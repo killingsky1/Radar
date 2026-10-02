@@ -1,0 +1,29 @@
+name: Labo (reconnaissance)
+
+# Branche de travail seulement : télécharge de vrais documents officiels pour bâtir les lecteurs.
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/*.py", ".github/workflows/labo.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  reconnaissance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: rm -rf labo/resultats && python labo/reconnaissance.py
+      - name: Sauvegarder les échantillons
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/resultats
+          git commit -m "Labo : échantillons du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git push origin HEAD:labo
