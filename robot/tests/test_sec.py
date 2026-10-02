@@ -1,6 +1,7 @@
 """Tests des lecteurs SEC sur de VRAIS documents officiels du 1er octobre 2026 (tests/fixtures/sec)."""
 
 import json
+import re
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -199,3 +200,59 @@ def test_trop_de_documents_illisibles_met_la_source_en_panne(tmp_path, index, mo
     assert rapport["sec_form4"]["ok"] is False and "illisibles" in rapport["sec_form4"]["erreur"]
     lus = tmp_path / "sec" / "jours_lus.json"
     assert not lus.exists() or "2026-10-01" not in json.loads(lus.read_text()).get("sec_form4", [])
+
+
+# ---------- Vraisemblance : les erreurs de frappe dans les documents eux-mêmes ----------
+
+
+@pytest.mark.parametrize("prix,cas", [
+    ("2272653", "SLBT : le prix total écrit dans la case « prix par action »"),
+    ("5134", "UUU : 5134 au lieu de 5,134 $"),
+])
+def test_prix_absurde_va_dans_a_verifier(prix, cas, index, syms):
+    t = lire("0001822293-26-000002.txt").replace("<value>24.33</value>", f"<value>{prix}</value>")
+    [ev] = [valider(e, JOUR) for e in evenements_form4(t, "a" * 64, index["0001822293-26-000002"], syms)]
+    assert ev.badge == "a_verifier", cas
+    assert ev.checks["prix_plausible"] is False
+
+
+def test_prix_eleve_permis_pour_les_actions_qui_valent_vraiment_autant():
+    from radar.collecteurs.sec import controles_form4
+    from radar.models import Evenement
+
+    ev = Evenement(source="sec_form4", official_id="x:S", category="compagnies", kind="vente_initie", title="t",
+                   occurred_on="2026-10-01", published_on="2026-10-01", official_url="https://www.sec.gov/x",
+                   sha256="a" * 64, parser_version="t", tickers=["BRK-A"], amount_min=750_000.0, amount_max=750_000.0,
+                   data={"symbole_declare": "BRK-A", "symboles_sec": ["BRK-A", "BRK-B"], "transactions": [
+                       {"code": "S", "acquis_cede": "D", "actions": 1.0, "prix": 750_000.0, "date": "2026-10-01"}]})
+    assert controles_form4(ev)["prix_plausible"] is True
+
+
+def test_13d_sous_5_pourcent_est_une_sortie(index, syms):
+    acc = "0000921895-26-002701"
+    t = lire(f"{acc}.txt")
+    for vieux in ("<percentOfClass>40.8</percentOfClass>", "<percentOfClass>39.3</percentOfClass>"):
+        t = t.replace(vieux, "<percentOfClass>0</percentOfClass>")
+    t = re.sub(r"<percentOfClass>[\d.]+</percentOfClass>", "<percentOfClass>0</percentOfClass>", t)
+    [ev] = [valider(e, JOUR) for e in evenements_13dg(t, "a" * 64, index[acc], syms)]
+    assert ev.badge == "officiel", ev.checks
+    assert ev.kind == "sous_5_pourcent" and ev.direction == -1
+    assert "passe sous 5 % de UNIVERSAL SAFETY PRODUCTS" in ev.title
+
+
+def test_les_infos_deja_publiees_sont_reverifiees(tmp_path, index, monkeypatch):
+    from radar import validate
+
+    internet = FauxInternet(pages_du_1er_octobre(index))
+    maintenant = datetime(2026, 10, 2, 11, 7, tzinfo=timezone.utc)
+    executer(tmp_path, client=internet, maintenant=maintenant)
+    assert any(e["tickers"] == ["GME"] for e in json.loads((tmp_path / "app" / "fil.json").read_text()))
+
+    # Un nouveau contrôle plus sévère apparaît : au passage suivant, l'info déjà publiée retourne « à vérifier ».
+    monkeypatch.setitem(validate.CONTROLES_SOURCE, "sec_form4",
+                        validate.CONTROLES_SOURCE["sec_form4"] + [lambda ev: {"nouveau_controle": "GME" not in ev.tickers}])
+    executer(tmp_path, client=internet, maintenant=maintenant.replace(hour=16))
+    fil = json.loads((tmp_path / "app" / "fil.json").read_text())
+    a_verifier = json.loads((tmp_path / "app" / "a_verifier.json").read_text())
+    assert not any(e["tickers"] == ["GME"] for e in fil)
+    assert any(e["tickers"] == ["GME"] and e["checks"]["nouveau_controle"] is False for e in a_verifier)

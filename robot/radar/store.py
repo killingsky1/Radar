@@ -56,9 +56,9 @@ class Depot:
                         touches.add(fichier)
             nouveau = ev.to_dict()
             if ancien is not None:
-                # Même document, même verdict : on garde l'ancienne ligne telle quelle (aucun changement dans git).
-                if (ancien["sha256"], ancien["badge"], ancien["checks"]) == (
-                    nouveau["sha256"], nouveau["badge"], nouveau["checks"]
+                # Même document, même lecteur, même verdict : on garde l'ancienne ligne telle quelle (rien ne change dans git).
+                if (ancien["sha256"], ancien["badge"], ancien["checks"], ancien["parser_version"]) == (
+                    nouveau["sha256"], nouveau["badge"], nouveau["checks"], nouveau["parser_version"]
                 ):
                     bilan["inchanges"] += 1
                     continue

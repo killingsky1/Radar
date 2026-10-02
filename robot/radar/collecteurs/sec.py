@@ -20,13 +20,18 @@ from pathlib import Path
 from ..models import Evenement
 from ..validate import controle_source, jours_ouvrables
 
-VERSION = "sec-1"
+VERSION = "sec-2"  # à augmenter quand un lecteur change : les infos sont relues et mises à jour
 ARCHIVES = "https://www.sec.gov/Archives"
 BOURSES_GARDEES = {"Nasdaq", "NYSE", "CBOE"}
 SEUIL_ACHAT = 25_000  # $ US : sous ce montant, un achat est du bruit
 SEUIL_VENTE = 1_000_000  # $ US : seules les grosses ventes comptent
 JOURS_OUVRABLES_EN_ARRIERE = 3  # jours ouvrables rattrapés si des passages ont été manqués
 FORMES_13 = {"SCHEDULE 13D", "SCHEDULE 13D/A", "SCHEDULE 13G"}
+# Au-dessus de ce prix par action, c'est presque toujours une erreur de frappe dans le document
+# (ex. le prix total écrit dans la case « prix par action »). Exception : les rares actions qui valent vraiment autant.
+PRIX_MAX = 2_000
+PRIX_ELEVES = {"BRK-A", "NVR", "BKNG", "AZO", "SEB", "FCNCA", "MKL", "WTM", "FICO", "TPL"}
+VALEUR_MAX = 5_000_000_000  # une seule déclaration de plus de 5 G$ : à vérifier
 
 ITEMS_8K = {  # description officielle EDGAR (début) -> (item, libellé, direction)
     "entry into a material definitive agreement": ("1.01", "contrat important signé", 0),
@@ -328,6 +333,9 @@ def controles_form4(ev: Evenement) -> dict[str, bool]:
         # Le symbole écrit par le déclarant doit correspondre à la liste officielle de la SEC (s'il en a écrit un).
         "symbole_conforme_sec": not declare or declare in {normaliser_symbole(s) for s in d.get("symboles_sec", [])},
         "montant_recalcule": abs(recalcule - (ev.amount_max or 0)) <= max(1.0, 0.005 * recalcule),
+        "prix_plausible": all((t["prix"] or 0) <= (1_000_000 if ev.tickers[:1] and ev.tickers[0] in PRIX_ELEVES else PRIX_MAX)
+                              for t in lignes),
+        "montant_plausible": (ev.amount_max or 0) <= VALEUR_MAX,
         "dates_transaction_valides": all(t["date"] and t["date"] <= ev.published_on for t in lignes),
     }
 
@@ -445,13 +453,18 @@ def evenements_13dg(texte: str, sha: str, depot: DepotSec, syms: Symboles) -> li
     precision = "13D, intentions actives" if actif else "13G, placement passif"
     if f["type"].endswith("/A"):
         precision += f", mise à jour n° {f['amendement']}" if f["amendement"] else ", mise à jour"
+    sortie = f["type"].endswith("/A") and pct is not None and pct < 5
+    if sortie:  # une mise à jour sous 5 % : le gros joueur a vendu
+        titre = f"{f['declarant']} passe sous 5 % de {cote['name']} : il en détient maintenant {pct_txt} % ({precision})"
+    else:
+        titre = f"{f['declarant']} détient {pct_txt} % de {cote['name']} ({precision})"
     return [Evenement(
-        source="sec_13dg", official_id=depot.acc, category="baleines", kind="plus_5_pourcent",
-        title=f"{f['declarant']} détient {pct_txt} % de {cote['name']} ({precision})",
+        source="sec_13dg", official_id=depot.acc, category="baleines", kind="sous_5_pourcent" if sortie else "plus_5_pourcent",
+        title=titre,
         occurred_on=min(f["date_evenement"] or publie, publie), published_on=publie,
         official_url=depot.page_officielle(f["cik_emetteur"]), sha256=sha, parser_version=VERSION,
         tickers=[cote["ticker"]], entities=[f["declarant"], cote["name"]],
-        direction=1 if f["type"] == "SCHEDULE 13D" else 0,
+        direction=-1 if sortie else (1 if f["type"] == "SCHEDULE 13D" else 0),
         data={**f, "bourse": cote["exchange"]},
     )]
 
@@ -460,7 +473,7 @@ def evenements_13dg(texte: str, sha: str, depot: DepotSec, syms: Symboles) -> li
 def controles_13dg(ev: Evenement) -> dict[str, bool]:
     d = ev.data
     return {
-        "pourcentage_valide": d.get("pourcentage") is not None and 0 < d["pourcentage"] <= 100,
+        "pourcentage_valide": d.get("pourcentage") is not None and 0 <= d["pourcentage"] <= 100,
         "emetteur_coherent": d.get("cik_sujet_entete") is None
         or int(d["cik_sujet_entete"]) == int(d.get("cik_emetteur") or 0),
     }

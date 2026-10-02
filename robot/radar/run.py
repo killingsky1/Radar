@@ -17,6 +17,7 @@ from zoneinfo import ZoneInfo
 
 from .collecteurs import COLLECTEURS
 from .http import ClientPoli
+from .models import Evenement
 from .publish import publier
 from .registry import PASSAGES, SOURCES
 from .store import Depot
@@ -49,6 +50,12 @@ def passage_auto(maintenant: datetime) -> str:
 
 def _charger_json(chemin: Path) -> dict:
     return json.loads(chemin.read_text(encoding="utf-8")) if chemin.exists() else {}
+
+
+def revalider(donnees: Path, maintenant: datetime) -> dict:
+    tous = Depot(donnees).lire("evenements") + Depot(donnees).lire("a_verifier")
+    evenements = [valider(Evenement.from_dict(d), maintenant.date()) for d in tous]
+    return Depot(donnees).enregistrer(evenements)
 
 
 def executer(donnees, passage=None, seulement=None, collecteurs=None, client=None, maintenant=None) -> dict:
@@ -86,6 +93,11 @@ def executer(donnees, passage=None, seulement=None, collecteurs=None, client=Non
         if dates:
             e["dernier_contenu"] = max(dates)
         rapport[sid] = {"ok": True, **bilan}
+
+    # Les contrôles s'améliorent : on les réapplique aux infos déjà publiées (une info peut retourner « à vérifier »).
+    bilan = revalider(donnees, maintenant)
+    if bilan["modifies"]:
+        print(f"Revérification des infos déjà publiées : {bilan['modifies']} changée(s) de statut")
 
     chemin_etat.parent.mkdir(parents=True, exist_ok=True)
     chemin_etat.write_text(json.dumps(etat, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")

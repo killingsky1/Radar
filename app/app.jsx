@@ -233,6 +233,11 @@ function libelleJour(jour) {
   return majuscule(new Date(`${jour}T12:00:00`).toLocaleDateString("fr-CA", { weekday: "long", day: "numeric", month: "long" }));
 }
 
+function dateCourte(jour) {
+  if (!jour) return "";
+  return new Date(`${jour}T12:00:00`).toLocaleDateString("fr-CA", { day: "numeric", month: "short" });
+}
+
 function dateLongue(jour) {
   if (!jour) return "";
   return new Date(`${jour}T12:00:00`).toLocaleDateString("fr-CA", { day: "numeric", month: "long", year: "numeric" });
@@ -708,13 +713,16 @@ function Accueil({ pousser, allerAuFil }) {
   const { donnees, charger, chargement } = useApp();
   const { meta, aujourdhui } = donnees;
   const visibles = useVisibles();
-  const nouvelles = visibles.filter((e) => Date.now() - new Date(e.collected_at).getTime() < 864e5).length;
-  const confirmees = visibles.filter((e) => e.badge === "confirme").length;
+  // Les compteurs viennent du robot : calculés sur TOUTES les infos, selon la date de publication officielle.
+  const c = meta.compteurs;
+  const nouvelles = c ? c.publiees_dernier_jour : visibles.length;
+  const confirmees = c ? c.confirmees_30j : visibles.filter((e) => e.badge === "confirme").length;
   const parCategorie = useMemo(() => {
+    if (c) return c.par_categorie_30j || {};
     const n = {};
     for (const e of visibles) n[e.category] = (n[e.category] || 0) + 1;
     return n;
-  }, [visibles]);
+  }, [c, visibles]);
   const top = aujourdhui?.top || [];
   const pourcentage = meta.sources_total ? Math.round((meta.sources_branchees / meta.sources_total) * 100) : 0;
   const date = majuscule(new Date().toLocaleDateString("fr-CA", { weekday: "long", day: "numeric", month: "long" }));
@@ -748,16 +756,16 @@ function Accueil({ pousser, allerAuFil }) {
         <button type="button" className="tuile presse" onClick={() => allerAuFil("tout")}>
           <Icone nom="eclair" taille={20} epaisseur={2} className="t-accent" />
           <span className="tuile-valeur">{nouvelles}</span>
-          <span className="tuile-label">Nouvelles (24 h)</span>
+          <span className="tuile-label">{c?.dernier_jour ? `Publiées le ${dateCourte(c.dernier_jour)}` : "Nouvelles"}</span>
         </button>
         <button type="button" className="tuile presse" onClick={() => allerAuFil("tout")}>
           <Icone nom="double" taille={20} epaisseur={2.2} className="t-vert" />
           <span className="tuile-valeur">{confirmees}</span>
-          <span className="tuile-label">Confirmées</span>
+          <span className="tuile-label">Confirmées (30 j)</span>
         </button>
         <button type="button" className="tuile presse" onClick={() => pousser("a_verifier")}>
           <Icone nom="alerte" taille={20} epaisseur={2} className="t-jaune" />
-          <span className="tuile-valeur">{donnees.a_verifier.length}</span>
+          <span className="tuile-valeur">{meta.a_verifier_3_mois ?? donnees.a_verifier.length}</span>
           <span className="tuile-label">À vérifier</span>
         </button>
         <button type="button" className="tuile presse" onClick={() => pousser("sources")}>
@@ -770,7 +778,7 @@ function Accueil({ pousser, allerAuFil }) {
         </button>
       </div>
 
-      <h2 className="section">Catégories</h2>
+      <h2 className="section">Catégories · 30 jours</h2>
       <div className="grille-cat">
         {Object.entries(CATEGORIES).map(([k, c]) => (
           <button key={k} type="button" className="cat presse" onClick={() => allerAuFil(k)}>

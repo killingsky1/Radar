@@ -3,7 +3,8 @@
 from __future__ import annotations
 
 import json
-from datetime import datetime
+from collections import Counter
+from datetime import datetime, timedelta
 from pathlib import Path
 
 from . import __version__
@@ -41,6 +42,19 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
             "compte": e.get("compte"),
         })
 
+    # Les compteurs de l'accueil sont calculés ici, sur TOUTES les infos (l'app ne reçoit que les plus récentes),
+    # et selon la date de publication officielle (pas l'heure où le robot les a lues).
+    depuis = (maintenant.date() - timedelta(days=30)).isoformat()
+    recentes = [e for e in fil if e["published_on"] >= depuis]
+    dernier_jour = max((e["published_on"] for e in fil), default=None)
+    compteurs = {
+        "dernier_jour": dernier_jour,
+        "publiees_dernier_jour": sum(1 for e in fil if e["published_on"] == dernier_jour),
+        "total_30j": len(recentes),
+        "confirmees_30j": sum(1 for e in recentes if e["badge"] == "confirme"),
+        "par_categorie_30j": dict(Counter(e["category"] for e in recentes)),
+    }
+
     actives = [s for s in SOURCES.values() if not s.ecartee]
     meta = {
         "genere_a": maintenant.isoformat(),
@@ -50,6 +64,7 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
         "sources_branchees": len([s for s in actives if s.id in branchees]),
         "evenements_3_mois": len(fil),
         "a_verifier_3_mois": len(a_verifier),
+        "compteurs": compteurs,
     }
     _ecrire(donnees / "app" / "meta.json", meta)
     _ecrire(donnees / "app" / "sources.json", sources)
