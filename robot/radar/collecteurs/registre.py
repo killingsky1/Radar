@@ -23,7 +23,7 @@ from ..models import Evenement, empreinte
 from ..store import Depot
 from ..validate import controle_source
 
-VERSION = "registre-1"
+VERSION = "registre-2"
 API = "https://www.federalregister.gov/api/v1"
 CHAMPS = ("title", "type", "subtype", "document_number", "html_url", "pdf_url", "publication_date", "signing_date",
           "agencies", "executive_order_number", "raw_text_url", "abstract")
@@ -125,7 +125,8 @@ def lire_vente_armes(texte: str) -> dict:
     d: dict = {}
     m = re.search(r"Transmittal No\.\s*([A-Z]*\s?[\w-]+)", texte)
     d["transmission"] = m.group(1).strip() if m else None
-    m = re.search(r"\(i\) Prospective Purchaser:\s*(.+?)\s*\(ii\)", texte)
+    # « (i) Prospective Purchaser: … » ou, dans les rapports d'ajout, « (i) (U) Purchaser: … » ((U) = non classifié)
+    m = re.search(r"\(i\) (?:\(U\) )?(?:Prospective )?Purchaser:\s*(.+?)\s*\(ii\)", texte)
     d["acheteur"] = m.group(1).strip() if m else None
     d["total"] = montant(texte)
     m = re.search(r"principal (?:U\.S\. )?contractors? (?:will be|is|are)\s+(.+?)\.\s+(?:At this time|There are no|The purchaser)",
@@ -171,7 +172,7 @@ PAYS_FR = {  # nom officiel (après « Government of ») -> nom français ; inco
     "Belgium": "Belgique", "Switzerland": "Suisse", "Austria": "Autriche", "Portugal": "Portugal", "Ukraine": "Ukraine",
     "New Zealand": "Nouvelle-Zélande", "Indonesia": "Indonésie", "Thailand": "Thaïlande", "Vietnam": "Vietnam",
     "Malaysia": "Malaisie", "Iraq": "Irak", "Tunisia": "Tunisie", "Nigeria": "Nigeria", "Ecuador": "Équateur",
-    "Taipei Economic and Cultural Representative Office in the United States": "Taïwan (TECRO)",
+    "Georgia": "Géorgie (pays)", "Taipei Economic and Cultural Representative Office in the United States": "Taïwan (TECRO)",
 }
 
 

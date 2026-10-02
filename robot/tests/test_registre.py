@@ -84,6 +84,12 @@ def test_ajout_a_une_vente_sans_montant_total():
     assert v["total"] is None  # rien plutôt que faux : on ne devine pas dans le texte libre
 
 
+def test_rapport_d_ajout_avec_mention_de_classification():
+    v = lire_vente_armes(texte("2026-17559"))  # « (i) (U) Purchaser: Government of Georgia »
+    assert v["acheteur"] == "Government of Georgia" and v["ajout_a_une_vente"] is True and v["total"] is None
+    assert registre.nom_pays(v["acheteur"]) == "Géorgie (pays)"  # un gouvernement acheteur : le pays, pas l'État américain
+
+
 def test_symboles_des_fournisseurs_par_nom_exact(noms_sec):
     trouves = {f: noms_sec.get(registre.nom_normalise(f)) for f in
                ["The Boeing Corporation", "RTX Corporation", "Northrop Grumman Corporation", "Pratt & Whitney Military Engines",
