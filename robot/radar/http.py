@@ -61,6 +61,17 @@ class ClientPoli:
         self._dernier_appel[domaine] = self.horloge()
 
     def get(self, url: str, entetes: dict | None = None) -> Telechargement:
+        return self._requete("get", url, entetes)
+
+    def post(self, url: str, donnees: dict, entetes: dict | None = None) -> Telechargement:
+        """Pour les sites qui demandent d'accepter des conditions ou d'envoyer un formulaire de recherche (Sénat)."""
+        return self._requete("post", url, entetes, donnees)
+
+    def cookie(self, nom: str) -> str | None:
+        pot = getattr(self.session, "cookies", None)
+        return pot.get(nom) if pot is not None else None
+
+    def _requete(self, methode: str, url: str, entetes: dict | None, donnees: dict | None = None) -> Telechargement:
         hote = (urlparse(url).hostname or "").lower()
         domaine = _domaine_racine(hote)
         if domaine == "sec.gov" and "@" not in self.contact:
@@ -69,7 +80,11 @@ class ClientPoli:
         for essai in range(self.essais):
             self._attendre_son_tour(domaine)
             try:
-                r = self.session.get(url, headers={**self.entetes, **(entetes or {})}, timeout=self.delai)
+                h = {**self.entetes, **(entetes or {})}
+                if methode == "post":
+                    r = self.session.post(url, data=donnees, headers=h, timeout=self.delai)
+                else:
+                    r = self.session.get(url, headers=h, timeout=self.delai)
             except Exception as exc:  # coupure réseau, délai dépassé…
                 derniere_erreur = f"{type(exc).__name__}"
                 self.dormir(min(2 ** essai, 30))

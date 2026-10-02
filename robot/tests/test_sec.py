@@ -172,10 +172,13 @@ def pages_du_1er_octobre(index):
     return pages
 
 
+LECTEURS_SEC = {"sec_form4": sec.collecter_form4, "sec_8k": sec.collecter_8k, "sec_13dg": sec.collecter_13dg}
+
+
 def test_robot_complet_sur_une_vraie_journee(tmp_path, index):
     internet = FauxInternet(pages_du_1er_octobre(index))
     maintenant = datetime(2026, 10, 2, 11, 7, tzinfo=timezone.utc)
-    rapport = executer(tmp_path, client=internet, maintenant=maintenant)
+    rapport = executer(tmp_path, client=internet, maintenant=maintenant, collecteurs=LECTEURS_SEC)
     assert all(r["ok"] for r in rapport.values()), rapport
     fil = json.loads((tmp_path / "app" / "fil.json").read_text(encoding="utf-8"))
     assert sorted(e["tickers"][0] for e in fil) == ["CWH", "GME", "IOT", "NFG", "UUU"]
@@ -185,7 +188,7 @@ def test_robot_complet_sur_une_vraie_journee(tmp_path, index):
 
     # Deuxième passage : la journée est déjà lue, on ne retélécharge pas les documents
     avant = len(internet.appels)
-    executer(tmp_path, client=internet, maintenant=maintenant.replace(hour=16))
+    executer(tmp_path, client=internet, maintenant=maintenant.replace(hour=16), collecteurs=LECTEURS_SEC)
     nouveaux = internet.appels[avant:]
     assert all("Archives/edgar/data" not in u for u in nouveaux), nouveaux
 
@@ -245,13 +248,13 @@ def test_les_infos_deja_publiees_sont_reverifiees(tmp_path, index, monkeypatch):
 
     internet = FauxInternet(pages_du_1er_octobre(index))
     maintenant = datetime(2026, 10, 2, 11, 7, tzinfo=timezone.utc)
-    executer(tmp_path, client=internet, maintenant=maintenant)
+    executer(tmp_path, client=internet, maintenant=maintenant, collecteurs=LECTEURS_SEC)
     assert any(e["tickers"] == ["GME"] for e in json.loads((tmp_path / "app" / "fil.json").read_text()))
 
     # Un nouveau contrôle plus sévère apparaît : au passage suivant, l'info déjà publiée retourne « à vérifier ».
     monkeypatch.setitem(validate.CONTROLES_SOURCE, "sec_form4",
                         validate.CONTROLES_SOURCE["sec_form4"] + [lambda ev: {"nouveau_controle": "GME" not in ev.tickers}])
-    executer(tmp_path, client=internet, maintenant=maintenant.replace(hour=16))
+    executer(tmp_path, client=internet, maintenant=maintenant.replace(hour=16), collecteurs=LECTEURS_SEC)
     fil = json.loads((tmp_path / "app" / "fil.json").read_text())
     a_verifier = json.loads((tmp_path / "app" / "a_verifier.json").read_text())
     assert not any(e["tickers"] == ["GME"] for e in fil)
