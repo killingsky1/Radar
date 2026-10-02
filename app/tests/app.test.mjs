@@ -27,9 +27,10 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
   await p.reload(); await p.waitForSelector(".tuiles");
 
   await verifier("Thème sombre par défaut", async () => assert.equal(await p.evaluate(() => document.documentElement.dataset.theme), "sombre"));
-  await verifier("Accueil : compteurs (7 nouvelles, 1 confirmée, 1 à vérifier)", async () => {
+  await verifier("Accueil : compteurs du robot (3 publiées aujourd'hui, 1 confirmée, 1 à vérifier)", async () => {
     const v = await p.locator(".tuile-valeur").allInnerTexts();
-    assert.deepEqual(v.slice(0, 3), ["7", "1", "1"]);
+    assert.deepEqual(v.slice(0, 3), ["3", "1", "1"]);
+    assert.ok((await p.locator(".tuile-label").first().innerText()).startsWith("Publiées le"));
   });
   await verifier("Tuile catégorie Militaire ouvre le fil filtré (1 info)", async () => {
     await p.locator(".cat", { hasText: "Militaire" }).click(); await p.waitForTimeout(250); assert.equal(await lignes(), 1);
