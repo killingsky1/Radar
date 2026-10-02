@@ -1,0 +1,144 @@
+"""Catalogue de toutes les sources : branchées, à venir et laissées de côté.
+
+`domaines` = seuls domaines acceptés pour les liens de cette source.
+`attente_heures` = délai max sans lecture réussie avant « en retard » (80 h couvre une fin de semaine).
+`publication_max_jours` = si la source n'a rien publié depuis ce délai, elle est « en pause »
+(ex. fermeture du gouvernement américain). None = pas de vérification.
+`officielle=False` = sert seulement à recouper ou calculer, jamais à créer une suggestion seule.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+
+PASSAGES = ("matin", "jour", "midi", "soir", "nuit")
+
+
+@dataclass(frozen=True)
+class Source:
+    id: str
+    nom: str
+    categorie: str
+    domaines: tuple[str, ...]
+    phase: int
+    site: str
+    attente_heures: int = 80
+    publication_max_jours: int | None = None
+    officielle: bool = True
+    ecartee: str | None = None  # raison si la source est laissée de côté
+    passages: tuple[str, ...] = PASSAGES
+
+
+S = Source
+_LISTE = [
+    # Phase 1 : compagnies et gros joueurs (SEC en premier : elle relie chaque compagnie à son symbole)
+    S("sec_form4", "SEC : formulaire 4 (achats et ventes des dirigeants)", "compagnies", ("sec.gov",), 1,
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=4", publication_max_jours=5),
+    S("sec_form144", "SEC : formulaire 144 (intention de vendre)", "compagnies", ("sec.gov",), 1,
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=144", publication_max_jours=5),
+    S("sec_13dg", "SEC : 13D/13G (un gros joueur dépasse 5 %)", "baleines", ("sec.gov",), 1,
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=SCHEDULE+13D", publication_max_jours=7),
+    S("sec_8k", "SEC : 8-K (événements majeurs)", "compagnies", ("sec.gov",), 1,
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=8-K", publication_max_jours=5),
+    S("sec_13f", "SEC : 13F (positions des gros fonds)", "baleines", ("sec.gov",), 1,
+      "https://www.sec.gov/data-research/sec-markets-data/form-13f-data-sets", publication_max_jours=100),
+    S("sec_offres", "SEC : offres d'achat de compagnies entières", "compagnies", ("sec.gov",), 1,
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=SC+TO-T"),
+    S("sec_blocage", "SEC : fins de blocage après entrée en bourse", "compagnies", ("sec.gov",), 1,
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=424B4"),
+    S("sec_poursuites", "SEC : poursuites", "compagnies", ("sec.gov",), 1,
+      "https://www.sec.gov/enforcement-litigation/litigation-releases"),
+    S("sec_ftd", "SEC : échecs de livraison d'actions", "compagnies", ("sec.gov",), 1,
+      "https://www.sec.gov/data-research/sec-markets-data/fails-deliver-data", publication_max_jours=40),
+    S("sp_indices", "S&P : entrées et sorties d'indices", "compagnies", ("spglobal.com",), 1,
+      "https://press.spglobal.com/"),
+    S("nbim", "Fonds souverain de la Norvège (NBIM)", "baleines", ("nbim.no",), 1,
+      "https://www.nbim.no/en/investments/all-investments/", attente_heures=24 * 8),
+    S("cftc_cot", "CFTC : positions des gros joueurs (contrats à terme)", "baleines", ("cftc.gov",), 1,
+      "https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm", publication_max_jours=10),
+    S("communiques", "Communiqués officiels des compagnies", "compagnies",
+      ("globenewswire.com", "newsfilecorp.com", "newswire.ca", "prnewswire.com"), 1,
+      "https://www.globenewswire.com/rss/list", publication_max_jours=3),
+    # Phase 2 : militaire et défense
+    S("war_contrats", "Pentagone : contrats du jour (war.gov)", "militaire", ("war.gov", "defense.gov"), 2,
+      "https://www.war.gov/News/Contracts/", publication_max_jours=5),
+    S("ventes_armes", "Ventes d'armes à l'étranger (Département d'État)", "militaire", ("state.gov", "dsca.mil"), 2,
+      "https://www.state.gov/arms-sales-congressional-notifications"),
+    S("usaspending", "USAspending : contrats, subventions, prêts", "militaire", ("usaspending.gov",), 2,
+      "https://www.usaspending.gov/", publication_max_jours=7),
+    S("gao_contestations", "GAO : contestations de contrats", "militaire", ("gao.gov",), 2,
+      "https://www.gao.gov/legal/bid-protests/search"),
+    S("participations_gouv", "Gouvernement américain actionnaire", "gouvernement",
+      ("sec.gov", "war.gov", "energy.gov", "commerce.gov", "whitehouse.gov"), 2, "https://www.sec.gov/edgar/search/"),
+    S("canadabuys", "CanadaBuys : appels d'offres et contrats", "canada", ("canadabuys.canada.ca",), 2,
+      "https://canadabuys.canada.ca/", publication_max_jours=5),
+    S("contrats_ca_10k", "Contrats fédéraux de plus de 10 000 $", "canada", ("open.canada.ca",), 2,
+      "https://search.open.canada.ca/contracts/", attente_heures=24 * 8, publication_max_jours=130),
+    S("nouvelles_defense_ca", "Centre des nouvelles du Canada : défense", "canada", ("canada.ca",), 2,
+      "https://www.canada.ca/en/news.html"),
+    S("ccc", "Corporation commerciale canadienne", "canada", ("ccc.ca",), 2, "https://www.ccc.ca/en/announcements/"),
+    # Phase 3 : politiciens
+    S("chambre_ptr", "Chambre des représentants : transactions des élus", "politiciens", ("house.gov",), 3,
+      "https://disclosures-clerk.house.gov/FinancialDisclosure", publication_max_jours=21),
+    S("senat_ptr", "Sénat : transactions des sénateurs", "politiciens", ("senate.gov",), 3,
+      "https://efdsearch.senate.gov/search/", publication_max_jours=30),
+    S("oge_278t", "Président, vice-président et cabinet (OGE)", "politiciens", ("oge.gov",), 3,
+      "https://www.oge.gov/"),
+    S("comites", "Composition des comités du Congrès", "politiciens", ("github.com", "congress.gov"), 3,
+      "https://github.com/unitedstates/congress-legislators", officielle=False),
+    S("votes", "Votes au Congrès", "politiciens", ("house.gov", "senate.gov", "congress.gov"), 3,
+      "https://clerk.house.gov/Votes"),
+    S("lobbying", "Lobbying (LDA.gov)", "politiciens", ("lda.gov",), 3, "https://lda.gov/"),
+    S("hr7008", "Suivi de H.R. 7008 (interdiction d'actions pour les élus)", "politiciens",
+      ("congress.gov", "govinfo.gov"), 3, "https://www.congress.gov/bill/119th-congress/house-bill/7008"),
+    # Phase 4 : gouvernement, régulateurs, économie
+    S("registre_federal", "Registre fédéral : décrets, tarifs, sanctions (la veille)", "gouvernement",
+      ("federalregister.gov", "govinfo.gov"), 4, "https://www.federalregister.gov/public-inspection/current",
+      publication_max_jours=5),
+    S("maison_blanche", "Maison-Blanche : actions présidentielles", "gouvernement", ("whitehouse.gov",), 4,
+      "https://www.whitehouse.gov/presidential-actions/"),
+    S("tarifs", "Tarifs : USTR, douanes, taux officiels", "gouvernement", ("ustr.gov", "cbp.gov", "usitc.gov"), 4,
+      "https://ustr.gov/"),
+    S("sanctions_us", "Sanctions américaines (OFAC, Commerce)", "gouvernement",
+      ("treasury.gov", "treas.gov", "trade.gov", "bis.gov"), 4, "https://ofac.treasury.gov/"),
+    S("fda", "FDA : approbations, rappels, comités", "gouvernement", ("fda.gov",), 4,
+      "https://www.fda.gov/drugs/novel-drug-approvals-fda"),
+    S("ftc_fusions", "FTC : fusions (fin anticipée de l'examen)", "gouvernement", ("ftc.gov",), 4,
+      "https://www.ftc.gov/legal-library/browse/early-termination-notices"),
+    S("doj_antitrust", "Ministère de la Justice : antitrust", "gouvernement", ("justice.gov",), 4,
+      "https://www.justice.gov/atr/news-feeds"),
+    S("fed", "Réserve fédérale (Fed)", "gouvernement", ("federalreserve.gov",), 4, "https://www.federalreserve.gov/feeds"),
+    S("tresor", "Trésor américain (Fiscal Data)", "gouvernement", ("fiscaldata.treasury.gov", "treasury.gov"), 4,
+      "https://fiscaldata.treasury.gov/"),
+    S("nhtsa", "NHTSA : rappels d'autos", "gouvernement", ("nhtsa.gov",), 4, "https://www.nhtsa.gov/recalls"),
+    S("banque_canada", "Banque du Canada", "canada", ("bankofcanada.ca",), 4, "https://www.bankofcanada.ca/"),
+    S("statcan", "Statistique Canada", "canada", ("statcan.gc.ca",), 4, "https://www150.statcan.gc.ca/"),
+    S("gazette_ca", "Gazette du Canada (règlements, surtaxes)", "canada", ("gazette.gc.ca",), 4,
+      "https://gazette.gc.ca/"),
+    S("sante_canada", "Santé Canada : approbations de médicaments", "canada", ("canada.ca",), 4,
+      "https://health-products.canada.ca/"),
+    S("concurrence_ca", "Bureau de la concurrence : fusions", "canada", ("canada.ca",), 4,
+      "https://competition-bureau.canada.ca/en/mergers-and-acquisitions/report-concluded-merger-reviews"),
+    S("grands_projets_ca", "Grands projets d'intérêt national (Canada)", "canada", ("canada.ca",), 4,
+      "https://www.canada.ca/en/one-canadian-economy/services/building-canada-act-projects-national-interest.html"),
+    S("sanctions_ca", "Sanctions canadiennes", "canada", ("international.gc.ca",), 4, "https://www.international.gc.ca/"),
+    S("legisinfo", "Projets de loi fédéraux (LEGISinfo)", "canada", ("parl.ca",), 4, "https://www.parl.ca/legisinfo/"),
+    S("arrets_negociation", "Arrêts de négociation (OCRI)", "canada", ("ciro.ca",), 4, "https://www.ciro.ca/"),
+    # Phase 5 : prix (non officiel, seulement pour le tableau de score)
+    S("prix_yahoo", "Prix des actions (Yahoo, non officiel)", "compagnies", ("yahoo.com",), 5,
+      "https://finance.yahoo.com/", officielle=False),
+    # Laissées de côté
+    S("sedi", "SEDI : initiés canadiens", "canada", ("sedi.ca",), 0, "https://www.sedi.ca/",
+      ecartee="Payant : aucun accès gratuit pour un robot"),
+    S("sedar", "SEDAR+ : documents des compagnies canadiennes", "canada", ("sedarplus.ca",), 0,
+      "https://www.sedarplus.ca/", ecartee="Robots interdits par ses conditions d'utilisation"),
+    S("finra", "FINRA : ventes à découvert", "compagnies", ("finra.org",), 0, "https://www.finra.org/finra-data",
+      ecartee="Compte obligatoire"),
+    S("sam_gov", "SAM.gov : contrats fédéraux", "militaire", ("sam.gov",), 0, "https://sam.gov/",
+      ecartee="Compte obligatoire (USAspending le remplace)"),
+    S("prix_payants", "Prix officiels payants (EODHD)", "compagnies", ("eodhd.com",), 0, "https://eodhd.com/",
+      ecartee="Payant (Yahoo gratuit le remplace)"),
+]
+
+SOURCES: dict[str, Source] = {s.id: s for s in _LISTE}
+assert len(SOURCES) == len(_LISTE), "identifiant de source en double"

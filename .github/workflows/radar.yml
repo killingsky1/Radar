@@ -1,0 +1,94 @@
+name: Radar
+
+on:
+  schedule:
+    # Heures en UTC. Entre parenthèses : l'heure de l'Est en été (HAE) / en hiver (HNE).
+    - cron: "7 11 * * 1-5"   # matin (7 h 07 / 6 h 07)
+    - cron: "47 13 * * 1-5"  # jour  (9 h 47 / 8 h 47) : après la mise à jour de CanadaBuys
+    - cron: "37 16 * * 1-5"  # midi  (12 h 37 / 11 h 37)
+    - cron: "17 22 * * 1-5"  # soir  (18 h 17 / 17 h 17) : après les contrats du Pentagone
+    - cron: "17 3 * * 2-6"   # nuit  (23 h 17 / 22 h 17) : après la fermeture de la SEC
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: radar
+  cancel-in-progress: false
+
+jobs:
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: robot/requirements.txt
+      - run: pip install -r robot/requirements.txt
+      - run: python -m pytest
+        working-directory: robot
+
+  robot:
+    name: Robot
+    needs: tests
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: robot/requirements.txt
+      - run: pip install -r robot/requirements.txt
+      - name: Lire les sources
+        working-directory: robot
+        run: python -m radar.run --donnees ../data ${{ github.event_name == 'schedule' && '--passage auto' || '' }}
+      - name: Sauvegarder les données
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then echo "Rien de nouveau"; exit 0; fi
+          git commit -m "Robot : données du $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+  site:
+    name: Site
+    needs: [tests, robot]
+    # Le site est remis en ligne même si le robot a échoué : l'app affiche alors « données vieilles ».
+    if: always() && needs.tests.result == 'success'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - run: npm ci
+        working-directory: app
+      - run: node build.mjs
+        working-directory: app
+      - run: mkdir -p app/dist/data && cp -r data/app app/dist/data/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/dist
+      - id: deploiement
+        uses: actions/deploy-pages@v4
