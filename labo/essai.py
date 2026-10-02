@@ -70,7 +70,7 @@ def verifier_registre(ev):
         brut = get(off["raw_text_url"]).text if off.get("raw_text_url") else ""
         lignes = [normal(l) for l in html.unescape(re.sub(r"<[^>]+>", "", brut)).splitlines()]
         acheteur = next((l.split(":", 1)[1].strip() for l in lignes if l.startswith("(i) prospective purchaser:")), None)
-        if acheteur != normal((d.get("vente") or {}).get("acheteur")):
+        if (acheteur or "") != normal((d.get("vente") or {}).get("acheteur")):
             ecarts.append(f"acheteur : texte « {acheteur} » ≠ robot « {(d.get('vente') or {}).get('acheteur')} »")
         texte = " ".join(lignes)
         totaux = re.findall(r"total\.*\s*\$\s*([\d.]+)\s*(million|billion)", texte)
@@ -91,7 +91,7 @@ def verifier_canada(ev):
     page = get(ev["official_url"]).text
     h1 = re.search(r"<h1[^>]*>(.*?)</h1>", page, re.S)
     ecarts = []
-    if not h1 or normal(h1.group(1)) != normal(ev["title"]):
+    if not h1 or normal(re.sub(r"</?sup>", "", h1.group(1))) != normal(ev["title"]):  # « 5<sup>e</sup> » = « 5e »
         ecarts.append(f"titre de la page « {normal(h1.group(1)) if h1 else '?'} » ≠ robot « {ev['title']} »")
     if normal(ev["data"]["ministere"]) not in normal(page):
         ecarts.append(f"ministère absent de la page : {ev['data']['ministere']}")
@@ -221,6 +221,16 @@ def main():
             evs += [json.loads(l) for l in f.read_text(encoding="utf-8").splitlines()
                     if l.strip() and json.loads(l)["source"] in SOURCES]
     (SORTIE / "infos.json").write_text(json.dumps(evs, ensure_ascii=False, indent=1), encoding="utf-8")
+    # Textes des avis d'armes mis de côté : pour améliorer le lecteur sans rien deviner.
+    for e in evs:
+        if e["source"] == "ventes_armes" and e["badge"] == "a_verifier":
+            try:
+                num = e["official_id"]
+                off = get(f"https://www.federalregister.gov/api/v1/documents/{num}.json").json()
+                (SORTIE / "textes").mkdir(exist_ok=True)
+                (SORTIE / "textes" / f"{num}.txt").write_text(get(off["raw_text_url"]).text, encoding="utf-8")
+            except Exception:  # noqa: BLE001
+                pass
     etat = json.loads((DONNEES / "etat_sources.json").read_text(encoding="utf-8"))
     (SORTIE / "etat.json").write_text(json.dumps({s: etat.get(s) for s in SOURCES}, ensure_ascii=False, indent=1), encoding="utf-8")
 
