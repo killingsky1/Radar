@@ -26,7 +26,8 @@ import requests
 RACINE = Path(__file__).resolve().parent.parent
 SORTIE = RACINE / "labo" / "essai"
 DONNEES = Path("/tmp/essai")
-SOURCES = ["registre_federal", "ventes_armes", "senat_ptr", "chambre_ptr", "nouvelles_defense_ca", "nouvelles_eco_ca"]
+SOURCES = ["maison_blanche", "fed", "banque_canada", "sec_form144", "sec_offres", "cftc_cot",
+           "registre_federal", "ventes_armes", "senat_ptr", "chambre_ptr", "nouvelles_defense_ca", "nouvelles_eco_ca"]
 UA = {"User-Agent": "Radar projet personnel math-veronneau1@hotmail.com"}
 PAR_SOURCE = 12  # infos vérifiées par source (au hasard)
 session = requests.Session()
@@ -204,7 +205,103 @@ def verifier_chambre(ev):
     return ecarts + comparer_transactions(ev, tx)
 
 
-VERIFS = {"registre_federal": verifier_registre, "ventes_armes": verifier_registre, "senat_ptr": verifier_senat,
+def verifier_maison_blanche(ev):
+    page = get(ev["official_url"]).text
+    titre = re.search(r"<title>(.*?)</title>", page, re.S)
+    ecarts = []
+    if not titre or normal(ev["data"]["titre_officiel"]) not in normal(titre.group(1)):
+        ecarts.append(f"titre de la page « {normal(titre.group(1)) if titre else '?'} » ≠ « {ev['data']['titre_officiel']} »")
+    for c in ev.get("confirmations") or []:  # la confirmation pointe vers un document du Registre au même titre
+        off = get(f"https://www.federalregister.gov/api/v1/documents/{c['official_id']}.json").json()
+        if re.sub(r"[^a-z0-9]", "", normal(off.get("title"))) != re.sub(r"[^a-z0-9]", "", normal(ev["data"]["titre_officiel"])):
+            ecarts.append(f"confirmation au titre différent : {off.get('title')}")
+    return ecarts
+
+
+def verifier_fed(ev):
+    texte = normal(get(ev["official_url"]).text)
+    phrase = re.search(r"decided to (\w+) the target range for the federal funds rate[^.]*?percent", texte)
+    ecarts = []
+    if not phrase:
+        return ["phrase de décision introuvable"]
+    chiffres = re.findall(r"(\d+(?:-\d+/\d+)?|\d+/\d+) to (\d+(?:-\d+/\d+)?) percent", phrase.group(0))
+    def n(x):
+        if "/" in x:
+            e, _, f = x.partition("-") if "-" in x else ("0", "", x)
+            a, b = f.split("/")
+            return float(e) + int(a) / int(b)
+        return float(x)
+    if not chiffres or (n(chiffres[-1][0]), n(chiffres[-1][1])) != (ev["data"]["bas"], ev["data"]["haut"]):
+        ecarts.append(f"fourchette : texte {chiffres} ≠ robot {ev['data'].get('bas')}-{ev['data'].get('haut')}")
+    vote = re.search(r"by a (\d+) [–-] (\d+) vote", texte)
+    if vote and f"{vote.group(1)}-{vote.group(2)}" != ev["data"].get("vote"):
+        ecarts.append(f"vote : texte {vote.groups()} ≠ robot {ev['data'].get('vote')}")
+    return ecarts
+
+
+def verifier_bdc(ev):
+    texte = normal(get(ev["official_url"]).text)
+    morceau = texte.split("its target for the overnight rate", 1)
+    if len(morceau) < 2:
+        return ["phrase de décision introuvable"]
+    m = re.match(r"\s*(?:by \d+ basis points )?(?:at|to) ([\d.]+)([¼½¾]?)%", morceau[1])
+    if not m:
+        return [f"taux introuvable : {morceau[1][:60]}"]
+    taux = float(m.group(1) or 0) + {"¼": .25, "½": .5, "¾": .75, "": 0}[m.group(2)]
+    return [] if abs(taux - ev["data"]["taux"]) < 1e-9 else [f"taux : texte {taux} ≠ robot {ev['data']['taux']}"]
+
+
+def verifier_144(ev):
+    from hashlib import sha256
+
+    acc = ev["official_id"]
+    cik = ev["official_url"].split("/edgar/data/")[1].split("/")[0]
+    brut = get(f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc}.txt").content
+    ecarts = [] if sha256(brut).hexdigest() == ev["sha256"] else ["le document SEC a changé depuis la lecture"]
+    t = brut.decode("utf-8", "replace")
+    valeur = sum(float(x) for x in re.findall(r"<aggregateMarketValue>\s*([\d.]+)\s*<", t))
+    actions = sum(float(x) for x in re.findall(r"<noOfUnitsSold>\s*([\d.]+)\s*<", t))
+    if abs(valeur - ev["amount_max"]) > 0.01:
+        ecarts.append(f"valeur : document {valeur} ≠ robot {ev['amount_max']}")
+    if abs(actions - ev["data"]["actions"]) > 1e-6:
+        ecarts.append(f"actions : document {actions} ≠ robot {ev['data']['actions']}")
+    return ecarts
+
+
+def verifier_offre(ev):
+    from hashlib import sha256
+
+    acc = ev["official_id"]
+    dossier = ev["official_url"].rsplit("/", 1)[0]
+    brut = get(f"{dossier}/{acc}-index-headers.html").content
+    ecarts = [] if sha256(brut).hexdigest() == ev["sha256"] else ["le document SEC a changé depuis la lecture"]
+    t = html.unescape(brut.decode("utf-8", "replace"))
+    forme = re.search(r"CONFORMED SUBMISSION TYPE:\s*(\S[^\n<]*)", t)
+    if ev["data"]["cible"] not in t:
+        ecarts.append(f"compagnie visée absente du document : {ev['data']['cible']}")
+    for _, nom in ev["data"]["acheteurs"]:
+        if nom not in t:
+            ecarts.append(f"acheteur absent du document : {nom}")
+    if not forme:
+        ecarts.append("forme introuvable")
+    return ecarts
+
+
+def verifier_cftc(ev):
+    [r] = get(ev["official_url"]).json()
+    net = int(r["noncomm_positions_long_all"]) - int(r["noncomm_positions_short_all"])
+    var = int(r["change_in_noncomm_long_all"]) - int(r["change_in_noncomm_short_all"])
+    ecarts = []
+    if (net, var) != (ev["data"]["net"], ev["data"]["variation"]):
+        ecarts.append(f"net/variation : API {net}/{var} ≠ robot {ev['data']['net']}/{ev['data']['variation']}")
+    if r["market_and_exchange_names"] != ev["data"]["nom_officiel"]:
+        ecarts.append("nom du marché différent")
+    return ecarts
+
+
+VERIFS = {
+    "maison_blanche": verifier_maison_blanche, "fed": verifier_fed, "banque_canada": verifier_bdc,
+    "sec_form144": verifier_144, "sec_offres": verifier_offre, "cftc_cot": verifier_cftc,"registre_federal": verifier_registre, "ventes_armes": verifier_registre, "senat_ptr": verifier_senat,
           "chambre_ptr": verifier_chambre, "nouvelles_defense_ca": verifier_canada, "nouvelles_eco_ca": verifier_canada}
 
 
