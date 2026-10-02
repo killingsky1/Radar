@@ -1,6 +1,6 @@
-# Audit de vérité : 20/20 infos identiques au document officiel
+# Audit de vérité : 42/48 infos identiques au document officiel
 
-Infos publiées par le robot : 387 · échantillon au hasard : 20
+Infos publiées par le robot : 519 · échantillon au hasard : 48
 
 - **OK** · Troendle August J. (President & CEO) vend 2 564 actions de Medpace Holdings, Inc.
   - document : https://www.sec.gov/Archives/edgar/data/1668397/0001622058-26-000020.txt · même document que le robot : oui
@@ -30,15 +30,71 @@ Infos publiées par le robot : 387 · échantillon au hasard : 20
   - document : https://www.sec.gov/Archives/edgar/data/48465/000110465926112101/0001104659-26-112101-index-headers.html · même document que le robot : oui
 - **OK** · Sandler Alan B. (Chief Development Officer) vend 6 309 actions de Revolution Medicines, Inc.
   - document : https://www.sec.gov/Archives/edgar/data/1628171/0001835966-26-000008.txt · même document que le robot : oui
-- **OK** · National Bank Holdings Corp : dépréciation importante d'actifs
-  - document : https://www.sec.gov/Archives/edgar/data/1475841/000110465926112856/0001104659-26-112856-index-headers.html · même document que le robot : oui
-- **OK** · Perceptive Advisors LLC détient 8,8 % de Kardigan, Inc. (13D, intentions actives, mise à jour n° 1)
-  - document : https://www.sec.gov/Archives/edgar/data/2123613/0001193125-26-410754.txt · même document que le robot : oui
-- **OK** · RUSCKOWSKI STEPHEN H (administrateur) achète 25 000 actions de ORACLE CORP
-  - document : https://www.sec.gov/Archives/edgar/data/1341439/0001341439-26-000099.txt · même document que le robot : oui
-- **OK** · Leslie's, Inc. : contrat important signé + faillite ou mise sous séquestre + dépréciation importante d'actifs + avis de retrait de la bourse
-  - document : https://www.sec.gov/Archives/edgar/data/1821806/000119312526408874/0001193125-26-408874-index-headers.html · même document que le robot : oui
-- **OK** · Conifer Management, L.L.C. (actionnaire de 10 %) achète 273 712 actions de GROUP 1 AUTOMOTIVE INC
-  - document : https://www.sec.gov/Archives/edgar/data/1031203/0000905148-26-004310.txt · même document que le robot : oui
-- **OK** · LARSEN JOHN O (administrateur) achète 7 500 actions de PG&E Corp
-  - document : https://www.sec.gov/Archives/edgar/data/1004980/0001628280-26-064255.txt · même document que le robot : oui
+- **ÉCART** · National Bank Holdings Corp : dépréciation importante d'actifs
+  - erreur : HTTP Error 429: Too Many Requests
+- **ÉCART** · Perceptive Advisors LLC détient 8,8 % de Kardigan, Inc. (13D, intentions actives, mise à jour n° 1)
+  - erreur : HTTP Error 429: Too Many Requests
+- **ÉCART** · RUSCKOWSKI STEPHEN H (administrateur) achète 25 000 actions de ORACLE CORP
+  - erreur : HTTP Error 429: Too Many Requests
+- **ÉCART** · Leslie's, Inc. : contrat important signé + faillite ou mise sous séquestre + dépréciation importante d'actifs + avis de retrait de la bourse
+  - erreur : HTTP Error 429: Too Many Requests
+- **ÉCART** · Conifer Management, L.L.C. (actionnaire de 10 %) achète 273 712 actions de GROUP 1 AUTOMOTIVE INC
+  - erreur : HTTP Error 429: Too Many Requests
+- **ÉCART** · LARSEN JOHN O (administrateur) achète 7 500 actions de PG&E Corp
+  - erreur : HTTP Error 429: Too Many Requests
+- **OK** · Kevin Hern (Chambre, OK01) vend BSX (6 transactions) — compte conjoint, enfant à charge
+  - document : https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf · même document que le robot : oui
+- **OK** · Scott Scott Franklin (Chambre, FL18) achète ACN (2 transactions) — conjoint·e, l'élu·e
+  - document : https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035450.pdf · même document que le robot : oui
+- **OK** · David J. Taylor (Chambre, OH02) achète IBP
+  - document : https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035471.pdf · même document que le robot : oui
+- **OK** · Kevin Hern (Chambre, OK01) vend LOW — compte conjoint
+  - document : https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf · même document que le robot : oui
+- **OK** · Thomas H. Kean (Chambre, NJ07) vend GOOGL
+  - document : https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035431.pdf · même document que le robot : oui
+- **OK** · L’Aviation royale canadienne s’associe au Fanshawe College pour offrir de l’instruction
+  - document : https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/laviation-royale-canadienne-sassocie-au-fanshawe-college-pour-offrir-de-linstruction.html · même document que le robot : oui
+- **OK** · Le gouvernement du Canada commence la construction d’une nouvelle installation de chauffage central à la 5e Escadre Goose Bay
+  - document : https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/le-gouvernement-du-canada-commence-la-construction-dune-nouvelle-installation-de-chauffage-central-a-la-5e-escadre-goose-bay.html · même document que le robot : oui
+- **OK** · Le gouvernement du Canada franchit une nouvelle étape en vue de doter l’Aviation royale canadienne d’une capacité essentielle aux missions
+  - document : https://www.canada.ca/fr/agence-investissement-defense/nouvelles/2026/09/le-gouvernement-du-canada-franchit-une-nouvelle-etape-en-vue-de-doter-laviation-royale-canadienne-dune-capacite-essentielle-aux-missions.html · même document que le robot : oui
+- **OK** · Le Tribunal ouvre un réexamen relatif à l’expiration — Certains petits transformateurs de puissance provenant du Taipei chinois et de la Corée du Sud
+  - document : https://www.canada.ca/fr/tribunal-commerce-exterieur/nouvelles/2026/10/le-tribunal-ouvre-un-reexamen-relatif-a-lexpiration--certains-petits-transformateurs-de-puissance-provenant-du-taipei-chinois-et-de-la-coree-du-sud.html · même document que le robot : oui
+- **OK** · Le Bureau de la concurrence craint que les consommateurs soient privés de certaines aubaines en épicerie
+  - document : https://www.canada.ca/fr/bureau-concurrence/nouvelles/2026/09/le-bureau-de-la-concurrence-craint-que-les-consommateurs-soient-prives-de-certaines-aubaines-en-epicerie.html · même document que le robot : oui
+- **OK** · Le Canada et l’Allemagne signent un accord sur la sécurité générale de l’information
+  - document : https://www.canada.ca/fr/services-publics-approvisionnement/nouvelles/2026/09/le-canada-et-lallemagne-signent-un-accord-sur-la-securite-generale-de-linformation.html · même document que le robot : oui
+- **OK** · Le gouvernement du Canada investit dans la création de 10 000 placements professionnels liés à l’IA pour de jeunes Canadiens
+  - document : https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/09/le-gouvernement-du-canada-investit-dans-la-creation-de-10-000-placements-professionnels-lies-a-lia-pour-de-jeunes-canadiens.html · même document que le robot : oui
+- **OK** · Le gouvernement du Canada présente la nouvelle Mégadéduction à la productivité pour aider les entreprises à investir, à croître et à créer des emplois au Canada
+  - document : https://www.canada.ca/fr/ministere-finances/nouvelles/2026/10/le-gouvernement-du-canada-presente-la-nouvelle-megadeduction-a-la-productivite-pour-aider-les-entreprises-a-investir-a-croitre-et-a-creer-des-emplo.html · même document que le robot : oui
+- **OK** · Sanctions (Trésor, OFAC) : Notice of OFAC Sanctions Action
+  - document : https://www.federalregister.gov/documents/2026/10/02/2026-20215/notice-of-ofac-sanctions-action · même document que le robot : oui
+- **OK** · Sanctions (Trésor, OFAC) : Iranian Transactions and Sanctions Regulations
+  - document : https://www.federalregister.gov/documents/2026/09/30/2026-19978/iranian-transactions-and-sanctions-regulations · même document que le robot : oui
+- **OK** · Détermination présidentielle : Presidential Determination on Refugee Admissions for Fiscal Year 2027
+  - document : https://www.federalregister.gov/documents/2026/10/02/2026-20318/presidential-determination-on-refugee-admissions-for-fiscal-year-2027 · même document que le robot : oui
+- **OK** · Décret présidentiel : Eliminating Disease-Carrying Pests and Restoring Enjoyment of the Great Outdoors
+  - document : https://www.federalregister.gov/documents/2026/10/02/2026-20320/eliminating-disease-carrying-pests-and-restoring-enjoyment-of-the-great-outdoors · même document que le robot : oui
+- **OK** · Sanctions (Trésor, OFAC) : Notice of OFAC Sanctions Action
+  - document : https://www.federalregister.gov/documents/2026/09/30/2026-20032/notice-of-ofac-sanctions-action · même document que le robot : oui
+- **OK** · John Boozman (Sénat) vend JNJ — compte conjoint
+  - document : https://efdsearch.senate.gov/search/view/ptr/6298991b-e48f-4b11-9bbb-dfc94a7e1b32/ · même document que le robot : oui
+- **OK** · Sheldon Whitehouse (Sénat) vend JPM (2 transactions) — conjoint·e, l'élu·e
+  - document : https://efdsearch.senate.gov/search/view/ptr/6bf3b6f7-9e1b-499a-bd5a-990292ce2e72/ · même document que le robot : oui
+- **OK** · Sheldon Whitehouse (Sénat) vend ADI — conjoint·e
+  - document : https://efdsearch.senate.gov/search/view/ptr/6bf3b6f7-9e1b-499a-bd5a-990292ce2e72/ · même document que le robot : oui
+- **OK** · John Boozman (Sénat) achète OTIS — compte conjoint
+  - document : https://efdsearch.senate.gov/search/view/ptr/0632f542-7ac2-46e4-bd9c-603e3673f0cd/ · même document que le robot : oui
+- **OK** · A. Mitchell McConnell Jr. (Sénat) achète WFC — conjoint·e
+  - document : https://efdsearch.senate.gov/search/view/ptr/028aef33-dc0d-44a1-992f-aa35ee42685b/ · même document que le robot : oui
+- **OK** · Vente d'armes à l'étranger : Koweït — fournisseur : The Boeing Company
+  - document : https://www.federalregister.gov/documents/2026/08/28/2026-17563/arms-sales-notification · même document que le robot : oui
+- **OK** · Vente d'armes à l'étranger : Corée du Sud — fournisseur : RTX Corporation
+  - document : https://www.federalregister.gov/documents/2026/09/22/2026-19322/arms-sales-notification · même document que le robot : oui
+- **OK** · Vente d'armes à l'étranger : Bahreïn
+  - document : https://www.federalregister.gov/documents/2026/09/22/2026-19316/arms-sales-notification · même document que le robot : oui
+- **OK** · Vente d'armes à l'étranger : Suède
+  - document : https://www.federalregister.gov/documents/2026/08/28/2026-17567/arms-sales-notification · même document que le robot : oui
+- **OK** · Vente d'armes à l'étranger : Arabie saoudite — fournisseur : BAE Systems
+  - document : https://www.federalregister.gov/documents/2026/08/28/2026-17566/arms-sales-notification · même document que le robot : oui
