@@ -41,7 +41,8 @@ def get(url, **kw):
 
 
 def normal(t):
-    return " ".join(html.unescape(re.sub(r"<[^>]+>", " ", t or "")).split()).lower()
+    t = html.unescape(re.sub(r"<[^>]+>", " ", t or "")).replace("’", "'").replace("‘", "'")
+    return " ".join(t.split()).lower()
 
 
 PLAGES = {"$1,001 - $15,000": (1001, 15000), "$15,001 - $50,000": (15001, 50000), "$50,001 - $100,000": (50001, 100000),
@@ -70,7 +71,9 @@ def verifier_registre(ev):
     if ev["source"] == "ventes_armes":
         brut = get(off["raw_text_url"]).text if off.get("raw_text_url") else ""
         lignes = [normal(l) for l in html.unescape(re.sub(r"<[^>]+>", "", brut)).splitlines()]
-        acheteur = next((l.split(":", 1)[1].strip() for l in lignes if l.startswith("(i) prospective purchaser:")), None)
+        texte_brut = re.sub(r"\[\[page \d+\]\]", " ", " ".join(lignes))
+        m_ach = re.search(r"\(i\) (?:\(u\) )?(?:prospective )?purchaser:\s*(.+?)\s*\(ii\)", texte_brut)
+        acheteur = m_ach.group(1).strip() if m_ach else None
         if (acheteur or "") != normal((d.get("vente") or {}).get("acheteur")):
             ecarts.append(f"acheteur : texte « {acheteur} » ≠ robot « {(d.get('vente') or {}).get('acheteur')} »")
         texte = " ".join(lignes)
@@ -220,7 +223,7 @@ def verifier_maison_blanche(ev):
 
 def verifier_fed(ev):
     texte = normal(get(ev["official_url"]).text)
-    phrase = re.search(r"decided to (\w+) the target range for the federal funds rate[^.]*?percent", texte)
+    phrase = re.search(r"decided to (\w+) the target range for the federal funds rate.*?percent(?!age)", texte)
     ecarts = []
     if not phrase:
         return ["phrase de décision introuvable"]
@@ -259,8 +262,8 @@ def verifier_144(ev):
     brut = get(f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc}.txt").content
     ecarts = [] if sha256(brut).hexdigest() == ev["sha256"] else ["le document SEC a changé depuis la lecture"]
     t = brut.decode("utf-8", "replace")
-    valeur = sum(float(x) for x in re.findall(r"<aggregateMarketValue>\s*([\d.]+)\s*<", t))
-    actions = sum(float(x) for x in re.findall(r"<noOfUnitsSold>\s*([\d.]+)\s*<", t))
+    valeur = sum(float(x.replace(",", "")) for x in re.findall(r"<(?:\w+:)?aggregateMarketValue>\s*([\d.,]+)\s*<", t))
+    actions = sum(float(x.replace(",", "")) for x in re.findall(r"<(?:\w+:)?noOfUnitsSold>\s*([\d.,]+)\s*<", t))
     if abs(valeur - ev["amount_max"]) > 0.01:
         ecarts.append(f"valeur : document {valeur} ≠ robot {ev['amount_max']}")
     if abs(actions - ev["data"]["actions"]) > 1e-6:
@@ -318,6 +321,14 @@ def main():
             evs += [json.loads(l) for l in f.read_text(encoding="utf-8").splitlines()
                     if l.strip() and json.loads(l)["source"] in SOURCES]
     (SORTIE / "infos.json").write_text(json.dumps(evs, ensure_ascii=False, indent=1), encoding="utf-8")
+    # Pages des décisions de la Fed mises de côté : pour améliorer le lecteur sans rien deviner.
+    for e in evs:
+        if e["source"] == "fed" and e["badge"] == "a_verifier":
+            try:
+                (SORTIE / "textes").mkdir(exist_ok=True)
+                (SORTIE / "textes" / f"{e['official_id']}.htm").write_text(get(e["official_url"]).text, encoding="utf-8")
+            except Exception:  # noqa: BLE001
+                pass
     # Textes des avis d'armes mis de côté : pour améliorer le lecteur sans rien deviner.
     for e in evs:
         if e["source"] == "ventes_armes" and e["badge"] == "a_verifier":
