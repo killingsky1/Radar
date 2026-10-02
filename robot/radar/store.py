@@ -12,6 +12,11 @@ from pathlib import Path
 from .models import Evenement
 
 DOSSIERS = ("evenements", "a_verifier")
+NOTE_MODIFIE = "Document modifié à la source depuis la 1re lecture."
+
+
+def _sans_heure(d: dict) -> dict:
+    return {k: v for k, v in d.items() if k != "collected_at"}
 
 
 def _dossier(ev: Evenement) -> str:
@@ -54,18 +59,22 @@ class Depot:
                     if fichier != cible:
                         del lignes[ev.id]
                         touches.add(fichier)
-            nouveau = ev.to_dict()
+            nouveau = json.loads(json.dumps(ev.to_dict()))  # même forme que dans le fichier (listes, pas tuples)
             if ancien is not None:
-                # Même document, même lecteur, même verdict : on garde l'ancienne ligne telle quelle (rien ne change dans git).
-                if (ancien["sha256"], ancien["badge"], ancien["checks"], ancien["parser_version"]) == (
-                    nouveau["sha256"], nouveau["badge"], nouveau["checks"], nouveau["parser_version"]
-                ):
+                # L'historique du document reste (anciennes empreintes, note « modifié »).
+                if ancien.get("data", {}).get("anciennes_empreintes"):
+                    nouveau["data"].setdefault("anciennes_empreintes", ancien["data"]["anciennes_empreintes"])
+                    if NOTE_MODIFIE in ancien["notes"] and NOTE_MODIFIE not in nouveau["notes"]:
+                        nouveau["notes"].append(NOTE_MODIFIE)
+                if ancien["sha256"] != nouveau["sha256"]:
+                    nouveau["data"]["anciennes_empreintes"] = (ancien.get("data", {}).get("anciennes_empreintes", [])
+                                                               + [ancien["sha256"]])
+                    if NOTE_MODIFIE not in nouveau["notes"]:
+                        nouveau["notes"].append(NOTE_MODIFIE)
+                # Même contenu (seule l'heure de lecture change) : on garde l'ancienne ligne (rien ne change dans git).
+                if _sans_heure(ancien) == _sans_heure(nouveau):
                     bilan["inchanges"] += 1
                     continue
-                if ancien["sha256"] != nouveau["sha256"]:
-                    empreintes = ancien.get("data", {}).get("anciennes_empreintes", []) + [ancien["sha256"]]
-                    nouveau["data"]["anciennes_empreintes"] = empreintes
-                    nouveau["notes"].append("Document modifié à la source depuis la 1re lecture.")
                 bilan["modifies"] += 1
             else:
                 bilan["nouveaux"] += 1

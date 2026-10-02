@@ -57,7 +57,15 @@ TITRES_PRESIDENTIELS = (
     ("Memorandum", re.compile(r"\bMemorandum\b")),
     ("Proclamation", re.compile(r"\bProclamation\b")),
 )
-COMMEMORATIF = re.compile(r",\s*(19|20)\d\d\s*$")  # « National Hispanic Heritage Month, 2026 »
+COMMEMORATIF = re.compile(r"\b(day|week|month)\b", re.I)
+ANNEE = re.compile(r"\b(19|20)\d\d\b")
+HOMMAGE = re.compile(r"\b(anniversary|honoring the memory)\b", re.I)
+
+
+def commemoratif(titre: str) -> bool:
+    """Proclamation de célébration (« Labor Day, 2026 », « Patriot Day 2026, the 25th Anniversary… »,
+    drapeaux en berne) : sans effet sur l'argent."""
+    return bool(HOMMAGE.search(titre) or (COMMEMORATIF.search(titre) and ANNEE.search(titre)))
 CONTINUATION = re.compile(r"^continuation of the national emergency", re.I)
 MONTANT_ARMES = re.compile(r"TOTAL\s*\.*\s*\$\s*([\d.,]+)\s*(million|billion)", re.I)
 
@@ -89,9 +97,9 @@ def choisir(doc: dict) -> tuple[str, str, str] | None:
     if doc.get("type") == "Presidential Document":
         if CONTINUATION.search(titre):
             return None
-        if doc.get("subtype") == "Proclamation" and COMMEMORATIF.search(titre):
-            return None
         sous_type = doc.get("subtype") or next((s for s, m in TITRES_PRESIDENTIELS if m.search(titre)), "")
+        if sous_type in ("Proclamation", "") and commemoratif(titre):  # "" : inspection publique, sorte inconnue
+            return None
         return ("presidentiel", PRESIDENTIELS.get(sous_type, "Document présidentiel"), "gouvernement")
     if titre.startswith("Arms Sales Notification") and "defense-department" in slugs(doc):
         return ("vente_armes", "Vente d'armes à l'étranger", "militaire")

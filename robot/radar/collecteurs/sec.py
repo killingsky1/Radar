@@ -18,6 +18,7 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 
 from ..models import Evenement
+from ..store import Depot
 from ..validate import controle_source, jours_ouvrables
 
 VERSION = "sec-2"  # à augmenter quand un lecteur change : les infos sont relues et mises à jour
@@ -493,3 +494,174 @@ def lire_un_13dg(ctx, depot: DepotSec) -> list[Evenement]:
 
 def collecter_13dg(ctx) -> list[Evenement]:
     return lire_journees(ctx, "sec_13dg", FORMES_13, lire_un_13dg)
+
+
+# ---------- Formulaire 144 : un dirigeant annonce qu'il va vendre ----------
+
+RELATIONS_144 = {"Officer": "dirigeant", "Director": "administrateur", "10% Stockholder": "actionnaire de 10 %",
+                 "Affiliate": "affilié", "Other": "autre", "Former Officer": "ancien dirigeant",
+                 "Former Director": "ancien administrateur", "Member of immediate family of any of the foregoing": "famille"}
+
+
+def lire_144(texte: str) -> dict:
+    racine = xml_du_depot(texte)
+    if racine.tag != "edgarSubmission" or (racine.findtext("headerData/submissionType") or "").strip() != "144":
+        raise ValueError("document inattendu (pas un formulaire 144)")
+    f = racine.find("formData")
+    info = f.find("issuerInfo")
+    lignes = []
+    for t in f.findall("securitiesInformation"):
+        mdy = (t.findtext("approxSaleDate") or "").strip().split("/")
+        lignes.append({
+            "classe": (t.findtext("securitiesClassTitle") or "").strip(),
+            "actions": nombre(t.findtext("noOfUnitsSold")), "valeur": nombre(t.findtext("aggregateMarketValue")),
+            "date_prevue": f"{mdy[2]}-{mdy[0]}-{mdy[1]}" if len(mdy) == 3 else None,
+            "bourse": (t.findtext("securitiesExchangeName") or "").strip(),
+        })
+    avis = (f.findtext("noticeSignature/noticeDate") or "").strip().split("/")
+    return {
+        "cik_emetteur": (info.findtext("issuerCik") or "").strip(), "nom_emetteur": (info.findtext("issuerName") or "").strip(),
+        "vendeur": (info.findtext("nameOfPersonForWhoseAccountTheSecuritiesAreToBeSold") or "").strip(),
+        "relations": [(r.text or "").strip() for r in info.findall("relationshipsToIssuer/relationshipToIssuer")],
+        "lignes": lignes,
+        "plan_10b5_1": [(d.text or "").strip() for d in f.findall("noticeSignature/planAdoptionDates/planAdoptionDate")],
+        "date_avis": f"{avis[2]}-{avis[0]}-{avis[1]}" if len(avis) == 3 else None,
+    }
+
+
+def evenements_144(texte: str, sha: str, depot: DepotSec, syms: Symboles) -> list[Evenement]:
+    f = lire_144(texte)
+    cote = syms.cote(f["cik_emetteur"])
+    if cote is None or not f["lignes"]:
+        return []
+    actions = sum(l["actions"] or 0 for l in f["lignes"])
+    valeur = sum(l["valeur"] or 0 for l in f["lignes"])
+    if valeur < SEUIL_VENTE:
+        return []
+    publie = iso(entete(texte).get("depose")) or depot.depose
+    relations = ", ".join(RELATIONS_144.get(r, r) for r in f["relations"]) or "initié"
+    notes = ["Vente prévue dans un plan de vente automatique (règle 10b5-1)."] if f["plan_10b5_1"] else []
+    dates = sorted(l["date_prevue"] for l in f["lignes"] if l["date_prevue"])
+    if dates:
+        notes.append(f"Date de vente prévue : {dates[0]}.")
+    return [Evenement(
+        source="sec_form144", official_id=depot.acc, category="compagnies", kind="intention_vente",
+        title=f"{f['vendeur']} ({relations}) prévoit vendre {nombre_fr(actions)} actions de {cote['name']}",
+        occurred_on=min(f["date_avis"] or publie, publie), published_on=publie,
+        official_url=depot.page_officielle(f["cik_emetteur"]), sha256=sha, parser_version=VERSION,
+        tickers=[cote["ticker"]], entities=[f["vendeur"], cote["name"]], amount_min=valeur, amount_max=valeur,
+        direction=-1, notes=notes, data={**f, "actions": actions, "bourse": cote["exchange"]},
+    )]
+
+
+@controle_source("sec_form144")
+def controles_144(ev: Evenement) -> dict[str, bool]:
+    lignes = ev.data.get("lignes") or []
+    actions = ev.data.get("actions") or 0
+    prix = (ev.amount_max or 0) / actions if actions else None
+    eleve = any(t in PRIX_ELEVES for t in ev.tickers)
+    return {
+        "actions_et_valeur_positives": bool(lignes) and all((l["actions"] or 0) > 0 and (l["valeur"] or 0) > 0 for l in lignes),
+        "prix_implicite_plausible": prix is not None and (eleve or prix <= PRIX_MAX),
+        "montant_plausible": (ev.amount_max or 0) <= VALEUR_MAX,
+    }
+
+
+def lire_un_144(ctx, depot: DepotSec) -> list[Evenement]:
+    t = ctx.client.get(f"{ARCHIVES}/{depot.fichier}")
+    return evenements_144(t.contenu.decode("utf-8", "replace"), t.sha256, depot, symboles(ctx))
+
+
+def collecter_144(ctx) -> list[Evenement]:
+    return lire_journees(ctx, "sec_form144", {"144"}, lire_un_144)
+
+
+# ---------- Offres d'achat de compagnies entières et retraits de la bourse ----------
+
+FORMES_OFFRES = {  # forme officielle -> (sorte, libellé)
+    "SC TO-T": ("offre_achat", "Offre publique d'achat"),
+    "SC TO-C": ("offre_annoncee", "Offre d'achat annoncée"),
+    "SC 13E3": ("privatisation", "Projet de privatisation (règle 13e-3)"),
+}
+JOURS_SANS_DOUBLON = 90
+
+
+def lire_entete_offre(entete_html: str) -> dict:
+    texte = html.unescape(entete_html)
+    sujet = re.search(r"SUBJECT COMPANY:.*?COMPANY CONFORMED NAME:\s*([^\n<]+).*?CENTRAL INDEX KEY:\s*(\d+)", texte, re.S)
+    deposants = re.findall(r"FILED BY:.*?COMPANY CONFORMED NAME:\s*([^\n<]+).*?CENTRAL INDEX KEY:\s*(\d+)", texte, re.S)
+    return {
+        **entete(texte), "cible": sujet.group(1).strip() if sujet else None, "cik_cible": sujet.group(2) if sujet else None,
+        "deposants": [(cik, nom.strip()) for nom, cik in deposants],
+    }
+
+
+def evenements_offre(entete_html: str, sha: str, depot: DepotSec, syms: Symboles, vus: set) -> list[Evenement]:
+    f = lire_entete_offre(entete_html)
+    forme = (f.get("type") or depot.forme).strip()
+    if depot.forme in FORMES_OFFRES:
+        forme = depot.forme  # une même déclaration peut servir à 2 formes (ex. TO-I + 13E3) : on garde celle de l'index
+    if forme not in FORMES_OFFRES or not f["cik_cible"]:
+        return []
+    cote = syms.cote(f["cik_cible"])
+    if cote is None:
+        return []  # la compagnie visée n'est pas cotée au Nasdaq, au NYSE ou au CBOE
+    sorte, libelle = FORMES_OFFRES[forme]
+    acheteurs = [(c, n) for c, n in f["deposants"] if int(c) != int(f["cik_cible"])]
+    if sorte != "privatisation" and not acheteurs:
+        return []  # la compagnie qui rachète ses propres actions : pas une offre d'un autre acheteur
+    # Une privatisation est déclarée par la compagnie ET par ses acheteurs : une seule info par compagnie.
+    cle = f"{int(f['cik_cible'])}:{sorte}" + ("" if sorte == "privatisation"
+                                             else ":" + ",".join(sorted(str(int(c)) for c, _ in acheteurs)))
+    if sorte != "offre_achat" and cle in vus:
+        return []  # même annonce déjà publiée (une offre donne souvent plusieurs communications)
+    vus.add(cle)
+    publie = iso(f.get("depose")) or depot.depose
+    tickers = [cote["ticker"]]
+    for c, _ in acheteurs:
+        autre = syms.cote(c)
+        if autre and autre["ticker"] not in tickers:
+            tickers.append(autre["ticker"])
+    noms = " et ".join(n for _, n in acheteurs) or None
+    if sorte == "privatisation":
+        titre = f"{libelle} : {cote['name']}" + (f" (déposé par {noms})" if noms else "")
+    else:
+        titre = f"{libelle} : {noms} vise les actions de {cote['name']}"
+    return [Evenement(
+        source="sec_offres", official_id=depot.acc, category="compagnies", kind=sorte, title=titre,
+        occurred_on=publie, published_on=publie, official_url=depot.page_officielle(f["cik_cible"]), sha256=sha,
+        parser_version=VERSION, tickers=tickers, entities=[n for _, n in acheteurs] + [cote["name"]], direction=1,
+        data={"forme": forme, "cible": f["cible"], "cik_cible": f["cik_cible"], "acheteurs": acheteurs,
+              "cle": cle, "bourse": cote["exchange"]},
+    )]
+
+
+@controle_source("sec_offres")
+def controles_offres(ev: Evenement) -> dict[str, bool]:
+    d = ev.data
+    return {
+        "forme_reconnue": d.get("forme") in FORMES_OFFRES,
+        "acheteur_different_de_la_cible": ev.kind == "privatisation"
+        or bool(d.get("acheteurs")) and all(int(c) != int(d.get("cik_cible") or 0) for c, _ in d["acheteurs"]),
+    }
+
+
+def _offres_vues(ctx) -> set:
+    """Annonces déjà publiées depuis 90 jours (clé : compagnie visée, sorte, acheteurs)."""
+    if "sec_offres_vues" not in ctx.cache:
+        limite = (ctx.maintenant.date() - timedelta(days=JOURS_SANS_DOUBLON)).isoformat()
+        depot = Depot(ctx.donnees)
+        ctx.cache["sec_offres_vues"] = {d["data"].get("cle") for dossier in ("evenements", "a_verifier")
+                                        for d in depot.lire(dossier)
+                                        if d["source"] == "sec_offres" and d["published_on"] >= limite}
+    return ctx.cache["sec_offres_vues"]
+
+
+def lire_une_offre(ctx, depot: DepotSec) -> list[Evenement]:
+    cik = depot.filers[0][0]
+    t = ctx.client.get(f"{depot.dossier(cik)}/{depot.acc}-index-headers.html")
+    return evenements_offre(t.contenu.decode("utf-8", "replace"), t.sha256, depot, symboles(ctx), _offres_vues(ctx))
+
+
+def collecter_offres(ctx) -> list[Evenement]:
+    return lire_journees(ctx, "sec_offres", set(FORMES_OFFRES), lire_une_offre)

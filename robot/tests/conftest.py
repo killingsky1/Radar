@@ -10,7 +10,7 @@ AUJOURD_HUI = date(2026, 10, 2)
 def bonne_info(**changements) -> Evenement:
     """Une info réaliste qui doit passer tous les contrôles."""
     valeurs = dict(
-        source="sec_form144",
+        source="sec_poursuites",  # une source SANS contrôles propres (sinon ses contrôles s'ajoutent)
         official_id="0001234567-26-000001",
         category="compagnies",
         kind="achat_initie",
