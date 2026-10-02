@@ -21,7 +21,7 @@ from ..models import Evenement
 from ..store import Depot
 from ..validate import controle_source, jours_ouvrables
 
-VERSION = "sec-2"  # à augmenter quand un lecteur change : les infos sont relues et mises à jour
+VERSION = "sec-3"  # à augmenter quand un lecteur change : les infos sont relues et mises à jour
 ARCHIVES = "https://www.sec.gov/Archives"
 BOURSES_GARDEES = {"Nasdaq", "NYSE", "CBOE"}
 SEUIL_ACHAT = 25_000  # $ US : sous ce montant, un achat est du bruit
@@ -498,9 +498,12 @@ def collecter_13dg(ctx) -> list[Evenement]:
 
 # ---------- Formulaire 144 : un dirigeant annonce qu'il va vendre ----------
 
-RELATIONS_144 = {"Officer": "dirigeant", "Director": "administrateur", "10% Stockholder": "actionnaire de 10 %",
-                 "Affiliate": "affilié", "Other": "autre", "Former Officer": "ancien dirigeant",
-                 "Former Director": "ancien administrateur", "Member of immediate family of any of the foregoing": "famille"}
+RELATIONS_144 = {"officer": "dirigeant", "director": "administrateur", "10% stockholder": "actionnaire de 10 %",
+                 "10% owner": "actionnaire de 10 %", "affiliate": "affilié", "other": "autre", "investor": "investisseur",
+                 "former officer": "ancien dirigeant", "former director": "ancien administrateur",
+                 "member of immediate family of any of the foregoing": "famille"}
+SEUIL_144_PLAN = 25_000_000  # vente prévue d'avance (plan 10b5-1) : seulement les très grosses
+# Une vente décidée librement (sans plan automatique) en dit plus : on la garde dès 1 M$ (SEUIL_VENTE).
 
 
 def lire_144(texte: str) -> dict:
@@ -515,6 +518,7 @@ def lire_144(texte: str) -> dict:
         lignes.append({
             "classe": (t.findtext("securitiesClassTitle") or "").strip(),
             "actions": nombre(t.findtext("noOfUnitsSold")), "valeur": nombre(t.findtext("aggregateMarketValue")),
+            "en_circulation": nombre(t.findtext("noOfUnitsOutstanding")),
             "date_prevue": f"{mdy[2]}-{mdy[0]}-{mdy[1]}" if len(mdy) == 3 else None,
             "bourse": (t.findtext("securitiesExchangeName") or "").strip(),
         })
@@ -522,7 +526,9 @@ def lire_144(texte: str) -> dict:
     return {
         "cik_emetteur": (info.findtext("issuerCik") or "").strip(), "nom_emetteur": (info.findtext("issuerName") or "").strip(),
         "vendeur": (info.findtext("nameOfPersonForWhoseAccountTheSecuritiesAreToBeSold") or "").strip(),
-        "relations": [(r.text or "").strip() for r in info.findall("relationshipsToIssuer/relationshipToIssuer")],
+        # Certains déclarants écrivent « Officer, Director » dans une seule case : on sépare.
+        "relations": [x.strip() for r in info.findall("relationshipsToIssuer/relationshipToIssuer")
+                      for x in (r.text or "").split(",") if x.strip()],
         "lignes": lignes,
         "plan_10b5_1": [(d.text or "").strip() for d in f.findall("noticeSignature/planAdoptionDates/planAdoptionDate")],
         "date_avis": f"{avis[2]}-{avis[0]}-{avis[1]}" if len(avis) == 3 else None,
@@ -536,11 +542,12 @@ def evenements_144(texte: str, sha: str, depot: DepotSec, syms: Symboles) -> lis
         return []
     actions = sum(l["actions"] or 0 for l in f["lignes"])
     valeur = sum(l["valeur"] or 0 for l in f["lignes"])
-    if valeur < SEUIL_VENTE:
+    if valeur < (SEUIL_144_PLAN if f["plan_10b5_1"] else SEUIL_VENTE):
         return []
     publie = iso(entete(texte).get("depose")) or depot.depose
-    relations = ", ".join(RELATIONS_144.get(r, r) for r in f["relations"]) or "initié"
-    notes = ["Vente prévue dans un plan de vente automatique (règle 10b5-1)."] if f["plan_10b5_1"] else []
+    relations = ", ".join(dict.fromkeys(RELATIONS_144.get(r.lower(), r) for r in f["relations"])) or "initié"
+    notes = (["Vente prévue d'avance dans un plan automatique (règle 10b5-1)."] if f["plan_10b5_1"]
+             else ["Vente décidée librement (pas dans un plan automatique)."])
     dates = sorted(l["date_prevue"] for l in f["lignes"] if l["date_prevue"])
     if dates:
         notes.append(f"Date de vente prévue : {dates[0]}.")
@@ -564,6 +571,9 @@ def controles_144(ev: Evenement) -> dict[str, bool]:
         "actions_et_valeur_positives": bool(lignes) and all((l["actions"] or 0) > 0 and (l["valeur"] or 0) > 0 for l in lignes),
         "prix_implicite_plausible": prix is not None and (eleve or prix <= PRIX_MAX),
         "montant_plausible": (ev.amount_max or 0) <= VALEUR_MAX,
+        # On ne peut pas vendre plus d'actions qu'il n'en existe (chiffre écrit dans le formulaire lui-même)
+        "actions_sous_le_total_en_circulation": bool(lignes) and all(
+            l.get("en_circulation") and (l["actions"] or 0) <= l["en_circulation"] for l in lignes),
     }
 
 

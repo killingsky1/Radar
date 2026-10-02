@@ -23,7 +23,7 @@ from ..models import Evenement, empreinte
 from ..store import Depot
 from ..validate import controle_source
 
-VERSION = "registre-3"
+VERSION = "registre-4"
 API = "https://www.federalregister.gov/api/v1"
 CHAMPS = ("title", "type", "subtype", "document_number", "html_url", "pdf_url", "publication_date", "signing_date",
           "agencies", "executive_order_number", "raw_text_url", "abstract")
@@ -130,6 +130,7 @@ def montant(texte: str) -> float | None:
 
 def lire_vente_armes(texte: str) -> dict:
     """Champs officiels d'un avis de vente d'armes (articles numérotés (i), (ii)… de la loi AECA)."""
+    texte = " ".join(re.sub(r"\[\[Page \d+\]\]", " ", texte).split())  # changement de page au milieu d'une ligne
     d: dict = {}
     m = re.search(r"Transmittal No\.\s*([A-Z]*\s?[\w-]+)", texte)
     d["transmission"] = m.group(1).strip() if m else None
