@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   tests:
-    name: Tests
+    name: Tests du robot
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -35,6 +35,23 @@ jobs:
       - run: pip install -r robot/requirements.txt
       - run: python -m pytest
         working-directory: robot
+
+  tests-app:
+    name: Tests de l'app (vrai navigateur)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - run: npm ci
+        working-directory: app
+      - run: app/tests/lancer.sh
 
   robot:
     name: Robot
@@ -65,9 +82,10 @@ jobs:
 
   site:
     name: Site
-    needs: [tests, robot]
+    needs: [tests, tests-app, robot]
     # Le site est remis en ligne même si le robot a échoué : l'app affiche alors « données vieilles ».
-    if: always() && needs.tests.result == 'success'
+    # Mais jamais si un test a échoué.
+    if: always() && needs.tests.result == 'success' && needs.tests-app.result == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

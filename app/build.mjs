@@ -1,6 +1,6 @@
 // Construit le site dans dist/ : app.jsx -> app.js (un seul fichier, compatible Safari iPhone).
 import * as esbuild from "esbuild";
-import { copyFile, mkdir } from "node:fs/promises";
+import { cp, copyFile, mkdir } from "node:fs/promises";
 
 await mkdir("dist", { recursive: true });
 await esbuild.build({
@@ -13,5 +13,6 @@ await esbuild.build({
   outfile: "dist/app.js",
   define: { "process.env.NODE_ENV": '"production"' },
 });
-for (const f of ["index.html", "manifest.json"]) await copyFile(f, `dist/${f}`);
+for (const f of ["index.html", "manifest.json", "sw.js"]) await copyFile(f, `dist/${f}`);
+await cp("icones", "dist/icones", { recursive: true });
 console.log("Site construit dans dist/");

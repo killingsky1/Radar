@@ -16,6 +16,6 @@ Robot qui lit chaque jour des sources **officielles** (SEC, Pentagone, Congrès,
 ## Organisation
 
 - `robot/` : le robot (Python). `python -m pytest` pour les tests.
-- `app/` : l'app (React, un seul fichier `app.jsx`). `npm ci && node build.mjs` pour construire.
+- `app/` : l'app (React, un seul fichier `app.jsx`). `npm ci && node build.mjs` pour construire, `tests/lancer.sh` pour la tester dans un vrai navigateur.
 - `data/` : les données, mises à jour par le robot (tout l'historique est dans git).
 - `.github/workflows/radar.yml` : le robot roule 5 fois par jour de semaine, puis le site est remis en ligne.
