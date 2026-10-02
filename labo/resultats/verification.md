@@ -1,0 +1,44 @@
+# Audit de vérité : 20/20 infos identiques au document officiel
+
+Infos publiées par le robot : 387 · échantillon au hasard : 20
+
+- **OK** · Troendle August J. (President & CEO) vend 2 564 actions de Medpace Holdings, Inc.
+  - document : https://www.sec.gov/Archives/edgar/data/1668397/0001622058-26-000020.txt · même document que le robot : oui
+- **OK** · L1 Capital Pty Ltd (actionnaire de 10 %) achète 397 226 actions de Anteris Technologies Global Corp.
+  - document : https://www.sec.gov/Archives/edgar/data/2011514/0001817646-26-000028.txt · même document que le robot : oui
+- **OK** · Vivakor, Inc. : contrat important signé
+  - document : https://www.sec.gov/Archives/edgar/data/1450704/000182912626010624/0001829126-26-010624-index-headers.html · même document que le robot : oui
+- **OK** · Commodore Capital LP détient 7,5 % de Surrozen, Inc./DE (13G, placement passif)
+  - document : https://www.sec.gov/Archives/edgar/data/1824893/0001831942-26-000044.txt · même document que le robot : oui
+- **OK** · L1 Capital Global Opportunities Master Fund, Ltd. détient 9,99 % de Baird Medical Investment Holdings Ltd (13G, placement passif)
+  - document : https://www.sec.gov/Archives/edgar/data/1982444/0001400253-26-000006.txt · même document que le robot : oui
+- **OK** · Chien-Fu Chen Chen détient 17,6 % de Ticketplus Ltd. (13G, placement passif)
+  - document : https://www.sec.gov/Archives/edgar/data/2104296/0001213900-26-105939.txt · même document que le robot : oui
+- **OK** · CID Holdco, Inc. : contrat important signé
+  - document : https://www.sec.gov/Archives/edgar/data/2033770/000121390026104296/0001213900-26-104296-index-headers.html · même document que le robot : oui
+- **OK** · SONOCO PRODUCTS CO : contrat important signé
+  - document : https://www.sec.gov/Archives/edgar/data/91767/000009176726000044/0000091767-26-000044-index-headers.html · même document que le robot : oui
+- **OK** · Paradigm BioCapital Advisors LP détient 5,1 % de Spyre Therapeutics, Inc. (13G, placement passif)
+  - document : https://www.sec.gov/Archives/edgar/data/1636282/0001104659-26-112828.txt · même document que le robot : oui
+- **OK** · Imunon, Inc. : contrat important signé
+  - document : https://www.sec.gov/Archives/edgar/data/749647/000149315226044792/0001493152-26-044792-index-headers.html · même document que le robot : oui
+- **OK** · 1 800 FLOWERS COM INC : contrat important signé
+  - document : https://www.sec.gov/Archives/edgar/data/1084869/000108486926000033/0001084869-26-000033-index-headers.html · même document que le robot : oui
+- **OK** · Invest Pro Shukai Hon Ltd. détient 9,99 % de IM Cannabis Corp. (13G, placement passif)
+  - document : https://www.sec.gov/Archives/edgar/data/1792030/0001213900-26-105245.txt · même document que le robot : oui
+- **OK** · HORMEL FOODS CORP /DE/ : contrat important signé
+  - document : https://www.sec.gov/Archives/edgar/data/48465/000110465926112101/0001104659-26-112101-index-headers.html · même document que le robot : oui
+- **OK** · Sandler Alan B. (Chief Development Officer) vend 6 309 actions de Revolution Medicines, Inc.
+  - document : https://www.sec.gov/Archives/edgar/data/1628171/0001835966-26-000008.txt · même document que le robot : oui
+- **OK** · National Bank Holdings Corp : dépréciation importante d'actifs
+  - document : https://www.sec.gov/Archives/edgar/data/1475841/000110465926112856/0001104659-26-112856-index-headers.html · même document que le robot : oui
+- **OK** · Perceptive Advisors LLC détient 8,8 % de Kardigan, Inc. (13D, intentions actives, mise à jour n° 1)
+  - document : https://www.sec.gov/Archives/edgar/data/2123613/0001193125-26-410754.txt · même document que le robot : oui
+- **OK** · RUSCKOWSKI STEPHEN H (administrateur) achète 25 000 actions de ORACLE CORP
+  - document : https://www.sec.gov/Archives/edgar/data/1341439/0001341439-26-000099.txt · même document que le robot : oui
+- **OK** · Leslie's, Inc. : contrat important signé + faillite ou mise sous séquestre + dépréciation importante d'actifs + avis de retrait de la bourse
+  - document : https://www.sec.gov/Archives/edgar/data/1821806/000119312526408874/0001193125-26-408874-index-headers.html · même document que le robot : oui
+- **OK** · Conifer Management, L.L.C. (actionnaire de 10 %) achète 273 712 actions de GROUP 1 AUTOMOTIVE INC
+  - document : https://www.sec.gov/Archives/edgar/data/1031203/0000905148-26-004310.txt · même document que le robot : oui
+- **OK** · LARSEN JOHN O (administrateur) achète 7 500 actions de PG&E Corp
+  - document : https://www.sec.gov/Archives/edgar/data/1004980/0001628280-26-064255.txt · même document que le robot : oui
