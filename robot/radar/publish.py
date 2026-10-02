@@ -12,7 +12,7 @@ from .health import LIBELLES, statut
 from .registry import SOURCES
 from .store import Depot
 
-MAX_FIL = 300
+MAX_PAR_CATEGORIE = 150  # chaque catégorie garde ses infos les plus récentes (les élus ne cachent pas le reste)
 MAX_A_VERIFIER = 100
 PHASE_ACTUELLE = 1
 
@@ -68,7 +68,13 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
     }
     _ecrire(donnees / "app" / "meta.json", meta)
     _ecrire(donnees / "app" / "sources.json", sources)
-    _ecrire(donnees / "app" / "fil.json", fil[:MAX_FIL])
+    par_cat: Counter = Counter()
+    fil_app = []
+    for e in fil:  # déjà du plus récent au plus vieux
+        par_cat[e["category"]] += 1
+        if par_cat[e["category"]] <= MAX_PAR_CATEGORIE:
+            fil_app.append(e)
+    _ecrire(donnees / "app" / "fil.json", fil_app)
     _ecrire(donnees / "app" / "a_verifier.json", a_verifier[:MAX_A_VERIFIER])
     _ecrire(donnees / "app" / "aujourdhui.json", {
         "top": [], "eviter": [], "note": "Les suggestions arrivent quand le score sera prêt (phase 5).",

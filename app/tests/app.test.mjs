@@ -50,6 +50,19 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     assert.equal(await p.locator(".feuille .controle").count(), 10); // 9 contrôles + 1 confirmation
     await fermer(); assert.equal(await p.locator(".feuille").count(), 0);
   });
+  await verifier("Détail d'un élu : transactions déclarées et avis légal", async () => {
+    await p.locator(".ligne", { hasText: "Microsoft" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
+    assert.equal(await p.locator(".transaction").count(), 1);
+    const t = await p.locator(".transaction").innerText();
+    assert.ok(t.includes("conjoint·e") && t.includes("15") && t.includes("50"), t);
+    assert.ok((await p.locator(".detail-pied").innerText()).includes("non commercial"));
+    assert.equal(await p.locator(".feuille .controle.rate").count(), 0);
+    await fermer();
+  });
+  await verifier("Tuiles des catégories : un nombre partout (toutes branchées)", async () => {
+    await onglet("Accueil"); assert.equal(await p.locator(".cat-phase").count(), 0); assert.equal(await p.locator(".cat-nombre").count(), 6);
+    await onglet("Fil");
+  });
   await verifier("Étoile dans le détail : ajoute AAPL aux favoris", async () => {
     await p.locator(".ligne", { hasText: "Apple" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
     await p.locator(".symbole-grand", { hasText: "AAPL" }).click(); await fermer();
@@ -88,12 +101,13 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     await reglages(); await p.getByRole("button", { name: /Réinitialiser/ }).click(); await p.waitForTimeout(200);
     assert.equal(await p.evaluate(() => document.documentElement.dataset.theme), "sombre");
   });
-  await verifier("État des sources : 54 sources listées", async () => { await reglages(); await p.getByRole("button", { name: /État des sources/ }).click(); await p.waitForSelector(".source"); assert.equal(await p.locator(".source").count(), 54); });
+  await verifier("État des sources : 55 sources listées", async () => { await reglages(); await p.getByRole("button", { name: /État des sources/ }).click(); await p.waitForSelector(".source"); assert.equal(await p.locator(".source").count(), 55); });
   await verifier("Bouton retour vers Réglages", async () => { await p.locator(".retour").click(); await p.waitForTimeout(200); assert.ok(await p.getByRole("button", { name: /Comment c'est vérifié/ }).isVisible()); });
   await verifier("À vérifier : le piège y est, avec le contrôle raté", async () => {
     await p.getByRole("button", { name: /^À vérifier/ }).click(); await p.waitForSelector(".ligne"); assert.equal(await lignes(), 1);
     await p.locator(".ligne").first().click(); await p.waitForSelector(".feuille-fond.ouvert");
-    assert.ok((await p.locator(".controle.rate").innerText()).includes("site officiel")); await fermer();
+    const rates = await p.locator(".controle.rate").allInnerTexts();
+    assert.ok(rates.some((r) => r.includes("site officiel")), rates.join(" | ")); await fermer();
   });
   await verifier("Hors ligne : l'app s'ouvre quand même (copie gardée)", async () => {
     await p.evaluate(async () => { await navigator.serviceWorker.register("./sw.js"); await navigator.serviceWorker.ready; });

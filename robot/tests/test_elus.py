@@ -79,7 +79,7 @@ def test_infos_de_la_chambre(syms):
     assert all(e.badge == "officiel" for e in evs), [e.checks for e in evs if e.badge != "officiel"]
     par_symbole = {(e.tickers[0], e.direction): e for e in evs}
     acn = par_symbole[("ACN", 1)]
-    assert acn.title == "Scott Scott Franklin (Chambre, FL18) achète ACN (2 transactions) : 2 002 $ à 30 000 $ — conjoint·e, l'élu·e"
+    assert acn.title == "Scott Scott Franklin (Chambre, FL18) achète ACN (2 transactions) — conjoint·e, l'élu·e"
     assert (acn.amount_min, acn.amount_max, acn.occurred_on, acn.published_on) == (2002.0, 30000.0, "2026-08-26", "2026-09-17")
     assert ("LSYIX", 1) not in par_symbole  # fonds d'obligations : pas une action
     assert par_symbole[("GOOG", -1)].kind == "vente_elu"
@@ -100,7 +100,8 @@ def test_page_senat_whitehouse(syms):
     assert set(evs) == {"JPM", "ADI", "V"}
     jpm = evs["JPM"]
     assert jpm.badge == "officiel", jpm.checks
-    assert jpm.title == "Sheldon Whitehouse (Sénat) vend JPM (2 transactions) : 30 002 $ à 100 000 $ — conjoint·e, l'élu·e"
+    assert jpm.title == "Sheldon Whitehouse (Sénat) vend JPM (2 transactions) — conjoint·e, l'élu·e"
+    assert (jpm.amount_min, jpm.amount_max) == (30002.0, 100000.0)
     assert jpm.direction == -1 and jpm.occurred_on == "2026-09-04"
 
 

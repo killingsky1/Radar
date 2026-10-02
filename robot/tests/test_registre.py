@@ -99,7 +99,9 @@ def test_evenement_vente_armes_complet(noms_sec):
     ev = valider(registre.evenement(doc, choisir(doc), texte("2026-19323"), "parution", "2026-09-22", noms_sec), JOUR)
     assert ev.badge == "officiel", ev.checks
     assert ev.source == "ventes_armes" and ev.category == "militaire"
-    assert ev.title.startswith("Vente d'armes à l'étranger : Qatar — 4,5 G$ US — fournisseur : The Boeing Corporation")
+    assert ev.title.startswith("Vente d'armes à l'étranger : Qatar — fournisseurs : The Boeing Corporation, Pratt")
+    assert registre.nom_pays("Republic of Korea") == "Corée du Sud" and registre.nom_pays("Government of Kuwait") == "Koweït"
+    assert registre.nom_pays("Government of Atlantis") == "Atlantis"  # inconnu : le nom officiel, rien d'inventé
     assert ev.tickers == ["BA", "RTX", "NOC"] and ev.amount_min == 4.5e9
     assert ev.occurred_on == "2026-08-18" and ev.published_on == "2026-09-22"
 

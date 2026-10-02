@@ -9,7 +9,7 @@ from radar.run import executer
 J = date.today()
 def jour(n): return (J - timedelta(days=n)).isoformat()
 def ev(i, source, cat, kind, titre, publie, url, **x):
-    return Evenement(source=source, official_id=f"TEST-{i}", category=cat, kind=kind, title=f"TEST : {titre}",
+    return Evenement(source=source, official_id=x.pop("numero", f"TEST-{i}"), category=cat, kind=kind, title=f"TEST : {titre}",
                      occurred_on=x.pop("occ", publie), published_on=publie, official_url=url,
                      sha256=empreinte(f"test{i}".encode()), parser_version="test", **x)
 
@@ -24,14 +24,19 @@ def faux(ctx):
            entities=["Jensen Huang, PDG"], direction=1,
            data={"symbole_declare": "NVDA", "symboles_sec": ["NVDA"], "actions": 50000,
                  "transactions": [{"code": "P", "acquis_cede": "A", "actions": 50000, "prix": 124.0, "date": jour(2)}]}),
-        ev(3, "registre_federal", "gouvernement", "decret", "nouveaux tarifs sur l'acier (publication demain)", jour(0),
-           "https://www.federalregister.gov/public-inspection/test", entities=["Maison-Blanche"]),
+        ev(3, "registre_federal", "gouvernement", "presidentiel", "nouveaux tarifs sur l'acier (publication demain)", jour(0),
+           "https://www.federalregister.gov/public-inspection/2026-99999/test", numero="2026-99999",
+           entities=["Executive Office of the President"],
+           data={"numero": "2026-99999", "etape": "inspection_publique", "numero_dans_le_texte": True}),
         ev(4, "sec_13dg", "baleines", "plus_5_pourcent", "un fonds dépasse 5 % d'Intel", jour(1),
            "https://www.sec.gov/test/13d.xml", tickers=["INTC"], entities=["Fonds activiste (exemple)"], direction=1,
            data={"pourcentage": 5.4, "cik_emetteur": "50863", "cik_sujet_entete": "0000050863"}),
-        ev(5, "chambre_ptr", "politiciens", "achat_elu", "une élue achète des actions de Microsoft", jour(1),
-           "https://disclosures-clerk.house.gov/test.pdf", occ=jour(20), tickers=["MSFT"],
-           amount_min=15001.0, amount_max=50000.0, entities=["Représentante (exemple)"], direction=1),
+        ev(5, "chambre_ptr", "politiciens", "achat_elu", "une personne élue achète des actions de Microsoft", jour(1),
+           "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/test.pdf", occ=jour(20), tickers=["MSFT"],
+           amount_min=15001.0, amount_max=50000.0, entities=["Élu·e (exemple)", "MICROSOFT CORP"], direction=1,
+           data={"lecture_complete": True, "recoupements": {"numero": True, "nom": True}, "nom_sec": "MICROSOFT CORP",
+                 "transactions": [{"proprietaire": "SP", "actif": "Microsoft Corporation - Common Stock (MSFT) [ST]",
+                                   "date": jour(20), "montant": "$15,001 - $50,000", "partielle": False}]}),
         ev(6, "canadabuys", "canada", "contrat", "contrat de fusils pour les Forces armées canadiennes", jour(2),
            "https://canadabuys.canada.ca/test", amount_min=3.07e8, amount_max=3.07e8, currency="CAD",
            entities=["Colt Canada"]),
@@ -43,4 +48,8 @@ def faux(ctx):
            amount_min=15001.0, amount_max=50000.0),
     ]
 
-print(executer(sys.argv[1], collecteurs={"sec_form4": faux}, maintenant=datetime.now(timezone.utc).replace(microsecond=0)))
+# Les sources branchées dans le vrai robot répondent « rien de neuf » ; le faux lecteur fournit les infos TEST.
+from radar.collecteurs import COLLECTEURS  # noqa: E402
+lecteurs = {sid: (lambda ctx: []) for sid in COLLECTEURS}
+lecteurs["sec_form4"] = faux
+print(executer(sys.argv[1], collecteurs=lecteurs, maintenant=datetime.now(timezone.utc).replace(microsecond=0)))
