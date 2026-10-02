@@ -4,7 +4,7 @@ name: Labo (reconnaissance)
 on:
   push:
     branches: [labo]
-    paths: ["labo/*.py", ".github/workflows/labo.yml"]
+    paths: ["labo/reconnaissance.py", ".github/workflows/labo.yml"]
   workflow_dispatch:
 
 permissions:

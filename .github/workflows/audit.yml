@@ -1,0 +1,31 @@
+name: Labo (audit de vérité)
+
+# Compare des infos publiées, tirées au hasard, à leur document officiel original.
+# Se lance quand labo/declencheur-audit.txt change sur la branche labo.
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/declencheur-audit.txt"]
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python labo/verification.py 20
+      - name: Sauvegarder le rapport
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/resultats/verification.md labo/resultats/verification.json
+          git commit -m "Labo : audit de vérité du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git push origin HEAD:labo
