@@ -1,4 +1,4 @@
-# Audit de vérité : 42/48 infos identiques au document officiel
+# Audit de vérité : 48/48 infos identiques au document officiel
 
 Infos publiées par le robot : 519 · échantillon au hasard : 48
 
@@ -30,18 +30,18 @@ Infos publiées par le robot : 519 · échantillon au hasard : 48
   - document : https://www.sec.gov/Archives/edgar/data/48465/000110465926112101/0001104659-26-112101-index-headers.html · même document que le robot : oui
 - **OK** · Sandler Alan B. (Chief Development Officer) vend 6 309 actions de Revolution Medicines, Inc.
   - document : https://www.sec.gov/Archives/edgar/data/1628171/0001835966-26-000008.txt · même document que le robot : oui
-- **ÉCART** · National Bank Holdings Corp : dépréciation importante d'actifs
-  - erreur : HTTP Error 429: Too Many Requests
-- **ÉCART** · Perceptive Advisors LLC détient 8,8 % de Kardigan, Inc. (13D, intentions actives, mise à jour n° 1)
-  - erreur : HTTP Error 429: Too Many Requests
-- **ÉCART** · RUSCKOWSKI STEPHEN H (administrateur) achète 25 000 actions de ORACLE CORP
-  - erreur : HTTP Error 429: Too Many Requests
-- **ÉCART** · Leslie's, Inc. : contrat important signé + faillite ou mise sous séquestre + dépréciation importante d'actifs + avis de retrait de la bourse
-  - erreur : HTTP Error 429: Too Many Requests
-- **ÉCART** · Conifer Management, L.L.C. (actionnaire de 10 %) achète 273 712 actions de GROUP 1 AUTOMOTIVE INC
-  - erreur : HTTP Error 429: Too Many Requests
-- **ÉCART** · LARSEN JOHN O (administrateur) achète 7 500 actions de PG&E Corp
-  - erreur : HTTP Error 429: Too Many Requests
+- **OK** · National Bank Holdings Corp : dépréciation importante d'actifs
+  - document : https://www.sec.gov/Archives/edgar/data/1475841/000110465926112856/0001104659-26-112856-index-headers.html · même document que le robot : oui
+- **OK** · Perceptive Advisors LLC détient 8,8 % de Kardigan, Inc. (13D, intentions actives, mise à jour n° 1)
+  - document : https://www.sec.gov/Archives/edgar/data/2123613/0001193125-26-410754.txt · même document que le robot : oui
+- **OK** · RUSCKOWSKI STEPHEN H (administrateur) achète 25 000 actions de ORACLE CORP
+  - document : https://www.sec.gov/Archives/edgar/data/1341439/0001341439-26-000099.txt · même document que le robot : oui
+- **OK** · Leslie's, Inc. : contrat important signé + faillite ou mise sous séquestre + dépréciation importante d'actifs + avis de retrait de la bourse
+  - document : https://www.sec.gov/Archives/edgar/data/1821806/000119312526408874/0001193125-26-408874-index-headers.html · même document que le robot : oui
+- **OK** · Conifer Management, L.L.C. (actionnaire de 10 %) achète 273 712 actions de GROUP 1 AUTOMOTIVE INC
+  - document : https://www.sec.gov/Archives/edgar/data/1031203/0000905148-26-004310.txt · même document que le robot : oui
+- **OK** · LARSEN JOHN O (administrateur) achète 7 500 actions de PG&E Corp
+  - document : https://www.sec.gov/Archives/edgar/data/1004980/0001628280-26-064255.txt · même document que le robot : oui
 - **OK** · Kevin Hern (Chambre, OK01) vend BSX (6 transactions) — compte conjoint, enfant à charge
   - document : https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf · même document que le robot : oui
 - **OK** · Scott Scott Franklin (Chambre, FL18) achète ACN (2 transactions) — conjoint·e, l'élu·e
