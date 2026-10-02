@@ -10,7 +10,7 @@ import argparse
 import json
 import os
 import sys
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -30,6 +30,7 @@ class Contexte:
     client: object
     maintenant: datetime
     donnees: Path
+    cache: dict = field(default_factory=dict)  # partagé entre les lecteurs d'un même passage (ex. index SEC)
 
 
 def passage_auto(maintenant: datetime) -> str:
