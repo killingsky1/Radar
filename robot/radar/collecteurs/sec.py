@@ -102,6 +102,13 @@ class Symboles:
     def tous(self, cik: str | int) -> list[str]:
         return [r["ticker"] for r in self.par_cik.get(int(cik), [])]
 
+    def par_symbole(self, symbole: str) -> dict | None:
+        """La ligne officielle d'un symbole coté au Nasdaq, au NYSE ou au CBOE (ex. « BRK-B »), sinon None."""
+        if not hasattr(self, "_par_symbole"):
+            self._par_symbole = {r["ticker"]: r for rs in self.par_cik.values() for r in rs
+                                 if r["exchange"] in BOURSES_GARDEES}
+        return self._par_symbole.get(normaliser_symbole(symbole))
+
 
 def normaliser_symbole(s: str | None) -> str:
     return (s or "").strip().upper().replace(".", "-")

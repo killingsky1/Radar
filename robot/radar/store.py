@@ -86,6 +86,10 @@ class Depot:
         texte = "".join(json.dumps(d, ensure_ascii=False, sort_keys=True) + "\n" for d in ordre)
         fichier.write_text(texte, encoding="utf-8")
 
+    def ids_enregistres(self, sources: set[str], mois_max: int = 3) -> set[str]:
+        """Numéros officiels déjà enregistrés pour ces sources (la 1re lecture gagne : on ne relit pas)."""
+        return {d["official_id"] for dossier in DOSSIERS for d in self.lire(dossier, mois_max) if d["source"] in sources}
+
     def lire(self, dossier: str, mois_max: int = 3) -> list[dict]:
         """Les infos des `mois_max` derniers fichiers mensuels d'un dossier."""
         fichiers = sorted((self.racine / dossier).glob("*.jsonl"))[-mois_max:]
