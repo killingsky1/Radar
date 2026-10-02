@@ -149,7 +149,10 @@ AUTRES = {
 
 def autres() -> None:
     for nom, url in AUTRES.items():
-        sauver(f"autres/{nom}", get(url, 6_000_000))
+        contenu = get(url, 6_000_000)
+        # Les pages web de tiers peuvent contenir leurs propres clés (ex. cartes) : on garde seulement le code de réponse.
+        if not nom.endswith(".html"):
+            sauver(f"autres/{nom}", contenu)
 
 
 if __name__ == "__main__":
@@ -159,3 +162,6 @@ if __name__ == "__main__":
     sauver("journal.json", json.dumps(journal, indent=1, ensure_ascii=False).encode())
     ok = sum(1 for j in journal if j.get("statut") == 200)
     print(f"{ok}/{len(journal)} requêtes réussies")
+    for j in journal:  # visible dans le journal de GitHub même si l'enregistrement échoue
+        if "sec.gov/Archives/edgar/data" not in j["url"]:
+            print(j.get("statut"), j.get("octets", j.get("erreur", "")), j["url"][:110])
