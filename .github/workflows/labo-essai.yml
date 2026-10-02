@@ -1,0 +1,32 @@
+name: Labo (essai réel des nouveaux lecteurs)
+
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/essai.py", "labo/declencheur-essai.txt", ".github/workflows/labo-essai.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  essai:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r robot/requirements.txt
+      - run: python -m pytest -q
+        working-directory: robot
+      - run: rm -rf labo/essai && python labo/essai.py
+      - name: Sauvegarder le résultat
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/essai
+          git commit -m "Labo : essai réel du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
