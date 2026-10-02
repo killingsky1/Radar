@@ -3,6 +3,53 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "decision_lue": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "fourchette_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "vote_lu": true
+  },
+  "collected_at": "2026-10-02T23:55:57+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "bas": 3.5,
+   "decision": "maintenu",
+   "dissidence": true,
+   "haut": 3.75,
+   "pas": null,
+   "resume": "id=\"article\"> April 29, 2026 Federal Reserve issues FOMC statement For release at 2:00 p.m. EDT Share Recent indicators suggest that economic activity has been expanding at a solid pace. Job gains have remained low, on average, and the unemployment rate has been little changed in recent months. Inflation is elevated, in part reflecting the recent increase in global energy prices. The Committee seeks to achieve maximum employment and inflation at the rate of 2 percent over the longer run. Developments in the Middle East are contributing to a high level of uncertainty about the economic outlook. The Committee is attentive to the risks to both sides of its dual mandate. In support of its goals,",
+   "titre_officiel": "Federal Reserve issues FOMC statement",
+   "vote_ecrit_en_noms": true
+  },
+  "direction": 0,
+  "entities": [
+   "Federal Reserve (FOMC)"
+  ],
+  "id": "fed:monetary20260429a",
+  "kind": "decision_taux",
+  "notes": [],
+  "occurred_on": "2026-04-29",
+  "official_id": "monetary20260429a",
+  "official_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm",
+  "parser_version": "banques-2",
+  "published_on": "2026-04-29",
+  "sha256": "a5e3742d89b2daf0a35aae23c082504dd8d908a1e75b7a3687d4f8421b0e441a",
+  "source": "fed",
+  "tickers": [],
+  "title": "Fed : taux directeur maintenu entre 3,5 % et 3,75 % (avec dissidence)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -16,7 +63,7 @@
    "taux_plausible": true,
    "titre_officiel_concorde": true
   },
-  "collected_at": "2026-10-02T23:50:37+00:00",
+  "collected_at": "2026-10-02T23:55:59+00:00",
   "confirmations": [],
   "currency": "CAD",
   "data": {
@@ -37,7 +84,7 @@
   "occurred_on": "2026-06-10",
   "official_id": "fad-press-release-2026-06-10",
   "official_url": "https://www.bankofcanada.ca/2026/06/fad-press-release-2026-06-10/",
-  "parser_version": "banques-1",
+  "parser_version": "banques-2",
   "published_on": "2026-06-10",
   "sha256": "8618dcf70cd83a9fb86a3af32ef0e4826ddd4fcf529309631afd4485d99d10fd",
   "source": "banque_canada",
@@ -61,7 +108,7 @@
    "symboles_valides": true,
    "vote_lu": true
   },
-  "collected_at": "2026-10-02T23:50:35+00:00",
+  "collected_at": "2026-10-02T23:55:57+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -69,7 +116,7 @@
    "decision": "maintenu",
    "haut": 3.75,
    "pas": null,
-   "resume": "The Federal Open Market Committee approved the following statement for release by a 12 – 0 vote: The Committee decided to maintain the target range for the federal funds rate at 3-1/2 to 3-3/4 percent, in support of the Federal Reserve's dual mandate. The Committee reaffirmed its policy of maintaining ample reserves in the banking system. Economic activity is expanding at a solid pace despite elevated uncertainty that owes, in part, to the conflict in the Middle East. Productivity growth and capital investment are strong. Job gains have kept pace with the workforce, and the unemployment rate has changed little. Inflation remains elevated relative to the Committee's 2 percent goal, in part re",
+   "resume": "id=\"article\"> June 17, 2026 Federal Reserve issues FOMC statement For release at 2:00 p.m. EDT Share The Federal Open Market Committee approved the following statement for release by a 12 - 0 vote: The Committee decided to maintain the target range for the federal funds rate at 3-1/2 to 3-3/4 percent, in support of the Federal Reserve's dual mandate. The Committee reaffirmed its policy of maintaining ample reserves in the banking system. Economic activity is expanding at a solid pace despite elevated uncertainty that owes, in part, to the conflict in the Middle East. Productivity growth and capital investment are strong. Job gains have kept pace with the workforce, and the unemployment rate ",
    "titre_officiel": "Federal Reserve issues FOMC statement",
    "vote": "12-0"
   },
@@ -83,9 +130,9 @@
   "occurred_on": "2026-06-17",
   "official_id": "monetary20260617a",
   "official_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
-  "parser_version": "banques-1",
+  "parser_version": "banques-2",
   "published_on": "2026-06-17",
-  "sha256": "98b32b040e464163799a051ff1038a33e267f0ffe299f9afcc5ee621d390e496",
+  "sha256": "22e161b193f701db20695282b7c4b1f1d27a63890763a3b704c6c91573db2da1",
   "source": "fed",
   "tickers": [],
   "title": "Fed : taux directeur maintenu entre 3,5 % et 3,75 % (vote : 12 pour, 0 contre)"
@@ -107,7 +154,7 @@
    "taux_plausible": true,
    "titre_officiel_concorde": true
   },
-  "collected_at": "2026-10-02T23:50:36+00:00",
+  "collected_at": "2026-10-02T23:55:58+00:00",
   "confirmations": [],
   "currency": "CAD",
   "data": {
@@ -128,7 +175,7 @@
   "occurred_on": "2026-07-15",
   "official_id": "fad-press-release-2026-07-15",
   "official_url": "https://www.bankofcanada.ca/2026/07/fad-press-release-2026-07-15/",
-  "parser_version": "banques-1",
+  "parser_version": "banques-2",
   "published_on": "2026-07-15",
   "sha256": "8618dcf70cd83a9fb86a3af32ef0e4826ddd4fcf529309631afd4485d99d10fd",
   "source": "banque_canada",
@@ -152,7 +199,7 @@
    "symboles_valides": true,
    "vote_lu": true
   },
-  "collected_at": "2026-10-02T23:50:34+00:00",
+  "collected_at": "2026-10-02T23:55:56+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -160,7 +207,7 @@
    "decision": "maintenu",
    "haut": 3.75,
    "pas": null,
-   "resume": "The Federal Open Market Committee approved the following statement for release by a 9 – 3 vote: The Committee decided to maintain the target range for the federal funds rate at 3-1/2 to 3-3/4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system. Economic activity is expanding at a solid pace despite elevated uncertainty that owes, in part, to the conflict in the Middle East. Productivity growth and capital investment are strong. Job gains have kept pace with the workforce, and the unemployment rate has changed little. Inflation remains elevated relative to the Committee's 2 percent goal, in part ",
+   "resume": "id=\"article\"> July 29, 2026 Federal Reserve issues FOMC statement For release at 2:00 p.m. EDT Share The Federal Open Market Committee approved the following statement for release by a 9 - 3 vote: The Committee decided to maintain the target range for the federal funds rate at 3-1/2 to 3-3/4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system. Economic activity is expanding at a solid pace despite elevated uncertainty that owes, in part, to the conflict in the Middle East. Productivity growth and capital investment are strong. Job gains have kept pace with the workforce, and the unemployment rat",
    "titre_officiel": "Federal Reserve issues FOMC statement",
    "vote": "9-3"
   },
@@ -174,9 +221,9 @@
   "occurred_on": "2026-07-29",
   "official_id": "monetary20260729a",
   "official_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
-  "parser_version": "banques-1",
+  "parser_version": "banques-2",
   "published_on": "2026-07-29",
-  "sha256": "1b9a2956087b0089fdba32a835ec3b9f4a4307878b5fffc103a5ac26559a505c",
+  "sha256": "348b18018cce73f633fae938b39666dbc0ad62cc32082d682f34db780f323cf8",
   "source": "fed",
   "tickers": [],
   "title": "Fed : taux directeur maintenu entre 3,5 % et 3,75 % (vote : 9 pour, 3 contre)"
@@ -198,7 +245,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -245,7 +292,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -292,7 +339,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -342,7 +389,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:44+00:00",
+  "collected_at": "2026-10-02T23:56:06+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -408,7 +455,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:44+00:00",
+  "collected_at": "2026-10-02T23:56:07+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -474,7 +521,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:45+00:00",
+  "collected_at": "2026-10-02T23:56:07+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -541,7 +588,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:45+00:00",
+  "collected_at": "2026-10-02T23:56:08+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -613,7 +660,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:46+00:00",
+  "collected_at": "2026-10-02T23:56:08+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -685,7 +732,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:46+00:00",
+  "collected_at": "2026-10-02T23:56:09+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -754,7 +801,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:47+00:00",
+  "collected_at": "2026-10-02T23:56:09+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -820,7 +867,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:47+00:00",
+  "collected_at": "2026-10-02T23:56:10+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -888,7 +935,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:48+00:00",
+  "collected_at": "2026-10-02T23:56:10+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -954,7 +1001,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:48+00:00",
+  "collected_at": "2026-10-02T23:56:11+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -1017,7 +1064,7 @@
    "taux_plausible": true,
    "titre_officiel_concorde": true
   },
-  "collected_at": "2026-10-02T23:50:36+00:00",
+  "collected_at": "2026-10-02T23:55:58+00:00",
   "confirmations": [],
   "currency": "CAD",
   "data": {
@@ -1038,7 +1085,7 @@
   "occurred_on": "2026-09-02",
   "official_id": "fad-press-release-2026-09-02",
   "official_url": "https://www.bankofcanada.ca/2026/09/fad-press-release-2026-09-02/",
-  "parser_version": "banques-1",
+  "parser_version": "banques-2",
   "published_on": "2026-09-02",
   "sha256": "8618dcf70cd83a9fb86a3af32ef0e4826ddd4fcf529309631afd4485d99d10fd",
   "source": "banque_canada",
@@ -1065,7 +1112,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:49+00:00",
+  "collected_at": "2026-10-02T23:56:11+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -1132,7 +1179,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:49+00:00",
+  "collected_at": "2026-10-02T23:56:12+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -1200,7 +1247,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -1247,7 +1294,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -1294,7 +1341,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -1341,7 +1388,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -1388,7 +1435,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -1435,7 +1482,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -1482,7 +1529,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -1529,7 +1576,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -1576,7 +1623,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -2978,7 +3025,7 @@
    "symboles_valides": true,
    "vote_lu": true
   },
-  "collected_at": "2026-10-02T23:50:34+00:00",
+  "collected_at": "2026-10-02T23:55:56+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -2986,7 +3033,7 @@
    "decision": "releve",
    "haut": 4.0,
    "pas": 0.25,
-   "resume": "The Federal Open Market Committee approved the following statement for release by a 12 – 0 vote: The Committee decided to raise the target range for the federal funds rate by 1/4 percentage point to 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system. Economic activity is expanding at a solid pace. While uncertainty remains elevated owing, in part, to geopolitical developments, domestic spending has been resilient. Productivity growth is strong, and capital investment is robust. Job gains have kept pace with the workforce, and the unemployment rate has changed little. Inflation remain",
+   "resume": "id=\"article\"> September 16, 2026 Federal Reserve issues FOMC statement For release at 2:00 p.m. EDT Share --> --> --> --> --> --> The Federal Open Market Committee approved the following statement for release by a 12 - 0 vote: The Committee decided to raise the target range for the federal funds rate by 1/4 percentage point to 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system. Economic activity is expanding at a solid pace. While uncertainty remains elevated owing, in part, to geopolitical developments, domestic spending has been resilient. Productivity growth is strong, and capital",
    "titre_officiel": "Federal Reserve issues FOMC statement",
    "vote": "12-0"
   },
@@ -3000,9 +3047,9 @@
   "occurred_on": "2026-09-16",
   "official_id": "monetary20260916a",
   "official_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
-  "parser_version": "banques-1",
+  "parser_version": "banques-2",
   "published_on": "2026-09-16",
-  "sha256": "c1e47995bf80e8dcdb9a3ee910e2932e956bf33e87e1750c29aa57bc5ca4a5b5",
+  "sha256": "f1ac51bbea14478297f47be81e2b8e801cd7cbdb158e816d3babba339872830e",
   "source": "fed",
   "tickers": [],
   "title": "Fed : taux directeur relevé de 0,25 point, entre 3,75 % et 4 % (vote : 12 pour, 0 contre)"
@@ -3024,7 +3071,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -3071,7 +3118,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -3779,7 +3826,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -3826,7 +3873,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -4087,7 +4134,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -4134,7 +4181,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -4527,7 +4574,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:50+00:00",
+  "collected_at": "2026-10-02T23:56:12+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -4593,7 +4640,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:50+00:00",
+  "collected_at": "2026-10-02T23:56:13+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -4659,7 +4706,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:51+00:00",
+  "collected_at": "2026-10-02T23:56:13+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -4726,7 +4773,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:51+00:00",
+  "collected_at": "2026-10-02T23:56:14+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -4792,7 +4839,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:52+00:00",
+  "collected_at": "2026-10-02T23:56:14+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -4864,7 +4911,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:52+00:00",
+  "collected_at": "2026-10-02T23:56:15+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -4944,7 +4991,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:53+00:00",
+  "collected_at": "2026-10-02T23:56:15+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -5013,7 +5060,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:53+00:00",
+  "collected_at": "2026-10-02T23:56:16+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -5082,7 +5129,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:54+00:00",
+  "collected_at": "2026-10-02T23:56:16+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -5153,7 +5200,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:54+00:00",
+  "collected_at": "2026-10-02T23:56:17+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -8750,7 +8797,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [
    {
     "official_id": "2026-20320",
@@ -8804,7 +8851,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [
    {
     "official_id": "2026-20321",
@@ -8858,7 +8905,7 @@
    "symboles_valides": true,
    "texte_officiel_lu": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [
    {
     "official_id": "2026-20319",
@@ -8913,7 +8960,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:33+00:00",
+  "collected_at": "2026-10-02T23:54:56+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -8988,7 +9035,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:40+00:00",
+  "collected_at": "2026-10-02T23:55:02+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -9055,7 +9102,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:34+00:00",
+  "collected_at": "2026-10-02T23:54:56+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -9126,7 +9173,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:34+00:00",
+  "collected_at": "2026-10-02T23:54:57+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -9197,7 +9244,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:39+00:00",
+  "collected_at": "2026-10-02T23:55:02+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -9266,7 +9313,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:38+00:00",
+  "collected_at": "2026-10-02T23:55:01+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -9333,7 +9380,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:30+00:00",
+  "collected_at": "2026-10-02T23:54:53+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -9400,7 +9447,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:39+00:00",
+  "collected_at": "2026-10-02T23:55:01+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -9468,7 +9515,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:40+00:00",
+  "collected_at": "2026-10-02T23:55:02+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -9532,7 +9579,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:50:32+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -9586,7 +9633,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:38+00:00",
+  "collected_at": "2026-10-02T23:56:01+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -9639,7 +9686,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:39+00:00",
+  "collected_at": "2026-10-02T23:56:01+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -9692,7 +9739,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:39+00:00",
+  "collected_at": "2026-10-02T23:56:02+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -9745,7 +9792,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:40+00:00",
+  "collected_at": "2026-10-02T23:56:02+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -9798,7 +9845,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:40+00:00",
+  "collected_at": "2026-10-02T23:56:03+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -9852,7 +9899,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:42+00:00",
+  "collected_at": "2026-10-02T23:55:05+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -9920,7 +9967,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:43+00:00",
+  "collected_at": "2026-10-02T23:55:06+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -9987,7 +10034,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:43+00:00",
+  "collected_at": "2026-10-02T23:55:06+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -10055,7 +10102,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:44+00:00",
+  "collected_at": "2026-10-02T23:55:06+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -10122,7 +10169,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:47+00:00",
+  "collected_at": "2026-10-02T23:55:09+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -10189,7 +10236,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:49+00:00",
+  "collected_at": "2026-10-02T23:55:12+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -10258,7 +10305,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:46+00:00",
+  "collected_at": "2026-10-02T23:55:08+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -10327,7 +10374,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:50+00:00",
+  "collected_at": "2026-10-02T23:55:12+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -10395,7 +10442,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:50+00:00",
+  "collected_at": "2026-10-02T23:55:12+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -10462,7 +10509,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:53+00:00",
+  "collected_at": "2026-10-02T23:55:15+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -10529,7 +10576,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:47+00:00",
+  "collected_at": "2026-10-02T23:55:09+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -10597,7 +10644,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:53+00:00",
+  "collected_at": "2026-10-02T23:55:15+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -10664,7 +10711,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:48+00:00",
+  "collected_at": "2026-10-02T23:55:10+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -10733,7 +10780,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:48+00:00",
+  "collected_at": "2026-10-02T23:55:11+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -11405,7 +11452,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:50:08+00:00",
+  "collected_at": "2026-10-02T23:55:30+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -11473,7 +11520,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:50:23+00:00",
+  "collected_at": "2026-10-02T23:55:45+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -11540,7 +11587,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:50:23+00:00",
+  "collected_at": "2026-10-02T23:55:46+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -11607,7 +11654,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:50:22+00:00",
+  "collected_at": "2026-10-02T23:55:45+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -11674,7 +11721,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:54+00:00",
+  "collected_at": "2026-10-02T23:55:16+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -11741,7 +11788,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:50:17+00:00",
+  "collected_at": "2026-10-02T23:55:40+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -11808,7 +11855,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:50:14+00:00",
+  "collected_at": "2026-10-02T23:55:37+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -11877,7 +11924,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:50:23+00:00",
+  "collected_at": "2026-10-02T23:55:45+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -11944,7 +11991,7 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T23:49:58+00:00",
+  "collected_at": "2026-10-02T23:55:20+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -11994,75 +12041,6 @@
    "UTHR"
   ],
   "title": "MARTINE ROTHBLATT (administrateur, dirigeant) prévoit vendre 209 000 actions de UNITED THERAPEUTICS Corp"
- },
- {
-  "amount_max": 5000000000.0,
-  "amount_min": 5000000000.0,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "actions_et_valeur_positives": true,
-   "actions_sous_le_total_en_circulation": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "montant_coherent": true,
-   "montant_plausible": true,
-   "prix_implicite_plausible": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T23:50:32+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 158000000000.0,
-   "bourse": "NYSE",
-   "cik_emetteur": "0000312069",
-   "date_avis": "2026-10-01",
-   "lignes": [
-    {
-     "actions": 158000000000.0,
-     "bourse": "NYSE",
-     "classe": "BARCLAYS PLC (BCS, BCLYF)",
-     "date_prevue": "2026-06-24",
-     "en_circulation": 800000000000.0,
-     "valeur": 5000000000.0
-    }
-   ],
-   "nom_emetteur": "BARCLAYS PLC",
-   "plan_10b5_1": [
-    "02/26/2026"
-   ],
-   "relations": [
-    "Investor"
-   ],
-   "vendeur": "Cardoso da silva Sergio Tony"
-  },
-  "direction": -1,
-  "entities": [
-   "Cardoso da silva Sergio Tony",
-   "BARCLAYS PLC"
-  ],
-  "id": "sec_form144:0002157144-26-000001",
-  "kind": "intention_vente",
-  "notes": [
-   "Vente prévue d'avance dans un plan automatique (règle 10b5-1).",
-   "Date de vente prévue : 2026-06-24."
-  ],
-  "occurred_on": "2026-10-01",
-  "official_id": "0002157144-26-000001",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/312069/000215714426000001/0002157144-26-000001-index.htm",
-  "parser_version": "sec-3",
-  "published_on": "2026-10-01",
-  "sha256": "9edbd9d2bbcd679bef75819a1da283bb50ef544a787da2a2cf66210fcee3b1fd",
-  "source": "sec_form144",
-  "tickers": [
-   "BCS"
-  ],
-  "title": "Cardoso da silva Sergio Tony (investisseur) prévoit vendre 158 000 000 000 actions de BARCLAYS PLC"
  },
  {
   "amount_max": 15000.0,
@@ -12300,7 +12278,7 @@
    "symboles_valides": true,
    "variation_coherente": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -12348,7 +12326,7 @@
    "symboles_valides": true,
    "variation_coherente": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -12396,7 +12374,7 @@
    "symboles_valides": true,
    "variation_coherente": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -12444,7 +12422,7 @@
    "symboles_valides": true,
    "variation_coherente": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -12492,7 +12470,7 @@
    "symboles_valides": true,
    "variation_coherente": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -12540,7 +12518,7 @@
    "symboles_valides": true,
    "variation_coherente": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -12588,7 +12566,7 @@
    "symboles_valides": true,
    "variation_coherente": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -12636,7 +12614,7 @@
    "symboles_valides": true,
    "variation_coherente": true
   },
-  "collected_at": "2026-10-02T23:50:33+00:00",
+  "collected_at": "2026-10-02T23:55:55+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -12820,7 +12798,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:41+00:00",
+  "collected_at": "2026-10-02T23:56:03+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -12873,7 +12851,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:41+00:00",
+  "collected_at": "2026-10-02T23:56:04+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -12925,7 +12903,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:42+00:00",
+  "collected_at": "2026-10-02T23:56:04+00:00",
   "confirmations": [
    {
     "official_id": "2026/09/streamlining-access-to-government-services-through-america-gov",
@@ -12985,7 +12963,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:42+00:00",
+  "collected_at": "2026-10-02T23:56:05+00:00",
   "confirmations": [
    {
     "official_id": "2026/09/eliminating-disease-carrying-pests-and-restoring-enjoyment-of-the-great-outdoors",
@@ -13045,7 +13023,7 @@
    "symboles_valides": true,
    "texte_du_meme_document": true
   },
-  "collected_at": "2026-10-02T23:50:43+00:00",
+  "collected_at": "2026-10-02T23:56:05+00:00",
   "confirmations": [
    {
     "official_id": "2026/09/inaugurating-the-era-of-super-intelligence",
@@ -13189,47 +13167,6 @@
   "title": "Détermination présidentielle : Lebanon; Presidential Determination on Revocation of Prior Presidential Determinations (Presidential Determination No. 2026-25 of September 30, 2026)"
  },
  {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "a_verifier",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "decision_lue": false,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "fourchette_plausible": false,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "vote_lu": false
-  },
-  "collected_at": "2026-10-02T23:50:35+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "resume": "",
-   "titre_officiel": "Federal Reserve issues FOMC statement"
-  },
-  "direction": 0,
-  "entities": [
-   "Federal Reserve (FOMC)"
-  ],
-  "id": "fed:monetary20260429a",
-  "kind": "decision_taux",
-  "notes": [],
-  "occurred_on": "2026-04-29",
-  "official_id": "monetary20260429a",
-  "official_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm",
-  "parser_version": "banques-1",
-  "published_on": "2026-04-29",
-  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-  "source": "fed",
-  "tickers": [],
-  "title": "Fed : décision de taux (texte à lire sur le site officiel)"
- },
- {
   "amount_max": 280000.0,
   "amount_min": 102003.0,
   "badge": "a_verifier",
@@ -13317,5 +13254,74 @@
    "MRSH"
   ],
   "title": "Kevin Hern (Chambre, OK01) vend MRSH (3 transactions) — compte conjoint"
+ },
+ {
+  "amount_max": 5000000000.0,
+  "amount_min": 5000000000.0,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "actions_et_valeur_positives": true,
+   "actions_sous_le_total_en_circulation": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "prix_implicite_plausible": false,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-02T23:55:54+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 158000000000.0,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000312069",
+   "date_avis": "2026-10-01",
+   "lignes": [
+    {
+     "actions": 158000000000.0,
+     "bourse": "NYSE",
+     "classe": "BARCLAYS PLC (BCS, BCLYF)",
+     "date_prevue": "2026-06-24",
+     "en_circulation": 800000000000.0,
+     "valeur": 5000000000.0
+    }
+   ],
+   "nom_emetteur": "BARCLAYS PLC",
+   "plan_10b5_1": [
+    "02/26/2026"
+   ],
+   "relations": [
+    "Investor"
+   ],
+   "vendeur": "Cardoso da silva Sergio Tony"
+  },
+  "direction": -1,
+  "entities": [
+   "Cardoso da silva Sergio Tony",
+   "BARCLAYS PLC"
+  ],
+  "id": "sec_form144:0002157144-26-000001",
+  "kind": "intention_vente",
+  "notes": [
+   "Vente prévue d'avance dans un plan automatique (règle 10b5-1).",
+   "Date de vente prévue : 2026-06-24."
+  ],
+  "occurred_on": "2026-10-01",
+  "official_id": "0002157144-26-000001",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/312069/000215714426000001/0002157144-26-000001-index.htm",
+  "parser_version": "sec-3",
+  "published_on": "2026-10-01",
+  "sha256": "9edbd9d2bbcd679bef75819a1da283bb50ef544a787da2a2cf66210fcee3b1fd",
+  "source": "sec_form144",
+  "tickers": [
+   "BCS"
+  ],
+  "title": "Cardoso da silva Sergio Tony (investisseur) prévoit vendre 158 000 000 000 actions de BARCLAYS PLC"
  }
 ]

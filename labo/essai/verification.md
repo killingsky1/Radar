@@ -1,43 +1,55 @@
 # Essai réel et vérification indépendante
 
 Infos produites : 203
-Vérifiées au hasard : 95 — identiques : 94
+Vérifiées au hasard : 95 — identiques : 72
 
 ## maison_blanche
 - produites : 21 {'officiel': 18, 'confirme': 3, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 21}, 'dernier_contenu': '2026-09-29', 'dernier_succes': '2026-10-02T23:49:29+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:49:29+00:00'}
-- OK  Décret présidentiel : Accelerating Access To Veterans’ Benefits And Employment Opportunities
-- OK  Décret présidentiel : Supporting America’s Ranchers
-- OK  Proclamation présidentielle : Restriction on Entry of Certain Nonimmigrant Workers
-- OK  Proclamation présidentielle : Modifying the Scope of Products of Canada Subject to the Additional Duties Impos
-- OK  Décret présidentiel : Providing Meaningful Water Quality Improvements Through Collaboration and Oversight of F
-- OK  Décret présidentiel : Eliminating Disease-Carrying Pests And Restoring Enjoyment Of The Great Outdoors
-- OK  Décret présidentiel : Reinvigorating America’s Hunting Heritage
-- OK  Décret présidentiel : Honoring the American History of the Great Lakes and Renaming Lake Ontario as Lake Ameri
-- OK  Proclamation présidentielle : Modifying the Scope of Products of Canada Subject to the Additional Duties Impos
-- OK  Proclamation présidentielle : Excluding Certain Canadian Alcoholic Beverages from Importation into the United 
-- OK  Décret présidentiel : Streamlining Access to Government Services Through America.gov
-- OK  Décret présidentiel : Inaugurating The Era Of Super Intelligence
+- état : {'compte': {'a_verifier': 0, 'recus': 21}, 'dernier_contenu': '2026-09-29', 'dernier_succes': '2026-10-02T23:54:52+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:54:52+00:00'}
+- ÉCART Décret présidentiel : Accelerating Access To Veterans’ Benefits And Employment Opportunities
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART Décret présidentiel : Supporting America’s Ranchers
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART Proclamation présidentielle : Restriction on Entry of Certain Nonimmigrant Workers
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART Proclamation présidentielle : Modifying the Scope of Products of Canada Subject to the Additional Duties Impos
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART Décret présidentiel : Providing Meaningful Water Quality Improvements Through Collaboration and Oversight of F
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART Décret présidentiel : Eliminating Disease-Carrying Pests And Restoring Enjoyment Of The Great Outdoors
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART Décret présidentiel : Reinvigorating America’s Hunting Heritage
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART Décret présidentiel : Honoring the American History of the Great Lakes and Renaming Lake Ontario as Lake Ameri
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART Proclamation présidentielle : Modifying the Scope of Products of Canada Subject to the Additional Duties Impos
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART Proclamation présidentielle : Excluding Certain Canadian Alcoholic Beverages from Importation into the United 
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART Décret présidentiel : Streamlining Access to Government Services Through America.gov
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART Décret présidentiel : Inaugurating The Era Of Super Intelligence
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
 
 ## fed
-- produites : 4 {'officiel': 3, 'confirme': 0, 'a_verifier': 1}
-- état : {'compte': {'a_verifier': 1, 'recus': 4}, 'dernier_contenu': '2026-09-16', 'dernier_succes': '2026-10-02T23:49:29+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:49:29+00:00'}
-- ÉCART Fed : décision de taux (texte à lire sur le site officiel)
-    - fourchette : texte [] ≠ robot None-None
+- produites : 4 {'officiel': 4, 'confirme': 0, 'a_verifier': 0}
+- état : {'compte': {'a_verifier': 0, 'recus': 4}, 'dernier_contenu': '2026-09-16', 'dernier_succes': '2026-10-02T23:54:52+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:54:52+00:00'}
 - OK  Fed : taux directeur relevé de 0,25 point, entre 3,75 % et 4 % (vote : 12 pour, 0 contre)
 - OK  Fed : taux directeur maintenu entre 3,5 % et 3,75 % (vote : 9 pour, 3 contre)
 - OK  Fed : taux directeur maintenu entre 3,5 % et 3,75 % (vote : 12 pour, 0 contre)
+- ÉCART Fed : taux directeur maintenu entre 3,5 % et 3,75 % (avec dissidence)
+    - fourchette : texte [] ≠ robot 3.5-3.75
 
 ## banque_canada
 - produites : 3 {'officiel': 3, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 3}, 'dernier_contenu': '2026-09-02', 'dernier_succes': '2026-10-02T23:49:29+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:49:29+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 3}, 'dernier_contenu': '2026-09-02', 'dernier_succes': '2026-10-02T23:54:52+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:54:52+00:00'}
 - OK  Banque du Canada : taux directeur maintenu à 2,25 %
 - OK  Banque du Canada : taux directeur maintenu à 2,25 %
 - OK  Banque du Canada : taux directeur maintenu à 2,25 %
 
 ## sec_form144
-- produites : 33 {'officiel': 33, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 33}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-02T23:49:29+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:49:29+00:00'}
+- produites : 33 {'officiel': 32, 'confirme': 0, 'a_verifier': 1}
+- état : {'compte': {'a_verifier': 1, 'recus': 33}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-02T23:54:52+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:54:52+00:00'}
 - OK  Jun Peng (Director & Officer) prévoit vendre 3 000 000 actions de Pony AI Inc.
 - OK  Arrow Holdings S.a.r.l. (actionnaire de 10 %) prévoit vendre 8 361 829 actions de Target Hospitality Corp.
 - OK  BRIAN VENTURO (dirigeant, administrateur) prévoit vendre 65 616 actions de CoreWeave, Inc.
@@ -53,12 +65,12 @@ Vérifiées au hasard : 95 — identiques : 94
 
 ## sec_offres
 - produites : 1 {'officiel': 1, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 1}, 'dernier_contenu': '2026-09-29', 'dernier_succes': '2026-10-02T23:49:29+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:49:29+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 1}, 'dernier_contenu': '2026-09-29', 'dernier_succes': '2026-10-02T23:54:52+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:54:52+00:00'}
 - OK  Offre d'achat annoncée : Transom Capital Fund IV, L.P. vise les actions de SOUNDTHINKING, INC.
 
 ## cftc_cot
 - produites : 8 {'officiel': 8, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 8}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-02T23:49:29+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:49:29+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 8}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-02T23:54:52+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:54:52+00:00'}
 - OK  Bitcoin (CME) : les gros spéculateurs sont acheteurs nets de 2 465 contrats (−291 en une semaine)
 - OK  Obligations américaines 10 ans : les gros spéculateurs sont vendeurs nets de 900 615 contrats (−88 863 en une 
 - OK  Nasdaq-100 (E-mini) : les gros spéculateurs sont acheteurs nets de 51 247 contrats (−4 903 en une semaine)
@@ -70,7 +82,7 @@ Vérifiées au hasard : 95 — identiques : 94
 
 ## registre_federal
 - produites : 12 {'officiel': 9, 'confirme': 3, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 10}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-02T23:49:29+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:49:29+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 10}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-02T23:54:52+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:54:52+00:00'}
 - OK  Sanctions (Trésor, OFAC) : Notice of OFAC Sanctions Action
 - OK  Sanctions (Trésor, OFAC) : Notice of OFAC Sanctions Action
 - OK  Décret présidentiel : Streamlining Access to Government Services Through America.gov
@@ -86,7 +98,7 @@ Vérifiées au hasard : 95 — identiques : 94
 
 ## ventes_armes
 - produites : 22 {'officiel': 22, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 22}, 'dernier_contenu': '2026-09-22', 'dernier_succes': '2026-10-02T23:49:29+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:49:29+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 22}, 'dernier_contenu': '2026-09-22', 'dernier_succes': '2026-10-02T23:54:52+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:54:52+00:00'}
 - OK  Vente d'armes à l'étranger : Géorgie (pays)
 - OK  Vente d'armes à l'étranger : Norvège — fournisseur : Lockheed Martin, Sikorsky
 - OK  Vente d'armes à l'étranger : Arabie saoudite — fournisseur : BAE Systems
@@ -102,7 +114,7 @@ Vérifiées au hasard : 95 — identiques : 94
 
 ## senat_ptr
 - produites : 9 {'officiel': 9, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-02T23:49:29+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:49:29+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-02T23:54:52+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:54:52+00:00'}
 - OK  A. Mitchell McConnell Jr. (Sénat) achète WFC — conjoint·e
 - OK  John Boozman (Sénat) vend JNJ — compte conjoint
 - OK  John Boozman (Sénat) achète FSLR — compte conjoint
@@ -115,7 +127,7 @@ Vérifiées au hasard : 95 — identiques : 94
 
 ## chambre_ptr
 - produites : 80 {'officiel': 79, 'confirme': 0, 'a_verifier': 1}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-02T23:49:29+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:49:29+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-02T23:54:52+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:54:52+00:00'}
 - OK  Kevin Hern (Chambre, OK01) vend OKE (2 transactions) — compte conjoint
 - OK  David J. Taylor (Chambre, OH02) achète PG
 - OK  Kevin Hern (Chambre, OK01) vend NEE (2 transactions) — compte conjoint
@@ -131,19 +143,29 @@ Vérifiées au hasard : 95 — identiques : 94
 
 ## nouvelles_defense_ca
 - produites : 3 {'officiel': 3, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-02T23:49:29+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:49:29+00:00'}
-- OK  Le gouvernement du Canada franchit une nouvelle étape en vue de doter l’Aviation royale canadienne d’une capac
-- OK  Le gouvernement du Canada commence la construction d’une nouvelle installation de chauffage central à la 5e Es
-- OK  L’Aviation royale canadienne s’associe au Fanshawe College pour offrir de l’instruction
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-02T23:54:52+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:54:52+00:00'}
+- ÉCART Le gouvernement du Canada franchit une nouvelle étape en vue de doter l’Aviation royale canadienne d’une capac
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART Le gouvernement du Canada commence la construction d’une nouvelle installation de chauffage central à la 5e Es
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART L’Aviation royale canadienne s’associe au Fanshawe College pour offrir de l’instruction
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
 
 ## nouvelles_eco_ca
 - produites : 7 {'officiel': 7, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-02T23:49:29+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:49:29+00:00'}
-- OK  Le gouvernement du Canada présente la nouvelle Mégadéduction à la productivité pour aider les entreprises à in
-- OK  Le gouvernement du Canada investit dans la création de 10 000 placements professionnels liés à l’IA pour de je
-- OK  La Régie approuve le règlement de Trans Mountain établissant un nouveau cadre pour les droits
-- OK  Le Canada et l’Allemagne signent un accord sur la sécurité générale de l’information
-- OK  La ministre McKnight visite le terminal maritime Westridge, exemple probant de la capacité du Canada de constr
-- OK  Le Tribunal ouvre un réexamen relatif à l’expiration — Certains petits transformateurs de puissance provenant 
-- OK  Le Bureau de la concurrence craint que les consommateurs soient privés de certaines aubaines en épicerie
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-02T23:54:52+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-02T23:54:52+00:00'}
+- ÉCART Le gouvernement du Canada présente la nouvelle Mégadéduction à la productivité pour aider les entreprises à in
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART Le gouvernement du Canada investit dans la création de 10 000 placements professionnels liés à l’IA pour de je
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART La Régie approuve le règlement de Trans Mountain établissant un nouveau cadre pour les droits
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART Le Canada et l’Allemagne signent un accord sur la sécurité générale de l’information
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART La ministre McKnight visite le terminal maritime Westridge, exemple probant de la capacité du Canada de constr
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART Le Tribunal ouvre un réexamen relatif à l’expiration — Certains petits transformateurs de puissance provenant 
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+- ÉCART Le Bureau de la concurrence craint que les consommateurs soient privés de certaines aubaines en épicerie
+    - vérification impossible : UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
 
