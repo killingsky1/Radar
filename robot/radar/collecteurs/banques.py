@@ -19,7 +19,7 @@ from ..models import Evenement, empreinte
 from ..store import Depot
 from ..validate import controle_source
 
-VERSION = "banques-1"
+VERSION = "banques-2"
 FLUX_FED = "https://www.federalreserve.gov/feeds/press_monetary.xml"
 FLUX_BDC = "https://www.bankofcanada.ca/content_type/press-releases/feed/"
 FRACTIONS = {"¼": 0.25, "½": 0.5, "¾": 0.75}
@@ -59,25 +59,30 @@ def _items(flux: str) -> list[dict]:
 
 DECISION_FED = re.compile(
     r"decided to (raise|lower|maintain|reduce|increase) the target range for the federal funds rate "
-    r"(?:by ([\d/-]+) percentage points? )?(?:to|at) ([\d/-]+) to ([\d/-]+) percent")
+    r"(?:by ([\d/-]+) percentage points? )?(?:to|at) ([\d/-]+) to ([\d/-]+) percent", re.I)
 VERBES_FED = {"raise": "releve", "increase": "releve", "lower": "abaisse", "reduce": "abaisse", "maintain": "maintenu"}
+TIRETS = dict.fromkeys(map(ord, "\u2010\u2011\u2012\u2013\u2014\u2212"), "-")  # « 3‑1/2 » (trait d'union insécable)
 
 
 def lire_fomc(page: str) -> dict:
-    texte = texte_html(page[page.find('id="article"'):] if 'id="article"' in page else page)
-    debut = texte.find("The Federal Open Market Committee approved")
-    if debut < 0:
-        debut = texte.find("The Committee decided")
-    fin = texte.find("For media inquiries", debut)
-    declaration = texte[debut:fin if fin > 0 else None].strip() if debut >= 0 else ""
+    """Le communiqué du FOMC : la phrase de décision peut être au début (format 2026) ou au milieu (format ancien)."""
+    debut = page.find('id="article"')
+    article = texte_html(page[debut:] if debut >= 0 else page).translate(TIRETS)
+    fin = article.find("Last Update")
+    article = article[:fin] if fin > 0 else article
+    media = article.find("For media inquiries")
+    declaration = article[:media].strip() if media > 0 else article.strip()
     d = {"declaration": declaration}
     m = DECISION_FED.search(declaration)
     if m:
-        d.update(decision=VERBES_FED[m.group(1)], pas=nombre(m.group(2)) if m.group(2) else None,
+        d.update(decision=VERBES_FED[m.group(1).lower()], pas=nombre(m.group(2)) if m.group(2) else None,
                  bas=nombre(m.group(3)), haut=nombre(m.group(4)))
-    v = re.search(r"by a (\d+)\s*[–-]\s*(\d+) vote", declaration)
+    v = re.search(r"by a (\d+)\s*-\s*(\d+) vote", declaration)
     if v:
         d["vote"] = f"{v.group(1)}-{v.group(2)}"
+    elif "Voting for the monetary policy action" in declaration:
+        d["vote_ecrit_en_noms"] = True  # ancien format : les noms, pas les chiffres
+        d["dissidence"] = "Voting against" in declaration
     return d
 
 
@@ -100,6 +105,8 @@ def evenement_fed(item: dict, page: str) -> Evenement | None:
         titre = "Fed : décision de taux (texte à lire sur le site officiel)"
     if d.get("vote"):
         titre += " (vote : {} pour, {} contre)".format(*d["vote"].split("-"))
+    elif d.get("dissidence"):
+        titre += " (avec dissidence)"
     return Evenement(
         source="fed", official_id=m.group(1), category="gouvernement", kind="decision_taux", title=titre,
         occurred_on=quand, published_on=quand, official_url=item["lien"],
@@ -118,7 +125,7 @@ def controles_fed(ev: Evenement) -> dict[str, bool]:
         "decision_lue": d.get("decision") in ("releve", "abaisse", "maintenu"),
         "fourchette_plausible": d.get("bas") is not None and 0 <= d["bas"] < d["haut"] <= 25
         and abs(d["haut"] - d["bas"] - 0.25) < 1e-9,
-        "vote_lu": bool(d.get("vote")),
+        "vote_lu": bool(d.get("vote") or d.get("vote_ecrit_en_noms")),
     }
 
 

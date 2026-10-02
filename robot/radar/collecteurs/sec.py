@@ -31,6 +31,7 @@ FORMES_13 = {"SCHEDULE 13D", "SCHEDULE 13D/A", "SCHEDULE 13G"}
 # Au-dessus de ce prix par action, c'est presque toujours une erreur de frappe dans le document
 # (ex. le prix total écrit dans la case « prix par action »). Exception : les rares actions qui valent vraiment autant.
 PRIX_MAX = 2_000
+PRIX_MIN = 0.10  # sous 10 cents l'action, une vente de 1 M$ et plus au Nasdaq ou au NYSE est presque toujours une erreur
 PRIX_ELEVES = {"BRK-A", "NVR", "BKNG", "AZO", "SEB", "FCNCA", "MKL", "WTM", "FICO", "TPL"}
 VALEUR_MAX = 5_000_000_000  # une seule déclaration de plus de 5 G$ : à vérifier
 
@@ -569,7 +570,8 @@ def controles_144(ev: Evenement) -> dict[str, bool]:
     eleve = any(t in PRIX_ELEVES for t in ev.tickers)
     return {
         "actions_et_valeur_positives": bool(lignes) and all((l["actions"] or 0) > 0 and (l["valeur"] or 0) > 0 for l in lignes),
-        "prix_implicite_plausible": prix is not None and (eleve or prix <= PRIX_MAX),
+        # Entre 0,10 $ et 2 000 $ l'action (ex. réel : « 158 milliards d'actions de Barclays » = 0,03 $ l'action)
+        "prix_implicite_plausible": prix is not None and prix >= PRIX_MIN and (eleve or prix <= PRIX_MAX),
         "montant_plausible": (ev.amount_max or 0) <= VALEUR_MAX,
         # On ne peut pas vendre plus d'actions qu'il n'en existe (chiffre écrit dans le formulaire lui-même)
         "actions_sous_le_total_en_circulation": bool(lignes) and all(

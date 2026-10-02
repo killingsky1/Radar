@@ -46,6 +46,13 @@ def test_fed_statu_quo_de_juillet_avec_dissidence():
     assert ev.direction == 0 and ev.badge == "officiel"
 
 
+def test_fed_ancien_format_decision_au_milieu_et_vote_en_noms():
+    # Avril 2026 : « In support of its goals, the Committee decided to maintain … at 3‑1/2 to 3‑3/4 percent »
+    ev = valider(evenement_fed(item_fed("monetary20260429a"), page("monetary20260429a.htm")), JOUR)
+    assert ev.badge == "officiel", ev.checks
+    assert ev.title == "Fed : taux directeur maintenu entre 3,5 % et 3,75 % (avec dissidence)"
+
+
 def test_fed_texte_illisible_va_dans_a_verifier():
     p = page("monetary20260916a.htm").replace("decided to raise the target range", "decided to change the target range")
     ev = valider(evenement_fed(item_fed("monetary20260916a"), p), JOUR)
