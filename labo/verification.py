@@ -22,6 +22,7 @@ import re
 import subprocess
 import sys
 import time
+import urllib.error
 import urllib.request
 
 UA = "Radar projet personnel math-veronneau1@hotmail.com"
@@ -29,11 +30,19 @@ TAILLE = int(sys.argv[1]) if len(sys.argv) > 1 else 20
 
 
 def telecharger(url: str) -> bytes:
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        contenu = r.read()
-    time.sleep(0.3)
-    return contenu
+    """Poli comme le robot : si la SEC dit « trop de requêtes » (429), on patiente et on réessaie."""
+    for essai in range(5):
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                contenu = r.read()
+            time.sleep(0.4)
+            return contenu
+        except urllib.error.HTTPError as e:
+            if e.code not in (429, 503) or essai == 4:
+                raise
+            time.sleep(float(e.headers.get("Retry-After") or 0) or 5 * 2 ** essai)
+    raise RuntimeError("inaccessible")
 
 
 def infos_publiees() -> list[dict]:
@@ -131,11 +140,16 @@ def main() -> None:
             resultats.append(verifier(info) if info["source"].startswith("sec_") else verifier_autre(info))
         except Exception as exc:  # noqa: BLE001
             resultats.append({"id": info["id"], "titre": info["title"], "ok": False, "ecarts": [f"erreur : {exc}"]})
+    for r in resultats:  # un document qu'on n'a pas pu télécharger n'est pas un écart : c'est « non vérifié »
+        r["impossible"] = not r["ok"] and all(e.startswith("erreur :") for e in r["ecarts"])
     ok = sum(1 for r in resultats if r["ok"])
-    lignes = [f"# Audit de vérité : {ok}/{len(resultats)} infos identiques au document officiel", "",
+    impossibles = sum(1 for r in resultats if r["impossible"])
+    verifiees = len(resultats) - impossibles
+    lignes = [f"# Audit de vérité : {ok}/{verifiees} infos identiques au document officiel"
+              + (f" ({impossibles} non vérifiées : site injoignable)" if impossibles else ""), "",
               f"Infos publiées par le robot : {len(infos)} · échantillon au hasard : {len(resultats)}", ""]
     for r in resultats:
-        etat = "OK" if r["ok"] else "ÉCART"
+        etat = "OK" if r["ok"] else "NON VÉRIFIÉE" if r["impossible"] else "ÉCART"
         lignes.append(f"- **{etat}** · {r['titre']}")
         if r.get("document"):
             lignes.append(f"  - document : {r['document']} · même document que le robot : {'oui' if r.get('meme_document') else 'NON'}")
