@@ -828,7 +828,7 @@ function Accueil({ pousser, allerAuFil }) {
               <div style={{ width: `${Math.max(pourcentage, 3)}%` }} />
             </div>
             <p className="heros-pied">
-              {meta.sources_branchees} sur {meta.sources_total} sources · phase {meta.phase}
+              {meta.sources_branchees} sur {meta.sources_total} sources branchées
             </p>
           </div>
         </div>

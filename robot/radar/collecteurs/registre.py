@@ -23,7 +23,7 @@ from ..models import Evenement, empreinte
 from ..store import Depot
 from ..validate import controle_source
 
-VERSION = "registre-2"
+VERSION = "registre-3"
 API = "https://www.federalregister.gov/api/v1"
 CHAMPS = ("title", "type", "subtype", "document_number", "html_url", "pdf_url", "publication_date", "signing_date",
           "agencies", "executive_order_number", "raw_text_url", "abstract")
@@ -144,6 +144,15 @@ MOIS = {m: i for i, m in enumerate(("January", "February", "March", "April", "Ma
                                     "September", "October", "November", "December"), 1)}
 
 
+MOIS_FR = ("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre",
+           "novembre", "décembre")
+
+
+def date_fr(iso: str) -> str:
+    d = date.fromisoformat(iso)
+    return f"{'1er' if d.day == 1 else d.day} {MOIS_FR[d.month - 1]} {d.year}"
+
+
 def date_en(texte: str | None) -> str | None:
     m = re.fullmatch(r"([A-Z][a-z]+) (\d{1,2}), (\d{4})", texte or "")
     if not m or m.group(1) not in MOIS:
@@ -242,9 +251,9 @@ def evenement(doc: dict, choix: tuple[str, str, str], texte: str, etape: str, pu
                 tickers.append(t)
         if tickers:
             data["symboles_trouves_par"] = "nom exact dans la liste officielle de la SEC"
-        if v["date_congres"]:
-            occ = date_en(v["date_congres"]) or occ
-            notes.append(f"Avis envoyé au Congrès le {v['date_congres']} ; publié ici plus tard.")
+        if v["date_congres"] and date_en(v["date_congres"]):
+            occ = date_en(v["date_congres"])
+            notes.append(f"Avis envoyé au Congrès le {date_fr(occ)} ; publié au Registre plus tard.")
         if v["ajout_a_une_vente"]:
             notes.append("Ajout ou mise à niveau d'une vente déjà annoncée.")
     else:
@@ -287,8 +296,12 @@ def controles_armes(ev: Evenement) -> dict[str, bool]:
     }
 
 
-def deja_lus(ctx) -> set[str]:
-    return Depot(ctx.donnees).ids_enregistres({"registre_federal", "ventes_armes"})
+def deja_lus(ctx) -> dict[str, tuple[str, str]]:
+    """Numéro -> (version du lecteur, étape) des documents déjà enregistrés."""
+    depot = Depot(ctx.donnees)
+    return {d["official_id"]: (d["parser_version"], d.get("data", {}).get("etape", ""))
+            for dossier in ("evenements", "a_verifier") for d in depot.lire(dossier)
+            if d["source"] in ("registre_federal", "ventes_armes")}
 
 
 def _symboles_noms(ctx) -> dict:
@@ -339,7 +352,11 @@ def collecter(ctx, sorte_voulue: str) -> list[Evenement]:
         if choix is None or choix[2] != sorte_voulue:
             continue
         if numero in lus and not doc.get("retire"):
-            continue  # la 1re lecture gagne
+            version, etape_lue = lus[numero]
+            # La 1re lecture gagne. Exception : un document déjà PARU est relu quand le lecteur s'améliore
+            # (même texte, même date de parution : seule la lecture change).
+            if version == VERSION or etape_lue != "parution" or etape != "parution":
+                continue
         if not doc.get("raw_text_url"):
             continue
         texte = texte_officiel(ctx.client.get(doc["raw_text_url"]).contenu)
