@@ -1,0 +1,178 @@
+<SEC-DOCUMENT>0001225208-26-008054.txt : 20261001
+<SEC-HEADER>0001225208-26-008054.hdr.sgml : 20261001
+<ACCEPTANCE-DATETIME>20261001161718
+ACCESSION NUMBER:		0001225208-26-008054
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20261001
+FILED AS OF DATE:		20261001
+DATE AS OF CHANGE:		20261001
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			Garza y Garza Eugenio
+		CENTRAL INDEX KEY:			0002064345
+		ORGANIZATION NAME:           	
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-09576
+		FILM NUMBER:		261431560
+
+	MAIL ADDRESS:	
+		STREET 1:		O-I GLASS, INC.
+		STREET 2:		ONE MICHAEL OWENS WAY, PLAZA I
+		CITY:			PERRYSBURG
+		STATE:			OH
+		ZIP:			43551
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			O-I Glass, Inc. /DE/
+		CENTRAL INDEX KEY:			0000812074
+		STANDARD INDUSTRIAL CLASSIFICATION:	GLASS CONTAINERS [3221]
+		ORGANIZATION NAME:           	04 Manufacturing
+		EIN:				222781933
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			1231
+
+	BUSINESS ADDRESS:	
+		STREET 1:		ONE MICHAEL OWENS WAY
+		CITY:			PERRYSBURG
+		STATE:			OH
+		ZIP:			43551-2999
+		BUSINESS PHONE:		7248223258
+
+	MAIL ADDRESS:	
+		STREET 1:		ONE MICHAEL OWENS WAY
+		CITY:			PERRYSBURG
+		STATE:			OH
+		ZIP:			43551-2999
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	OWENS ILLINOIS INC /DE/
+		DATE OF NAME CHANGE:	20100601
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	OWENS-ILLINOIS INC /DE/
+		DATE OF NAME CHANGE:	20100601
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	OWENS ILLINOIS INC /DE/
+		DATE OF NAME CHANGE:	19920703
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>doc4.xml
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-10-01</periodOfReport>
+
+    <issuer>
+        <issuerCik>0000812074</issuerCik>
+        <issuerName>O-I Glass, Inc. /DE/</issuerName>
+        <issuerTradingSymbol>OI</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0002064345</rptOwnerCik>
+            <rptOwnerName>Garza y Garza Eugenio</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>ONE MICHAEL OWENS WAY</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>PERRYSBURG</rptOwnerCity>
+            <rptOwnerState>OH</rptOwnerState>
+            <rptOwnerZipCode>43551</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>1</isDirector>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <nonDerivativeTable></nonDerivativeTable>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Phantom Stock</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F1"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-10-01</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>5420.3540</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0.0000</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F1"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F1"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock (Direct)</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>5420.3540</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>15965.7735</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Each share of phantom stock is the economic equivalent of one share of common stock. The shares of phantom stock become payable in cash, at the election of the reporting person, following the reporting person's separation from service as a director of the Issuer.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/ Darrow A. Abrahams, attorney-in-fact</signatureName>
+        <signatureDate>2026-10-01</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

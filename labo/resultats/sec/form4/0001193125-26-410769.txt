@@ -1,0 +1,170 @@
+<SEC-DOCUMENT>0001193125-26-410769.txt : 20261001
+<SEC-HEADER>0001193125-26-410769.hdr.sgml : 20261001
+<ACCEPTANCE-DATETIME>20261001164151
+ACCESSION NUMBER:		0001193125-26-410769
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20260930
+FILED AS OF DATE:		20261001
+DATE AS OF CHANGE:		20261001
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			Ryan Scott C
+		CENTRAL INDEX KEY:			0001895408
+		ORGANIZATION NAME:           	
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	000-56646
+		FILM NUMBER:		261432053
+
+	MAIL ADDRESS:	
+		STREET 1:		4745 N. 7TH STREET, SUITE 310
+		CITY:			PHOENIX
+		STATE:			KY
+		ZIP:			85014
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			DIRTT ENVIRONMENTAL SOLUTIONS LTD
+		CENTRAL INDEX KEY:			0001340476
+		STANDARD INDUSTRIAL CLASSIFICATION:	SERVICES-PREPACKAGED SOFTWARE [7372]
+		ORGANIZATION NAME:           	06 Technology
+		EIN:				000000000
+		STATE OF INCORPORATION:			A0
+		FISCAL YEAR END:			1231
+
+	BUSINESS ADDRESS:	
+		ADDRESS IS A NON US LOCATION: 	YES
+		STREET 1:		7303 30 ST S E
+		CITY:			CALGARY ALBERTA T2C 1N6 CAN
+		PROVINCE COUNTRY:   	A1
+		BUSINESS PHONE:		403-723-5000
+
+	MAIL ADDRESS:	
+		ADDRESS IS A NON US LOCATION: 	YES
+		STREET 1:		7303 30 ST S E
+		CITY:			CALGARY ALBERTA T2C 1N6 CAN
+		PROVINCE COUNTRY:   	A1
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>ownership.xml
+<DESCRIPTION>4
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-09-30</periodOfReport>
+
+    <issuer>
+        <issuerCik>0001340476</issuerCik>
+        <issuerName>DIRTT ENVIRONMENTAL SOLUTIONS LTD</issuerName>
+        <issuerTradingSymbol>DRTTF</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001895408</rptOwnerCik>
+            <rptOwnerName>Ryan Scott C</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>true</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>7303 30 STREET SE</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>CALGARY</rptOwnerCity>
+            <rptOwnerNonUSStateTerritory></rptOwnerNonUSStateTerritory>
+            <rptOwnerCountry>A0</rptOwnerCountry>
+            <rptOwnerZipCode>T2C1N6</rptOwnerZipCode>
+            <rptOwnerStateDescription>ALBERTA, CANADA</rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>true</isDirector>
+            <isOfficer>false</isOfficer>
+            <isTenPercentOwner>false</isTenPercentOwner>
+            <isOther>false</isOther>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>false</aff10b5One>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Deferred Share Unit</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F1"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-09-30</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>33654</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0.59</value>
+                    <footnoteId id="F2"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F1"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F1"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Shares</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>33654</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>1092643</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Each deferred share unit (&quot;DSU&quot;) was granted pursuant to the DIRTT Environmental Solutions Ltd. Third Amended and Restated Long Term Incentive Plan and is the economic equivalent of one common share (a &quot;Common Share&quot;) of DIRTT Environmental Solutions Ltd. (the &quot;Issuer&quot;). All DSUs settle following the cessation of service and employment with the Issuer (the &quot;Termination Date&quot;). For directors who are subject to taxation in the United States (&quot;US Directors&quot;), the DSUs will settle no later than forty days following the Termination Date. Each DSU will be settled in one Common Share or in the cash equivalent of such Common Shares, calculated based on the closing price of the Common Shares on the day prior to the 30th day following separation from service for US Directors.</footnote>
+        <footnote id="F2">The price used to calculate the number of DSUs granted was C$0.83, which was the closing price Issuer's Common Shares as reported on the Toronto Stock Exchange on September 29, 2026. The price was converted using the Bank of Canada exchange rate for September 29, 2026 of C$1.4188 = US$1.00.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/ Fareeha Khan, as attorney-in-fact Scott Ryan</signatureName>
+        <signatureDate>2026-10-01</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

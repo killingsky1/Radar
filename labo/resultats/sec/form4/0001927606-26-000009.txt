@@ -1,0 +1,317 @@
+<SEC-DOCUMENT>0001927606-26-000009.txt : 20261001
+<SEC-HEADER>0001927606-26-000009.hdr.sgml : 20261001
+<ACCEPTANCE-DATETIME>20261001191801
+ACCESSION NUMBER:		0001927606-26-000009
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		2
+CONFORMED PERIOD OF REPORT:	20260930
+FILED AS OF DATE:		20261001
+DATE AS OF CHANGE:		20261001
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			Reilly David
+		CENTRAL INDEX KEY:			0001927606
+		ORGANIZATION NAME:           	
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-03754
+		FILM NUMBER:		261432986
+
+	MAIL ADDRESS:	
+		STREET 1:		C/O ALLY FINANCIAL INC.
+		STREET 2:		500 WOODWARD AVE, 10TH FLOOR
+		CITY:			DETROIT
+		STATE:			MI
+		ZIP:			48226
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			Ally Financial Inc.
+		CENTRAL INDEX KEY:			0000040729
+		STANDARD INDUSTRIAL CLASSIFICATION:	STATE COMMERCIAL BANKS [6022]
+		ORGANIZATION NAME:           	02 Finance
+		EIN:				380572512
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			1231
+
+	BUSINESS ADDRESS:	
+		STREET 1:		ALLY DETROIT CENTER
+		STREET 2:		500 WOODWARD AVE. FLOOR 10
+		CITY:			DETROIT
+		STATE:			MI
+		ZIP:			48226
+		BUSINESS PHONE:		866-710-4623
+
+	MAIL ADDRESS:	
+		STREET 1:		ALLY DETROIT CENTER
+		STREET 2:		500 WOODWARD AVE. FLOOR 10
+		CITY:			DETROIT
+		STATE:			MI
+		ZIP:			48226
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	GMAC INC.
+		DATE OF NAME CHANGE:	20090701
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	GMAC LLC
+		DATE OF NAME CHANGE:	20060720
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	GENERAL MOTORS ACCEPTANCE CORP
+		DATE OF NAME CHANGE:	19920703
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>primarydocument.xml
+<DESCRIPTION>PRIMARY DOCUMENT
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-09-30</periodOfReport>
+
+    <notSubjectToSection16>false</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0000040729</issuerCik>
+        <issuerName>Ally Financial Inc.</issuerName>
+        <issuerTradingSymbol>ALLY</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001927606</rptOwnerCik>
+            <rptOwnerName>Reilly David</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>500 WOODWARD AVENUE</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>DETROIT</rptOwnerCity>
+            <rptOwnerState>MI</rptOwnerState>
+            <rptOwnerZipCode>48226</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>true</isDirector>
+            <isOfficer>false</isOfficer>
+            <isTenPercentOwner>false</isTenPercentOwner>
+            <isOther>false</isOther>
+            <officerTitle></officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>false</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-09-30</value>
+            </transactionDate>
+            <deemedExecutionDate></deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>864.00</value>
+                    <footnoteId id="F1"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>37.62</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>37634.00</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <derivativeTable></derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Represents deferred stock units payable solely in the Registrant's common stock on a one-for-one basis following the Reporting Person's termination of service as a director in accordance with the Reporting Person's deferral election under the Ally Financial Inc. Non-Employee Directors Deferred Compensation Plan.</footnote>
+    </footnotes>
+
+    <remarks></remarks>
+
+    <ownerSignature>
+        <signatureName>/s/ Joyce M. Daniels, attorney-in-fact for Mr. Reilly</signatureName>
+        <signatureDate>2026-10-01</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+<DOCUMENT>
+<TYPE>EX-24
+<SEQUENCE>2
+<FILENAME>section16poareilly26.txt
+<DESCRIPTION>POWER OF ATTORNEY - 2026
+<TEXT>
+POWER OF ATTORNEY
+
+The undersigned hereby makes, constitutes, and appoints each of Jeffrey
+A. Belisle, Joyce M. Daniels, Sonja L. Mahon, and Christine R. Strong, or
+any of them acting singly, and with full power of substitution, re-
+substitution, and delegation, the undersigned's true and lawful attorney in
+fact (each of such persons and their substitutes and delegees being
+referred to herein as the "Attorney-in-Fact"), with full power to act for the
+undersigned and in the undersigned's name, place, and stead, in the
+undersigned's capacity as an officer, director, or shareholder of Ally
+Financial Inc. (the "Company"), to:
+
+1.	Take such actions as may be necessary or appropriate to
+enable the undersigned to submit and file forms, schedules, and other
+documents with the U.S. Securities and Exchange Commission ("SEC")
+utilizing the SEC's Electronic Data Gathering, Analysis and Retrieval
+("EDGAR") system, which actions may include (a) preparing, executing,
+and submitting to the SEC a Form ID, any amendments thereto, and such
+other documents and information as may be necessary or appropriate to
+obtain codes and passwords enabling the undersigned to make filings
+and submissions utilizing the EDGAR system, (b) enrolling the
+undersigned in EDGAR Next or any successor filing system, and (c)
+receiving notifications or other communications from the SEC of the
+various codes and passwords issued to the undersigned;
+
+2.	Prepare and execute any and all forms (including any
+amendments thereto) the undersigned is required to file with the SEC or
+which the Attorney-in-Fact considers it advisable for the undersigned to
+file with the SEC under Section 16 of the Securities Exchange Act of 1934,
+as amended (the "Exchange Act"), or any rule or regulation thereunder,
+including Forms 3, 4, and 5 (all such forms being referred to herein as
+"SEC Filings");
+
+3.	Do and perform any and all acts for and on behalf of the
+undersigned which may be necessary or desirable to complete and
+execute any SEC Filings, complete and execute any amendments thereto,
+and submit and file SEC Filings with the SEC utilizing the EDGAR system
+or cause them to be submitted and filed by a person appointed under
+Section 5 below;
+
+4.	File, submit, or otherwise deliver SEC Filings to any securities
+exchange on which the Company's securities may be listed or traded;
+
+5.	Act as an account administrator for the undersigned's EDGAR
+account, including: (i) appointing, removing, and replacing account
+administrators, account users, technical administrators, and delegated
+entities; (ii) maintaining the security of the undersigned's EDGAR account,
+including modification of access codes; (iii) maintaining, modifying, and
+certifying the accuracy of information on the undersigned's EDGAR
+account dashboard; (iv) acting as the EDGAR point of contact with
+respect to the undersigned's EDGAR account; and (v) taking any other
+actions contemplated by Rule 10 of Regulation S-T with respect to
+account administrators;
+
+6.	Cause the Company to accept a delegation of authority from
+any of the undersigned's EDGAR account administrators and, pursuant to
+that delegation, authorize the Company's EDGAR account administrators
+to appoint, remove, or replace users for the undersigned's EDGAR
+account; and
+
+7.	Obtain, as the undersigned's representative and on the
+undersigned's behalf, information regarding transactions in the
+Company's securities from any third party, including the Company and
+any brokers, dealers, employee benefit plan administrators, and trustees,
+and the undersigned hereby authorizes any such third party to release
+such information to the Attorney-in-Fact and further ratifies the release of
+such information.
+
+8.	Take any other action which, in the opinion of such attorney-in-
+fact, may be of benefit to, in the best interest of, or legally required by or
+for, the undersigned, in furtherance of the foregoing.
+
+      The undersigned acknowledges that:
+
+     a)	This Power of Attorney authorizes, but does not
+require, the Attorney-in-Fact to act in his or her discretion on information
+provided to such Attorney-in-Fact without independent verification of such
+information;
+
+     b)	Any documents prepared or executed by the
+Attorney-in-Fact on behalf of the undersigned pursuant to this Power of
+Attorney will be in such form and will contain such information as the
+Attorney-in-Fact deems necessary or desirable in such Attorney-in-Fact's
+sole discretion;
+
+     c)	Neither the Company nor the Attorney-in-Fact
+assumes any liability for the undersigned's responsibility to comply with
+the requirements of Section 16 of the Exchange Act, any liability of the
+undersigned for any failure to comply with such requirements, or any
+liability of the undersigned for disgorgement of profits under Section 16(b)
+of the Exchange Act; and
+
+     d)	This Power of Attorney does not relieve the
+undersigned from responsibility for compliance with the undersigned's
+obligations under Section 16 of the Exchange Act, including, without
+limitation, the reporting requirements under Section 16 of the Exchange
+Act.
+
+The undersigned hereby grants to the Attorney-in-Fact full power and
+authority to do and perform each and every act requisite, necessary, or
+advisable to be done in connection with the foregoing, as fully, to all
+intents and purposes, as the undersigned might or could do in person,
+hereby ratifying and confirming all that the Attorney-in-Fact, or his or her
+substitute or substitutes, shall lawfully do or cause to be done by authority
+of this Power of Attorney.
+
+This Power of Attorney shall remain in full force and effect until the
+undersigned is no longer required to file SEC Filings with respect to the
+undersigned's holdings of and transactions in securities of the Company,
+unless earlier revoked by the undersigned in a signed writing delivered to
+the Attorney-in-Fact. This Power of Attorney revokes all previous powers of
+attorney with respect to the subject matter of this Power of Attorney.
+
+IN WITNESS WHEREOF, the undersigned has executed this Power of
+Attorney as of July 28, 2026.
+
+/s/ David Reilly
+
+David Reilly
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

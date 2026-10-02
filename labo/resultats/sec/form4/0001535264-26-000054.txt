@@ -1,0 +1,179 @@
+<SEC-DOCUMENT>0001535264-26-000054.txt : 20261001
+<SEC-HEADER>0001535264-26-000054.hdr.sgml : 20261001
+<ACCEPTANCE-DATETIME>20261001170205
+ACCESSION NUMBER:		0001535264-26-000054
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20260929
+FILED AS OF DATE:		20261001
+DATE AS OF CHANGE:		20261001
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			AWM Investment Company, Inc.
+		CENTRAL INDEX KEY:			0001535264
+		ORGANIZATION NAME:           	
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			1231
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-39815
+		FILM NUMBER:		261432279
+
+	BUSINESS ADDRESS:	
+		STREET 1:		527 MADISON AVENUE
+		STREET 2:		SUITE 2600
+		CITY:			NEW YORK
+		STATE:			NY
+		ZIP:			10022
+		BUSINESS PHONE:		212-319-6670
+
+	MAIL ADDRESS:	
+		STREET 1:		527 MADISON AVENUE
+		STREET 2:		SUITE 2600
+		CITY:			NEW YORK
+		STATE:			NY
+		ZIP:			10022
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			908 Devices Inc.
+		CENTRAL INDEX KEY:			0001555279
+		STANDARD INDUSTRIAL CLASSIFICATION:	LABORATORY ANALYTICAL INSTRUMENTS [3826]
+		ORGANIZATION NAME:           	08 Industrial Applications and Services
+		EIN:				454524096
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			1231
+
+	BUSINESS ADDRESS:	
+		STREET 1:		44 THIRD AVENUE
+		CITY:			BURLINGTON
+		STATE:			MA
+		ZIP:			01803
+		BUSINESS PHONE:		978-729-4478
+
+	MAIL ADDRESS:	
+		STREET 1:		44 THIRD AVENUE
+		CITY:			BURLINGTON
+		STATE:			MA
+		ZIP:			01803
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>primary_doc.xml
+<DESCRIPTION>PRIMARY DOCUMENT
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-09-29</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0001555279</issuerCik>
+        <issuerName>908 Devices Inc.</issuerName>
+        <issuerTradingSymbol>MASS</issuerTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001535264</rptOwnerCik>
+            <rptOwnerName>AWM Investment Company, Inc.</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>527 MADISON AVENUE</rptOwnerStreet1>
+            <rptOwnerStreet2>SUITE 2600</rptOwnerStreet2>
+            <rptOwnerCity>NEW YORK</rptOwnerCity>
+            <rptOwnerState>NY</rptOwnerState>
+            <rptOwnerZipCode>10022</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>0</isDirector>
+            <isOfficer>0</isOfficer>
+            <isTenPercentOwner>1</isTenPercentOwner>
+            <isOther>0</isOther>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-09-29</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionTimeliness>
+                <value></value>
+            </transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>18000</value>
+                    <footnoteId id="F2"/>
+                    <footnoteId id="F3"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>11.5179</value>
+                    <footnoteId id="F1"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>4736773</value>
+                    <footnoteId id="F2"/>
+                    <footnoteId id="F3"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                    <footnoteId id="F2"/>
+                    <footnoteId id="F3"/>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>By Limited Partnership</value>
+                    <footnoteId id="F2"/>
+                    <footnoteId id="F3"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <footnotes>
+        <footnote id="F1">This is a weighted average price.</footnote>
+        <footnote id="F2">AWM Investment Company, Inc., a Delaware Corporation (AWM), is the investment adviser to Special Situations Fund III QP, L.P. (SSFQP), Special Situations Cayman Fund, L.P. (CAY), Special Situations Private Equity Fund, L.P. (SSPE), Special Situations Technology Fund, L.P. (TECH) and Special Situations Technology Fund II, L.P. (TECH II and together with SSFQP, CAY, SSPE and TECH, the Funds).  As the investment adviser to the Funds, AWM holds sole voting and investment power over 1,962,485 shares of Common Stock of the Issuer (the Shares) held by SSFQP, 560,026 Shares held by CAY, 198,802 Shares held by SSPE, 338,137 Shares held by TECH and 1,677,323 Shares held by TECH II.</footnote>
+        <footnote id="F3">David M. Greenhouse (Greenhouse) and Adam C. Stettner (Stettner) are the controlling principals of AWM. The reporting person disclaims beneficial ownership of the Shares, except to the extent of its pecuniary interest therein. This report shall not be deemed an admission that the reporting person is the beneficial owner of the securities reported herein for purposes of Section 16 of the Securities Exchange Act of 1934, as amended, or for any other purpose.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>Adam Stettner</signatureName>
+        <signatureDate>2026-10-01</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

@@ -1,0 +1,197 @@
+<SEC-DOCUMENT>0000310158-26-000232.txt : 20261001
+<SEC-HEADER>0000310158-26-000232.hdr.sgml : 20261001
+<ACCEPTANCE-DATETIME>20261001135013
+ACCESSION NUMBER:		0000310158-26-000232
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20260930
+FILED AS OF DATE:		20261001
+DATE AS OF CHANGE:		20261001
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			Karsanbhai Surendralal Lanca
+		CENTRAL INDEX KEY:			0001754881
+		ORGANIZATION NAME:           	
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-06571
+		FILM NUMBER:		261430422
+
+	MAIL ADDRESS:	
+		STREET 1:		C/O EMERSON ELECTRIC CO.
+		STREET 2:		8000 W. FLORISSANT AVENUE
+		CITY:			ST. LOUIS
+		STATE:			MO
+		ZIP:			63136
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			Merck & Co., Inc.
+		CENTRAL INDEX KEY:			0000310158
+		STANDARD INDUSTRIAL CLASSIFICATION:	PHARMACEUTICAL PREPARATIONS [2834]
+		ORGANIZATION NAME:           	03 Life Sciences
+		EIN:				221918501
+		STATE OF INCORPORATION:			NJ
+		FISCAL YEAR END:			1231
+
+	BUSINESS ADDRESS:	
+		STREET 1:		126 EAST LINCOLN AVENUE
+		STREET 2:		P.O. BOX 2000
+		CITY:			RAHWAY
+		STATE:			NJ
+		ZIP:			07065
+		BUSINESS PHONE:		908-740-4000
+
+	MAIL ADDRESS:	
+		STREET 1:		126 EAST LINCOLN AVENUE
+		STREET 2:		P.O. BOX 2000
+		CITY:			RAHWAY
+		STATE:			NJ
+		ZIP:			07065
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	Merck & Co. Inc.
+		DATE OF NAME CHANGE:	20091103
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	SCHERING PLOUGH CORP
+		DATE OF NAME CHANGE:	19920703
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>form4.xml
+<DESCRIPTION>PRIMARY DOCUMENT
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-09-30</periodOfReport>
+
+    <issuer>
+        <issuerCik>0000310158</issuerCik>
+        <issuerName>Merck &amp; Co., Inc.</issuerName>
+        <issuerTradingSymbol>MRK</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001754881</rptOwnerCik>
+            <rptOwnerName>Karsanbhai Surendralal Lanca</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>MERCK &amp; CO., INC.</rptOwnerStreet1>
+            <rptOwnerStreet2>126 EAST LINCOLN AVENUE</rptOwnerStreet2>
+            <rptOwnerCity>RAHWAY</rptOwnerCity>
+            <rptOwnerState>NJ</rptOwnerState>
+            <rptOwnerZipCode>07065</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>1</isDirector>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeHolding>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>1</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeHolding>
+    </nonDerivativeTable>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Phantom Stock</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F1"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-09-30</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>111.8299</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>145.31</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F2"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F2"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>111.8299</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>5667.0117</value>
+                    <footnoteId id="F3"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">1-for-1</footnote>
+        <footnote id="F2">Phantom stock units are to be settled 100% in cash upon reporting person's termination of service in accordance with a distribution schedule elected pursuant to the terms of the Plan for Deferred Payment of Directors' Compensation.</footnote>
+        <footnote id="F3">Holdings include shares acquired in dividend reinvestment transactions.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/ Kelly E. W. Grez as Attorney-in-Fact for Surendralal L. Karsanbhai</signatureName>
+        <signatureDate>2026-10-01</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

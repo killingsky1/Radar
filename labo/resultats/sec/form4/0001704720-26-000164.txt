@@ -1,0 +1,151 @@
+<SEC-DOCUMENT>0001704720-26-000164.txt : 20261001
+<SEC-HEADER>0001704720-26-000164.hdr.sgml : 20261001
+<ACCEPTANCE-DATETIME>20261001161007
+ACCESSION NUMBER:		0001704720-26-000164
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20260930
+FILED AS OF DATE:		20261001
+DATE AS OF CHANGE:		20261001
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			Ammerman Douglas K
+		CENTRAL INDEX KEY:			0001335360
+		ORGANIZATION NAME:           	
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-38300
+		FILM NUMBER:		261431449
+
+	MAIL ADDRESS:	
+		STREET 1:		601 RIVERSIDE AVENUE
+		CITY:			JACKSONVILLE
+		STATE:			FL
+		ZIP:			32204
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			Cannae Holdings, Inc.
+		CENTRAL INDEX KEY:			0001704720
+		STANDARD INDUSTRIAL CLASSIFICATION:	RETAIL-EATING & DRINKING PLACES [5810]
+		ORGANIZATION NAME:           	07 Trade & Services
+		EIN:				821273460
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			1231
+
+	BUSINESS ADDRESS:	
+		STREET 1:		C/O CANNAE HOLDINGS, INC.
+		STREET 2:		1701 VILLAGE CENTER CIRCLE
+		CITY:			LAS VEGAS
+		STATE:			NV
+		ZIP:			89134
+		BUSINESS PHONE:		702-323-7334
+
+	MAIL ADDRESS:	
+		STREET 1:		C/O CANNAE HOLDINGS, INC.
+		STREET 2:		1701 VILLAGE CENTER CIRCLE
+		CITY:			LAS VEGAS
+		STATE:			NV
+		ZIP:			89134
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>form4.xml
+<DESCRIPTION>PRIMARY DOCUMENT
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-09-30</periodOfReport>
+
+    <issuer>
+        <issuerCik>0001704720</issuerCik>
+        <issuerName>Cannae Holdings, Inc.</issuerName>
+        <issuerTradingSymbol>CNNE</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001335360</rptOwnerCik>
+            <rptOwnerName>Ammerman Douglas K</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>1701 VILLLAGE CENTER CIRCLE</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>LAS VEGAS</rptOwnerCity>
+            <rptOwnerState>NV</rptOwnerState>
+            <rptOwnerZipCode>89134</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>1</isDirector>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-09-30</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>2853</value>
+                    <footnoteId id="F1"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>15.34</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>74878</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Shares obtained under the Director Retainer Election Program.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/ Carol Nairn, as attorney-in-fact</signatureName>
+        <signatureDate>2026-10-01</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

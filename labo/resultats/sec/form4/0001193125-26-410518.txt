@@ -1,0 +1,182 @@
+<SEC-DOCUMENT>0001193125-26-410518.txt : 20261001
+<SEC-HEADER>0001193125-26-410518.hdr.sgml : 20261001
+<ACCEPTANCE-DATETIME>20261001145924
+ACCESSION NUMBER:		0001193125-26-410518
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20260930
+FILED AS OF DATE:		20261001
+DATE AS OF CHANGE:		20261001
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			Hale David Peter
+		CENTRAL INDEX KEY:			0001713233
+		ORGANIZATION NAME:           	
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	000-14549
+		FILM NUMBER:		261430833
+
+	MAIL ADDRESS:	
+		STREET 1:		131 WEST FRONT STREET
+		STREET 2:		P O BOX 249
+		CITY:			THOMASVILLE
+		STATE:			AL
+		ZIP:			36784
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			FIRST US BANCSHARES, INC.
+		CENTRAL INDEX KEY:			0000717806
+		STANDARD INDUSTRIAL CLASSIFICATION:	STATE COMMERCIAL BANKS [6022]
+		ORGANIZATION NAME:           	02 Finance
+		EIN:				630843362
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			1231
+
+	BUSINESS ADDRESS:	
+		STREET 1:		3291 U.S. HIGHWAY 280
+		CITY:			BIRMINGHAM
+		STATE:			AL
+		ZIP:			35243
+		BUSINESS PHONE:		2055821084
+
+	MAIL ADDRESS:	
+		STREET 1:		3291 U.S. HIGHWAY 280
+		CITY:			BIRMINGHAM
+		STATE:			AL
+		ZIP:			35243
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	FIRST US BANCSHARES INC
+		DATE OF NAME CHANGE:	20161011
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	UNITED SECURITY BANCSHARES INC
+		DATE OF NAME CHANGE:	19920703
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>ownership.xml
+<DESCRIPTION>4
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-09-30</periodOfReport>
+
+    <notSubjectToSection16>false</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0000717806</issuerCik>
+        <issuerName>FIRST US BANCSHARES, INC.</issuerName>
+        <issuerTradingSymbol>FUSB</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001713233</rptOwnerCik>
+            <rptOwnerName>Hale David Peter</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>3291 US HIGHWAY 280</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>BIRMINGHAM</rptOwnerCity>
+            <rptOwnerState>AL</rptOwnerState>
+            <rptOwnerZipCode>35243</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>true</isDirector>
+            <isOfficer>false</isOfficer>
+            <isTenPercentOwner>false</isTenPercentOwner>
+            <isOther>false</isOther>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>false</aff10b5One>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Phantom Stock Units</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F1"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-09-30</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>526.14</value>
+                    <footnoteId id="F2"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>16.49</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F3"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F3"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>526.14</value>
+                    <footnoteId id="F2"/>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>21405.48</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">The units convert to common stock on a 1-for-1 basis.</footnote>
+        <footnote id="F2">Includes 86.42 shares attributable to quarterly dividends accrued under the First US Bancshares, Inc. Non-Employee Directors' Deferred Compensation Plan.</footnote>
+        <footnote id="F3">The phantom stock units were accrued under the First US Bancshares, Inc. Non-Employee Directors' Deferred Compensation Plan and are to be settled in common stock at the end of the deferral period.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/Beverly J. Dozier, by power of attorney</signatureName>
+        <signatureDate>2026-10-01</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

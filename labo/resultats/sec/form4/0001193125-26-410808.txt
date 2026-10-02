@@ -1,0 +1,160 @@
+<SEC-DOCUMENT>0001193125-26-410808.txt : 20261001
+<SEC-HEADER>0001193125-26-410808.hdr.sgml : 20261001
+<ACCEPTANCE-DATETIME>20261001170459
+ACCESSION NUMBER:		0001193125-26-410808
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20260930
+FILED AS OF DATE:		20261001
+DATE AS OF CHANGE:		20261001
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			Bruno Marc A
+		CENTRAL INDEX KEY:			0001738789
+		ORGANIZATION NAME:           	
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-14387
+		FILM NUMBER:		261432309
+
+	MAIL ADDRESS:	
+		STREET 1:		C/O UNITED RENTALS, INC.
+		STREET 2:		100 FIRST STAMFORD PLACE, SUITE  700
+		CITY:			STAMFORD
+		STATE:			CT
+		ZIP:			06902
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			UNITED RENTALS, INC.
+		CENTRAL INDEX KEY:			0001067701
+		STANDARD INDUSTRIAL CLASSIFICATION:	SERVICES-EQUIPMENT RENTAL & LEASING, NEC [7359]
+		ORGANIZATION NAME:           	07 Trade & Services
+		EIN:				061522496
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			1231
+
+	BUSINESS ADDRESS:	
+		STREET 1:		100 FIRST STAMFORD PLACE, SUITE 700
+		CITY:			STAMFORD
+		STATE:			CT
+		ZIP:			06902
+		BUSINESS PHONE:		2036223131
+
+	MAIL ADDRESS:	
+		STREET 1:		100 FIRST STAMFORD PLACE, SUITE 700
+		CITY:			STAMFORD
+		STATE:			CT
+		ZIP:			06902
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	UNITED RENTALS INC /DE
+		DATE OF NAME CHANGE:	19980806
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>ownership.xml
+<DESCRIPTION>4
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-09-30</periodOfReport>
+
+    <issuer>
+        <issuerCik>0001067701</issuerCik>
+        <issuerName>UNITED RENTALS, INC.</issuerName>
+        <issuerTradingSymbol>URI</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001738789</rptOwnerCik>
+            <rptOwnerName>Bruno Marc A</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>C/O UNITED RENTALS, INC.</rptOwnerStreet1>
+            <rptOwnerStreet2>100 FIRST STAMFORD PLACE, SUITE 700</rptOwnerStreet2>
+            <rptOwnerCity>STAMFORD</rptOwnerCity>
+            <rptOwnerState>CT</rptOwnerState>
+            <rptOwnerZipCode>06902</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>true</isDirector>
+            <isOfficer>false</isOfficer>
+            <isTenPercentOwner>false</isTenPercentOwner>
+            <isOther>false</isOther>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>false</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-09-30</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>38</value>
+                    <footnoteId id="F1"/>
+                    <footnoteId id="F2"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>1000.78</value>
+                    <footnoteId id="F3"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>7783</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Represents Phantom Stock Units acquired under the United Rentals, Inc. Deferred Compensation Plan for Directors. The Phantom Stock Units are deemed to be invested in shares of Common Stock (with each unit having the economic equivalent of one share).</footnote>
+        <footnote id="F2">The Common Stock represented by the Phantom Stock Units will be paid to the reporting person on a one-for-one basis on the first day of the month immediately following termination of the reporting person's service as a director.</footnote>
+        <footnote id="F3">Represents amount of deferred fees used to acquire one Phantom Stock Unit.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/ Alison M. Walsh, Attorney-in-fact</signatureName>
+        <signatureDate>2026-10-01</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

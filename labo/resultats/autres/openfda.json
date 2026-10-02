@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-01",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 29373
+    }
+  },
+  "results": [
+    {
+      "submissions": [
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "7",
+          "submission_status": "AP",
+          "submission_status_date": "20100331",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "12",
+          "submission_status": "AP",
+          "submission_status_date": "20110913",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "1",
+          "submission_status": "AP",
+          "submission_status_date": "20050322",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling"
+        },
+        {
+          "submission_type": "ORIG",
+          "submission_number": "1",
+          "submission_status": "AP",
+          "submission_status_date": "20040628"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "4",
+          "submission_status": "AP",
+          "submission_status_date": "20070329",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling"
+        }
+      ],
+      "application_number": "ANDA076355",
+      "sponsor_name": "NEPHRON",
+      "openfda": {
+        "application_number": [
+          "ANDA076355"
+        ],
+        "brand_name": [
+          "ALBUTEROL SULFATE"
+        ],
+        "generic_name": [
+          "ALBUTEROL SULFATE"
+        ],
+        "manufacturer_name": [
+          "Nephron Pharmaceuticals Corporation",
+          "Rising Pharma Holdings, Inc",
+          "Chartwell RX, LLC"
+        ],
+        "product_ndc": [
+          "0487-0301",
+          "0487-9904",
+          "64980-643",
+          "64980-644",
+          "62135-826",
+          "62135-827"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "RESPIRATORY (INHALATION)"
+        ],
+        "substance_name": [
+          "ALBUTEROL SULFATE"
+        ],
+        "rxcui": [
+          "351136",
+          "351137"
+        ],
+        "spl_id": [
+          "4ecf4a2e-bc85-7019-e063-6394a90a3202",
+          "56c0a24f-4608-be23-e063-6294a90a9be2",
+          "11e59625-431b-e530-e063-6294a90a0596"
+        ],
+        "spl_set_id": [
+          "285a656c-f77f-4e77-b0a8-a0e9c901803f",
+          "32474c0e-af35-69d1-e063-6394a90a53c6",
+          "4e48ccbe-3ec0-4bf2-be28-83eb9baa63d6"
+        ],
+        "package_ndc": [
+          "0487-9904-25",
+          "0487-9904-01",
+          "0487-9904-02",
+          "0487-0301-01",
+          "0487-0301-02",
+          "64980-644-02",
+          "64980-643-03",
+          "62135-826-84",
+          "62135-827-84"
+        ],
+        "unii": [
+          "021SEF3731"
+        ]
+      },
+      "products": [
+        {
+          "product_number": "001",
+          "reference_drug": "No",
+          "brand_name": "ALBUTEROL SULFATE",
+          "active_ingredients": [
+            {
+              "name": "ALBUTEROL SULFATE",
+              "strength": "EQ 0.042% BASE"
+            }
+          ],
+          "reference_standard": "Yes",
+          "dosage_form": "SOLUTION",
+          "route": "INHALATION",
+          "marketing_status": "Prescription",
+          "te_code": "AN"
+        },
+        {
+          "product_number": "002",
+          "reference_drug": "No",
+          "brand_name": "ALBUTEROL SULFATE",
+          "active_ingredients": [
+            {
+              "name": "ALBUTEROL SULFATE",
+              "strength": "EQ 0.021% BASE"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "SOLUTION",
+          "route": "INHALATION",
+          "marketing_status": "Prescription",
+          "te_code": "AN"
+        }
+      ]
+    }
+  ]
+}

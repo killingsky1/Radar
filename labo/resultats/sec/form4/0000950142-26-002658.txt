@@ -1,0 +1,181 @@
+<SEC-DOCUMENT>0000950142-26-002658.txt : 20261001
+<SEC-HEADER>0000950142-26-002658.hdr.sgml : 20261001
+<ACCEPTANCE-DATETIME>20261001163243
+ACCESSION NUMBER:		0000950142-26-002658
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20260930
+FILED AS OF DATE:		20261001
+DATE AS OF CHANGE:		20261001
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			Kennedy Michelle
+		CENTRAL INDEX KEY:			0001976664
+		ORGANIZATION NAME:           	
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-16497
+		FILM NUMBER:		261431866
+
+	MAIL ADDRESS:	
+		STREET 1:		650 FROM ROAD
+		STREET 2:		STE. 375
+		CITY:			PARAMUS
+		STATE:			NJ
+		ZIP:			07652
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			MOVADO GROUP INC
+		CENTRAL INDEX KEY:			0000072573
+		STANDARD INDUSTRIAL CLASSIFICATION:	WATCHES, CLOCKS, CLOCKWORK OPERATED DEVICES/PARTS [3873]
+		ORGANIZATION NAME:           	08 Industrial Applications and Services
+		EIN:				132595932
+		STATE OF INCORPORATION:			NY
+		FISCAL YEAR END:			0131
+
+	BUSINESS ADDRESS:	
+		STREET 1:		650 FROM ROAD
+		STREET 2:		SUITE 375
+		CITY:			PARAMUS
+		STATE:			NJ
+		ZIP:			07652
+		BUSINESS PHONE:		201-267-8000
+
+	MAIL ADDRESS:	
+		STREET 1:		650 FROM ROAD
+		STREET 2:		SUITE 375
+		CITY:			PARAMUS
+		STATE:			NJ
+		ZIP:			07652
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	NORTH AMERICAN WATCH CORP
+		DATE OF NAME CHANGE:	19930916
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>es260836969_4-kennedy.xml
+<DESCRIPTION>OWNERSHIP DOCUMENT
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-09-30</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0000072573</issuerCik>
+        <issuerName>MOVADO GROUP INC</issuerName>
+        <issuerTradingSymbol>MOV</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001976664</rptOwnerCik>
+            <rptOwnerName>Kennedy Michelle</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>C/O MOVADO GROUP, INC.,</rptOwnerStreet1>
+            <rptOwnerStreet2>650 FROM ROAD, SUITE 375</rptOwnerStreet2>
+            <rptOwnerCity>PARAMUS</rptOwnerCity>
+            <rptOwnerState>NJ</rptOwnerState>
+            <rptOwnerZipCode>07652</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>0</isDirector>
+            <isOfficer>1</isOfficer>
+            <isTenPercentOwner>0</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle>SVP, Human Resources</officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Phantom Stock Unit</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F1"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-09-30</value>
+            </transactionDate>
+            <deemedExecutionDate></deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>40.01</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F2"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F2"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>40.01</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>588.34</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Each share of phantom stock is the economic equivalent of one share of Movado Group, Inc. common stock.</footnote>
+        <footnote id="F2">Phantom stock units acquired under issuer's Deferred Compensation Plan distributable in equal annual installments for 10 years following date of reporting person's termination of employment with issuer.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/ Mitchell C. Sussis, attorney-in-fact</signatureName>
+        <signatureDate>2026-10-01</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

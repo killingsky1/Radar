@@ -1,0 +1,321 @@
+<SEC-DOCUMENT>0001466026-26-000090.txt : 20261001
+<SEC-HEADER>0001466026-26-000090.hdr.sgml : 20261001
+<ACCEPTANCE-DATETIME>20261001090423
+ACCESSION NUMBER:		0001466026-26-000090
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		2
+CONFORMED PERIOD OF REPORT:	20260930
+FILED AS OF DATE:		20261001
+DATE AS OF CHANGE:		20261001
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			Carlson Gerald Joseph
+		CENTRAL INDEX KEY:			0002009794
+		ORGANIZATION NAME:           	
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-35272
+		FILM NUMBER:		261429156
+
+	MAIL ADDRESS:	
+		STREET 1:		1201 NETWORK CENTRE DRIVE
+		CITY:			EFFINGHAM
+		STATE:			IL
+		ZIP:			62401
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			Midland States Bancorp, Inc.
+		CENTRAL INDEX KEY:			0001466026
+		STANDARD INDUSTRIAL CLASSIFICATION:	STATE COMMERCIAL BANKS [6022]
+		ORGANIZATION NAME:           	02 Finance
+		EIN:				371233196
+		STATE OF INCORPORATION:			IL
+		FISCAL YEAR END:			1231
+
+	BUSINESS ADDRESS:	
+		STREET 1:		1201 NETWORK CENTRE DRIVE
+		CITY:			EFFINGHAM
+		STATE:			IL
+		ZIP:			62401
+		BUSINESS PHONE:		(217) 342-2141
+
+	MAIL ADDRESS:	
+		STREET 1:		1201 NETWORK CENTRE DRIVE
+		CITY:			EFFINGHAM
+		STATE:			IL
+		ZIP:			62401
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>primary_01.xml
+<DESCRIPTION>PRIMARY DOCUMENT
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-09-30</periodOfReport>
+
+    <issuer>
+        <issuerCik>0001466026</issuerCik>
+        <issuerName>Midland States Bancorp, Inc.</issuerName>
+        <issuerTradingSymbol>MSBI</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0002009794</rptOwnerCik>
+            <rptOwnerName>Carlson Gerald Joseph</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>1201 NETWORK CENTRE DRIVE</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>EFFINGHAM</rptOwnerCity>
+            <rptOwnerState>IL</rptOwnerState>
+            <rptOwnerZipCode>62401</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>true</isDirector>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>false</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeHolding>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>4000</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeHolding>
+    </nonDerivativeTable>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Common Share Equivalent</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F1"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-09-30</value>
+            </transactionDate>
+            <deemedExecutionDate></deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>132.51</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>33.38</value>
+                    <footnoteId id="F2"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F3"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F3"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>132.51</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>13536.0825</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Common Share Equivalent</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F1"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-09-30</value>
+            </transactionDate>
+            <deemedExecutionDate></deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>466.418</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>32.16</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F3"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F3"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>466.418</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>14002.5005</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Represents restricted stock units acquired by the reporting person under the 2019 Long-term incentive plan and deferred under the DDCP as of the date of this form. Each restricted stock unit is the contingent right to receive one share of Issuer common stock. Vested shares will be delivered to the reporting person based on the terms of the DDCP and the reporting persons distribution elections thereunder.</footnote>
+        <footnote id="F2">Represents common share equivalents acquired by the reporting person in the DDCP pursuant to the reinvestment of dividends received during the quarter on common share equivalents held in the DDCP by the reporting person at the time such dividend was paid on the underlying shares. Common share equivalents received for dividend reinvestments fully vested on the transaction date listed above and become payable upon termination of service as a director.</footnote>
+        <footnote id="F3">Represents common share equivalents held pursuant to Directors Deferred Compensation Plan as of the date of this form.  Each common share equivalent is the economic equivalent of one share of common stock.  Common stock equivalents become payable upon the reporting persons termination of service as a director.</footnote>
+    </footnotes>
+
+    <remarks></remarks>
+
+    <ownerSignature>
+        <signatureName>/s/Gerald Carlson</signatureName>
+        <signatureDate>2026-10-01</signatureDate>
+    </ownerSignature>
+
+    <ownerSignature>
+        <signatureName>/s/Nathan D. Sturycz, attorney-in-fact</signatureName>
+        <signatureDate>2026-10-01</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+<DOCUMENT>
+<TYPE>EX-24
+<SEQUENCE>2
+<FILENAME>sec16poa_carlson.txt
+<DESCRIPTION>EX-24 DOCUMENT
+<TEXT>
+POWER OF ATTORNEY  SECTION 16 FILINGS
+Know all by these presents, that the undersigned hereby constitutes and
+appoints each of Nathan D. Sturycz, Stephanie Gurgel, Summer Moorman,  and
+their designees with full power and authority to act alone, as the
+undersigneds true and lawful attorney-in-fact to:
+(1)	prepare, execute for and on behalf of the undersigned, and submit to
+the United States Securities and Exchange Commission (the Commission) a
+Form ID, including amendments thereto, and any other documents necessary or
+appropriate to obtain codes and passwords enabling the undersigned to make
+electronic filings with the Commission of reports required by Section 16(a)
+of the Securities Exchange Act of 1934, as amended (the Exchange Act), or
+any rule or regulation of the Commission;
+(2)	act as account administrator and to manage the undersigneds EDGAR
+account;
+(3)	execute for and on behalf of the undersigned, in the undersigneds
+capacity as a reporting person of Midland States Bancorp, Inc. (the
+Company), Forms 3, 4 and 5 in accordance with Section 16(a) of the Exchange
+Act and the rules thereunder, or Forms 144 pursuant to the Exchange Act;
+(4)	do and perform any and all acts for and on behalf of the undersigned
+which maybe necessary or desirable to complete and execute any such Form 3,
+4, 5, or Form 144 including any amendment or amendments thereto and file
+such form with the Commission and the applicable stock exchange or similar
+authority;
+(5)	 seek or obtain, as the undersigneds representative and on the
+undersigneds behalf, information on transactions in the Companys securities
+from any third party, including brokers, employee benefit plan
+administrators and trustees, and the undersigned hereby authorizes any such
+person to release any such information to the undersigneds attorney-in-fact
+appointed by this Power of Attorney and approves and ratifies any such
+release of information; and
+(6)	take any other action of any type whatsoever in connection with the
+foregoing which, in the opinion of any of such attorney-in-fact, may be of
+benefit to, in the best interest of, or legally required by, the
+undersigned, it being understood that the documents executed by any of such
+attorney-in-fact on behalf of the undersigned pursuant to this Power of
+Attorney shall be in such form and shall contain such terms and conditions
+as any of such attorney-in-fact may approve in his or her discretion.
+The undersigned hereby grants to such attorney-in-fact full power and
+authority to act separately and to do and perform any and every act and
+thing whatsoever requisite, necessary, or proper to be done in the exercise
+of any of the rights and powers herein granted, as fully to all intents and
+purposes as the undersigned might or could do if personally present, with
+full power of substitution or revocation, hereby ratifying and confirming
+all that any of such attorney-in-fact, or the substitute or substitutes of
+any of such attorney-in-fact, shall lawfully do or cause to be done by
+virtue of this Power of Attorney and the rights and powers herein granted.
+The undersigned acknowledges that the foregoing attorney-in-fact, in
+serving in such capacity at the request of the undersigned, are not
+assuming, nor is the Company assuming, any of the undersigneds
+responsibilities to comply with Section 16 of the Exchange Act.
+This Power of Attorney shall remain in full force and effect until the
+undersigned is no longer required to file Forms 3, 4 and 5 with respect to
+the undersigneds holdings of and transactions in securities issued by the
+Company, unless earlier revoked by the undersigned in a signed writing
+delivered to the foregoing attorney-in-fact.
+The undersigned agrees to hold the attorney-in-fact, or either one of them,
+jointly and severally, free and harmless from any and all loss, damage or
+liability that they, or either one of them, may sustain as a result of any
+action taken in good faith hereunder and not due to the attorney-in-facts
+own negligence, misconduct or bad faith.
+
+IN WITNESS WHEREOF, the undersigned has caused this Power of Attorney to be
+executed as of this 5th day of August, 2025.
+
+Signature:
+Name:	Gerald J. Carlson
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

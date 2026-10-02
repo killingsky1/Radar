@@ -1,0 +1,256 @@
+<SEC-DOCUMENT>0001225208-26-008035.txt : 20261001
+<SEC-HEADER>0001225208-26-008035.hdr.sgml : 20261001
+<ACCEPTANCE-DATETIME>20261001130559
+ACCESSION NUMBER:		0001225208-26-008035
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		2
+CONFORMED PERIOD OF REPORT:	20260930
+FILED AS OF DATE:		20261001
+DATE AS OF CHANGE:		20261001
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			Stern Alfred
+		CENTRAL INDEX KEY:			0002053457
+		ORGANIZATION NAME:           	
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-04534
+		FILM NUMBER:		261430171
+
+	MAIL ADDRESS:	
+		STREET 1:		1940 AIR PRODUCTS BOULEVARD
+		CITY:			ALLENTOWN
+		STATE:			PA
+		ZIP:			18106-5500
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			Air Products & Chemicals, Inc.
+		CENTRAL INDEX KEY:			0000002969
+		STANDARD INDUSTRIAL CLASSIFICATION:	INDUSTRIAL INORGANIC CHEMICALS [2810]
+		ORGANIZATION NAME:           	08 Industrial Applications and Services
+		EIN:				231274455
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			0930
+
+	BUSINESS ADDRESS:	
+		STREET 1:		1940 AIR PRODUCTS BLVD.
+		CITY:			ALLENTOWN
+		STATE:			PA
+		ZIP:			18106-5500
+		BUSINESS PHONE:		6104814911
+
+	MAIL ADDRESS:	
+		STREET 1:		1940 AIR PRODUCTS BLVD.
+		CITY:			ALLENTOWN
+		STATE:			PA
+		ZIP:			18106-5500
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	AIR PRODUCTS & CHEMICALS, INC.
+		DATE OF NAME CHANGE:	20220408
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	AIR PRODUCTS & CHEMICALS INC /DE/
+		DATE OF NAME CHANGE:	19920703
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>doc4.xml
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-09-30</periodOfReport>
+
+    <issuer>
+        <issuerCik>0000002969</issuerCik>
+        <issuerName>Air Products &amp; Chemicals, Inc.</issuerName>
+        <issuerTradingSymbol>APD</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0002053457</rptOwnerCik>
+            <rptOwnerName>Stern Alfred</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>1940 AIR PRODUCTS BLVD.</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>ALLENTOWN</rptOwnerCity>
+            <rptOwnerState>PA</rptOwnerState>
+            <rptOwnerZipCode>18106-5500</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>1</isDirector>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <nonDerivativeTable></nonDerivativeTable>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Phantom Stock</value>
+                <footnoteId id="F1"/>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <value>0.0000</value>
+                <footnoteId id="F2"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-09-30</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>99.1107</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>279.1900</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F3"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F3"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>99.1107</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>1850.8856</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Phantom deferred stock units (Units) acquired under the Air Products Stock Account of the issuer's Deferred Compensation Program for Directors, under the Company's Long-Term Incentive Plan.</footnote>
+        <footnote id="F2">Not applicable to this security</footnote>
+        <footnote id="F3">These Units are payable in the form of shares of common stock equal in number to the Units, at the time elected by the reporting person, which is generally after service on the Company's Board of Directors ends. Units may be paid in a lump sum or up to ten installments as elected by the reporting person in advance.</footnote>
+    </footnotes>
+
+    <remarks>sternpoa4.txt</remarks>
+
+    <ownerSignature>
+        <signatureName>Melissa A Woodring as Attorney in Fact</signatureName>
+        <signatureDate>2026-10-01</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+<DOCUMENT>
+<TYPE>EX-24
+<SEQUENCE>2
+<FILENAME>sternpoa4.txt
+<TEXT>
+POWER OF ATTORNEY
+
+KNOW ALL BY THESE PRESENTS, that the undersigned hereby constitutes and appoints
+
+each of Matthew Lepore, Michael Psathas, Melissa Woodring, Alicia Davis and
+Darlene Reimert, signing
+singly, the undersigned's true and lawful attorney-in-fact to:
+
+(1)	execute for and on behalf of the undersigned, in the undersigned's capacity
+as an
+officer and/or director of Air Products and Chemicals, Inc., (the "Company"),
+Forms 3, 4, and 5 in accordance with, and any other reports of the undersigned
+with respect to equity securities of the Company required under, Section 16(a)
+of
+the Securities Exchange Act of 1934 and the rules thereunder;
+(2)	execute Forms 144 with respect to the sale of equity securities of the
+Company in
+accordance with Rule 144(h) promulgated under the Securities Act of 1933;
+(3)	do and perform any and all acts for and on behalf of the undersigned which
+may be
+necessary or desirable to complete and execute any such Form 3, 4, or 5 or other
+
+report or Form 144, complete and execute any amendment or amendments thereto,
+and timely file such form with the United States Securities and Exchange
+Commission and any stock exchange or other authority; and
+(4)	take any other action of any type whatsoever in connection with the
+foregoing
+which, in the opinion of such attorney-in-fact, may be of benefit to, in the
+best
+interest of, or legally required by, the undersigned, it being understood that
+the
+documents executed by such attorney-in-fact on behalf of the undersigned
+pursuant to this Power of Attorney shall be in such form and shall contain such
+terms and conditions as such attorney-in-fact may approve in such attorney-in-
+fact's discretion.
+
+The undersigned hereby grants to each such attorney-in-fact full power and
+authority to do
+and perform any and every act and thing whatsoever requisite, necessary, or
+proper to be
+done in the exercise of any of the rights and powers herein granted, as fully to
+  all intents
+and purposes as the undersigned might or could do if personally present, with
+full power of
+substitution or revocation, hereby ratifying and confirming all that such
+attorney-in-fact, or
+such attorney-in-fact's substitute or substitutes, shall lawfully do or cause to
+  be done by
+virtue of this power of attorney and the rights and powers herein granted.  The
+undersigned acknowledges that the foregoing attorneys-in-fact, in serving in
+such capacity
+at the request of the undersigned, are not assuming, nor is the Company
+assuming, any of
+the undersigned's responsibilities to comply with Section 16 of the Securities
+Exchange Act
+of 1934.
+
+This Power of Attorney shall remain in full force and effect until the
+undersigned is no
+longer required to file Forms 3, 4, and 5 with respect to the undersigned's
+holdings of and
+transactions in securities issued by the Company, unless earlier revoked by the
+undersigned in a signed writing delivered to the foregoing attorneys-in-fact.
+
+IN WITNESS WHEREOF, the undersigned has caused this Power of Attorney to be
+executed as of this 16th day of September 2026.
+
+
+	       /s/Alfred Stern
+	Alfred Stern
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

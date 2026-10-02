@@ -1,0 +1,195 @@
+<SEC-DOCUMENT>0000912562-26-000155.txt : 20261001
+<SEC-HEADER>0000912562-26-000155.hdr.sgml : 20261001
+<ACCEPTANCE-DATETIME>20261001135925
+ACCESSION NUMBER:		0000912562-26-000155
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20260930
+FILED AS OF DATE:		20261001
+DATE AS OF CHANGE:		20261001
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			Bolanowski Katherine
+		CENTRAL INDEX KEY:			0001914788
+		ORGANIZATION NAME:           	
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	000-22462
+		FILM NUMBER:		261430476
+
+	MAIL ADDRESS:	
+		STREET 1:		3556 LAKE SHORE ROAD
+		STREET 2:		P.O. BOX 2028
+		CITY:			BUFFALO
+		STATE:			NY
+		ZIP:			14219
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			GIBRALTAR INDUSTRIES, INC.
+		CENTRAL INDEX KEY:			0000912562
+		STANDARD INDUSTRIAL CLASSIFICATION:	STEEL WORKS, BLAST FURNACES & ROLLING & FINISHING MILLS [3310]
+		ORGANIZATION NAME:           	04 Manufacturing
+		EIN:				161445150
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			1231
+
+	BUSINESS ADDRESS:	
+		STREET 1:		3556 LAKE SHORE ROAD
+		STREET 2:		P O BOX 2028
+		CITY:			BUFFALO
+		STATE:			NY
+		ZIP:			14219-0228
+		BUSINESS PHONE:		7168266500
+
+	MAIL ADDRESS:	
+		STREET 1:		GATEWAY EXECUTIVE PARK
+		STREET 2:		3556 LAKE SHORE ROAD PO BOX 2028
+		CITY:			BUFFALO
+		STATE:			NY
+		ZIP:			14219-0228
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	GIBRALTAR STEEL CORP
+		DATE OF NAME CHANGE:	19930924
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>form4.xml
+<DESCRIPTION>PRIMARY DOCUMENT
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-09-30</periodOfReport>
+
+    <issuer>
+        <issuerCik>0000912562</issuerCik>
+        <issuerName>GIBRALTAR INDUSTRIES, INC.</issuerName>
+        <issuerTradingSymbol>ROCK</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001914788</rptOwnerCik>
+            <rptOwnerName>Bolanowski Katherine</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>3556 LAKE SHORE ROAD</rptOwnerStreet1>
+            <rptOwnerStreet2>P.O. BOX 2028</rptOwnerStreet2>
+            <rptOwnerCity>BUFFALO</rptOwnerCity>
+            <rptOwnerState>NY</rptOwnerState>
+            <rptOwnerZipCode>14219-0228</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isOfficer>1</isOfficer>
+            <officerTitle>General Counsel, VP, Secretary</officerTitle>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeHolding>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>17389</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeHolding>
+    </nonDerivativeTable>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Restricted Stock Unit (2018 MSPP Match)</value>
+                <footnoteId id="F1"/>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F2"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-09-30</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>245.21</value>
+                    <footnoteId id="F3"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F2"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F2"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>245.21</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>7525.09</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Represents matching restricted stock units allocated to the Reporting Person with respect to the Reporting Person's deferral of a portion of their annual base salary and annual cash incentive compensation pursuant to the Company's 2018 Management Stock Purchase Plan.</footnote>
+        <footnote id="F2">Restricted stock units are forfeited if Reporting Person's service as an officer of the Company is terminated prior to the fifth (5th) anniversary of the Reporting Person's vesting commencement date.  If service as an officer continues beyond the fifth (5th) anniversary of the Reporting Person's vesting commencement date, restricted stock units are payable solely in cash in one lump sum payment or in five (5) or ten (10) consecutive, substantially equal annual installments, whichever distribution form is elected by the Reporting Person, beginning six (6) months following termination of service.  Each restricted stock unit is converted to cash in an amount equal to the fair market value of one share of the Company's common stock, as defined in the Company's 2018 Management Stock Purchase Plan, on the date of termination of the Reporting Person's service as an officer of the Company.</footnote>
+        <footnote id="F3">Represents matching restricted stock units allocated to the Reporting Person with respect to the Reporting Person's deferral of a portion of their annual base salary pursuant to the Company's 2018 Management Stock Purchase Plan.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/ Jeffrey J. Watorek, Attorney-in-Fact for Katherine E. Bolanowski</signatureName>
+        <signatureDate>2026-10-01</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

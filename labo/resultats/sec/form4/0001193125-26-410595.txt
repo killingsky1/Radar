@@ -1,0 +1,174 @@
+<SEC-DOCUMENT>0001193125-26-410595.txt : 20261001
+<SEC-HEADER>0001193125-26-410595.hdr.sgml : 20261001
+<ACCEPTANCE-DATETIME>20261001154727
+ACCESSION NUMBER:		0001193125-26-410595
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20260930
+FILED AS OF DATE:		20261001
+DATE AS OF CHANGE:		20261001
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			Keohane Sean D
+		CENTRAL INDEX KEY:			0001435737
+		ORGANIZATION NAME:           	
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-05667
+		FILM NUMBER:		261431131
+
+	MAIL ADDRESS:	
+		STREET 1:		C/O CABOT CORPORATION
+		STREET 2:		TWO SEAPORT LANE, SUITE 1400
+		CITY:			BOSTON
+		STATE:			MA
+		ZIP:			02210
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			CABOT CORP
+		CENTRAL INDEX KEY:			0000016040
+		STANDARD INDUSTRIAL CLASSIFICATION:	MISCELLANEOUS CHEMICAL PRODUCTS [2890]
+		ORGANIZATION NAME:           	08 Industrial Applications and Services
+		EIN:				042271897
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			0930
+
+	BUSINESS ADDRESS:	
+		STREET 1:		TWO SEAPORT LANE SUITE 1400
+		CITY:			BOSTON
+		STATE:			MA
+		ZIP:			02210
+		BUSINESS PHONE:		6173450100
+
+	MAIL ADDRESS:	
+		STREET 1:		TWO SEAPORT LANE SUITE 1400
+		CITY:			BOSTON
+		STATE:			MA
+		ZIP:			02210
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	CABOT GODFREY L INC
+		DATE OF NAME CHANGE:	19680418
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>ownership.xml
+<DESCRIPTION>4
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-09-30</periodOfReport>
+
+    <issuer>
+        <issuerCik>0000016040</issuerCik>
+        <issuerName>CABOT CORP</issuerName>
+        <issuerTradingSymbol>CBT</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001435737</rptOwnerCik>
+            <rptOwnerName>Keohane Sean D</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>C/O CABOT CORPORATION</rptOwnerStreet1>
+            <rptOwnerStreet2>TWO SEAPORT LANE, SUITE 1400</rptOwnerStreet2>
+            <rptOwnerCity>BOSTON</rptOwnerCity>
+            <rptOwnerState>MA</rptOwnerState>
+            <rptOwnerZipCode>02210</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>true</isDirector>
+            <isOfficer>true</isOfficer>
+            <isTenPercentOwner>false</isTenPercentOwner>
+            <isOther>false</isOther>
+            <officerTitle>President and CEO</officerTitle>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>false</aff10b5One>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Phantom Stock Units</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F1"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-09-30</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>346.2590</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>76.91</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F2"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F2"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>346.2590</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>48460.8725</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">1 for 1</footnote>
+        <footnote id="F2">The reported phantom stock units were acquired under the Corporation's supplemental 401(k) plan and are to be settled upon the reporting person's retirement or other termination of service.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>By: Mazda Cintron, pursuant to a power of attorney from Sean D. Keohane</signatureName>
+        <signatureDate>2026-10-01</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

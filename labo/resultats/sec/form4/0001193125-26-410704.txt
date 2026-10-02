@@ -1,0 +1,156 @@
+<SEC-DOCUMENT>0001193125-26-410704.txt : 20261001
+<SEC-HEADER>0001193125-26-410704.hdr.sgml : 20261001
+<ACCEPTANCE-DATETIME>20261001162329
+ACCESSION NUMBER:		0001193125-26-410704
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20260930
+FILED AS OF DATE:		20261001
+DATE AS OF CHANGE:		20261001
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			Webb Mark W.
+		CENTRAL INDEX KEY:			0001774998
+		ORGANIZATION NAME:           	
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-38026
+		FILM NUMBER:		261431660
+
+	MAIL ADDRESS:	
+		STREET 1:		4 BATTERYMARCH PARK
+		CITY:			QUINCY
+		STATE:			MA
+		ZIP:			02169
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			J.Jill, Inc.
+		CENTRAL INDEX KEY:			0001687932
+		STANDARD INDUSTRIAL CLASSIFICATION:	WOMEN'S, MISSES', AND JUNIORS OUTERWEAR [2330]
+		ORGANIZATION NAME:           	04 Manufacturing
+		EIN:				451459825
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			0130
+
+	BUSINESS ADDRESS:	
+		STREET 1:		4 BATTERYMARCH PARK
+		CITY:			QUINCY
+		STATE:			MA
+		ZIP:			02169
+		BUSINESS PHONE:		617-376-4300
+
+	MAIL ADDRESS:	
+		STREET 1:		4 BATTERYMARCH PARK
+		CITY:			QUINCY
+		STATE:			MA
+		ZIP:			02169
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	Jill Intermediate LLC
+		DATE OF NAME CHANGE:	20161019
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>ownership.xml
+<DESCRIPTION>4
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-09-30</periodOfReport>
+
+    <issuer>
+        <issuerCik>0001687932</issuerCik>
+        <issuerName>J.Jill, Inc.</issuerName>
+        <issuerTradingSymbol>JILL</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001774998</rptOwnerCik>
+            <rptOwnerName>Webb Mark W.</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>C/O J.JILL, INC.</rptOwnerStreet1>
+            <rptOwnerStreet2>4 BATTERYMARCH PARK</rptOwnerStreet2>
+            <rptOwnerCity>QUINCY</rptOwnerCity>
+            <rptOwnerState>MA</rptOwnerState>
+            <rptOwnerZipCode>02169</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>false</isDirector>
+            <isOfficer>true</isOfficer>
+            <isTenPercentOwner>false</isTenPercentOwner>
+            <isOther>false</isOther>
+            <officerTitle>EVP, CFO &amp; COO</officerTitle>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>false</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-09-30</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>F</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>3513.4</value>
+                    <footnoteId id="F1"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>24.48</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>118279.8</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Shares reported were withheld from Mr. Webb for the payment of taxes associated with the vesting of previously granted RSUs.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/ Kathleen Stevens, Attorney-in-Fact</signatureName>
+        <signatureDate>2026-10-01</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>
