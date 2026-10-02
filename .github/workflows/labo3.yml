@@ -1,0 +1,29 @@
+name: Labo (reconnaissance 3)
+
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/reconnaissance3.py", ".github/workflows/labo3.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  reconnaissance3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pdfplumber==0.11.4
+      - run: rm -rf labo/resultats3 && python labo/reconnaissance3.py
+      - name: Sauvegarder les échantillons
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/resultats3
+          git commit -m "Labo : échantillons 3 du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
