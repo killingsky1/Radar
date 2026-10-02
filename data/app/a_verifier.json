@@ -1,55 +1,141 @@
 [
  {
-  "amount_max": null,
-  "amount_min": null,
+  "amount_max": 10329903316818.0,
+  "amount_min": 10329903316818.0,
   "badge": "a_verifier",
-  "category": "baleines",
+  "category": "compagnies",
   "checks": {
    "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
    "dates_coherentes": true,
+   "dates_transaction_valides": true,
    "domaine_officiel": true,
-   "emetteur_coherent": true,
    "empreinte": true,
-   "pourcentage_valide": false,
+   "montant_coherent": true,
+   "montant_plausible": false,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": false,
    "source_connue": true,
    "source_officielle": true,
+   "symbole_conforme_sec": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T19:48:24+00:00",
+  "collected_at": "2026-10-02T20:00:49+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
-   "actions": 0.0,
-   "amendement": "5",
+   "actions": 4545306.0,
    "bourse": "Nasdaq",
-   "cik_emetteur": "0001737287",
-   "cik_sujet_entete": "0001737287",
-   "date_evenement": "2026-09-28",
-   "declarant": "TPG GP A, LLC",
-   "nb_personnes": 3,
-   "nom_emetteur": "Allogene Therapeutics, Inc.",
-   "pourcentage": 0.0,
-   "type": "SCHEDULE 13D/A"
+   "cik_emetteur": "0002070534",
+   "plan_10b5_1": false,
+   "prix_moyen": 2272653.0,
+   "roles": [
+    "Chief Executive Officer"
+   ],
+   "symbole_declare": "SLBT",
+   "symboles_sec": [
+    "SLBT"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 4545306.0,
+     "apres": 333832129.0,
+     "code": "P",
+     "date": "2026-09-29",
+     "prix": 2272653.0
+    }
+   ]
   },
-  "direction": 0,
+  "direction": 1,
   "entities": [
-   "TPG GP A, LLC",
-   "Allogene Therapeutics, Inc."
+   "Wang Ching-Dong",
+   "SL Science Holding Ltd"
   ],
-  "id": "sec_13dg:0001999371-26-021654",
-  "kind": "plus_5_pourcent",
+  "id": "sec_form4:0001104659-26-112844:P",
+  "kind": "achat_initie",
   "notes": [],
-  "occurred_on": "2026-09-28",
-  "official_id": "0001999371-26-021654",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1737287/000199937126021654/0001999371-26-021654-index.htm",
-  "parser_version": "sec-1",
-  "published_on": "2026-09-30",
-  "sha256": "7f44a200b0f6ecf488658048763c3ae27f12d485ab1921d49ae981747698f653",
-  "source": "sec_13dg",
+  "occurred_on": "2026-09-29",
+  "official_id": "0001104659-26-112844:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/2070534/000110465926112844/0001104659-26-112844-index.htm",
+  "parser_version": "sec-2",
+  "published_on": "2026-10-01",
+  "sha256": "7bf2fd978b82b81b11fdf084192318806964cd4d2c62fcec34de528134ab486c",
+  "source": "sec_form4",
   "tickers": [
-   "ALLO"
+   "SLBT"
   ],
-  "title": "TPG GP A, LLC détient 0 % de Allogene Therapeutics, Inc. (13D, intentions actives, mise à jour n° 5)"
+  "title": "Wang Ching-Dong (Chief Executive Officer) achète 4 545 306 actions de SL Science Holding Ltd"
+ },
+ {
+  "amount_max": 92412000.0,
+  "amount_min": 92412000.0,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": false,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-02T19:58:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 18000.0,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000102109",
+   "plan_10b5_1": false,
+   "prix_moyen": 5134.0,
+   "roles": [
+    "administrateur"
+   ],
+   "symbole_declare": "UUU",
+   "symboles_sec": [
+    "UUU"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 18000.0,
+     "apres": 1166096.0,
+     "code": "P",
+     "date": "2026-09-30",
+     "prix": 5134.0
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "AULT MILTON C III",
+   "UNIVERSAL SAFETY PRODUCTS, INC."
+  ],
+  "id": "sec_form4:0001214659-26-012438:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-09-30",
+  "official_id": "0001214659-26-012438:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/102109/000121465926012438/0001214659-26-012438-index.htm",
+  "parser_version": "sec-2",
+  "published_on": "2026-10-01",
+  "sha256": "b1033ac26eb4e5251b9de2cedc2e47ed7f13387f6a43d45ddde1884723d64065",
+  "source": "sec_form4",
+  "tickers": [
+   "UUU"
+  ],
+  "title": "AULT MILTON C III (administrateur) achète 18 000 actions de UNIVERSAL SAFETY PRODUCTS, INC."
  },
  {
   "amount_max": 267239.7,
@@ -64,14 +150,16 @@
    "domaine_officiel": true,
    "empreinte": true,
    "montant_coherent": true,
+   "montant_plausible": true,
    "montant_recalcule": true,
    "prix_et_actions_positifs": true,
+   "prix_plausible": true,
    "source_connue": true,
    "source_officielle": true,
    "symbole_conforme_sec": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T19:42:43+00:00",
+  "collected_at": "2026-10-02T19:57:45+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
@@ -109,7 +197,7 @@
   "occurred_on": "2026-09-29",
   "official_id": "0001193125-26-408652:P",
   "official_url": "https://www.sec.gov/Archives/edgar/data/809559/000119312526408652/0001193125-26-408652-index.htm",
-  "parser_version": "sec-1",
+  "parser_version": "sec-2",
   "published_on": "2026-09-30",
   "sha256": "c0e64c2b3f160c7bab86d909b90dac0e40f8d786152d5fa19a95e0d5fc3f6a64",
   "source": "sec_form4",
