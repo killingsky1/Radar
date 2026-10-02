@@ -13,7 +13,7 @@ from .store import Depot
 
 MAX_FIL = 300
 MAX_A_VERIFIER = 100
-PHASE_ACTUELLE = 0
+PHASE_ACTUELLE = 1
 
 
 def _ecrire(chemin: Path, contenu) -> None:

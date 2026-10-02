@@ -12,4 +12,10 @@ from ..models import Evenement
 
 Collecteur = Callable[["object"], list[Evenement]]
 
-COLLECTEURS: dict[str, Collecteur] = {}
+from . import sec  # noqa: E402
+
+COLLECTEURS: dict[str, Collecteur] = {
+    "sec_form4": sec.collecter_form4,
+    "sec_8k": sec.collecter_8k,
+    "sec_13dg": sec.collecter_13dg,
+}
