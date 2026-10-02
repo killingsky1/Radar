@@ -40,7 +40,7 @@ def get(url, **kw):
     return r
 
 
-def page(url):
+def lire_page(url):
     """Le texte d'une page en UTF-8 (requests devine parfois latin-1 et abîme les caractères spéciaux)."""
     return get(url).content.decode("utf-8", "replace")
 
@@ -97,7 +97,7 @@ def verifier_registre(ev):
 
 
 def verifier_canada(ev):
-    page = page(ev["official_url"])
+    page = lire_page(ev["official_url"])
     h1 = re.search(r"<h1[^>]*>(.*?)</h1>", page, re.S)
     ecarts = []
     if not h1 or normal(re.sub(r"</?sup>", "", h1.group(1))) != normal(ev["title"]):  # « 5<sup>e</sup> » = « 5e »
@@ -171,7 +171,7 @@ def iso(us):
 
 def verifier_senat(ev):
     p = Rangées()
-    p.feed(page(ev["official_url"]))
+    p.feed(lire_page(ev["official_url"]))
     tx = []
     for r in p.rangees:
         if len(r) >= 8 and r[5] in ("Stock", "Stock Option"):
@@ -214,7 +214,7 @@ def verifier_chambre(ev):
 
 
 def verifier_maison_blanche(ev):
-    page = page(ev["official_url"])
+    page = lire_page(ev["official_url"])
     titre = re.search(r"<title>(.*?)</title>", page, re.S)
     ecarts = []
     if not titre or normal(ev["data"]["titre_officiel"]) not in normal(titre.group(1)):
@@ -227,7 +227,7 @@ def verifier_maison_blanche(ev):
 
 
 def verifier_fed(ev):
-    texte = normal(page(ev["official_url"]))
+    texte = normal(lire_page(ev["official_url"])).translate(dict.fromkeys(map(ord, "\u2010\u2011\u2012\u2013\u2014\u2212"), "-"))
     phrase = re.search(r"decided to (\w+) the target range for the federal funds rate.*?percent(?!age)", texte)
     ecarts = []
     if not phrase:
@@ -248,7 +248,7 @@ def verifier_fed(ev):
 
 
 def verifier_bdc(ev):
-    texte = normal(page(ev["official_url"]))
+    texte = normal(lire_page(ev["official_url"]))
     morceau = texte.split("its target for the overnight rate", 1)
     if len(morceau) < 2:
         return ["phrase de décision introuvable"]
