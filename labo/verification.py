@@ -1,10 +1,13 @@
-"""Audit de vérité : 20 infos publiées, tirées au hasard, comparées au document officiel original.
+"""Audit de vérité : des infos publiées, tirées au hasard dans CHAQUE source, comparées au document officiel.
 
-Pour chaque info :
+SEC (20 au hasard) :
 1. on retélécharge le document original à la SEC ;
 2. on vérifie que c'est EXACTEMENT le même document que le robot a lu (même empreinte SHA-256) ;
 3. on relit les chiffres avec une méthode indépendante (expressions simples sur le texte brut,
    pas le lecteur XML du robot) et on compare : actions, montant, pourcentage, items 8-K, dates.
+Autres sources (5 au hasard chacune) : les vérifications indépendantes de labo/essai.py
+(API officielle du Registre, page officielle du Canada, autre lecteur HTML pour le Sénat, autre lecture du PDF
+pour la Chambre).
 
 Résultat : labo/resultats/verification.md (+ .json). Ne publie rien dans l'app.
 """
@@ -41,7 +44,7 @@ def infos_publiees() -> list[dict]:
     for f in fichiers:
         texte = subprocess.run(["git", "show", f"origin/main:{f}"], capture_output=True, text=True, check=True).stdout
         infos += [json.loads(l) for l in texte.splitlines() if l.strip()]
-    return [i for i in infos if i["source"].startswith("sec_")]
+    return infos
 
 
 def valeur(bloc: str, balise: str) -> str | None:
@@ -95,14 +98,37 @@ def verifier(info: dict) -> dict:
     return r
 
 
+PAR_SOURCE = 5
+
+
+def verifier_autre(info: dict) -> dict:
+    import essai  # vérifications indépendantes des nouvelles sources
+
+    ecarts = essai.VERIFS[info["source"]](info)
+    return {"id": info["id"], "titre": info["title"], "document": info["official_url"], "meme_document": True,
+            "ecarts": ecarts, "ok": not ecarts}
+
+
 def main() -> None:
+    sys.path.insert(0, "labo")
     infos = infos_publiees()
     random.seed(int(time.time()) // 86400)  # un nouvel échantillon chaque jour
-    echantillon = random.sample(infos, min(TAILLE, len(infos)))
+    sec = [i for i in infos if i["source"].startswith("sec_")]
+    echantillon = random.sample(sec, min(TAILLE, len(sec)))
+    autres: dict[str, list] = {}
+    for i in infos:
+        if not i["source"].startswith("sec_"):
+            autres.setdefault(i["source"], []).append(i)
+    for s in sorted(autres):
+        echantillon += random.sample(autres[s], min(PAR_SOURCE, len(autres[s])))
+    if any(i["source"] == "senat_ptr" for i in echantillon):
+        import essai
+
+        essai.accepter_conditions_senat()
     resultats = []
     for info in echantillon:
         try:
-            resultats.append(verifier(info))
+            resultats.append(verifier(info) if info["source"].startswith("sec_") else verifier_autre(info))
         except Exception as exc:  # noqa: BLE001
             resultats.append({"id": info["id"], "titre": info["title"], "ok": False, "ecarts": [f"erreur : {exc}"]})
     ok = sum(1 for r in resultats if r["ok"])
