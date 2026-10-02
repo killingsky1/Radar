@@ -297,6 +297,15 @@ def test_formulaire_144_vente_libre_gardee(syms_complets):
     assert ev.notes[0] == "Vente décidée librement (pas dans un plan automatique)."
 
 
+def test_formulaire_144_prix_par_action_impossible(syms_complets):
+    # Comme le cas réel Barclays (5 G$ pour 158 milliards d'actions = 0,03 $) : « à vérifier »
+    [ev] = form144("0001950047-26-009944", syms_complets,
+                   {**SANS_PLAN, r"<noOfUnitsSold>\d+</noOfUnitsSold>": "<noOfUnitsSold>158000000000</noOfUnitsSold>",
+                    r"<noOfUnitsOutstanding>\d+</noOfUnitsOutstanding>":
+                    "<noOfUnitsOutstanding>999000000000</noOfUnitsOutstanding>"})
+    assert ev.badge == "a_verifier" and ev.checks["prix_implicite_plausible"] is False
+
+
 def test_formulaire_144_plus_d_actions_qu_il_n_en_existe(syms_complets):
     # Comme le cas réel « 158 milliards d'actions de Barclays » : impossible, donc « à vérifier »
     [ev] = form144("0001950047-26-009944", syms_complets,
