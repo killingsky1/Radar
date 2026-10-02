@@ -150,16 +150,41 @@ def date_en(texte: str | None) -> str | None:
     return date(int(m.group(3)), MOIS[m.group(1)], int(m.group(2))).isoformat()
 
 
-def montant_fr(n: float) -> str:
-    if n >= 1e9:
-        return f"{n / 1e9:.2f}".rstrip("0").rstrip(".").replace(".", ",") + " G$ US"
-    return f"{n / 1e6:.1f}".rstrip("0").rstrip(".").replace(".", ",") + " M$ US"
+PAYS_FR = {  # nom officiel (après « Government of ») -> nom français ; inconnu : le nom officiel tel quel
+    "Canada": "Canada", "Qatar": "Qatar", "State of Qatar": "Qatar", "Bahrain": "Bahreïn", "Kingdom of Bahrain": "Bahreïn",
+    "Kuwait": "Koweït", "State of Kuwait": "Koweït", "Norway": "Norvège", "Sweden": "Suède", "France": "France",
+    "Pakistan": "Pakistan", "Singapore": "Singapour", "Republic of Singapore": "Singapour", "Japan": "Japon",
+    "Poland": "Pologne", "Republic of Poland": "Pologne", "Germany": "Allemagne",
+    "Federal Republic of Germany": "Allemagne", "Saudi Arabia": "Arabie saoudite", "Kingdom of Saudi Arabia": "Arabie saoudite",
+    "United Arab Emirates": "Émirats arabes unis", "Israel": "Israël", "Egypt": "Égypte", "Arab Republic of Egypt": "Égypte",
+    "India": "Inde", "Australia": "Australie", "Commonwealth of Australia": "Australie", "United Kingdom": "Royaume-Uni",
+    "Netherlands": "Pays-Bas", "the Netherlands": "Pays-Bas", "Kingdom of the Netherlands": "Pays-Bas",
+    "Denmark": "Danemark", "Kingdom of Denmark": "Danemark", "Finland": "Finlande", "Romania": "Roumanie",
+    "Philippines": "Philippines", "Republic of the Philippines": "Philippines", "Republic of Korea": "Corée du Sud",
+    "Korea": "Corée du Sud", "Italy": "Italie", "Spain": "Espagne", "Greece": "Grèce", "Hellenic Republic": "Grèce",
+    "Turkey": "Turquie", "Türkiye": "Turquie", "Republic of Türkiye": "Turquie", "Lebanon": "Liban", "Jordan": "Jordanie",
+    "Hashemite Kingdom of Jordan": "Jordanie", "Morocco": "Maroc", "Kingdom of Morocco": "Maroc", "Oman": "Oman",
+    "Sultanate of Oman": "Oman", "Brazil": "Brésil", "Mexico": "Mexique", "Chile": "Chili", "Colombia": "Colombie",
+    "Peru": "Pérou", "Argentina": "Argentine", "Czech Republic": "Tchéquie", "Slovakia": "Slovaquie",
+    "Hungary": "Hongrie", "Bulgaria": "Bulgarie", "Republic of Bulgaria": "Bulgarie", "Croatia": "Croatie",
+    "Lithuania": "Lituanie", "Republic of Lithuania": "Lituanie", "Latvia": "Lettonie", "Estonia": "Estonie",
+    "Belgium": "Belgique", "Switzerland": "Suisse", "Austria": "Autriche", "Portugal": "Portugal", "Ukraine": "Ukraine",
+    "New Zealand": "Nouvelle-Zélande", "Indonesia": "Indonésie", "Thailand": "Thaïlande", "Vietnam": "Vietnam",
+    "Malaysia": "Malaisie", "Iraq": "Irak", "Tunisia": "Tunisie", "Nigeria": "Nigeria", "Ecuador": "Équateur",
+    "Taipei Economic and Cultural Representative Office in the United States": "Taïwan (TECRO)",
+}
 
 
 def nom_pays(acheteur: str | None) -> str | None:
+    """« Government of Qatar » -> « Qatar ». Un nom absent de la table reste en anglais officiel (rien d'inventé)."""
     if not acheteur:
         return None
-    return re.sub(r"^(the )?(government|republic) of (the )?", "", acheteur, flags=re.I).strip() or acheteur
+    sans = re.sub(r"^(the )?government of (the )?", "", acheteur.strip(), flags=re.I).strip()
+    if sans in PAYS_FR:
+        return PAYS_FR[sans]
+    if "north atlantic treaty organization" in sans.lower():
+        return "OTAN (" + sans + ")"
+    return sans or acheteur
 
 
 # ---------- Symboles des fournisseurs (liste officielle SEC, nom exact seulement) ----------
@@ -206,12 +231,9 @@ def evenement(doc: dict, choix: tuple[str, str, str], texte: str, etape: str, pu
         data["vente"] = v
         pays = nom_pays(v["acheteur"]) or "pays non lu"
         montant_total = v["total"]
-        morceaux = [f"{libelle} : {pays}"]
-        if montant_total:
-            morceaux.append(montant_fr(montant_total))
+        titre_fr = f"{libelle} : {pays}"
         if v["fournisseurs"]:
-            morceaux.append("fournisseur : " + ", ".join(v["fournisseurs"]))
-        titre_fr = " — ".join(morceaux)
+            titre_fr += f" — fournisseur{'s' if len(v['fournisseurs']) > 1 else ''} : " + ", ".join(v["fournisseurs"])
         entites = [x for x in [v["acheteur"]] + v["fournisseurs"] if x]
         for f in v["fournisseurs"]:
             t = syms_noms.get(nom_normalise(f))

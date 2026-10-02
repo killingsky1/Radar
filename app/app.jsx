@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.2.0";
+const VERSION = "0.3.0";
 
 // ---------- Constantes ----------
 
@@ -31,6 +31,48 @@ const CONTROLES = {
   montant_coherent: "Montant cohérent",
   symboles_valides: "Symboles boursiers valides",
   confirmations_valides: "Confirmations valides",
+};
+
+// Contrôles propres à chaque source (le nom technique vient du robot).
+const CONTROLES_SOURCES = {
+  code_achat_ou_vente_reel: "Vrai achat ou vraie vente (code P ou S)",
+  prix_et_actions_positifs: "Prix et nombre d'actions positifs",
+  symbole_conforme_sec: "Symbole conforme à la liste SEC",
+  montant_recalcule: "Montant recalculé",
+  dates_transaction_valides: "Dates des transactions valides",
+  prix_plausible: "Prix plausible",
+  montant_plausible: "Montant plausible",
+  items_officiels_reconnus: "Points officiels du 8-K reconnus",
+  type_8k: "Vrai formulaire 8-K",
+  pourcentage_valide: "Pourcentage valide",
+  emetteur_coherent: "Compagnie visée cohérente",
+  numero_officiel: "Numéro officiel du Registre",
+  lien_du_meme_document: "Lien vers le même document",
+  texte_du_meme_document: "Texte lu du même document",
+  non_retire: "Pas retiré avant sa parution",
+  acheteur_lu: "Pays acheteur lu",
+  lien_identique_au_fil: "Lien identique au fil officiel",
+  ministere_reconnu: "Ministère reconnu",
+  type_communique: "Communiqué officiel",
+  lien_ministere_coherent: "Lien d'une page de nouvelles",
+  lecture_complete: "Document lu au complet",
+  recoupements_index_document: "Index et document concordent",
+  montants_officiels: "Fourchettes de montants officielles",
+  dates_transactions_valides: "Dates des transactions valides",
+  symbole_cote_sec: "Action cotée (liste SEC)",
+  nom_coherent_avec_symbole: "Nom cohérent avec le symbole",
+};
+
+// Qui détient l'actif, selon les codes officiels du Congrès.
+const PROPRIETAIRES = {
+  "": "l'élu·e",
+  Self: "l'élu·e",
+  SP: "conjoint·e",
+  Spouse: "conjoint·e",
+  JT: "compte conjoint",
+  Joint: "compte conjoint",
+  DC: "enfant à charge",
+  Child: "enfant à charge",
 };
 
 const STATUTS = {
@@ -258,8 +300,18 @@ function argent(n, devise) {
 function montant(ev) {
   const { amount_min: bas, amount_max: haut, currency } = ev;
   if (bas == null && haut == null) return null;
+  // Fourchette ouverte (ex. « Over $50,000,000 » chez les élus) : seul le minimum est connu.
+  if (haut == null) return `plus de ${argent(bas - 1, currency)}`;
   if (bas != null && haut != null && bas !== haut) return `${argent(bas, currency)} à ${argent(haut, currency)}`;
   return argent(bas ?? haut, currency);
+}
+
+// « $15,001 - $50,000 » (texte officiel) → « 15 001 $ US à 50 000 $ US ». Autre format : le texte officiel tel quel.
+function fourchette(texte) {
+  const n = (texte || "").match(/\$[\d,]+/g)?.map((x) => Number(x.replace(/[$,]/g, "")));
+  if (!n?.length) return texte || "";
+  if (/^Over/i.test(texte) || n.length === 1) return `plus de ${argent(n[0], "USD")}`;
+  return `${argent(n[0], "USD")} à ${argent(n[1], "USD")}`;
 }
 
 function montantMax(ev) {
@@ -634,6 +686,7 @@ function FeuilleDetail({ ev, fermer }) {
         </div>
       )}
       {ev.entities?.length > 0 && <p className="detail-entites">{ev.entities.join(" · ")}</p>}
+      {ev.data?.resume && <p className="detail-resume">{ev.data.resume}</p>}
       {ev.notes?.map((n) => (
         <p key={n} className="detail-note">
           <Icone nom="alerte" taille={16} epaisseur={2.2} /> {n}
@@ -651,12 +704,29 @@ function FeuilleDetail({ ev, fermer }) {
         </button>
       </div>
 
+      {ev.category === "politiciens" && ev.data?.transactions?.length > 0 && (
+        <>
+          <h3 className="section">Transactions déclarées</h3>
+          <div className="carte liste transactions">
+            {ev.data.transactions.map((tr, i) => (
+              <div key={i} className="transaction">
+                <span className="transaction-qui">
+                  {dateCourte(tr.date)} · {PROPRIETAIRES[tr.proprietaire] ?? tr.proprietaire}
+                  {tr.partielle ? " · vente partielle" : ""}
+                </span>
+                <span className="transaction-montant">{fourchette(tr.montant)}</span>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
       <h3 className="section">{rates ? `${rates} contrôle(s) raté(s)` : "Tous les contrôles réussis"}</h3>
       <div className="carte liste controles">
         {controlesEnOrdre(ev.checks).map(([nom, ok]) => (
           <div key={nom} className={ok ? "controle ok" : "controle rate"}>
             <Icone nom={ok ? "double" : "x"} taille={16} epaisseur={2.4} />
-            {CONTROLES[nom] || nom.replaceAll("_", " ")}
+            {CONTROLES[nom] || CONTROLES_SOURCES[nom] || nom.replaceAll("_", " ")}
           </div>
         ))}
         {ev.confirmations?.map((c) => (
@@ -671,6 +741,12 @@ function FeuilleDetail({ ev, fermer }) {
         Lu {ilYa(ev.collected_at)} · n° officiel {ev.official_id}
         <br />
         Empreinte {ev.sha256?.slice(0, 16)}…
+        {ev.category === "politiciens" && (
+          <>
+            <br />
+            Rapports publics du Congrès : usage personnel et non commercial seulement (loi américaine 5 U.S.C. § 13107).
+          </>
+        )}
       </p>
     </Feuille>
   );
@@ -723,6 +799,17 @@ function Accueil({ pousser, allerAuFil }) {
     for (const e of visibles) n[e.category] = (n[e.category] || 0) + 1;
     return n;
   }, [c, visibles]);
+  // Une catégorie sans aucune source branchée affiche sa phase au lieu d'un 0 trompeur.
+  const phaseCategorie = useMemo(() => {
+    const branchee = {};
+    const phase = {};
+    for (const s of donnees.sources || []) {
+      if (s.statut === "ecartee") continue;
+      if (s.statut === "a_venir") phase[s.categorie] = Math.min(phase[s.categorie] ?? 9, s.phase);
+      else branchee[s.categorie] = true;
+    }
+    return Object.fromEntries(Object.keys(CATEGORIES).map((k) => [k, branchee[k] ? null : phase[k] ?? null]));
+  }, [donnees.sources]);
   const top = aujourdhui?.top || [];
   const pourcentage = meta.sources_total ? Math.round((meta.sources_branchees / meta.sources_total) * 100) : 0;
   const date = majuscule(new Date().toLocaleDateString("fr-CA", { weekday: "long", day: "numeric", month: "long" }));
@@ -784,7 +871,11 @@ function Accueil({ pousser, allerAuFil }) {
           <button key={k} type="button" className="cat presse" onClick={() => allerAuFil(k)}>
             <IconeCategorie code={k} />
             <span className="cat-label">{c.label}</span>
-            <span className="cat-nombre">{parCategorie[k] || 0}</span>
+            {phaseCategorie[k] ? (
+              <span className="cat-phase">Phase {phaseCategorie[k]}</span>
+            ) : (
+              <span className="cat-nombre">{parCategorie[k] || 0}</span>
+            )}
           </button>
         ))}
       </div>
@@ -1279,6 +1370,7 @@ input { font: inherit; color: var(--texte); }
   background: var(--carte); border: 1px solid var(--ligne); border-radius: var(--rayon); min-width: 0; }
 .cat-label { font-size: .8125rem; font-weight: 600; line-height: 1.2; }
 .cat-nombre { position: absolute; top: 12px; right: 12px; color: var(--texte-3); font-size: .875rem; font-weight: 650; font-variant-numeric: tabular-nums; }
+.cat-phase { position: absolute; top: 12px; right: 10px; color: var(--texte-3); font-size: .6875rem; font-weight: 650; letter-spacing: .02em; text-transform: uppercase; }
 
 .pastille { flex: none; width: 36px; height: 36px; border-radius: 11px; display: inline-flex; align-items: center; justify-content: center; }
 .pastille.petite { width: 30px; height: 30px; border-radius: 9px; color: #fff; }
@@ -1403,6 +1495,11 @@ input { font: inherit; color: var(--texte); }
   background: var(--carte-2); color: var(--texte); }
 .symbole-grand.suivi { background: color-mix(in srgb, var(--jaune) 18%, transparent); color: var(--jaune); }
 .detail-entites { color: var(--texte-2); margin: 12px 0 0; font-size: .9375rem; }
+.detail-resume { color: var(--texte-2); margin: 10px 0 0; font-size: .9375rem; line-height: 1.45; }
+.transaction { position: relative; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 11px 16px; font-size: .9375rem; }
+.transaction + .transaction::before { content: ""; position: absolute; top: 0; left: 16px; right: 0; height: 1px; background: var(--ligne); transform: scaleY(.5); }
+.transaction-qui { color: var(--texte-2); min-width: 0; }
+.transaction-montant { color: var(--texte); font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
 .detail-note { display: flex; gap: 8px; align-items: flex-start; margin: 12px 0 0; padding: 10px 12px; border-radius: 12px; font-size: .875rem;
   background: color-mix(in srgb, var(--jaune) 14%, transparent); color: var(--jaune); }
 .detail-actions { display: grid; grid-template-columns: 1fr auto; gap: 10px; margin-top: 20px; }

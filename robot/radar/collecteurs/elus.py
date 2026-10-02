@@ -65,10 +65,6 @@ def plage(texte: str) -> tuple[int, int | None] | None:
     return PLAGES.get(" ".join((texte or "").replace("$ ", "$").split()))
 
 
-def argent(n: float) -> str:
-    return f"{n:,.0f}".replace(",", " ") + " $"
-
-
 @dataclass
 class Transaction:
     proprietaire: str  # code officiel (SP, JT, DC, Spouse…) ; vide = l'élu·e
@@ -116,9 +112,6 @@ def evenements(rapport: Rapport, syms) -> list[Evenement]:
         verbe = "achète" if sens == "P" else "vend"
         quoi = symbole if sorte == "action" else f"des options {'d’achat (call)' if option == 'call' else 'de vente (put)' if option == 'put' else ''} sur {symbole}".replace("  ", " ")
         combien = f" ({len(ts)} transactions)" if len(ts) > 1 else ""
-        montant_txt = ""
-        if bas is not None:
-            montant_txt = f" : {argent(bas)} à {argent(haut)}" if haut is not None else f" : plus de {argent(bas - 1)}"
         proprios = sorted({PROPRIETAIRES.get(t.proprietaire, t.proprietaire) for t in ts})
         pour = "" if proprios == ["l'élu·e"] else f" — {', '.join(proprios)}"
         dates = sorted(t.date for t in ts if t.date)
@@ -136,7 +129,7 @@ def evenements(rapport: Rapport, syms) -> list[Evenement]:
             source="senat_ptr" if rapport.chambre == "senat" else "chambre_ptr",
             official_id=f"{rapport.numero}:{symbole}:{sens}{'' if sorte == 'action' else ':' + (option or 'option')}",
             category="politiciens", kind=f"{'achat' if sens == 'P' else 'vente'}_elu" + ("" if sorte == "action" else "_option"),
-            title=f"{qui} {verbe} {quoi}{combien}{montant_txt}{pour}",
+            title=f"{qui} {verbe} {quoi}{combien}{pour}",
             occurred_on=dates[0] if dates else rapport.depose, published_on=rapport.depose,
             official_url=rapport.url, sha256=rapport.sha256, parser_version=VERSION,
             tickers=[symbole], entities=[rapport.nom, cote["name"]],
