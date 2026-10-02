@@ -28,7 +28,9 @@ def _plus_recent(d: dict):
 
 def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime) -> None:
     depot = Depot(donnees)
-    fil = sorted(depot.lire("evenements"), key=_plus_recent, reverse=True)
+    # Un acte publié par 2 sources (ex. Maison-Blanche puis Registre) n'apparaît qu'une fois, avec sa confirmation.
+    fil = sorted((e for e in depot.lire("evenements") if not e.get("data", {}).get("meme_acte_que")),
+                 key=_plus_recent, reverse=True)
     a_verifier = sorted(depot.lire("a_verifier"), key=_plus_recent, reverse=True)
 
     sources = []

@@ -259,3 +259,61 @@ def test_les_infos_deja_publiees_sont_reverifiees(tmp_path, index, monkeypatch):
     a_verifier = json.loads((tmp_path / "app" / "a_verifier.json").read_text())
     assert not any(e["tickers"] == ["GME"] for e in fil)
     assert any(e["tickers"] == ["GME"] and e["checks"]["nouveau_controle"] is False for e in a_verifier)
+
+
+# ---------- Formulaire 144 et offres d'achat (vrais documents des 17 septembre au 1er octobre 2026) ----------
+
+
+@pytest.fixture(scope="module")
+def syms_complets():
+    import gzip
+
+    return Symboles(json.loads(gzip.decompress((F / "company_tickers_exchange_complet.json.gz").read_bytes())))
+
+
+def test_formulaire_144_grosse_vente_annoncee(syms_complets):
+    acc = "0001950047-26-009944"
+    t = lire(f"{acc}.txt")
+    depot = sec.DepotSec(acc, "144", "2026-10-01", f"edgar/data/x/{acc}.txt", [])
+    [ev] = [valider(e, JOUR) for e in sec.evenements_144(t, empreinte(t.encode()), depot, syms_complets)]
+    assert ev.badge == "officiel", ev.checks
+    assert ev.title == "ADAM C SPICE (dirigeant) prévoit vendre 140 157 actions de Rocket Lab Corp"
+    assert ev.amount_max == 9766139.76 and ev.direction == -1
+    assert "plan de vente automatique" in ev.notes[0]
+
+
+def test_formulaire_144_petite_vente_ignoree(syms_complets):
+    acc = "0001921094-26-001064"  # 60 561 $ : sous le seuil de 1 M$
+    t = lire(f"{acc}.txt")
+    depot = sec.DepotSec(acc, "144", "2026-10-01", f"edgar/data/x/{acc}.txt", [])
+    assert sec.evenements_144(t, empreinte(t.encode()), depot, syms_complets) == []
+
+
+def offre(nom, forme, syms_complets, vus=None):
+    t = lire(f"{nom}.headers.html")
+    depot = sec.DepotSec(nom.split(".")[0], forme, "2026-09-22", "x", [("1", "x")])
+    return [valider(e, JOUR) for e in sec.evenements_offre(t, empreinte(t.encode()), depot, syms_complets,
+                                                             set() if vus is None else vus)]
+
+
+def test_offres_d_achat_reelles(syms_complets):
+    [acv] = offre("0001193125-26-393827.SC_TO-T", "SC TO-T", syms_complets)
+    assert acv.title == "Offre publique d'achat : COPART INC vise les actions de ACV Auctions Inc."
+    assert acv.tickers == ["ACVA", "CPRT"] and acv.badge == "officiel"
+    [rgr] = offre("0001193805-26-001242.SC_TO-T", "SC TO-T", syms_complets)
+    assert rgr.tickers == ["RGR"] and "Beretta Holding S.A." in rgr.title
+    [ssti] = offre("0001140361-26-037933.SC_TO-C", "SC TO-C", syms_complets)
+    assert ssti.kind == "offre_annoncee" and ssti.tickers == ["SSTI"]
+
+
+def test_offres_de_la_compagnie_elle_meme_ignorees(syms_complets):
+    assert offre("0001193125-26-410644.SC_TO-I", "SC TO-I", syms_complets) == []  # rachat par l'émetteur
+    assert offre("0001193125-26-410845.SC_TO-C", "SC TO-C", syms_complets) == []  # communication de l'émetteur
+
+
+def test_privatisation_une_seule_info_par_compagnie(syms_complets):
+    vus = set()
+    a = offre("0001193125-26-398027.SC_13E3", "SC 13E3", syms_complets, vus)  # déposé par ReNew
+    b = offre("0001193125-26-398221.SC_13E3", "SC 13E3", syms_complets, vus)  # déposé par le fonds du RPC
+    assert len(a) == 1 and b == []
+    assert a[0].title == "Projet de privatisation (règle 13e-3) : ReNew Energy Global plc" and a[0].tickers == ["RNW"]

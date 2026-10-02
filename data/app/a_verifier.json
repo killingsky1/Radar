@@ -205,5 +205,94 @@
    "TSI"
   ],
   "title": "HADEN PATRICK C (administrateur) achète 63 000 actions de TCW STRATEGIC INCOME FUND INC"
+ },
+ {
+  "amount_max": 280000.0,
+  "amount_min": 102003.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": false,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-02T22:45:36+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "MARSH & MCLENNAN COMPANIES, INC.",
+   "rapport": "20035491",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Marsh Common Stock (MRSH) [ST]",
+     "avis": "2026-09-15",
+     "date": "2026-09-02",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    },
+    {
+     "actif": "Marsh Common Stock (MRSH) [ST]",
+     "avis": "2026-09-15",
+     "date": "2026-09-14",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    },
+    {
+     "actif": "Marsh Common Stock (MRSH) [ST]",
+     "avis": "2026-09-15",
+     "date": "2026-09-09",
+     "description": null,
+     "montant": "$100,001 - $250,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "MARSH & MCLENNAN COMPANIES, INC."
+  ],
+  "id": "chambre_ptr:20035491:MRSH:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-02",
+  "official_id": "20035491:MRSH:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-09-25",
+  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MRSH"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend MRSH (3 transactions) — compte conjoint"
  }
 ]

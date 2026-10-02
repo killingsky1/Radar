@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.3.0";
+const VERSION = "0.4.0";
 
 // ---------- Constantes ----------
 
@@ -61,6 +61,21 @@ const CONTROLES_SOURCES = {
   dates_transactions_valides: "Dates des transactions valides",
   symbole_cote_sec: "Action cotée (liste SEC)",
   nom_coherent_avec_symbole: "Nom cohérent avec le symbole",
+  lien_d_une_action_presidentielle: "Lien d'une action présidentielle",
+  categorie_officielle_reconnue: "Catégorie officielle reconnue",
+  texte_officiel_lu: "Texte officiel lu",
+  decision_lue: "Décision lue dans le communiqué",
+  fourchette_plausible: "Fourchette de taux plausible",
+  vote_lu: "Vote lu",
+  taux_plausible: "Taux plausible",
+  titre_officiel_concorde: "Le titre officiel dit la même chose",
+  actions_et_valeur_positives: "Actions et valeur positives",
+  prix_implicite_plausible: "Prix par action plausible",
+  forme_reconnue: "Formulaire officiel reconnu",
+  acheteur_different_de_la_cible: "L'acheteur n'est pas la compagnie visée",
+  marche_attendu: "Bon marché (code officiel)",
+  positions_coherentes: "Positions cohérentes",
+  variation_coherente: "Variation cohérente",
 };
 
 // Qui détient l'actif, selon les codes officiels du Congrès.
@@ -828,7 +843,7 @@ function Accueil({ pousser, allerAuFil }) {
               <div style={{ width: `${Math.max(pourcentage, 3)}%` }} />
             </div>
             <p className="heros-pied">
-              {meta.sources_branchees} sur {meta.sources_total} sources · phase {meta.phase}
+              {meta.sources_branchees} sur {meta.sources_total} sources branchées
             </p>
           </div>
         </div>

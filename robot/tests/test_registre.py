@@ -110,6 +110,7 @@ def test_evenement_vente_armes_complet(noms_sec):
     assert registre.nom_pays("Government of Atlantis") == "Atlantis"  # inconnu : le nom officiel, rien d'inventé
     assert ev.tickers == ["BA", "RTX", "NOC"] and ev.amount_min == 4.5e9
     assert ev.occurred_on == "2026-08-18" and ev.published_on == "2026-09-22"
+    assert "Avis envoyé au Congrès le 18 août 2026" in ev.notes[0]
 
 
 def test_texte_officiel_sans_mise_en_page():
@@ -213,3 +214,23 @@ def test_document_retire_avant_parution_va_dans_a_verifier(tmp_path):
     assert ev["checks"]["non_retire"] is False and any("Retiré" in n for n in ev["notes"])
     fil = json.loads((tmp_path / "app" / "fil.json").read_text(encoding="utf-8"))
     assert not any(e["official_id"] == "2026-20439" for e in fil)
+
+
+def test_un_lecteur_ameliore_relit_les_documents_deja_parus(tmp_path, monkeypatch):
+    pages = internet_du_2_octobre()
+    for k in list(pages):
+        if "documents.json" in k:
+            pages[k] = ajouter_textes(pages[k])
+    collecteurs = {"registre_federal": registre.collecter_registre}
+    maintenant = datetime(2026, 10, 2, 22, 17, tzinfo=timezone.utc)
+    executer(tmp_path, client=FauxInternet(pages), maintenant=maintenant, collecteurs=collecteurs)
+    monkeypatch.setattr(registre, "VERSION", "registre-test-nouveau")
+    internet = FauxInternet(pages)
+    executer(tmp_path, client=internet, maintenant=maintenant.replace(hour=23), collecteurs=collecteurs)
+    relus = [u for u in internet.appels if "/texte/" in u or "/raw_text/" in u]
+    assert any("2026-20321" in u for u in relus)  # décret paru : relu avec le nouveau lecteur
+    assert not any("/raw_text/" in u for u in relus)  # inspection publique : la 1re lecture gagne
+    fil = json.loads((tmp_path / "app" / "fil.json").read_text(encoding="utf-8"))
+    [decret] = [e for e in fil if e["official_id"] == "2026-20321"]
+    assert decret["parser_version"] == "registre-test-nouveau" and decret["published_on"] == "2026-10-02"
+    assert not any("modifié" in n for n in decret["notes"])

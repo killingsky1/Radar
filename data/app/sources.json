@@ -6,7 +6,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-02T20:10:50+00:00",
+  "dernier_succes": "2026-10-02T22:49:18+00:00",
   "explication": "",
   "id": "sec_form4",
   "libelle": "OK",
@@ -37,7 +37,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-02T20:10:50+00:00",
+  "dernier_succes": "2026-10-02T22:49:18+00:00",
   "explication": "",
   "id": "sec_13dg",
   "libelle": "OK",
@@ -54,7 +54,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-02T20:10:50+00:00",
+  "dernier_succes": "2026-10-02T22:49:18+00:00",
   "explication": "",
   "id": "sec_8k",
   "libelle": "OK",
@@ -206,17 +206,20 @@
  },
  {
   "categorie": "militaire",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 2.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 22
+  },
+  "dernier_contenu": "2026-09-22",
+  "dernier_succes": "2026-10-02T22:49:18+00:00",
+  "explication": "",
   "id": "ventes_armes",
-  "libelle": "À venir",
-  "nom": "Ventes d'armes à l'étranger (Département d'État)",
+  "libelle": "OK",
+  "nom": "Ventes d'armes à l'étranger (avis officiels au Registre fédéral)",
   "officielle": true,
   "phase": 2,
-  "site": "https://www.state.gov/arms-sales-congressional-notifications",
-  "statut": "a_venir"
+  "site": "https://www.federalregister.gov/documents/search?conditions%5Bterm%5D=%22Arms+Sales+Notification%22",
+  "statut": "ok"
  },
  {
   "categorie": "militaire",
@@ -289,18 +292,21 @@
   "statut": "a_venir"
  },
  {
-  "categorie": "canada",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 2.",
+  "categorie": "militaire",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 0
+  },
+  "dernier_contenu": "2026-10-02",
+  "dernier_succes": "2026-10-02T22:49:18+00:00",
+  "explication": "",
   "id": "nouvelles_defense_ca",
-  "libelle": "À venir",
-  "nom": "Centre des nouvelles du Canada : défense",
+  "libelle": "OK",
+  "nom": "Canada : nouvelles de la Défense nationale",
   "officielle": true,
   "phase": 2,
-  "site": "https://www.canada.ca/en/news.html",
-  "statut": "a_venir"
+  "site": "https://www.canada.ca/fr/nouvelles.html",
+  "statut": "ok"
  },
  {
   "categorie": "canada",
@@ -318,31 +324,37 @@
  },
  {
   "categorie": "politiciens",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 3.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 0
+  },
+  "dernier_contenu": "2026-10-01",
+  "dernier_succes": "2026-10-02T22:49:18+00:00",
+  "explication": "",
   "id": "chambre_ptr",
-  "libelle": "À venir",
+  "libelle": "OK",
   "nom": "Chambre des représentants : transactions des élus",
   "officielle": true,
   "phase": 3,
   "site": "https://disclosures-clerk.house.gov/FinancialDisclosure",
-  "statut": "a_venir"
+  "statut": "ok"
  },
  {
   "categorie": "politiciens",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 3.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 0
+  },
+  "dernier_contenu": "2026-10-01",
+  "dernier_succes": "2026-10-02T22:49:18+00:00",
+  "explication": "",
   "id": "senat_ptr",
-  "libelle": "À venir",
+  "libelle": "OK",
   "nom": "Sénat : transactions des sénateurs",
   "officielle": true,
   "phase": 3,
   "site": "https://efdsearch.senate.gov/search/",
-  "statut": "a_venir"
+  "statut": "ok"
  },
  {
   "categorie": "politiciens",
@@ -416,17 +428,20 @@
  },
  {
   "categorie": "gouvernement",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 4.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 10
+  },
+  "dernier_contenu": "2026-10-02",
+  "dernier_succes": "2026-10-02T22:49:18+00:00",
+  "explication": "",
   "id": "registre_federal",
-  "libelle": "À venir",
+  "libelle": "OK",
   "nom": "Registre fédéral : décrets, tarifs, sanctions (la veille)",
   "officielle": true,
   "phase": 4,
   "site": "https://www.federalregister.gov/public-inspection/current",
-  "statut": "a_venir"
+  "statut": "ok"
  },
  {
   "categorie": "gouvernement",
@@ -553,6 +568,23 @@
   "phase": 4,
   "site": "https://www.nhtsa.gov/recalls",
   "statut": "a_venir"
+ },
+ {
+  "categorie": "canada",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 0
+  },
+  "dernier_contenu": "2026-10-02",
+  "dernier_succes": "2026-10-02T22:49:18+00:00",
+  "explication": "",
+  "id": "nouvelles_eco_ca",
+  "libelle": "OK",
+  "nom": "Canada : nouvelles des ministères économiques",
+  "officielle": true,
+  "phase": 4,
+  "site": "https://www.canada.ca/fr/nouvelles.html",
+  "statut": "ok"
  },
  {
   "categorie": "canada",

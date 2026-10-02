@@ -1,19 +1,23 @@
 {
- "a_verifier_3_mois": 3,
+ "a_verifier_3_mois": 4,
  "compteurs": {
   "confirmees_30j": 0,
-  "dernier_jour": "2026-10-01",
+  "dernier_jour": "2026-10-02",
   "par_categorie_30j": {
    "baleines": 89,
-   "compagnies": 298
+   "canada": 7,
+   "compagnies": 298,
+   "gouvernement": 12,
+   "militaire": 15,
+   "politiciens": 88
   },
-  "publiees_dernier_jour": 150,
-  "total_30j": 387
+  "publiees_dernier_jour": 10,
+  "total_30j": 509
  },
- "evenements_3_mois": 387,
- "genere_a": "2026-10-02T20:10:50+00:00",
+ "evenements_3_mois": 519,
+ "genere_a": "2026-10-02T22:49:18+00:00",
  "phase": 1,
- "sources_branchees": 3,
- "sources_total": 49,
+ "sources_branchees": 9,
+ "sources_total": 50,
  "version": "0.1.0"
 }

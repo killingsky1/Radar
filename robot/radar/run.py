@@ -19,6 +19,7 @@ from .collecteurs import COLLECTEURS
 from .http import ClientPoli
 from .models import Evenement
 from .publish import publier
+from .recoupement import recouper
 from .registry import PASSAGES, SOURCES
 from .store import Depot
 from .validate import valider
@@ -93,6 +94,11 @@ def executer(donnees, passage=None, seulement=None, collecteurs=None, client=Non
         if dates:
             e["dernier_contenu"] = max(dates)
         rapport[sid] = {"ok": True, **bilan}
+
+    # Deux sources officielles qui publient le même acte : liées (badge « Confirmé »).
+    liees = recouper(donnees)
+    if liees:
+        print(f"Recoupement : {liees} info(s) reliée(s) à une 2e source officielle")
 
     # Les contrôles s'améliorent : on les réapplique aux infos déjà publiées (une info peut retourner « à vérifier »).
     bilan = revalider(donnees, maintenant)
