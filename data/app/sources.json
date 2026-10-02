@@ -1,17 +1,20 @@
 [
  {
   "categorie": "compagnies",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 1.",
+  "compte": {
+   "a_verifier": 1,
+   "recus": 146
+  },
+  "dernier_contenu": "2026-10-01",
+  "dernier_succes": "2026-10-02T19:41:07+00:00",
+  "explication": "",
   "id": "sec_form4",
-  "libelle": "À venir",
+  "libelle": "OK",
   "nom": "SEC : formulaire 4 (achats et ventes des dirigeants)",
   "officielle": true,
   "phase": 1,
   "site": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=4",
-  "statut": "a_venir"
+  "statut": "ok"
  },
  {
   "categorie": "compagnies",
@@ -29,31 +32,37 @@
  },
  {
   "categorie": "baleines",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 1.",
+  "compte": {
+   "a_verifier": 1,
+   "recus": 89
+  },
+  "dernier_contenu": "2026-10-01",
+  "dernier_succes": "2026-10-02T19:41:07+00:00",
+  "explication": "",
   "id": "sec_13dg",
-  "libelle": "À venir",
+  "libelle": "OK",
   "nom": "SEC : 13D/13G (un gros joueur dépasse 5 %)",
   "officielle": true,
   "phase": 1,
   "site": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=SCHEDULE+13D",
-  "statut": "a_venir"
+  "statut": "ok"
  },
  {
   "categorie": "compagnies",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 1.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 155
+  },
+  "dernier_contenu": "2026-10-01",
+  "dernier_succes": "2026-10-02T19:41:07+00:00",
+  "explication": "",
   "id": "sec_8k",
-  "libelle": "À venir",
+  "libelle": "OK",
   "nom": "SEC : 8-K (événements majeurs)",
   "officielle": true,
   "phase": 1,
   "site": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=8-K",
-  "statut": "a_venir"
+  "statut": "ok"
  },
  {
   "categorie": "baleines",
