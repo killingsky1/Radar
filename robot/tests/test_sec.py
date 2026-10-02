@@ -271,15 +271,38 @@ def syms_complets():
     return Symboles(json.loads(gzip.decompress((F / "company_tickers_exchange_complet.json.gz").read_bytes())))
 
 
-def test_formulaire_144_grosse_vente_annoncee(syms_complets):
-    acc = "0001950047-26-009944"
+def form144(acc, syms_complets, remplacer=None):
     t = lire(f"{acc}.txt")
+    for motif, neuf in (remplacer or {}).items():
+        t, n = re.subn(motif, neuf, t, flags=re.S)
+        assert n, motif
     depot = sec.DepotSec(acc, "144", "2026-10-01", f"edgar/data/x/{acc}.txt", [])
-    [ev] = [valider(e, JOUR) for e in sec.evenements_144(t, empreinte(t.encode()), depot, syms_complets)]
+    return [valider(e, JOUR) for e in sec.evenements_144(t, empreinte(t.encode()), depot, syms_complets)]
+
+
+SANS_PLAN = {r"<planAdoptionDates>.*?</planAdoptionDates>": ""}
+
+
+def test_formulaire_144_vente_prevue_d_avance_sous_25_millions_ignoree(syms_complets):
+    # Rocket Lab : 9,8 M$ dans un plan automatique (10b5-1) -> trop routinier pour le fil
+    assert form144("0001950047-26-009944", syms_complets) == []
+
+
+def test_formulaire_144_vente_libre_gardee(syms_complets):
+    # Même document, sans la date d'adoption du plan (modifié pour le test) : vente décidée librement
+    [ev] = form144("0001950047-26-009944", syms_complets, SANS_PLAN)
     assert ev.badge == "officiel", ev.checks
     assert ev.title == "ADAM C SPICE (dirigeant) prévoit vendre 140 157 actions de Rocket Lab Corp"
     assert ev.amount_max == 9766139.76 and ev.direction == -1
-    assert "plan de vente automatique" in ev.notes[0]
+    assert ev.notes[0] == "Vente décidée librement (pas dans un plan automatique)."
+
+
+def test_formulaire_144_plus_d_actions_qu_il_n_en_existe(syms_complets):
+    # Comme le cas réel « 158 milliards d'actions de Barclays » : impossible, donc « à vérifier »
+    [ev] = form144("0001950047-26-009944", syms_complets,
+                   {**SANS_PLAN, r"<noOfUnitsOutstanding>\d+</noOfUnitsOutstanding>":
+                    "<noOfUnitsOutstanding>1000</noOfUnitsOutstanding>"})
+    assert ev.badge == "a_verifier" and ev.checks["actions_sous_le_total_en_circulation"] is False
 
 
 def test_formulaire_144_petite_vente_ignoree(syms_complets):

@@ -234,3 +234,10 @@ def test_un_lecteur_ameliore_relit_les_documents_deja_parus(tmp_path, monkeypatc
     [decret] = [e for e in fil if e["official_id"] == "2026-20321"]
     assert decret["parser_version"] == "registre-test-nouveau" and decret["published_on"] == "2026-10-02"
     assert not any("modifié" in n for n in decret["notes"])
+
+
+def test_changement_de_page_au_milieu_de_l_acheteur():
+    # Cas réel vu à l'essai (Pologne) : « Government of Poland [[Page 55553]] (ii) … ». Reproduit ici sur la Corée.
+    brut = (F / "2026-19322.txt").read_bytes().replace(b"Republic of Korea", b"Republic of Korea\n\n[[Page 55553]]\n", 1)
+    v = lire_vente_armes(texte_officiel(brut))
+    assert v["acheteur"] == "Republic of Korea"
