@@ -1,6 +1,6 @@
 import json
 
-from conftest import bonne_info
+from conftest import AUJOURD_HUI, bonne_info
 from radar.models import empreinte
 from radar.store import Depot
 from radar.validate import valider
@@ -43,3 +43,14 @@ def test_info_corrigee_passe_de_a_verifier_a_evenements(tmp_path, aujourd_hui):
     assert not (tmp_path / "a_verifier" / "2026-09.jsonl").exists()
     [ligne] = _lignes(tmp_path / "evenements" / "2026-09.jsonl")
     assert ligne["badge"] == "officiel"
+
+
+def test_nouveau_lecteur_ne_pretend_pas_que_le_document_a_change(tmp_path):
+    from radar.store import Depot
+
+    depot = Depot(tmp_path)
+    depot.enregistrer([valider(bonne_info(), AUJOURD_HUI)])
+    relu = valider(bonne_info(sha256=empreinte(b"lu autrement"), parser_version="test-2"), AUJOURD_HUI)
+    assert Depot(tmp_path).enregistrer([relu]) == {"nouveaux": 0, "modifies": 1, "inchanges": 0}
+    [ligne] = Depot(tmp_path).lire("evenements")
+    assert ligne["parser_version"] == "test-2" and ligne["notes"] == [] and "anciennes_empreintes" not in ligne["data"]

@@ -21,7 +21,7 @@ from ..models import Evenement
 from ..store import Depot
 from ..validate import controle_source, jours_ouvrables
 
-VERSION = "sec-3"  # à augmenter quand un lecteur change : les infos sont relues et mises à jour
+VERSION = "sec-4"  # à augmenter quand un lecteur change : les infos sont relues et mises à jour
 ARCHIVES = "https://www.sec.gov/Archives"
 BOURSES_GARDEES = {"Nasdaq", "NYSE", "CBOE"}
 SEUIL_ACHAT = 25_000  # $ US : sous ce montant, un achat est du bruit
@@ -157,6 +157,15 @@ def nombre(valeur: str | None) -> float | None:
         return float((valeur or "").replace(",", "").strip())
     except ValueError:
         return None
+
+
+MOIS_FR = ("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre",
+           "novembre", "décembre")
+
+
+def date_fr(iso_jour: str) -> str:
+    d = date.fromisoformat(iso_jour)
+    return f"{'1er' if d.day == 1 else d.day} {MOIS_FR[d.month - 1]} {d.year}"
 
 
 def nombre_fr(n: float) -> str:
@@ -551,7 +560,7 @@ def evenements_144(texte: str, sha: str, depot: DepotSec, syms: Symboles) -> lis
              else ["Vente décidée librement (pas dans un plan automatique)."])
     dates = sorted(l["date_prevue"] for l in f["lignes"] if l["date_prevue"])
     if dates:
-        notes.append(f"Date de vente prévue : {dates[0]}.")
+        notes.append(f"Date de vente prévue : {date_fr(dates[0])}.")
     return [Evenement(
         source="sec_form144", official_id=depot.acc, category="compagnies", kind="intention_vente",
         title=f"{f['vendeur']} ({relations}) prévoit vendre {nombre_fr(actions)} actions de {cote['name']}",
