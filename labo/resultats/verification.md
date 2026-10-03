@@ -1,16 +1,16 @@
-# Audit de vérité : 61/61 infos identiques au document officiel (9 non vérifiées : site injoignable)
+# Audit de vérité : 61/70 infos identiques au document officiel (9 avec les mêmes faits mais une page modifiée par le site)
 
 Infos publiées par le robot : 578 · échantillon au hasard : 70
 
-- **NON VÉRIFIÉE** · SHERWIN WILLIAMS CO : contrat important signé + contrat important résilié
+- **MÊMES FAITS, PAGE CHANGÉE (page différente à chaque visite : non)** · SHERWIN WILLIAMS CO : contrat important signé + contrat important résilié
   - document : https://www.sec.gov/Archives/edgar/data/89800/000119312526405960/0001193125-26-405960-index-headers.html · même document que le robot : NON
 - **OK** · MOORE RICHARD H (Chief Executive Officer) vend 23 343 actions de FIRST BANCORP /NC/
   - document : https://www.sec.gov/Archives/edgar/data/811589/0000811589-26-000160.txt · même document que le robot : oui
-- **NON VÉRIFIÉE** · Indaptus Therapeutics, Inc. : contrat important signé
+- **MÊMES FAITS, PAGE CHANGÉE (page différente à chaque visite : non)** · Indaptus Therapeutics, Inc. : contrat important signé
   - document : https://www.sec.gov/Archives/edgar/data/1857044/000149315226045040/0001493152-26-045040-index-headers.html · même document que le robot : NON
-- **NON VÉRIFIÉE** · POWER SOLUTIONS INTERNATIONAL, INC. : contrat important signé + contrat important résilié
+- **MÊMES FAITS, PAGE CHANGÉE (page différente à chaque visite : non)** · POWER SOLUTIONS INTERNATIONAL, INC. : contrat important signé + contrat important résilié
   - document : https://www.sec.gov/Archives/edgar/data/1137091/000119312526408371/0001193125-26-408371-index-headers.html · même document que le robot : NON
-- **NON VÉRIFIÉE** · VirnetX Holding Corp : contrat important signé
+- **MÊMES FAITS, PAGE CHANGÉE** · VirnetX Holding Corp : contrat important signé
   - document : https://www.sec.gov/Archives/edgar/data/1082324/000114036126038170/0001140361-26-038170-index-headers.html · même document que le robot : NON
 - **OK** · HANDLEY THOMAS W (administrateur) achète 2 000 actions de FULLER H B CO
   - document : https://www.sec.gov/Archives/edgar/data/39368/0001225208-26-008014.txt · même document que le robot : oui
@@ -30,15 +30,15 @@ Infos publiées par le robot : 578 · échantillon au hasard : 70
   - document : https://www.sec.gov/Archives/edgar/data/1326380/0000921895-26-002669.txt · même document que le robot : oui
 - **OK** · Cohen Ryan (President, CEO and Chairman) achète 450 000 actions de GameStop Corp.
   - document : https://www.sec.gov/Archives/edgar/data/1326380/0000921895-26-002670.txt · même document que le robot : oui
-- **NON VÉRIFIÉE** · FOX FACTORY HOLDING CORP : contrat important signé + acquisition ou vente d'actifs complétée
+- **MÊMES FAITS, PAGE CHANGÉE** · FOX FACTORY HOLDING CORP : contrat important signé + acquisition ou vente d'actifs complétée
   - document : https://www.sec.gov/Archives/edgar/data/1424929/000142492926000057/0001424929-26-000057-index-headers.html · même document que le robot : NON
-- **NON VÉRIFIÉE** · Angel Oak Mortgage REIT, Inc. : contrat important signé
+- **MÊMES FAITS, PAGE CHANGÉE** · Angel Oak Mortgage REIT, Inc. : contrat important signé
   - document : https://www.sec.gov/Archives/edgar/data/1766478/000176647826000058/0001766478-26-000058-index-headers.html · même document que le robot : NON
-- **NON VÉRIFIÉE** · Trump Media & Technology Group Corp. : contrat important signé
+- **MÊMES FAITS, PAGE CHANGÉE** · Trump Media & Technology Group Corp. : contrat important signé
   - document : https://www.sec.gov/Archives/edgar/data/1849635/000143774926031535/0001437749-26-031535-index-headers.html · même document que le robot : NON
-- **NON VÉRIFIÉE** · Madison Square Garden Sports Corp. : contrat important signé
+- **MÊMES FAITS, PAGE CHANGÉE** · Madison Square Garden Sports Corp. : contrat important signé
   - document : https://www.sec.gov/Archives/edgar/data/1636519/000119312526409143/0001193125-26-409143-index-headers.html · même document que le robot : NON
-- **NON VÉRIFIÉE** · UNIVERSAL LOGISTICS HOLDINGS, INC. : contrat important signé
+- **MÊMES FAITS, PAGE CHANGÉE** · UNIVERSAL LOGISTICS HOLDINGS, INC. : contrat important signé
   - document : https://www.sec.gov/Archives/edgar/data/1308208/000119312526410681/0001193125-26-410681-index-headers.html · même document que le robot : NON
 - **OK** · MALONE JOHN C (actionnaire de 10 %) achète 21 525 actions de Liberty Latin America Ltd.
   - document : https://www.sec.gov/Archives/edgar/data/1712184/0000937797-26-000034.txt · même document que le robot : oui
