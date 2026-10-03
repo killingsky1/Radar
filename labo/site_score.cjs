@@ -8,7 +8,7 @@ const fs = require("fs");
   const elusLocal = fs.readFileSync(fichierElus, "utf8");
   const lobbyingLocal = fs.readFileSync(fichierLobbying, "utf8");
   const lobbying = JSON.parse(lobbyingLocal);
-  const VERSION = "0.10.0";
+  const VERSION = "0.11.0";
   const base = process.env.BASE || "https://killingsky1.github.io/Radar/"; // BASE : essai local seulement
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
@@ -171,8 +171,37 @@ const fs = require("fs");
     await photo("v8-vote-senat");
     dire(`Vote du Sénat : ${await p.locator(".feuille .controle.rate").count()} contrôle(s) raté(s)`);
   }
+  // Canada (lot 3c, livraison 1) : une fiche de chaque source, l'encadré « Détails » et la mention exigée
+  await p.locator("nav.onglets button", { hasText: "Fil" }).click();
+  await p.locator(".puce", { hasText: "Canada" }).click();
+  await photo("v13-fil-canada");
+  const CANADA = [
+    ["v14-gazette", "Gazette du Canada :", "Reproduction non officielle"],
+    ["v15-concurrence", "Bureau de la concurrence :", "Contient de l'information visée par la Licence du gouvernement ouvert"],
+    ["v16-grand-projet", "Projet d'intérêt national :", "Reproduction non officielle"],
+    ["v17-statcan", "Statistique Canada :", "Source : Statistique Canada, Le Quotidien"],
+    ["v18-legisinfo", "Projet de loi ", "Source : LEGISinfo, Parlement du Canada"],
+    ["v19-sanctions", "Sanctions canadiennes", "Contient de l'information visée par la Licence du gouvernement ouvert"],
+  ];
+  let canadaOk = true;
+  for (const [nom, debut, mention] of CANADA) {
+    const l = p.locator(".ligne", { hasText: debut });
+    if (!(await l.count())) { dire(`Canada : aucune info « ${debut} » dans le fil`); canadaOk = false; continue; }
+    await l.first().click(); await p.waitForSelector(".feuille-fond.ouvert"); await p.waitForTimeout(400);
+    const titreC = await p.locator(".detail-titre").innerText();
+    const details = await p.locator(".details-officiels .detail-officiel").count();
+    if (details) await p.locator(".details-officiels").evaluate((el) => el.previousElementSibling.scrollIntoView({ block: "start" }));
+    await photo(nom);
+    const m = (await p.locator(".detail-pied .mention").count()) ? await p.locator(".detail-pied .mention").innerText() : "";
+    const rates = await p.locator(".feuille .controle.rate").count();
+    const bon = titreC.includes(debut.trim()) && details > 0 && m.startsWith(mention) && rates === 0;
+    dire(`Canada : « ${titreC.slice(0, 95)} » · ${details} détails · mention « ${m.slice(0, 60)}… » · ${rates} contrôle(s) raté(s) · conforme : ${bon ? "OUI" : "NON"}`);
+    canadaOk = canadaOk && bon;
+    await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
+  }
+  dire(`Fiches du Canada affichées : ${canadaOk ? "OUI" : "NON"}`);
   dire(`Erreurs du navigateur : ${erreurs.length ? erreurs.join(" | ") : "aucune"}`);
-  const ok = pareil && elusPareil && lobbyingPareil && memeTop && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && !erreurs.length && js.includes(VERSION);
+  const ok = pareil && elusPareil && lobbyingPareil && memeTop && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && !erreurs.length && js.includes(VERSION);
   dire(ok ? "VERDICT : OK" : "VERDICT : PROBLÈME");
   fs.writeFileSync(`${dossier}/site.txt`, lignes.join("\n") + "\n");
   await b.close();

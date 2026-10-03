@@ -4,7 +4,7 @@ on:
   push:
     branches: [labo]
     paths: ["labo/declencheur-score.txt", "labo/recalcul_score.py", "labo/site_score.cjs", "labo/verif_congres.py",
-            ".github/workflows/labo20.yml"]
+            "labo/verif_canada3c.py", ".github/workflows/labo20.yml"]
 
 permissions:
   contents: write
@@ -31,6 +31,9 @@ jobs:
       - name: Congrès contre-vérifié aux pages officielles
         if: always()
         run: python labo/verif_congres.py principal/data labo/resultats-score/congres.txt
+      - name: Canada (lot 3c) contre-vérifié aux sources officielles
+        if: always()
+        run: python labo/verif_canada3c.py principal/data labo/resultats-score/canada3c.txt
       - run: npm i --no-save playwright@1.56.1
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
