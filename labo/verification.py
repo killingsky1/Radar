@@ -122,22 +122,23 @@ def main() -> None:
     sys.path.insert(0, "labo")
     infos = infos_publiees()
     random.seed(int(time.time()) // 86400)  # un nouvel échantillon chaque jour
-    sec = [i for i in infos if i["source"].startswith("sec_")]
+    import essai
+
+    anciens_sec = {"sec_form4", "sec_8k", "sec_13dg"}  # les autres sources ont leur vérification dans essai.py
+    sec = [i for i in infos if i["source"] in anciens_sec]
     echantillon = random.sample(sec, min(TAILLE, len(sec)))
     autres: dict[str, list] = {}
     for i in infos:
-        if not i["source"].startswith("sec_"):
+        if i["source"] not in anciens_sec and i["source"] in essai.VERIFS:
             autres.setdefault(i["source"], []).append(i)
     for s in sorted(autres):
         echantillon += random.sample(autres[s], min(PAR_SOURCE, len(autres[s])))
     if any(i["source"] == "senat_ptr" for i in echantillon):
-        import essai
-
         essai.accepter_conditions_senat()
     resultats = []
     for info in echantillon:
         try:
-            resultats.append(verifier(info) if info["source"].startswith("sec_") else verifier_autre(info))
+            resultats.append(verifier(info) if info["source"] in anciens_sec else verifier_autre(info))
         except Exception as exc:  # noqa: BLE001
             resultats.append({"id": info["id"], "titre": info["title"], "ok": False, "ecarts": [f"erreur : {exc}"]})
     for r in resultats:  # un document qu'on n'a pas pu télécharger n'est pas un écart : c'est « non vérifié »
