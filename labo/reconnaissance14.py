@@ -13,10 +13,10 @@ import requests
 
 UA = "Radar projet personnel"
 H = {"User-Agent": UA, "Accept-Encoding": "gzip, deflate"}
-SORTIE = Path("labo/resultats-lobbying-oge")
+SORTIE = Path("labo/resultats-lobbying-oge2")
 SORTIE.mkdir(parents=True, exist_ok=True)
 F = "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name="
-CIBLES = {
+CIBLES_1 = {
     "lda_tos": "https://lda.gov/api/tos/",
     "lda_tos_senat": "https://lda.senate.gov/api/tos/",
     "lda_racine": "https://lda.gov/api/v1/",
@@ -36,6 +36,14 @@ CIBLES = {
     "oge_president_vp": "https://www.oge.gov/web/OGE.nsf/Officials%20Individual%20Disclosures%20Search%20Collection",
     "oge_formulaire_201": "https://www.oge.gov/web/oge.nsf/Resources/OGE+Form+201:+Request+an+Individual%E2%80%99s+Ethics+Documents",
 }
+# 2e passage : le guide officiel du LDA (règle des montants) et un nouvel essai sur l'OGE (délai dépassé au 1er)
+CIBLES = {
+    "lda_guide": "https://lobbyingdisclosure.house.gov/ldaguidance.pdf",
+    "oge_par_date": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%20Filings%20by%20Date?OpenView",
+    "oge_par_date_200": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%20Filings%20by%20Date?OpenView&Count=200",
+    "oge_president_vp": "https://www.oge.gov/web/OGE.nsf/Officials%20Individual%20Disclosures%20Search%20Collection",
+    "oge_formulaire_201": "https://www.oge.gov/web/oge.nsf/Resources/OGE+Form+201:+Request+an+Individual%E2%80%99s+Ethics+Documents",
+}
 ATTENTE = {"lda.gov": 4.5, "lda.senate.gov": 4.5}
 robots, resultats, dernier = {}, {}, {}
 
@@ -44,7 +52,7 @@ def regles(hote):
     if hote not in robots:
         rp = urllib.robotparser.RobotFileParser()
         try:
-            r = requests.get(f"https://{hote}/robots.txt", headers=H, timeout=30)
+            r = requests.get(f"https://{hote}/robots.txt", headers=H, timeout=(20, 40))
             robots[hote] = {"statut": r.status_code, "texte": r.text[:3000]}
             if r.status_code >= 500:
                 rp.disallow_all = True
