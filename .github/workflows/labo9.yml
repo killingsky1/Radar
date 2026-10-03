@@ -1,0 +1,33 @@
+name: "Labo (reconnaissance 2 du lot 2)"
+
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/reconnaissance8.py", ".github/workflows/labo9.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: labo-depot
+  cancel-in-progress: false
+
+jobs:
+  reconnaissance8:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - run: rm -rf labo/resultats-lot2c && python labo/reconnaissance8.py
+      - name: Sauvegarder les échantillons
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/resultats-lot2c
+          git commit -m "Labo : reconnaissance 3 du lot 2 du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
