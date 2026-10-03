@@ -3,12 +3,15 @@
 Entrées : les infos du robot (data/evenements/*.jsonl, 3 derniers mois) et le score publié (data/app/aujourdhui.json).
 Vérifie : mêmes compagnies dans le même ordre, mêmes points (±0,01), mêmes infos comptées, bonus, contexte,
 et que chaque info citée existe, est « officiel »/« confirmé », et pointe vers un domaine officiel.
+Lot B : note sur 10 = 5 + points × 5/6 (0 à 10, au dixième, 5 vers le haut) ; listes à 7/10 et plus, 3/10 et moins ;
+« Récent » = l'info comptée la plus récente du sens de la liste, déposée il y a moins de 3 jours de bourse.
 """
 import json
 import re
 import sys
 import unicodedata
 from datetime import date, datetime, timedelta
+from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
 from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
@@ -179,10 +182,17 @@ for t, liste in notes.items():
         groupe = [v[0] for k, v in meilleurs.items() if k[1] == sens]
         if groupe:
             total += sum(groupe) * (1 + 0.25 * (len(groupe) - 1))
-    calcule[t] = (total, {k: v[1] for k, v in meilleurs.items()})
+    frais = {sens: max((v[2] for k, v in meilleurs.items() if k[1] == sens), default=None) for sens in (1, -1)}
+    calcule[t] = (total, {k: v[1] for k, v in meilleurs.items()}, frais)
 
-hausse = sorted((t for t in calcule if calcule[t][0] >= 1.5), key=lambda t: (-calcule[t][0], t))[:20]
-baisse = sorted((t for t in calcule if calcule[t][0] <= -1.5), key=lambda t: (calcule[t][0], t))[:20]
+
+def sur_10(points):
+    n = Decimal(str(round(points, 2))) * 5 / 6 + 5
+    return float(min(max(n, Decimal(0)), Decimal(10)).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP))
+
+
+hausse = sorted((t for t in calcule if sur_10(calcule[t][0]) >= 7.0), key=lambda t: (-calcule[t][0], t))[:20]
+baisse = sorted((t for t in calcule if sur_10(calcule[t][0]) <= 3.0), key=lambda t: (calcule[t][0], t))[:20]
 
 ecarts = []
 for nom, attendu in (("hausse", hausse), ("baisse", baisse)):
@@ -195,6 +205,12 @@ for nom, attendu in (("hausse", hausse), ("baisse", baisse)):
             continue
         if abs(x["score"] - calcule[t][0]) > 0.01:
             ecarts.append(f"{t} : score publié {x['score']} ≠ recalculé {calcule[t][0]:.4f}")
+        if x.get("note10") != sur_10(calcule[t][0]):
+            ecarts.append(f"{t} : note publiée {x.get('note10')} ≠ recalculée {sur_10(calcule[t][0])}")
+        depot = calcule[t][2][1 if nom == "hausse" else -1]
+        recent = bool(depot) and ouvrables(date.fromisoformat(depot), jour) < 3
+        if x.get("depot_recent") != depot or x.get("recent") is not recent:
+            ecarts.append(f"{t} : « Récent » publié {x.get('recent')} ({x.get('depot_recent')}) ≠ recalculé {recent} ({depot})")
         comptees = {(g["famille"], g["sens"]): next(i["id"] for i in g["infos"] if i["compte"]) for g in x["groupes"]}
         if comptees != calcule[t][1]:
             ecarts.append(f"{t} : infos comptées {comptees} ≠ {calcule[t][1]}")
@@ -212,7 +228,12 @@ for nom, attendu in (("hausse", hausse), ("baisse", baisse)):
 
 print(f"Jour du calcul : {jour} · infos lues : {len(infos)} · compagnies notées : {len(calcule)} "
       f"(publié : {pub['compagnies_notees']}) · fonds mis à part : {len(FONDS)}")
-print(f"Hausse : {len(hausse)} · Baisse : {len(baisse)}")
+print(f"Hausse (7/10 et plus) : {len(hausse)} · Baisse (3/10 et moins) : {len(baisse)}")
+for nom, liste in (("Hausse", hausse), ("Baisse", baisse)):
+    print(f"{nom} : " + ", ".join(f"{t} {str(sur_10(calcule[t][0])).replace('.', ',')}/10" + (" (récent)" if
+          ouvrables(date.fromisoformat(calcule[t][2][1 if nom == 'Hausse' else -1]), jour) < 3 else "") for t in liste))
+if not pub["methode"].get("seuil", "").startswith("Une compagnie entre dans la liste à partir de 7/10"):
+    ecarts.append("méthode publiée : le seuil n'est pas 7/10")
 transactions_chefs = {e["id"] for e in infos if e["source"] in ("chambre_ptr", "senat_ptr") and est_chef(e)}
 print(f"Chefs du Congrès dans la liste officielle : {len(CHEFS)} · leurs transactions (3 mois) : {len(transactions_chefs)}")
 publiees = {r["code"]: r["points"] for r in pub["methode"]["regles"]}
