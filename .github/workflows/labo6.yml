@@ -1,0 +1,35 @@
+name: Labo (mesure 6 : pages SEC des 8-K)
+
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/diff8k.py", ".github/workflows/labo6.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: labo-depot
+  cancel-in-progress: false
+
+jobs:
+  mesure6:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - run: rm -rf labo/resultats6 && python labo/diff8k.py
+      - name: Sauvegarder la mesure
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/resultats6
+          git commit -m "Labo : mesure 6 du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
