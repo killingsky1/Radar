@@ -1,0 +1,30 @@
+name: "Labo (lot 3c : les 9 sources du Canada)"
+
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/reconnaissance16.py", ".github/workflows/labo32.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  canada:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - run: rm -rf labo/resultats-lot3c && python labo/reconnaissance16.py
+      - name: Sauvegarder
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/resultats-lot3c
+          git commit -m "Labo : sources du Canada du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
