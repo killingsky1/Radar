@@ -13,7 +13,7 @@ import requests
 
 UA = "Radar projet personnel"
 H = {"User-Agent": UA, "Accept-Encoding": "gzip, deflate"}
-SORTIE = Path("labo/resultats-lobbying-oge2")
+SORTIE = Path("labo/resultats-oge-api")
 SORTIE.mkdir(parents=True, exist_ok=True)
 F = "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name="
 CIBLES_1 = {
@@ -36,8 +36,17 @@ CIBLES_1 = {
     "oge_president_vp": "https://www.oge.gov/web/OGE.nsf/Officials%20Individual%20Disclosures%20Search%20Collection",
     "oge_formulaire_201": "https://www.oge.gov/web/oge.nsf/Resources/OGE+Form+201:+Request+an+Individual%E2%80%99s+Ethics+Documents",
 }
-# 2e passage : le guide officiel du LDA (règle des montants) et un nouvel essai sur l'OGE (délai dépassé au 1er)
+# 3e passage : l'adresse de données publique qu'appelle la page « Officials' Individual Disclosures » de l'OGE
+API = "https://extapps2.oge.gov/201/Presiden.nsf/API.xsp/v3/rest?draw=1&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=desc"
+for i, c in enumerate(("docDate", "title", "type", "name", "agency", "level")):
+    API += f"&columns%5B{i}%5D%5Bdata%5D={c}&columns%5B{i}%5D%5Bsearchable%5D=true&columns%5B{i}%5D%5Borderable%5D=true"
 CIBLES = {
+    "oge_api_recents": API + "&start=0&length=25&search%5Bvalue%5D=",
+    "oge_api_278t": API + "&start=0&length=25&search%5Bvalue%5D=278-T",
+    "oge_api_colonne_type": API + "&start=0&length=25&search%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=Transaction",
+    "oge_api_president": API + "&start=0&length=25&search%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=Trump",
+}
+CIBLES_2 = {
     "lda_guide": "https://lobbyingdisclosure.house.gov/ldaguidance.pdf",
     "oge_par_date": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%20Filings%20by%20Date?OpenView",
     "oge_par_date_200": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%20Filings%20by%20Date?OpenView&Count=200",
