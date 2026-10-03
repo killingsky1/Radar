@@ -155,6 +155,20 @@ def test_votes_lus_une_fois_avec_le_sujet_en_clair(tmp_path):
     assert sorted(gardes) == ["H279-2026", "H280-2026", "S253-2026"] and len(gardes["S253-2026"]["votes"]) == 100
 
 
+def test_votes_deja_lus_pas_relus_meme_hors_des_3_derniers_mois(tmp_path):
+    lecteurs = {"hr7008": cg.collecter_hr7008, "votes": cg.collecter_votes}
+    executer(tmp_path, collecteurs=lecteurs, client=FauxInternet(), maintenant=MAINTENANT)
+    assert sorted(f.name for f in (tmp_path / "evenements").glob("*.jsonl")) == ["2026-07.jsonl", "2026-09.jsonl"]
+    for mois in ("2026-08", "2026-10"):  # juillet sort des 3 derniers fichiers mensuels
+        (tmp_path / "evenements" / f"{mois}.jsonl").write_text("", encoding="utf-8")
+    internet = FauxInternet()
+    rapport = executer(tmp_path, collecteurs=lecteurs, client=internet, maintenant=MAINTENANT)
+    assert internet.appels == [cg.PROJET]  # seulement le statut du projet : aucun vote retéléchargé
+    assert all(r["ok"] for r in rapport.values())
+    etat = json.loads((tmp_path / "etat_sources.json").read_text(encoding="utf-8"))
+    assert etat["votes"]["compte"]["recus"] == 0 and etat["hr7008"]["compte"]["recus"] == 0
+
+
 def test_vote_dont_le_total_ne_se_recompte_pas_refuse():
     v = cg.lire_vote_senat(lu("vote_119_2_00253.xml.gz"))
     v["oui"] = 54  # total officiel qui ne correspond pas aux votes un par un

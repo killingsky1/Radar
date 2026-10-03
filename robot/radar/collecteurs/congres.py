@@ -25,8 +25,8 @@ from datetime import datetime
 from pathlib import Path
 
 from ..models import Evenement, empreinte
+from ..store import Depot
 from ..validate import controle_source
-from .regulateurs import deja
 
 VERSION = "congres-1"
 MEMBRES_CHAMBRE = "https://clerk.house.gov/xml/lists/MemberData.xml"
@@ -189,6 +189,12 @@ def chemin_votes(donnees) -> Path:
 
 def chemin_projet(donnees) -> Path:
     return Path(donnees) / "elus" / "projet.json"
+
+
+def deja(ctx, source: str) -> set[str]:
+    """Numéros déjà enregistrés, même au-delà des 3 derniers mois : un vote ou une étape du projet ne change plus
+    (sinon les votes de juillet seraient relus à chaque passage une fois sortis de la fenêtre de 3 mois)."""
+    return Depot(ctx.donnees).ids_enregistres({source}, mois_max=24)
 
 
 def _ecrire(chemin: Path, contenu: dict) -> None:
