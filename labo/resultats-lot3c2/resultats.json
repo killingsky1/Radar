@@ -1,0 +1,767 @@
+{
+ "noc_main_fr": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/noticeofcompliancemain/?lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/noticeofcompliancemain/?lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 24077250,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Cache-Control": "no-cache",
+   "Content-Encoding": "gzip"
+  },
+  "debut": "[{\"noc_number\":403,\"noc_date\":\"2002-03-13\",\"noc_manufacturer_name\":\"AVENTIS PASTEUR LIMITED\",\"noc_status_with_conditions\":\"N\",\"noc_on_submission_type\":\"Supplément à une présentation de drogue nouvelle (SPDN)\",\"noc_is_suppliment\":\"Y\",\"noc_submission_class\":\"Autre\",\"noc_is_admin\":\"N\",\"noc_product_type\":\"Biologique\",\"noc_crp_product_name\":\"\",\"noc_crp_company_name\":\"\",\"noc_crp_country_name\":\"\",\"noc_active_status\":\"1\",\"noc_reason_supplement\":\"NOUVEL EMPLACEMENT DE FABRICATION\",\"noc_reason_submissi"
+ },
+ "noc_noticeofcompliancemain_38344": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/noticeofcompliancemain/?id=38344&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/noticeofcompliancemain/?id=38344&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 575,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "575",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "{\"noc_number\":38344,\"noc_date\":\"2026-09-24\",\"noc_manufacturer_name\":\"BOEHRINGER INGELHEIM (CANADA) LTD LTEE\",\"noc_status_with_conditions\":\"Y\",\"noc_on_submission_type\":\"Présentation de drogue nouvelle (PDN)\",\"noc_is_suppliment\":\"N\",\"noc_submission_class\":\"Nouvelle substance active (NSA)\",\"noc_is_admin\":\"N\",\"noc_product_type\":\"Disponible avec ordonnance\",\"noc_crp_product_name\":\"\",\"noc_crp_company_name\":\"\",\"noc_crp_country_name\":\"\",\"noc_active_status\":\"1\",\"noc_reason_supplement\":\"\",\"noc_reason_sub"
+ },
+ "noc_drugproduct_38344": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38344&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38344&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 127,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "127",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38344,\"noc_br_brand_id\":41160,\"noc_br_brandname\":\"HERNEXEOS\",\"noc_br_din\":\"02571730\",\"noc_br_product_id\":78869}]"
+ },
+ "noc_medicinalingredient_38344": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38344&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38344&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 159,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "159",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38344,\"noc_pi_din_product_id\":78869,\"noc_pi_medic_ingr_name\":\"ZONGERTINIB\",\"noc_pi_strength\":60.0,\"noc_pi_unit\":\"MG\",\"noc_pi_basic_unit\":\"TAB\"}]"
+ },
+ "noc_noticeofcompliancemain_38346": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/noticeofcompliancemain/?id=38346&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/noticeofcompliancemain/?id=38346&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 580,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "580",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "{\"noc_number\":38346,\"noc_date\":\"2026-09-24\",\"noc_manufacturer_name\":\"CENTRE FOR PROBE DEVELOPMENT AND COMMERCIALIZATION\",\"noc_status_with_conditions\":\"N\",\"noc_on_submission_type\":\"Présentation de drogue nouvelle (PDN)\",\"noc_is_suppliment\":\"N\",\"noc_submission_class\":\"Nouvelle substance active (NSA)\",\"noc_is_admin\":\"N\",\"noc_product_type\":\"Radiopharmaceutique\",\"noc_crp_product_name\":\"\",\"noc_crp_company_name\":\"\",\"noc_crp_country_name\":\"\",\"noc_active_status\":\"1\",\"noc_reason_supplement\":\"\",\"noc_reaso"
+ },
+ "noc_drugproduct_38346": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38346&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38346&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 129,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "129",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38346,\"noc_br_brand_id\":41162,\"noc_br_brandname\":\"PROSTALUMIN\",\"noc_br_din\":\"02571757\",\"noc_br_product_id\":78871}]"
+ },
+ "noc_medicinalingredient_38346": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38346&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38346&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 161,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "161",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38346,\"noc_pi_din_product_id\":78871,\"noc_pi_medic_ingr_name\":\"(18F)PSMA-1007\",\"noc_pi_strength\":3.7,\"noc_pi_unit\":\"GBQ\",\"noc_pi_basic_unit\":\"ML\"}]"
+ },
+ "noc_noticeofcompliancemain_38368": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/noticeofcompliancemain/?id=38368&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/noticeofcompliancemain/?id=38368&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 557,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "557",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "{\"noc_number\":38368,\"noc_date\":\"2026-09-28\",\"noc_manufacturer_name\":\"CELYSTRA PHARMA INC.\",\"noc_status_with_conditions\":\"N\",\"noc_on_submission_type\":\"Présentation de drogue nouvelle (PDN)\",\"noc_is_suppliment\":\"N\",\"noc_submission_class\":\"Nouvelle substance active (NSA)\",\"noc_is_admin\":\"N\",\"noc_product_type\":\"Disponible avec ordonnance\",\"noc_crp_product_name\":\"\",\"noc_crp_company_name\":\"\",\"noc_crp_country_name\":\"\",\"noc_active_status\":\"1\",\"noc_reason_supplement\":\"\",\"noc_reason_submission\":\"\",\"noc_t"
+ },
+ "noc_drugproduct_38368": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38368&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38368&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 126,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "126",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38368,\"noc_br_brand_id\":41187,\"noc_br_brandname\":\"DAWNZERA\",\"noc_br_din\":\"02571943\",\"noc_br_product_id\":78919}]"
+ },
+ "noc_medicinalingredient_38368": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38368&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38368&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 170,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "170",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38368,\"noc_pi_din_product_id\":78919,\"noc_pi_medic_ingr_name\":\"DONIDALORSEN SODIQUE\",\"noc_pi_strength\":80.0,\"noc_pi_unit\":\"MG\",\"noc_pi_basic_unit\":\"0.8ML\"}]"
+ },
+ "contrats_champs": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&limit=0",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&limit=0",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 2537,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "2537",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"include_total\": true, \"limit\": 0, \"records_format\": \"objects\", \"resource_id\": \"fac950c0-00d5-4ec1-a4d3-9cbebf98a305\", \"total_estimation_threshold\": null, \"records\": [], \"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"procurement_id\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"vendor_postal_code\", \"type\": \"text\"}, {\"id\""
+ },
+ "contrats_par_trimestre": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search_sql?sql=SELECT%20reporting_period%2C%20count%28%2A%29%20AS%20n%2C%20sum%28CASE%20WHEN%20contract_value%3A%3Anumeric%20%3E%3D%201000000%20THEN%201%20ELSE%200%20END%29%20AS%20un_million%2C%20sum%28CASE%20WHEN%20contract_value%3A%3Anumeric%20%3E%3D%2010000000%20THEN%201%20ELSE%200%20END%29%20AS%20dix_millions%20FROM%20%22fac950c0-00d5-4ec1-a4d3-9cbebf98a305%22%20WHERE%20reporting_period%20%3E%3D%20%272025-2026-Q1%27%20GROUP%20BY%20reporting_period%20ORDER%20BY%20reporting_period%20DESC",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search_sql?sql=SELECT%20reporting_period%2C%20count%28%2A%29%20AS%20n%2C%20sum%28CASE%20WHEN%20contract_value%3A%3Anumeric%20%3E%3D%201000000%20THEN%201%20ELSE%200%20END%29%20AS%20un_million%2C%20sum%28CASE%20WHEN%20contract_value%3A%3Anumeric%20%3E%3D%2010000000%20THEN%201%20ELSE%200%20END%29%20AS%20dix_millions%20FROM%20%22fac950c0-00d5-4ec1-a4d3-9cbebf98a305%22%20WHERE%20reporting_period%20%3E%3D%20%272025-2026-Q1%27%20GROUP%20BY%20reporting_period%20ORDER%20BY%20reporting_period%20DESC",
+  "statut": 400,
+  "type": "application/json;charset=utf-8",
+  "taille": 59,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "59",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "\"Bad request - Action name not known: datastore_search_sql\""
+ },
+ "contrats_gros_recents": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search_sql?sql=SELECT%20_id%2C%20reference_number%2C%20owner_org%2C%20owner_org_title%2C%20vendor_name%2C%20contract_date%2C%20contract_value%2C%20original_value%2C%20amendment_value%2C%20description_fr%2C%20reporting_period%2C%20country_of_vendor%2C%20solicitation_procedure%2C%20number_of_bids%20FROM%20%22fac950c0-00d5-4ec1-a4d3-9cbebf98a305%22%20WHERE%20reporting_period%20%3D%20%272026-2027-Q1%27%20AND%20contract_value%3A%3Anumeric%20%3E%3D%2010000000%20ORDER%20BY%20contract_value%3A%3Anumeric%20DESC%20LIMIT%2040",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search_sql?sql=SELECT%20_id%2C%20reference_number%2C%20owner_org%2C%20owner_org_title%2C%20vendor_name%2C%20contract_date%2C%20contract_value%2C%20original_value%2C%20amendment_value%2C%20description_fr%2C%20reporting_period%2C%20country_of_vendor%2C%20solicitation_procedure%2C%20number_of_bids%20FROM%20%22fac950c0-00d5-4ec1-a4d3-9cbebf98a305%22%20WHERE%20reporting_period%20%3D%20%272026-2027-Q1%27%20AND%20contract_value%3A%3Anumeric%20%3E%3D%2010000000%20ORDER%20BY%20contract_value%3A%3Anumeric%20DESC%20LIMIT%2040",
+  "statut": 400,
+  "type": "application/json;charset=utf-8",
+  "taille": 59,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "59",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "\"Bad request - Action name not known: datastore_search_sql\""
+ },
+ "contrats_doublons": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search_sql?sql=SELECT%20count%28%2A%29%20AS%20lignes%2C%20count%28DISTINCT%20owner_org%20%7C%7C%20%27%7C%27%20%7C%7C%20reference_number%29%20AS%20cles%20FROM%20%22fac950c0-00d5-4ec1-a4d3-9cbebf98a305%22%20WHERE%20reporting_period%20%3E%3D%20%272025-2026-Q1%27",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search_sql?sql=SELECT%20count%28%2A%29%20AS%20lignes%2C%20count%28DISTINCT%20owner_org%20%7C%7C%20%27%7C%27%20%7C%7C%20reference_number%29%20AS%20cles%20FROM%20%22fac950c0-00d5-4ec1-a4d3-9cbebf98a305%22%20WHERE%20reporting_period%20%3E%3D%20%272025-2026-Q1%27",
+  "statut": 400,
+  "type": "application/json;charset=utf-8",
+  "taille": 59,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "59",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "\"Bad request - Action name not known: datastore_search_sql\""
+ },
+ "recherche_sanctions": {
+  "url": "https://open.canada.ca/data/api/action/package_search?q=consolidated%20autonomous%20sanctions&rows=3",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/package_search?q=consolidated%20autonomous%20sanctions&rows=3",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 17621,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "17621",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=package_search\", \"success\": true, \"result\": {\"count\": 2, \"facets\": {}, \"facet_ranges\": {\"portal_release_date\": {\"counts\": [\"1926-10-03T00:00:00Z\", 2], \"gap\": \"+100YEARS\", \"start\": \"1926-10-03T00:00:00Z\", \"end\": \"2126-10-03T00:00:00Z\"}}, \"facet_queries\": {}, \"results\": [{\"association_type\": [], \"audience\": [], \"author\": null, \"author_email\": null, \"collection\": \"primary\", \"contributor\": {\"en\": \"\", \"fr\": \"\"}, \"creator\": \"\", \"creator"
+ },
+ "recherche_fusions": {
+  "url": "https://open.canada.ca/data/api/action/package_search?q=merger%20reviews%20competition%20bureau&rows=3",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/package_search?q=merger%20reviews%20competition%20bureau&rows=3",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 15689,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "15689",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=package_search\", \"success\": true, \"result\": {\"count\": 2, \"facets\": {}, \"facet_ranges\": {\"portal_release_date\": {\"counts\": [\"1926-10-03T00:00:00Z\", 2], \"gap\": \"+100YEARS\", \"start\": \"1926-10-03T00:00:00Z\", \"end\": \"2126-10-03T00:00:00Z\"}}, \"facet_queries\": {}, \"results\": [{\"association_type\": [], \"audience\": [], \"author\": null, \"author_email\": null, \"collection\": \"primary\", \"contributor\": {\"fr\": \"\", \"en\": \"\"}, \"creator\": \"Mergers Int"
+ },
+ "ccc_rapports": {
+  "url": "https://www.ccc.ca/en/about/corporate-reports/",
+  "permis_robots_txt": true,
+  "url_finale": "https://www.ccc.ca/en/about/corporate-reports/",
+  "statut": 200,
+  "type": "text/html; charset=UTF-8",
+  "taille": 495991,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Cache-Control": "max-age=600, must-revalidate",
+   "Content-Encoding": "gzip"
+  },
+  "debut": "<!DOCTYPE html>\n<html lang=\"en-CA\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\t<link rel=\"profile\" href=\"https://gmpg.org/xfn/11\">\n\t<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />\n\n<!-- Google Tag Manager for WordPress by gtm4wp.com -->\n<script data-cfasync=\"false\" data-pagespeed-no-defer>\n\tvar gtm4wp_datalayer_name = \"dataLayer\";\n\tvar dataLayer = dataLayer || [];\n\t(function(",
+  "liens": [
+   "https://international.canada.ca/en/services/business/trade/export/support/trade-team",
+   "https://www.ccc.ca/en/about/transparency-and-disclosure/",
+   "https://www.ccc.ca/en/canadian-exporters/",
+   "https://www.ccc.ca/en/canadian-exporters/g2g-exporter-success-stories/",
+   "https://www.ccc.ca/en/canadian-exporters/modern-slavery-prevention-and-anti-corruption-training/",
+   "https://www.ccc.ca/en/canadian-exporters/onboarding-process/",
+   "https://www.ccc.ca/en/canadian-exporters/sell-to-us-dow-through-g2g/",
+   "https://www.ccc.ca/en/canadian-exporters/u-s-dod-innovation-programs/",
+   "https://www.ccc.ca/en/canadian-exporters/win-contracts-with-foreign-governments-through-ccc/",
+   "https://www.ccc.ca/en/insights-for-exporters/",
+   "https://www.ccc.ca/en/terms-of-use/",
+   "https://www.ccc.ca/wp-content/uploads/2021/12/CCC-Annual-ATIP-Reports-to-Parliament-2020-2021_FR-FINAL.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2022/10/CCC-Annual-ATIP-Reports-to-Parliament-2021-2022_EN.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2022/11/CCC-2022-23-Q2-Proforma-FS-V1-MDA-V4-FINAL-Web.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2022/11/Q2-2022-2023.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2023/03/CCC-2022-23-Q3-Proforma-FS-V2-MDA-V9-FINAL-Web.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2023/03/TD-Q3-V2.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2023/06/TD-2022-2023-Q4-FINAL2.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2023/08/CCC-2023-24-Q1-Proforma-FS-V3-MDA-V12-FINAL.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2023/08/TD-2023-2024-Q1-FINAL-.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2023/10/CCC-Quarterly-Event-Disclosure-Report-for-2023-2024-Q2-EN.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2023/11/CCC-2023-24-Q2-Proforma-FS-V3-MDA-V5-Final-.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2023/11/TD-2023-2024-Q2-FINAL-1.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2024/01/CCC-Quarterly-Event-Disclosure-Report-2023-2024-Q3-EN.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2024/02/CCC-2023-24-Q3-Proforma-FS-V4-MDA-V3-MASTER-CLEAN-FINAL-1.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2024/02/TD-2023-2024-Q3-FINAL.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2024/04/CCC-Quarterly-Event-Disclosure-Report-for-2023-2024-Q4.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2024/05/TD-2023-2024-Q4-FINAL.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2024/08/Quarterly-Event-Disclosure-Report-for-2024-2025-Q1.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2024/08/TD-2024-2025-Q1-FINAL.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2024/09/CCC-Annual-ATIP-Reports-to-Parliament-2022-2023_EN.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2024/10/CCC-Annual-ATIP-Reports-to-Parliament-2023-2024_EN-FINAL.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2024/10/Quarterly-Event-Disclosure-Report-2024-2025-Q2.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2024/11/CCC-2024-25-Q1-Proforma-FS-V4-and-MDA-V5-Clean-final.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2024/11/CCC-2024-25-Q2-Proforma-FS-v1-and-MDA-v1-CLEAN-FINAL.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2024/11/TD-2024-2025-Q2.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2025/02/CCC-2024-25-Q3-Proforma-FS-v1-and-MDA-v1-2-20-CLEAN-FINAL.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2025/02/CCC-Quarterly-Event-Disclosure-Report-2024-2025-Q3.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2025/02/TD-2024-2025-Q3.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2025/05/TD-2024-2025-Q4.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2025/07/CCC-Quarterly-Event-Disclosure-Report-2024-25-Q4.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2025/07/TD-2025-2026-Q1.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2025/08/CCC-2025-26-Q1-Proforma-FS-and-MDA-V2-Clean-FINAL.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2025/10/CCC-Annual-ATIP-Reports-to-Parliament-2024-2025_EN-FINAL-1.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2025/11/CCC-2025-26-Q2-Proforma-FS-and-MDA-V1-CLEAN.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2025/11/CCC-Quarterly-Event-Disclosure-Report-2025-2026-Q1.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2025/11/CCC-Quarterly-Event-Disclosure-Report-2025-2026-Q2.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2025/11/TD-2025-2026-Q2.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2026/02/CCC-2025-26-Q3-Proforma-FS-and-MDA-V1-CLEAN.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2026/02/Event-Report-Q3.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2026/02/TD-2025-2026-Q3.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2026/04/Q4-Event-Report.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2026/06/TD-2025-2026-Q4.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2026/07/Event-Report-26-27-Q1.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2026/07/TD-2026-2027-Q1.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2026/08/CCC-2026-27-Q1-Proforma-FS-and-MDA-V1-CLEAN.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/CCC-2021-22-Q1-Proforma-FS-V3-MDA-V4-Final-Web-protected.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/CCC-2021-22-Q2-Proforma-FS-V1-MDA-V5-Final-Web-1-protected.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/CCC-2021-22-Q3-Proforma-FS-V1-MDA-V2-final-web-protected.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/CCC-2022-23-Q1-Proforma-FS-and-MDA-FINAL.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/CCC_CPS_2018-19_EN_Mar1--protected.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/CCC_CPS_2019-20_EN_Mar2-protected.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/CCC_CPS_2020-21_EN_Mar2-protected.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/CCC_CorpPlan_2021-22_EN_Feb11_WEB - FINAL-protected.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/Canadian-Commercial-Corporation-Disclosure-Report-of-Signed-Transactions-Q2.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/Canadian-Commercial-Corporation-Disclosure-Report-of-Signed-Transactions-Q3.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/Disclosure-Report-of-Signed-Transactions-Q4-2022.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/Disclosure-Report-of-Signed-Transactrion-Q1-FY-22-23-protected.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/corporate-plans-report-2014-2015-protected.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/corporate-plans-report-2015-2016-protected.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/corporate-plans-report-2016-2017-protected.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/corporate-plans-report-2017-2018-protected.pdf"
+  ]
+ },
+ "ccc_conditions": {
+  "url": "https://www.ccc.ca/en/terms-of-use/",
+  "permis_robots_txt": true,
+  "url_finale": "https://www.ccc.ca/en/terms-of-use/",
+  "statut": 200,
+  "type": "text/html; charset=UTF-8",
+  "taille": 425260,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Cache-Control": "max-age=600, must-revalidate",
+   "Content-Encoding": "gzip"
+  },
+  "debut": "<!DOCTYPE html>\n<html lang=\"en-CA\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\t<link rel=\"profile\" href=\"https://gmpg.org/xfn/11\">\n\t<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />\n\n<!-- Google Tag Manager for WordPress by gtm4wp.com -->\n<script data-cfasync=\"false\" data-pagespeed-no-defer>\n\tvar gtm4wp_datalayer_name = \"dataLayer\";\n\tvar dataLayer = dataLayer || [];\n\t(function(",
+  "liens": [
+   "https://international.canada.ca/en/services/business/trade/export/support/trade-team",
+   "https://www.ccc.ca/en/about/transparency-and-disclosure/",
+   "https://www.ccc.ca/en/canadian-exporters/",
+   "https://www.ccc.ca/en/canadian-exporters/g2g-exporter-success-stories/",
+   "https://www.ccc.ca/en/canadian-exporters/modern-slavery-prevention-and-anti-corruption-training/",
+   "https://www.ccc.ca/en/canadian-exporters/onboarding-process/",
+   "https://www.ccc.ca/en/canadian-exporters/sell-to-us-dow-through-g2g/",
+   "https://www.ccc.ca/en/canadian-exporters/u-s-dod-innovation-programs/",
+   "https://www.ccc.ca/en/canadian-exporters/win-contracts-with-foreign-governments-through-ccc/",
+   "https://www.ccc.ca/en/insights-for-exporters/",
+   "https://www.ccc.ca/en/terms-of-use/",
+   "https://www.ccc.ca/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ccc.ca%2Fen%2Fterms-of-use%2F",
+   "https://www.ccc.ca/fr/conditions-dutilisation/"
+  ]
+ },
+ "ccc_liens_transactions": {
+  "liens": [
+   "https://www.ccc.ca/wp-content/uploads/pdfs/Disclosure-Report-of-Signed-Transactrion-Q1-FY-22-23-protected.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/Disclosure-Report-of-Signed-Transactions-Q4-2022.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/Canadian-Commercial-Corporation-Disclosure-Report-of-Signed-Transactions-Q3.pdf",
+   "https://www.ccc.ca/wp-content/uploads/pdfs/Canadian-Commercial-Corporation-Disclosure-Report-of-Signed-Transactions-Q2.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2025/11/CCC-Quarterly-Event-Disclosure-Report-2025-2026-Q2.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2025/11/CCC-Quarterly-Event-Disclosure-Report-2025-2026-Q1.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2025/07/CCC-Quarterly-Event-Disclosure-Report-2024-25-Q4.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2025/02/CCC-Quarterly-Event-Disclosure-Report-2024-2025-Q3.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2024/10/Quarterly-Event-Disclosure-Report-2024-2025-Q2.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2024/08/Quarterly-Event-Disclosure-Report-for-2024-2025-Q1.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2024/04/CCC-Quarterly-Event-Disclosure-Report-for-2023-2024-Q4.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2024/01/CCC-Quarterly-Event-Disclosure-Report-2023-2024-Q3-EN.pdf",
+   "https://www.ccc.ca/wp-content/uploads/2023/10/CCC-Quarterly-Event-Disclosure-Report-for-2023-2024-Q2-EN.pdf",
+   "https://www.ccc.ca/en/about/transparency-and-disclosure/"
+  ]
+ },
+ "ccc_rapport_0": {
+  "url": "https://www.ccc.ca/wp-content/uploads/pdfs/Disclosure-Report-of-Signed-Transactrion-Q1-FY-22-23-protected.pdf",
+  "permis_robots_txt": true,
+  "url_finale": "https://www.ccc.ca/wp-content/uploads/pdfs/Disclosure-Report-of-Signed-Transactrion-Q1-FY-22-23-protected.pdf",
+  "statut": 200,
+  "type": "application/pdf",
+  "taille": 117324,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "117324",
+   "Last-Modified": "Fri, 18 Nov 2022 22:10:25 GMT",
+   "ETag": "\"637802d1-1ca4c\"",
+   "Cache-Control": "public, max-age=31536000"
+  },
+  "debut": "%PDF-1.7\r%����\r\n224 0 obj\r<</Linearized 1/L 117324/O 227/E 109290/N 1/T 116971/H [ 523 221]>>\rendobj\r             \r\n244 0 obj\r<</DecodeParms<</Columns 5/Predictor 12>>/Encrypt 225 0 R/Filter/FlateDecode/ID[<599FD802677CEE4187049FC9F7BE7112><6113A687ACAA5E4ABB6DB0EAAF0513A8>]/Index[224 31]/Info 223 0 R/Length 96/Prev 116972/Root 226 0 R/Size 255/Type/XRef/W[1 3 1]>>stream\r\nh�bbd`\u0010``b``�\u0001&�Hƽ`R\u0019D*|\u0004�,\u0016`r9�l\u0007�� �9\u001d!�\f\u0011/\u0007�\fe 2\f,�\b�e��\u000e6\u001f�k\u000e��\u001f�\th{\u0001X=\u0003#\t�\u0006&�\u001f\u0000\u0001\u0006\u0000:+\u0010M\r\nendstream\rendobj\rstartxref\r"
+ },
+ "ccc_rapport_1": {
+  "url": "https://www.ccc.ca/wp-content/uploads/pdfs/Disclosure-Report-of-Signed-Transactions-Q4-2022.pdf",
+  "permis_robots_txt": true,
+  "url_finale": "https://www.ccc.ca/wp-content/uploads/pdfs/Disclosure-Report-of-Signed-Transactions-Q4-2022.pdf",
+  "statut": 200,
+  "type": "application/pdf",
+  "taille": 78454,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "78454",
+   "Last-Modified": "Fri, 18 Nov 2022 22:10:25 GMT",
+   "ETag": "\"637802d1-13276\"",
+   "Cache-Control": "public, max-age=31536000"
+  },
+  "debut": "%PDF-1.7\r%����\r\n13 0 obj\r<</Linearized 1/L 78454/O 16/E 73328/N 2/T 78130/H [ 527 225]>>\rendobj\r                  \r\n34 0 obj\r<</DecodeParms<</Columns 5/Predictor 12>>/Encrypt 14 0 R/Filter/FlateDecode/ID[<EFCFD7CE1905026BFC0D08A29627417C><5532D33AA40AB746AB0F03B1DA9AA13B>]/Index[13 34]/Info 12 0 R/Length 106/Prev 78131/Root 15 0 R/Size 47/Type/XRef/W[1 3 1]>>stream\r\nh�bbd`\u0010``b``z\u0000&�HF;0�\u0014D2'�H��`\u00116\u0010i�\u0006f/\u0003�\u0019m`]e ��\u0019�}\rH2r����U2��H��`�\u001cD�M\u0007��\u0003��O�\u0018��n�\u000b\u0012\u0001�J&�����7�\u0000\u0003\u0000�\u0006\u0012W\r\nendstream\rendobj\rstartx"
+ },
+ "statcan_cal1": {
+  "url": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-eng.htm",
+  "permis_robots_txt": true,
+  "url_finale": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-eng.htm",
+  "statut": 200,
+  "type": "text/html; charset=UTF-8",
+  "taille": 20693,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Cache-Control": "max-age=3, public",
+   "Content-Encoding": "gzip"
+  },
+  "debut": "<!DOCTYPE html>\r\n<!--[if lt IE 9]><html class=\"no-js lt-ie9\" lang=\"en\" dir=\"ltr\"><![endif]--><!--[if gt IE 8]><!-->\r\n<html class=\"no-js\" lang=\"en\" dir=\"ltr\" xmlns=\"http://www.w3.org/1999/xhtml\" >\r\n<!--<![endif]-->\r\n<head>\r\n<meta charset=\"utf-8\" />\r\n<link rel=\"schema.dcterms\" href=\"http://purl.org/dc/terms/\"/>\r\n<!-- Web Experience Toolkit (WET) / Boite a outils de l'experience Web (BOEW)\r\n     wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html ----->\r\n<title",
+  "liens": [
+   "http://purl.org/dc/terms/",
+   "https://www.statcan.gc.ca/en/terms-conditions",
+   "https://www150.statcan.gc.ca/release-diffusion/2026-eng.pdf"
+  ]
+ },
+ "statcan_cal3": {
+  "url": "https://www150.statcan.gc.ca/n1/dai-quo/cal3-eng.htm",
+  "permis_robots_txt": true,
+  "url_finale": "https://www150.statcan.gc.ca/n1/dai-quo/cal3-eng.htm",
+  "statut": 200,
+  "type": "text/html; charset=UTF-8",
+  "taille": 18273,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Cache-Control": "max-age=3, public",
+   "Content-Encoding": "gzip"
+  },
+  "debut": "<!DOCTYPE html>\r\n<!--[if lt IE 9]><html class=\"no-js lt-ie9\" lang=\"en\" dir=\"ltr\"><![endif]--><!--[if gt IE 8]><!-->\r\n<html class=\"no-js\" lang=\"en\" dir=\"ltr\" xmlns=\"http://www.w3.org/1999/xhtml\" >\r\n<!--<![endif]-->\r\n<head>\r\n<meta charset=\"utf-8\" />\r\n<link rel=\"schema.dcterms\" href=\"http://purl.org/dc/terms/\"/>\r\n<!-- Web Experience Toolkit (WET) / Boite a outils de l'experience Web (BOEW)\r\n     wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->\r\n<title>Re",
+  "liens": [
+   "http://purl.org/dc/terms/",
+   "https://www.statcan.gc.ca/en/terms-conditions"
+  ]
+ },
+ "statcan_cal4": {
+  "url": "https://www150.statcan.gc.ca/n1/dai-quo/cal4-eng.htm",
+  "permis_robots_txt": true,
+  "url_finale": "https://www150.statcan.gc.ca/n1/dai-quo/cal4-eng.htm",
+  "statut": 200,
+  "type": "text/html; charset=UTF-8",
+  "taille": 18290,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Cache-Control": "max-age=3, public",
+   "Content-Encoding": "gzip"
+  },
+  "debut": "<!DOCTYPE html>\r\n<!--[if lt IE 9]><html class=\"no-js lt-ie9\" lang=\"en\" dir=\"ltr\"><![endif]--><!--[if gt IE 8]><!-->\r\n<html class=\"no-js\" lang=\"en\" dir=\"ltr\" xmlns=\"http://www.w3.org/1999/xhtml\" >\r\n<!--<![endif]-->\r\n<head>\r\n<meta charset=\"utf-8\" />\r\n<link rel=\"schema.dcterms\" href=\"http://purl.org/dc/terms/\"/>\r\n<!-- Web Experience Toolkit (WET) / Boite a outils de l'experience Web (BOEW)\r\n     wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->\r\n<title>Re",
+  "liens": [
+   "http://purl.org/dc/terms/",
+   "https://www.statcan.gc.ca/en/terms-conditions"
+  ]
+ },
+ "statcan_conditions": {
+  "url": "https://www.statcan.gc.ca/en/terms-conditions",
+  "permis_robots_txt": true,
+  "url_finale": "https://www.statcan.gc.ca/en/terms-conditions",
+  "statut": 200,
+  "type": "text/html; charset=UTF-8",
+  "taille": 37706,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "10892",
+   "cache-control": "max-age=300, public",
+   "last-modified": "Sat, 03 Oct 2026 15:21:04 GMT",
+   "etag": "W/\"1791040864\"",
+   "content-encoding": "gzip"
+  },
+  "debut": "<!DOCTYPE html>\n<!--[if lt IE 9]><html lang=\"en\" dir=\"ltr\" class=\"no-js\"><![endif]-->\n<!--[if gt IE 8]><!-->\n<html lang=\"en\" dir=\"ltr\" class=\"no-js\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<!--<![endif]-->\n  <head>\n    <meta charset=\"utf-8\" />\n<meta name=\"description\" content=\"On this page General terms and conditions Providing content in Canada&#039;s official languages Linking to non-government of Canada websites Ownership and usage of content provided on this site Our commitment to accessibilit",
+  "liens": [
+   "http://purl.org/dc/terms/",
+   "https://www.canada.ca/en/transparency/terms.html",
+   "https://www.facebook.com/legal/terms",
+   "https://www.statcan.gc.ca/en/terms-conditions",
+   "https://www.statcan.gc.ca/en/terms-conditions/general",
+   "https://www.statcan.gc.ca/en/terms-conditions/open-licence",
+   "https://www.statcan.gc.ca/en/terms-conditions/open-licence-faq",
+   "https://www.statcan.gc.ca/fr/avis",
+   "https://www.youtube.com/t/terms?hl=en&amp;override_hl=1"
+  ]
+ },
+ "gazette_p2_0923_fr": {
+  "url": "https://gazette.gc.ca/rp-pr/p2/2026/2026-09-23/html/index-fra.html",
+  "permis_robots_txt": true,
+  "url_finale": "https://gazette.gc.ca/rp-pr/p2/2026/2026-09-23/html/index-fra.html",
+  "statut": 200,
+  "type": "text/html; charset=UTF-8",
+  "taille": 15883,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "15883"
+  },
+  "debut": "<!DOCTYPE html>\n<!--[if lt IE 9]><html class=\"no-js lt-ie9\" lang=\"fr\" dir=\"ltr\"><![endif]-->\n<!--[if gt IE 8]><!-->\n<html class=\"no-js\" lang=\"fr\" dir=\"ltr\">\n<!--<![endif]-->\n\t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<!-- Web Experience Toolkit (WET) / Bo�te � outils de l'exp�rience Web (BOEW)\n\t\twet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->\n\t\t<!-- Meta data -->\n\t\t<!-- AA-V4-DEV --> \r\n<script src=\"//assets.adobedtm.com/be5dfd287373/0127575cd23a/launch-f7c3e",
+  "liens": [
+   "https://www.canada.ca/fr/transparence/avis.html"
+  ]
+ },
+ "gazette_p1_1003_fr": {
+  "url": "https://gazette.gc.ca/rp-pr/p1/2026/2026-10-03/html/index-fra.html",
+  "permis_robots_txt": true,
+  "url_finale": "https://gazette.gc.ca/rp-pr/p1/2026/2026-10-03/html/index-fra.html",
+  "statut": 200,
+  "type": "text/html; charset=UTF-8",
+  "taille": 20068,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "20068"
+  },
+  "debut": "<!DOCTYPE html>\n<!--[if lt IE 9]><html class=\"no-js lt-ie9\" lang=\"fr\" dir=\"ltr\"><![endif]-->\n<!--[if gt IE 8]><!-->\n<html class=\"no-js\" lang=\"fr\" dir=\"ltr\">\n<!--<![endif]-->\n\t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<!-- Web Experience Toolkit (WET) / Bo�te � outils de l'exp�rience Web (BOEW)\n\t\twet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->\n\t\t<!-- Meta data -->\n\t\t<title>La Gazette du Canada, Partie 1, volume 160, num&eacute;ro 40&nbsp;:&nbsp;Index</title>\r",
+  "liens": [
+   "https://gazette.gc.ca/rp-pr/p1/2026/2026-10-03/html/notice-avis-fra.html",
+   "https://www.canada.ca/fr/transparence/avis.html"
+  ]
+ },
+ "gazette_p1_0829_fr": {
+  "url": "https://gazette.gc.ca/rp-pr/p1/2026/2026-08-29/html/index-fra.html",
+  "permis_robots_txt": true,
+  "url_finale": "https://gazette.gc.ca/rp-pr/p1/2026/2026-08-29/html/index-fra.html",
+  "statut": 200,
+  "type": "text/html; charset=UTF-8",
+  "taille": 19900,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "19900"
+  },
+  "debut": "<!DOCTYPE html>\n<!--[if lt IE 9]><html class=\"no-js lt-ie9\" lang=\"fr\" dir=\"ltr\"><![endif]-->\n<!--[if gt IE 8]><!-->\n<html class=\"no-js\" lang=\"fr\" dir=\"ltr\">\n<!--<![endif]-->\n\t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<!-- Web Experience Toolkit (WET) / Bo�te � outils de l'exp�rience Web (BOEW)\n\t\twet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->\n\t\t<!-- Meta data -->\n\t\t<title>La Gazette du Canada, Partie 1, volume 160, num&eacute;ro 35&nbsp;:&nbsp;Index</title>\r",
+  "liens": [
+   "https://gazette.gc.ca/rp-pr/p1/2026/2026-08-29/html/notice-avis-fra.html",
+   "https://www.canada.ca/fr/transparence/avis.html"
+  ]
+ },
+ "gazette_p2_extra": {
+  "url": "https://gazette.gc.ca/rp-pr/p2/2026/index-fra.html",
+  "permis_robots_txt": true,
+  "url_finale": "https://gazette.gc.ca/rp-pr/p2/2026/index-fra.html",
+  "statut": 200,
+  "type": "text/html",
+  "taille": 30255,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "30255"
+  },
+  "debut": "<!DOCTYPE html>\r\n<!--[if lt IE 9]><html class=\"no-js lt-ie9\" lang=\"fr\" dir=\"ltr\"><![endif]-->\r\n<!--[if gt IE 8]><!-->\r\n<html class=\"no-js\" lang=\"fr\" dir=\"ltr\">\r\n<!--<![endif]-->\r\n<head>\r\n<meta charset=\"utf-8\">\r\n<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)\r\nwet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->\r\n<title>La Gazette du Canada, Partie II : volume 160 - Canada.ca</title>\r\n<!-- Meta data -->\r\n<meta name=\"descrip",
+  "liens": [
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-01-14/pdf/g2-16001.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-01-28/pdf/g2-16002.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-02-11/pdf/g2-16003.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-02-25/pdf/g2-16004.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-03-11/pdf/g2-16005.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-03-25/pdf/g2-16006.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-03-31-c1/pdf/g2-160c1-fra.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-04-08/pdf/g2-16007.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-04-22/pdf/g2-16008.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-05-06/pdf/g2-16009.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-05-20/pdf/g2-16010.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-06-03/pdf/g2-16011.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-06-08-x1/pdf/g2-160x1.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-06-17/pdf/g2-16012.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-06-30-c2/pdf/g2-160c2-fra.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-07-01/pdf/g2-16013.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-07-15/pdf/g2-16014.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-07-29/pdf/g2-16015.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-12/pdf/g2-16016.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-26/pdf/g2-16017.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-09-09/pdf/g2-16018.pdf",
+   "https://gazette.gc.ca/rp-pr/p2/2026/2026-09-23/pdf/g2-16019.pdf",
+   "https://www.canada.ca/fr/transparence/avis.html"
+  ]
+ },
+ "concurrence_fr": {
+  "url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "permis_robots_txt": true,
+  "url_finale": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "statut": 200,
+  "type": "text/html; charset=UTF-8",
+  "taille": 216256,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "cache-control": "max-age=2764800, public, private",
+   "last-modified": "Sat, 03 Oct 2026 15:26:41 GMT",
+   "etag": "W/\"1791041201\"",
+   "content-encoding": "gzip",
+   "Content-Length": "62458"
+  },
+  "debut": "<!DOCTYPE html>\n<!--[if lt IE 9]><html lang=\"fr\" dir=\"ltr\" prefix=\"content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# \" class=\"no-js\"><![endif]-->\n<!--[if gt IE 8]><!-->\n<html lang=\"fr\" di",
+  "liens": [
+   "mailto:avisdefusionmergernotification@cb-bc.gc.ca"
+  ]
+ },
+ "bgp_nationaux": {
+  "url": "https://www.canada.ca/en/privy-council/major-projects-office/projects/national.html",
+  "permis_robots_txt": true,
+  "url_finale": "https://www.canada.ca/en/privy-council/major-projects-office/projects/national.html",
+  "statut": 200,
+  "type": "text/html;charset=utf-8",
+  "taille": 107967,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Last-Modified": "Sat, 03 Oct 2026 13:23:41 GMT",
+   "Content-Encoding": "gzip",
+   "Content-Length": "10435"
+  },
+  "debut": "<!DOCTYPE html>\r\n\r\n<html class=\"no-js\" dir=\"ltr\" lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\">\r\n   <head>\r\n      <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n      <meta charset=\"utf-8\"/>\r\n      <title>Projects - Major Projects Office - Canada.ca</title>\r\n      <meta content=\"width=device-width,initial-scale=1\" name=\"viewport\"/>\r\n      \r\n      \r\n\r\n      \r\n      \r\n         <meta name=\"content-page-ref\" content=\"qDXvbDLVz6dqE3VkUsNuO3pRh0Gk2F15pl5qSGFuUrpIPs8uRFBxUq9n7cHoNphCp8pDPkvBI",
+  "liens": [
+   "http://purl.org/dc/terms/",
+   "https://www.canada.ca/en/transparency/terms.html"
+  ]
+ },
+ "bgp_autres": {
+  "url": "https://www.canada.ca/en/privy-council/major-projects-office/projects/other.html",
+  "permis_robots_txt": true,
+  "url_finale": "https://www.canada.ca/en/privy-council/major-projects-office/projects/other.html",
+  "statut": 200,
+  "type": "text/html;charset=utf-8",
+  "taille": 22734,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Last-Modified": "Sat, 03 Oct 2026 13:41:16 GMT",
+   "Content-Encoding": "gzip",
+   "Content-Length": "7935"
+  },
+  "debut": "<!DOCTYPE html>\r\n\r\n<html class=\"no-js\" dir=\"ltr\" lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\">\r\n   <head>\r\n      <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n      <meta charset=\"utf-8\"/>\r\n      <title>Transformative strategies - Major Projects Office - Canada.ca</title>\r\n      <meta content=\"width=device-width,initial-scale=1\" name=\"viewport\"/>\r\n      \r\n      \r\n\r\n      \r\n      \r\n         <meta name=\"content-page-ref\" content=\"qDXvbDLVz6dqE3VkUsNuO3pRh0Gk2F15pl5qSGFuUrpIPs8uRFBxUq9n",
+  "liens": [
+   "http://purl.org/dc/terms/",
+   "https://www.canada.ca/en/transparency/terms.html"
+  ]
+ },
+ "bgp_west": {
+  "url": "https://www.canada.ca/en/privy-council/major-projects-office/projects/national/west.html",
+  "permis_robots_txt": true,
+  "url_finale": "https://www.canada.ca/en/privy-council/major-projects-office/projects/national/west.html",
+  "statut": 200,
+  "type": "text/html;charset=utf-8",
+  "taille": 36639,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Last-Modified": "Sat, 03 Oct 2026 13:05:50 GMT",
+   "Content-Encoding": "gzip",
+   "Content-Length": "10609"
+  },
+  "debut": "<!DOCTYPE html>\r\n\r\n<html class=\"no-js\" dir=\"ltr\" lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\">\r\n   <head>\r\n      <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n      <meta charset=\"utf-8\"/>\r\n      <title>West Coast Oil Pipeline - Major Projects Office - Canada.ca</title>\r\n      <meta content=\"width=device-width,initial-scale=1\" name=\"viewport\"/>\r\n      \r\n      \r\n\r\n      \r\n      \r\n         <meta name=\"content-page-ref\" content=\"qDXvbDLVz6dqE3VkUsNuO3pRh0Gk2F15pl5qSGFuUrpIPs8uRFBxUq9n7c",
+  "liens": [
+   "http://purl.org/dc/terms/",
+   "https://www.canada.ca/en/transparency/terms.html"
+  ]
+ },
+ "bgp_lng": {
+  "url": "https://www.canada.ca/en/privy-council/major-projects-office/projects/national/lng-canada.html",
+  "permis_robots_txt": true,
+  "url_finale": "https://www.canada.ca/en/privy-council/major-projects-office/projects/national/lng-canada.html",
+  "statut": 200,
+  "type": "text/html;charset=utf-8",
+  "taille": 35799,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Last-Modified": "Sat, 03 Oct 2026 13:03:34 GMT",
+   "Content-Encoding": "gzip",
+   "Content-Length": "10898"
+  },
+  "debut": "<!DOCTYPE html>\r\n\r\n<html class=\"no-js\" dir=\"ltr\" lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\">\r\n   <head>\r\n      <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n      <meta charset=\"utf-8\"/>\r\n      <title>LNG Canada Phase 2 - Major Projects Office - Canada.ca</title>\r\n      <meta content=\"width=device-width,initial-scale=1\" name=\"viewport\"/>\r\n      \r\n      \r\n\r\n      \r\n      \r\n         <meta name=\"content-page-ref\" content=\"qDXvbDLVz6dqE3VkUsNuO3pRh0Gk2F15pl5qSGFuUrpIPs8uRFBxUq9n7cHoNph",
+  "liens": [
+   "http://purl.org/dc/terms/",
+   "https://www.canada.ca/en/transparency/terms.html"
+  ]
+ },
+ "bgp_nouvelles": {
+  "url": "https://www.canada.ca/en/privy-council/major-projects-office/news.html",
+  "permis_robots_txt": true,
+  "url_finale": "https://www.canada.ca/en/privy-council/major-projects-office/news.html",
+  "statut": 200,
+  "type": "text/html;charset=utf-8",
+  "taille": 32616,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Last-Modified": "Sat, 03 Oct 2026 05:57:35 GMT",
+   "Content-Encoding": "gzip",
+   "Content-Length": "9393"
+  },
+  "debut": "<!DOCTYPE html>\r\n\r\n<html class=\"no-js\" dir=\"ltr\" lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\">\r\n   <head>\r\n      <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n      <meta charset=\"utf-8\"/>\r\n      <title>Latest news on the One Canadian Economy Act - Major Projects Office - Canada.ca</title>\r\n      <meta content=\"width=device-width,initial-scale=1\" name=\"viewport\"/>\r\n      \r\n      \r\n\r\n      \r\n      \r\n         <meta name=\"content-page-ref\" content=\"qDXvbDLVz6dqE3VkUsNuO3pRh0Gk2F15pl5qSG",
+  "liens": [
+   "http://purl.org/dc/terms/",
+   "https://www.canada.ca/en/one-canadian-economy/news/2026/07/canada-to-diversify-trade-and-double-exports-through-the-port-of-vancouver-gateway-strategy.html",
+   "https://www.canada.ca/en/transparency/terms.html"
+  ]
+ },
+ "bgp_fr": {
+  "url": "https://www.canada.ca/fr/conseil-prive/bureau-grands-projets.html",
+  "permis_robots_txt": true,
+  "url_finale": "https://www.canada.ca/fr/conseil-prive/bureau-grands-projets.html",
+  "statut": 200,
+  "type": "text/html;charset=utf-8",
+  "taille": 77434,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Last-Modified": "Sat, 03 Oct 2026 04:21:36 GMT",
+   "Content-Encoding": "gzip",
+   "Content-Length": "12813"
+  },
+  "debut": "<!DOCTYPE html>\r\n\r\n<html class=\"no-js\" dir=\"ltr\" lang=\"fr\" xmlns=\"http://www.w3.org/1999/xhtml\">\r\n   <head>\r\n      <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n      <meta charset=\"utf-8\"/>\r\n      <title>Bureau des grands projets - Canada.ca</title>\r\n      <meta content=\"width=device-width,initial-scale=1\" name=\"viewport\"/>\r\n      \r\n      \r\n\r\n      \r\n      \r\n         <meta name=\"content-page-ref\" content=\"qDXvbDLVz6dqE3VkUsNuOw_fIKjNySni6s8Ss8VI38AgDSmLv8rtkkPIeQb2ZWUiFHt1XU8NjgBCRLqz",
+  "liens": [
+   "http://purl.org/dc/terms/",
+   "https://www.canada.ca/fr/transparence/avis.html"
+  ]
+ },
+ "legisinfo_c31": {
+  "url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-31/json",
+  "permis_robots_txt": true,
+  "url_finale": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-31/json",
+  "statut": 200,
+  "type": "text/json; charset=utf-8",
+  "taille": 43705,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "43705"
+  },
+  "debut": "[{\"Id\":14071880,\"NumberCode\":\"C-31\",\"NumberPrefix\":\"C\",\"Number\":31,\"LongTitleEn\":\"A second Act to implement certain provisions of the budget tabled in Parliament on November 4, 2025\",\"LongTitleFr\":\"Loi no 2 portant exécution de certaines dispositions du budget déposé au Parlement le 4 novembre 2025\",\"LongTitle\":\"Loi no 2 portant exécution de certaines dispositions du budget déposé au Parlement le 4 novembre 2025\",\"ShortTitleEn\":\"Budget 2025 Implementation Act, No. 2\",\"ShortTitleFr\":\"Loi no"
+ },
+ "decret_reproduction": {
+  "url": "https://laws-lois.justice.gc.ca/fra/reglements/TR-97-5/TexteComplet.html",
+  "permis_robots_txt": true,
+  "url_finale": "https://laws-lois.justice.gc.ca/fra/reglements/TR-97-5/TexteComplet.html",
+  "statut": 200,
+  "type": "text/html",
+  "taille": 17467,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "17467"
+  },
+  "debut": "<!DOCTYPE html>\r\n<html class=\"no-js\" lang=\"fr\" dir=\"ltr\">\r\n<head>\r\n<meta charset=\"utf-8\">\r\n<meta property=\"dcterms:accessRights\" content=\"2\"/>\r\n<meta property=\"dcterms:service\" content=\"JUS-Laws_Lois\"/>\r\n<meta content=\"width=device-width,initial-scale=1\" name=\"viewport\">\r\n<meta name=\"dcterms.language\" title=\"ISO639-2\" content=\"fra\" />\r\n<link href=\"/canada/themes-dist/GCWeb/assets/favicon.ico\" rel=\"icon\" type=\"image/x-icon\">\r\n<link rel=\"stylesheet\" href=\"/canada/themes-dist/GCWeb/css/theme.min.cs",
+  "liens": [
+   "https://laws-lois.justice.gc.ca/PDF/SI-97-5.pdf",
+   "https://laws-lois.justice.gc.ca/fra/XML/TR-97-5.xml",
+   "https://www.canada.ca/fr/transparence/avis.html"
+  ]
+ }
+}

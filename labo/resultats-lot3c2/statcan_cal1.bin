@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+<!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/"/>
+<!-- Web Experience Toolkit (WET) / Boite a outils de l'experience Web (BOEW)
+     wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html ----->
+<title>Release schedule – Major economic releases</title>
+<meta name="dcterms.title" content="Release schedule – Major economic releases"/>
+<meta name="description" content="View the release dates for selected major economic indicators."/>
+<meta name="keywords" content="none"/>
+<meta name="STCkeywords" content="none"/>
+<meta name="dcterms.creator" content="Government of Canada, Statistics Canada"/>
+<meta name="dcterms.issued" title="W3CDTF" content="2015-04-22"/>
+<meta name="dcterms.modified" title="W3CDTF" content="2015-04-22"/>
+<meta name="dcterms.subject" title="gcstc" content="none"/>
+<meta name="dcterms.language" title="ISO639-2/T" content="eng"/>
+<meta name="STCtopic" content="none"/>
+<meta name="STCtopicID" content="none"/>
+<meta name="STCsubtopic" content="none"/>
+<meta name="STCsubtopicID" content="none"/>
+<meta name="STCtype" content="none"/>
+<meta name="STCsource" content="none"/>
+<meta name="STCstatus" content="none"/>
+<meta name="STClist" content="none"/>
+<meta content="width=device-width,initial-scale=1" name="viewport" />
+<meta property="dcterms:service" content="StatCan"/> 
+<meta property="dcterms:accessRights" content="2"/>
+
+<link href="/wet-boew4b/assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="/wet-boew4b/css/wet-boew.min.css">
+<script src="/wet-boew4b/js/jquery.min.js"></script>
+
+<link rel="stylesheet" href="/wet-boew4b/css/theme.min.css">
+<link rel="stylesheet" href="/wet-boew4b/css/statcan.css">
+<link rel="stylesheet" href="/wet-boew4b/invitation-manager/Overlay.css"> 
+
+<noscript><link rel="stylesheet" href="/wet-boew4b/css/noscript.min.css" /></noscript>
+<!-- Adobe Analytics v5 production version --><!--script src="//assets.adobedtm.com/be5dfd287373/8cdb3d539c44/launch-6df9e9b447f9.min.js"></script-->
+<!-- Adobe Analytics v5 staging version --><!--script src="//assets.adobedtm.com/be5dfd287373/8cdb3d539c44/launch-dfa8abb35555-staging.min.js"></script-->
+<!-- Adobe Analytics v10 production version --><script src="//assets.adobedtm.com/be5dfd287373/8f0ead8a37e7/launch-09394abc039d.min.js"></script>
+
+<script>dataLayer1 = [];</script>
+
+
+<link rel="stylesheet" href="/DailyWet4b/css/daily-wet4b-min.css" />
+
+<!-- CustomScriptsCSSEnd -->
+<script src="/wet-boew4b/js/jquery.min.js"></script>
+<script src="/DailyWet4b/js/jquery-ui.widget.min.js"></script>
+<script  src="/DailyWet4b/js/dailyWet4b-min.js"></script>
+
+<link href="/DailyWet4b/css/responsive_table.css" rel="stylesheet" type="text/css" />
+<link rel="canonical" href="https://www150.statcan.gc.ca/n1/dai-quo/cal1-eng.htm" />
+<!-- Added to fix weird calendar bug (Syed; SMARTDAILY-1228) -->
+<style>
+	.eventsCalendar-daysList.showAsWeek li {
+		min-height: 29px;
+	}
+</style>
+</head>
+<body vocab="http://schema.org/" typeof="WebPage">
+<ul id="wb-tphp">
+<li class="wb-slc">
+<a class="wb-sl" href="#wb-cont">Skip to main content</a>
+</li>
+<li class="wb-slc visible-sm visible-md visible-lg">
+<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+</li>
+</ul>
+<header role="banner">
+<div id="wb-bnr" class="container">
+<section id="wb-lng" class="visible-md visible-lg text-right">
+<h2 class="wb-inv">Language selection</h2>
+<div class="row">
+<div class="col-md-12">
+<ul class="list-inline margin-bottom-none">
+<li><a lang="fr" href="
+/cgi-bin/change.cgi
+">Fran&#231;ais</a></li>
+</ul>
+</div>
+</div>
+</section>
+<div class="row">
+<div class="brand col-xs-9 col-sm-5 col-md-4">
+<a href="https://www.canada.ca/en.html"><img src="/wet-boew4b/assets/sig-blk-gov-en.svg" alt="Government of Canada"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span></a>
+</div>
+<section class="wb-mb-links col-sm-offset-4 col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+<h2>Search and menus</h2>
+<ul class="list-inline text-right chvrn">
+<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
+</ul>
+<div id="mb-pnl"></div>
+</section>
+
+<section id="wb-srch" class="col-lg-offset-2 col-md-offset-2 col-xs-6 text-right visible-md visible-lg">
+<h2 class="wb-inv">Search</h2>
+<form action="https://www.statcan.gc.ca/search/results/site-search" method="get" name="cse-search-box" role="search" class="form-inline">
+<div class="form-group wb-srch-qry">
+<label for="wb-srch-q" class="wb-inv">Search Statistics Canada</label>
+<input type="hidden" name="fq" value="stclac:2" />
+<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Statistics Canada">
+<datalist id="wb-srch-q-ac">
+</datalist>
+</div>
+<div class="form-group submit">
+<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+</div>
+</form>
+</section>
+</div>
+</div>
+
+<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-replace="/wet-boew4b/ajax/sitemenu-en.html" typeof="SiteNavigationElement">
+	<div class="container nvbar">
+		<h2 class="wb-inv">Topics menu</h2>
+		<div class="row">
+			<ul class="list-inline menu">
+				<li><a href="https://www150.statcan.gc.ca/n1/en/subjects?MM=1">Subjects</a></li>
+				<li><a href="https://www150.statcan.gc.ca/n1/en/type/data?MM=1">Data</a></li>
+				<li><a href="https://www150.statcan.gc.ca/n1/en/type/analysis?MM=1">Analysis</a></li>
+				<li><a href="https://www.statcan.gc.ca/en/reference?MM=1">Reference</a></li>
+				<li><a href="https://www.statcan.gc.ca/en/geography?MM=1">Geography</a></li>
+				<li><a href="https://www.statcan.gc.ca/en/census?MM=1">Census</a></li>
+				<li><a href="https://www.statcan.gc.ca/en/surveys?MM=1">Surveys and statistical programs</a></li>
+				<li><a href="https://www.statcan.gc.ca/en/about/statcan?MM=1">About StatCan</a></li>
+				<li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+<!-- Breadcrumb trail -->
+<ol class="breadcrumb">
+<li><a href="/start-debut-eng.html">Home</a></li>
+<li><em>The Daily</em></li>
+</ol>
+</div>
+</div>
+</nav>
+</header>
+
+<main role="main" property="mainContentOfPage" class="container">
+<h1 property="name" id="wb-cont">Release schedule</h1>
+<section>
+<div class="moduleHeading">
+  <div class="DailyHeading">The Daily</div>	
+  <div class="DailySeperator">|</div>
+  <div class="DailySearch">
+    <a title="Search The Daily" href="#search01" aria-controls="search01" class="wb-lbx btn DailySearchLink" role="button">
+       <span class="glyphicon glyphicon-search"></span>
+	   <span class="wb-inv">Search The Daily</span>
+    </a>
+  </div>
+
+  <section id="search01" class="mfp-hide modal-dialog modal-content overlay-def">
+    <header class="modal-header">
+      <h2 class="modal-title">Search <em>The Daily</em></h2>
+    </header>
+    <div class="modal-body">
+      <form action="//www.statcan.gc.ca/search/results/module-search" method="get" name="daily-search-box" role="search" class="form-inline">
+        <label for="daily-srch-q" class="wb-inv">Search website</label>
+        <input id="daily-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control daily-search-input" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search The Daily">
+	    <input type="hidden" name="mc" value="dailyle" />
+        <button type="submit" class="btn btn-primary daily-search-btn">Search</button>
+      </form>
+    </div>
+  </section>
+</div>
+
+<div class="btn-group btn-group-justified" role="group">
+	<a class="btn btn-default" href="index-eng.htm"><span class="glyphicon glyphicon-flash"></span>&nbsp;In the news</a>
+	<a class="btn btn-default" href="ind1-eng.htm"><span class="glyphicon glyphicon-star"></span>&nbsp;Indicators</a>
+	<a class="btn btn-default" href="subjects_sujets-eng.htm"><span class="glyphicon glyphicon-book"></span>&nbsp;Releases by subject</a>
+</div>
+
+<div class="btn-group btn-group-justified" role="group">
+	<a class="btn btn-default" href="special-eng.htm"><span class="glyphicon glyphicon-link"></span>&nbsp;Special interest</a>
+	<a class="btn btn-default btn-primary" href="cal3-eng.htm"><span class="glyphicon glyphicon-calendar"></span>&nbsp;Release schedule</a>
+	<a class="btn btn-default" href="info1-eng.htm"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;Information</a>	
+</div>
+
+<br />
+<div class="release_nav">
+   <a class="btn btn-default btn-sm" href="cal3-eng.htm">All releases</a>
+   <a class="btn btn-default btn-primary btn-sm" href="cal1-eng.htm">Major economic releases</a>
+   <a class="btn btn-default btn-sm" href="cal2-eng.htm">Upcoming releases</a>
+   <a class="btn btn-default btn-sm" href="cal4-eng.htm">Products</a>
+</div>
+
+<h2 class="wb-invisible">Major economic releases</h2>
+
+			 <p>View the release dates for selected major economic indicators.</p>
+			 <p>Annual release dates available in PDF format: </p>
+			 <ul>
+				<li><a title="2026-2027 release dates for the major economic releases" href="/release-diffusion/2026-eng.pdf">2026-2027 release dates (159 kb)</a></li>
+			 </ul>
+
+		<div class="well">
+			<label for="select_keylist" style="display:none">items</label>
+			<select class= "select_keylist" id="select_keylist" style="max-width:90%">
+					<option value="3592">Building permits</option>
+<option value="1021">Canada's balance of international payments</option>
+<option value="3339">Canada's international investment position</option>
+<option value="3496">Canada's international transactions in securities</option>
+<option value="3612">Canadian international merchandise trade</option>
+<option value="3665">Consumer Price Index</option>
+<option value="3687">Farm income</option>
+<option value="3569">Gross domestic product by industry</option>
+<option value="4824">Gross domestic product by industry: Provinces and territories</option>
+<option value="3278">Gross domestic product, income and expenditure</option>
+<option value="3556">Industrial product and raw materials price indexes</option>
+<option value="19277">Investment in building construction</option>
+<option value="3443">Investment in non-residential building construction</option>
+<option value="3587">Labour Force Survey</option>
+<option value="3313">Labour productivity, hourly compensation and unit labour cost</option>
+<option value="12721">Model-based principal field crop estimates</option>
+<option value="3628">Monthly Survey of Manufacturing</option>
+<option value="5421">National balance sheet and financial flow accounts</option>
+<option value="3389">National tourism indicators</option>
+<option value="11961">Non-residential capital and repair expenditures</option>
+<option value="3555">Payroll employment, earnings and hours, and job vacancies</option>
+<option value="4822">Principal field crop areas</option>
+<option value="812">Production of principal field crops</option>
+<option value="3682">Quarterly financial statistics for enterprises</option>
+<option value="3660">Retail trade</option>
+<option value="3325">Stocks of principal field crops</option>
+<option value="3635">Travel between Canada and other countries</option>
+<option value="3647">Wholesale trade</option>
+
+			</select>  
+			    <label for="select_month" class="wb-inv">Select month</label>
+			<select id="select_month">
+				<option value="0">January</option>
+				<option value="1">February</option>
+				<option value="2">March</option>
+				<option value="3">April</option>
+				<option value="4">May</option>
+				<option value="5">June</option>
+				<option value="6">July</option>
+				<option value="7">August</option>
+				<option value="8">September</option>
+				<option value="9">October</option>
+				<option value="10">November</option>
+				<option value="11">December</option>
+			</select>
+			<label for="select_year" class="wb-inv">Select year</label>
+			<select id="select_year">
+				<option value="2012">2012</option>
+				<option value="2013">2013</option>
+				<option value="2014">2014</option>
+				<option value="2015">2015</option>
+				<option value="2016">2016</option>
+				<option value="2017">2017</option>
+				<option value="2018">2018</option>
+				<option value="2019">2019</option>
+				<option value="2020">2020</option>
+				<option value="2021">2021</option>
+				<option value="2022">2022</option>
+				<option value="2023">2023</option>
+				<option value="2024">2024</option>
+				<option value="2025">2025</option>
+				<option value="2026">2026</option>
+				<option value="2027">2027</option>
+			</select>
+
+			<a id="applySelect" href="#" class="btn btn-default btn-xs" ><span class="glyphicon glyphicon-ok"></span>&#160;Apply</a>
+			<br /><br />			<div id="eventCalendarDefault">
+
+
+						<br />			</div>
+<br /><br />		</div>	
+
+
+
+</section>
+<div class="pagedetails">
+	<dl id="wb-dtmd">
+		<dt>Date modified:&#32;</dt>
+		<dd><time property="dateModified">
+  2026-06-10
+</time></dd>
+	</dl>
+</div>
+</main>
+<footer id="wb-info">
+	<h2 class="wb-inv">About this site</h2>
+	<div class="gc-contextual">
+		<div class="container">
+			<nav>
+				<h3>Statistics Canada</h3>
+				<ul class="list-unstyled colcount-sm-2 colcount-md-3">
+					<li><a href="https://www.statcan.gc.ca/en/reference/refcentre/index">Contact StatCan</a></li>
+					<li><a href="https://www.statcan.gc.ca/en/trust">Trust Centre</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="gc-main-footer">
+		<div class="container">
+			<nav>
+				<h3>Government of Canada</h3>
+				<ul class="list-unstyled colcount-sm-2 colcount-md-3">
+					<li><a href="https://www.canada.ca/en/contact.html">All contacts</a></li>
+					<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+					<li><a href="https://www.canada.ca/en/government/system.html">About government</a></li>
+				</ul>
+				<h4><span class="wb-inv">Themes and topics</span></h4>
+				<ul class="list-unstyled colcount-sm-2 colcount-md-3">
+					<li><a href="https://www.canada.ca/en/services/jobs.html">Jobs</a></li>
+					<li><a href="https://www.canada.ca/en/services/immigration-citizenship.html">Immigration and citizenship</a></li>
+					<li><a href="https://travel.gc.ca/">Travel and tourism</a></li>
+					<li><a href="https://www.canada.ca/en/services/business.html">Business</a></li>
+					<li><a href="https://www.canada.ca/en/services/benefits.html">Benefits</a></li>
+					<li><a href="https://www.canada.ca/en/services/health.html">Health</a></li>
+					<li><a href="https://www.canada.ca/en/services/taxes.html">Taxes</a></li>
+					<li><a href="https://www.canada.ca/en/services/environment.html">Environment and natural resources</a></li>
+					<li><a href="https://www.canada.ca/en/services/defence.html">National security and defence</a></li>
+					<li><a href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
+					<li><a href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
+					<li><a href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
+					<li><a href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
+					<li><a href="https://www.canada.ca/en/services/finance.html">Money and finance</a></li>
+					<li><a href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li>
+					<li><a href="https://www.canada.ca/en/services/indigenous-peoples.html">Indigenous peoples</a></li>
+					<li><a href="https://www.canada.ca/en/services/veterans.html">Veterans and military</a></li>
+					<li><a href="https://www.canada.ca/en/services/youth.html">Youth</a></li>
+					<li><a href="https://www.canada.ca/en/services/life-events.html">Manage life events</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="gc-sub-footer">
+		<div class="container d-flex align-items-center">
+			<nav>
+				<h3 class="wb-inv">Government of Canada Corporate</h3>
+				<ul>
+					<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+					<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+					<li><a href="https://www.canada.ca/en/government/about-canada-ca.html">About Canada.ca</a></li>
+					<li><a href="https://www.statcan.gc.ca/en/terms-conditions">Terms and conditions</a></li>
+					<li><a href="https://www.statcan.gc.ca/en/about/transparency/privacy">Privacy</a></li>
+				</ul>
+			</nav>
+			<div class="wtrmrk align-self-end">
+				<img src="/wet-boew4b/assets/wmms-blk.svg" alt="Symbol of the Government of Canada">
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script>
+
+    modifyBreadCrum();
+    
+
+    function modifyBreadCrum(){
+        
+    let dailyEn = "n1/dai-quo/index-eng.htm";
+    let dailyFr = "n1/dai-quo/index-fra.htm";
+ 
+    let breadcrumb = document.querySelector("#wb-bc ol.breadcrumb");
+        
+    if(breadcrumb === undefined || breadcrumb === null || breadcrumb.children.length == 0){
+        return;
+    } 
+        
+    let lastListNode = breadcrumb.children[breadcrumb.children.length -1];
+    
+    if(window.location.href.indexOf("daily-quotidien") != -1 || window.location.href.indexOf("dai-quo") != -1){
+        let href = window.location.href;
+        let env = href.split("n1")[0];
+        href = href.indexOf("eng") != -1 ? env + dailyEn : env + dailyFr;
+
+        createBreadcrumAnchor(href);
+    }
+    else{
+        removeBreadcrumNotAnchor();
+    }
+
+    return;
+
+    function createBreadcrumAnchor(href){
+
+        let anchor = document.createElement("a");
+    
+        if(lastListNode.lastChild !== undefined && lastListNode.lastChild !== null){
+            if(lastListNode.lastChild.nodeName === anchor.nodeName){
+                return;
+            } 
+
+            anchor.innerHTML = lastListNode.innerHTML;
+            anchor.href = href;
+            lastListNode.innerHTML = anchor.outerHTML; 
+        }
+    }
+
+    function removeBreadcrumNotAnchor(){
+
+        let anchor = document.createElement("a");
+
+        if(lastListNode.lastChild !== undefined && lastListNode.lastChild !== null){
+            if(lastListNode.lastChild.nodeName === anchor.nodeName){
+                return;
+            } 
+        
+            breadcrumb.removeChild(lastListNode);
+        }
+
+    }
+
+    }
+
+</script>
+
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="/wet-boew4b/js/wet-boew.min.js"></script>
+<script src="/wet-boew4b/js/theme.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="/wet-boew4b/js/ie8-wet-boew2.min.js"></script>
+<![endif]-->
+<!-- InvitationManager -->
+<script src="/wet-boew4b/invitation-manager/Overlay.js"></script>
+<script src="/wet-boew4b/invitation-manager/InvitationManager.js"></script>
+<!-- End InvitationManager -->
+<script type="text/javascript">_satellite.pageBottom();</script>
+
+<script src="/DailyWet4b/js/moment.js" type="text/javascript"></script>
+<script src="/DailyWet4b/js/jquery.eventCalendar.min.js" type="text/javascript"></script>
+<script>
+      CurrentPage= "cal1-eng.htm";
+      CurrentLang=0;
+		$(document).ready(function() {
+			$("#eventCalendarDefault").eventCalendar({
+				txt_SpecificEvents_prev: "Release(s) for ",
+				txt_SpecificEvents_after: "",
+				txt_next: "Next month",
+				txt_prev: "Previous month",
+				eventsjson: '/dai-quo/ssi/homepage/schedule-key_indicators-eng.json', // link to events json
+				dateFormat: 'dddd, YYYY-MM-DD',
+				showDescription: 'true',
+				eventsLimit: 500,		
+				startWeekOnMonday: false,
+				jsonDateFormat: 'human'
+			});
+		});
+        $("#select_month").change(function() {
+				ZeFlag = 1;
+        });
+        $("#select_year").change(function() {
+				ZeFlag = 1;
+        });
+</script>
+</body>
+</html>
