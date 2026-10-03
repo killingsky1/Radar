@@ -1,0 +1,109 @@
+# Émissions : 105 documents relus (0 erreurs)
+
+- form4 ['GME'] 2026-09-29 : — · Cohen Ryan (President, CEO and Chairman) achète 450 000 actions de GameStop Corp.
+- form4 ['COUR'] 2026-09-29 : — · Pale Fire Capital SE et Pale Fire Capital SICAV a.s. et Pale Fire Capital investicni spole
+- form4 ['PRTA'] 2026-09-29 : — · SCULLY WILLIAM P (actionnaire de 10 %) achète 103 500 actions de PROTHENA CORP PUBLIC LTD 
+- form4 ['QTEX'] 2026-09-29 : — · Ben-Noon Dagi Shahar (Chief Executive Officer) achète 168 894 actions de QTREX Quantum Ltd
+- form4 ['HGBL'] 2026-09-29 : purchase agreement · Burnham William L (administrateur) achète 300 000 actions de Heritage Global Inc.
+- form4 ['CRBG'] 2026-09-29 : — · NIPPON LIFE INSURANCE CO (actionnaire de 10 %) achète 178 840 actions de Corebridge Financ
+- form4 ['ADRX'] 2026-09-29 : — · George Simeon (administrateur) achète 1 600 000 actions de ADARx Pharmaceuticals, Inc.
+- form4 ['ADRX'] 2026-09-29 : — · SR ONE CAPITAL MANAGEMENT, LLC (actionnaire de 10 %) achète 1 600 000 actions de ADARx Pha
+- form4 ['SWZ'] 2026-09-29 : — · Dakos Andrew (President and CEO) achète 20 000 actions de Total Return Securities Fund
+- form4 ['FTHY'] 2026-09-29 : — · HOUSEY WILLIAM A JR (initié) achète 2 500 actions de FIRST TRUST HIGH YIELD OPPORTUNITIES 
+- form4 ['MXF'] 2026-09-29 : — · Saba Capital Management, L.P. (actionnaire de 10 %) achète 4 133 actions de MEXICO FUND IN
+- form4 ['PAM'] 2026-09-29 : — · Mariani Gustavo (Vicepresident) achète 25 000 actions de Pampa Energy Inc.
+- form4 ['GPI'] 2026-09-30 : — · Conifer Management, L.L.C. (actionnaire de 10 %) achète 273 712 actions de GROUP 1 AUTOMOT
+- form4 ['ADRX'] 2026-09-30 : initial public offering · ORBIMED ADVISORS LLC et OrbiMed Capital GP VII LLC et OrbiMed Israel GP II, L.P. et OrbiMe
+- form4 ['ADRX'] 2026-09-30 : initial public offering · GORDON CARL L (administrateur) achète 950 000 actions de ADARx Pharmaceuticals, Inc.
+- form4 ['ADRX'] 2026-09-30 : initial public offering · Chimovits Erez (administrateur) achète 61 516 actions de ADARx Pharmaceuticals, Inc.
+- form4 ['PRTA'] 2026-09-30 : — · SCULLY WILLIAM P (actionnaire de 10 %) achète 162 000 actions de PROTHENA CORP PUBLIC LTD 
+- form4 ['MNSO'] 2026-09-30 : — · Zhang Jingjing Eason (VP and Chief Financial Officer) achète 150 600 actions de MINISO Gro
+- form4 ['KWY'] 2026-09-30 : — · Horowitz Joshua (administrateur) achète 3 575 actions de KINGSWAY Corp
+- form4 ['KBDC'] 2026-09-30 : — · ROBO JAMES L (administrateur) achète 146 755 actions de Kayne Anderson BDC, Inc.
+- form4 ['KOD'] 2026-09-30 : — · BAKER BROS. ADVISORS LP et 667, L.P. et Baker Bros. Advisors (GP) LLC et Baker Brothers Li
+- form4 ['KOD'] 2026-09-30 : — · BAKER BROS. ADVISORS LP et 667, L.P. et Baker Bros. Advisors (GP) LLC et Baker Brothers Li
+- form4 ['KOD'] 2026-09-30 : — · BAKER BROS. ADVISORS LP et 667, L.P. et Baker Bros. Advisors (GP) LLC et Baker Brothers Li
+- form4 ['CRBG'] 2026-09-30 : — · NIPPON LIFE INSURANCE CO (actionnaire de 10 %) achète 805 782 actions de Corebridge Financ
+- form4 ['LEN'] 2026-09-30 : — · BERKSHIRE HATHAWAY INC et BUFFETT WARREN E (actionnaire de 10 %) achète 660 410 actions de
+- form4 ['FUL'] 2026-09-30 : — · Zaheer Srilata (administrateur) achète 2 040 actions de FULLER H B CO
+- form4 ['FUL'] 2026-09-30 : — · Lauber Charles T (administrateur) achète 2 005 actions de FULLER H B CO
+- form4 ['FUL'] 2026-09-30 : — · Rasmussen Trangsrud Teresa J (administrateur) achète 2 042 actions de FULLER H B CO
+- form4 ['FUL'] 2026-09-30 : — · HANDLEY THOMAS W (administrateur) achète 2 000 actions de FULLER H B CO
+- form4 ['FUL'] 2026-09-30 : — · FLORNESS DANIEL L (administrateur) achète 2 030 actions de FULLER H B CO
+- form4 ['BBD'] 2026-09-30 : — · Di Marcello Francesco (Executive Officer) achète 57 160 actions de BANK BRADESCO
+- form4 ['BPRE'] 2026-09-30 : — · Ruddy Jordan B. (President) achète 4 780 actions de Bluerock Private Real Estate Fund
+- form4 ['BPRE'] 2026-09-30 : — · KAMFAR RAMIN (administrateur) achète 425 590 actions de Bluerock Private Real Estate Fund
+- form4 ['FLNA'] 2026-09-30 : — · Barry Richard (President & CEO) achète 93 091 actions de FILANA THERAPEUTICS, INC.
+- form4 ['CLPR'] 2026-09-30 : — · Bistricer Jacob (Chief Operating Officer) achète 73 500 actions de Clipper Realty Inc.
+- form4 ['LPCN'] 2026-09-30 : — · Higuchi John W. (administrateur) achète 12 561 actions de Lipocine Inc.
+- form4 ['AFCG'] 2026-09-30 : — · TANNENBAUM LEONARD M (administrateur) achète 95 397 actions de Advanced Flower Capital Inc
+- form4 ['NYAX'] 2026-09-30 : — · Nechmad Yair (CEO, Co Founder & Chairman) achète 46 935 actions de Nayax Ltd.
+- form4 ['CSWC'] 2026-10-01 : — · Thomas William R III (administrateur) achète 2 170 actions de CAPITAL SOUTHWEST CORP
+- form4 ['HELP'] 2026-10-01 : — · Cavers Greg (Chief Financial Officer) achète 3 000 actions de CYBIN INC.
+- form4 ['LILA'] 2026-10-01 : — · MALONE JOHN C (actionnaire de 10 %) achète 21 525 actions de Liberty Latin America Ltd.
+- form4 ['SPG'] 2026-10-01 : — · GLASSCOCK LARRY C (administrateur) achète 367 actions de SIMON PROPERTY GROUP INC.
+- form4 ['XENE'] 2026-10-01 : — · MORTIMER IAN (PRESIDENT & CEO) achète 30 000 actions de Xenon Pharmaceuticals Inc.
+- form4 ['XENE'] 2026-10-01 : — · Kelly Thomas Patrick (Chief Financial Officer) achète 15 000 actions de Xenon Pharmaceutic
+- form4 ['CRBG'] 2026-10-01 : — · NIPPON LIFE INSURANCE CO (actionnaire de 10 %) achète 216 818 actions de Corebridge Financ
+- form4 ['PRHI'] 2026-10-01 : — · MELOCHE HAROLD J (CFO, Treasurer) achète 4 100 actions de Presurance Holdings, Inc.
+- form4 ['PRHI'] 2026-10-01 : — · RONEY BRIAN J (Chief Executive Officer) achète 7 500 actions de Presurance Holdings, Inc.
+- form4 ['PRHI'] 2026-10-01 : — · Smith James Grant (administrateur) achète 7 250 actions de Presurance Holdings, Inc.
+- form4 ['PRHI'] 2026-10-01 : — · O'Hanlon Isolde (administrateur) achète 7 250 actions de Presurance Holdings, Inc.
+- form4 ['PRHI'] 2026-10-01 : — · SARAFA JOSEPH D (administrateur) achète 11 000 actions de Presurance Holdings, Inc.
+- form4 ['FUND'] 2026-10-01 : — · GEORGE W WHITNEY (administrateur) achète 181 813 actions de SPROTT FOCUS TRUST INC.
+- form4 ['SPG'] 2026-10-01 : — · RODKIN GARY M (administrateur) achète 232 actions de SIMON PROPERTY GROUP INC.
+- form4 ['SPG'] 2026-10-01 : — · LEIBOWITZ REUBEN S (administrateur) achète 480 actions de SIMON PROPERTY GROUP INC.
+- form4 ['TKLF'] 2026-10-01 : — · Kanayama Mei (Representative Director (PEO)) achète 1 396 755 actions de Tokyo Lifestyle C
+- form4 ['GPUS'] 2026-10-01 : — · AULT MILTON C III et Ault & Company, Inc. (Executive Chairman, actionnaire de 10 %) achète
+- form4 ['FUL'] 2026-10-01 : — · Happe Michael J (administrateur) achète 2 000 actions de FULLER H B CO
+- form4 ['SPG'] 2026-10-01 : — · STEWART MARTA R (administrateur) achète 199 actions de SIMON PROPERTY GROUP INC.
+- form4 ['GBR'] 2026-10-01 : — · REALTY ADVISORS INC (actionnaire de 10 %) achète 2 000 000 actions de New Concept Energy, 
+- form4 ['SPG'] 2026-10-01 : — · Aeppel Glyn (administrateur) achète 222 actions de SIMON PROPERTY GROUP INC.
+- form4 ['ORCL'] 2026-10-01 : — · RUSCKOWSKI STEPHEN H (administrateur) achète 25 000 actions de ORACLE CORP
+- form4 ['FLNA'] 2026-10-01 : — · Barry Richard (President & CEO) achète 306 813 actions de FILANA THERAPEUTICS, INC.
+- form4 ['SPG'] 2026-10-01 : — · Smith Daniel C. (administrateur) achète 350 actions de SIMON PROPERTY GROUP INC.
+- form4 ['ASPI'] 2026-10-01 : — · Ryan Robert John Andrew (administrateur) achète 15 000 actions de ASP Isotopes Inc.
+- form4 ['VENU'] 2026-10-01 : — · Finke Thomas M (administrateur) achète 50 000 actions de Venu Holding Corp
+- form4 ['LPCN'] 2026-10-01 : — · Higuchi John W. (administrateur) achète 25 007 actions de Lipocine Inc.
+- form4 ['GF'] 2026-10-01 : — · Saba Capital Management, L.P. (actionnaire de 10 %) achète 13 047 actions de NEW GERMANY F
+- form4 ['MXF'] 2026-10-01 : — · Saba Capital Management, L.P. (actionnaire de 10 %) achète 1 238 actions de MEXICO FUND IN
+- form4 ['PCG'] 2026-10-01 : — · LARSEN JOHN O (administrateur) achète 7 500 actions de PG&E Corp
+- form4 ['GTLB'] 2026-10-01 : — · Staples William (Chief Executive Officer) achète 2 677 actions de Gitlab Inc.
+- form4 ['SPG'] 2026-10-01 : — · SELIG STEFAN M (administrateur) achète 208 actions de SIMON PROPERTY GROUP INC.
+- form4 ['AVR'] 2026-10-01 : — · L1 Capital Pty Ltd (actionnaire de 10 %) achète 397 226 actions de Anteris Technologies Gl
+- form4 ['GME'] 2026-10-01 : — · Turner Nat (administrateur) achète 10 462 actions de GameStop Corp.
+- form4 ['DKS'] 2026-10-01 : — · Barnes Matthew (President - Foot Locker Intl) achète 3 665 actions de DICK'S SPORTING GOOD
+- form4 ['CRESY'] 2026-10-01 : — · Elsztain Alejandro Gustavo (CEO) achète 17 334 actions de CRESUD INC
+- form4 ['GME'] 2026-10-02 : — · Cohen Ryan (President, CEO and Chairman) achète 700 000 actions de GameStop Corp.
+- form4 ['CRBG'] 2026-10-02 : — · NIPPON LIFE INSURANCE CO (actionnaire de 10 %) achète 348 215 actions de Corebridge Financ
+- form4 ['FGBI'] 2026-10-02 : — · Smith Edgar R. III (administrateur) achète 99 277 actions de First Guaranty Bancshares, In
+- form4 ['ACOG'] 2026-10-02 : — · Opaleye Management Inc. (actionnaire de 10 %) achète 19 050 actions de Alpha Cognition Inc
+- form4 ['QVCG'] 2026-10-02 : — · GOLDENTREE ASSET MANAGEMENT LP et GoldenTree Asset Management LLC et Tananbaum Steven A. (
+- form4 ['DLHC'] 2026-10-02 : — · Mink Brook Asset Management LLC (actionnaire de 10 %) achète 199 099 actions de DLH Holdin
+- form4 ['NYAX'] 2026-10-02 : — · Nechmad Yair (CEO, Co Founder & Chairman) achète 44 148 actions de Nayax Ltd.
+- form4 ['PAM'] 2026-10-02 : — · Mindlin Damian Miguel (Vicepresident) achète 1 432 197 actions de Pampa Energy Inc.
+- form4 ['XAIR'] 2026-10-02 : — · Lin Yi-Chien (actionnaire de 10 %) achète 20 393 actions de Beyond Air, Inc.
+- 13d ['PPLI'] 2026-09-29 : — · Jennifer Stier détient 7,9 % de People Inc (13D, intentions actives)
+- 13d ['MNY'] 2026-09-29 : — · HONIG JONATHAN détient 9 % de MoneyHero Ltd (13D, intentions actives)
+- 13d ['BRSP'] 2026-09-29 : — · CWRE SSF Securities Holding, LP détient 8,7 % de BrightSpire Capital, Inc. (13D, intention
+- 13d ['BSAA'] 2026-09-29 : — · Tsang Claudius détient 80 % de BEST SPAC I Acquisition Corp. (13D, intentions actives)
+- 13d ['NSAI'] 2026-09-29 : — · PMGC Holdings Inc. détient 21,43 % de NorthStrive Acquisition Corp I. (13D, intentions act
+- 13d ['SAMG'] 2026-09-30 : — · Equinox Partners Investment Management LLC détient 7,1 % de Silvercrest Asset Management G
+- 13d ['ZTR'] 2026-09-30 : subscription · Saba Capital Management, L.P. détient 5,04 % de Virtus Total Return Fund Inc. (13D, intent
+- 13d ['SSTI'] 2026-09-30 : — · Transom Capital Public Fund, LP détient 1,16 % de SOUNDTHINKING, INC. (13D, intentions act
+- 13d ['MASK'] 2026-09-30 : subscription · 3E NETWORK TECHNOLOGY PTE. LTD. détient 13,4 % de 3 E Network Technology Group Ltd (13D, i
+- 13d ['MCY'] 2026-09-30 : — · Vicky Wai Yee Joseph détient 35,3 % de MERCURY GENERAL CORP (13D, intentions actives)
+- 13d ['ONEN'] 2026-09-30 : purchase agreement · NCCS Management, LLC détient 4,6 % de ONE Nuclear Energy Inc. (13D, intentions actives)
+- 13d ['INSG'] 2026-10-01 : purchase agreement, subscription · Nokia Solutions and Networks Oy détient 14,2 % de INSEEGO CORP. (13D, intentions actives)
+- 13d ['CPHC'] 2026-10-01 : — · Gate City Capital Management, LLC détient 9,35 % de Canterbury Park Holding Corp (13D, int
+- 13d ['CELZ'] 2026-10-01 : private placement, purchase agreement · Timothy Warbington détient 13,7 % de CREATIVE MEDICAL TECHNOLOGY HOLDINGS, INC. (13D, inte
+- 13d ['SSM'] 2026-10-01 : — · Alpine Fox Capital LLC détient 21,5 % de Sono Group N.V. (13D, intentions actives)
+- 13d ['ADRX'] 2026-10-02 : initial public offering, ipo · ORBIMED ADVISORS LLC détient 14 % de ADARx Pharmaceuticals, Inc. (13D, intentions actives)
+- 13d ['SSTI'] 2026-10-02 : initial public offering · Gary M. Lauder détient 17 % de SOUNDTHINKING, INC. (13D, intentions actives)
+- 13d ['ZDGE'] 2026-10-02 : private placement, purchase agreement · Howard S. Jonas détient 15,6 % de Zedge, Inc. (13D, intentions actives)
+- 13d ['GOW'] 2026-10-02 : — · Hegro Well Pte. Ltd. ("Hegro") détient 74 % de GOWell Energy Technology (13D, intentions a
+- 13d ['GOW'] 2026-10-02 : — · Inflection Point Fund I, LP détient 9,87 % de GOWell Energy Technology (13D, intentions ac
+- 13d ['ATER'] 2026-10-02 : purchase agreement · Michelle Chiam Sin Ling détient 10 % de Aterian, Inc. (13D, intentions actives)
+- 13d ['ATER'] 2026-10-02 : purchase agreement · Chang Woei Jiann détient 10 % de Aterian, Inc. (13D, intentions actives)
+
+## Erreurs
