@@ -8,7 +8,7 @@ const fs = require("fs");
   const elusLocal = fs.readFileSync(fichierElus, "utf8");
   const lobbyingLocal = fs.readFileSync(fichierLobbying, "utf8");
   const lobbying = JSON.parse(lobbyingLocal);
-  const VERSION = "0.18.0";
+  const VERSION = "0.19.0";
   const base = process.env.BASE || "https://killingsky1.github.io/Radar/"; // BASE : essai local seulement
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
@@ -80,6 +80,25 @@ const fs = require("fs");
     && attendusRadar.includes(ficheRadar);
   dire(`Radar : ${etiquettesRadar.length} points ${etiquettesRadar.join(", ")} · attendus ${attendusRadar.join(", ")} · balayage ${balai} · point touché → fiche ${ficheRadar} · conforme : ${radarOk ? "OUI" : "NON"}`);
   await p.locator(".retour").click(); await p.waitForTimeout(300);
+  // Lot E : l'aide (bouton « ? ») : 5 étapes, nombre de sources = fichier du robot, délais légaux, avertissement
+  let aideOk = false;
+  try {
+    const sourcesAide = JSON.parse(fs.readFileSync(fichierMain.replace(/aujourdhui\.json$/, "sources.json"), "utf8"));
+    const branchees = sourcesAide.filter((x) => !["ecartee", "a_venir"].includes(x.statut)).length;
+    const ecartees = sourcesAide.filter((x) => x.statut === "ecartee").length;
+    await p.getByRole("button", { name: "Aide" }).click(); await p.waitForSelector(".flux-etape"); await p.waitForTimeout(900);
+    await photo("v36-aide");
+    const etapesAide = await p.locator(".flux-etape b").allInnerTexts();
+    const texteAide = (await p.locator(".ecran").innerText()).replace(/\u00a0/g, " ");
+    await p.locator(".delai").first().evaluate((e) => e.scrollIntoView({ block: "center" }));
+    await photo("v37-aide-limites");
+    aideOk = etapesAide.length === 5 && texteAide.includes(`${branchees} sources branchées`) && texteAide.includes(`${ecartees} laissées de côté`)
+      && texteAide.includes("2 jours ouvrables après la transaction") && texteAide.includes("Pas un conseil financier");
+    dire(`Aide : ${etapesAide.join(" → ")} · ${branchees} sources branchées et ${ecartees} laissées de côté (fichier du robot) · conforme : ${aideOk ? "OUI" : "NON"}`);
+    await p.locator(".retour").click(); await p.waitForTimeout(300);
+  } catch (e) {
+    dire(`Aide : ERREUR ${String(e).slice(0, 200)}`);
+  }
   const affiches = await p.locator(".ligne.suggestion .symbole").allInnerTexts();
   const attendus = a.hausse.slice(0, 5).map((x) => x.symbole);
   // Lot B : chaque note affichée = la note publiée par le robot ; « Récent » au même endroit
@@ -365,7 +384,7 @@ const fs = require("fs");
     await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
   } else dire("Participation : aucune info dans le fil (aucun cas dans les 8-K lus)");
   dire(`Erreurs du navigateur : ${erreurs.length ? erreurs.join(" | ") : "aucune"}`);
-  const ok = pareil && elusPareil && lobbyingPareil && memeTop && radarOk && ficheOk && methodeOk && argentOk && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && participationOk && !erreurs.length && js.includes(VERSION);
+  const ok = pareil && elusPareil && lobbyingPareil && memeTop && radarOk && aideOk && ficheOk && methodeOk && argentOk && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && participationOk && !erreurs.length && js.includes(VERSION);
   dire(ok ? "VERDICT : OK" : "VERDICT : PROBLÈME");
   fs.writeFileSync(`${dossier}/site.txt`, lignes.join("\n") + "\n");
   await b.close();
