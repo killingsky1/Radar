@@ -373,5 +373,79 @@
    "MRSH"
   ],
   "title": "Kevin Hern (Chambre, OK01) vend MRSH (3 transactions) — compte conjoint"
+ },
+ {
+  "amount_max": 1000000.0,
+  "amount_min": 500001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "declarant_concorde": true,
+   "document_pdf": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": false,
+   "poste_publie_sans_201": true,
+   "sans_formulaire_201": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true,
+   "type_reconnu": true
+  },
+  "collected_at": "2026-10-03T14:44:09+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agence": "Office of Personnel Management",
+   "ajoute_le": "2026-08-21",
+   "declarant_concorde": true,
+   "lecture_complete": true,
+   "niveau": "Level II",
+   "nom": "Kupor, Scott A",
+   "nom_sec": "Omada Health, Inc.",
+   "pdf_valide": true,
+   "rapport": "C98F5D124FF9D62785258E5A002DB8E2",
+   "signe_le": "2026-07-15",
+   "taille": 5118,
+   "titre": "Director",
+   "transactions": [
+    {
+     "avis": "No",
+     "date": "2026-07-14",
+     "description": "Omada Common Stock (OMDA)",
+     "montant": "$500,001 - $1,000,000",
+     "n": "1",
+     "note": null,
+     "symbole": "OMDA",
+     "type": "Sale"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Scott A Kupor",
+   "Omada Health, Inc."
+  ],
+  "id": "oge_278t:C98F5D124FF9D62785258E5A002DB8E2:OMDA:S",
+  "kind": "vente_cabinet",
+  "notes": [],
+  "occurred_on": "2026-07-14",
+  "official_id": "C98F5D124FF9D62785258E5A002DB8E2:OMDA:S",
+  "official_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/C98F5D124FF9D62785258E5A002DB8E2/$FILE/Scott-A-Kupor-07.15.2026-278T.pdf",
+  "parser_version": "oge-2",
+  "published_on": "2026-08-21",
+  "sha256": "f3f83220ed894d22838c74571323035b3c8604cbfabba075ee6cb667c2b48d9b",
+  "source": "oge_278t",
+  "tickers": [
+   "OMDA"
+  ],
+  "title": "Scott A Kupor (Director, Office of Personnel Management, niveau II) vend OMDA"
  }
 ]
