@@ -80,6 +80,24 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     assert.equal(await p.locator(".anneau").getAttribute("aria-label"), `Note ${n.replace("/10", "")} sur 10`);
     await p.locator(".retour").click(); await p.waitForTimeout(200);
   });
+  await verifier("Aide : bouton « ? » du Radar, chemin en 5 étapes, heures des robots, sources refusées, liens", async () => {
+    try {
+      await p.getByRole("button", { name: "Aide" }).click(); await p.waitForSelector(".flux-etape");
+      assert.equal(await p.locator(".grand-titre h1").innerText(), "Aide");
+      const etapes = await p.locator(".flux-etape b").allInnerTexts();
+      assert.deepEqual(etapes, ["1. Sources officielles", "2. Robots", "3. Contrôles", "4. Labo", "5. Note"]);
+      assert.deepEqual(await p.locator(".passage b").allInnerTexts(), ["7 h 07", "9 h 47", "12 h 37", "18 h 17", "23 h 17"]);
+      const texte = (await p.locator(".ecran").innerText()).replace(/\u00a0/g, " ");
+      assert.ok(texte.includes("Aujourd'hui : 1 source dans ce cas.") && texte.includes("2 jours ouvrables après la transaction")
+        && texte.includes("Note sur 10 = 5 + points × 5/6") && texte.includes("Pas un conseil financier"), texte.slice(0, 300));
+      await p.locator(".lien-rangee", { hasText: "État des sources" }).click(); await p.waitForTimeout(250);
+      assert.equal(await p.locator(".grand-titre h1").innerText(), "Sources");
+      await p.locator(".retour").click(); await p.waitForTimeout(200);
+      assert.equal(await p.locator(".grand-titre h1").innerText(), "Aide");
+    } finally {
+      await onglet("Radar"); // retour à l'accueil, même en cas d'échec
+    }
+  });
   await verifier("Accueil : 1 à surveiller à la baisse", async () => {
     assert.ok((await p.locator(".alerte-baisse").innerText()).includes("1 à surveiller à la baisse"));
   });
@@ -445,6 +463,10 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     assert.ok((await p.locator(".resume").innerText()).includes("Refusées par le site · 1"));
   });
   await verifier("Bouton retour vers Réglages", async () => { await p.locator(".retour").click(); await p.waitForTimeout(200); assert.ok(await p.getByRole("button", { name: /Comment c'est vérifié/ }).isVisible()); });
+  await verifier("Réglages : « Comment marche Radar (aide) » ouvre l'aide", async () => {
+    await p.getByRole("button", { name: /Comment marche Radar/ }).click(); await p.waitForSelector(".flux-etape");
+    assert.equal(await p.locator(".flux-etape").count(), 5); await p.locator(".retour").click(); await p.waitForTimeout(200);
+  });
   await verifier("Réglages : lien vers le calcul du score", async () => {
     await p.getByRole("button", { name: /Comment le score est calculé/ }).click(); await p.waitForTimeout(200);
     assert.equal(await p.locator(".regle").count(), 13); await p.locator(".retour").click(); await p.waitForTimeout(200);
@@ -470,6 +492,8 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       assert.equal(await q.locator(".radar-marque").first().evaluate((e) => getComputedStyle(e).animationName), "none");
       const finals = await q.locator("[data-defile]").evaluateAll((els) => els.map((e) => e.dataset.final));
       assert.ok(finals.length >= 3 && finals.every((f) => f === "1"), finals.join(","));
+      await q.getByRole("button", { name: "Aide" }).click(); await q.waitForSelector(".flux-point");
+      assert.equal(await q.locator(".flux-point").evaluate((e) => getComputedStyle(e).animationName), "none");
     } finally {
       await calme.close();
     }

@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.18.0";
+const VERSION = "0.19.0";
 
 // ---------- Constantes ----------
 
@@ -1665,7 +1665,16 @@ function Accueil({ pousser, allerAuFil }) {
   const date = majuscule(new Date().toLocaleDateString("fr-CA", { weekday: "long", day: "numeric", month: "long" }));
 
   return (
-    <Ecran titre="Radar" sousTitre={date} droite={<BoutonRond icone="rafraichir" label="Actualiser" onClick={charger} tourne={chargement} />}>
+    <Ecran
+      titre="Radar"
+      sousTitre={date}
+      droite={
+        <span className="boutons-haut">
+          <BoutonRond icone="info" label="Aide" onClick={() => pousser("aide")} />
+          <BoutonRond icone="rafraichir" label="Actualiser" onClick={charger} tourne={chargement} />
+        </span>
+      }
+    >
       <EtatDonnees />
 
       {hausse.length === 0 && baisse.length === 0 ? (
@@ -2132,6 +2141,7 @@ function Reglages({ pousser, ouvrirInstaller }) {
       <Groupe titre="Fiabilité">
         <RangeeLien icone="antenne" couleur="bleu" label="État des sources" valeur={`${meta.sources_branchees}/${meta.sources_total}`} onClick={() => pousser("sources")} />
         <RangeeLien icone="alerte" couleur="jaune" label="À vérifier" valeur={donnees.a_verifier.length} onClick={() => pousser("a_verifier")} />
+        <RangeeLien icone="info" couleur="accent" label="Comment marche Radar (aide)" onClick={() => pousser("aide")} />
         <RangeeLien icone="bouclier-ok" couleur="vert" label="Comment c'est vérifié" onClick={() => pousser("verification")} />
         <RangeeLien icone="tarte" couleur="accent" label="Comment le score est calculé" onClick={() => pousser("methode")} />
       </Groupe>
@@ -2242,6 +2252,125 @@ function EcranVerification({ retour }) {
   );
 }
 
+// ---------- Aide : comment marche Radar (les chiffres viennent des fichiers du robot) ----------
+
+const PASSAGES_AIDE = [
+  ["Matin", "7 h 07"], ["Jour", "9 h 47"], ["Midi", "12 h 37"], ["Soir", "18 h 17"], ["Nuit", "23 h 17"],
+];
+
+const DELAIS_AIDE = [
+  ["Dirigeants (formulaire 4)", "2 jours ouvrables après la transaction"],
+  ["Avis de vente (formulaire 144)", "au moment de l'ordre de vente"],
+  ["Fonds activistes (13D)", "5 jours ouvrables après avoir passé 5 % des actions"],
+  ["Grands fonds (13F)", "jusqu'à 45 jours après la fin du trimestre"],
+  ["Élus du Congrès", "jusqu'à 45 jours après la transaction"],
+  ["Contrats de la Défense (USAspending)", "publiés avec 90 jours de délai"],
+];
+
+function EcranAide({ retour }) {
+  const { donnees, pousser } = useApp();
+  const sources = donnees.sources || [];
+  const branchees = sources.filter((x) => !["ecartee", "a_venir"].includes(x.statut)).length;
+  const ecartees = sources.filter((x) => x.statut === "ecartee").length;
+  const refusees = sources.filter((x) => x.statut === "refusee").length;
+  const m = donnees.aujourdhui?.methode || {};
+  const etapes = [
+    ["antenne", "Sources officielles", `${branchees} sources branchées : SEC, Congrès, Trésor, Maison-Blanche, gouvernement du Canada… ${ecartees} laissées de côté, avec la raison.`],
+    ["radar", "Robots", "5 passages par jour de semaine. Ils respectent les règles de chaque site et attendent entre deux lectures."],
+    ["bouclier-ok", "Contrôles", "Chaque info reçoit un badge : Officiel, Confirmé ou À vérifier. Une info « À vérifier » ne compte jamais."],
+    ["double", "Labo", "Un programme à part relit les documents officiels et refait le calcul, sans rien prendre du robot."],
+    ["tarte", "Note", "Les points des études deviennent une note sur 10 : Radar, Argent et Fil."],
+  ];
+  return (
+    <Ecran titre="Aide" sousTitre="Comment marche Radar" retour={retour}>
+      <p className="explication">{fr("Radar lit seulement des sources officielles et montre où va le gros argent, preuves à l'appui. Rien plutôt que faux. Pas un conseil financier.")}</p>
+
+      <ol className="carte flux" aria-label="Le chemin d'une info, des sources officielles à la note">
+        <span className="flux-ligne" aria-hidden="true">
+          <span className="flux-point" />
+        </span>
+        {etapes.map(([icone, titre, texte], i) => (
+          <li key={titre} className="flux-etape" style={{ "--i": i }}>
+            <span className="flux-icone">
+              <Icone nom={icone} taille={18} epaisseur={2.2} />
+            </span>
+            <span className="flux-texte">
+              <b>{`${i + 1}. ${titre}`}</b>
+              <span>{fr(texte)}</span>
+            </span>
+          </li>
+        ))}
+      </ol>
+
+      <Groupe titre="Les robots" pied="Heure de l'Est en été ; une heure plus tôt en hiver. Le passage de nuit lit les dépôts de la SEC de la journée.">
+        <div className="rangee bloc">
+          <span className="rangee-texte">{fr("Chaque source a son lecteur. Il lit la page, le fichier ou l'API officielle, garde le lien, le numéro officiel et l'empreinte du document. Il s'identifie comme « Radar projet personnel » et respecte les robots.txt. Les tests passent avant chaque passage : s'ils échouent, rien n'est publié.")}</span>
+        </div>
+        <div className="passages">
+          {PASSAGES_AIDE.map(([nom, heure]) => (
+            <span key={nom} className="passage">
+              <b>{heure}</b>
+              {nom}
+            </span>
+          ))}
+        </div>
+        <div className="rangee bloc">
+          <span className="rangee-texte">{fr(`Un site qui refuse le robot (erreur 403) deux fois de suite est mis en pause 7 jours : Radar ne le sollicite plus et réessaie une fois. Aujourd'hui : ${refusees} source${refusees > 1 ? "s" : ""} dans ce cas.`)}</span>
+        </div>
+        <RangeeLien icone="antenne" couleur="bleu" label="État des sources" valeur={`${branchees} branchées`} onClick={() => pousser("sources")} />
+      </Groupe>
+
+      <Groupe titre="Une info vérifiée">
+        {Object.entries(BADGES).map(([code, b]) => (
+          <div key={code} className="rangee bloc">
+            <Badge code={code} grand />
+            <span className="rangee-texte">{b.texte}</span>
+          </div>
+        ))}
+        <div className="rangee bloc">
+          <span className="rangee-texte">{fr("Le labo : un programme séparé relit les documents officiels (ex. chaque formulaire 4 à la SEC), refait le score de son côté et vérifie le vrai site, photos à l'appui. Il tourne à chaque changement de Radar.")}</span>
+        </div>
+        <RangeeLien icone="bouclier-ok" couleur="vert" label="Comment c'est vérifié" onClick={() => pousser("verification")} />
+      </Groupe>
+
+      <Groupe titre="Regroupées par compagnie">
+        <div className="rangee bloc">
+          <span className="rangee-texte">{fr("Chaque info est reliée à une compagnie par la liste officielle des symboles de la SEC, puis classée par famille : dirigeants, fonds activistes, grands fonds, élus, FDA, SEC, rappels, la compagnie elle-même. La même transaction déclarée par plusieurs entités liées compte une seule fois ; le même acte publié par deux sources devient « Confirmé ».")}</span>
+        </div>
+      </Groupe>
+
+      <Groupe titre="La note sur 10">
+        {[m.resume, m.temps, m.familles, m.bonus, m.note10, m.seuil, m.recent].filter(Boolean).map((t) => (
+          <div key={t} className="rangee bloc">
+            <span className="rangee-texte">{fr(t)}</span>
+          </div>
+        ))}
+        <RangeeLien icone="tarte" couleur="accent" label="Comment le score est calculé" onClick={() => pousser("methode")} />
+      </Groupe>
+
+      <Groupe titre="L'onglet Argent">
+        <div className="rangee bloc">
+          <span className="rangee-texte">{fr("Les vrais montants des dépôts officiels des 30 derniers jours : nombre d'actions × prix écrit dans le dépôt, pourcentage de leurs actions quand le dépôt le permet, fourchettes officielles pour les élus. Pas de cours de bourse en direct.")}</span>
+        </div>
+      </Groupe>
+
+      <Groupe titre="Les limites, franchement" pied={m.prix ? fr(m.prix) : undefined}>
+        {DELAIS_AIDE.map(([qui, delai]) => (
+          <div key={qui} className="rangee bloc delai">
+            <span className="rangee-texte">
+              <b>{qui}</b> : {fr(delai)}
+            </span>
+          </div>
+        ))}
+        <div className="rangee bloc">
+          <span className="rangee-texte">{fr("La note mesure la force des preuves officielles, pas une promesse de hausse : les études parlent de moyennes sur beaucoup de transactions. Certaines sources sont pour un usage personnel seulement (à revoir avant une vente de l'app).")}</span>
+        </div>
+      </Groupe>
+      <p className="avertissement">{m.avertissement || "Pas un conseil financier."}</p>
+    </Ecran>
+  );
+}
+
 // ---------- App ----------
 
 const ONGLETS = [
@@ -2258,6 +2387,7 @@ const PAGES = {
   suggestions: EcranSuggestions,
   compagnie: EcranCompagnie,
   methode: EcranMethode,
+  aide: EcranAide,
 };
 
 // « Nouveau » : entrée dans les listes depuis la dernière visite (1re visite : depuis 24 h).
@@ -2745,6 +2875,24 @@ input { font: inherit; color: var(--texte); }
   .radar-balai, .radar-marque, .anneau-valeur, .carte.liste > *, .radar-point { animation: none !important; }
   .radar-balai { opacity: .4; transform: rotate(40deg); }
 }
+
+/* Aide : le chemin d'une info (un point descend le long de la ligne) */
+.boutons-haut { display: inline-flex; gap: 8px; }
+.flux { position: relative; list-style: none; margin: 0; padding: 14px 16px 14px 14px; display: flex; flex-direction: column; gap: 14px; }
+.flux-ligne { position: absolute; left: 31px; top: 30px; bottom: 30px; width: 2px; border-radius: 1px; background: var(--ligne-radar); overflow: hidden; }
+.flux-point { position: absolute; left: -3px; top: 0; width: 8px; height: 26px; border-radius: 4px;
+  background: linear-gradient(to bottom, transparent, var(--accent)); animation: descente 2.6s ease-in-out infinite; }
+@keyframes descente { from { top: -26px; } to { top: 100%; } }
+.flux-etape { position: relative; display: flex; gap: 12px; align-items: flex-start; animation: glisse .3s ease-out backwards; animation-delay: calc(var(--i) * 70ms); }
+.flux-icone { flex: none; z-index: 1; width: 36px; height: 36px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center;
+  background: var(--carte-2); color: var(--accent); box-shadow: 0 0 0 3px var(--carte); }
+.flux-texte { display: flex; flex-direction: column; gap: 2px; padding-top: 1px; font-size: .875rem; line-height: 1.4; color: var(--texte-2); }
+.flux-texte b { color: var(--texte); font-size: .9375rem; }
+.passages { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 4px 16px 12px; }
+.passage { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 2px; border-radius: 10px; background: var(--carte-2); font-size: .6875rem; color: var(--texte-2); }
+.passage b { color: var(--texte); font-size: .8125rem; font-variant-numeric: tabular-nums; }
+.delai .rangee-texte b { color: var(--texte); }
+@media (prefers-reduced-motion: reduce) { .flux-point, .flux-etape { animation: none !important; } .flux-point { top: 40%; } }
 
 /* Argent */
 .argent { align-items: flex-start; }
