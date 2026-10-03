@@ -1168,7 +1168,7 @@ function Lobbying({ symbole }) {
         <p className="lobbying-total">{argent(x.total, "USD")}</p>
         <p className="lobbying-texte">
           {x.base === "compagnie"
-            ? `Dépenses déclarées par la compagnie elle-même${x.firmes ? ` : elles incluent ce qu'elle paie à ${x.firmes} firme${x.firmes > 1 ? "s" : ""} de lobbying, qui déclarent ensemble ${argent(x.revenus_firmes, "USD")}` : ""}.`
+            ? `Dépenses déclarées par la compagnie elle-même${x.firmes ? ` : elles incluent ce qu'elle paie à ${x.firmes} firme${x.firmes > 1 ? "s" : ""} de lobbying, qui ${x.firmes > 1 ? "déclarent ensemble" : "déclare"} ${argent(x.revenus_firmes, "USD")}` : ""}.`
             : `Payés à ${x.firmes} firme${x.firmes > 1 ? "s" : ""} de lobbying (la compagnie n'a pas ses propres lobbyistes).`}
           {x.moins_de_5000 > 0 && ` ${x.moins_de_5000} rapport${x.moins_de_5000 > 1 ? "s" : ""} « moins de 5 000 $ » sans montant.`}
         </p>

@@ -104,7 +104,7 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     const total = (await p.locator(".lobbying-total").innerText()).replace(/\s/g, "");
     assert.ok(total.includes("1,23M$US"), total);
     const t = (await p.locator(".lobbying").innerText()).replace(/\u00a0|\u202f/g, " ");
-    assert.ok(t.includes("Dépenses déclarées par la compagnie elle-même : elles incluent ce qu'elle paie à 1 firme de lobbying"), t);
+    assert.ok(t.includes("Dépenses déclarées par la compagnie elle-même : elles incluent ce qu'elle paie à 1 firme de lobbying, qui déclare 40"), t);
     assert.ok(t.includes("Sujets : Commerce (intérieur et extérieur) · Fiscalité (impôts)"), t);
     assert.equal(await p.locator(".lobbying .transaction").count(), 2);
     assert.ok((await p.locator(".lobbying .transaction").first().innerText()).includes("La compagnie elle-même"));
