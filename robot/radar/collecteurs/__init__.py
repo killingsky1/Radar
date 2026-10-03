@@ -12,7 +12,7 @@ from ..models import Evenement
 
 Collecteur = Callable[["object"], list[Evenement]]
 
-from . import banques, canada, cftc, elus, fda, fonds13f, maison_blanche, registre, regulateurs, sec  # noqa: E402
+from . import banques, canada, cftc, congres, elus, fda, fonds13f, maison_blanche, registre, regulateurs, sec  # noqa: E402
 
 # L'ordre compte : les lecteurs SEC chargent la liste officielle des symboles, réutilisée ensuite.
 COLLECTEURS: dict[str, Collecteur] = {
@@ -36,6 +36,9 @@ COLLECTEURS: dict[str, Collecteur] = {
     "ventes_armes": registre.collecter_ventes_armes,
     "senat_ptr": elus.collecter_senat,
     "chambre_ptr": elus.collecter_chambre,
+    "comites": congres.collecter_comites,
+    "hr7008": congres.collecter_hr7008,  # avant « votes » : les votes viennent du statut du projet de loi
+    "votes": congres.collecter_votes,
     "nouvelles_defense_ca": canada.collecter_defense,
     "nouvelles_eco_ca": canada.collecter_economie,
 }

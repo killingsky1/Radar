@@ -61,10 +61,13 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     await p.locator(".ligne.raison").first().click(); await p.waitForSelector(".feuille-fond.ouvert");
     assert.ok(await p.getByText("Document officiel").isVisible()); await fermer();
   });
-  await verifier("Comment le score est calculé : 11 règles, 16 liens d'études", async () => {
+  await verifier("Comment le score est calculé : 13 règles, 19 liens d'études, règles des chefs", async () => {
     await p.getByRole("button", { name: "Comment le score est calculé" }).click(); await p.waitForTimeout(250);
-    assert.equal(await p.locator(".regle").count(), 11);
-    assert.equal(await p.locator("a.etude").count(), 16);
+    assert.equal(await p.locator(".regle").count(), 13);
+    assert.equal(await p.locator("a.etude").count(), 19);
+    const chef = (await p.locator(".regle", { hasText: "Un chef du Congrès achète" }).innerText()).replace(/\u00a0/g, " ");
+    assert.ok(chef.includes("+2") && chef.includes("Wei et Zhou"), chef);
+    assert.ok((await p.locator(".regle", { hasText: "Un chef du Congrès vend" }).innerText()).replace(/\u00a0/g, " ").includes("−1"));
     assert.ok((await p.locator(".ecran").innerText()).includes("Pas un conseil financier"));
   });
   await verifier("Baisse : Exemple Corp., faillite + vente du PDG, bonus 2 familles", async () => {
@@ -72,7 +75,9 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     assert.equal(await p.locator(".segment.actif").innerText(), "Baisse · 1");
     await p.locator(".ligne.suggestion", { hasText: "XMPL" }).click(); await p.waitForTimeout(250);
     const t = await p.locator(".calcul").innerText();
-    assert.ok(t.includes("bonus ×1,25 (2 familles d'accord)") && t.includes("Score : −6,9"), t);
+    // Infos TEST datées d'hier (jour UTC) ; le score compte les jours à l'heure de Toronto : 0 ou 1 jour selon l'heure
+    const age = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Toronto" }).format(new Date()) === new Date().toISOString().slice(0, 10) ? 1 : 0;
+    assert.ok(t.includes("bonus ×1,25 (2 familles d'accord)") && t.includes(`Score : ${age ? "−6,7" : "−6,9"}`), t);
   });
   await verifier("Retour : Suggestions puis Accueil", async () => {
     await p.locator(".retour").click(); await p.waitForTimeout(200);
@@ -105,12 +110,63 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
   });
   await verifier("Détail d'un élu : transactions déclarées et avis légal", async () => {
     await p.locator(".ligne", { hasText: "Microsoft" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
-    assert.equal(await p.locator(".transaction").count(), 1);
-    const t = await p.locator(".transaction").innerText();
+    assert.equal(await p.locator(".transactions .transaction").count(), 1);
+    const t = await p.locator(".transactions .transaction").innerText();
     assert.ok(t.includes("conjoint·e") && t.includes("15") && t.includes("50"), t);
     assert.ok((await p.locator(".detail-pied").innerText()).includes("non commercial"));
     assert.equal(await p.locator(".feuille .controle.rate").count(), 0);
     await fermer();
+  });
+  await verifier("Détail d'un élu : au Congrès (pas chef, comités, ses 2 votes sur H.R. 7008)", async () => {
+    await p.locator(".ligne", { hasText: "Microsoft" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
+    assert.equal(await p.locator(".congres-chef").innerText(), "Pas un des 12 chefs du Congrès.");
+    const comites = await p.locator(".congres .transaction").allInnerTexts();
+    assert.equal(comites.length, 2); assert.ok(comites[0].includes("Financial Services") && comites[0].includes("président·e"), comites[0]);
+    const t = await p.locator(".feuille").innerText();
+    assert.ok(/motion de renvoi en comité \(procédure\)\s*contre/.test(t) && /adoption du projet de loi\s*pour/.test(t), t);
+    assert.ok((await p.locator(".congres-source").innerText()).includes("Élu·e Exemple · listes officielles"));
+    await fermer();
+  });
+  await verifier("Chef du Congrès : bandeau affiché (fichier des élus modifié pour le test)", async () => {
+    const r = await (await p.request.get(`${ADRESSE}data/app/elus.json`)).json();
+    r.par_elu["Élu·e (exemple)"].chef = { poste: "whip (2e rang du parti)", titre: "Majority Whip" };
+    await p.route("**/data/app/elus.json", (route) => route.fulfill({ json: r }));
+    try {
+      await p.reload(); await p.waitForSelector(".onglets"); await onglet("Fil"); await p.locator(".puce", { hasText: "Tout" }).click();
+      await p.locator(".ligne", { hasText: "Microsoft" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
+      const t = await p.locator(".congres-chef.est-chef").innerText();
+      assert.ok(t.includes("Chef du Congrès") && t.includes("whip (2e rang du parti) (Majority Whip)") && t.includes("comptent double"), t);
+      await fermer();
+    } finally { await p.unroute("**/data/app/elus.json"); await p.reload(); await p.waitForSelector(".onglets"); }
+  });
+  await verifier("Fil Politiciens : carte H.R. 7008 (étape officielle et 3 votes)", async () => {
+    await onglet("Fil"); await p.locator(".puce", { hasText: "Politiciens" }).click(); await p.waitForTimeout(150);
+    const c = p.locator(".carte-projet");
+    assert.ok((await c.innerText()).includes("Bloqué au Sénat (clôture rejetée, 53 pour, 47 contre, 60 voix requises)"));
+    const v = await p.locator(".carte-projet-vote").allInnerTexts();
+    assert.equal(v.length, 3);
+    assert.ok(v[0].includes("La Chambre rejette la motion de renvoi en comité (procédure), 211 pour, 218 contre"), v[0]);
+    assert.ok(v[1].includes("La Chambre adopte le projet de loi, 232 pour, 198 contre"), v[1]);
+    assert.ok(v[2].includes("Le Sénat rejette la clôture (60 voix requises pour ouvrir le débat), 53 pour, 47 contre"), v[2]);
+    assert.equal(await c.getAttribute("href"), "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7008.xml");
+    await p.locator(".puce", { hasText: "Tout" }).click(); await p.waitForTimeout(150);
+    assert.equal(await p.locator(".carte-projet").count(), 0);
+  });
+  await verifier("Sans fichier des élus : l'app marche quand même", async () => {
+    const avant = erreurs.length;
+    await p.route("**/data/app/elus.json", (route) => route.fulfill({ status: 404, body: "" }));
+    try {
+      await p.reload(); await p.waitForSelector(".onglets"); await onglet("Fil");
+      await p.locator(".puce", { hasText: "Politiciens" }).click(); await p.waitForTimeout(150);
+      assert.equal(await p.locator(".carte-projet").count(), 0); assert.equal(await lignes(), 1);
+      await p.locator(".ligne", { hasText: "Microsoft" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
+      assert.equal(await p.locator(".congres").count(), 0); await fermer();
+    } finally {
+      await p.unroute("**/data/app/elus.json"); await p.reload(); await p.waitForSelector(".onglets");
+      await onglet("Fil"); await p.locator(".puce", { hasText: "Tout" }).click();
+      // Le 404 voulu s'affiche dans la console du navigateur : ce n'est pas une erreur de l'app
+      erreurs.splice(avant, erreurs.length - avant, ...erreurs.slice(avant).filter((e) => !e.includes("404")));
+    }
   });
   await verifier("Détail d'un 13D : le but écrit par le déclarant", async () => {
     await p.locator(".ligne", { hasText: "Intel" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
@@ -163,7 +219,7 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
   await verifier("Bouton retour vers Réglages", async () => { await p.locator(".retour").click(); await p.waitForTimeout(200); assert.ok(await p.getByRole("button", { name: /Comment c'est vérifié/ }).isVisible()); });
   await verifier("Réglages : lien vers le calcul du score", async () => {
     await p.getByRole("button", { name: /Comment le score est calculé/ }).click(); await p.waitForTimeout(200);
-    assert.equal(await p.locator(".regle").count(), 11); await p.locator(".retour").click(); await p.waitForTimeout(200);
+    assert.equal(await p.locator(".regle").count(), 13); await p.locator(".retour").click(); await p.waitForTimeout(200);
   });
   await verifier("À vérifier : le piège y est, avec le contrôle raté", async () => {
     await p.getByRole("button", { name: /^À vérifier/ }).click(); await p.waitForSelector(".ligne"); assert.equal(await lignes(), 1);

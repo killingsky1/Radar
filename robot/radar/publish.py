@@ -8,6 +8,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 from . import __version__, emetteurs
+from .collecteurs import congres
 from .health import LIBELLES, statut
 from .registry import SOURCES
 from .score import calculer
@@ -80,11 +81,19 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
             fil_app.append(e)
     _ecrire(donnees / "app" / "fil.json", fil_app)
     _ecrire(donnees / "app" / "a_verifier.json", a_verifier[:MAX_A_VERIFIER])
+    # Chefs, comités et votes des élus (listes officielles du Congrès). En cas d'erreur : aucun chef, donc aucun bonus.
+    chefs: set[str] = set()
+    try:
+        elus = congres.pour_app(donnees, fil)
+        _ecrire(donnees / "app" / "elus.json", elus)
+        chefs = {nom for nom, info in elus["par_elu"].items() if info["chef"]}
+    except Exception as exc:  # noqa: BLE001
+        print(f"Élus : erreur, fichier de l'app pas mis à jour ({type(exc).__name__}: {exc})")
     # Le score : calculé sur TOUTES les infos validées ; la liste précédente sert à savoir qui vient d'entrer.
     # S'il plante, les infos sont quand même publiées et l'ancien score reste (l'app montre son heure de calcul).
     chemin = donnees / "app" / "aujourdhui.json"
     try:
         precedent = json.loads(chemin.read_text(encoding="utf-8")) if chemin.exists() else None
-        _ecrire(chemin, calculer(fil, maintenant, precedent, symboles, fonds=emetteurs.fonds(donnees)))
+        _ecrire(chemin, calculer(fil, maintenant, precedent, symboles, fonds=emetteurs.fonds(donnees), chefs=chefs))
     except Exception as exc:  # noqa: BLE001
         print(f"Score : erreur, l'ancien calcul est gardé ({type(exc).__name__}: {exc})")

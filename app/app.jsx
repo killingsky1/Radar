@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.7.1";
+const VERSION = "0.8.0";
 
 // ---------- Constantes ----------
 
@@ -78,6 +78,10 @@ const CONTROLES_SOURCES = {
   variation_coherente: "Variation cohérente",
   approbation_originale: "Approbation originale (pas un générique)",
   nouvelle_molecule: "Nouvelle molécule (classe 1 dans la base de la FDA)",
+  projet_suivi: "Bon projet de loi (H.R. 7008, 119e Congrès)",
+  etape_datee: "Étape officielle datée",
+  vote_du_projet_suivi: "Vote sur le bon projet de loi",
+  total_recompte: "Total officiel = votes recomptés un par un",
   lettre_officielle: "Lettre d'approbation officielle",
   trimestres_consecutifs: "Trimestres consécutifs comparés",
   rapports_complets: "Deux rapports complets comparés",
@@ -379,19 +383,28 @@ function enGroupesParJour(liste) {
 // ---------- Données ----------
 
 const FICHIERS = ["meta", "aujourdhui", "fil", "a_verifier", "sources"];
+const FICHIERS_OPTIONNELS = ["elus"]; // absent ou illisible : l'app fonctionne sans
 
 function useDonnees() {
   const [etat, setEtat] = useState({ chargement: true, erreur: null, donnees: null });
   const charger = useCallback(async () => {
     setEtat((e) => ({ ...e, chargement: true, erreur: null }));
     try {
-      const resultats = await Promise.all(
-        FICHIERS.map(async (nom) => {
+      const resultats = await Promise.all([
+        ...FICHIERS.map(async (nom) => {
           const r = await fetch(`./data/app/${nom}.json`, { cache: "no-store" });
           if (!r.ok) throw new Error(`${nom}.json : HTTP ${r.status}`);
           return [nom, await r.json()];
         }),
-      );
+        ...FICHIERS_OPTIONNELS.map(async (nom) => {
+          try {
+            const r = await fetch(`./data/app/${nom}.json`, { cache: "no-store" });
+            return [nom, r.ok ? await r.json() : null];
+          } catch {
+            return [nom, null];
+          }
+        }),
+      ]);
       setEtat({ chargement: false, erreur: null, donnees: Object.fromEntries(resultats) });
     } catch (err) {
       setEtat((e) => ({ ...e, chargement: false, erreur: String(err.message || err) }));
@@ -743,6 +756,8 @@ function FeuilleDetail({ ev, fermer }) {
         </button>
       </div>
 
+      <AuCongres ev={ev} />
+
       {ev.category === "politiciens" && ev.data?.transactions?.length > 0 && (
         <>
           <h3 className="section">Transactions déclarées</h3>
@@ -794,6 +809,90 @@ function FeuilleDetail({ ev, fermer }) {
         )}
       </p>
     </Feuille>
+  );
+}
+
+// ---------- Congrès : chefs, comités, H.R. 7008 ----------
+
+const ROLES_COMITE = {
+  Chair: "président·e",
+  Chairman: "président·e",
+  Chairwoman: "président·e",
+  "Vice Chair": "vice-président·e",
+  "Vice Chairman": "vice-président·e",
+  Ranking: "chef de l'opposition",
+  "Ex Officio": "membre d'office",
+};
+
+function AuCongres({ ev }) {
+  const { donnees } = useApp();
+  const elus = donnees.elus;
+  const info = (ev.source === "chambre_ptr" || ev.source === "senat_ptr") && elus?.par_elu?.[ev.data?.elu];
+  if (!info) return null;
+  return (
+    <>
+      <h3 className="section">Au Congrès</h3>
+      <div className="carte liste congres">
+        <div className={info.chef ? "congres-chef est-chef" : "congres-chef"}>
+          {info.chef ? (
+            <>
+              <strong>Chef du Congrès</strong> : {info.chef.poste} ({info.chef.titre}). Ses achats comptent double dans le score.
+            </>
+          ) : (
+            <>Pas un des 12 chefs du Congrès.</>
+          )}
+        </div>
+        {info.comites.map((c) => (
+          <div key={c.nom} className="transaction">
+            <span className="transaction-qui">{c.nom}</span>
+            {c.role && <span className="transaction-montant">{ROLES_COMITE[c.role] ?? c.role}</span>}
+          </div>
+        ))}
+      </div>
+      {info.votes_hr7008?.length > 0 && (
+        <>
+          <h3 className="section">Ses votes sur H.R. 7008</h3>
+          <div className="carte liste votes-elu">
+            {info.votes_hr7008.map((v) => (
+              <div key={`${v.chambre}${v.numero}`} className="transaction">
+                <span className="transaction-qui">
+                  {dateCourte(v.date)} · {v.sujet}
+                </span>
+                <span className="transaction-montant">{v.vote_fr}</span>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+      <p className="congres-source">
+        {info.nom_officiel} · listes officielles de la Chambre et du Sénat{elus.listes_lues ? `, lues ${ilYa(elus.listes_lues)}` : ""}
+      </p>
+    </>
+  );
+}
+
+function CarteProjet() {
+  const { donnees } = useApp();
+  const p = donnees.elus?.projet;
+  if (!p) return null;
+  return (
+    <a className="carte carte-projet presse" href={p.url} target="_blank" rel="noopener noreferrer">
+      <span className="carte-projet-haut">
+        <Icone nom="capitole" taille={18} epaisseur={2} />
+        Projet de loi suivi · {dateCourte(p.date)}
+      </span>
+      <span className="carte-projet-titre">H.R. 7008 : interdire aux élus d'acheter des actions</span>
+      <span className="carte-projet-etape">{majuscule(p.etape)}</span>
+      {p.votes.map((v) => (
+        <span key={`${v.chambre}${v.numero}`} className="carte-projet-vote">
+          {dateCourte(v.date)} · {majuscule(v.phrase)}, {v.oui} pour, {v.non} contre
+        </span>
+      ))}
+      <span className="carte-projet-pied">
+        Source officielle : govinfo.gov
+        <Icone nom="externe" taille={13} epaisseur={2.2} />
+      </span>
+    </a>
   );
 }
 
@@ -1278,6 +1377,7 @@ function Fil({ filtre: filtreChoisi, setFiltre, recherche, setRecherche }) {
           </button>
         ))}
       </div>
+      {filtre === "politiciens" && !recherche && <CarteProjet />}
       {liste.length === 0 ? (
         <Vide
           icone={recherche ? "loupe" : "radar"}
@@ -1905,6 +2005,18 @@ input { font: inherit; color: var(--texte); }
 .transaction + .transaction::before { content: ""; position: absolute; top: 0; left: 16px; right: 0; height: 1px; background: var(--ligne); transform: scaleY(.5); }
 .transaction-qui { color: var(--texte-2); min-width: 0; }
 .transaction-montant { color: var(--texte); font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.congres-chef { padding: 11px 16px; font-size: .9375rem; color: var(--texte-2); }
+.congres-source { color: var(--texte-3); font-size: .75rem; margin: 8px 4px 0; line-height: 1.5; }
+.congres-chef + .transaction::before { content: ""; position: absolute; top: 0; left: 16px; right: 0; height: 1px; background: var(--ligne); transform: scaleY(.5); }
+.congres-chef.est-chef { color: var(--texte); background: color-mix(in srgb, var(--violet) 14%, transparent); }
+.congres .transaction-qui { overflow-wrap: anywhere; }
+.carte-projet { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; margin: 0 0 6px; color: var(--texte);
+  border-color: color-mix(in srgb, var(--violet) 40%, var(--ligne)); }
+.carte-projet-haut { display: flex; align-items: center; gap: 6px; color: var(--violet); font-size: .8125rem; font-weight: 600; }
+.carte-projet-titre { font-size: 1.0625rem; font-weight: 700; letter-spacing: -.01em; }
+.carte-projet-etape { font-size: .9375rem; font-weight: 600; }
+.carte-projet-vote { color: var(--texte-2); font-size: .8125rem; line-height: 1.4; }
+.carte-projet-pied { display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; color: var(--accent); font-size: .8125rem; font-weight: 500; }
 .detail-note { display: flex; gap: 8px; align-items: flex-start; margin: 12px 0 0; padding: 10px 12px; border-radius: 12px; font-size: .875rem;
   background: color-mix(in srgb, var(--jaune) 14%, transparent); color: var(--jaune); }
 .detail-actions { display: grid; grid-template-columns: 1fr auto; gap: 10px; margin-top: 20px; }

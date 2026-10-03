@@ -21,7 +21,7 @@ from zoneinfo import ZoneInfo
 
 from .registry import SOURCES
 
-VERSION = "score-3"
+VERSION = "score-4"
 DEMI_VIE = 30
 DEMI_VIE_FONDS = 60  # le 13F arrive jusqu'à 45 jours après la fin du trimestre
 AGE_MAX = 90
@@ -61,7 +61,9 @@ ETUDES = {
                          "https://conference.nber.org/confer/2008/bff08/polk.pdf"),
     "eggers_hainmueller": ("Eggers et Hainmueller (2013)", "Les élus du Congrès ne battent pas le marché.",
                            "https://andy.egge.rs/papers/Eggmueller_CapitolLosses.pdf"),
-    "wei_zhou": ("Wei et Zhou (2025)", "Les chefs du Congrès battent le marché après leur nomination.",
+    "wei_zhou": ("Wei et Zhou (2025)",
+                 "Après leur nomination, les chefs du Congrès battent leurs pairs de 47 points de pourcentage par an ; "
+                 "leurs ventes précèdent des mesures des régulateurs.",
                  "https://www.nber.org/papers/w34524"),
     "sarkar_de_jong": ("Sarkar et de Jong (2006)",
                        "Approbation finale de la FDA : +0,35 % le jour même ; le marché l'avait surtout déjà prévue.",
@@ -121,8 +123,19 @@ REGLES = {
     "achat_elu": {
         "famille": "elus", "points": 1.0, "libelle": "Un élu du Congrès achète (actions ou options d'achat)",
         "details": ["Les études se contredisent : poids faible",
-                    "Bonus pour les chefs du Congrès : plus tard, avec la liste officielle des chefs (lot 3b)"],
+                    "Les chefs du Congrès ont leur propre règle, plus forte"],
         "etudes": ["eggers_hainmueller", "wei_zhou"]},
+    "achat_chef": {
+        "famille": "elus", "points": 2.0, "libelle": "Un chef du Congrès achète (actions ou options d'achat)",
+        "details": ["Les 12 postes de l'étude : président de la Chambre, chefs de parti, whips, présidents de conférence "
+                    "ou de caucus, selon les listes officielles actuelles de la Chambre et du Sénat",
+                    "Le double d'un élu ordinaire : les élus ordinaires ne battent pas le marché, les chefs battent "
+                    "leurs pairs"],
+        "etudes": ["wei_zhou", "eggers_hainmueller"]},
+    "vente_chef": {
+        "famille": "elus", "points": -1.0, "libelle": "Un chef du Congrès vend des actions",
+        "details": ["Les ventes des chefs précèdent des mesures des régulateurs ; celles des autres élus ne disent rien"],
+        "etudes": ["wei_zhou"]},
     "fda": {
         "famille": "fda", "points": 0.5, "libelle": "La FDA approuve un nouveau médicament (nouvelle molécule)",
         "details": ["Le marché a surtout prévu l'approbation avant qu'elle arrive : poids très faible"],
@@ -231,10 +244,11 @@ def facteurs_role(roles: list[str]) -> list:
     return []
 
 
-def evaluer(ev: dict, emissions: frozenset = frozenset()) -> list[Apport]:
+def evaluer(ev: dict, emissions: frozenset = frozenset(), chefs: frozenset = frozenset()) -> list[Apport]:
     """Les apports d'une info, un par compagnie visée.
 
     `emissions` : (symbole, date, prix) des achats déclarés lors d'une émission (voir achats_d_emission).
+    `chefs` : les élus (nom écrit dans leur rapport) qui sont chefs du Congrès selon les listes officielles.
     """
     s, k, d, symboles = ev["source"], ev["kind"], ev.get("data") or {}, ev.get("tickers") or []
 
@@ -274,7 +288,10 @@ def evaluer(ev: dict, emissions: frozenset = frozenset()) -> list[Apport]:
     if s == "sec_13f":
         return regle("fonds_13f") if ev.get("direction", 0) > 0 else contexte("fonds_vente")
     if s in ("chambre_ptr", "senat_ptr"):
-        return regle("achat_elu") if ev.get("direction", 0) > 0 else contexte("elu_vente")
+        chef = d.get("elu") in chefs
+        if ev.get("direction", 0) > 0:
+            return regle("achat_chef" if chef else "achat_elu")
+        return regle("vente_chef") if chef and k == "vente_elu" else contexte("elu_vente")
     if s == "fda":
         return regle("fda")
     if s == "nhtsa":
@@ -355,10 +372,12 @@ def _infos(a: Apport, compte: bool) -> dict:
 
 
 def calculer(evenements: list[dict], maintenant: datetime, precedent: dict | None = None, symboles=None,
-             fonds: set[str] | frozenset = frozenset()) -> dict:
-    """`fonds` : symboles des fonds enregistrés selon leur fiche SEC (voir emetteurs.py) : 0 point, contexte seulement."""
+             fonds: set[str] | frozenset = frozenset(), chefs: set[str] | frozenset = frozenset()) -> dict:
+    """`fonds` : symboles des fonds enregistrés selon leur fiche SEC (voir emetteurs.py) : 0 point, contexte seulement.
+    `chefs` : noms des élus chefs du Congrès (voir congres.relier_elus)."""
     jour = jour_de_calcul(maintenant)
     emissions = achats_d_emission(evenements)
+    chefs = frozenset(chefs)
     par_symbole: dict[str, list[Apport]] = defaultdict(list)
     for ev in evenements:
         source = SOURCES.get(ev["source"])
@@ -367,7 +386,7 @@ def calculer(evenements: list[dict], maintenant: datetime, precedent: dict | Non
         age = (jour - date.fromisoformat(ev["published_on"])).days
         if age > AGE_MAX:
             continue
-        for a in evaluer(ev, emissions):
+        for a in evaluer(ev, emissions, chefs):
             a.age = max(age, 0)
             if a.regle and a.symbole in fonds:
                 a.regle, a.pourquoi, a.facteurs = None, SANS_POINTS["fonds"], []

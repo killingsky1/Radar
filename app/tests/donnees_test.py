@@ -36,6 +36,7 @@ def faux(ctx):
            "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/test.pdf", occ=jour(20), tickers=["MSFT"],
            amount_min=15001.0, amount_max=50000.0, entities=["Élu·e (exemple)", "MICROSOFT CORP"], direction=1,
            data={"lecture_complete": True, "recoupements": {"numero": True, "nom": True}, "nom_sec": "MICROSOFT CORP",
+                 "elu": "Élu·e (exemple)", "circonscription": "ZZ01",
                  "transactions": [{"proprietaire": "SP", "actif": "Microsoft Corporation - Common Stock (MSFT) [ST]",
                                    "date": jour(20), "montant": "$15,001 - $50,000", "partielle": False}]}),
         ev(6, "contrats_ca_10k", "canada", "contrat", "contrat de fusils pour les Forces armées canadiennes", jour(2),
@@ -76,6 +77,26 @@ def faux(ctx):
 
 def sans_amd(ctx):
     return [e for e in faux(ctx) if e.tickers[:1] != ["AMD"]]
+
+# Congrès : le VRAI statut de H.R. 7008 et ses VRAIS votes (fichiers officiels gardés pour les tests du robot),
+# plus une personne élue fictive (« Élu·e Exemple », circonscription ZZ01) et ses votes fictifs.
+import gzip  # noqa: E402
+from radar.collecteurs import congres as cg  # noqa: E402
+FC = Path(__file__).resolve().parents[2] / "robot" / "tests" / "fixtures" / "congres"
+def lu(nom): return gzip.decompress((FC / nom).read_bytes())
+projet = cg.lire_projet(lu("BILLSTATUS-119hr7008.xml.gz"))
+votes = {}
+for info, nom in zip(projet["votes"], ("roll279.xml.gz", "roll280.xml.gz", "vote_119_2_00253.xml.gz")):
+    v = (cg.lire_vote_chambre if info["chambre"] == "House" else cg.lire_vote_senat)(lu(nom))
+    votes[f"{v['chambre'][0]}{info['numero']}-{v['date'][:4]}"] = {**v, "numero": info["numero"], "url": info["url"]}
+votes["H279-2026"]["votes"]["Z000001"], votes["H280-2026"]["votes"]["Z000001"] = "Nay", "Yea"
+cg._ecrire(cg.chemin_projet(sys.argv[1]), {**projet, "lu": datetime.now(timezone.utc).isoformat()})
+cg._ecrire(cg.chemin_votes(sys.argv[1]), votes)
+cg._ecrire(cg.chemin_congres(sys.argv[1]), {
+    "chambre": {"ZZ01": {"nom": "Élu·e Exemple", "nom_famille": "Exemple", "bioguide": "Z000001", "parti": "I",
+                         "comites": [{"nom": "Committee on Financial Services (exemple)", "role": "Chair"},
+                                     {"nom": "Committee on Agriculture (exemple)", "role": None}]}},
+    "senat": {}, "chefs": [], "lu": datetime.now(timezone.utc).isoformat()})
 
 # Les sources branchées dans le vrai robot répondent « rien de neuf » ; le faux lecteur fournit les infos TEST.
 from radar.collecteurs import COLLECTEURS  # noqa: E402
