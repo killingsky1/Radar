@@ -5,12 +5,15 @@ import pytest
 from radar.models import Confirmation, Evenement, empreinte
 
 AUJOURD_HUI = date(2026, 10, 2)
+# Une source officielle de la SEC SANS contrôles propres (sinon ses contrôles s'ajoutent aux tests génériques).
+# À changer si cette source reçoit un jour son lecteur et ses contrôles.
+SOURCE_GENERIQUE = "sec_blocage"
 
 
 def bonne_info(**changements) -> Evenement:
     """Une info réaliste qui doit passer tous les contrôles."""
     valeurs = dict(
-        source="sec_poursuites",  # une source SANS contrôles propres (sinon ses contrôles s'ajoutent)
+        source=SOURCE_GENERIQUE,
         official_id="0001234567-26-000001",
         category="compagnies",
         kind="achat_initie",

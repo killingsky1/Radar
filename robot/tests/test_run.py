@@ -1,7 +1,7 @@
 import json
 from datetime import datetime, timezone
 
-from conftest import bonne_info
+from conftest import SOURCE_GENERIQUE, bonne_info
 from radar.run import executer, passage_auto
 
 MAINTENANT = datetime(2026, 10, 2, 16, 37, tzinfo=timezone.utc)
@@ -20,8 +20,8 @@ def test_passage_complet(tmp_path):
     assert rapport["sec_form4"]["ok"] is True
 
     app = tmp_path / "app"
-    assert [e["id"] for e in _json(app / "fil.json")] == ["sec_poursuites:0001234567-26-000001"]
-    assert [e["id"] for e in _json(app / "a_verifier.json")] == ["sec_poursuites:0001234567-26-000099"]
+    assert [e["id"] for e in _json(app / "fil.json")] == [f"{SOURCE_GENERIQUE}:0001234567-26-000001"]
+    assert [e["id"] for e in _json(app / "a_verifier.json")] == [f"{SOURCE_GENERIQUE}:0001234567-26-000099"]
 
     sources = {s["id"]: s for s in _json(app / "sources.json")}
     assert sources["sec_form4"]["statut"] == "ok"
