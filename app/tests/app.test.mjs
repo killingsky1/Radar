@@ -90,10 +90,19 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     await p.reload(); await p.waitForSelector(".tuiles");
     assert.equal(await p.locator(".ligne.suggestion .nouveau").count(), 0);
   });
-  await verifier("Fiche AMD : lobbying (total, firme incluse, sujets, 2 rapports, phrase du Sénat)", async () => {
-    await p.locator(".ligne.suggestion", { hasText: "AMD" }).click(); await p.waitForTimeout(250);
-    const total = (await p.locator(".lobbying-total").innerText()).replace(/\u00a0|\u202f/g, " ");
-    assert.ok(total.includes("1,23") && total.includes("M$"), total);
+  // Chaque test de fiche revient à l'accueil même s'il échoue (sinon les suivants échouent aussi).
+  const fiche = async (symbole, fn, baisse = false) => {
+    if (baisse) { await p.locator(".alerte-baisse").click(); await p.waitForTimeout(250); }
+    await p.locator(".ligne.suggestion", { hasText: symbole }).click(); await p.waitForTimeout(250);
+    try { await fn(); } finally {
+      await p.locator(".retour").click(); await p.waitForTimeout(200);
+      if (baisse) { await p.locator(".retour").click(); await p.waitForTimeout(200); }
+    }
+  };
+  await verifier("Fiche AMD : lobbying (total, firme incluse, sujets, 2 rapports, phrase du Sénat)", () => fiche("AMD", async () => {
+    // Le format compact varie selon la version de Chrome (« 1,23 M$ US » ou « 1,23 M $ US ») : on compare sans espaces
+    const total = (await p.locator(".lobbying-total").innerText()).replace(/\s/g, "");
+    assert.ok(total.includes("1,23M$US"), total);
     const t = (await p.locator(".lobbying").innerText()).replace(/\u00a0|\u202f/g, " ");
     assert.ok(t.includes("Dépenses déclarées par la compagnie elle-même : elles incluent ce qu'elle paie à 1 firme de lobbying"), t);
     assert.ok(t.includes("Sujets : Commerce (intérieur et extérieur) · Fiscalité (impôts)"), t);
@@ -101,20 +110,14 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     assert.ok((await p.locator(".lobbying .transaction").first().innerText()).includes("La compagnie elle-même"));
     const pied = await p.locator(".congres-source").last().innerText();
     assert.ok(pied.includes("Senate Office of Public Records cannot vouch for the data") && pied.includes("Lu sur LDA.gov le"), pied);
-    await p.locator(".retour").click(); await p.waitForTimeout(200);
-  });
-  await verifier("Fiche NVDA : aucun rapport au nom exact (et pas « 0 $ »)", async () => {
-    await p.locator(".ligne.suggestion", { hasText: "NVDA" }).click(); await p.waitForTimeout(250);
+  }));
+  await verifier("Fiche NVDA : aucun rapport au nom exact (et pas « 0 $ »)", () => fiche("NVDA", async () => {
     const t = await p.locator(".lobbying").innerText();
     assert.ok(t.includes("Aucun rapport de lobbying au nom exact « NVIDIA CORP »") && !t.includes("$"), t);
-    await p.locator(".retour").click(); await p.waitForTimeout(200);
-  });
-  await verifier("Fiche XMPL : recherche trop large, pas vérifié", async () => {
-    await p.locator(".alerte-baisse").click(); await p.waitForTimeout(250);
-    await p.locator(".ligne.suggestion", { hasText: "XMPL" }).click(); await p.waitForTimeout(250);
+  }));
+  await verifier("Fiche XMPL : recherche trop large, pas vérifié", () => fiche("XMPL", async () => {
     assert.ok((await p.locator(".lobbying").innerText()).includes("Recherche trop large (« EXEMPLE ») : pas vérifié."));
-    await p.locator(".retour").click(); await p.waitForTimeout(200); await p.locator(".retour").click(); await p.waitForTimeout(200);
-  });
+  }, true));
   await verifier("Sans fichier du lobbying : la fiche s'affiche sans la section", async () => {
     const avant = erreurs.length;
     await p.route("**/data/app/lobbying.json", (route) => route.fulfill({ status: 404, body: "" }));
