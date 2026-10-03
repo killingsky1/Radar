@@ -5,7 +5,7 @@ Vérifiées au hasard : 94 — identiques : 94
 
 ## maison_blanche
 - produites : 21 {'officiel': 18, 'confirme': 3, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-09-29', 'dernier_succes': '2026-10-03T00:14:24+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:14:24+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-09-29', 'dernier_succes': '2026-10-03T00:33:07+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:33:07+00:00'}
 - OK  Décret présidentiel : Accelerating Access To Veterans’ Benefits And Employment Opportunities
 - OK  Décret présidentiel : Supporting America’s Ranchers
 - OK  Proclamation présidentielle : Restriction on Entry of Certain Nonimmigrant Workers
@@ -21,7 +21,7 @@ Vérifiées au hasard : 94 — identiques : 94
 
 ## fed
 - produites : 4 {'officiel': 4, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 3}, 'dernier_contenu': '2026-09-16', 'dernier_succes': '2026-10-03T00:14:24+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:14:24+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 3}, 'dernier_contenu': '2026-09-16', 'dernier_succes': '2026-10-03T00:33:07+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:33:07+00:00'}
 - OK  Fed : taux directeur relevé de 0,25 point, entre 3,75 % et 4 % (vote : 12 pour, 0 contre)
 - OK  Fed : taux directeur maintenu entre 3,5 % et 3,75 % (vote : 9 pour, 3 contre)
 - OK  Fed : taux directeur maintenu entre 3,5 % et 3,75 % (vote : 12 pour, 0 contre)
@@ -29,14 +29,14 @@ Vérifiées au hasard : 94 — identiques : 94
 
 ## banque_canada
 - produites : 3 {'officiel': 3, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 2}, 'dernier_contenu': '2026-09-02', 'dernier_succes': '2026-10-03T00:14:24+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:14:24+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 2}, 'dernier_contenu': '2026-09-02', 'dernier_succes': '2026-10-03T00:33:07+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:33:07+00:00'}
 - OK  Banque du Canada : taux directeur maintenu à 2,25 %
 - OK  Banque du Canada : taux directeur maintenu à 2,25 %
 - OK  Banque du Canada : taux directeur maintenu à 2,25 %
 
 ## sec_form144
 - produites : 24 {'officiel': 23, 'confirme': 0, 'a_verifier': 1}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T00:14:24+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:14:24+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T00:33:07+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:33:07+00:00'}
 - OK  Jun Peng (Director & Officer) prévoit vendre 3 000 000 actions de Pony AI Inc.
 - OK  Insight Venture Partners (Cayman) X, L.P. (actionnaire de 10 %) prévoit vendre 399 338 actions de Hinge Health
 - OK  MFA Global S.a.r.l. (actionnaire de 10 %) prévoit vendre 2 638 171 actions de Target Hospitality Corp.
@@ -52,11 +52,11 @@ Vérifiées au hasard : 94 — identiques : 94
 
 ## sec_offres
 - produites : 0 {'officiel': 0, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_succes': '2026-10-03T00:14:24+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:14:24+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_succes': '2026-10-03T00:33:07+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:33:07+00:00'}
 
 ## cftc_cot
 - produites : 8 {'officiel': 8, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T00:14:24+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:14:24+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T00:33:07+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:33:07+00:00'}
 - OK  Bitcoin (CME) : les gros spéculateurs sont acheteurs nets de 2 465 contrats (−291 en une semaine)
 - OK  Obligations américaines 10 ans : les gros spéculateurs sont vendeurs nets de 900 615 contrats (−88 863 en une 
 - OK  Nasdaq-100 (E-mini) : les gros spéculateurs sont acheteurs nets de 51 247 contrats (−4 903 en une semaine)
@@ -68,7 +68,7 @@ Vérifiées au hasard : 94 — identiques : 94
 
 ## registre_federal
 - produites : 12 {'officiel': 9, 'confirme': 3, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T00:14:24+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:14:24+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T00:33:07+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:33:07+00:00'}
 - OK  Sanctions (Trésor, OFAC) : Notice of OFAC Sanctions Action
 - OK  Sanctions (Trésor, OFAC) : Notice of OFAC Sanctions Action
 - OK  Décret présidentiel : Streamlining Access to Government Services Through America.gov
@@ -84,7 +84,7 @@ Vérifiées au hasard : 94 — identiques : 94
 
 ## ventes_armes
 - produites : 22 {'officiel': 22, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-09-22', 'dernier_succes': '2026-10-03T00:14:24+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:14:24+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-09-22', 'dernier_succes': '2026-10-03T00:33:07+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:33:07+00:00'}
 - OK  Vente d'armes à l'étranger : Géorgie (pays)
 - OK  Vente d'armes à l'étranger : Norvège — fournisseur : Lockheed Martin, Sikorsky
 - OK  Vente d'armes à l'étranger : Arabie saoudite — fournisseur : BAE Systems
@@ -100,7 +100,7 @@ Vérifiées au hasard : 94 — identiques : 94
 
 ## senat_ptr
 - produites : 9 {'officiel': 9, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T00:14:24+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:14:24+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T00:33:07+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:33:07+00:00'}
 - OK  A. Mitchell McConnell Jr. (Sénat) achète WFC — conjoint·e
 - OK  John Boozman (Sénat) vend JNJ — compte conjoint
 - OK  John Boozman (Sénat) achète FSLR — compte conjoint
@@ -113,7 +113,7 @@ Vérifiées au hasard : 94 — identiques : 94
 
 ## chambre_ptr
 - produites : 80 {'officiel': 79, 'confirme': 0, 'a_verifier': 1}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T00:14:24+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:14:24+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T00:33:07+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:33:07+00:00'}
 - OK  Kevin Hern (Chambre, OK01) vend OKE (2 transactions) — compte conjoint
 - OK  David J. Taylor (Chambre, OH02) achète PG
 - OK  Kevin Hern (Chambre, OK01) vend NEE (2 transactions) — compte conjoint
@@ -129,14 +129,14 @@ Vérifiées au hasard : 94 — identiques : 94
 
 ## nouvelles_defense_ca
 - produites : 3 {'officiel': 3, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T00:14:24+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:14:24+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T00:33:07+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:33:07+00:00'}
 - OK  Le gouvernement du Canada franchit une nouvelle étape en vue de doter l’Aviation royale canadienne d’une capac
 - OK  Le gouvernement du Canada commence la construction d’une nouvelle installation de chauffage central à la 5e Es
 - OK  L’Aviation royale canadienne s’associe au Fanshawe College pour offrir de l’instruction
 
 ## nouvelles_eco_ca
 - produites : 7 {'officiel': 7, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T00:14:24+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:14:24+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T00:33:07+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T00:33:07+00:00'}
 - OK  Le gouvernement du Canada présente la nouvelle Mégadéduction à la productivité pour aider les entreprises à in
 - OK  Le gouvernement du Canada investit dans la création de 10 000 placements professionnels liés à l’IA pour de je
 - OK  La Régie approuve le règlement de Trans Mountain établissant un nouveau cadre pour les droits
