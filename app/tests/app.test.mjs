@@ -21,6 +21,8 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
   const reglages = async () => { await onglet("Réglages"); };
   const filTout = async () => { await onglet("Fil"); await p.locator(".puce", { hasText: "Tout" }).click(); await p.waitForTimeout(150); };
   const fermer = async () => { await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400); };
+  // Les chiffres défilent 0,65 s : on lit la valeur finale (data-final="1")
+  const chiffresFinis = () => p.waitForFunction(() => [...document.querySelectorAll("[data-defile]")].every((e) => e.dataset.final === "1"));
 
   await p.goto(ADRESSE);
   await p.evaluate(() => localStorage.clear());
@@ -34,6 +36,7 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
 
   await verifier("Thème sombre par défaut", async () => assert.equal(await p.evaluate(() => document.documentElement.dataset.theme), "sombre"));
   await verifier("Accueil : compteurs du robot (3 publiées aujourd'hui, 1 confirmée, 1 à vérifier)", async () => {
+    await chiffresFinis();
     const v = await p.locator(".tuile-valeur").allInnerTexts();
     assert.deepEqual(v.slice(0, 3), ["3", "1", "1"]);
     assert.ok((await p.locator(".tuile-label").first().innerText()).startsWith("Publiées le"));
@@ -52,6 +55,30 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       assert.ok(/^\d+,\d\/10$/.test(n) && parseFloat(n.replace(",", ".")) >= 7, n);
     }
     assert.equal(await l.nth(1).locator(".recent").count(), 1); // NVDA : déposé aujourd'hui
+  });
+  await verifier("Radar animé : 3 points (AMD et NVDA en hausse, XMPL en baisse), plus près du centre = note plus forte", async () => {
+    const cibles = p.locator(".radar-cible");
+    assert.equal(await cibles.count(), 3);
+    const etiquettes = await p.locator(".radar-etiquette").allInnerTexts();
+    assert.deepEqual([...etiquettes].sort(), ["AMD", "NVDA", "XMPL"]);
+    assert.equal(await p.locator(".radar-cible.baisse").count(), 1);
+    assert.ok((await p.locator(".radar-cible.baisse").getAttribute("aria-label")).startsWith("XMPL, à la baisse, note 0,0 sur 10"));
+    // Le balayage tourne et chaque point s'allume (animations CSS actives)
+    assert.equal(await p.locator(".radar-balai").evaluate((e) => getComputedStyle(e).animationName), "balayage");
+    // Distance au centre : la note la plus forte (la plus loin de 5) est la plus proche du centre
+    const pos = await cibles.evaluateAll((els) => els.map((e) => [e.getAttribute("aria-label"), Math.hypot(parseFloat(e.style.left) - 50, parseFloat(e.style.top) - 50)]));
+    const note = (l) => Math.abs(parseFloat(l.match(/note (\d+,\d)/)[1].replace(",", ".")) - 5);
+    const tries = [...pos].sort((a, b) => note(b[0]) - note(a[0]));
+    assert.ok(tries.every((x, i) => i === 0 || x[1] >= tries[i - 1][1] - 0.01), JSON.stringify(pos));
+  });
+  await verifier("Radar : toucher un point ouvre la fiche, avec la note dans un anneau", async () => {
+    await p.locator(".radar-cible", { hasText: "NVDA" }).click(); await p.waitForTimeout(250);
+    assert.equal(await p.locator(".grand-titre h1").innerText(), "NVDA");
+    await chiffresFinis();
+    const n = (await p.locator(".fiche-score").innerText()).replace(/\s+/g, "");
+    assert.ok(/^\d+,\d\/10$/.test(n), n);
+    assert.equal(await p.locator(".anneau").getAttribute("aria-label"), `Note ${n.replace("/10", "")} sur 10`);
+    await p.locator(".retour").click(); await p.waitForTimeout(200);
   });
   await verifier("Accueil : 1 à surveiller à la baisse", async () => {
     assert.ok((await p.locator(".alerte-baisse").innerText()).includes("1 à surveiller à la baisse"));
@@ -81,9 +108,10 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     assert.ok((await p.locator(".ecran").innerText()).includes("Pas un conseil financier"));
   });
   await verifier("Baisse : Exemple Corp., faillite + vente du PDG, bonus 2 familles", async () => {
-    await onglet("Accueil"); await p.locator(".alerte-baisse").click(); await p.waitForTimeout(250);
+    await onglet("Radar"); await p.locator(".alerte-baisse").click(); await p.waitForTimeout(250);
     assert.equal(await p.locator(".segment.actif").innerText(), "Baisse · 1");
     await p.locator(".ligne.suggestion", { hasText: "XMPL" }).click(); await p.waitForTimeout(250);
+    await chiffresFinis();
     const t = (await p.locator(".calcul").innerText()).replace(/\u00a0/g, " ");
     // Infos TEST datées d'hier (jour UTC) ; le score compte les jours à l'heure de Toronto : 0 ou 1 jour selon l'heure
     const age = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Toronto" }).format(new Date()) === new Date().toISOString().slice(0, 10) ? 1 : 0;
@@ -302,7 +330,7 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     await fermer();
   });
   await verifier("Argent : onglet, thermomètre des dirigeants, lignes du plus gros montant au plus petit", async () => {
-    await onglet("Argent"); await p.waitForSelector(".ligne.argent");
+    await onglet("Argent"); await p.waitForSelector(".ligne.argent"); await chiffresFinis();
     assert.equal(await p.locator(".grand-titre h1").innerText(), "Argent");
     // Sans espaces : selon la version du navigateur, « 2 G$ US » ou « 2 G $ US » (même montant)
     const sans = (t) => t.replace(/\s+/g, "");
@@ -342,6 +370,14 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       await filTout(); // les tests suivants partent du fil, même en cas d'échec
     }
   });
+  await verifier("Fil : tri sur place, plus gros montant d'abord (44 G$ du Trésor), puis retour au plus récent", async () => {
+    try {
+      await p.locator(".segment", { hasText: "Plus gros montant" }).click(); await p.waitForTimeout(200);
+      assert.ok((await p.locator(".ligne").first().innerText()).includes("adjudication de 44 G$"));
+    } finally {
+      await p.locator(".segment", { hasText: "Plus récent" }).click(); await p.waitForTimeout(200);
+    }
+  });
   await verifier("Fil : une vente déclarée aussi par une entité liée n'apparaît qu'une fois, avec son nom", async () => {
     assert.equal(await p.locator(".ligne", { hasText: "vend 100 000 actions" }).count(), 1);
     await p.locator(".ligne", { hasText: "vend 100 000 actions" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
@@ -355,7 +391,7 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     await fermer();
   });
   await verifier("Tuiles des catégories : un nombre partout (toutes branchées)", async () => {
-    await onglet("Accueil"); assert.equal(await p.locator(".cat-phase").count(), 0); assert.equal(await p.locator(".cat-nombre").count(), 6);
+    await onglet("Radar"); assert.equal(await p.locator(".cat-phase").count(), 0); assert.equal(await p.locator(".cat-nombre").count(), 6);
     await onglet("Fil");
   });
   await verifier("Étoile dans le détail : ajoute AAPL aux favoris", async () => {
@@ -424,6 +460,19 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     await p.reload(); await p.waitForSelector(".onglets"); await p.waitForTimeout(500);
     await ctx.setOffline(true); await p.reload(); await p.waitForSelector(".onglets", { timeout: 5000 });
     assert.ok(await p.locator(".grand-titre h1").isVisible()); await ctx.setOffline(false);
+  });
+  await verifier("Réglage iPhone « Réduire les animations » : radar immobile, chiffres finaux tout de suite", async () => {
+    const calme = await b.newContext({ viewport: { width: 390, height: 844 }, locale: "fr-CA", reducedMotion: "reduce" });
+    try {
+      const q = await calme.newPage();
+      await q.goto(ADRESSE); await q.waitForSelector(".radar-cible");
+      assert.equal(await q.locator(".radar-balai").evaluate((e) => getComputedStyle(e).animationName), "none");
+      assert.equal(await q.locator(".radar-marque").first().evaluate((e) => getComputedStyle(e).animationName), "none");
+      const finals = await q.locator("[data-defile]").evaluateAll((els) => els.map((e) => e.dataset.final));
+      assert.ok(finals.length >= 3 && finals.every((f) => f === "1"), finals.join(","));
+    } finally {
+      await calme.close();
+    }
   });
 
   console.log(res.join("\n"));

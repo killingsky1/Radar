@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.17.0";
+const VERSION = "0.18.0";
 
 // ---------- Constantes ----------
 
@@ -719,6 +719,130 @@ function RangeeLien({ icone, couleur, label, valeur, onClick, danger }) {
   );
 }
 
+// ---------- Animations (le réglage iPhone « Réduire les animations » les coupe) ----------
+
+function animationsReduites() {
+  return typeof window !== "undefined" && typeof window.matchMedia === "function" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+// Un nombre qui défile de 0 à sa valeur (0,65 s). data-final="1" quand il a fini (les tests attendent ce moment).
+function useDefile(cible, duree = 650) {
+  const reduit = animationsReduites();
+  const [etat, setEtat] = useState({ v: reduit ? cible : 0, fini: reduit });
+  useEffect(() => {
+    if (reduit || typeof cible !== "number" || !Number.isFinite(cible)) {
+      setEtat({ v: cible, fini: true });
+      return undefined;
+    }
+    let image;
+    let debut;
+    const pas = (t) => {
+      debut ??= t;
+      const k = Math.min((t - debut) / duree, 1);
+      if (k < 1) {
+        setEtat({ v: cible * (1 - (1 - k) ** 3), fini: false });
+        image = requestAnimationFrame(pas);
+      } else setEtat({ v: cible, fini: true });
+    };
+    image = requestAnimationFrame(pas);
+    return () => cancelAnimationFrame(image);
+  }, [cible, duree, reduit]);
+  return [etat.v, etat.fini];
+}
+
+function Defile({ valeur, format = (n) => nombre(n), className }) {
+  const [v, fini] = useDefile(valeur);
+  return (
+    <span className={className} data-defile="" data-final={fini ? "1" : "0"}>
+      {format(v)}
+    </span>
+  );
+}
+
+// La note sur 10 dans un anneau qui se remplit ; le chiffre défile.
+function AnneauNote({ valeur, baisse }) {
+  const r = 52;
+  const tour = 2 * Math.PI * r;
+  const reste = tour * (1 - Math.min(Math.max(valeur ?? 5, 0), 10) / 10);
+  return (
+    <div className="anneau" role="img" aria-label={`Note ${note(valeur)} sur 10`}>
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <circle className="anneau-fond" cx="60" cy="60" r={r} />
+        <circle className={baisse ? "anneau-valeur baisse" : "anneau-valeur hausse"} cx="60" cy="60" r={r} style={{ "--tour": tour, "--reste": reste }} />
+      </svg>
+      <span className="anneau-texte fiche-score">
+        <Defile valeur={valeur} format={note} className="fiche-score-chiffre" />
+        <small>/10</small>
+      </span>
+    </div>
+  );
+}
+
+// Le radar de l'accueil : les compagnies notées. Plus près du centre = note plus forte (loin de 5, le neutre).
+// Rond = hausse, losange = baisse (jamais la couleur seule), symbole écrit à côté ; toucher un point ouvre la fiche.
+// Angles : pas de 360/n, avec un saut pour que deux rangs qui se suivent ne soient pas voisins (étiquettes lisibles).
+const TOUR_RADAR = 4; // secondes par tour du balayage
+
+function pgcd(a, b) {
+  return b ? pgcd(b, a % b) : a;
+}
+
+function RadarSuggestions({ hausse, baisse }) {
+  const { ouvrirCompagnie } = useApp();
+  const points = [...hausse.slice(0, 8).map((s) => ({ s, sens: 1 })), ...baisse.slice(0, 3).map((s) => ({ s, sens: -1 }))];
+  const n = points.length;
+  const force = (x) => Math.round(Math.abs((x.note10 ?? 5) - 5) * 10) / 10;
+  const niveaux = [...new Set(points.map(({ s }) => force(s)))].sort((a, b) => b - a); // du plus fort au plus faible
+  let saut = Math.max(1, Math.round(n / 3));
+  while (n > 1 && pgcd(saut, n) !== 1) saut += 1;
+  return (
+    <div className="carte radar-carte">
+      <div className="radar" role="group" aria-label={`Radar : ${n} compagnies notées. Plus près du centre, note plus forte.`}>
+        <svg className="radar-grille" viewBox="0 0 100 100" aria-hidden="true">
+          {[12.5, 25, 37.5, 49.5].map((r) => (
+            <circle key={r} cx="50" cy="50" r={r} />
+          ))}
+          <path d="M50 .5V99.5M.5 50H99.5" />
+        </svg>
+        <div className="radar-balai" aria-hidden="true" />
+        {points.map(({ s, sens }, i) => {
+          // Distance au centre selon le RANG de force (|note − 5|) : les points ne se tassent pas, l'ordre reste exact,
+          // et deux notes égales sont à la même distance.
+          const niveau = niveaux.indexOf(force(s));
+          const rayon = 0.24 + (niveaux.length > 1 ? (0.66 * niveau) / (niveaux.length - 1) : 0.3);
+          const angle = (((i * saut) % n) * 360) / n;
+          const rad = (angle * Math.PI) / 180;
+          const x = 50 + 50 * rayon * Math.sin(rad);
+          const y = 50 - 50 * rayon * Math.cos(rad);
+          // Le symbole est écrit vers l'extérieur du radar, loin des points plus forts
+          const dx = Math.sin(rad) * 21;
+          const dy = -Math.cos(rad) * 15;
+          return (
+            <button
+              key={`${sens}${s.symbole}`}
+              type="button"
+              className={`radar-cible ${sens > 0 ? "hausse" : "baisse"}`}
+              style={{ left: `${x}%`, top: `${y}%`, "--delai": `${((angle / 360 - 1) * TOUR_RADAR).toFixed(2)}s` }}
+              onClick={() => ouvrirCompagnie(s.symbole)}
+              aria-label={`${s.symbole}, ${sens > 0 ? "à la hausse" : "à la baisse"}, note ${note(s.note10)} sur 10`}
+            >
+              <span className="radar-marque" />
+              <span className="radar-etiquette" style={{ transform: `translate(calc(-50% + ${dx.toFixed(1)}px), calc(-50% + ${dy.toFixed(1)}px))` }}>
+                {s.symbole}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+      <p className="radar-legende">
+        <span className="legende-marque hausse" /> Hausse
+        <span className="legende-marque baisse" /> Baisse
+        <span className="legende-texte">{fr("Plus près du centre : note plus forte. Touchez un point.")}</span>
+      </p>
+    </div>
+  );
+}
+
 function RadarAnime() {
   return (
     <div className="radar-anime" aria-hidden="true">
@@ -1302,9 +1426,7 @@ function EcranCompagnie({ retour }) {
     <Ecran titre={c.symbole} retour={retour}>
       <div className="carte fiche">
         <p className="fiche-nom">{c.nom}</p>
-        <p className={baisse ? "fiche-score t-rouge" : "fiche-score t-vert"}>
-          {note(c.note10)} <small>/10</small>
-        </p>
+        <AnneauNote valeur={c.note10} baisse={baisse} />
         <p className="fiche-points">{fr(`${pts(c.score)} points`)}</p>
         <p className="fiche-sens">
           {baisse ? "À surveiller à la baisse" : "À regarder à la hausse"}
@@ -1564,6 +1686,7 @@ function Accueil({ pousser, allerAuFil }) {
         </div>
       ) : (
         <>
+          <RadarSuggestions hausse={hausse} baisse={baisse} />
           <div className="section-ligne">
             <h2 className="section">À regarder aujourd'hui</h2>
             <button type="button" className="lien" onClick={() => ouvrirSuggestions("hausse")}>
@@ -1590,17 +1713,17 @@ function Accueil({ pousser, allerAuFil }) {
       <div className="tuiles">
         <button type="button" className="tuile presse" onClick={() => allerAuFil("tout")}>
           <Icone nom="eclair" taille={20} epaisseur={2} className="t-accent" />
-          <span className="tuile-valeur">{nouvelles}</span>
+          <Defile valeur={nouvelles} className="tuile-valeur" />
           <span className="tuile-label">{c?.dernier_jour ? `Publiées le ${dateCourte(c.dernier_jour)}` : "Nouvelles"}</span>
         </button>
         <button type="button" className="tuile presse" onClick={() => allerAuFil("tout")}>
           <Icone nom="double" taille={20} epaisseur={2.2} className="t-vert" />
-          <span className="tuile-valeur">{confirmees}</span>
+          <Defile valeur={confirmees} className="tuile-valeur" />
           <span className="tuile-label">Confirmées (30 j)</span>
         </button>
         <button type="button" className="tuile presse" onClick={() => pousser("a_verifier")}>
           <Icone nom="alerte" taille={20} epaisseur={2} className="t-jaune" />
-          <span className="tuile-valeur">{meta.a_verifier_3_mois ?? donnees.a_verifier.length}</span>
+          <Defile valeur={meta.a_verifier_3_mois ?? donnees.a_verifier.length} className="tuile-valeur" />
           <span className="tuile-label">À vérifier</span>
         </button>
         <button type="button" className="tuile presse" onClick={() => pousser("sources")}>
@@ -1661,7 +1784,7 @@ function EtatDonnees() {
 }
 
 function Fil({ filtre: filtreChoisi, setFiltre, recherche, setRecherche }) {
-  const { reglages } = useApp();
+  const { reglages, setReglages } = useApp();
   // Si la catégorie choisie a été cachée dans les réglages, on revient à « Tout ».
   const filtre = filtreChoisi !== "tout" && reglages.categories[filtreChoisi] === false ? "tout" : filtreChoisi;
   const liste = useVisibles({ filtre, recherche });
@@ -1684,6 +1807,7 @@ function Fil({ filtre: filtreChoisi, setFiltre, recherche, setRecherche }) {
           </button>
         ))}
       </div>
+      <Segments label="Trier par" valeur={reglages.tri} onChange={(v) => setReglages({ ...reglages, tri: v })} options={[["recent", "Plus récent"], ["montant", "Plus gros montant"]]} />
       {filtre === "politiciens" && !recherche && <CarteProjet />}
       {liste.length === 0 ? (
         <Vide
@@ -1794,10 +1918,16 @@ function Thermometre({ t }) {
       </div>
       <div className="thermo-chiffres">
         <span className="t-vert">
-          <b>{argentCourt(achats)}</b> achetés ({t.achats.nombre})
+          <b>
+            <Defile valeur={achats} format={(n) => argentCourt(n)} />
+          </b>{" "}
+          achetés ({t.achats.nombre})
         </span>
         <span className="t-rouge">
-          <b>{argentCourt(ventes)}</b> vendus ({t.ventes_libres.nombre})
+          <b>
+            <Defile valeur={ventes} format={(n) => argentCourt(n)} />
+          </b>{" "}
+          vendus ({t.ventes_libres.nombre})
         </span>
       </div>
       <p className="thermo-note">
@@ -2115,7 +2245,7 @@ function EcranVerification({ retour }) {
 // ---------- App ----------
 
 const ONGLETS = [
-  { id: "accueil", label: "Accueil", icone: "accueil" },
+  { id: "accueil", label: "Radar", icone: "radar" },
   { id: "argent", label: "Argent", icone: "billet" },
   { id: "fil", label: "Fil", icone: "fil" },
   { id: "favoris", label: "Favoris", icone: "etoile" },
@@ -2272,6 +2402,7 @@ const CSS = `
   --fond: #07090D; --fond-2: #0F121A; --carte: #12161F; --carte-2: #1A1F2B; --ligne: rgba(255,255,255,.07);
   --texte: #F3F5F9; --texte-2: #A1A9B8; --texte-3: #6B7385;
   --vert: #2BD9A0; --jaune: #F5B544; --rouge: #FF5C6C; --bleu: #4F8CFF; --gris: #5D6577; --violet: #A98BFF; --cyan: #29C5F6; --olive: #9BD45A;
+  --radar-hausse: #1DAA80; --radar-baisse: #EE4F5C; --ligne-radar: rgba(255,255,255,.13);
   --barre: rgba(12,15,21,.92); --ombre: 0 12px 40px rgba(0,0,0,.5); --segment: #2A3142; --inter-off: #2B3142;
   color-scheme: dark;
 }
@@ -2279,6 +2410,7 @@ const CSS = `
   --fond: #F2F3F7; --fond-2: #FFFFFF; --carte: #FFFFFF; --carte-2: #EEF0F5; --ligne: rgba(15,23,42,.08);
   --texte: #0B1220; --texte-2: #586274; --texte-3: #8D95A5;
   --vert: #0E9F74; --jaune: #B97509; --rouge: #E5484D; --bleu: #2F6BEA; --gris: #A3AAB8; --violet: #7A5AF0; --cyan: #0A93C4; --olive: #5A9618;
+  --radar-hausse: #0E9F74; --radar-baisse: #E5484D; --ligne-radar: rgba(15,23,42,.14);
   --barre: rgba(255,255,255,.92); --ombre: 0 12px 40px rgba(15,23,42,.14); --segment: #FFFFFF; --inter-off: #E1E4EA;
   color-scheme: light;
 }
@@ -2570,6 +2702,49 @@ input { font: inherit; color: var(--texte); }
 .etapes li { display: flex; align-items: center; gap: 12px; padding: 10px 0; font-size: 1rem; flex-wrap: wrap; }
 .etape-num { flex: none; width: 28px; height: 28px; border-radius: 14px; display: inline-flex; align-items: center; justify-content: center; background: var(--accent); color: #fff; font-weight: 700; font-size: .875rem; }
 .icone-inline { display: inline-flex; color: var(--accent); }
+
+/* Radar de l'accueil (couleurs validées pour les daltoniens avec la forme : rond = hausse, losange = baisse) */
+.radar-carte { padding: 18px 16px 12px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.radar { position: relative; width: min(100%, 300px); aspect-ratio: 1; border-radius: 50%; isolation: isolate;
+  background: radial-gradient(circle, color-mix(in srgb, var(--radar-hausse) 9%, transparent), transparent 72%); }
+.radar-grille { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: var(--ligne-radar); stroke-width: .35; }
+.radar-balai { position: absolute; inset: 0; border-radius: 50%; z-index: 0; pointer-events: none;
+  background: conic-gradient(from 0deg, transparent 0deg 285deg, color-mix(in srgb, var(--radar-hausse) 24%, transparent) 352deg, color-mix(in srgb, var(--radar-hausse) 55%, transparent) 360deg);
+  animation: balayage 4s linear infinite; will-change: transform; }
+@keyframes balayage { to { transform: rotate(360deg); } }
+.radar-cible { position: absolute; z-index: 1; width: 44px; height: 44px; margin: -22px 0 0 -22px; display: flex; align-items: center; justify-content: center; }
+.radar-marque { width: 10px; height: 10px; border-radius: 50%; color: var(--radar-hausse); background: currentColor; box-shadow: 0 0 0 2px var(--carte);
+  animation: eclat 4s linear infinite; animation-delay: var(--delai, 0s); }
+.radar-cible.baisse .radar-marque { color: var(--radar-baisse); border-radius: 2px; transform: rotate(45deg); }
+@keyframes eclat { 0% { opacity: 1; box-shadow: 0 0 0 2px var(--carte), 0 0 14px 4px currentColor; } 55%, 100% { opacity: .6; box-shadow: 0 0 0 2px var(--carte); } }
+.radar-etiquette { position: absolute; left: 50%; top: 50%; font-size: .6875rem; font-weight: 700; letter-spacing: .02em; color: var(--texte-2); white-space: nowrap; pointer-events: none; }
+.radar-legende { margin: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 6px; font-size: .75rem; color: var(--texte-2); }
+.legende-marque { display: inline-block; width: 8px; height: 8px; margin-left: 4px; border-radius: 50%; background: var(--radar-hausse); }
+.legende-marque.baisse { border-radius: 1px; transform: rotate(45deg); background: var(--radar-baisse); }
+.legende-texte { flex-basis: 100%; text-align: center; color: var(--texte-3); }
+
+/* Anneau de la note (fiche) */
+.anneau { position: relative; width: 132px; height: 132px; margin: 6px auto 0; }
+.anneau svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.anneau-fond { fill: none; stroke: var(--carte-2); stroke-width: 10; }
+.anneau-valeur { fill: none; stroke-width: 10; stroke-linecap: round; stroke-dasharray: var(--tour); stroke-dashoffset: var(--reste); animation: remplir .9s cubic-bezier(.2, .8, .2, 1) backwards; }
+.anneau-valeur.hausse { stroke: var(--radar-hausse); } .anneau-valeur.baisse { stroke: var(--radar-baisse); }
+@keyframes remplir { from { stroke-dashoffset: var(--tour); } }
+.anneau-texte { position: absolute; inset: 0; margin: 0; display: flex; align-items: center; justify-content: center; font-size: 2.25rem; font-weight: 800; letter-spacing: -.02em; font-variant-numeric: tabular-nums; color: var(--texte); }
+.anneau-texte small { align-self: center; margin: 10px 0 0 2px; font-size: .9375rem; font-weight: 600; color: var(--texte-2); letter-spacing: 0; }
+
+/* Listes qui glissent à l'arrivée (seulement au début : « backwards », l'effet de pression reste) */
+.carte.liste > * { animation: glisse .28s ease-out backwards; }
+.carte.liste > :nth-child(2) { animation-delay: .03s; } .carte.liste > :nth-child(3) { animation-delay: .06s; }
+.carte.liste > :nth-child(4) { animation-delay: .09s; } .carte.liste > :nth-child(5) { animation-delay: .12s; }
+.carte.liste > :nth-child(n+6) { animation-delay: .15s; }
+@keyframes glisse { from { opacity: 0; transform: translateY(6px); } }
+
+/* Réglage iPhone « Réduire les animations » : tout reste immobile */
+@media (prefers-reduced-motion: reduce) {
+  .radar-balai, .radar-marque, .anneau-valeur, .carte.liste > *, .radar-point { animation: none !important; }
+  .radar-balai { opacity: .4; transform: rotate(40deg); }
+}
 
 /* Argent */
 .argent { align-items: flex-start; }
