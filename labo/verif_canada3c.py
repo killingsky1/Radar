@@ -18,6 +18,7 @@ import re
 import sys
 import time
 import unicodedata
+import urllib.error
 import urllib.request
 import urllib.robotparser
 import xml.etree.ElementTree as ET
@@ -45,8 +46,17 @@ def lire(url):
     site = f"{urlparse(url).scheme}://{urlparse(url).netloc}"
     ua = UA_SEC if urlparse(url).netloc.endswith("sec.gov") else UA
     if site not in ROBOTS:
-        rp = urllib.robotparser.RobotFileParser(site + "/robots.txt")
-        rp.read()  # 404 : tout est permis ; 401/403 : rien n'est permis
+        # robots.txt lu avec NOTRE identification (la SEC refuse les robots anonymes) : 401/403 = interdit, 404 = permis
+        rp = urllib.robotparser.RobotFileParser()
+        try:
+            with urllib.request.urlopen(urllib.request.Request(site + "/robots.txt", headers={"User-Agent": ua}),
+                                        timeout=60) as r:
+                rp.parse(r.read().decode("utf-8", "replace").splitlines())
+        except urllib.error.HTTPError as exc:
+            if exc.code in (401, 403) or exc.code >= 500:
+                rp.disallow_all = True
+            else:
+                rp.allow_all = True
         ROBOTS[site] = rp
     if not ROBOTS[site].can_fetch(ua, url):
         raise SystemExit(f"robots.txt ne permet pas {url}")

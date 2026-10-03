@@ -34,7 +34,9 @@ jobs:
       - name: Canada (lot 3c) contre-vérifié aux sources officielles
         if: always()
         run: python labo/verif_canada3c.py principal/data labo/resultats-score/canada3c.txt
-      - run: npm i --no-save playwright@1.56.1
+      - name: Navigateur (installé même si une vérification a échoué)
+        if: always()
+        run: npm i --no-save playwright@1.56.1
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
       - name: Site en ligne
