@@ -1,0 +1,7 @@
+HTTP 200
+
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+Sitemap: https://www.bankofcanada.ca/wp-sitemap.xml

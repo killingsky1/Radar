@@ -1,0 +1,45 @@
+HTTP 200
+
+#robots.txt file for Accessdata
+
+User-agent: EventMachine 
+Disallow: /
+
+#For all crawlers
+User-agent: * 
+Disallow: /scripts/cder/bmis/
+Disallow: /scripts/cder/BMIS/
+Disallow: /scripts/cdrh/cfdocs/cfClia/
+Disallow: /scripts/cdrh/cfdocs/cfclia/
+Disallow: /scripts/cdrh/cfdocs/cfCLIA/
+Disallow: /scripts/cdrh/cfdocs/cfrl/rl.cfm
+Disallow: /SCRIPTs/cdrh/cfdocs/cfrl/rl.cfm
+Disallow: /SCRIPTs/cdrh/cfdocs/cfRL/rl.cfm
+Disallow: /scrIpts/cdrh/cfdocs/cfrl/rl.cfm
+Disallow: /SCRIPTS/cdrh/cfdocs/cfrl/rl.cfm
+Disallow: /scripts/cdrh/cfdocs/cfRL/rl.cfm
+Disallow: /scripts/cdrh/cfdocs/cfres/textresults.cfm
+Disallow: /scripts/cdrh/devicesatfda/
+Disallow: /scripts/cdrh/cfdocs/cftplc/
+Disallow: /scripts/cdrh/*excel*.cfm
+Disallow: /scripts/cdrh/*excel*.CFM
+Disallow: /scripts/cdrh/*Excel*.cfm
+Disallow: /scripts/cdrh/*Excel*.CFM
+Disallow: /SCRIPTs/cdrh/devicesatfda/
+Disallow: /scripts/email/
+Disallow: /scripts/enforcement/enforce_rpt-Event-Tabs.cfm
+Disallow: /scripts/enforcement/enforce_rpt-Event-All-Tabs.cfm
+Disallow: /scripts/ImportRefusals/ir_index.cfm
+Disallow: /scripts/warningletters/
+Disallow: /scripts/search/
+Disallow: /scripts/enforcement/enforce_rpt-Event-Tabs.cfm
+Disallow: /scripts/enforcement/enforce_rpt-Event-All-Tabs.cfm
+
+#added 28 Apr 2016 by CN
+Disallow: /drugsatfda_docs/rems/
+Disallow: /DrugsAtFDA_docs/REMS/
+
+
+Hit-rate: 30 # wait 30 seconds before starting a new URL request default=30
+Visiting-hours: 23:00EDT-05:00EDT #index this site between 11PM - 5AM EDT
+Concurrent-hits: 2 # limit concurrent active URLS to 2 for each index server

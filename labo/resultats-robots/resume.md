@@ -1,0 +1,32 @@
+# robots.txt de chaque site
+
+- PERMIS · https://www.sec.gov/Archives/edgar/daily-index/2026/QTR4/master.20261001.idx
+- PERMIS · https://www.sec.gov/Archives/edgar/data/1067983/000119312526352200/56757.xml
+- PERMIS · https://www.sec.gov/Archives/edgar/data/1067983/000119312526352200/index.json
+- PERMIS · https://www.sec.gov/files/company_tickers_exchange.json
+- PERMIS · https://www.sec.gov/files/data/fails-deliver-data/cnsfails202609a.zip
+- PAS DE robots.txt (permis) · https://data.sec.gov/submissions/CIK0001067983.json
+- PERMIS (délai demandé : 1 s) · https://publicreporting.cftc.gov/resource/6dca-aqww.json
+- PERMIS · https://www.whitehouse.gov/presidential-actions/feed/
+- PAS DE robots.txt (permis) · https://www.federalreserve.gov/feeds/press_monetary.xml
+- PAS DE robots.txt (permis) · https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm
+- PERMIS · https://www.bankofcanada.ca/content_type/press-releases/feed/
+- PERMIS · https://www.bankofcanada.ca/2026/09/fad-press-release-2026-09-02/
+- PERMIS · https://www.federalregister.gov/api/v1/public-inspection-documents/current.json
+- PERMIS · https://www.federalregister.gov/api/v1/documents.json
+- PERMIS · https://www.federalregister.gov/documents/full_text/text/2026/10/02/2026-19000.txt
+- robots.txt illisible (403) · https://public-inspection.federalregister.gov/2026-19000.pdf
+- PAS DE robots.txt (permis) · https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026FD.zip
+- PAS DE robots.txt (permis) · https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20033000.pdf
+- PAS DE robots.txt (permis) · https://efdsearch.senate.gov/search/home/
+- PAS DE robots.txt (permis) · https://efdsearch.senate.gov/search/report/data/
+- PAS DE robots.txt (permis) · https://efdsearch.senate.gov/search/view/ptr/00000000-0000-0000-0000-000000000000/
+- PAS DE robots.txt (permis) · https://api.io.canada.ca/io-server/gc/news/fr/v2
+- PERMIS · https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/x.html
+- PAS DE robots.txt (permis) · https://api.fda.gov/drug/drugsfda.json
+- PERMIS · https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm
+- PERMIS · https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220605Orig1s000ltr.pdf
+- INTERDIT · https://canadabuys.canada.ca/opendata/pub/2026-2027-contractHistory-contratsOctroyes.csv
+- PERMIS (délai demandé : 20 s) · https://open.canada.ca/data/api/action/package_show
+- PERMIS (délai demandé : 20 s) · https://open.canada.ca/data/dataset/d8f85d91-7dec-4fd1-8055-483b77225d8b/resource/x/download/contracts.csv
+- PAS DE robots.txt (permis) · https://press.spglobal.com/index.php
