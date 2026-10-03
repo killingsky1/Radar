@@ -1,100 +1,144 @@
-# Audit de vérité : 48/48 infos identiques au document officiel
+# Audit de vérité : 61/61 infos identiques au document officiel (9 non vérifiées : site injoignable)
 
-Infos publiées par le robot : 519 · échantillon au hasard : 48
+Infos publiées par le robot : 578 · échantillon au hasard : 70
 
-- **OK** · Troendle August J. (President & CEO) vend 2 564 actions de Medpace Holdings, Inc.
-  - document : https://www.sec.gov/Archives/edgar/data/1668397/0001622058-26-000020.txt · même document que le robot : oui
-- **OK** · L1 Capital Pty Ltd (actionnaire de 10 %) achète 397 226 actions de Anteris Technologies Global Corp.
-  - document : https://www.sec.gov/Archives/edgar/data/2011514/0001817646-26-000028.txt · même document que le robot : oui
-- **OK** · Vivakor, Inc. : contrat important signé
-  - document : https://www.sec.gov/Archives/edgar/data/1450704/000182912626010624/0001829126-26-010624-index-headers.html · même document que le robot : oui
-- **OK** · Commodore Capital LP détient 7,5 % de Surrozen, Inc./DE (13G, placement passif)
-  - document : https://www.sec.gov/Archives/edgar/data/1824893/0001831942-26-000044.txt · même document que le robot : oui
-- **OK** · L1 Capital Global Opportunities Master Fund, Ltd. détient 9,99 % de Baird Medical Investment Holdings Ltd (13G, placement passif)
-  - document : https://www.sec.gov/Archives/edgar/data/1982444/0001400253-26-000006.txt · même document que le robot : oui
-- **OK** · Chien-Fu Chen Chen détient 17,6 % de Ticketplus Ltd. (13G, placement passif)
-  - document : https://www.sec.gov/Archives/edgar/data/2104296/0001213900-26-105939.txt · même document que le robot : oui
-- **OK** · CID Holdco, Inc. : contrat important signé
-  - document : https://www.sec.gov/Archives/edgar/data/2033770/000121390026104296/0001213900-26-104296-index-headers.html · même document que le robot : oui
-- **OK** · SONOCO PRODUCTS CO : contrat important signé
-  - document : https://www.sec.gov/Archives/edgar/data/91767/000009176726000044/0000091767-26-000044-index-headers.html · même document que le robot : oui
-- **OK** · Paradigm BioCapital Advisors LP détient 5,1 % de Spyre Therapeutics, Inc. (13G, placement passif)
-  - document : https://www.sec.gov/Archives/edgar/data/1636282/0001104659-26-112828.txt · même document que le robot : oui
-- **OK** · Imunon, Inc. : contrat important signé
-  - document : https://www.sec.gov/Archives/edgar/data/749647/000149315226044792/0001493152-26-044792-index-headers.html · même document que le robot : oui
-- **OK** · 1 800 FLOWERS COM INC : contrat important signé
-  - document : https://www.sec.gov/Archives/edgar/data/1084869/000108486926000033/0001084869-26-000033-index-headers.html · même document que le robot : oui
-- **OK** · Invest Pro Shukai Hon Ltd. détient 9,99 % de IM Cannabis Corp. (13G, placement passif)
-  - document : https://www.sec.gov/Archives/edgar/data/1792030/0001213900-26-105245.txt · même document que le robot : oui
-- **OK** · HORMEL FOODS CORP /DE/ : contrat important signé
-  - document : https://www.sec.gov/Archives/edgar/data/48465/000110465926112101/0001104659-26-112101-index-headers.html · même document que le robot : oui
-- **OK** · Sandler Alan B. (Chief Development Officer) vend 6 309 actions de Revolution Medicines, Inc.
-  - document : https://www.sec.gov/Archives/edgar/data/1628171/0001835966-26-000008.txt · même document que le robot : oui
-- **OK** · National Bank Holdings Corp : dépréciation importante d'actifs
-  - document : https://www.sec.gov/Archives/edgar/data/1475841/000110465926112856/0001104659-26-112856-index-headers.html · même document que le robot : oui
-- **OK** · Perceptive Advisors LLC détient 8,8 % de Kardigan, Inc. (13D, intentions actives, mise à jour n° 1)
-  - document : https://www.sec.gov/Archives/edgar/data/2123613/0001193125-26-410754.txt · même document que le robot : oui
-- **OK** · RUSCKOWSKI STEPHEN H (administrateur) achète 25 000 actions de ORACLE CORP
-  - document : https://www.sec.gov/Archives/edgar/data/1341439/0001341439-26-000099.txt · même document que le robot : oui
-- **OK** · Leslie's, Inc. : contrat important signé + faillite ou mise sous séquestre + dépréciation importante d'actifs + avis de retrait de la bourse
-  - document : https://www.sec.gov/Archives/edgar/data/1821806/000119312526408874/0001193125-26-408874-index-headers.html · même document que le robot : oui
-- **OK** · Conifer Management, L.L.C. (actionnaire de 10 %) achète 273 712 actions de GROUP 1 AUTOMOTIVE INC
-  - document : https://www.sec.gov/Archives/edgar/data/1031203/0000905148-26-004310.txt · même document que le robot : oui
-- **OK** · LARSEN JOHN O (administrateur) achète 7 500 actions de PG&E Corp
-  - document : https://www.sec.gov/Archives/edgar/data/1004980/0001628280-26-064255.txt · même document que le robot : oui
-- **OK** · Kevin Hern (Chambre, OK01) vend BSX (6 transactions) — compte conjoint, enfant à charge
+- **NON VÉRIFIÉE** · SHERWIN WILLIAMS CO : contrat important signé + contrat important résilié
+  - document : https://www.sec.gov/Archives/edgar/data/89800/000119312526405960/0001193125-26-405960-index-headers.html · même document que le robot : NON
+- **OK** · MOORE RICHARD H (Chief Executive Officer) vend 23 343 actions de FIRST BANCORP /NC/
+  - document : https://www.sec.gov/Archives/edgar/data/811589/0000811589-26-000160.txt · même document que le robot : oui
+- **NON VÉRIFIÉE** · Indaptus Therapeutics, Inc. : contrat important signé
+  - document : https://www.sec.gov/Archives/edgar/data/1857044/000149315226045040/0001493152-26-045040-index-headers.html · même document que le robot : NON
+- **NON VÉRIFIÉE** · POWER SOLUTIONS INTERNATIONAL, INC. : contrat important signé + contrat important résilié
+  - document : https://www.sec.gov/Archives/edgar/data/1137091/000119312526408371/0001193125-26-408371-index-headers.html · même document que le robot : NON
+- **NON VÉRIFIÉE** · VirnetX Holding Corp : contrat important signé
+  - document : https://www.sec.gov/Archives/edgar/data/1082324/000114036126038170/0001140361-26-038170-index-headers.html · même document que le robot : NON
+- **OK** · HANDLEY THOMAS W (administrateur) achète 2 000 actions de FULLER H B CO
+  - document : https://www.sec.gov/Archives/edgar/data/39368/0001225208-26-008014.txt · même document que le robot : oui
+- **OK** · NCCS Management, LLC détient 4,6 % de ONE Nuclear Energy Inc. (13D, intentions actives)
+  - document : https://www.sec.gov/Archives/edgar/data/1846416/0001493152-26-045190.txt · même document que le robot : oui
+- **OK** · NIPPON LIFE INSURANCE CO (actionnaire de 10 %) achète 805 782 actions de Corebridge Financial, Inc.
+  - document : https://www.sec.gov/Archives/edgar/data/1889539/0001193125-26-409206.txt · même document que le robot : oui
+- **OK** · Oasis Management Co Ltd. détient 9 % de VAIL RESORTS INC (13D, intentions actives, mise à jour n° 2)
+  - document : https://www.sec.gov/Archives/edgar/data/812011/0000902664-26-003970.txt · même document que le robot : oui
+- **OK** · REALTY ADVISORS INC (actionnaire de 10 %) achète 2 000 000 actions de New Concept Energy, Inc.
+  - document : https://www.sec.gov/Archives/edgar/data/105744/0001273348-26-000012.txt · même document que le robot : oui
+- **OK** · Smith Daniel C. (administrateur) achète 350 actions de SIMON PROPERTY GROUP INC.
+  - document : https://www.sec.gov/Archives/edgar/data/1063761/0001464273-26-000010.txt · même document que le robot : oui
+- **OK** · ROTHBLATT MARTINE A (Chairperson & CEO) vend 7 580 actions de UNITED THERAPEUTICS Corp
+  - document : https://www.sec.gov/Archives/edgar/data/1082554/0001106578-26-000153.txt · même document que le robot : oui
+- **OK** · Cohen Ryan détient 8,8 % de GameStop Corp. (13D, intentions actives, mise à jour n° 18)
+  - document : https://www.sec.gov/Archives/edgar/data/1326380/0000921895-26-002669.txt · même document que le robot : oui
+- **OK** · Cohen Ryan (President, CEO and Chairman) achète 450 000 actions de GameStop Corp.
+  - document : https://www.sec.gov/Archives/edgar/data/1326380/0000921895-26-002670.txt · même document que le robot : oui
+- **NON VÉRIFIÉE** · FOX FACTORY HOLDING CORP : contrat important signé + acquisition ou vente d'actifs complétée
+  - document : https://www.sec.gov/Archives/edgar/data/1424929/000142492926000057/0001424929-26-000057-index-headers.html · même document que le robot : NON
+- **NON VÉRIFIÉE** · Angel Oak Mortgage REIT, Inc. : contrat important signé
+  - document : https://www.sec.gov/Archives/edgar/data/1766478/000176647826000058/0001766478-26-000058-index-headers.html · même document que le robot : NON
+- **NON VÉRIFIÉE** · Trump Media & Technology Group Corp. : contrat important signé
+  - document : https://www.sec.gov/Archives/edgar/data/1849635/000143774926031535/0001437749-26-031535-index-headers.html · même document que le robot : NON
+- **NON VÉRIFIÉE** · Madison Square Garden Sports Corp. : contrat important signé
+  - document : https://www.sec.gov/Archives/edgar/data/1636519/000119312526409143/0001193125-26-409143-index-headers.html · même document que le robot : NON
+- **NON VÉRIFIÉE** · UNIVERSAL LOGISTICS HOLDINGS, INC. : contrat important signé
+  - document : https://www.sec.gov/Archives/edgar/data/1308208/000119312526410681/0001193125-26-410681-index-headers.html · même document que le robot : NON
+- **OK** · MALONE JOHN C (actionnaire de 10 %) achète 21 525 actions de Liberty Latin America Ltd.
+  - document : https://www.sec.gov/Archives/edgar/data/1712184/0000937797-26-000034.txt · même document que le robot : oui
+- **OK** · Banque du Canada : taux directeur maintenu à 2,25 %
+  - document : https://www.bankofcanada.ca/2026/09/fad-press-release-2026-09-02/ · même document que le robot : oui
+- **OK** · Banque du Canada : taux directeur maintenu à 2,25 %
+  - document : https://www.bankofcanada.ca/2026/07/fad-press-release-2026-07-15/ · même document que le robot : oui
+- **OK** · Banque du Canada : taux directeur maintenu à 2,25 %
+  - document : https://www.bankofcanada.ca/2026/06/fad-press-release-2026-06-10/ · même document que le robot : oui
+- **OK** · S&P 500 (E-mini) : les gros spéculateurs sont vendeurs nets de 142 499 contrats (−9 271 en une semaine)
+  - document : https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=26092913874AF · même document que le robot : oui
+- **OK** · Or : les gros spéculateurs sont acheteurs nets de 218 632 contrats (−7 221 en une semaine)
+  - document : https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=260929088691F · même document que le robot : oui
+- **OK** · Dollar canadien : les gros spéculateurs sont vendeurs nets de 78 671 contrats (−25 461 en une semaine)
+  - document : https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=260929090741F · même document que le robot : oui
+- **OK** · Cuivre : les gros spéculateurs sont acheteurs nets de 85 411 contrats (−5 111 en une semaine)
+  - document : https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=260929085692F · même document que le robot : oui
+- **OK** · Bitcoin (CME) : les gros spéculateurs sont acheteurs nets de 2 465 contrats (−291 en une semaine)
+  - document : https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=260929133741F · même document que le robot : oui
+- **OK** · David J. Taylor (Chambre, OH02) vend MPC (2 transactions)
+  - document : https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035549.pdf · même document que le robot : oui
+- **OK** · Kevin Hern (Chambre, OK01) vend NVS
   - document : https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf · même document que le robot : oui
-- **OK** · Scott Scott Franklin (Chambre, FL18) achète ACN (2 transactions) — conjoint·e, l'élu·e
-  - document : https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035450.pdf · même document que le robot : oui
-- **OK** · David J. Taylor (Chambre, OH02) achète IBP
-  - document : https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035471.pdf · même document que le robot : oui
-- **OK** · Kevin Hern (Chambre, OK01) vend LOW — compte conjoint
+- **OK** · Kevin Hern (Chambre, OK01) vend CL (3 transactions) — compte conjoint, l'élu·e
   - document : https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf · même document que le robot : oui
-- **OK** · Thomas H. Kean (Chambre, NJ07) vend GOOGL
+- **OK** · Thomas H. Kean (Chambre, NJ07) vend MSFT
   - document : https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035431.pdf · même document que le robot : oui
+- **OK** · Josh Gottheimer (Chambre, NJ05) achète des options d’achat (call) sur MSFT (2 transactions) — compte conjoint
+  - document : https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035455.pdf · même document que le robot : oui
+- **OK** · Fed : taux directeur maintenu entre 3,5 % et 3,75 % (vote : 12 pour, 0 contre)
+  - document : https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm · même document que le robot : oui
+- **OK** · Fed : taux directeur maintenu entre 3,5 % et 3,75 % (avec dissidence)
+  - document : https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm · même document que le robot : oui
+- **OK** · Fed : taux directeur relevé de 0,25 point, entre 3,75 % et 4 % (vote : 12 pour, 0 contre)
+  - document : https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm · même document que le robot : oui
+- **OK** · Fed : taux directeur maintenu entre 3,5 % et 3,75 % (vote : 9 pour, 3 contre)
+  - document : https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm · même document que le robot : oui
+- **OK** · Proclamation présidentielle : Modifying the Scope of Products of Canada Subject to the Additional Duties Imposed to Offset Canadian Discrimination Against the United States with Respect to Motor Vehicles
+  - document : https://www.whitehouse.gov/presidential-actions/2026/09/modifying-the-scope-of-products-of-canada-subject-to-the-additional-duties-imposed-to-offset-canadian-discrimination-against-the-united-states-with-respect-to-motor-vehicles/ · même document que le robot : oui
+- **OK** · Mémorandum présidentiel : Restoring Reciprocity in Government Procurement
+  - document : https://www.whitehouse.gov/presidential-actions/2026/09/restoring-reciprocity-in-government-procurement/ · même document que le robot : oui
+- **OK** · Proclamation présidentielle : Further Ensuring Affordable Beef for the American Consumer
+  - document : https://www.whitehouse.gov/presidential-actions/2026/08/further-ensuring-affordable-beef-for-the-american-consumer/ · même document que le robot : oui
+- **OK** · Décret présidentiel : Accelerating Access To Veterans’ Benefits And Employment Opportunities
+  - document : https://www.whitehouse.gov/presidential-actions/2026/09/accelerating-access-to-veterans-benefits-and-employment-opportunities/ · même document que le robot : oui
+- **OK** · Décret présidentiel : Enhancing Program Integrity and Integrity and Interagency Coordination in the Administration of the H-1B Nonimmigrant Visa Program
+  - document : https://www.whitehouse.gov/presidential-actions/2026/09/enhancing-program-integrity-and-integrity-and-interagency-coordination-in-the-administration-of-the-h-1b-nonimmigrant-visa-program/ · même document que le robot : oui
+- **OK** · Le gouvernement du Canada franchit une nouvelle étape en vue de doter l’Aviation royale canadienne d’une capacité essentielle aux missions
+  - document : https://www.canada.ca/fr/agence-investissement-defense/nouvelles/2026/09/le-gouvernement-du-canada-franchit-une-nouvelle-etape-en-vue-de-doter-laviation-royale-canadienne-dune-capacite-essentielle-aux-missions.html · même document que le robot : oui
 - **OK** · L’Aviation royale canadienne s’associe au Fanshawe College pour offrir de l’instruction
   - document : https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/laviation-royale-canadienne-sassocie-au-fanshawe-college-pour-offrir-de-linstruction.html · même document que le robot : oui
 - **OK** · Le gouvernement du Canada commence la construction d’une nouvelle installation de chauffage central à la 5e Escadre Goose Bay
   - document : https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/le-gouvernement-du-canada-commence-la-construction-dune-nouvelle-installation-de-chauffage-central-a-la-5e-escadre-goose-bay.html · même document que le robot : oui
-- **OK** · Le gouvernement du Canada franchit une nouvelle étape en vue de doter l’Aviation royale canadienne d’une capacité essentielle aux missions
-  - document : https://www.canada.ca/fr/agence-investissement-defense/nouvelles/2026/09/le-gouvernement-du-canada-franchit-une-nouvelle-etape-en-vue-de-doter-laviation-royale-canadienne-dune-capacite-essentielle-aux-missions.html · même document que le robot : oui
-- **OK** · Le Tribunal ouvre un réexamen relatif à l’expiration — Certains petits transformateurs de puissance provenant du Taipei chinois et de la Corée du Sud
-  - document : https://www.canada.ca/fr/tribunal-commerce-exterieur/nouvelles/2026/10/le-tribunal-ouvre-un-reexamen-relatif-a-lexpiration--certains-petits-transformateurs-de-puissance-provenant-du-taipei-chinois-et-de-la-coree-du-sud.html · même document que le robot : oui
-- **OK** · Le Bureau de la concurrence craint que les consommateurs soient privés de certaines aubaines en épicerie
-  - document : https://www.canada.ca/fr/bureau-concurrence/nouvelles/2026/09/le-bureau-de-la-concurrence-craint-que-les-consommateurs-soient-prives-de-certaines-aubaines-en-epicerie.html · même document que le robot : oui
-- **OK** · Le Canada et l’Allemagne signent un accord sur la sécurité générale de l’information
-  - document : https://www.canada.ca/fr/services-publics-approvisionnement/nouvelles/2026/09/le-canada-et-lallemagne-signent-un-accord-sur-la-securite-generale-de-linformation.html · même document que le robot : oui
-- **OK** · Le gouvernement du Canada investit dans la création de 10 000 placements professionnels liés à l’IA pour de jeunes Canadiens
-  - document : https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/09/le-gouvernement-du-canada-investit-dans-la-creation-de-10-000-placements-professionnels-lies-a-lia-pour-de-jeunes-canadiens.html · même document que le robot : oui
 - **OK** · Le gouvernement du Canada présente la nouvelle Mégadéduction à la productivité pour aider les entreprises à investir, à croître et à créer des emplois au Canada
   - document : https://www.canada.ca/fr/ministere-finances/nouvelles/2026/10/le-gouvernement-du-canada-presente-la-nouvelle-megadeduction-a-la-productivite-pour-aider-les-entreprises-a-investir-a-croitre-et-a-creer-des-emplo.html · même document que le robot : oui
-- **OK** · Sanctions (Trésor, OFAC) : Notice of OFAC Sanctions Action
-  - document : https://www.federalregister.gov/documents/2026/10/02/2026-20215/notice-of-ofac-sanctions-action · même document que le robot : oui
-- **OK** · Sanctions (Trésor, OFAC) : Iranian Transactions and Sanctions Regulations
-  - document : https://www.federalregister.gov/documents/2026/09/30/2026-19978/iranian-transactions-and-sanctions-regulations · même document que le robot : oui
-- **OK** · Détermination présidentielle : Presidential Determination on Refugee Admissions for Fiscal Year 2027
-  - document : https://www.federalregister.gov/documents/2026/10/02/2026-20318/presidential-determination-on-refugee-admissions-for-fiscal-year-2027 · même document que le robot : oui
-- **OK** · Décret présidentiel : Eliminating Disease-Carrying Pests and Restoring Enjoyment of the Great Outdoors
-  - document : https://www.federalregister.gov/documents/2026/10/02/2026-20320/eliminating-disease-carrying-pests-and-restoring-enjoyment-of-the-great-outdoors · même document que le robot : oui
+- **OK** · La ministre McKnight visite le terminal maritime Westridge, exemple probant de la capacité du Canada de construire de grandes infrastructures énergétiques de manière responsable
+  - document : https://www.canada.ca/fr/ressources-naturelles-canada/nouvelles/2026/10/la-ministre-mcknight-visite-le-terminal-maritime-westridge-exemple-probant-de-la-capacite-du-canada-de-construire-de-grandes-infrastructures-energe0.html · même document que le robot : oui
+- **OK** · Le Tribunal ouvre un réexamen relatif à l’expiration — Certains petits transformateurs de puissance provenant du Taipei chinois et de la Corée du Sud
+  - document : https://www.canada.ca/fr/tribunal-commerce-exterieur/nouvelles/2026/10/le-tribunal-ouvre-un-reexamen-relatif-a-lexpiration--certains-petits-transformateurs-de-puissance-provenant-du-taipei-chinois-et-de-la-coree-du-sud.html · même document que le robot : oui
+- **OK** · Le Canada et l’Allemagne signent un accord sur la sécurité générale de l’information
+  - document : https://www.canada.ca/fr/services-publics-approvisionnement/nouvelles/2026/09/le-canada-et-lallemagne-signent-un-accord-sur-la-securite-generale-de-linformation.html · même document que le robot : oui
+- **OK** · La Régie approuve le règlement de Trans Mountain établissant un nouveau cadre pour les droits
+  - document : https://www.canada.ca/fr/regie-energie-canada/nouvelles/2026/09/la-regie-approuve-le-reglement-de-trans-mountain-etablissant-un-nouveau-cadre-pour-les-droits.html · même document que le robot : oui
+- **OK** · Sanctions (Trésor, OFAC) : Cuba Sanctions Regulations
+  - document : https://www.federalregister.gov/documents/2026/09/30/2026-19977/cuba-sanctions-regulations · même document que le robot : oui
 - **OK** · Sanctions (Trésor, OFAC) : Notice of OFAC Sanctions Action
   - document : https://www.federalregister.gov/documents/2026/09/30/2026-20032/notice-of-ofac-sanctions-action · même document que le robot : oui
-- **OK** · John Boozman (Sénat) vend JNJ — compte conjoint
+- **OK** · Décret présidentiel : Streamlining Access to Government Services Through America.gov
+  - document : https://www.federalregister.gov/documents/2026/10/02/2026-20319/streamlining-access-to-government-services-through-americagov · même document que le robot : oui
+- **OK** · Décret présidentiel : Eliminating Disease-Carrying Pests and Restoring Enjoyment of the Great Outdoors
+  - document : https://www.federalregister.gov/documents/2026/10/02/2026-20320/eliminating-disease-carrying-pests-and-restoring-enjoyment-of-the-great-outdoors · même document que le robot : oui
+- **OK** · Détermination présidentielle : Presidential Determination on Refugee Admissions for Fiscal Year 2027
+  - document : https://www.federalregister.gov/documents/2026/10/02/2026-20318/presidential-determination-on-refugee-admissions-for-fiscal-year-2027 · même document que le robot : oui
+- **OK** · MICHAEL SENTONAS (dirigeant) prévoit vendre 241 944 actions de CrowdStrike Holdings, Inc.
+  - document : https://www.sec.gov/Archives/edgar/data/1535527/000195004726009890/0001950047-26-009890-index.htm · même document que le robot : oui
+- **OK** · Stilwell Value LLC (actionnaire de 10 %) prévoit vendre 32 069 actions de Wheeler Real Estate Investment Trust, Inc.
+  - document : https://www.sec.gov/Archives/edgar/data/1527541/000139707626000016/0001397076-26-000016-index.htm · même document que le robot : oui
+- **OK** · SCOTT BURROWS (dirigeant) prévoit vendre 17 500 actions de Spyre Therapeutics, Inc.
+  - document : https://www.sec.gov/Archives/edgar/data/1636282/000195004726009876/0001950047-26-009876-index.htm · même document que le robot : oui
+- **OK** · Stuart A. Rose (affilié) prévoit vendre 50 000 actions de REX AMERICAN RESOURCES Corp
+  - document : https://www.sec.gov/Archives/edgar/data/744187/000196858226001022/0001968582-26-001022-index.htm · même document que le robot : oui
+- **OK** · KENNETH WILLIAM EXNER (ancien dirigeant) prévoit vendre 54 131 actions de Elastic N.V.
+  - document : https://www.sec.gov/Archives/edgar/data/1707753/000195004726009976/0001950047-26-009976-index.htm · même document que le robot : oui
+- **OK** · John Boozman (Sénat) achète FSLR — compte conjoint
+  - document : https://efdsearch.senate.gov/search/view/ptr/0632f542-7ac2-46e4-bd9c-603e3673f0cd/ · même document que le robot : oui
+- **OK** · Alan Armstrong (Sénat) achète des options d’achat (call) sur WMB (2 transactions) — compte conjoint
+  - document : https://efdsearch.senate.gov/search/view/ptr/b999bc0e-3eb0-4ca9-ab07-8e8f2e04b41f/ · même document que le robot : oui
+- **OK** · John Boozman (Sénat) vend CEG — compte conjoint
   - document : https://efdsearch.senate.gov/search/view/ptr/6298991b-e48f-4b11-9bbb-dfc94a7e1b32/ · même document que le robot : oui
 - **OK** · Sheldon Whitehouse (Sénat) vend JPM (2 transactions) — conjoint·e, l'élu·e
   - document : https://efdsearch.senate.gov/search/view/ptr/6bf3b6f7-9e1b-499a-bd5a-990292ce2e72/ · même document que le robot : oui
-- **OK** · Sheldon Whitehouse (Sénat) vend ADI — conjoint·e
+- **OK** · Sheldon Whitehouse (Sénat) vend V (2 transactions) — conjoint·e, l'élu·e
   - document : https://efdsearch.senate.gov/search/view/ptr/6bf3b6f7-9e1b-499a-bd5a-990292ce2e72/ · même document que le robot : oui
-- **OK** · John Boozman (Sénat) achète OTIS — compte conjoint
-  - document : https://efdsearch.senate.gov/search/view/ptr/0632f542-7ac2-46e4-bd9c-603e3673f0cd/ · même document que le robot : oui
-- **OK** · A. Mitchell McConnell Jr. (Sénat) achète WFC — conjoint·e
-  - document : https://efdsearch.senate.gov/search/view/ptr/028aef33-dc0d-44a1-992f-aa35ee42685b/ · même document que le robot : oui
-- **OK** · Vente d'armes à l'étranger : Koweït — fournisseur : The Boeing Company
-  - document : https://www.federalregister.gov/documents/2026/08/28/2026-17563/arms-sales-notification · même document que le robot : oui
-- **OK** · Vente d'armes à l'étranger : Corée du Sud — fournisseur : RTX Corporation
-  - document : https://www.federalregister.gov/documents/2026/09/22/2026-19322/arms-sales-notification · même document que le robot : oui
-- **OK** · Vente d'armes à l'étranger : Bahreïn
-  - document : https://www.federalregister.gov/documents/2026/09/22/2026-19316/arms-sales-notification · même document que le robot : oui
 - **OK** · Vente d'armes à l'étranger : Suède
   - document : https://www.federalregister.gov/documents/2026/08/28/2026-17567/arms-sales-notification · même document que le robot : oui
-- **OK** · Vente d'armes à l'étranger : Arabie saoudite — fournisseur : BAE Systems
-  - document : https://www.federalregister.gov/documents/2026/08/28/2026-17566/arms-sales-notification · même document que le robot : oui
+- **OK** · Vente d'armes à l'étranger : Koweït — fournisseur : The Boeing Company
+  - document : https://www.federalregister.gov/documents/2026/08/28/2026-17563/arms-sales-notification · même document que le robot : oui
+- **OK** · Vente d'armes à l'étranger : Grèce — fournisseur : Aero Vironment Inc.
+  - document : https://www.federalregister.gov/documents/2026/08/28/2026-17564/arms-sales-notification · même document que le robot : oui
+- **OK** · Vente d'armes à l'étranger : Liban
+  - document : https://www.federalregister.gov/documents/2026/09/22/2026-19318/arms-sales-notification · même document que le robot : oui
+- **OK** · Vente d'armes à l'étranger : Corée du Sud — fournisseur : RTX Corporation
+  - document : https://www.federalregister.gov/documents/2026/09/22/2026-19322/arms-sales-notification · même document que le robot : oui
