@@ -1,5 +1,74 @@
 [
  {
+  "amount_max": 5000000000.0,
+  "amount_min": 5000000000.0,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "actions_et_valeur_positives": true,
+   "actions_sous_le_total_en_circulation": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "prix_implicite_plausible": false,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T00:05:56+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 158000000000.0,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000312069",
+   "date_avis": "2026-10-01",
+   "lignes": [
+    {
+     "actions": 158000000000.0,
+     "bourse": "NYSE",
+     "classe": "BARCLAYS PLC (BCS, BCLYF)",
+     "date_prevue": "2026-06-24",
+     "en_circulation": 800000000000.0,
+     "valeur": 5000000000.0
+    }
+   ],
+   "nom_emetteur": "BARCLAYS PLC",
+   "plan_10b5_1": [
+    "02/26/2026"
+   ],
+   "relations": [
+    "Investor"
+   ],
+   "vendeur": "Cardoso da silva Sergio Tony"
+  },
+  "direction": -1,
+  "entities": [
+   "Cardoso da silva Sergio Tony",
+   "BARCLAYS PLC"
+  ],
+  "id": "sec_form144:0002157144-26-000001",
+  "kind": "intention_vente",
+  "notes": [
+   "Vente prévue d'avance dans un plan automatique (règle 10b5-1).",
+   "Date de vente prévue : 2026-06-24."
+  ],
+  "occurred_on": "2026-10-01",
+  "official_id": "0002157144-26-000001",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/312069/000215714426000001/0002157144-26-000001-index.htm",
+  "parser_version": "sec-3",
+  "published_on": "2026-10-01",
+  "sha256": "9edbd9d2bbcd679bef75819a1da283bb50ef544a787da2a2cf66210fcee3b1fd",
+  "source": "sec_form144",
+  "tickers": [
+   "BCS"
+  ],
+  "title": "Cardoso da silva Sergio Tony (investisseur) prévoit vendre 158 000 000 000 actions de BARCLAYS PLC"
+ },
+ {
   "amount_max": 10329903316818.0,
   "amount_min": 10329903316818.0,
   "badge": "a_verifier",
