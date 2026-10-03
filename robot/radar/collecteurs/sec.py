@@ -17,11 +17,11 @@ from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
-from ..models import Evenement
+from ..models import Evenement, empreinte
 from ..store import Depot
 from ..validate import controle_source, jours_ouvrables
 
-VERSION = "sec-3"  # à augmenter quand un lecteur change : les infos sont relues et mises à jour
+VERSION = "sec-4"  # à augmenter quand un lecteur change : les infos sont relues et mises à jour
 ARCHIVES = "https://www.sec.gov/Archives"
 BOURSES_GARDEES = {"Nasdaq", "NYSE", "CBOE"}
 SEUIL_ACHAT = 25_000  # $ US : sous ce montant, un achat est du bruit
@@ -157,6 +157,15 @@ def nombre(valeur: str | None) -> float | None:
         return float((valeur or "").replace(",", "").strip())
     except ValueError:
         return None
+
+
+MOIS_FR = ("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre",
+           "novembre", "décembre")
+
+
+def date_fr(iso_jour: str) -> str:
+    d = date.fromisoformat(iso_jour)
+    return f"{'1er' if d.day == 1 else d.day} {MOIS_FR[d.month - 1]} {d.year}"
 
 
 def nombre_fr(n: float) -> str:
@@ -401,10 +410,21 @@ def controles_8k(ev: Evenement) -> dict[str, bool]:
     }
 
 
+def empreinte_entete(entete_html: str) -> str:
+    """Empreinte de l'en-tête officiel du dépôt (<SEC-HEADER>…</SEC-HEADER>), espaces normalisés.
+
+    La page « -index-headers.html » est fabriquée par EDGAR : ses octets peuvent changer (fins de ligne, espaces)
+    sans que le dépôt change (vu à l'audit du 3 octobre 2026 : mêmes faits, octets différents).
+    """
+    m = re.search(r"<SEC-HEADER>.*?</SEC-HEADER>", entete_html, re.S)
+    return empreinte(" ".join((m.group(0) if m else entete_html).split()).encode("utf-8"))
+
+
 def lire_un_8k(ctx, depot: DepotSec) -> list[Evenement]:
     cik = depot.filers[0][0]
     t = ctx.client.get(f"{depot.dossier(cik)}/{depot.acc}-index-headers.html")
-    return evenements_8k(t.contenu.decode("utf-8", "replace"), t.sha256, depot, symboles(ctx))
+    texte = t.contenu.decode("utf-8", "replace")
+    return evenements_8k(texte, empreinte_entete(texte), depot, symboles(ctx))
 
 
 def collecter_8k(ctx) -> list[Evenement]:
@@ -551,7 +571,7 @@ def evenements_144(texte: str, sha: str, depot: DepotSec, syms: Symboles) -> lis
              else ["Vente décidée librement (pas dans un plan automatique)."])
     dates = sorted(l["date_prevue"] for l in f["lignes"] if l["date_prevue"])
     if dates:
-        notes.append(f"Date de vente prévue : {dates[0]}.")
+        notes.append(f"Date de vente prévue : {date_fr(dates[0])}.")
     return [Evenement(
         source="sec_form144", official_id=depot.acc, category="compagnies", kind="intention_vente",
         title=f"{f['vendeur']} ({relations}) prévoit vendre {nombre_fr(actions)} actions de {cote['name']}",
@@ -672,7 +692,8 @@ def _offres_vues(ctx) -> set:
 def lire_une_offre(ctx, depot: DepotSec) -> list[Evenement]:
     cik = depot.filers[0][0]
     t = ctx.client.get(f"{depot.dossier(cik)}/{depot.acc}-index-headers.html")
-    return evenements_offre(t.contenu.decode("utf-8", "replace"), t.sha256, depot, symboles(ctx), _offres_vues(ctx))
+    texte = t.contenu.decode("utf-8", "replace")
+    return evenements_offre(texte, empreinte_entete(texte), depot, symboles(ctx), _offres_vues(ctx))
 
 
 def collecter_offres(ctx) -> list[Evenement]:

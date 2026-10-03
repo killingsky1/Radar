@@ -66,7 +66,9 @@ class Depot:
                     nouveau["data"].setdefault("anciennes_empreintes", ancien["data"]["anciennes_empreintes"])
                     if NOTE_MODIFIE in ancien["notes"] and NOTE_MODIFIE not in nouveau["notes"]:
                         nouveau["notes"].append(NOTE_MODIFIE)
-                if ancien["sha256"] != nouveau["sha256"]:
+                # Empreinte différente avec le MÊME lecteur : le document a changé à la source.
+                # (Un nouveau lecteur peut calculer l'empreinte autrement : ça ne prouve pas que le document a changé.)
+                if ancien["sha256"] != nouveau["sha256"] and ancien["parser_version"] == nouveau["parser_version"]:
                     nouveau["data"]["anciennes_empreintes"] = (ancien.get("data", {}).get("anciennes_empreintes", [])
                                                                + [ancien["sha256"]])
                     if NOTE_MODIFIE not in nouveau["notes"]:

@@ -19,14 +19,22 @@ from ..models import Evenement, empreinte
 from ..store import Depot
 from ..validate import controle_source
 
-VERSION = "banques-2"
+VERSION = "banques-3"
 FLUX_FED = "https://www.federalreserve.gov/feeds/press_monetary.xml"
 FLUX_BDC = "https://www.bankofcanada.ca/content_type/press-releases/feed/"
 FRACTIONS = {"¼": 0.25, "½": 0.5, "¾": 0.75}
 
 
 def texte_html(fragment: str) -> str:
-    return " ".join(html.unescape(re.sub(r"<[^>]+>", " ", fragment or "")).split())
+    sans_commentaires = re.sub(r"<!--.*?-->", " ", fragment or "", flags=re.S)
+    return " ".join(html.unescape(re.sub(r"<[^>]+>", " ", sans_commentaires)).split())
+
+
+def deja_lus(ctx, source: str) -> dict[str, str]:
+    """Numéro -> version du lecteur, pour relire un communiqué quand le lecteur s'améliore."""
+    depot = Depot(ctx.donnees)
+    return {d["official_id"]: d["parser_version"] for dossier in ("evenements", "a_verifier")
+            for d in depot.lire(dossier) if d["source"] == source}
 
 
 def nombre(texte: str) -> float:
@@ -67,9 +75,12 @@ TIRETS = dict.fromkeys(map(ord, "\u2010\u2011\u2012\u2013\u2014\u2212"), "-")  #
 def lire_fomc(page: str) -> dict:
     """Le communiqué du FOMC : la phrase de décision peut être au début (format 2026) ou au milieu (format ancien)."""
     debut = page.find('id="article"')
-    article = texte_html(page[debut:] if debut >= 0 else page).translate(TIRETS)
+    debut = page.find(">", debut) + 1 if debut >= 0 else 0
+    article = texte_html(page[debut:]).translate(TIRETS)
     fin = article.find("Last Update")
     article = article[:fin] if fin > 0 else article
+    entete = re.search(r"For release at [^.]*?\. ?m\. \w+ Share ", article)  # « For release at 2:00 p.m. EDT Share »
+    article = article[entete.end():] if entete else article
     media = article.find("For media inquiries")
     declaration = article[:media].strip() if media > 0 else article.strip()
     d = {"declaration": declaration}
@@ -133,14 +144,14 @@ def collecter_fed(ctx) -> list[Evenement]:
     items = _items(ctx.client.get(FLUX_FED).contenu.decode("utf-8", "replace"))
     if not items:
         raise RuntimeError("fil de la Fed vide")
-    deja = Depot(ctx.donnees).ids_enregistres({"fed"})
+    deja = deja_lus(ctx, "fed")
     evs = []
     for it in items:
         if not it["titre"].startswith("Federal Reserve issues FOMC statement"):
             continue
         ident = it["lien"].rsplit("/", 1)[-1].replace(".htm", "")
-        if ident in deja:
-            continue
+        if deja.get(ident) == VERSION:
+            continue  # déjà lu par ce lecteur
         ev = evenement_fed(it, ctx.client.get(it["lien"]).contenu.decode("utf-8", "replace"))
         if ev:
             evs.append(ev)
@@ -165,8 +176,8 @@ def lire_decision_bdc(page: str) -> dict:
     d = {"titre_officiel": html.unescape(titre.group(1)).strip() if titre else ""}
     m = DECISION_BDC.search(texte)
     if m:
-        fin = texte.find(".", m.end())
-        d.update(phrase=texte[m.start():fin + 1] if fin > 0 else m.group(0), decision=VERBES_BDC[m.group(1)],
+        fin = re.search(r"\.(?=\s+[A-Z]|$)", texte[m.end():])  # fin de phrase (pas le point de « 2.5 % »)
+        d.update(phrase=texte[m.start():m.end() + fin.end()] if fin else m.group(0), decision=VERBES_BDC[m.group(1)],
                  pas_points_base=int(m.group(2)) if m.group(2) else None, taux=nombre(m.group(3)))
     return d
 
@@ -213,12 +224,12 @@ def collecter_bdc(ctx) -> list[Evenement]:
     items = _items(ctx.client.get(FLUX_BDC).contenu.decode("utf-8", "replace"))
     if not items:
         raise RuntimeError("fil de la Banque du Canada vide")
-    deja = Depot(ctx.donnees).ids_enregistres({"banque_canada"})
+    deja = deja_lus(ctx, "banque_canada")
     evs = []
     for it in items:
         m = LIEN_BDC.fullmatch(it["lien"])
-        if not m or m.group(1) in deja:
-            continue
+        if not m or deja.get(m.group(1)) == VERSION:
+            continue  # déjà lu par ce lecteur
         ev = evenement_bdc(it, ctx.client.get(it["lien"]).contenu.decode("utf-8", "replace"))
         if ev:
             evs.append(ev)

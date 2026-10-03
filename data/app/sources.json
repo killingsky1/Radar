@@ -6,7 +6,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
   "explication": "",
   "id": "sec_form4",
   "libelle": "OK",
@@ -18,17 +18,20 @@
  },
  {
   "categorie": "compagnies",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 1.",
+  "compte": {
+   "a_verifier": 1,
+   "recus": 24
+  },
+  "dernier_contenu": "2026-10-01",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "explication": "",
   "id": "sec_form144",
-  "libelle": "À venir",
+  "libelle": "OK",
   "nom": "SEC : formulaire 144 (intention de vendre)",
   "officielle": true,
   "phase": 1,
   "site": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=144",
-  "statut": "a_venir"
+  "statut": "ok"
  },
  {
   "categorie": "baleines",
@@ -37,7 +40,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
   "explication": "",
   "id": "sec_13dg",
   "libelle": "OK",
@@ -54,7 +57,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
   "explication": "",
   "id": "sec_8k",
   "libelle": "OK",
@@ -80,17 +83,20 @@
  },
  {
   "categorie": "compagnies",
-  "compte": null,
+  "compte": {
+   "a_verifier": 0,
+   "recus": 0
+  },
   "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 1.",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "explication": "",
   "id": "sec_offres",
-  "libelle": "À venir",
-  "nom": "SEC : offres d'achat de compagnies entières",
+  "libelle": "OK",
+  "nom": "SEC : offres d'achat de compagnies entières et privatisations",
   "officielle": true,
   "phase": 1,
   "site": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=SC+TO-T",
-  "statut": "a_venir"
+  "statut": "ok"
  },
  {
   "categorie": "compagnies",
@@ -164,17 +170,20 @@
  },
  {
   "categorie": "baleines",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 1.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 0
+  },
+  "dernier_contenu": "2026-10-02",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "explication": "",
   "id": "cftc_cot",
-  "libelle": "À venir",
+  "libelle": "OK",
   "nom": "CFTC : positions des gros joueurs (contrats à terme)",
   "officielle": true,
   "phase": 1,
   "site": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm",
-  "statut": "a_venir"
+  "statut": "ok"
  },
  {
   "categorie": "compagnies",
@@ -208,11 +217,11 @@
   "categorie": "militaire",
   "compte": {
    "a_verifier": 0,
-   "recus": 0
+   "recus": 22
   },
   "dernier_contenu": "2026-09-22",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
-  "explication": "",
+  "dernier_succes": "2026-10-03T00:05:04+00:00",
+  "explication": "Lecture OK récemment, mais le dernier essai a échoué : ErreurSource: https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest&fields[]=title&fields[]=type&fields[]=subtype&fields[]=document_number&fields[]=html_url&fields[]=pdf_url&fields[]=publication_date&fields[]=signing_date&fields[]=agencies&fields[]=executive_order_number&fi",
   "id": "ventes_armes",
   "libelle": "OK",
   "nom": "Ventes d'armes à l'étranger (avis officiels au Registre fédéral)",
@@ -298,7 +307,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
   "explication": "",
   "id": "nouvelles_defense_ca",
   "libelle": "OK",
@@ -329,7 +338,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
   "explication": "",
   "id": "chambre_ptr",
   "libelle": "OK",
@@ -346,7 +355,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
   "explication": "",
   "id": "senat_ptr",
   "libelle": "OK",
@@ -430,11 +439,11 @@
   "categorie": "gouvernement",
   "compte": {
    "a_verifier": 0,
-   "recus": 0
+   "recus": 10
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
-  "explication": "",
+  "dernier_succes": "2026-10-03T00:05:04+00:00",
+  "explication": "Lecture OK récemment, mais le dernier essai a échoué : ErreurSource: https://www.federalregister.gov/api/v1/public-inspection-documents/current.json : HTTP 403",
   "id": "registre_federal",
   "libelle": "OK",
   "nom": "Registre fédéral : décrets, tarifs, sanctions (la veille)",
@@ -445,17 +454,20 @@
  },
  {
   "categorie": "gouvernement",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 4.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 0
+  },
+  "dernier_contenu": "2026-09-29",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "explication": "",
   "id": "maison_blanche",
-  "libelle": "À venir",
+  "libelle": "OK",
   "nom": "Maison-Blanche : actions présidentielles",
   "officielle": true,
   "phase": 4,
   "site": "https://www.whitehouse.gov/presidential-actions/",
-  "statut": "a_venir"
+  "statut": "ok"
  },
  {
   "categorie": "gouvernement",
@@ -529,17 +541,20 @@
  },
  {
   "categorie": "gouvernement",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 4.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 4
+  },
+  "dernier_contenu": "2026-09-16",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "explication": "",
   "id": "fed",
-  "libelle": "À venir",
-  "nom": "Réserve fédérale (Fed)",
+  "libelle": "OK",
+  "nom": "Réserve fédérale (Fed) : décisions de taux",
   "officielle": true,
   "phase": 4,
-  "site": "https://www.federalreserve.gov/feeds",
-  "statut": "a_venir"
+  "site": "https://www.federalreserve.gov/newsevents/pressreleases.htm",
+  "statut": "ok"
  },
  {
   "categorie": "gouvernement",
@@ -576,7 +591,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
   "explication": "",
   "id": "nouvelles_eco_ca",
   "libelle": "OK",
@@ -588,17 +603,20 @@
  },
  {
   "categorie": "canada",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 4.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 3
+  },
+  "dernier_contenu": "2026-09-02",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "explication": "",
   "id": "banque_canada",
-  "libelle": "À venir",
-  "nom": "Banque du Canada",
+  "libelle": "OK",
+  "nom": "Banque du Canada : décisions de taux",
   "officielle": true,
   "phase": 4,
-  "site": "https://www.bankofcanada.ca/",
-  "statut": "a_venir"
+  "site": "https://www.bankofcanada.ca/core-functions/monetary-policy/key-interest-rate/",
+  "statut": "ok"
  },
  {
   "categorie": "canada",

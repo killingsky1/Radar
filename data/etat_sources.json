@@ -1,13 +1,53 @@
 {
+ "banque_canada": {
+  "compte": {
+   "a_verifier": 0,
+   "recus": 3
+  },
+  "dernier_contenu": "2026-09-02",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "derniere_erreur": null,
+  "derniere_tentative": "2026-10-03T00:11:34+00:00"
+ },
+ "cftc_cot": {
+  "compte": {
+   "a_verifier": 0,
+   "recus": 0
+  },
+  "dernier_contenu": "2026-10-02",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "derniere_erreur": null,
+  "derniere_tentative": "2026-10-03T00:11:34+00:00"
+ },
  "chambre_ptr": {
   "compte": {
    "a_verifier": 0,
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-02T22:52:39+00:00"
+  "derniere_tentative": "2026-10-03T00:11:34+00:00"
+ },
+ "fed": {
+  "compte": {
+   "a_verifier": 0,
+   "recus": 4
+  },
+  "dernier_contenu": "2026-09-16",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "derniere_erreur": null,
+  "derniere_tentative": "2026-10-03T00:11:34+00:00"
+ },
+ "maison_blanche": {
+  "compte": {
+   "a_verifier": 0,
+   "recus": 0
+  },
+  "dernier_contenu": "2026-09-29",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "derniere_erreur": null,
+  "derniere_tentative": "2026-10-03T00:11:34+00:00"
  },
  "nouvelles_defense_ca": {
   "compte": {
@@ -15,9 +55,9 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-02T22:52:39+00:00"
+  "derniere_tentative": "2026-10-03T00:11:34+00:00"
  },
  "nouvelles_eco_ca": {
   "compte": {
@@ -25,19 +65,19 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-02T22:52:39+00:00"
+  "derniere_tentative": "2026-10-03T00:11:34+00:00"
  },
  "registre_federal": {
   "compte": {
    "a_verifier": 0,
-   "recus": 0
+   "recus": 10
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
-  "derniere_erreur": null,
-  "derniere_tentative": "2026-10-02T22:52:39+00:00"
+  "dernier_succes": "2026-10-03T00:05:04+00:00",
+  "derniere_erreur": "ErreurSource: https://www.federalregister.gov/api/v1/public-inspection-documents/current.json : HTTP 403",
+  "derniere_tentative": "2026-10-03T00:11:34+00:00"
  },
  "sec_13dg": {
   "compte": {
@@ -45,9 +85,9 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-02T22:52:39+00:00"
+  "derniere_tentative": "2026-10-03T00:11:34+00:00"
  },
  "sec_8k": {
   "compte": {
@@ -55,9 +95,19 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-02T22:52:39+00:00"
+  "derniere_tentative": "2026-10-03T00:11:34+00:00"
+ },
+ "sec_form144": {
+  "compte": {
+   "a_verifier": 1,
+   "recus": 24
+  },
+  "dernier_contenu": "2026-10-01",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "derniere_erreur": null,
+  "derniere_tentative": "2026-10-03T00:11:34+00:00"
  },
  "sec_form4": {
   "compte": {
@@ -65,9 +115,18 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-02T22:52:39+00:00"
+  "derniere_tentative": "2026-10-03T00:11:34+00:00"
+ },
+ "sec_offres": {
+  "compte": {
+   "a_verifier": 0,
+   "recus": 0
+  },
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "derniere_erreur": null,
+  "derniere_tentative": "2026-10-03T00:11:34+00:00"
  },
  "senat_ptr": {
   "compte": {
@@ -75,18 +134,18 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
+  "dernier_succes": "2026-10-03T00:11:34+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-02T22:52:39+00:00"
+  "derniere_tentative": "2026-10-03T00:11:34+00:00"
  },
  "ventes_armes": {
   "compte": {
    "a_verifier": 0,
-   "recus": 0
+   "recus": 22
   },
   "dernier_contenu": "2026-09-22",
-  "dernier_succes": "2026-10-02T22:52:39+00:00",
-  "derniere_erreur": null,
-  "derniere_tentative": "2026-10-02T22:52:39+00:00"
+  "dernier_succes": "2026-10-03T00:05:04+00:00",
+  "derniere_erreur": "ErreurSource: https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest&fields[]=title&fields[]=type&fields[]=subtype&fields[]=document_number&fields[]=html_url&fields[]=pdf_url&fields[]=publication_date&fields[]=signing_date&fields[]=agencies&fields[]=executive_order_number&fi",
+  "derniere_tentative": "2026-10-03T00:11:34+00:00"
  }
 }

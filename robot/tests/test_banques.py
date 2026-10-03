@@ -137,3 +137,25 @@ def test_page_introuvable_met_la_source_en_panne(tmp_path):
                        collecteurs=LECTEURS)
     assert rapport["fed"]["ok"] is False and "404" in rapport["fed"]["erreur"]
     assert rapport["banque_canada"]["ok"]  # une source en panne n'arrête pas les autres
+
+
+def test_resumes_propres():
+    fomc = lire_fomc(page("monetary20260916a.htm"))
+    assert fomc["declaration"].startswith("The Federal Open Market Committee approved the following statement")
+    assert "-->" not in fomc["declaration"] and "id=" not in fomc["declaration"]
+    assert lire_fomc(page("monetary20260429a.htm"))["declaration"].startswith("Recent indicators suggest")
+    bdc = banques.lire_decision_bdc(page("fad-press-release-2026-09-02.html"))
+    assert bdc["phrase"] == ("The Bank of Canada today held its target for the overnight rate at 2.25%, "
+                             "with the Bank Rate at 2.5% and the deposit rate at 2.20%.")
+
+
+def test_un_lecteur_ameliore_relit_les_communiques(tmp_path, monkeypatch):
+    internet = internet_des_banques()
+    executer(tmp_path, client=internet, maintenant=datetime(2026, 10, 2, 22, tzinfo=timezone.utc), collecteurs=LECTEURS)
+    monkeypatch.setattr(banques, "VERSION", "banques-test-nouveau")
+    avant = len(internet.appels)
+    executer(tmp_path, client=internet, maintenant=datetime(2026, 10, 2, 23, tzinfo=timezone.utc), collecteurs=LECTEURS)
+    assert any("monetary20260916a" in u for u in internet.appels[avant:])
+    fil = json.loads((tmp_path / "app" / "fil.json").read_text(encoding="utf-8"))
+    assert {e["parser_version"] for e in fil} == {"banques-test-nouveau"}
+    assert not any("modifié" in n for e in fil for n in e["notes"])  # c'est le lecteur qui a changé, pas le document
