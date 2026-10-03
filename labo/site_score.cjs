@@ -8,7 +8,7 @@ const fs = require("fs");
   const elusLocal = fs.readFileSync(fichierElus, "utf8");
   const lobbyingLocal = fs.readFileSync(fichierLobbying, "utf8");
   const lobbying = JSON.parse(lobbyingLocal);
-  const VERSION = "0.16.0";
+  const VERSION = "0.17.0";
   const base = process.env.BASE || "https://killingsky1.github.io/Radar/"; // BASE : essai local seulement
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
@@ -294,6 +294,37 @@ const fs = require("fs");
   dire(`Source LEGISinfo : affichée « ${etatLeg.slice(0, 150)} » · publiée par le robot : ${leg.statut} · conforme : ${legOk ? "OUI" : "NON"}`);
   ecarteesOk = ecarteesOk && legOk;
   await p.locator(".retour").first().click().catch(() => {});
+  // Lot C : l'onglet Argent = le fichier du robot (montants, ordre, thermomètre) ; une ligne ouvre son info officielle
+  let argentOk = false;
+  try {
+    const dossierMain = fichierMain.replace(/aujourdhui\.json$/, "");
+    const ag = JSON.parse(fs.readFileSync(dossierMain + "argent.json", "utf8"));
+    const agInfos = JSON.parse(fs.readFileSync(dossierMain + "argent_infos.json", "utf8"));
+    const court = (n) => new Intl.NumberFormat("fr-CA", { style: "currency", currency: "USD", notation: "compact", minimumFractionDigits: 0, maximumFractionDigits: Math.abs(n) >= 1e9 ? 2 : 1 }).format(n);
+    await p.locator("nav.onglets button", { hasText: "Argent" }).click();
+    await p.waitForSelector(".ligne.argent", { timeout: 20000 });
+    await p.locator(".segment", { hasText: "30 jours" }).click(); await p.waitForTimeout(300);
+    await photo("v31-argent");
+    // Sans espaces : le navigateur et Node n'écrivent pas toujours l'espace avant « $ » (même montant)
+    const sans = (t) => t.replace(/\s+/g, "");
+    const vus = (await p.locator(".ligne.argent .argent-montant").allInnerTexts()).slice(0, 5).map(sans);
+    const attendus = ag.lignes.slice(0, 5).map((l) => sans(l.montant != null ? court(l.montant) : `${court(l.montant_min)} à ${court(l.montant_max)}`));
+    const th = ag.thermometre;
+    const thermo = sans(await p.locator(".thermo").innerText());
+    const thermoOk = thermo.includes(sans(`${court(th.achats.montant)} achetés (${th.achats.nombre})`))
+      && thermo.includes(sans(`${court(th.ventes_libres.montant)} vendus (${th.ventes_libres.nombre})`));
+    await p.locator(".ligne.argent").first().click(); await p.waitForSelector(".feuille-fond.ouvert", { timeout: 20000 }); await p.waitForTimeout(400);
+    const titreA = await p.locator(".detail-titre").innerText();
+    await photo("v32-argent-detail");
+    const ratesA = await p.locator(".feuille .controle.rate").count();
+    await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
+    await p.locator(".puce", { hasText: "Achats" }).click(); await p.waitForTimeout(300);
+    await photo("v33-argent-achats");
+    argentOk = JSON.stringify(vus) === JSON.stringify(attendus) && thermoOk && titreA === agInfos[ag.lignes[0].id].title && ratesA === 0;
+    dire(`Argent : ${ag.lignes.length} lignes · 5 premiers montants affichés ${vus.join(" | ")} · attendus ${attendus.join(" | ")} · thermomètre conforme : ${thermoOk ? "OUI" : "NON"} · 1re ligne ouverte « ${titreA.slice(0, 90)} » (${ratesA} contrôle raté) · conforme : ${argentOk ? "OUI" : "NON"}`);
+  } catch (e) {
+    dire(`Argent : ERREUR ${String(e).slice(0, 200)}`);
+  }
   // Lot 3d, livraison 2 : une participation du gouvernement (s'il y en a une) : l'extrait officiel est affiché, rien de raté.
   // USAspending : 1re lecture silencieuse, donc aucune info attendue aujourd'hui (l'état de la source est vérifié plus haut).
   let participationOk = true;
@@ -316,7 +347,7 @@ const fs = require("fs");
     await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
   } else dire("Participation : aucune info dans le fil (aucun cas dans les 8-K lus)");
   dire(`Erreurs du navigateur : ${erreurs.length ? erreurs.join(" | ") : "aucune"}`);
-  const ok = pareil && elusPareil && lobbyingPareil && memeTop && ficheOk && methodeOk && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && participationOk && !erreurs.length && js.includes(VERSION);
+  const ok = pareil && elusPareil && lobbyingPareil && memeTop && ficheOk && methodeOk && argentOk && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && participationOk && !erreurs.length && js.includes(VERSION);
   dire(ok ? "VERDICT : OK" : "VERDICT : PROBLÈME");
   fs.writeFileSync(`${dossier}/site.txt`, lignes.join("\n") + "\n");
   await b.close();
