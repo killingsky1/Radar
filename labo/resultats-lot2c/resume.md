@@ -1,0 +1,121 @@
+# Reconnaissance 3 du lot 2 (CanadaBuys)
+
+- 200 · 51986 octets · https://canadabuys.canada.ca/en/procurement-and-contracting-data
+    - https://canadabuys.canada.ca/en/procurement-and-contracting-data
+    - https://canadabuys.canada.ca/fr/donnees-d-approvisionnement-et-d-attribution
+    - https://canadabuys.canada.ca/en/procurement-and-contracting-data#wb-cont
+    - https://canadabuys.canada.ca/en/procurement-and-contracting-data#wb-info
+    - https://www.open-contracting.org/
+    - https://www.open-contracting.org/data-standard/
+    - https://canadabuys.canada.ca/en/procurement-and-contracting-data#chat-with-us
+- 200 · 413751 octets · https://canadabuys.canada.ca/en/tender-opportunities?search_filter=WS5672955639
+    - https://canadabuys.canada.ca/en/procurement-and-contracting-data
+    - https://canadabuys.canada.ca/en/tender-opportunities/request-contract-history-letter
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-aa7b09cd-a3de-4b67-b725-09910ded753b
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-aa7b09cd-a3de-4b67-b725-09910ded753b
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-0cbe432e-ffd5-4616-a9fd-046552e34a0b
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-0cbe432e-ffd5-4616-a9fd-046552e34a0b
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-6c516fb9-3829-4d13-9752-615fef64fab3
+- 200 · 50321 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-6c516fb9-3829-4d13-9752-615fef64fab3
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-c14703da-2baf-4c08-a18d-e1d7788e2042
+- 200 · 49972 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-c14703da-2baf-4c08-a18d-e1d7788e2042
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-5709f1fa-8b1f-4896-9b6a-beb32d254b43
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-5709f1fa-8b1f-4896-9b6a-beb32d254b43
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-47eded50-b58f-4807-8e31-76c796425cbc
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-47eded50-b58f-4807-8e31-76c796425cbc
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-908-35642955
+- 200 · 67096 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-908-35642955
+      - …ced compliant bid. Set-aside under the Procurement Strategy for Indigenous Business: This procurement is not subject to any set-asides for Indigenous Suppliers. Comprehensive Land Claim Agreement: This procurement is not subject to a Comprehensive Land Claims Agreement. Security Requirements: This contract does not include security requirements. Nature of Requirements: The following is a summary o…
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-257-77415127
+- 200 · 59098 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-257-77415127
+      - …ion of office furniture to Quebec city, Quebec, by January 29th, 2027. 3. This NPP covers a requirement to be solicited amongst the General Stream of Suppliers (SA holders). Show more description&nbsp;&nbsp; Show less description&nbsp;&nbsp; Contract duration The estimated contract period will be 4 month(s), with a proposed start date of 2026/10/16. Trade agreements Canada-Korea Free Trade Agreeme…
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5864267296-doc5864599080
+- 200 · 57678 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5864267296-doc5864599080
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5824747970-doc5865919997
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5824747970-doc5865919997
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5811557851-doc5856578974
+- 200 · 66746 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5811557851-doc5856578974
+      - …d to perform alignments on the diesel generators fitted on the Artic and offshore patrol ships (AOPS). The Period of the Contract is from the date of Award to 31 October, 2026. The Laser Geometric Measuring Systems must be delivered by 31 October 2026. Offerors may request a debriefing on the results of the solicitation of offers process. Reference the solicitation for further details. Show more d…
+      - …ns will not be considered or accepted. The response time deadline is 14:00 EDT. This solicitation of offers is open only to Canadian suppliers and to Suppliers of an applicable trading partner. Supply of a Laser Geometric Measuring Systems to be used at Fleet Maintenance Facility Cape Scott (FMFCS) to check the flatness of gun seats, launcher pads, as well as other seats like antenna seats and mou…
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-115-21584872
+- 200 · 65839 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-115-21584872
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-383-49070000
+- 200 · 56653 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-383-49070000
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-543-87610947
+- 200 · 61673 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-543-87610947
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-963-21486209
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-963-21486209
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5491670965-doc5790569153
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5491670965-doc5790569153
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5735706725-doc5788374070
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5735706725-doc5788374070
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5491670965-doc5790622543
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5491670965-doc5790622543
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-708-73634001
+- 200 · 64418 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-708-73634001
+      - …nd installation of office furniture to Ottawa, Ontario by March 31, 2027. 3. This NPP covers a requirement to be solicited amongst the PSIB stream of Suppliers (SA holders). 4. There is a security requirement associated with the requirement. For additional information, consult the bid solicitation document. 5. This procurement is set aside under the federal government’s Procurement Strategy for In…
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-544-1759279
+- 200 · 66668 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-544-1759279
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-456-17395187
+- 200 · 57657 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-456-17395187
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-384-26123891
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-384-26123891
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-604-38747835
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-604-38747835
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities?search_filter=CW2451599
+- 200 · 413679 octets · https://canadabuys.canada.ca/en/tender-opportunities?search_filter=CW2461613
+    - https://canadabuys.canada.ca/en/procurement-and-contracting-data
+    - https://canadabuys.canada.ca/en/tender-opportunities/request-contract-history-letter
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-aa7b09cd-a3de-4b67-b725-09910ded753b
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-aa7b09cd-a3de-4b67-b725-09910ded753b
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-0cbe432e-ffd5-4616-a9fd-046552e34a0b
+- 200 · 49737 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-0cbe432e-ffd5-4616-a9fd-046552e34a0b
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-6c516fb9-3829-4d13-9752-615fef64fab3
+- 200 · 50321 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-6c516fb9-3829-4d13-9752-615fef64fab3
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-c14703da-2baf-4c08-a18d-e1d7788e2042
+- 200 · 49972 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-c14703da-2baf-4c08-a18d-e1d7788e2042
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-5709f1fa-8b1f-4896-9b6a-beb32d254b43
+- 200 · 50129 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-5709f1fa-8b1f-4896-9b6a-beb32d254b43
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-47eded50-b58f-4807-8e31-76c796425cbc
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/bt-47eded50-b58f-4807-8e31-76c796425cbc
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-908-35642955
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-908-35642955
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-257-77415127
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-257-77415127
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5864267296-doc5864599080
+- 200 · 57678 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5864267296-doc5864599080
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5824747970-doc5865919997
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5824747970-doc5865919997
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5811557851-doc5856578974
+- 200 · 66746 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5811557851-doc5856578974
+      - …d to perform alignments on the diesel generators fitted on the Artic and offshore patrol ships (AOPS). The Period of the Contract is from the date of Award to 31 October, 2026. The Laser Geometric Measuring Systems must be delivered by 31 October 2026. Offerors may request a debriefing on the results of the solicitation of offers process. Reference the solicitation for further details. Show more d…
+      - …ns will not be considered or accepted. The response time deadline is 14:00 EDT. This solicitation of offers is open only to Canadian suppliers and to Suppliers of an applicable trading partner. Supply of a Laser Geometric Measuring Systems to be used at Fleet Maintenance Facility Cape Scott (FMFCS) to check the flatness of gun seats, launcher pads, as well as other seats like antenna seats and mou…
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-115-21584872
+- 200 · 65839 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-115-21584872
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-383-49070000
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-383-49070000
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-543-87610947
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-543-87610947
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-963-21486209
+- 200 · 59595 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-963-21486209
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5491670965-doc5790569153
+- 200 · 99564 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5491670965-doc5790569153
+      - …lated contracts awarded and their amendments. The columns are sortable in ascending and descending order. Company name Contract number Amendment date Award date More details Zodiac Hurricane Technologies Inc. CW2460483 Not available 2026/07/17 View the details of contract CW2460483 for Zodiac Hurricane Technologies Inc. Voltari Marine Electric Inc. CW2460478 Not available 2026/07/17 View the detai…
+      - … ascending and descending order. Title Solicitation Number Publication date Closing date E60MC240001-B1 – RFSA Refresh for Small Vessels - Indigenous Suppliers WS5491670965 2026/07/14 2031/07/31 E60MC-240001-B RFSA for Small Vessels - Indigenous Suppliers WS5491670965 2025/12/22 2026/04/17 E60MC-240001-A RFSA for Small Vessels - General Industry Suppliers WS5491670965 2025/12/22 2026/04/17 Contrac…
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5735706725-doc5788374070
+- 200 · 63561 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5735706725-doc5788374070
+      - …chments are copyright protected. Please refer to our terms and conditions page for more information. Summary information Notice type Advance Contract Award Notice Language(s) English, French Region(s) of delivery Saguenay Procurement method Advance Contract Award Notice Selection criteria Not applicable Commodity - UNSPSC Click the links below to see a list of notices associated with the UNSPSC. 7…
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5491670965-doc5790622543
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/ws5491670965-doc5790622543
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-708-73634001
+- 200 · 64418 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-708-73634001
+      - …nd installation of office furniture to Ottawa, Ontario by March 31, 2027. 3. This NPP covers a requirement to be solicited amongst the PSIB stream of Suppliers (SA holders). 4. There is a security requirement associated with the requirement. For additional information, consult the bid solicitation document. 5. This procurement is set aside under the federal government’s Procurement Strategy for In…
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-544-1759279
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-544-1759279
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-456-17395187
+- 200 · 57657 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-456-17395187
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-384-26123891
+- 403 · 40783 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-384-26123891
+    - https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-604-38747835
+- 200 · 63339 octets · https://canadabuys.canada.ca/en/tender-opportunities/tender-notice/cb-604-38747835
+      - …ced compliant bid. Set-aside under the Procurement Strategy for Indigenous Business: This procurement is not subject to any set-asides for Indigenous Suppliers. Comprehensive Land Claim Agreement: This procurement is not subject to a Comprehensive Land Claims Agreement. Security Requirements: This contract does not include security requirements. Nature of Requirements: This RFP is only for pre-qua…
