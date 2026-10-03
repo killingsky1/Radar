@@ -1762,7 +1762,7 @@ input { font: inherit; color: var(--texte); }
 .etude svg { flex: none; color: var(--accent); margin-top: 1px; }
 .etude b { color: var(--accent); font-weight: 600; }
 .bloc-lien { display: block; margin: 20px auto 0; }
-.bouton-favori { font-family: inherit; font-weight: 600; }
+.symbole-grand.bouton-favori { font-family: inherit; font-weight: 600; } /* plus précis que .symbole-grand (police à chasse fixe) */
 
 /* Catégories */
 .grille-cat { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
