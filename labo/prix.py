@@ -7,9 +7,15 @@ UA = {"User-Agent": "Radar projet personnel"}
 out = []
 def get(u, nom=None):
     time.sleep(1.5)
-    r = requests.get(u, headers=UA, timeout=60)
+    try:
+        r = requests.get(u, headers=UA, timeout=60)
+    except Exception as e:  # noqa: BLE001
+        out.append(f"- ERREUR {type(e).__name__} · {u}")
+        (S / "resume.md").write_text("\n".join(out) + "\n", encoding="utf-8")
+        return type("R", (), {"text": "", "content": b"", "status_code": 0})()
     out.append(f"- {r.status_code} · {len(r.content)} octets · {r.headers.get('Content-Type')} · {u}")
     if nom: (S / nom).write_bytes(r.content)
+    (S / "resume.md").write_text("\n".join(out) + "\n", encoding="utf-8")
     return r
 r = get("https://stooq.com/robots.txt", "stooq_robots.txt")
 out.append("```\n" + r.text[:1500] + "\n```")
