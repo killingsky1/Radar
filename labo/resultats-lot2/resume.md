@@ -1,0 +1,364 @@
+# Reconnaissance du lot 2
+
+
+## FDA
+- 200 · 644329 octets · https://api.fda.gov/drug/drugsfda.json?search=submissions.submission_type:%22ORIG%22+AND+submissions.submission_status:%22AP%22+AND+submissions.submission_status_date:[20260815+TO+20261003]&limit=100
+  - meta : {"disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.", "terms": "https://open.fda.gov/terms/", "license": "https://open.fda.gov/license/", "last_updated": "2026-10-02", "re
+  - ANDA220657 · DIFGEN PHARMS · EPINEPHRINE · ORIG [('AP', '20260915')]
+  - NDA215341 · BAYER HLTHCARE · KERENDIA · ORIG [('AP', '20210709')]
+  - NDA213312 · AADI · FYARRO · ORIG [('AP', '20211122')]
+  - ANDA219239 · GLAND · EPINEPHRINE · ORIG [('AP', '20250206')]
+  - NDA050640 · BAXTER HLTHCARE · BACTOCILL IN PLASTIC CONTAINER · ORIG [('AP', '19891026')]
+  - NDA219713 · NUVATION · IBTROZI · ORIG [('AP', '20250611')]
+  - ANDA208014 · SUN PHARM · FINGOLIMOD HYDROCHLORIDE · ORIG [('AP', '20191204')]
+  - BLA761232 · BEIGENE · TEVIMBRA · ORIG [('AP', '20240313')]
+  - ANDA218217 · AMNEAL · LANREOTIDE ACETATE · ORIG [('AP', '20260918')]
+  - ANDA219718 · CIPLA · POMALIDOMIDE · ORIG [('AP', '20260831')]
+  - ANDA074305 · AIPING PHARM INC · GLIPIZIDE · ORIG [('AP', '19950407')]
+  - ANDA090292 · ACTAVIS TOTOWA · LETROZOLE · ORIG [('AP', '20110713')]
+  - ANDA204857 · AMNEAL PHARMS · LACOSAMIDE · ORIG [('AP', '20220317')]
+  - ANDA215268 · NEPHRON · PHENYLEPHRINE HYDROCHLORIDE · ORIG [('AP', '20260924')]
+  - BLA761240 · COHERUS BIOSCIENCES INC · LOQTORZI · ORIG [('AP', '20231027')]
+  - ANDA218687 · NOVITIUM PHARMA · ESOMEPRAZOLE MAGNESIUM · ORIG [('AP', '20260925')]
+  - ANDA207616 · HETERO LABS LTD V · ROSUVASTATIN CALCIUM · ORIG [('AP', '20161031')]
+  - ANDA219183 · MICRO LABS · TOPIRAMATE · ORIG [('AP', '20260904')]
+  - ANDA076135 · TEVA PHARMS USA · CLARAVIS · ORIG [('AP', '20030411')]
+  - ANDA209465 · ZYDUS PHARMS · LACOSAMIDE · ORIG [('AP', '20220629')]
+  - BLA761258 · AKESO BIOPHARMA · PENPULIMAB-KCQX · ORIG [('AP', '20250423')]
+  - ANDA210489 · IPCA LABS LTD · AMLODIPINE BESYLATE · ORIG [('AP', '20260922')]
+  - ANDA213631 · AUROBINDO PHARMA LTD · SACUBITRIL AND VALSARTAN · ORIG [('AP', '20260902')]
+  - NDA210806 · MSD MERCK CO · PIFELTRO · ORIG [('AP', '20180830')]
+  - ANDA090943 · RISING · CAPECITABINE · ORIG [('AP', '20140808')]
+  - ANDA091620 · SANDOZ · TIGECYCLINE · ORIG [('AP', '20150527')]
+  - NDA210807 · MSD MERCK CO · DELSTRIGO · ORIG [('AP', '20180830')]
+  - ANDA074626 · HOSPIRA · BUTORPHANOL TARTRATE PRESERVATIVE FREE · ORIG [('AP', '19970123')]
+  - ANDA209813 · TEVA PHARMS USA · TOFACITINIB CITRATE · ORIG [('AP', '20260817')]
+  - NDA217806 · ELI LILLY AND CO · ZEPBOUND, ZEPBOUND (AUTOINJECTOR), ZEPBOUND KWIKPEN · ORIG [('AP', '20231108')]
+  - ANDA210149 · GUARDIAN DRUG · IBUPROFEN · ORIG [('AP', '20180817')]
+  - ANDA213267 · NATCO · THALIDOMIDE · ORIG [('AP', '20230427'), ('AP', '20260424')]
+  - BLA761274 · BIOCON BIOLOGICS INC · YESAFILI · ORIG [('AP', '20240520')]
+  - ANDA220509 · SENORES PHARMS · HYDROCODONE BITARTRATE AND HOMATROPINE METHYLBROMIDE · ORIG [('AP', '20260922')]
+  - NDA213645 · BAXTER HLTHCARE CORP · DAPTOMYCIN IN 0.9% SODIUM CHLORIDE, DAPZURA RT · ORIG [('AP', '20220125')]
+  - ANDA220524 · HIKMA · DEFLAZACORT · ORIG [('AP', '20260918')]
+  - ANDA076356 · TEVA PHARMS USA · CLARAVIS · ORIG [('AP', '20030411')]
+  - ANDA075576 · DR REDDYS LABS LTD · OMEPRAZOLE · ORIG [('AP', '20071022')]
+  - BLA761289 · ASTRAZENECA AB · IMJUDO · ORIG [('AP', '20221021')]
+  - BLA761297 · CHECKPOINT THERAPEUTICS INC · UNLOXCYT · ORIG [('AP', '20241213')]
+  - ANDA211182 · HETERO LABS LTD V · IBRUTINIB · ORIG [('AP', '20260908')]
+  - ANDA220597 · NOVITIUM PHARMA · EVEROLIMUS · ORIG [('AP', '20260921')]
+  - ANDA212918 · BIONPHARMA · ATOVAQUONE · ORIG [('AP', '20210330')]
+  - NDA209139 · CARMEL BIOSCIENCES · PREXXARTAN · ORIG [('AP', '20171219')]
+  - ANDA220590 · YICHANG HUMANWELL · DILTIAZEM HYDROCHLORIDE · ORIG [('AP', '20260925')]
+  - ANDA079019 · GLENMARK PHARMS LTD · ATOMOXETINE HYDROCHLORIDE · ORIG [('AP', '20170530')]
+  - ANDA206922 · ACCORD HLTHCARE · EPLERENONE · ORIG [('AP', '20170713')]
+  - ANDA217442 · ASCENT PHARMS INC · LISDEXAMFETAMINE DIMESYLATE · ORIG [('AP', '20230825')]
+  - ANDA206098 · ALEMBIC · ASENAPINE MALEATE · ORIG [('AP', '20201210')]
+  - NDA019658 · BAYER HEALTHCARE LLC · CLARITIN, CLARITIN HIVES RELIEF · ORIG [('AP', '19930412')]
+  - NDA220605 · TAKEDA PHARMS AM · MIMRYLO · ORIG [('AP', '20260828')]
+  - NDA050162 · PFIZER · CLEOCIN HYDROCHLORIDE · ORIG [('AP', '19700222')]
+  - NDA220613 · HANDA ONCOL · OMCAZIO · ORIG [('AP', '20260903')]
+  - ANDA203027 · APOTEX · LEVOCETIRIZINE DIHYDROCHLORIDE · ORIG [('AP', '20150213')]
+  - NDA208065 · ASTRAZENECA · TAGRISSO · ORIG [('AP', '20151113')]
+  - ANDA091322 · LUPIN LTD · MEFENAMIC ACID · ORIG [('AP', '20110722')]
+  - ANDA079021 · STRIDES PHARMA · ATOMOXETINE HYDROCHLORIDE · ORIG [('AP', '20210218')]
+  - ANDA214897 · ZYDUS · AMANTADINE, AMANTADINE HYDROCHLORIDE · ORIG [('AP', '20240826'), ('TA', '20240826')]
+  - ANDA219232 · GLENMARK SPECLT · FLUTICASONE PROPIONATE · ORIG [('AP', '20260818')]
+  - ANDA219832 · ZYDUS PHARMS · EPINEPHRINE · ORIG [('AP', '20260914')]
+  - ANDA074653 · HIKMA · HYDROMORPHONE HYDROCHLORIDE · ORIG [('AP', '19980729')]
+  - NDA208081 · BIOFRONTERA · AMELUZ · ORIG [('AP', '20160510')]
+  - NDA203441 · TAKEDA PHARMS USA · GATTEX KIT · ORIG [('AP', '20121221')]
+  - ANDA065364 · FRESENIUS KABI USA · COLISTIMETHATE SODIUM · ORIG [('AP', '20080417')]
+  - ANDA203830 · STERISCIENCE · NAFCILLIN SODIUM · ORIG [('AP', '20260925')]
+  - ANDA202359 · AVET LIFESCIENCES · COLISTIMETHATE SODIUM · ORIG [('AP', '20120928')]
+  - ANDA219260 · BAXTER HLTHCARE CORP · ROCURONIUM BROMIDE · ORIG [('AP', '20260918')]
+  - NDA017584 · FRESENIUS KABI USA · LIDOCAINE HYDROCHLORIDE PRESERVATIVE FREE · ORIG [('AP', '19760326')]
+  - NDA020766 · CHEPLAPHARM · XENICAL · ORIG [('AP', '19990423')]
+  - NDA206947 · EISAI INC · LENVIMA · ORIG [('AP', '20150213')]
+  - NDA215358 · NOVARTIS · SCEMBLIX · ORIG [('AP', '20211029'), ('AP', '20211029')]
+  - BLA761344 · AMGEN INC · IMDELLTRA · ORIG [('AP', '20240516')]
+  - ANDA219258 · GRANULES · LISDEXAMFETAMINE DIMESYLATE · ORIG [('AP', '20241216')]
+  - ANDA220741 · SANDOZ · POMALIDOMIDE · ORIG [('AP', '20260831')]
+  - ANDA090685 · PPI-DAC · POLYETHYLENE GLYCOL 3350 · ORIG [('AP', '20091006')]
+  - ANDA217031 · BIOCON PHARMA · MYCOPHENOLATE SODIUM · ORIG [('AP', '20231129')]
+  - ANDA090681 · ACCORD HLTHCARE · QUETIAPINE FUMARATE · ORIG [('AP', '20161101'), ('AP', '20170509')]
+  - ANDA078734 · SUN PHARM INDS LTD · OXCARBAZEPINE · ORIG [('AP', '20090626')]
+  - ANDA090682 · AUROBINDO PHARMA · VALACYCLOVIR HYDROCHLORIDE · ORIG [('AP', '20100524')]
+  - ANDA214523 · PRECISION DOSE INC · ALENDRONATE SODIUM · ORIG [('AP', '20260902')]
+  - ANDA090688 · MACLEODS PHARMS · NEVIRAPINE · ORIG [('AP', '20190114')]
+  - NDA213702 · JAZZ · ZEPZELCA · ORIG [('AP', '20200615')]
+  - ANDA040088 · VISTAPHARM LLC · METHADONE HYDROCHLORIDE · ORIG [('AP', '19941130')]
+  - ANDA040671 · MICRO LABS · TRIAMCINOLONE ACETONIDE · ORIG [('AP', '20060609')]
+  - NDA020936 · APOTEX · PAXIL CR · ORIG [('AP', '19990216')]
+  - ANDA206556 · INVAGEN PHARMS · BUPROPION HYDROCHLORIDE · ORIG [('AP', '20160826')]
+  - ANDA212968 · GLAND · NEOSTIGMINE METHYLSULFATE · ORIG [('AP', '20191016')]
+  - NDA219285 · GENENTECH INC · EVRYSDI · ORIG [('AP', '20250211')]
+  - ANDA220865 · MSN · TAPENTADOL HYDROCHLORIDE · ORIG [('AP', '20260903')]
+  - NDA021529 · ORGANON · IMPLANON, NEXPLANON · ORIG [('AP', '20060717')]
+  - ANDA074700 · SANDOZ · BUMETANIDE · ORIG [('AP', '19961121')]
+  - ANDA211568 · ZYDUS PHARMS · ISOTRETINOIN · ORIG [('AP', '20230829')]
+  - NDA215383 · MERCK SHARP DOHME · WELIREG · ORIG [('AP', '20210813')]
+  - ANDA217060 · LANTHEUS MEDICAL · BRAVNETSA · ORIG [('AP', '20260921')]
+  - ANDA220884 · RUBICON RESEARCH · SPIRONOLACTONE AND HYDROCHLOROTHIAZIDE · ORIG [('AP', '20260910')]
+  - ANDA091356 · ONESOURCE SPECIALTY · CALCITRIOL · ORIG [('AP', '20141212')]
+  - ANDA208475 · B BRAUN MEDICAL · LIDOCAINE HYDROCHLORIDE AND EPINEPHRINE · ORIG [('AP', '20210908')]
+  - BLA761363 · MERCK SHARP DOHME · WINREVAIR · ORIG [('AP', '20240326')]
+  - ANDA220873 · ZYDUS PHARMS · ASCORBIC ACID · ORIG [('AP', '20260820')]
+  - ANDA220876 · ANNORA PHARMA · NORGESTIMATE AND ETHINYL ESTRADIOL · ORIG [('AP', '20260923')]
+- 200 · 130897 octets · https://open.fda.gov/terms/
+- 200 · 123019 octets · https://open.fda.gov/license/
+- 200 · 118723 octets · https://open.fda.gov/apis/authentication/
+- 404 · 10 octets · https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2026
+- 404 · 10 octets · https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml
+- 404 · 10 octets · https://www.fda.gov/robots.txt
+- 404 · 149 octets · https://api.fda.gov/robots.txt
+- 404 · 10 octets · https://www.fda.gov/about-fda/about-website/website-policies
+- 404 · 10 octets · https://www.fda.gov/vaccines-blood-biologics/development-approval-process-cber/biological-approvals-year
+  - approbations « novel » 2026 : 0 lignes de tableau
+
+## SEC 13F
+- 200 · 539681 octets · https://www.sec.gov/Archives/edgar/daily-index/2026/QTR3/master.20260803.idx
+- 200 · 608985 octets · https://www.sec.gov/Archives/edgar/daily-index/2026/QTR3/master.20260804.idx
+- 200 · 489442 octets · https://www.sec.gov/Archives/edgar/daily-index/2026/QTR3/master.20260805.idx
+- 200 · 614150 octets · https://www.sec.gov/Archives/edgar/daily-index/2026/QTR3/master.20260806.idx
+- 200 · 548913 octets · https://www.sec.gov/Archives/edgar/daily-index/2026/QTR3/master.20260807.idx
+- 200 · 461512 octets · https://www.sec.gov/Archives/edgar/daily-index/2026/QTR3/master.20260810.idx
+- 200 · 515611 octets · https://www.sec.gov/Archives/edgar/daily-index/2026/QTR3/master.20260811.idx
+- 200 · 501670 octets · https://www.sec.gov/Archives/edgar/daily-index/2026/QTR3/master.20260812.idx
+- 200 · 652338 octets · https://www.sec.gov/Archives/edgar/daily-index/2026/QTR3/master.20260813.idx
+- 200 · 1050798 octets · https://www.sec.gov/Archives/edgar/daily-index/2026/QTR3/master.20260814.idx
+  - 13F-HR déposés du 3 au 14 août 2026 : 5168
+  - BERKSHIRE HATHAWAY → CIK 1067983 · BERKSHIRE HATHAWAY INC · 20260814 · edgar/data/1067983/0001193125-26-352200.txt
+  - BRIDGEWATER → CIK 1350694 · Bridgewater Associates, LP · 20260814 · edgar/data/1350694/0001350694-26-000003.txt
+  - BRIDGEWATER → CIK 1600319 · Bridgewater Advisors Inc. · 20260805 · edgar/data/1600319/0001600319-26-000004.txt
+  - PERSHING SQUARE → CIK 2026053 · PERSHING SQUARE INC. · 20260814 · edgar/data/2026053/0001172661-26-003790.txt
+  - SCION ASSET → aucun 13F-HR trouvé du 3 au 14 août
+  - RENAISSANCE TECH → CIK 1037389 · RENAISSANCE TECHNOLOGIES LLC · 20260813 · edgar/data/1037389/0001037389-26-000059.txt
+  - CITADEL ADVISORS → CIK 1423053 · CITADEL ADVISORS LLC · 20260814 · edgar/data/1423053/0001104659-26-097200.txt
+  - SOROS FUND → CIK 1029160 · SOROS FUND MANAGEMENT LLC · 20260814 · edgar/data/1029160/0000902664-26-003507.txt
+  - APPALOOSA → CIK 1656456 · Appaloosa LP · 20260814 · edgar/data/1656456/0001656456-26-000003.txt
+  - THIRD POINT → CIK 1040273 · Third Point LLC · 20260814 · edgar/data/1040273/0001040273-26-000003.txt
+  - TIGER GLOBAL → CIK 1167483 · TIGER GLOBAL MANAGEMENT LLC · 20260814 · edgar/data/1167483/0000919574-26-005427.txt
+  - BAUPOST → CIK 1061768 · BAUPOST GROUP LLC/MA · 20260813 · edgar/data/1061768/0001061768-26-000010.txt
+  - GREENLIGHT → aucun 13F-HR trouvé du 3 au 14 août
+  - ICAHN → CIK 921669 · ICAHN CARL C · 20260814 · edgar/data/921669/0001539497-26-002243.txt
+  - ARK INVESTMENT → CIK 1554871 · Spark Investment Management LLC · 20260810 · edgar/data/1554871/0000899140-26-000792.txt
+  - ARK INVESTMENT → CIK 1697748 · ARK Investment Management LLC · 20260814 · edgar/data/1697748/0001104659-26-096910.txt
+  - ARK INVESTMENT → CIK 1910971 · Benchmark Investment Advisors LLC · 20260812 · edgar/data/1910971/0001104659-26-095032.txt
+  - ARK INVESTMENT → CIK 2023551 · LANDMARK INVESTMENT PARTNERS, L.P. · 20260814 · edgar/data/2023551/0002023551-26-000005.txt
+  - DUQUESNE → CIK 1536411 · Duquesne Family Office LLC · 20260814 · edgar/data/1536411/0001536411-26-000006.txt
+  - ELLIOTT → CIK 1791786 · Elliott Investment Management L.P. · 20260814 · edgar/data/1791786/0001013594-26-000915.txt
+  - COATUE → CIK 1135730 · COATUE MANAGEMENT LLC · 20260814 · edgar/data/1135730/0000919574-26-005478.txt
+  - VIKING GLOBAL → CIK 1103804 · VIKING GLOBAL INVESTORS LP · 20260814 · edgar/data/1103804/0001103804-26-000006.txt
+  - LONE PINE → CIK 1061165 · LONE PINE CAPITAL LLC · 20260814 · edgar/data/1061165/0000919574-26-005485.txt
+  - GATES FOUNDATION → CIK 1166559 · GATES FOUNDATION TRUST · 20260814 · edgar/data/1166559/0001104659-26-097175.txt
+  - NORGES BANK → CIK 1374170 · NORGES BANK · 20260812 · edgar/data/1374170/0001374170-26-000069.txt
+  - CAISSE DE DEPOT → CIK 898286 · CAISSE DE DEPOT ET PLACEMENT DU QUEBEC · 20260814 · edgar/data/898286/0001140361-26-033187.txt
+  - CANADA PENSION PLAN → CIK 1283718 · CANADA PENSION PLAN INVESTMENT BOARD · 20260814 · edgar/data/1283718/0001104659-26-097308.txt
+  - ONTARIO TEACHERS → CIK 937567 · ONTARIO TEACHERS PENSION PLAN BOARD · 20260807 · edgar/data/937567/0001999371-26-017424.txt
+  - PUBLIC SECTOR PENSION → CIK 1396318 · PUBLIC SECTOR PENSION INVESTMENT BOARD · 20260813 · edgar/data/1396318/0001396318-26-000031.txt
+  - BRITISH COLUMBIA INVESTMENT → CIK 1228242 · BRITISH COLUMBIA INVESTMENT MANAGEMENT Corp · 20260813 · edgar/data/1228242/0001228242-26-000009.txt
+  - OMERS → CIK 1053321 · OMERS ADMINISTRATION Corp · 20260813 · edgar/data/1053321/0001062993-26-004250.txt
+  - OMERS → CIK 1567912 · Somerset Group LLC · 20260812 · edgar/data/1567912/0001062993-26-004218.txt
+  - ALBERTA INVESTMENT → CIK 1463559 · Alberta Investment Management Corp · 20260806 · edgar/data/1463559/0001123292-26-001065.txt
+  - HEALTHCARE OF ONTARIO → CIK 1535845 · HEALTHCARE OF ONTARIO PENSION PLAN TRUST FUND · 20260813 · edgar/data/1535845/0001535845-26-000007.txt
+  - ROYAL BANK OF CANADA → CIK 1000275 · ROYAL BANK OF CANADA · 20260814 · edgar/data/1000275/0001140361-26-033080.txt
+  - TORONTO DOMINION → CIK 947263 · TORONTO DOMINION BANK · 20260814 · edgar/data/947263/0002052595-26-000084.txt
+  - BANK OF MONTREAL → CIK 927971 · BANK OF MONTREAL /CAN/ · 20260812 · edgar/data/927971/0000927971-26-000090.txt
+  - CANADIAN IMPERIAL → aucun 13F-HR trouvé du 3 au 14 août
+  - BANK OF NOVA SCOTIA → CIK 1335382 · BANK OF NOVA SCOTIA TRUST CO · 20260811 · edgar/data/1335382/0001335382-26-000003.txt
+  - BANK OF NOVA SCOTIA → CIK 9631 · BANK OF NOVA SCOTIA · 20260812 · edgar/data/9631/0000009631-26-000026.txt
+  - FAIRFAX → CIK 915191 · FAIRFAX FINANCIAL HOLDINGS LTD/ CAN · 20260814 · edgar/data/915191/0001104659-26-096276.txt
+  - BROOKFIELD → CIK 1001085 · BROOKFIELD Corp /ON/ · 20260814 · edgar/data/1001085/0001193125-26-352024.txt
+- 200 · 161229 octets · https://data.sec.gov/submissions/CIK0001067983.json
+  - Berkshire (submissions) : nom officiel « BERKSHIRE HATHAWAY INC »
+- 200 · 656 octets · https://www.sec.gov/Archives/edgar/data/1067983/000119312526352200/index.json
+  - 13F-HR 0001193125-26-352200 · déposé 2026-08-14 · trimestre 2026-06-30 · fichiers ['0001193125-26-352200-index-headers.html', '0001193125-26-352200-index.html', '0001193125-26-352200.txt', '56757.xml', 'primary_doc.xml']
+- 200 · 44724 octets · https://www.sec.gov/Archives/edgar/data/1067983/000119312526352200/56757.xml
+- 200 · 5555 octets · https://www.sec.gov/Archives/edgar/data/1067983/000119312526352200/primary_doc.xml
+- 200 · 2875 octets · https://www.sec.gov/Archives/edgar/data/1067983/000119312526352200/0001193125-26-352200-index-headers.html
+- 200 · 656 octets · https://www.sec.gov/Archives/edgar/data/1067983/000119312526226661/index.json
+  - 13F-HR 0001193125-26-226661 · déposé 2026-05-15 · trimestre 2026-03-31 · fichiers ['0001193125-26-226661-index-headers.html', '0001193125-26-226661-index.html', '0001193125-26-226661.txt', '53405.xml', 'primary_doc.xml']
+- 200 · 45259 octets · https://www.sec.gov/Archives/edgar/data/1067983/000119312526226661/53405.xml
+- 200 · 5555 octets · https://www.sec.gov/Archives/edgar/data/1067983/000119312526226661/primary_doc.xml
+- 200 · 2873 octets · https://www.sec.gov/Archives/edgar/data/1067983/000119312526226661/0001193125-26-226661-index-headers.html
+
+## S&P Dow Jones Indices
+- 403 · 384 octets · https://www.spglobal.com/robots.txt
+- 404 · 62 octets · https://press.spglobal.com/robots.txt
+- 200 · 82845 octets · https://press.spglobal.com/
+    - Vylor Added to the S&P 500; Twilio Set to Join S&P 500; Others to Join S&P MidCa → https://press.spglobal.com/2026-10-01-Vylor-Added-to-the-S-P-500-Twilio-Set-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400-and-S-P-SmallCap-600
+    - Bloom Energy, Illumina, and Everpure Set to Join S&P 500; Others to Join S&P 100 → https://press.spglobal.com/2026-09-04-Bloom-Energy,-Illumina,-and-Everpure-Set-to-Join-S-P-500-Others-to-Join-S-P-100,-S-P-MidCap-400,-and-S-P-SmallCap-600
+    -  → https://press.spglobal.com/index.php?s=2429&amp;pagetemplate=rss
+    -  → http://investor.spglobal.com/RSS-Feeds/Index?KeyGenPage=1073751617
+    - Terms of Use → https://www.spglobal.com/terms-of-use
+- 403 · 2008 octets · https://www.spglobal.com/en/terms-of-use
+- 403 · 2011 octets · https://www.spglobal.com/spdji/en/terms-of-use/
+- 403 · 2011 octets · https://www.spglobal.com/spdji/en/media-center/news-announcements/
+- 403 · 2011 octets · https://www.spglobal.com/spdji/en/indices/equity/sp-500/
+
+## CanadaBuys
+- 200 · 261486 octets · https://open.canada.ca/data/api/action/package_search?q=CanadaBuys&rows=20
+  - jeu : CanadaBuys contract history  · 4fe645a1-ffcd-40c1-9385-2c771be956a4 · licence ca-ogl-lgo
+    - Supporting Documentation (English) · HTML · 2026-03-24T20:14:08.299314 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/ac-cb/COsoutien-CHsupport-eng.html
+    - Supporting Documentation (French) · HTML · 2026-03-24T20:14:08.299319 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/ac-cb/COsoutien-CHsupport-fra.html
+    - CanadaBuys data dictionary · XML · 2023-06-02T12:36:26.739954 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/ac-cb/achatscanada-canadabuys-dd.xml
+    - All CanadaBuys contract history, 2023-06-01 onwards · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/contractHistoryComplete-contratsOctroyesComplet.csv
+    - Legacy contract history, 2009-01 to 2023-05 (prior to CanadaBuys) · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2009-2023-contractHistoryHistorical-contratsOctroyesHistorique.csv
+    - Contract history, 2026-2027 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2026-2027-contractHistory-contratsOctroyes.csv
+    - Contact History, 2025-2026 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2025-2026-contractHistory-contratsOctroyes.csv
+    - Contract history, 2024-2025 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2024-2025-contractHistory-contratsOctroyes.csv
+    - Contract history, 2023-2024 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2023-2024-contractHistory-contratsOctroyes.csv
+    - Contract history, 2022-2023 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2022-2023-contractHistory-contratsOctroyes.csv
+    - Contract history, 2021-2022 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2021-2022-contractHistory-contratsOctroyes.csv
+    - Contract history, 2020-2021 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2020-2021-contractHistory-contratsOctroyes.csv
+    - Contract history, 2019-2020 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2019-2020-contractHistory-contratsOctroyes.csv
+    - Contract history, 2018-2019 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2018-2019-contractHistory-contratsOctroyes.csv
+    - Contract history, 2017-2018 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2017-2018-contractHistory-contratsOctroyes.csv
+    - Contract history, 2016-2017 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2016-2017-contractHistory-contratsOctroyes.csv
+    - Contract history, 2015-2016 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2015-2016-contractHistory-contratsOctroyes.csv
+    - Contract history, 2014-2015 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2014-2015-contractHistory-contratsOctroyes.csv
+    - Contract history, 2013-2014 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2013-2014-contractHistory-contratsOctroyes.csv
+    - Contract history, 2012-2013 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2012-2013-contractHistory-contratsOctroyes.csv
+    - Contract history, 2011-2012 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2011-2012-contractHistory-contratsOctroyes.csv
+    - Contract history, 2010-2011 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2010-2011-contractHistory-contratsOctroyes.csv
+    - Contract history, 2009-2010 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2009-2010-contractHistory-contratsOctroyes.csv
+    - Contract history, 2009-Jan to Mar · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2009-jan-Mar-contractHistory-contratsOctroyes.csv
+  - jeu : CanadaBuys award notices · a1acb126-9ce8-40a9-b889-5da2b1dd20cb · licence ca-ogl-lgo
+    - Implementation Notice: March 17, 2026 - April 10, 2026 (English) · HTML · 2026-03-24T20:54:14.120903 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/ac-cb/COsoutien-CHsupport-eng.html
+    - Implementation Notice: March 17, 2026 - April 10, 2026 (French) · HTML · 2026-03-24T20:54:14.120909 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/ac-cb/COsoutien-CHsupport-fra.html
+    - Supporting Documentation (English) · HTML · 2023-04-27T13:49:54.827407 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/ac-cb/soutien-support-eng.html
+    - Supporting Documentation (French) · HTML · 2026-02-04T22:04:17.114847 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/ac-cb/soutien-support-fra.html
+    - CanadaBuys data dictionary · XML · 2023-04-27T13:49:54.827419 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/ac-cb/achatscanada-canadabuys-dd.xml
+    - All CanadaBuys award notices, 2022-08-08 onwards · CSV · 2026-09-29T00:00:00 · https://canadabuys.canada.ca/opendata/pub/awardNoticeComplete-avisAttributionComplet.csv
+    - Legacy award notices, 2012 to 2022-08 (prior to CanadaBuys) · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2012-2022-awardNoticeHistorical-avisAttributionHistorique.csv
+    - Award notices, 2026-2027 · CSV · 2026-09-29T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2026-2027-awardNotice-avisAttribution.csv
+    - Award notices, 2025-2026 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2025-2026-awardNotice-avisAttribution.csv
+    - Award notices, 2024-2025 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2024-2025-awardNotice-avisAttribution.csv
+    - Award notices, 2023-2024 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2023-2024-awardNotice-avisAttribution.csv
+    - Award notices, 2022-2023 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2022-2023-awardNotice-avisAttribution.csv
+  - jeu : CanadaBuys tender notices · 6abd20d4-7a1c-4b38-baa2-9525d0bb2fd2 · licence ca-ogl-lgo
+    - Supporting Documentation (English) · HTML · 2023-04-27T13:49:58.283336 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/ac-cb/soutien-support-eng.html
+    - Supporting Documentation (French) · HTML · 2023-04-27T13:49:58.283346 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/ac-cb/soutien-support-fra.html
+    - CanadaBuys data dictionary · XML · 2023-04-27T13:49:58.283349 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/ac-cb/achatscanada-canadabuys-dd.xml
+    - New tender notices · CSV · 2026-09-30T00:00:00 · https://canadabuys.canada.ca/opendata/pub/newTenderNotice-nouvelAvisAppelOffres.csv
+    - Open tender notices · CSV · 2026-09-29T00:00:00 · https://canadabuys.canada.ca/opendata/pub/openTenderNotice-ouvertAvisAppelOffres.csv
+    - Tender notices, 2026-2027 · CSV · 2026-09-29T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2026-2027-TenderNotice-AvisAppelOffres.csv
+    - Tender notices, 2025-2026 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2025-2026-TenderNotice-AvisAppelOffres.csv
+    - Tender notices, 2024-2025 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2024-2025-TenderNotice-AvisAppelOffres.csv
+    - Tender notices, 2023-2024 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2023-2024-TenderNotice-AvisAppelOffres.csv
+    - Tender notices, 2022-2023 · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2022-2023-TenderNotice-AvisAppelOffres.csv
+    - All CanadaBuys tender notices, 2022-08-08 onwards · CSV · 2026-09-29T00:00:00 · https://canadabuys.canada.ca/opendata/pub/tenderNoticeComplete-avisAppelOffresComplet.csv
+    - Archived, 2009-2022 legacy tender notices · CSV · 2026-09-28T00:00:00 · https://canadabuys.canada.ca/opendata/pub/2009-2022-tenderNoticeHistorical-AvisAppelOffresHistorique.csv
+  - jeu : Bank of Canada buy-back transactions with investment dealers and chartered banks · cb468866-a7f7-4bfb-9cf7-3f0a1bd0f1e5 · licence ca-ogl-lgo
+    - Dataset · CSV · 2023-01-17T21:58:15.425780 · https://www150.statcan.gc.ca/n1/tbl/csv/10100098-fra.zip
+    - Dataset · CSV · 2023-01-17T21:58:15.425786 · https://www150.statcan.gc.ca/n1/tbl/csv/10100098-eng.zip
+    - Dataset · XML · 2023-01-17T21:58:15.425789 · https://www150.statcan.gc.ca/n1/tbl/sdmx/10100098-SDMX.zip
+    - Supporting Document · HTML · 2023-01-17T21:58:15.425791 · https://www150.statcan.gc.ca/t1/tbl1/fr/tv.action?pid=1010009801
+    - Supporting Document · HTML · 2023-01-17T21:58:15.425793 · https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1010009801
+  - jeu : Risks of buying natural health products online · 4508da08-fafe-4256-8279-9e0e79dc37e8 · licence ca-ogl-lgo
+    - Risks of buying natural health products online · HTML · 2021-09-09T12:31:31.897861 · https://www.canada.ca/en/health-canada/services/natural-health-products/risks-buying-natural-health-products-online.html
+    - Risks of buying natural health products online · HTML · 2021-09-09T12:31:31.897868 · https://www.canada.ca/fr/sante-canada/services/produits-sante-naturels/risques-lies-achat-produits-sante-naturels-ligne.html
+  - jeu : Chemical safety for buying, renting and maintaining your home · 1be2428a-d63e-453c-b16c-670966a493ce · licence ca-ogl-lgo
+    - Chemical safety for buying, renting and maintaining your home · HTML · 2021-01-06T17:51:47.156610 · https://www.canada.ca/en/health-canada/services/home-safety/chemical-safety-home.html
+    - Chemical safety for buying, renting and maintaining your home · HTML · 2021-01-06T17:51:47.156618 · https://www.canada.ca/fr/sante-canada/services/securite-domicile/security-produits-chimiques.html
+  - jeu : Sources of financing to buy or acquire business used by small and medium enterprises · c56f26b3-f4ef-4cd4-8445-d1a4f4689122 · licence ca-ogl-lgo
+    - Dataset · CSV · 2023-11-08T20:59:08.242224 · https://www150.statcan.gc.ca/n1/tbl/csv/33100445-fra.zip
+    - Dataset · CSV · 2023-11-08T20:59:08.242231 · https://www150.statcan.gc.ca/n1/tbl/csv/33100445-eng.zip
+    - Dataset · XML · 2023-11-08T20:59:08.242233 · https://www150.statcan.gc.ca/n1/tbl/sdmx/33100445-SDMX.zip
+    - Supporting Document · HTML · 2023-11-08T20:59:08.242236 · https://www150.statcan.gc.ca/t1/tbl1/fr/tv.action?pid=3310044501
+    - Supporting Document · HTML · 2023-11-08T20:59:08.242238 · https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3310044501
+  - jeu : Advertising Media expenditures associated with agency responsible for media  planning and buying, the Agency of Record (AOR), for the Government of Canada · f9c132bc-4573-4bfd-bab5-3d242740bfea · licence ca-ogl-lgo
+    - 2017-2018 to present, data file · CSV · 2025-02-05T00:00:00 · https://donnees-data.tpsgc-pwgsc.gc.ca/bi1/placemedia-mediaplace/placemedia-mediaplace.csv
+    - 2016-2017 data file · CSV · 2022-04-26T00:00:00 · https://donnees-data.tpsgc-pwgsc.gc.ca/bi1/placemedia-mediaplace/placemedia-mediaplace-2016-2017.csv
+    - Data Dictionary · XML · 2018-05-31T20:00:18.254107 · https://donnees-data.tpsgc-pwgsc.gc.ca/bi1/depensescampagne-advertisingcampaign/depensescampagne-advertisingcampaign-dd.xml
+    - Supporting Documentation · HTML · 2022-04-26T15:32:49.573100 · https://donnees-data.tpsgc-pwgsc.gc.ca/bi1/placemedia-mediaplace/soutien-support-eng.html
+    - Supporting Documentation · HTML · 2022-04-26T15:32:49.573103 · https://donnees-data.tpsgc-pwgsc.gc.ca/bi1/placemedia-mediaplace/soutien-support-fra.html
+  - jeu : Bank of Canada, positions of members of the Canadian Payments Association and buy-back transactions with primary dealers, weekly averages of daily data · 1c6ab0b8-abdd-40df-9b2d-3a7a4bc2a055 · licence ca-ogl-lgo
+    - Dataset · CSV · 2023-01-17T19:56:41.651374 · https://www150.statcan.gc.ca/n1/tbl/csv/10100083-fra.zip
+    - Dataset · CSV · 2023-01-17T19:56:41.651381 · https://www150.statcan.gc.ca/n1/tbl/csv/10100083-eng.zip
+    - Dataset · XML · 2023-01-17T19:56:41.651383 · https://www150.statcan.gc.ca/n1/tbl/sdmx/10100083-SDMX.zip
+    - Supporting Document · HTML · 2023-01-17T19:56:41.651386 · https://www150.statcan.gc.ca/t1/tbl1/fr/tv.action?pid=1010008301
+    - Supporting Document · HTML · 2023-01-17T19:56:41.651387 · https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1010008301
+  - jeu : Bank of Canada, positions of members of the Canadian Payments Association and buy-back transactions with primary dealers, monthly averages of daily data · 3890cbad-ed06-4abf-8058-819b94d31de4 · licence ca-ogl-lgo
+    - Dataset · CSV · 2023-01-17T19:56:39.821180 · https://www150.statcan.gc.ca/n1/tbl/csv/10100082-fra.zip
+    - Dataset · CSV · 2023-01-17T19:56:39.821187 · https://www150.statcan.gc.ca/n1/tbl/csv/10100082-eng.zip
+    - Dataset · XML · 2023-01-17T19:56:39.821190 · https://www150.statcan.gc.ca/n1/tbl/sdmx/10100082-SDMX.zip
+    - Supporting Document · HTML · 2023-01-17T19:56:39.821192 · https://www150.statcan.gc.ca/t1/tbl1/fr/tv.action?pid=1010008201
+    - Supporting Document · HTML · 2023-01-17T19:56:39.821195 · https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1010008201
+  - jeu : OD0025 Seafood Buying And Processing Licenses from 2009 · 8949e0ba-52ee-b865-fefd-fe78f8c12415 · licence pei-oglpei
+    - Prince Edward Island original metadata (https://data.princeedwardisland.ca) · HTML · 2026-04-17T15:34:46.335287 · https://data.princeedwardisland.ca/datasets/4a903aa6f6c840aea534d6e4a0723bd7/about
+    - ArcGIS Hub Dataset · HTML · 2026-04-17T15:34:46.335295 · https://data.princeedwardisland.ca/datasets/4a903aa6f6c840aea534d6e4a0723bd7/explore
+  - jeu : [ARCHIVED] Select Nova Scotia · b423f7c1-3ae4-c648-5145-ccfc8e0260e4 · licence ns-oglns
+    - Nova Scotia original metadata (https://data.novascotia.ca) · HTML · 2026-04-17T15:31:58.408837 · https://data.novascotia.ca/datasets/t8ij-8svj
+    - [ARCHIVED] Select Nova Scotia (CSV) · CSV · 2026-04-17T15:31:58.408845 · https://data.novascotia.ca/api/views/t8ij-8svj/rows.csv?accessType=DOWNLOAD
+    - [ARCHIVED] Select Nova Scotia (CSV Excel) · CSV · 2026-04-17T15:31:58.408847 · https://data.novascotia.ca/api/views/t8ij-8svj/rows.csv?accessType=DOWNLOAD&bom=true&format=true
+    - [ARCHIVED] Select Nova Scotia (CSV Excel (EU)) · CSV · 2026-04-17T15:31:58.408849 · https://data.novascotia.ca/api/views/t8ij-8svj/rows.csv?accessType=DOWNLOAD&bom=true&format=true&delimiter=%3B
+    - [ARCHIVED] Select Nova Scotia (TSV) · other · 2026-04-17T15:31:58.408851 · https://data.novascotia.ca/api/views/t8ij-8svj/rows.tsv?accessType=DOWNLOAD&bom=true&format=true&delimiter=%3B
+    - [ARCHIVED] Select Nova Scotia (RDF) · RDF · 2026-04-17T15:31:58.408853 · https://data.novascotia.ca/api/views/t8ij-8svj/rows.rdf?accessType=DOWNLOAD
+    - [ARCHIVED] Select Nova Scotia (RSS) · RSS · 2026-04-17T15:31:58.408854 · https://data.novascotia.ca/api/views/t8ij-8svj/rows.rss?accessType=DOWNLOAD
+    - [ARCHIVED] Select Nova Scotia (XML) · XML · 2026-04-17T15:31:58.408856 · https://data.novascotia.ca/api/views/t8ij-8svj/rows.xml?accessType=DOWNLOAD
+  - jeu : Archived, contract history · 53753f06-8b28-42d7-89f7-04cd014323b0 · licence ca-ogl-lgo
+    - Procurement Data Dictionary · XML · 2016-12-01T12:44:09.682112 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/appelsoffrescontractsoctroyes-tendercnoticescontracthistory-2023-04-26-dd.xml
+    - Archived, complete file: 2009 to May 2023 · CSV · 2016-12-01T12:44:09.682157 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/contratsoctroyes-contracthistory-2009-2023-05.zip
+    - Archived, 2023-Apr to May · CSV · 2023-04-14T17:30:23.527964 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/contratsoctroyes-contracthistory-2023-avr-mai-apr-may.csv
+    - Archived, 2022-2023 fiscal year · CSV · 2022-05-18T20:21:24.710612 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/contratsoctroyes-contracthistory-2022-2023.csv
+    - Archived, 2021-2022 fiscal year · CSV · 2022-01-14T15:25:09.893540 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/contratsoctroyes-contracthistory-2021-2022.csv
+    - Archived, 2020-2021 fiscal year  · CSV · 2020-07-21T19:10:37.991350 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/contratsoctroyes-contracthistory-2020-2021.csv
+    - Archived, 2019-2020 fiscal year · CSV · 2019-06-18T20:30:42.878406 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/contratsoctroyes-contracthistory-2019-2020.csv
+    - Archived, 2018-2019 fiscal year  · CSV · 2018-05-10T14:40:28.507849 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/contratsoctroyes-contracthistory-2018-2019.csv
+    - Archived, 2017-2018 fiscal year · CSV · 2017-07-28T09:30:10.990852 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/contratsoctroyes-contracthistory-2017-2018.csv
+    - Archived, 2016-2017 fiscal year  · CSV · 2016-12-01T12:44:09.682272 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/contratsoctroyes-contracthistory-2016-2017.csv
+    - Archived, 2015-2016 fiscal year  · CSV · 2016-12-01T12:44:09.682259 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/contratsoctroyes-contracthistory-2015-2016.csv
+    - Archived, 2014-2015 fiscal year · CSV · 2016-12-01T12:44:09.682246 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/contratsoctroyes-contracthistory-2014-2015.csv
+    - Archived, 2013-2014 fiscal year · CSV · 2016-12-01T12:44:09.682234 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/contratsoctroyes-contracthistory-2013-2014.csv
+    - Archived, 2012-2013 fiscal year · CSV · 2016-12-01T12:44:09.682221 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/contratsoctroyes-contracthistory-2012-2013.csv
+    - Archived, 2011-2012 fiscal year · CSV · 2016-12-01T12:44:09.682209 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/contratsoctroyes-contracthistory-2011-2012.csv
+    - Archived, 2010-2011 fiscal year · CSV · 2016-12-01T12:44:09.682196 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/contratsoctroyes-contracthistory-2010-2011.csv
+    - Archived, 2009-2010 fiscal year · CSV · 2016-12-01T12:44:09.682184 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/contratsoctroyes-contracthistory-2009-2010.csv
+    - Archived, 2009 January - March · CSV · 2016-12-01T12:44:09.682171 · https://donnees-data.tpsgc-pwgsc.gc.ca/ba2/aev-bas/contratsoctroyes-contracthistory-2009-jan-mar.csv
+  - jeu : Atlantic Quarterly Autumn 2017 - Select Nova Scotia · 0260acb5-5263-1cf9-7aeb-0321d31d2365 · licence ns-oglns
+    - Nova Scotia original metadata (https://data.novascotia.ca) · HTML · 2026-04-17T15:26:35.685778 · https://data.novascotia.ca/datasets/v75j-h2va
+    - Atlantic Quarterly Autumn 2017 - Select Nova Scotia (CSV) · CSV · 2026-04-17T15:26:35.685784 · https://data.novascotia.ca/api/views/v75j-h2va/rows.csv?accessType=DOWNLOAD
+    - Atlantic Quarterly Autumn 2017 - Select Nova Scotia (CSV Excel) · CSV · 2026-04-17T15:26:35.685786 · https://data.novascotia.ca/api/views/v75j-h2va/rows.csv?accessType=DOWNLOAD&bom=true&format=true
+    - Atlantic Quarterly Autumn 2017 - Select Nova Scotia (CSV Excel (EU)) · CSV · 2026-04-17T15:26:35.685787 · https://data.novascotia.ca/api/views/v75j-h2va/rows.csv?accessType=DOWNLOAD&bom=true&format=true&delimiter=%3B
+    - Atlantic Quarterly Autumn 2017 - Select Nova Scotia (TSV) · other · 2026-04-17T15:26:35.685788 · https://data.novascotia.ca/api/views/v75j-h2va/rows.tsv?accessType=DOWNLOAD&bom=true&format=true&delimiter=%3B
+    - Atlantic Quarterly Autumn 2017 - Select Nova Scotia (RDF) · RDF · 2026-04-17T15:26:35.685789 · https://data.novascotia.ca/api/views/v75j-h2va/rows.rdf?accessType=DOWNLOAD
+    - Atlantic Quarterly Autumn 2017 - Select Nova Scotia (RSS) · RSS · 2026-04-17T15:26:35.685791 · https://data.novascotia.ca/api/views/v75j-h2va/rows.rss?accessType=DOWNLOAD
+    - Atlantic Quarterly Autumn 2017 - Select Nova Scotia (XML) · XML · 2026-04-17T15:26:35.685792 · https://data.novascotia.ca/api/views/v75j-h2va/rows.xml?accessType=DOWNLOAD
+  - jeu : Food Labelling · 06a2b5ec-5dc3-4b2f-8e97-290a184a341d · licence ca-ogl-lgo
+    - Food Labelling · HTML · 2020-09-24T13:51:26.260595 · https://www.canada.ca/en/health-canada/services/food-nutrition/food-labelling.html
+    - Food Labelling · HTML · 2020-09-24T13:51:26.260600 · https://www.canada.ca/fr/sante-canada/services/aliments-nutrition/etiquetage-aliments.html
+  - jeu : Canada’s Emergencies Act · 7a4431d7-2304-4242-aeed-93b70181f92a · licence ca-ogl-lgo
+    - Canada’s Emergencies Act - Backgrounder · HTML · 2022-03-31T20:04:11.473055 · https://www.canada.ca/en/department-justice/news/2022/02/canadas-emergencies-act.html
+    - Canada’s Emergencies Act - Backgrounder · HTML · 2022-03-31T20:04:11.473063 · https://www.canada.ca/fr/ministere-justice/nouvelles/2022/02/la-loi-sur-les-mesures-durgence-du-canada.html
+    - The Emergencies Act in Canada - Infographic · HTML · 2022-03-31T20:04:11.473066 · https://www.justice.gc.ca/eng/csj-sjc/ea_infog-lu_infog.html
+    - The Emergencies Act in Canada - Infographic · HTML · 2022-03-31T20:04:11.473069 · https://www.justice.gc.ca/fra/sjc-csj/lu_infog-ea_infog.html
+    - The Emergencies Act in Canada - Infographic · PDF · 2022-03-31T20:04:11.473071 · https://www.justice.gc.ca/eng/csj-sjc/Infographic-Emergency%20Act-v13.pdf
+    - The Emergencies Act in Canada - Infographic · PDF · 2022-03-31T20:04:11.473073 · https://www.justice.gc.ca/fra/sjc-csj/Infographic-Emergency%20Act-v13-FRA.pdf
+  - jeu : Non-prescription drug labels · 89732c11-dd5d-42a5-a520-4d3f6794d216 · licence ca-ogl-lgo
+    - Non-prescription drug labels · HTML · 2021-09-09T12:21:27.070093 · https://www.canada.ca/en/health-canada/topics/buying-using-drug-health-products-safely/non-prescription-drug-labels.html
+    - Non-prescription drug labels · HTML · 2021-09-09T12:21:27.070101 · https://www.canada.ca/fr/sante-canada/sujets/achat-et-utilisation-securitaire-produits-sante/etiquettes-medicaments-vendus-sans-ordonnance.html
+  - jeu : Invest in Canada - Canada’s competitive advantages: clean technology · a513608e-ec04-4be0-ad82-567668c1ba01 · licence ca-ogl-lgo
+    - Invest in Canada - Canada’s competitive advantages: clean technology - 2018 · PDF · 2025-12-11T19:33:03.196166 · /data/dataset/a513608e-ec04-4be0-ad82-567668c1ba01/resource/b732c001-4e1a-4cba-ade5-1740d37097f9/download/fr5-38-29-2017-eng.pdf
+    - Invest in Canada - Canada’s competitive advantages: clean technology - 2018 · PDF · 2025-12-11T19:33:43.973447 · /data/dataset/a513608e-ec04-4be0-ad82-567668c1ba01/resource/4b6ac97e-b9c5-496d-ac69-953b72aa57a5/download/fr5-38-29-2017-fra.pdf
+  - jeu : Perfume entrepreneur pays it forward · 2c56812e-8659-4b93-b59c-c8e3eb1e6903 · licence ca-ogl-lgo
+    - Perfume entrepreneur pays it forward - 2019-06-07 · HTML · 2025-09-02T13:21:01.249290 · https://webarchiveweb.wayback.bac-lac.canada.ca/web/20240515084354/https://www.international.gc.ca/world-monde/stories-histoires/2019/bwit-7-virtues-faci.aspx?lang=eng
+    - Perfume entrepreneur pays it forward - 2019-06-07 · HTML · 2025-09-02T13:21:01.249294 · https://webarchiveweb.wayback.bac-lac.canada.ca/web/20240515084355/https://www.international.gc.ca/world-monde/stories-histoires/2019/bwit-7-virtues-faci.aspx?lang=fra
+  - jeu : Canada Gazette: Global Affairs Canada · aa630bdb-d81b-4dfc-a01d-541bcdb6e3c5 · licence ca-ogl-lgo
+    - Canada Gazette, Part I, Volume 154, Number 34: Global Affairs Canada- 2020-08-22 · HTML · 2025-10-06T18:51:27.201739 · https://gazette.gc.ca/rp-pr/p1/2020/2020-08-22/html/sup1-eng.html
+    - Canada Gazette, Part I, Volume 154, Number 34: Global Affairs Canada- 2020-08-22 · HTML · 2025-10-06T18:51:27.201742 · https://gazette.gc.ca/rp-pr/p1/2020/2020-08-22/html/sup1-fra.html
+- 200 · 400000 octets · https://canadabuys.canada.ca/opendata/pub/contractHistoryComplete-contratsOctroyesComplet.csv
+- 200 · 400000 octets · https://canadabuys.canada.ca/opendata/pub/2009-2023-contractHistoryHistorical-contratsOctroyesHistorique.csv
+- 200 · 400000 octets · https://canadabuys.canada.ca/opendata/pub/2026-2027-contractHistory-contratsOctroyes.csv
+- 200 · 400000 octets · https://canadabuys.canada.ca/opendata/pub/2025-2026-contractHistory-contratsOctroyes.csv
+- 200 · 400000 octets · https://canadabuys.canada.ca/opendata/pub/2024-2025-contractHistory-contratsOctroyes.csv
+- 200 · 400000 octets · https://canadabuys.canada.ca/opendata/pub/2023-2024-contractHistory-contratsOctroyes.csv
+- 200 · 2396 octets · https://canadabuys.canada.ca/robots.txt
+- 200 · 43456 octets · https://canadabuys.canada.ca/en
+    - Terms and conditions → https://www.canada.ca/en/transparency/terms.html
+- 200 · 23079 octets · https://open.canada.ca/en/open-government-licence-canada
+
+## OCRI / CIRO
+- 200 · 2103 octets · https://www.ciro.ca/robots.txt
+- 403 · 5402 octets · https://www.ciro.ca/
+- 403 · 5456 octets · https://www.ciro.ca/sitemap.xml
