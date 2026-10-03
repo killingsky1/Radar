@@ -23,16 +23,19 @@ import subprocess
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 
-UA = "Radar projet personnel math-veronneau1@hotmail.com"
+UA = "Radar projet personnel"  # comme le robot : le courriel ne part qu'à la SEC
+UA_SEC = "Radar projet personnel math-veronneau1@hotmail.com"
 TAILLE = int(sys.argv[1]) if len(sys.argv) > 1 else 20
 
 
 def telecharger(url: str) -> bytes:
     """Poli comme le robot : si la SEC dit « trop de requêtes » (429), on patiente et on réessaie."""
     for essai in range(5):
-        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        hote = (urllib.parse.urlparse(url).hostname or "").lower()
+        req = urllib.request.Request(url, headers={"User-Agent": UA_SEC if hote == "sec.gov" or hote.endswith(".sec.gov") else UA})
         try:
             with urllib.request.urlopen(req, timeout=60) as r:
                 contenu = r.read()

@@ -20,6 +20,7 @@ import time
 from datetime import date
 from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import urlparse
 
 import requests
 
@@ -28,14 +29,17 @@ SORTIE = RACINE / "labo" / "essai"
 DONNEES = Path("/tmp/essai")
 SOURCES = ["maison_blanche", "fed", "banque_canada", "sec_form144", "sec_offres", "cftc_cot",
            "registre_federal", "ventes_armes", "senat_ptr", "chambre_ptr", "nouvelles_defense_ca", "nouvelles_eco_ca"]
-UA = {"User-Agent": "Radar projet personnel math-veronneau1@hotmail.com"}
+UA = {"User-Agent": "Radar projet personnel"}  # comme le robot : le courriel ne part qu'à la SEC
+UA_SEC = {"User-Agent": "Radar projet personnel math-veronneau1@hotmail.com"}
 PAR_SOURCE = 12  # infos vérifiées par source (au hasard)
 session = requests.Session()
 
 
 def get(url, **kw):
     time.sleep(0.5)
-    r = session.get(url, headers={**UA, **kw.pop("headers", {})}, timeout=60, **kw)
+    hote = (urlparse(url).hostname or "").lower()
+    ua = UA_SEC if hote == "sec.gov" or hote.endswith(".sec.gov") else UA
+    r = session.get(url, headers={**ua, **kw.pop("headers", {})}, timeout=60, **kw)
     r.raise_for_status()
     return r
 
