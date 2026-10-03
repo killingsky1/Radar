@@ -12,6 +12,7 @@ from __future__ import annotations
 import html
 import json
 import re
+import unicodedata
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
@@ -111,9 +112,41 @@ class Symboles:
                                  if r["exchange"] in BOURSES_GARDEES}
         return self._par_symbole.get(normaliser_symbole(symbole))
 
+    def par_nom(self, nom: str | None) -> dict | None:
+        """La compagnie cotée dont le nom officiel est EXACTEMENT ce nom (formes juridiques et ponctuation à part).
+
+        Rien si le nom est ambigu ou absent : une filiale (« Takeda Pharmaceuticals America ») n'est pas
+        rattachée à sa mère cotée, et une abréviation (« IONIS PHARMS ») n'est pas devinée.
+        """
+        if not hasattr(self, "_par_nom"):
+            self._par_nom: dict[str, set[int]] = {}
+            for cik, rs in self.par_cik.items():
+                for r in rs:
+                    if r["exchange"] in BOURSES_GARDEES and r.get("name"):
+                        self._par_nom.setdefault(nom_normalise(r["name"]), set()).add(cik)
+        n = nom_normalise(nom or "")
+        ciks = self._par_nom.get(n, set()) if n else set()
+        return self.cote(next(iter(ciks))) if len(ciks) == 1 else None
+
 
 def normaliser_symbole(s: str | None) -> str:
     return (s or "").strip().upper().replace(".", "-")
+
+
+FORMES_JURIDIQUES = {"INC", "INCORPORATED", "CORP", "CORPORATION", "CO", "COMPANY", "LTD", "LIMITED", "LTEE", "PLC",
+                     "LLC", "LP", "LLP", "AG", "SA", "NV", "SE", "AB", "ASA", "SPA", "BV", "ULC"}
+
+
+def nom_normalise(nom: str) -> str:
+    """« Eli Lilly and Company » et « ELI LILLY & Co » -> « ELI LILLY AND » : pour comparer des noms officiels."""
+    n = unicodedata.normalize("NFKD", nom).encode("ascii", "ignore").decode().upper().replace("&", " AND ")
+    n = re.sub(r"[/\\]\s*[A-Z]{2,4}[/\\]?\s*$", " ", n)  # suffixes de la SEC : « /DE/ », « /CAN/ », « \DE »
+    mots = re.findall(r"[A-Z0-9]+", n)
+    while mots and (mots[-1] in FORMES_JURIDIQUES or len(mots[-1]) == 1):  # « L.L.C. », « S.A. »
+        mots.pop()
+    if mots and mots[0] == "THE":
+        mots.pop(0)
+    return " ".join(mots)
 
 
 def entete(texte: str) -> dict[str, str]:
