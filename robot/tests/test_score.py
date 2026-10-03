@@ -40,7 +40,7 @@ def test_jour_de_calcul_a_l_heure_de_toronto():
 
 def test_listes_sur_les_vraies_infos():
     r = sc.calculer(vraies_infos(), MAINTENANT)
-    assert r["version"] == "score-1" and r["jour"] == "2026-10-02"
+    assert r["version"] == "score-2" and r["jour"] == "2026-10-02"
     assert len(r["hausse"]) == sc.MAX_LISTE and all(x["score"] >= sc.SEUIL for x in r["hausse"])
     assert [x["score"] for x in r["hausse"]] == sorted((x["score"] for x in r["hausse"]), reverse=True)
     assert [x["symbole"] for x in r["baisse"]] == ["LESL", "EGBN", "CBZ"]
@@ -99,15 +99,24 @@ def test_roles(role, attendu):
     assert (f[0][1] if f else None) == attendu
 
 
-def test_13d_seulement_un_gestionnaire_de_fonds():
+def test_13d_seulement_un_gestionnaire_de_fonds_qui_dit_l_action_sous_evaluee():
     saba = une(vraies_infos(), source="sec_13dg", tickers=["ZTR"])
     assert saba["data"]["type"] == "SCHEDULE 13D" and "types_declarants" not in saba["data"]  # lu avant le changement
-    assert sc.evaluer(saba)[0].regle is None  # type inconnu : 0 point par prudence
-    for types, regle in ((["IA", "PN"], "activiste_13d"), (["IN"], None), (["CO", "OO"], None)):
+    assert sc.evaluer(saba)[0].pourquoi == sc.SANS_POINTS["13d_type_inconnu"]  # 0 point par prudence
+    cas = (
+        ({"types_declarants": ["IA", "PN"], "but_sous_evalue": True}, "activiste_13d", None),
+        ({"types_declarants": ["IA", "PN"], "but_sous_evalue": False}, None, "13d_pas_sous_evalue"),
+        ({"types_declarants": ["IA", "PN"], "but_sous_evalue": None}, None, "13d_pas_sous_evalue"),  # sans point 4
+        ({"types_declarants": ["IA", "PN"]}, None, "13d_but_inconnu"),  # lu avant que le robot lise le but
+        ({"types_declarants": ["IN"], "but_sous_evalue": True}, None, "13d_autre"),
+        ({"types_declarants": ["CO", "OO"], "but_sous_evalue": True}, None, "13d_autre"),
+    )
+    for champs, regle, raison in cas:
         e = copy.deepcopy(saba)
-        e["data"]["types_declarants"] = types
-        assert sc.evaluer(e)[0].regle == regle
-    e["data"]["types_declarants"] = ["IA"]
+        e["data"].update(champs)
+        (a,) = sc.evaluer(e)
+        assert (a.regle, a.pourquoi) == (regle, sc.SANS_POINTS.get(raison)), champs
+    e["data"].update(cas[0][0])
     assert ligne(sc.calculer([e], MAINTENANT), "ZTR")["score"] == round(5 * 0.5 ** (2 / 30), 2)
 
 
@@ -202,7 +211,7 @@ def test_publication_ecrit_le_score(tmp_path):
         (F / "score" / "evenements_20261003.jsonl.gz").read_bytes()))
     executer(tmp_path, collecteurs={}, maintenant=MAINTENANT)
     r = json.loads((tmp_path / "app" / "aujourdhui.json").read_text(encoding="utf-8"))
-    assert r["version"] == "score-1" and r["hausse"][0]["symbole"] in ("PRHI", "XENE")
+    assert r["version"] == "score-2" and r["hausse"][0]["symbole"] in ("PRHI", "XENE")
     assert r["methode"]["regles"][0]["code"] == "achat_dirigeant"
     assert all(e in r["methode"]["etudes"] for regle in r["methode"]["regles"] for e in regle["etudes"])
     # Le passage suivant garde la date d'entrée de chacun
@@ -229,3 +238,65 @@ def test_un_score_qui_plante_n_empeche_pas_la_publication(tmp_path, monkeypatch,
     assert (tmp_path / "app" / "fil.json").exists()  # les infos sont publiées quand même
     assert (tmp_path / "app" / "aujourdhui.json").read_text(encoding="utf-8") == avant  # l'ancien score reste
     assert "Score : erreur, l'ancien calcul est gardé (ValueError: bogue simulé)" in capsys.readouterr().out
+
+
+# ---------- Émissions et 13D : vrais dépôts relus le 3 octobre 2026 (tests/fixtures/sec/emissions) ----------
+
+E = F / "sec" / "emissions"
+
+
+def depot_lu(acc, forme, depose, cik):
+    from radar.collecteurs.sec import DepotSec, evenements_13dg, evenements_form4
+    from radar.models import empreinte
+    from radar.validate import valider
+
+    texte = gzip.decompress((E / f"{acc}.txt.gz").read_bytes()).decode("utf-8")
+    lire = evenements_form4 if forme == "4" else evenements_13dg
+    evs = lire(texte, empreinte(texte.encode()), DepotSec(acc, forme, depose, "", [(str(cik), "x")]), symboles_sec())
+    return [valider(e, date(2026, 10, 2)).to_dict() for e in evs]
+
+
+def test_entree_en_bourse_d_adarx_zero_point():
+    # OrbiMed (note « purchased in the Issuer's initial public offering ») + le 13D d'OrbiMed (pas « sous-évaluée »)
+    # + George Simeon (même jour, même prix de 17 $, sans la note) : rien de tout ça n'est un achat en bourse.
+    orbimed = depot_lu("0000947871-26-000910", "4", "2026-09-30", 1802369)
+    treize_d = depot_lu("0000947871-26-000917", "SCHEDULE 13D", "2026-10-02", 1802369)
+    simeon = [e for e in vraies_infos() if e["tickers"] == ["ADRX"] and "George Simeon" in e["entities"]]
+    assert len(orbimed) == len(treize_d) == len(simeon) == 1
+    assert "initial public offering" in orbimed[0]["data"]["hors_bourse"] and orbimed[0]["badge"] == "officiel"
+    assert any("Note du déposant : transaction lors d'une émission" in n for n in orbimed[0]["notes"])
+    assert treize_d[0]["data"]["but_sous_evalue"] is False
+    r = sc.calculer(orbimed + treize_d + simeon, MAINTENANT)
+    assert r["compagnies_notees"] == 0
+    raisons = {a.ev["id"]: a.pourquoi for e in orbimed + treize_d + simeon
+               for a in sc.evaluer(e, sc.achats_d_emission(orbimed + simeon))}
+    assert sorted(raisons.values()) == sorted([sc.SANS_POINTS["emission"], sc.SANS_POINTS["13d_pas_sous_evalue"],
+                                               sc.SANS_POINTS["emission_meme_prix"]])
+
+
+def test_achat_negocie_en_prive_zero_point():
+    (hgbl,) = depot_lu("0001193125-26-407271", "4", "2026-09-29", 849145)
+    assert "privately negotiated" in hgbl["data"]["hors_bourse"]
+    assert [a.pourquoi for a in sc.evaluer(hgbl)] == [sc.SANS_POINTS["emission"]]
+
+
+def test_vrais_fonds_activistes_et_financement_de_fusion():
+    (equinox,) = depot_lu("0001013594-26-000998", "SCHEDULE 13D", "2026-09-30", 1549966)
+    (gate_city,) = depot_lu("0001398344-26-017759", "SCHEDULE 13D", "2026-10-01", 1672909)
+    (nccs,) = depot_lu("0001493152-26-045190", "SCHEDULE 13D", "2026-09-30", 1846416)
+    assert equinox["data"]["but_sous_evalue"] and gate_city["data"]["but_sous_evalue"]
+    assert "undervalued" in equinox["data"]["extrait_but"]
+    assert nccs["data"]["but_sous_evalue"] is False and "Forward Purchase Agreement" in nccs["data"]["extrait_but"]
+    r = sc.calculer([equinox, gate_city, nccs], MAINTENANT)
+    assert {x["symbole"] for x in r["hausse"]} == {equinox["tickers"][0], gate_city["tickers"][0]}
+    assert ligne(r, gate_city["tickers"][0])["score"] == round(5 * 0.5 ** (1 / 30), 2)
+
+
+def test_note_d_une_autre_ligne_ne_marque_pas_l_achat():
+    # Dépôt de George Simeon : les conversions d'actions privilégiées (code C) parlent de l'entrée en bourse, pas ses
+    # achats (code P). L'achat n'est donc pas marqué par sa propre note : c'est la règle « même jour, même prix » qui joue.
+    (simeon,) = depot_lu("0001193125-26-408061", "4", "2026-09-29", 1802369)
+    assert simeon["data"]["hors_bourse"] is None and all(t["hors_bourse"] is None for t in simeon["data"]["transactions"])
+    orbimed = depot_lu("0000947871-26-000910", "4", "2026-09-30", 1802369)
+    assert [a.pourquoi for a in sc.evaluer(simeon, sc.achats_d_emission(orbimed))] == [sc.SANS_POINTS["emission_meme_prix"]]
+    assert [a.regle for a in sc.evaluer(simeon)] == ["achat_dirigeant"]  # sans l'achat d'OrbiMed : un achat normal

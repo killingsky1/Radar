@@ -21,7 +21,7 @@ from zoneinfo import ZoneInfo
 
 from .registry import SOURCES
 
-VERSION = "score-1"
+VERSION = "score-2"
 DEMI_VIE = 30
 DEMI_VIE_FONDS = 60  # le 13F arrive jusqu'à 45 jours après la fin du trimestre
 AGE_MAX = 90
@@ -94,7 +94,9 @@ REGLES = {
                     "×0,5 si c'est seulement un actionnaire de 10 %",
                     "×1,75 si un autre initié de la même compagnie a acheté à 2 jours ouvrables près (groupe d'achats)",
                     "Pas de bonus pour le montant",
-                    "0 point si l'achat était planifié d'avance (plan 10b5-1)"],
+                    "0 point si l'achat était planifié d'avance (plan 10b5-1)",
+                    "0 point si le déposant écrit que l'achat s'est fait lors d'une émission (entrée en bourse, "
+                    "placement) ou hors bourse, ou s'il a eu lieu le même jour au même prix qu'un tel achat"],
         "etudes": ["lakonishok_lee", "cohen_malloy_pomorski", "alldredge_blank", "seyhun", "wang_shin_francis",
                    "cziraki_gider"]},
     "vente_dirigeant": {
@@ -105,8 +107,10 @@ REGLES = {
     "activiste_13d": {
         "famille": "activistes", "points": 5.0,
         "libelle": "Un gestionnaire de fonds dépasse 5 % avec des intentions actives (13D)",
-        "details": ["Seulement le premier dépôt, et seulement si un déclarant est un gestionnaire de placements "
-                    "(type « IA » dans le document) : il pourrait déclarer en 13G (passif) mais choisit le 13D"],
+        "details": ["Seulement le premier dépôt d'un gestionnaire de placements (type « IA » dans le document) : "
+                    "il pourrait déclarer en 13G (passif) mais choisit le 13D",
+                    "Et seulement s'il écrit au point 4 (le but de l'achat) que l'action est sous-évaluée : c'est ce "
+                    "qu'écrivent les fonds activistes dans environ 2 cas sur 3"],
         "etudes": ["brav"]},
     "fonds_13f": {
         "famille": "fonds", "points": 1.0, "libelle": "Un grand fonds suivi ouvre ou grossit une position importante (13F)",
@@ -147,6 +151,12 @@ SANS_POINTS = {
     "13d_autre": "13D d'un déclarant qui n'est pas un gestionnaire de fonds (individu, compagnie, commanditaire de SPAC…) : "
                  "l'étude ne porte pas sur ce cas.",
     "13d_type_inconnu": "13D lu avant que le robot note le type de déclarant : 0 point par prudence.",
+    "13d_but_inconnu": "13D lu avant que le robot lise son but (point 4) : 0 point par prudence.",
+    "13d_pas_sous_evalue": "13D d'un gestionnaire de fonds qui n'écrit pas que l'action est sous-évaluée (ex. achat lors "
+                           "d'une entrée en bourse, financement d'une fusion) : ce n'est pas le cas mesuré par l'étude.",
+    "emission": "Transaction lors d'une émission (entrée en bourse, placement) ou hors bourse, selon la note du "
+                "déposant : les études portent sur les achats et les ventes en bourse.",
+    "emission_meme_prix": "Même jour et même prix qu'un achat déclaré lors d'une émission : c'est la même émission.",
     "13g": "13G : placement passif (souvent un fonds indiciel qui grossit).",
     "13d_suivi": "Mise à jour d'un 13D ou passage sous 5 % : seul le premier dépôt compte.",
     "fonds_vente": "Vente ou baisse d'un grand fonds : les études portent sur les achats.",
@@ -176,8 +186,9 @@ METHODE = {
     "avertissement": "Une aide pour voir où va le gros argent, preuves à l'appui. Pas un conseil financier.",
     "regles": [{"code": c, **{k: r[k] for k in ("famille", "points", "libelle", "details", "etudes")}}
                for c, r in REGLES.items()],
-    "sans_points": [SANS_POINTS[k] for k in ("plan", "avis_144", "13g", "13d_autre", "13d_suivi", "fonds_vente",
-                                             "elu_vente", "offre", "ftc", "8k_autre")]
+    "sans_points": [SANS_POINTS[k] for k in ("plan", "emission", "emission_meme_prix", "avis_144", "13g", "13d_autre",
+                                             "13d_pas_sous_evalue", "13d_suivi", "fonds_vente", "elu_vente", "offre",
+                                             "ftc", "8k_autre")]
                    + ["Fed, Banque du Canada, décrets, sanctions, ventes d'armes, CFTC : contexte, sans points."],
     "familles_noms": FAMILLES,
     "etudes": {k: {"titre": t, "constat": c, "lien": u} for k, (t, c, u) in ETUDES.items()},
@@ -214,8 +225,11 @@ def facteurs_role(roles: list[str]) -> list:
     return []
 
 
-def evaluer(ev: dict) -> list[Apport]:
-    """Les apports d'une info, un par compagnie visée."""
+def evaluer(ev: dict, emissions: frozenset = frozenset()) -> list[Apport]:
+    """Les apports d'une info, un par compagnie visée.
+
+    `emissions` : (symbole, date, prix) des achats déclarés lors d'une émission (voir achats_d_emission).
+    """
     s, k, d, symboles = ev["source"], ev["kind"], ev.get("data") or {}, ev.get("tickers") or []
 
     def regle(code, facteurs=(), viser=None):
@@ -229,6 +243,11 @@ def evaluer(ev: dict) -> list[Apport]:
     if s == "sec_form4":
         if d.get("plan_10b5_1"):
             return contexte("plan")
+        if d.get("hors_bourse"):
+            return contexte("emission")
+        if k == "achat_initie" and any((symboles[0], t.get("date"), t.get("prix")) in emissions
+                                       for t in d.get("transactions") or []):
+            return contexte("emission_meme_prix")
         return regle("achat_dirigeant", facteurs_role(d.get("roles") or [])) if k == "achat_initie" else (
             regle("vente_dirigeant") if k == "vente_initie" else contexte("contexte"))
     if s == "sec_form144":
@@ -238,7 +257,11 @@ def evaluer(ev: dict) -> list[Apport]:
             types = d.get("types_declarants")
             if not types:
                 return contexte("13d_type_inconnu")
-            return regle("activiste_13d") if "IA" in types else contexte("13d_autre")
+            if "IA" not in types:
+                return contexte("13d_autre")
+            if "but_sous_evalue" not in d:
+                return contexte("13d_but_inconnu")
+            return regle("activiste_13d") if d["but_sous_evalue"] else contexte("13d_pas_sous_evalue")
         return contexte("13g" if (d.get("type") or "").startswith("SCHEDULE 13G") else "13d_suivi")
     if s == "sec_13f":
         return regle("fonds_13f") if ev.get("direction", 0) > 0 else contexte("fonds_vente")
@@ -258,6 +281,18 @@ def evaluer(ev: dict) -> list[Apport]:
     if s == "ftc_fusions":
         return contexte("ftc")
     return contexte("contexte")
+
+
+def achats_d_emission(evenements: list[dict]) -> frozenset:
+    """(symbole, date, prix) des achats que le déposant dit faits lors d'une émission ou hors bourse.
+
+    Un autre initié qui achète la même action le même jour au même prix (ex. un fonds lors d'une entrée en bourse,
+    sans la note) participe à la même émission.
+    """
+    return frozenset((ev["tickers"][0], t.get("date"), t.get("prix")) for ev in evenements
+                     if ev["source"] == "sec_form4" and ev["kind"] == "achat_initie" and ev.get("tickers")
+                     and ev.get("badge") in ("officiel", "confirme") and (ev.get("data") or {}).get("hors_bourse")
+                     for t in ev["data"].get("transactions") or [] if t.get("hors_bourse"))
 
 
 def jours_ouvrables(a: date, b: date) -> int:
@@ -313,6 +348,7 @@ def _infos(a: Apport, compte: bool) -> dict:
 
 def calculer(evenements: list[dict], maintenant: datetime, precedent: dict | None = None, symboles=None) -> dict:
     jour = jour_de_calcul(maintenant)
+    emissions = achats_d_emission(evenements)
     par_symbole: dict[str, list[Apport]] = defaultdict(list)
     for ev in evenements:
         source = SOURCES.get(ev["source"])
@@ -321,7 +357,7 @@ def calculer(evenements: list[dict], maintenant: datetime, precedent: dict | Non
         age = (jour - date.fromisoformat(ev["published_on"])).days
         if age > AGE_MAX:
             continue
-        for a in evaluer(ev):
+        for a in evaluer(ev, emissions):
             a.age = max(age, 0)
             par_symbole[a.symbole].append(a)
 

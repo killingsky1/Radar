@@ -22,7 +22,7 @@ from ..models import Evenement, empreinte
 from ..store import Depot
 from ..validate import controle_source, jours_ouvrables
 
-VERSION = "sec-5"  # à augmenter quand un lecteur change : les infos sont relues et mises à jour
+VERSION = "sec-6"  # à augmenter quand un lecteur change : les infos sont relues et mises à jour
 ARCHIVES = "https://www.sec.gov/Archives"
 BOURSES_GARDEES = {"Nasdaq", "NYSE", "CBOE"}
 SEUIL_ACHAT = 25_000  # $ US : sous ce montant, un achat est du bruit
@@ -35,6 +35,14 @@ PRIX_MAX = 2_000
 PRIX_MIN = 0.10  # sous 10 cents l'action, une vente de 1 M$ et plus au Nasdaq ou au NYSE est presque toujours une erreur
 PRIX_ELEVES = {"BRK-A", "NVR", "BKNG", "AZO", "SEB", "FCNCA", "MKL", "WTM", "FICO", "TPL"}
 VALEUR_MAX = 5_000_000_000  # une seule déclaration de plus de 5 G$ : à vérifier
+# Note du déposant qui dit que la transaction ne s'est pas faite en bourse : émission (entrée en bourse, placement)
+# ou transaction négociée en privé. Seules les notes rattachées à la transaction elle-même comptent (pas celles sur
+# les actions détenues après ni sur la forme de détention).
+HORS_BOURSE = re.compile(r"initial public offering|\bIPO\b|public offering|private placement|privately negotiated|"
+                         r"not effected on (?:a|any) (?:national )?securities exchange|registered direct offering|"
+                         r"directed share program", re.I)
+PARTIES_TRANSACTION = ("securityTitle", "transactionDate", "transactionCoding", "transactionAmounts")
+SOUS_EVALUE = re.compile(r"undervalu", re.I)  # « undervalued », « undervaluation » (point 4 d'un 13D)
 
 ITEMS_8K = {  # description officielle EDGAR (début) -> (item, libellé, direction)
     "entry into a material definitive agreement": ("1.01", "contrat important signé", 0),
@@ -294,8 +302,11 @@ def lire_form4(texte: str) -> dict:
             "dix_pourcent": oui(rel.findtext("isTenPercentOwner")) if rel is not None else False,
             "titre": ((rel.findtext("officerTitle") if rel is not None else "") or "").strip(),
         })
+    notes = {n.get("id"): " ".join((n.text or "").split()) for n in racine.findall("footnotes/footnote")}
     transactions = []
     for tr in racine.findall("nonDerivativeTable/nonDerivativeTransaction"):
+        ids = sorted({f.get("id") for partie in PARTIES_TRANSACTION for el in tr.findall(partie) for f in el.iter("footnoteId")})
+        hors_bourse = next((notes[i][:300] for i in ids if HORS_BOURSE.search(notes.get(i, ""))), None)
         transactions.append({
             "code": (tr.findtext("transactionCoding/transactionCode") or "").strip(),
             "date": (tr.findtext("transactionDate/value") or "").strip()[:10],
@@ -303,6 +314,7 @@ def lire_form4(texte: str) -> dict:
             "prix": nombre(tr.findtext("transactionAmounts/transactionPricePerShare/value")),
             "acquis_cede": (tr.findtext("transactionAmounts/transactionAcquiredDisposedCode/value") or "").strip(),
             "apres": nombre(tr.findtext("postTransactionAmounts/sharesOwnedFollowingTransaction/value")),
+            "hors_bourse": hors_bourse,
         })
     return {
         "type": racine.findtext("documentType"),
@@ -352,6 +364,10 @@ def evenements_form4(texte: str, sha: str, depot: DepotSec, syms: Symboles) -> l
             notes.append(f"Déclaré en retard : {retard} jours ouvrables après la transaction (limite légale : 2).")
         if code == "S" and f["plan_10b5_1"]:
             notes.append("Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment.")
+        hors_bourse = next((t["hors_bourse"] for t in lignes if t.get("hors_bourse")), None)
+        if hors_bourse:
+            extrait = hors_bourse if len(hors_bourse) <= 160 else hors_bourse[:159] + "…"
+            notes.append(f"Note du déposant : transaction lors d'une émission ou hors bourse (« {extrait} »).")
         titre = f"{' et '.join(noms)} ({', '.join(roles)}) {verbe} {nombre_fr(actions)} actions de {cote['name']}"
         evenements.append(Evenement(
             source="sec_form4", official_id=f"{depot.acc}:{code}", category="compagnies",
@@ -364,7 +380,7 @@ def evenements_form4(texte: str, sha: str, depot: DepotSec, syms: Symboles) -> l
                 "cik_emetteur": f["cik_emetteur"], "bourse": cote["exchange"], "symbole_declare": f["symbole_declare"],
                 "symboles_sec": syms.tous(f["cik_emetteur"]), "actions": actions,
                 "prix_moyen": round(valeur / actions, 4) if actions else None, "plan_10b5_1": f["plan_10b5_1"],
-                "roles": roles, "transactions": lignes,
+                "roles": roles, "transactions": lignes, "hors_bourse": hors_bourse,
             },
         ))
     return evenements
@@ -483,6 +499,8 @@ def lire_13dg(texte: str) -> dict:
         noeuds = racine.findall("formData/reportingPersons/reportingPersonInfo")
         personnes = [(p.findtext("reportingPersonName"), nombre(p.findtext("percentOfClass")),
                       nombre(p.findtext("aggregateAmountOwned"))) for p in noeuds]
+        item4 = racine.find("formData/items1To7/item4")  # « Purpose of Transaction » : le but écrit par le déclarant
+        but = " ".join(" ".join(item4.itertext()).split()) if item4 is not None else None
     else:
         cik = entete_xml.findtext("issuerInfo/issuerCik") or entete_xml.findtext(".//issuerCik")
         nom = entete_xml.findtext("issuerInfo/issuerName") or entete_xml.findtext(".//issuerName")
@@ -490,6 +508,7 @@ def lire_13dg(texte: str) -> dict:
         noeuds = racine.findall("formData/coverPageHeaderReportingPersonDetails")
         personnes = [(p.findtext("reportingPersonName"), nombre(p.findtext("classPercent")),
                       nombre(p.findtext("reportingPersonBeneficiallyOwnedAggregateNumberOfShares"))) for p in noeuds]
+        but = None
     personnes = [p for p in personnes if p[0]]
     # Type officiel de chaque déclarant (IA = gestionnaire de placements, IN = individu, CO = compagnie…)
     types = sorted({(t.text or "").strip() for n in noeuds for t in n.findall("typeOfReportingPerson")} - {""})
@@ -503,6 +522,9 @@ def lire_13dg(texte: str) -> dict:
         "date_evenement": f"{annee}-{mois}-{jour}" if annee else None,
         "declarant": principale[0].strip(), "pourcentage": principale[1], "actions": principale[2],
         "nb_personnes": len(personnes), "types_declarants": types, "amendement": entete_xml.findtext("amendmentNo"),
+        # Le déclarant écrit-il que l'action est sous-évaluée ? (None : pas de point 4 dans le document)
+        "but_sous_evalue": None if but is None else bool(SOUS_EVALUE.search(but)),
+        "extrait_but": (re.search(r"[^.]*undervalu[^.]*\.?", but, re.I) or [but[:300]])[0].strip()[:300] if but else None,
         "cik_sujet_entete": (re.search(r"SUBJECT COMPANY:.*?CENTRAL INDEX KEY:\s*(\d+)", texte, re.S) or [None, None])[1],
     }
 
