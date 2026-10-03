@@ -1,0 +1,362 @@
+{
+ "contrats_page_0": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=0&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=0&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 495819,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "495819",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_1": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=1000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=1000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 482052,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "482052",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_2": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=2000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=2000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 475000,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "475000",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_3": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=3000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=3000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 504716,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "504716",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_4": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=4000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=4000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 477350,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "477350",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_5": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=5000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=5000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 473716,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "473716",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_6": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=6000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=6000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 496570,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "496570",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_7": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=7000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=7000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 440473,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "440473",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_8": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=8000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=8000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 438536,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "438536",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_9": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=9000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=9000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 444428,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "444428",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_10": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=10000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=10000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 442250,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "442250",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_11": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=11000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=11000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 454960,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "454960",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_12": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=12000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=12000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 450106,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "450106",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_13": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=13000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=13000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 457538,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "457538",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_14": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=14000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=14000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 446455,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "446455",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_15": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=15000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=15000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 463363,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "463363",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_16": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=16000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=16000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 468036,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "468036",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_17": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=17000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=17000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 501697,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "501697",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_18": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=18000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=18000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 446029,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "446029",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_19": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=19000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=19000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 505014,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "505014",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_20": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=20000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=20000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 504888,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "504888",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_21": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=21000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=21000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 491515,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "491515",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_22": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=22000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=22000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 503740,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "503740",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ },
+ "contrats_page_23": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=23000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "permis_robots_txt": true,
+  "url_finale": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20asc&limit=1000&offset=23000&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,country_of_vendor,solicitation_procedure,number_of_bids,instrument_type",
+  "statut": 200,
+  "type": "application/json;charset=utf-8",
+  "taille": 182926,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "182926",
+   "Cache-Control": "public, max-age=30, must-revalidate"
+  },
+  "debut": "{\"help\": \"https://open.canada.ca/data/api/3/action/help_show?name=datastore_search\", \"success\": true, \"result\": {\"fields\": [{\"id\": \"_id\", \"type\": \"int\"}, {\"id\": \"reference_number\", \"type\": \"text\"}, {\"id\": \"owner_org\", \"type\": \"text\"}, {\"id\": \"owner_org_title\", \"type\": \"text\"}, {\"id\": \"vendor_name\", \"type\": \"text\"}, {\"id\": \"contract_date\", \"type\": \"text\"}, {\"id\": \"contract_value\", \"type\": \"text\"}, {\"id\": \"original_value\", \"type\": \"text\"}, {\"id\": \"amendment_value\", \"type\": \"text\"}, {\"id\": \"descrip"
+ }
+}
