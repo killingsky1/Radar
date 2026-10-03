@@ -33,9 +33,11 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
     depot = Depot(donnees)
     # Un acte publié par 2 sources (ex. Maison-Blanche puis Registre) n'apparaît qu'une fois, avec sa confirmation.
     # Même chose pour la même transaction déclarée par plusieurs entités liées (formulaires 4) : une seule ligne.
-    fil = sorted((e for e in depot.lire("evenements")
-                  if not e.get("data", {}).get("meme_acte_que") and not e.get("data", {}).get("meme_transaction_que")),
-                 key=_plus_recent, reverse=True)
+    # Le score, lui, voit toutes les déclarations (comme avant) : il compte déjà une seule fois le même achat, et garde
+    # le rôle le plus informatif (ex. l'administrateur plutôt que son fonds, actionnaire de 10 %).
+    pour_score = sorted((e for e in depot.lire("evenements") if not e.get("data", {}).get("meme_acte_que")),
+                        key=_plus_recent, reverse=True)
+    fil = [e for e in pour_score if not e.get("data", {}).get("meme_transaction_que")]
     a_verifier = sorted(depot.lire("a_verifier"), key=_plus_recent, reverse=True)
 
     sources = []
@@ -96,7 +98,7 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
     chemin = donnees / "app" / "aujourdhui.json"
     try:
         precedent = json.loads(chemin.read_text(encoding="utf-8")) if chemin.exists() else None
-        _ecrire(chemin, calculer(fil, maintenant, precedent, symboles, fonds=emetteurs.fonds(donnees), chefs=chefs))
+        _ecrire(chemin, calculer(pour_score, maintenant, precedent, symboles, fonds=emetteurs.fonds(donnees), chefs=chefs))
     except Exception as exc:  # noqa: BLE001
         print(f"Score : erreur, l'ancien calcul est gardé ({type(exc).__name__}: {exc})")
     # Lobbying des compagnies des listes (celles du score publié)

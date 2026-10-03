@@ -194,3 +194,19 @@ def test_l_info_elmet_deja_publiee_est_corrigee_une_seule_fois(tmp_path):
     assert extrait.removeprefix("… ").removesuffix(" …") in texte  # toujours mot pour mot dans le document officiel
     Depot(tmp_path).enregistrer(corrigees)
     assert pa.corriger_anciennes(Contexte(client=None, maintenant=ctx.maintenant, donnees=tmp_path)) == []
+
+
+def test_le_score_voit_toutes_les_declarations(tmp_path):
+    """Marquer les doublons ne change rien au score : il voit toutes les déclarations, comme avant (vraies infos)."""
+    from radar.publish import publier
+    t = datetime(2026, 10, 3, 21, 40, tzinfo=timezone.utc)
+    resultats = []
+    for nom, marquer in (("avant", False), ("apres", True)):
+        d = tmp_path / nom
+        Depot(d).enregistrer(infos_reelles())
+        if marquer:
+            assert marquer_doublons_form4(d) == 16
+        publier(d, {}, set(), t)
+        a = json.loads((d / "app" / "aujourdhui.json").read_text())
+        resultats.append(json.dumps({k: a[k] for k in ("hausse", "baisse", "compagnies_notees")}, sort_keys=True))
+    assert resultats[0] == resultats[1]
