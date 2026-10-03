@@ -1,7 +1,7 @@
 """Client web poli : il s'identifie, limite sa vitesse et réessaie quand un site est occupé.
 
 Règles de la SEC : maximum 10 requêtes/seconde et un nom + courriel dans chaque requête.
-On reste à 5/seconde pour garder une marge.
+On reste à 5/seconde pour garder une marge. Le courriel n'est envoyé qu'à la SEC.
 """
 
 from __future__ import annotations
@@ -48,8 +48,9 @@ class ClientPoli:
         self.dormir = dormir
         self.horloge = horloge
         self._dernier_appel: dict[str, float] = {}
-        identite = f"Radar projet personnel {self.contact}".strip()
-        self.entetes = {"User-Agent": identite, "Accept-Encoding": "gzip, deflate"}
+        # Le courriel ne part qu'à la SEC, qui l'exige ; les autres sites voient seulement « Radar projet personnel ».
+        self.entetes = {"User-Agent": "Radar projet personnel", "Accept-Encoding": "gzip, deflate"}
+        self.entetes_sec = {**self.entetes, "User-Agent": f"Radar projet personnel {self.contact}".strip()}
 
     def _attendre_son_tour(self, domaine: str) -> None:
         intervalle = 1.0 / VITESSE_MAX.get(domaine, VITESSE_DEFAUT)
@@ -80,7 +81,7 @@ class ClientPoli:
         for essai in range(self.essais):
             self._attendre_son_tour(domaine)
             try:
-                h = {**self.entetes, **(entetes or {})}
+                h = {**(self.entetes_sec if domaine == "sec.gov" else self.entetes), **(entetes or {})}
                 if methode == "post":
                     r = self.session.post(url, data=donnees, headers=h, timeout=self.delai)
                 else:
