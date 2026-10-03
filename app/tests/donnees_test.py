@@ -37,7 +37,7 @@ def faux(ctx):
         ev(2, "sec_form4", "compagnies", "achat_initie", "le PDG de Nvidia achète 50 000 actions", jour(0),
            "https://www.sec.gov/test/form4.xml", occ=jour(2), tickers=["NVDA"], amount_min=6.2e6, amount_max=6.2e6,
            entities=["Jensen Huang, PDG"], direction=1,
-           data={"symbole_declare": "NVDA", "symboles_sec": ["NVDA"], "actions": 50000,
+           data={"symbole_declare": "NVDA", "symboles_sec": ["NVDA"], "actions": 50000, "roles": ["CEO"],
                  "transactions": [{"code": "P", "acquis_cede": "A", "actions": 50000, "prix": 124.0, "date": jour(2)}]}),
         ev(3, "registre_federal", "gouvernement", "presidentiel", "nouveaux tarifs sur l'acier (publication demain)", jour(0),
            "https://www.federalregister.gov/public-inspection/2026-99999/test", numero="2026-99999",

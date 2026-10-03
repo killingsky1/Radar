@@ -41,9 +41,11 @@ def test_jour_de_calcul_a_l_heure_de_toronto():
 def test_listes_sur_les_vraies_infos():
     r = sc.calculer(vraies_infos(), MAINTENANT)
     assert r["version"] == sc.VERSION and r["jour"] == "2026-10-02"
-    assert len(r["hausse"]) == sc.MAX_LISTE and all(x["score"] >= sc.SEUIL for x in r["hausse"])
+    # Listes strictes (lot B) : 7/10 et plus, 3/10 et moins. Mesuré sur ces vraies infos : 16 au lieu de 20, 1 au lieu
+    # de 3 (EGBN 3,4/10 et CBZ 3,5/10 sortent de la liste « baisse »).
+    assert len(r["hausse"]) == 16 and all(x["note10"] >= 7.0 for x in r["hausse"])
     assert [x["score"] for x in r["hausse"]] == sorted((x["score"] for x in r["hausse"]), reverse=True)
-    assert [x["symbole"] for x in r["baisse"]] == ["LESL", "EGBN", "CBZ"]
+    assert [x["symbole"] for x in r["baisse"]] == ["LESL"] and r["baisse"][0]["note10"] <= 3.0
     # Chaque info citée est jointe (l'app l'ouvre même si elle n'est plus dans le fil)
     for liste in ("hausse", "baisse"):
         for x in r[liste]:
@@ -69,7 +71,8 @@ def test_sept_administrateurs_le_meme_jour_comptent_une_fois():
     assert spg["score"] == round(2 * 1.75 * 0.5 ** (1 / 30), 2) == 3.42  # pas 7 fois les points
 
 
-def test_meme_achat_declare_par_l_administrateur_et_son_fonds_n_est_pas_un_groupe():
+def test_meme_achat_declare_par_l_administrateur_et_son_fonds_n_est_pas_un_groupe(monkeypatch):
+    monkeypatch.setattr(sc, "NOTE_HAUSSE", 5.1)  # pour voir les petites notes
     infos = vraies_infos()
     simeon = une(infos, source="sec_form4", tickers=["ADRX"], entities=["George Simeon", "ADARx Pharmaceuticals, Inc."])
     sr_one = une(infos, source="sec_form4", tickers=["ADRX"],
@@ -133,7 +136,7 @@ def test_avis_144_ventes_d_elus_offres_et_ftc_sans_points():
 
 
 def test_les_points_fondent_avec_le_temps(monkeypatch):
-    monkeypatch.setattr(sc, "SEUIL", 0.01)  # pour voir les petits scores
+    monkeypatch.setattr(sc, "NOTE_HAUSSE", 5.1)  # pour voir les petites notes
     e = copy.deepcopy(une(vraies_infos(), source="sec_form4", kind="achat_initie", tickers=["DKS"]))
     jour = sc.jour_de_calcul(MAINTENANT)
     for age, attendu in ((0, 2.0), (30, 1.0), (60, 0.5), (90, 0.25)):
@@ -146,7 +149,7 @@ def test_les_points_fondent_avec_le_temps(monkeypatch):
 def test_grands_fonds_moitie_apres_60_jours(monkeypatch):
     from test_fonds13f import evenements  # vrais dépôts 13F de Berkshire (14 août 2026)
 
-    monkeypatch.setattr(sc, "SEUIL", 0.01)
+    monkeypatch.setattr(sc, "NOTE_HAUSSE", 5.1)
     evs = [e.to_dict() for e in evenements(1067983)]
     alphabet = next(e for e in evs if e["tickers"] == ["GOOGL"])
     (x,) = sc.calculer([alphabet], MAINTENANT)["hausse"]
@@ -175,7 +178,8 @@ def test_infos_a_verifier_jamais_comptees():
     assert sc.calculer(infos, MAINTENANT)["compagnies_notees"] == 0
 
 
-def test_faillite_et_procedures_sec_a_la_baisse():
+def test_faillite_et_procedures_sec_a_la_baisse(monkeypatch):
+    monkeypatch.setattr(sc, "NOTE_BAISSE", 4.9)  # EGBN (3,4/10) : pour voir la règle même hors de la liste
     r = sc.calculer(vraies_infos(), MAINTENANT)
     lesl, egbn = ligne(r, "LESL"), ligne(r, "EGBN")
     assert lesl["groupes"][0]["infos"][0]["regle"] == "faillite" and lesl["score"] == round(-5 * 0.5 ** (2 / 30), 2)
@@ -196,7 +200,8 @@ def test_nouveau_seulement_pour_qui_vient_d_entrer():
     assert all(d is None for s, d in depuis.items() if s != sortie)
 
 
-def test_noms_officiels_de_la_sec():
+def test_noms_officiels_de_la_sec(monkeypatch):
+    monkeypatch.setattr(sc, "NOTE_BAISSE", 4.9)  # EGBN (3,4/10)
     infos = vraies_infos()
     sans = sc.calculer(infos, MAINTENANT)
     avec = sc.calculer(infos, MAINTENANT, symboles=symboles_sec())

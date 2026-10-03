@@ -45,6 +45,14 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     assert.equal(await l.nth(0).locator(".nouveau").count(), 1);
     assert.equal(await l.nth(1).locator(".nouveau").count(), 0);
   });
+  await verifier("Accueil : notes sur 10 (7/10 et plus) et « Récent » pour un dépôt de moins de 3 jours de bourse", async () => {
+    const l = p.locator(".ligne.suggestion");
+    for (let i = 0; i < 2; i++) {
+      const n = (await l.nth(i).locator(".score-pastille").innerText()).replace(/\s+/g, "");
+      assert.ok(/^\d+,\d\/10$/.test(n) && parseFloat(n.replace(",", ".")) >= 7, n);
+    }
+    assert.equal(await l.nth(1).locator(".recent").count(), 1); // NVDA : déposé aujourd'hui
+  });
   await verifier("Accueil : 1 à surveiller à la baisse", async () => {
     assert.ok((await p.locator(".alerte-baisse").innerText()).includes("1 à surveiller à la baisse"));
   });
@@ -61,10 +69,12 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     await p.locator(".ligne.raison").first().click(); await p.waitForSelector(".feuille-fond.ouvert");
     assert.ok(await p.getByText("Document officiel").isVisible()); await fermer();
   });
-  await verifier("Comment le score est calculé : 13 règles, 19 liens d'études, règles des chefs", async () => {
+  await verifier("Comment le score est calculé : 13 règles, 20 liens d'études (dont Brochet pour « Récent »), règles des chefs", async () => {
     await p.getByRole("button", { name: "Comment le score est calculé" }).click(); await p.waitForTimeout(250);
     assert.equal(await p.locator(".regle").count(), 13);
-    assert.equal(await p.locator("a.etude").count(), 19);
+    assert.equal(await p.locator("a.etude").count(), 20);
+    const calcul = (await p.locator(".groupe", { hasText: "Le calcul" }).innerText()).replace(/\u00a0/g, " ");
+    assert.ok(calcul.includes("Note sur 10 = 5 + points × 5/6") && calcul.includes("à partir de 7/10") && calcul.includes("Brochet (2010)"), calcul);
     const chef = (await p.locator(".regle", { hasText: "Un chef du Congrès achète" }).innerText()).replace(/\u00a0/g, " ");
     assert.ok(chef.includes("+2") && chef.includes("Wei et Zhou"), chef);
     assert.ok((await p.locator(".regle", { hasText: "Un chef du Congrès vend" }).innerText()).replace(/\u00a0/g, " ").includes("−1"));
@@ -74,10 +84,12 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     await onglet("Accueil"); await p.locator(".alerte-baisse").click(); await p.waitForTimeout(250);
     assert.equal(await p.locator(".segment.actif").innerText(), "Baisse · 1");
     await p.locator(".ligne.suggestion", { hasText: "XMPL" }).click(); await p.waitForTimeout(250);
-    const t = await p.locator(".calcul").innerText();
+    const t = (await p.locator(".calcul").innerText()).replace(/\u00a0/g, " ");
     // Infos TEST datées d'hier (jour UTC) ; le score compte les jours à l'heure de Toronto : 0 ou 1 jour selon l'heure
     const age = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Toronto" }).format(new Date()) === new Date().toISOString().slice(0, 10) ? 1 : 0;
-    assert.ok(t.includes("bonus ×1,25 (2 familles d'accord)") && t.includes(`Score : ${age ? "−6,7" : "−6,9"}`), t);
+    assert.ok(t.includes("bonus ×1,25 (2 familles d'accord)") && t.includes(`Score : ${age ? "−6,7" : "−6,9"} points → note 0,0/10`), t);
+    assert.equal((await p.locator(".fiche-score").innerText()).replace(/\s+/g, ""), "0,0/10");
+    assert.ok(t.includes(`Note = 5 + (${age ? "−6,7" : "−6,9"}`) && t.includes(") × 5/6, entre 0 et 10, arrondie au dixième"), t);
   });
   await verifier("Retour : Suggestions puis Accueil", async () => {
     await p.locator(".retour").click(); await p.waitForTimeout(200);

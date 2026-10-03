@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.15.0";
+const VERSION = "0.16.0";
 
 // ---------- Constantes ----------
 
@@ -1159,6 +1159,17 @@ function pts(n, signe = false) {
   return `${n < 0 ? "−" : signe ? "+" : ""}${t}`;
 }
 
+// Les points exacts publiés (2 décimales) dans la formule de la note : 5.13 -> « 5,13 » ; −4.67 -> « (−4,67) ».
+function formule(n) {
+  const t = Math.abs(n).toLocaleString("fr-CA", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  return n < 0 ? `(−${t})` : t;
+}
+
+// Note sur 10 publiée par le robot : 9.3 -> « 9,3 » (toujours une décimale).
+function note(n) {
+  return (n ?? 5).toLocaleString("fr-CA", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+}
+
 // Typographie française : espace insécable avant « % : ; ! ? » (évite « 1,2 » en fin de ligne et « % » au début de la suivante).
 function fr(texte) {
   return (texte || "").replace(/ ([%:;!?»])/g, "\u00a0$1").replace(/« /g, "«\u00a0");
@@ -1179,13 +1190,17 @@ function LigneSuggestion({ s }) {
   const { ouvrirCompagnie, estNouveau } = useApp();
   return (
     <button type="button" className="ligne suggestion presse" onClick={() => ouvrirCompagnie(s.symbole)}>
-      <span className={s.score < 0 ? "score-pastille baisse" : "score-pastille"}>{pts(s.score)}</span>
+      <span className={s.score < 0 ? "score-pastille baisse" : "score-pastille"} aria-label={`Note ${note(s.note10)} sur 10`}>
+        {note(s.note10)}
+        <small>/10</small>
+      </span>
       <span className="ligne-centre">
         <span className="ligne-titre">
           <span className="symbole">{s.symbole}</span> {s.nom}
         </span>
         <span className="ligne-meta">
           {estNouveau(s) && <span className="nouveau">Nouveau</span>}
+          {s.recent && <span className="recent">Récent</span>}
           <span>{s.groupes.map((g) => FAMILLES_COURTES[g.famille] || g.famille).join(" · ")}</span>
         </span>
       </span>
@@ -1230,7 +1245,7 @@ function EcranSuggestions({ retour }) {
         ]}
       />
       <p className="explication">
-        {fr(baisse ? "Signaux négatifs : −1,5 point ou moins." : "Où le gros argent entre : 1,5 point ou plus.")} Calculé {ilYa(s.genere_a)}.
+        {fr(baisse ? "Signaux négatifs : note de 3/10 et moins." : "Où le gros argent entre : note de 7/10 et plus.")} Calculé {ilYa(s.genere_a)}.
       </p>
       {liste.length === 0 ? (
         <div className="carte">
@@ -1279,11 +1294,13 @@ function EcranCompagnie({ retour }) {
       <div className="carte fiche">
         <p className="fiche-nom">{c.nom}</p>
         <p className={baisse ? "fiche-score t-rouge" : "fiche-score t-vert"}>
-          {pts(c.score)} <small>points</small>
+          {note(c.note10)} <small>/10</small>
         </p>
+        <p className="fiche-points">{fr(`${pts(c.score)} points`)}</p>
         <p className="fiche-sens">
           {baisse ? "À surveiller à la baisse" : "À regarder à la hausse"}
           {estNouveau(c) && <span className="nouveau">Nouveau</span>}
+          {c.recent && <span className="recent">Récent</span>}
         </p>
         <button type="button" className={suivi ? "symbole-grand bouton-favori suivi presse" : "symbole-grand bouton-favori presse"} onClick={() => basculerFavori(c.symbole)} aria-pressed={suivi}>
           <Icone nom="etoile" taille={16} rempli={suivi} epaisseur={2} />
@@ -1319,7 +1336,10 @@ function EcranCompagnie({ retour }) {
       <div className="carte calcul">
         {c.groupes.length > 1 && ligneCalcul(1, c.plus, c.bonus.plus)}
         {c.groupes.length > 1 && ligneCalcul(-1, c.moins, c.bonus.moins)}
-        <p className="calcul-total">Score : {pts(c.score)}</p>
+        <p className="calcul-total">
+          {fr(`Score : ${pts(c.score)} points → note ${note(c.note10)}/10`)}
+          <small>{fr(`Note = 5 + ${formule(c.score)} × 5/6, entre 0 et 10, arrondie au dixième`)}</small>
+        </p>
       </div>
 
       {c.contexte.length > 0 && (
@@ -1446,11 +1466,23 @@ function EcranMethode({ retour }) {
         ))}
       </Groupe>
       <Groupe titre="Le calcul">
-        {[m.temps, m.familles, m.bonus, m.seuil, m.badges].map((t) => (
+        {[m.temps, m.familles, m.bonus, m.note10, m.seuil, m.recent, m.badges].filter(Boolean).map((t) => (
           <div key={t} className="rangee bloc">
             <span className="rangee-texte">{fr(t)}</span>
           </div>
         ))}
+        {(m.etudes_note || [])
+          .filter((e) => m.etudes[e])
+          .map((e) => (
+            <div key={e} className="rangee bloc">
+              <a className="etude" href={m.etudes[e].lien} target="_blank" rel="noopener noreferrer">
+                <Icone nom="document" taille={16} epaisseur={2} />
+                <span>
+                  <b>{m.etudes[e].titre}</b>{fr(` : ${m.etudes[e].constat}`)}
+                </span>
+              </a>
+            </div>
+          ))}
       </Groupe>
       <Groupe titre="Sans points (contexte)">
         {m.sans_points.map((t) => (
@@ -1511,7 +1543,7 @@ function Accueil({ pousser, allerAuFil }) {
           <div className="heros-texte">
             <p className="heros-titre">{aujourdhui?.version ? "Rien d'assez fort aujourd'hui" : "Pas encore de suggestions"}</p>
             <p className="heros-sous">
-              {aujourdhui?.version ? "Aucune compagnie n'atteint 1,5 point." : "Le score arrive bientôt."} En attendant, le fil montre tout ce que le robot lit.
+              {aujourdhui?.version ? "Aucune compagnie n'atteint 7/10." : "Le score arrive bientôt."} En attendant, le fil montre tout ce que le robot lit.
             </p>
             <div className="mini-barre">
               <div style={{ width: `${Math.max(pourcentage, 3)}%` }} />
@@ -1533,7 +1565,7 @@ function Accueil({ pousser, allerAuFil }) {
             <ListeSuggestions liste={hausse.slice(0, 5)} />
           ) : (
             <div className="carte">
-              <Vide titre="Rien à la hausse" texte="Aucune compagnie n'atteint 1,5 point." />
+              <Vide titre="Rien à la hausse" texte="Aucune compagnie n'atteint 7/10." />
             </div>
           )}
           {baisse.length > 0 && (
@@ -2113,6 +2145,11 @@ input { font: inherit; color: var(--texte); }
 .suggestion .ligne-titre .symbole { margin-right: 2px; vertical-align: 1px; }
 .nouveau { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: .6875rem; font-weight: 700; background: var(--accent); color: #fff; margin-left: 6px; }
 .ligne-meta .nouveau { margin-left: 0; }
+.score-pastille small { font-size: .625rem; font-weight: 600; opacity: .75; margin-left: 1px; }
+.recent { display: inline-block; padding: 1px 7px; border-radius: 999px; font-size: .6875rem; font-weight: 700; color: var(--vert); border: 1px solid color-mix(in srgb, var(--vert) 55%, transparent); margin-left: 6px; }
+.ligne-meta .recent { margin-left: 0; }
+.fiche-points { margin: 0; color: var(--texte-2); font-size: .875rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.calcul-total small { display: block; margin-top: 2px; color: var(--texte-3); font-weight: 500; font-size: .8125rem; }
 .alerte-baisse { width: 100%; display: flex; align-items: center; gap: 10px; padding: 13px 14px; margin-top: 10px; font-size: .9375rem; font-weight: 600; text-align: left; }
 .alerte-baisse span { flex: 1; }
 .fiche { padding: 18px 16px; text-align: center; }

@@ -17,15 +17,21 @@ import re
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
+from decimal import ROUND_HALF_UP, Decimal
 from zoneinfo import ZoneInfo
 
 from .registry import SOURCES
 
-VERSION = "score-6"
+VERSION = "score-7"
 DEMI_VIE = 30
 DEMI_VIE_FONDS = 60  # le 13F arrive jusqu'à 45 jours après la fin du trimestre
 AGE_MAX = 90
-SEUIL = 1.5
+# Note sur 10 (lot B, 3 octobre 2026) : 5 = neutre ; 6 points ou plus = 10/10 ; −6 ou moins = 0/10. Une seule famille
+# plafonne à 5,25 points (achat du PDG en groupe : 2 × 1,5 × 1,75), soit 9,4/10 : 10/10 demande plusieurs familles.
+POINTS_POUR_10 = 6
+NOTE_HAUSSE = 7.0  # liste « hausse » : 7/10 et plus (2,34 points et plus : 6,95 s'arrondit à 7,0)
+NOTE_BAISSE = 3.0  # liste « baisse » : 3/10 et moins
+JOURS_RECENT = 3  # « Récent » : preuve déposée il y a moins de 3 jours de bourse (la réaction du cours suit le dépôt)
 BONUS_FAMILLE = 0.25
 MAX_LISTE = 20
 MAX_CONTEXTE = 5
@@ -74,6 +80,10 @@ ETUDES = {
     "karpoff": ("Karpoff, Lee et Martin (2008)",
                 "Après une sanction de la SEC pour fraude comptable, la perte de réputation dépasse de loin l'amende.",
                 "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=652121"),
+    "brochet": ("Brochet (2010)",
+                "Depuis 2002 (dépôt du formulaire 4 en 2 jours), le cours réagit nettement plus aux achats d'initiés "
+                "dans les jours qui entourent le dépôt.",
+                "https://www.researchgate.net/publication/228238781_Information_Content_of_Insider_Trades_Before_and_After_the_Sarbanes-Oxley_Act"),
     "palmrose": ("Palmrose, Richardson et Scholz (2004)", "Annonce d'états financiers à refaire : environ −9 % en 2 jours.",
                  "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=265009"),
 }
@@ -214,7 +224,13 @@ METHODE = {
                 "administrateur et par son fonds compte aussi une seule fois.",
     "bonus": "Plusieurs familles qui pointent dans le même sens : +25 % par famille de plus. Ce bonus est un choix du "
              "modèle, pas une mesure d'étude.",
-    "seuil": "Une compagnie entre dans la liste à partir de 1,5 point (hausse) ou de −1,5 point (baisse).",
+    "seuil": "Une compagnie entre dans la liste à partir de 7/10 (hausse) ou à 3/10 et moins (baisse).",
+    "note10": "Note sur 10 = 5 + points × 5/6, entre 0 et 10, arrondie au dixième. 5 = neutre. Les achats de "
+              "dirigeants seuls plafonnent à 9,4 ; 10/10 demande plusieurs familles de sources d'accord. La note mesure "
+              "la force des preuves officielles, pas une promesse de hausse.",
+    "recent": "« Récent » : une preuve qui compte dans la note a été déposée il y a moins de 3 jours de bourse. "
+              "Depuis 2002, le cours réagit surtout dans les jours qui entourent le dépôt (Brochet, 2010).",
+    "etudes_note": ["brochet"],
     "badges": "Seules les infos « Officiel » ou « Confirmé » comptent ; les « À vérifier » n'entrent jamais.",
     "prix": "Aucune source de prix gratuite et permise aux robots : le score suit les règles des études, sans vérifier "
             "lui-même s'il gagne.",
@@ -376,6 +392,19 @@ def groupe_d_achats(a: Apport, achats: list[Apport]) -> bool:
     return False
 
 
+def note_sur_10(score: float) -> float:
+    """5 + points × 5/6, bornée entre 0 et 10, arrondie au dixième (5 vers le haut), à partir du score publié
+    (2 décimales) : le labo la recalcule à l'identique. 5,13 points -> 9,3 ; −4,67 -> 1,1."""
+    n = Decimal(str(round(score, 2))) * 5 / POINTS_POUR_10 + 5
+    n = min(max(n, Decimal(0)), Decimal(10))
+    return float(n.quantize(Decimal("0.1"), rounding=ROUND_HALF_UP))
+
+
+def recent(depot: str | None, jour: date) -> bool:
+    """La preuve a été déposée il y a moins de JOURS_RECENT jours de bourse (le jour même compte pour 0)."""
+    return bool(depot) and jours_ouvrables(date.fromisoformat(depot), jour) < JOURS_RECENT
+
+
 def jour_de_calcul(maintenant: datetime) -> date:
     return maintenant.astimezone(ZoneInfo("America/Toronto")).date()
 
@@ -440,11 +469,12 @@ def calculer(evenements: list[dict], maintenant: datetime, precedent: dict | Non
                 groupes[(a.famille, a.sens)].append(a)
         if not groupes:
             continue
-        sortie_groupes, totaux = [], {1: 0.0, -1: 0.0}
+        sortie_groupes, totaux, frais = [], {1: 0.0, -1: 0.0}, {1: None, -1: None}
         for (famille, sens), membres in groupes.items():
             membres.sort(key=lambda a: (abs(a.points), a.ev["published_on"], a.ev["id"]), reverse=True)
             retenu = membres[0]
             totaux[sens] += retenu.points
+            frais[sens] = max(frais[sens] or "", retenu.ev["published_on"])  # dépôt le plus récent qui compte
             sortie_groupes.append({"famille": famille, "sens": sens, "points": round(retenu.points, 2),
                                    "infos": [_infos(a, a is retenu) for a in membres]})
         nb = {s: sum(1 for (_, sg) in groupes if sg == s) for s in (1, -1)}
@@ -455,14 +485,17 @@ def calculer(evenements: list[dict], maintenant: datetime, precedent: dict | Non
                           reverse=True)[:MAX_CONTEXTE]
         resultats.append({
             "symbole": symbole, "nom": nom_de(symbole, apports, symboles), "score": round(plus + moins, 2),
+            "note10": note_sur_10(plus + moins),
             "plus": round(plus, 2), "moins": round(moins, 2), "bonus": {"plus": bonus[1], "moins": bonus[-1]},
             "derniere_info": max(a.ev["published_on"] for a in apports if a.regle),
             "groupes": sortie_groupes, "contexte": [{"id": a.ev["id"], "pourquoi": a.pourquoi} for a in contexte],
-            "_brut": plus + moins, "_apports": apports,
+            "_brut": plus + moins, "_apports": apports, "_frais": frais,
         })
 
-    hausse = sorted((r for r in resultats if r["_brut"] >= SEUIL), key=lambda r: (-r["_brut"], r["symbole"]))[:MAX_LISTE]
-    baisse = sorted((r for r in resultats if r["_brut"] <= -SEUIL), key=lambda r: (r["_brut"], r["symbole"]))[:MAX_LISTE]
+    hausse = sorted((r for r in resultats if r["note10"] >= NOTE_HAUSSE),
+                    key=lambda r: (-r["_brut"], r["symbole"]))[:MAX_LISTE]
+    baisse = sorted((r for r in resultats if r["note10"] <= NOTE_BAISSE),
+                    key=lambda r: (r["_brut"], r["symbole"]))[:MAX_LISTE]
 
     # « Nouveau » : la date où la compagnie est entrée dans sa liste (gardée tant qu'elle y reste).
     premier_calcul = not precedent or precedent.get("version", "").split("-")[0] != "score"
@@ -472,6 +505,8 @@ def calculer(evenements: list[dict], maintenant: datetime, precedent: dict | Non
         for r in liste:
             r["depuis"] = avant[(nom, r["symbole"])] if (nom, r["symbole"]) in avant else (
                 None if premier_calcul else maintenant.isoformat())
+            r["depot_recent"] = r.pop("_frais")[1 if nom == "hausse" else -1]
+            r["recent"] = recent(r["depot_recent"], jour)
             for a in r.pop("_apports"):
                 if a.regle or any(c["id"] == a.ev["id"] for c in r["contexte"]):
                     evenements_cites[a.ev["id"]] = a.ev

@@ -233,7 +233,7 @@ def test_option_de_vente_achetee_par_un_chef_reste_sans_points():
     assert sc.evaluer(e, chefs=frozenset({e["data"]["elu"]}))[0].regle is None
 
 
-def test_un_chef_relie_par_les_listes_officielles_recoit_le_bonus():
+def test_un_chef_relie_par_les_listes_officielles_recoit_le_bonus(monkeypatch):
     # Transaction FICTIVE (test seulement) : le rapport réel de John Boozman, attribué à John Thune (chef au Sénat).
     infos = vraies_infos()
     e = copy.deepcopy(next(x for x in infos if x["source"] == "senat_ptr" and x["data"]["elu"] == "John Boozman"
@@ -243,9 +243,12 @@ def test_un_chef_relie_par_les_listes_officielles_recoit_le_bonus():
     assert par_elu["John Thune"]["chef"] == {"poste": "chef de parti", "titre": "Senate Majority Leader"}
     chefs = {n for n, i in par_elu.items() if i["chef"]}
     lendemain = datetime(2026, 9, 12, 16, tzinfo=timezone.utc)  # publié le 11 septembre
-    assert sc.calculer([e], lendemain)["hausse"] == []  # élu ordinaire : 1 point, sous le seuil de 1,5
+    assert sc.calculer([e], lendemain)["hausse"] == []  # élu ordinaire : 1 point (5,8/10), sous le seuil de 7/10
+    assert sc.calculer([e], lendemain, chefs=chefs)["hausse"] == []  # chef seul : 1,95 point = 6,6/10, sous 7/10 aussi
+    monkeypatch.setattr(sc, "NOTE_HAUSSE", 5.1)  # pour voir la règle des chefs sous le seuil
     r = sc.calculer([e], lendemain, chefs=chefs)
     assert [x["symbole"] for x in r["hausse"]] == ["FSLR"] and r["hausse"][0]["score"] == round(2 * 0.5 ** (1 / 30), 2)
+    assert r["hausse"][0]["note10"] == 6.6
     assert r["hausse"][0]["groupes"][0]["infos"][0]["regle"] == "achat_chef"
 
 
