@@ -3,7 +3,8 @@ name: "Labo (score : recalcul indépendant et site en ligne)"
 on:
   push:
     branches: [labo]
-    paths: ["labo/declencheur-score.txt", "labo/recalcul_score.py", "labo/site_score.cjs", ".github/workflows/labo20.yml"]
+    paths: ["labo/declencheur-score.txt", "labo/recalcul_score.py", "labo/site_score.cjs", "labo/verif_congres.py",
+            ".github/workflows/labo20.yml"]
 
 permissions:
   contents: write
@@ -27,6 +28,9 @@ jobs:
       - run: rm -rf labo/resultats-score && mkdir -p labo/resultats-score
       - name: Recalcul indépendant
         run: python labo/recalcul_score.py principal/data > labo/resultats-score/recalcul.txt 2>&1; s=$?; cat labo/resultats-score/recalcul.txt; exit $s
+      - name: Congrès contre-vérifié aux pages officielles
+        if: always()
+        run: python labo/verif_congres.py principal/data labo/resultats-score/congres.txt
       - run: npm i --no-save playwright@1.56.1
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
@@ -34,7 +38,7 @@ jobs:
         if: always()
         run: |
           (cd principal && git log -1 --format='Données de main : %h %s' -- data) > labo/resultats-score/main.txt
-          node labo/site_score.cjs principal/data/app/aujourdhui.json labo/resultats-score
+          node labo/site_score.cjs principal/data/app/aujourdhui.json labo/resultats-score principal/data/app/elus.json
       - name: Sauvegarder
         if: always()
         run: |
