@@ -27,7 +27,7 @@ import requests
 RACINE = Path(__file__).resolve().parent.parent
 SORTIE = RACINE / "labo" / "essai"
 DONNEES = Path("/tmp/essai")
-SOURCES = ["maison_blanche", "fed", "banque_canada", "sec_form144", "sec_offres", "cftc_cot",
+SOURCES = ["fda", "sec_13f", "maison_blanche", "fed", "banque_canada", "sec_form144", "sec_offres", "cftc_cot",
            "registre_federal", "ventes_armes", "senat_ptr", "chambre_ptr", "nouvelles_defense_ca", "nouvelles_eco_ca"]
 UA = {"User-Agent": "Radar projet personnel"}  # comme le robot : le courriel ne part qu'à la SEC
 UA_SEC = {"User-Agent": "Radar projet personnel math-veronneau1@hotmail.com"}
@@ -313,7 +313,69 @@ def verifier_cftc(ev):
     return ecarts
 
 
+MOIS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+           "November", "December"]
+
+
+def texte_pdf(contenu):
+    import pdfplumber
+    with pdfplumber.open(io.BytesIO(contenu)) as pdf:
+        return " ".join((p.extract_text() or "") for p in pdf.pages[:4])
+
+
+def verifier_fda(ev):
+    """2e méthode : la LETTRE D'APPROBATION officielle (PDF) et la page Drugs@FDA, pas la fiche openFDA du robot."""
+    d = ev["data"]
+    t = " ".join(texte_pdf(get(d["lettre"]).content).split()).upper()
+    ecarts = []
+    num = d["application"]
+    if not re.search(rf"{num[:3]}\s*{num[3:]}", t):
+        ecarts.append(f"numéro {num} absent de la lettre")
+    for marque in d["marques"]:
+        if marque.upper() not in t:
+            ecarts.append(f"marque {marque} absente de la lettre")
+    if "APPROV" not in t:
+        ecarts.append("la lettre ne parle pas d'approbation")
+    jour = date.fromisoformat(ev["published_on"])
+    if f"{MOIS_EN[jour.month - 1]} {jour.day}, {jour.year}".upper() not in t:
+        ecarts.append(f"date {MOIS_EN[jour.month - 1]} {jour.day}, {jour.year} absente de la lettre")
+    page = lire_page(ev["official_url"]).upper()
+    if d["marques"] and d["marques"][0].upper() not in page:
+        ecarts.append("la page Drugs@FDA ne nomme pas le médicament")
+    return ecarts
+
+
+def actions_13f(cik, acc, cusip):
+    """2e méthode : expressions régulières sur la table officielle (le robot utilise un analyseur XML)."""
+    dossier = f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc.replace('-', '')}"
+    items = get(f"{dossier}/index.json").json()["directory"]["item"]
+    table = next(i["name"] for i in items if i["name"].endswith(".xml") and i["name"] != "primary_doc.xml")
+    xml = get(f"{dossier}/{table}").content.decode("utf-8", "replace")
+    total = 0
+    for bloc in re.findall(r"<(?:\w+:)?infoTable>(.*?)</(?:\w+:)?infoTable>", xml, re.S):
+        c = re.search(r"<(?:\w+:)?cusip>\s*([0-9A-Za-z]{9})\s*<", bloc)
+        if not c or c.group(1).upper() != cusip or re.search(r"<(?:\w+:)?putCall>", bloc):
+            continue
+        if not re.search(r"<(?:\w+:)?sshPrnamtType>\s*SH\s*<", bloc):
+            continue
+        total += int(float(re.search(r"<(?:\w+:)?sshPrnamt>\s*([\d.]+)\s*<", bloc).group(1)))
+    return total
+
+
+def verifier_13f(ev):
+    d = ev["data"]
+    acc = ev["official_id"].split(":")[0]
+    a, b = actions_13f(d["cik_fonds"], d["acc_precedent"], d["cusip"]), actions_13f(d["cik_fonds"], acc, d["cusip"])
+    ecarts = []
+    if (a, b) != (d["actions_avant"], d["actions_apres"]):
+        ecarts.append(f"actions : document {a} -> {b} ≠ robot {d['actions_avant']} -> {d['actions_apres']}")
+    if ev["published_on"] not in lire_page(ev["official_url"]):
+        ecarts.append("date de dépôt absente de la page officielle")
+    return ecarts
+
+
 VERIFS = {
+    "fda": verifier_fda, "sec_13f": verifier_13f,
     "maison_blanche": verifier_maison_blanche, "fed": verifier_fed, "banque_canada": verifier_bdc,
     "sec_form144": verifier_144, "sec_offres": verifier_offre, "cftc_cot": verifier_cftc,"registre_federal": verifier_registre, "ventes_armes": verifier_registre, "senat_ptr": verifier_senat,
           "chambre_ptr": verifier_chambre, "nouvelles_defense_ca": verifier_canada, "nouvelles_eco_ca": verifier_canada}
