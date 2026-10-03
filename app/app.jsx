@@ -77,7 +77,7 @@ const CONTROLES_SOURCES = {
   positions_coherentes: "Positions cohérentes",
   variation_coherente: "Variation cohérente",
   approbation_originale: "Approbation originale (pas un générique)",
-  nouvelle_molecule: "Nouvelle molécule (classe officielle 1)",
+  nouvelle_molecule: "Nouvelle molécule (classe 1 dans la base de la FDA)",
   lettre_officielle: "Lettre d'approbation officielle",
   trimestres_consecutifs: "Trimestres consécutifs comparés",
   rapports_complets: "Deux rapports complets comparés",
