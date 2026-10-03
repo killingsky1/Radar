@@ -349,3 +349,9 @@ def test_privatisation_une_seule_info_par_compagnie(syms_complets):
     b = offre("0001193125-26-398221.SC_13E3", "SC 13E3", syms_complets, vus)  # déposé par le fonds du RPC
     assert len(a) == 1 and b == []
     assert a[0].title == "Projet de privatisation (règle 13e-3) : ReNew Energy Global plc" and a[0].tickers == ["RNW"]
+
+
+def test_empreinte_de_l_entete_insensible_aux_espaces():
+    t = lire("0000721371-26-000041-index-headers.html")
+    assert sec.empreinte_entete(t) == sec.empreinte_entete(t.replace("\n", "\r\n"))  # fins de ligne
+    assert sec.empreinte_entete(t) != sec.empreinte_entete(t.replace("8-K", "8-K/A", 1))  # vrai changement
