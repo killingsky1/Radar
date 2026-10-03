@@ -16685,6 +16685,66 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T01:27:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA220963",
+   "classe": "TYPE 1",
+   "compagnie": "RARE THYROID THERAPEUTICS INTERNATIONAL AB",
+   "date": "20260928",
+   "fabricant": null,
+   "ingredients": [
+    "TIRATRICO"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220963Orig1s000ltr.pdf",
+   "marques": [
+    "EMCITATE"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "PRIORITY",
+   "sponsor": "RARE THYROID THERAPEUTICS INTERNATIONAL AB",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "RARE THYROID THERAPEUTICS INTERNATIONAL AB"
+  ],
+  "id": "fda:NDA220963-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
+   "Médicament orphelin : maladie rare."
+  ],
+  "occurred_on": "2026-09-28",
+  "official_id": "NDA220963-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220963",
+  "parser_version": "fda-1",
+  "published_on": "2026-09-28",
+  "sha256": "e7b0f5b2aae29a208e550cb10c3952ca3eb1cad1c23ee673d738b36eee0492f2",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, EMCITATE (tiratrico), de RARE THYROID THERAPEUTICS INTERNATIONAL AB"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -16770,6 +16830,127 @@
   "source": "nouvelles_eco_ca",
   "tickers": [],
   "title": "Le Bureau de la concurrence craint que les consommateurs soient privés de certaines aubaines en épicerie"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T01:27:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA221198",
+   "classe": "TYPE 1",
+   "compagnie": "INCYTE CORP",
+   "date": "20260925",
+   "fabricant": null,
+   "ingredients": [
+    "ZILURGISERTIB"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/221198Orig1s000ltr.pdf",
+   "marques": [
+    "ATEBRIOZ"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "PRIORITY",
+   "sponsor": "INCYTE CORP",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "INCYTE CORP"
+  ],
+  "id": "fda:NDA221198-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
+   "Médicament orphelin : maladie rare."
+  ],
+  "occurred_on": "2026-09-25",
+  "official_id": "NDA221198-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221198",
+  "parser_version": "fda-1",
+  "published_on": "2026-09-25",
+  "sha256": "59daf822fed709a1c70c4d73c1efafd99a2b3f888d9a52e6ef2c893e300af0a1",
+  "source": "fda",
+  "tickers": [
+   "INCY"
+  ],
+  "title": "FDA : nouveau médicament approuvé, ATEBRIOZ (zilurgisertib), de INCYTE CORP"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T01:27:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA220415",
+   "classe": "TYPE 1",
+   "compagnie": "ABBVIE INC",
+   "date": "20260925",
+   "fabricant": null,
+   "ingredients": [
+    "TAVAPADON"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220415Orig1s000ltr.pdf",
+   "marques": [
+    "JUVMO"
+   ],
+   "numero_soumission": "1",
+   "orphelin": false,
+   "priorite": "STANDARD",
+   "sponsor": "ABBVIE INC",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "ABBVIE INC"
+  ],
+  "id": "fda:NDA220415-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [],
+  "occurred_on": "2026-09-25",
+  "official_id": "NDA220415-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220415",
+  "parser_version": "fda-1",
+  "published_on": "2026-09-25",
+  "sha256": "09719276ed1dd9a6e5acf12edc51e572e1c0abc1f85a3a9abb48e2b43bb2d58d",
+  "source": "fda",
+  "tickers": [
+   "ABBV"
+  ],
+  "title": "FDA : nouveau médicament approuvé, JUVMO (tavapadon), de ABBVIE INC"
  },
  {
   "amount_max": null,
@@ -20218,6 +20399,127 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T01:27:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA220425",
+   "classe": "TYPE 1",
+   "compagnie": "ELEVAR THERAPEUTICS INC",
+   "date": "20260923",
+   "fabricant": null,
+   "ingredients": [
+    "LIRAFUGRATINIB HYDROCHLORIDE"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220425Orig1s000ltr.pdf",
+   "marques": [
+    "LYRFIGTU"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "PRIORITY",
+   "sponsor": "ELEVAR THERAPEUTICS INC",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "ELEVAR THERAPEUTICS INC"
+  ],
+  "id": "fda:NDA220425-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
+   "Médicament orphelin : maladie rare."
+  ],
+  "occurred_on": "2026-09-23",
+  "official_id": "NDA220425-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
+  "parser_version": "fda-1",
+  "published_on": "2026-09-23",
+  "sha256": "4dce223c18e684a8c2ebd7b9626db232ad21edb7246d18bdfa4ec05cc5e7ae2b",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, LYRFIGTU (lirafugratinib hydrochloride), de ELEVAR THERAPEUTICS INC"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T01:27:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "BLA761408",
+   "classe": "TYPE 1",
+   "compagnie": "ELI LILLY AND CO",
+   "date": "20260923",
+   "fabricant": null,
+   "ingredients": [
+    "INSULIN EFSITORA ALFA-GOBE"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/761408Orig1s000ltr.pdf",
+   "marques": [
+    "ONSWIK"
+   ],
+   "numero_soumission": "1",
+   "orphelin": false,
+   "priorite": "STANDARD",
+   "sponsor": "ELI LILLY AND CO",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "ELI LILLY AND CO"
+  ],
+  "id": "fda:BLA761408-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Produit biologique."
+  ],
+  "occurred_on": "2026-09-23",
+  "official_id": "BLA761408-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761408",
+  "parser_version": "fda-1",
+  "published_on": "2026-09-23",
+  "sha256": "6cd26761a4927c7fc0e1675e7db442f6727ce5f504bceefe1135357e955467c3",
+  "source": "fda",
+  "tickers": [
+   "LLY"
+  ],
+  "title": "FDA : nouveau médicament approuvé, ONSWIK (insulin efsitora alfa-gobe), de ELI LILLY AND CO"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "militaire",
   "checks": {
    "acheteur_lu": true,
@@ -23540,6 +23842,127 @@
   "title": "Thomas H. Kean (Chambre, NJ07) vend AMCR"
  },
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T01:27:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA218592",
+   "classe": "TYPE 1",
+   "compagnie": "TELIX",
+   "date": "20260911",
+   "fabricant": null,
+   "ingredients": [
+    "FLORETYROSINE F-18"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/218592Orig1s000ltr.pdf",
+   "marques": [
+    "PIXCLARA"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "PRIORITY",
+   "sponsor": "TELIX",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "TELIX"
+  ],
+  "id": "fda:NDA218592-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
+   "Médicament orphelin : maladie rare."
+  ],
+  "occurred_on": "2026-09-11",
+  "official_id": "NDA218592-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218592",
+  "parser_version": "fda-1",
+  "published_on": "2026-09-11",
+  "sha256": "8b83f9373ddbccdee8f9a9c51bf1bfc9e58283fccdb8713d8832b9e4c9469dfc",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, PIXCLARA (floretyrosine f-18), de TELIX"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T01:27:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "BLA761463",
+   "classe": "TYPE 1",
+   "compagnie": "SCHOLAR ROCK INC",
+   "date": "20260911",
+   "fabricant": null,
+   "ingredients": [
+    "APITEGROMAB-MSTN"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/761463Orig1s000ltr.pdf",
+   "marques": [
+    "ISEMBYLD"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "PRIORITY",
+   "sponsor": "SCHOLAR ROCK INC",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "SCHOLAR ROCK INC"
+  ],
+  "id": "fda:BLA761463-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
+   "Médicament orphelin : maladie rare.",
+   "Produit biologique."
+  ],
+  "occurred_on": "2026-09-11",
+  "official_id": "BLA761463-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761463",
+  "parser_version": "fda-1",
+  "published_on": "2026-09-11",
+  "sha256": "e83989082f46e7609664e8ba680af4eea64547b9320b3656db3ffca3533434d3",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, ISEMBYLD (apitegromab-mstn), de SCHOLAR ROCK INC"
+ },
+ {
   "amount_max": 15000.0,
   "amount_min": 1001.0,
   "badge": "officiel",
@@ -24142,6 +24565,65 @@
   "badge": "officiel",
   "category": "gouvernement",
   "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T01:27:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA220359",
+   "classe": "TYPE 1",
+   "compagnie": "AstraZeneca Pharmaceuticals LP",
+   "date": "20260904",
+   "fabricant": "AstraZeneca Pharmaceuticals LP",
+   "ingredients": [
+    "CAMIZESTRANT"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220359Orig1s000ltr.pdf",
+   "marques": [
+    "ETCAMAH"
+   ],
+   "numero_soumission": "1",
+   "orphelin": false,
+   "priorite": "STANDARD",
+   "sponsor": "ASTRAZENECA",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "AstraZeneca Pharmaceuticals LP"
+  ],
+  "id": "fda:NDA220359-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [],
+  "occurred_on": "2026-09-04",
+  "official_id": "NDA220359-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220359",
+  "parser_version": "fda-1",
+  "published_on": "2026-09-04",
+  "sha256": "e3084e52d15c6f63f85aa478675debabc5487f12ff552330de6542f5ad0aafb3",
+  "source": "fda",
+  "tickers": [
+   "AZN"
+  ],
+  "title": "FDA : nouveau médicament approuvé, ETCAMAH (camizestrant), de AstraZeneca Pharmaceuticals LP"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
    "categorie_officielle_reconnue": true,
    "champs_requis": true,
    "dates_coherentes": true,
@@ -24229,6 +24711,66 @@
   "source": "maison_blanche",
   "tickers": [],
   "title": "Décret présidentiel : Promoting Fair Competition In Livestock Markets And Expanding Market Access for American Meat Producers"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T01:27:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA220210",
+   "classe": "TYPE 1",
+   "compagnie": "IONIS PHARMS INC",
+   "date": "20260903",
+   "fabricant": null,
+   "ingredients": [
+    "ZILGANERSEN SODIUM"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220210Orig1s000ltr.pdf",
+   "marques": [
+    "ZANVASTRO"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "PRIORITY",
+   "sponsor": "IONIS PHARMS INC",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "IONIS PHARMS INC"
+  ],
+  "id": "fda:NDA220210-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
+   "Médicament orphelin : maladie rare."
+  ],
+  "occurred_on": "2026-09-03",
+  "official_id": "NDA220210-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220210",
+  "parser_version": "fda-1",
+  "published_on": "2026-09-03",
+  "sha256": "fb543d228cc66db84b61a582b6a4533a65934dded0d95e7a3d673e5517d7637a",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, ZANVASTRO (zilganersen sodium), de IONIS PHARMS INC"
  },
  {
   "amount_max": null,
@@ -24412,6 +24954,66 @@
   "source": "ventes_armes",
   "tickers": [],
   "title": "Vente d'armes à l'étranger : Canada"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T01:27:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA220605",
+   "classe": "TYPE 1",
+   "compagnie": "Takeda Pharmaceuticals America, Inc.",
+   "date": "20260828",
+   "fabricant": "Takeda Pharmaceuticals America, Inc.",
+   "ingredients": [
+    "RUSFERTIDE ACETATE"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220605Orig1s000ltr.pdf",
+   "marques": [
+    "MIMRYLO"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "PRIORITY",
+   "sponsor": "TAKEDA PHARMS AM",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "Takeda Pharmaceuticals America, Inc."
+  ],
+  "id": "fda:NDA220605-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
+   "Médicament orphelin : maladie rare."
+  ],
+  "occurred_on": "2026-08-28",
+  "official_id": "NDA220605-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220605",
+  "parser_version": "fda-1",
+  "published_on": "2026-08-28",
+  "sha256": "c13fd83efd1902b5ccfed8ed89cac1d120148acad4e540fc691895dbbe141702",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, MIMRYLO (rusfertide acetate), de Takeda Pharmaceuticals America, Inc."
  },
  {
   "amount_max": null,
@@ -25144,6 +25746,66 @@
   "badge": "officiel",
   "category": "gouvernement",
   "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T01:27:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA220106",
+   "classe": "TYPE 1",
+   "compagnie": "Priovant Therapeutics, Inc.",
+   "date": "20260827",
+   "fabricant": "Priovant Therapeutics, Inc.",
+   "ingredients": [
+    "BREPOCITINIB TOSYLATE"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220106Orig1s000ltr.pdf",
+   "marques": [
+    "LISRAYA"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "PRIORITY",
+   "sponsor": "PRIOVANT THERAP",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "Priovant Therapeutics, Inc."
+  ],
+  "id": "fda:NDA220106-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
+   "Médicament orphelin : maladie rare."
+  ],
+  "occurred_on": "2026-08-27",
+  "official_id": "NDA220106-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220106",
+  "parser_version": "fda-1",
+  "published_on": "2026-08-27",
+  "sha256": "e0f19c6c7df343f34c15f5398b2e5b45cfdd7278bd19f02011f3eee24acff99d",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, LISRAYA (brepocitinib tosylate), de Priovant Therapeutics, Inc."
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
    "categorie_officielle_reconnue": true,
    "champs_requis": true,
    "dates_coherentes": true,
@@ -25191,6 +25853,68 @@
   "badge": "officiel",
   "category": "gouvernement",
   "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T01:27:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA220910",
+   "classe": "TYPE 1",
+   "compagnie": "Revolution Medicines, Inc.",
+   "date": "20260826",
+   "fabricant": "Revolution Medicines, Inc.",
+   "ingredients": [
+    "DARAXONRASIB"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220910Orig1s000ltr.pdf",
+   "marques": [
+    "RASONQUE"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "PRIORITY",
+   "sponsor": "REVOLUTION MEDICINES",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "Revolution Medicines, Inc."
+  ],
+  "id": "fda:NDA220910-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
+   "Médicament orphelin : maladie rare."
+  ],
+  "occurred_on": "2026-08-26",
+  "official_id": "NDA220910-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220910",
+  "parser_version": "fda-1",
+  "published_on": "2026-08-26",
+  "sha256": "13fd4358a3ffa1f76a240b7be4e1b5dececfcae945a5242fb681bb74dfe1f85b",
+  "source": "fda",
+  "tickers": [
+   "RVMD"
+  ],
+  "title": "FDA : nouveau médicament approuvé, RASONQUE (daraxonrasib), de Revolution Medicines, Inc."
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
    "categorie_officielle_reconnue": true,
    "champs_requis": true,
    "dates_coherentes": true,
@@ -25231,5 +25955,247 @@
   "source": "maison_blanche",
   "tickers": [],
   "title": "Proclamation présidentielle : Further Ensuring Affordable Beef for the American Consumer"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T01:27:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "BLA761508",
+   "classe": "TYPE 1",
+   "compagnie": "Regeneron Pharmaceuticals, Inc.",
+   "date": "20260819",
+   "fabricant": "Regeneron Pharmaceuticals, Inc.",
+   "ingredients": [
+    "GARETOSMAB-GRTS"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/761508Orig1s000ltr.pdf",
+   "marques": [
+    "PASATRU"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "PRIORITY",
+   "sponsor": "REGENERON PHARMACEUTICALS, INC",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "Regeneron Pharmaceuticals, Inc."
+  ],
+  "id": "fda:BLA761508-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
+   "Médicament orphelin : maladie rare.",
+   "Produit biologique."
+  ],
+  "occurred_on": "2026-08-19",
+  "official_id": "BLA761508-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761508",
+  "parser_version": "fda-1",
+  "published_on": "2026-08-19",
+  "sha256": "17f92054b6d75ebcd0d84239717be06b3f30c860e23c3d7eb2ff0eb1b45ffbe5",
+  "source": "fda",
+  "tickers": [
+   "REGN"
+  ],
+  "title": "FDA : nouveau médicament approuvé, PASATRU (garetosmab-grts), de Regeneron Pharmaceuticals, Inc."
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T01:27:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA221075",
+   "classe": "TYPE 1",
+   "compagnie": "E.R. Squibb & Sons, L.L.C.",
+   "date": "20260813",
+   "fabricant": "E.R. Squibb & Sons, L.L.C.",
+   "ingredients": [
+    "IBERDOMIDE HYDROCHLORIDE"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/221075Orig1s000ltr.pdf",
+   "marques": [
+    "ZENBEXUS"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "PRIORITY",
+   "sponsor": "BRISTOL MYERS SQUIBB",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "E.R. Squibb & Sons, L.L.C."
+  ],
+  "id": "fda:NDA221075-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
+   "Médicament orphelin : maladie rare."
+  ],
+  "occurred_on": "2026-08-13",
+  "official_id": "NDA221075-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221075",
+  "parser_version": "fda-1",
+  "published_on": "2026-08-13",
+  "sha256": "309e1fd15529f0bdebdf1417063e311bdbd1eb3a40096b70b4435d4a3f155b2a",
+  "source": "fda",
+  "tickers": [
+   "BMY"
+  ],
+  "title": "FDA : nouveau médicament approuvé, ZENBEXUS (iberdomide hydrochloride), de E.R. Squibb & Sons, L.L.C."
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T01:27:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA220496",
+   "classe": "TYPE 1",
+   "compagnie": "CERVEAU LANTHEUS",
+   "date": "20260813",
+   "fabricant": null,
+   "ingredients": [
+    "FLORQUINITAU F-18"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220496Orig1s000ltr.pdf",
+   "marques": [
+    "TAUKLARIFY"
+   ],
+   "numero_soumission": "1",
+   "orphelin": false,
+   "priorite": "STANDARD",
+   "sponsor": "CERVEAU LANTHEUS",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "CERVEAU LANTHEUS"
+  ],
+  "id": "fda:NDA220496-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [],
+  "occurred_on": "2026-08-13",
+  "official_id": "NDA220496-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
+  "parser_version": "fda-1",
+  "published_on": "2026-08-13",
+  "sha256": "5421429075ef25939669412b909fa3da262a74bf79f85c12e17cbb51034609fa",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, TAUKLARIFY (florquinitau f-18), de CERVEAU LANTHEUS"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T01:27:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA220860",
+   "classe": "TYPE 1",
+   "compagnie": "TAKEDA PHARMS USA",
+   "date": "20260805",
+   "fabricant": null,
+   "ingredients": [
+    "OVEPOREXTON"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220860Orig1s000ltr.pdf",
+   "marques": [
+    "ORZEYFUL"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "PRIORITY",
+   "sponsor": "TAKEDA PHARMS USA",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "TAKEDA PHARMS USA"
+  ],
+  "id": "fda:NDA220860-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
+   "Médicament orphelin : maladie rare."
+  ],
+  "occurred_on": "2026-08-05",
+  "official_id": "NDA220860-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220860",
+  "parser_version": "fda-1",
+  "published_on": "2026-08-05",
+  "sha256": "707b789e29017d6cb0dbf67f1eca497e79aaefda56de1338424c68d3909279c0",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, ORZEYFUL (oveporexton), de TAKEDA PHARMS USA"
  }
 ]
