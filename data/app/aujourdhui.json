@@ -6,6 +6,7 @@
     "plus": 1.0
    },
    "contexte": [],
+   "depot_recent": "2026-09-30",
    "depuis": null,
    "derniere_info": "2026-09-30",
    "groupes": [
@@ -29,75 +30,11 @@
    ],
    "moins": -4.67,
    "nom": "Leslie's, Inc.",
+   "note10": 1.1,
    "plus": 0.0,
+   "recent": false,
    "score": -4.67,
    "symbole": "LESL"
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depuis": null,
-   "derniere_info": "2026-09-30",
-   "groupes": [
-    {
-     "famille": "sec",
-     "infos": [
-      {
-       "age": 3,
-       "base": -2.0,
-       "compte": true,
-       "facteurs": [],
-       "id": "sec_poursuites:34-106555",
-       "points": -1.87,
-       "regle": "sec_procedure",
-       "temps": 0.933
-      }
-     ],
-     "points": -1.87,
-     "sens": -1
-    }
-   ],
-   "moins": -1.87,
-   "nom": "EAGLE BANCORP INC",
-   "plus": 0.0,
-   "score": -1.87,
-   "symbole": "EGBN"
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depuis": null,
-   "derniere_info": "2026-09-28",
-   "groupes": [
-    {
-     "famille": "sec",
-     "infos": [
-      {
-       "age": 5,
-       "base": -2.0,
-       "compte": true,
-       "facteurs": [],
-       "id": "sec_poursuites:33-11441",
-       "points": -1.78,
-       "regle": "sec_procedure",
-       "temps": 0.891
-      }
-     ],
-     "points": -1.78,
-     "sens": -1
-    }
-   ],
-   "moins": -1.78,
-   "nom": "CBIZ, Inc.",
-   "plus": 0.0,
-   "score": -1.78,
-   "symbole": "CBZ"
   }
  ],
  "compagnies_notees": 104,
@@ -614,79 +551,6 @@
     "GPUS"
    ],
    "title": "Hyperscale Data, Inc. : contrat important signé"
-  },
-  "sec_form4:0000017313-26-000159:P": {
-   "amount_max": 50005.48,
-   "amount_min": 50005.48,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-03T03:53:53+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 2170.0,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0000017313",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 23.044,
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "CSWC",
-    "symboles_sec": [
-     "CSWC"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 2170.0,
-      "apres": 22842.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-10-01",
-      "hors_bourse": null,
-      "prix": 23.044
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Thomas William R III",
-    "CAPITAL SOUTHWEST CORP"
-   ],
-   "id": "sec_form4:0000017313-26-000159:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-10-01",
-   "official_id": "0000017313-26-000159:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/17313/000001731326000159/0000017313-26-000159-index.htm",
-   "parser_version": "sec-7",
-   "published_on": "2026-10-01",
-   "sha256": "8b58c4b9802c0904781ba0073b16875661bbd0eb4f5112597eaae1ab65fdaf48",
-   "source": "sec_form4",
-   "tickers": [
-    "CSWC"
-   ],
-   "title": "Thomas William R III (administrateur) achète 2 170 actions de CAPITAL SOUTHWEST CORP"
   },
   "sec_form4:0000912282-26-001334:P": {
    "amount_max": 38730.0,
@@ -2339,303 +2203,6 @@
    ],
    "title": "Barry Richard (President & CEO) achète 306 813 actions de FILANA THERAPEUTICS, INC."
   },
-  "sec_form4:0001437749-26-031876:P": {
-   "amount_max": 822013.56,
-   "amount_min": 822013.56,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-03T03:00:21+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 99277.0,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001408534",
-    "plan_10b5_1": false,
-    "prix_moyen": 8.28,
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "FGBI",
-    "symboles_sec": [
-     "FGBI",
-     "FGBIP"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 99277.0,
-      "apres": 958523.0,
-      "code": "P",
-      "date": "2026-09-30",
-      "prix": 8.28
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Smith Edgar R. III",
-    "First Guaranty Bancshares, Inc."
-   ],
-   "id": "sec_form4:0001437749-26-031876:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-30",
-   "official_id": "0001437749-26-031876:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1408534/000143774926031876/0001437749-26-031876-index.htm",
-   "parser_version": "sec-5",
-   "published_on": "2026-10-02",
-   "sha256": "cae068f2ffb497190ca773e196080c9373cd4f54f8e4f28bfd228b6bdcb3c444",
-   "source": "sec_form4",
-   "tickers": [
-    "FGBI"
-   ],
-   "title": "Smith Edgar R. III (administrateur) achète 99 277 actions de First Guaranty Bancshares, Inc."
-  },
-  "sec_form4:0001477932-26-005964:P": {
-   "amount_max": 40200.0,
-   "amount_min": 40200.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-03T03:55:01+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 15000.0,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001921865",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 2.68,
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "ASPI",
-    "symboles_sec": [
-     "ASPI"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 15000.0,
-      "apres": 675222.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-09-30",
-      "hors_bourse": null,
-      "prix": 2.68
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Ryan Robert John Andrew",
-    "ASP Isotopes Inc."
-   ],
-   "id": "sec_form4:0001477932-26-005964:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-30",
-   "official_id": "0001477932-26-005964:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1921865/000147793226005964/0001477932-26-005964-index.htm",
-   "parser_version": "sec-7",
-   "published_on": "2026-10-01",
-   "sha256": "0f231c0cfa4d16a78e65f9a421b57ed9480a9e57eb88a84b90d79848f719d0f2",
-   "source": "sec_form4",
-   "tickers": [
-    "ASPI"
-   ],
-   "title": "Ryan Robert John Andrew (administrateur) achète 15 000 actions de ASP Isotopes Inc."
-  },
-  "sec_form4:0001493152-26-045185:P": {
-   "amount_max": 27131.76,
-   "amount_min": 27131.76,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-03T03:16:30+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 12561.0,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001535955",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 2.16,
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "LPCN",
-    "symboles_sec": [
-     "LPCN"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 12561.0,
-      "apres": 216358.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "hors_bourse": null,
-      "prix": 2.16
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Higuchi John W.",
-    "Lipocine Inc."
-   ],
-   "id": "sec_form4:0001493152-26-045185:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-28",
-   "official_id": "0001493152-26-045185:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1535955/000149315226045185/0001493152-26-045185-index.htm",
-   "parser_version": "sec-6",
-   "published_on": "2026-09-30",
-   "sha256": "8095e132029ad25d29bd9b2b2305eb35033f333321a3145a3786e00c2e1b3b06",
-   "source": "sec_form4",
-   "tickers": [
-    "LPCN"
-   ],
-   "title": "Higuchi John W. (administrateur) achète 12 561 actions de Lipocine Inc."
-  },
-  "sec_form4:0001493152-26-045400:P": {
-   "amount_max": 55042.65,
-   "amount_min": 55042.65,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-03T03:54:11+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 25007.0,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001535955",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 2.2011,
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "LPCN",
-    "symboles_sec": [
-     "LPCN"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 9037.0,
-      "apres": 225395.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-09-29",
-      "hors_bourse": null,
-      "prix": 2.15
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 15970.0,
-      "apres": 241365.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-09-30",
-      "hors_bourse": null,
-      "prix": 2.23
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Higuchi John W.",
-    "Lipocine Inc."
-   ],
-   "id": "sec_form4:0001493152-26-045400:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-29",
-   "official_id": "0001493152-26-045400:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1535955/000149315226045400/0001493152-26-045400-index.htm",
-   "parser_version": "sec-7",
-   "published_on": "2026-10-01",
-   "sha256": "26f0dd70aba390aaac483d41977b2bbe8944e6ca831ae9251934618023aa9f26",
-   "source": "sec_form4",
-   "tickers": [
-    "LPCN"
-   ],
-   "title": "Higuchi John W. (administrateur) achète 25 007 actions de Lipocine Inc."
-  },
   "sec_form4:0001822293-26-000002:P": {
    "amount_max": 254540.46,
    "amount_min": 254540.46,
@@ -3070,79 +2637,6 @@
    ],
    "title": "Mariani Gustavo (Vicepresident) achète 25 000 actions de Pampa Energy Inc."
   },
-  "sec_form4:0002100573-26-000006:P": {
-   "amount_max": 499868.98,
-   "amount_min": 499868.98,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-03T03:53:12+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 3665.0,
-    "automatique": null,
-    "bourse": "NYSE",
-    "cik_emetteur": "0001089063",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 136.3899,
-    "roles": [
-     "President - Foot Locker Intl"
-    ],
-    "symbole_declare": "DKS",
-    "symboles_sec": [
-     "DKS"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 3665.0,
-      "apres": 11965.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-09-30",
-      "hors_bourse": null,
-      "prix": 136.3899
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Barnes Matthew",
-    "DICK'S SPORTING GOODS, INC."
-   ],
-   "id": "sec_form4:0002100573-26-000006:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-30",
-   "official_id": "0002100573-26-000006:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1089063/000210057326000006/0002100573-26-000006-index.htm",
-   "parser_version": "sec-7",
-   "published_on": "2026-10-01",
-   "sha256": "7d335ca9bc9dba0dbc519c208617d46f44ab05fd10060d353896c4f25ab9a92d",
-   "source": "sec_form4",
-   "tickers": [
-    "DKS"
-   ],
-   "title": "Barnes Matthew (President - Foot Locker Intl) achète 3 665 actions de DICK'S SPORTING GOODS, INC."
-  },
   "sec_form4:0002119764-26-000028:P": {
    "amount_max": 199282.39,
    "amount_min": 199282.39,
@@ -3225,91 +2719,9 @@
     "CRESY"
    ],
    "title": "Elsztain Alejandro Gustavo (CEO) achète 17 334 actions de CRESUD INC"
-  },
-  "sec_poursuites:33-11441": {
-   "amount_max": null,
-   "amount_min": null,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "dates_coherentes": true,
-    "document_officiel_sec": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-03T02:03:21+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "nom_officiel": "CBIZ, Inc.",
-    "sorte": "procedure"
-   },
-   "direction": -1,
-   "entities": [
-    "CBIZ, Inc."
-   ],
-   "id": "sec_poursuites:33-11441",
-   "kind": "procedure_sec",
-   "notes": [],
-   "occurred_on": "2026-09-28",
-   "official_id": "33-11441",
-   "official_url": "https://www.sec.gov/files/litigation/admin/2026/33-11441.pdf",
-   "parser_version": "sec-poursuites-1",
-   "published_on": "2026-09-28",
-   "sha256": "f19ecc44847a47079d6458592c81d97d84625307bb00fdb0e3cd141e5bc6f849",
-   "source": "sec_poursuites",
-   "tickers": [
-    "CBZ"
-   ],
-   "title": "SEC : procédure administrative visant CBIZ, Inc."
-  },
-  "sec_poursuites:34-106555": {
-   "amount_max": null,
-   "amount_min": null,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "dates_coherentes": true,
-    "document_officiel_sec": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-03T02:03:21+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "nom_officiel": "Eagle Bancorp, Inc.",
-    "sorte": "procedure"
-   },
-   "direction": -1,
-   "entities": [
-    "Eagle Bancorp, Inc."
-   ],
-   "id": "sec_poursuites:34-106555",
-   "kind": "procedure_sec",
-   "notes": [],
-   "occurred_on": "2026-09-30",
-   "official_id": "34-106555",
-   "official_url": "https://www.sec.gov/files/litigation/admin/2026/34-106555.pdf",
-   "parser_version": "sec-poursuites-1",
-   "published_on": "2026-09-30",
-   "sha256": "0d4c2912f76495c3c33f37c22541ad6be4753678dc7beac6148c69add9cd1a95",
-   "source": "sec_poursuites",
-   "tickers": [
-    "EGBN"
-   ],
-   "title": "SEC : procédure administrative visant Eagle Bancorp, Inc."
   }
  },
- "genere_a": "2026-10-03T21:33:07+00:00",
+ "genere_a": "2026-10-03T21:55:32+00:00",
  "hausse": [
   {
    "bonus": {
@@ -3330,6 +2742,7 @@
      "pourquoi": "Mise à jour d'un 13D ou passage sous 5 % : seul le premier dépôt compte."
     }
    ],
+   "depot_recent": "2026-10-02",
    "depuis": null,
    "derniere_info": "2026-10-02",
    "groupes": [
@@ -3396,7 +2809,9 @@
    ],
    "moins": 0.0,
    "nom": "GameStop Corp.",
+   "note10": 9.3,
    "plus": 5.13,
+   "recent": true,
    "score": 5.13,
    "symbole": "GME"
   },
@@ -3406,6 +2821,7 @@
     "plus": 1.0
    },
    "contexte": [],
+   "depot_recent": "2026-10-01",
    "depuis": null,
    "derniere_info": "2026-10-01",
    "groupes": [
@@ -3502,7 +2918,9 @@
    ],
    "moins": 0.0,
    "nom": "Presurance Holdings, Inc.",
+   "note10": 9.2,
    "plus": 5.01,
+   "recent": true,
    "score": 5.01,
    "symbole": "PRHI"
   },
@@ -3512,6 +2930,7 @@
     "plus": 1.0
    },
    "contexte": [],
+   "depot_recent": "2026-10-01",
    "depuis": null,
    "derniere_info": "2026-10-01",
    "groupes": [
@@ -3563,7 +2982,9 @@
    ],
    "moins": 0.0,
    "nom": "Xenon Pharmaceuticals Inc.",
+   "note10": 9.2,
    "plus": 5.01,
+   "recent": true,
    "score": 5.01,
    "symbole": "XENE"
   },
@@ -3573,6 +2994,7 @@
     "plus": 1.0
    },
    "contexte": [],
+   "depot_recent": "2026-10-01",
    "depuis": null,
    "derniere_info": "2026-10-01",
    "groupes": [
@@ -3596,7 +3018,9 @@
    ],
    "moins": 0.0,
    "nom": "Canterbury Park Holding Corp",
+   "note10": 9.0,
    "plus": 4.77,
+   "recent": true,
    "score": 4.77,
    "symbole": "CPHC"
   },
@@ -3606,6 +3030,7 @@
     "plus": 1.0
    },
    "contexte": [],
+   "depot_recent": "2026-09-30",
    "depuis": null,
    "derniere_info": "2026-09-30",
    "groupes": [
@@ -3629,7 +3054,9 @@
    ],
    "moins": 0.0,
    "nom": "Silvercrest Asset Management Group Inc.",
+   "note10": 8.9,
    "plus": 4.67,
+   "recent": false,
    "score": 4.67,
    "symbole": "SAMG"
   },
@@ -3639,6 +3066,7 @@
     "plus": 1.0
    },
    "contexte": [],
+   "depot_recent": "2026-10-02",
    "depuis": null,
    "derniere_info": "2026-10-02",
    "groupes": [
@@ -3682,7 +3110,9 @@
    ],
    "moins": 0.0,
    "nom": "Pampa Energy Inc.",
+   "note10": 7.9,
    "plus": 3.42,
+   "recent": true,
    "score": 3.42,
    "symbole": "PAM"
   },
@@ -3692,6 +3122,7 @@
     "plus": 1.0
    },
    "contexte": [],
+   "depot_recent": "2026-10-01",
    "depuis": null,
    "derniere_info": "2026-10-01",
    "groupes": [
@@ -3795,7 +3226,9 @@
    ],
    "moins": 0.0,
    "nom": "FULLER H B CO",
+   "note10": 7.8,
    "plus": 3.34,
+   "recent": true,
    "score": 3.34,
    "symbole": "FUL"
   },
@@ -3805,6 +3238,7 @@
     "plus": 1.0
    },
    "contexte": [],
+   "depot_recent": "2026-10-02",
    "depuis": null,
    "derniere_info": "2026-10-02",
    "groupes": [
@@ -3848,7 +3282,9 @@
    ],
    "moins": 0.0,
    "nom": "Nayax Ltd.",
+   "note10": 7.4,
    "plus": 2.93,
+   "recent": true,
    "score": 2.93,
    "symbole": "NYAX"
   },
@@ -3858,6 +3294,7 @@
     "plus": 1.0
    },
    "contexte": [],
+   "depot_recent": "2026-10-01",
    "depuis": null,
    "derniere_info": "2026-10-01",
    "groupes": [
@@ -3886,7 +3323,9 @@
    ],
    "moins": 0.0,
    "nom": "CRESUD INC",
+   "note10": 7.4,
    "plus": 2.86,
+   "recent": true,
    "score": 2.86,
    "symbole": "CRESY"
   },
@@ -3896,6 +3335,7 @@
     "plus": 1.0
    },
    "contexte": [],
+   "depot_recent": "2026-10-01",
    "depuis": null,
    "derniere_info": "2026-10-01",
    "groupes": [
@@ -3939,7 +3379,9 @@
    ],
    "moins": 0.0,
    "nom": "FILANA THERAPEUTICS, INC.",
+   "note10": 7.4,
    "plus": 2.86,
+   "recent": true,
    "score": 2.86,
    "symbole": "FLNA"
   },
@@ -3958,6 +3400,7 @@
      "pourquoi": "Autre point du 8-K (contrat, acquisition, avis de retrait de la bourse…) : effet incertain."
     }
    ],
+   "depot_recent": "2026-10-01",
    "depuis": null,
    "derniere_info": "2026-10-01",
    "groupes": [
@@ -3986,7 +3429,9 @@
    ],
    "moins": 0.0,
    "nom": "Hyperscale Data, Inc.",
+   "note10": 7.4,
    "plus": 2.86,
+   "recent": true,
    "score": 2.86,
    "symbole": "GPUS"
   },
@@ -3996,6 +3441,7 @@
     "plus": 1.0
    },
    "contexte": [],
+   "depot_recent": "2026-10-01",
    "depuis": null,
    "derniere_info": "2026-10-01",
    "groupes": [
@@ -4024,7 +3470,9 @@
    ],
    "moins": 0.0,
    "nom": "CYBIN INC.",
+   "note10": 7.4,
    "plus": 2.86,
+   "recent": true,
    "score": 2.86,
    "symbole": "HELP"
   },
@@ -4039,6 +3487,7 @@
      "pourquoi": "Mise à jour d'un 13D ou passage sous 5 % : seul le premier dépôt compte."
     }
    ],
+   "depot_recent": "2026-10-01",
    "depuis": null,
    "derniere_info": "2026-10-01",
    "groupes": [
@@ -4067,7 +3516,9 @@
    ],
    "moins": 0.0,
    "nom": "Tokyo Lifestyle Co., Ltd.",
+   "note10": 7.4,
    "plus": 2.86,
+   "recent": true,
    "score": 2.86,
    "symbole": "TKLF"
   },
@@ -4077,6 +3528,7 @@
     "plus": 1.0
    },
    "contexte": [],
+   "depot_recent": "2026-09-30",
    "depuis": null,
    "derniere_info": "2026-09-30",
    "groupes": [
@@ -4105,7 +3557,9 @@
    ],
    "moins": 0.0,
    "nom": "MINISO Group Holding Ltd",
+   "note10": 7.3,
    "plus": 2.8,
+   "recent": false,
    "score": 2.8,
    "symbole": "MNSO"
   },
@@ -4115,6 +3569,7 @@
     "plus": 1.0
    },
    "contexte": [],
+   "depot_recent": "2026-09-29",
    "depuis": null,
    "derniere_info": "2026-09-29",
    "groupes": [
@@ -4143,184 +3598,11 @@
    ],
    "moins": 0.0,
    "nom": "QTREX Quantum Ltd.",
+   "note10": 7.3,
    "plus": 2.74,
+   "recent": false,
    "score": 2.74,
    "symbole": "QTEX"
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depuis": "2026-10-03T03:15:57+00:00",
-   "derniere_info": "2026-10-02",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 1,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [],
-       "id": "sec_form4:0001437749-26-031876:P",
-       "points": 1.95,
-       "regle": "achat_dirigeant",
-       "temps": 0.977
-      }
-     ],
-     "points": 1.95,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "First Guaranty Bancshares, Inc.",
-   "plus": 1.95,
-   "score": 1.95,
-   "symbole": "FGBI"
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depuis": "2026-10-03T03:52:50+00:00",
-   "derniere_info": "2026-10-01",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 2,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [],
-       "id": "sec_form4:0001477932-26-005964:P",
-       "points": 1.91,
-       "regle": "achat_dirigeant",
-       "temps": 0.955
-      }
-     ],
-     "points": 1.91,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "ASP Isotopes Inc.",
-   "plus": 1.91,
-   "score": 1.91,
-   "symbole": "ASPI"
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depuis": "2026-10-03T03:52:50+00:00",
-   "derniere_info": "2026-10-01",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 2,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [],
-       "id": "sec_form4:0000017313-26-000159:P",
-       "points": 1.91,
-       "regle": "achat_dirigeant",
-       "temps": 0.955
-      }
-     ],
-     "points": 1.91,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "CAPITAL SOUTHWEST CORP",
-   "plus": 1.91,
-   "score": 1.91,
-   "symbole": "CSWC"
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depuis": "2026-10-03T03:52:50+00:00",
-   "derniere_info": "2026-10-01",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 2,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [],
-       "id": "sec_form4:0002100573-26-000006:P",
-       "points": 1.91,
-       "regle": "achat_dirigeant",
-       "temps": 0.955
-      }
-     ],
-     "points": 1.91,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "DICK'S SPORTING GOODS, INC.",
-   "plus": 1.91,
-   "score": 1.91,
-   "symbole": "DKS"
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depuis": "2026-10-03T03:52:50+00:00",
-   "derniere_info": "2026-10-01",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 2,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [],
-       "id": "sec_form4:0001493152-26-045400:P",
-       "points": 1.91,
-       "regle": "achat_dirigeant",
-       "temps": 0.955
-      },
-      {
-       "age": 3,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [],
-       "id": "sec_form4:0001493152-26-045185:P",
-       "points": 1.87,
-       "regle": "achat_dirigeant",
-       "temps": 0.933
-      }
-     ],
-     "points": 1.91,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "Lipocine Inc.",
-   "plus": 1.91,
-   "score": 1.91,
-   "symbole": "LPCN"
   }
  ],
  "jour": "2026-10-03",
@@ -4338,6 +3620,11 @@
     "constat": "Un fonds activiste qui dépasse 5 % : environ +7 % autour du dépôt, sans retour en arrière.",
     "lien": "https://www.ecgi.global/sites/default/files/working_papers/documents/finalbravjiangthomaspartnoy.pdf",
     "titre": "Brav, Jiang, Partnoy et Thomas (2008)"
+   },
+   "brochet": {
+    "constat": "Depuis 2002 (dépôt du formulaire 4 en 2 jours), le cours réagit nettement plus aux achats d'initiés dans les jours qui entourent le dépôt.",
+    "lien": "https://www.researchgate.net/publication/228238781_Information_Content_of_Insider_Trades_Before_and_After_the_Sarbanes-Oxley_Act",
+    "titre": "Brochet (2010)"
    },
    "cohen_malloy_pomorski": {
     "constat": "Les achats inhabituels rapportent 0,82 % par mois ; les achats routiniers, rien.",
@@ -4400,6 +3687,9 @@
     "titre": "Wei et Zhou (2025)"
    }
   },
+  "etudes_note": [
+   "brochet"
+  ],
   "familles": "Dans une même famille, seule l'info la plus forte compte : 7 administrateurs qui achètent le même jour forment UN groupe d'achats (avec son bonus), pas 7 fois les points. Le même achat déclaré par un administrateur et par son fonds compte aussi une seule fois.",
   "familles_noms": {
    "activistes": "Fonds activistes (13D)",
@@ -4411,7 +3701,9 @@
    "rappels": "Rappels de véhicules (NHTSA)",
    "sec": "SEC (poursuites)"
   },
+  "note10": "Note sur 10 = 5 + points × 5/6, entre 0 et 10, arrondie au dixième. 5 = neutre. Les achats de dirigeants seuls plafonnent à 9,4 ; 10/10 demande plusieurs familles de sources d'accord. La note mesure la force des preuves officielles, pas une promesse de hausse.",
   "prix": "Aucune source de prix gratuite et permise aux robots : le score suit les règles des études, sans vérifier lui-même s'il gagne.",
+  "recent": "« Récent » : une preuve qui compte dans la note a été déposée il y a moins de 3 jours de bourse. Depuis 2002, le cours réagit surtout dans les jours qui entourent le dépôt (Brochet, 2010).",
   "regles": [
    {
     "code": "achat_dirigeant",
@@ -4601,10 +3893,10 @@
    "Rapports du président (OGE) : images numérisées, en liste seulement ; transactions du cabinet : sans points.",
    "Fed, Banque du Canada, décrets, sanctions, ventes d'armes, CFTC : contexte, sans points."
   ],
-  "seuil": "Une compagnie entre dans la liste à partir de 1,5 point (hausse) ou de −1,5 point (baisse).",
+  "seuil": "Une compagnie entre dans la liste à partir de 7/10 (hausse) ou à 3/10 et moins (baisse).",
   "temps": "Moitié des points après 30 jours (60 pour les grands fonds, qui déclarent en retard). Après 90 jours, une info ne compte plus.",
-  "version": "score-6"
+  "version": "score-7"
  },
  "note": "Une aide pour voir où va le gros argent, preuves à l'appui. Pas un conseil financier.",
- "version": "score-6"
+ "version": "score-7"
 }
