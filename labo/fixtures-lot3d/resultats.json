@@ -1,0 +1,389 @@
+{
+ "pages": {
+  "fd_adjudications_recentes": {
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query?sort=-auction_date&page[size]=100",
+   "post": null,
+   "permis_robots_txt": true,
+   "url_finale": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query?sort=-auction_date&page[size]=100",
+   "cles_masquees": 0,
+   "statut": 200,
+   "type": "application/json",
+   "taille": 350570,
+   "complet": true,
+   "entetes": {
+    "Content-Length": "30963",
+    "Server": "nginx",
+    "content-encoding": "gzip"
+   },
+   "debut": "{\"data\":[{\"record_date\":\"2026-10-15\",\"cusip\":\"912810UW6\",\"security_type\":\"Bond\",\"security_term\":\"29-Year 10-Month\",\"auction_date\":\"2026-10-08\",\"issue_date\":\"2026-10-15\",\"maturity_date\":\"2056-08-15\",\"price_per100\":\"null\",\"accrued_int_per100\":\"null\",\"accrued_int_per1000\":\"8.4952400000\",\"adj_accrued_int_per1000\":\"null\",\"adj_price\":\"null\",\"allocation_pctage\":\"null\",\"allocation_pctage_decimals\":\"2\",\"announcemtd_cusip\":\"null\",\"announcemt_date\":\"2026-10-01\",\"auction_format\":\"Single-Price\",\"avg_med_discnt_rate\":\"null\",\"avg_med_investment_rate\":\"null\",\"avg_med_price\":\"null\",\"avg_med_discnt_margin\":\"nul"
+  },
+  "fd_obligations_historique": {
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query?filter=security_type:in:(Note,Bond)&sort=-auction_date&page[size]=300",
+   "post": null,
+   "permis_robots_txt": true,
+   "url_finale": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query?filter=security_type:in:(Note,Bond)&sort=-auction_date&page[size]=300",
+   "cles_masquees": 0,
+   "statut": 200,
+   "type": "application/json",
+   "taille": 1033887,
+   "complet": true,
+   "entetes": {
+    "Content-Length": "87427",
+    "Server": "nginx",
+    "content-encoding": "gzip"
+   },
+   "debut": "{\"data\":[{\"record_date\":\"2026-10-15\",\"cusip\":\"912810UW6\",\"security_type\":\"Bond\",\"security_term\":\"29-Year 10-Month\",\"auction_date\":\"2026-10-08\",\"issue_date\":\"2026-10-15\",\"maturity_date\":\"2056-08-15\",\"price_per100\":\"null\",\"accrued_int_per100\":\"null\",\"accrued_int_per1000\":\"8.4952400000\",\"adj_accrued_int_per1000\":\"null\",\"adj_price\":\"null\",\"allocation_pctage\":\"null\",\"allocation_pctage_decimals\":\"2\",\"announcemtd_cusip\":\"null\",\"announcemt_date\":\"2026-10-01\",\"auction_format\":\"Single-Price\",\"avg_med_discnt_rate\":\"null\",\"avg_med_investment_rate\":\"null\",\"avg_med_price\":\"null\",\"avg_med_discnt_margin\":\"nul"
+  },
+  "fd_etat_mensuel": {
+   "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1?sort=-record_date&page[size]=60",
+   "post": null,
+   "permis_robots_txt": true,
+   "url_finale": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1?sort=-record_date&page[size]=60",
+   "cles_masquees": 0,
+   "statut": 200,
+   "type": "application/json",
+   "taille": 38737,
+   "complet": true,
+   "entetes": {
+    "Content-Length": "3050",
+    "Server": "nginx",
+    "content-encoding": "gzip"
+   },
+   "debut": "{\"data\":[{\"record_date\":\"2026-08-31\",\"parent_id\":\"59308438\",\"classification_id\":\"59308462\",\"classification_desc\":\"March\",\"current_month_gross_rcpt_amt\":\"384862602035.79\",\"current_month_gross_outly_amt\":\"548962915853.65\",\"current_month_dfct_sur_amt\":\"164100313817.86\",\"table_nbr\":\"1\",\"src_line_nbr\":\"21\",\"print_order_nbr\":\"21\",\"line_code_nbr\":\"210\",\"data_type_cd\":\"D\",\"record_type_cd\":\"MTH\",\"sequence_level_nbr\":\"2\",\"sequence_number_cd\":\"2.6\",\"record_fiscal_year\":\"2026\",\"record_fiscal_quarter\":\"4\",\"record_calendar_year\":\"2026\",\"record_calendar_quarter\":\"3\",\"record_calendar_month\":\"08\",\"record_calen"
+  },
+  "fd_calendrier": {
+   "url": "https://api.fiscaldata.treasury.gov/services/calendar/release",
+   "post": null,
+   "permis_robots_txt": true,
+   "url_finale": "https://api.fiscaldata.treasury.gov/services/calendar/release",
+   "cles_masquees": 0,
+   "statut": 200,
+   "type": "application/json",
+   "taille": 65312,
+   "complet": true,
+   "entetes": {
+    "Content-Length": "4336",
+    "Server": "nginx",
+    "cache-control": "max-age=20923",
+    "etag": "W/-4142066805802971049",
+    "content-encoding": "gzip"
+   },
+   "debut": "[{\"datasetId\":\"015-BFS-2014Q3-077\",\"date\":\"2027-01-05\",\"time\":\"20:00\",\"released\":\"false\"},{\"datasetId\":\"015-BFS-2020Q4-yy\",\"date\":\"2027-01-05\",\"time\":\"00:00\",\"released\":\"false\"},{\"datasetId\":\"015-BFS-2014Q3-065\",\"date\":\"2027-01-04\",\"time\":\"21:15\",\"released\":\"false\"},{\"datasetId\":\"015-BFS-2014Q1-03\",\"date\":\"2027-01-04\",\"time\":\"21:00\",\"released\":\"false\"},{\"datasetId\":\"015-BFS-2014Q1-14\",\"date\":\"2027-01-04\",\"time\":\"21:00\",\"released\":\"false\"},{\"datasetId\":\"015-BFS-2014Q3-053\",\"date\":\"2027-01-04\",\"time\":\"11:55\",\"released\":\"false\"},{\"datasetId\":\"015-BFS-2014Q3-yy\",\"date\":\"2027-01-04\",\"time\":\"16:00\","
+  },
+  "fd_metadonnees": {
+   "url": "https://api.fiscaldata.treasury.gov/services/dtg/metadata/",
+   "post": null,
+   "permis_robots_txt": true,
+   "url_finale": "https://api.fiscaldata.treasury.gov/services/dtg/metadata/",
+   "cles_masquees": 0,
+   "statut": 200,
+   "type": "application/json",
+   "taille": 1268106,
+   "complet": true,
+   "entetes": {
+    "Content-Length": "140631",
+    "Server": "nginx",
+    "cache-control": "max-age=7297",
+    "etag": "W/8325533276961837031",
+    "content-encoding": "gzip"
+   },
+   "debut": "[{\"dataset_id\":\"015-BFS-2014Q3-076\",\"title\":\"Schedules of Federal Debt\",\"long_description\":\"The Schedules of Federal Debt dataset provides monthly and fiscal year-to-date changes in federal debt. It shows increases (borrowing) and decreases (repayments) in debt. The data notes whether the debt is debt held by the public or intragovernmental holdings. These two categories are further broken down into principal debt, accrued interest payable, and net unamortized premiums/discounts. All figures are rounded to the nearest million.\",\"short_description\":\"Monthly and fiscal year-to-date increases and"
+  },
+  "fd_resultat_pdf": {
+   "url": "https://fiscaldata.treasury.gov/static-data/published-reports/auctions-query/results/R_20260924_3.pdf",
+   "post": null,
+   "permis_robots_txt": true,
+   "url_finale": "https://fiscaldata.treasury.gov/static-data/published-reports/auctions-query/results/R_20260924_3.pdf",
+   "cles_masquees": 0,
+   "statut": 200,
+   "type": "application/pdf",
+   "taille": 57258,
+   "complet": true,
+   "entetes": {
+    "Last-Modified": "Thu, 24 Sep 2026 17:03:16 GMT",
+    "ETag": "\"364272c1182431c36121a7a341dc7dd1\"",
+    "Content-Length": "57258",
+    "Server": "AmazonS3",
+    "Cache-Control": "max-age=0, no-cache"
+   },
+   "debut": "%PDF-1.4\n%����\n4 0 obj\n<<\n/Creator (Apache FOP Version 1.0)\n/Producer (Apache FOP Version 1.0)\n/CreationDate (D:20260924130216-04'00')\n>>\nendobj\n5 0 obj\n<<\n  /N 3\n  /Length 11 0 R\n  /Filter /FlateDecode\n>>\nstream\nx���wXS�\u001e��sN�`$!l\b{��@\u0000�\u0011��\f٢\u0010�\u0000\u0001\u0012 $\f�@T����R\u0004)�X�Z�ԉ(\u000e���\rR\u0004�Z����D���������\u001f�|���������y\u000e\u0000��L�0\u0017V\u0001@(��#��\u0019�q�\f�\u0000�\u0001\u001e`�=\u0000\u001cnn�WXX0�+З�ȕ;�ѫ�\u0000R��1\u0015{��O��l�\u0004\u0000(Lγx�\\���䜙/�V�'�LK�P0�R�X~@9k(8u��?�̰��yB\u0011OΑr��\ty\n��<)_Έ\"��<\u0001?_���l�)\u0015\n��F\u0011+�s�9�H\n���M����I��\b���\u0000�#�~��_��_ Q$���.\u0014\u000bR�$\fs�\u0005��Ņ�\b��g�%\u0012f\u0018���\u0011�\u0018�,a6GT\b�LΟEQԖ!/�����\u0013�����B��ſ)Eog�E��A��?l��\u0000\u0000kJ^�-ؒ�\u0000�\\\u0007���?l�{"
+  },
+  "fd_resultat_xml": {
+   "url": "https://fiscaldata.treasury.gov/static-data/published-reports/auctions-query/results/R_20260924_3.xml",
+   "post": null,
+   "permis_robots_txt": true,
+   "url_finale": "https://fiscaldata.treasury.gov/static-data/published-reports/auctions-query/results/R_20260924_3.xml",
+   "cles_masquees": 0,
+   "statut": 200,
+   "type": "application/xml",
+   "taille": 4779,
+   "complet": true,
+   "entetes": {
+    "Last-Modified": "Thu, 24 Sep 2026 17:03:14 GMT",
+    "ETag": "\"81ff52b36079ba25d2ad4cb02aa09e02\"",
+    "Content-Length": "4779",
+    "Server": "AmazonS3",
+    "Cache-Control": "max-age=0, no-cache"
+   },
+   "debut": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><td:AuctionData xmlns:td=\"http://www.treasurydirect.gov/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.treasurydirect.gov/ https://www.treasurydirect.gov/xsd/Auction_v7_0_0.xsd\">\r\n<AuctionAnnouncement>\r\n<SecurityTermWeekYear>7-YEAR</SecurityTermWeekYear>\r\n<SecurityTermDayMonth>0-MONTH</SecurityTermDayMonth>\r\n<SecurityType>NOTE</SecurityType>\r\n<CUSIP>91282CRM5</CUSIP>\r\n<AnnouncementDate>2026-09-17</AnnouncementDate>\r\n<AuctionDate>2026-09-24</AuctionDate>\r\n<IssueDate>2026-09-30</IssueDate>\r\n<MaturityDate>2033-09-30</Ma"
+  },
+  "fd_page_adjudications": {
+   "url": "https://fiscaldata.treasury.gov/page-data/datasets/treasury-securities-auctions-data/page-data.json",
+   "post": null,
+   "permis_robots_txt": true,
+   "url_finale": "https://fiscaldata.treasury.gov/page-data/datasets/treasury-securities-auctions-data/page-data.json",
+   "cles_masquees": 0,
+   "statut": 200,
+   "type": "application/json",
+   "taille": 109398,
+   "complet": true,
+   "entetes": {
+    "Content-Encoding": "gzip",
+    "Content-Length": "24877",
+    "Cache-Control": "max-age=0, no-cache"
+   },
+   "debut": "{\"componentChunkName\":\"component---src-layouts-dataset-detail-dataset-detail-jsx\",\"path\":\"/datasets/treasury-securities-auctions-data/\",\"result\":{\"data\":{\"allDatasets\":{\"datasets\":[{\"datasetId\":\"015-BFS-2014Q1-14\",\"slug\":\"/record-setting-auction-data/\",\"name\":\"Record-Setting Treasury Securities Auction Data\",\"apis\":[{\"apiId\":149}],\"tagLine\":\"Record highs and lows from Treasury securities auctions, including rates and yields, offers, security type and term, and the date of the record-setting auction.\",\"relatedTopics\":[\"Auctions\",\"Interest & Exchange Rates\"],\"techSpecs\":{\"earliestDate\":\"10/02/20"
+  },
+  "fd_page_etat_mensuel": {
+   "url": "https://fiscaldata.treasury.gov/page-data/datasets/monthly-treasury-statement/page-data.json",
+   "post": null,
+   "permis_robots_txt": true,
+   "url_finale": "https://fiscaldata.treasury.gov/page-data/datasets/monthly-treasury-statement/page-data.json",
+   "cles_masquees": 0,
+   "statut": 200,
+   "type": "application/json",
+   "taille": 464027,
+   "complet": true,
+   "entetes": {
+    "Content-Encoding": "gzip",
+    "Content-Length": "28573",
+    "Cache-Control": "max-age=0, no-cache"
+   },
+   "debut": "{\"componentChunkName\":\"component---src-layouts-dataset-detail-dataset-detail-jsx\",\"path\":\"/datasets/monthly-treasury-statement/\",\"result\":{\"data\":{\"allDatasets\":{\"datasets\":[{\"datasetId\":\"015-BFS-2014Q3-065\",\"slug\":\"/debt-to-the-penny/\",\"name\":\"Debt to the Penny\",\"apis\":[{\"apiId\":143}],\"tagLine\":\"Total outstanding debt of the U.S. government reported daily. Includes a breakout of intragovernmental holdings (federal debt held by U.S. government) and debt held by the public (federal debt held by entities outside the U.S. government).\",\"relatedTopics\":[\"Debt\"],\"techSpecs\":{\"earliestDate\":\"04/01/1"
+  },
+  "csms_rss": {
+   "url": "https://content.govdelivery.com/accounts/USDHSCBP/widgets/USDHSCBP_WIDGET_2.rss",
+   "post": null,
+   "permis_robots_txt": true,
+   "url_finale": "https://content.govdelivery.com/accounts/USDHSCBP/widgets/USDHSCBP_WIDGET_2.rss",
+   "cles_masquees": 0,
+   "statut": 200,
+   "type": "application/rss+xml; charset=utf-8",
+   "taille": 1313977,
+   "complet": true,
+   "entetes": {
+    "Server": "nginx",
+    "ETag": "W/\"77033062274a2750aac90eca67112883\"",
+    "Content-Encoding": "gzip",
+    "Cache-Control": "no-cache, no-store, must-revalidate"
+   },
+   "debut": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss version=\"2.0\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:atom=\"http://www.w3.org/2005/Atom\">\n  <channel>\n    <title>U.S. Customs and Border Protection updates (100 bulletins)</title>\n    <link>https://public.govdelivery.com/accounts/USDHSCBP/widgets/USDHSCBP_WIDGET_2.rss</link>\n    <language>en-us</language>\n    <item>\n      <pubDate>Thu, 01 Oct 2026 13:57:17 -0400</pubDate>\n      <title>CSMS # 70087229 - ACE Production Standard Invasive Maintenance from 10:00 p.m. ET Saturday, October 3, 2026, to 4:00 a.m. ET Sunday, October 4, 2026</title>\n "
+  },
+  "csms_message_0": {
+   "url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/42cf077",
+   "post": null,
+   "permis_robots_txt": true,
+   "url_finale": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/42cf077",
+   "cles_masquees": 0,
+   "statut": 200,
+   "type": "text/html; charset=utf-8",
+   "taille": 33117,
+   "complet": true,
+   "entetes": {
+    "Server": "nginx",
+    "ETag": "W/\"762153fd444623dccd9d22b925258457\"",
+    "Content-Encoding": "gzip",
+    "Content-Length": "8240",
+    "Cache-Control": "no-cache, no-store, must-revalidate"
+   },
+   "debut": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>\n<head>\n<title>\nCSMS # 70054007 - UPDATED GUIDANCE: Section 232 Duties on Imports of Pharmaceutical Articles and Ingredients\n\n</title>\n<link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"https://content.govdelivery.com/assets/favicon-94315c818b5268e39f80115887f7dd8faccfb149103286751fe95d6e35fe14bc.ico\" />\n<link href='https://content.govdelivery.com/accounts/USDHSCBP/bulletins/42cf077' rel='canonical' />\n<met",
+   "liens": [
+    "http://www.dhs.gov/privacy-policy",
+    "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/42333fe",
+    "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/42cf077",
+    "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/42cf077?reqfrom=share",
+    "https://content.govdelivery.com/accounts/usdhscbp/bulletins/422e390",
+    "https://www.usitc.gov/tariff_affairs/documents/list_of_committee_changes_for_july_1_2026-final.pdf"
+   ]
+  },
+  "csms_message_1": {
+   "url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/429db0c",
+   "post": null,
+   "permis_robots_txt": true,
+   "url_finale": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/429db0c",
+   "cles_masquees": 0,
+   "statut": 200,
+   "type": "text/html; charset=utf-8",
+   "taille": 91592,
+   "complet": true,
+   "entetes": {
+    "Server": "nginx",
+    "ETag": "W/\"7b21fe291c51ef5f0a5ad0fa3f95170e\"",
+    "Content-Encoding": "gzip",
+    "Content-Length": "9252",
+    "Cache-Control": "no-cache, no-store, must-revalidate"
+   },
+   "debut": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>\n<head>\n<title>\nCSMS # 69851916 - Modifying Section 338 Additional Duties on Certain Goods of Canada\n\n</title>\n<link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"https://content.govdelivery.com/assets/favicon-94315c818b5268e39f80115887f7dd8faccfb149103286751fe95d6e35fe14bc.ico\" />\n<link href='https://content.govdelivery.com/accounts/USDHSCBP/bulletins/429db0c' rel='canonical' />\n<meta content='text/html; ch",
+   "liens": [
+    "http://www.dhs.gov/privacy-policy",
+    "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/429db0c",
+    "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/429db0c?reqfrom=share"
+   ]
+  },
+  "cbp_politique": {
+   "url": "https://www.cbp.gov/site-policy-notices",
+   "post": null,
+   "permis_robots_txt": true,
+   "url_finale": "https://www.cbp.gov/site-policy-notices",
+   "cles_masquees": 0,
+   "statut": 200,
+   "type": "text/html; charset=utf-8",
+   "taille": 91718,
+   "complet": true,
+   "entetes": {
+    "Server": "Apache",
+    "Last-Modified": "Sat, 03 Oct 2026 18:25:54 GMT",
+    "ETag": "\"1791051954\"",
+    "Content-Encoding": "gzip",
+    "Content-Length": "15230",
+    "Cache-Control": "public, max-age=600"
+   },
+   "debut": "<!DOCTYPE html>\n<html lang=\"en\" dir=\"ltr\" prefix=\"og: https://ogp.me/ns#\">\n  <head>\n    <meta charset=\"utf-8\" />\n<noscript><style>form.antibot > * { display: none !important; } form.antibot noscript { display: block !important; }</style>\n</noscript><meta name=\"description\" content=\"Federal websites are required by laws, policies and regulations to have certain content - or a link to that content - from various locations on their websites.\" />\n<meta name=\"keywords\" content=\"About CBP\" />\n<link rel=\"canonical\" href=\"https://www.cbp.gov/site-policy-notices\" />\n<meta property=\"og:site_name\" conten",
+   "liens": [
+    "https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2017/m-17-06.pdf",
+    "https://www.cbp.gov/document/directives/vulnerability-disclosure-program-policy-and-rules-engagement",
+    "https://www.cbp.gov/newsroom",
+    "https://www.cbp.gov/newsroom/accountability-and-transparency",
+    "https://www.cbp.gov/newsroom/accountability-and-transparency/body-worn-camera-video-releases",
+    "https://www.cbp.gov/newsroom/accountability-and-transparency/foia-reading-room",
+    "https://www.cbp.gov/newsroom/accountability-and-transparency/policies-procedures-and-directives",
+    "https://www.cbp.gov/newsroom/announcements",
+    "https://www.cbp.gov/newsroom/cbp-forms-publications-catalog",
+    "https://www.cbp.gov/newsroom/media-releases/all",
+    "https://www.cbp.gov/newsroom/multimedia-libraries",
+    "https://www.cbp.gov/newsroom/news/news-from-cbp",
+    "https://www.cbp.gov/newsroom/press",
+    "https://www.cbp.gov/newsroom/publications/forms",
+    "https://www.cbp.gov/newsroom/publications/general-aviation-airport-fact-sheets",
+    "https://www.cbp.gov/newsroom/social-media-directory",
+    "https://www.cbp.gov/newsroom/stats",
+    "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics",
+    "https://www.cbp.gov/newsroom/stats/cbp-public-data-portal",
+    "https://www.cbp.gov/newsroom/stats/custody-and-transfer-statistics",
+    "https://www.cbp.gov/newsroom/stats/migrant-protection-protocols",
+    "https://www.cbp.gov/newsroom/stats/nationwide-encounters",
+    "https://www.cbp.gov/newsroom/stats/typical-day-fy2025",
+    "https://www.cbp.gov/newsroom/stats/webmetrics",
+    "https://www.cbp.gov/site-policy-notices",
+    "https://www.cbp.gov/site-policy-notices/accessibility",
+    "https://www.cbp.gov/site-policy-notices/cbp-websites",
+    "https://www.cbp.gov/site-policy-notices/copyright-notice",
+    "https://www.cbp.gov/site-policy-notices/foia",
+    "https://www.cbp.gov/site-policy-notices/linking-policy",
+    "https://www.cbp.gov/site-policy-notices/photo-video-audio-use-guidelines",
+    "https://www.cbp.gov/site-policy-notices/plain-writing-cbp",
+    "https://www.cbp.gov/site-policy-notices/privacy-functional-areas",
+    "https://www.cbp.gov/site-policy-notices/privacy-policy",
+    "https://www.cbp.gov/site-policy-notices/use-us-customs-and-border-protection-emblem-name-or-seal",
+    "https://www.cbp.gov/trade/basic-import-export",
+    "https://www.cbp.gov/trade/basic-import-export/export-docs/motor-vehicle",
+    "https://www.cbp.gov/trade/basic-import-export/importer-exporter-tips",
+    "https://www.cbp.gov/trade/basic-import-export/importing-car",
+    "https://www.cbp.gov/trade/basic-import-export/internet-purchases",
+    "https://www.cbp.gov/trade/rulings/bulletin-decisions",
+    "https://www.cbp.gov/travel/biometrics/privacy-policy"
+   ]
+  },
+  "cbp_politique_vie_privee": {
+   "url": "https://www.cbp.gov/site-policy-notices/privacy-policy",
+   "post": null,
+   "permis_robots_txt": true,
+   "url_finale": "https://www.cbp.gov/site-policy-notices/privacy-policy",
+   "cles_masquees": 0,
+   "statut": 200,
+   "type": "text/html; charset=utf-8",
+   "taille": 99615,
+   "complet": true,
+   "entetes": {
+    "Server": "Apache",
+    "Last-Modified": "Sat, 03 Oct 2026 19:15:04 GMT",
+    "ETag": "\"1791054904\"",
+    "Content-Encoding": "gzip",
+    "Content-Length": "17929",
+    "Cache-Control": "public, max-age=600"
+   },
+   "debut": "<!DOCTYPE html>\n<html lang=\"en\" dir=\"ltr\" prefix=\"og: https://ogp.me/ns#\">\n  <head>\n    <meta charset=\"utf-8\" />\n<noscript><style>form.antibot > * { display: none !important; } form.antibot noscript { display: block !important; }</style>\n</noscript><meta name=\"description\" content=\"This is an official website of U.S. Customs and Border Protection (CBP) and is provided as a public service. Information presented on the site is considered public information and may be distributed or copied for non-commercial purposes, except where third party copyright notification exists. Use of appropriate byli",
+   "liens": [
+    "https://www.cbp.gov/document/directives/vulnerability-disclosure-program-policy-and-rules-engagement",
+    "https://www.cbp.gov/newsroom",
+    "https://www.cbp.gov/newsroom/accountability-and-transparency",
+    "https://www.cbp.gov/newsroom/accountability-and-transparency/body-worn-camera-video-releases",
+    "https://www.cbp.gov/newsroom/accountability-and-transparency/foia-reading-room",
+    "https://www.cbp.gov/newsroom/accountability-and-transparency/policies-procedures-and-directives",
+    "https://www.cbp.gov/newsroom/accountability-and-transparency/site-policy-notices/privacy-office",
+    "https://www.cbp.gov/newsroom/announcements",
+    "https://www.cbp.gov/newsroom/cbp-forms-publications-catalog",
+    "https://www.cbp.gov/newsroom/media-releases/all",
+    "https://www.cbp.gov/newsroom/multimedia-libraries",
+    "https://www.cbp.gov/newsroom/news/news-from-cbp",
+    "https://www.cbp.gov/newsroom/press",
+    "https://www.cbp.gov/newsroom/publications/forms",
+    "https://www.cbp.gov/newsroom/publications/general-aviation-airport-fact-sheets",
+    "https://www.cbp.gov/newsroom/social-media-directory",
+    "https://www.cbp.gov/newsroom/stats",
+    "https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics",
+    "https://www.cbp.gov/newsroom/stats/cbp-public-data-portal",
+    "https://www.cbp.gov/newsroom/stats/custody-and-transfer-statistics",
+    "https://www.cbp.gov/newsroom/stats/migrant-protection-protocols",
+    "https://www.cbp.gov/newsroom/stats/nationwide-encounters",
+    "https://www.cbp.gov/newsroom/stats/typical-day-fy2025",
+    "https://www.cbp.gov/newsroom/stats/webmetrics",
+    "https://www.cbp.gov/site-policy-notices",
+    "https://www.cbp.gov/site-policy-notices/accessibility",
+    "https://www.cbp.gov/site-policy-notices/cbp-websites",
+    "https://www.cbp.gov/site-policy-notices/copyright-notice",
+    "https://www.cbp.gov/site-policy-notices/foia",
+    "https://www.cbp.gov/site-policy-notices/linking-policy",
+    "https://www.cbp.gov/site-policy-notices/photo-video-audio-use-guidelines",
+    "https://www.cbp.gov/site-policy-notices/plain-writing-cbp",
+    "https://www.cbp.gov/site-policy-notices/privacy-functional-areas",
+    "https://www.cbp.gov/site-policy-notices/privacy-policy",
+    "https://www.cbp.gov/site-policy-notices/privacy-statement",
+    "https://www.cbp.gov/trade/basic-import-export",
+    "https://www.cbp.gov/trade/basic-import-export/export-docs/motor-vehicle",
+    "https://www.cbp.gov/trade/basic-import-export/importer-exporter-tips",
+    "https://www.cbp.gov/trade/basic-import-export/importing-car",
+    "https://www.cbp.gov/trade/basic-import-export/internet-purchases",
+    "https://www.cbp.gov/trade/rulings/bulletin-decisions",
+    "https://www.cbp.gov/travel/biometrics/privacy-policy",
+    "https://www.dhs.gov/privacy-policy"
+   ]
+  }
+ },
+ "robots": {
+  "api.fiscaldata.treasury.gov": {
+   "statut": 404,
+   "texte": "Not Found",
+   "url_finale": "https://api.fiscaldata.treasury.gov/robots.txt",
+   "delai": null
+  },
+  "fiscaldata.treasury.gov": {
+   "statut": 200,
+   "texte": "User-agent: *\nAllow: /\nSitemap: https://fiscaldata.treasury.gov/sitemap/sitemap-index.xml\nHost: https://fiscaldata.treasury.gov\n",
+   "url_finale": "https://fiscaldata.treasury.gov/robots.txt",
+   "delai": null
+  },
+  "content.govdelivery.com": {
+   "statut": 404,
+   "texte": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n</body></html>\n",
+   "url_finale": "https://content.govdelivery.com/robots.txt",
+   "delai": null
+  },
+  "www.cbp.gov": {
+   "statut": 200,
+   "texte": "#\n# robots.txt\n#\n# This file is to prevent the crawling and indexing of certain parts\n# of your site by web crawlers and spiders run by sites like Yahoo!\n# and Google. By telling these \"robots\" where not to go on your site,\n# you save bandwidth and server resources.\n#\n# This file will be ignored unless it is at the root of your host:\n# Used:    http://example.com/robots.txt\n# Ignored: http://example.com/site/robots.txt\n#\n# For more information about the robots.txt standard, see:\n# http://www.robotstxt.org/robotstxt.html\n\nUser-agent: *\n# CSS, JS, Images\nAllow: /core/*.css$\nAllow: /core/*.css?\nAllow: /core/*.js$\nAllow: /core/*.js?\nAllow: /core/*.avif\nAllow: /core/*.gif\nAllow: /core/*.jpg\nAllow: /core/*.jpeg\nAllow: /core/*.png\nAllow: /core/*.svg\nAllow: /core/*.webp\nAllow: /profiles/*.css$\nAllow: /profiles/*.css?\nAllow: /profiles/*.js$\nAllow: /profiles/*.js?\nAllow: /profiles/*.avif\nAllow: /profiles/*.gif\nAllow: /profiles/*.jpg\nAllow: /profiles/*.jpeg\nAllow: /profiles/*.png\nAllow: /profiles/*.svg\nAllow: /profiles/*.webp\n# Directories\nDisallow: /core/\nDisallow: /profiles/\n# Files\nDisallow: /README.md\nDisallow: /composer/Metapackage/README.txt\nDisallow: /composer/Plugin/ProjectMessage/README.md\nDisallow: /composer/Plugin/Scaffold/README.md\nDisallow: /composer/Plugin/VendorHardening/README.txt\nDisallow: /composer/Template/README.txt\nDisallow: /modules/README.txt\nDisallow: /sites/README.txt\nDisallow: /themes/README.txt\n# Paths (clean URLs)\nDisallow: /admin/\nDisallow: /comment/reply/\nDisallow: /filter/tips\nDisallow: /node/add/\nDisallow: /search/\nDisallow: /search?\nDisallow: /user/register\nDisallow: /user/password\nDisallow: /user/login\nDisallow: /user/logout\nDisallow: /media/oembed\nDisallow: /*/media/oembed\n# Paths (no clean URLs)\nDisallow: /index.php/admin/\nDisallow: /index.php/comment/reply/\nDisallow: /index.php/filter/tips\nDisallow: /index.php/node/add/\nDisallow: /index.php/search/\nDisallow: /index.php/search?\nDisallow: /index.php/user/password\nDisallow: /index.php/user/register\nDisallow: /index.php/user/login\nDisallow: /index.php/user/logout\nDisallow: /index.php/media/oembed\nDisallow: /index.php/*/media/oembed\n\n#Disallow the profile directory as per OPA request 2/1/24\nDisallow: /profile/\nDisallow: /profile/*\n#Disallow the files/assets/documents directory 10/04/24\nDisallow:  /sites/default/files/assets/documents/\nDisallow:  /sites/default/files/assets/documents/*\nUser-agent: PetalBot\nDisallow: /\n",
+   "url_finale": "https://www.cbp.gov/robots.txt",
+   "delai": null
+  }
+ }
+}

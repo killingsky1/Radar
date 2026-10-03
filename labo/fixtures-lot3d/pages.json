@@ -1,0 +1,16 @@
+{
+ "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query?sort=-auction_date&page[size]=100": "fd_adjudications_recentes.gz",
+ "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query?filter=security_type:in:(Note,Bond)&sort=-auction_date&page[size]=300": "fd_obligations_historique.gz",
+ "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1?sort=-record_date&page[size]=60": "fd_etat_mensuel.gz",
+ "https://api.fiscaldata.treasury.gov/services/calendar/release": "fd_calendrier.gz",
+ "https://api.fiscaldata.treasury.gov/services/dtg/metadata/": "fd_metadonnees.gz",
+ "https://fiscaldata.treasury.gov/static-data/published-reports/auctions-query/results/R_20260924_3.pdf": "fd_resultat_pdf.gz",
+ "https://fiscaldata.treasury.gov/static-data/published-reports/auctions-query/results/R_20260924_3.xml": "fd_resultat_xml.gz",
+ "https://fiscaldata.treasury.gov/page-data/datasets/treasury-securities-auctions-data/page-data.json": "fd_page_adjudications.gz",
+ "https://fiscaldata.treasury.gov/page-data/datasets/monthly-treasury-statement/page-data.json": "fd_page_etat_mensuel.gz",
+ "https://content.govdelivery.com/accounts/USDHSCBP/widgets/USDHSCBP_WIDGET_2.rss": "csms_rss.gz",
+ "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/42cf077": "csms_message_0.gz",
+ "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/429db0c": "csms_message_1.gz",
+ "https://www.cbp.gov/site-policy-notices": "cbp_politique.gz",
+ "https://www.cbp.gov/site-policy-notices/privacy-policy": "cbp_politique_vie_privee.gz"
+}
