@@ -22,10 +22,13 @@ CONTRAT_TEST = {"_id": 1, "reference_number": "TEST-6", "owner_org": "dnd-mdn",
                 "reporting_period": trimestre(J), "fournisseur": "Colt Canada", "ministere": "Défense nationale",
                 "montant": 3.07e8, "type": "contrat"}
 
+RESULTAT_TEST = ("https://fiscaldata.treasury.gov/static-data/published-reports/auctions-query/results/R_"
+                 + jour(5).replace("-", "") + "_1.pdf")
+
 def faux(ctx):
     return [
-        ev(1, "war_contrats", "militaire", "contrat", "Lockheed Martin obtient un contrat de missiles", jour(0),
-           "https://www.war.gov/News/Contracts/test", tickers=["LMT"], amount_min=2.0e9, amount_max=2.0e9,
+        ev(1, "usaspending", "militaire", "contrat", "Lockheed Martin obtient un contrat de missiles", jour(0),
+           "https://www.usaspending.gov/award/TEST-1", tickers=["LMT"], amount_min=2.0e9, amount_max=2.0e9,
            entities=["Lockheed Martin Corp."], direction=1,
            confirmations=[Confirmation("sec_8k", "https://www.sec.gov/test/8k.htm", "TEST-8K")]),
         ev(2, "sec_form4", "compagnies", "achat_initie", "le PDG de Nvidia achète 50 000 actions", jour(0),
@@ -124,6 +127,23 @@ def faux(ctx):
                      {"exportateur": "Canadian Exporter", "destination": "Canada",
                       "description": "Medical Equipment / Équipement médical", "min": 100000.0, "max": 1.0e6,
                       "fourchette": "100 000 $ à 1 M$"}]}),
+        # Lot 3d : une adjudication du Trésor (détails officiels) et une directive de la douane (CSMS)
+        ev(19, "tresor", "gouvernement", "adjudication", "Trésor américain : adjudication de 44 G$ sur 7 ans (exemple)",
+           jour(5), RESULTAT_TEST, numero="TESTCUSIP:" + jour(5), amount_min=44e9, amount_max=44e9, currency="USD",
+           entities=["Trésor américain"],
+           data={"type": "Note", "adjudication": jour(5), "document": RESULTAT_TEST.rsplit("/", 1)[1], "taux": 4.5,
+                 "demande_offre": 2.4, "offres_competitives_acceptees": 43e9,
+                 "acceptees": {"indirect_bidder": 25e9, "direct_bidder": 13e9, "primary_dealer": 5e9},
+                 "details": [["Montant offert", "44 G$"], ["Taux retenu (le plus élevé accepté)", "4,500 %"],
+                             ["Demande / offre", "2,40 (moyenne des 6 précédentes : 2,50)"]]}),
+        ev(20, "tarifs", "gouvernement", "directive_douane",
+           "Douane américaine : GUIDANCE: Section 232 Duties on Imports of Example Articles", jour(6),
+           "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/test20", numero="99999999",
+           entities=["U.S. Customs and Border Protection"],
+           data={"numero": "99999999", "guid": "99999999", "envoye_le": jour(6) + "T17:42:00-04:00",
+                 "titre_officiel": "GUIDANCE: Section 232 Duties on Imports of Example Articles",
+                 "details": [["Message", "CSMS # 99999999"], ["Proclamations citées", "11020"],
+                             ["Extrait", "This message provides guidance (example)."]]}),
         ev(13, "sec_form4", "compagnies", "vente_initie", "le PDG d'Exemple Corp. vend 100 000 actions", jour(1),
            "https://www.sec.gov/test/xmpl-form4.xml", tickers=["XMPL"], amount_min=1.5e6, amount_max=1.5e6,
            entities=["PDG (exemple)", "Exemple Corp."], direction=-1,

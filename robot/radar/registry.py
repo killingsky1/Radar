@@ -48,25 +48,14 @@ _LISTE = [
       "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=424B4"),
     S("sec_poursuites", "SEC : suspensions de cotation et procédures contre des compagnies cotées", "compagnies",
       ("sec.gov",), 1, "https://www.sec.gov/enforcement-litigation/trading-suspensions"),
-    S("sec_ftd", "SEC : échecs de livraison d'actions", "compagnies", ("sec.gov",), 1,
-      "https://www.sec.gov/data-research/sec-markets-data/fails-deliver-data", publication_max_jours=40),
-    S("nbim", "Fonds souverain de la Norvège (NBIM)", "baleines", ("nbim.no",), 1,
-      "https://www.nbim.no/en/investments/all-investments/", attente_heures=24 * 8),
     S("cftc_cot", "CFTC : positions des gros joueurs (contrats à terme)", "baleines", ("cftc.gov",), 1,
       "https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm", publication_max_jours=10),
-    S("communiques", "Communiqués officiels des compagnies", "compagnies",
-      ("globenewswire.com", "newsfilecorp.com", "newswire.ca", "prnewswire.com"), 1,
-      "https://www.globenewswire.com/rss/list", publication_max_jours=3),
     # Phase 2 : militaire et défense
-    S("war_contrats", "Pentagone : contrats du jour (war.gov)", "militaire", ("war.gov", "defense.gov"), 2,
-      "https://www.war.gov/News/Contracts/", publication_max_jours=5),
     S("ventes_armes", "Ventes d'armes à l'étranger (avis officiels au Registre fédéral)", "militaire",
       ("federalregister.gov",), 2,
       "https://www.federalregister.gov/documents/search?conditions%5Bterm%5D=%22Arms+Sales+Notification%22"),
     S("usaspending", "USAspending : contrats, subventions, prêts", "militaire", ("usaspending.gov",), 2,
       "https://www.usaspending.gov/", publication_max_jours=7),
-    S("gao_contestations", "GAO : contestations de contrats", "militaire", ("gao.gov",), 2,
-      "https://www.gao.gov/legal/bid-protests/search"),
     S("participations_gouv", "Gouvernement américain actionnaire", "gouvernement",
       ("sec.gov", "war.gov", "energy.gov", "commerce.gov", "whitehouse.gov"), 2, "https://www.sec.gov/edgar/search/"),
     # Lot 3c : contrats de 10 M$ et plus (nouveaux ou hausses), lus chaque matin sur l'API du portail (20 s entre 2 requêtes)
@@ -102,8 +91,10 @@ _LISTE = [
       publication_max_jours=5),
     S("maison_blanche", "Maison-Blanche : actions présidentielles", "gouvernement", ("whitehouse.gov",), 4,
       "https://www.whitehouse.gov/presidential-actions/"),
-    S("tarifs", "Tarifs : USTR, douanes, taux officiels", "gouvernement", ("ustr.gov", "cbp.gov", "usitc.gov"), 4,
-      "https://ustr.gov/"),
+    # Lot 3d : les directives de la douane sur les surtaxes et les interdictions d'importation (messages CSMS)
+    S("tarifs", "Douane américaine : directives sur les surtaxes (messages CSMS)", "gouvernement",
+      ("cbp.gov", "govdelivery.com"), 4, "https://www.cbp.gov/trade/automated/cargo-systems-messaging-service",
+      passages=("matin", "soir")),
     S("sanctions_us", "Sanctions américaines (OFAC)", "gouvernement",
       ("treasury.gov", "treas.gov", "trade.gov", "bis.gov"), 4, "https://ofac.treasury.gov/recent-actions",
       publication_max_jours=21),
@@ -115,8 +106,11 @@ _LISTE = [
       "https://www.justice.gov/atr/news-feeds", publication_max_jours=45),
     S("fed", "Réserve fédérale (Fed) : décisions de taux", "gouvernement", ("federalreserve.gov",), 4,
       "https://www.federalreserve.gov/newsevents/pressreleases.htm"),
-    S("tresor", "Trésor américain (Fiscal Data)", "gouvernement", ("fiscaldata.treasury.gov", "treasury.gov"), 4,
-      "https://fiscaldata.treasury.gov/"),
+    # Lot 3d : les résultats arrivent sur Fiscal Data vers 23 h UTC (calendrier officiel) : lus la nuit, le matin en secours
+    S("tresor", "Trésor américain : adjudications d'obligations et déficit mensuel (Fiscal Data)", "gouvernement",
+      ("fiscaldata.treasury.gov", "treasury.gov"), 4,
+      "https://fiscaldata.treasury.gov/datasets/treasury-securities-auctions-data/", publication_max_jours=10,
+      passages=("nuit", "matin")),
     S("nhtsa", "NHTSA : gros rappels d'autos (10 000 véhicules et plus)", "gouvernement", ("nhtsa.gov",), 4,
       "https://www.nhtsa.gov/recalls", publication_max_jours=21),
     S("nouvelles_eco_ca", "Canada : nouvelles des ministères économiques", "canada", ("canada.ca",), 4,
@@ -141,9 +135,6 @@ _LISTE = [
       "consolidated-consolide.aspx?lang=fra", passages=("matin", "soir")),
     S("legisinfo", "Projets de loi du gouvernement fédéral (LEGISinfo)", "canada", ("parl.ca",), 4,
       "https://www.parl.ca/legisinfo/fr/projets-de-loi", passages=("matin", "soir")),
-    # Phase 5 : prix (non officiel, seulement pour le tableau de score)
-    S("prix_yahoo", "Prix des actions (Yahoo, non officiel)", "compagnies", ("yahoo.com",), 5,
-      "https://finance.yahoo.com/", officielle=False),
     # Laissées de côté
     S("sedi", "SEDI : initiés canadiens", "canada", ("sedi.ca",), 0, "https://www.sedi.ca/",
       ecartee="Payant : aucun accès gratuit pour un robot"),
@@ -154,7 +145,7 @@ _LISTE = [
     S("sam_gov", "SAM.gov : contrats fédéraux", "militaire", ("sam.gov",), 0, "https://sam.gov/",
       ecartee="Compte obligatoire (USAspending le remplace)"),
     S("prix_payants", "Prix officiels payants (EODHD)", "compagnies", ("eodhd.com",), 0, "https://eodhd.com/",
-      ecartee="Payant (Yahoo gratuit le remplace)"),
+      ecartee="Payant"),
     S("sp_indices", "S&P : entrées et sorties d'indices", "compagnies", ("spglobal.com",), 0,
       "https://press.spglobal.com/",
       ecartee="Conditions d'utilisation de S&P Dow Jones Indices : robots interdits sans permission écrite"),
@@ -163,6 +154,25 @@ _LISTE = [
       ecartee="Son robots.txt interdit les robots sur tout le site, données ouvertes comprises"),
     S("arrets_negociation", "Arrêts de négociation (OCRI)", "canada", ("ciro.ca",), 0, "https://www.ciro.ca/",
       ecartee="Le site bloque les robots (vérification anti-robots)"),
+    # Lot 3d (3 octobre 2026) : robots.txt et conditions lus avec notre identification
+    S("war_contrats", "Pentagone : contrats du jour (war.gov)", "militaire", ("war.gov", "defense.gov"), 0,
+      "https://www.war.gov/News/Contracts/", ecartee="Le site refuse les robots (erreur 403)"),
+    S("gao_contestations", "GAO : contestations de contrats", "militaire", ("gao.gov",), 0,
+      "https://www.gao.gov/legal/bid-protests/search", ecartee="Le site refuse les robots (erreur 403)"),
+    S("nbim", "Fonds souverain de la Norvège (NBIM)", "baleines", ("nbim.no",), 0,
+      "https://www.nbim.no/en/investments/all-investments/",
+      ecartee="Ses conditions interdisent les copies automatiques du site ; ses actions américaines restent suivies "
+              "par son 13F (SEC)"),
+    S("communiques", "Communiqués officiels des compagnies", "compagnies",
+      ("globenewswire.com", "newsfilecorp.com", "newswire.ca", "prnewswire.com"), 0, "https://www.globenewswire.com/",
+      ecartee="Conditions des agences de presse : lecture personnelle, sans robots ni copie (GlobeNewswire : robots.txt "
+              "sans réponse) ; les communiqués importants arrivent par les 8-K de la SEC"),
+    S("prix_yahoo", "Prix des actions (Yahoo, non officiel)", "compagnies", ("yahoo.com",), 0, "https://finance.yahoo.com/",
+      officielle=False, ecartee="Robots interdits par le robots.txt de son API des prix et par ses conditions d'utilisation"),
+    S("sec_ftd", "SEC : échecs de livraison d'actions", "compagnies", ("sec.gov",), 0,
+      "https://www.sec.gov/data-research/sec-markets-data/fails-deliver-data",
+      ecartee="Mise de côté par choix : publiée 2 semaines plus tard, et la SEC précise que ce n'est pas une preuve de "
+              "vente à découvert abusive ; aucune étude solide après publication"),
 ]
 
 SOURCES: dict[str, Source] = {s.id: s for s in _LISTE}

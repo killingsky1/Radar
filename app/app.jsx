@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.12.0";
+const VERSION = "0.13.0";
 
 // ---------- Constantes ----------
 
@@ -122,6 +122,17 @@ const CONTROLES_SOURCES = {
   meme_periode_que_le_lien: "Même période que le lien de la page des rapports",
   lignes_lues: "Chaque ligne lue (exportateur, destination, description)",
   fourchettes_reconnues: "Fourchettes de montants reconnues",
+  resultats_publies: "Résultats officiels publiés",
+  parts_qui_s_additionnent: "Les 3 catégories d'acheteurs font le total",
+  obligation_du_tresor: "Obligation du Trésor (pas un bon de moins d'un an)",
+  resultat_officiel_du_jour: "Résultat officiel du jour de l'adjudication",
+  mois_publie: "Mois publié",
+  solde_egal_depenses_moins_recettes: "Solde = dépenses moins recettes",
+  cumul_de_l_exercice_lu: "Cumul de l'exercice lu",
+  numero_csms: "Numéro du message de la douane (CSMS)",
+  lien_du_message: "Lien du message officiel",
+  sujet_surtaxes: "Surtaxes ou interdiction d'importation",
+  date_d_envoi_lue: "Date d'envoi lue",
   lettre_officielle: "Lettre d'approbation officielle",
   trimestres_consecutifs: "Trimestres consécutifs comparés",
   rapports_complets: "Deux rapports complets comparés",
@@ -869,6 +880,18 @@ function FeuilleDetail({ ev, fermer }) {
           <>
             <br />
             <span className="mention">Données fournies par la Food and Drug Administration des États-Unis (open.fda.gov).</span>
+          </>
+        )}
+        {ev.source === "tresor" && (
+          <>
+            <br />
+            <span className="mention">Source : Trésor des États-Unis, Bureau of the Fiscal Service (données ouvertes Fiscal Data).</span>
+          </>
+        )}
+        {ev.source === "tarifs" && (
+          <>
+            <br />
+            <span className="mention">Source : U.S. Customs and Border Protection (messages CSMS).</span>
           </>
         )}
         <MentionCanada ev={ev} />

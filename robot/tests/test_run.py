@@ -25,7 +25,7 @@ def test_passage_complet(tmp_path):
 
     sources = {s["id"]: s for s in _json(app / "sources.json")}
     assert sources["sec_form4"]["statut"] == "ok"
-    assert sources["war_contrats"]["statut"] == "a_venir"
+    assert sources["sec_blocage"]["statut"] == "a_venir"
     assert sources["sedi"]["statut"] == "ecartee"
 
     meta = _json(app / "meta.json")
@@ -37,13 +37,13 @@ def test_une_source_qui_plante_n_arrete_pas_les_autres(tmp_path):
     def plante(ctx):
         raise ConnectionError("site inaccessible")
 
-    rapport = executer(tmp_path, collecteurs={"war_contrats": plante, "sec_form4": faux_sec}, maintenant=MAINTENANT)
-    assert rapport["war_contrats"]["ok"] is False
+    rapport = executer(tmp_path, collecteurs={"sec_blocage": plante, "sec_form4": faux_sec}, maintenant=MAINTENANT)
+    assert rapport["sec_blocage"]["ok"] is False
     assert rapport["sec_form4"]["ok"] is True
 
     sources = {s["id"]: s for s in _json(tmp_path / "app" / "sources.json")}
-    assert sources["war_contrats"]["statut"] == "en_panne"
-    assert "site inaccessible" in sources["war_contrats"]["explication"]
+    assert sources["sec_blocage"]["statut"] == "en_panne"
+    assert "site inaccessible" in sources["sec_blocage"]["explication"]
 
 
 def test_relancer_ne_modifie_pas_les_infos(tmp_path):

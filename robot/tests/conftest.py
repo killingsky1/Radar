@@ -32,11 +32,12 @@ def bonne_info(**changements) -> Evenement:
     return Evenement(**valeurs)
 
 
-def confirmation_pentagone() -> Confirmation:
+def confirmation_officielle() -> Confirmation:
+    """Une 2e source officielle, active, sur son propre domaine (le Pentagone, laissé de côté, ne peut plus confirmer)."""
     return Confirmation(
-        source="war_contrats",
-        official_url="https://www.war.gov/News/Contracts/Contract/Article/4616977/",
-        official_id="contracts-2026-10-01",
+        source="registre_federal",
+        official_url="https://www.federalregister.gov/documents/2026/10/01/2026-12345/exemple",
+        official_id="2026-12345",
     )
 
 

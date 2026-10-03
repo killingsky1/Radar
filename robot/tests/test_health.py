@@ -6,7 +6,7 @@ MAINTENANT = datetime(2026, 10, 2, 16, 37, tzinfo=timezone.utc)
 
 
 def test_source_pas_encore_branchee():
-    assert statut("war_contrats", None, branchee=False, maintenant=MAINTENANT)[0] == "a_venir"
+    assert statut("sec_blocage", None, branchee=False, maintenant=MAINTENANT)[0] == "a_venir"
 
 
 def test_source_laissee_de_cote():

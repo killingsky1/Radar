@@ -1,0 +1,6 @@
+{
+ "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1?sort=-record_date&page[size]=60": "fd_etat_mensuel.gz",
+ "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query?filter=security_type:in:(Note,Bond)&sort=-auction_date&page[size]=300": "fd_obligations_historique.gz",
+ "https://api.fiscaldata.treasury.gov/services/calendar/release": "fd_calendrier.gz",
+ "https://content.govdelivery.com/accounts/USDHSCBP/widgets/USDHSCBP_WIDGET_2.rss": "csms_rss.gz"
+}

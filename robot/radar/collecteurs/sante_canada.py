@@ -72,7 +72,7 @@ def evenement(avis: dict, produits: list[dict], ingredients: list[dict], syms=No
                             ("Fabricant", fabricant), ("Type", avis.get("noc_product_type") or ""),
                             ("Présentation", avis.get("noc_on_submission_type") or ""),
                             ("Classe", avis.get("noc_submission_class") or ""),
-                            ("Classe thérapeutique", (avis.get("noc_therapeutic_class") or "").capitalize()),
+                            ("Classe thérapeutique", avis.get("noc_therapeutic_class") or ""),  # telle quelle (sigles compris)
                             ("Avis de conformité", f"n° {n} du {avis.get('noc_date')}"))}
     return Evenement(
         source="sante_canada", official_id=str(n), category="canada", kind="approbation_sante_canada",

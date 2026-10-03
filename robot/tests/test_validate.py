@@ -2,7 +2,7 @@ from datetime import date
 
 import pytest
 
-from conftest import SOURCE_GENERIQUE, bonne_info, confirmation_pentagone
+from conftest import SOURCE_GENERIQUE, bonne_info, confirmation_officielle
 from radar import validate
 from radar.models import Confirmation, empreinte
 from radar.validate import delai_depasse, jours_ouvrables, valider
@@ -15,7 +15,7 @@ def test_bonne_info_est_officielle(aujourd_hui):
 
 
 def test_confirmee_par_une_autre_source_officielle(aujourd_hui):
-    ev = valider(bonne_info(confirmations=[confirmation_pentagone()]), aujourd_hui)
+    ev = valider(bonne_info(confirmations=[confirmation_officielle()]), aujourd_hui)
     assert ev.badge == "confirme"
 
 
@@ -54,7 +54,7 @@ def test_une_source_ne_peut_pas_se_confirmer_elle_meme(aujourd_hui):
 
 
 def test_confirmation_sur_un_site_non_officiel_refusee(aujourd_hui):
-    fausse = Confirmation("war_contrats", "https://www.blogue-defense.com/contrat", "x")
+    fausse = Confirmation("registre_federal", "https://www.blogue-defense.com/contrat", "x")
     ev = valider(bonne_info(confirmations=[fausse]), aujourd_hui)
     assert ev.badge == "a_verifier"
 
