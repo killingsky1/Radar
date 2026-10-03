@@ -26,5 +26,16 @@
  "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37777&lang=fr&type=json": "noc_medicinalingredient_37777.gz",
  "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37735&lang=fr&type=json": "noc_drugproduct_37735.gz",
  "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37735&lang=fr&type=json": "noc_medicinalingredient_37735.gz",
- "https://health-products.canada.ca/noc-ac/index-fra.jsp": "noc_accueil.gz"
+ "https://health-products.canada.ca/noc-ac/index-fra.jsp": "noc_accueil.gz",
+ "https://health-products.canada.ca/noc-ac/info.do?lang=fr&no=38368": "noc_fiche_1.gz",
+ "https://health-products.canada.ca/noc-ac/info.do?no=38368&lang=fr": "noc_fiche_2.gz",
+ "https://health-products.canada.ca/noc-ac/info.do?lang=fre&no=38368": "noc_fiche_3.gz",
+ "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20desc&limit=1000&offset=0&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,instrument_type,reporting_period": "contrats_2026-2027-Q1_page0.gz",
+ "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q2%22%7D&sort=_id%20desc&limit=1000&offset=0&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,instrument_type,reporting_period": "contrats_2026-2027-Q2_page0.gz",
+ "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q3%22%7D&sort=_id%20desc&limit=1000&offset=0&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,instrument_type,reporting_period": "contrats_2026-2027-Q3_page0.gz",
+ "https://search.open.canada.ca/contracts/record/cbsa-asfc,C-2025-2026-Q3-908": "contrat_fiche_en.gz",
+ "https://rechercher.ouvert.canada.ca/contrats/record/cbsa-asfc,C-2025-2026-Q3-908": "contrat_fiche_fr.gz",
+ "https://www.ccc.ca/en/about/corporate-reports/": "ccc_rapports.gz",
+ "https://www.ccc.ca/wp-content/uploads/2026/07/TD-2026-2027-Q1.pdf": "ccc_td_2026_q1.gz",
+ "https://www.ccc.ca/wp-content/uploads/2026/06/TD-2025-2026-Q4.pdf": "ccc_td_2025_q4.gz"
 }
