@@ -24708,6 +24708,98 @@
   "badge": "officiel",
   "category": "canada",
   "checks": {
+   "avis_actif": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "fiches_du_meme_avis": true,
+   "marque_et_ingredient_lus": true,
+   "nouvelle_substance_active": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T17:20:55+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "actif": "1",
+   "avec_conditions": false,
+   "classe": "Nouvelle substance active (NSA)",
+   "classe_therapeutique": "",
+   "date": "2026-09-28",
+   "details": [
+    [
+     "Médicament",
+     "DAWNZERA"
+    ],
+    [
+     "Ingrédient(s)",
+     "donidalorsen sodique 80 MG / 0.8ML"
+    ],
+    [
+     "Fabricant",
+     "CELYSTRA PHARMA INC."
+    ],
+    [
+     "Type",
+     "Disponible avec ordonnance"
+    ],
+    [
+     "Présentation",
+     "Présentation de drogue nouvelle (PDN)"
+    ],
+    [
+     "Classe",
+     "Nouvelle substance active (NSA)"
+    ],
+    [
+     "Avis de conformité",
+     "n° 38368 du 2026-09-28"
+    ]
+   ],
+   "din": [
+    "02571943"
+   ],
+   "fabricant": "CELYSTRA PHARMA INC.",
+   "fiches_meme_avis": true,
+   "ingredients": [
+    {
+     "dose": "80 MG / 0.8ML",
+     "nom": "donidalorsen sodique"
+    }
+   ],
+   "marques": [
+    "DAWNZERA"
+   ],
+   "numero": 38368,
+   "presentation": "Présentation de drogue nouvelle (PDN)",
+   "type_produit": "Disponible avec ordonnance"
+  },
+  "direction": 0,
+  "entities": [
+   "CELYSTRA PHARMA INC."
+  ],
+  "id": "sante_canada:38368",
+  "kind": "approbation_sante_canada",
+  "notes": [],
+  "occurred_on": "2026-09-28",
+  "official_id": "38368",
+  "official_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=fre&no=38368",
+  "parser_version": "sante-canada-1",
+  "published_on": "2026-09-28",
+  "sha256": "90f4f5a4a7e73eb499eb526079acbd7d26ff40327b30fbec4949cf492f3c1a8e",
+  "source": "sante_canada",
+  "tickers": [],
+  "title": "Santé Canada : nouveau médicament autorisé, DAWNZERA (donidalorsen sodique), de CELYSTRA PHARMA INC."
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
    "champs_requis": true,
    "dates_coherentes": true,
    "domaine_officiel": true,
@@ -28660,6 +28752,192 @@
    "AAPL"
   ],
   "title": "Kevin Hern (Chambre, OK01) vend AAPL (2 transactions) — enfant à charge"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "avis_actif": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "fiches_du_meme_avis": true,
+   "marque_et_ingredient_lus": true,
+   "nouvelle_substance_active": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T17:20:54+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "actif": "1",
+   "avec_conditions": false,
+   "classe": "Nouvelle substance active (NSA)",
+   "classe_therapeutique": "",
+   "date": "2026-09-24",
+   "details": [
+    [
+     "Médicament",
+     "PROSTALUMIN"
+    ],
+    [
+     "Ingrédient(s)",
+     "(18f)psma-1007 3.7 GBQ / ML"
+    ],
+    [
+     "Fabricant",
+     "CENTRE FOR PROBE DEVELOPMENT AND COMMERCIALIZATION"
+    ],
+    [
+     "Type",
+     "Radiopharmaceutique"
+    ],
+    [
+     "Présentation",
+     "Présentation de drogue nouvelle (PDN)"
+    ],
+    [
+     "Classe",
+     "Nouvelle substance active (NSA)"
+    ],
+    [
+     "Avis de conformité",
+     "n° 38346 du 2026-09-24"
+    ]
+   ],
+   "din": [
+    "02571757"
+   ],
+   "fabricant": "CENTRE FOR PROBE DEVELOPMENT AND COMMERCIALIZATION",
+   "fiches_meme_avis": true,
+   "ingredients": [
+    {
+     "dose": "3.7 GBQ / ML",
+     "nom": "(18f)psma-1007"
+    }
+   ],
+   "marques": [
+    "PROSTALUMIN"
+   ],
+   "numero": 38346,
+   "presentation": "Présentation de drogue nouvelle (PDN)",
+   "type_produit": "Radiopharmaceutique"
+  },
+  "direction": 0,
+  "entities": [
+   "CENTRE FOR PROBE DEVELOPMENT AND COMMERCIALIZATION"
+  ],
+  "id": "sante_canada:38346",
+  "kind": "approbation_sante_canada",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "38346",
+  "official_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=fre&no=38346",
+  "parser_version": "sante-canada-1",
+  "published_on": "2026-09-24",
+  "sha256": "185c1989a39fdecf00490c4d42a9b68f9ef67369f282e33bd55dc4b03f4a31ac",
+  "source": "sante_canada",
+  "tickers": [],
+  "title": "Santé Canada : nouveau médicament autorisé, PROSTALUMIN ((18f)psma-1007), de CENTRE FOR PROBE DEVELOPMENT AND COMMERCIALIZATION"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "avis_actif": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "fiches_du_meme_avis": true,
+   "marque_et_ingredient_lus": true,
+   "nouvelle_substance_active": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T17:20:53+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "actif": "1",
+   "avec_conditions": true,
+   "classe": "Nouvelle substance active (NSA)",
+   "classe_therapeutique": "",
+   "date": "2026-09-24",
+   "details": [
+    [
+     "Médicament",
+     "HERNEXEOS"
+    ],
+    [
+     "Ingrédient(s)",
+     "zongertinib 60 MG / TAB"
+    ],
+    [
+     "Fabricant",
+     "BOEHRINGER INGELHEIM (CANADA) LTD LTEE"
+    ],
+    [
+     "Type",
+     "Disponible avec ordonnance"
+    ],
+    [
+     "Présentation",
+     "Présentation de drogue nouvelle (PDN)"
+    ],
+    [
+     "Classe",
+     "Nouvelle substance active (NSA)"
+    ],
+    [
+     "Avis de conformité",
+     "n° 38344 du 2026-09-24"
+    ]
+   ],
+   "din": [
+    "02571730"
+   ],
+   "fabricant": "BOEHRINGER INGELHEIM (CANADA) LTD LTEE",
+   "fiches_meme_avis": true,
+   "ingredients": [
+    {
+     "dose": "60 MG / TAB",
+     "nom": "zongertinib"
+    }
+   ],
+   "marques": [
+    "HERNEXEOS"
+   ],
+   "numero": 38344,
+   "presentation": "Présentation de drogue nouvelle (PDN)",
+   "type_produit": "Disponible avec ordonnance"
+  },
+  "direction": 0,
+  "entities": [
+   "BOEHRINGER INGELHEIM (CANADA) LTD LTEE"
+  ],
+  "id": "sante_canada:38344",
+  "kind": "approbation_sante_canada",
+  "notes": [
+   "Autorisé avec conditions (AC-C) : le fabricant doit faire d'autres études pour confirmer le bienfait."
+  ],
+  "occurred_on": "2026-09-24",
+  "official_id": "38344",
+  "official_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=fre&no=38344",
+  "parser_version": "sante-canada-1",
+  "published_on": "2026-09-24",
+  "sha256": "63b139abbc44675decfe3d087d5cd5b86e1fcea352cb3ee52c080fa89ead2e39",
+  "source": "sante_canada",
+  "tickers": [],
+  "title": "Santé Canada : nouveau médicament autorisé, HERNEXEOS (zongertinib), de BOEHRINGER INGELHEIM (CANADA) LTD LTEE"
  },
  {
   "amount_max": null,
@@ -33813,6 +34091,104 @@
   "badge": "officiel",
   "category": "canada",
   "checks": {
+   "avis_actif": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "fiches_du_meme_avis": true,
+   "marque_et_ingredient_lus": true,
+   "nouvelle_substance_active": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T17:20:52+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "actif": "1",
+   "avec_conditions": false,
+   "classe": "Priorité-NSA",
+   "classe_therapeutique": "",
+   "date": "2026-09-16",
+   "details": [
+    [
+     "Médicament",
+     "AMMIVO"
+    ],
+    [
+     "Ingrédient(s)",
+     "benzoate de sodium 100 MG / ML; phénylacétate sodique 100 MG / ML"
+    ],
+    [
+     "Fabricant",
+     "STERIMAX INC"
+    ],
+    [
+     "Type",
+     "Disponible avec ordonnance"
+    ],
+    [
+     "Présentation",
+     "Présentation de drogue nouvelle (PDN)"
+    ],
+    [
+     "Classe",
+     "Priorité-NSA"
+    ],
+    [
+     "Avis de conformité",
+     "n° 38296 du 2026-09-16"
+    ]
+   ],
+   "din": [
+    "02571595"
+   ],
+   "fabricant": "STERIMAX INC",
+   "fiches_meme_avis": true,
+   "ingredients": [
+    {
+     "dose": "100 MG / ML",
+     "nom": "benzoate de sodium"
+    },
+    {
+     "dose": "100 MG / ML",
+     "nom": "phénylacétate sodique"
+    }
+   ],
+   "marques": [
+    "AMMIVO"
+   ],
+   "numero": 38296,
+   "presentation": "Présentation de drogue nouvelle (PDN)",
+   "type_produit": "Disponible avec ordonnance"
+  },
+  "direction": 0,
+  "entities": [
+   "STERIMAX INC"
+  ],
+  "id": "sante_canada:38296",
+  "kind": "approbation_sante_canada",
+  "notes": [
+   "Examen prioritaire (classe « Priorité-NSA ») : Santé Canada a examiné la demande en accéléré."
+  ],
+  "occurred_on": "2026-09-16",
+  "official_id": "38296",
+  "official_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=fre&no=38296",
+  "parser_version": "sante-canada-1",
+  "published_on": "2026-09-16",
+  "sha256": "f735153d1cd64b9e064e7aa17d82296b81844ff8d471efbaf134c55fff03a00a",
+  "source": "sante_canada",
+  "tickers": [],
+  "title": "Santé Canada : nouveau médicament autorisé, AMMIVO (benzoate de sodium, phénylacétate sodique), de STERIMAX INC"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
    "champs_requis": true,
    "dates_coherentes": true,
    "domaine_officiel": true,
@@ -37833,6 +38209,411 @@
   "title": "Vente d'armes à l'étranger : Canada"
  },
  {
+  "amount_max": 1247900000.0,
+  "amount_min": 608200000.0,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "fourchettes_reconnues": true,
+   "lignes_lues": true,
+   "meme_periode_que_le_lien": true,
+   "montant_coherent": true,
+   "periode_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T17:29:17+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "anonymes": 11,
+   "debut": "2026-04-01",
+   "details": [
+    [
+     "Période",
+     "1er avril 2026 au 30 juin 2026"
+    ],
+    [
+     "Transactions",
+     "37"
+    ],
+    [
+     "La plus grosse",
+     "250 M$ à 500 M$ (Defence Vehicles / Véhicules de défense)"
+    ],
+    [
+     "Exportateurs nommés",
+     "Bell Textron Canada Limited, Cascade Aerospace Inc., Emergent BioSolutions Canada Inc., Evacusled Inc., General Dynamics OTS - Canada Inc., General Dynamics OTS - Canada Valleyfield Inc., Lockheed Martin Canada Inc., M1 Composites Technology Inc., MDA Systems Ltd., MaestroVision inc., Magellan Aerospace, Winnipeg, Mercedes Textiles Limited, Montreal Bronze Ltd, Pratt & Whitney Canada Inc., SLR Consulting (Canada) Ltd., Schaeffler Aerospace Canada Inc., Shark Marine Technologies Inc., Standard Aero Limited, Winnipeg, Valcom Manufacturing Group Inc., Wescam Inc."
+    ]
+   ],
+   "fin": "2026-06-30",
+   "fin_lien": "2026-06-30",
+   "libelle_lien": "Quarter ending June 30, 2026",
+   "nombre": 37,
+   "page_modifiee_le": "2026-08-31",
+   "pdf": "https://www.ccc.ca/wp-content/uploads/2026/07/TD-2026-2027-Q1.pdf",
+   "resume": "37 transactions signées du 1er avril 2026 au 30 juin 2026, dont 11 avec un exportateur anonyme. Montant total déclaré : entre 608,2 M$ et 1 247,9 M$.",
+   "transactions": [
+    {
+     "description": "Aerospace / Aérospatiale",
+     "destination": "Montenegro",
+     "exportateur": "Bell Textron Canada Limited",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Medical Equipment / Équipement médical",
+     "destination": "Canada",
+     "exportateur": "Canadian Exporter",
+     "fourchette": "moins de 100 000 $",
+     "max": 100000.0,
+     "min": 0.0,
+     "montant": "<$100,000.00"
+    },
+    {
+     "description": "Machinery / Machinerie",
+     "destination": "Canada",
+     "exportateur": "Canadian Exporter",
+     "fourchette": "10 M$ à 20 M$",
+     "max": 20000000.0,
+     "min": 10000000.0,
+     "montant": "$10,000,000.00 – $20,000,000.00"
+    },
+    {
+     "description": "Medical Equipment / Équipement médical",
+     "destination": "Canada",
+     "exportateur": "Canadian Exporter",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Defence Vehicles / Véhicules de défense",
+     "destination": "Canada",
+     "exportateur": "Canadian Exporter",
+     "fourchette": "250 M$ à 500 M$",
+     "max": 500000000.0,
+     "min": 250000000.0,
+     "montant": "$250,000,000.00 – $500,000,000.00"
+    },
+    {
+     "description": "Small Arms (inc. Rifles) / Armes légères (y compris les fusils)",
+     "destination": "Canada",
+     "exportateur": "Canadian Exporter",
+     "fourchette": "250 M$ à 500 M$",
+     "max": 500000000.0,
+     "min": 250000000.0,
+     "montant": "$250,000,000.00 – $500,000,000.00"
+    },
+    {
+     "description": "Medical Equipment / Équipement médical",
+     "destination": "Canada",
+     "exportateur": "Canadian Exporter",
+     "fourchette": "moins de 100 000 $",
+     "max": 100000.0,
+     "min": 0.0,
+     "montant": "<$100,000.00"
+    },
+    {
+     "description": "Other Related Consumer Goods & Services / Autres biens et services de consommation connexes",
+     "destination": "Canada",
+     "exportateur": "Canadian Exporter",
+     "fourchette": "moins de 100 000 $",
+     "max": 100000.0,
+     "min": 0.0,
+     "montant": "<$100,000.00"
+    },
+    {
+     "description": "Medical Equipment / Équipement médical",
+     "destination": "Canada",
+     "exportateur": "Canadian Exporter",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Defence Products / Produits de défense",
+     "destination": "Canada",
+     "exportateur": "Canadian Exporter",
+     "fourchette": "10 M$ à 20 M$",
+     "max": 20000000.0,
+     "min": 10000000.0,
+     "montant": "$10,000,000.00 – $20,000,000.00"
+    },
+    {
+     "description": "Defence Products / Produits de défense",
+     "destination": "Canada",
+     "exportateur": "Canadian Exporter",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Defence Products / Produits de défense",
+     "destination": "Canada",
+     "exportateur": "Canadian Exporter",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Aircraft R&O & Maintenance Services / Services de R&R et de maintenance des aéronefs",
+     "destination": "United States",
+     "exportateur": "Cascade Aerospace Inc.",
+     "fourchette": "10 M$ à 20 M$",
+     "max": 20000000.0,
+     "min": 10000000.0,
+     "montant": "$10,000,000.00 – $20,000,000.00"
+    },
+    {
+     "description": "Pharmaceuticals and Medical Supplies / Produits pharmaceutiques et fournitures médicales",
+     "destination": "United States",
+     "exportateur": "Emergent BioSolutions Canada Inc.",
+     "fourchette": "10 M$ à 20 M$",
+     "max": 20000000.0,
+     "min": 10000000.0,
+     "montant": "$10,000,000.00 – $20,000,000.00"
+    },
+    {
+     "description": "Medical Equipment / Équipement médical",
+     "destination": "United States",
+     "exportateur": "Evacusled Inc.",
+     "fourchette": "moins de 100 000 $",
+     "max": 100000.0,
+     "min": 0.0,
+     "montant": "<$100,000.00"
+    },
+    {
+     "description": "Ammunition / Munition",
+     "destination": "United States",
+     "exportateur": "General Dynamics OTS - Canada Inc.",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Explosives (inc. Propellant & Pyrotechnic) / Explosifs (y compris propulseur et pyrotechnique)",
+     "destination": "United States",
+     "exportateur": "General Dynamics OTS - Canada Valleyfield Inc.",
+     "fourchette": "50 M$ à 100 M$",
+     "max": 100000000.0,
+     "min": 50000000.0,
+     "montant": "$50,000,000.00 – $100,000,000.00"
+    },
+    {
+     "description": "Explosives (inc. Propellant & Pyrotechnic) / Explosifs (y compris propulseur et pyrotechnique)",
+     "destination": "United States",
+     "exportateur": "General Dynamics OTS - Canada Valleyfield Inc.",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Explosives (inc. Propellant & Pyrotechnic) / Explosifs (y compris propulseur et pyrotechnique)",
+     "destination": "United States",
+     "exportateur": "General Dynamics OTS - Canada Valleyfield Inc.",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Explosives (inc. Propellant & Pyrotechnic) / Explosifs (y compris propulseur et pyrotechnique)",
+     "destination": "United States",
+     "exportateur": "General Dynamics OTS - Canada Valleyfield Inc.",
+     "fourchette": "moins de 100 000 $",
+     "max": 100000.0,
+     "min": 0.0,
+     "montant": "<$100,000.00"
+    },
+    {
+     "description": "Education & Training Equipment & Services / Équipements et services destinés à l'éducation et à la formation",
+     "destination": "United States",
+     "exportateur": "Lockheed Martin Canada Inc.",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Defence Products / Produits de défense",
+     "destination": "Germany",
+     "exportateur": "Lockheed Martin Canada Inc.",
+     "fourchette": "moins de 100 000 $",
+     "max": 100000.0,
+     "min": 0.0,
+     "montant": "<$100,000.00"
+    },
+    {
+     "description": "Defence Products / Produits de défense",
+     "destination": "United States",
+     "exportateur": "M1 Composites Technology Inc.",
+     "fourchette": "moins de 100 000 $",
+     "max": 100000.0,
+     "min": 0.0,
+     "montant": "<$100,000.00"
+    },
+    {
+     "description": "Security Products and Services / Produits et services de sécurité",
+     "destination": "Canada",
+     "exportateur": "MaestroVision inc.",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Aircraft Parts & Auxiliary Equipment / Pièces d'aéronefs et équipement auxiliaire",
+     "destination": "United States",
+     "exportateur": "Magellan Aerospace, Winnipeg",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Defence Products / Produits de défense",
+     "destination": "United States",
+     "exportateur": "Magellan Aerospace, Winnipeg",
+     "fourchette": "5 M$ à 10 M$",
+     "max": 10000000.0,
+     "min": 5000000.0,
+     "montant": "$5,000,000.00 – $10,000,000.00"
+    },
+    {
+     "description": "Information & Communication Technologies / Technologies de l'information et de la communication",
+     "destination": "United States",
+     "exportateur": "MDA Systems Ltd.",
+     "fourchette": "5 M$ à 10 M$",
+     "max": 10000000.0,
+     "min": 5000000.0,
+     "montant": "$5,000,000.00 – $10,000,000.00"
+    },
+    {
+     "description": "Fire Fighting Equipment, Training & Services / Équipement, formation et services de lutte contre les incendies",
+     "destination": "United States",
+     "exportateur": "Mercedes Textiles Limited",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Aircraft Parts & Auxiliary Equipment / Pièces d'aéronefs et équipement auxiliaire",
+     "destination": "United States",
+     "exportateur": "Montreal Bronze Ltd",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Aircraft Parts & Auxiliary Equipment / Pièces d'aéronefs et équipement auxiliaire",
+     "destination": "United States",
+     "exportateur": "Pratt & Whitney Canada Inc.",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Aircraft Parts & Auxiliary Equipment / Pièces d'aéronefs et équipement auxiliaire",
+     "destination": "United States",
+     "exportateur": "Pratt & Whitney Canada Inc.",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Aircraft Parts & Auxiliary Equipment / Pièces d'aéronefs et équipement auxiliaire",
+     "destination": "United States",
+     "exportateur": "Schaeffler Aerospace Canada Inc.",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Ocean Technologies / Technologies océaniques",
+     "destination": "United States",
+     "exportateur": "Shark Marine Technologies Inc.",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Other Related Consumer Goods & Services / Autres biens et services de consommation connexes",
+     "destination": "Dominican Republic",
+     "exportateur": "SLR Consulting (Canada) Ltd.",
+     "fourchette": "moins de 100 000 $",
+     "max": 100000.0,
+     "min": 0.0,
+     "montant": "<$100,000.00"
+    },
+    {
+     "description": "Gas Turbine Engines & Parts / Moteurs et pièces de turbines à gaz",
+     "destination": "United States",
+     "exportateur": "Standard Aero Limited, Winnipeg",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Information & Communication Technologies / Technologies de l'information et de la communication",
+     "destination": "United States",
+     "exportateur": "Valcom Manufacturing Group Inc.",
+     "fourchette": "moins de 100 000 $",
+     "max": 100000.0,
+     "min": 0.0,
+     "montant": "<$100,000.00"
+    },
+    {
+     "description": "Imaging & Counter Measure Equipment / Équipement d'imagerie et de contre-mesure",
+     "destination": "United States",
+     "exportateur": "Wescam Inc.",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    }
+   ]
+  },
+  "direction": 0,
+  "entities": [
+   "Corporation commerciale canadienne"
+  ],
+  "id": "ccc:2026-04-01:2026-06-30",
+  "kind": "transactions_signees",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle des rapports (au plus tard)."
+  ],
+  "occurred_on": "2026-06-30",
+  "official_id": "2026-04-01:2026-06-30",
+  "official_url": "https://www.ccc.ca/wp-content/uploads/2026/07/TD-2026-2027-Q1.pdf",
+  "parser_version": "ccc-1",
+  "published_on": "2026-08-31",
+  "sha256": "64ed3ffd48d050728bc3ee55fa974ae67bd4ff082c7e99310094225872d9e849",
+  "source": "ccc",
+  "tickers": [],
+  "title": "Corporation commerciale canadienne : 37 transactions signées (1er avril 2026 au 30 juin 2026), la plus grosse de 250 M$ à 500 M$"
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -41145,6 +41926,98 @@
   "source": "fda",
   "tickers": [],
   "title": "FDA : nouveau médicament approuvé, ORZEYFUL (oveporexton), de TAKEDA PHARMS USA"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "avis_actif": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "fiches_du_meme_avis": true,
+   "marque_et_ingredient_lus": true,
+   "nouvelle_substance_active": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T17:20:51+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "actif": "1",
+   "avec_conditions": false,
+   "classe": "Nouvelle substance active (NSA)",
+   "classe_therapeutique": "",
+   "date": "2026-08-04",
+   "details": [
+    [
+     "Médicament",
+     "ETCAMAH"
+    ],
+    [
+     "Ingrédient(s)",
+     "camizestrant 75 MG / TAB"
+    ],
+    [
+     "Fabricant",
+     "ASTRAZENECA CANADA INC"
+    ],
+    [
+     "Type",
+     "Disponible avec ordonnance"
+    ],
+    [
+     "Présentation",
+     "Présentation de drogue nouvelle (PDN)"
+    ],
+    [
+     "Classe",
+     "Nouvelle substance active (NSA)"
+    ],
+    [
+     "Avis de conformité",
+     "n° 38047 du 2026-08-04"
+    ]
+   ],
+   "din": [
+    "02570572"
+   ],
+   "fabricant": "ASTRAZENECA CANADA INC",
+   "fiches_meme_avis": true,
+   "ingredients": [
+    {
+     "dose": "75 MG / TAB",
+     "nom": "camizestrant"
+    }
+   ],
+   "marques": [
+    "ETCAMAH"
+   ],
+   "numero": 38047,
+   "presentation": "Présentation de drogue nouvelle (PDN)",
+   "type_produit": "Disponible avec ordonnance"
+  },
+  "direction": 0,
+  "entities": [
+   "ASTRAZENECA CANADA INC"
+  ],
+  "id": "sante_canada:38047",
+  "kind": "approbation_sante_canada",
+  "notes": [],
+  "occurred_on": "2026-08-04",
+  "official_id": "38047",
+  "official_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=fre&no=38047",
+  "parser_version": "sante-canada-1",
+  "published_on": "2026-08-04",
+  "sha256": "65a186da75b852a180c56d3f571574f8a234937f42ba418b5bd7478ea91f86eb",
+  "source": "sante_canada",
+  "tickers": [],
+  "title": "Santé Canada : nouveau médicament autorisé, ETCAMAH (camizestrant), de ASTRAZENECA CANADA INC"
  },
  {
   "amount_max": null,

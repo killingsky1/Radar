@@ -6,7 +6,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "sec_form4",
   "libelle": "OK",
@@ -23,7 +23,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "sec_form144",
   "libelle": "OK",
@@ -40,7 +40,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "sec_13dg",
   "libelle": "OK",
@@ -57,7 +57,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "sec_8k",
   "libelle": "OK",
@@ -74,7 +74,7 @@
    "recus": 0
   },
   "dernier_contenu": null,
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "sec_13f",
   "libelle": "OK",
@@ -91,7 +91,7 @@
    "recus": 0
   },
   "dernier_contenu": null,
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "sec_offres",
   "libelle": "OK",
@@ -122,7 +122,7 @@
    "recus": 2
   },
   "dernier_contenu": "2026-09-30",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "sec_poursuites",
   "libelle": "OK",
@@ -167,7 +167,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "cftc_cot",
   "libelle": "OK",
@@ -212,7 +212,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-22",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "ventes_armes",
   "libelle": "OK",
@@ -266,17 +266,20 @@
  },
  {
   "categorie": "canada",
-  "compte": null,
+  "compte": {
+   "a_verifier": 0,
+   "recus": 0
+  },
   "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 2.",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "explication": "",
   "id": "contrats_ca_10k",
-  "libelle": "À venir",
-  "nom": "Contrats fédéraux de plus de 10 000 $",
+  "libelle": "OK",
+  "nom": "Contrats fédéraux de 10 M$ et plus (publication proactive)",
   "officielle": true,
   "phase": 2,
-  "site": "https://search.open.canada.ca/contracts/",
-  "statut": "a_venir"
+  "site": "https://rechercher.ouvert.canada.ca/contrats/",
+  "statut": "ok"
  },
  {
   "categorie": "militaire",
@@ -285,7 +288,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "nouvelles_defense_ca",
   "libelle": "OK",
@@ -297,17 +300,20 @@
  },
  {
   "categorie": "canada",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 2.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 1
+  },
+  "dernier_contenu": "2026-08-31",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "explication": "",
   "id": "ccc",
-  "libelle": "À venir",
-  "nom": "Corporation commerciale canadienne",
+  "libelle": "OK",
+  "nom": "Corporation commerciale canadienne : transactions signées (rapport trimestriel)",
   "officielle": true,
   "phase": 2,
-  "site": "https://www.ccc.ca/en/announcements/",
-  "statut": "a_venir"
+  "site": "https://www.ccc.ca/en/about/corporate-reports/",
+  "statut": "ok"
  },
  {
   "categorie": "politiciens",
@@ -316,7 +322,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "chambre_ptr",
   "libelle": "OK",
@@ -333,7 +339,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "senat_ptr",
   "libelle": "OK",
@@ -350,7 +356,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-30",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "oge_278t",
   "libelle": "OK",
@@ -367,7 +373,7 @@
    "recus": 0
   },
   "dernier_contenu": null,
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "comites",
   "libelle": "OK",
@@ -384,7 +390,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-30",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "votes",
   "libelle": "OK",
@@ -401,7 +407,7 @@
    "recus": 0
   },
   "dernier_contenu": null,
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "lobbying",
   "libelle": "OK",
@@ -418,7 +424,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-30",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "hr7008",
   "libelle": "OK",
@@ -435,7 +441,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "registre_federal",
   "libelle": "OK",
@@ -452,7 +458,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-29",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "maison_blanche",
   "libelle": "OK",
@@ -483,7 +489,7 @@
    "recus": 7
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "sanctions_us",
   "libelle": "OK",
@@ -500,7 +506,7 @@
    "recus": 16
   },
   "dernier_contenu": "2026-09-28",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "fda",
   "libelle": "OK",
@@ -517,7 +523,7 @@
    "recus": 20
   },
   "dernier_contenu": "2026-09-30",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "ftc_fusions",
   "libelle": "OK",
@@ -534,7 +540,7 @@
    "recus": 3
   },
   "dernier_contenu": "2026-09-23",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "doj_antitrust",
   "libelle": "OK",
@@ -551,7 +557,7 @@
    "recus": 3
   },
   "dernier_contenu": "2026-09-16",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "fed",
   "libelle": "OK",
@@ -582,7 +588,7 @@
    "recus": 12
   },
   "dernier_contenu": "2026-09-28",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "nhtsa",
   "libelle": "OK",
@@ -599,7 +605,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "nouvelles_eco_ca",
   "libelle": "OK",
@@ -616,7 +622,7 @@
    "recus": 2
   },
   "dernier_contenu": "2026-09-02",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "banque_canada",
   "libelle": "OK",
@@ -630,10 +636,10 @@
   "categorie": "canada",
   "compte": {
    "a_verifier": 0,
-   "recus": 19
+   "recus": 0
   },
   "dernier_contenu": "2026-09-29",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "statcan",
   "libelle": "OK",
@@ -647,10 +653,10 @@
   "categorie": "canada",
   "compte": {
    "a_verifier": 0,
-   "recus": 9
+   "recus": 0
   },
   "dernier_contenu": "2026-09-23",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "gazette_ca",
   "libelle": "OK",
@@ -662,26 +668,29 @@
  },
  {
   "categorie": "canada",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 4.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 5
+  },
+  "dernier_contenu": "2026-09-28",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "explication": "",
   "id": "sante_canada",
-  "libelle": "À venir",
-  "nom": "Santé Canada : approbations de médicaments",
+  "libelle": "OK",
+  "nom": "Santé Canada : nouveaux médicaments (nouvelles substances actives)",
   "officielle": true,
   "phase": 4,
-  "site": "https://health-products.canada.ca/",
-  "statut": "a_venir"
+  "site": "https://health-products.canada.ca/noc-ac/?lang=fre",
+  "statut": "ok"
  },
  {
   "categorie": "canada",
   "compte": {
    "a_verifier": 0,
-   "recus": 39
+   "recus": 0
   },
   "dernier_contenu": "2026-09-29",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "concurrence_ca",
   "libelle": "OK",
@@ -695,10 +704,10 @@
   "categorie": "canada",
   "compte": {
    "a_verifier": 0,
-   "recus": 4
+   "recus": 0
   },
   "dernier_contenu": "2026-09-19",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "grands_projets_ca",
   "libelle": "OK",
@@ -712,10 +721,10 @@
   "categorie": "canada",
   "compte": {
    "a_verifier": 0,
-   "recus": 2
+   "recus": 0
   },
   "dernier_contenu": "2026-09-22",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "sanctions_ca",
   "libelle": "OK",
@@ -729,10 +738,10 @@
   "categorie": "canada",
   "compte": {
    "a_verifier": 0,
-   "recus": 6
+   "recus": 0
   },
   "dernier_contenu": "2026-09-28",
-  "dernier_succes": "2026-10-03T16:24:01+00:00",
+  "dernier_succes": "2026-10-03T17:20:03+00:00",
   "explication": "",
   "id": "legisinfo",
   "libelle": "OK",
