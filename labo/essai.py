@@ -445,7 +445,7 @@ def verifier_ofac(ev):
     sections = re.split(r"(The following[^<]{5,120}:)", corps)
     for i in range(1, len(sections) - 1, 2):
         entete = sections[i].lower()
-        bloc = sections[i + 1].split("The following")[0]
+        bloc = re.split(r"The following|Unrelated Administrative List Changes", sections[i + 1])[0]
         n = len([f for f in re.split(r"<br\s*/?>\s*<br\s*/?>|</p>", bloc) if re.search(r"\[[A-Z0-9-]+\]", f)])
         if "added" in entete:
             cat = next((v for k, v in noms.items() if k in entete), "fiches")
