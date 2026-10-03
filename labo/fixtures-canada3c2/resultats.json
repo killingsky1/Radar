@@ -1,0 +1,466 @@
+{
+ "noc_liste": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/noticeofcompliancemain/?lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/noticeofcompliancemain/?lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 24077250,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Cache-Control": "no-cache",
+   "Content-Encoding": "gzip"
+  },
+  "debut": "[{\"noc_number\":403,\"noc_date\":\"2002-03-13\",\"noc_manufacturer_name\":\"AVENTIS PASTEUR LIMITED\",\"noc_status_with_conditions\":\"N\",\"noc_on_submission_type\":\"Supplément à une présentation de drogue nouvelle (SPDN)\",\"noc_is_suppliment\":\"Y\",\"noc_submission_class\":\"Autre\",\"noc_is_admin\":\"N\",\"noc_product_type\":\"Biologique\",\"noc_crp_product_name\":\"\",\"noc_crp_company_name\":\"\",\"noc_crp_country_name\":\"\",\"noc_active_status\":\"1\",\"noc_reason_supplement\":\"NOUVEL EMPLACEMENT DE FABRICATION\",\"noc_reason_submissi"
+ },
+ "noc_drugproduct_38047": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38047&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38047&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 125,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "125",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38047,\"noc_br_brand_id\":40840,\"noc_br_brandname\":\"ETCAMAH\",\"noc_br_din\":\"02570572\",\"noc_br_product_id\":78250}]"
+ },
+ "noc_medicinalingredient_38047": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38047&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38047&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 160,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "160",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38047,\"noc_pi_din_product_id\":78250,\"noc_pi_medic_ingr_name\":\"CAMIZESTRANT\",\"noc_pi_strength\":75.0,\"noc_pi_unit\":\"MG\",\"noc_pi_basic_unit\":\"TAB\"}]"
+ },
+ "noc_drugproduct_37818": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37818&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37818&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 125,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "125",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37818,\"noc_br_brand_id\":40595,\"noc_br_brandname\":\"BESREMI\",\"noc_br_din\":\"02569728\",\"noc_br_product_id\":77747}]"
+ },
+ "noc_medicinalingredient_37818": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37818&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37818&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 174,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "174",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37818,\"noc_pi_din_product_id\":77747,\"noc_pi_medic_ingr_name\":\"ROPÉGINTERFÉRON ALFA-2B\",\"noc_pi_strength\":500.0,\"noc_pi_unit\":\"MCG\",\"noc_pi_basic_unit\":\"ML\"}]"
+ },
+ "noc_drugproduct_37820": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37820&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37820&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 126,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "126",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37820,\"noc_br_brand_id\":40597,\"noc_br_brandname\":\"VANRAFIA\",\"noc_br_din\":\"02569590\",\"noc_br_product_id\":77753}]"
+ },
+ "noc_medicinalingredient_37820": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37820&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37820&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 173,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "173",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37820,\"noc_pi_din_product_id\":77753,\"noc_pi_medic_ingr_name\":\"CHLORHYDRATE D'ATRASENTAN\",\"noc_pi_strength\":0.75,\"noc_pi_unit\":\"MG\",\"noc_pi_basic_unit\":\"TAB\"}]"
+ },
+ "noc_drugproduct_37875": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37875&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37875&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 126,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "126",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37875,\"noc_br_brand_id\":40655,\"noc_br_brandname\":\"SCENESSE\",\"noc_br_din\":\"02569825\",\"noc_br_product_id\":77862}]"
+ },
+ "noc_medicinalingredient_37875": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37875&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37875&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 174,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "174",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37875,\"noc_pi_din_product_id\":77862,\"noc_pi_medic_ingr_name\":\"ACÉTATE DE AFAMÉLANOTIDE\",\"noc_pi_strength\":16.0,\"noc_pi_unit\":\"MG\",\"noc_pi_basic_unit\":\"IMP\"}]"
+ },
+ "noc_drugproduct_37901": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37901&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37901&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 247,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "247",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37901,\"noc_br_brand_id\":40681,\"noc_br_brandname\":\"OJEMDA\",\"noc_br_din\":\"02569876\",\"noc_br_product_id\":77927},{\"noc_number\":37901,\"noc_br_brand_id\":40681,\"noc_br_brandname\":\"OJEMDA\",\"noc_br_din\":\"02569817\",\"noc_br_product_id\":77928}]"
+ },
+ "noc_medicinalingredient_37901": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37901&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37901&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 317,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "317",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37901,\"noc_pi_din_product_id\":77927,\"noc_pi_medic_ingr_name\":\"TOVORAFENIB\",\"noc_pi_strength\":25.0,\"noc_pi_unit\":\"MG\",\"noc_pi_basic_unit\":\"ML\"},{\"noc_number\":37901,\"noc_pi_din_product_id\":77928,\"noc_pi_medic_ingr_name\":\"TOVORAFENIB\",\"noc_pi_strength\":100.0,\"noc_pi_unit\":\"MG\",\"noc_pi_basic_unit\":\"TAB\"}]"
+ },
+ "noc_drugproduct_38344": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38344&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38344&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 127,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "127",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38344,\"noc_br_brand_id\":41160,\"noc_br_brandname\":\"HERNEXEOS\",\"noc_br_din\":\"02571730\",\"noc_br_product_id\":78869}]"
+ },
+ "noc_medicinalingredient_38344": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38344&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38344&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 159,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "159",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38344,\"noc_pi_din_product_id\":78869,\"noc_pi_medic_ingr_name\":\"ZONGERTINIB\",\"noc_pi_strength\":60.0,\"noc_pi_unit\":\"MG\",\"noc_pi_basic_unit\":\"TAB\"}]"
+ },
+ "noc_drugproduct_38346": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38346&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38346&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 129,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "129",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38346,\"noc_br_brand_id\":41162,\"noc_br_brandname\":\"PROSTALUMIN\",\"noc_br_din\":\"02571757\",\"noc_br_product_id\":78871}]"
+ },
+ "noc_medicinalingredient_38346": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38346&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38346&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 161,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "161",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38346,\"noc_pi_din_product_id\":78871,\"noc_pi_medic_ingr_name\":\"(18F)PSMA-1007\",\"noc_pi_strength\":3.7,\"noc_pi_unit\":\"GBQ\",\"noc_pi_basic_unit\":\"ML\"}]"
+ },
+ "noc_drugproduct_37930": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37930&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37930&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 126,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "126",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37930,\"noc_br_brand_id\":40710,\"noc_br_brandname\":\"RHAPSIDO\",\"noc_br_din\":\"02570076\",\"noc_br_product_id\":77987}]"
+ },
+ "noc_medicinalingredient_37930": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37930&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37930&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 160,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "160",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37930,\"noc_pi_din_product_id\":77987,\"noc_pi_medic_ingr_name\":\"REMIBRUTINIB\",\"noc_pi_strength\":25.0,\"noc_pi_unit\":\"MG\",\"noc_pi_basic_unit\":\"TAB\"}]"
+ },
+ "noc_drugproduct_38368": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38368&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38368&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 126,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "126",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38368,\"noc_br_brand_id\":41187,\"noc_br_brandname\":\"DAWNZERA\",\"noc_br_din\":\"02571943\",\"noc_br_product_id\":78919}]"
+ },
+ "noc_medicinalingredient_38368": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38368&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38368&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 170,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "170",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38368,\"noc_pi_din_product_id\":78919,\"noc_pi_medic_ingr_name\":\"DONIDALORSEN SODIQUE\",\"noc_pi_strength\":80.0,\"noc_pi_unit\":\"MG\",\"noc_pi_basic_unit\":\"0.8ML\"}]"
+ },
+ "noc_drugproduct_38008": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38008&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38008&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 127,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "127",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38008,\"noc_br_brand_id\":40793,\"noc_br_brandname\":\"AMBELVIST\",\"noc_br_din\":\"02570424\",\"noc_br_product_id\":78161}]"
+ },
+ "noc_medicinalingredient_38008": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38008&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38008&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 160,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "160",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38008,\"noc_pi_din_product_id\":78161,\"noc_pi_medic_ingr_name\":\"GADOQUATRANE\",\"noc_pi_strength\":257.9,\"noc_pi_unit\":\"MG\",\"noc_pi_basic_unit\":\"ML\"}]"
+ },
+ "noc_drugproduct_37709": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37709&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37709&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 251,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "251",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37709,\"noc_br_brand_id\":40476,\"noc_br_brandname\":\"EXDENSUR\",\"noc_br_din\":\"02568926\",\"noc_br_product_id\":77476},{\"noc_number\":37709,\"noc_br_brand_id\":40476,\"noc_br_brandname\":\"EXDENSUR\",\"noc_br_din\":\"02568934\",\"noc_br_product_id\":77477}]"
+ },
+ "noc_medicinalingredient_37709": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37709&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37709&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 321,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "321",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37709,\"noc_pi_din_product_id\":77476,\"noc_pi_medic_ingr_name\":\"DÉPÉMOKIMAB\",\"noc_pi_strength\":100.0,\"noc_pi_unit\":\"MG\",\"noc_pi_basic_unit\":\"ML\"},{\"noc_number\":37709,\"noc_pi_din_product_id\":77477,\"noc_pi_medic_ingr_name\":\"DÉPÉMOKIMAB\",\"noc_pi_strength\":100.0,\"noc_pi_unit\":\"MG\",\"noc_pi_basic_unit\":\"ML\"}]"
+ },
+ "noc_drugproduct_37777": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37777&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37777&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 126,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "126",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37777,\"noc_br_brand_id\":40551,\"noc_br_brandname\":\"VIMKUNYA\",\"noc_br_din\":\"02569078\",\"noc_br_product_id\":77656}]"
+ },
+ "noc_medicinalingredient_37777": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37777&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37777&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 200,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "200",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37777,\"noc_pi_din_product_id\":77656,\"noc_pi_medic_ingr_name\":\"PARTICULES PSEUDO-VIRALES DU VIRUS DU CHIKUNGUNYA\",\"noc_pi_strength\":40.0,\"noc_pi_unit\":\"MCG\",\"noc_pi_basic_unit\":\"0.8ML\"}]"
+ },
+ "noc_drugproduct_37735": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37735&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37735&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 122,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "122",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37735,\"noc_br_brand_id\":40506,\"noc_br_brandname\":\"BOEY\",\"noc_br_din\":\"02569086\",\"noc_br_product_id\":77535}]"
+ },
+ "noc_medicinalingredient_37735": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37735&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37735&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 173,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "173",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37735,\"noc_pi_din_product_id\":77535,\"noc_pi_medic_ingr_name\":\"TRENIBOTULINUMTOXINE\",\"noc_pi_strength\":1400.0,\"noc_pi_unit\":\"UNIT\",\"noc_pi_basic_unit\":\"VIAL\"}]"
+ },
+ "noc_accueil": {
+  "url": "https://health-products.canada.ca/noc-ac/index-fra.jsp",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/noc-ac/?lang=fre",
+  "statut": 200,
+  "type": "text/html;charset=UTF-8",
+  "taille": 23504,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+   "Content-Encoding": "gzip"
+  },
+  "debut": "<!DOCTYPE HTML>\r\n   \r\n<!--[if gt IE 8]><!-->\n<!--[if lt IE 9]><html class=\"no-js lt-ie9\" dir=\"ltr\"><![endif]-->\n<html xmlns=\"http://www.w3.org/1999/xhtml\" class=\"no-js\" lang=\"fr\" dir=\"ltr\">\r\n<!--<![endif]-->\r\n  <head>\r\n    <meta charset=\"utf-8\" />\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\r\n    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)\r\n         wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->\r\n",
+  "liens": [
+   "http://www.hc-sc.gc.ca/dhp-mps/medeff/advisories-avis/index-fra.php",
+   "http://www.hc-sc.gc.ca/dhp-mps/prodpharma/notices-avis/list/index-fra.php",
+   "http://www.hc-sc.gc.ca/dhp-mps/prodpharma/notices-avis/noc-acc/noc_acc_faq-fra.php",
+   "http://www.hc-sc.gc.ca/dhp-mps/prodpharma/notices-avis/noc-acc/nocsearch_rechercheacc-fra.php",
+   "http://www.hc-sc.gc.ca/dhp-mps/prodpharma/notices-avis/noc-acc/term_noc_acc-fra.php",
+   "https://www.canada.ca/fr/transparence/avis.html"
+  ]
+ },
+ "noc_fiche_1": {
+  "url": "https://health-products.canada.ca/noc-ac/info.do?lang=fr&no=38368",
+  "erreur": "'int' object has no attribute 'get'"
+ },
+ "noc_fiche_2": {
+  "url": "https://health-products.canada.ca/noc-ac/info.do?no=38368&lang=fr",
+  "erreur": "'int' object has no attribute 'get'"
+ },
+ "noc_fiche_3": {
+  "url": "https://health-products.canada.ca/noc-ac/info.do?lang=fr&code=38368",
+  "erreur": "'int' object has no attribute 'get'"
+ },
+ "contrats_2026-2027-Q1_page0": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q1%22%7D&sort=_id%20desc&limit=1000&offset=0&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,instrument_type,reporting_period",
+  "erreur": "'int' object does not support item assignment"
+ },
+ "contrats_2026-2027-Q2_page0": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q2%22%7D&sort=_id%20desc&limit=1000&offset=0&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,instrument_type,reporting_period",
+  "erreur": "'int' object has no attribute 'get'"
+ },
+ "contrats_2026-2027-Q3_page0": {
+  "url": "https://open.canada.ca/data/api/action/datastore_search?resource_id=fac950c0-00d5-4ec1-a4d3-9cbebf98a305&filters=%7B%22reporting_period%22%3A%20%222026-2027-Q3%22%7D&sort=_id%20desc&limit=1000&offset=0&fields=_id,reference_number,owner_org,owner_org_title,vendor_name,contract_date,contract_value,original_value,amendment_value,description_fr,instrument_type,reporting_period",
+  "erreur": "'int' object has no attribute 'get'"
+ },
+ "ccc_rapports": {
+  "url": "https://www.ccc.ca/en/about/corporate-reports/",
+  "erreur": "'int' object does not support item assignment"
+ },
+ "ccc_td_2026_q1": {
+  "url": "https://www.ccc.ca/wp-content/uploads/2026/07/TD-2026-2027-Q1.pdf",
+  "erreur": "'int' object has no attribute 'get'"
+ },
+ "ccc_td_2025_q4": {
+  "url": "https://www.ccc.ca/wp-content/uploads/2026/06/TD-2025-2026-Q4.pdf",
+  "erreur": "'int' object has no attribute 'get'"
+ }
+}
