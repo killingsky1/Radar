@@ -1,11 +1,11 @@
 # Essai réel et vérification indépendante
 
 Infos produites : 253
-Vérifiées au hasard : 142 — identiques : 140
+Vérifiées au hasard : 142 — identiques : 142
 
 ## nhtsa
 - produites : 12 {'officiel': 12, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 12}, 'dernier_contenu': '2026-09-28', 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 12}, 'dernier_contenu': '2026-09-28', 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 - OK  Rappel de Chrysler (FCA US, LLC) : 97 349 véhicules — « Roof Rack Crossbars May Detach »
 - OK  Rappel de Grand Design RV, LLC : 16 128 véhicules — « Solar Controller May Select Incorrect Voltage Output »
 - OK  Rappel de Cummins, Inc. : 39 052 équipements — « Fuel Filter Hoses May Disconnect and Leak Fuel »
@@ -21,24 +21,23 @@ Vérifiées au hasard : 142 — identiques : 140
 
 ## doj_antitrust
 - produites : 3 {'officiel': 3, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 3}, 'dernier_contenu': '2026-09-23', 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 3}, 'dernier_contenu': '2026-09-23', 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 - OK  Antitrust (ministère de la Justice) : Department of Justice Again Wins Substantial Relief Against Google
 - OK  Antitrust (ministère de la Justice) : Justice Department Issues Statements on the U.S. District Court for the 
 - OK  Antitrust (ministère de la Justice) : Justice Department Reaches Proposed Consent Decree with Pinnacle,  One o
 
 ## sec_poursuites
 - produites : 2 {'officiel': 2, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 2}, 'dernier_contenu': '2026-09-30', 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 2}, 'dernier_contenu': '2026-09-30', 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 - OK  SEC : procédure administrative visant CBIZ, Inc.
 - OK  SEC : procédure administrative visant Eagle Bancorp, Inc.
 
 ## sanctions_us
 - produites : 7 {'officiel': 7, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 7}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 7}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 - OK  Sanctions américaines (OFAC) : Iran-related Designations and Designations Updates; Transnational Criminal Orga
 - OK  Sanctions américaines (OFAC) : Expiration of Emergency With Respect to the Situation in Ethiopia; Ethiopia-rel
-- ÉCART Sanctions américaines (OFAC) : Democratic Republic of the Congo-related Designations Removals
-    - retraits : page 9 ≠ robot 10
+- OK  Sanctions américaines (OFAC) : Democratic Republic of the Congo-related Designations Removals
 - OK  Sanctions américaines (OFAC) : Counter Narcotics, Counter Terrorism, Iran-related, and Non-Proliferation Desig
 - OK  Sanctions américaines (OFAC) : Counter Terrorism and Transnational Criminal Organizations Designations; Belaru
 - OK  Sanctions américaines (OFAC) : Iran-related Designations; Cuba Designations; Belarus-related Designations Remo
@@ -46,27 +45,26 @@ Vérifiées au hasard : 142 — identiques : 140
 
 ## ftc_fusions
 - produites : 20 {'officiel': 20, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 20}, 'dernier_contenu': '2026-09-30', 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
-- OK  FTC : feu vert antitrust anticipé, Prive Aggregator, LP (acquéreur) et Bowman Consulting Group Ltd. (partie vi
-- OK  FTC : feu vert antitrust anticipé, CDW Corporation (acquéreur) et Analytics and Insights Holdings, LLC (partie
-- OK  FTC : feu vert antitrust anticipé, Thoma Bravo Discover Fund V, L.P. (acquéreur) et ACP Investment Fund III-A,
-- OK  FTC : feu vert antitrust anticipé, GC Hermes Holdings Inc. (acquéreur) et Mercury Parent Holdings, Inc. (parti
+- état : {'compte': {'a_verifier': 0, 'recus': 20}, 'dernier_contenu': '2026-09-30', 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
+- OK  FTC : feu vert antitrust anticipé, Indivior Pharmaceuticals, Inc. (acquéreur) et Supernus Pharmaceuticals, Inc
+- OK  FTC : feu vert antitrust anticipé, Blackstone Private Equity Strategies Fund L.P. (acquéreur) et VSC Synapse, 
+- OK  FTC : feu vert antitrust anticipé, Aquiline Financial Services Fund V L.P. (acquéreur) et LM Freeway Co-Invest
+- OK  FTC : feu vert antitrust anticipé, Francisco Partners VII-A, L.P. (acquéreur) et Weave Communications, Inc. (p
 - OK  FTC : feu vert antitrust anticipé, Kirin Holdings Company, Limited (acquéreur) et Jamieson Wellness Inc. (part
-- OK  FTC : feu vert antitrust anticipé, Providence Equity Partners IX-A S.C.Sp. (acquéreur) et CheckedUp Investors,
+- OK  FTC : feu vert antitrust anticipé, New Mountain Partners VII, L.P. (acquéreur) et Gryphon Partners IV, L.P. (p
 - OK  FTC : feu vert antitrust anticipé, KKR Armstrong Aggregator L.P. (acquéreur) et Integer Holdings Corporation (
 - OK  FTC : feu vert antitrust anticipé, Watsco, Inc. (acquéreur) et BBH Capital Partners VI, L.P. (partie visée)
-- OK  FTC : feu vert antitrust anticipé, The Hartford Insurance Group, Inc. (acquéreur) et Equitable Holdings, Inc. 
-- OK  FTC : feu vert antitrust anticipé, Madison Industries Holdings LLC (acquéreur) et ebm-papst Mulfingen GmbH & C
-- OK  FTC : feu vert antitrust anticipé, Bain Capital Insurance Fund, L.P. (acquéreur) et Spitfire Topco Ltd. (parti
+- OK  FTC : feu vert antitrust anticipé, Providence Equity Partners IX-A S.C.Sp. (acquéreur) et CheckedUp Investors,
+- OK  FTC : feu vert antitrust anticipé, Korea Zinc Co., Ltd. (acquéreur) et SOLARCYCLE, Inc. (partie visée)
+- OK  FTC : feu vert antitrust anticipé, BP UFT Aggregator, L.P. (acquéreur) et Shad Stringfellow (partie visée)
 - OK  FTC : feu vert antitrust anticipé, Velocity I Aggregator, LP (acquéreur) et AG FCH Aggregator Holdings, LP (pa
 
 ## fda
 - produites : 16 {'officiel': 16, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 16}, 'dernier_contenu': '2026-09-28', 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 16}, 'dernier_contenu': '2026-09-28', 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 - OK  FDA : nouveau médicament approuvé, ETCAMAH (camizestrant), de AstraZeneca Pharmaceuticals LP
 - OK  FDA : nouveau médicament approuvé, LYRFIGTU (lirafugratinib hydrochloride), de ELEVAR THERAPEUTICS INC
-- ÉCART FDA : nouveau médicament approuvé, LISRAYA (brepocitinib tosylate), de Priovant Therapeutics, Inc.
-    - vérification impossible : ReadTimeout: HTTPSConnectionPool(host='www.accessdata.fda.gov', port=443): Read timed out. (read timeout=60)
+- OK  FDA : nouveau médicament approuvé, LISRAYA (brepocitinib tosylate), de Priovant Therapeutics, Inc.
 - OK  FDA : nouveau médicament approuvé, ZANVASTRO (zilganersen sodium), de IONIS PHARMS INC
 - OK  FDA : nouveau médicament approuvé, ISEMBYLD (apitegromab-mstn), de SCHOLAR ROCK INC
 - OK  FDA : nouveau médicament approuvé, PASATRU (garetosmab-grts), de Regeneron Pharmaceuticals, Inc.
@@ -79,11 +77,11 @@ Vérifiées au hasard : 142 — identiques : 140
 
 ## sec_13f
 - produites : 0 {'officiel': 0, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 
 ## maison_blanche
 - produites : 21 {'officiel': 18, 'confirme': 3, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-09-29', 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-09-29', 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 - OK  Décret présidentiel : Honoring the American History of the Great Lakes and Renaming Lake Ontario as Lake Ameri
 - OK  Décret présidentiel : Eliminating Disease-Carrying Pests And Restoring Enjoyment Of The Great Outdoors
 - OK  Proclamation présidentielle : Excluding Certain Canadian Alcoholic Beverages from Importation into the United 
@@ -99,7 +97,7 @@ Vérifiées au hasard : 142 — identiques : 140
 
 ## fed
 - produites : 4 {'officiel': 4, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 3}, 'dernier_contenu': '2026-09-16', 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 3}, 'dernier_contenu': '2026-09-16', 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 - OK  Fed : taux directeur maintenu entre 3,5 % et 3,75 % (vote : 9 pour, 3 contre)
 - OK  Fed : taux directeur relevé de 0,25 point, entre 3,75 % et 4 % (vote : 12 pour, 0 contre)
 - OK  Fed : taux directeur maintenu entre 3,5 % et 3,75 % (avec dissidence)
@@ -107,14 +105,14 @@ Vérifiées au hasard : 142 — identiques : 140
 
 ## banque_canada
 - produites : 3 {'officiel': 3, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 2}, 'dernier_contenu': '2026-09-02', 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 2}, 'dernier_contenu': '2026-09-02', 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 - OK  Banque du Canada : taux directeur maintenu à 2,25 %
 - OK  Banque du Canada : taux directeur maintenu à 2,25 %
 - OK  Banque du Canada : taux directeur maintenu à 2,25 %
 
 ## sec_form144
 - produites : 24 {'officiel': 23, 'confirme': 0, 'a_verifier': 1}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 - OK  BENDER INVESTMENT CO (MEMBER OF 10% OWNER) prévoit vendre 100 000 actions de Cactus, Inc.
 - OK  WAJID ALI (dirigeant) prévoit vendre 24 542 actions de Lumentum Holdings Inc.
 - OK  Jun Peng (Director & Officer) prévoit vendre 3 000 000 actions de Pony AI Inc.
@@ -130,11 +128,11 @@ Vérifiées au hasard : 142 — identiques : 140
 
 ## sec_offres
 - produites : 0 {'officiel': 0, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 
 ## cftc_cot
 - produites : 8 {'officiel': 8, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 - OK  Pétrole WTI : les gros spéculateurs sont acheteurs nets de 109 463 contrats (−31 643 en une semaine)
 - OK  Nasdaq-100 (E-mini) : les gros spéculateurs sont acheteurs nets de 51 247 contrats (−4 903 en une semaine)
 - OK  Obligations américaines 10 ans : les gros spéculateurs sont vendeurs nets de 900 615 contrats (−88 863 en une 
@@ -146,7 +144,7 @@ Vérifiées au hasard : 142 — identiques : 140
 
 ## registre_federal
 - produites : 12 {'officiel': 9, 'confirme': 3, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 - OK  Décret présidentiel : Eliminating Disease-Carrying Pests and Restoring Enjoyment of the Great Outdoors
 - OK  Sanctions (Trésor, OFAC) : Cuba Sanctions Regulations
 - OK  Décret présidentiel : Streamlining Access to Government Services Through America.gov
@@ -162,7 +160,7 @@ Vérifiées au hasard : 142 — identiques : 140
 
 ## ventes_armes
 - produites : 22 {'officiel': 22, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-09-22', 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-09-22', 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 - OK  Vente d'armes à l'étranger : France
 - OK  Vente d'armes à l'étranger : Grèce — fournisseur : Aero Vironment Inc.
 - OK  Vente d'armes à l'étranger : Italie — fournisseur : BAE Systems
@@ -178,7 +176,7 @@ Vérifiées au hasard : 142 — identiques : 140
 
 ## senat_ptr
 - produites : 9 {'officiel': 9, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 - OK  Sheldon Whitehouse (Sénat) vend ADI — conjoint·e
 - OK  A. Mitchell McConnell Jr. (Sénat) achète WFC — conjoint·e
 - OK  Sheldon Whitehouse (Sénat) vend V (2 transactions) — conjoint·e, l'élu·e
@@ -191,7 +189,7 @@ Vérifiées au hasard : 142 — identiques : 140
 
 ## chambre_ptr
 - produites : 80 {'officiel': 79, 'confirme': 0, 'a_verifier': 1}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 - OK  Thomas H. Kean (Chambre, NJ07) achète LIN
 - OK  Kevin Hern (Chambre, OK01) vend CDNS (2 transactions) — compte conjoint
 - OK  Richard W. Allen (Chambre, GA12) achète TSM — conjoint·e
@@ -207,14 +205,14 @@ Vérifiées au hasard : 142 — identiques : 140
 
 ## nouvelles_defense_ca
 - produites : 3 {'officiel': 3, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 - OK  Le gouvernement du Canada commence la construction d’une nouvelle installation de chauffage central à la 5e Es
 - OK  L’Aviation royale canadienne s’associe au Fanshawe College pour offrir de l’instruction
 - OK  Le gouvernement du Canada franchit une nouvelle étape en vue de doter l’Aviation royale canadienne d’une capac
 
 ## nouvelles_eco_ca
 - produites : 7 {'officiel': 7, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:51:41+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:51:41+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:57:00+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:57:00+00:00'}
 - OK  Le gouvernement du Canada présente la nouvelle Mégadéduction à la productivité pour aider les entreprises à in
 - OK  Le Tribunal ouvre un réexamen relatif à l’expiration — Certains petits transformateurs de puissance provenant 
 - OK  Le gouvernement du Canada investit dans la création de 10 000 placements professionnels liés à l’IA pour de je
