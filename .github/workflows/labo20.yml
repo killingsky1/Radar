@@ -4,7 +4,7 @@ on:
   push:
     branches: [labo]
     paths: ["labo/declencheur-score.txt", "labo/recalcul_score.py", "labo/site_score.cjs", "labo/verif_congres.py",
-            "labo/verif_canada3c.py", "labo/verif_canada3c2.py", ".github/workflows/labo20.yml"]
+            "labo/verif_canada3c.py", "labo/verif_canada3c2.py", "labo/verif_lot3d.py", ".github/workflows/labo20.yml"]
 
 permissions:
   contents: write
@@ -39,6 +39,9 @@ jobs:
         run: |
           which pdftotext || (sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils)
           python labo/verif_canada3c2.py principal/data labo/resultats-score/canada3c2.txt
+      - name: États-Unis (lot 3d) contre-vérifié aux documents officiels (XML du Trésor, pages de la douane)
+        if: always()
+        run: python labo/verif_lot3d.py principal/data labo/resultats-score/lot3d.txt
       - name: Navigateur (installé même si une vérification a échoué)
         if: always()
         run: npm i --no-save playwright@1.56.1

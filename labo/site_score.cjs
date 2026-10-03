@@ -8,7 +8,7 @@ const fs = require("fs");
   const elusLocal = fs.readFileSync(fichierElus, "utf8");
   const lobbyingLocal = fs.readFileSync(fichierLobbying, "utf8");
   const lobbying = JSON.parse(lobbyingLocal);
-  const VERSION = "0.12.0";
+  const VERSION = "0.13.0";
   const base = process.env.BASE || "https://killingsky1.github.io/Radar/"; // BASE : essai local seulement
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
@@ -231,8 +231,48 @@ const fs = require("fs");
     sourcesOk = sourcesOk && etat.startsWith("OK");
   }
   await p.locator(".ecran-retour, .retour").first().click().catch(() => {});
+  // Lot 3d : une adjudication du Trésor et un message de la douane (catégorie Gouvernement), puis les sources laissées de côté
+  await p.locator("nav.onglets button", { hasText: "Fil" }).click();
+  await p.locator(".puce", { hasText: "Gouvernement" }).click();
+  let etatsUnisOk = true;
+  for (const [nom, debut, mention] of [
+    ["v24-tresor", "Trésor américain : adjudication", "Source : Trésor des États-Unis, Bureau of the Fiscal Service"],
+    ["v25-douane", "Douane américaine :", "Source : U.S. Customs and Border Protection (messages CSMS)."],
+  ]) {
+    const l = p.locator(".ligne", { hasText: debut });
+    if (!(await l.count())) { dire(`États-Unis : aucune info « ${debut} » dans le fil`); etatsUnisOk = false; continue; }
+    await l.first().click(); await p.waitForSelector(".feuille-fond.ouvert"); await p.waitForTimeout(400);
+    const titreU = await p.locator(".detail-titre").innerText();
+    const detailsU = await p.locator(".details-officiels .detail-officiel").count();
+    if (detailsU) await p.locator(".details-officiels").evaluate((el) => el.previousElementSibling.scrollIntoView({ block: "start" }));
+    await photo(nom);
+    const mU = (await p.locator(".detail-pied .mention").count()) ? await p.locator(".detail-pied .mention").innerText() : "";
+    const ratesU = await p.locator(".feuille .controle.rate").count();
+    const bonU = titreU.includes(debut) && detailsU > 0 && mU.startsWith(mention) && ratesU === 0;
+    dire(`États-Unis : « ${titreU.slice(0, 110)} » · ${detailsU} détails · mention « ${mU.slice(0, 70)}… » · ${ratesU} contrôle(s) raté(s) · conforme : ${bonU ? "OUI" : "NON"}`);
+    etatsUnisOk = etatsUnisOk && bonU;
+    await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
+  }
+  await p.locator("nav.onglets button", { hasText: "Accueil" }).click(); await p.waitForTimeout(400);
+  await p.locator(".tuile", { hasText: "Sources actives" }).click(); await p.waitForTimeout(600);
+  let ecarteesOk = true;
+  for (const nom of ["Pentagone : contrats du jour", "GAO : contestations", "Fonds souverain de la Norvège", "Communiqués officiels",
+                     "Prix des actions (Yahoo", "SEC : échecs de livraison"]) {
+    const s = p.locator(".source", { hasText: nom });
+    const etat = (await s.count()) ? await s.first().locator(".source-etat").innerText() : "absente";
+    if (nom.startsWith("Fonds souverain")) { await s.first().evaluate((el) => el.scrollIntoView({ block: "center" })); await photo("v26-sources-laissees-de-cote"); }
+    dire(`Source « ${nom} » : ${etat.slice(0, 140)}`);
+    ecarteesOk = ecarteesOk && etat.startsWith("Laissée de côté");
+  }
+  for (const nom of ["Trésor américain : adjudications", "Douane américaine : directives"]) {
+    const s = p.locator(".source", { hasText: nom });
+    const etat = (await s.count()) ? await s.first().locator(".source-etat").innerText() : "absente";
+    dire(`Source « ${nom} » : ${etat}`);
+    ecarteesOk = ecarteesOk && etat.startsWith("OK");
+  }
+  await p.locator(".retour").first().click().catch(() => {});
   dire(`Erreurs du navigateur : ${erreurs.length ? erreurs.join(" | ") : "aucune"}`);
-  const ok = pareil && elusPareil && lobbyingPareil && memeTop && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && !erreurs.length && js.includes(VERSION);
+  const ok = pareil && elusPareil && lobbyingPareil && memeTop && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && !erreurs.length && js.includes(VERSION);
   dire(ok ? "VERDICT : OK" : "VERDICT : PROBLÈME");
   fs.writeFileSync(`${dossier}/site.txt`, lignes.join("\n") + "\n");
   await b.close();
