@@ -1,0 +1,1496 @@
+{
+  "id" : "6axg-epim",
+  "name" : "Recalls Data",
+  "assetType" : "dataset",
+  "attribution" : "National Highway Traffic Safety Administration",
+  "averageRating" : 0,
+  "category" : "Automobiles",
+  "createdAt" : 1615810051,
+  "description" : "About the Data:\nThe dataset includes recall information related to specific NHTSA campaigns. Users can filter based on characteristics like manufacturer and component. The dataset can also be filtered by recall type: tires, vehicles, car seats, and equipment. The earliest campaign data is from 1966. The dataset displays the completion rate from the latest Recall Quarterly Report or Annual Report data from Year 2015 Quarter 1 (2015-1) onward.\n\nData Reporting Requirement:\nManufacturers who determine that a product or piece of original equipment either contains a safety defect or is not in compliance with Federal safety standards are required to notify NHTSA within 5 business days. NHTSA requires that manufacturers file a Defect and Noncompliance Report in compliance with Federal Regulation 49 (the National Traffic and Motor Safety Act) Part 573, which identifies the requirements for safety recalls. This information is stored in the NHTSA database referenced above.\n\nNotes:\nThe default visualization depicted here represents only the top 12 manufacturers for the current calendar year. Please use the Filters for specific data requests. For a complete historical perspective, please visit:\nhttps://www.nhtsa.gov/sites/nhtsa.gov/files/2023-03/2022-Recalls-Annual-Report_030223-tag.pdf.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 248850,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "USGOV_WORKS",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 39348839,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1677626536,
+  "publicationGroup" : 18135188,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1790933855,
+  "rowsUpdatedBy" : "uatt-a9dr",
+  "tableId" : 19072869,
+  "totalTimesRated" : 0,
+  "viewCount" : 339281,
+  "viewLastModified" : 1790933813,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1625140263,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 5325483,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1625139799,
+    "targetAudience" : "public",
+    "workflowId" : 568,
+    "reviewer" : {
+      "id" : "9ni7-629e",
+      "displayName" : "Daniel Morgan"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1625140264,
+      "failureCount" : 0,
+      "startedAt" : 1625140263,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "qexf-wu67",
+      "displayName" : "Gopal Rajanala"
+    }
+  }, {
+    "state" : "submittable",
+    "submissionObject" : "internal_audience_request",
+    "submissionOutcome" : "change_audience",
+    "targetAudience" : "internal",
+    "workflowId" : 5258,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 572305526,
+    "name" : "Report Received Date",
+    "dataTypeName" : "calendar_date",
+    "description" : "Displays the date that NHTSA received the Defect and Noncompliance report from the manufacturer.",
+    "fieldName" : "report_received_date",
+    "position" : 1,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 133082328,
+    "cachedContents" : {
+      "non_null" : "30338",
+      "largest" : "2026-09-30T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2013-10-17T00:00:00.000",
+        "count" : "42"
+      }, {
+        "item" : "2002-08-15T00:00:00.000",
+        "count" : "29"
+      }, {
+        "item" : "2018-12-19T00:00:00.000",
+        "count" : "22"
+      }, {
+        "item" : "2018-01-09T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2003-11-04T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2007-06-07T00:00:00.000",
+        "count" : "18"
+      }, {
+        "item" : "2009-07-29T00:00:00.000",
+        "count" : "17"
+      }, {
+        "item" : "2014-07-02T00:00:00.000",
+        "count" : "17"
+      }, {
+        "item" : "2011-01-31T00:00:00.000",
+        "count" : "17"
+      }, {
+        "item" : "2023-12-21T00:00:00.000",
+        "count" : "17"
+      }, {
+        "item" : "2023-12-22T00:00:00.000",
+        "count" : "17"
+      }, {
+        "item" : "2025-10-10T00:00:00.000",
+        "count" : "17"
+      }, {
+        "item" : "2022-08-04T00:00:00.000",
+        "count" : "16"
+      }, {
+        "item" : "2025-09-25T00:00:00.000",
+        "count" : "16"
+      }, {
+        "item" : "2025-12-18T00:00:00.000",
+        "count" : "15"
+      }, {
+        "item" : "2025-03-14T00:00:00.000",
+        "count" : "15"
+      }, {
+        "item" : "2007-09-05T00:00:00.000",
+        "count" : "15"
+      }, {
+        "item" : "2019-03-01T00:00:00.000",
+        "count" : "15"
+      }, {
+        "item" : "2008-11-24T00:00:00.000",
+        "count" : "15"
+      }, {
+        "item" : "2005-06-02T00:00:00.000",
+        "count" : "15"
+      } ],
+      "smallest" : "1966-01-19T00:00:00.000",
+      "count" : "30338",
+      "cardinality" : "30338"
+    },
+    "format" : {
+      "view" : "date"
+    }
+  }, {
+    "id" : 572305527,
+    "name" : "NHTSA ID",
+    "dataTypeName" : "text",
+    "description" : "NHTSA CAMPAIGN NUMBER, Displays the recall number. The recall number is composed of the two-digit year, the one-character recall type, the two-character recall sub-type, the three-character recall number for the year, and the three-character recall subject.",
+    "fieldName" : "nhtsa_id",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 133082339,
+    "cachedContents" : {
+      "non_null" : "30338",
+      "largest" : "99V363000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "06V037000",
+        "count" : "1"
+      }, {
+        "item" : "88V027000",
+        "count" : "1"
+      }, {
+        "item" : "23V159000",
+        "count" : "1"
+      }, {
+        "item" : "04V237000",
+        "count" : "1"
+      }, {
+        "item" : "15T002000",
+        "count" : "1"
+      }, {
+        "item" : "90V051000",
+        "count" : "1"
+      }, {
+        "item" : "07E074000",
+        "count" : "1"
+      }, {
+        "item" : "73V228000",
+        "count" : "1"
+      }, {
+        "item" : "67V062000",
+        "count" : "1"
+      }, {
+        "item" : "95E003005",
+        "count" : "1"
+      }, {
+        "item" : "84V136000",
+        "count" : "1"
+      }, {
+        "item" : "16V709000",
+        "count" : "1"
+      }, {
+        "item" : "79V096000",
+        "count" : "1"
+      }, {
+        "item" : "20V501000",
+        "count" : "1"
+      }, {
+        "item" : "77V149000",
+        "count" : "1"
+      }, {
+        "item" : "11V136000",
+        "count" : "1"
+      }, {
+        "item" : "25E058000",
+        "count" : "1"
+      }, {
+        "item" : "25V063000",
+        "count" : "1"
+      }, {
+        "item" : "23V138000",
+        "count" : "1"
+      }, {
+        "item" : "19V179000",
+        "count" : "1"
+      } ],
+      "smallest" : "00C007000",
+      "count" : "30338",
+      "cardinality" : "30338"
+    },
+    "format" : { }
+  }, {
+    "id" : 572305528,
+    "name" : "Recall Link",
+    "dataTypeName" : "url",
+    "description" : "Displays a link for Information on the recall on the NHTSA web site.",
+    "fieldName" : "recall_link",
+    "position" : 3,
+    "renderTypeName" : "url",
+    "tableColumnId" : 133082338,
+    "format" : { },
+    "subColumnTypes" : [ "url", "description" ]
+  }, {
+    "id" : 572305529,
+    "name" : "Manufacturer",
+    "dataTypeName" : "text",
+    "description" : "Displays the name of the product manufacturer.",
+    "fieldName" : "manufacturer",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 133082337,
+    "cachedContents" : {
+      "non_null" : "30338",
+      "largest" : "Z-TECH OF PEORIA",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Ford Motor Company",
+        "count" : "1751"
+      }, {
+        "item" : "General Motors, LLC",
+        "count" : "1724"
+      }, {
+        "item" : "Chrysler (FCA US, LLC)",
+        "count" : "1525"
+      }, {
+        "item" : "Forest River, Inc.",
+        "count" : "636"
+      }, {
+        "item" : "Volkswagen Group of America, Inc.",
+        "count" : "598"
+      }, {
+        "item" : "BMW of North America, LLC",
+        "count" : "590"
+      }, {
+        "item" : "Daimler Trucks North America, LLC",
+        "count" : "548"
+      }, {
+        "item" : "Mercedes-Benz USA, LLC",
+        "count" : "504"
+      }, {
+        "item" : "Honda (American Honda Motor Co.)",
+        "count" : "476"
+      }, {
+        "item" : "Nissan North America, Inc.",
+        "count" : "450"
+      }, {
+        "item" : "Mack Trucks, Inc.",
+        "count" : "435"
+      }, {
+        "item" : "PACCAR Incorporated",
+        "count" : "423"
+      }, {
+        "item" : "Blue Bird Body Company",
+        "count" : "416"
+      }, {
+        "item" : "International Motors, LLC",
+        "count" : "411"
+      }, {
+        "item" : "Toyota Motor Engineering & Manufacturing",
+        "count" : "349"
+      }, {
+        "item" : "FREIGHTLINER LLC",
+        "count" : "348"
+      }, {
+        "item" : "Jayco, Inc.",
+        "count" : "316"
+      }, {
+        "item" : "INTERNATIONAL TRUCK & ENGINE CORPORATION",
+        "count" : "308"
+      }, {
+        "item" : "Hyundai Motor America",
+        "count" : "306"
+      }, {
+        "item" : "Volvo Trucks North America",
+        "count" : "265"
+      } ],
+      "smallest" : "1888653 Ontario Inc",
+      "count" : "30338",
+      "cardinality" : "30338"
+    },
+    "format" : { }
+  }, {
+    "id" : 572305530,
+    "name" : "Subject",
+    "dataTypeName" : "text",
+    "description" : "Displays the name of the product and the defect that is the subject of the recall.",
+    "fieldName" : "subject",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 133082336,
+    "cachedContents" : {
+      "non_null" : "30338",
+      "largest" : "Zone Rating Error may cause Loss of Load Control",
+      "null" : "0",
+      "top" : [ {
+        "item" : "REFRIGERATOR/DOMETIC",
+        "count" : "185"
+      }, {
+        "item" : "TIRES",
+        "count" : "161"
+      }, {
+        "item" : "TIRES:TREAD",
+        "count" : "126"
+      }, {
+        "item" : "SUNROOF SEPARATION",
+        "count" : "112"
+      }, {
+        "item" : "BRAKES:HYDRAULIC:LINES:HOSE:NON-METALLIC",
+        "count" : "110"
+      }, {
+        "item" : "EQUIPMENT:CERTIFICATION LABEL",
+        "count" : "108"
+      }, {
+        "item" : "FUEL:THROTTLE LINKAGES AND CONTROL",
+        "count" : "101"
+      }, {
+        "item" : "WHEELS",
+        "count" : "89"
+      }, {
+        "item" : "Rearview Camera Image May Not Display/FMVSS 111",
+        "count" : "86"
+      }, {
+        "item" : "Interior Side Door Lock May Become Inoperable",
+        "count" : "79"
+      }, {
+        "item" : "INTERIOR SYSTEMS:ACTIVE SEAT AND SHOULDER BELTS AN",
+        "count" : "79"
+      }, {
+        "item" : "BRAKES:HYDRAULIC:LINES:METALLIC",
+        "count" : "76"
+      }, {
+        "item" : "STRUCTURE:DOOR ASSEMBLY:LATCHES AND LOCKS",
+        "count" : "76"
+      }, {
+        "item" : "EQUIPMENT:CHILD SEAT",
+        "count" : "75"
+      }, {
+        "item" : "EQUIPMENT:OTHER PIECES:TRAILER HITCHES AND ATTACHM",
+        "count" : "73"
+      }, {
+        "item" : "FUEL:FUEL LINES:HOSES:NON-METALLIC",
+        "count" : "72"
+      }, {
+        "item" : "THRESHOLD WARNING SYSTEM/FMVSS 404/RICON",
+        "count" : "68"
+      }, {
+        "item" : "Passenger Frontal Air Bag Inflator May Explode",
+        "count" : "67"
+      }, {
+        "item" : "FUEL:FUEL TANK ASSEMBLY:TANK",
+        "count" : "63"
+      }, {
+        "item" : "STEERING:LINKAGES:ARM:PITMAN",
+        "count" : "57"
+      } ],
+      "smallest" : "10A Circuit Breaker Can Trip Causing Stall",
+      "count" : "30338",
+      "cardinality" : "30338"
+    },
+    "format" : { }
+  }, {
+    "id" : 572305531,
+    "name" : "Component",
+    "dataTypeName" : "text",
+    "description" : "Displays the name of the defective/noncompliant component associated with the product.",
+    "fieldName" : "component",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 133082335,
+    "cachedContents" : {
+      "non_null" : "22702",
+      "largest" : "WHEELS",
+      "null" : "7636",
+      "top" : [ {
+        "item" : "EQUIPMENT",
+        "count" : "3205"
+      }, {
+        "item" : "ELECTRICAL SYSTEM",
+        "count" : "2363"
+      }, {
+        "item" : "STEERING",
+        "count" : "1647"
+      }, {
+        "item" : "SERVICE BRAKES, HYDRAULIC",
+        "count" : "1577"
+      }, {
+        "item" : "SUSPENSION",
+        "count" : "1440"
+      }, {
+        "item" : "POWER TRAIN",
+        "count" : "1379"
+      }, {
+        "item" : "FUEL SYSTEM, GASOLINE",
+        "count" : "1362"
+      }, {
+        "item" : "STRUCTURE",
+        "count" : "1161"
+      }, {
+        "item" : "ENGINE AND ENGINE COOLING",
+        "count" : "954"
+      }, {
+        "item" : "AIR BAGS",
+        "count" : "903"
+      }, {
+        "item" : "EXTERIOR LIGHTING",
+        "count" : "897"
+      }, {
+        "item" : "SERVICE BRAKES, AIR",
+        "count" : "892"
+      }, {
+        "item" : "VISIBILITY",
+        "count" : "840"
+      }, {
+        "item" : "SEAT BELTS",
+        "count" : "821"
+      }, {
+        "item" : "TIRES",
+        "count" : "736"
+      }, {
+        "item" : "WHEELS",
+        "count" : "438"
+      }, {
+        "item" : "LATCHES/LOCKS/LINKAGES",
+        "count" : "330"
+      }, {
+        "item" : "VEHICLE SPEED CONTROL",
+        "count" : "278"
+      }, {
+        "item" : "BACK OVER PREVENTION",
+        "count" : "273"
+      }, {
+        "item" : "SEATS",
+        "count" : "245"
+      } ],
+      "smallest" : "AIR BAGS",
+      "count" : "30338",
+      "cardinality" : "30338"
+    },
+    "format" : { }
+  }, {
+    "id" : 572305532,
+    "name" : "Mfr Campaign Number",
+    "dataTypeName" : "text",
+    "description" : "Displays the identification number assigned to the recall by the manufacturer.",
+    "fieldName" : "mfr_campaign_number",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 133082334,
+    "cachedContents" : {
+      "non_null" : "30036",
+      "largest" : "ZL4",
+      "null" : "302",
+      "top" : [ {
+        "item" : "NR (Not Reported)",
+        "count" : "16634"
+      }, {
+        "item" : "N/A",
+        "count" : "21"
+      }, {
+        "item" : "TBD",
+        "count" : "16"
+      }, {
+        "item" : "None",
+        "count" : "16"
+      }, {
+        "item" : "150",
+        "count" : "10"
+      }, {
+        "item" : "39-0139830",
+        "count" : "10"
+      }, {
+        "item" : "NA",
+        "count" : "8"
+      }, {
+        "item" : "05S28",
+        "count" : "7"
+      }, {
+        "item" : "145",
+        "count" : "6"
+      }, {
+        "item" : "147",
+        "count" : "6"
+      }, {
+        "item" : "19E-009",
+        "count" : "6"
+      }, {
+        "item" : "10C-5",
+        "count" : "5"
+      }, {
+        "item" : "18E-063",
+        "count" : "5"
+      }, {
+        "item" : "15E-068",
+        "count" : "5"
+      }, {
+        "item" : "000314",
+        "count" : "5"
+      }, {
+        "item" : "PG5215",
+        "count" : "5"
+      }, {
+        "item" : "4EN",
+        "count" : "5"
+      }, {
+        "item" : "2618F",
+        "count" : "5"
+      }, {
+        "item" : "1317F",
+        "count" : "5"
+      }, {
+        "item" : "41-0967369",
+        "count" : "5"
+      } ],
+      "smallest" : "00001",
+      "count" : "30338",
+      "cardinality" : "30338"
+    },
+    "format" : { }
+  }, {
+    "id" : 572305533,
+    "name" : "Recall Type",
+    "dataTypeName" : "text",
+    "description" : "Displays the recall category. If the recall involves a noncompliant product, the word \"compliance\" appears in this field. If the recall involves a defective product, the word \"Defect\" appears. If the recall involves a product that requires a safety improvement, the phrase \"safety improvement\" appears.",
+    "fieldName" : "recall_type",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 133082333,
+    "cachedContents" : {
+      "non_null" : "30338",
+      "largest" : "Vehicle",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Vehicle",
+        "count" : "26431"
+      }, {
+        "item" : "Equipment",
+        "count" : "2866"
+      }, {
+        "item" : "Tire",
+        "count" : "788"
+      }, {
+        "item" : "Child Seat",
+        "count" : "253"
+      } ],
+      "smallest" : "Child Seat",
+      "count" : "30338",
+      "cardinality" : "30338"
+    },
+    "format" : { }
+  }, {
+    "id" : 572305534,
+    "name" : "Potentially Affected",
+    "dataTypeName" : "number",
+    "description" : "Displays the number of products that are potentially affected by the recall.",
+    "fieldName" : "potentially_affected",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 133082332,
+    "cachedContents" : {
+      "non_null" : "30338",
+      "largest" : "32000000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "283"
+      }, {
+        "item" : "2",
+        "count" : "274"
+      }, {
+        "item" : "3",
+        "count" : "209"
+      }, {
+        "item" : "4",
+        "count" : "209"
+      }, {
+        "item" : "5",
+        "count" : "202"
+      }, {
+        "item" : "8",
+        "count" : "172"
+      }, {
+        "item" : "6",
+        "count" : "162"
+      }, {
+        "item" : "7",
+        "count" : "160"
+      }, {
+        "item" : "10",
+        "count" : "154"
+      }, {
+        "item" : "9",
+        "count" : "135"
+      }, {
+        "item" : "12",
+        "count" : "134"
+      }, {
+        "item" : "17",
+        "count" : "126"
+      }, {
+        "item" : "11",
+        "count" : "121"
+      }, {
+        "item" : "14",
+        "count" : "120"
+      }, {
+        "item" : "16",
+        "count" : "118"
+      }, {
+        "item" : "13",
+        "count" : "116"
+      }, {
+        "item" : "20",
+        "count" : "115"
+      }, {
+        "item" : "18",
+        "count" : "111"
+      }, {
+        "item" : "15",
+        "count" : "110"
+      }, {
+        "item" : "22",
+        "count" : "104"
+      } ],
+      "smallest" : "0",
+      "count" : "30338",
+      "cardinality" : "30338"
+    },
+    "format" : { }
+  }, {
+    "id" : 572305535,
+    "name" : "Recall Description",
+    "dataTypeName" : "text",
+    "description" : "Displays a summary of the problem that prompted the recall. The description includes the product make, model, and model year.",
+    "fieldName" : "defect_summary",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 133082331,
+    "cachedContents" : {
+      "non_null" : "27937",
+      "largest" : "Zoox, Inc. (Zoox) is recalling certain Automated Driving Systems (ADS). The ADS software may fail to detect heavy smoke, allowing the vehicle to enter an area of low visibility, particularly active emergency scenes.",
+      "null" : "2401",
+      "top" : [ {
+        "item" : "ON CERTAIN TRAILERS EQUIPPED WITH SEALCO SPRING BRAKE CONTROL VALVE ASSEMBLIES INCORPORATED IN ARVINMERITOR AXLES, PART NOS. 110700 AND 110800, THERE IS A RECESSED AREA ON TOP OF THE VALVE IN WHICH A BRASS GUIDE PIN FITS DOWN INSIDE THE BODY OF THE VALVE AND IS HELD IN PLACE BY A STEEL SNAP RING.  THE RECESSED AREA ALLOWS ACCUMULATION OF WATER, DIRT, AND/OR CHEMICALS TO BUILD UP BEHIND THE SNAP RING TO THE POINT WHERE IT WILL NO LONGER CONTAIN THE GUIDE PIN RESULTING IN A FAILURE OF THE AIR VALVE.",
+        "count" : "28"
+      }, {
+        "item" : "ON CERTAIN TRAILERS EQUIPPED WITH BENDIX EC-30T ELECTRONIC CONTROL UNITS (ECU).  IF THE TRAILER-MOUNTED ABS WARNING LAMP CIRCUIT EXPERIENCES AN ELECTRICAL SHORT AND THE SHORT IS NOT REPAIRED, THE HIGH SIDE POWER SWITCH INSIDE THE ECU THAT CONTROLS THE ILLUMINATION OF THE TRAILER-MOUNTED ABS WARNING LAMP MAY EVENTUALLY BECOME THERMALLY STRESSED AND EXPERIENCE AN ELECTRICAL SHORT.",
+        "count" : "23"
+      }, {
+        "item" : "ON CERTAIN TRAILERS EQUIPPED WITH BENDIX SR-2, SR-4, AND SR-5 TRAILER SPRING BRAKE VALVE ASSEMBLIES, THE MOLDED RUBBER FACE OF THE INLET/EXHAUST VALVE (I/E VALVE) COMPONENT OF THE AFFECTED VALVES CAN SEPARATE FROM THE VALVE'S METAL INSERT.  AIR CAN BE TRAPPED BY A SEPARATED I/E VALVE CAUSING IT TO BALLOON AND BLOCK THE EXHAUST PASSAGE OF THE TRAILER SPRING BRAKE CIRCUIT.",
+        "count" : "20"
+      }, {
+        "item" : "VEHICLE DESCRIPTION:  CERTAIN LIMOUSINES STRETCHED OVER 60 INCHES FAIL TO COMPLY WITH THE REQUIREMENTS OF FMVSS NO. 109, \"NEW PNEUMATIC TIRES,\" AND NO. 110, \"TIRE SELECTION AND RIMS.\"",
+        "count" : "16"
+      }, {
+        "item" : "CERTAIN MOTOR HOME CHASSIS FAIL TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 105, \"HYDRAULIC AND ELECTRIC BRAKE SYSTEMS.\"  THE BRAKE SYSTEM WARNING INDICATOR MAY NOT FUNCTION AS REQUIRED BY STANDARD.",
+        "count" : "14"
+      }, {
+        "item" : "CERTAIN RECREATIONAL VEHICLES EQUIPPED WITH A TWO-DOOR REFRIGERATOR, MANUFACTURED BY THE DOMETIC CORPORATION, MAY HAVE A DEFECT IN THE BOILER TUBE.  PRESSURIZED COOLANT SOLUTION COULD BE RELEASED INTO AN AREA WHERE AN IGNITION SOURCE (GAS FLAME) IS PRESENT.",
+        "count" : "12"
+      }, {
+        "item" : "THE FRONT SAFETY BELT BUCKLE RELEASE BUTTONS CAN BREAK. THESE RED PLASTIC RELEASE BUTTONS ARE MARKED \"PRESS.\" IF A BUTTON BREAKS, PIECES CAN FALL INTO THE BUCKLE ASSEMBLY CAUSING THE BUCKLE TO OPERATE IMPROPERLY.",
+        "count" : "11"
+      }, {
+        "item" : "ON CERTAIN TRAVEL TRAILERS EQUIPPED WITH SAMSUNG MICROWAVE OVENS, THESE OVENS WERE PRODUCED WITH A DEFECTIVE PANEL.  AN ELECTRICAL SHORT CAN OCCUR BETWEEN CIRCUIT PATTERNS ON THE MEMBRANE PANEL, ESPECIALLY OVERLAPPED BY A \"JUMPER\" OR JUMP WIRE.  THIS MAY CAUSE THE OVEN TO ACTIVATE WITHOUT PRESSING ANY KEY PADS.",
+        "count" : "11"
+      }, {
+        "item" : "AIR SYSTEM BLOCKAGE IN THE AIR DRYER OCCURS DEGRADING THE MOISTURE REMOVING CAPABILITIES OF THE DRYER WHEN THE VEHICLE IS OPERATED IN A COLD ENVIRONMENT AND MOISTURE ACCUMULATES AND FREEZES IN THE AIR DRYER OR IN THE LINE BETWEEN THE DRYER AND THE AIR SYSTEM RESERVOIR. THE AIR DRYER CAN BECOME OVERPRESSURIZED CAUSING THE AIR DRYER CARTRIDGE TO SEPARATE FROM THE MOUNTING BASE.",
+        "count" : "11"
+      }, {
+        "item" : "VEHICLE DESCRIPTION:  MOTOR HOMES EQUIPPED WITH AQUA-HOT HEATING SYSTEMS, MODEL 431-3 ZONE WITH ENGINE LOOP.  FIBERGLASS INSULATING MATERIAL LOCATED UNDER THE BURNER HEAD ON THE FLOOR OF THE HEATER ENCLOSURE, CAN BECOME SOAKED WITH FLUIDS (ETHYLENE GLYCOL AND/OR DIESEL FUEL).",
+        "count" : "11"
+      }, {
+        "item" : "PASSENGERS CLOTHING CAN UNKNOWINGLY BECOME CAUGHT IN THE HANDRAILS AT BUS DOORS WHEN EXITING THE BUS.",
+        "count" : "10"
+      }, {
+        "item" : "PASSENGER'S CLOTHING CAN UNKNOWINGLY BECOME CAUGHT IN THE HANDRAILS AT BUS DOORS WHEN EXITING THE BUS.",
+        "count" : "9"
+      }, {
+        "item" : "HEATER HOSE MAY BE INCORRECTLY ROUTED.",
+        "count" : "8"
+      }, {
+        "item" : "THESE AXLES CONSIST OF A STEEL TUBULAR CENTER SECTION AND FORGED STEEL SPINDLES THAT ARE WELDED TO EACH END OF THE TUBE. EITHER SPINDLE CAN CONTAIN A CIRCUMFERENTIAL CRACK THROUGH A PORTION OF ITS CROSS SECTION.",
+        "count" : "8"
+      }, {
+        "item" : "VEHICLE DESCRIPTION:  MOTOR HOMES BUILT ON A FORD CHASSIS.  THE BRAKE SYSTEM WARNING INDICATOR LAMP IS NOT IN THE CORRECT POSITION IN THE INSTRUMENT CLUSTER. THIS DOES NOT MEET THE REQUIREMENTS OF FMVSS NO. 105, \"HYDRAULIC BRAKE SYSTEMS.\"",
+        "count" : "8"
+      }, {
+        "item" : "VEHICLE DESCRIPTION:  TRAILERS EQUIPPED WITH AFTERMARKET ALUMINUM DUAL WHEELS, 22.5X8.25, ONE-PIECE, TUBELESS, SUPPLIED BY ACCURIDE/AKW.  CERTAIN DESIGN REVISIONS COMBINED WITH PROCESS CONDITIONS CAUSED FATIGUE CRACKS IN THESE WHEELS.",
+        "count" : "7"
+      }, {
+        "item" : "CERTAIN MOTOR HOMES EQUIPPED WITH A TWO-DOOR REFRIGERATOR, MANUFACTURED BY THE DOMETIC CORPORATION, MAY HAVE A DEFECT IN THE BOILER TUBE.  PRESSURIZED COOLANT SOLUTION COULD BE RELEASED INTO AN AREA WHERE AN IGNITION SOURCE (GAS FLAME) IS PRESENT.",
+        "count" : "7"
+      }, {
+        "item" : "ON CERTAIN MOTOR HOMES BUILT WITH CUMMINS  ISL CM850 DIESEL ENGINES, THE CONNECTING ROD CONTAINS A MACHINING DEFECT IN THE WRIST PIN BUSHING OF THE ROD THAT COULD CAUSE A SEIZURE OF THE PISTON PIN.",
+        "count" : "7"
+      }, {
+        "item" : "ON CERTAIN CLASS A MOTOR HOMES EQUIPPED WITH VEHICLE SYSTEMS' AQUA-HOT AND HYDRO-HOT WATER HEATERS, WHICH USE WEBASTO BURNER TUBES, THE BURNER TUBES DO NOT MEET SPECIFICATIONS AND COULD FAIL PREMATURELY.",
+        "count" : "7"
+      }, {
+        "item" : "THE  \"O\" RINGS OF THE REGULATOR ASSEMBLY IN THE ONAN EMERALD AND MARQUIS BRAND GENERATOR SETS CAN WEAKEN AND BREAK WHEN EXPOSED TO HIGH AMBIENT TEMPERATURES.",
+        "count" : "6"
+      } ],
+      "smallest" : "16 X 6 INCH, 5 DEGREE DROP CENTER, ONE-PIECE TUBELESS STEEL WHEELS FOR USE ON LIGHT TRUCKS MANUFACTURED ON AUGUST 14 AND 15, 2003, PART NO. 29581.  A PORTION OF THE WHEELS WERE ASSEMBLED USING A RIM THAT WAS LIGHTER THAN THE RIM NORMALLY USED.  THE LOAD RATING STAMPED ON THE WHEELS IS INCORRECT.  THE WHEEL ASSEMBLED WITH THE LIGHTER RIM IS SUBJECT TO A LOAD IN EXCESS OF 2,680 POUNDS AT 80 PSI.",
+      "count" : "30338",
+      "cardinality" : "30338"
+    },
+    "format" : { }
+  }, {
+    "id" : 572305536,
+    "name" : "Consequence Summary",
+    "dataTypeName" : "text",
+    "description" : "Displays a summary of the consequences of the defect or noncompliance.",
+    "fieldName" : "consequence_summary",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 133082330,
+    "cachedContents" : {
+      "non_null" : "25450",
+      "largest" : "Worn or failed suspension assemblies may lead to a loss of vehicle stability and compromised structural integrity, which can increase the risk of a crash.",
+      "null" : "4888",
+      "top" : [ {
+        "item" : "RELEASE OF COOLANT UNDER CERTAIN CONDITIONS COULD IGNITE AND RESULT IN A FIRE.",
+        "count" : "128"
+      }, {
+        "item" : "A fuel leak in the presence of an ignition source increases the risk of a fire.",
+        "count" : "115"
+      }, {
+        "item" : "IN THE EVENT OF A SEPARATION, THE FALLING GLASS COULD CREATE A ROAD HAZARD OR STRIKE A TRAILING VEHICLE, AND CAUSE A CRASH.",
+        "count" : "110"
+      }, {
+        "item" : "THE USER OF THE LIFT COULD BE INJURED SHOULD THE LIFT MOVE UNINTENTIONALLY.",
+        "count" : "84"
+      }, {
+        "item" : "An inflator explosion may result in sharp metal fragments striking the driver or other occupants resulting in serious injury or death.",
+        "count" : "69"
+      }, {
+        "item" : "A LIFT OCCUPANT CAN BE INJURED SHOULD THE LIFT BEGIN TO STOW UNINTENTIONALLY.",
+        "count" : "62"
+      }, {
+        "item" : "A gas leak in the presence of an ignition source can increase the risk of a fire.",
+        "count" : "62"
+      }, {
+        "item" : "A loss of drive power increases the risk of a crash.",
+        "count" : "56"
+      }, {
+        "item" : "FUEL LEAKAGE, IN THE PRESENCE OF AN IGNITION SOURCE, COULD RESULT IN A FIRE.",
+        "count" : "51"
+      }, {
+        "item" : "A fuel leak in the presence of an ignition source can increase the risk of a fire.",
+        "count" : "50"
+      }, {
+        "item" : "IF THIS SOLUTION IS EXPOSED TO AN IGNITION SOURCE UNDER CERTAIN SPECIFIC CIRCUMSTANCES, IT CAN RESULT IN A VEHICLE FIRE.",
+        "count" : "50"
+      }, {
+        "item" : "FUEL LEAKAGE IN THE PRESENCE OF AN IGNITION SOURCE COULD RESULT IN A FIRE.",
+        "count" : "50"
+      }, {
+        "item" : "FAILURE OF THE VALVE IN AN EMPTY OR LIGHTLY LOADED TRAILER WHILE THE VEHICLE IS IN MOTION COULD RESULT IN A HARD APPLICATION OF THE SPRING BRAKES, POSSIBLY LOCKING UP THE TRAILER WHEELS AND RESULTING IN A VEHICLE CRASH.",
+        "count" : "49"
+      }, {
+        "item" : "An engine stall can increase the risk of a crash.",
+        "count" : "45"
+      }, {
+        "item" : "An inflator rupture may result in metal fragments striking the vehicle occupants resulting in serious injury or death.",
+        "count" : "43"
+      }, {
+        "item" : "If the deadbolt jams, the interior side of the door lock may also jam.  A person inside the travel trailer at the time will then be locked in and be unable to exit the vehicle without using the emergency exit, increasing the risk of injury.",
+        "count" : "42"
+      }, {
+        "item" : "If the brake lights incorrectly illuminate, it can confuse other drivers, possibly increasing the risk of a crash.",
+        "count" : "40"
+      }, {
+        "item" : "THE SENSING ALGORITHM OR THERMAL SWITCH INSTALLED TO SHUT OFF POWER TO THE REFRIGERATOR WHEN HIGH TEMPERATURES ARE DETECTED DUE TO A POSSIBLE HYDROGEN GAS LEAK MAY NOT SHUT OFF IN SUFFICIENT TIME TO PREVENT A FIRE.",
+        "count" : "38"
+      }, {
+        "item" : "If the platform side plates crack, the lift platform can separate from the lift and come to rest against the vehicle's lift door.  When the doors are opened, the platform may fall out, increasing the risk of injury to the lift operator.",
+        "count" : "37"
+      }, {
+        "item" : "In the event of a fire, if the fire extinguisher does not function properly, it can increase the risk of injury.",
+        "count" : "37"
+      } ],
+      "smallest" : ".",
+      "count" : "30338",
+      "cardinality" : "30338"
+    },
+    "format" : { }
+  }, {
+    "id" : 572305537,
+    "name" : "Corrective Action",
+    "dataTypeName" : "text",
+    "description" : "Displays a brief description of the proposed solution to the recall.",
+    "fieldName" : "corrective_action",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 133082329,
+    "cachedContents" : {
+      "non_null" : "27950",
+      "largest" : "Zoox has updated the ADS software, free of charge. Zoox's number for this recall is 26-01.",
+      "null" : "2388",
+      "top" : [ {
+        "item" : "DEALERS WILL EQUIP AIR SYSTEMS WITH A PRESSURE RELIEF VALVE TO BE LOCATED BETWEEN THE COMPRESSOR AND THE AIR DRYER. THIS PRESSURE RELIEF VALVE IS INTENDED TO VENT IF EXCESSIVE PRESSURE DEVELOPS IN THE AIR DRYER.",
+        "count" : "18"
+      }, {
+        "item" : "TIRES WILL BE REPLACED WITHIN 60 DAYS OF OWNER\"S NOTIFICATION AT NO CHARGE.",
+        "count" : "14"
+      }, {
+        "item" : "DEALERS WILL REPLACE ALL 5 TIRES (INCLUDING THE SPARE TIRE) WITH MICHELIN TIRES (225/70R16 107T REINFORCED WHITE SIDEWALL) WITH A SUFFICIENTLY HIGHER LOAD RATING.  FORD HAS AGREED TO CONDUCT THE ENTIRE RECALL TO REMEDY THIS NON-COMPLIANCE.  OWNER NOTIFICATION IS EXPECTED TO BEGIN DURING JANUARY 2001.  OWNERS WHO TAKE THEIR VEHICLES TO AN AUTHORIZED DEALER ON AN AGREED UPON SERVICE DATE AND DO NOT RECEIVE THE FREE REMEDY WITHIN A REASONABLE TIME SHOULD CONTACT FORD AT 1-800-248-0186.",
+        "count" : "13"
+      }, {
+        "item" : "ACCURIDE/AKW WILL REPLACE THESE WHEELS.",
+        "count" : "13"
+      }, {
+        "item" : "TIRES WILL BE REPLACED WITHOUT CHARGE WITHIN 60 DAYS OF RECALL NOTIFICATION.",
+        "count" : "12"
+      }, {
+        "item" : "ISRINGHAUSEN IS CONDUCTING THE OWNER NOTIFICATION AND REMEDY CAMPAIGN FOR THIS RECALL.    DEALERS WILL INSPECT THESE SEATS AND REPLACE THE SEAT FRAME ASSEMBLY.",
+        "count" : "11"
+      }, {
+        "item" : "DEXTER AXLE WILL INSPECT AND REPAIR THE AFFECTED AXLES FREE OF CHARGE.",
+        "count" : "11"
+      }, {
+        "item" : "REPLACE OR REPOSITION THE HANDRAILS TO STOP CLOTHING FROM BECOMING CAUGHT.",
+        "count" : "11"
+      }, {
+        "item" : "REPLACE ORIGINAL 1\" REAR WHEEL BRAKE CYLINDER WITH A 1 1/16\" CYLINDER.",
+        "count" : "10"
+      }, {
+        "item" : "EATON WILL USE PORTABLE ULTRASONIC TESTING EQUIPMENT TO INSPECT EACH SUSPECT TRAILER AXLE. TRAILER AXLES CONTAINING DEFECTIVE SPINDLES WILL BE REPLACED WITH EQUIVALENT AXLES.",
+        "count" : "9"
+      }, {
+        "item" : "VSS IS CONDUCTING THE NOTIFICATION AND REMEDY CAMPAIGN FOR THIS RECALL.  DEALERS WILL REMOVE ALL FOAM AND/OR FABRIC SANDWICHED BETWEEN THE RECLINER ASSEMBLY AND THE SEAT FRAME, INSTALL WASHERS BETWEEN THE SEAT RECLINER AND THE SEAT FRAME AT EACH ATTACHMENT POINT, AND INSTALL NEW ATTACHING BOLTS TORQUED TO A HIGHER SPECIFICATION. THESE CORRECTIONS WILL BE MADE TO BOTH THE DRIVER'S AND PASSENGER'S SEATS.",
+        "count" : "9"
+      }, {
+        "item" : "DEALERS WILL PLACE THE BRAKE SYSTEM WARNING INDICATOR LAMP IN THE CORRECT POSITION.",
+        "count" : "8"
+      }, {
+        "item" : "ATWOOD WILL EXCHANGE THESE CARBON MONOXIDE ALARMS AT NO CHARGE TO THE CONSUMER.",
+        "count" : "7"
+      }, {
+        "item" : "DEALER WILL REPLACE INVOLVED TIRES WITHOUT CHARGE WITHIN 60 DAYS OF RECALL NOTIFICATION.",
+        "count" : "7"
+      }, {
+        "item" : "DEALERS WILL REPLACE THE ABS ECU.",
+        "count" : "7"
+      }, {
+        "item" : "INSPECT AND REPLACE ALL BUCKLE ASSEMBLIES FOUND WITH IMPROPER CLEARANCE.",
+        "count" : "6"
+      }, {
+        "item" : "OWNERS SHOULD PROMPTLY CHECK THE CONDITION AND OPERATION OF BOTH FRONT SAFETY BELT BUCKLES AND CAREFULLY INSPECT THE RED RELEASE BUTTON FOR ANY BREAKS OR CRACKS. THEY SHOULD ENSURE THAT BOTH BUCKLES ARE OPERATING PROPERLY BY INSERTING EACH LATCH PLATE INTO ITS BUCKLE, TUGGING ON THE BELT TO MAKE SURE THE LATCH IS SECURELY LOCKED, AND THEN PRESSING THE RELEASE BUTTON. THE LATCH PLATE SHOULD POP OUT OF THE BUCKLE WHEN THE BUTTON IS PRESSED. IF EITHER RELEASE BUTTON SHOWS A SIGN OF BREAKING OR CRACKING OR IF EITHER BUCKLE FAILS TO OPERATE PROPERLY, OWNERS SHOULD PROMPTLY CONTACT THEIR AUTHORIZED DEALER TO SCHEDULE AN APPOINTMENT TO HAVE THE BUCKLE REPLACED OR REPAIRED, FREE OF CHARGE. THE MANUFACTURER IS DEVELOPING A REMEDY DESIGNED TO PREVENT FAILURE OF THE BUTTONS THAT ARE NOT CURRENTLY BROKEN.",
+        "count" : "6"
+      }, {
+        "item" : "DEALER WILL REPLACE RECALLED TIRES WITHOUT CHARGE WITHIN 60 DAYS OF RECALL NOTIFICATION.",
+        "count" : "6"
+      }, {
+        "item" : "OWNER NOTIFICATION IS BEING CONDUCTED BY NEWAY ANCHORLOK.  DEALERS WILL INSPECT AND REPLACE ALL SUSPENSION SUSPENSION BEAMS WITH SUSPENSION BEAMS CONTAINING APPROPRIATE SHAFTS.",
+        "count" : "6"
+      }, {
+        "item" : "VEHICLE SYSTEMS INC. WILL CONDUCT THE OWNER NOTIFICATION FOR THIS CAMPAIGN.  DEALERS WILL REMOVE THE INSULATION FROM BENEATH THE DIESEL HEATING UNIT AS WELL AS FROM BEHIND THE CONTROL THERMOSTAT AND AIR-CONDITIONING HEATING ELEMENT ACCESS COVERS.",
+        "count" : "6"
+      } ],
+      "smallest" : "1) ALL HYDRAULIC SAE 100R1 HOSES WILL BE REPLACED WITH SAE 100R2 HOSES, 2) APPLY LOCKING COMPOUND TO THE LIFTGATE CLEVISES ON THE BZ AND RZ MODEL LIFTGATES, 3) ALL PROPER LOCKING NUTS WILL BE INSTALLED, PROPERLY TORQUED AND WELDED IN PLACE, 4) THE BZ AND RZ MODELS WILL BE MODIFIED TO PREVENT THE TILT CYLINDER CLEVISES FROM BREAKING. NOTE: IF YOUR EQUIPMENT IS PRESENTED TO AN AUTHORIZED DEALER ON AN AGREED UPON SERVICE DATE AND THE REMEDY IS NOT PROVIDED WITHIN A REASONABLE TIME AND FREE OF CHARGE OR THE REMEDY DOES NOT CORRECT THE DEFECT OR NONCOMPLIANCE, PLEASE CONTACT WALTCO SERVICE CENTER AT 1-216-633-9191. ALSO, CONTACT THE NATIONAL HIGHWAY TRAFFIC SAFETY ADMINISTRATION'S AUTO SAFETY HOTLINE AT 1-800-424-9393.",
+      "count" : "30338",
+      "cardinality" : "30338"
+    },
+    "format" : { }
+  }, {
+    "id" : 572305538,
+    "name" : "Park Outside Advisory ",
+    "dataTypeName" : "text",
+    "description" : "Advisory for owners to park outside and away from structures because vehicles can catch fire.",
+    "fieldName" : "fire_risk_when_parked",
+    "position" : 13,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145896765,
+    "cachedContents" : {
+      "non_null" : "30338",
+      "largest" : "Yes",
+      "null" : "0",
+      "top" : [ {
+        "item" : "No",
+        "count" : "30234"
+      }, {
+        "item" : "Yes",
+        "count" : "104"
+      } ],
+      "smallest" : "No",
+      "count" : "30338",
+      "cardinality" : "30338"
+    },
+    "format" : { }
+  }, {
+    "id" : 572305540,
+    "name" : "Do Not Drive Advisory",
+    "dataTypeName" : "text",
+    "description" : "Advisory for owners of these vehicles should park them immediately until the recall remedy is completed.",
+    "fieldName" : "do_not_drive",
+    "position" : 14,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145896767,
+    "cachedContents" : {
+      "non_null" : "30338",
+      "largest" : "Yes",
+      "null" : "0",
+      "top" : [ {
+        "item" : "No",
+        "count" : "30129"
+      }, {
+        "item" : "Yes",
+        "count" : "209"
+      } ],
+      "smallest" : "No",
+      "count" : "30338",
+      "cardinality" : "30338"
+    },
+    "format" : { }
+  }, {
+    "id" : 572305539,
+    "name" : "Completion Rate % (Blank - Not Reported)",
+    "dataTypeName" : "number",
+    "description" : "Displays a percentage that indicates how many units of the recalled population have been remedied. Blank value indicates it has not been reported",
+    "fieldName" : "completion_rate",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 145896766,
+    "cachedContents" : {
+      "non_null" : "11600",
+      "largest" : "3380.00",
+      "null" : "18738",
+      "top" : [ {
+        "item" : "100.00",
+        "count" : "1730"
+      }, {
+        "item" : "0.00",
+        "count" : "248"
+      }, {
+        "item" : "50.00",
+        "count" : "57"
+      }, {
+        "item" : "66.67",
+        "count" : "53"
+      }, {
+        "item" : "75.00",
+        "count" : "44"
+      }, {
+        "item" : "80.00",
+        "count" : "36"
+      }, {
+        "item" : "87.50",
+        "count" : "31"
+      }, {
+        "item" : "33.33",
+        "count" : "31"
+      }, {
+        "item" : "85.71",
+        "count" : "27"
+      }, {
+        "item" : "90.00",
+        "count" : "25"
+      }, {
+        "item" : "25.00",
+        "count" : "21"
+      }, {
+        "item" : "88.89",
+        "count" : "19"
+      }, {
+        "item" : "90.91",
+        "count" : "19"
+      }, {
+        "item" : "40.00",
+        "count" : "17"
+      }, {
+        "item" : "83.33",
+        "count" : "17"
+      }, {
+        "item" : "77.78",
+        "count" : "16"
+      }, {
+        "item" : "92.86",
+        "count" : "16"
+      }, {
+        "item" : "62.50",
+        "count" : "15"
+      }, {
+        "item" : "91.67",
+        "count" : "15"
+      }, {
+        "item" : "55.56",
+        "count" : "15"
+      } ],
+      "smallest" : "0.00",
+      "count" : "30338",
+      "cardinality" : "30338"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "Public Domain U.S. Government",
+    "termsLink" : "https://www.usa.gov/government-works"
+  },
+  "metadata" : {
+    "jsonQuery" : {
+      "order" : [ {
+        "columnFieldName" : "report_received_date",
+        "ascending" : false
+      } ]
+    },
+    "custom_fields" : {
+      "Common Core" : {
+        "Contact Email" : "NHTSA-Datahub@dot.gov",
+        "Homepage" : "https://nhtsa.gov/recalls",
+        "Language" : "en-US",
+        "Update Frequency\t" : "R/P1D",
+        "Contact Name" : "NHTSA-Datahub",
+        "License" : "http://www.usa.gov/publicdomain/label/1.0/",
+        "Program Code" : "021:031",
+        "Publisher" : "National Highway Traffic Safety Administration",
+        "Is Quality Data" : "true",
+        "Bureau Code" : "021:18",
+        "Public Access Level" : "public"
+      },
+      "Common Core 3" : {
+        "Contact Email" : "NHTSA-Datahub@dot.gov",
+        "Rights" : "public",
+        "Language" : "en-US",
+        "Contact Name" : "NHTSA-Datahub",
+        "Program Code" : "021:031",
+        "Publisher" : "National Highway Traffic Safety Administration",
+        "Bureau Code" : "021:18"
+      }
+    },
+    "rowLabel" : "Recall",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "ksns-ue6z",
+    "createdAt" : 1713534818,
+    "displayName" : "NHTSA-Data Team",
+    "screenName" : "NHTSA-Data Team",
+    "type" : "team",
+    "members" : [ {
+      "id" : "43rx-qr9d",
+      "createdAt" : 1624887696,
+      "disabledAt" : 1779804747,
+      "displayName" : "Ibrahim, Abdulaziz (NHTSA)",
+      "screenName" : "Ibrahim, Abdulaziz (NHTSA)",
+      "teamId" : 1597343,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "ub79-3ar5",
+      "createdAt" : 1542287539,
+      "disabledAt" : 1744138985,
+      "displayName" : "Amy Lee",
+      "screenName" : "Amy Lee",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "uatt-a9dr",
+      "createdAt" : 1592484821,
+      "displayName" : "Andy Silletti",
+      "screenName" : "Andy Silletti",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "djrz-ygsy",
+      "createdAt" : 1592485391,
+      "disabledAt" : 1779804811,
+      "displayName" : "BienvenidoOrtiz",
+      "screenName" : "BienvenidoOrtiz",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "jk3f-enp5",
+      "createdAt" : 1665598302,
+      "disabledAt" : 1728405079,
+      "displayName" : "Gobel, Brandon (NHTSA)",
+      "screenName" : "Gobel, Brandon (NHTSA)",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "pp9d-thz4",
+      "createdAt" : 1507727169,
+      "displayName" : "Gary Lesser",
+      "screenName" : "Gary Lesser",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "qexf-wu67",
+      "createdAt" : 1595421136,
+      "disabledAt" : 1763750461,
+      "displayName" : "Gopal Rajanala",
+      "screenName" : "Gopal Rajanala",
+      "teamId" : 1597343,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "5was-yujz",
+      "createdAt" : 1524580356,
+      "disabledAt" : 1725568039,
+      "displayName" : "Greg Radja",
+      "screenName" : "Greg Radja",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "we8j-d2cc",
+      "createdAt" : 1642786573,
+      "disabledAt" : 1728404989,
+      "displayName" : "Jeff Goodboy",
+      "screenName" : "Jeff Goodboy",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "t5xm-r8th",
+      "createdAt" : 1723661578,
+      "disabledAt" : 1744138990,
+      "displayName" : "Jingfei Wu",
+      "screenName" : "Jingfei Wu",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "hsdh-2yqf",
+      "createdAt" : 1663878138,
+      "displayName" : "Padela, Joyce (NHTSA)",
+      "screenName" : "Padela, Joyce (NHTSA)",
+      "teamId" : 1597343,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "cpz9-fyh3",
+      "createdAt" : 1542280756,
+      "disabledAt" : 1744138972,
+      "displayName" : "Lynn Greenbauer",
+      "screenName" : "Lynn Greenbauer",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "qesv-6zxw",
+      "createdAt" : 1709209482,
+      "displayName" : "Vadlamudi, Muralidhar CTR (NHTSA)",
+      "screenName" : "Vadlamudi, Muralidhar CTR (NHTSA)",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "ucsz-3sck",
+      "createdAt" : 1705515193,
+      "disabledAt" : 1779804821,
+      "displayName" : "Najeeb Rahman",
+      "screenName" : "Najeeb Rahman",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "crku-b7ei",
+      "createdAt" : 1713536729,
+      "displayName" : "NHTSA Datahub",
+      "screenName" : "NHTSA Datahub",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "24es-8ut9",
+      "createdAt" : 1540220021,
+      "disabledAt" : 1779804786,
+      "displayName" : "Sreeni Angara",
+      "screenName" : "Sreeni Angara",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "u5j6-szdg",
+      "createdAt" : 1708955272,
+      "disabledAt" : 1779804793,
+      "displayName" : "Midha, Sanjay (NHTSA)",
+      "screenName" : "Midha, Sanjay (NHTSA)",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "yqig-5wmp",
+      "createdAt" : 1767384049,
+      "displayName" : "Shankar Patil",
+      "screenName" : "Shankar Patil",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "dy7g-yzqi",
+      "createdAt" : 1704291695,
+      "disabledAt" : 1779804809,
+      "displayName" : "Rajendraprasad, Tamilselvan (NHTSA)",
+      "screenName" : "Rajendraprasad, Tamilselvan (NHTSA)",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "pwqs-d269",
+      "createdAt" : 1676473438,
+      "disabledAt" : 1779804777,
+      "displayName" : "Topka, Tanya (NHTSA)",
+      "screenName" : "Topka, Tanya (NHTSA)",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    } ]
+  },
+  "query" : {
+    "orderBys" : [ {
+      "ascending" : false,
+      "expression" : {
+        "columnId" : 572305526,
+        "type" : "column"
+      }
+    } ]
+  },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "ksns-ue6z",
+    "createdAt" : 1713534818,
+    "displayName" : "NHTSA-Data Team",
+    "screenName" : "NHTSA-Data Team",
+    "type" : "team",
+    "members" : [ {
+      "id" : "43rx-qr9d",
+      "createdAt" : 1624887696,
+      "disabledAt" : 1779804747,
+      "displayName" : "Ibrahim, Abdulaziz (NHTSA)",
+      "screenName" : "Ibrahim, Abdulaziz (NHTSA)",
+      "teamId" : 1597343,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "ub79-3ar5",
+      "createdAt" : 1542287539,
+      "disabledAt" : 1744138985,
+      "displayName" : "Amy Lee",
+      "screenName" : "Amy Lee",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "uatt-a9dr",
+      "createdAt" : 1592484821,
+      "displayName" : "Andy Silletti",
+      "screenName" : "Andy Silletti",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "djrz-ygsy",
+      "createdAt" : 1592485391,
+      "disabledAt" : 1779804811,
+      "displayName" : "BienvenidoOrtiz",
+      "screenName" : "BienvenidoOrtiz",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "jk3f-enp5",
+      "createdAt" : 1665598302,
+      "disabledAt" : 1728405079,
+      "displayName" : "Gobel, Brandon (NHTSA)",
+      "screenName" : "Gobel, Brandon (NHTSA)",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "pp9d-thz4",
+      "createdAt" : 1507727169,
+      "displayName" : "Gary Lesser",
+      "screenName" : "Gary Lesser",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "qexf-wu67",
+      "createdAt" : 1595421136,
+      "disabledAt" : 1763750461,
+      "displayName" : "Gopal Rajanala",
+      "screenName" : "Gopal Rajanala",
+      "teamId" : 1597343,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "5was-yujz",
+      "createdAt" : 1524580356,
+      "disabledAt" : 1725568039,
+      "displayName" : "Greg Radja",
+      "screenName" : "Greg Radja",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "we8j-d2cc",
+      "createdAt" : 1642786573,
+      "disabledAt" : 1728404989,
+      "displayName" : "Jeff Goodboy",
+      "screenName" : "Jeff Goodboy",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "t5xm-r8th",
+      "createdAt" : 1723661578,
+      "disabledAt" : 1744138990,
+      "displayName" : "Jingfei Wu",
+      "screenName" : "Jingfei Wu",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "hsdh-2yqf",
+      "createdAt" : 1663878138,
+      "displayName" : "Padela, Joyce (NHTSA)",
+      "screenName" : "Padela, Joyce (NHTSA)",
+      "teamId" : 1597343,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "cpz9-fyh3",
+      "createdAt" : 1542280756,
+      "disabledAt" : 1744138972,
+      "displayName" : "Lynn Greenbauer",
+      "screenName" : "Lynn Greenbauer",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "qesv-6zxw",
+      "createdAt" : 1709209482,
+      "displayName" : "Vadlamudi, Muralidhar CTR (NHTSA)",
+      "screenName" : "Vadlamudi, Muralidhar CTR (NHTSA)",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "ucsz-3sck",
+      "createdAt" : 1705515193,
+      "disabledAt" : 1779804821,
+      "displayName" : "Najeeb Rahman",
+      "screenName" : "Najeeb Rahman",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "crku-b7ei",
+      "createdAt" : 1713536729,
+      "displayName" : "NHTSA Datahub",
+      "screenName" : "NHTSA Datahub",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "24es-8ut9",
+      "createdAt" : 1540220021,
+      "disabledAt" : 1779804786,
+      "displayName" : "Sreeni Angara",
+      "screenName" : "Sreeni Angara",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "u5j6-szdg",
+      "createdAt" : 1708955272,
+      "disabledAt" : 1779804793,
+      "displayName" : "Midha, Sanjay (NHTSA)",
+      "screenName" : "Midha, Sanjay (NHTSA)",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "yqig-5wmp",
+      "createdAt" : 1767384049,
+      "displayName" : "Shankar Patil",
+      "screenName" : "Shankar Patil",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "dy7g-yzqi",
+      "createdAt" : 1704291695,
+      "disabledAt" : 1779804809,
+      "displayName" : "Rajendraprasad, Tamilselvan (NHTSA)",
+      "screenName" : "Rajendraprasad, Tamilselvan (NHTSA)",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "pwqs-d269",
+      "createdAt" : 1676473438,
+      "disabledAt" : 1779804777,
+      "displayName" : "Topka, Tanya (NHTSA)",
+      "screenName" : "Topka, Tanya (NHTSA)",
+      "teamId" : 1597343,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    } ]
+  },
+  "tags" : [ "recall", "recalls", "office of defect investigations", "vehicles", "tires", "child safety seats", "equipment", "air bag", "air bags", "auto", "campaign", "car", "car seat", "cars", "child seat", "defect", "email", "fmvss", "potential affected", "http://safercar.gov", "safety", "tire", "vehicle", "vin", "vin search" ],
+  "flags" : [ "default", "restorable", "restorePossibleForType" ]
+}
