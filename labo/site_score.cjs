@@ -3,10 +3,12 @@ const { chromium } = require("playwright");
 const fs = require("fs");
 
 (async () => {
-  const [fichierMain, dossier, fichierElus] = process.argv.slice(2);
+  const [fichierMain, dossier, fichierElus, fichierLobbying] = process.argv.slice(2);
   const local = fs.readFileSync(fichierMain, "utf8");
   const elusLocal = fs.readFileSync(fichierElus, "utf8");
-  const VERSION = "0.8.0";
+  const lobbyingLocal = fs.readFileSync(fichierLobbying, "utf8");
+  const lobbying = JSON.parse(lobbyingLocal);
+  const VERSION = "0.9.0";
   const base = process.env.BASE || "https://killingsky1.github.io/Radar/"; // BASE : essai local seulement
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
@@ -39,6 +41,14 @@ const fs = require("fs");
     await new Promise((ok) => setTimeout(ok, 15000));
   }
   const elusPareil = elusServi === elusLocal;
+  let lobbyingServi = "";
+  for (let i = 0; i < 12; i++) {
+    lobbyingServi = await (await ctx.request.get(`${base}data/app/lobbying.json?x=${Date.now()}`)).text();
+    if (lobbyingServi === lobbyingLocal) break;
+    await new Promise((ok) => setTimeout(ok, 15000));
+  }
+  const lobbyingPareil = lobbyingServi === lobbyingLocal;
+  dire(`Fichier du lobbying sur le site : identique à celui du robot sur main : ${lobbyingPareil ? "OUI" : "NON"} · ${Object.keys(lobbying.par_symbole).length} compagnies · ${lobbying.trimestre.libelle}`);
   const elus = JSON.parse(elusLocal);
   dire(`Fichier des élus sur le site : identique à celui du robot sur main : ${elusPareil ? "OUI" : "NON"} · ${Object.keys(elus.par_elu).length} élus reliés, ${elus.chefs.length} chefs`);
   const a = JSON.parse(servi);
@@ -63,6 +73,19 @@ const fs = require("fs");
   await photo("v3-fiche-1re");
   const titre = await p.locator(".grand-titre h1").innerText();
   dire(`Fiche ouverte : ${titre}`);
+  // Le lobbying de cette compagnie, comme dans lobbying.json
+  let lobbyingOk = false;
+  const entree = lobbying.par_symbole[titre];
+  if (await p.locator(".lobbying").count()) {
+    await p.locator(".lobbying").evaluate((el) => el.previousElementSibling.scrollIntoView({ block: "start" }));
+    await photo("v9-fiche-lobbying");
+    const texte = (await p.locator(".lobbying").innerText()).replace(/\u00a0|\u202f/g, " ");
+    const pied = await p.locator(".congres-source").last().innerText();
+    const attendu = !entree ? "Pas encore lu" : !entree.complet ? "Recherche trop large" : entree.total == null
+      ? "Aucun rapport de lobbying au nom exact" : entree.base === "compagnie" ? "Dépenses déclarées par la compagnie" : "Payés à";
+    lobbyingOk = texte.includes(attendu) && pied.includes("Senate Office of Public Records cannot vouch");
+    dire(`Lobbying sur la fiche ${titre} : « ${texte.split("\n")[0]} » · conforme : ${lobbyingOk ? "OUI" : "NON"}`);
+  } else dire("Lobbying : section absente de la fiche");
   await p.locator(".retour").click();
   await p.locator(".segment", { hasText: "Baisse" }).click();
   await photo("v4-baisse");
@@ -102,6 +125,18 @@ const fs = require("fs");
     dire(`Au Congrès (${entree ? entree.nom_officiel : "?"}) : ${comites} comités, ${votes} votes, « ${chef} » · conforme : ${congresOk ? "OUI" : "NON"}`);
   } else dire("Au Congrès : section absente");
   await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
+  // Un rapport 278-T de l'OGE : mention légale de l'OGE, aucun contrôle raté
+  let ogeOk = false;
+  const ligneOge = p.locator(".ligne", { hasText: "278-T" });
+  if (await ligneOge.count()) {
+    await ligneOge.first().click(); await p.waitForSelector(".feuille-fond.ouvert"); await p.waitForTimeout(400);
+    await photo("v10-rapport-oge");
+    const pied = await p.locator(".detail-pied").innerText();
+    const rates = await p.locator(".feuille .controle.rate").count();
+    ogeOk = pied.includes("Office of Government Ethics") && rates === 0;
+    dire(`Rapport de l'OGE : « ${(await p.locator(".detail-titre").innerText()).slice(0, 90)} » · ${rates} contrôle(s) raté(s) · conforme : ${ogeOk ? "OUI" : "NON"}`);
+    await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
+  } else dire("Rapport de l'OGE : aucun dans le fil Politiciens");
   const ligneVote = p.locator(".ligne", { hasText: "le Sénat rejette la clôture" });
   if (await ligneVote.count()) {
     await ligneVote.first().click(); await p.waitForSelector(".feuille-fond.ouvert"); await p.waitForTimeout(400);
@@ -109,7 +144,7 @@ const fs = require("fs");
     dire(`Vote du Sénat : ${await p.locator(".feuille .controle.rate").count()} contrôle(s) raté(s)`);
   }
   dire(`Erreurs du navigateur : ${erreurs.length ? erreurs.join(" | ") : "aucune"}`);
-  const ok = pareil && elusPareil && memeTop && regles === a.methode.regles.length && carteOk && congresOk && !erreurs.length && js.includes(VERSION);
+  const ok = pareil && elusPareil && lobbyingPareil && memeTop && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && !erreurs.length && js.includes(VERSION);
   dire(ok ? "VERDICT : OK" : "VERDICT : PROBLÈME");
   fs.writeFileSync(`${dossier}/site.txt`, lignes.join("\n") + "\n");
   await b.close();

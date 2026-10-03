@@ -38,7 +38,7 @@ jobs:
         if: always()
         run: |
           (cd principal && git log -1 --format='Données de main : %h %s' -- data) > labo/resultats-score/main.txt
-          node labo/site_score.cjs principal/data/app/aujourdhui.json labo/resultats-score principal/data/app/elus.json
+          node labo/site_score.cjs principal/data/app/aujourdhui.json labo/resultats-score principal/data/app/elus.json principal/data/app/lobbying.json
       - name: Sauvegarder
         if: always()
         run: |
