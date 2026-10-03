@@ -170,6 +170,7 @@ const fs = require("fs");
     await ligneVote.first().click(); await p.waitForSelector(".feuille-fond.ouvert"); await p.waitForTimeout(400);
     await photo("v8-vote-senat");
     dire(`Vote du Sénat : ${await p.locator(".feuille .controle.rate").count()} contrôle(s) raté(s)`);
+    await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
   }
   // Canada (lot 3c, livraison 1) : une fiche de chaque source, l'encadré « Détails » et la mention exigée
   await p.locator("nav.onglets button", { hasText: "Fil" }).click();

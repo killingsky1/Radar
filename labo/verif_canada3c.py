@@ -92,6 +92,8 @@ def nom_simple(nom):
               "LLP", "AG", "SA", "NV", "SE", "AB", "ASA", "SPA", "BV", "ULC", "DE", "THE"}
     while mots and (mots[-1] in formes or len(mots[-1]) == 1):
         mots.pop()
+    if mots[:1] == ["THE"]:  # « The Carlyle Group Inc » = « Carlyle Group Inc. » à la SEC
+        mots = mots[1:]
     return " ".join(mots)
 
 
@@ -231,7 +233,8 @@ for e in avis:
         ecarts.append(f"avis {e['official_id']} : date du numéro ≠ publiée {e['published_on']}")
     elif debut < 0 or not nom or plat(nom.group(1)) != e["data"]["projet"]:
         ecarts.append(f"avis {e['official_id']} : projet ≠ page officielle")
-    elif not premier or "afin d’inscrire" not in plat(premier.group(1)) or "annexe" not in plat(premier.group(1)):
+    elif not premier or not re.search(r"afin d[’']\s*(?:y\s+)?inscrire", plat(premier.group(1))) \
+            or "annexe" not in plat(premier.group(1)):  # « afin d'inscrire » ou « afin d'y inscrire »
         ecarts.append(f"avis {e['official_id']} : la phrase officielle « afin d'inscrire … annexe 1 » est absente")
     else:
         ok += 1
