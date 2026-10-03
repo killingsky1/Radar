@@ -1,0 +1,34 @@
+name: "Labo (transactions du cabinet : 2e lecture indépendante avec pdftotext)"
+
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/verif_cabinet.py", "labo/declencheur-cabinet.txt", ".github/workflows/labo31.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  cabinet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: principal
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get install -y poppler-utils && pip install requests
+      - run: mkdir -p labo/resultats-cabinet && python labo/verif_cabinet.py principal/data labo/resultats-cabinet/verif.txt
+      - name: Sauvegarder
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/resultats-cabinet
+          git commit -m "Labo : transactions du cabinet vérifiées du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo

@@ -8,7 +8,7 @@ const fs = require("fs");
   const elusLocal = fs.readFileSync(fichierElus, "utf8");
   const lobbyingLocal = fs.readFileSync(fichierLobbying, "utf8");
   const lobbying = JSON.parse(lobbyingLocal);
-  const VERSION = "0.9.0";
+  const VERSION = "0.10.0";
   const base = process.env.BASE || "https://killingsky1.github.io/Radar/"; // BASE : essai local seulement
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
@@ -137,6 +137,34 @@ const fs = require("fs");
     dire(`Rapport de l'OGE : « ${(await p.locator(".detail-titre").innerText()).slice(0, 90)} » · ${rates} contrôle(s) raté(s) · conforme : ${ogeOk ? "OUI" : "NON"}`);
     await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
   } else dire("Rapport de l'OGE : aucun dans le fil Politiciens");
+  // Transactions du cabinet : un rapport lu (ses lignes) et une info de compagnie
+  let cabinetOk = false;
+  const ligneRapport = p.locator(".ligne", { hasText: /278-T\), \d+ transactions?/ });
+  if (await ligneRapport.count()) {
+    await ligneRapport.first().click(); await p.waitForSelector(".feuille-fond.ouvert"); await p.waitForTimeout(400);
+    const titreR = await p.locator(".detail-titre").innerText();
+    const n = Number(titreR.match(/(\d+) transactions?$/)[1]);
+    await p.locator(".lignes-oge").evaluate((el) => el.previousElementSibling.scrollIntoView({ block: "start" }));
+    await photo("v11-rapport-cabinet-lignes");
+    const lues = await p.locator(".lignes-oge .ligne-oge").count();
+    const ratesR = await p.locator(".feuille .controle.rate").count();
+    dire(`Rapport du cabinet : « ${titreR.slice(0, 80)}… » · ${lues} lignes affichées pour ${n} annoncées · ${ratesR} contrôle(s) raté(s)`);
+    cabinetOk = lues === n && ratesR === 0;
+    await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
+  } else dire("Rapport du cabinet : aucun dans le fil Politiciens");
+  const ligneCie = p.locator(".ligne", { hasText: /niveau I+\) (vend|achète|échange) / });
+  if (await ligneCie.count()) {
+    await ligneCie.first().click(); await p.waitForSelector(".feuille-fond.ouvert"); await p.waitForTimeout(400);
+    await photo("v12-cabinet-compagnie");
+    const titreC = await p.locator(".detail-titre").innerText();
+    const lignesC = await p.locator(".lignes-oge .ligne-oge").count();
+    const ratesC = await p.locator(".feuille .controle.rate").count();
+    const pied = await p.locator(".detail-pied").innerText();
+    dire(`Info de compagnie : « ${titreC} » · ${lignesC} ligne(s) · ${ratesC} contrôle(s) raté(s)`);
+    cabinetOk = cabinetOk && lignesC >= 1 && ratesC === 0 && pied.includes("Office of Government Ethics");
+    await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
+  } else { dire("Info de compagnie du cabinet : aucune dans le fil Politiciens"); cabinetOk = false; }
+  dire(`Transactions du cabinet affichées : ${cabinetOk ? "OUI" : "NON"}`);
   const ligneVote = p.locator(".ligne", { hasText: "le Sénat rejette la clôture" });
   if (await ligneVote.count()) {
     await ligneVote.first().click(); await p.waitForSelector(".feuille-fond.ouvert"); await p.waitForTimeout(400);
@@ -144,7 +172,7 @@ const fs = require("fs");
     dire(`Vote du Sénat : ${await p.locator(".feuille .controle.rate").count()} contrôle(s) raté(s)`);
   }
   dire(`Erreurs du navigateur : ${erreurs.length ? erreurs.join(" | ") : "aucune"}`);
-  const ok = pareil && elusPareil && lobbyingPareil && memeTop && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && !erreurs.length && js.includes(VERSION);
+  const ok = pareil && elusPareil && lobbyingPareil && memeTop && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && !erreurs.length && js.includes(VERSION);
   dire(ok ? "VERDICT : OK" : "VERDICT : PROBLÈME");
   fs.writeFileSync(`${dossier}/site.txt`, lignes.join("\n") + "\n");
   await b.close();
