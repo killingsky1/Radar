@@ -54,10 +54,12 @@ _LISTE = [
     S("ventes_armes", "Ventes d'armes à l'étranger (avis officiels au Registre fédéral)", "militaire",
       ("federalregister.gov",), 2,
       "https://www.federalregister.gov/documents/search?conditions%5Bterm%5D=%22Arms+Sales+Notification%22"),
-    S("usaspending", "USAspending : contrats, subventions, prêts", "militaire", ("usaspending.gov",), 2,
-      "https://www.usaspending.gov/", publication_max_jours=7),
-    S("participations_gouv", "Gouvernement américain actionnaire", "gouvernement",
-      ("sec.gov", "war.gov", "energy.gov", "commerce.gov", "whitehouse.gov"), 2, "https://www.sec.gov/edgar/search/"),
+    # Lot 3d : contrats de 100 M$ et plus ; une info va dans « Militaire » si le contrat vient de la Défense
+    S("usaspending", "USAspending : contrats fédéraux américains de 100 M$ et plus", "gouvernement", ("usaspending.gov",),
+      2, "https://www.usaspending.gov/search", attente_heures=24 * 8, publication_max_jours=21, passages=("matin",)),
+    # Lot 3d : la phrase exacte d'un 8-K où le gouvernement reçoit, détient ou revend des titres de la compagnie
+    S("participations_gouv", "Gouvernement américain actionnaire (8-K de la SEC)", "gouvernement", ("sec.gov",), 2,
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=8-K"),
     # Lot 3c : contrats de 10 M$ et plus (nouveaux ou hausses), lus chaque matin sur l'API du portail (20 s entre 2 requêtes)
     S("contrats_ca_10k", "Contrats fédéraux de 10 M$ et plus (publication proactive)", "canada",
       ("open.canada.ca", "ouvert.canada.ca"), 2, "https://rechercher.ouvert.canada.ca/contrats/",
