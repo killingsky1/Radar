@@ -73,7 +73,8 @@ def main() -> None:
         if not ev:
             lignes.append(f"- {acc} : pas trouvé dans les données du robot")
             continue
-        url = ev["official_url"]
+        url = ev["official_url"].replace("-index.htm", "-index-headers.html")  # la page que le robot lit
+        assert url.endswith("-index-headers.html"), url
         a = robot.get(url)
         c = sans_gzip.get(url)
         b, entetes_b = urllib_get(url, False)
