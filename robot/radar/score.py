@@ -182,6 +182,7 @@ SANS_POINTS = {
     "elu_vente": "Vente d'un élu : les études ne montrent rien.",
     "offre": "Offre d'achat : le prix a déjà bondi à l'annonce.",
     "ftc": "Feu vert antitrust (FTC) : aucune étude solide trouvée.",
+    "concurrence": "Examen de fusion du Bureau de la concurrence (Canada) : aucune étude solide trouvée.",
     "lobbying": "Lobbying à Washington (LDA.gov) : montré sur la fiche de la compagnie, sans points. L'étude de Chen, "
                 "Parsley et Yang (2015) mesure un effet sur 3 ans, selon le lobbying par rapport à la taille de la "
                 "compagnie, que Radar ne mesure pas.",
@@ -314,6 +315,8 @@ def evaluer(ev: dict, emissions: frozenset = frozenset(), chefs: frozenset = fro
         return contexte("cabinet")
     if s == "ftc_fusions":
         return contexte("ftc")
+    if s == "concurrence_ca":
+        return contexte("concurrence")
     return contexte("contexte")
 
 

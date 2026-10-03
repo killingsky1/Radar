@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.10.0";
+const VERSION = "0.11.0";
 
 // ---------- Constantes ----------
 
@@ -87,6 +87,28 @@ const CONTROLES_SOURCES = {
   document_pdf: "Document PDF officiel",
   declarant_concorde: "Nom du déclarant = index de l'OGE",
   type_reconnu: "Type reconnu (achat, vente, échange)",
+  resultat_officiel_connu: "Résultat officiel connu (note du rapport du Bureau)",
+  dates_dans_l_ordre: "Dates dans l'ordre (début, puis conclusion)",
+  industrie_scian: "Code d'industrie SCIAN valide",
+  date_d_inscription_valide: "Date d'inscription valide",
+  chaque_inscription_nommee: "Chaque inscription a un nom",
+  regime_lu: "Régime de sanctions lu",
+  indicateur_de_la_liste_officielle: "Grand indicateur de la liste officielle de Statistique Canada",
+  lien_du_quotidien: "Lien du Quotidien (statcan.gc.ca)",
+  resume_lu: "Résumé officiel lu",
+  numero_dors_ou_tr: "Numéro officiel (DORS ou TR) identique au lien",
+  loi_liee_a_l_argent: "Loi liée à l'argent (liste fixe)",
+  titre_officiel_lu: "Titre officiel lu sur la page du texte",
+  meme_numero_que_l_index: "Même numéro que l'index de la Gazette",
+  date_d_enregistrement_lue: "Date d'enregistrement lue",
+  projet_nomme: "Projet nommé",
+  page_du_bureau_des_grands_projets: "Page du Bureau des grands projets",
+  loi_visant_a_batir_le_canada: "Loi visant à bâtir le Canada",
+  lien_de_la_gazette: "Lien de la Gazette du Canada",
+  texte_officiel_de_l_avis: "Texte officiel de l'avis lu (inscription à l'annexe 1)",
+  projet_du_gouvernement: "Projet de loi du gouvernement",
+  sanction_confirmee: "Sanction royale confirmée",
+  lien_legisinfo: "Lien LEGISinfo",
   lettre_officielle: "Lettre d'approbation officielle",
   trimestres_consecutifs: "Trimestres consécutifs comparés",
   rapports_complets: "Deux rapports complets comparés",
@@ -763,6 +785,20 @@ function FeuilleDetail({ ev, fermer }) {
 
       <AuCongres ev={ev} />
 
+      {ev.data?.details?.length > 0 && (
+        <>
+          <h3 className="section">Détails</h3>
+          <div className="carte liste details-officiels">
+            {ev.data.details.map(([nom, valeur]) => (
+              <div key={nom} className="detail-officiel">
+                <span className="detail-officiel-nom">{nom}</span>
+                <span className="detail-officiel-valeur">{valeur}</span>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
       {ev.source === "oge_278t" && ev.data?.transactions?.length > 0 && <LignesOge ev={ev} />}
 
       {(ev.source === "chambre_ptr" || ev.source === "senat_ptr") && ev.data?.transactions?.length > 0 && (
@@ -805,23 +841,59 @@ function FeuilleDetail({ ev, fermer }) {
         {(ev.source === "chambre_ptr" || ev.source === "senat_ptr") && (
           <>
             <br />
-            Rapports publics du Congrès : usage personnel et non commercial seulement (loi américaine 5 U.S.C. § 13107).
+            <span className="mention">Rapports publics du Congrès : usage personnel et non commercial seulement (loi américaine 5 U.S.C. § 13107).</span>
           </>
         )}
         {ev.source === "oge_278t" && (
           <>
             <br />
-            Rapports publics de l'Office of Government Ethics : usage personnel et non commercial seulement (loi américaine 5 U.S.C. § 13107).
+            <span className="mention">Rapports publics de l'Office of Government Ethics : usage personnel et non commercial seulement (loi américaine 5 U.S.C. § 13107).</span>
           </>
         )}
         {ev.source === "fda" && (
           <>
             <br />
-            Données fournies par la Food and Drug Administration des États-Unis (open.fda.gov).
+            <span className="mention">Données fournies par la Food and Drug Administration des États-Unis (open.fda.gov).</span>
           </>
         )}
+        <MentionCanada ev={ev} />
       </p>
     </Feuille>
+  );
+}
+
+// ---------- Canada : la mention exacte exigée par chaque licence ou permission ----------
+
+const LICENCE_OUVERTE = "https://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada";
+
+function MentionCanada({ ev }) {
+  const s = ev.source;
+  const gazette = s === "gazette_ca" || (s === "grands_projets_ca" && ev.kind !== "projet_soutenu");
+  let texte = null;
+  if (s === "concurrence_ca" || s === "sanctions_ca")
+    texte = (
+      <>
+        Contient de l'information visée par la{" "}
+        <a href={LICENCE_OUVERTE} target="_blank" rel="noopener noreferrer">
+          Licence du gouvernement ouvert – Canada
+        </a>
+        .
+      </>
+    );
+  else if (s === "statcan")
+    texte = `Source : Statistique Canada, Le Quotidien, ${dateLongue(ev.published_on)}. Reproduit et diffusé « tel quel » avec la permission de Statistique Canada.`;
+  else if (gazette)
+    texte = "Reproduction non officielle : seule la version publiée dans la Gazette du Canada fait foi (Décret sur la reproduction de la législation fédérale, TR/97-5).";
+  else if (s === "grands_projets_ca")
+    texte = "Reproduction de la version disponible à l'adresse officielle (Bureau des grands projets, Bureau du Conseil privé) : usage personnel et non commercial.";
+  else if (s === "legisinfo")
+    texte = "Source : LEGISinfo, Parlement du Canada. Reproduction exacte et non officielle, pour un usage personnel et non commercial.";
+  if (!texte) return null;
+  return (
+    <>
+      <br />
+      <span className="mention">{texte}</span>
+    </>
   );
 }
 
@@ -2132,6 +2204,12 @@ input { font: inherit; color: var(--texte); }
   background: color-mix(in srgb, var(--jaune) 14%, transparent); color: var(--jaune); }
 .detail-actions { display: grid; grid-template-columns: 1fr auto; gap: 10px; margin-top: 20px; }
 .detail-pied { color: var(--texte-3); font-size: .75rem; margin: 14px 4px 0; line-height: 1.6; word-break: break-all; }
+.detail-pied .mention { word-break: normal; overflow-wrap: break-word; }
+.detail-pied .mention a { color: inherit; }
+.detail-officiel { position: relative; display: flex; flex-direction: column; gap: 2px; padding: 10px 16px; }
+.detail-officiel + .detail-officiel::before { content: ""; position: absolute; top: 0; left: 16px; right: 0; height: 1px; background: var(--ligne); transform: scaleY(.5); }
+.detail-officiel-nom { color: var(--texte-3); font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.detail-officiel-valeur { color: var(--texte); font-size: .9375rem; line-height: 1.4; overflow-wrap: anywhere; }
 .controle { position: relative; display: flex; align-items: center; gap: 10px; padding: 11px 16px; font-size: .9375rem; color: var(--texte); }
 .controle svg:first-child { flex: none; }
 .controle.ok svg:first-child { color: var(--vert); }
