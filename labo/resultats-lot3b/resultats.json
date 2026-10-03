@@ -1,0 +1,119 @@
+{
+ "chambre_membres": {
+  "url": "https://clerk.house.gov/xml/lists/MemberData.xml",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "text/xml",
+  "taille": 557203,
+  "limites": {},
+  "debut": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><MemberData publish-date=\"October 1, 2026\"><title-info><congress-num>119</congress-num><congress-text>One Hundred Nineteenth Congress</congress-text><session>2</session><majority>R</majority><minority>D</minority><clerk>KEVIN F. McCUMBER</clerk><weburl>https://clerk.house.gov</weburl></title-info><members><member><statedistrict>AK00</statedistrict><member-info><namelist>Begich, Nicholas</namelist><bioguideID>B001323</bioguideID><lastname>Begich</lastname><firstname>Nicholas</firstname><middlename>J.</middlename><sort-name>BEGICH,NICHOLAS</sort-name><suffix"
+ },
+ "senat_comite_banques": {
+  "url": "https://www.senate.gov/general/committee_membership/committee_memberships_SSBK.xml",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "text/xml",
+  "taille": 14731,
+  "limites": {},
+  "debut": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><committee_membership><committees><majority_party>R</majority_party><committee_name>Committee on Banking, Housing, and Urban Affairs</committee_name><committee_code>SSBK00</committee_code><members><member><name><first>Tim</first><last>Scott</last></name><state>SC</state><party>R</party><position>Chairman</position></member><member><name><first>Elizabeth</first><last>Warren</last></name><state>MA</state><party>D</party><position>Ranking</position></member><member><name><first>Jack</first><last>Reed</last></name><state>RI</state><party>D</party><position>Mem"
+ },
+ "senat_chefs": {
+  "url": "https://www.senate.gov/senators/leadership.htm",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "text/html; charset=UTF-8",
+  "taille": 42025,
+  "limites": {},
+  "debut": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<!-- [if lt IE 7]> <html lang=\"en\" class=\"ie6 oldie\"> <![endif] --><!-- [if IE 7]>    <html lang=\"en\" class=\"ie7 oldie\"> <![endif] --><!-- [if IE 8]>    <html lang=\"en\" class=\"ie8 oldie\"> <![endif] --><!-- [if gt IE 8]> <! --><html lang=\"en\" class=\"\">\n<!-- <![endif] -->\n<head>\n<META http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<meta name=\"object\" content=\"lead"
+ },
+ "chambre_chefs": {
+  "url": "https://www.house.gov/leadership",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "text/html; charset=utf-8",
+  "taille": 23023,
+  "limites": {},
+  "debut": "<!DOCTYPE html>\n<html  lang=\"en\" dir=\"ltr\">\n  <head>\n    <meta charset=\"utf-8\" />\n<link rel=\"canonical\" href=\"http://www.house.gov/leadership\" />\n<meta name=\"Generator\" content=\"Drupal 11 (https://www.drupal.org)\" />\n<meta name=\"MobileOptimized\" content=\"width\" />\n<meta name=\"HandheldFriendly\" content=\"true\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n<script type=\"text/javascript\" src=\"/ruxitagentjs_ICA7NVfqrux_10345260810170330.js\" data-dtconfig=\"rid=RID_81348109|rpid=1165386351|domain=house.gov|reportUrl=/rb_84936baa-290a-41c1-8aba-c50589e8f708|app=4d7477304a"
+ },
+ "hr7008_statut": {
+  "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7008.xml",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "text/xml",
+  "taille": 68316,
+  "limites": {},
+  "debut": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<billStatus>\n  <version>3.0.0</version>\n  <bill>\n    <number>7008</number>\n    <updateDate>2026-10-01T10:57:12Z</updateDate>\n    <updateDateIncludingText>2026-10-01T10:57:12Z</updateDateIncludingText>\n    <originChamber>House</originChamber>\n    <originChamberCode>H</originChamberCode>\n    <type>HR</type>\n    <introducedDate>2026-01-12</introducedDate>\n    <congress>119</congress>\n    <legislationUrl>https://www.congress.gov/bill/119th-congress/house-bill/7008</legislationUrl>\n    <constitutionalAuthorityStatementText><![CDATA[<pre>[Congre"
+ },
+ "vote_chambre_hr7008": {
+  "url": "https://clerk.house.gov/evs/2026/roll280.xml",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "application/xml; charset=UTF-8",
+  "taille": 93779,
+  "limites": {},
+  "debut": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<rollcall-vote>\r\n  <vote-metadata>\r\n    <majority>R</majority>\r\n    <congress>119</congress>\r\n    <session>2nd</session>\r\n    <chamber>U.S. House of Representatives</chamber>\r\n    <rollcall-num>280</rollcall-num>\r\n    <legis-num>H R 7008</legis-num>\r\n    <vote-question>On Passage</vote-question>\r\n    <vote-type>YEA-AND-NAY</vote-type>\r\n    <vote-result>Passed</vote-result>\r\n    <action-date>22-Jul-2026</action-date>\r\n    <action-time time-etz=\"16:51\">4:51 PM</action-time>\r\n    <vote-desc>Stop Insider Trading Act</vote-desc>\r\n    <vote-totals>\r\n      <tot"
+ },
+ "votes_senat_liste": {
+  "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.xml",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "text/xml",
+  "taille": 165543,
+  "limites": {},
+  "debut": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><vote_summary>\n  <congress>119</congress>\n  <session>2</session>\n  <congress_year>2026</congress_year>\n  <votes>\n    <vote>\n      <vote_number>00256</vote_number>\n      <vote_date>30-Sep</vote_date>\n      <issue>PN1129</issue>\n      <question>On the Nomination\n         </question>\n      <result>Confirmed</result>\n      <vote_tally>\n        <yeas>47</yeas>\n        <nays>41</nays>\n      </vote_tally>\n      <title>Confirmation: Keith Sonderling, of F.L., to be Secretary of Labor</title>\n    </vote>\n    <vote>\n      <vote_number>00255</vote_number>\n      <vote"
+ },
+ "lda_api": {
+  "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=3",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "application/json",
+  "taille": 11818,
+  "limites": {},
+  "debut": "{\"count\":27559,\"next\":\"https://lda.gov/api/v1/filings/?filing_period=second_quarter&filing_year=2026&page=2&page_size=3\",\"previous\":null,\"results\":[{\"url\":\"https://lda.gov/api/v1/filings/6622ad34-34e1-4a1f-81a2-ce7ab68d34db/\",\"filing_uuid\":\"6622ad34-34e1-4a1f-81a2-ce7ab68d34db\",\"filing_type\":\"RR\",\"filing_type_display\":\"Registration\",\"filing_year\":2026,\"filing_period\":\"second_quarter\",\"filing_period_display\":\"2nd Quarter (Apr 1 - June 30)\",\"filing_document_url\":\"https://lda.gov/filings/public/filing/6622ad34-34e1-4a1f-81a2-ce7ab68d34db/print/\",\"filing_document_content_type\":\"text/html\",\"income\""
+ },
+ "lda_ancien_api": {
+  "url": "https://lda.senate.gov/api/v1/filings/?filing_year=2026&page_size=1",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "application/json",
+  "taille": 3121,
+  "limites": {},
+  "debut": "{\"count\":57506,\"next\":\"https://lda.gov/api/v1/filings/?filing_year=2026&page=2&page_size=1\",\"previous\":null,\"results\":[{\"url\":\"https://lda.gov/api/v1/filings/a934e791-d564-4fd3-8b78-041f8cfcf115/\",\"filing_uuid\":\"a934e791-d564-4fd3-8b78-041f8cfcf115\",\"filing_type\":\"RR\",\"filing_type_display\":\"Registration\",\"filing_year\":2026,\"filing_period\":\"first_quarter\",\"filing_period_display\":\"1st Quarter (Jan 1 - Mar 31)\",\"filing_document_url\":\"https://lda.gov/filings/public/filing/a934e791-d564-4fd3-8b78-041f8cfcf115/print/\",\"filing_document_content_type\":\"text/html\",\"income\":null,\"expenses\":null,\"expenses"
+ },
+ "oge_index_pas": {
+  "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index?OpenView",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "text/html; charset=UTF-8",
+  "taille": 97967,
+  "limites": {},
+  "debut": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head>\n<meta name=\"robots\" content=\"noindex\">\n<title>US Office of Government Ethics: Presidential Nominee and Appointee Request System: Online OGE Form 201</title><link rel=\"stylesheet\" type=\"text/css\" href=\"/201/Presiden.nsf/common.css\" /><script type=\"text/javascript\" src=\"/201/Presiden.nsf/common.js?OpenJavascriptLibrary\"></script><meta http-equiv=\"content-type\" content=\"text/plain; charset=UTF-8\"/><!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. --><script async type=\"text"
+ },
+ "oge_278t_president": {
+  "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/5326D3AF5BE7C25385258DF7002DD1B7/%24FILE/Trump%2C%20Donald%20J.-05.08.2026-278T.pdf",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "application/pdf",
+  "taille": 1227279,
+  "limites": {},
+  "debut": "%PDF-1.6\r%����\r\n57 0 obj\r<</Linearized 1/L 1227279/O 59/E 276845/N 5/T 1226895/H [ 520 261]>>\rendobj\r             \r\n80 0 obj\r<</DecodeParms<</Columns 5/Predictor 12>>/Filter/FlateDecode/ID[<99EC73DEB0E74A5512C21E219E78F24A><2EEDE8645F850A44AB726F21B0FA28D6>]/Index[57 43]/Info 56 0 R/Length 112/Prev 1226896/Root 58 0 R/Size 100/Type/XRef/W[1 3 1]>>stream\r\nh�bbd`\u0010``b``�\u000b\"\u0019\u000e�H�\b0{*�d<\u000f&�@$\u000b\u0003���\u000fDJz�U\u001e\u0007�F\u0001IF&\u0007�9�`�J0�\b\u0016�\u0001��A�\u0012)��h��\u0018�J��`�< ��=\u0007\u0003\u0013�=g��\u0003\r�5�\u001f���\u0000\u0001\u0006\u0000ȣ\u0012b\r\nendstream\rendobj\rstartxref\r\n0\r\n%%EOF\r\n         \r\n99 0 obj\r<</Filter/FlateDecode/I 187/Length 174/S 82/V 161>>stream\r\nh�b```a``:��"
+ },
+ "maison_blanche_278t": {
+  "url": "https://www.whitehouse.gov/wp-content/uploads/2026/01/President-Donald-J.-Trump-Periodic-Transaction-Report-1.14.2026-.pdf",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "application/pdf",
+  "taille": 3040217,
+  "limites": {},
+  "debut": "%PDF-1.6\r%����\r\n539 0 obj\r<</Linearized 1/L 3040217/O 541/E 405829/N 8/T 3039309/H [ 552 276]>>\rendobj\r           \r\n567 0 obj\r<</DecodeParms<</Columns 5/Predictor 12>>/Filter/FlateDecode/ID[<4D95B4425D989DDDBDE2F1780C5162E7><4FD09AE47316F54BA0F965E88B66C0FB>]/Index[539 60]/Info 538 0 R/Length 135/Prev 3039310/Root 540 0 R/Size 599/Type/XRef/W[1 3 1]>>stream\r\nh�bbd`\u0010``b``�\u0001�\f� �1\u001cLN\u0007����� ��\u0015D��\u000f$\u0019u\u0003Al�� r�c���/ 6�\u0004ش>��\u0014\u0010�4\u001f�N\u0007�7�ٙ �s-Xv#��\b\u0010�{\u001c,[\u00022��\fH2]�\u0005�t�\u0002����\u0018�\u0018\u0019�փ�30\u000e\u0019�?\u0003\u0003�c�\u0000\u0003\u0000�V\u0017�\r\nendstream\rendobj\rstartxref\r\n0\r\n%%EOF\r\n              \r\n598 0 obj\r<</Filter/FlateDecode/I 210/Length 188"
+ },
+ "congress_gov_page": {
+  "url": "https://www.congress.gov/bill/119th-congress/house-bill/7008/all-info",
+  "permis_robots_txt": true,
+  "statut": 403,
+  "type": "text/html; charset=UTF-8",
+  "taille": 5603,
+  "limites": {},
+  "debut": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-6VtOINpnF3IqyLGM0IfKwE&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-src-attr &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://challenges"
+ }
+}
