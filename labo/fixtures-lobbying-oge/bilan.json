@@ -1,0 +1,238 @@
+{
+ "requetes": [
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=LOCKHEED",
+   "statut": 200,
+   "taille": 75851
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=GAMESTOP",
+   "statut": 200,
+   "taille": 52
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=EAGLE",
+   "statut": 200,
+   "taille": 30773
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=SOUTHWEST",
+   "statut": 200,
+   "taille": 116473
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?client_name=SOUTHWEST&filing_period=second_quarter&filing_year=2026&page=2&page_size=25",
+   "statut": 200,
+   "taille": 34629
+  },
+  {
+   "southwest_page_2": "https://lda.gov/api/v1/filings/?client_name=SOUTHWEST&filing_period=second_quarter&filing_year=2026&page=2&page_size=25"
+  },
+  {
+   "url": "https://lda.gov/api/v1/constants/filing/lobbyingactivityissues/",
+   "statut": 200,
+   "taille": 3596
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/API.xsp/v3/rest?draw=1&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=desc&columns%5B0%5D%5Bdata%5D=docDate&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B1%5D%5Bdata%5D=title&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B2%5D%5Bdata%5D=type&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B3%5D%5Bdata%5D=name&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B4%5D%5Bdata%5D=agency&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B5%5D%5Bdata%5D=level&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&search%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=Transaction&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=Level&start=0&length=100",
+   "statut": 200,
+   "taille": 43103
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/API.xsp/v3/rest?draw=1&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=desc&columns%5B0%5D%5Bdata%5D=docDate&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B1%5D%5Bdata%5D=title&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B2%5D%5Bdata%5D=type&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B3%5D%5Bdata%5D=name&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B4%5D%5Bdata%5D=agency&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B5%5D%5Bdata%5D=level&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&search%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=Transaction&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=President&start=0&length=100",
+   "statut": 200,
+   "taille": 42809
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/038F222E7B084F8C85258E3F002DB296/$FILE/Markwayne-Mullin-06.24.2026-278T.pdf",
+   "statut": 200,
+   "taille": 13881
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0933B220C51FFFB485258E52002DD2D9/$FILE/Kevin-Warsh-06.25.2026-278T.pdf",
+   "statut": 200,
+   "taille": 12402
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0CC139F3C2A2CB1985258E3F002DA973/$FILE/Scott-A-Kupor-06.22.2026-278T(1).pdf",
+   "statut": 200,
+   "taille": 6645
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/24F079312783534385258E4D002DAB10/$FILE/Michael-J-Kratsios-07.09.2026-278T.pdf",
+   "statut": 200,
+   "taille": 5056
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/2BF91F890F718ACB85258E5B002DE16B/$FILE/Donald-J-Trump-08.12.2026-278T.pdf",
+   "statut": 200,
+   "taille": 26880519
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/2DC3DD386173222E85258E4D002D8CD0/$FILE/Frank-J-Bisignano-07.07.2026-278T.pdf",
+   "statut": 200,
+   "taille": 5242
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/42300720A4227E9E85258E77002DD1B3/$FILE/Scott-A-Kupor-08.07.2026-278T(1).pdf",
+   "statut": 200,
+   "taille": 5290
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/661FD7E5862DFE1485258E77002DD1AB/$FILE/Scott-A-Kupor-08.07.2026-278T.pdf",
+   "statut": 200,
+   "taille": 5118
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/73A4FAE1704F806F85258E3F002DA96E/$FILE/Scott-A-Kupor-06.22.2026-278T.pdf",
+   "statut": 200,
+   "taille": 5301
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/7B58D078A7F838FE85258E5A002DB8C1/$FILE/Scott-A-Kupor-07.20.2026-278T.pdf",
+   "statut": 200,
+   "taille": 5453
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/87D4C3BB9C104B3E85258E6D002DDD05/$FILE/Sean-McMaster-06.11.2026-278T(1).pdf",
+   "statut": 200,
+   "taille": 5295
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/890743E0467213D285258E4D002D98F0/$FILE/Sean-Duffy-06.09.2026-278T.pdf",
+   "statut": 200,
+   "taille": 8782
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/ADE89624CD8D7F1D85258E35002DD6B1/$FILE/Sean-McMaster-06.11.2026-278T.pdf",
+   "statut": 200,
+   "taille": 5461
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/B157175D415FEC4685258E82002DBEBE/$FILE/Scott-A-Kupor-07.31.2026-278T.pdf",
+   "statut": 200,
+   "taille": 5142
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/B215A2D9D7B0CC0E85258E4A002D8CC2/$FILE/Douglas-J-Burgum-05.12.2026-278T.pdf",
+   "statut": 200,
+   "taille": 5922
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/C98F5D124FF9D62785258E5A002DB8E2/$FILE/Scott-A-Kupor-07.15.2026-278T.pdf",
+   "statut": 200,
+   "taille": 5118
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/CC5D2BAFDF8EB24085258E6E002DF7E9/$FILE/Kevin-Warsh-08.06.2026-278T.pdf",
+   "statut": 200,
+   "taille": 5451
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/D4003325FAE6858085258E6E002DF6AB/$FILE/Eric-M-Ueland-08.06.2026-278T.pdf",
+   "statut": 200,
+   "taille": 9786
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/E590116FC9631E9885258E7A002DE209/$FILE/Donald-J-Trump-09.8.2026-278T.pdf",
+   "statut": 200,
+   "taille": 10978381
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/E856C1C9F19C67C785258E3F002DB290/$FILE/Markwayne-Mullin-06.26.2026-278T.pdf",
+   "statut": 200,
+   "taille": 7876
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/F4060C7CB31DC8DA85258E31002DCF6A/$FILE/Michael-Kratsios-06.10.2026-278T.pdf",
+   "statut": 200,
+   "taille": 5055
+  }
+ ],
+ "pdfs": {
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/038F222E7B084F8C85258E3F002DB296/$FILE/Markwayne-Mullin-06.24.2026-278T.pdf": {
+   "taille": 13881,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0933B220C51FFFB485258E52002DD2D9/$FILE/Kevin-Warsh-06.25.2026-278T.pdf": {
+   "taille": 12402,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0CC139F3C2A2CB1985258E3F002DA973/$FILE/Scott-A-Kupor-06.22.2026-278T(1).pdf": {
+   "taille": 6645,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/24F079312783534385258E4D002DAB10/$FILE/Michael-J-Kratsios-07.09.2026-278T.pdf": {
+   "taille": 5056,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/2BF91F890F718ACB85258E5B002DE16B/$FILE/Donald-J-Trump-08.12.2026-278T.pdf": {
+   "taille": 26880519,
+   "debut": "%PDF-1.6"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/2DC3DD386173222E85258E4D002D8CD0/$FILE/Frank-J-Bisignano-07.07.2026-278T.pdf": {
+   "taille": 5242,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/42300720A4227E9E85258E77002DD1B3/$FILE/Scott-A-Kupor-08.07.2026-278T(1).pdf": {
+   "taille": 5290,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/661FD7E5862DFE1485258E77002DD1AB/$FILE/Scott-A-Kupor-08.07.2026-278T.pdf": {
+   "taille": 5118,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/73A4FAE1704F806F85258E3F002DA96E/$FILE/Scott-A-Kupor-06.22.2026-278T.pdf": {
+   "taille": 5301,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/7B58D078A7F838FE85258E5A002DB8C1/$FILE/Scott-A-Kupor-07.20.2026-278T.pdf": {
+   "taille": 5453,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/87D4C3BB9C104B3E85258E6D002DDD05/$FILE/Sean-McMaster-06.11.2026-278T(1).pdf": {
+   "taille": 5295,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/890743E0467213D285258E4D002D98F0/$FILE/Sean-Duffy-06.09.2026-278T.pdf": {
+   "taille": 8782,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/ADE89624CD8D7F1D85258E35002DD6B1/$FILE/Sean-McMaster-06.11.2026-278T.pdf": {
+   "taille": 5461,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/B157175D415FEC4685258E82002DBEBE/$FILE/Scott-A-Kupor-07.31.2026-278T.pdf": {
+   "taille": 5142,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/B215A2D9D7B0CC0E85258E4A002D8CC2/$FILE/Douglas-J-Burgum-05.12.2026-278T.pdf": {
+   "taille": 5922,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/C98F5D124FF9D62785258E5A002DB8E2/$FILE/Scott-A-Kupor-07.15.2026-278T.pdf": {
+   "taille": 5118,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/CC5D2BAFDF8EB24085258E6E002DF7E9/$FILE/Kevin-Warsh-08.06.2026-278T.pdf": {
+   "taille": 5451,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/D4003325FAE6858085258E6E002DF6AB/$FILE/Eric-M-Ueland-08.06.2026-278T.pdf": {
+   "taille": 9786,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/E590116FC9631E9885258E7A002DE209/$FILE/Donald-J-Trump-09.8.2026-278T.pdf": {
+   "taille": 10978381,
+   "debut": "%PDF-1.6"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/E856C1C9F19C67C785258E3F002DB290/$FILE/Markwayne-Mullin-06.26.2026-278T.pdf": {
+   "taille": 7876,
+   "debut": "%PDF-1.4"
+  },
+  "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/F4060C7CB31DC8DA85258E31002DCF6A/$FILE/Michael-Kratsios-06.10.2026-278T.pdf": {
+   "taille": 5055,
+   "debut": "%PDF-1.4"
+  }
+ }
+}
