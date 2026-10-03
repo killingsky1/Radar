@@ -8,7 +8,7 @@ const fs = require("fs");
   const elusLocal = fs.readFileSync(fichierElus, "utf8");
   const lobbyingLocal = fs.readFileSync(fichierLobbying, "utf8");
   const lobbying = JSON.parse(lobbyingLocal);
-  const VERSION = "0.17.0";
+  const VERSION = "0.18.0";
   const base = process.env.BASE || "https://killingsky1.github.io/Radar/"; // BASE : essai local seulement
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
@@ -19,6 +19,8 @@ const fs = require("fs");
   const lignes = [];
   const dire = (t) => { console.log(t); lignes.push(t); };
   const photo = async (nom) => { await p.waitForTimeout(600); await p.screenshot({ path: `${dossier}/${nom}.png` }); };
+  // Les chiffres défilent 0,65 s : on lit la valeur finale (data-final="1")
+  const chiffresFinis = () => p.waitForFunction(() => [...document.querySelectorAll("[data-defile]")].every((e) => e.dataset.final === "1"));
 
   // Attendre que GitHub Pages serve la nouvelle app (au plus 6 minutes).
   for (let i = 0; i < 24; i++) {
@@ -63,7 +65,21 @@ const fs = require("fs");
 
   await p.goto(base);
   await p.waitForSelector(".tuiles");
+  await chiffresFinis();
   await photo("v1-accueil");
+  // Lot D : le radar = les compagnies du score (8 premières à la hausse, 3 à la baisse) ; un point ouvre sa fiche
+  const etiquettesRadar = (await p.locator(".radar-etiquette").allInnerTexts()).sort();
+  const attendusRadar = [...a.hausse.slice(0, 8), ...a.baisse.slice(0, 3)].map((x) => x.symbole).sort();
+  const balai = await p.locator(".radar-balai").evaluate((e) => getComputedStyle(e).animationName);
+  await p.locator(".radar").evaluate((e) => e.scrollIntoView({ block: "center" }));
+  await photo("v34-radar");
+  await p.locator(".radar-cible").first().click(); await p.waitForTimeout(300); await chiffresFinis();
+  const ficheRadar = await p.locator(".grand-titre h1").innerText();
+  await photo("v35-fiche-anneau");
+  const radarOk = JSON.stringify(etiquettesRadar) === JSON.stringify(attendusRadar) && balai === "balayage"
+    && attendusRadar.includes(ficheRadar);
+  dire(`Radar : ${etiquettesRadar.length} points ${etiquettesRadar.join(", ")} · attendus ${attendusRadar.join(", ")} · balayage ${balai} · point touché → fiche ${ficheRadar} · conforme : ${radarOk ? "OUI" : "NON"}`);
+  await p.locator(".retour").click(); await p.waitForTimeout(300);
   const affiches = await p.locator(".ligne.suggestion .symbole").allInnerTexts();
   const attendus = a.hausse.slice(0, 5).map((x) => x.symbole);
   // Lot B : chaque note affichée = la note publiée par le robot ; « Récent » au même endroit
@@ -80,6 +96,7 @@ const fs = require("fs");
   await p.locator(".ligne.suggestion").first().click();
   await photo("v3-fiche-1re");
   const titre = await p.locator(".grand-titre h1").innerText();
+  await chiffresFinis();
   const noteFiche = (await p.locator(".fiche-score").innerText()).replace(/\s+/g, "");
   const ficheOk = noteFiche === sur10(a.hausse[0].note10) && titre === a.hausse[0].symbole;
   dire(`Fiche ouverte : ${titre} · note affichée ${noteFiche} · publiée ${sur10(a.hausse[0].note10)} · conforme : ${ficheOk ? "OUI" : "NON"}`);
@@ -232,7 +249,7 @@ const fs = require("fs");
     await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
   } else dire("CCC : aucune info dans le fil");
   // Contrats fédéraux : 1re lecture silencieuse (aucune info), l'état de la source se voit dans l'écran Sources
-  await p.locator("nav.onglets button", { hasText: "Accueil" }).click(); await p.waitForTimeout(400);
+  await p.locator("nav.onglets button", { hasText: "Radar" }).click(); await p.waitForTimeout(400);
   await p.locator(".tuile", { hasText: "Sources actives" }).click(); await p.waitForTimeout(600);
   let sourcesOk = true;
   for (const nom of ["Santé Canada : nouveaux médicaments", "Contrats fédéraux de 10 M$ et plus", "Corporation commerciale canadienne : transactions"]) {
@@ -265,7 +282,7 @@ const fs = require("fs");
     etatsUnisOk = etatsUnisOk && bonU;
     await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
   }
-  await p.locator("nav.onglets button", { hasText: "Accueil" }).click(); await p.waitForTimeout(400);
+  await p.locator("nav.onglets button", { hasText: "Radar" }).click(); await p.waitForTimeout(400);
   await p.locator(".tuile", { hasText: "Sources actives" }).click(); await p.waitForTimeout(600);
   let ecarteesOk = true;
   for (const nom of ["Pentagone : contrats du jour", "GAO : contestations", "Fonds souverain de la Norvège", "Communiqués officiels",
@@ -310,6 +327,7 @@ const fs = require("fs");
     const vus = (await p.locator(".ligne.argent .argent-montant").allInnerTexts()).slice(0, 5).map(sans);
     const attendus = ag.lignes.slice(0, 5).map((l) => sans(l.montant != null ? court(l.montant) : `${court(l.montant_min)} à ${court(l.montant_max)}`));
     const th = ag.thermometre;
+    await chiffresFinis();
     const thermo = sans(await p.locator(".thermo").innerText());
     const thermoOk = thermo.includes(sans(`${court(th.achats.montant)} achetés (${th.achats.nombre})`))
       && thermo.includes(sans(`${court(th.ventes_libres.montant)} vendus (${th.ventes_libres.nombre})`));
@@ -347,7 +365,7 @@ const fs = require("fs");
     await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
   } else dire("Participation : aucune info dans le fil (aucun cas dans les 8-K lus)");
   dire(`Erreurs du navigateur : ${erreurs.length ? erreurs.join(" | ") : "aucune"}`);
-  const ok = pareil && elusPareil && lobbyingPareil && memeTop && ficheOk && methodeOk && argentOk && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && participationOk && !erreurs.length && js.includes(VERSION);
+  const ok = pareil && elusPareil && lobbyingPareil && memeTop && radarOk && ficheOk && methodeOk && argentOk && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && participationOk && !erreurs.length && js.includes(VERSION);
   dire(ok ? "VERDICT : OK" : "VERDICT : PROBLÈME");
   fs.writeFileSync(`${dossier}/site.txt`, lignes.join("\n") + "\n");
   await b.close();
