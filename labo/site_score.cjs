@@ -22,8 +22,14 @@ const fs = require("fs");
     if (t.includes("0.7.1")) break;
     await new Promise((ok) => setTimeout(ok, 15000));
   }
-  const r = await ctx.request.get(`${base}data/app/aujourdhui.json?x=${Date.now()}`);
-  const servi = await r.text();
+  // Attendre que le site serve le score publié par le robot sur main (au plus 6 minutes).
+  let r, servi;
+  for (let i = 0; i < 24; i++) {
+    r = await ctx.request.get(`${base}data/app/aujourdhui.json?x=${Date.now()}`);
+    servi = await r.text();
+    if (servi === local) break;
+    await new Promise((ok) => setTimeout(ok, 15000));
+  }
   const a = JSON.parse(servi);
   const pareil = servi === local;
   dire(`Fichier du score sur le site : HTTP ${r.status()} · identique à celui du robot sur main : ${pareil ? "OUI" : "NON"}`);
