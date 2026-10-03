@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.7.0";
+const VERSION = "0.7.1";
 
 // ---------- Constantes ----------
 
@@ -721,6 +721,11 @@ function FeuilleDetail({ ev, fermer }) {
       )}
       {ev.entities?.length > 0 && <p className="detail-entites">{ev.entities.join(" · ")}</p>}
       {ev.data?.resume && <p className="detail-resume">{ev.data.resume}</p>}
+      {ev.source === "sec_13dg" && ev.data?.extrait_but && (
+        <p className="detail-resume">
+          But écrit par le déclarant (point 4 du 13D) : « {ev.data.extrait_but} »
+        </p>
+      )}
       {ev.notes?.map((n) => (
         <p key={n} className="detail-note">
           <Icone nom="alerte" taille={16} epaisseur={2.2} /> {n}

@@ -112,6 +112,11 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     assert.equal(await p.locator(".feuille .controle.rate").count(), 0);
     await fermer();
   });
+  await verifier("Détail d'un 13D : le but écrit par le déclarant", async () => {
+    await p.locator(".ligne", { hasText: "Intel" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
+    assert.ok((await p.locator(".feuille").innerText()).includes("But écrit par le déclarant (point 4 du 13D) : « The Reporting Persons believe the Shares are undervalued (exemple). »"));
+    await fermer();
+  });
   await verifier("Tuiles des catégories : un nombre partout (toutes branchées)", async () => {
     await onglet("Accueil"); assert.equal(await p.locator(".cat-phase").count(), 0); assert.equal(await p.locator(".cat-nombre").count(), 6);
     await onglet("Fil");
