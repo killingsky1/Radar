@@ -1,0 +1,78 @@
+{
+ "amount_max": null,
+ "amount_min": null,
+ "badge": "officiel",
+ "category": "gouvernement",
+ "checks": {
+  "champs_requis": true,
+  "compagnie_cotee": true,
+  "dates_coherentes": true,
+  "domaine_officiel": true,
+  "empreinte": true,
+  "extrait_officiel": true,
+  "gouvernement_nomme": true,
+  "point_8k_retenu": true,
+  "source_connue": true,
+  "source_officielle": true,
+  "symboles_valides": true,
+  "titre_de_propriete": true
+ },
+ "collected_at": "2026-10-03T20:33:59+00:00",
+ "confirmations": [],
+ "currency": "USD",
+ "data": {
+  "cik": "0002101698",
+  "details": [
+   [
+    "Compagnie",
+    "Elmet Group Co."
+   ],
+   [
+    "Ministère",
+    "ministère de la Guerre (Défense)"
+   ],
+   [
+    "Points du 8-K",
+    "8.01"
+   ],
+   [
+    "Extrait (EX-99.1)",
+    "… $450 million redeemable preferred stock investment from the Department of War ‒ $200 million at close, followed by five, $50 million tranches over next few years • 5.5% payment-in-kind (PIK) dividend • Warrants representing up to 19.9% of Elmet's post- deal common stock ‒ 75.0% penny warrants (~5.7 million shares) ‒ 25.0% str …"
+   ]
+  ],
+  "documents": [
+   {
+    "extraits": [
+     "… $450 million redeemable preferred stock investment from the Department of War ‒ $200 million at close, followed by five, $50 million tranches over next few years • 5.5% payment-in-kind (PIK) dividend • Warrants representing up to 19.9% of Elmet's post- deal common stock ‒ 75.0% penny warrants (~5.7 million shares) ‒ 25.0% str …"
+    ],
+    "type": "EX-99.1",
+    "url": "https://www.sec.gov/Archives/edgar/data/2101698/000121390026106420/ea030742001ex99-1.htm"
+   }
+  ],
+  "ministere": "War",
+  "points": [
+   "8.01"
+  ]
+ },
+ "direction": 0,
+ "entities": [
+  "Elmet Group Co.",
+  "Gouvernement américain"
+ ],
+ "id": "participations_gouv:0001213900-26-106420",
+ "kind": "participation_gouv",
+ "notes": [
+  "Lisez l'extrait officiel : le titre résume seulement qu'il est question de titres de la compagnie et du gouvernement américain (achat, détention, bons de souscription ou revente)."
+ ],
+ "occurred_on": "2026-10-02",
+ "official_id": "0001213900-26-106420",
+ "official_url": "https://www.sec.gov/Archives/edgar/data/2101698/000121390026106420/0001213900-26-106420-index.htm",
+ "parser_version": "participations-1",
+ "published_on": "2026-10-02",
+ "sha256": "65031c00366c0a41d2774e722cb43732fb42c12232dbec99618af03234fc2a2b",
+ "source": "participations_gouv",
+ "tickers": [
+  "ELMT"
+ ],
+ "title": "Elmet Group Co. : un 8-K dit que le gouvernement américain (ministère de la Guerre (Défense)) reçoit, détient ou revend des titres de la compagnie"
+}

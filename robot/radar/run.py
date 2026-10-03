@@ -9,23 +9,74 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import sys
+import urllib.robotparser
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 
 from . import emetteurs
 from .collecteurs import COLLECTEURS
-from .http import ClientPoli
+from .http import ClientPoli, ErreurSource
 from .models import Evenement
 from .publish import publier
-from .recoupement import recouper
+from .recoupement import marquer_doublons_form4, recouper
 from .registry import PASSAGES, SOURCES
 from .store import Depot
 from .validate import valider
 
 CONFIG = Path(__file__).resolve().parent.parent / "config.json"
+
+# Un site qui refuse le robot (erreur 401 ou 403) : on respecte. Un refus isolé peut être passager (ex. le Registre
+# fédéral le 3 octobre 2026 : lu à 00 h 05, 403 à 00 h 11, lu normalement au passage suivant) ; deux refus de suite, à
+# au moins 1 heure d'écart, sont un vrai refus : la source est mise en pause 7 jours, puis on réessaie une seule fois,
+# en lisant d'abord le robots.txt du site (refusé ou illisible = on attend encore 7 jours).
+REFUS = re.compile(r"HTTP (401|403)$")
+ECART_REFUS = timedelta(hours=1)
+PAUSE_REFUS = timedelta(days=7)
+AGENT = "Radar projet personnel"
+
+
+def noter_refus(e: dict, code: int, maintenant: datetime) -> None:
+    r = e.get("refus")
+    if r is None:
+        e["refus"] = {"depuis": maintenant.isoformat(), "code": code, "essais": 1, "dernier_refus": maintenant.isoformat(),
+                      "confirme": False}
+        return
+    if not r["confirme"] and maintenant - datetime.fromisoformat(r["dernier_refus"]) < ECART_REFUS:
+        return  # trop proche du 1er refus (ex. deux lancements de suite) : ce n'est pas une 2e preuve
+    r.update(code=code, essais=r["essais"] + 1, dernier_refus=maintenant.isoformat())
+    if r["essais"] >= 2:
+        r["confirme"] = True
+        r["prochain_essai"] = (maintenant + PAUSE_REFUS).isoformat()
+
+
+def refus_d_avant(e: dict) -> None:
+    """État écrit avant cette règle : une dernière erreur 401/403 plus récente que la dernière réussite = 1er refus."""
+    erreur, tentative = e.get("derniere_erreur") or "", e.get("derniere_tentative")
+    m = REFUS.search(erreur)
+    if "refus" not in e and m and tentative and (e.get("dernier_succes") or "") < tentative:
+        e["refus"] = {"depuis": tentative, "code": int(m.group(1)), "essais": 1, "dernier_refus": tentative,
+                      "confirme": False}
+
+
+def robots_permet(client, site: str) -> tuple[bool, str]:
+    """Le robots.txt du site permet-il de lire `site` ? Absent (404) = permis ; refusé ou illisible = non."""
+    racine = f"{urlparse(site).scheme}://{urlparse(site).netloc}"
+    try:
+        texte = client.get(racine + "/robots.txt").contenu.decode("utf-8", "replace")
+    except ErreurSource as exc:
+        if str(exc).endswith("HTTP 404"):
+            return True, "pas de robots.txt"
+        return False, f"robots.txt refusé ou illisible ({str(exc).rsplit(' : ', 1)[-1]})"
+    rp = urllib.robotparser.RobotFileParser()
+    rp.parse(texte.splitlines())
+    if rp.can_fetch(AGENT, site):
+        return True, "robots.txt permet"
+    return False, "robots.txt ne permet pas"
 
 
 @dataclass
@@ -76,6 +127,19 @@ def executer(donnees, passage=None, seulement=None, collecteurs=None, client=Non
         if passage and passage not in SOURCES[sid].passages:
             continue
         e = etat.setdefault(sid, {})
+        refus_d_avant(e)
+        refus = e.get("refus")
+        if refus and refus["confirme"]:
+            if maintenant < datetime.fromisoformat(refus["prochain_essai"]):
+                rapport[sid] = {"ok": False, "refusee_depuis": refus["depuis"]}
+                continue  # le site refuse le robot : on ne le sollicite pas pendant la pause
+            permis, pourquoi = robots_permet(client, SOURCES[sid].site)
+            refus["robots"] = pourquoi
+            if not permis:
+                refus.update(dernier_refus=maintenant.isoformat(), prochain_essai=(maintenant + PAUSE_REFUS).isoformat())
+                e["derniere_tentative"] = maintenant.isoformat()
+                rapport[sid] = {"ok": False, "refusee_depuis": refus["depuis"], "robots": pourquoi}
+                continue
         e["derniere_tentative"] = maintenant.isoformat()
         try:
             evenements = list(collecteur(ctx))
@@ -84,8 +148,12 @@ def executer(donnees, passage=None, seulement=None, collecteurs=None, client=Non
             bilan = depot.enregistrer(evenements)
         except Exception as exc:  # isole la panne à cette source
             e["derniere_erreur"] = f"{type(exc).__name__}: {exc}"[:300]
+            m = REFUS.search(str(exc))
+            if m:
+                noter_refus(e, int(m.group(1)), maintenant)
             rapport[sid] = {"ok": False, "erreur": e["derniere_erreur"]}
             continue
+        e.pop("refus", None)  # lecture réussie : le site accepte de nouveau le robot
         e["dernier_succes"] = maintenant.isoformat()
         e["derniere_erreur"] = None
         e["compte"] = {"recus": len(evenements), "a_verifier": sum(ev.badge == "a_verifier" for ev in evenements)}
@@ -109,6 +177,11 @@ def executer(donnees, passage=None, seulement=None, collecteurs=None, client=Non
     liees = recouper(donnees)
     if liees:
         print(f"Recoupement : {liees} info(s) reliée(s) à une 2e source officielle")
+
+    # La même transaction déclarée par plusieurs entités liées (ex. un fonds et ses gestionnaires) : une seule ligne.
+    doublons = marquer_doublons_form4(donnees)
+    if doublons:
+        print(f"Doublons : {doublons} formulaire(s) 4 relié(s) à la même transaction déjà déclarée")
 
     # Les contrôles s'améliorent : on les réapplique aux infos déjà publiées (une info peut retourner « à vérifier »).
     bilan = revalider(donnees, maintenant)

@@ -32,7 +32,9 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
     """`symboles` : la liste officielle de la SEC si un lecteur l'a lue à ce passage (noms des compagnies du score)."""
     depot = Depot(donnees)
     # Un acte publié par 2 sources (ex. Maison-Blanche puis Registre) n'apparaît qu'une fois, avec sa confirmation.
-    fil = sorted((e for e in depot.lire("evenements") if not e.get("data", {}).get("meme_acte_que")),
+    # Même chose pour la même transaction déclarée par plusieurs entités liées (formulaires 4) : une seule ligne.
+    fil = sorted((e for e in depot.lire("evenements")
+                  if not e.get("data", {}).get("meme_acte_que") and not e.get("data", {}).get("meme_transaction_que")),
                  key=_plus_recent, reverse=True)
     a_verifier = sorted(depot.lire("a_verifier"), key=_plus_recent, reverse=True)
 

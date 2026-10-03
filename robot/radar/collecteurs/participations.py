@@ -19,16 +19,18 @@ La recherche plein texte de la SEC (efts.sec.gov) n'est pas utilisée : son robo
 
 from __future__ import annotations
 
+import copy
 import html
 import re
 
 from ..models import Evenement
+from ..store import Depot
 from ..validate import controle_source
 from .gazette import details
 from .regulateurs import canonique
 from .sec import ARCHIVES, empreinte_entete, lire_8k, lire_journees, symboles
 
-VERSION = "participations-1"
+VERSION = "participations-2"
 POINTS_LUS = {"1.01", "3.02", "8.01"}
 # Descriptions officielles EDGAR (« ITEM INFORMATION » de l'en-tête) : le lecteur des 8-K ne garde pas 3.02 ni 8.01
 POINTS_EDGAR = {"entry into a material definitive agreement": "1.01", "unregistered sales of equity securities": "3.02",
@@ -51,6 +53,14 @@ VERBE = re.compile(r"\b(?:issue[sd]?|issuance|issuing|sell|sold|sale|resale|rese
 BOILERPLATE = re.compile(r"forward[- ]looking|These risks include|risk factors", re.I)
 NOMS = {"Commerce": "ministère du Commerce", "War": "ministère de la Guerre (Défense)",
         "Defense": "ministère de la Défense", "Energy": "ministère de l'Énergie"}
+# Pour le titre : « le ministère américain de la Guerre (Défense) » (pas de parenthèses dans des parenthèses)
+QUI = {"Commerce": "le ministère américain du Commerce", "War": "le ministère américain de la Guerre (Défense)",
+       "Defense": "le ministère américain de la Défense", "Energy": "le ministère américain de l'Énergie"}
+
+
+def titre(compagnie: str, ministere: str | None) -> str:
+    return (f"{compagnie} : un 8-K dit que {QUI.get(ministere, 'le gouvernement américain')} reçoit, détient ou revend "
+            "des titres de la compagnie")
 
 
 def texte_doc(contenu: bytes) -> str:
@@ -70,6 +80,13 @@ def passages(texte: str) -> list[dict]:
     motif, trouves = gouvernement(texte), []
     for m in motif.finditer(texte):
         debut, fin = max(0, m.start() - PROCHE), min(len(texte), m.end() + PROCHE)
+        # Mots entiers : jamais un extrait qui commence ou finit au milieu d'un mot (« … 25.0% str … »)
+        if debut > 0 and not texte[debut - 1].isspace():
+            espace = texte.find(" ", debut, m.start())
+            debut = espace + 1 if espace != -1 else debut
+        if fin < len(texte) and not texte[fin].isspace():
+            espace = texte.rfind(" ", m.end(), fin)
+            fin = espace if espace != -1 else fin
         zone = texte[debut:fin]
         if not (TITRE.search(zone) and VERBE.search(zone)) or BOILERPLATE.search(zone):
             continue
@@ -99,7 +116,6 @@ def evenement(depot, cik: str, cote: dict, documents: list[tuple[str, str, list[
               sha: str) -> Evenement:
     tous = [t for _, _, ts in documents for t in ts]
     m = ministere_principal(tous)
-    qui = f"le gouvernement américain ({NOMS[m]})" if m else "le gouvernement américain"
     premier_doc = next(url for url, _, ts in documents if ts)
     d = {"cik": cik, "points": [i["item"] for i in items], "ministere": m,
          "documents": [{"url": url, "type": sorte, "extraits": [t["extrait"] for t in ts]} for url, sorte, ts in documents if ts],
@@ -108,7 +124,7 @@ def evenement(depot, cik: str, cote: dict, documents: list[tuple[str, str, list[
                             *[(f"Extrait ({sorte})", t["extrait"]) for _, sorte, ts in documents for t in ts[:2]])}
     return Evenement(
         source="participations_gouv", official_id=depot.acc, category="gouvernement", kind="participation_gouv",
-        title=f"{cote['name']} : un 8-K dit que {qui} reçoit, détient ou revend des titres de la compagnie",
+        title=titre(cote["name"], m),
         occurred_on=depot.depose, published_on=depot.depose, official_url=depot.page_officielle(cik), sha256=sha,
         parser_version=VERSION, tickers=[cote["ticker"]], entities=[cote["name"], "Gouvernement américain"], data=d,
         notes=["Lisez l'extrait officiel : le titre résume seulement qu'il est question de titres de la compagnie et du "
@@ -175,5 +191,32 @@ def lire_un(ctx, depot) -> list[Evenement]:
                                                                                  for t in ts]}))]
 
 
+def fin_au_mot_entier(extrait: str) -> str:
+    """Version 1 : l'extrait finissait à 250 caractères, parfois au milieu d'un mot ; on enlève ce dernier bout."""
+    if not extrait.endswith(" …"):
+        return extrait
+    coeur = extrait[:-2].rstrip()
+    return (coeur.rsplit(" ", 1)[0] if " " in coeur else coeur) + " …"
+
+
+def corriger_anciennes(ctx) -> list[Evenement]:
+    """Infos publiées par la version 1 : titre sans parenthèses dans des parenthèses, extraits finis au mot entier.
+    Rien n'est relu à la SEC : l'extrait raccourci reste mot pour mot dans le document officiel."""
+    corrigees = []
+    for d in Depot(ctx.donnees).lire("evenements"):
+        if d["source"] != "participations_gouv" or d["parser_version"] != "participations-1" or d["data"].get("corrigee"):
+            continue  # une seule fois : raccourcir de nouveau enlèverait un mot entier
+        n = copy.deepcopy(d)
+        n["data"]["corrigee"] = "Titre et fin d'extrait au mot entier (version 2 du lecteur, 3 octobre 2026)."
+        n["title"] = titre(d["entities"][0], d["data"].get("ministere"))
+        for doc in n["data"].get("documents") or []:
+            doc["extraits"] = [fin_au_mot_entier(x) for x in doc["extraits"]]
+        n["data"]["details"] = [[nom, fin_au_mot_entier(v) if nom.startswith("Extrait (") else v]
+                                for nom, v in n["data"].get("details") or []]
+        if n != d:
+            corrigees.append(Evenement.from_dict(n))
+    return corrigees
+
+
 def collecter(ctx) -> list[Evenement]:
-    return lire_journees(ctx, "participations_gouv", {"8-K"}, lire_un)
+    return lire_journees(ctx, "participations_gouv", {"8-K"}, lire_un) + corriger_anciennes(ctx)

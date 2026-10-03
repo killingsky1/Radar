@@ -159,8 +159,8 @@ def test_participations_intel_et_d_wave_de_bout_en_bout(tmp_path):
     assert len(intel) == 1
     e = valider(intel[0], datetime(2025, 8, 26).date())
     assert e.badge == "officiel", e.checks
-    assert e.title == ("INTEL CORP : un 8-K dit que le gouvernement américain (ministère du Commerce) reçoit, détient ou "
-                       "revend des titres de la compagnie")
+    assert e.title == ("INTEL CORP : un 8-K dit que le ministère américain du Commerce reçoit, détient ou revend des titres "
+                       "de la compagnie")
     assert (e.tickers, e.official_id, e.published_on) == (["INTC"], "0000050863-25-000129", "2025-08-25")
     assert e.official_url == "https://www.sec.gov/Archives/edgar/data/50863/000005086325000129/0000050863-25-000129-index.htm"
     assert e.data["points"] == ["1.01", "3.02", "8.01"]

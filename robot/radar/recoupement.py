@@ -69,3 +69,56 @@ def recouper(donnees: Path) -> int:
     if modifies:
         depot.enregistrer([Evenement.from_dict(d) for d in modifies.values()])
     return len(modifies)
+
+
+def cle_transaction(ev: dict) -> tuple | None:
+    """Même compagnie, même sens, et exactement les mêmes lignes (date, code, nombre d'actions, prix)."""
+    lignes = (ev.get("data") or {}).get("transactions") or []
+    if ev["source"] != "sec_form4" or not ev.get("tickers") or not lignes:
+        return None
+    return (ev["tickers"][0], ev["kind"],
+            tuple(sorted((t.get("date"), t.get("code"), t.get("actions"), t.get("prix")) for t in lignes)))
+
+
+def marquer_doublons_form4(donnees: Path) -> int:
+    """La même transaction déclarée dans plusieurs formulaires 4 (entités liées : un administrateur et son fonds, un
+    fonds et ses gestionnaires) n'est montrée qu'une fois : la 1re déclaration (la plus ancienne) reste, les autres
+    sont marquées « même transaction » et nommées dans « aussi déclarée par ». Mesuré du 3 septembre au 3 octobre
+    2026 : 6 cas sur 201 formulaires 4 (ex. Blackstone : 5 dépôts pour une seule vente).
+    Le score n'est pas touché : il ne compte déjà qu'une fois le même achat (même jour, même montant)."""
+    depot = Depot(donnees)
+    tous = copy.deepcopy(depot.lire("evenements"))
+    groupes: dict[tuple, list[dict]] = {}
+    for ev in tous:
+        cle = cle_transaction(ev)
+        if cle:
+            groupes.setdefault(cle, []).append(ev)
+    modifies = {}
+    for membres in groupes.values():
+        membres.sort(key=lambda d: (d["published_on"], d["id"]))
+        premier, autres = membres[0], membres[1:]
+        noms = []
+        for ev in autres:
+            declarants = (ev.get("entities") or [])[:-1]  # la dernière entité est la compagnie
+            if not declarants:
+                nom = ev["official_id"]
+            elif len(declarants) == 1:
+                nom = declarants[0]
+            else:
+                nom = f"{declarants[0]} et {len(declarants) - 1} autre{'s' if len(declarants) > 2 else ''}"
+            noms.append(nom)
+            if ev["data"].get("meme_transaction_que") != premier["id"]:
+                ev["data"]["meme_transaction_que"] = premier["id"]
+                modifies[ev["id"]] = ev
+        if premier["data"].get("meme_transaction_que"):
+            del premier["data"]["meme_transaction_que"]
+            modifies[premier["id"]] = premier
+        if (premier["data"].get("aussi_declare_par") or []) != noms:
+            if noms:
+                premier["data"]["aussi_declare_par"] = noms
+            else:
+                premier["data"].pop("aussi_declare_par", None)
+            modifies[premier["id"]] = premier
+    if modifies:
+        depot.enregistrer([Evenement.from_dict(d) for d in modifies.values()])
+    return len(modifies)

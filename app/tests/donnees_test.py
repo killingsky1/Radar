@@ -148,8 +148,8 @@ def faux(ctx):
                  "details": [["Message", "CSMS # 99999999"], ["Proclamations citées", "11020"],
                              ["Extrait", "This message provides guidance (example)."]]}),
         ev(21, "participations_gouv", "gouvernement", "participation_gouv",
-           "MP Materials : un 8-K dit que le gouvernement américain (ministère du Commerce) reçoit, détient ou revend "
-           "des titres de la compagnie (exemple)", jour(7), "https://www.sec.gov/Archives/edgar/data/1801368/test-index.htm",
+           "MP Materials : un 8-K dit que le ministère américain du Commerce reçoit, détient ou revend des titres de la "
+           "compagnie (exemple)", jour(7), "https://www.sec.gov/Archives/edgar/data/1801368/test-index.htm",
            numero="0001801368-26-999999", tickers=["MP"], entities=["MP Materials Corp.", "Gouvernement américain"],
            data={"points": ["1.01", "3.02"], "ministere": "Commerce",
                  "documents": [{"url": "https://www.sec.gov/Archives/edgar/data/1801368/test.htm", "type": "8-K",
@@ -163,6 +163,12 @@ def faux(ctx):
            "https://www.sec.gov/test/xmpl-form4.xml", tickers=["XMPL"], amount_min=1.5e6, amount_max=1.5e6,
            entities=["PDG (exemple)", "Exemple Corp."], direction=-1,
            data={"symbole_declare": "XMPL", "symboles_sec": ["XMPL"], "actions": 100000, "roles": ["CEO"], "plan_10b5_1": False,
+                 "transactions": [{"code": "S", "acquis_cede": "D", "actions": 100000, "prix": 15.0, "date": jour(1)}]}),
+        # La même vente, déclarée aussi par une entité liée (ex. le fonds du PDG) : une seule ligne dans le fil
+        ev(22, "sec_form4", "compagnies", "vente_initie", "Fonds lié (exemple) vend 100 000 actions d'Exemple Corp.", jour(1),
+           "https://www.sec.gov/test/xmpl-form4-fonds.xml", tickers=["XMPL"], amount_min=1.5e6, amount_max=1.5e6,
+           entities=["Fonds lié (exemple)", "Exemple Corp."], direction=-1,
+           data={"symbole_declare": "XMPL", "symboles_sec": ["XMPL"], "actions": 100000, "roles": ["10% owner"], "plan_10b5_1": False,
                  "transactions": [{"code": "S", "acquis_cede": "D", "actions": 100000, "prix": 15.0, "date": jour(1)}]}),
     ]
 
@@ -212,6 +218,11 @@ c.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
 # Les sources branchées dans le vrai robot répondent « rien de neuf » ; le faux lecteur fournit les infos TEST.
 from radar.collecteurs import COLLECTEURS  # noqa: E402
 lecteurs = {sid: (lambda ctx: []) for sid in COLLECTEURS}
+# Un site qui refuse le robot (403) aux 2 passages (2 heures d'écart) : « Refusée par le site »
+from radar.http import ErreurSource  # noqa: E402
+def refuse(ctx):
+    raise ErreurSource("https://www.parl.ca/legisinfo/fr/projets-de-loi/json?parlsession=45-1 : HTTP 403")
+lecteurs["legisinfo"] = refuse
 # 2 passages : AMD entre dans les suggestions au 2e (pastille « Nouveau ») ; les autres y étaient déjà au 1er.
 maintenant = datetime.now(timezone.utc).replace(microsecond=0)
 lecteurs["sec_form4"] = sans_amd

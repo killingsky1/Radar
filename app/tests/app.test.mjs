@@ -284,9 +284,16 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     await fermer();
   });
   await verifier("Détail participation du gouvernement : l'extrait exact du 8-K", async () => {
-    await p.locator(".ligne", { hasText: "un 8-K dit que le gouvernement américain" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
+    await p.locator(".ligne", { hasText: "un 8-K dit que le ministère américain du Commerce" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
     assert.ok((await p.locator(".details-officiels").innerText()).includes("United States Department of Commerce to issue shares"));
     assert.equal(await p.locator(".feuille .controle.rate").count(), 0);
+    await fermer();
+  });
+  await verifier("Fil : une vente déclarée aussi par une entité liée n'apparaît qu'une fois, avec son nom", async () => {
+    assert.equal(await p.locator(".ligne", { hasText: "vend 100 000 actions" }).count(), 1);
+    await p.locator(".ligne", { hasText: "vend 100 000 actions" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
+    assert.equal(await p.locator(".aussi-declare").innerText(),
+      "Même transaction déclarée aussi par Fonds lié (exemple) (entités liées) : elle est comptée une seule fois.");
     await fermer();
   });
   await verifier("Détail d'un 13D : le but écrit par le déclarant", async () => {
@@ -340,6 +347,14 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     assert.equal(await p.evaluate(() => document.documentElement.dataset.theme), "sombre");
   });
   await verifier("État des sources : 55 sources listées", async () => { await reglages(); await p.getByRole("button", { name: /État des sources/ }).click(); await p.waitForSelector(".source"); assert.equal(await p.locator(".source").count(), 55); });
+  await verifier("Sources : un site qui refuse le robot (403) : « Refusée par le site », point violet, nouvel essai daté", async () => {
+    const s = p.locator(".source", { hasText: "LEGISinfo" });
+    const etat = await s.locator(".source-etat").innerText();
+    assert.ok(etat.startsWith("Refusée par le site") && etat.includes("Le site refuse l'accès au robot (erreur 403) depuis le ")
+      && etat.includes("Radar respecte ce refus et réessaie une fois le "), etat);
+    assert.equal(await s.locator(".point.violet").count(), 1);
+    assert.ok((await p.locator(".resume").innerText()).includes("Refusées par le site · 1"));
+  });
   await verifier("Bouton retour vers Réglages", async () => { await p.locator(".retour").click(); await p.waitForTimeout(200); assert.ok(await p.getByRole("button", { name: /Comment c'est vérifié/ }).isVisible()); });
   await verifier("Réglages : lien vers le calcul du score", async () => {
     await p.getByRole("button", { name: /Comment le score est calculé/ }).click(); await p.waitForTimeout(200);

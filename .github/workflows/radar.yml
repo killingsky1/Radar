@@ -11,6 +11,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      sources:
+        description: "Sources à lire, séparées par des virgules (vide = toutes). Ménage les sites lors d'un essai."
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -69,7 +74,10 @@ jobs:
       - run: pip install -r robot/requirements.txt
       - name: Lire les sources
         working-directory: robot
-        run: python -m radar.run --donnees ../data ${{ github.event_name == 'schedule' && '--passage auto' || '' }}
+        env:
+          PASSAGE: ${{ github.event_name == 'schedule' && '--passage auto' || '' }}
+          SOURCES: ${{ github.event.inputs.sources }}
+        run: python -m radar.run --donnees ../data $PASSAGE ${SOURCES:+--sources "$SOURCES"}
       - name: Sauvegarder les données
         run: |
           git config user.name "radar-robot"

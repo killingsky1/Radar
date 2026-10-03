@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.14.0";
+const VERSION = "0.15.0";
 
 // ---------- Constantes ----------
 
@@ -178,6 +178,7 @@ const STATUTS = {
   en_retard: { label: "En retard", couleur: "jaune" },
   en_panne: { label: "En panne", couleur: "rouge" },
   en_pause: { label: "En pause", couleur: "bleu" },
+  refusee: { label: "Refusée par le site", pluriel: "Refusées par le site", couleur: "violet" },
   a_venir: { label: "À venir", couleur: "gris" },
   ecartee: { label: "Laissée de côté", pluriel: "Laissées de côté", couleur: "gris" },
 };
@@ -797,6 +798,17 @@ function FeuilleDetail({ ev, fermer }) {
       {ev.source === "sec_13dg" && ev.data?.extrait_but && (
         <p className="detail-resume">
           But écrit par le déclarant (point 4 du 13D) : « {ev.data.extrait_but} »
+        </p>
+      )}
+      {ev.data?.aussi_declare_par?.length > 0 && (
+        <p className="detail-resume aussi-declare">
+          Même transaction déclarée aussi par {ev.data.aussi_declare_par.join(", ")} (entités liées) : elle est comptée une
+          seule fois.
+        </p>
+      )}
+      {ev.data?.corrigee && (
+        <p className="detail-note">
+          <Icone nom="info" taille={16} epaisseur={2.2} /> Corrigée par Radar : {ev.data.corrigee}
         </p>
       )}
       {ev.notes?.map((n) => (
@@ -2226,6 +2238,7 @@ input { font: inherit; color: var(--texte); }
 .pilule { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px; font-size: .8125rem; font-weight: 600; background: var(--carte-2); color: var(--texte-2); }
 .point { flex: none; width: 9px; height: 9px; border-radius: 5px; background: var(--gris); }
 .point.vert { background: var(--vert); } .point.jaune { background: var(--jaune); } .point.rouge { background: var(--rouge); } .point.bleu { background: var(--bleu); }
+.point.violet { background: var(--violet); }
 .source { position: relative; display: flex; align-items: center; gap: 12px; padding: 12px 16px; color: var(--texte); }
 .source + .source::before { left: 37px; }
 .source.ecartee { opacity: .55; }

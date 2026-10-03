@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from datetime import date, datetime, timedelta
+from zoneinfo import ZoneInfo
 
 from .registry import SOURCES
 
@@ -12,8 +13,19 @@ LIBELLES = {
     "en_retard": "En retard",
     "en_panne": "En panne",
     "en_pause": "En pause",
+    "refusee": "Refusée par le site",
     "ecartee": "Laissée de côté",
 }
+
+
+MOIS = ("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre",
+        "décembre")
+
+
+def jour_fr(iso: str) -> str:
+    """« 2026-10-03T20:28:12+00:00 » -> « 3 octobre 2026 » (jour de l'heure de l'Est)."""
+    d = datetime.fromisoformat(iso).astimezone(ZoneInfo("America/Toronto")).date()
+    return f"{'1er' if d.day == 1 else d.day} {MOIS[d.month - 1]} {d.year}"
 
 
 def statut(source_id: str, etat: dict | None, branchee: bool, maintenant: datetime) -> tuple[str, str]:
@@ -26,6 +38,10 @@ def statut(source_id: str, etat: dict | None, branchee: bool, maintenant: dateti
     etat = etat or {}
     if etat.get("pause"):
         return "en_pause", etat.get("raison_pause") or "Mise en pause."
+    refus = etat.get("refus") or {}
+    if refus.get("confirme"):
+        return "refusee", (f"Le site refuse l'accès au robot (erreur {refus['code']}) depuis le {jour_fr(refus['depuis'])} ; "
+                           f"Radar respecte ce refus et réessaie une fois le {jour_fr(refus['prochain_essai'])}.")
 
     limite = timedelta(hours=src.attente_heures)
     succes = etat.get("dernier_succes")
