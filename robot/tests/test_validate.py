@@ -2,7 +2,7 @@ from datetime import date
 
 import pytest
 
-from conftest import bonne_info, confirmation_pentagone
+from conftest import SOURCE_GENERIQUE, bonne_info, confirmation_pentagone
 from radar import validate
 from radar.models import Confirmation, empreinte
 from radar.validate import delai_depasse, jours_ouvrables, valider
@@ -47,7 +47,7 @@ def test_piege_va_dans_a_verifier(nom, changements, controle, aujourd_hui):
 
 
 def test_une_source_ne_peut_pas_se_confirmer_elle_meme(aujourd_hui):
-    soi_meme = Confirmation("sec_poursuites", "https://www.sec.gov/autre.xml", "0001234567-26-000002")
+    soi_meme = Confirmation(SOURCE_GENERIQUE, "https://www.sec.gov/autre.xml", "0001234567-26-000002")
     ev = valider(bonne_info(confirmations=[soi_meme]), aujourd_hui)
     assert ev.badge == "a_verifier"
     assert ev.checks["confirmations_valides"] is False
@@ -60,7 +60,7 @@ def test_confirmation_sur_un_site_non_officiel_refusee(aujourd_hui):
 
 
 def test_controle_de_source_rate(aujourd_hui, monkeypatch):
-    monkeypatch.setitem(validate.CONTROLES_SOURCE, "sec_poursuites", [lambda ev: {"code_P_achat_reel": False}])
+    monkeypatch.setitem(validate.CONTROLES_SOURCE, SOURCE_GENERIQUE, [lambda ev: {"code_P_achat_reel": False}])
     ev = valider(bonne_info(), aujourd_hui)
     assert ev.badge == "a_verifier"
     assert ev.checks["code_P_achat_reel"] is False
@@ -70,7 +70,7 @@ def test_controle_qui_plante_compte_comme_un_echec(aujourd_hui, monkeypatch):
     def plante(ev):
         raise ValueError("format inattendu")
 
-    monkeypatch.setitem(validate.CONTROLES_SOURCE, "sec_poursuites", [plante])
+    monkeypatch.setitem(validate.CONTROLES_SOURCE, SOURCE_GENERIQUE, [plante])
     ev = valider(bonne_info(), aujourd_hui)
     assert ev.badge == "a_verifier"
     assert ev.checks["controle_plante"] is False

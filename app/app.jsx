@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.5.0";
+const VERSION = "0.6.0";
 
 // ---------- Constantes ----------
 
@@ -77,12 +77,24 @@ const CONTROLES_SOURCES = {
   positions_coherentes: "Positions cohérentes",
   variation_coherente: "Variation cohérente",
   approbation_originale: "Approbation originale (pas un générique)",
-  nouvelle_molecule: "Nouvelle molécule (classe officielle 1)",
+  nouvelle_molecule: "Nouvelle molécule (classe 1 dans la base de la FDA)",
   lettre_officielle: "Lettre d'approbation officielle",
   trimestres_consecutifs: "Trimestres consécutifs comparés",
   rapports_complets: "Deux rapports complets comparés",
   variation_recalculee: "Variation recalculée",
   part_du_portefeuille_coherente: "Montant cohérent avec le portefeuille",
+  numero_de_rappel_officiel: "Numéro de rappel officiel",
+  nombre_plausible: "Nombre de véhicules plausible",
+  lien_du_meme_rappel: "Lien vers le même rappel",
+  communique_officiel: "Communiqué officiel",
+  document_officiel_sec: "Document officiel de la SEC",
+  action_officielle: "Action officielle de l'OFAC",
+  date_de_l_adresse_concorde: "Date de l'adresse officielle concorde",
+  liste_sdn_lue: "Liste des sanctions lue",
+  titre_et_liste_concordent: "Le titre et la liste concordent",
+  numero_de_transaction_officiel: "Numéro de transaction officiel",
+  feu_vert_accorde: "Feu vert accordé",
+  parties_lues: "Parties lues",
 };
 
 // Qui détient l'actif, selon les codes officiels du Congrès.
