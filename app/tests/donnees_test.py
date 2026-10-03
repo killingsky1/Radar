@@ -46,10 +46,42 @@ def faux(ctx):
         ev(8, "chambre_ptr", "politiciens", "achat_elu", "transaction lue sur un site non officiel (piège)", jour(1),
            "https://www.capitoltrades.com/trades/test", occ=jour(15), tickers=["NVDA"],
            amount_min=15001.0, amount_max=50000.0),
+        # Pour le score : un groupe d'achats chez AMD (directrice financière + administrateur) et un 13G sans points ;
+        # une faillite et une vente du PDG chez Exemple Corp. (2 familles à la baisse : bonus).
+        ev(9, "sec_form4", "compagnies", "achat_initie", "la directrice financière d'AMD achète 20 000 actions", jour(1),
+           "https://www.sec.gov/test/amd-form4-1.xml", tickers=["AMD"], amount_min=3.1e6, amount_max=3.1e6,
+           entities=["Directrice financière (exemple)", "ADVANCED MICRO DEVICES INC"], direction=1,
+           data={"symbole_declare": "AMD", "symboles_sec": ["AMD"], "actions": 20000, "roles": ["Chief Financial Officer"],
+                 "plan_10b5_1": False,
+                 "transactions": [{"code": "P", "acquis_cede": "A", "actions": 20000, "prix": 155.0, "date": jour(1)}]}),
+        ev(10, "sec_form4", "compagnies", "achat_initie", "un administrateur d'AMD achète 5 000 actions", jour(1),
+           "https://www.sec.gov/test/amd-form4-2.xml", occ=jour(2), tickers=["AMD"], amount_min=7.5e5, amount_max=7.5e5,
+           entities=["Administrateur (exemple)", "ADVANCED MICRO DEVICES INC"], direction=1,
+           data={"symbole_declare": "AMD", "symboles_sec": ["AMD"], "actions": 5000, "roles": ["administrateur"],
+                 "plan_10b5_1": False,
+                 "transactions": [{"code": "P", "acquis_cede": "A", "actions": 5000, "prix": 150.0, "date": jour(2)}]}),
+        ev(11, "sec_13dg", "baleines", "plus_5_pourcent", "un fonds indiciel dépasse 5 % d'AMD (13G)", jour(2),
+           "https://www.sec.gov/test/amd-13g.xml", tickers=["AMD"], entities=["Fonds indiciel (exemple)", "ADVANCED MICRO DEVICES INC"],
+           data={"type": "SCHEDULE 13G", "pourcentage": 6.1, "cik_emetteur": "2488", "cik_sujet_entete": "0000002488"}),
+        ev(12, "sec_8k", "compagnies", "evenement_8k", "Exemple Corp. se place sous la protection de la loi sur les faillites",
+           jour(1), "https://www.sec.gov/test/xmpl-8k.htm", tickers=["XMPL"], entities=["Exemple Corp."], direction=-1,
+           data={"type": "8-K", "items": [{"item": "1.03", "libelle": "faillite ou mise sous séquestre", "direction": -1}]}),
+        ev(13, "sec_form4", "compagnies", "vente_initie", "le PDG d'Exemple Corp. vend 100 000 actions", jour(1),
+           "https://www.sec.gov/test/xmpl-form4.xml", tickers=["XMPL"], amount_min=1.5e6, amount_max=1.5e6,
+           entities=["PDG (exemple)", "Exemple Corp."], direction=-1,
+           data={"symbole_declare": "XMPL", "symboles_sec": ["XMPL"], "actions": 100000, "roles": ["CEO"], "plan_10b5_1": False,
+                 "transactions": [{"code": "S", "acquis_cede": "D", "actions": 100000, "prix": 15.0, "date": jour(1)}]}),
     ]
+
+def sans_amd(ctx):
+    return [e for e in faux(ctx) if e.tickers[:1] != ["AMD"]]
 
 # Les sources branchées dans le vrai robot répondent « rien de neuf » ; le faux lecteur fournit les infos TEST.
 from radar.collecteurs import COLLECTEURS  # noqa: E402
 lecteurs = {sid: (lambda ctx: []) for sid in COLLECTEURS}
+# 2 passages : AMD entre dans les suggestions au 2e (pastille « Nouveau ») ; les autres y étaient déjà au 1er.
+maintenant = datetime.now(timezone.utc).replace(microsecond=0)
+lecteurs["sec_form4"] = sans_amd
+print(executer(sys.argv[1], collecteurs=lecteurs, maintenant=maintenant - timedelta(hours=2)))
 lecteurs["sec_form4"] = faux
-print(executer(sys.argv[1], collecteurs=lecteurs, maintenant=datetime.now(timezone.utc).replace(microsecond=0)))
+print(executer(sys.argv[1], collecteurs=lecteurs, maintenant=maintenant))

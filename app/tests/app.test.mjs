@@ -1,4 +1,4 @@
-// Tests de l'app dans un vrai navigateur (données TEST : 7 infos validées + 1 piège).
+// Tests de l'app dans un vrai navigateur (données TEST : 12 infos validées + 1 piège ; score : AMD, NVDA, XMPL).
 import { chromium } from "playwright";
 import assert from "node:assert";
 
@@ -25,6 +25,12 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
   await p.goto(ADRESSE);
   await p.evaluate(() => localStorage.clear());
   await p.reload(); await p.waitForSelector(".tuiles");
+  // Quitter une page marque les suggestions comme vues : on simule une dernière visite très ancienne, une seule fois.
+  await p.evaluate(() => sessionStorage.setItem("visite-ancienne", "1"));
+  await p.addInitScript(() => {
+    if (sessionStorage.getItem("visite-ancienne")) { sessionStorage.removeItem("visite-ancienne"); localStorage.setItem("radar-suggestions-vues", "0"); }
+  });
+  await p.reload(); await p.waitForSelector(".tuiles");
 
   await verifier("Thème sombre par défaut", async () => assert.equal(await p.evaluate(() => document.documentElement.dataset.theme), "sombre"));
   await verifier("Accueil : compteurs du robot (3 publiées aujourd'hui, 1 confirmée, 1 à vérifier)", async () => {
@@ -32,12 +38,59 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     assert.deepEqual(v.slice(0, 3), ["3", "1", "1"]);
     assert.ok((await p.locator(".tuile-label").first().innerText()).startsWith("Publiées le"));
   });
+  await verifier("Accueil : top à la hausse (AMD puis NVDA), pastille Nouveau sur AMD seulement", async () => {
+    const l = p.locator(".ligne.suggestion");
+    assert.equal(await l.count(), 2);
+    assert.ok((await l.nth(0).innerText()).includes("AMD") && (await l.nth(1).innerText()).includes("NVDA"));
+    assert.equal(await l.nth(0).locator(".nouveau").count(), 1);
+    assert.equal(await l.nth(1).locator(".nouveau").count(), 0);
+  });
+  await verifier("Accueil : 1 à surveiller à la baisse", async () => {
+    assert.ok((await p.locator(".alerte-baisse").innerText()).includes("1 à surveiller à la baisse"));
+  });
+  await verifier("Fiche AMD : groupe d'achats, 1 info comptée sur 2, 13G sans points", async () => {
+    await p.locator(".ligne.suggestion", { hasText: "AMD" }).click(); await p.waitForTimeout(250);
+    assert.equal(await p.locator(".grand-titre h1").innerText(), "AMD");
+    assert.equal(await p.locator(".ligne.raison").count(), 3);
+    const t = (await p.locator(".ecran").innerText()).replace(/\u00a0/g, " "); // espaces insécables (typographie)
+    assert.ok(t.includes("Groupe d'achats ×1,75") && t.includes("PDG, directeur financier ou président du conseil ×1,5"), t);
+    assert.equal(await p.locator(".raison-points.pas-compte").count(), 1);
+    assert.ok(t.toLowerCase().includes("autres infos (0 point)") && t.includes("13G : placement passif"), t);
+  });
+  await verifier("Fiche AMD : une raison ouvre le document officiel", async () => {
+    await p.locator(".ligne.raison").first().click(); await p.waitForSelector(".feuille-fond.ouvert");
+    assert.ok(await p.getByText("Document officiel").isVisible()); await fermer();
+  });
+  await verifier("Comment le score est calculé : 11 règles, 16 liens d'études", async () => {
+    await p.getByRole("button", { name: "Comment le score est calculé" }).click(); await p.waitForTimeout(250);
+    assert.equal(await p.locator(".regle").count(), 11);
+    assert.equal(await p.locator("a.etude").count(), 16);
+    assert.ok((await p.locator(".ecran").innerText()).includes("Pas un conseil financier"));
+  });
+  await verifier("Baisse : Exemple Corp., faillite + vente du PDG, bonus 2 familles", async () => {
+    await onglet("Accueil"); await p.locator(".alerte-baisse").click(); await p.waitForTimeout(250);
+    assert.equal(await p.locator(".segment.actif").innerText(), "Baisse · 1");
+    await p.locator(".ligne.suggestion", { hasText: "XMPL" }).click(); await p.waitForTimeout(250);
+    const t = await p.locator(".calcul").innerText();
+    assert.ok(t.includes("bonus ×1,25 (2 familles d'accord)") && t.includes("Score : −6,9"), t);
+  });
+  await verifier("Retour : Suggestions puis Accueil", async () => {
+    await p.locator(".retour").click(); await p.waitForTimeout(200);
+    assert.equal(await p.locator(".grand-titre h1").innerText(), "Suggestions");
+    await p.locator(".segment", { hasText: "Hausse" }).click(); assert.equal(await p.locator(".ligne.suggestion").count(), 2);
+    await p.locator(".retour").click(); await p.waitForTimeout(200); assert.ok(await p.locator(".tuiles").isVisible());
+  });
+  await verifier("Nouveau : disparaît une fois la liste vue (visite suivante)", async () => {
+    await p.evaluate(() => localStorage.setItem("radar-suggestions-vues", JSON.stringify(Date.now())));
+    await p.reload(); await p.waitForSelector(".tuiles");
+    assert.equal(await p.locator(".ligne.suggestion .nouveau").count(), 0);
+  });
   await verifier("Tuile catégorie Militaire ouvre le fil filtré (1 info)", async () => {
     await p.locator(".cat", { hasText: "Militaire" }).click(); await p.waitForTimeout(250); assert.equal(await lignes(), 1);
   });
-  await verifier("Fil : 7 infos, le piège est caché", async () => { await p.locator(".puce", { hasText: "Tout" }).click(); assert.equal(await lignes(), 7); });
+  await verifier("Fil : 12 infos, le piège est caché", async () => { await p.locator(".puce", { hasText: "Tout" }).click(); assert.equal(await lignes(), 12); });
   await verifier("Fil se souvient du filtre choisi (Tout) après un changement d'onglet", async () => {
-    await onglet("Favoris"); await onglet("Fil"); assert.equal(await lignes(), 7);
+    await onglet("Favoris"); await onglet("Fil"); assert.equal(await lignes(), 12);
     assert.equal(await p.locator(".puce.actif").innerText(), "Tout");
   });
   await verifier("Fil groupé par jour (Aujourd'hui, Hier…)", async () => {
@@ -76,18 +129,18 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
   await verifier("Réglage : seulement les confirmées (fil = 1)", async () => {
     await reglages(); await inter("Seulement les confirmées"); await filTout(); try { assert.equal(await lignes(), 1); } finally { await remettre(() => inter("Seulement les confirmées")); }
   });
-  await verifier("Réglage : montrer les « À vérifier » (fil = 8)", async () => {
-    await reglages(); await inter("Montrer les infos à vérifier"); await filTout(); try { assert.equal(await lignes(), 8); } finally { await remettre(() => inter("Montrer les infos à vérifier")); }
+  await verifier("Réglage : montrer les « À vérifier » (fil = 13)", async () => {
+    await reglages(); await inter("Montrer les infos à vérifier"); await filTout(); try { assert.equal(await lignes(), 13); } finally { await remettre(() => inter("Montrer les infos à vérifier")); }
   });
-  await verifier("Réglage : montant minimum 1 M$ (fil = 6)", async () => {
-    await reglages(); await p.getByRole("radio", { name: "1 M$" }).click(); await filTout(); try { assert.equal(await lignes(), 6); } finally { await remettre(() => p.getByRole("radio", { name: "Tous" }).click()); }
+  await verifier("Réglage : montant minimum 1 M$ (fil = 10)", async () => {
+    await reglages(); await p.getByRole("radio", { name: "1 M$" }).click(); await filTout(); try { assert.equal(await lignes(), 10); } finally { await remettre(() => p.getByRole("radio", { name: "Tous" }).click()); }
   });
-  await verifier("Réglage : cacher Politiciens (fil = 6)", async () => {
-    await reglages(); await inter("Politiciens"); await filTout(); try { assert.equal(await lignes(), 6); } finally { await remettre(() => inter("Politiciens")); }
+  await verifier("Réglage : cacher Politiciens (fil = 11)", async () => {
+    await reglages(); await inter("Politiciens"); await filTout(); try { assert.equal(await lignes(), 11); } finally { await remettre(() => inter("Politiciens")); }
   });
   await verifier("Réglage : catégorie cachée alors qu'elle était filtrée → retour à Tout", async () => {
     await onglet("Fil"); await p.locator(".puce", { hasText: "Politiciens" }).click(); await reglages(); await inter("Politiciens"); await onglet("Fil");
-    try { assert.equal(await p.locator(".puce.actif").innerText(), "Tout"); assert.equal(await lignes(), 6); } finally { await remettre(() => inter("Politiciens")); await filTout(); }
+    try { assert.equal(await p.locator(".puce.actif").innerText(), "Tout"); assert.equal(await lignes(), 11); } finally { await remettre(() => inter("Politiciens")); await filTout(); }
   });
   await verifier("Réglage : trier par montant (1er = 2 G$ LMT)", async () => {
     await reglages(); await p.getByRole("radio", { name: "Plus gros montant" }).click(); await filTout();
@@ -103,6 +156,10 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
   });
   await verifier("État des sources : 55 sources listées", async () => { await reglages(); await p.getByRole("button", { name: /État des sources/ }).click(); await p.waitForSelector(".source"); assert.equal(await p.locator(".source").count(), 55); });
   await verifier("Bouton retour vers Réglages", async () => { await p.locator(".retour").click(); await p.waitForTimeout(200); assert.ok(await p.getByRole("button", { name: /Comment c'est vérifié/ }).isVisible()); });
+  await verifier("Réglages : lien vers le calcul du score", async () => {
+    await p.getByRole("button", { name: /Comment le score est calculé/ }).click(); await p.waitForTimeout(200);
+    assert.equal(await p.locator(".regle").count(), 11); await p.locator(".retour").click(); await p.waitForTimeout(200);
+  });
   await verifier("À vérifier : le piège y est, avec le contrôle raté", async () => {
     await p.getByRole("button", { name: /^À vérifier/ }).click(); await p.waitForSelector(".ligne"); assert.equal(await lignes(), 1);
     await p.locator(".ligne").first().click(); await p.waitForSelector(".feuille-fond.ouvert");

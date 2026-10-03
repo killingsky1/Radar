@@ -22,7 +22,7 @@ from ..models import Evenement, empreinte
 from ..store import Depot
 from ..validate import controle_source, jours_ouvrables
 
-VERSION = "sec-4"  # à augmenter quand un lecteur change : les infos sont relues et mises à jour
+VERSION = "sec-5"  # à augmenter quand un lecteur change : les infos sont relues et mises à jour
 ARCHIVES = "https://www.sec.gov/Archives"
 BOURSES_GARDEES = {"Nasdaq", "NYSE", "CBOE"}
 SEUIL_ACHAT = 25_000  # $ US : sous ce montant, un achat est du bruit
@@ -480,16 +480,19 @@ def lire_13dg(texte: str) -> dict:
         cik = emetteur.findtext("issuerCIK")
         nom = emetteur.findtext("issuerName")
         date_evt = entete_xml.findtext("dateOfEvent")
+        noeuds = racine.findall("formData/reportingPersons/reportingPersonInfo")
         personnes = [(p.findtext("reportingPersonName"), nombre(p.findtext("percentOfClass")),
-                      nombre(p.findtext("aggregateAmountOwned"))) for p in racine.findall("formData/reportingPersons/reportingPersonInfo")]
+                      nombre(p.findtext("aggregateAmountOwned"))) for p in noeuds]
     else:
         cik = entete_xml.findtext("issuerInfo/issuerCik") or entete_xml.findtext(".//issuerCik")
         nom = entete_xml.findtext("issuerInfo/issuerName") or entete_xml.findtext(".//issuerName")
         date_evt = entete_xml.findtext("eventDateRequiresFilingThisStatement")
+        noeuds = racine.findall("formData/coverPageHeaderReportingPersonDetails")
         personnes = [(p.findtext("reportingPersonName"), nombre(p.findtext("classPercent")),
-                      nombre(p.findtext("reportingPersonBeneficiallyOwnedAggregateNumberOfShares")))
-                     for p in racine.findall("formData/coverPageHeaderReportingPersonDetails")]
+                      nombre(p.findtext("reportingPersonBeneficiallyOwnedAggregateNumberOfShares"))) for p in noeuds]
     personnes = [p for p in personnes if p[0]]
+    # Type officiel de chaque déclarant (IA = gestionnaire de placements, IN = individu, CO = compagnie…)
+    types = sorted({(t.text or "").strip() for n in noeuds for t in n.findall("typeOfReportingPerson")} - {""})
     if not personnes:
         raise ValueError("aucune personne déclarante")
     # Plusieurs personnes d'un même groupe déclarent souvent les mêmes actions : on garde le plus gros pourcentage.
@@ -499,7 +502,7 @@ def lire_13dg(texte: str) -> dict:
         "type": type_depot, "cik_emetteur": (cik or "").strip(), "nom_emetteur": (nom or "").strip(),
         "date_evenement": f"{annee}-{mois}-{jour}" if annee else None,
         "declarant": principale[0].strip(), "pourcentage": principale[1], "actions": principale[2],
-        "nb_personnes": len(personnes), "amendement": entete_xml.findtext("amendmentNo"),
+        "nb_personnes": len(personnes), "types_declarants": types, "amendement": entete_xml.findtext("amendmentNo"),
         "cik_sujet_entete": (re.search(r"SUBJECT COMPANY:.*?CENTRAL INDEX KEY:\s*(\d+)", texte, re.S) or [None, None])[1],
     }
 

@@ -107,7 +107,7 @@ def executer(donnees, passage=None, seulement=None, collecteurs=None, client=Non
 
     chemin_etat.parent.mkdir(parents=True, exist_ok=True)
     chemin_etat.write_text(json.dumps(etat, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
-    publier(donnees, etat, set(collecteurs), maintenant)
+    publier(donnees, etat, set(collecteurs), maintenant, ctx.cache.get("sec_symboles"))
     return rapport
 
 

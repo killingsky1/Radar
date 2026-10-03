@@ -132,6 +132,7 @@ def test_13d_modifie(index, syms):
     assert ev.data["pourcentage"] == 40.8 and ev.data["nb_personnes"] == 9
     assert ev.title.startswith("AULT MILTON C III détient 40,8 % de UNIVERSAL SAFETY PRODUCTS")
     assert "mise à jour n° 20" in ev.title and ev.occurred_on == "2026-09-30"
+    assert ev.data["types_declarants"] == ["CO", "IN", "OO", "PN"]  # compagnies, individus, autres, société en commandite
 
 
 def test_13g_passif(index, syms):
@@ -141,6 +142,7 @@ def test_13g_passif(index, syms):
     assert ev.badge == "officiel", ev.checks
     assert ev.tickers == ["CWH"] and ev.data["pourcentage"] == 7.7
     assert "13G, placement passif" in ev.title and ev.occurred_on == "2026-06-30"
+    assert ev.data["types_declarants"] == ["HC", "IA", "IN"]  # gestionnaire de placements, société mère, individu
 
 
 # ---------- Le robot au complet, avec un faux Internet qui sert les vrais documents ----------

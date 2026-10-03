@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.6.0";
+const VERSION = "0.7.0";
 
 // ---------- Constantes ----------
 
@@ -823,10 +823,286 @@ function FeuilleInstaller({ fermer }) {
   );
 }
 
+// ---------- Score ----------
+
+// Noms courts des familles de sources (les noms complets viennent du robot).
+const FAMILLES_COURTES = {
+  inities: "Dirigeants",
+  activistes: "Fonds activiste",
+  fonds: "Grand fonds",
+  elus: "Élus",
+  fda: "FDA",
+  sec: "SEC",
+  rappels: "Rappel",
+  compagnie: "8-K",
+};
+
+// 5.25 → « 5,3 » ; avec signe : « +5,3 », « −0,5 ».
+function pts(n, signe = false) {
+  const v = Math.round(Math.abs(n) * 10) / 10;
+  const t = v.toLocaleString("fr-CA", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  return `${n < 0 ? "−" : signe ? "+" : ""}${t}`;
+}
+
+// Typographie française : espace insécable avant « % : ; ! ? » (évite « 1,2 » en fin de ligne et « % » au début de la suivante).
+function fr(texte) {
+  return (texte || "").replace(/ ([%:;!?»])/g, "\u00a0$1").replace(/« /g, "«\u00a0");
+}
+
+function fois(m) {
+  return `×${m.toLocaleString("fr-CA", { maximumFractionDigits: 2 })}`;
+}
+
+// Le calcul d'une info, en clair : « Base +2,0 · PDG… ×1,5 · Groupe d'achats ×1,75 · temps ×0,93 ».
+function calculInfo(i) {
+  const morceaux = [`Base ${pts(i.base, true)}`, ...i.facteurs.map(([l, m]) => `${l} ${fois(m)}`)];
+  if (i.temps < 1) morceaux.push(`temps ${fois(i.temps)}`);
+  return fr(morceaux.join(" · "));
+}
+
+function LigneSuggestion({ s }) {
+  const { ouvrirCompagnie, estNouveau } = useApp();
+  return (
+    <button type="button" className="ligne suggestion presse" onClick={() => ouvrirCompagnie(s.symbole)}>
+      <span className={s.score < 0 ? "score-pastille baisse" : "score-pastille"}>{pts(s.score)}</span>
+      <span className="ligne-centre">
+        <span className="ligne-titre">
+          <span className="symbole">{s.symbole}</span> {s.nom}
+        </span>
+        <span className="ligne-meta">
+          {estNouveau(s) && <span className="nouveau">Nouveau</span>}
+          <span>{s.groupes.map((g) => FAMILLES_COURTES[g.famille] || g.famille).join(" · ")}</span>
+        </span>
+      </span>
+      <Icone nom="chevron-d" taille={18} epaisseur={2.2} className="chevron" />
+    </button>
+  );
+}
+
+function ListeSuggestions({ liste }) {
+  return (
+    <div className="carte liste">
+      {liste.map((s) => (
+        <LigneSuggestion key={s.symbole} s={s} />
+      ))}
+    </div>
+  );
+}
+
+function LienMethode() {
+  const { pousser } = useApp();
+  return (
+    <button type="button" className="lien bloc-lien" onClick={() => pousser("methode")}>
+      Comment le score est calculé
+    </button>
+  );
+}
+
+function EcranSuggestions({ retour }) {
+  const { donnees, vueSuggestions, setVueSuggestions } = useApp();
+  const s = donnees.aujourdhui || {};
+  const baisse = vueSuggestions === "baisse";
+  const liste = (baisse ? s.baisse : s.hausse) || [];
+  return (
+    <Ecran titre="Suggestions" retour={retour}>
+      <Segments
+        label="Sens"
+        valeur={vueSuggestions}
+        onChange={setVueSuggestions}
+        options={[
+          ["hausse", `Hausse · ${s.hausse?.length || 0}`],
+          ["baisse", `Baisse · ${s.baisse?.length || 0}`],
+        ]}
+      />
+      <p className="explication">
+        {fr(baisse ? "Signaux négatifs : −1,5 point ou moins." : "Où le gros argent entre : 1,5 point ou plus.")} Calculé {ilYa(s.genere_a)}.
+      </p>
+      {liste.length === 0 ? (
+        <div className="carte">
+          <Vide titre="Personne pour l'instant" texte="Aucune compagnie n'atteint le seuil." />
+        </div>
+      ) : (
+        <ListeSuggestions liste={liste} />
+      )}
+      <LienMethode />
+      <p className="avertissement">{s.note || "Pas des conseils financiers"}</p>
+    </Ecran>
+  );
+}
+
+function EcranCompagnie({ retour }) {
+  const { donnees, compagnie, ouvrirDetail, favoris, basculerFavori, estNouveau } = useApp();
+  const s = donnees.aujourdhui || {};
+  const c = [...(s.hausse || []), ...(s.baisse || [])].find((x) => x.symbole === compagnie);
+  if (!c) {
+    return (
+      <Ecran titre={compagnie || "Compagnie"} retour={retour}>
+        <div className="carte">
+          <Vide titre="Plus dans les listes" texte="Cette compagnie est sortie des suggestions au dernier calcul." />
+        </div>
+      </Ecran>
+    );
+  }
+  const evs = s.evenements || {};
+  const noms = s.methode?.familles_noms || {};
+  const suivi = favoris.includes(c.symbole);
+  const baisse = c.score < 0;
+  const ligneCalcul = (sens, total, bonus) => {
+    const g = c.groupes.filter((x) => x.sens === sens);
+    if (!g.length) return null;
+    const somme = g.map((x) => pts(x.points, true)).join(" ");
+    const avecBonus = bonus > 1 ? ` · bonus ${fois(bonus)} (${g.length} familles d'accord)` : "";
+    return (
+      <p>
+        {sens > 0 ? "Hausse" : "Baisse"} : {somme}
+        {avecBonus} = {pts(total, true)}
+      </p>
+    );
+  };
+  return (
+    <Ecran titre={c.symbole} retour={retour}>
+      <div className="carte fiche">
+        <p className="fiche-nom">{c.nom}</p>
+        <p className={baisse ? "fiche-score t-rouge" : "fiche-score t-vert"}>
+          {pts(c.score)} <small>points</small>
+        </p>
+        <p className="fiche-sens">
+          {baisse ? "À surveiller à la baisse" : "À regarder à la hausse"}
+          {estNouveau(c) && <span className="nouveau">Nouveau</span>}
+        </p>
+        <button type="button" className={suivi ? "symbole-grand bouton-favori suivi presse" : "symbole-grand bouton-favori presse"} onClick={() => basculerFavori(c.symbole)} aria-pressed={suivi}>
+          <Icone nom="etoile" taille={16} rempli={suivi} epaisseur={2} />
+          {suivi ? "Dans mes favoris" : "Ajouter aux favoris"}
+        </button>
+      </div>
+
+      {c.groupes.map((g) => (
+        <section key={`${g.famille}${g.sens}`}>
+          <div className="section-ligne">
+            <h2 className="section">{noms[g.famille] || g.famille}</h2>
+            <span className={g.sens < 0 ? "section-points t-rouge" : "section-points t-vert"}>{pts(g.points, true)}</span>
+          </div>
+          <div className="carte liste">
+            {g.infos.map((i) => {
+              const ev = evs[i.id];
+              return (
+                <button key={i.id} type="button" className="ligne raison presse" onClick={() => ev && ouvrirDetail(ev)}>
+                  <span className="ligne-centre">
+                    <span className="ligne-titre">{fr(ev?.title || i.id)}</span>
+                    <span className="ligne-meta">
+                      {dateCourte(ev?.published_on)} · {i.compte ? calculInfo(i) : fr("Même famille : seule l'info la plus forte compte")}
+                    </span>
+                  </span>
+                  <span className={i.compte ? "raison-points" : "raison-points pas-compte"}>{i.compte ? pts(i.points, true) : "0"}</span>
+                </button>
+              );
+            })}
+          </div>
+        </section>
+      ))}
+
+      <div className="carte calcul">
+        {c.groupes.length > 1 && ligneCalcul(1, c.plus, c.bonus.plus)}
+        {c.groupes.length > 1 && ligneCalcul(-1, c.moins, c.bonus.moins)}
+        <p className="calcul-total">Score : {pts(c.score)}</p>
+      </div>
+
+      {c.contexte.length > 0 && (
+        <>
+          <h2 className="section">Autres infos (0 point)</h2>
+          <div className="carte liste">
+            {c.contexte.map((x) => {
+              const ev = evs[x.id];
+              return (
+                <button key={x.id} type="button" className="ligne raison presse" onClick={() => ev && ouvrirDetail(ev)}>
+                  <span className="ligne-centre">
+                    <span className="ligne-titre">{fr(ev?.title || x.id)}</span>
+                    <span className="ligne-meta">
+                      {dateCourte(ev?.published_on)} · {fr(x.pourquoi)}
+                    </span>
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </>
+      )}
+      <LienMethode />
+      <p className="avertissement">{s.note || "Pas des conseils financiers"}</p>
+    </Ecran>
+  );
+}
+
+function EcranMethode({ retour }) {
+  const { donnees } = useApp();
+  const m = donnees.aujourdhui?.methode;
+  if (!m) {
+    return (
+      <Ecran titre="Le score" retour={retour}>
+        <div className="carte">
+          <Vide titre="Pas encore calculé" texte="Le robot n'a pas encore publié de score." />
+        </div>
+      </Ecran>
+    );
+  }
+  return (
+    <Ecran titre="Le score" retour={retour}>
+      <p className="explication">{fr(m.resume)}</p>
+      <Groupe titre="Les points">
+        {m.regles.map((r) => (
+          <div key={r.code} className="rangee bloc regle">
+            <div className="regle-haut">
+              <span className="rangee-label">{fr(r.libelle)}</span>
+              <span className={r.points < 0 ? "regle-points t-rouge" : "regle-points t-vert"}>{pts(r.points, true)}</span>
+            </div>
+            {r.details.length > 0 && (
+              <ul className="regle-details">
+                {r.details.map((d) => (
+                  <li key={d}>{fr(d)}</li>
+                ))}
+              </ul>
+            )}
+            {r.etudes
+              .filter((e) => m.etudes[e])
+              .map((e) => (
+                <a key={e} className="etude" href={m.etudes[e].lien} target="_blank" rel="noopener noreferrer">
+                  <Icone nom="document" taille={16} epaisseur={2} />
+                  <span>
+                    <b>{m.etudes[e].titre}</b>{fr(` : ${m.etudes[e].constat}`)}
+                  </span>
+                </a>
+              ))}
+          </div>
+        ))}
+      </Groupe>
+      <Groupe titre="Le calcul">
+        {[m.temps, m.familles, m.bonus, m.seuil, m.badges].map((t) => (
+          <div key={t} className="rangee bloc">
+            <span className="rangee-texte">{fr(t)}</span>
+          </div>
+        ))}
+      </Groupe>
+      <Groupe titre="Sans points (contexte)">
+        {m.sans_points.map((t) => (
+          <div key={t} className="rangee bloc">
+            <span className="rangee-texte">{fr(t)}</span>
+          </div>
+        ))}
+      </Groupe>
+      <Groupe titre="Les prix">
+        <div className="rangee bloc">
+          <span className="rangee-texte">{fr(m.prix)}</span>
+        </div>
+      </Groupe>
+      <p className="avertissement">{m.avertissement}</p>
+    </Ecran>
+  );
+}
+
 // ---------- Écrans ----------
 
 function Accueil({ pousser, allerAuFil }) {
-  const { donnees, charger, chargement } = useApp();
+  const { donnees, charger, chargement, ouvrirSuggestions } = useApp();
   const { meta, aujourdhui } = donnees;
   const visibles = useVisibles();
   // Les compteurs viennent du robot : calculés sur TOUTES les infos, selon la date de publication officielle.
@@ -850,7 +1126,8 @@ function Accueil({ pousser, allerAuFil }) {
     }
     return Object.fromEntries(Object.keys(CATEGORIES).map((k) => [k, branchee[k] ? null : phase[k] ?? null]));
   }, [donnees.sources]);
-  const top = aujourdhui?.top || [];
+  const hausse = aujourdhui?.hausse || [];
+  const baisse = aujourdhui?.baisse || [];
   const pourcentage = meta.sources_total ? Math.round((meta.sources_branchees / meta.sources_total) * 100) : 0;
   const date = majuscule(new Date().toLocaleDateString("fr-CA", { weekday: "long", day: "numeric", month: "long" }));
 
@@ -858,12 +1135,14 @@ function Accueil({ pousser, allerAuFil }) {
     <Ecran titre="Radar" sousTitre={date} droite={<BoutonRond icone="rafraichir" label="Actualiser" onClick={charger} tourne={chargement} />}>
       <EtatDonnees />
 
-      {top.length === 0 ? (
+      {hausse.length === 0 && baisse.length === 0 ? (
         <div className="heros">
           <RadarAnime />
           <div className="heros-texte">
-            <p className="heros-titre">Pas encore de suggestions</p>
-            <p className="heros-sous">Le score arrive à la phase 5. En attendant, le fil montre tout ce que le robot lit.</p>
+            <p className="heros-titre">{aujourdhui?.version ? "Rien d'assez fort aujourd'hui" : "Pas encore de suggestions"}</p>
+            <p className="heros-sous">
+              {aujourdhui?.version ? "Aucune compagnie n'atteint 1,5 point." : "Le score arrive bientôt."} En attendant, le fil montre tout ce que le robot lit.
+            </p>
             <div className="mini-barre">
               <div style={{ width: `${Math.max(pourcentage, 3)}%` }} />
             </div>
@@ -874,8 +1153,26 @@ function Accueil({ pousser, allerAuFil }) {
         </div>
       ) : (
         <>
-          <h2 className="section">À regarder aujourd'hui</h2>
-          <ListeEvenements liste={top} groupee={false} />
+          <div className="section-ligne">
+            <h2 className="section">À regarder aujourd'hui</h2>
+            <button type="button" className="lien" onClick={() => ouvrirSuggestions("hausse")}>
+              Tout voir
+            </button>
+          </div>
+          {hausse.length > 0 ? (
+            <ListeSuggestions liste={hausse.slice(0, 5)} />
+          ) : (
+            <div className="carte">
+              <Vide titre="Rien à la hausse" texte="Aucune compagnie n'atteint 1,5 point." />
+            </div>
+          )}
+          {baisse.length > 0 && (
+            <button type="button" className="carte alerte-baisse presse" onClick={() => ouvrirSuggestions("baisse")}>
+              <Icone nom="alerte" taille={18} epaisseur={2.2} className="t-rouge" />
+              <span>{baisse.length} à surveiller à la baisse</span>
+              <Icone nom="chevron-d" taille={18} epaisseur={2.2} className="chevron" />
+            </button>
+          )}
         </>
       )}
 
@@ -1086,6 +1383,7 @@ function Reglages({ pousser, ouvrirInstaller }) {
         <RangeeLien icone="antenne" couleur="bleu" label="État des sources" valeur={`${meta.sources_branchees}/${meta.sources_total}`} onClick={() => pousser("sources")} />
         <RangeeLien icone="alerte" couleur="jaune" label="À vérifier" valeur={donnees.a_verifier.length} onClick={() => pousser("a_verifier")} />
         <RangeeLien icone="bouclier-ok" couleur="vert" label="Comment c'est vérifié" onClick={() => pousser("verification")} />
+        <RangeeLien icone="tarte" couleur="accent" label="Comment le score est calculé" onClick={() => pousser("methode")} />
       </Groupe>
 
       <Groupe titre="App">
@@ -1202,7 +1500,26 @@ const ONGLETS = [
   { id: "favoris", label: "Favoris", icone: "etoile" },
   { id: "reglages", label: "Réglages", icone: "reglages" },
 ];
-const PAGES = { sources: EcranSources, a_verifier: EcranAVerifier, verification: EcranVerification };
+const PAGES = {
+  sources: EcranSources,
+  a_verifier: EcranAVerifier,
+  verification: EcranVerification,
+  suggestions: EcranSuggestions,
+  compagnie: EcranCompagnie,
+  methode: EcranMethode,
+};
+
+// « Nouveau » : entrée dans les listes depuis la dernière visite (1re visite : depuis 24 h).
+const CLE_VU = "radar-suggestions-vues";
+function useDerniereVisite() {
+  const [vu] = useState(() => lireJSON(CLE_VU, Date.now() - 864e5));
+  useEffect(() => {
+    const partir = () => document.visibilityState === "hidden" && ecrireJSON(CLE_VU, Date.now());
+    document.addEventListener("visibilitychange", partir);
+    return () => document.removeEventListener("visibilitychange", partir);
+  }, []);
+  return vu;
+}
 const TITRES_ONGLETS = { accueil: "Radar", fil: "Fil", favoris: "Favoris", reglages: "Réglages" };
 
 function Squelette() {
@@ -1233,6 +1550,9 @@ function App() {
   const [rechercheFil, setRechercheFil] = useState("");
   const [detail, setDetail] = useState(null);
   const [installer, setInstaller] = useState(false);
+  const [compagnie, setCompagnie] = useState(null);
+  const [vueSuggestions, setVueSuggestions] = useState("hausse");
+  const derniereVisite = useDerniereVisite();
   useApparence(reglages);
 
   const choisirOnglet = (id) => {
@@ -1255,9 +1575,21 @@ function App() {
     choisirOnglet("fil");
   };
   const basculerFavori = (t) => setFavoris(favoris.includes(t) ? favoris.filter((x) => x !== t) : [...favoris, t]);
+  const ouvrirCompagnie = (symbole) => {
+    setCompagnie(symbole);
+    pousser("compagnie");
+  };
+  const ouvrirSuggestions = (vue) => {
+    setVueSuggestions(vue);
+    pousser("suggestions");
+  };
+  const estNouveau = (s) => Boolean(s.depuis) && Date.parse(s.depuis) > derniereVisite;
   const noms = useMemo(() => Object.fromEntries((donnees?.sources || []).map((s) => [s.id, s.nom])), [donnees]);
 
-  const valeur = { donnees, chargement, charger, reglages, setReglages, favoris, basculerFavori, noms, ouvrirDetail: setDetail };
+  const valeur = {
+    donnees, chargement, charger, reglages, setReglages, favoris, basculerFavori, noms, ouvrirDetail: setDetail, pousser,
+    compagnie, ouvrirCompagnie, vueSuggestions, setVueSuggestions, ouvrirSuggestions, estNouveau,
+  };
   const page = pile[pile.length - 1];
   const Page = page ? PAGES[page] : null;
   const retour = { label: pile.length > 1 ? "Retour" : TITRES_ONGLETS[onglet], action: revenir };
@@ -1403,6 +1735,34 @@ input { font: inherit; color: var(--texte); }
 .tuile-valeur small { font-size: 1rem; color: var(--texte-3); font-weight: 600; }
 .tuile-label { font-size: .8125rem; color: var(--texte-2); font-weight: 500; }
 .t-accent { color: var(--accent); } .t-vert { color: var(--vert); } .t-jaune { color: var(--jaune); } .t-bleu { color: var(--bleu); }
+.t-rouge { color: var(--rouge); }
+.score-pastille { flex: none; min-width: 50px; height: 34px; padding: 0 8px; border-radius: 11px; display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 750; font-variant-numeric: tabular-nums; background: color-mix(in srgb, var(--vert) 16%, transparent); color: var(--vert); }
+.score-pastille.baisse { background: color-mix(in srgb, var(--rouge) 16%, transparent); color: var(--rouge); }
+.suggestion .ligne-titre .symbole { margin-right: 2px; vertical-align: 1px; }
+.nouveau { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: .6875rem; font-weight: 700; background: var(--accent); color: #fff; margin-left: 6px; }
+.ligne-meta .nouveau { margin-left: 0; }
+.alerte-baisse { width: 100%; display: flex; align-items: center; gap: 10px; padding: 13px 14px; margin-top: 10px; font-size: .9375rem; font-weight: 600; text-align: left; }
+.alerte-baisse span { flex: 1; }
+.fiche { padding: 18px 16px; text-align: center; }
+.fiche-nom { margin: 0; color: var(--texte-2); font-weight: 600; }
+.fiche-score { margin: 6px 0 0; font-size: 2.5rem; font-weight: 800; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.fiche-score small { font-size: 1rem; font-weight: 600; color: var(--texte-2); letter-spacing: 0; }
+.fiche-sens { margin: 2px 0 14px; color: var(--texte-2); font-size: .9375rem; }
+.section-points { font-weight: 700; margin-right: 6px; font-variant-numeric: tabular-nums; }
+.raison-points { flex: none; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--texte); }
+.raison-points.pas-compte { color: var(--texte-3); font-weight: 500; }
+.calcul { padding: 10px 16px; margin-top: 16px; font-size: .875rem; color: var(--texte-2); }
+.calcul p { margin: 4px 0; }
+.calcul-total { color: var(--texte); font-weight: 700; font-size: .9375rem; }
+.regle-haut { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.regle-points { font-weight: 750; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.regle-details { margin: 0; padding-left: 18px; color: var(--texte-2); font-size: .875rem; line-height: 1.45; }
+.etude { display: flex; gap: 8px; align-items: flex-start; color: var(--texte-2); font-size: .8125rem; line-height: 1.4; }
+.etude svg { flex: none; color: var(--accent); margin-top: 1px; }
+.etude b { color: var(--accent); font-weight: 600; }
+.bloc-lien { display: block; margin: 20px auto 0; }
+.bouton-favori { font-family: inherit; font-weight: 600; }
 
 /* Catégories */
 .grille-cat { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }

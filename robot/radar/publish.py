@@ -10,6 +10,7 @@ from pathlib import Path
 from . import __version__
 from .health import LIBELLES, statut
 from .registry import SOURCES
+from .score import calculer
 from .store import Depot
 
 MAX_PAR_CATEGORIE = 150  # chaque catégorie garde ses infos les plus récentes (les élus ne cachent pas le reste)
@@ -26,7 +27,8 @@ def _plus_recent(d: dict):
     return (d["published_on"], d["collected_at"], d["id"])
 
 
-def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime) -> None:
+def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime, symboles=None) -> None:
+    """`symboles` : la liste officielle de la SEC si un lecteur l'a lue à ce passage (noms des compagnies du score)."""
     depot = Depot(donnees)
     # Un acte publié par 2 sources (ex. Maison-Blanche puis Registre) n'apparaît qu'une fois, avec sa confirmation.
     fil = sorted((e for e in depot.lire("evenements") if not e.get("data", {}).get("meme_acte_que")),
@@ -78,6 +80,7 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
             fil_app.append(e)
     _ecrire(donnees / "app" / "fil.json", fil_app)
     _ecrire(donnees / "app" / "a_verifier.json", a_verifier[:MAX_A_VERIFIER])
-    _ecrire(donnees / "app" / "aujourdhui.json", {
-        "top": [], "eviter": [], "note": "Les suggestions arrivent quand le score sera prêt (phase 5).",
-    })
+    # Le score : calculé sur TOUTES les infos validées ; la liste précédente sert à savoir qui vient d'entrer.
+    chemin = donnees / "app" / "aujourdhui.json"
+    precedent = json.loads(chemin.read_text(encoding="utf-8")) if chemin.exists() else None
+    _ecrire(chemin, calculer(fil, maintenant, precedent, symboles))
