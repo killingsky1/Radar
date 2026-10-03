@@ -36,14 +36,28 @@ def principal(titre):
             or "CHIEF FINANCIAL" in t or any(m.startswith("CHAIR") for m in mots))
 
 
+# Achats que le déposant dit faits lors d'une émission ou hors bourse : (symbole, date, prix) de chaque ligne marquée
+EMISSIONS = set()
+for e in infos:
+    if e["source"] == "sec_form4" and e["kind"] == "achat_initie" and e["badge"] in ("officiel", "confirme") \
+            and e["tickers"] and e["data"].get("hors_bourse"):
+        for ligne in e["data"]["transactions"]:
+            if ligne.get("hors_bourse"):
+                EMISSIONS.add((e["tickers"][0], ligne["date"], ligne["prix"]))
+
+
 def regle_de(e):
     s, d = e["source"], e.get("data") or {}
     if s == "sec_form4":
-        if d.get("plan_10b5_1"):
+        if d.get("plan_10b5_1") or d.get("hors_bourse"):
+            return None
+        if e["kind"] == "achat_initie" and any((e["tickers"][0], l["date"], l["prix"]) in EMISSIONS
+                                               for l in d.get("transactions", [])):
             return None
         return {"achat_initie": "achat_dirigeant", "vente_initie": "vente_dirigeant"}.get(e["kind"])
     if s == "sec_13dg":
-        ok = d.get("type") == "SCHEDULE 13D" and e["kind"] == "plus_5_pourcent" and "IA" in (d.get("types_declarants") or [])
+        ok = (d.get("type") == "SCHEDULE 13D" and e["kind"] == "plus_5_pourcent"
+              and "IA" in (d.get("types_declarants") or []) and d.get("but_sous_evalue") is True)
         return "activiste_13d" if ok else None
     if s == "sec_13f":
         return "fonds_13f" if e["direction"] == 1 else None
