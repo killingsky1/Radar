@@ -1,0 +1,29 @@
+name: "Labo (documents 13F)"
+
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/documents13f.py", ".github/workflows/labo11.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  documents13f:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - run: rm -rf labo/resultats-13f && python labo/documents13f.py
+      - name: Sauvegarder
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/resultats-13f
+          git commit -m "Labo : documents 13F du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
