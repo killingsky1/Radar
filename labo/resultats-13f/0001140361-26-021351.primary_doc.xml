@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edgarSubmission xmlns:com="http://www.sec.gov/edgar/common" xmlns="http://www.sec.gov/edgar/thirteenffiler">
+  <schemaVersion>X0202</schemaVersion>
+  <headerData>
+    <submissionType>13F-HR</submissionType>
+    <filerInfo>
+      <liveTestFlag>LIVE</liveTestFlag>
+      <filer>
+        <credentials>
+          <cik>0000898286</cik>
+          <ccc>XXXXXXXX</ccc>
+        </credentials>
+      </filer>
+      <periodOfReport>03-31-2026</periodOfReport>
+    </filerInfo>
+  </headerData>
+  <formData>
+    <coverPage>
+      <reportCalendarOrQuarter>03-31-2026</reportCalendarOrQuarter>
+      <isAmendment>false</isAmendment>
+      <filingManager>
+        <name>Caisse de depot et placement du Quebec</name>
+        <address>
+          <com:street1>1000 PLACE JEAN-PAUL RIOPELLE</com:street1>
+          <com:city>Montreal</com:city>
+          <com:stateOrCountry>A8</com:stateOrCountry>
+          <com:zipCode>H2Z2B3</com:zipCode>
+        </address>
+      </filingManager>
+      <reportType>13F HOLDINGS REPORT</reportType>
+      <form13FFileNumber>028-12476</form13FFileNumber>
+      <provideInfoForInstruction5>N</provideInfoForInstruction5>
+    </coverPage>
+    <signatureBlock>
+      <name>Soulef Hadjoudj</name>
+      <title>Senior Director, Legal Affairs</title>
+      <phone>514-847-5998</phone>
+      <signature>/s/ Soulef Hadjoudj</signature>
+      <city>Montreal</city>
+      <stateOrCountry>A8</stateOrCountry>
+      <signatureDate>05-14-2026</signatureDate>
+    </signatureBlock>
+    <summaryPage>
+      <otherIncludedManagersCount>0</otherIncludedManagersCount>
+      <tableEntryTotal>684</tableEntryTotal>
+      <tableValueTotal>62432772923</tableValueTotal>
+    </summaryPage>
+  </formData>
+</edgarSubmission>
