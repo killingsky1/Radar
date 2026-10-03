@@ -1,0 +1,602 @@
+{
+ "chefs": [
+  {
+   "chambre": "chambre",
+   "nom": "Mike Johnson",
+   "poste": "président de la Chambre",
+   "titre": "Speaker of the House"
+  },
+  {
+   "chambre": "chambre",
+   "nom": "Steve Scalise",
+   "poste": "chef de parti",
+   "titre": "Majority Leader"
+  },
+  {
+   "chambre": "chambre",
+   "nom": "Tom Emmer",
+   "poste": "whip (2e rang du parti)",
+   "titre": "Majority Whip"
+  },
+  {
+   "chambre": "chambre",
+   "nom": "Lisa C. McClain",
+   "poste": "président de la conférence du parti",
+   "titre": "Republican Conference Chairman"
+  },
+  {
+   "chambre": "chambre",
+   "nom": "Hakeem S. Jeffries",
+   "poste": "chef de parti",
+   "titre": "Democratic Leader"
+  },
+  {
+   "chambre": "chambre",
+   "nom": "Katherine M. Clark",
+   "poste": "whip (2e rang du parti)",
+   "titre": "Democratic Whip"
+  },
+  {
+   "chambre": "chambre",
+   "nom": "Pete Aguilar",
+   "poste": "président de la conférence du parti",
+   "titre": "Democratic Caucus Chairman"
+  },
+  {
+   "chambre": "senat",
+   "nom": "John Thune",
+   "poste": "chef de parti",
+   "titre": "Senate Majority Leader"
+  },
+  {
+   "chambre": "senat",
+   "nom": "John Barrasso",
+   "poste": "whip (2e rang du parti)",
+   "titre": "Majority Whip"
+  },
+  {
+   "chambre": "senat",
+   "nom": "Tom Cotton",
+   "poste": "président de la conférence du parti",
+   "titre": "Republican Conference Chair"
+  },
+  {
+   "chambre": "senat",
+   "nom": "Charles E. Schumer",
+   "poste": "chef de parti",
+   "titre": "Democratic Leader Chair of the Conference"
+  },
+  {
+   "chambre": "senat",
+   "nom": "Richard J. Durbin",
+   "poste": "whip (2e rang du parti)",
+   "titre": "Democratic Whip"
+  }
+ ],
+ "listes_lues": "2026-10-03T04:40:21+00:00",
+ "par_elu": {
+  "A. Mitchell McConnell Jr.": {
+   "chef": null,
+   "cle": "senat:MCCONNELL:KY",
+   "comites": [
+    {
+     "nom": "Joint Committee of Congress on the Library",
+     "role": "Vice Chairman"
+    },
+    {
+     "nom": "Joint Committee on Printing",
+     "role": "Chairman"
+    },
+    {
+     "nom": "Committee on Agriculture, Nutrition, and Forestry",
+     "role": null
+    },
+    {
+     "nom": "Committee on Appropriations",
+     "role": null
+    },
+    {
+     "nom": "Committee on Rules and Administration",
+     "role": "Chairman"
+    }
+   ],
+   "nom_officiel": "Mitch McConnell",
+   "votes_hr7008": [
+    {
+     "chambre": "Senate",
+     "date": "2026-09-30",
+     "numero": "253",
+     "question": "On Cloture on the Motion to Proceed H.R. 7008",
+     "sujet": "clôture pour ouvrir le débat (60 voix requises)",
+     "vote": "Yea",
+     "vote_fr": "pour"
+    }
+   ]
+  },
+  "Alan Armstrong": {
+   "chef": null,
+   "cle": "senat:ARMSTRONG:OK",
+   "comites": [
+    {
+     "nom": "Committee on Indian Affairs",
+     "role": null
+    },
+    {
+     "nom": "Committee on Health, Education, Labor, and Pensions",
+     "role": null
+    }
+   ],
+   "nom_officiel": "Alan Armstrong",
+   "votes_hr7008": [
+    {
+     "chambre": "Senate",
+     "date": "2026-09-30",
+     "numero": "253",
+     "question": "On Cloture on the Motion to Proceed H.R. 7008",
+     "sujet": "clôture pour ouvrir le débat (60 voix requises)",
+     "vote": "Yea",
+     "vote_fr": "pour"
+    }
+   ]
+  },
+  "Byron Donalds": {
+   "chef": null,
+   "cle": "chambre:FL19",
+   "comites": [
+    {
+     "nom": "Committee on Financial Services",
+     "role": null
+    },
+    {
+     "nom": "Committee on Oversight and Government Reform",
+     "role": null
+    }
+   ],
+   "nom_officiel": "Byron Donalds",
+   "votes_hr7008": [
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "279",
+     "question": "On Motion to Recommit",
+     "sujet": "motion de renvoi en comité (procédure)",
+     "vote": "Nay",
+     "vote_fr": "contre"
+    },
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "280",
+     "question": "On Passage",
+     "sujet": "adoption du projet de loi",
+     "vote": "Yea",
+     "vote_fr": "pour"
+    }
+   ]
+  },
+  "Cleo Fields": {
+   "chef": null,
+   "cle": "chambre:LA06",
+   "comites": [
+    {
+     "nom": "Committee on Financial Services",
+     "role": null
+    }
+   ],
+   "nom_officiel": "Cleo Fields",
+   "votes_hr7008": [
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "279",
+     "question": "On Motion to Recommit",
+     "sujet": "motion de renvoi en comité (procédure)",
+     "vote": "Yea",
+     "vote_fr": "pour"
+    },
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "280",
+     "question": "On Passage",
+     "sujet": "adoption du projet de loi",
+     "vote": "Nay",
+     "vote_fr": "contre"
+    }
+   ]
+  },
+  "David J. Taylor": {
+   "chef": null,
+   "cle": "chambre:OH02",
+   "comites": [
+    {
+     "nom": "Committee on Agriculture",
+     "role": null
+    },
+    {
+     "nom": "Committee on Transportation and Infrastructure",
+     "role": null
+    }
+   ],
+   "nom_officiel": "David J. Taylor",
+   "votes_hr7008": [
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "279",
+     "question": "On Motion to Recommit",
+     "sujet": "motion de renvoi en comité (procédure)",
+     "vote": "Nay",
+     "vote_fr": "contre"
+    },
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "280",
+     "question": "On Passage",
+     "sujet": "adoption du projet de loi",
+     "vote": "Yea",
+     "vote_fr": "pour"
+    }
+   ]
+  },
+  "John Boozman": {
+   "chef": null,
+   "cle": "senat:BOOZMAN:AR",
+   "comites": [
+    {
+     "nom": "Committee on Agriculture, Nutrition, and Forestry",
+     "role": "Chairman"
+    },
+    {
+     "nom": "Committee on Appropriations",
+     "role": null
+    },
+    {
+     "nom": "Committee on Environment and Public Works",
+     "role": null
+    },
+    {
+     "nom": "Committee on Rules and Administration",
+     "role": null
+    },
+    {
+     "nom": "Committee on Veterans' Affairs",
+     "role": null
+    }
+   ],
+   "nom_officiel": "John Boozman",
+   "votes_hr7008": [
+    {
+     "chambre": "Senate",
+     "date": "2026-09-30",
+     "numero": "253",
+     "question": "On Cloture on the Motion to Proceed H.R. 7008",
+     "sujet": "clôture pour ouvrir le débat (60 voix requises)",
+     "vote": "Yea",
+     "vote_fr": "pour"
+    }
+   ]
+  },
+  "John W. Rose": {
+   "chef": null,
+   "cle": "chambre:TN06",
+   "comites": [
+    {
+     "nom": "Committee on Agriculture",
+     "role": null
+    },
+    {
+     "nom": "Committee on Financial Services",
+     "role": null
+    }
+   ],
+   "nom_officiel": "John W. Rose",
+   "votes_hr7008": [
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "279",
+     "question": "On Motion to Recommit",
+     "sujet": "motion de renvoi en comité (procédure)",
+     "vote": "Nay",
+     "vote_fr": "contre"
+    },
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "280",
+     "question": "On Passage",
+     "sujet": "adoption du projet de loi",
+     "vote": "Yea",
+     "vote_fr": "pour"
+    }
+   ]
+  },
+  "Josh Gottheimer": {
+   "chef": null,
+   "cle": "chambre:NJ05",
+   "comites": [
+    {
+     "nom": "Committee on Financial Services",
+     "role": null
+    },
+    {
+     "nom": "Permanent Select Committee on Intelligence",
+     "role": null
+    }
+   ],
+   "nom_officiel": "Josh Gottheimer",
+   "votes_hr7008": [
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "279",
+     "question": "On Motion to Recommit",
+     "sujet": "motion de renvoi en comité (procédure)",
+     "vote": "Yea",
+     "vote_fr": "pour"
+    },
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "280",
+     "question": "On Passage",
+     "sujet": "adoption du projet de loi",
+     "vote": "Yea",
+     "vote_fr": "pour"
+    }
+   ]
+  },
+  "Kevin Hern": {
+   "chef": null,
+   "cle": "chambre:OK01",
+   "comites": [
+    {
+     "nom": "Committee on Ways and Means",
+     "role": null
+    }
+   ],
+   "nom_officiel": "Kevin Hern",
+   "votes_hr7008": [
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "279",
+     "question": "On Motion to Recommit",
+     "sujet": "motion de renvoi en comité (procédure)",
+     "vote": "Nay",
+     "vote_fr": "contre"
+    },
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "280",
+     "question": "On Passage",
+     "sujet": "adoption du projet de loi",
+     "vote": "Yea",
+     "vote_fr": "pour"
+    }
+   ]
+  },
+  "Pete Sessions": {
+   "chef": null,
+   "cle": "chambre:TX17",
+   "comites": [
+    {
+     "nom": "Committee on Financial Services",
+     "role": null
+    },
+    {
+     "nom": "Committee on Oversight and Government Reform",
+     "role": null
+    }
+   ],
+   "nom_officiel": "Pete Sessions",
+   "votes_hr7008": [
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "279",
+     "question": "On Motion to Recommit",
+     "sujet": "motion de renvoi en comité (procédure)",
+     "vote": "Nay",
+     "vote_fr": "contre"
+    },
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "280",
+     "question": "On Passage",
+     "sujet": "adoption du projet de loi",
+     "vote": "Yea",
+     "vote_fr": "pour"
+    }
+   ]
+  },
+  "Richard W. Allen": {
+   "chef": null,
+   "cle": "chambre:GA12",
+   "comites": [
+    {
+     "nom": "Committee on Education and Workforce",
+     "role": null
+    },
+    {
+     "nom": "Committee on Energy and Commerce",
+     "role": null
+    }
+   ],
+   "nom_officiel": "Rick W. Allen",
+   "votes_hr7008": [
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "279",
+     "question": "On Motion to Recommit",
+     "sujet": "motion de renvoi en comité (procédure)",
+     "vote": "Nay",
+     "vote_fr": "contre"
+    },
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "280",
+     "question": "On Passage",
+     "sujet": "adoption du projet de loi",
+     "vote": "Yea",
+     "vote_fr": "pour"
+    }
+   ]
+  },
+  "Scott Scott Franklin": {
+   "chef": null,
+   "cle": "chambre:FL18",
+   "comites": [
+    {
+     "nom": "Committee on Appropriations",
+     "role": null
+    },
+    {
+     "nom": "Committee on Science, Space, and Technology",
+     "role": null
+    }
+   ],
+   "nom_officiel": "Scott Franklin",
+   "votes_hr7008": [
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "279",
+     "question": "On Motion to Recommit",
+     "sujet": "motion de renvoi en comité (procédure)",
+     "vote": "Nay",
+     "vote_fr": "contre"
+    },
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "280",
+     "question": "On Passage",
+     "sujet": "adoption du projet de loi",
+     "vote": "Yea",
+     "vote_fr": "pour"
+    }
+   ]
+  },
+  "Sheldon Whitehouse": {
+   "chef": null,
+   "cle": "senat:WHITEHOUSE:RI",
+   "comites": [
+    {
+     "nom": "Committee on the Budget",
+     "role": null
+    },
+    {
+     "nom": "Committee on Environment and Public Works",
+     "role": "Ranking"
+    },
+    {
+     "nom": "Committee on Finance",
+     "role": null
+    },
+    {
+     "nom": "Committee on the Judiciary",
+     "role": null
+    }
+   ],
+   "nom_officiel": "Sheldon Whitehouse",
+   "votes_hr7008": [
+    {
+     "chambre": "Senate",
+     "date": "2026-09-30",
+     "numero": "253",
+     "question": "On Cloture on the Motion to Proceed H.R. 7008",
+     "sujet": "clôture pour ouvrir le débat (60 voix requises)",
+     "vote": "Nay",
+     "vote_fr": "contre"
+    }
+   ]
+  },
+  "Thomas H. Kean": {
+   "chef": null,
+   "cle": "chambre:NJ07",
+   "comites": [
+    {
+     "nom": "Committee on Foreign Affairs",
+     "role": null
+    },
+    {
+     "nom": "Committee on Energy and Commerce",
+     "role": null
+    }
+   ],
+   "nom_officiel": "Thomas H. Kean, Jr.",
+   "votes_hr7008": [
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "279",
+     "question": "On Motion to Recommit",
+     "sujet": "motion de renvoi en comité (procédure)",
+     "vote": "Nay",
+     "vote_fr": "contre"
+    },
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "280",
+     "question": "On Passage",
+     "sujet": "adoption du projet de loi",
+     "vote": "Yea",
+     "vote_fr": "pour"
+    }
+   ]
+  }
+ },
+ "projet": {
+  "date": "2026-09-30",
+  "etape": "bloqué au Sénat (clôture rejetée, 53 pour, 47 contre, 60 voix requises)",
+  "lu": "2026-10-03T04:40:21+00:00",
+  "nom": "H.R. 7008 (interdiction des transactions boursières des élus)",
+  "numero": "HR 7008",
+  "texte": "Cloture on the motion to proceed to the measure not invoked in Senate by Yea-Nay Vote. 53 - 47. Record Vote Number: 253.",
+  "titre": "Stop Insider Trading Act",
+  "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7008.xml",
+  "votes": [
+   {
+    "chambre": "House",
+    "date": "2026-07-22",
+    "non": 218,
+    "numero": "279",
+    "oui": 211,
+    "phrase": "la Chambre rejette la motion de renvoi en comité (procédure)",
+    "question": "On Motion to Recommit",
+    "resultat": "Failed",
+    "url": "https://clerk.house.gov/evs/2026/roll279.xml"
+   },
+   {
+    "chambre": "House",
+    "date": "2026-07-22",
+    "non": 198,
+    "numero": "280",
+    "oui": 232,
+    "phrase": "la Chambre adopte le projet de loi",
+    "question": "On Passage",
+    "resultat": "Passed",
+    "url": "https://clerk.house.gov/evs/2026/roll280.xml"
+   },
+   {
+    "chambre": "Senate",
+    "date": "2026-09-30",
+    "non": 47,
+    "numero": "253",
+    "oui": 53,
+    "phrase": "le Sénat rejette la clôture (60 voix requises pour ouvrir le débat)",
+    "question": "On Cloture on the Motion to Proceed H.R. 7008",
+    "resultat": "Cloture on the Motion to Proceed Rejected (53-47, 3/5 majority required)",
+    "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00253.xml"
+   }
+  ]
+ }
+}

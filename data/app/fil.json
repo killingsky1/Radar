@@ -16998,6 +16998,99 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "total_recompte": true,
+   "vote_du_projet_suivi": true
+  },
+  "collected_at": "2026-10-03T04:40:50+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "Senate",
+   "compte_non": 47,
+   "compte_oui": 53,
+   "non": 47,
+   "numero": "253",
+   "oui": 53,
+   "projet": "H.R. 7008",
+   "question": "On Cloture on the Motion to Proceed H.R. 7008",
+   "resultat": "Cloture on the Motion to Proceed Rejected (53-47, 3/5 majority required)"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "votes:S253-2026",
+  "kind": "vote",
+  "notes": [
+   "Question officielle : « On Cloture on the Motion to Proceed H.R. 7008 » · résultat : « Cloture on the Motion to Proceed Rejected (53-47, 3/5 majority required) »"
+  ],
+  "occurred_on": "2026-09-30",
+  "official_id": "S253-2026",
+  "official_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00253.xml",
+  "parser_version": "congres-1",
+  "published_on": "2026-09-30",
+  "sha256": "774d39920ce2f42e86a9682811d1a2bd12a007925b9e77e51880a58654d3bf2a",
+  "source": "votes",
+  "tickers": [],
+  "title": "H.R. 7008 (interdiction des transactions boursières des élus) : le Sénat rejette la clôture (60 voix requises pour ouvrir le débat), 53 pour, 47 contre"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "etape_datee": true,
+   "projet_suivi": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T04:40:49+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "action": {
+    "date": "2026-09-30",
+    "texte": "Cloture on the motion to proceed to the measure not invoked in Senate by Yea-Nay Vote. 53 - 47. Record Vote Number: 253."
+   },
+   "congres": "119",
+   "numero": "HR 7008",
+   "resume": "Projet de loi « Stop Insider Trading Act » : interdirait aux élus du Congrès, à leur conjoint et à leurs enfants à charge d'acheter des actions, et les obligerait à annoncer leurs ventes 7 à 14 jours d'avance.",
+   "titre_officiel": "Stop Insider Trading Act"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "hr7008:2026-09-30:3a9fbcb2b622",
+  "kind": "projet_de_loi",
+  "notes": [
+   "Texte officiel : « Cloture on the motion to proceed to the measure not invoked in Senate by Yea-Nay Vote. 53 - 47. Record Vote Number: 253. »"
+  ],
+  "occurred_on": "2026-09-30",
+  "official_id": "2026-09-30:3a9fbcb2b622",
+  "official_url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7008.xml",
+  "parser_version": "congres-1",
+  "published_on": "2026-09-30",
+  "sha256": "bf750e5e7117cb5134f42d9e8c49256f0466b5ea059fce05879ee2c7786551b0",
+  "source": "hr7008",
+  "tickers": [],
+  "title": "H.R. 7008 (interdiction des transactions boursières des élus) : bloqué au Sénat (clôture rejetée, 53 pour, 47 contre, 60 voix requises)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "baleines",
   "checks": {
    "champs_requis": true,
