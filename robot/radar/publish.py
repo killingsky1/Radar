@@ -81,6 +81,10 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
     _ecrire(donnees / "app" / "fil.json", fil_app)
     _ecrire(donnees / "app" / "a_verifier.json", a_verifier[:MAX_A_VERIFIER])
     # Le score : calculé sur TOUTES les infos validées ; la liste précédente sert à savoir qui vient d'entrer.
+    # S'il plante, les infos sont quand même publiées et l'ancien score reste (l'app montre son heure de calcul).
     chemin = donnees / "app" / "aujourdhui.json"
-    precedent = json.loads(chemin.read_text(encoding="utf-8")) if chemin.exists() else None
-    _ecrire(chemin, calculer(fil, maintenant, precedent, symboles))
+    try:
+        precedent = json.loads(chemin.read_text(encoding="utf-8")) if chemin.exists() else None
+        _ecrire(chemin, calculer(fil, maintenant, precedent, symboles))
+    except Exception as exc:  # noqa: BLE001
+        print(f"Score : erreur, l'ancien calcul est gardé ({type(exc).__name__}: {exc})")

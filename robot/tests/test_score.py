@@ -209,3 +209,23 @@ def test_publication_ecrit_le_score(tmp_path):
     executer(tmp_path, collecteurs={}, maintenant=datetime(2026, 10, 3, 11, 7, tzinfo=timezone.utc))
     r2 = json.loads((tmp_path / "app" / "aujourdhui.json").read_text(encoding="utf-8"))
     assert {x["symbole"]: x["depuis"] for x in r2["hausse"]} == {x["symbole"]: x["depuis"] for x in r["hausse"]}
+
+
+def test_un_score_qui_plante_n_empeche_pas_la_publication(tmp_path, monkeypatch, capsys):
+    from radar import publish
+
+    (tmp_path / "evenements").mkdir()
+    (tmp_path / "evenements" / "2026-10.jsonl").write_bytes(gzip.decompress(
+        (F / "score" / "evenements_20261003.jsonl.gz").read_bytes()))
+    executer(tmp_path, collecteurs={}, maintenant=MAINTENANT)
+    avant = (tmp_path / "app" / "aujourdhui.json").read_text(encoding="utf-8")
+
+    def plante(*args, **kwargs):
+        raise ValueError("bogue simulé")
+
+    monkeypatch.setattr(publish, "calculer", plante)
+    (tmp_path / "app" / "fil.json").unlink()
+    executer(tmp_path, collecteurs={}, maintenant=datetime(2026, 10, 3, 11, 7, tzinfo=timezone.utc))
+    assert (tmp_path / "app" / "fil.json").exists()  # les infos sont publiées quand même
+    assert (tmp_path / "app" / "aujourdhui.json").read_text(encoding="utf-8") == avant  # l'ancien score reste
+    assert "Score : erreur, l'ancien calcul est gardé (ValueError: bogue simulé)" in capsys.readouterr().out
