@@ -7,6 +7,8 @@ import re
 import time
 from pathlib import Path
 
+import urllib.robotparser
+
 import requests
 
 H = {"User-Agent": "Radar projet personnel", "Accept-Encoding": "gzip, deflate"}
@@ -14,7 +16,13 @@ SORTIE = Path("labo/fixtures-congres")
 SORTIE.mkdir(parents=True, exist_ok=True)
 
 
+ROBOTS = urllib.robotparser.RobotFileParser("https://www.senate.gov/robots.txt")
+ROBOTS.read()
+
+
 def lire(url, nom):
+    if "senate.gov" in url and not ROBOTS.can_fetch(H["User-Agent"], url):
+        raise SystemExit(f"robots.txt interdit {url}")
     r = requests.get(url, headers=H, timeout=60)
     r.raise_for_status()
     (SORTIE / f"{nom}.gz").write_bytes(gzip.compress(r.content, 9))
@@ -34,7 +42,7 @@ for url, nom in (
 ):
     lire(url, nom)
 
-accueil = lire("https://www.senate.gov/committees/committees_home.htm", "senat_comites.html")
+accueil = lire("https://www.senate.gov/committees/index.htm", "senat_comites.html")
 codes = sorted(set(re.findall(r"committee_memberships_([A-Z]{4})\.htm", accueil)))
 print("comités du Sénat trouvés :", len(codes), codes)
 for c in codes:
