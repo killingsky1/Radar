@@ -27,7 +27,7 @@ import requests
 RACINE = Path(__file__).resolve().parent.parent
 SORTIE = RACINE / "labo" / "essai"
 DONNEES = Path("/tmp/essai")
-SOURCES = ["fda", "sec_13f", "maison_blanche", "fed", "banque_canada", "sec_form144", "sec_offres", "cftc_cot",
+SOURCES = ["nhtsa", "doj_antitrust", "sec_poursuites", "sanctions_us", "ftc_fusions", "fda", "sec_13f", "maison_blanche", "fed", "banque_canada", "sec_form144", "sec_offres", "cftc_cot",
            "registre_federal", "ventes_armes", "senat_ptr", "chambre_ptr", "nouvelles_defense_ca", "nouvelles_eco_ca"]
 UA = {"User-Agent": "Radar projet personnel"}  # comme le robot : le courriel ne part qu'à la SEC
 UA_SEC = {"User-Agent": "Radar projet personnel math-veronneau1@hotmail.com"}
@@ -391,7 +391,91 @@ def verifier_13f(ev):
     return ecarts
 
 
+def verifier_nhtsa(ev):
+    """2e méthode : export CSV du même portail (le robot lit le JSON), filtré sur le numéro de rappel."""
+    import csv
+    num = ev["official_id"]
+    texte = get(f"https://datahub.transportation.gov/resource/6axg-epim.csv?nhtsa_id={num}").content.decode("utf-8")
+    lignes = list(csv.DictReader(io.StringIO(texte)))
+    if len(lignes) != 1:
+        return [f"{len(lignes)} ligne(s) pour {num} dans l'export CSV"]
+    l = lignes[0]
+    d = ev["data"]
+    ecarts = []
+    if int(float(l["potentially_affected"])) != d["unites"]:
+        ecarts.append(f"véhicules : CSV {l['potentially_affected']} ≠ robot {d['unites']}")
+    if l["manufacturer"].strip() != d["constructeur"]:
+        ecarts.append(f"constructeur : CSV {l['manufacturer']} ≠ robot {d['constructeur']}")
+    if l["report_received_date"][:10] != ev["published_on"]:
+        ecarts.append(f"date : CSV {l['report_received_date'][:10]} ≠ robot {ev['published_on']}")
+    if l["subject"].strip() != (d.get("sujet") or "").strip():
+        ecarts.append("sujet différent")
+    return ecarts
+
+
+def verifier_doj(ev):
+    """2e méthode : la page du communiqué lui-même (le robot lit le flux RSS)."""
+    page = normal(lire_page(ev["official_url"]))
+    titre = normal(ev["data"]["titre_officiel"])
+    ecarts = [] if titre[:80] in page else ["titre absent de la page du communiqué"]
+    jour = date.fromisoformat(ev["published_on"])
+    if f"{MOIS_EN[jour.month - 1]} {jour.day}, {jour.year}".lower() not in page:
+        ecarts.append(f"date {jour} absente de la page")
+    return ecarts
+
+
+def verifier_sec_poursuites(ev):
+    """2e méthode : le document officiel (PDF de l'ordonnance) doit nommer la compagnie."""
+    t = normal(" ".join(textes_pdf(get(ev["official_url"]).content)))
+    nom = normal(ev["data"]["nom_officiel"]).replace(",", "")
+    t2 = t.replace(",", "")
+    ecarts = [] if nom[:40] in t2 else [f"{ev['data']['nom_officiel']} absent du document officiel"]
+    if ev["kind"] == "suspension_cotation" and "suspension of trading" not in t:
+        ecarts.append("le document ne parle pas de suspension de cotation")
+    return ecarts
+
+
+def verifier_ofac(ev):
+    """2e méthode : compter les paragraphes HTML de chaque liste (le robot compte les étiquettes [PROGRAMME])."""
+    page = lire_page(ev["official_url"])
+    corps = page[page.find("field--name-field-body"):]
+    ajouts, retraits = {}, 0
+    noms = {"individual": "personnes", "entit": "entités", "vessel": "navires", "aircraft": "aéronefs"}
+    morceaux = re.split(r"(The following [^:<]{5,90}OFAC(?:&#039;|')s SDN List:)", corps)
+    for i in range(1, len(morceaux) - 1, 2):
+        entete = morceaux[i].lower()
+        suite = re.split(r"The following [^:<]{5,90}SDN List:|</div>", morceaux[i + 1])[0]
+        n = len([p for p in re.findall(r"<p[^>]*>(.*?)</p>", suite, re.S) if "[" in p])
+        if "added" in entete:
+            cat = next((v for k, v in noms.items() if k in entete), "fiches")
+            ajouts[cat] = ajouts.get(cat, 0) + n
+        elif "deletion" in entete or "removed" in entete:
+            retraits += n
+    ecarts = []
+    if ajouts != ev["data"]["ajouts"]:
+        ecarts.append(f"ajouts : page {ajouts} ≠ robot {ev['data']['ajouts']}")
+    if retraits != ev["data"]["retraits"]:
+        ecarts.append(f"retraits : page {retraits} ≠ robot {ev['data']['retraits']}")
+    return ecarts
+
+
+def verifier_ftc(ev):
+    """2e méthode : la page de l'avis (le robot lit le flux RSS)."""
+    page = normal(lire_page(ev["official_url"]))
+    d = ev["data"]
+    ecarts = []
+    for etiquette, valeur in (("numéro", d["numero"]), ("acquéreur", d["acquereur"]), ("partie visée", d["partie_visee"])):
+        if normal(valeur) not in page:
+            ecarts.append(f"{etiquette} {valeur} absent de la page")
+    jour = date.fromisoformat(ev["occurred_on"])
+    if f"{MOIS_EN[jour.month - 1]} {jour.day}, {jour.year}".lower() not in page:
+        ecarts.append(f"date {jour} absente de la page")
+    return ecarts
+
+
 VERIFS = {
+    "nhtsa": verifier_nhtsa, "doj_antitrust": verifier_doj, "sec_poursuites": verifier_sec_poursuites,
+    "sanctions_us": verifier_ofac, "ftc_fusions": verifier_ftc,
     "fda": verifier_fda, "sec_13f": verifier_13f,
     "maison_blanche": verifier_maison_blanche, "fed": verifier_fed, "banque_canada": verifier_bdc,
     "sec_form144": verifier_144, "sec_offres": verifier_offre, "cftc_cot": verifier_cftc,"registre_federal": verifier_registre, "ventes_armes": verifier_registre, "senat_ptr": verifier_senat,
