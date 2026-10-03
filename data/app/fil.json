@@ -11263,6 +11263,3056 @@
   "title": "Commerce extérieur (USTR) : Hearings, Meetings, Proceedings, etc.: Operation of the Agreement between the United States of America, the United Mexican States, and Canada"
  },
  {
+  "amount_max": 2127535.0,
+  "amount_min": 2127535.0,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:55:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 50000.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000744187",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 42.5507,
+   "roles": [
+    "Executive COB"
+   ],
+   "symbole_declare": "REX",
+   "symboles_sec": [
+    "REX"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 50000.0,
+     "apres": 2278324.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 42.5507
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "ROSE STUART A",
+   "REX AMERICAN RESOURCES Corp"
+  ],
+  "id": "sec_form4:0000936969-26-000009:S",
+  "kind": "vente_initie",
+  "notes": [],
+  "occurred_on": "2026-09-30",
+  "official_id": "0000936969-26-000009:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/744187/000093696926000009/0000936969-26-000009-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "3d22225b3d1da2c60f78d51ebf1977da5d68dd3e6808c63bca3fccfc86fa2620",
+  "source": "sec_form4",
+  "tickers": [
+   "REX"
+  ],
+  "title": "ROSE STUART A (Executive COB) vend 50 000 actions de REX AMERICAN RESOURCES Corp"
+ },
+ {
+  "amount_max": 3567246.54,
+  "amount_min": 3567246.54,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:55:08+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 134886.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0001999480",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 26.4464,
+   "roles": [
+    "PRESIDENT AND CFO"
+   ],
+   "symbole_declare": "ANRO",
+   "symboles_sec": [
+    "ANRO"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 110830.0,
+     "apres": 24060.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 26.5826
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 23170.0,
+     "apres": 24946.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 25.7786
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 886.0,
+     "apres": 24060.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 26.87
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Smith Nicholas Conrad",
+   "Alto Neuroscience, Inc."
+  ],
+  "id": "sec_form4:0002009130-26-000004:S",
+  "kind": "vente_initie",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "0002009130-26-000004:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1999480/000200913026000004/0002009130-26-000004-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "dc660fcd49d986f3e1f2bc2b4838614be7cc3ffc791fd16da31922ea30371547",
+  "source": "sec_form4",
+  "tickers": [
+   "ANRO"
+  ],
+  "title": "Smith Nicholas Conrad (PRESIDENT AND CFO) vend 134 886 actions de Alto Neuroscience, Inc."
+ },
+ {
+  "amount_max": 4325373.07,
+  "amount_min": 4325373.07,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:55:05+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 80263.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001958140",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 53.89,
+   "roles": [
+    "EVP, CLO & Secretary"
+   ],
+   "symbole_declare": "BATRK",
+   "symboles_sec": [
+    "BATRA",
+    "BATRK",
+    "BATRB"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 80263.0,
+     "apres": 22741.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 53.89
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Heller Gregory John",
+   "Atlanta Braves Holdings, Inc."
+  ],
+  "id": "sec_form4:0002036380-26-000002:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-09-29",
+  "official_id": "0002036380-26-000002:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1958140/000203638026000002/0002036380-26-000002-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "02e3aa6a2c496e65928dfb47ab102c5ff2a16202ce55e61d762ef40cfc0444e9",
+  "source": "sec_form4",
+  "tickers": [
+   "BATRA"
+  ],
+  "title": "Heller Gregory John (EVP, CLO & Secretary) vend 80 263 actions de Atlanta Braves Holdings, Inc."
+ },
+ {
+  "amount_max": 40200.0,
+  "amount_min": 40200.0,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:55:01+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 15000.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001921865",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 2.68,
+   "roles": [
+    "administrateur"
+   ],
+   "symbole_declare": "ASPI",
+   "symboles_sec": [
+    "ASPI"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 15000.0,
+     "apres": 675222.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 2.68
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Ryan Robert John Andrew",
+   "ASP Isotopes Inc."
+  ],
+  "id": "sec_form4:0001477932-26-005964:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-09-30",
+  "official_id": "0001477932-26-005964:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1921865/000147793226005964/0001477932-26-005964-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "0f231c0cfa4d16a78e65f9a421b57ed9480a9e57eb88a84b90d79848f719d0f2",
+  "source": "sec_form4",
+  "tickers": [
+   "ASPI"
+  ],
+  "title": "Ryan Robert John Andrew (administrateur) achète 15 000 actions de ASP Isotopes Inc."
+ },
+ {
+  "amount_max": 7300934.2,
+  "amount_min": 7300934.2,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:55:00+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 216818.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0001889539",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 33.6731,
+   "roles": [
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "CRBG",
+   "symboles_sec": [
+    "CRBG",
+    "CRBD"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 216818.0,
+     "apres": 125796472.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 33.6731
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "NIPPON LIFE INSURANCE CO",
+   "Corebridge Financial, Inc."
+  ],
+  "id": "sec_form4:0001193125-26-410677:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001193125-26-410677:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1889539/000119312526410677/0001193125-26-410677-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "a43a422054096ee96d9ec5efedb722ce5fb77e485a3b88f5620447462e916a72",
+  "source": "sec_form4",
+  "tickers": [
+   "CRBG"
+  ],
+  "title": "NIPPON LIFE INSURANCE CO (actionnaire de 10 %) achète 216 818 actions de Corebridge Financial, Inc."
+ },
+ {
+  "amount_max": 382710.87,
+  "amount_min": 382710.87,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:53+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 1396755.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001836242",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 0.274,
+   "roles": [
+    "Representative Director (PEO)"
+   ],
+   "symbole_declare": "TKLF",
+   "symboles_sec": [
+    "TKLF"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 1396755.0,
+     "apres": 8613191.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 0.274
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Kanayama Mei",
+   "Tokyo Lifestyle Co., Ltd."
+  ],
+  "id": "sec_form4:0001213900-26-105765:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001213900-26-105765:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1836242/000121390026105765/0001213900-26-105765-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "94339393bb7dad2191f5b17738b22ffeb103a697db1efc4fab373c6e7bcc569e",
+  "source": "sec_form4",
+  "tickers": [
+   "TKLF"
+  ],
+  "title": "Kanayama Mei (Representative Director (PEO)) achète 1 396 755 actions de Tokyo Lifestyle Co., Ltd."
+ },
+ {
+  "amount_max": 38730.0,
+  "amount_min": 38730.0,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:53+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 3000.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001833141",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 12.91,
+   "roles": [
+    "Chief Financial Officer"
+   ],
+   "symbole_declare": "HELP",
+   "symboles_sec": [
+    "HELP"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 3000.0,
+     "apres": 3000.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 12.91
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Cavers Greg",
+   "CYBIN INC."
+  ],
+  "id": "sec_form4:0000912282-26-001334:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "0000912282-26-001334:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1833141/000091228226001334/0000912282-26-001334-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "38bc8c573fe8253696b5dd677eb94f81d49842e6f34d802a6775df6bba3a62e7",
+  "source": "sec_form4",
+  "tickers": [
+   "HELP"
+  ],
+  "title": "Cavers Greg (Chief Financial Officer) achète 3 000 actions de CYBIN INC."
+ },
+ {
+  "amount_max": 9331014.0,
+  "amount_min": 9331014.0,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:52+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 175395.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001958140",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 53.2,
+   "roles": [
+    "EVP, Business"
+   ],
+   "symbole_declare": "BATRK",
+   "symboles_sec": [
+    "BATRA",
+    "BATRK",
+    "BATRB"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 175395.0,
+     "apres": 316908.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 53.2
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Schiller Derek Gordon",
+   "Atlanta Braves Holdings, Inc."
+  ],
+  "id": "sec_form4:0001825383-26-000002:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-09-30",
+  "official_id": "0001825383-26-000002:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1958140/000182538326000002/0001825383-26-000002-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "db0db6b7a28e31b65e5b9e5df34403433ae82e0ec161ad1b61bd2978dfa2615e",
+  "source": "sec_form4",
+  "tickers": [
+   "BATRA"
+  ],
+  "title": "Schiller Derek Gordon (EVP, Business) vend 175 395 actions de Atlanta Braves Holdings, Inc."
+ },
+ {
+  "amount_max": 3027831.92,
+  "amount_min": 3027831.92,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:50+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 397226.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0002011514",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 7.6224,
+   "roles": [
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "AVR",
+   "symboles_sec": [
+    "AVR"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 74286.0,
+     "apres": 4877827.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 7.72
+    },
+    {
+     "acquis_cede": "A",
+     "actions": 322940.0,
+     "apres": 5200767.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-10-01",
+     "hors_bourse": null,
+     "prix": 7.6
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "L1 Capital Pty Ltd",
+   "Anteris Technologies Global Corp."
+  ],
+  "id": "sec_form4:0001817646-26-000028:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-09-30",
+  "official_id": "0001817646-26-000028:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/2011514/000181764626000028/0001817646-26-000028-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "1f34739ef68fe5ddda60f2582576a4ea7bf137ab8f837fc4924b937379438504",
+  "source": "sec_form4",
+  "tickers": [
+   "AVR"
+  ],
+  "title": "L1 Capital Pty Ltd (actionnaire de 10 %) achète 397 226 actions de Anteris Technologies Global Corp."
+ },
+ {
+  "amount_max": 3413916.63,
+  "amount_min": 3413916.63,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:50+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 30000.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001815442",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 113.7972,
+   "roles": [
+    "Chief Executive Officer"
+   ],
+   "symbole_declare": "KYMR",
+   "symboles_sec": [
+    "KYMR"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 3525.0,
+     "apres": 693043.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-10-01",
+     "hors_bourse": null,
+     "prix": 111.44
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 5506.0,
+     "apres": 687537.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-10-01",
+     "hors_bourse": null,
+     "prix": 112.42
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 4876.0,
+     "apres": 682661.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-10-01",
+     "hors_bourse": null,
+     "prix": 113.24
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 7601.0,
+     "apres": 675060.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-10-01",
+     "hors_bourse": null,
+     "prix": 114.43
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 8230.0,
+     "apres": 666830.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-10-01",
+     "hors_bourse": null,
+     "prix": 115.4
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 262.0,
+     "apres": 666568.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-10-01",
+     "hors_bourse": null,
+     "prix": 116.12
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Mainolfi Nello",
+   "Kymera Therapeutics, Inc."
+  ],
+  "id": "sec_form4:0001193125-26-410839:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-10-01",
+  "official_id": "0001193125-26-410839:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1815442/000119312526410839/0001193125-26-410839-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "b0395bd7d640547c314474926cf96340f5bbd124361fb727f3b2ab87a68e4b04",
+  "source": "sec_form4",
+  "tickers": [
+   "KYMR"
+  ],
+  "title": "Mainolfi Nello (Chief Executive Officer) vend 30 000 actions de Kymera Therapeutics, Inc."
+ },
+ {
+  "amount_max": 5333158.15,
+  "amount_min": 5333158.15,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:49+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 27500.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001807794",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 193.933,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "symbole_declare": "CRDO",
+   "symboles_sec": [
+    "CRDO"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 300.0,
+     "apres": 5689597.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 189.6467
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 900.0,
+     "apres": 5688697.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 191.4544
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 8366.0,
+     "apres": 5680331.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 192.4774
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 6332.0,
+     "apres": 5673999.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 193.24
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 4426.0,
+     "apres": 5669573.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 194.3727
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 2985.0,
+     "apres": 5666588.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 195.3981
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 1591.0,
+     "apres": 5664997.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 196.2563
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 1500.0,
+     "apres": 5663497.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 197.2113
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 1100.0,
+     "apres": 5662397.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 198.6145
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Cheng Chi Fung",
+   "Credo Technology Group Holding Ltd"
+  ],
+  "id": "sec_form4:0001628280-26-064300:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001628280-26-064300:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026064300/0001628280-26-064300-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "f6e79dd9c75945a4070898aaa31b02c1c707c5da6b02af6fddf392a2453b1f48",
+  "source": "sec_form4",
+  "tickers": [
+   "CRDO"
+  ],
+  "title": "Cheng Chi Fung (Chief Technology Officer) vend 27 500 actions de Credo Technology Group Holding Ltd"
+ },
+ {
+  "amount_max": 1371599.88,
+  "amount_min": 1371599.88,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:45+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 12100.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000004977",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 113.3554,
+   "roles": [
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "AFL",
+   "symboles_sec": [
+    "AFL"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 6378.0,
+     "apres": 50451012.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 113.1
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 5722.0,
+     "apres": 50445290.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 113.64
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Japan Post Holdings Co., Ltd.",
+   "AFLAC INC"
+  ],
+  "id": "sec_form4:0001104659-26-112614:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001104659-26-112614:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/4977/000110465926112614/0001104659-26-112614-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "a475d0b63ef1b9c89828572ae09eaa8769dfab28f9ca7e8644fc58fa306617b3",
+  "source": "sec_form4",
+  "tickers": [
+   "AFL"
+  ],
+  "title": "Japan Post Holdings Co., Ltd. (actionnaire de 10 %) vend 12 100 actions de AFLAC INC"
+ },
+ {
+  "amount_max": 3060738.0,
+  "amount_min": 3060738.0,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:41+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 90000.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000899689",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 34.0082,
+   "roles": [
+    "EVP - HEAD OF RETAIL"
+   ],
+   "symbole_declare": "VNO",
+   "symboles_sec": [
+    "VNO",
+    "VNORP",
+    "VNO-PL",
+    "VNO-PM",
+    "VNO-PN",
+    "VNO-PO"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 90000.0,
+     "apres": 110000.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 34.0082
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Chera Haim",
+   "VORNADO REALTY TRUST"
+  ],
+  "id": "sec_form4:0001774826-26-000017:S",
+  "kind": "vente_initie",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001774826-26-000017:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/899689/000177482626000017/0001774826-26-000017-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "ea141c99139657292e0ff15d8148b6d107b594ceeea38f2c763571fd183d3c08",
+  "source": "sec_form4",
+  "tickers": [
+   "VNO"
+  ],
+  "title": "Chera Haim (EVP - HEAD OF RETAIL) vend 90 000 actions de VORNADO REALTY TRUST"
+ },
+ {
+  "amount_max": 26661770.16,
+  "amount_min": 26661770.16,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:41+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 307692.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001769628",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 86.6508,
+   "roles": [
+    "CEO and President"
+   ],
+   "symbole_declare": "CRWV",
+   "symboles_sec": [
+    "CRWV"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 89338.0,
+     "apres": 597791.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 85.8577
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 74072.0,
+     "apres": 523719.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 86.5695
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 12712.0,
+     "apres": 511007.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 87.6469
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 10719.0,
+     "apres": 500288.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 88.717
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 12054.0,
+     "apres": 488234.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 89.8102
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 1105.0,
+     "apres": 487129.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 90.2553
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 48103.0,
+     "apres": 59589.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 85.8577
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 39883.0,
+     "apres": 19706.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 86.5696
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 6847.0,
+     "apres": 12859.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 87.6469
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 5773.0,
+     "apres": 7086.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 88.717
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 6491.0,
+     "apres": 595.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 89.8102
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 595.0,
+     "apres": 0.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 90.2553
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Intrator Michael N",
+   "CoreWeave, Inc."
+  ],
+  "id": "sec_form4:0001769628-26-000437:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001769628-26-000437:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000437/0001769628-26-000437-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "01d5bbbb285991a6f73013dde28cc3954d8e9d5f3612e315168d95ef7d6ef70a",
+  "source": "sec_form4",
+  "tickers": [
+   "CRWV"
+  ],
+  "title": "Intrator Michael N (CEO and President) vend 307 692 actions de CoreWeave, Inc."
+ },
+ {
+  "amount_max": 2507353.8,
+  "amount_min": 2507353.8,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:33+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 17308.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0001713445",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 144.8668,
+   "roles": [
+    "CEO & President"
+   ],
+   "symbole_declare": "RDDT",
+   "symboles_sec": [
+    "RDDT"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 300.0,
+     "apres": 353440.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 142.44
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 2500.0,
+     "apres": 350940.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 143.78
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 8100.0,
+     "apres": 342840.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 144.64
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 5308.0,
+     "apres": 337532.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 145.46
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 776.0,
+     "apres": 336756.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 146.62
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 324.0,
+     "apres": 336432.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 147.25
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Huffman Steve Ladd",
+   "Reddit, Inc."
+  ],
+  "id": "sec_form4:0001827011-26-000041:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001827011-26-000041:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1713445/000182701126000041/0001827011-26-000041-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "61a395c3be8b8fc220988a172d9d857cd0e328b3011b77401737b381ce4a90cb",
+  "source": "sec_form4",
+  "tickers": [
+   "RDDT"
+  ],
+  "title": "Huffman Steve Ladd (CEO & President) vend 17 308 actions de Reddit, Inc."
+ },
+ {
+  "amount_max": 199197.68,
+  "amount_min": 199197.68,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:33+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 21525.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001712184",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 9.2542,
+   "roles": [
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "LILA",
+   "symboles_sec": [
+    "LILA",
+    "LILAK",
+    "LILAB",
+    "LILAP"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 512.0,
+     "apres": 1411162.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 20.4492
+    },
+    {
+     "acquis_cede": "A",
+     "actions": 1013.0,
+     "apres": 1412175.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 20.4301
+    },
+    {
+     "acquis_cede": "A",
+     "actions": 20000.0,
+     "apres": 326571.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 8.4016
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "MALONE JOHN C",
+   "Liberty Latin America Ltd."
+  ],
+  "id": "sec_form4:0000937797-26-000034:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "0000937797-26-000034:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1712184/000093779726000034/0000937797-26-000034-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "12bd28928e425394322d15b3435c927a28576f02fa999a3f9b91af3331d324c1",
+  "source": "sec_form4",
+  "tickers": [
+   "LILA"
+  ],
+  "title": "MALONE JOHN C (actionnaire de 10 %) achète 21 525 actions de Liberty Latin America Ltd."
+ },
+ {
+  "amount_max": 2620500.0,
+  "amount_min": 2620500.0,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:28+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 10000.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001835632",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 262.05,
+   "roles": [
+    "President and COO"
+   ],
+   "symbole_declare": "MRVL",
+   "symboles_sec": [
+    "MRVL"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 10000.0,
+     "apres": 207941.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-10-01",
+     "hors_bourse": null,
+     "prix": 262.05
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Koopmans Chris",
+   "Marvell Technology, Inc."
+  ],
+  "id": "sec_form4:0001628280-26-064351:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-10-01",
+  "official_id": "0001628280-26-064351:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1835632/000162828026064351/0001628280-26-064351-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "bd7373ba149e75c1c9aa10da940d95e629e98182d08b1ae6a7bd81f6210ef122",
+  "source": "sec_form4",
+  "tickers": [
+   "MRVL"
+  ],
+  "title": "Koopmans Chris (President and COO) vend 10 000 actions de Marvell Technology, Inc."
+ },
+ {
+  "amount_max": 10036932.05,
+  "amount_min": 10036932.05,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:25+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 263900.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0001642896",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 38.0331,
+   "roles": [
+    "CHIEF EXECUTIVE OFFICER"
+   ],
+   "symbole_declare": "IOT",
+   "symboles_sec": [
+    "IOT"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 101968.0,
+     "apres": 983867.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 37.6769
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 8244.0,
+     "apres": 975623.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 38.2642
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 10300.0,
+     "apres": 51900.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 37.9158
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 300.0,
+     "apres": 51600.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 38.4033
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 34760.0,
+     "apres": 236340.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 37.6743
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 2830.0,
+     "apres": 233510.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 38.3035
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 76359.0,
+     "apres": 899264.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 38.3926
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 300.0,
+     "apres": 898964.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 38.91
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 7640.0,
+     "apres": 225870.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 38.4259
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 70.0,
+     "apres": 225800.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 38.91
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 13283.0,
+     "apres": 885681.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-10-01",
+     "hors_bourse": null,
+     "prix": 38.6
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 7846.0,
+     "apres": 877835.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-10-01",
+     "hors_bourse": null,
+     "prix": 39.1687
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Biswas Sanjit",
+   "Samsara Inc."
+  ],
+  "id": "sec_form4:0001895111-26-000019:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001895111-26-000019:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1642896/000189511126000019/0001895111-26-000019-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "071e199d44dea18c3a43927711baacb1a97213ac0ddc279def6cb8e7076d18e9",
+  "source": "sec_form4",
+  "tickers": [
+   "IOT"
+  ],
+  "title": "Biswas Sanjit (CHIEF EXECUTIVE OFFICER) vend 263 900 actions de Samsara Inc."
+ },
+ {
+  "amount_max": 10036612.94,
+  "amount_min": 10036612.94,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:25+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 263900.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0001642896",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 38.0319,
+   "roles": [
+    "SEE REMARKS"
+   ],
+   "symbole_declare": "IOT",
+   "symboles_sec": [
+    "IOT"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 101198.0,
+     "apres": 1084200.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 37.6705
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 9048.0,
+     "apres": 1075152.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 38.2582
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 9456.0,
+     "apres": 52744.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 37.8798
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 1144.0,
+     "apres": 51600.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 38.3343
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 35116.0,
+     "apres": 235984.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 37.682
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 2465.0,
+     "apres": 233519.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 38.2898
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 76831.0,
+     "apres": 998321.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 38.39
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 400.0,
+     "apres": 997921.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 38.895
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 7619.0,
+     "apres": 225900.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 38.4278
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 100.0,
+     "apres": 225800.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 38.92
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 13019.0,
+     "apres": 984902.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-10-01",
+     "hors_bourse": null,
+     "prix": 38.6262
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 7504.0,
+     "apres": 977398.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-10-01",
+     "hors_bourse": null,
+     "prix": 39.173
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Bicket John",
+   "Samsara Inc."
+  ],
+  "id": "sec_form4:0001895106-26-000020:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001895106-26-000020:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1642896/000189510626000020/0001895106-26-000020-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "0cf081fa0001c8e29b5e24309afffa9edfd2cc8058523e4c8852bb12ee472e45",
+  "source": "sec_form4",
+  "tickers": [
+   "IOT"
+  ],
+  "title": "Bicket John (SEE REMARKS) vend 263 900 actions de Samsara Inc."
+ },
+ {
+  "amount_max": 124801.74,
+  "amount_min": 124801.74,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:25+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 2677.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001653482",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 46.62,
+   "roles": [
+    "Chief Executive Officer"
+   ],
+   "symbole_declare": "GTLB",
+   "symboles_sec": [
+    "GTLB"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 2677.0,
+     "apres": 735080.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 46.62
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Staples William",
+   "Gitlab Inc."
+  ],
+  "id": "sec_form4:0001653482-26-000174:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-09-30",
+  "official_id": "0001653482-26-000174:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1653482/000165348226000174/0001653482-26-000174-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "4a6959d53ac80ad5aa9d281fe9a738f9e27fafccd457df8446fef3785a221941",
+  "source": "sec_form4",
+  "tickers": [
+   "GTLB"
+  ],
+  "title": "Staples William (Chief Executive Officer) achète 2 677 actions de Gitlab Inc."
+ },
+ {
+  "amount_max": 1275294.23,
+  "amount_min": 1275294.23,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 6309.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001628171",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 202.1389,
+   "roles": [
+    "Chief Development Officer"
+   ],
+   "symbole_declare": "RVMD",
+   "symboles_sec": [
+    "RVMD",
+    "RVMDW"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 2200.0,
+     "apres": 56668.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 200.8188
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 1609.0,
+     "apres": 55059.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 201.7239
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 1000.0,
+     "apres": 54059.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 202.8127
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 1199.0,
+     "apres": 52860.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 203.9074
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 301.0,
+     "apres": 52559.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 204.7224
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Sandler Alan B.",
+   "Revolution Medicines, Inc."
+  ],
+  "id": "sec_form4:0001835966-26-000008:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001835966-26-000008:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1628171/000183596626000008/0001835966-26-000008-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "cbccde51608548655ba707c56c13f4104127e7feaf5543dfd29f2b732ce8afc7",
+  "source": "sec_form4",
+  "tickers": [
+   "RVMD"
+  ],
+  "title": "Sandler Alan B. (Chief Development Officer) vend 6 309 actions de Revolution Medicines, Inc."
+ },
+ {
+  "amount_max": 30320929.04,
+  "amount_min": 30320929.04,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 48667.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001668397",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 623.0285,
+   "roles": [
+    "President & CEO"
+   ],
+   "symbole_declare": "MEDP",
+   "symboles_sec": [
+    "MEDP"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 26701.0,
+     "apres": 360191.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 621.02
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 21966.0,
+     "apres": 338225.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 625.47
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Troendle August J.",
+   "Medpace Holdings, Inc."
+  ],
+  "id": "sec_form4:0001622058-26-000022:S",
+  "kind": "vente_initie",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001622058-26-000022:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1668397/000162205826000022/0001622058-26-000022-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "5fa665600ca4dfee27ab5e597ed4b6ae75fdb7baf45430b11404e27c44a59338",
+  "source": "sec_form4",
+  "tickers": [
+   "MEDP"
+  ],
+  "title": "Troendle August J. (President & CEO) vend 48 667 actions de Medpace Holdings, Inc."
+ },
+ {
+  "amount_max": 1121400.0,
+  "amount_min": 1121400.0,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:17+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 30000.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001582313",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 37.38,
+   "roles": [
+    "PRESIDENT & CEO"
+   ],
+   "symbole_declare": "XENE",
+   "symboles_sec": [
+    "XENE"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 30000.0,
+     "apres": 49923.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 37.38
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "MORTIMER IAN",
+   "Xenon Pharmaceuticals Inc."
+  ],
+  "id": "sec_form4:0001193125-26-409999:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-09-30",
+  "official_id": "0001193125-26-409999:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1582313/000119312526409999/0001193125-26-409999-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "8b928940f521a7968b6b2e592ea5dc31c62ae957e4dee2478d617339ce6575e3",
+  "source": "sec_form4",
+  "tickers": [
+   "XENE"
+  ],
+  "title": "MORTIMER IAN (PRESIDENT & CEO) achète 30 000 actions de Xenon Pharmaceuticals Inc."
+ },
+ {
+  "amount_max": 37116929.2,
+  "amount_min": 37116929.2,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 762894.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001823529",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 48.6528,
+   "roles": [
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "ACT",
+   "symboles_sec": [
+    "ACT"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 762894.0,
+     "apres": 109628073.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 48.6528
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Genworth Holdings, Inc.",
+   "Enact Holdings, Inc."
+  ],
+  "id": "sec_form4:0001572983-26-000021:S",
+  "kind": "vente_initie",
+  "notes": [],
+  "occurred_on": "2026-09-30",
+  "official_id": "0001572983-26-000021:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1823529/000157298326000021/0001572983-26-000021-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "0ecbc13336d31069db1d0d3ac14b58f75b0f31371325f58c5cd7242b52bdbcef",
+  "source": "sec_form4",
+  "tickers": [
+   "ACT"
+  ],
+  "title": "Genworth Holdings, Inc. (actionnaire de 10 %) vend 762 894 actions de Enact Holdings, Inc."
+ },
+ {
+  "amount_max": 2116287.52,
+  "amount_min": 2116287.52,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:15+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 34456.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0001645590",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 61.42,
+   "roles": [
+    "EVP, Pres GM Networking"
+   ],
+   "symbole_declare": "HPE",
+   "symboles_sec": [
+    "HPE",
+    "HPE-PC"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 27877.0,
+     "apres": 881712.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 61.42
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 6579.0,
+     "apres": 875133.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 61.42
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "rahim rami",
+   "Hewlett Packard Enterprise Co"
+  ],
+  "id": "sec_form4:0001560849-26-000010:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001560849-26-000010:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1645590/000156084926000010/0001560849-26-000010-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "5c45d209d7c8454f3570b5f38b7afffa0062e5ee96c7c2ade4ea2a6f9f57ce7b",
+  "source": "sec_form4",
+  "tickers": [
+   "HPE"
+  ],
+  "title": "rahim rami (EVP, Pres GM Networking) vend 34 456 actions de Hewlett Packard Enterprise Co"
+ },
+ {
+  "amount_max": 55042.65,
+  "amount_min": 55042.65,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:11+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 25007.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001535955",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 2.2011,
+   "roles": [
+    "administrateur"
+   ],
+   "symbole_declare": "LPCN",
+   "symboles_sec": [
+    "LPCN"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 9037.0,
+     "apres": 225395.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 2.15
+    },
+    {
+     "acquis_cede": "A",
+     "actions": 15970.0,
+     "apres": 241365.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 2.23
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Higuchi John W.",
+   "Lipocine Inc."
+  ],
+  "id": "sec_form4:0001493152-26-045400:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001493152-26-045400:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1535955/000149315226045400/0001493152-26-045400-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "26f0dd70aba390aaac483d41977b2bbe8944e6ca831ae9251934618023aa9f26",
+  "source": "sec_form4",
+  "tickers": [
+   "LPCN"
+  ],
+  "title": "Higuchi John W. (administrateur) achète 25 007 actions de Lipocine Inc."
+ },
+ {
+  "amount_max": 1327740.0,
+  "amount_min": 1327740.0,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:08+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 18000.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0001512673",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 73.7633,
+   "roles": [
+    "administrateur"
+   ],
+   "symbole_declare": "XYZ",
+   "symboles_sec": [
+    "XYZ",
+    "BSQKZ"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 6000.0,
+     "apres": 1338672.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 73.29
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 6000.0,
+     "apres": 1332672.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 74.33
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 6000.0,
+     "apres": 1326672.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-10-01",
+     "hors_bourse": null,
+     "prix": 73.67
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Eisen Anthony Mathew",
+   "Block, Inc."
+  ],
+  "id": "sec_form4:0001628280-26-064331:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001628280-26-064331:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1512673/000162828026064331/0001628280-26-064331-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "a18a92135672bc7d6c22baf572062518ee494d3935e4b47b7f71c5a2b620a1fb",
+  "source": "sec_form4",
+  "tickers": [
+   "XYZ"
+  ],
+  "title": "Eisen Anthony Mathew (administrateur) vend 18 000 actions de Block, Inc."
+ },
+ {
+  "amount_max": 25242.82,
+  "amount_min": 25242.82,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:07+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 1238.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000065433",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 20.39,
+   "roles": [
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "MXF",
+   "symboles_sec": [
+    "MXF"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 1238.0,
+     "apres": 2348440.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 20.39
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Saba Capital Management, L.P.",
+   "MEXICO FUND INC"
+  ],
+  "id": "sec_form4:0001510281-26-000320:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-09-30",
+  "official_id": "0001510281-26-000320:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/65433/000151028126000320/0001510281-26-000320-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "64135808f2f29cb39bf68011c9610c58475eb432fc0c2f9cfe47cff8032fccd7",
+  "source": "sec_form4",
+  "tickers": [
+   "MXF"
+  ],
+  "title": "Saba Capital Management, L.P. (actionnaire de 10 %) achète 1 238 actions de MEXICO FUND INC"
+ },
+ {
+  "amount_max": 139574.33,
+  "amount_min": 139574.33,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:07+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 13047.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000858706",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 10.6978,
+   "roles": [
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "GF",
+   "symboles_sec": [
+    "GF"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 1988.0,
+     "apres": 3707474.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 10.63
+    },
+    {
+     "acquis_cede": "A",
+     "actions": 11059.0,
+     "apres": 3718533.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 10.71
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Saba Capital Management, L.P.",
+   "NEW GERMANY FUND INC"
+  ],
+  "id": "sec_form4:0001510281-26-000319:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001510281-26-000319:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/858706/000151028126000319/0001510281-26-000319-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "ab315f6d533aed69d939133475002e8a6b9b78d66f9dfe01623ba7ef7b335737",
+  "source": "sec_form4",
+  "tickers": [
+   "GF"
+  ],
+  "title": "Saba Capital Management, L.P. (actionnaire de 10 %) achète 13 047 actions de NEW GERMANY FUND INC"
+ },
+ {
+  "amount_max": 48935.32,
+  "amount_min": 48935.32,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:06+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 7250.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001502292",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 6.7497,
+   "roles": [
+    "administrateur"
+   ],
+   "symbole_declare": "PRHI",
+   "symboles_sec": [
+    "PRHI",
+    "PRHIZ"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 7250.0,
+     "apres": 7964.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 6.7497
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "O'Hanlon Isolde",
+   "Presurance Holdings, Inc."
+  ],
+  "id": "sec_form4:0001193125-26-410913:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-09-30",
+  "official_id": "0001193125-26-410913:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1502292/000119312526410913/0001193125-26-410913-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "d11c6a51d9b46a58169cf71eb521ce82cee5d05df05b96dd2607da7c09adf9e5",
+  "source": "sec_form4",
+  "tickers": [
+   "PRHI"
+  ],
+  "title": "O'Hanlon Isolde (administrateur) achète 7 250 actions de Presurance Holdings, Inc."
+ },
+ {
+  "amount_max": 48935.32,
+  "amount_min": 48935.32,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:54:06+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 7250.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001502292",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 6.7497,
+   "roles": [
+    "administrateur"
+   ],
+   "symbole_declare": "PRHI",
+   "symboles_sec": [
+    "PRHI",
+    "PRHIZ"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 7250.0,
+     "apres": 15953.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 6.7497
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Smith James Grant",
+   "Presurance Holdings, Inc."
+  ],
+  "id": "sec_form4:0001193125-26-410905:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-09-30",
+  "official_id": "0001193125-26-410905:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1502292/000119312526410905/0001193125-26-410905-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "26882743315a95e31a8e4686d3d6f8642011a872938f11dcea3e0100e1cba66f",
+  "source": "sec_form4",
+  "tickers": [
+   "PRHI"
+  ],
+  "title": "Smith James Grant (administrateur) achète 7 250 actions de Presurance Holdings, Inc."
+ },
+ {
+  "amount_max": 559740.0,
+  "amount_min": 559740.0,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:53:56+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 15000.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001582313",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 37.316,
+   "roles": [
+    "Chief Financial Officer"
+   ],
+   "symbole_declare": "XENE",
+   "symboles_sec": [
+    "XENE"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 15000.0,
+     "apres": 15000.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-30",
+     "hors_bourse": null,
+     "prix": 37.316
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Kelly Thomas Patrick",
+   "Xenon Pharmaceuticals Inc."
+  ],
+  "id": "sec_form4:0001193125-26-410001:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-09-30",
+  "official_id": "0001193125-26-410001:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1582313/000119312526410001/0001193125-26-410001-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "3116f8932d2cbbb32423bd09985412db092d206ea57f17c5b2439bccb634d9f6",
+  "source": "sec_form4",
+  "tickers": [
+   "XENE"
+  ],
+  "title": "Kelly Thomas Patrick (Chief Financial Officer) achète 15 000 actions de Xenon Pharmaceuticals Inc."
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -13121,1704 +16171,6 @@
   "source": "sanctions_us",
   "tickers": [],
   "title": "Sanctions américaines (OFAC) : Iran-related Designations and Designations Updates; Transnational Criminal Organizations Designation; Publication of Iran-related Determination; Publication of Amended Iran-related Frequently Asked Question"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:32:09+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0000903129",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    },
-    {
-     "direction": 0,
-     "item": "2.01",
-     "libelle": "acquisition ou vente d'actifs complétée",
-     "officiel": "Completion of Acquisition or Disposition of Assets"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "Gentherm Inc"
-  ],
-  "id": "sec_8k:0001193125-26-410776",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-29",
-  "official_id": "0001193125-26-410776",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/903129/000119312526410776/0001193125-26-410776-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "088e973264756c7e6e7209ec0653b2846a750c57c66704afbe0beea66ff1d720",
-  "source": "sec_8k",
-  "tickers": [
-   "THRM"
-  ],
-  "title": "Gentherm Inc : contrat important signé + acquisition ou vente d'actifs complétée"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:32:07+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "NYSE",
-   "cik": "0000081362",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "QUAKER CHEMICAL CORP"
-  ],
-  "id": "sec_8k:0001628280-26-064284",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-10-01",
-  "official_id": "0001628280-26-064284",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/81362/000162828026064284/0001628280-26-064284-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "86941e5d8877640175733e0b99a60fbd76d6b154422a991edc9d3a2fed22ad0c",
-  "source": "sec_8k",
-  "tickers": [
-   "KWR"
-  ],
-  "title": "QUAKER CHEMICAL CORP : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:32:07+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0000817720",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "SYNAPTICS Inc"
-  ],
-  "id": "sec_8k:0001140361-26-038301",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-10-01",
-  "official_id": "0001140361-26-038301",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/817720/000114036126038301/0001140361-26-038301-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "b04cb7d036248ac94c56c4ee692d5dd3b56f7092a1dae0e175e74e46fcde5c46",
-  "source": "sec_8k",
-  "tickers": [
-   "SYNA"
-  ],
-  "title": "SYNAPTICS Inc : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:32:06+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0000799850",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "AMERICAS CARMART INC"
-  ],
-  "id": "sec_8k:0001171843-26-006326",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001171843-26-006326",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/799850/000117184326006326/0001171843-26-006326-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "e2f2b8c23976aabf890b6374a42920aec3620daf172a50c6897c79bffc853b5c",
-  "source": "sec_8k",
-  "tickers": [
-   "CRMT"
-  ],
-  "title": "AMERICAS CARMART INC : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:32:05+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0000766829",
-   "items": [
-    {
-     "direction": 0,
-     "item": "2.01",
-     "libelle": "acquisition ou vente d'actifs complétée",
-     "officiel": "Completion of Acquisition or Disposition of Assets"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "H2O AMERICA"
-  ],
-  "id": "sec_8k:0001628280-26-064259",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-10-01",
-  "official_id": "0001628280-26-064259",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/766829/000162828026064259/0001628280-26-064259-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "3dc684a3aea17e0e02de1b1d9c1d34eab4b3888b522735b1f93c99876c357bf9",
-  "source": "sec_8k",
-  "tickers": [
-   "HTO"
-  ],
-  "title": "H2O AMERICA : acquisition ou vente d'actifs complétée"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:32:04+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "NYSE",
-   "cik": "0000070145",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    },
-    {
-     "direction": 0,
-     "item": "2.01",
-     "libelle": "acquisition ou vente d'actifs complétée",
-     "officiel": "Completion of Acquisition or Disposition of Assets"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "NATIONAL FUEL GAS CO"
-  ],
-  "id": "sec_8k:0001193125-26-409787",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-10-01",
-  "official_id": "0001193125-26-409787",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/70145/000119312526409787/0001193125-26-409787-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "dfa81ebe4bef74ddd71adcad7dd27e0ac7abee918dab1e96d94fbe01a97e4ce5",
-  "source": "sec_8k",
-  "tickers": [
-   "NFG"
-  ],
-  "title": "NATIONAL FUEL GAS CO : contrat important signé + acquisition ou vente d'actifs complétée"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:32:03+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "NYSE",
-   "cik": "0000067347",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    },
-    {
-     "direction": 0,
-     "item": "2.01",
-     "libelle": "acquisition ou vente d'actifs complétée",
-     "officiel": "Completion of Acquisition or Disposition of Assets"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "MODINE MANUFACTURING CO"
-  ],
-  "id": "sec_8k:0001104659-26-112870",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-10-01",
-  "official_id": "0001104659-26-112870",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/67347/000110465926112870/0001104659-26-112870-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "4cee52e25b9411e899a11eb4520167cf2a96a30a774e3ccb7534416ebc8aabfa",
-  "source": "sec_8k",
-  "tickers": [
-   "MOD"
-  ],
-  "title": "MODINE MANUFACTURING CO : contrat important signé + acquisition ou vente d'actifs complétée"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:32:01+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0002141406",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "Accelevation Holdings Corp."
-  ],
-  "id": "sec_8k:0001628280-26-064282",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-29",
-  "official_id": "0001628280-26-064282",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/2141406/000162828026064282/0001628280-26-064282-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "fdf595d27b6a4029b5a667be2ea9ff86537a7e866a2020c2826747552c221492",
-  "source": "sec_8k",
-  "tickers": [
-   "ACCV"
-  ],
-  "title": "Accelevation Holdings Corp. : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:59+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0002068385",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "SharonAI Holdings Inc."
-  ],
-  "id": "sec_8k:0001493152-26-045368",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-28",
-  "official_id": "0001493152-26-045368",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/2068385/000149315226045368/0001493152-26-045368-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "cc8b1442f6549fccf886d88b9526fe075179125fa3e01ef2bd26d1d29616d57c",
-  "source": "sec_8k",
-  "tickers": [
-   "SHAZ"
-  ],
-  "title": "SharonAI Holdings Inc. : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:57+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0002038439",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "VisionWave Holdings, Inc."
-  ],
-  "id": "sec_8k:0001731122-26-001305",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001731122-26-001305",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/2038439/000173112226001305/0001731122-26-001305-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "324ce21828140947cdf9a8d982dcf5aa7d635eda2002fa4b9b728857905565b5",
-  "source": "sec_8k",
-  "tickers": [
-   "VWAV"
-  ],
-  "title": "VisionWave Holdings, Inc. : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:56+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0002009312",
-   "items": [
-    {
-     "direction": 0,
-     "item": "2.01",
-     "libelle": "acquisition ou vente d'actifs complétée",
-     "officiel": "Completion of Acquisition or Disposition of Assets"
-    },
-    {
-     "direction": -1,
-     "item": "4.01",
-     "libelle": "changement de vérificateur comptable",
-     "officiel": "Changes in Registrant's Certifying Accountant"
-    },
-    {
-     "direction": 0,
-     "item": "5.01",
-     "libelle": "changement de contrôle",
-     "officiel": "Changes in Control of Registrant"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": -1,
-  "entities": [
-   "Aureus Greenway Holdings Inc"
-  ],
-  "id": "sec_8k:0001493152-26-045385",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-10-01",
-  "official_id": "0001493152-26-045385",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/2009312/000149315226045385/0001493152-26-045385-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "1b19d600a94546292bfc633ae41cc4bfbf301d220818304e3c15b5958241efee",
-  "source": "sec_8k",
-  "tickers": [
-   "PUSA"
-  ],
-  "title": "Aureus Greenway Holdings Inc : acquisition ou vente d'actifs complétée + changement de vérificateur comptable + changement de contrôle"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:56+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0001996192",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "Quanome Technologies, Inc."
-  ],
-  "id": "sec_8k:0001213900-26-105778",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-28",
-  "official_id": "0001213900-26-105778",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1996192/000121390026105778/0001213900-26-105778-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "04b53dabac513f42c147796430401ca9e7019b94a4e91e79190dfd329050c9af",
-  "source": "sec_8k",
-  "tickers": [
-   "QNME"
-  ],
-  "title": "Quanome Technologies, Inc. : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:55+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "NYSE",
-   "cik": "0001995807",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "LandBridge Co LLC"
-  ],
-  "id": "sec_8k:0001193125-26-410656",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-10-01",
-  "official_id": "0001193125-26-410656",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1995807/000119312526410656/0001193125-26-410656-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "5dfcf4f703c72052d05b86a7a94ecd41dc8f3168e527c79c51061e10b5193a94",
-  "source": "sec_8k",
-  "tickers": [
-   "LB"
-  ],
-  "title": "LandBridge Co LLC : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:55+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "NYSE",
-   "cik": "0000019745",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "CHESAPEAKE UTILITIES CORP"
-  ],
-  "id": "sec_8k:0001193125-26-409820",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001193125-26-409820",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/19745/000119312526409820/0001193125-26-409820-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "76e39cb57671a9c5b90fc9a6e23412eccc33857d1937fb1d436758c30299fc88",
-  "source": "sec_8k",
-  "tickers": [
-   "CPK"
-  ],
-  "title": "CHESAPEAKE UTILITIES CORP : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:53+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0001938046",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    },
-    {
-     "direction": 0,
-     "item": "2.01",
-     "libelle": "acquisition ou vente d'actifs complétée",
-     "officiel": "Completion of Acquisition or Disposition of Assets"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "MANGOCEUTICALS, INC."
-  ],
-  "id": "sec_8k:0001493152-26-045341",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001493152-26-045341",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1938046/000149315226045341/0001493152-26-045341-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "97c4fe7a212846d109a3f3ff1a2de440ca2e45ab2b77a4be17b4460062cf9d57",
-  "source": "sec_8k",
-  "tickers": [
-   "MGRX"
-  ],
-  "title": "MANGOCEUTICALS, INC. : contrat important signé + acquisition ou vente d'actifs complétée"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:51+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0001895618",
-   "items": [
-    {
-     "direction": -1,
-     "item": "3.01",
-     "libelle": "avis de retrait de la bourse",
-     "officiel": "Notice of Delisting or Failure to Satisfy a Continued Listing Rule or Standard; Transfer of Listing"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": -1,
-  "entities": [
-   "GAXOS.AI INC."
-  ],
-  "id": "sec_8k:0001213900-26-105791",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-28",
-  "official_id": "0001213900-26-105791",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1895618/000121390026105791/0001213900-26-105791-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "df080a99e26d10f426926e66cf8c65c349cae4c960e6f43b54bb40c05ebcff99",
-  "source": "sec_8k",
-  "tickers": [
-   "GXAI"
-  ],
-  "title": "GAXOS.AI INC. : avis de retrait de la bourse"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:51+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "NYSE",
-   "cik": "0001898496",
-   "items": [
-    {
-     "direction": -1,
-     "item": "3.01",
-     "libelle": "avis de retrait de la bourse",
-     "officiel": "Notice of Delisting or Failure to Satisfy a Continued Listing Rule or Standard; Transfer of Listing"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": -1,
-  "entities": [
-   "Getty Images Holdings, Inc."
-  ],
-  "id": "sec_8k:0001213900-26-105790",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-29",
-  "official_id": "0001213900-26-105790",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1898496/000121390026105790/0001213900-26-105790-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "486cade2615208f6144badd091b9165a178eb0d97a71ceb9e12d2a7744390ec5",
-  "source": "sec_8k",
-  "tickers": [
-   "GETY"
-  ],
-  "title": "Getty Images Holdings, Inc. : avis de retrait de la bourse"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:50+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0001880613",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "Direct Digital Holdings, Inc."
-  ],
-  "id": "sec_8k:0001880613-26-000111",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-25",
-  "official_id": "0001880613-26-000111",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1880613/000188061326000111/0001880613-26-000111-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "5389329781b9bb37baba17a3a3007622713b3887842ef020e84685511b0bfd09",
-  "source": "sec_8k",
-  "tickers": [
-   "DRCT"
-  ],
-  "title": "Direct Digital Holdings, Inc. : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:50+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0001881592",
-   "items": [
-    {
-     "direction": 0,
-     "item": "2.01",
-     "libelle": "acquisition ou vente d'actifs complétée",
-     "officiel": "Completion of Acquisition or Disposition of Assets"
-    },
-    {
-     "direction": -1,
-     "item": "3.01",
-     "libelle": "avis de retrait de la bourse",
-     "officiel": "Notice of Delisting or Failure to Satisfy a Continued Listing Rule or Standard; Transfer of Listing"
-    },
-    {
-     "direction": 0,
-     "item": "5.01",
-     "libelle": "changement de contrôle",
-     "officiel": "Changes in Control of Registrant"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": -1,
-  "entities": [
-   "NSTS Bancorp, Inc."
-  ],
-  "id": "sec_8k:0001437749-26-031662",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-29",
-  "official_id": "0001437749-26-031662",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1881592/000143774926031662/0001437749-26-031662-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "5017b766cbe9ff83aaff04ace9fa8b87c88c9d9a75748cb629e7ffd0ab03a7be",
-  "source": "sec_8k",
-  "tickers": [
-   "NSTS"
-  ],
-  "title": "NSTS Bancorp, Inc. : acquisition ou vente d'actifs complétée + avis de retrait de la bourse + changement de contrôle"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:50+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0001879403",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    },
-    {
-     "direction": 0,
-     "item": "2.01",
-     "libelle": "acquisition ou vente d'actifs complétée",
-     "officiel": "Completion of Acquisition or Disposition of Assets"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "La Rosa Holdings Corp."
-  ],
-  "id": "sec_8k:0001213900-26-105473",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-28",
-  "official_id": "0001213900-26-105473",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1879403/000121390026105473/0001213900-26-105473-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "5c160c756e629527436523af01f0f9f8d381fb0a7d28c6863aec3476a7c351c4",
-  "source": "sec_8k",
-  "tickers": [
-   "LRHC"
-  ],
-  "title": "La Rosa Holdings Corp. : contrat important signé + acquisition ou vente d'actifs complétée"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:50+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0001888654",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    },
-    {
-     "direction": 0,
-     "item": "2.01",
-     "libelle": "acquisition ou vente d'actifs complétée",
-     "officiel": "Completion of Acquisition or Disposition of Assets"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "5E Advanced Materials, Inc."
-  ],
-  "id": "sec_8k:0001193125-26-410775",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-10-01",
-  "official_id": "0001193125-26-410775",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1888654/000119312526410775/0001193125-26-410775-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "da35c054f191dcb5f0821eba18365693bac7932329757c0911bb6a75b039b632",
-  "source": "sec_8k",
-  "tickers": [
-   "FEAM"
-  ],
-  "title": "5E Advanced Materials, Inc. : contrat important signé + acquisition ou vente d'actifs complétée"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:49+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0001862463",
-   "items": [
-    {
-     "direction": 0,
-     "item": "2.01",
-     "libelle": "acquisition ou vente d'actifs complétée",
-     "officiel": "Completion of Acquisition or Disposition of Assets"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "ALPHA MODUS HOLDINGS, INC."
-  ],
-  "id": "sec_8k:0001493152-26-045296",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001493152-26-045296",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1862463/000149315226045296/0001493152-26-045296-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "f27b3186ea8d85ed2113dee477feace6df21700953796f357f7c536698e773aa",
-  "source": "sec_8k",
-  "tickers": [
-   "AMOD"
-  ],
-  "title": "ALPHA MODUS HOLDINGS, INC. : acquisition ou vente d'actifs complétée"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:48+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0001849820",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "Nauticus Robotics, Inc."
-  ],
-  "id": "sec_8k:0001849820-26-000163",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001849820-26-000163",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1849820/000184982026000163/0001849820-26-000163-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "a2d6044b73087cf1324e8f2b7795ed5f42e3a833d369ac5d2c98808b003a4d76",
-  "source": "sec_8k",
-  "tickers": [
-   "KITT"
-  ],
-  "title": "Nauticus Robotics, Inc. : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:48+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "NYSE",
-   "cik": "0001846069",
-   "items": [
-    {
-     "direction": -1,
-     "item": "3.01",
-     "libelle": "avis de retrait de la bourse",
-     "officiel": "Notice of Delisting or Failure to Satisfy a Continued Listing Rule or Standard; Transfer of Listing"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": -1,
-  "entities": [
-   "Nextdoor Holdings, Inc."
-  ],
-  "id": "sec_8k:0001846069-26-000162",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-10-01",
-  "official_id": "0001846069-26-000162",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1846069/000184606926000162/0001846069-26-000162-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "1f243fff0ca115e36fdf41298a7ae7c2bc6bd73425baef3124adf75abb8b4bfe",
-  "source": "sec_8k",
-  "tickers": [
-   "NXDR"
-  ],
-  "title": "Nextdoor Holdings, Inc. : avis de retrait de la bourse"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:47+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0001826011",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "Banzai International, Inc."
-  ],
-  "id": "sec_8k:0001493152-26-045262",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-25",
-  "official_id": "0001493152-26-045262",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1826011/000149315226045262/0001493152-26-045262-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "6a31288a6d56cb94432e8cce5f64c27992aaf1261f356d7cc2d69d8e7d8cabba",
-  "source": "sec_8k",
-  "tickers": [
-   "PARA"
-  ],
-  "title": "Banzai International, Inc. : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:47+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0001829635",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "Transcode Therapeutics, Inc."
-  ],
-  "id": "sec_8k:0001104659-26-112826",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-10-01",
-  "official_id": "0001104659-26-112826",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1829635/000110465926112826/0001104659-26-112826-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "cfbc5756c1604c753b7ddbc94869749b1af33e933f0e9e5921d0b017556559ac",
-  "source": "sec_8k",
-  "tickers": [
-   "RNAZ"
-  ],
-  "title": "Transcode Therapeutics, Inc. : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:46+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0001809750",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "Edible Garden AG Inc"
-  ],
-  "id": "sec_8k:0001477932-26-005955",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001477932-26-005955",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1809750/000147793226005955/0001477932-26-005955-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "7222dbe36d9680c0947aa46666c757e2cc639ce9c278f1684220187c8271805b",
-  "source": "sec_8k",
-  "tickers": [
-   "EDBL"
-  ],
-  "title": "Edible Garden AG Inc : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:44+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0001782223",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "Pyxis Oncology, Inc."
-  ],
-  "id": "sec_8k:0001437749-26-031767",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-29",
-  "official_id": "0001437749-26-031767",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1782223/000143774926031767/0001437749-26-031767-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "e152de7ed7e91d6b09d4e6c619661e9ac8a646dac2f011c93f17a5d73f2a3935",
-  "source": "sec_8k",
-  "tickers": [
-   "PYXS"
-  ],
-  "title": "Pyxis Oncology, Inc. : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:43+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0001763950",
-   "items": [
-    {
-     "direction": -1,
-     "item": "3.01",
-     "libelle": "avis de retrait de la bourse",
-     "officiel": "Notice of Delisting or Failure to Satisfy a Continued Listing Rule or Standard; Transfer of Listing"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": -1,
-  "entities": [
-   "Lantern Pharma Inc."
-  ],
-  "id": "sec_8k:0001493152-26-045344",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-25",
-  "official_id": "0001493152-26-045344",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1763950/000149315226045344/0001493152-26-045344-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "334d98759775599a121c170e779d6819b4b54b769479c17f6d2bfc632ae44243",
-  "source": "sec_8k",
-  "tickers": [
-   "LTRN"
-  ],
-  "title": "Lantern Pharma Inc. : avis de retrait de la bourse"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:41+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0001701756",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    },
-    {
-     "direction": 0,
-     "item": "2.01",
-     "libelle": "acquisition ou vente d'actifs complétée",
-     "officiel": "Completion of Acquisition or Disposition of Assets"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "Sadot Group Inc."
-  ],
-  "id": "sec_8k:0001731122-26-001306",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001731122-26-001306",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1701756/000173112226001306/0001731122-26-001306-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "e66a1a803b51371a3b1a0d3acf04767a108d1c5531c48548be84d6ae3a87b21f",
-  "source": "sec_8k",
-  "tickers": [
-   "SDOT"
-  ],
-  "title": "Sadot Group Inc. : contrat important signé + acquisition ou vente d'actifs complétée"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:41+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0001701756",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "Sadot Group Inc."
-  ],
-  "id": "sec_8k:0001731122-26-001304",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001731122-26-001304",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1701756/000173112226001304/0001731122-26-001304-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "fcd39e9894df6de37f69530dbddc2c182a8e49d15c395195d04189a0ce2151a9",
-  "source": "sec_8k",
-  "tickers": [
-   "SDOT"
-  ],
-  "title": "Sadot Group Inc. : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:31:41+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0001716166",
-   "items": [
-    {
-     "direction": -1,
-     "item": "4.01",
-     "libelle": "changement de vérificateur comptable",
-     "officiel": "Changes in Registrant's Certifying Accountant"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": -1,
-  "entities": [
-   "Vivos Therapeutics, Inc."
-  ],
-  "id": "sec_8k:0001493152-26-045193",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-29",
-  "official_id": "0001493152-26-045193",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1716166/000149315226045193/0001493152-26-045193-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "178536fd4934d0600c4783e8bd271e7807fb18e6a18dfd9eb409b479088509d6",
-  "source": "sec_8k",
-  "tickers": [
-   "VVOS"
-  ],
-  "title": "Vivos Therapeutics, Inc. : changement de vérificateur comptable"
  },
  {
   "amount_max": null,
@@ -23952,6 +25304,53 @@
    "LLY"
   ],
   "title": "FDA : nouveau médicament approuvé, ONSWIK (insulin efsitora alfa-gobe), de ELI LILLY AND CO"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:55:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "New Mountain Partners VII, L.P.",
+   "entites_visees": [
+    "Jensen Hughes Holdings Corporation"
+   ],
+   "numero": "20262178",
+   "partie_visee": "Gryphon Partners IV, L.P.",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "New Mountain Partners VII, L.P.",
+   "Gryphon Partners IV, L.P."
+  ],
+  "id": "ftc_fusions:20262178",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-21",
+  "official_id": "20262178",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262178",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-22",
+  "sha256": "c06ff0f447c239548f70061f74d8f0fb731c9b39452932ce64f142644f5934cd",
+  "source": "ftc_fusions",
+  "tickers": [],
+  "title": "FTC : feu vert antitrust anticipé, New Mountain Partners VII, L.P. (acquéreur) et Gryphon Partners IV, L.P. (partie visée)"
  },
  {
   "amount_max": null,

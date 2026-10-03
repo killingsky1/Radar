@@ -100,7 +100,7 @@
    "symbole": "CBZ"
   }
  ],
- "compagnies_notees": 112,
+ "compagnies_notees": 104,
  "evenements": {
   "sec_13dg:0000921895-26-002669": {
    "amount_max": null,
@@ -321,65 +321,6 @@
     "SAMG"
    ],
    "title": "Equinox Partners Investment Management LLC détient 7,1 % de Silvercrest Asset Management Group Inc. (13D, intentions actives)"
-  },
-  "sec_13dg:0001062993-26-005116": {
-   "amount_max": null,
-   "amount_min": null,
-   "badge": "officiel",
-   "category": "baleines",
-   "checks": {
-    "champs_requis": true,
-    "dates_coherentes": true,
-    "domaine_officiel": true,
-    "emetteur_coherent": true,
-    "empreinte": true,
-    "pourcentage_valide": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-03T03:17:00+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 2519703.0,
-    "amendement": null,
-    "bourse": "NYSE",
-    "but_sous_evalue": true,
-    "cik_emetteur": "0000836412",
-    "cik_sujet_entete": "0000836412",
-    "date_evenement": "2026-09-28",
-    "declarant": "Saba Capital Management, L.P.",
-    "extrait_but": "The Reporting Persons acquired the Common Shares to which this Schedule 13D relates in the ordinary course of business for investment purposes because they believe that the Common Shares are undervalued and represent an attractive investment opportunity.",
-    "nb_personnes": 3,
-    "nom_emetteur": "Virtus Total Return Fund Inc.",
-    "pourcentage": 5.04,
-    "type": "SCHEDULE 13D",
-    "types_declarants": [
-     "IA",
-     "OO",
-     "PN"
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Saba Capital Management, L.P.",
-    "Virtus Total Return Fund Inc."
-   ],
-   "id": "sec_13dg:0001062993-26-005116",
-   "kind": "plus_5_pourcent",
-   "notes": [],
-   "occurred_on": "2026-09-28",
-   "official_id": "0001062993-26-005116",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/836412/000106299326005116/0001062993-26-005116-index.htm",
-   "parser_version": "sec-6",
-   "published_on": "2026-09-30",
-   "sha256": "bdc907c5239c102d82778eb3eca8b021d191007ea3b52ebb925e0ce8bf64df3e",
-   "source": "sec_13dg",
-   "tickers": [
-    "ZTR"
-   ],
-   "title": "Saba Capital Management, L.P. détient 5,04 % de Virtus Total Return Fund Inc. (13D, intentions actives)"
   },
   "sec_13dg:0001193805-26-001309": {
    "amount_max": null,
@@ -674,6 +615,79 @@
    ],
    "title": "Hyperscale Data, Inc. : contrat important signé"
   },
+  "sec_form4:0000017313-26-000159:P": {
+   "amount_max": 50005.48,
+   "amount_min": 50005.48,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-03T03:53:53+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 2170.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0000017313",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 23.044,
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "CSWC",
+    "symboles_sec": [
+     "CSWC"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 2170.0,
+      "apres": 22842.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-10-01",
+      "hors_bourse": null,
+      "prix": 23.044
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Thomas William R III",
+    "CAPITAL SOUTHWEST CORP"
+   ],
+   "id": "sec_form4:0000017313-26-000159:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-10-01",
+   "official_id": "0000017313-26-000159:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/17313/000001731326000159/0000017313-26-000159-index.htm",
+   "parser_version": "sec-7",
+   "published_on": "2026-10-01",
+   "sha256": "8b58c4b9802c0904781ba0073b16875661bbd0eb4f5112597eaae1ab65fdaf48",
+   "source": "sec_form4",
+   "tickers": [
+    "CSWC"
+   ],
+   "title": "Thomas William R III (administrateur) achète 2 170 actions de CAPITAL SOUTHWEST CORP"
+  },
   "sec_form4:0000912282-26-001334:P": {
    "amount_max": 38730.0,
    "amount_min": 38730.0,
@@ -696,13 +710,15 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T20:00:27+00:00",
+   "collected_at": "2026-10-03T03:54:53+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 3000.0,
+    "automatique": null,
     "bourse": "Nasdaq",
     "cik_emetteur": "0001833141",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 12.91,
     "roles": [
@@ -717,8 +733,10 @@
       "acquis_cede": "A",
       "actions": 3000.0,
       "apres": 3000.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-29",
+      "hors_bourse": null,
       "prix": 12.91
      }
     ]
@@ -734,7 +752,7 @@
    "occurred_on": "2026-09-29",
    "official_id": "0000912282-26-001334:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1833141/000091228226001334/0000912282-26-001334-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-7",
    "published_on": "2026-10-01",
    "sha256": "38bc8c573fe8253696b5dd677eb94f81d49842e6f34d802a6775df6bba3a62e7",
    "source": "sec_form4",
@@ -1032,76 +1050,6 @@
    ],
    "title": "Ben-Noon Dagi Shahar (Chief Executive Officer) achète 168 894 actions de QTREX Quantum Ltd."
   },
-  "sec_form4:0001189793-26-000014:P": {
-   "amount_max": 74420.26,
-   "amount_min": 74420.26,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-02T19:58:41+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 367.0,
-    "bourse": "NYSE",
-    "cik_emetteur": "0001063761",
-    "plan_10b5_1": false,
-    "prix_moyen": 202.78,
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "SPG",
-    "symboles_sec": [
-     "SPG",
-     "SPG-PJ"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 367.0,
-      "apres": 46269.0,
-      "code": "P",
-      "date": "2026-09-30",
-      "prix": 202.78
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "GLASSCOCK LARRY C",
-    "SIMON PROPERTY GROUP INC."
-   ],
-   "id": "sec_form4:0001189793-26-000014:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-30",
-   "official_id": "0001189793-26-000014:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1063761/000118979326000014/0001189793-26-000014-index.htm",
-   "parser_version": "sec-2",
-   "published_on": "2026-10-01",
-   "sha256": "318cddfaafd01fe6d78ac183b5b6fa971e9eef2a19b98d3e9017e2a5b983245d",
-   "source": "sec_form4",
-   "tickers": [
-    "SPG"
-   ],
-   "title": "GLASSCOCK LARRY C (administrateur) achète 367 actions de SIMON PROPERTY GROUP INC."
-  },
   "sec_form4:0001193125-26-409999:P": {
    "amount_max": 1121400.0,
    "amount_min": 1121400.0,
@@ -1124,13 +1072,15 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:59:52+00:00",
+   "collected_at": "2026-10-03T03:54:17+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 30000.0,
+    "automatique": null,
     "bourse": "Nasdaq",
     "cik_emetteur": "0001582313",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 37.38,
     "roles": [
@@ -1145,8 +1095,10 @@
       "acquis_cede": "A",
       "actions": 30000.0,
       "apres": 49923.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-30",
+      "hors_bourse": null,
       "prix": 37.38
      }
     ]
@@ -1162,7 +1114,7 @@
    "occurred_on": "2026-09-30",
    "official_id": "0001193125-26-409999:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1582313/000119312526409999/0001193125-26-409999-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-7",
    "published_on": "2026-10-01",
    "sha256": "8b928940f521a7968b6b2e592ea5dc31c62ae957e4dee2478d617339ce6575e3",
    "source": "sec_form4",
@@ -1193,13 +1145,15 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:59:31+00:00",
+   "collected_at": "2026-10-03T03:53:56+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 15000.0,
+    "automatique": null,
     "bourse": "Nasdaq",
     "cik_emetteur": "0001582313",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 37.316,
     "roles": [
@@ -1214,8 +1168,10 @@
       "acquis_cede": "A",
       "actions": 15000.0,
       "apres": 15000.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-30",
+      "hors_bourse": null,
       "prix": 37.316
      }
     ]
@@ -1231,7 +1187,7 @@
    "occurred_on": "2026-09-30",
    "official_id": "0001193125-26-410001:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1582313/000119312526410001/0001193125-26-410001-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-7",
    "published_on": "2026-10-01",
    "sha256": "3116f8932d2cbbb32423bd09985412db092d206ea57f17c5b2439bccb634d9f6",
    "source": "sec_form4",
@@ -1262,13 +1218,15 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:59:24+00:00",
+   "collected_at": "2026-10-03T03:53:49+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 4100.0,
+    "automatique": null,
     "bourse": "Nasdaq",
     "cik_emetteur": "0001502292",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 6.375,
     "roles": [
@@ -1284,8 +1242,10 @@
       "acquis_cede": "A",
       "actions": 4100.0,
       "apres": 14468.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-30",
+      "hors_bourse": null,
       "prix": 6.375
      }
     ]
@@ -1301,7 +1261,7 @@
    "occurred_on": "2026-09-30",
    "official_id": "0001193125-26-410889:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1502292/000119312526410889/0001193125-26-410889-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-7",
    "published_on": "2026-10-01",
    "sha256": "4265dcab183725eafe6faba3bcb743c050f2c678e43c8d25dfe4246e06f363e8",
    "source": "sec_form4",
@@ -1332,13 +1292,15 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:59:24+00:00",
+   "collected_at": "2026-10-03T03:53:49+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 7500.0,
+    "automatique": null,
     "bourse": "Nasdaq",
     "cik_emetteur": "0001502292",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 6.7497,
     "roles": [
@@ -1354,8 +1316,10 @@
       "acquis_cede": "A",
       "actions": 7500.0,
       "apres": 80390.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-30",
+      "hors_bourse": null,
       "prix": 6.7497
      }
     ]
@@ -1371,7 +1335,7 @@
    "occurred_on": "2026-09-30",
    "official_id": "0001193125-26-410894:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1502292/000119312526410894/0001193125-26-410894-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-7",
    "published_on": "2026-10-01",
    "sha256": "0109cc47b8d7cf058dc1925bf108307e820808dc43042c26de361ab4b5a40dbd",
    "source": "sec_form4",
@@ -1402,13 +1366,15 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:59:41+00:00",
+   "collected_at": "2026-10-03T03:54:06+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 7250.0,
+    "automatique": null,
     "bourse": "Nasdaq",
     "cik_emetteur": "0001502292",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 6.7497,
     "roles": [
@@ -1424,8 +1390,10 @@
       "acquis_cede": "A",
       "actions": 7250.0,
       "apres": 15953.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-30",
+      "hors_bourse": null,
       "prix": 6.7497
      }
     ]
@@ -1441,7 +1409,7 @@
    "occurred_on": "2026-09-30",
    "official_id": "0001193125-26-410905:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1502292/000119312526410905/0001193125-26-410905-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-7",
    "published_on": "2026-10-01",
    "sha256": "26882743315a95e31a8e4686d3d6f8642011a872938f11dcea3e0100e1cba66f",
    "source": "sec_form4",
@@ -1472,13 +1440,15 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:59:41+00:00",
+   "collected_at": "2026-10-03T03:54:06+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 7250.0,
+    "automatique": null,
     "bourse": "Nasdaq",
     "cik_emetteur": "0001502292",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 6.7497,
     "roles": [
@@ -1494,8 +1464,10 @@
       "acquis_cede": "A",
       "actions": 7250.0,
       "apres": 7964.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-30",
+      "hors_bourse": null,
       "prix": 6.7497
      }
     ]
@@ -1511,7 +1483,7 @@
    "occurred_on": "2026-09-30",
    "official_id": "0001193125-26-410913:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1502292/000119312526410913/0001193125-26-410913-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-7",
    "published_on": "2026-10-01",
    "sha256": "d11c6a51d9b46a58169cf71eb521ce82cee5d05df05b96dd2607da7c09adf9e5",
    "source": "sec_form4",
@@ -1542,13 +1514,15 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:59:24+00:00",
+   "collected_at": "2026-10-03T03:53:49+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 11000.0,
+    "automatique": null,
     "bourse": "Nasdaq",
     "cik_emetteur": "0001502292",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 6.7497,
     "roles": [
@@ -1564,8 +1538,10 @@
       "acquis_cede": "A",
       "actions": 11000.0,
       "apres": 61000.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-30",
+      "hors_bourse": null,
       "prix": 6.7497
      }
     ]
@@ -1581,7 +1557,7 @@
    "occurred_on": "2026-09-30",
    "official_id": "0001193125-26-410914:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1502292/000119312526410914/0001193125-26-410914-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-7",
    "published_on": "2026-10-01",
    "sha256": "cb53ae91fbd53bc4b9524558aec6fdf6b78acb67cd1fc8850497248c6e6faea4",
    "source": "sec_form4",
@@ -1589,146 +1565,6 @@
     "PRHI"
    ],
    "title": "SARAFA JOSEPH D (administrateur) achète 11 000 actions de Presurance Holdings, Inc."
-  },
-  "sec_form4:0001199045-26-000010:P": {
-   "amount_max": 47044.96,
-   "amount_min": 47044.96,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-02T19:58:41+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 232.0,
-    "bourse": "NYSE",
-    "cik_emetteur": "0001063761",
-    "plan_10b5_1": false,
-    "prix_moyen": 202.78,
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "SPG",
-    "symboles_sec": [
-     "SPG",
-     "SPG-PJ"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 232.0,
-      "apres": 21248.0,
-      "code": "P",
-      "date": "2026-09-30",
-      "prix": 202.78
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "RODKIN GARY M",
-    "SIMON PROPERTY GROUP INC."
-   ],
-   "id": "sec_form4:0001199045-26-000010:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-30",
-   "official_id": "0001199045-26-000010:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1063761/000119904526000010/0001199045-26-000010-index.htm",
-   "parser_version": "sec-2",
-   "published_on": "2026-10-01",
-   "sha256": "4b8637478429448a39ceea4a4bcb9658d850831b2a0e0921155aa961a3b39fff",
-   "source": "sec_form4",
-   "tickers": [
-    "SPG"
-   ],
-   "title": "RODKIN GARY M (administrateur) achète 232 actions de SIMON PROPERTY GROUP INC."
-  },
-  "sec_form4:0001210982-26-000010:P": {
-   "amount_max": 97334.4,
-   "amount_min": 97334.4,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-02T19:58:41+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 480.0,
-    "bourse": "NYSE",
-    "cik_emetteur": "0001063761",
-    "plan_10b5_1": false,
-    "prix_moyen": 202.78,
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "SPG",
-    "symboles_sec": [
-     "SPG",
-     "SPG-PJ"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 480.0,
-      "apres": 56277.0,
-      "code": "P",
-      "date": "2026-09-30",
-      "prix": 202.78
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "LEIBOWITZ REUBEN S",
-    "SIMON PROPERTY GROUP INC."
-   ],
-   "id": "sec_form4:0001210982-26-000010:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-30",
-   "official_id": "0001210982-26-000010:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1063761/000121098226000010/0001210982-26-000010-index.htm",
-   "parser_version": "sec-2",
-   "published_on": "2026-10-01",
-   "sha256": "1801d3cd818cd4ff122ee5386442aa19b7166cdb1677dc4cc200d75e1cc1d6c2",
-   "source": "sec_form4",
-   "tickers": [
-    "SPG"
-   ],
-   "title": "LEIBOWITZ REUBEN S (administrateur) achète 480 actions de SIMON PROPERTY GROUP INC."
   },
   "sec_form4:0001213900-26-105765:P": {
    "amount_max": 382710.87,
@@ -1752,13 +1588,15 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T20:00:28+00:00",
+   "collected_at": "2026-10-03T03:54:53+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 1396755.0,
+    "automatique": null,
     "bourse": "Nasdaq",
     "cik_emetteur": "0001836242",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 0.274,
     "roles": [
@@ -1773,8 +1611,10 @@
       "acquis_cede": "A",
       "actions": 1396755.0,
       "apres": 8613191.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-29",
+      "hors_bourse": null,
       "prix": 0.274
      }
     ]
@@ -1790,7 +1630,7 @@
    "occurred_on": "2026-09-29",
    "official_id": "0001213900-26-105765:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1836242/000121390026105765/0001213900-26-105765-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-7",
    "published_on": "2026-10-01",
    "sha256": "94339393bb7dad2191f5b17738b22ffeb103a697db1efc4fab373c6e7bcc569e",
    "source": "sec_form4",
@@ -1821,13 +1661,15 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:59:07+00:00",
+   "collected_at": "2026-10-03T03:53:31+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 10313474.0,
+    "automatique": null,
     "bourse": "NYSE",
     "cik_emetteur": "0000896493",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 0.4898,
     "roles": [
@@ -1844,24 +1686,30 @@
       "acquis_cede": "A",
       "actions": 1600.0,
       "apres": 962500.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-29",
+      "hors_bourse": null,
       "prix": 0.1662
      },
      {
       "acquis_cede": "A",
       "actions": 311874.0,
       "apres": 3925566.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-30",
+      "hors_bourse": null,
       "prix": 0.1639
      },
      {
       "acquis_cede": "A",
       "actions": 10000000.0,
       "apres": 13925566.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-30",
+      "hors_bourse": null,
       "prix": 0.5
      }
     ]
@@ -1878,7 +1726,7 @@
    "occurred_on": "2026-09-29",
    "official_id": "0001214659-26-012383:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/896493/000121465926012383/0001214659-26-012383-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-7",
    "published_on": "2026-10-01",
    "sha256": "288eab4c62d6902399bfa6693905c38ba75e4e62ea220d6c4e0f6629040b847c",
    "source": "sec_form4",
@@ -2282,13 +2130,15 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:59:28+00:00",
+   "collected_at": "2026-10-03T03:53:53+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 2000.0,
+    "automatique": null,
     "bourse": "NYSE",
     "cik_emetteur": "0000039368",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 49.625,
     "roles": [
@@ -2303,8 +2153,10 @@
       "acquis_cede": "A",
       "actions": 2000.0,
       "apres": 3343.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-29",
+      "hors_bourse": null,
       "prix": 49.625
      }
     ]
@@ -2320,7 +2172,7 @@
    "occurred_on": "2026-09-29",
    "official_id": "0001225208-26-008046:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/39368/000122520826008046/0001225208-26-008046-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-7",
    "published_on": "2026-10-01",
    "sha256": "322dd9e073a14bcde0f84b5e2fae549d5b1769163db2ba9202fe47e094fe938c",
    "source": "sec_form4",
@@ -2328,408 +2180,6 @@
     "FUL"
    ],
    "title": "Happe Michael J (administrateur) achète 2 000 actions de FULLER H B CO"
-  },
-  "sec_form4:0001272064-26-000012:P": {
-   "amount_max": 40353.22,
-   "amount_min": 40353.22,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-02T19:58:42+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 199.0,
-    "bourse": "NYSE",
-    "cik_emetteur": "0001063761",
-    "plan_10b5_1": false,
-    "prix_moyen": 202.78,
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "SPG",
-    "symboles_sec": [
-     "SPG",
-     "SPG-PJ"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 199.0,
-      "apres": 18199.0,
-      "code": "P",
-      "date": "2026-09-30",
-      "prix": 202.78
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "STEWART MARTA R",
-    "SIMON PROPERTY GROUP INC."
-   ],
-   "id": "sec_form4:0001272064-26-000012:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-30",
-   "official_id": "0001272064-26-000012:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1063761/000127206426000012/0001272064-26-000012-index.htm",
-   "parser_version": "sec-2",
-   "published_on": "2026-10-01",
-   "sha256": "4b87c4792e16c0bdf7383cf6465f63ffdf65196fa53feb4e200f43ef39dc7c58",
-   "source": "sec_form4",
-   "tickers": [
-    "SPG"
-   ],
-   "title": "STEWART MARTA R (administrateur) achète 199 actions de SIMON PROPERTY GROUP INC."
-  },
-  "sec_form4:0001340262-26-000013:P": {
-   "amount_max": 45017.16,
-   "amount_min": 45017.16,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-02T19:58:42+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 222.0,
-    "bourse": "NYSE",
-    "cik_emetteur": "0001063761",
-    "plan_10b5_1": false,
-    "prix_moyen": 202.78,
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "SPG",
-    "symboles_sec": [
-     "SPG",
-     "SPG-PJ"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 222.0,
-      "apres": 21289.0,
-      "code": "P",
-      "date": "2026-09-30",
-      "prix": 202.78
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Aeppel Glyn",
-    "SIMON PROPERTY GROUP INC."
-   ],
-   "id": "sec_form4:0001340262-26-000013:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-30",
-   "official_id": "0001340262-26-000013:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1063761/000134026226000013/0001340262-26-000013-index.htm",
-   "parser_version": "sec-2",
-   "published_on": "2026-10-01",
-   "sha256": "ff8848a89c94a28f16b2148c16553adad6cf48cf69e9f313b7aeb622ca5a07a5",
-   "source": "sec_form4",
-   "tickers": [
-    "SPG"
-   ],
-   "title": "Aeppel Glyn (administrateur) achète 222 actions de SIMON PROPERTY GROUP INC."
-  },
-  "sec_form4:0001398344-26-017532:P": {
-   "amount_max": 115813.51,
-   "amount_min": 115813.51,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-02T19:56:33+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 20000.0,
-    "bourse": "NYSE",
-    "cik_emetteur": "0000813623",
-    "plan_10b5_1": false,
-    "prix_moyen": 5.7907,
-    "roles": [
-     "President and CEO"
-    ],
-    "symbole_declare": "SWZ",
-    "symboles_sec": [
-     "SWZ"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 7649.0,
-      "apres": 47649.0,
-      "code": "P",
-      "date": "2026-09-25",
-      "prix": 5.81
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 2351.0,
-      "apres": 50000.0,
-      "code": "P",
-      "date": "2026-09-25",
-      "prix": 5.82
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 1000.0,
-      "apres": 51000.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "prix": 5.76
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 9000.0,
-      "apres": 60000.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "prix": 5.77
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Dakos Andrew",
-    "Total Return Securities Fund"
-   ],
-   "id": "sec_form4:0001398344-26-017532:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-25",
-   "official_id": "0001398344-26-017532:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/813623/000139834426017532/0001398344-26-017532-index.htm",
-   "parser_version": "sec-2",
-   "published_on": "2026-09-29",
-   "sha256": "afbb790157a27c20f1c537a3f1ae28fdcc63ef7de9683afff3691c94c2d0c2b7",
-   "source": "sec_form4",
-   "tickers": [
-    "SWZ"
-   ],
-   "title": "Dakos Andrew (President and CEO) achète 20 000 actions de Total Return Securities Fund"
-  },
-  "sec_form4:0001398344-26-017659:P": {
-   "amount_max": 59963.28,
-   "amount_min": 59963.28,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-03T03:16:31+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 4780.0,
-    "bourse": "NYSE",
-    "cik_emetteur": "0001551047",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 12.5446,
-    "roles": [
-     "President"
-    ],
-    "symbole_declare": "BPRE",
-    "symboles_sec": [
-     "BPRE"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 2400.0,
-      "apres": 13672.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "hors_bourse": null,
-      "prix": 12.4897
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 2380.0,
-      "apres": 16052.0,
-      "code": "P",
-      "date": "2026-09-30",
-      "hors_bourse": null,
-      "prix": 12.6
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Ruddy Jordan B.",
-    "Bluerock Private Real Estate Fund"
-   ],
-   "id": "sec_form4:0001398344-26-017659:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-28",
-   "official_id": "0001398344-26-017659:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1551047/000139834426017659/0001398344-26-017659-index.htm",
-   "parser_version": "sec-6",
-   "published_on": "2026-09-30",
-   "sha256": "1a7bf508479fea4d71dcfc0a8f3e613e58a570120af2f30072f21bc39b35c31f",
-   "source": "sec_form4",
-   "tickers": [
-    "BPRE"
-   ],
-   "title": "Ruddy Jordan B. (President) achète 4 780 actions de Bluerock Private Real Estate Fund"
-  },
-  "sec_form4:0001398344-26-017661:P": {
-   "amount_max": 5351244.04,
-   "amount_min": 5351244.04,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-03T03:16:09+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 425590.0,
-    "bourse": "NYSE",
-    "cik_emetteur": "0001551047",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 12.5737,
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "BPRE",
-    "symboles_sec": [
-     "BPRE"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 135669.0,
-      "apres": 616439.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "hors_bourse": null,
-      "prix": 12.5011
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 135817.0,
-      "apres": 752256.0,
-      "code": "P",
-      "date": "2026-09-29",
-      "hors_bourse": null,
-      "prix": 12.6029
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 154104.0,
-      "apres": 906360.0,
-      "code": "P",
-      "date": "2026-09-30",
-      "hors_bourse": null,
-      "prix": 12.6119
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "KAMFAR RAMIN",
-    "Bluerock Private Real Estate Fund"
-   ],
-   "id": "sec_form4:0001398344-26-017661:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-28",
-   "official_id": "0001398344-26-017661:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1551047/000139834426017661/0001398344-26-017661-index.htm",
-   "parser_version": "sec-6",
-   "published_on": "2026-09-30",
-   "sha256": "ec932d57c3bcb222fc7b4d0c8327364ba8562822b95023ca049bfdb417422ec6",
-   "source": "sec_form4",
-   "tickers": [
-    "BPRE"
-   ],
-   "title": "KAMFAR RAMIN (administrateur) achète 425 590 actions de Bluerock Private Real Estate Fund"
   },
   "sec_form4:0001437749-26-031597:P": {
    "amount_max": 78196.44,
@@ -2824,13 +2274,15 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:58:45+00:00",
+   "collected_at": "2026-10-03T03:53:09+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 306813.0,
+    "automatique": null,
     "bourse": "Nasdaq",
     "cik_emetteur": "0001069530",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 0.9065,
     "roles": [
@@ -2845,16 +2297,20 @@
       "acquis_cede": "A",
       "actions": 206813.0,
       "apres": 1237964.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-29",
+      "hors_bourse": null,
       "prix": 0.9
      },
      {
       "acquis_cede": "A",
       "actions": 100000.0,
       "apres": 1337964.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-30",
+      "hors_bourse": null,
       "prix": 0.92
      }
     ]
@@ -2870,7 +2326,7 @@
    "occurred_on": "2026-09-29",
    "official_id": "0001437749-26-031654:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1069530/000143774926031654/0001437749-26-031654-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-7",
    "published_on": "2026-10-01",
    "sha256": "c74065ef28b214ed48cb0d040dbc88ffa2006d259b22428b1e8e4f4f168a52fa",
    "source": "sec_form4",
@@ -2949,9 +2405,9 @@
    ],
    "title": "Smith Edgar R. III (administrateur) achète 99 277 actions de First Guaranty Bancshares, Inc."
   },
-  "sec_form4:0001464273-26-000010:P": {
-   "amount_max": 70973.0,
-   "amount_min": 70973.0,
+  "sec_form4:0001477932-26-005964:P": {
+   "amount_max": 40200.0,
+   "amount_min": 40200.0,
    "badge": "officiel",
    "category": "compagnies",
    "checks": {
@@ -2971,57 +2427,60 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:58:42+00:00",
+   "collected_at": "2026-10-03T03:55:01+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
-    "actions": 350.0,
-    "bourse": "NYSE",
-    "cik_emetteur": "0001063761",
+    "actions": 15000.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001921865",
+    "hors_bourse": null,
     "plan_10b5_1": false,
-    "prix_moyen": 202.78,
+    "prix_moyen": 2.68,
     "roles": [
      "administrateur"
     ],
-    "symbole_declare": "SPG",
+    "symbole_declare": "ASPI",
     "symboles_sec": [
-     "SPG",
-     "SPG-PJ"
+     "ASPI"
     ],
     "transactions": [
      {
       "acquis_cede": "A",
-      "actions": 350.0,
-      "apres": 34830.0,
+      "actions": 15000.0,
+      "apres": 675222.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-30",
-      "prix": 202.78
+      "hors_bourse": null,
+      "prix": 2.68
      }
     ]
    },
    "direction": 1,
    "entities": [
-    "Smith Daniel C.",
-    "SIMON PROPERTY GROUP INC."
+    "Ryan Robert John Andrew",
+    "ASP Isotopes Inc."
    ],
-   "id": "sec_form4:0001464273-26-000010:P",
+   "id": "sec_form4:0001477932-26-005964:P",
    "kind": "achat_initie",
    "notes": [],
    "occurred_on": "2026-09-30",
-   "official_id": "0001464273-26-000010:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1063761/000146427326000010/0001464273-26-000010-index.htm",
-   "parser_version": "sec-2",
+   "official_id": "0001477932-26-005964:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1921865/000147793226005964/0001477932-26-005964-index.htm",
+   "parser_version": "sec-7",
    "published_on": "2026-10-01",
-   "sha256": "efc3dffdf5af1448484414b934fe04f9a40a6e08d9d224c2e96cbb4729478854",
+   "sha256": "0f231c0cfa4d16a78e65f9a421b57ed9480a9e57eb88a84b90d79848f719d0f2",
    "source": "sec_form4",
    "tickers": [
-    "SPG"
+    "ASPI"
    ],
-   "title": "Smith Daniel C. (administrateur) achète 350 actions de SIMON PROPERTY GROUP INC."
+   "title": "Ryan Robert John Andrew (administrateur) achète 15 000 actions de ASP Isotopes Inc."
   },
-  "sec_form4:0001709407-26-000012:P": {
-   "amount_max": 42178.24,
-   "amount_min": 42178.24,
+  "sec_form4:0001493152-26-045185:P": {
+   "amount_max": 27131.76,
+   "amount_min": 27131.76,
    "badge": "officiel",
    "category": "compagnies",
    "checks": {
@@ -3041,53 +2500,137 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:58:42+00:00",
+   "collected_at": "2026-10-03T03:16:30+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
-    "actions": 208.0,
-    "bourse": "NYSE",
-    "cik_emetteur": "0001063761",
+    "actions": 12561.0,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001535955",
+    "hors_bourse": null,
     "plan_10b5_1": false,
-    "prix_moyen": 202.78,
+    "prix_moyen": 2.16,
     "roles": [
      "administrateur"
     ],
-    "symbole_declare": "SPG",
+    "symbole_declare": "LPCN",
     "symboles_sec": [
-     "SPG",
-     "SPG-PJ"
+     "LPCN"
     ],
     "transactions": [
      {
       "acquis_cede": "A",
-      "actions": 208.0,
-      "apres": 34020.0,
+      "actions": 12561.0,
+      "apres": 216358.0,
       "code": "P",
-      "date": "2026-09-30",
-      "prix": 202.78
+      "date": "2026-09-28",
+      "hors_bourse": null,
+      "prix": 2.16
      }
     ]
    },
    "direction": 1,
    "entities": [
-    "SELIG STEFAN M",
-    "SIMON PROPERTY GROUP INC."
+    "Higuchi John W.",
+    "Lipocine Inc."
    ],
-   "id": "sec_form4:0001709407-26-000012:P",
+   "id": "sec_form4:0001493152-26-045185:P",
    "kind": "achat_initie",
    "notes": [],
-   "occurred_on": "2026-09-30",
-   "official_id": "0001709407-26-000012:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1063761/000170940726000012/0001709407-26-000012-index.htm",
-   "parser_version": "sec-2",
-   "published_on": "2026-10-01",
-   "sha256": "a1cc89c3ae39ae4d0d9f20222d641450b70cffcd31f58451525842a224d54560",
+   "occurred_on": "2026-09-28",
+   "official_id": "0001493152-26-045185:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1535955/000149315226045185/0001493152-26-045185-index.htm",
+   "parser_version": "sec-6",
+   "published_on": "2026-09-30",
+   "sha256": "8095e132029ad25d29bd9b2b2305eb35033f333321a3145a3786e00c2e1b3b06",
    "source": "sec_form4",
    "tickers": [
-    "SPG"
+    "LPCN"
    ],
-   "title": "SELIG STEFAN M (administrateur) achète 208 actions de SIMON PROPERTY GROUP INC."
+   "title": "Higuchi John W. (administrateur) achète 12 561 actions de Lipocine Inc."
+  },
+  "sec_form4:0001493152-26-045400:P": {
+   "amount_max": 55042.65,
+   "amount_min": 55042.65,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-03T03:54:11+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 25007.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001535955",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 2.2011,
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "LPCN",
+    "symboles_sec": [
+     "LPCN"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 9037.0,
+      "apres": 225395.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-09-29",
+      "hors_bourse": null,
+      "prix": 2.15
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 15970.0,
+      "apres": 241365.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-09-30",
+      "hors_bourse": null,
+      "prix": 2.23
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Higuchi John W.",
+    "Lipocine Inc."
+   ],
+   "id": "sec_form4:0001493152-26-045400:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-09-29",
+   "official_id": "0001493152-26-045400:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1535955/000149315226045400/0001493152-26-045400-index.htm",
+   "parser_version": "sec-7",
+   "published_on": "2026-10-01",
+   "sha256": "26f0dd70aba390aaac483d41977b2bbe8944e6ca831ae9251934618023aa9f26",
+   "source": "sec_form4",
+   "tickers": [
+    "LPCN"
+   ],
+   "title": "Higuchi John W. (administrateur) achète 25 007 actions de Lipocine Inc."
   },
   "sec_form4:0001822293-26-000002:P": {
    "amount_max": 254540.46,
@@ -3111,13 +2654,15 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:59:22+00:00",
+   "collected_at": "2026-10-03T03:53:47+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 10462.0,
+    "automatique": null,
     "bourse": "NYSE",
     "cik_emetteur": "0001326380",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 24.33,
     "roles": [
@@ -3133,8 +2678,10 @@
       "acquis_cede": "A",
       "actions": 10462.0,
       "apres": 10462.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-10-01",
+      "hors_bourse": null,
       "prix": 24.33
      }
     ]
@@ -3150,7 +2697,7 @@
    "occurred_on": "2026-10-01",
    "official_id": "0001822293-26-000002:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1326380/000182229326000002/0001822293-26-000002-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-7",
    "published_on": "2026-10-01",
    "sha256": "abac3080f050cbd6a8d596fb06dd8bc17dfc4d054a021a036a8784b94315161b",
    "source": "sec_form4",
@@ -3519,6 +3066,79 @@
    ],
    "title": "Mariani Gustavo (Vicepresident) achète 25 000 actions de Pampa Energy Inc."
   },
+  "sec_form4:0002100573-26-000006:P": {
+   "amount_max": 499868.98,
+   "amount_min": 499868.98,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-03T03:53:12+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 3665.0,
+    "automatique": null,
+    "bourse": "NYSE",
+    "cik_emetteur": "0001089063",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 136.3899,
+    "roles": [
+     "President - Foot Locker Intl"
+    ],
+    "symbole_declare": "DKS",
+    "symboles_sec": [
+     "DKS"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 3665.0,
+      "apres": 11965.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-09-30",
+      "hors_bourse": null,
+      "prix": 136.3899
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Barnes Matthew",
+    "DICK'S SPORTING GOODS, INC."
+   ],
+   "id": "sec_form4:0002100573-26-000006:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-09-30",
+   "official_id": "0002100573-26-000006:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1089063/000210057326000006/0002100573-26-000006-index.htm",
+   "parser_version": "sec-7",
+   "published_on": "2026-10-01",
+   "sha256": "7d335ca9bc9dba0dbc519c208617d46f44ab05fd10060d353896c4f25ab9a92d",
+   "source": "sec_form4",
+   "tickers": [
+    "DKS"
+   ],
+   "title": "Barnes Matthew (President - Foot Locker Intl) achète 3 665 actions de DICK'S SPORTING GOODS, INC."
+  },
   "sec_form4:0002119764-26-000028:P": {
    "amount_max": 199282.39,
    "amount_min": 199282.39,
@@ -3541,13 +3161,15 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:58:34+00:00",
+   "collected_at": "2026-10-03T03:52:58+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 17334.0,
+    "automatique": null,
     "bourse": "Nasdaq",
     "cik_emetteur": "0001034957",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 11.4966,
     "roles": [
@@ -3562,16 +3184,20 @@
       "acquis_cede": "A",
       "actions": 8573.0,
       "apres": 1234337.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-30",
+      "hors_bourse": null,
       "prix": 11.63
      },
      {
       "acquis_cede": "A",
       "actions": 8761.0,
       "apres": 1243098.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-10-01",
+      "hors_bourse": null,
       "prix": 11.3661
      }
     ]
@@ -3587,7 +3213,7 @@
    "occurred_on": "2026-09-30",
    "official_id": "0002119764-26-000028:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1034957/000211976426000028/0002119764-26-000028-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-7",
    "published_on": "2026-10-01",
    "sha256": "015dc8ae72b237803cb14dd4b82adc97b7a585d91e3d600540136ac16ef1011e",
    "source": "sec_form4",
@@ -3679,7 +3305,7 @@
    "title": "SEC : procédure administrative visant Eagle Bancorp, Inc."
   }
  },
- "genere_a": "2026-10-03T03:15:57+00:00",
+ "genere_a": "2026-10-03T03:52:50+00:00",
  "hausse": [
   {
    "bonus": {
@@ -4010,39 +3636,6 @@
    },
    "contexte": [],
    "depuis": null,
-   "derniere_info": "2026-09-30",
-   "groupes": [
-    {
-     "famille": "activistes",
-     "infos": [
-      {
-       "age": 2,
-       "base": 5.0,
-       "compte": true,
-       "facteurs": [],
-       "id": "sec_13dg:0001062993-26-005116",
-       "points": 4.77,
-       "regle": "activiste_13d",
-       "temps": 0.955
-      }
-     ],
-     "points": 4.77,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "Virtus Total Return Fund Inc.",
-   "plus": 4.77,
-   "score": 4.77,
-   "symbole": "ZTR"
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depuis": null,
    "derniere_info": "2026-10-02",
    "groupes": [
     {
@@ -4201,187 +3794,6 @@
    "plus": 3.42,
    "score": 3.42,
    "symbole": "FUL"
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depuis": null,
-   "derniere_info": "2026-10-01",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 1,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "Groupe d'achats",
-         1.75
-        ]
-       ],
-       "id": "sec_form4:0001709407-26-000012:P",
-       "points": 3.42,
-       "regle": "achat_dirigeant",
-       "temps": 0.977
-      },
-      {
-       "age": 1,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Groupe d'achats",
-         1.75
-        ]
-       ],
-       "id": "sec_form4:0001464273-26-000010:P",
-       "points": 3.42,
-       "regle": "achat_dirigeant",
-       "temps": 0.977
-      },
-      {
-       "age": 1,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Groupe d'achats",
-         1.75
-        ]
-       ],
-       "id": "sec_form4:0001340262-26-000013:P",
-       "points": 3.42,
-       "regle": "achat_dirigeant",
-       "temps": 0.977
-      },
-      {
-       "age": 1,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Groupe d'achats",
-         1.75
-        ]
-       ],
-       "id": "sec_form4:0001272064-26-000012:P",
-       "points": 3.42,
-       "regle": "achat_dirigeant",
-       "temps": 0.977
-      },
-      {
-       "age": 1,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Groupe d'achats",
-         1.75
-        ]
-       ],
-       "id": "sec_form4:0001210982-26-000010:P",
-       "points": 3.42,
-       "regle": "achat_dirigeant",
-       "temps": 0.977
-      },
-      {
-       "age": 1,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Groupe d'achats",
-         1.75
-        ]
-       ],
-       "id": "sec_form4:0001199045-26-000010:P",
-       "points": 3.42,
-       "regle": "achat_dirigeant",
-       "temps": 0.977
-      },
-      {
-       "age": 1,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Groupe d'achats",
-         1.75
-        ]
-       ],
-       "id": "sec_form4:0001189793-26-000014:P",
-       "points": 3.42,
-       "regle": "achat_dirigeant",
-       "temps": 0.977
-      }
-     ],
-     "points": 3.42,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "SIMON PROPERTY GROUP INC.",
-   "plus": 3.42,
-   "score": 3.42,
-   "symbole": "SPG"
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depuis": null,
-   "derniere_info": "2026-09-30",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 2,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "Groupe d'achats",
-         1.75
-        ]
-       ],
-       "id": "sec_form4:0001398344-26-017661:P",
-       "points": 3.34,
-       "regle": "achat_dirigeant",
-       "temps": 0.955
-      },
-      {
-       "age": 2,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Groupe d'achats",
-         1.75
-        ]
-       ],
-       "id": "sec_form4:0001398344-26-017659:P",
-       "points": 3.34,
-       "regle": "achat_dirigeant",
-       "temps": 0.955
-      }
-     ],
-     "points": 3.34,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "Bluerock Private Real Estate Fund",
-   "plus": 3.34,
-   "score": 3.34,
-   "symbole": "BPRE"
   },
   {
    "bonus": {
@@ -4738,44 +4150,6 @@
    },
    "contexte": [],
    "depuis": "2026-10-03T03:15:57+00:00",
-   "derniere_info": "2026-09-29",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 3,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "PDG, directeur financier ou président du conseil",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001398344-26-017532:P",
-       "points": 2.8,
-       "regle": "achat_dirigeant",
-       "temps": 0.933
-      }
-     ],
-     "points": 2.8,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "Total Return Securities Fund",
-   "plus": 2.8,
-   "score": 2.8,
-   "symbole": "SWZ"
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depuis": "2026-10-03T03:15:57+00:00",
    "derniere_info": "2026-10-02",
    "groupes": [
     {
@@ -4801,6 +4175,148 @@
    "plus": 2.0,
    "score": 2.0,
    "symbole": "FGBI"
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depuis": "2026-10-03T03:52:50+00:00",
+   "derniere_info": "2026-10-01",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 1,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [],
+       "id": "sec_form4:0001477932-26-005964:P",
+       "points": 1.95,
+       "regle": "achat_dirigeant",
+       "temps": 0.977
+      }
+     ],
+     "points": 1.95,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "ASP Isotopes Inc.",
+   "plus": 1.95,
+   "score": 1.95,
+   "symbole": "ASPI"
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depuis": "2026-10-03T03:52:50+00:00",
+   "derniere_info": "2026-10-01",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 1,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [],
+       "id": "sec_form4:0000017313-26-000159:P",
+       "points": 1.95,
+       "regle": "achat_dirigeant",
+       "temps": 0.977
+      }
+     ],
+     "points": 1.95,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "CAPITAL SOUTHWEST CORP",
+   "plus": 1.95,
+   "score": 1.95,
+   "symbole": "CSWC"
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depuis": "2026-10-03T03:52:50+00:00",
+   "derniere_info": "2026-10-01",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 1,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [],
+       "id": "sec_form4:0002100573-26-000006:P",
+       "points": 1.95,
+       "regle": "achat_dirigeant",
+       "temps": 0.977
+      }
+     ],
+     "points": 1.95,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "DICK'S SPORTING GOODS, INC.",
+   "plus": 1.95,
+   "score": 1.95,
+   "symbole": "DKS"
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depuis": "2026-10-03T03:52:50+00:00",
+   "derniere_info": "2026-10-01",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 1,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [],
+       "id": "sec_form4:0001493152-26-045400:P",
+       "points": 1.95,
+       "regle": "achat_dirigeant",
+       "temps": 0.977
+      },
+      {
+       "age": 2,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [],
+       "id": "sec_form4:0001493152-26-045185:P",
+       "points": 1.91,
+       "regle": "achat_dirigeant",
+       "temps": 0.955
+      }
+     ],
+     "points": 1.95,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "Lipocine Inc.",
+   "plus": 1.95,
+   "score": 1.95,
+   "symbole": "LPCN"
   }
  ],
  "jour": "2026-10-02",
@@ -4901,6 +4417,7 @@
      "×1,75 si un autre initié de la même compagnie a acheté à 2 jours ouvrables près (groupe d'achats)",
      "Pas de bonus pour le montant",
      "0 point si l'achat était planifié d'avance (plan 10b5-1)",
+     "0 point si le déposant écrit que l'achat est automatique (réinvestissement de dividendes, régime d'achat des employés)",
      "0 point si le déposant écrit que l'achat s'est fait lors d'une émission (entrée en bourse, placement) ou hors bourse, ou s'il a eu lieu le même jour au même prix qu'un tel achat"
     ],
     "etudes": [
@@ -5034,7 +4551,9 @@
   ],
   "resume": "Chaque info officielle sur une compagnie vaut des points selon ce que les études ont mesuré. Les points fondent avec le temps, seule l'info la plus forte de chaque famille compte, et plusieurs familles d'accord donnent un bonus.",
   "sans_points": [
+   "Fonds de placement enregistré (il dépose des rapports de fonds N-CSR ou N-PORT à la SEC) : les études portent sur des compagnies, pas sur des fonds.",
    "Planifié d'avance (plan 10b5-1) : comme les achats « routiniers » des études, ça ne prédit rien.",
+   "Achat automatique (réinvestissement de dividendes, régime d'achat des employés), selon la note du déposant : ce n'est pas une décision d'acheter.",
    "Transaction lors d'une émission (entrée en bourse, placement) ou hors bourse, selon la note du déposant : les études portent sur les achats et les ventes en bourse.",
    "Même jour et même prix qu'un achat déclaré lors d'une émission : c'est la même émission.",
    "Avis d'intention de vente : la même vente arrive ensuite dans le formulaire 4 (sinon elle compterait deux fois).",
@@ -5051,8 +4570,8 @@
   ],
   "seuil": "Une compagnie entre dans la liste à partir de 1,5 point (hausse) ou de −1,5 point (baisse).",
   "temps": "Moitié des points après 30 jours (60 pour les grands fonds, qui déclarent en retard). Après 90 jours, une info ne compte plus.",
-  "version": "score-2"
+  "version": "score-3"
  },
  "note": "Une aide pour voir où va le gros argent, preuves à l'appui. Pas un conseil financier.",
- "version": "score-2"
+ "version": "score-3"
 }
