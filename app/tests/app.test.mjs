@@ -304,12 +304,14 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
   await verifier("Argent : onglet, thermomètre des dirigeants, lignes du plus gros montant au plus petit", async () => {
     await onglet("Argent"); await p.waitForSelector(".ligne.argent");
     assert.equal(await p.locator(".grand-titre h1").innerText(), "Argent");
-    const montants = (await p.locator(".ligne.argent .argent-montant").allInnerTexts()).map((t) => t.replace(/\s+/g, " "));
-    assert.equal(montants[0], "2 G$ US"); // le contrat de Lockheed (TEST), 2 G$
-    const thermo = (await p.locator(".thermo").innerText()).replace(/\s+/g, " ");
-    assert.ok(thermo.includes("10,1 M$ US achetés (3)") && thermo.includes("1,5 M$ US vendus (1)"), thermo);
-    const nvda = (await p.locator(".ligne.argent", { hasText: "NVDA" }).innerText()).replace(/\s+/g, " ");
-    assert.ok(nvda.includes("Jensen Huang (CEO) achète 50 000 actions à 124,00 $ US") && nvda.includes("+5 % de ses actions") && nvda.includes("6,2 M$ US"), nvda);
+    // Sans espaces : selon la version du navigateur, « 2 G$ US » ou « 2 G $ US » (même montant)
+    const sans = (t) => t.replace(/\s+/g, "");
+    const montants = (await p.locator(".ligne.argent .argent-montant").allInnerTexts()).map(sans);
+    assert.equal(montants[0], "2G$US"); // le contrat de Lockheed (TEST), 2 G$
+    const thermo = sans(await p.locator(".thermo").innerText());
+    assert.ok(thermo.includes("10,1M$USachetés(3)") && thermo.includes("1,5M$USvendus(1)"), thermo);
+    const nvda = sans(await p.locator(".ligne.argent", { hasText: "NVDA" }).innerText());
+    assert.ok(nvda.includes(sans("Jensen Huang (CEO) achète 50 000 actions à 124,00 $ US")) && nvda.includes(sans("+5 % de ses actions")) && nvda.includes("6,2M$US"), nvda);
   });
   await verifier("Argent : la vente déclarée aussi par une entité liée compte une fois ; 20 % de ses actions vendues", async () => {
     assert.equal(await p.locator(".ligne.argent", { hasText: "XMPL" }).count(), 1);
@@ -317,22 +319,28 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     assert.ok(x.includes("20 % de ses actions vendues") && x.includes("aussi déclarée par 1"), x);
   });
   await verifier("Argent : filtres Achats, Élus (fourchette officielle) et Contrats", async () => {
-    await p.locator(".puce", { hasText: "Achats" }).click(); await p.waitForTimeout(150);
-    assert.equal(await p.locator(".ligne.argent").count(), 3);
-    assert.equal(await p.locator(".ligne.argent .argent-sens.achat").count(), 3);
-    await p.locator(".puce", { hasText: "Élus" }).click(); await p.waitForTimeout(150);
-    const elu = (await p.locator(".ligne.argent").first().innerText()).replace(/\s+/g, " ");
-    assert.ok(elu.includes("fourchette officielle") && elu.includes("15 k$ US à 50 k$ US"), elu);
-    await p.locator(".puce", { hasText: "Contrats" }).click(); await p.waitForTimeout(150);
-    assert.equal(await p.locator(".ligne.argent").count(), 2);
-    await p.locator(".puce", { hasText: "Tout" }).click(); await p.waitForTimeout(150);
+    try {
+      await p.locator(".puce", { hasText: "Achats" }).click(); await p.waitForTimeout(150);
+      assert.equal(await p.locator(".ligne.argent").count(), 3);
+      assert.equal(await p.locator(".ligne.argent .argent-sens.achat").count(), 3);
+      await p.locator(".puce", { hasText: "Élus" }).click(); await p.waitForTimeout(150);
+      const elu = (await p.locator(".ligne.argent").first().innerText()).replace(/\s+/g, "");
+      assert.ok(elu.includes("fourchetteofficielle") && elu.includes("15k$USà50k$US"), elu);
+      await p.locator(".puce", { hasText: "Contrats" }).click(); await p.waitForTimeout(150);
+      assert.equal(await p.locator(".ligne.argent").count(), 2);
+    } finally {
+      await p.locator(".puce", { hasText: "Tout" }).click(); await p.waitForTimeout(150); // même en cas d'échec
+    }
   });
   await verifier("Argent : toucher une ligne ouvre le détail avec le document officiel", async () => {
-    await p.locator(".ligne.argent", { hasText: "NVDA" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
-    assert.ok((await p.locator(".detail-titre").innerText()).includes("le PDG de Nvidia achète 50 000 actions"));
-    assert.equal(await p.locator(".feuille .controle.rate").count(), 0);
-    await fermer();
-    await filTout();
+    try {
+      await p.locator(".ligne.argent", { hasText: "NVDA" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
+      assert.ok((await p.locator(".detail-titre").innerText()).includes("le PDG de Nvidia achète 50 000 actions"));
+      assert.equal(await p.locator(".feuille .controle.rate").count(), 0);
+      await fermer();
+    } finally {
+      await filTout(); // les tests suivants partent du fil, même en cas d'échec
+    }
   });
   await verifier("Fil : une vente déclarée aussi par une entité liée n'apparaît qu'une fois, avec son nom", async () => {
     assert.equal(await p.locator(".ligne", { hasText: "vend 100 000 actions" }).count(), 1);
