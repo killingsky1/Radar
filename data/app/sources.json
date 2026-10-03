@@ -6,7 +6,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "dernier_succes": "2026-10-03T00:17:09+00:00",
   "explication": "",
   "id": "sec_form4",
   "libelle": "OK",
@@ -19,11 +19,11 @@
  {
   "categorie": "compagnies",
   "compte": {
-   "a_verifier": 1,
-   "recus": 24
+   "a_verifier": 0,
+   "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "dernier_succes": "2026-10-03T00:17:09+00:00",
   "explication": "",
   "id": "sec_form144",
   "libelle": "OK",
@@ -40,7 +40,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "dernier_succes": "2026-10-03T00:17:09+00:00",
   "explication": "",
   "id": "sec_13dg",
   "libelle": "OK",
@@ -57,7 +57,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "dernier_succes": "2026-10-03T00:17:09+00:00",
   "explication": "",
   "id": "sec_8k",
   "libelle": "OK",
@@ -88,7 +88,7 @@
    "recus": 0
   },
   "dernier_contenu": null,
-  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "dernier_succes": "2026-10-03T00:17:09+00:00",
   "explication": "",
   "id": "sec_offres",
   "libelle": "OK",
@@ -175,7 +175,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "dernier_succes": "2026-10-03T00:17:09+00:00",
   "explication": "",
   "id": "cftc_cot",
   "libelle": "OK",
@@ -217,11 +217,11 @@
   "categorie": "militaire",
   "compte": {
    "a_verifier": 0,
-   "recus": 22
+   "recus": 0
   },
   "dernier_contenu": "2026-09-22",
-  "dernier_succes": "2026-10-03T00:05:04+00:00",
-  "explication": "Lecture OK récemment, mais le dernier essai a échoué : ErreurSource: https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest&fields[]=title&fields[]=type&fields[]=subtype&fields[]=document_number&fields[]=html_url&fields[]=pdf_url&fields[]=publication_date&fields[]=signing_date&fields[]=agencies&fields[]=executive_order_number&fi",
+  "dernier_succes": "2026-10-03T00:17:09+00:00",
+  "explication": "",
   "id": "ventes_armes",
   "libelle": "OK",
   "nom": "Ventes d'armes à l'étranger (avis officiels au Registre fédéral)",
@@ -307,7 +307,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "dernier_succes": "2026-10-03T00:17:09+00:00",
   "explication": "",
   "id": "nouvelles_defense_ca",
   "libelle": "OK",
@@ -338,7 +338,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "dernier_succes": "2026-10-03T00:17:09+00:00",
   "explication": "",
   "id": "chambre_ptr",
   "libelle": "OK",
@@ -355,7 +355,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "dernier_succes": "2026-10-03T00:17:09+00:00",
   "explication": "",
   "id": "senat_ptr",
   "libelle": "OK",
@@ -439,11 +439,11 @@
   "categorie": "gouvernement",
   "compte": {
    "a_verifier": 0,
-   "recus": 10
+   "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T00:05:04+00:00",
-  "explication": "Lecture OK récemment, mais le dernier essai a échoué : ErreurSource: https://www.federalregister.gov/api/v1/public-inspection-documents/current.json : HTTP 403",
+  "dernier_succes": "2026-10-03T00:17:09+00:00",
+  "explication": "",
   "id": "registre_federal",
   "libelle": "OK",
   "nom": "Registre fédéral : décrets, tarifs, sanctions (la veille)",
@@ -459,7 +459,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-29",
-  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "dernier_succes": "2026-10-03T00:17:09+00:00",
   "explication": "",
   "id": "maison_blanche",
   "libelle": "OK",
@@ -543,10 +543,10 @@
   "categorie": "gouvernement",
   "compte": {
    "a_verifier": 0,
-   "recus": 4
+   "recus": 3
   },
   "dernier_contenu": "2026-09-16",
-  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "dernier_succes": "2026-10-03T00:17:09+00:00",
   "explication": "",
   "id": "fed",
   "libelle": "OK",
@@ -591,7 +591,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "dernier_succes": "2026-10-03T00:17:09+00:00",
   "explication": "",
   "id": "nouvelles_eco_ca",
   "libelle": "OK",
@@ -605,10 +605,10 @@
   "categorie": "canada",
   "compte": {
    "a_verifier": 0,
-   "recus": 3
+   "recus": 2
   },
   "dernier_contenu": "2026-09-02",
-  "dernier_succes": "2026-10-03T00:11:34+00:00",
+  "dernier_succes": "2026-10-03T00:17:09+00:00",
   "explication": "",
   "id": "banque_canada",
   "libelle": "OK",
