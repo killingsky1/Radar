@@ -1,46 +1,36 @@
 # Essai réel et vérification indépendante
 
 Infos produites : 209
-Vérifiées au hasard : 106 — identiques : 94
+Vérifiées au hasard : 106 — identiques : 103
 
 ## fda
 - produites : 16 {'officiel': 16, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 16}, 'dernier_contenu': '2026-09-28', 'dernier_succes': '2026-10-03T01:01:25+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:01:25+00:00'}
-- ÉCART FDA : nouveau médicament approuvé, LISRAYA (brepocitinib tosylate), de Priovant Therapeutics, Inc.
-    - date August 27, 2026 absente de la lettre
-- ÉCART FDA : nouveau médicament approuvé, PIXCLARA (floretyrosine f-18), de TELIX
-    - date September 11, 2026 absente de la lettre
-- ÉCART FDA : nouveau médicament approuvé, ZENBEXUS (iberdomide hydrochloride), de E.R. Squibb & Sons, L.L.C.
-    - date August 13, 2026 absente de la lettre
-- ÉCART FDA : nouveau médicament approuvé, ETCAMAH (camizestrant), de AstraZeneca Pharmaceuticals LP
-    - date September 4, 2026 absente de la lettre
-- ÉCART FDA : nouveau médicament approuvé, EMCITATE (tiratrico), de RARE THYROID THERAPEUTICS INTERNATIONAL AB
-    - date September 28, 2026 absente de la lettre
-- ÉCART FDA : nouveau médicament approuvé, MIMRYLO (rusfertide acetate), de Takeda Pharmaceuticals America, Inc.
-    - date August 28, 2026 absente de la lettre
+- état : {'compte': {'a_verifier': 0, 'recus': 16}, 'dernier_contenu': '2026-09-28', 'dernier_succes': '2026-10-03T01:13:19+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:13:19+00:00'}
+- OK  FDA : nouveau médicament approuvé, LISRAYA (brepocitinib tosylate), de Priovant Therapeutics, Inc.
+- OK  FDA : nouveau médicament approuvé, PIXCLARA (floretyrosine f-18), de TELIX
+- OK  FDA : nouveau médicament approuvé, ZENBEXUS (iberdomide hydrochloride), de E.R. Squibb & Sons, L.L.C.
+- OK  FDA : nouveau médicament approuvé, ETCAMAH (camizestrant), de AstraZeneca Pharmaceuticals LP
+- OK  FDA : nouveau médicament approuvé, EMCITATE (tiratrico), de RARE THYROID THERAPEUTICS INTERNATIONAL AB
+- OK  FDA : nouveau médicament approuvé, MIMRYLO (rusfertide acetate), de Takeda Pharmaceuticals America, Inc.
 - ÉCART FDA : nouveau médicament approuvé, ONSWIK (insulin efsitora alfa-gobe), de ELI LILLY AND CO
-    - date September 23, 2026 absente de la lettre
+    - Drugs@FDA : pas d'approbation originale de type 1 le 09/23/2026
 - ÉCART FDA : nouveau médicament approuvé, TAUKLARIFY (florquinitau f-18), de CERVEAU LANTHEUS
-    - numéro NDA220496 absent de la lettre
-    - marque TAUKLARIFY absente de la lettre
-    - la lettre ne parle pas d'approbation
-    - date August 13, 2026 absente de la lettre
-- ÉCART FDA : nouveau médicament approuvé, ZANVASTRO (zilganersen sodium), de IONIS PHARMS INC
-    - date September 3, 2026 absente de la lettre
-- ÉCART FDA : nouveau médicament approuvé, JUVMO (tavapadon), de ABBVIE INC
-    - date September 25, 2026 absente de la lettre
-- ÉCART FDA : nouveau médicament approuvé, ATEBRIOZ (zilurgisertib), de INCYTE CORP
-    - date September 25, 2026 absente de la lettre
+    - lettre : numéro NDA220496 absent
+    - lettre : marque TAUKLARIFY absente
+    - lettre : le mot « approved » est absent
+- OK  FDA : nouveau médicament approuvé, ZANVASTRO (zilganersen sodium), de IONIS PHARMS INC
+- OK  FDA : nouveau médicament approuvé, JUVMO (tavapadon), de ABBVIE INC
+- OK  FDA : nouveau médicament approuvé, ATEBRIOZ (zilurgisertib), de INCYTE CORP
 - ÉCART FDA : nouveau médicament approuvé, PASATRU (garetosmab-grts), de Regeneron Pharmaceuticals, Inc.
-    - date August 19, 2026 absente de la lettre
+    - Drugs@FDA : pas d'approbation originale de type 1 le 08/19/2026
 
 ## sec_13f
 - produites : 0 {'officiel': 0, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_succes': '2026-10-03T01:01:25+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:01:25+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_succes': '2026-10-03T01:13:19+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:13:19+00:00'}
 
 ## maison_blanche
 - produites : 21 {'officiel': 18, 'confirme': 3, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-09-29', 'dernier_succes': '2026-10-03T01:01:25+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:01:25+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-09-29', 'dernier_succes': '2026-10-03T01:13:19+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:13:19+00:00'}
 - OK  Décret présidentiel : Inaugurating The Era Of Super Intelligence
 - OK  Décret présidentiel : Streamlining Access to Government Services Through America.gov
 - OK  Proclamation présidentielle : Excluding Certain Canadian Products from Importation into the United States in R
@@ -56,7 +46,7 @@ Vérifiées au hasard : 106 — identiques : 94
 
 ## fed
 - produites : 4 {'officiel': 4, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 3}, 'dernier_contenu': '2026-09-16', 'dernier_succes': '2026-10-03T01:01:25+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:01:25+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 3}, 'dernier_contenu': '2026-09-16', 'dernier_succes': '2026-10-03T01:13:19+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:13:19+00:00'}
 - OK  Fed : taux directeur maintenu entre 3,5 % et 3,75 % (avec dissidence)
 - OK  Fed : taux directeur relevé de 0,25 point, entre 3,75 % et 4 % (vote : 12 pour, 0 contre)
 - OK  Fed : taux directeur maintenu entre 3,5 % et 3,75 % (vote : 9 pour, 3 contre)
@@ -64,14 +54,14 @@ Vérifiées au hasard : 106 — identiques : 94
 
 ## banque_canada
 - produites : 3 {'officiel': 3, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 2}, 'dernier_contenu': '2026-09-02', 'dernier_succes': '2026-10-03T01:01:25+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:01:25+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 2}, 'dernier_contenu': '2026-09-02', 'dernier_succes': '2026-10-03T01:13:19+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:13:19+00:00'}
 - OK  Banque du Canada : taux directeur maintenu à 2,25 %
 - OK  Banque du Canada : taux directeur maintenu à 2,25 %
 - OK  Banque du Canada : taux directeur maintenu à 2,25 %
 
 ## sec_form144
 - produites : 24 {'officiel': 23, 'confirme': 0, 'a_verifier': 1}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T01:01:25+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:01:25+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T01:13:19+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:13:19+00:00'}
 - OK  SCOTT BURROWS (dirigeant) prévoit vendre 17 500 actions de Spyre Therapeutics, Inc.
 - OK  JAMES L LAUFMAN (dirigeant) prévoit vendre 5 000 actions de Credo Technology Group Holding Ltd
 - OK  Moeller Jon R (dirigeant, administrateur) prévoit vendre 8 087 actions de PROCTER & GAMBLE Co
@@ -87,11 +77,11 @@ Vérifiées au hasard : 106 — identiques : 94
 
 ## sec_offres
 - produites : 0 {'officiel': 0, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_succes': '2026-10-03T01:01:25+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:01:25+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_succes': '2026-10-03T01:13:19+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:13:19+00:00'}
 
 ## cftc_cot
 - produites : 8 {'officiel': 8, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:01:25+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:01:25+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:13:19+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:13:19+00:00'}
 - OK  S&P 500 (E-mini) : les gros spéculateurs sont vendeurs nets de 142 499 contrats (−9 271 en une semaine)
 - OK  Pétrole WTI : les gros spéculateurs sont acheteurs nets de 109 463 contrats (−31 643 en une semaine)
 - OK  Or : les gros spéculateurs sont acheteurs nets de 218 632 contrats (−7 221 en une semaine)
@@ -103,7 +93,7 @@ Vérifiées au hasard : 106 — identiques : 94
 
 ## registre_federal
 - produites : 12 {'officiel': 9, 'confirme': 3, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:01:25+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:01:25+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:13:19+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:13:19+00:00'}
 - OK  Sanctions (Trésor, OFAC) : Notice of OFAC Sanctions Action
 - OK  Sanctions (Trésor, OFAC) : Cuban Assets Control Regulations
 - OK  Sanctions (Trésor, OFAC) : Notice of OFAC Sanctions Action
@@ -119,7 +109,7 @@ Vérifiées au hasard : 106 — identiques : 94
 
 ## ventes_armes
 - produites : 22 {'officiel': 22, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-09-22', 'dernier_succes': '2026-10-03T01:01:25+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:01:25+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-09-22', 'dernier_succes': '2026-10-03T01:13:19+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:13:19+00:00'}
 - OK  Vente d'armes à l'étranger : Canada
 - OK  Vente d'armes à l'étranger : Qatar — fournisseurs : The Boeing Corporation, Pratt & Whitney Military Engines, 
 - OK  Vente d'armes à l'étranger : Pologne
@@ -135,7 +125,7 @@ Vérifiées au hasard : 106 — identiques : 94
 
 ## senat_ptr
 - produites : 9 {'officiel': 9, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T01:01:25+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:01:25+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T01:13:19+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:13:19+00:00'}
 - OK  John Boozman (Sénat) achète OTIS — compte conjoint
 - OK  John Boozman (Sénat) vend CEG — compte conjoint
 - OK  John Boozman (Sénat) achète FSLR — compte conjoint
@@ -148,7 +138,7 @@ Vérifiées au hasard : 106 — identiques : 94
 
 ## chambre_ptr
 - produites : 80 {'officiel': 79, 'confirme': 0, 'a_verifier': 1}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T01:01:25+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:01:25+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-01', 'dernier_succes': '2026-10-03T01:13:19+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:13:19+00:00'}
 - OK  Kevin Hern (Chambre, OK01) vend STE
 - OK  Josh Gottheimer (Chambre, NJ05) achète QSR — compte conjoint
 - OK  Kevin Hern (Chambre, OK01) vend ROK (3 transactions) — compte conjoint
@@ -164,14 +154,14 @@ Vérifiées au hasard : 106 — identiques : 94
 
 ## nouvelles_defense_ca
 - produites : 3 {'officiel': 3, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:01:25+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:01:25+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:13:19+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:13:19+00:00'}
 - OK  L’Aviation royale canadienne s’associe au Fanshawe College pour offrir de l’instruction
 - OK  Le gouvernement du Canada franchit une nouvelle étape en vue de doter l’Aviation royale canadienne d’une capac
 - OK  Le gouvernement du Canada commence la construction d’une nouvelle installation de chauffage central à la 5e Es
 
 ## nouvelles_eco_ca
 - produites : 7 {'officiel': 7, 'confirme': 0, 'a_verifier': 0}
-- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:01:25+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:01:25+00:00'}
+- état : {'compte': {'a_verifier': 0, 'recus': 0}, 'dernier_contenu': '2026-10-02', 'dernier_succes': '2026-10-03T01:13:19+00:00', 'derniere_erreur': None, 'derniere_tentative': '2026-10-03T01:13:19+00:00'}
 - OK  La ministre McKnight visite le terminal maritime Westridge, exemple probant de la capacité du Canada de constr
 - OK  La Régie approuve le règlement de Trans Mountain établissant un nouveau cadre pour les droits
 - OK  Le Tribunal ouvre un réexamen relatif à l’expiration — Certains petits transformateurs de puissance provenant 
