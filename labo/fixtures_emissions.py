@@ -16,6 +16,7 @@ DEPOTS = [  # (cik du dossier, numéro officiel)
     (1672909, "0001398344-26-017759"),  # CPHC : Gate City (13D, « undervalued »)
     (1802369, "0000947871-26-000917"),  # ADRX : OrbiMed (13D, entrée en bourse)
     (1063761, "0001189793-26-000014"),  # SPG : administrateur, réinvestissement de dividendes (formulaire 4)
+    (1004980, "0001628280-26-064255"),  # PCG : achat en bourse ; la note sur le total parle de réinvestissement
 ]
 sortie = Path("labo/fixtures-emissions")
 sortie.mkdir(parents=True, exist_ok=True)
