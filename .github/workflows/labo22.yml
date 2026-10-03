@@ -1,0 +1,29 @@
+name: "Labo (documents de test : émissions et 13D)"
+
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/fixtures_emissions.py", ".github/workflows/labo22.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  documents:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - run: rm -rf labo/fixtures-emissions && python labo/fixtures_emissions.py
+      - name: Sauvegarder
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/fixtures-emissions
+          git commit -m "Labo : documents de test (émissions, 13D) du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
