@@ -446,8 +446,10 @@ def controles_8k(ev: Evenement) -> dict[str, bool]:
 def empreinte_entete(entete_html: str) -> str:
     """Empreinte de l'en-tête officiel du dépôt (<SEC-HEADER>…</SEC-HEADER>), espaces normalisés.
 
-    La page « -index-headers.html » est fabriquée par EDGAR : ses octets peuvent changer (fins de ligne, espaces)
-    sans que le dépôt change (vu à l'audit du 3 octobre 2026 : mêmes faits, octets différents).
+    Mesuré le 3 octobre 2026 : pour 9 dépôts, les octets de la page « -index-headers.html » ne correspondaient
+    plus à ceux lus par le robot la veille, alors que les faits étaient identiques et que la SEC donne une date de
+    modification antérieure. Cause inconnue (la copie lue n'avait pas été gardée). L'empreinte porte donc sur
+    l'en-tête officiel lui-même, pas sur la page qui l'entoure.
     """
     m = re.search(r"<SEC-HEADER>.*?</SEC-HEADER>", entete_html, re.S)
     return empreinte(" ".join((m.group(0) if m else entete_html).split()).encode("utf-8"))
