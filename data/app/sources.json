@@ -6,7 +6,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "sec_form4",
   "libelle": "OK",
@@ -23,7 +23,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "sec_form144",
   "libelle": "OK",
@@ -40,7 +40,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "sec_13dg",
   "libelle": "OK",
@@ -57,7 +57,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "sec_8k",
   "libelle": "OK",
@@ -74,7 +74,7 @@
    "recus": 0
   },
   "dernier_contenu": null,
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "sec_13f",
   "libelle": "OK",
@@ -91,7 +91,7 @@
    "recus": 0
   },
   "dernier_contenu": null,
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "sec_offres",
   "libelle": "OK",
@@ -122,7 +122,7 @@
    "recus": 2
   },
   "dernier_contenu": "2026-09-30",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "sec_poursuites",
   "libelle": "OK",
@@ -133,41 +133,13 @@
   "statut": "ok"
  },
  {
-  "categorie": "compagnies",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 1.",
-  "id": "sec_ftd",
-  "libelle": "À venir",
-  "nom": "SEC : échecs de livraison d'actions",
-  "officielle": true,
-  "phase": 1,
-  "site": "https://www.sec.gov/data-research/sec-markets-data/fails-deliver-data",
-  "statut": "a_venir"
- },
- {
-  "categorie": "baleines",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 1.",
-  "id": "nbim",
-  "libelle": "À venir",
-  "nom": "Fonds souverain de la Norvège (NBIM)",
-  "officielle": true,
-  "phase": 1,
-  "site": "https://www.nbim.no/en/investments/all-investments/",
-  "statut": "a_venir"
- },
- {
   "categorie": "baleines",
   "compte": {
    "a_verifier": 0,
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "cftc_cot",
   "libelle": "OK",
@@ -178,41 +150,13 @@
   "statut": "ok"
  },
  {
-  "categorie": "compagnies",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 1.",
-  "id": "communiques",
-  "libelle": "À venir",
-  "nom": "Communiqués officiels des compagnies",
-  "officielle": true,
-  "phase": 1,
-  "site": "https://www.globenewswire.com/rss/list",
-  "statut": "a_venir"
- },
- {
-  "categorie": "militaire",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 2.",
-  "id": "war_contrats",
-  "libelle": "À venir",
-  "nom": "Pentagone : contrats du jour (war.gov)",
-  "officielle": true,
-  "phase": 2,
-  "site": "https://www.war.gov/News/Contracts/",
-  "statut": "a_venir"
- },
- {
   "categorie": "militaire",
   "compte": {
    "a_verifier": 0,
    "recus": 0
   },
   "dernier_contenu": "2026-09-22",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "ventes_armes",
   "libelle": "OK",
@@ -237,20 +181,6 @@
   "statut": "a_venir"
  },
  {
-  "categorie": "militaire",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 2.",
-  "id": "gao_contestations",
-  "libelle": "À venir",
-  "nom": "GAO : contestations de contrats",
-  "officielle": true,
-  "phase": 2,
-  "site": "https://www.gao.gov/legal/bid-protests/search",
-  "statut": "a_venir"
- },
- {
   "categorie": "gouvernement",
   "compte": null,
   "dernier_contenu": null,
@@ -271,7 +201,7 @@
    "recus": 0
   },
   "dernier_contenu": null,
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "contrats_ca_10k",
   "libelle": "OK",
@@ -288,7 +218,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "nouvelles_defense_ca",
   "libelle": "OK",
@@ -302,10 +232,10 @@
   "categorie": "canada",
   "compte": {
    "a_verifier": 0,
-   "recus": 1
+   "recus": 0
   },
   "dernier_contenu": "2026-08-31",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "ccc",
   "libelle": "OK",
@@ -322,7 +252,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "chambre_ptr",
   "libelle": "OK",
@@ -339,7 +269,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "senat_ptr",
   "libelle": "OK",
@@ -356,7 +286,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-30",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "oge_278t",
   "libelle": "OK",
@@ -373,7 +303,7 @@
    "recus": 0
   },
   "dernier_contenu": null,
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "comites",
   "libelle": "OK",
@@ -390,7 +320,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-30",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "votes",
   "libelle": "OK",
@@ -407,7 +337,7 @@
    "recus": 0
   },
   "dernier_contenu": null,
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "lobbying",
   "libelle": "OK",
@@ -424,7 +354,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-30",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "hr7008",
   "libelle": "OK",
@@ -441,7 +371,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "registre_federal",
   "libelle": "OK",
@@ -458,7 +388,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-29",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "maison_blanche",
   "libelle": "OK",
@@ -470,17 +400,20 @@
  },
  {
   "categorie": "gouvernement",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 4.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 8
+  },
+  "dernier_contenu": "2026-09-28",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
+  "explication": "",
   "id": "tarifs",
-  "libelle": "À venir",
-  "nom": "Tarifs : USTR, douanes, taux officiels",
+  "libelle": "OK",
+  "nom": "Douane américaine : directives sur les surtaxes (messages CSMS)",
   "officielle": true,
   "phase": 4,
-  "site": "https://ustr.gov/",
-  "statut": "a_venir"
+  "site": "https://www.cbp.gov/trade/automated/cargo-systems-messaging-service",
+  "statut": "ok"
  },
  {
   "categorie": "gouvernement",
@@ -489,7 +422,7 @@
    "recus": 7
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "sanctions_us",
   "libelle": "OK",
@@ -506,7 +439,7 @@
    "recus": 16
   },
   "dernier_contenu": "2026-09-28",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "fda",
   "libelle": "OK",
@@ -523,7 +456,7 @@
    "recus": 20
   },
   "dernier_contenu": "2026-09-30",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "ftc_fusions",
   "libelle": "OK",
@@ -540,7 +473,7 @@
    "recus": 3
   },
   "dernier_contenu": "2026-09-23",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "doj_antitrust",
   "libelle": "OK",
@@ -557,7 +490,7 @@
    "recus": 3
   },
   "dernier_contenu": "2026-09-16",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "fed",
   "libelle": "OK",
@@ -569,17 +502,20 @@
  },
  {
   "categorie": "gouvernement",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 4.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 3
+  },
+  "dernier_contenu": "2026-09-24",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
+  "explication": "",
   "id": "tresor",
-  "libelle": "À venir",
-  "nom": "Trésor américain (Fiscal Data)",
+  "libelle": "OK",
+  "nom": "Trésor américain : adjudications d'obligations et déficit mensuel (Fiscal Data)",
   "officielle": true,
   "phase": 4,
-  "site": "https://fiscaldata.treasury.gov/",
-  "statut": "a_venir"
+  "site": "https://fiscaldata.treasury.gov/datasets/treasury-securities-auctions-data/",
+  "statut": "ok"
  },
  {
   "categorie": "gouvernement",
@@ -588,7 +524,7 @@
    "recus": 12
   },
   "dernier_contenu": "2026-09-28",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "nhtsa",
   "libelle": "OK",
@@ -605,7 +541,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "nouvelles_eco_ca",
   "libelle": "OK",
@@ -622,7 +558,7 @@
    "recus": 2
   },
   "dernier_contenu": "2026-09-02",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "banque_canada",
   "libelle": "OK",
@@ -639,7 +575,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-29",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "statcan",
   "libelle": "OK",
@@ -656,7 +592,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-23",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "gazette_ca",
   "libelle": "OK",
@@ -670,10 +606,10 @@
   "categorie": "canada",
   "compte": {
    "a_verifier": 0,
-   "recus": 5
+   "recus": 0
   },
   "dernier_contenu": "2026-09-28",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "sante_canada",
   "libelle": "OK",
@@ -690,7 +626,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-29",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "concurrence_ca",
   "libelle": "OK",
@@ -707,7 +643,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-19",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "grands_projets_ca",
   "libelle": "OK",
@@ -724,7 +660,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-22",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "sanctions_ca",
   "libelle": "OK",
@@ -741,7 +677,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-28",
-  "dernier_succes": "2026-10-03T17:20:03+00:00",
+  "dernier_succes": "2026-10-03T19:33:14+00:00",
   "explication": "",
   "id": "legisinfo",
   "libelle": "OK",
@@ -750,20 +686,6 @@
   "phase": 4,
   "site": "https://www.parl.ca/legisinfo/fr/projets-de-loi",
   "statut": "ok"
- },
- {
-  "categorie": "compagnies",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 5.",
-  "id": "prix_yahoo",
-  "libelle": "À venir",
-  "nom": "Prix des actions (Yahoo, non officiel)",
-  "officielle": false,
-  "phase": 5,
-  "site": "https://finance.yahoo.com/",
-  "statut": "a_venir"
  },
  {
   "categorie": "canada",
@@ -826,7 +748,7 @@
   "compte": null,
   "dernier_contenu": null,
   "dernier_succes": null,
-  "explication": "Payant (Yahoo gratuit le remplace)",
+  "explication": "Payant",
   "id": "prix_payants",
   "libelle": "Laissée de côté",
   "nom": "Prix officiels payants (EODHD)",
@@ -875,6 +797,90 @@
   "officielle": true,
   "phase": 0,
   "site": "https://www.ciro.ca/",
+  "statut": "ecartee"
+ },
+ {
+  "categorie": "militaire",
+  "compte": null,
+  "dernier_contenu": null,
+  "dernier_succes": null,
+  "explication": "Le site refuse les robots (erreur 403)",
+  "id": "war_contrats",
+  "libelle": "Laissée de côté",
+  "nom": "Pentagone : contrats du jour (war.gov)",
+  "officielle": true,
+  "phase": 0,
+  "site": "https://www.war.gov/News/Contracts/",
+  "statut": "ecartee"
+ },
+ {
+  "categorie": "militaire",
+  "compte": null,
+  "dernier_contenu": null,
+  "dernier_succes": null,
+  "explication": "Le site refuse les robots (erreur 403)",
+  "id": "gao_contestations",
+  "libelle": "Laissée de côté",
+  "nom": "GAO : contestations de contrats",
+  "officielle": true,
+  "phase": 0,
+  "site": "https://www.gao.gov/legal/bid-protests/search",
+  "statut": "ecartee"
+ },
+ {
+  "categorie": "baleines",
+  "compte": null,
+  "dernier_contenu": null,
+  "dernier_succes": null,
+  "explication": "Ses conditions interdisent les copies automatiques du site ; ses actions américaines restent suivies par son 13F (SEC)",
+  "id": "nbim",
+  "libelle": "Laissée de côté",
+  "nom": "Fonds souverain de la Norvège (NBIM)",
+  "officielle": true,
+  "phase": 0,
+  "site": "https://www.nbim.no/en/investments/all-investments/",
+  "statut": "ecartee"
+ },
+ {
+  "categorie": "compagnies",
+  "compte": null,
+  "dernier_contenu": null,
+  "dernier_succes": null,
+  "explication": "Conditions des agences de presse : lecture personnelle, sans robots ni copie (GlobeNewswire : robots.txt sans réponse) ; les communiqués importants arrivent par les 8-K de la SEC",
+  "id": "communiques",
+  "libelle": "Laissée de côté",
+  "nom": "Communiqués officiels des compagnies",
+  "officielle": true,
+  "phase": 0,
+  "site": "https://www.globenewswire.com/",
+  "statut": "ecartee"
+ },
+ {
+  "categorie": "compagnies",
+  "compte": null,
+  "dernier_contenu": null,
+  "dernier_succes": null,
+  "explication": "Robots interdits par le robots.txt de son API des prix et par ses conditions d'utilisation",
+  "id": "prix_yahoo",
+  "libelle": "Laissée de côté",
+  "nom": "Prix des actions (Yahoo, non officiel)",
+  "officielle": false,
+  "phase": 0,
+  "site": "https://finance.yahoo.com/",
+  "statut": "ecartee"
+ },
+ {
+  "categorie": "compagnies",
+  "compte": null,
+  "dernier_contenu": null,
+  "dernier_succes": null,
+  "explication": "Mise de côté par choix : publiée 2 semaines plus tard, et la SEC précise que ce n'est pas une preuve de vente à découvert abusive ; aucune étude solide après publication",
+  "id": "sec_ftd",
+  "libelle": "Laissée de côté",
+  "nom": "SEC : échecs de livraison d'actions",
+  "officielle": true,
+  "phase": 0,
+  "site": "https://www.sec.gov/data-research/sec-markets-data/fails-deliver-data",
   "statut": "ecartee"
  }
 ]

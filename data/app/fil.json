@@ -24706,6 +24706,166 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "date_d_envoi_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_message": true,
+   "numero_csms": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "sujet_surtaxes": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T19:34:48+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "codes_9903": [
+    "9903.04.60",
+    "9903.04.61",
+    "9903.04.62",
+    "9903.04.63",
+    "9903.04.64",
+    "9903.04.65",
+    "9903.04.66",
+    "9903.04.67",
+    "9903.04.68",
+    "9903.04.69",
+    "9903.04.70",
+    "9903.94.70"
+   ],
+   "details": [
+    [
+     "Message",
+     "CSMS # 70054007"
+    ],
+    [
+     "Envoyé",
+     "28 septembre 2026 à 17 h 42 (heure de New York)"
+    ],
+    [
+     "Proclamations citées",
+     "11020"
+    ],
+    [
+     "Numéros du tarif cités (chapitre 99)",
+     "9903.04.60, 9903.04.61, 9903.04.62, 9903.04.63, 9903.04.64, 9903.04.65, 9903.04.66, 9903.04.67, 9903.04.68, 9903.04.69, 9903.04.70, 9903.94.70"
+    ],
+    [
+     "Extrait",
+     "This message provides updated guidance regarding the implementation of Proclamation 11020, \"Adjusting Imports of Pharmaceuticals and Pharmaceutical Ingredients Into the United States,\" dated April 2, 2026 and the September 23, 2026 Federal Register notice on Guidance and Procedures for Implementing Tariff Adjustments for Specialty Pharmaceuticals and Associated Pharmaceutical Ingredients and Technical Corrections to  […]"
+    ]
+   ],
+   "envoye_le": "2026-09-28T17:42:46-04:00",
+   "extrait": "This message provides updated guidance regarding the implementation of Proclamation 11020, \"Adjusting Imports of Pharmaceuticals and Pharmaceutical Ingredients Into the United States,\" dated April 2, 2026 and the September 23, 2026 Federal Register notice on Guidance and Procedures for Implementing Tariff Adjustments for Specialty Pharmaceuticals and Associated Pharmaceutical Ingredients and Technical Corrections to  […]",
+   "guid": "70054007",
+   "numero": "70054007",
+   "proclamations": [
+    "11020"
+   ],
+   "titre_officiel": "UPDATED GUIDANCE: Section 232 Duties on Imports of Pharmaceutical Articles and Ingredients"
+  },
+  "direction": 0,
+  "entities": [
+   "U.S. Customs and Border Protection"
+  ],
+  "id": "tarifs:70054007",
+  "kind": "directive_douane",
+  "notes": [
+   "Directive de la douane : elle applique une décision officielle (proclamation, avis au Registre fédéral) sans la remplacer."
+  ],
+  "occurred_on": "2026-09-28",
+  "official_id": "70054007",
+  "official_url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/42cf077",
+  "parser_version": "douane-1",
+  "published_on": "2026-09-28",
+  "sha256": "53d291b94f9b3c1ae23016b8d1f93c1683131b023dd4a38834fe8df6328232dc",
+  "source": "tarifs",
+  "tickers": [],
+  "title": "Douane américaine : UPDATED GUIDANCE: Section 232 Duties on Imports of Pharmaceutical Articles and Ingredients"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "date_d_envoi_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_message": true,
+   "numero_csms": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "sujet_surtaxes": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T19:34:48+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "codes_9903": [],
+   "details": [
+    [
+     "Message",
+     "CSMS # 70050970"
+    ],
+    [
+     "Envoyé",
+     "28 septembre 2026 à 13 h 34 (heure de New York)"
+    ],
+    [
+     "Proclamations citées",
+     "11061, 11062, 11063, 11046, 11047, 11048"
+    ],
+    [
+     "Extrait",
+     "The purpose of this message is to provide guidance on the Presidential Proclamations 11061, 11062, and 11063: “Excluding Certain Canadian Alcoholic Beverages from Importation into the United States in Response to Continued Discrimination Against the Commerce of the United States with Respect to Alcoholic Beverages, “Excluding Certain Canadian Products from Importation into the United States in Response to Continued D […]"
+    ]
+   ],
+   "envoye_le": "2026-09-28T13:34:10-04:00",
+   "extrait": "The purpose of this message is to provide guidance on the Presidential Proclamations 11061, 11062, and 11063: “Excluding Certain Canadian Alcoholic Beverages from Importation into the United States in Response to Continued Discrimination Against the Commerce of the United States with Respect to Alcoholic Beverages, “Excluding Certain Canadian Products from Importation into the United States in Response to Continued D […]",
+   "guid": "70050970",
+   "numero": "70050970",
+   "proclamations": [
+    "11061",
+    "11062",
+    "11063",
+    "11046",
+    "11047",
+    "11048"
+   ],
+   "titre_officiel": "Certain Canadian Products Excluded from Importation into the United States; Presidential Proclamations 11061, 11062, and 11063"
+  },
+  "direction": 0,
+  "entities": [
+   "U.S. Customs and Border Protection"
+  ],
+  "id": "tarifs:70050970",
+  "kind": "directive_douane",
+  "notes": [
+   "Directive de la douane : elle applique une décision officielle (proclamation, avis au Registre fédéral) sans la remplacer."
+  ],
+  "occurred_on": "2026-09-28",
+  "official_id": "70050970",
+  "official_url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/42ce49a",
+  "parser_version": "douane-1",
+  "published_on": "2026-09-28",
+  "sha256": "470af390d55ff14d3feb19a083562f8f1692b62dc86381e3b94405e59870b26b",
+  "source": "tarifs",
+  "tickers": [],
+  "title": "Douane américaine : Certain Canadian Products Excluded from Importation into the United States; Presidential Proclamations 11061, 11062, and 11063"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "canada",
   "checks": {
    "avis_actif": true,
@@ -28754,6 +28914,158 @@
   "title": "Kevin Hern (Chambre, OK01) vend AAPL (2 transactions) — enfant à charge"
  },
  {
+  "amount_max": 44000000000.0,
+  "amount_min": 44000000000.0,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "obligation_du_tresor": true,
+   "parts_qui_s_additionnent": true,
+   "resultat_officiel_du_jour": true,
+   "resultats_publies": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T19:34:42+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acceptees": {
+    "direct_bidder": 13163710000.0,
+    "indirect_bidder": 24869544500.0,
+    "primary_dealer": 5447550000.0
+   },
+   "adjudication": "2026-09-24",
+   "cusip": "91282CRM5",
+   "demande_offre": 2.42,
+   "demande_offre_moyenne": 2.4916666666666667,
+   "details": [
+    [
+     "Montant offert",
+     "44 G$"
+    ],
+    [
+     "Taux retenu (le plus élevé accepté)",
+     "5,085 %"
+    ],
+    [
+     "Demande / offre",
+     "2,42 (moyenne des 6 précédentes : 2,49)"
+    ],
+    [
+     "Acheteurs indirects",
+     "57,2 % (moyenne des 6 précédentes : 64,6 %)"
+    ],
+    [
+     "Acheteurs directs",
+     "30,3 %"
+    ],
+    [
+     "Courtiers primaires",
+     "12,5 %"
+    ],
+    [
+     "Titre",
+     "Note 7-Year, CUSIP 91282CRM5"
+    ],
+    [
+     "Date d'émission",
+     "2026-09-30"
+    ],
+    [
+     "Résultat officiel",
+     "R_20260924_3.pdf"
+    ]
+   ],
+   "document": "R_20260924_3.pdf",
+   "emission": "2026-09-30",
+   "heure_de_cloture": "01:00 PM",
+   "montant_offert": 44000000000.0,
+   "offres_competitives_acceptees": 43480804500.0,
+   "part_indirecte_moyenne": 64.62978084441771,
+   "parts": {
+    "direct_bidder": 30.274761820471834,
+    "indirect_bidder": 57.1966061483522,
+    "primary_dealer": 12.528632031175965
+   },
+   "precedentes": [
+    {
+     "adjudication": "2026-08-27",
+     "cusip": "91282CRJ2",
+     "demande_offre": 2.5,
+     "document": "R_20260827_3.pdf",
+     "part_indirecte": 60.77734403019506
+    },
+    {
+     "adjudication": "2026-07-28",
+     "cusip": "91282CRC7",
+     "demande_offre": 2.49,
+     "document": "R_20260728_2.pdf",
+     "part_indirecte": 70.14878839131619
+    },
+    {
+     "adjudication": "2026-06-25",
+     "cusip": "91282CQW4",
+     "demande_offre": 2.5,
+     "document": "R_20260625_3.pdf",
+     "part_indirecte": 57.55348820394999
+    },
+    {
+     "adjudication": "2026-05-28",
+     "cusip": "91282CQT1",
+     "demande_offre": 2.52,
+     "document": "R_20260528_3.pdf",
+     "part_indirecte": 78.38687190979195
+    },
+    {
+     "adjudication": "2026-04-28",
+     "cusip": "91282CQN4",
+     "demande_offre": 2.51,
+     "document": "R_20260428_3.pdf",
+     "part_indirecte": 58.352698517238224
+    },
+    {
+     "adjudication": "2026-03-26",
+     "cusip": "91282CQF1",
+     "demande_offre": 2.43,
+     "document": "R_20260326_3.pdf",
+     "part_indirecte": 62.55949401401485
+    }
+   ],
+   "reference_ans": 7,
+   "reouverture": false,
+   "sorte": "nominale",
+   "taux": 5.085,
+   "terme": "7-Year",
+   "type": "Note"
+  },
+  "direction": 0,
+  "entities": [
+   "Trésor américain"
+  ],
+  "id": "tresor:91282CRM5:2026-09-24",
+  "kind": "adjudication",
+  "notes": [
+   "Parts des acheteurs : en % des offres compétitives acceptées (catégories officielles du Trésor).",
+   "Bons du Trésor (moins d'un an) non montrés."
+  ],
+  "occurred_on": "2026-09-24",
+  "official_id": "91282CRM5:2026-09-24",
+  "official_url": "https://fiscaldata.treasury.gov/static-data/published-reports/auctions-query/results/R_20260924_3.pdf",
+  "parser_version": "tresor-1",
+  "published_on": "2026-09-24",
+  "sha256": "c67496e4cad93cbadc6589f91b3ff08ae03c74515b20b2e077016032c855c344",
+  "source": "tresor",
+  "tickers": [],
+  "title": "Trésor américain : adjudication de 44 G$ sur 7 ans à 5,085 % (demande : 2,42 fois l'offre)"
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -29146,6 +29458,310 @@
    "GM"
   ],
   "title": "Rappel de General Motors, LLC : 29 347 véhicules — « Window Automatic Reversal System Malfunction/FMVSS 118 »"
+ },
+ {
+  "amount_max": 70000000000.0,
+  "amount_min": 70000000000.0,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "obligation_du_tresor": true,
+   "parts_qui_s_additionnent": true,
+   "resultat_officiel_du_jour": true,
+   "resultats_publies": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T19:34:42+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acceptees": {
+    "direct_bidder": 20841600000.0,
+    "indirect_bidder": 37837082000.0,
+    "primary_dealer": 10990000000.0
+   },
+   "adjudication": "2026-09-23",
+   "cusip": "91282CRN3",
+   "demande_offre": 2.21,
+   "demande_offre_moyenne": 2.3266666666666667,
+   "details": [
+    [
+     "Montant offert",
+     "70 G$"
+    ],
+    [
+     "Taux retenu (le plus élevé accepté)",
+     "5,033 %"
+    ],
+    [
+     "Demande / offre",
+     "2,21 (moyenne des 6 précédentes : 2,33)"
+    ],
+    [
+     "Acheteurs indirects",
+     "54,3 % (moyenne des 6 précédentes : 65,2 %)"
+    ],
+    [
+     "Acheteurs directs",
+     "29,9 %"
+    ],
+    [
+     "Courtiers primaires",
+     "15,8 %"
+    ],
+    [
+     "Titre",
+     "Note 5-Year, CUSIP 91282CRN3"
+    ],
+    [
+     "Date d'émission",
+     "2026-09-30"
+    ],
+    [
+     "Résultat officiel",
+     "R_20260923_3.pdf"
+    ]
+   ],
+   "document": "R_20260923_3.pdf",
+   "emission": "2026-09-30",
+   "heure_de_cloture": "01:00 PM",
+   "montant_offert": 70000000000.0,
+   "offres_competitives_acceptees": 69668682000.0,
+   "part_indirecte_moyenne": 65.23326846005982,
+   "parts": {
+    "direct_bidder": 29.915306851936712,
+    "indirect_bidder": 54.31002986392078,
+    "primary_dealer": 15.774663284142507
+   },
+   "precedentes": [
+    {
+     "adjudication": "2026-08-26",
+     "cusip": "91282CRK9",
+     "demande_offre": 2.37,
+     "document": "R_20260826_3.pdf",
+     "part_indirecte": 61.51388661425441
+    },
+    {
+     "adjudication": "2026-07-27",
+     "cusip": "91282CRA1",
+     "demande_offre": 2.28,
+     "document": "R_20260727_3.pdf",
+     "part_indirecte": 59.24271560513065
+    },
+    {
+     "adjudication": "2026-06-24",
+     "cusip": "91282CQX2",
+     "demande_offre": 2.35,
+     "document": "R_20260624_3.pdf",
+     "part_indirecte": 61.59659635643804
+    },
+    {
+     "adjudication": "2026-05-27",
+     "cusip": "91282CQU8",
+     "demande_offre": 2.34,
+     "document": "R_20260527_3.pdf",
+     "part_indirecte": 74.85374344254377
+    },
+    {
+     "adjudication": "2026-04-27",
+     "cusip": "91282CQK0",
+     "demande_offre": 2.33,
+     "document": "R_20260427_4.pdf",
+     "part_indirecte": 72.29003724544427
+    },
+    {
+     "adjudication": "2026-03-25",
+     "cusip": "91282CQG9",
+     "demande_offre": 2.29,
+     "document": "R_20260325_3.pdf",
+     "part_indirecte": 61.90263149654778
+    }
+   ],
+   "reference_ans": 5,
+   "reouverture": false,
+   "sorte": "nominale",
+   "taux": 5.033,
+   "terme": "5-Year",
+   "type": "Note"
+  },
+  "direction": 0,
+  "entities": [
+   "Trésor américain"
+  ],
+  "id": "tresor:91282CRN3:2026-09-23",
+  "kind": "adjudication",
+  "notes": [
+   "Parts des acheteurs : en % des offres compétitives acceptées (catégories officielles du Trésor).",
+   "Bons du Trésor (moins d'un an) non montrés."
+  ],
+  "occurred_on": "2026-09-23",
+  "official_id": "91282CRN3:2026-09-23",
+  "official_url": "https://fiscaldata.treasury.gov/static-data/published-reports/auctions-query/results/R_20260923_3.pdf",
+  "parser_version": "tresor-1",
+  "published_on": "2026-09-23",
+  "sha256": "58ef653f9d2079c7392382337f8117879f916fc1a76a7b9d7e695bc842fd8fe0",
+  "source": "tresor",
+  "tickers": [],
+  "title": "Trésor américain : adjudication de 70 G$ sur 5 ans à 5,033 % (demande : 2,21 fois l'offre)"
+ },
+ {
+  "amount_max": 28000000000.0,
+  "amount_min": 28000000000.0,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "obligation_du_tresor": true,
+   "parts_qui_s_additionnent": true,
+   "resultat_officiel_du_jour": true,
+   "resultats_publies": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T19:34:42+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acceptees": {
+    "direct_bidder": 0.0,
+    "indirect_bidder": 16537912500.0,
+    "primary_dealer": 11451850000.0
+   },
+   "adjudication": "2026-09-23",
+   "cusip": "91282CRD5",
+   "demande_offre": 2.63,
+   "demande_offre_moyenne": 3.2150000000000003,
+   "details": [
+    [
+     "Montant offert",
+     "28 G$"
+    ],
+    [
+     "Marge retenue (taux variable)",
+     "0,040 %"
+    ],
+    [
+     "Demande / offre",
+     "2,63 (moyenne des 6 précédentes : 3,22)"
+    ],
+    [
+     "Acheteurs indirects",
+     "59,1 % (moyenne des 6 précédentes : 64,2 %)"
+    ],
+    [
+     "Acheteurs directs",
+     "0,0 %"
+    ],
+    [
+     "Courtiers primaires",
+     "40,9 %"
+    ],
+    [
+     "Titre",
+     "Note 1-Year 10-Month, CUSIP 91282CRD5"
+    ],
+    [
+     "Date d'émission",
+     "2026-09-25"
+    ],
+    [
+     "Résultat officiel",
+     "R_20260923_2.pdf"
+    ]
+   ],
+   "document": "R_20260923_2.pdf",
+   "emission": "2026-09-25",
+   "heure_de_cloture": "11:30 AM",
+   "montant_offert": 28000000000.0,
+   "offres_competitives_acceptees": 27989762500.0,
+   "part_indirecte_moyenne": 64.24958701639517,
+   "parts": {
+    "direct_bidder": 0.0,
+    "indirect_bidder": 59.08557637814897,
+    "primary_dealer": 40.91442362185103
+   },
+   "precedentes": [
+    {
+     "adjudication": "2026-08-26",
+     "cusip": "91282CRD5",
+     "demande_offre": 3.14,
+     "document": "R_20260826_2.pdf",
+     "part_indirecte": 66.55915054366108
+    },
+    {
+     "adjudication": "2026-07-29",
+     "cusip": "91282CRD5",
+     "demande_offre": 3.37,
+     "document": "R_20260729_1.pdf",
+     "part_indirecte": 63.223762353820035
+    },
+    {
+     "adjudication": "2026-06-24",
+     "cusip": "91282CQM6",
+     "demande_offre": 2.99,
+     "document": "R_20260624_2.pdf",
+     "part_indirecte": 66.65183521362206
+    },
+    {
+     "adjudication": "2026-05-27",
+     "cusip": "91282CQM6",
+     "demande_offre": 3.49,
+     "document": "R_20260527_1.pdf",
+     "part_indirecte": 72.44417911751057
+    },
+    {
+     "adjudication": "2026-04-28",
+     "cusip": "91282CQM6",
+     "demande_offre": 3.52,
+     "document": "R_20260428_1.pdf",
+     "part_indirecte": 65.71211296612492
+    },
+    {
+     "adjudication": "2026-03-25",
+     "cusip": "91282CPX3",
+     "demande_offre": 2.78,
+     "document": "R_20260325_2.pdf",
+     "part_indirecte": 50.906481903632375
+    }
+   ],
+   "reference_ans": 2,
+   "reouverture": true,
+   "sorte": "FRN",
+   "taux": 0.04,
+   "terme": "1-Year 10-Month",
+   "type": "Note"
+  },
+  "direction": 0,
+  "entities": [
+   "Trésor américain"
+  ],
+  "id": "tresor:91282CRD5:2026-09-23",
+  "kind": "adjudication",
+  "notes": [
+   "Parts des acheteurs : en % des offres compétitives acceptées (catégories officielles du Trésor).",
+   "Bons du Trésor (moins d'un an) non montrés."
+  ],
+  "occurred_on": "2026-09-23",
+  "official_id": "91282CRD5:2026-09-23",
+  "official_url": "https://fiscaldata.treasury.gov/static-data/published-reports/auctions-query/results/R_20260923_2.pdf",
+  "parser_version": "tresor-1",
+  "published_on": "2026-09-23",
+  "sha256": "5d1be9bb513d0a21e732e4709946088b2c3afc95e4a77631bf321aa6475483f4",
+  "source": "tresor",
+  "tickers": [],
+  "title": "Trésor américain : adjudication de 28 G$ à taux variable sur 1 an et 10 mois (réouverture), marge de 0,040 % (demande : 2,63 fois l'offre)"
  },
  {
   "amount_max": null,
@@ -29584,6 +30200,144 @@
    "LLY"
   ],
   "title": "FDA : nouveau médicament approuvé, ONSWIK (insulin efsitora alfa-gobe), de ELI LILLY AND CO"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "date_d_envoi_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_message": true,
+   "numero_csms": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "sujet_surtaxes": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T19:34:48+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "codes_9903": [],
+   "details": [
+    [
+     "Message",
+     "CSMS # 69994928"
+    ],
+    [
+     "Envoyé",
+     "22 septembre 2026 à 16 h 27 (heure de New York)"
+    ],
+    [
+     "Proclamations citées",
+     "11052"
+    ],
+    [
+     "Extrait",
+     "The purpose of this message is to provide guidance regarding the U.S. Department of Commerce’s (Commerce’s) Temporary Final Rule (TFR) on Measures to Restrict Stockpiling of Polysilicon and Polysilicon Derivatives Under Proclamation 11052. BACKGROUND On September 24, 2026, Commerce will publish a TFR providing for procedures for an import ban on certain imports of polysilicon products. […]"
+    ]
+   ],
+   "envoye_le": "2026-09-22T16:27:48-04:00",
+   "extrait": "The purpose of this message is to provide guidance regarding the U.S. Department of Commerce’s (Commerce’s) Temporary Final Rule (TFR) on Measures to Restrict Stockpiling of Polysilicon and Polysilicon Derivatives Under Proclamation 11052. BACKGROUND On September 24, 2026, Commerce will publish a TFR providing for procedures for an import ban on certain imports of polysilicon products. […]",
+   "guid": "69994928",
+   "numero": "69994928",
+   "proclamations": [
+    "11052"
+   ],
+   "titre_officiel": "GUIDANCE: Import Ban of Certain Polysilicon Products Under Proclamation 11052"
+  },
+  "direction": 0,
+  "entities": [
+   "U.S. Customs and Border Protection"
+  ],
+  "id": "tarifs:69994928",
+  "kind": "directive_douane",
+  "notes": [
+   "Directive de la douane : elle applique une décision officielle (proclamation, avis au Registre fédéral) sans la remplacer."
+  ],
+  "occurred_on": "2026-09-22",
+  "official_id": "69994928",
+  "official_url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/42c09b0",
+  "parser_version": "douane-1",
+  "published_on": "2026-09-22",
+  "sha256": "eca68aac51b265fe3db501fd71321d4ab38a6cbcd44b4919590ca7e23476839b",
+  "source": "tarifs",
+  "tickers": [],
+  "title": "Douane américaine : GUIDANCE: Import Ban of Certain Polysilicon Products Under Proclamation 11052"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "date_d_envoi_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_message": true,
+   "numero_csms": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "sujet_surtaxes": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T19:34:48+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "codes_9903": [
+    "9903.88.69"
+   ],
+   "details": [
+    [
+     "Message",
+     "CSMS # 69990649"
+    ],
+    [
+     "Envoyé",
+     "22 septembre 2026 à 15 h 26 (heure de New York)"
+    ],
+    [
+     "Numéros du tarif cités (chapitre 99)",
+     "9903.88.69"
+    ],
+    [
+     "Extrait",
+     "The purpose of this message is to provide guidance regarding the amendment of Section 301 China product exclusions to conform with certain changes to the Harmonized Tariff Schedule of the United States (HTSUS). BACKGROUND On September 2, 2026, the Office of the U.S. Trade Representative (USTR) published Federal Register Notice (FRN) 91 FR 56538 making conforming amendments to four product exclusions. […]"
+    ]
+   ],
+   "envoye_le": "2026-09-22T15:26:01-04:00",
+   "extrait": "The purpose of this message is to provide guidance regarding the amendment of Section 301 China product exclusions to conform with certain changes to the Harmonized Tariff Schedule of the United States (HTSUS). BACKGROUND On September 2, 2026, the Office of the U.S. Trade Representative (USTR) published Federal Register Notice (FRN) 91 FR 56538 making conforming amendments to four product exclusions. […]",
+   "guid": "69990649",
+   "numero": "69990649",
+   "proclamations": [],
+   "titre_officiel": "GUIDANCE: Section 301 China Conforming Amendment"
+  },
+  "direction": 0,
+  "entities": [
+   "U.S. Customs and Border Protection"
+  ],
+  "id": "tarifs:69990649",
+  "kind": "directive_douane",
+  "notes": [
+   "Directive de la douane : elle applique une décision officielle (proclamation, avis au Registre fédéral) sans la remplacer."
+  ],
+  "occurred_on": "2026-09-22",
+  "official_id": "69990649",
+  "official_url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/42bf8f9",
+  "parser_version": "douane-1",
+  "published_on": "2026-09-22",
+  "sha256": "4489851f0ab082fbd6d90fb02f32a9c832b5540679d8a7c7dcdad85a913f8bf6",
+  "source": "tarifs",
+  "tickers": [],
+  "title": "Douane américaine : GUIDANCE: Section 301 China Conforming Amendment"
  },
  {
   "amount_max": null,
@@ -35775,6 +36529,90 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "date_d_envoi_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_message": true,
+   "numero_csms": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "sujet_surtaxes": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T19:34:48+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "codes_9903": [
+    "9903.03.12",
+    "9903.03.13",
+    "9903.03.14",
+    "9903.03.15",
+    "9903.03.16"
+   ],
+   "details": [
+    [
+     "Message",
+     "CSMS # 69851916"
+    ],
+    [
+     "Envoyé",
+     "11 septembre 2026 à 16 h 49 (heure de New York)"
+    ],
+    [
+     "Proclamations citées",
+     "11056, 11046, 11047, 11048, 11064, 11065"
+    ],
+    [
+     "Numéros du tarif cités (chapitre 99)",
+     "9903.03.12, 9903.03.13, 9903.03.14, 9903.03.15, 9903.03.16"
+    ],
+    [
+     "Extrait",
+     "The purpose of this message is to provide guidance on the modifications to the Section 338 Canada duties pursuant to the Presidential Proclamations on Modifying the Scope of Products of Canada Subject to the Additional Duties Imposed to Offset Canadian Discrimination Against the Commerce of the United States with Respect to Alcoholic Beverages and Motor Vehicles issued on September 8, 2026. […]"
+    ]
+   ],
+   "envoye_le": "2026-09-11T16:49:29-04:00",
+   "extrait": "The purpose of this message is to provide guidance on the modifications to the Section 338 Canada duties pursuant to the Presidential Proclamations on Modifying the Scope of Products of Canada Subject to the Additional Duties Imposed to Offset Canadian Discrimination Against the Commerce of the United States with Respect to Alcoholic Beverages and Motor Vehicles issued on September 8, 2026. […]",
+   "guid": "69851916",
+   "numero": "69851916",
+   "proclamations": [
+    "11056",
+    "11046",
+    "11047",
+    "11048",
+    "11064",
+    "11065"
+   ],
+   "titre_officiel": "Modifying Section 338 Additional Duties on Certain Goods of Canada"
+  },
+  "direction": 0,
+  "entities": [
+   "U.S. Customs and Border Protection"
+  ],
+  "id": "tarifs:69851916",
+  "kind": "directive_douane",
+  "notes": [
+   "Directive de la douane : elle applique une décision officielle (proclamation, avis au Registre fédéral) sans la remplacer."
+  ],
+  "occurred_on": "2026-09-11",
+  "official_id": "69851916",
+  "official_url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/429db0c",
+  "parser_version": "douane-1",
+  "published_on": "2026-09-11",
+  "sha256": "69c145870e5880dfd377764dec400ea3cd4486bedc91851dec1a4345f5f6eb75",
+  "source": "tarifs",
+  "tickers": [],
+  "title": "Douane américaine : Modifying Section 338 Additional Duties on Certain Goods of Canada"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -38029,6 +38867,87 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "date_d_envoi_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_message": true,
+   "numero_csms": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "sujet_surtaxes": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T19:34:48+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "codes_9903": [
+    "9903.08.20",
+    "9903.08.21",
+    "9903.08.22",
+    "9903.08.23",
+    "9903.08.24",
+    "9903.08.25",
+    "9903.08.26"
+   ],
+   "details": [
+    [
+     "Message",
+     "CSMS # 69738151"
+    ],
+    [
+     "Envoyé",
+     "2 septembre 2026 à 15 h 07 (heure de New York)"
+    ],
+    [
+     "Proclamations citées",
+     "11055"
+    ],
+    [
+     "Numéros du tarif cités (chapitre 99)",
+     "9903.08.20, 9903.08.21, 9903.08.22, 9903.08.23, 9903.08.24, 9903.08.25, 9903.08.26"
+    ],
+    [
+     "Extrait",
+     "The purpose of this message is to provide guidance on the implementation of the Presidential Proclamation 11055, August 13, 2026, “Adjusting Imports of Unmanned Aircraft Systems and Unmanned Aircraft Systems Components into the United States.” BACKGROUND On August 13, 2026, the President issued Proclamation 11055, imposing between 10% - 100% additional duties on certain imports of Unmanned Aircraft Systems (UAS) and  […]"
+    ]
+   ],
+   "envoye_le": "2026-09-02T15:07:26-04:00",
+   "extrait": "The purpose of this message is to provide guidance on the implementation of the Presidential Proclamation 11055, August 13, 2026, “Adjusting Imports of Unmanned Aircraft Systems and Unmanned Aircraft Systems Components into the United States.” BACKGROUND On August 13, 2026, the President issued Proclamation 11055, imposing between 10% - 100% additional duties on certain imports of Unmanned Aircraft Systems (UAS) and  […]",
+   "guid": "69738151",
+   "numero": "69738151",
+   "proclamations": [
+    "11055"
+   ],
+   "titre_officiel": "GUIDANCE: Section 232 Duties on Imports of Unmanned Aircraft Systems and Unmanned Aircraft Systems Components"
+  },
+  "direction": 0,
+  "entities": [
+   "U.S. Customs and Border Protection"
+  ],
+  "id": "tarifs:69738151",
+  "kind": "directive_douane",
+  "notes": [
+   "Directive de la douane : elle applique une décision officielle (proclamation, avis au Registre fédéral) sans la remplacer."
+  ],
+  "occurred_on": "2026-09-02",
+  "official_id": "69738151",
+  "official_url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/4281ea7",
+  "parser_version": "douane-1",
+  "published_on": "2026-09-02",
+  "sha256": "e243bcacff925caf4894b7b7fa0297939c6a8f26956bbfe0072b465203a91831",
+  "source": "tarifs",
+  "tickers": [],
+  "title": "Douane américaine : GUIDANCE: Section 232 Duties on Imports of Unmanned Aircraft Systems and Unmanned Aircraft Systems Components"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -40115,6 +41034,90 @@
   "title": "Donald J Trump (président des États-Unis) : rapport de transactions (278-T), image numérisée"
  },
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "date_d_envoi_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_message": true,
+   "numero_csms": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "sujet_surtaxes": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T19:34:48+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "codes_9903": [
+    "9903.03.12",
+    "9903.03.13",
+    "9903.03.14",
+    "9903.03.15",
+    "9903.03.16",
+    "9903.04.12",
+    "9903.04.14"
+   ],
+   "details": [
+    [
+     "Message",
+     "CSMS # 69606660"
+    ],
+    [
+     "Envoyé",
+     "21 août 2026 à 23 h 16 (heure de New York)"
+    ],
+    [
+     "Proclamations citées",
+     "11056, 11046, 11047, 11048"
+    ],
+    [
+     "Numéros du tarif cités (chapitre 99)",
+     "9903.03.12, 9903.03.13, 9903.03.14, 9903.03.15, 9903.03.16, 9903.04.12, 9903.04.14"
+    ],
+    [
+     "Extrait",
+     "The purpose of this message is to provide guidance on the implementation of the July 20, 2026, Presidential Proclamations on Imposing Additional Duties to Offset Canadian Discrimination Against the Commerce of the United States with Respect to Alcoholic Beverages, Dairy, and Motor Vehicles. […]"
+    ]
+   ],
+   "envoye_le": "2026-08-21T23:16:57-04:00",
+   "extrait": "The purpose of this message is to provide guidance on the implementation of the July 20, 2026, Presidential Proclamations on Imposing Additional Duties to Offset Canadian Discrimination Against the Commerce of the United States with Respect to Alcoholic Beverages, Dairy, and Motor Vehicles. […]",
+   "guid": "69606660",
+   "numero": "69606660",
+   "proclamations": [
+    "11056",
+    "11046",
+    "11047",
+    "11048"
+   ],
+   "titre_officiel": "GUIDANCE: Section 338 Additional Duties on Certain Goods of Canada"
+  },
+  "direction": 0,
+  "entities": [
+   "U.S. Customs and Border Protection"
+  ],
+  "id": "tarifs:69606660",
+  "kind": "directive_douane",
+  "notes": [
+   "Directive de la douane : elle applique une décision officielle (proclamation, avis au Registre fédéral) sans la remplacer."
+  ],
+  "occurred_on": "2026-08-21",
+  "official_id": "69606660",
+  "official_url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/4261d04",
+  "parser_version": "douane-1",
+  "published_on": "2026-08-21",
+  "sha256": "a047447b8eb89b902403007fbec46a6a56adaf0f83cf4b4db1ecc4367c240f3f",
+  "source": "tarifs",
+  "tickers": [],
+  "title": "Douane américaine : GUIDANCE: Section 338 Additional Duties on Certain Goods of Canada"
+ },
+ {
   "amount_max": 5000000.0,
   "amount_min": 1000001.0,
   "badge": "officiel",
@@ -42018,6 +43021,81 @@
   "source": "sante_canada",
   "tickers": [],
   "title": "Santé Canada : nouveau médicament autorisé, ETCAMAH (camizestrant), de ASTRAZENECA CANADA INC"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "date_d_envoi_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_message": true,
+   "numero_csms": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "sujet_surtaxes": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T19:34:48+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "codes_9903": [
+    "9903.04.63"
+   ],
+   "details": [
+    [
+     "Message",
+     "CSMS # 69415934"
+    ],
+    [
+     "Envoyé",
+     "1er août 2026 à 21 h 09 (heure de New York)"
+    ],
+    [
+     "Proclamations citées",
+     "11020"
+    ],
+    [
+     "Numéros du tarif cités (chapitre 99)",
+     "9903.04.63"
+    ],
+    [
+     "Extrait",
+     "This message provides guidance regarding the reduction of tariffs on patented pharmaceuticals and associated pharmaceutical ingredients that are products of the United Kingdom amending Presidential Proclamation 11020, “Adjusting Imports of Pharmaceuticals and Pharmaceutical Ingredients Into the United States.” BACKGROUND On July 31, 2026, the Secretary of Commerce published “Notice of Reduction of Tariffs on Patented […]"
+    ]
+   ],
+   "envoye_le": "2026-08-01T21:09:28-04:00",
+   "extrait": "This message provides guidance regarding the reduction of tariffs on patented pharmaceuticals and associated pharmaceutical ingredients that are products of the United Kingdom amending Presidential Proclamation 11020, “Adjusting Imports of Pharmaceuticals and Pharmaceutical Ingredients Into the United States.” BACKGROUND On July 31, 2026, the Secretary of Commerce published “Notice of Reduction of Tariffs on Patented […]",
+   "guid": "69415934",
+   "numero": "69415934",
+   "proclamations": [
+    "11020"
+   ],
+   "titre_officiel": "GUIDANCE: Reduction of Tariffs on Patented Pharmaceuticals and Pharmaceutical Ingredients for Products of the United Kingdom Implemented by Presidential Proclamation 11020"
+  },
+  "direction": 0,
+  "entities": [
+   "U.S. Customs and Border Protection"
+  ],
+  "id": "tarifs:69415934",
+  "kind": "directive_douane",
+  "notes": [
+   "Directive de la douane : elle applique une décision officielle (proclamation, avis au Registre fédéral) sans la remplacer."
+  ],
+  "occurred_on": "2026-08-01",
+  "official_id": "69415934",
+  "official_url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/42333fe",
+  "parser_version": "douane-1",
+  "published_on": "2026-08-01",
+  "sha256": "a58ad655f10eafde4d7a7ea7f27ec72fc465ae158a4f34fcbe8070341cd8d3a2",
+  "source": "tarifs",
+  "tickers": [],
+  "title": "Douane américaine : GUIDANCE: Reduction of Tariffs on Patented Pharmaceuticals and Pharmaceutical Ingredients for Products of the United Kingdom Implemented by Presidential Proclamation 11020"
  },
  {
   "amount_max": null,
