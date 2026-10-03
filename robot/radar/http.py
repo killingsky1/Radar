@@ -13,7 +13,8 @@ from urllib.parse import urlparse
 from .models import empreinte, maintenant_utc
 
 # Requêtes par seconde, par domaine. CFTC : son robots.txt demande 1 seconde entre deux requêtes.
-VITESSE_MAX = {"sec.gov": 5.0, "federalregister.gov": 1.0, "cftc.gov": 1.0}
+# LDA.gov : robots.txt demande 4 secondes entre deux requêtes (15 par minute sans compte) : on en attend 4,5.
+VITESSE_MAX = {"sec.gov": 5.0, "federalregister.gov": 1.0, "cftc.gov": 1.0, "lda.gov": 1 / 4.5}
 VITESSE_DEFAUT = 2.0
 CODES_A_REESSAYER = {429, 500, 502, 503, 504}
 

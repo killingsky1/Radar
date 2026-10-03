@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 from . import __version__, emetteurs
-from .collecteurs import congres
+from .collecteurs import congres, lobbying
 from .health import LIBELLES, statut
 from .registry import SOURCES
 from .score import calculer
@@ -97,3 +97,10 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
         _ecrire(chemin, calculer(fil, maintenant, precedent, symboles, fonds=emetteurs.fonds(donnees), chefs=chefs))
     except Exception as exc:  # noqa: BLE001
         print(f"Score : erreur, l'ancien calcul est gardé ({type(exc).__name__}: {exc})")
+    # Lobbying des compagnies des listes (celles du score publié)
+    try:
+        score = json.loads(chemin.read_text(encoding="utf-8")) if chemin.exists() else {}
+        symboles_listes = [x["symbole"] for liste in ("hausse", "baisse") for x in score.get(liste, [])]
+        _ecrire(donnees / "app" / "lobbying.json", lobbying.pour_app(donnees, symboles_listes, maintenant))
+    except Exception as exc:  # noqa: BLE001
+        print(f"Lobbying : erreur, fichier de l'app pas mis à jour ({type(exc).__name__}: {exc})")

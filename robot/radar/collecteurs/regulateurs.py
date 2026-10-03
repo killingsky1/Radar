@@ -25,8 +25,8 @@ NEW_YORK = ZoneInfo("America/New_York")
 FENETRE_JOURS = 30
 
 
-def deja(ctx, source: str) -> set[str]:
-    return Depot(ctx.donnees).ids_enregistres({source})
+def deja(ctx, source: str, mois_max: int = 3) -> set[str]:
+    return Depot(ctx.donnees).ids_enregistres({source}, mois_max)
 
 
 def jour_new_york(date_rss: str) -> str | None:

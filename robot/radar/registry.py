@@ -79,14 +79,18 @@ _LISTE = [
       "https://disclosures-clerk.house.gov/FinancialDisclosure", publication_max_jours=21),
     S("senat_ptr", "Sénat : transactions des sénateurs", "politiciens", ("senate.gov",), 3,
       "https://efdsearch.senate.gov/search/", publication_max_jours=30),
-    S("oge_278t", "Président, vice-président et cabinet (OGE)", "politiciens", ("oge.gov",), 3,
-      "https://www.oge.gov/"),
+    # Rapports 278-T publiés sans formulaire 201 (président, vice-président, niveaux I et II) : une fois par jour
+    S("oge_278t", "Président, vice-président et cabinet : rapports de transactions (OGE)", "politiciens", ("oge.gov",),
+      3, "https://www.oge.gov/web/OGE.nsf/Officials%20Individual%20Disclosures%20Search%20Collection",
+      passages=("matin",)),
     # 27 pages officielles (dont 24 comités du Sénat) qui changent rarement : une fois par jour de semaine suffit
     S("comites", "Chefs et comités du Congrès (Chambre et Sénat)", "politiciens", ("house.gov", "senate.gov"), 3,
       "https://clerk.house.gov/xml/lists/MemberData.xml", passages=("matin",)),
     S("votes", "Votes du Congrès sur les projets de loi suivis", "politiciens", ("house.gov", "senate.gov"), 3,
       "https://clerk.house.gov/Votes"),
-    S("lobbying", "Lobbying (LDA.gov)", "politiciens", ("lda.gov",), 3, "https://lda.gov/"),
+    # Lobbying des compagnies des listes (15 requêtes par minute sans compte) : une fois par jour de semaine
+    S("lobbying", "Lobbying des compagnies des listes (LDA.gov)", "politiciens", ("lda.gov",), 3, "https://lda.gov/",
+      passages=("matin",)),
     S("hr7008", "Suivi de H.R. 7008 (interdiction des transactions des élus)", "politiciens",
       ("govinfo.gov", "congress.gov"), 3, "https://www.congress.gov/bill/119th-congress/house-bill/7008"),
     # Phase 4 : gouvernement, régulateurs, économie

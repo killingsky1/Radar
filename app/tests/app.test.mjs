@@ -1,4 +1,4 @@
-// Tests de l'app dans un vrai navigateur (données TEST : 12 infos validées + 1 piège ; score : AMD, NVDA, XMPL).
+// Tests de l'app dans un vrai navigateur (données TEST : 13 infos validées + 1 piège ; score : AMD, NVDA, XMPL).
 import { chromium } from "playwright";
 import assert from "node:assert";
 
@@ -90,12 +90,50 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     await p.reload(); await p.waitForSelector(".tuiles");
     assert.equal(await p.locator(".ligne.suggestion .nouveau").count(), 0);
   });
+  await verifier("Fiche AMD : lobbying (total, firme incluse, sujets, 2 rapports, phrase du Sénat)", async () => {
+    await p.locator(".ligne.suggestion", { hasText: "AMD" }).click(); await p.waitForTimeout(250);
+    const total = (await p.locator(".lobbying-total").innerText()).replace(/\u00a0|\u202f/g, " ");
+    assert.ok(total.includes("1,23") && total.includes("M$"), total);
+    const t = (await p.locator(".lobbying").innerText()).replace(/\u00a0|\u202f/g, " ");
+    assert.ok(t.includes("Dépenses déclarées par la compagnie elle-même : elles incluent ce qu'elle paie à 1 firme de lobbying"), t);
+    assert.ok(t.includes("Sujets : Commerce (intérieur et extérieur) · Fiscalité (impôts)"), t);
+    assert.equal(await p.locator(".lobbying .transaction").count(), 2);
+    assert.ok((await p.locator(".lobbying .transaction").first().innerText()).includes("La compagnie elle-même"));
+    const pied = await p.locator(".congres-source").last().innerText();
+    assert.ok(pied.includes("Senate Office of Public Records cannot vouch for the data") && pied.includes("Lu sur LDA.gov le"), pied);
+    await p.locator(".retour").click(); await p.waitForTimeout(200);
+  });
+  await verifier("Fiche NVDA : aucun rapport au nom exact (et pas « 0 $ »)", async () => {
+    await p.locator(".ligne.suggestion", { hasText: "NVDA" }).click(); await p.waitForTimeout(250);
+    const t = await p.locator(".lobbying").innerText();
+    assert.ok(t.includes("Aucun rapport de lobbying au nom exact « NVIDIA CORP »") && !t.includes("$"), t);
+    await p.locator(".retour").click(); await p.waitForTimeout(200);
+  });
+  await verifier("Fiche XMPL : recherche trop large, pas vérifié", async () => {
+    await p.locator(".alerte-baisse").click(); await p.waitForTimeout(250);
+    await p.locator(".ligne.suggestion", { hasText: "XMPL" }).click(); await p.waitForTimeout(250);
+    assert.ok((await p.locator(".lobbying").innerText()).includes("Recherche trop large (« EXEMPLE ») : pas vérifié."));
+    await p.locator(".retour").click(); await p.waitForTimeout(200); await p.locator(".retour").click(); await p.waitForTimeout(200);
+  });
+  await verifier("Sans fichier du lobbying : la fiche s'affiche sans la section", async () => {
+    const avant = erreurs.length;
+    await p.route("**/data/app/lobbying.json", (route) => route.fulfill({ status: 404, body: "" }));
+    try {
+      await p.reload(); await p.waitForSelector(".tuiles");
+      await p.locator(".ligne.suggestion", { hasText: "AMD" }).click(); await p.waitForTimeout(250);
+      assert.equal(await p.locator(".grand-titre h1").innerText(), "AMD"); assert.equal(await p.locator(".lobbying").count(), 0);
+      await p.locator(".retour").click(); await p.waitForTimeout(200);
+    } finally {
+      await p.unroute("**/data/app/lobbying.json"); await p.reload(); await p.waitForSelector(".tuiles");
+      erreurs.splice(avant, erreurs.length - avant, ...erreurs.slice(avant).filter((e) => !e.includes("404")));
+    }
+  });
   await verifier("Tuile catégorie Militaire ouvre le fil filtré (1 info)", async () => {
     await p.locator(".cat", { hasText: "Militaire" }).click(); await p.waitForTimeout(250); assert.equal(await lignes(), 1);
   });
-  await verifier("Fil : 12 infos, le piège est caché", async () => { await p.locator(".puce", { hasText: "Tout" }).click(); assert.equal(await lignes(), 12); });
+  await verifier("Fil : 13 infos, le piège est caché", async () => { await p.locator(".puce", { hasText: "Tout" }).click(); assert.equal(await lignes(), 13); });
   await verifier("Fil se souvient du filtre choisi (Tout) après un changement d'onglet", async () => {
-    await onglet("Favoris"); await onglet("Fil"); assert.equal(await lignes(), 12);
+    await onglet("Favoris"); await onglet("Fil"); assert.equal(await lignes(), 13);
     assert.equal(await p.locator(".puce.actif").innerText(), "Tout");
   });
   await verifier("Fil groupé par jour (Aujourd'hui, Hier…)", async () => {
@@ -158,7 +196,7 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     try {
       await p.reload(); await p.waitForSelector(".onglets"); await onglet("Fil");
       await p.locator(".puce", { hasText: "Politiciens" }).click(); await p.waitForTimeout(150);
-      assert.equal(await p.locator(".carte-projet").count(), 0); assert.equal(await lignes(), 1);
+      assert.equal(await p.locator(".carte-projet").count(), 0); assert.equal(await lignes(), 2); // la transaction d'élu et le rapport de l'OGE
       await p.locator(".ligne", { hasText: "Microsoft" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
       assert.equal(await p.locator(".congres").count(), 0); await fermer();
     } finally {
@@ -167,6 +205,16 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       // Le 404 voulu s'affiche dans la console du navigateur : ce n'est pas une erreur de l'app
       erreurs.splice(avant, erreurs.length - avant, ...erreurs.slice(avant).filter((e) => !e.includes("404")));
     }
+  });
+  await verifier("Détail d'un rapport de l'OGE : mention légale de l'OGE et ses 3 contrôles", async () => {
+    await p.locator(".ligne", { hasText: "278-T" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
+    const pied = await p.locator(".detail-pied").innerText();
+    assert.ok(pied.includes("Office of Government Ethics") && pied.includes("non commercial") && !pied.includes("du Congrès"), pied);
+    const ok = await p.locator(".feuille .controle.ok").allInnerTexts();
+    for (const c of ["Publié sans formulaire 201 (lien direct de l'OGE)", "Président, vice-président ou poste de niveau I ou II", "Document PDF officiel"])
+      assert.ok(ok.some((x) => x.includes(c)), c);
+    assert.equal(await p.locator(".feuille .controle.rate").count(), 0);
+    await fermer();
   });
   await verifier("Détail d'un 13D : le but écrit par le déclarant", async () => {
     await p.locator(".ligne", { hasText: "Intel" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
@@ -190,11 +238,11 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
   await verifier("Réglage : seulement les confirmées (fil = 1)", async () => {
     await reglages(); await inter("Seulement les confirmées"); await filTout(); try { assert.equal(await lignes(), 1); } finally { await remettre(() => inter("Seulement les confirmées")); }
   });
-  await verifier("Réglage : montrer les « À vérifier » (fil = 13)", async () => {
-    await reglages(); await inter("Montrer les infos à vérifier"); await filTout(); try { assert.equal(await lignes(), 13); } finally { await remettre(() => inter("Montrer les infos à vérifier")); }
+  await verifier("Réglage : montrer les « À vérifier » (fil = 14)", async () => {
+    await reglages(); await inter("Montrer les infos à vérifier"); await filTout(); try { assert.equal(await lignes(), 14); } finally { await remettre(() => inter("Montrer les infos à vérifier")); }
   });
-  await verifier("Réglage : montant minimum 1 M$ (fil = 10)", async () => {
-    await reglages(); await p.getByRole("radio", { name: "1 M$" }).click(); await filTout(); try { assert.equal(await lignes(), 10); } finally { await remettre(() => p.getByRole("radio", { name: "Tous" }).click()); }
+  await verifier("Réglage : montant minimum 1 M$ (fil = 11 : les infos sans montant restent)", async () => {
+    await reglages(); await p.getByRole("radio", { name: "1 M$" }).click(); await filTout(); try { assert.equal(await lignes(), 11); } finally { await remettre(() => p.getByRole("radio", { name: "Tous" }).click()); }
   });
   await verifier("Réglage : cacher Politiciens (fil = 11)", async () => {
     await reglages(); await inter("Politiciens"); await filTout(); try { assert.equal(await lignes(), 11); } finally { await remettre(() => inter("Politiciens")); }

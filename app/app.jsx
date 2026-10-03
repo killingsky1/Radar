@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.8.0";
+const VERSION = "0.9.0";
 
 // ---------- Constantes ----------
 
@@ -82,6 +82,9 @@ const CONTROLES_SOURCES = {
   etape_datee: "Étape officielle datée",
   vote_du_projet_suivi: "Vote sur le bon projet de loi",
   total_recompte: "Total officiel = votes recomptés un par un",
+  sans_formulaire_201: "Publié sans formulaire 201 (lien direct de l'OGE)",
+  poste_publie_sans_201: "Président, vice-président ou poste de niveau I ou II",
+  document_pdf: "Document PDF officiel",
   lettre_officielle: "Lettre d'approbation officielle",
   trimestres_consecutifs: "Trimestres consécutifs comparés",
   rapports_complets: "Deux rapports complets comparés",
@@ -383,7 +386,7 @@ function enGroupesParJour(liste) {
 // ---------- Données ----------
 
 const FICHIERS = ["meta", "aujourdhui", "fil", "a_verifier", "sources"];
-const FICHIERS_OPTIONNELS = ["elus"]; // absent ou illisible : l'app fonctionne sans
+const FICHIERS_OPTIONNELS = ["elus", "lobbying"]; // absents ou illisibles : l'app fonctionne sans
 
 function useDonnees() {
   const [etat, setEtat] = useState({ chargement: true, erreur: null, donnees: null });
@@ -795,10 +798,16 @@ function FeuilleDetail({ ev, fermer }) {
         Lu {ilYa(ev.collected_at)} · n° officiel {ev.official_id}
         <br />
         Empreinte {ev.sha256?.slice(0, 16)}…
-        {ev.category === "politiciens" && (
+        {(ev.source === "chambre_ptr" || ev.source === "senat_ptr") && (
           <>
             <br />
             Rapports publics du Congrès : usage personnel et non commercial seulement (loi américaine 5 U.S.C. § 13107).
+          </>
+        )}
+        {ev.source === "oge_278t" && (
+          <>
+            <br />
+            Rapports publics de l'Office of Government Ethics : usage personnel et non commercial seulement (loi américaine 5 U.S.C. § 13107).
           </>
         )}
         {ev.source === "fda" && (
@@ -1131,9 +1140,64 @@ function EcranCompagnie({ retour }) {
           </div>
         </>
       )}
+      <Lobbying symbole={c.symbole} />
       <LienMethode />
       <p className="avertissement">{s.note || "Pas des conseils financiers"}</p>
     </Ecran>
+  );
+}
+
+// Lobbying à Washington (LDA.gov) : montré sur la fiche, 0 point. Conditions de l'API : date de lecture et avertissement.
+function Lobbying({ symbole }) {
+  const { donnees } = useApp();
+  const l = donnees.lobbying;
+  if (!l?.trimestre) return null;
+  const x = l.par_symbole?.[symbole];
+  let contenu;
+  if (!x) contenu = <p className="lobbying-texte">Pas encore lu : le robot lit LDA.gov chaque matin de semaine.</p>;
+  else if (!x.complet) contenu = <p className="lobbying-texte">Recherche trop large (« {x.recherche} ») : pas vérifié.</p>;
+  else if (x.total == null)
+    contenu = (
+      <p className="lobbying-texte">
+        Aucun rapport de lobbying au nom exact « {x.nom} » ce trimestre. Les filiales et les noms écrits autrement ne sont pas cherchés.
+      </p>
+    );
+  else
+    contenu = (
+      <>
+        <p className="lobbying-total">{argent(x.total, "USD")}</p>
+        <p className="lobbying-texte">
+          {x.base === "compagnie"
+            ? `Dépenses déclarées par la compagnie elle-même${x.firmes ? ` : elles incluent ce qu'elle paie à ${x.firmes} firme${x.firmes > 1 ? "s" : ""} de lobbying, qui déclarent ensemble ${argent(x.revenus_firmes, "USD")}` : ""}.`
+            : `Payés à ${x.firmes} firme${x.firmes > 1 ? "s" : ""} de lobbying (la compagnie n'a pas ses propres lobbyistes).`}
+          {x.moins_de_5000 > 0 && ` ${x.moins_de_5000} rapport${x.moins_de_5000 > 1 ? "s" : ""} « moins de 5 000 $ » sans montant.`}
+        </p>
+        {x.sujets.length > 0 && (
+          <p className="lobbying-sujets">
+            Sujets : {x.sujets.slice(0, 6).map((u) => u.nom).join(" · ")}
+            {x.sujets.length > 6 ? ` · et ${x.sujets.length - 6} autres` : ""}
+          </p>
+        )}
+        {x.rapports.map((r) => (
+          <a key={r.uuid} className="transaction presse" href={r.url} target="_blank" rel="noopener noreferrer">
+            <span className="transaction-qui">
+              {r.soi_meme ? "La compagnie elle-même" : r.registrant}
+              {r.sans_activite ? " · sans activité" : ""}
+            </span>
+            <span className="transaction-montant">{r.montant != null ? argent(r.montant, "USD") : r.sans_activite ? "—" : "< 5 000 $"}</span>
+          </a>
+        ))}
+      </>
+    );
+  return (
+    <>
+      <h2 className="section">Lobbying à Washington · {l.trimestre.libelle}</h2>
+      <div className="carte liste lobbying">{contenu}</div>
+      <p className="congres-source">
+        {x?.lu ? `Lu sur LDA.gov le ${dateLongue(x.lu.slice(0, 10))}. ` : ""}Montants arrondis aux 10 000 $ par les déposants. 0 point dans le score. « {l.avertissement} » (Le bureau des
+        documents publics du Sénat ne garantit pas ces données ni les analyses qu'on en tire une fois sorties de LDA.gov.)
+      </p>
+    </>
   );
 }
 
@@ -2007,6 +2071,11 @@ input { font: inherit; color: var(--texte); }
 .transaction-montant { color: var(--texte); font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
 .congres-chef { padding: 11px 16px; font-size: .9375rem; color: var(--texte-2); }
 .congres-source { color: var(--texte-3); font-size: .75rem; margin: 8px 4px 0; line-height: 1.5; }
+.lobbying-total { margin: 0; padding: 12px 16px 0; font-size: 1.375rem; font-weight: 750; font-variant-numeric: tabular-nums; }
+.lobbying-texte { margin: 0; padding: 8px 16px 12px; color: var(--texte-2); font-size: .9375rem; line-height: 1.45; }
+.lobbying-sujets { margin: 0; padding: 0 16px 12px; font-size: .875rem; line-height: 1.45; }
+.lobbying .transaction { color: inherit; text-decoration: none; }
+.lobbying-sujets + .transaction::before, .lobbying-texte + .transaction::before { content: ""; position: absolute; top: 0; left: 16px; right: 0; height: 1px; background: var(--ligne); transform: scaleY(.5); }
 .congres-chef + .transaction::before { content: ""; position: absolute; top: 0; left: 16px; right: 0; height: 1px; background: var(--ligne); transform: scaleY(.5); }
 .congres-chef.est-chef { color: var(--texte); background: color-mix(in srgb, var(--violet) 14%, transparent); }
 .congres .transaction-qui { overflow-wrap: anywhere; }

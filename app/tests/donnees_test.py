@@ -68,6 +68,12 @@ def faux(ctx):
         ev(12, "sec_8k", "compagnies", "evenement_8k", "Exemple Corp. se place sous la protection de la loi sur les faillites",
            jour(1), "https://www.sec.gov/test/xmpl-8k.htm", tickers=["XMPL"], entities=["Exemple Corp."], direction=-1,
            data={"type": "8-K", "items": [{"item": "1.03", "libelle": "faillite ou mise sous séquestre", "direction": -1}]}),
+        ev(14, "oge_278t", "politiciens", "rapport_278t", "une ministre (exemple) dépose un rapport de transactions (278-T)",
+           jour(4), "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0123456789ABCDEF0123456789ABCDEF/$FILE/Test-278T.pdf",
+           numero="0123456789ABCDEF0123456789ABCDEF", entities=["Ministre (exemple)", "Department of Test"],
+           notes=["Liste seulement : le robot ne lit pas le contenu du rapport."],
+           data={"nom": "Exemple, Ministre", "titre": "Secretary", "agence": "Department of Test", "niveau": "Level I",
+                 "ajoute_le": jour(4), "modifie_le": None, "pdf_valide": True, "taille": 5000}),
         ev(13, "sec_form4", "compagnies", "vente_initie", "le PDG d'Exemple Corp. vend 100 000 actions", jour(1),
            "https://www.sec.gov/test/xmpl-form4.xml", tickers=["XMPL"], amount_min=1.5e6, amount_max=1.5e6,
            entities=["PDG (exemple)", "Exemple Corp."], direction=-1,
@@ -81,6 +87,7 @@ def sans_amd(ctx):
 # Congrès : le VRAI statut de H.R. 7008 et ses VRAIS votes (fichiers officiels gardés pour les tests du robot),
 # plus une personne élue fictive (« Élu·e Exemple », circonscription ZZ01) et ses votes fictifs.
 import gzip  # noqa: E402
+import json  # noqa: E402
 from radar.collecteurs import congres as cg  # noqa: E402
 FC = Path(__file__).resolve().parents[2] / "robot" / "tests" / "fixtures" / "congres"
 def lu(nom): return gzip.decompress((FC / nom).read_bytes())
@@ -97,6 +104,25 @@ cg._ecrire(cg.chemin_congres(sys.argv[1]), {
                          "comites": [{"nom": "Committee on Financial Services (exemple)", "role": "Chair"},
                                      {"nom": "Committee on Agriculture (exemple)", "role": None}]}},
     "senat": {}, "chefs": [], "lu": datetime.now(timezone.utc).isoformat()})
+
+# Lobbying : 3 fiches fictives (TEST) au format exact du robot (lobbying.bilan) : montants, aucun rapport, trop large.
+from radar.collecteurs import lobbying as lb  # noqa: E402
+annee, trim = lb.dernier_trimestre_complet(datetime.now(timezone.utc).date())
+def rapport(uuid, qui, soi_meme, montant, sujets):
+    return {"uuid": uuid, "type": f"Q{trim}", "registrant": qui, "registrant_id": uuid, "client": "TEST", "client_id": 1,
+            "soi_meme": soi_meme, "sans_activite": False, "montant": montant, "poste": jour(70),
+            "url": f"https://lda.gov/filings/public/filing/{uuid}/print/", "sujets": sujets, "sujets_officiels": {}}
+lu = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+cache = {
+    "AMD": {"nom": "ADVANCED MICRO DEVICES INC", "recherche": "ADVANCED", "pages": 1, "complet": True, "lu": lu,
+            **lb.bilan("ADVANCED MICRO DEVICES INC", [rapport("test-1", "COMPAGNIE (EXEMPLE)", True, 1_230_000.0, ["TRD", "TAX"]),
+                                                      rapport("test-2", "FIRME DE LOBBYING (EXEMPLE)", False, 40_000.0, ["TRD"])], trim)},
+    "NVDA": {"nom": "NVIDIA CORP", "recherche": "NVIDIA", "pages": 1, "complet": True, "lu": lu, **lb.bilan("NVIDIA CORP", [], trim)},
+    "XMPL": {"nom": "EXEMPLE CORP", "recherche": "EXEMPLE", "pages": 4, "complet": False, "lu": lu, **lb.bilan("EXEMPLE CORP", [], trim)},
+}
+c = lb.chemin_cache(sys.argv[1], annee, trim)
+c.parent.mkdir(parents=True, exist_ok=True)
+c.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
 
 # Les sources branchées dans le vrai robot répondent « rien de neuf » ; le faux lecteur fournit les infos TEST.
 from radar.collecteurs import COLLECTEURS  # noqa: E402

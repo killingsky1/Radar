@@ -21,7 +21,7 @@ from zoneinfo import ZoneInfo
 
 from .registry import SOURCES
 
-VERSION = "score-4"
+VERSION = "score-5"
 DEMI_VIE = 30
 DEMI_VIE_FONDS = 60  # le 13F arrive jusqu'à 45 jours après la fin du trimestre
 AGE_MAX = 90
@@ -182,6 +182,10 @@ SANS_POINTS = {
     "elu_vente": "Vente d'un élu : les études ne montrent rien.",
     "offre": "Offre d'achat : le prix a déjà bondi à l'annonce.",
     "ftc": "Feu vert antitrust (FTC) : aucune étude solide trouvée.",
+    "lobbying": "Lobbying à Washington (LDA.gov) : montré sur la fiche de la compagnie, sans points. L'étude de Chen, "
+                "Parsley et Yang (2015) mesure un effet sur 3 ans, selon le lobbying par rapport à la taille de la "
+                "compagnie, que Radar ne mesure pas.",
+    "oge": "Rapports de transactions du président et du cabinet (OGE) : liste seulement, le contenu n'est pas lu.",
     "8k_autre": "Autre point du 8-K (contrat, acquisition, avis de retrait de la bourse…) : effet incertain.",
     "contexte": "Contexte seulement.",
 }
@@ -207,7 +211,7 @@ METHODE = {
                for c, r in REGLES.items()],
     "sans_points": [SANS_POINTS[k] for k in ("fonds", "plan", "automatique", "emission", "emission_meme_prix", "avis_144",
                                              "13g", "13d_autre", "13d_pas_sous_evalue", "13d_suivi", "fonds_vente",
-                                             "elu_vente", "offre", "ftc", "8k_autre")]
+                                             "elu_vente", "offre", "ftc", "8k_autre", "lobbying", "oge")]
                    + ["Fed, Banque du Canada, décrets, sanctions, ventes d'armes, CFTC : contexte, sans points."],
     "familles_noms": FAMILLES,
     "etudes": {k: {"titre": t, "constat": c, "lien": u} for k, (t, c, u) in ETUDES.items()},
