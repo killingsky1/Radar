@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html lang="fr" dir="ltr" class="no-js"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="fr" dir="ltr" class="no-js" xmlns="http://www.w3.org/1999/xhtml">
+<!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="La présente licence est accordée au nom de Sa Majesté le Roi du chef du Canada, représentée par le ministre responsable de Statistique Canada (« Statistique Canada ») à vous (un particulier ou une personne morale que vous êtes autorisé à représenter). Vous trouverez ci-après les conditions qui régissent votre utilisation de l&#039;information. Votre utilisation de toute information est une indication que vous comprenez et acceptez ces conditions. Si vous n&#039;acceptez pas ces conditions, il ne vous est pas permis d&#039;utiliser l&#039;information." />
+<meta name="keywords" content="nul" />
+<link rel="canonical" href="https://www.statcan.gc.ca/fr/avis/licence-ouverte" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<meta name="dcterms.title" content="Licence ouverte de Statistique Canada" />
+<meta name="dcterms.creator" content="Gouvernement du Canada, Statistique Canada" />
+<meta name="dcterms.subject" content="nul" title="gcstc" />
+<meta name="dcterms.description" content="La présente licence est accordée au nom de Sa Majesté le Roi du chef du Canada, représentée par le ministre responsable de Statistique Canada (« Statistique Canada ») à vous (un particulier ou une personne morale que vous êtes autorisé à représenter). Vous trouverez ci-après les conditions qui régissent votre utilisation de l&#039;information. Votre utilisation de toute information est une indication que vous comprenez et acceptez ces conditions. Si vous n&#039;acceptez pas ces conditions, il ne vous est pas permis d&#039;utiliser l&#039;information." />
+<meta name="dcterms.language" content="fra" title="ISO639-2/T" />
+<meta name="dcterms.issued" content="2013-10-09" title="W3CDTF" />
+<meta name="dcterms.modified" content="2025-07-10" title="W3CDTF" />
+<meta name="dcterms:service" content="StatCan" />
+<meta name="dcterms:accessRights" content="2" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="text/javascript">window.imConfigPath = "https://www.statcan.gc.ca/en/json/"</script>
+<link rel="icon" href="/themes/custom/stc_bootstrap/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="https://www.statcan.gc.ca/en/terms-conditions/open-licence" />
+<link rel="alternate" hreflang="fr" href="https://www.statcan.gc.ca/fr/avis/licence-ouverte" />
+
+    <title>Licence ouverte de Statistique Canada</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_6-lnB6d_dh_XHH3m3lKzEk-G9zNBUk7jUD8vKC9EmOc.css?delta=0&amp;language=fr&amp;theme=wcms_bootstrap&amp;include=eJx1jlESwiAMRC-EciQmYEqjQJgkbe3tbfHHGfVvs_smu6CKFqjdMRmLT6rXjA0FSji0g-945oodMv7LK2UBI26hklEe8henSzyvYNwphc5iUNSppRCZTU2g-1w4Qrmo7YVadrqrYfURFN2Wqv4nR0ptJRv9FdqxWPxv-0134dty7NEUVrohv-GJiqGE8y-q25720TkJVNxYHsMvFAVk9zZjxUtOG8YXaCKMBg" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_BI7lIG_mg99_n4Zp9Yuixzr7mtmILpvkaBTI2TuICO8.css?delta=1&amp;language=fr&amp;theme=wcms_bootstrap&amp;include=eJx1jlESwiAMRC-EciQmYEqjQJgkbe3tbfHHGfVvs_smu6CKFqjdMRmLT6rXjA0FSji0g-945oodMv7LK2UBI26hklEe8henSzyvYNwphc5iUNSppRCZTU2g-1w4Qrmo7YVadrqrYfURFN2Wqv4nR0ptJRv9FdqxWPxv-0134dty7NEUVrohv-GJiqGE8y-q25720TkJVNxYHsMvFAVk9zZjxUtOG8YXaCKMBg" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_FtojvIwIjPkZgoaSAlw6-4HoEjY_M2sh_y_B40Je2wo.css?delta=2&amp;language=fr&amp;theme=wcms_bootstrap&amp;include=eJx1jlESwiAMRC-EciQmYEqjQJgkbe3tbfHHGfVvs_smu6CKFqjdMRmLT6rXjA0FSji0g-945oodMv7LK2UBI26hklEe8henSzyvYNwphc5iUNSppRCZTU2g-1w4Qrmo7YVadrqrYfURFN2Wqv4nR0ptJRv9FdqxWPxv-0134dty7NEUVrohv-GJiqGE8y-q25720TkJVNxYHsMvFAVk9zZjxUtOG8YXaCKMBg" />
+
+    <script src="//assets.adobedtm.com/be5dfd287373/8f0ead8a37e7/launch-09394abc039d.min.js"></script>
+
+  </head>
+  <body class="path-node page-node-type-wcms-product-basic has-glyphicons wcms-bootstrap theme-gcweb">
+    <nav aria-label="Skip links">
+      <ul id="wb-tphp">
+        <li class="wb-slc">
+          <a class="wb-sl" href="#wb-cont">
+            Aller au contenu principal
+          </a>
+        </li>
+        <li class="wb-slc">
+          <a class="wb-sl" href="#wb-info">
+            Aller au pied de page
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+  
+        <header class="navbar navbar-default" id="navbar" role="banner">
+            <div id="wb-bnr" class=" container ">
+        <section id="wb-lng" class="visible-md visible-lg text-right">
+          <h2 class="wb-inv">Sélection de la langue</h2>
+          <div class="row">
+            <div class="col-md-12">
+                <div class="region region-language-toggle">
+    <section class="language-switcher-language-url block block-wxt-library block-wxt-language-blocklanguage-interface clearfix" id="block-wcms-languageswitcher" data-block-plugin-id="wxt_language_block:language_interface">
+  
+      <h2 class="wb-inv">WxT Language switcher</h2>
+    
+
+      <ul class="links list-inline mrgn-bttm-0">                    <li><a href="/en/terms-conditions/open-licence" class="language-link" lang="en" hreflang="en" data-drupal-link-system-path="node/88"><span class="hidden-xs">English</span><abbr title="English" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">en</abbr></a></li></ul>
+  </section>
+
+  </div>
+
+            </div>
+          </div>
+        </section>
+        <div class="row">
+            <div class="region col-xs-9 col-sm-5 col-md-4 region-banner">
+      <div class="brand">
+        <a href="https://www.canada.ca/fr.html">
+      <img id="header-logo" src="/themes/custom/stc_bootstrap/assets/sig-blk-gov-fr.svg" alt="Gouvernement du Canada" />
+      <span class="wb-inv">
+        / <span lang="en">Government of Canada</span>
+      </span>
+    </a>
+  </div>
+
+  </div>
+
+          <section class="wb-mb-links col-sm-offset-4 col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+            <h2>Recherche et menus</h2>
+            <ul class="list-inline text-right chvrn">
+              <li>
+                <a href="#mb-pnl" title="Recherche et menus" aria-controls="mb-pnl" class="overlay-lnk" role="button">
+                  <span class="glyphicon glyphicon-search">
+                    <span class="glyphicon glyphicon-th-list">
+                      <span class="wb-inv">Recherche et menus</span>
+                    </span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <div id="mb-pnl"></div>
+          </section>
+            <div class="region region-search">
+    <section  class="wxt-search-block-form block clearfix col-lg-offset-2 col-md-offset-2 col-xs-6 text-right visible-md visible-lg" data-drupal-selector="wxt-search-block-form" id="wb-srch" data-block-plugin-id="wxt_search_form_block">
+  
+      <h2 class="block-title">WxT Search form</h2>
+    
+
+      <form action="https://www.statcan.gc.ca/recherche/resultats/site-recherche" method="get" id="wxt-search-block-form" accept-charset="UTF-8" class="search-form search-block-form form-inline" role="search">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-q js-form-item-q form-no-label form-group">
+      <label for="wb-srch-q" class="control-label sr-only">Rechercher dans Statistique Canada</label>
+  
+  
+  <input data-drupal-selector="wb-srch-q" class="form-search form-control" placeholder="Rechercher dans Statistique Canada" type="search" id="wb-srch-q" name="q" value="" size="27" maxlength="150" />
+
+  
+  
+  </div>
+<div class="submit form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-submit-container" id="edit-submit-container"><button class="btn-primary button js-form-submit form-submit btn icon-before" data-drupal-selector="wb-srch-sub" type="submit" id="wb-srch-sub" name="op" value="" title="Rechercher"><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span><span class="wb-inv">Rechercher</span></button></div>
+<input data-drupal-selector="edit-fq" type="hidden" name="fq" value="stclac:2" />
+</form>
+
+  </section>
+
+
+  </div>
+
+        </div>
+      </div>
+              <nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-trgt="mb-pnl">
+      <div class="pnl-strt container nvbar">
+      <h2 class="wb-inv">Menus des sujets</h2>
+      <div class="row">
+        <ul class="list-inline menu" role="menubar">
+          <li><a href="https://www150.statcan.gc.ca/n1/fr/sujets?MM=1" class="item">Sujets</a></li>
+          <li><a href="https://www150.statcan.gc.ca/n1/fr/type/donnees?MM=1" class="item">Donn&eacute;es</a></li>
+          <li><a href="https://www150.statcan.gc.ca/n1/fr/type/analyses?MM=1" class="item">Analyses</a></li>
+          <li><a href="#references" class="item">R&eacute;f&eacute;rences</a>
+            <ul class="sm list-unstyled" id="references" role="menu">
+              <li><a href="https://www150.statcan.gc.ca/n1/fr/type/references?MM=1">Ressources r&eacute;f&eacute;rences</a></li>
+              <li><a href="https://www.statcan.gc.ca/fr/concepts/index?MM=1">Normes, sources de donn&eacute;es et m&eacute;thodes</a></li>
+              <li class="slflnk"><a href="https://www.statcan.gc.ca/fr/references?MM=1">R&eacute;f&eacute;rences &#8212; Page principale</a></li>
+            </ul>
+          </li>
+          <li><a href="https://www.statcan.gc.ca/fr/geographie?MM=1" class="item">G&eacute;ographie</a></li>
+          <li><a href="#recensement" class="item">Recensement</a>
+            <ul class="sm list-unstyled" id="recensement" role="menu">
+              <li><a href="https://www.recensement.gc.ca/fr/index?MM=1">Recensement de 2026</a></li>
+              <li><a href="https://www12.statcan.gc.ca/census-recensement/index-fra.cfm?MM=1">Recensement de la population</a></li>
+              <li><a href="https://www.statcan.gc.ca/fr/recensement-agriculture?MM=1">Recensement de l'agriculture</a></li>
+              <li><a href="https://www.statcan.gc.ca/fr/recensement-environnement?MM=1">Recensement de l'environnement</a></li>
+              <li><a href="https://www.statcan.gc.ca/fr/recensement/sensibilisation-recensement?MM=1">Sensibilisation au recensement</a></li>
+              <li class="slflnk"><a href="https://www.statcan.gc.ca/fr/recensement?MM=1">Recensement &#8212; Page principale</a></li>
+            </ul>
+          </li>
+          <li><a href="#enquetes" class="item">Enqu&ecirc;tes et programmes statistiques</a>
+            <ul class="sm list-unstyled" id="enquetes" role="menu">
+              <li><a href="https://www.statcan.gc.ca/fr/enquete/index?MM=1">Renseignements pour les participants aux enqu&ecirc;tes</a></li>
+              <li><a href="https://www150.statcan.gc.ca/n1/fr/type/enquetes?MM=1">R&eacute;sultats et documentation des enqu&ecirc;tes et des programmes statistiques</a></li>
+              <li><a href="https://www.statcan.gc.ca/fr/nos-donnees?MM=1">Utilisation de nouvelles donn&eacute;es et de donn&eacute;es existantes pour les statistiques officielles</a></li>
+              <li class="slflnk"><a href="https://www.statcan.gc.ca/fr/enquetes?MM=1">Enqu&ecirc;tes et programmes statistiques &#8212; Page principale</a></li>
+            </ul>
+          </li>
+          <li><a href="https://www.statcan.gc.ca/fr/apercu/statcan?MM=1" class="item">&Agrave; propos de StatCan</a></li>
+          <li><a href="https://www.canada.ca/fr.html" class="item">Canada.ca</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+              <div class="region region-breadcrumb">
+      <nav id="wb-bc" property="breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb">
+              <li >
+                      <a href="/fr">Accueil</a>
+                  </li>
+              <li >
+                      <a href="https://www.statcan.gc.ca/fr/reference/avis">Avis</a>
+                  </li>
+          </ol>
+  </div>
+</nav>
+
+
+  </div>
+
+    </header>
+  
+
+  <div class="container">
+    <div class="row">
+
+                              <div class="highlighted">  <div class="region region-highlighted">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+</div>
+              
+                  <main role="main" property="mainContentOfPage"  class="col-md-12 main-container container js-quickedit-main-content">
+
+                                                        <div class="region region-header">
+      
+      
+                  <h1 property="name" id="wb-cont" class="gc-thickline">Licence ouverte de Statistique Canada</h1>
+            
+
+  </div>
+
+                                        <section>
+                    
+                    
+                    
+                                <a id="main-content"></a>
+                          <div class="region region-content">
+      <article class="wcms-product-basic is-promoted full clearfix">
+
+  
+    
+
+  
+  <div class="content">
+    
+            <div class="field field--name-field-basic__body field--type-text-with-summary field--label-hidden field--item"><p>La présente licence est accordée au nom de Sa Majesté le Roi du chef du Canada, représentée par le ministre responsable de Statistique Canada («&nbsp;Statistique Canada&nbsp;») à vous (un particulier ou une personne morale que vous êtes autorisé à représenter).</p>
+
+<p>Vous trouverez ci-après les conditions qui régissent votre utilisation de l'information. Votre utilisation de toute information est une indication que vous comprenez et acceptez ces conditions. Si vous n'acceptez pas ces conditions, il ne vous est pas permis d'utiliser l'information.</p>
+
+<p>Statistique Canada peut modifier cette licence en tout temps, et ces modifications entreront en vigueur dès la publication de la version modifiée de la licence dans le site Web de Statistique Canada. Votre utilisation de l'information sera régie par les conditions de la licence en vigueur à la date et à l'heure où vous avez accédé à l'information.</p>
+
+<section>
+<h2>Définitions</h2>
+
+<p>«&nbsp;Information&nbsp;»&nbsp;: regroupement des résultats non confidentiels issus des activités de Statistique Canada, ce qui comprend les fichiers de données, bases de données, fichiers de microdonnées à grande diffusion, tableaux, graphiques, cartes, rapports ou textes dont Statistique Canada est propriétaire ou concessionnaire de tous les droits de propriété intellectuelle et qui est mis à votre disposition conformément à la présente licence, moyennant des frais ou gratuitement, dans le site Web de Statistique Canada ou par d'autres moyens en vertu d'un contrat pour des biens ou des services.</p>
+
+<p>«&nbsp;Produit à valeur ajoutée&nbsp;»&nbsp;: tout produit que vous avez élaboré en adaptant ou en intégrant l'information, en tout ou en partie, conformément aux conditions de la présente licence.</p>
+</section>
+
+<section>
+<h2>Octroi de licence</h2>
+
+<p>Sous réserve des conditions de la présente licence, Statistique Canada vous accorde une licence mondiale, libre de redevances et non exclusive vous permettant&nbsp;:</p>
+
+<ul>
+	<li>d'utiliser, de reproduire, de publier, de diffuser gratuitement ou de vendre l'information;</li>
+	<li>d'utiliser, de reproduire, de publier, de diffuser gratuitement ou de vendre des produits à valeur ajoutée;</li>
+	<li>d'accorder des sous licences conférant une partie ou la totalité de ces droits, conformément aux conditions de cette licence.</li>
+</ul>
+
+<p>Durant l'exécution de toute activité susmentionnée, vous devez&nbsp;:</p>
+
+<ul>
+	<li>reproduire l'information avec exactitude;</li>
+	<li>ne pas utiliser l'information d'une façon qui laisse croire que Statistique Canada vous appuie ou appuie l'utilisation que vous faites de l'information;</li>
+	<li>ne pas présenter de manière inexacte l'information ou sa source;</li>
+	<li>utiliser l'information d'une manière qui ne viole ni n'enfreint toute loi applicable;</li>
+	<li>ne pas fusionner ni lier l'information à toute autre base de données pour tenter d'identifier une personne, une entreprise ou une organisation particulière;</li>
+	<li>ne pas présenter l'information d'une façon donnant l'impression que vous auriez pu avoir reçu ou avoir eu accès à des renseignements détenus par Statistique Canada sur toute personne, entreprise ou organisation identifiable;</li>
+	<li>ne désassembler, ni décompiler, ni effectuer quelque procédé d'ingénierie inverse que ce soit sur les logiciels qui font partie de l'information.</li>
+</ul>
+
+<h2>Droits de propriété intellectuelle</h2>
+
+<p>Les droits de propriété intellectuelle visant les produits à valeur ajoutée, à savoir tout droit de propriété intellectuelle reconnu par la loi, y compris mais sans s'y limiter les droits de propriété intellectuelle protégés par une législation, vous sont attribués ou sont attribués à la personne que vous désignez ou qui est désignée par application de la loi.</p>
+
+<p>Les droits de propriété intellectuelle visant l'information que possède Statistique Canada demeurent la propriété de Statistique Canada. Les droits de propriété intellectuelle visant l'information qui appartient à des tiers demeurent la propriété de ces derniers.</p>
+</section>
+
+<section>
+<h2>Mention de la source</h2>
+
+<p>(a) Pour tout exercice de vos droits d'utilisation de l'information, vous devez inclure et maintenir la mention suivante&nbsp;:</p>
+
+<p class="mrgn-lft-lg"><em>Source&nbsp;: Statistique Canada, nom du produit, date de référence. Reproduit et diffusé «&nbsp;tel quel&nbsp;» avec la permission de Statistique Canada.</em></p>
+
+<p>(b) Pour toute information contenue dans un produit à valeur ajoutée, vous devez inclure dans ce produit à valeur ajoutée la mention suivante&nbsp;:</p>
+
+<p class="mrgn-lft-lg"><em>Adapté de Statistique Canada, nom du produit, date de référence. Cela ne constitue pas une approbation de ce produit par Statistique Canada.</em></p>
+</section>
+
+<section>
+<h2>Promotion et publicité</h2>
+
+<p>Il vous est interdit d'utiliser sur toute reproduction de l'information ou sur tout matériel ayant trait à votre produit à valeur ajoutée, ou ailleurs&nbsp;:</p>
+
+<p>(a) le nom, l'emblème, les logos ou tout insigne ou nom de domaine de Statistique Canada ou les symboles officiels du gouvernement du Canada, y compris le mot symbole «&nbsp;Canada&nbsp;», les armoiries du Canada et le symbole du drapeau, sans l'autorisation écrite du Secrétariat du Conseil du Trésor. La demande d'autorisation au Secrétariat du Conseil du Trésor peut être adressée à&nbsp;:</p>
+
+<p class="mrgn-lft-lg"><a href="mailto:information@fip-pcim.gc.ca">information@fip-pcim.gc.ca</a><br>
+Programme de coordination de l'image de marque<br>
+Secrétariat du Conseil du Trésor du Canada<br>
+300, avenue Laurier Ouest<br>
+Ottawa (Canada) K1A 0R5</p>
+
+<p>(b) toute annotation qui pourrait être interprétée comme une approbation du produit à valeur ajoutée par Statistique Canada ou qui sous-entendrait que vous avez conclu une entente de distribution exclusive pour une partie ou pour toute l'information, ou que vous avez accès à des renseignements confidentiels ou non accessibles à d'autres parties.</p>
+</section>
+
+<section>
+<h2>Pas de garantie ni de responsabilité</h2>
+
+<p>L'information est octroyée sous licence «&nbsp;telle quelle&nbsp;», et Statistique Canada ne fait aucune assertion et n'offre aucune garantie d'aucune sorte, explicite ou implicite, relativement à l'information et rejette expressément toute garantie implicite de qualité marchande de l'information ou de son utilité à des fins particulières.</p>
+
+<p>Statistique Canada ni aucun de ses ministres, dirigeants, fonctionnaires, employés, agents, successeurs et ayant droit ne sera tenu responsable d'aucune erreur ni omission dans l'information et ne sera en aucun cas tenu responsable des pertes, blessures ou dommages directs, indirects, spéciaux, conséquents ou autre, quelle qu'en soit la cause, que vous pourriez subir à n'importe quel moment en raison de votre possession de l'information, de votre accès à cette information ou de son utilisation, ou résultant de l'exercice de vos droits ou du respect de vos obligations aux termes de la présente licence.</p>
+</section>
+
+<section>
+<h2>Terme</h2>
+
+<p>La présente licence entre en vigueur à la date et à l'heure où vous accédez à l'information et est résiliée automatiquement si vous enfreignez l'une des conditions de cette licence.</p>
+
+<p>Nonobstant la résiliation de cette licence&nbsp;:</p>
+
+<ol>
+	<li class="mrgn-bttm-md">vous pouvez continuer de distribuer les produits à valeur ajoutée aux fins de remplir les commandes faites avant la résiliation de la licence, à condition que vous respectiez les exigences énoncées dans la clause de mention de la source;</li>
+	<li>les licences des particuliers ou des personnes morales auxquels vous avez fourni des produits à valeur ajoutée ou des reproductions de l'information en vertu de la présente licence ne seront pas résiliées à condition qu'ils continuent à se conformer entièrement aux conditions de ces licences.</li>
+</ol>
+</section>
+
+<section>
+<h2>Survie</h2>
+
+<p>Les obligations qui survivent à la résiliation de la présente licence, expressément ou en raison de leur nature, demeureront en vigueur. Pour plus de clarté, et sans limiter la généralité de ce qui précède, les dispositions qui suivent survivent à l'expiration ou à la résiliation de la présente licence&nbsp;: «&nbsp;Mention de la source&nbsp;» et «&nbsp;Aucune garantie ni responsabilité&nbsp;».</p>
+</section>
+
+<section>
+<h2>Lois applicables</h2>
+
+<p>La présente licence est régie par les lois de la province de l'Ontario et les lois applicables du Canada. Toute procédure judiciaire se rapportant à cette licence ne pourra être portée que devant les tribunaux de l'Ontario ou la Cour fédérale du Canada.</p>
+</section>
+</div>
+      
+  </div>
+
+</article>
+
+
+  </div>
+
+                            <div class="pagedetails region region-content-footer">
+    <div class="row">
+      
+<section id="block-wcms-datemodifiedblock" class="col-xs-12 col-sm-12 col-md-12 block block-wxt-library block-date-modified-block clearfix" data-block-plugin-id="date_modified_block">
+  
+    
+
+      <dl id="wb-dtmd">
+<dt>Date de modification :</dt>
+<dd><time property="dateModified">2025-07-10</time></dd></dl>
+  </section>
+
+    </div>
+  </div>
+
+                              </section>
+
+      </main>
+
+                        
+                        
+    </div>
+  </div>
+
+
+
+              <footer id="wb-info">
+    <h2 class="wb-inv">&Agrave; propos de ce site</h2>
+    <div class="gc-contextual">
+      <div class="container">
+        <nav>
+          <h3>Statistique Canada</h3>
+          <ul class="list-unstyled colcount-sm-2 colcount-md-3">
+            <li><a href="https://www.statcan.gc.ca/fr/reference/centreref/index">Contactez StatCan</a></li>
+            <li><a href="https://www.statcan.gc.ca/fr/confiance">Centre de confiance</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="gc-main-footer">
+      <div class="container">
+        <nav>
+          <h3>Gouvernement du Canada</h3>
+          <ul class="list-unstyled colcount-sm-2 colcount-md-3">
+            <li><a href="https://www.canada.ca/fr/contact.html">Toutes les coordonn&eacute;es</a></li>
+            <li><a href="https://www.canada.ca/fr/gouvernement/min.html">Minist&egrave;res et organismes</a></li>
+            <li><a href="https://www.canada.ca/fr/gouvernement/systeme.html">&Agrave; propos du gouvernement</a></li>
+          </ul>
+          <h4><span class="wb-inv">Th&egrave;mes et sujets</span></h4>
+          <ul class="list-unstyled colcount-sm-2 colcount-md-3">
+            <li><a href="https://www.canada.ca/fr/services/emplois.html">Emplois</a></li>
+            <li><a href="https://www.canada.ca/fr/services/immigration-citoyennete.html">Immigration et citoyennet&eacute;</a></li>
+            <li><a href="https://voyage.gc.ca/">Voyage et tourisme</a></li>
+            <li><a href="https://www.canada.ca/fr/services/entreprises.html">Entreprises</a></li>
+            <li><a href="https://www.canada.ca/fr/services/prestations.html">Prestations</a></li>
+            <li><a href="https://www.canada.ca/fr/services/sante.html">Sant&eacute;</a></li>
+            <li><a href="https://www.canada.ca/fr/services/impots.html">Imp&ocirc;ts</a></li>
+            <li><a href="https://www.canada.ca/fr/services/environnement.html">Environnement et ressources naturelles</a></li>
+            <li><a href="https://www.canada.ca/fr/services/defense.html">S&eacute;curit&eacute; nationale et d&eacute;fense</a></li>
+            <li><a href="https://www.canada.ca/fr/services/culture.html">Culture, histoire et sport</a></li>
+            <li><a href="https://www.canada.ca/fr/services/police.html">Services de police, justice et urgences</a></li>
+            <li><a href="https://www.canada.ca/fr/services/transport.html">Transport et infrastructure</a></li>
+            <li><a href="https://www.international.gc.ca/world-monde/index.aspx?lang=fra">Le Canada et le monde</a></li>
+            <li><a href="https://www.canada.ca/fr/services/finance.html">Argent et finance</a></li>
+            <li><a href="https://www.canada.ca/fr/services/science.html">Science et innovation</a></li>
+            <li><a href="https://www.canada.ca/fr/services/autochtones.html">Autochtones</a></li>
+            <li><a href="https://www.canada.ca/fr/services/veterans.html">V&eacute;t&eacute;rans et militaires</a></li>
+            <li><a href="https://www.canada.ca/fr/services/jeunesse.html">Jeunesse</a></li>
+            <li><a href="https://www.canada.ca/fr/services/evenements-vie.html">G&eacute;rer les &eacute;v&eacute;nements de la vie</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="gc-sub-footer">
+      <div class="container d-flex align-items-center">
+        <nav>
+          <h3 class="wb-inv">Organisation du gouvernement du Canada</h3>
+          <ul>
+            <li><a href="https://www.canada.ca/fr/sociaux.html">M&eacute;dias sociaux</a></li>
+            <li><a href="https://www.canada.ca/fr/mobile.html">Applications mobiles</a></li>
+            <li><a href="https://www.canada.ca/fr/gouvernement/a-propos-canada-ca.html">À propos de Canada.ca</a></li>
+            <li><a href="https://www.statcan.gc.ca/fr/avis">Avis</a></li>
+            <li><a href="https://www.statcan.gc.ca/fr/a-propos/transparence/confidentialite">Confidentialit&eacute;</a></li>
+          </ul>
+        </nav>
+        <div class="wtrmrk align-self-end">
+          <img src='/libraries/theme-gcweb/assets/wmms-blk.svg' alt="Symbole du gouvernement du Canada" />
+        </div>
+      </div>
+    </div>
+  </footer>
+
+      
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"fr\/","currentPath":"node\/88","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"fr"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click"},"statistics":{"data":{"nid":"88"},"url":"\/core\/modules\/statistics\/statistics.php"},"ajaxTrustedUrl":{"https:\/\/www.statcan.gc.ca\/recherche\/resultats\/site-recherche":true},"user":{"uid":0,"permissionsHash":"b7c834737d201f4fcd8cf283caa024dadcfeceea2ce33b2f751301f6f15c6248"}}</script>
+<script src="/sites/default/files/js/js_OpoOyUHNBC3m1i9oV4d-hmcKmGt3xR1XxBBmXlYu5Ak.js?scope=footer&amp;delta=0&amp;language=fr&amp;theme=wcms_bootstrap&amp;include=eJyNjtEOwjAIRX-os5_UQIeVpCsNxdX9vXVRF40PvsHJgXtRxJopVI-vKVSlwIXNvZGvUmUldc3AuBnH5me9Vsing7gelxZgFqQABfK2a1_7X1I4j-CRtrtHiZQFIU8tKld7fuKy8qOBlGWcJ1L_G7t-s5AZFXTzdqGFphQ74QfvZBMK9Tur129J"></script>
+<script src="/libraries/wet-boew/js/wet-boew.min.js?tma8ky"></script>
+<script src="/sites/default/files/js/js_YR5UIhUd_o5D2jaTTd8zdiW77qYACyh69SJnxG8iM6M.js?scope=footer&amp;delta=2&amp;language=fr&amp;theme=wcms_bootstrap&amp;include=eJyNjtEOwjAIRX-os5_UQIeVpCsNxdX9vXVRF40PvsHJgXtRxJopVI-vKVSlwIXNvZGvUmUldc3AuBnH5me9Vsing7gelxZgFqQABfK2a1_7X1I4j-CRtrtHiZQFIU8tKld7fuKy8qOBlGWcJ1L_G7t-s5AZFXTzdqGFphQ74QfvZBMK9Tur129J"></script>
+<script src="/libraries/theme-gcweb/js/theme.min.js?tma8ky"></script>
+
+  </body>
+</html>
