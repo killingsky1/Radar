@@ -21,7 +21,7 @@ from zoneinfo import ZoneInfo
 
 from .registry import SOURCES
 
-VERSION = "score-5"
+VERSION = "score-6"
 DEMI_VIE = 30
 DEMI_VIE_FONDS = 60  # le 13F arrive jusqu'à 45 jours après la fin du trimestre
 AGE_MAX = 90
@@ -185,7 +185,10 @@ SANS_POINTS = {
     "lobbying": "Lobbying à Washington (LDA.gov) : montré sur la fiche de la compagnie, sans points. L'étude de Chen, "
                 "Parsley et Yang (2015) mesure un effet sur 3 ans, selon le lobbying par rapport à la taille de la "
                 "compagnie, que Radar ne mesure pas.",
-    "oge": "Rapports de transactions du président et du cabinet (OGE) : liste seulement, le contenu n'est pas lu.",
+    "cabinet": "Transaction d'un ministre ou d'un haut fonctionnaire (rapport 278-T de l'OGE) : aucune étude ne mesure "
+               "d'effet pour ces postes (les études portent sur le Congrès), et une vente peut être imposée par "
+               "l'entente d'éthique du poste.",
+    "oge": "Rapports du président (OGE) : images numérisées, en liste seulement ; transactions du cabinet : sans points.",
     "8k_autre": "Autre point du 8-K (contrat, acquisition, avis de retrait de la bourse…) : effet incertain.",
     "contexte": "Contexte seulement.",
 }
@@ -211,7 +214,7 @@ METHODE = {
                for c, r in REGLES.items()],
     "sans_points": [SANS_POINTS[k] for k in ("fonds", "plan", "automatique", "emission", "emission_meme_prix", "avis_144",
                                              "13g", "13d_autre", "13d_pas_sous_evalue", "13d_suivi", "fonds_vente",
-                                             "elu_vente", "offre", "ftc", "8k_autre", "lobbying", "oge")]
+                                             "elu_vente", "cabinet", "offre", "ftc", "8k_autre", "lobbying", "oge")]
                    + ["Fed, Banque du Canada, décrets, sanctions, ventes d'armes, CFTC : contexte, sans points."],
     "familles_noms": FAMILLES,
     "etudes": {k: {"titre": t, "constat": c, "lien": u} for k, (t, c, u) in ETUDES.items()},
@@ -307,6 +310,8 @@ def evaluer(ev: dict, emissions: frozenset = frozenset(), chefs: frozenset = fro
         return regle("faillite") if "1.03" in items else regle("etats_financiers") if "4.02" in items else contexte("8k_autre")
     if s == "sec_offres":
         return contexte("offre")
+    if s == "oge_278t":
+        return contexte("cabinet")
     if s == "ftc_fusions":
         return contexte("ftc")
     return contexte("contexte")

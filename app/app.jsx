@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.9.0";
+const VERSION = "0.10.0";
 
 // ---------- Constantes ----------
 
@@ -85,6 +85,8 @@ const CONTROLES_SOURCES = {
   sans_formulaire_201: "Publié sans formulaire 201 (lien direct de l'OGE)",
   poste_publie_sans_201: "Président, vice-président ou poste de niveau I ou II",
   document_pdf: "Document PDF officiel",
+  declarant_concorde: "Nom du déclarant = index de l'OGE",
+  type_reconnu: "Type reconnu (achat, vente, échange)",
   lettre_officielle: "Lettre d'approbation officielle",
   trimestres_consecutifs: "Trimestres consécutifs comparés",
   rapports_complets: "Deux rapports complets comparés",
@@ -761,7 +763,9 @@ function FeuilleDetail({ ev, fermer }) {
 
       <AuCongres ev={ev} />
 
-      {ev.category === "politiciens" && ev.data?.transactions?.length > 0 && (
+      {ev.source === "oge_278t" && ev.data?.transactions?.length > 0 && <LignesOge ev={ev} />}
+
+      {(ev.source === "chambre_ptr" || ev.source === "senat_ptr") && ev.data?.transactions?.length > 0 && (
         <>
           <h3 className="section">Transactions déclarées</h3>
           <div className="carte liste transactions">
@@ -818,6 +822,38 @@ function FeuilleDetail({ ev, fermer }) {
         )}
       </p>
     </Feuille>
+  );
+}
+
+// ---------- OGE : les lignes d'un rapport 278-T du cabinet (telles qu'écrites par le déclarant) ----------
+
+const TYPES_278T = { Purchase: "achat", Sale: "vente", Exchange: "échange" };
+
+function LignesOge({ ev }) {
+  const ls = ev.data.transactions;
+  const rapport = ev.kind === "rapport_278t";
+  return (
+    <>
+      <h3 className="section">{rapport ? `Les ${ls.length} lignes du rapport` : "Transactions déclarées"}</h3>
+      <div className="carte liste lignes-oge">
+        {ls.map((t) => (
+          <div key={t.n} className="ligne-oge">
+            <div className="transaction">
+              <span className="transaction-qui">
+                {dateCourte(t.date)} · {TYPES_278T[t.type] ?? t.type}
+                {t.symbole && rapport ? <span className="symbole">{t.symbole}</span> : null}
+              </span>
+              <span className="transaction-montant">{fourchette(t.montant)}</span>
+            </div>
+            <p className="ligne-oge-desc">
+              {t.n}. {t.description}
+              {t.avis === "Yes" ? " · avis reçu plus de 30 jours après" : ""}
+            </p>
+            {t.note && <p className="ligne-oge-note">Note du déclarant : « {t.note} »</p>}
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 
@@ -2070,6 +2106,12 @@ input { font: inherit; color: var(--texte); }
 .transaction-qui { color: var(--texte-2); min-width: 0; }
 .transaction-montant { color: var(--texte); font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
 .congres-chef { padding: 11px 16px; font-size: .9375rem; color: var(--texte-2); }
+.ligne-oge { position: relative; padding-bottom: 10px; }
+.ligne-oge + .ligne-oge::before { content: ""; position: absolute; top: 0; left: 16px; right: 0; height: 1px; background: var(--ligne); transform: scaleY(.5); }
+.ligne-oge .transaction { padding-bottom: 2px; }
+.ligne-oge .transaction-qui { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.ligne-oge-desc { margin: 0; padding: 0 16px; color: var(--texte); font-size: .875rem; line-height: 1.4; overflow-wrap: anywhere; }
+.ligne-oge-note { margin: 4px 0 0; padding: 0 16px; color: var(--texte-2); font-size: .8125rem; line-height: 1.4; }
 .congres-source { color: var(--texte-3); font-size: .75rem; margin: 8px 4px 0; line-height: 1.5; }
 .lobbying-total { margin: 0; padding: 12px 16px 0; font-size: 1.375rem; font-weight: 750; font-variant-numeric: tabular-nums; }
 .lobbying-texte { margin: 0; padding: 8px 16px 12px; color: var(--texte-2); font-size: .9375rem; line-height: 1.45; }

@@ -214,9 +214,19 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     const pied = await p.locator(".detail-pied").innerText();
     assert.ok(pied.includes("Office of Government Ethics") && pied.includes("non commercial") && !pied.includes("du Congrès"), pied);
     const ok = await p.locator(".feuille .controle.ok").allInnerTexts();
-    for (const c of ["Publié sans formulaire 201 (lien direct de l'OGE)", "Président, vice-président ou poste de niveau I ou II", "Document PDF officiel"])
+    for (const c of ["Publié sans formulaire 201 (lien direct de l'OGE)", "Président, vice-président ou poste de niveau I ou II", "Document PDF officiel",
+      "Nom du déclarant = index de l'OGE", "Type reconnu (achat, vente, échange)"])
       assert.ok(ok.some((x) => x.includes(c)), c);
     assert.equal(await p.locator(".feuille .controle.rate").count(), 0);
+    await fermer();
+  });
+  await verifier("Détail d'un rapport de l'OGE : ses 2 lignes (type, montant, symbole, avis tardif, note du déclarant)", async () => {
+    await p.locator(".ligne", { hasText: "278-T" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
+    assert.equal(await p.locator(".lignes-oge .ligne-oge").count(), 2);
+    assert.ok((await p.locator("h3.section", { hasText: "lignes du rapport" }).innerText()).toLowerCase().includes("les 2 lignes du rapport"));
+    const [l1, l2] = (await p.locator(".lignes-oge .ligne-oge").allInnerTexts()).map((t) => t.replace(/\u00a0|\u202f/g, " "));
+    assert.ok(l1.includes("vente") && l1.includes("XMPL") && l1.includes("1. Exemple Corp. (XMPL)") && /15 001\s*\$ US à 50 000\s*\$ US/.test(l1), l1);
+    assert.ok(l2.includes("achat") && l2.includes("avis reçu plus de 30 jours après") && l2.includes("Note du déclarant : « Placement fait par le gestionnaire (exemple). »"), l2);
     await fermer();
   });
   await verifier("Détail d'un 13D : le but écrit par le déclarant", async () => {
