@@ -141,14 +141,19 @@ for e in parts:
                      if p.strip().lower() in POINTS})  # une ligne par point dans l'en-tête brut
     if points != sorted(d["points"]):
         pb.append(f"points de l'en-tête {points} ≠ {d['points']}")
+    if re.search(r"\([^()]*\(", e["title"]):
+        pb.append("titre avec des parenthèses dans des parenthèses")
     if not set(e["tickers"]) & set(par_cik.get(str(int(d["cik"])), [])):
         pb.append(f"symbole {e['tickers']} ≠ fichier de la SEC pour le CIK {d['cik']}")
     for doc in d["documents"]:
         t = texte(lire(doc["url"]))
         for x in doc["extraits"]:
             coeur = x.removeprefix("… ").removesuffix(" …")
-            if coeur not in t:
+            i = t.find(coeur)
+            if i < 0:
                 pb.append(f"extrait absent du document {doc['url'].rsplit('/', 1)[-1]} : « {coeur[:80]}… »")
+            elif (i > 0 and t[i - 1] != " ") or (i + len(coeur) < len(t) and t[i + len(coeur)] != " "):
+                pb.append(f"extrait coupé au milieu d'un mot : « {coeur[:40]}… {coeur[-25:]} »")
     if pb:
         ecarts.append(f"participation {e['official_id']} : " + " ; ".join(pb))
     dire(f"Participation {e['official_id']} : « {e['title'][:120]} » · {'conforme' if not pb else 'ÉCART'}")

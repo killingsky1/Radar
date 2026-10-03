@@ -42,6 +42,10 @@ def dire(t):
     lignes.append(t)
 
 
+class Refus(Exception):
+    """Le site refuse le robot (robots.txt refusé ou qui interdit, ou erreur 401/403) : on respecte, rien n'est relu."""
+
+
 def lire(url):
     site = f"{urlparse(url).scheme}://{urlparse(url).netloc}"
     ua = UA_SEC if urlparse(url).netloc.endswith("sec.gov") else UA
@@ -59,14 +63,19 @@ def lire(url):
                 rp.allow_all = True
         ROBOTS[site] = rp
     if not ROBOTS[site].can_fetch(ua, url):
-        raise SystemExit(f"robots.txt ne permet pas {url}")
+        raise Refus(f"robots.txt refusé ou qui ne permet pas {url}")
     delai = max(1.5, float(ROBOTS[site].crawl_delay(ua) or 0))
     attente = delai - (time.monotonic() - DERNIER.get(site, 0.0))
     if attente > 0:
         time.sleep(attente)
     req = urllib.request.Request(url, headers={"User-Agent": ua, "Accept-Encoding": "identity"})
-    with urllib.request.urlopen(req, timeout=120) as r:
-        contenu = r.read()
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            contenu = r.read()
+    except urllib.error.HTTPError as exc:
+        if exc.code in (401, 403):
+            raise Refus(f"erreur {exc.code} sur {url}") from exc
+        raise
     DERNIER[site] = time.monotonic()
     return contenu
 
@@ -251,11 +260,16 @@ if autres:
 ETAPES = {"chambre-1": ("HouseBillStages", "Première lecture"), "chambre-2": ("HouseBillStages", "Deuxième lecture"),
           "chambre-3": ("HouseBillStages", "Troisième lecture"), "senat-1": ("SenateBillStages", "Première lecture"),
           "senat-2": ("SenateBillStages", "Deuxième lecture"), "senat-3": ("SenateBillStages", "Troisième lecture")}
-fiches, ok = {}, 0
+fiches, ok, non_verifiables = {}, 0, []
 for e in par_source["legisinfo"]:
     d = e["data"]
     if e["official_url"] not in fiches:
-        fiches[e["official_url"]] = json.loads(lire(e["official_url"] + "/json").decode("utf-8-sig"))[0]
+        try:
+            fiches[e["official_url"]] = json.loads(lire(e["official_url"] + "/json").decode("utf-8-sig"))[0]
+        except Refus as exc:
+            non_verifiables.append(f"LEGISinfo : le site refuse la relecture ({exc}) : les {len(par_source['legisinfo'])} "
+                                   "infos publiées ne peuvent pas être relues aujourd'hui (on respecte le refus)")
+            break
     fiche = fiches[e["official_url"]]
     publie = datetime.fromisoformat(d["date_officielle"]).astimezone(timezone.utc).replace(tzinfo=None)
     if d["cle"] == "sanction":
@@ -270,10 +284,14 @@ for e in par_source["legisinfo"]:
         ecarts.append(f"LEGISinfo {e['official_id']} : étape à {officiel} (UTC) dans la fiche ≠ publiée {d['date_officielle']}")
     else:
         ok += 1
-dire(f"LEGISinfo : {ok}/{len(par_source['legisinfo'])} étapes = date de l'étape dans la fiche officielle du projet "
-     f"({len(fiches)} fiches relues)")
+if not non_verifiables:
+    dire(f"LEGISinfo : {ok}/{len(par_source['legisinfo'])} étapes = date de l'étape dans la fiche officielle du projet "
+         f"({len(fiches)} fiches relues)")
 
-dire("\n".join(ecarts) if ecarts else "AUCUN ÉCART : chaque info relue à sa source officielle.")
-dire("VERDICT : " + ("PROBLÈME" if ecarts else "OK"))
+for n in non_verifiables:
+    dire("NON VÉRIFIABLE : " + n)
+dire("\n".join(ecarts) if ecarts else "AUCUN ÉCART : chaque info qui a pu être relue = sa source officielle.")
+dire("VERDICT : " + ("PROBLÈME" if ecarts else "OK" + (" (sauf LEGISinfo : non vérifiable, le site refuse)"
+                                                        if non_verifiables else "")))
 SORTIE.write_text("\n".join(lignes) + "\n", encoding="utf-8")
 sys.exit(1 if ecarts else 0)

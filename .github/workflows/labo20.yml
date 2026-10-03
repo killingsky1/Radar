@@ -5,7 +5,7 @@ on:
     branches: [labo]
     paths: ["labo/declencheur-score.txt", "labo/recalcul_score.py", "labo/site_score.cjs", "labo/verif_congres.py",
             "labo/verif_canada3c.py", "labo/verif_canada3c2.py", "labo/verif_lot3d.py",
-            "labo/verif_lot3d2.py", ".github/workflows/labo20.yml"]
+            "labo/verif_lot3d2.py", "labo/verif_lotA.py", ".github/workflows/labo20.yml"]
 
 permissions:
   contents: write
@@ -46,6 +46,9 @@ jobs:
       - name: États-Unis (lot 3d, livraison 2) contre-vérifié (API d'USAspending, dépôts de la SEC)
         if: always()
         run: python labo/verif_lot3d2.py principal/data labo/resultats-score/lot3d2.txt
+      - name: Lot A contre-vérifié (doublons de formulaires 4, sites qui refusent le robot, titres)
+        if: always()
+        run: python labo/verif_lotA.py principal/data labo/resultats-score/lotA.txt
       - name: Navigateur (installé même si une vérification a échoué)
         if: always()
         run: npm i --no-save playwright@1.56.1
