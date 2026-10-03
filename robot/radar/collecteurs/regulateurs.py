@@ -257,7 +257,10 @@ def lire_action_ofac(page: str) -> dict:
     retraits = 0
     blocs = re.split(r"(The following [^:]{5,90}OFAC's SDN List:)", texte)
     for i in range(1, len(blocs) - 1, 2):
-        entete, contenu = blocs[i].lower(), blocs[i + 1]
+        entete = blocs[i].lower()
+        # La liste s'arrête au paragraphe administratif qui peut la suivre (vu le 23 sept. 2026 : « Unrelated
+        # Administrative List Changes… », compté à tort comme 2 retraits de plus).
+        contenu = re.split(r"Unrelated Administrative List Changes", blocs[i + 1])[0]
         fiches = len(re.findall(r"(?:\[[A-Z0-9-]+\]\s*)+", contenu))  # chaque fiche finit par [PROGRAMME(S)]
         if "added" in entete:
             cat = next((v for k, v in CATEGORIES_SDN.items() if k[:6] in entete), "fiches")
