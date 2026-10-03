@@ -16,6 +16,12 @@ const fs = require("fs");
   const dire = (t) => { console.log(t); lignes.push(t); };
   const photo = async (nom) => { await p.waitForTimeout(600); await p.screenshot({ path: `${dossier}/${nom}.png` }); };
 
+  // Attendre que GitHub Pages serve la nouvelle app (au plus 6 minutes).
+  for (let i = 0; i < 24; i++) {
+    const t = await (await ctx.request.get(`${base}app.js?x=${Date.now()}`)).text();
+    if (t.includes("0.7.1")) break;
+    await new Promise((ok) => setTimeout(ok, 15000));
+  }
   const r = await ctx.request.get(`${base}data/app/aujourdhui.json?x=${Date.now()}`);
   const servi = await r.text();
   const a = JSON.parse(servi);
@@ -25,7 +31,7 @@ const fs = require("fs");
   dire(`Hausse (${a.hausse.length}) : ${a.hausse.map((x) => `${x.symbole} ${x.score}`).join(", ")}`);
   dire(`Baisse (${a.baisse.length}) : ${a.baisse.map((x) => `${x.symbole} ${x.score}`).join(", ")}`);
   const js = await (await ctx.request.get(`${base}app.js?x=${Date.now()}`)).text();
-  dire(`App en ligne : version 0.7.0 ${js.includes("0.7.0") ? "OUI" : "NON"}`);
+  dire(`App en ligne : version 0.7.1 ${js.includes("0.7.1") ? "OUI" : "NON"}`);
 
   await p.goto(base);
   await p.waitForSelector(".tuiles");
@@ -48,7 +54,7 @@ const fs = require("fs");
   const regles = await p.locator(".regle").count();
   dire(`Page de la méthode : ${regles} règles`);
   dire(`Erreurs du navigateur : ${erreurs.length ? erreurs.join(" | ") : "aucune"}`);
-  const ok = pareil && memeTop && regles === a.methode.regles.length && !erreurs.length && js.includes("0.7.0");
+  const ok = pareil && memeTop && regles === a.methode.regles.length && !erreurs.length && js.includes("0.7.1");
   dire(ok ? "VERDICT : OK" : "VERDICT : PROBLÈME");
   fs.writeFileSync(`${dossier}/site.txt`, lignes.join("\n") + "\n");
   await b.close();
