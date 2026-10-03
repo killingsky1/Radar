@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.13.0";
+const VERSION = "0.14.0";
 
 // ---------- Constantes ----------
 
@@ -133,6 +133,15 @@ const CONTROLES_SOURCES = {
   lien_du_message: "Lien du message officiel",
   sujet_surtaxes: "Surtaxes ou interdiction d'importation",
   date_d_envoi_lue: "Date d'envoi lue",
+  seuil_de_100_millions: "100 M$ et plus engagés",
+  contrat_federal: "Contrat fédéral (pas une subvention ni un prêt)",
+  date_de_signature_lue: "Date de signature lue",
+  fournisseur_lu: "Fournisseur lu",
+  extrait_officiel: "Extrait exact du dépôt officiel",
+  gouvernement_nomme: "Gouvernement américain nommé dans l'extrait",
+  titre_de_propriete: "Actions ou bons de souscription dans l'extrait",
+  point_8k_retenu: "Point du 8-K lu (1.01, 3.02 ou 8.01)",
+  compagnie_cotee: "Compagnie cotée en bourse",
   lettre_officielle: "Lettre d'approbation officielle",
   trimestres_consecutifs: "Trimestres consécutifs comparés",
   rapports_complets: "Deux rapports complets comparés",
@@ -892,6 +901,15 @@ function FeuilleDetail({ ev, fermer }) {
           <>
             <br />
             <span className="mention">Source : U.S. Customs and Border Protection (messages CSMS).</span>
+          </>
+        )}
+        {ev.source === "usaspending" && (
+          <>
+            <br />
+            <span className="mention">
+              Source : USAspending.gov, Trésor des États-Unis (Bureau of the Fiscal Service), consulté le {dateLongue((ev.collected_at || "").slice(0, 10))}. Noms
+              et adresses d'entreprises : données Dun &amp; Bradstreet (D&amp;B), usage limité.
+            </span>
           </>
         )}
         <MentionCanada ev={ev} />

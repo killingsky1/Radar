@@ -486,6 +486,7 @@ def lire_un_8k(ctx, depot: DepotSec) -> list[Evenement]:
     cik = depot.filers[0][0]
     t = ctx.client.get(f"{depot.dossier(cik)}/{depot.acc}-index-headers.html")
     texte = t.contenu.decode("utf-8", "replace")
+    ctx.cache.setdefault("entetes_8k", {})[depot.acc] = texte  # réutilisé par les participations (pas de 2e lecture)
     return evenements_8k(texte, empreinte_entete(texte), depot, symboles(ctx))
 
 

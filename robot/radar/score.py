@@ -187,6 +187,10 @@ SANS_POINTS = {
     "contrat_ca": "Contrat fédéral canadien : aucune étude solide trouvée sur les contrats canadiens.",
     "ccc": "Transaction de la Corporation commerciale canadienne : aucune étude solide trouvée ; montants publiés en "
            "fourchettes.",
+    "usaspending": "Contrat fédéral américain (USAspending) : publié des jours après la signature (90 jours pour la "
+                   "Défense) ; aucune étude solide trouvée sur ces données publiées plus tard.",
+    "participation_gouv": "Participation du gouvernement américain : aucune étude solide trouvée sur les cas de 2025-2026 ; "
+                          "les études plus anciennes trouvent l'effet surtout à l'annonce.",
     "lobbying": "Lobbying à Washington (LDA.gov) : montré sur la fiche de la compagnie, sans points. L'étude de Chen, "
                 "Parsley et Yang (2015) mesure un effet sur 3 ans, selon le lobbying par rapport à la taille de la "
                 "compagnie, que Radar ne mesure pas.",
@@ -327,6 +331,10 @@ def evaluer(ev: dict, emissions: frozenset = frozenset(), chefs: frozenset = fro
         return contexte("contrat_ca")
     if s == "ccc":
         return contexte("ccc")
+    if s == "usaspending":
+        return contexte("usaspending")
+    if s == "participations_gouv":
+        return contexte("participation_gouv")
     return contexte("contexte")
 
 

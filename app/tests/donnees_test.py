@@ -28,8 +28,11 @@ RESULTAT_TEST = ("https://fiscaldata.treasury.gov/static-data/published-reports/
 def faux(ctx):
     return [
         ev(1, "usaspending", "militaire", "contrat", "Lockheed Martin obtient un contrat de missiles", jour(0),
-           "https://www.usaspending.gov/award/TEST-1", tickers=["LMT"], amount_min=2.0e9, amount_max=2.0e9,
-           entities=["Lockheed Martin Corp."], direction=1,
+           "https://www.usaspending.gov/award/CONT_AWD_TEST_1", numero="CONT_AWD_TEST_1", tickers=["LMT"],
+           amount_min=2.0e9, amount_max=2.0e9, currency="USD", entities=["Lockheed Martin Corp."], direction=1,
+           data={"id": "CONT_AWD_TEST_1", "montant": 2.0e9, "signe_le": jour(95), "fournisseur": "LOCKHEED MARTIN CORP",
+                 "details": [["Fournisseur", "LOCKHEED MARTIN CORP"], ["Ministère ou agence", "Department of Defense"],
+                             ["Sommes engagées", "2 G$"]]},
            confirmations=[Confirmation("sec_8k", "https://www.sec.gov/test/8k.htm", "TEST-8K")]),
         ev(2, "sec_form4", "compagnies", "achat_initie", "le PDG de Nvidia achète 50 000 actions", jour(0),
            "https://www.sec.gov/test/form4.xml", occ=jour(2), tickers=["NVDA"], amount_min=6.2e6, amount_max=6.2e6,
@@ -144,6 +147,18 @@ def faux(ctx):
                  "titre_officiel": "GUIDANCE: Section 232 Duties on Imports of Example Articles",
                  "details": [["Message", "CSMS # 99999999"], ["Proclamations citées", "11020"],
                              ["Extrait", "This message provides guidance (example)."]]}),
+        ev(21, "participations_gouv", "gouvernement", "participation_gouv",
+           "MP Materials : un 8-K dit que le gouvernement américain (ministère du Commerce) reçoit, détient ou revend "
+           "des titres de la compagnie (exemple)", jour(7), "https://www.sec.gov/Archives/edgar/data/1801368/test-index.htm",
+           numero="0001801368-26-999999", tickers=["MP"], entities=["MP Materials Corp.", "Gouvernement américain"],
+           data={"points": ["1.01", "3.02"], "ministere": "Commerce",
+                 "documents": [{"url": "https://www.sec.gov/Archives/edgar/data/1801368/test.htm", "type": "8-K",
+                                "extraits": ["On August 22, 2025, the Company entered into an agreement with the United "
+                                             "States Department of Commerce to issue shares of common stock (exemple)."]}],
+                 "details": [["Compagnie", "MP Materials Corp."], ["Ministère", "ministère du Commerce"],
+                             ["Extrait (8-K)", "On August 22, 2025, the Company entered into an agreement with the "
+                                               "United States Department of Commerce to issue shares of common stock "
+                                               "(exemple)."]]}),
         ev(13, "sec_form4", "compagnies", "vente_initie", "le PDG d'Exemple Corp. vend 100 000 actions", jour(1),
            "https://www.sec.gov/test/xmpl-form4.xml", tickers=["XMPL"], amount_min=1.5e6, amount_max=1.5e6,
            entities=["PDG (exemple)", "Exemple Corp."], direction=-1,

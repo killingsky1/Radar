@@ -1,4 +1,4 @@
-// Tests de l'app dans un vrai navigateur (données TEST : 19 infos validées + 1 piège ; score : AMD, NVDA, XMPL).
+// Tests de l'app dans un vrai navigateur (données TEST : 20 infos validées + 1 piège ; score : AMD, NVDA, XMPL).
 import { chromium } from "playwright";
 import assert from "node:assert";
 
@@ -134,9 +134,9 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
   await verifier("Tuile catégorie Militaire ouvre le fil filtré (1 info)", async () => {
     await p.locator(".cat", { hasText: "Militaire" }).click(); await p.waitForTimeout(250); assert.equal(await lignes(), 1);
   });
-  await verifier("Fil : 19 infos, le piège est caché", async () => { await p.locator(".puce", { hasText: "Tout" }).click(); assert.equal(await lignes(), 19); });
+  await verifier("Fil : 20 infos, le piège est caché", async () => { await p.locator(".puce", { hasText: "Tout" }).click(); assert.equal(await lignes(), 20); });
   await verifier("Fil se souvient du filtre choisi (Tout) après un changement d'onglet", async () => {
-    await onglet("Favoris"); await onglet("Fil"); assert.equal(await lignes(), 19);
+    await onglet("Favoris"); await onglet("Fil"); assert.equal(await lignes(), 20);
     assert.equal(await p.locator(".puce.actif").innerText(), "Tout");
   });
   await verifier("Fil groupé par jour (Aujourd'hui, Hier…)", async () => {
@@ -144,9 +144,9 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
   });
   await verifier("Recherche « nvda » : 1 résultat", async () => { await p.fill("input[type=search]", "nvda"); await p.waitForTimeout(150); assert.equal(await lignes(), 1); await p.fill("input[type=search]", ""); });
   await verifier("Recherche sans résultat : message clair", async () => { await p.fill("input[type=search]", "zzzz"); await p.waitForTimeout(150); assert.ok(await p.getByText("Aucun résultat").isVisible()); await p.fill("input[type=search]", ""); });
-  await verifier("Détail : s'ouvre, montre 9 contrôles, se ferme", async () => {
+  await verifier("Détail : s'ouvre, montre 14 contrôles (9 communs + 5 d'USAspending) et 1 confirmation, se ferme", async () => {
     await p.locator(".ligne").first().click(); await p.waitForSelector(".feuille-fond.ouvert");
-    assert.equal(await p.locator(".feuille .controle").count(), 10); // 9 contrôles + 1 confirmation
+    assert.equal(await p.locator(".feuille .controle").count(), 15); // 14 contrôles + 1 confirmation
     await fermer(); assert.equal(await p.locator(".feuille").count(), 0);
   });
   await verifier("Détail d'un élu : transactions déclarées et avis légal", async () => {
@@ -276,6 +276,19 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     assert.equal(await p.locator(".feuille .controle.rate").count(), 0);
     await fermer();
   });
+  await verifier("Détail USAspending : mention de la source, date de consultation et données D&B", async () => {
+    await p.locator(".ligne", { hasText: "Lockheed Martin obtient" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
+    const m = await p.locator(".detail-pied .mention").innerText();
+    assert.ok(m.startsWith("Source : USAspending.gov, Trésor des États-Unis (Bureau of the Fiscal Service), consulté le ") && m.includes("Dun & Bradstreet (D&B)"), m);
+    assert.equal(await p.locator(".feuille .controle.rate").count(), 0);
+    await fermer();
+  });
+  await verifier("Détail participation du gouvernement : l'extrait exact du 8-K", async () => {
+    await p.locator(".ligne", { hasText: "un 8-K dit que le gouvernement américain" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
+    assert.ok((await p.locator(".details-officiels").innerText()).includes("United States Department of Commerce to issue shares"));
+    assert.equal(await p.locator(".feuille .controle.rate").count(), 0);
+    await fermer();
+  });
   await verifier("Détail d'un 13D : le but écrit par le déclarant", async () => {
     await p.locator(".ligne", { hasText: "Intel" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
     assert.ok((await p.locator(".feuille").innerText()).includes("But écrit par le déclarant (point 4 du 13D) : « The Reporting Persons believe the Shares are undervalued (exemple). »"));
@@ -298,18 +311,18 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
   await verifier("Réglage : seulement les confirmées (fil = 1)", async () => {
     await reglages(); await inter("Seulement les confirmées"); await filTout(); try { assert.equal(await lignes(), 1); } finally { await remettre(() => inter("Seulement les confirmées")); }
   });
-  await verifier("Réglage : montrer les « À vérifier » (fil = 20)", async () => {
-    await reglages(); await inter("Montrer les infos à vérifier"); await filTout(); try { assert.equal(await lignes(), 20); } finally { await remettre(() => inter("Montrer les infos à vérifier")); }
+  await verifier("Réglage : montrer les « À vérifier » (fil = 21)", async () => {
+    await reglages(); await inter("Montrer les infos à vérifier"); await filTout(); try { assert.equal(await lignes(), 21); } finally { await remettre(() => inter("Montrer les infos à vérifier")); }
   });
-  await verifier("Réglage : montant minimum 1 M$ (fil = 17 : les infos sans montant restent)", async () => {
-    await reglages(); await p.getByRole("radio", { name: "1 M$" }).click(); await filTout(); try { assert.equal(await lignes(), 17); } finally { await remettre(() => p.getByRole("radio", { name: "Tous" }).click()); }
+  await verifier("Réglage : montant minimum 1 M$ (fil = 18 : les infos sans montant restent)", async () => {
+    await reglages(); await p.getByRole("radio", { name: "1 M$" }).click(); await filTout(); try { assert.equal(await lignes(), 18); } finally { await remettre(() => p.getByRole("radio", { name: "Tous" }).click()); }
   });
-  await verifier("Réglage : cacher Politiciens (fil = 17)", async () => {
-    await reglages(); await inter("Politiciens"); await filTout(); try { assert.equal(await lignes(), 17); } finally { await remettre(() => inter("Politiciens")); }
+  await verifier("Réglage : cacher Politiciens (fil = 18)", async () => {
+    await reglages(); await inter("Politiciens"); await filTout(); try { assert.equal(await lignes(), 18); } finally { await remettre(() => inter("Politiciens")); }
   });
   await verifier("Réglage : catégorie cachée alors qu'elle était filtrée → retour à Tout", async () => {
     await onglet("Fil"); await p.locator(".puce", { hasText: "Politiciens" }).click(); await reglages(); await inter("Politiciens"); await onglet("Fil");
-    try { assert.equal(await p.locator(".puce.actif").innerText(), "Tout"); assert.equal(await lignes(), 17); } finally { await remettre(() => inter("Politiciens")); await filTout(); }
+    try { assert.equal(await p.locator(".puce.actif").innerText(), "Tout"); assert.equal(await lignes(), 18); } finally { await remettre(() => inter("Politiciens")); await filTout(); }
   });
   await verifier("Réglage : trier par montant (1er = 44 G$ du Trésor, 2e = 2 G$ LMT)", async () => {
     await reglages(); await p.getByRole("radio", { name: "Plus gros montant" }).click(); await filTout();
