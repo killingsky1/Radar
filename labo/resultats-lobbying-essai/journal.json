@@ -1,0 +1,249 @@
+{
+ "robots": {
+  "extapps2.oge.gov": "404",
+  "lda.gov": "200",
+  "papers.ssrn.com": "403"
+ },
+ "requetes": [
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/API.xsp/v3/rest?draw=1&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=desc&columns%5B0%5D%5Bdata%5D=docDate&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B1%5D%5Bdata%5D=title&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B2%5D%5Bdata%5D=type&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B3%5D%5Bdata%5D=name&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B4%5D%5Bdata%5D=agency&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B5%5D%5Bdata%5D=level&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&search%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=Transaction&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=Level&start=0&length=100",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 43103,
+   "type": "application/json;charset=UTF-8",
+   "longueur": "4764"
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/API.xsp/v3/rest?draw=1&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=desc&columns%5B0%5D%5Bdata%5D=docDate&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B1%5D%5Bdata%5D=title&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B2%5D%5Bdata%5D=type&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B3%5D%5Bdata%5D=name&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B4%5D%5Bdata%5D=agency&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B5%5D%5Bdata%5D=level&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&search%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=Transaction&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=President&start=0&length=100",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 42809,
+   "type": "application/json;charset=UTF-8",
+   "longueur": "3017"
+  },
+  {
+   "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/B157175D415FEC4685258E82002DBEBE/$FILE/Scott-A-Kupor-07.31.2026-278T.pdf",
+   "methode": "HEAD",
+   "statut": 200,
+   "taille": 0,
+   "type": "application/pdf",
+   "longueur": "5142"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=GAMESTOP",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 52,
+   "type": "application/json",
+   "longueur": "52"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=PRESURANCE",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 52,
+   "type": "application/json",
+   "longueur": "52"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=XENON",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 52,
+   "type": "application/json",
+   "longueur": "52"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=CANTERBURY",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 52,
+   "type": "application/json",
+   "longueur": "52"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=SILVERCREST",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 52,
+   "type": "application/json",
+   "longueur": "52"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=PAMPA",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 52,
+   "type": "application/json",
+   "longueur": "52"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=FULLER",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 7242,
+   "type": "application/json",
+   "longueur": "1916"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=NAYAX",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 52,
+   "type": "application/json",
+   "longueur": "52"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=CRESUD",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 52,
+   "type": "application/json",
+   "longueur": "52"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=FILANA",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 52,
+   "type": "application/json",
+   "longueur": "52"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=HYPERSCALE",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 52,
+   "type": "application/json",
+   "longueur": "52"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=CYBIN",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 52,
+   "type": "application/json",
+   "longueur": "52"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=LIFESTYLE",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 10767,
+   "type": "application/json",
+   "longueur": "2065"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=MINISO",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 52,
+   "type": "application/json",
+   "longueur": "52"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=QUANTUM",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 98509,
+   "type": "application/json",
+   "longueur": "12940"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?client_name=QUANTUM&filing_period=second_quarter&filing_year=2026&page=2&page_size=25",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 6723,
+   "type": "application/json",
+   "longueur": "1787"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=GUARANTY",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 33145,
+   "type": "application/json",
+   "longueur": "5411"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=ISOTOPES",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 52,
+   "type": "application/json",
+   "longueur": "52"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=SOUTHWEST",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 116473,
+   "type": "application/json",
+   "longueur": "14262"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?client_name=SOUTHWEST&filing_period=second_quarter&filing_year=2026&page=2&page_size=25",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 34629,
+   "type": "application/json",
+   "longueur": "6034"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=SPORTING",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 2139,
+   "type": "application/json",
+   "longueur": "955"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=LIPOCINE",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 52,
+   "type": "application/json",
+   "longueur": "52"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=LESLIES",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 52,
+   "type": "application/json",
+   "longueur": "52"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=EAGLE",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 30773,
+   "type": "application/json",
+   "longueur": "5065"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=CBIZ",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 52,
+   "type": "application/json",
+   "longueur": "52"
+  },
+  {
+   "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=LOCKHEED",
+   "methode": "GET",
+   "statut": 200,
+   "taille": 75851,
+   "type": "application/json",
+   "longueur": "9457"
+  },
+  {
+   "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1014264",
+   "methode": "GET",
+   "statut": 403,
+   "taille": 5637,
+   "type": "text/html; charset=UTF-8",
+   "longueur": null
+  }
+ ]
+}
