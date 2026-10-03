@@ -71,8 +71,10 @@ def verifier(info: dict) -> dict:
         url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc}.txt"
     brut = telecharger(url)
     texte = html.unescape(brut.decode("utf-8", "replace")) if info["source"] == "sec_8k" else brut.decode("utf-8", "replace")
+    entete = re.search(rb"<SEC-HEADER>.*?</SEC-HEADER>", brut, re.S)  # empreinte de l'en-tête (8-K, depuis le 3 oct.)
+    canon = hashlib.sha256(b" ".join(entete.group(0).split())).hexdigest() if entete else None
     r = {"id": info["id"], "titre": info["title"], "document": url,
-         "meme_document": hashlib.sha256(brut).hexdigest() == info["sha256"], "ecarts": []}
+         "meme_document": info["sha256"] in (hashlib.sha256(brut).hexdigest(), canon), "ecarts": []}
 
     def comparer(nom, lu, attendu, tolerance=0.0):
         ok = lu == attendu if tolerance == 0 else (lu is not None and attendu is not None and abs(lu - attendu) <= tolerance)

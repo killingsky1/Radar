@@ -282,7 +282,9 @@ def verifier_offre(ev):
     acc = ev["official_id"]
     dossier = ev["official_url"].rsplit("/", 1)[0]
     brut = get(f"{dossier}/{acc}-index-headers.html").content
-    ecarts = [] if sha256(brut).hexdigest() == ev["sha256"] else ["le document SEC a changé depuis la lecture"]
+    entete = re.search(rb"<SEC-HEADER>.*?</SEC-HEADER>", brut, re.S)
+    canon = sha256(b" ".join(entete.group(0).split())).hexdigest() if entete else None
+    ecarts = [] if ev["sha256"] in (sha256(brut).hexdigest(), canon) else ["le document SEC a changé depuis la lecture"]
     t = html.unescape(brut.decode("utf-8", "replace"))
     forme = re.search(r"CONFORMED SUBMISSION TYPE:\s*(\S[^\n<]*)", t)
     if ev["data"]["cible"] not in t:
