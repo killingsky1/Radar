@@ -1,0 +1,957 @@
+<!DOCTYPE HTML><html lang="en">
+<head>
+<link rel="canonical" href="https://www.oge.gov/web/oge.nsf/" /><title>USOGE | </title><link rel="stylesheet" type="text/css" href="/web/oge.nsf/base.css" /><link rel="stylesheet" type="text/css" href="/web/oge.nsf/custom.css" /><link rel="stylesheet" type="text/css" href="/web/oge.nsf/mobile.css" /><script type="text/javascript" src="/web/oge.nsf/uswds.js?OpenJavascriptLibrary"></script><script type="text/javascript" src="/web/oge.nsf/search.js?OpenJavascriptLibrary"></script><script type="text/javascript" src="/web/oge.nsf/date_picker.js?OpenJavascriptLibrary"></script><link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900|Open+Sans:300i,400,600,700|Source+Sans+Pro:200,300,400,600,700,900&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet"><!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. --><script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=OGE" id="_fed_an_ua_tag"></script><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="content-type" content="text/plain; charset=UTF-8"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script><script type="text/javascript" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script><script type="text/javascript" src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap.min.js"></script><script type="text/javascript" src="https://cdn.datatables.net/searchpanes/1.1.1/js/dataTables.searchPanes.min.js"></script><script type="text/javascript" src="https://cdn.datatables.net/searchpanes/1.1.1/js/searchPanes.bootstrap.min.js"></script><script type="text/javascript" src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script><link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /><link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap.min.css" /><link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.1.1/css/searchPanes.bootstrap.min.css" /><link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.bootstrap.min.css" /><link rel="stylesheet" type="text/css" href="/web/oge.nsf/base.css" /><link rel="stylesheet" type="text/css" href="/web/oge.nsf/custom.css" /><link rel="stylesheet" type="text/css" href="/web/oge.nsf/mobile.css" />
+<script language="JavaScript" type="text/javascript">
+<!-- 
+function off() {  document.getElementById("overlay").style.display = "none";}function on() {  document.getElementById("overlay").style.display = "block";}
+// -->
+</script>
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+document._domino_target = "_self";
+function _doClick(v, o, t, h) {
+  var form = document._DominoForm;
+  if (form.onsubmit) {
+     var retVal = form.onsubmit();
+     if (typeof retVal == "boolean" && retVal == false)
+       return false;
+  }
+  var target = document._domino_target;
+  if (o.href != null) {
+    if (o.target != null)
+       target = o.target;
+  } else {
+    if (t != null)
+      target = t;
+  }
+  form.target = target;
+  form.__Click.value = v;
+  if (h != null)
+    form.action += h;
+  form.submit();
+  return false;
+}
+// -->
+</script>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" onload="on();$(document).ready(function () {    /*     * Internal pages must use the API on the internal Domino server.     * Production and all other hosts must use extapps2.     */    var hostname = window.location.hostname.toLowerCase();    var isInternal =        hostname === &quot;intpriaps02.oge.gov&quot; ||        hostname === &quot;intpriaps02&quot; ||        hostname.indexOf(&quot;intpriaps02.&quot;) === 0;    var apiUrl;    if (isInternal) {        apiUrl =            &quot;/201/Presiden.nsf/API.xsp/v3/rest&quot;;    } else {        apiUrl =            &quot;https://extapps2.oge.gov/201/Presiden.nsf/API.xsp/v3/rest&quot;;    }    console.log(        &quot;Loading disclosure data from: &quot; + apiUrl    );    var table = $(&quot;#example&quot;).DataTable({        &quot;pageLength&quot;: 100,        &quot;serverSide&quot;: true,        &quot;processing&quot;: true,        &quot;deferRender&quot;: true,        &quot;layout&quot;: {            &quot;topEnd&quot;: &quot;&quot;,            &quot;bottomStart&quot;: &quot;info&quot;,            &quot;bottomEnd&quot;: &quot;paging&quot;        },        &quot;columnDefs&quot;: [            {                &quot;type&quot;: &quot;date&quot;,                &quot;targets&quot;: 0            }        ],        &quot;order&quot;: [            [0, &quot;desc&quot;]        ],        &quot;language&quot;: {            &quot;infoFiltered&quot;:                &quot;&lt;span class='quickApproveTable_info_filtered_span'&gt;&quot; +                &quot;(filtered from _MAX_ total entries)&quot; +                &quot;&lt;/span&gt;&quot;,            &quot;emptyTable&quot;:                &quot;No matching records found&quot;,            &quot;loadingRecords&quot;:                &quot;Loading disclosure records...&quot;,            &quot;processing&quot;:                &quot;Loading disclosure records...&quot;        },        &quot;ajax&quot;: {            &quot;url&quot;: apiUrl,            &quot;type&quot;: &quot;GET&quot;,            &quot;dataSrc&quot;: &quot;data&quot;        },        &quot;columns&quot;: [            {                &quot;data&quot;: &quot;docDate&quot;,                &quot;title&quot;: &quot;Date Added&quot;,                &quot;render&quot;: function (                    data,                    type,                    row,                    meta                ) {                    var rtn = &quot;&quot;;                    if (type === &quot;display&quot;) {                        var date = new Date(data);                        var month =                            date.getMonth() + 1;                        var monthStr = &quot;&quot;;                        if (                            month.toString().length &gt; 1                        ) {                            monthStr = month;                        } else {                            monthStr = &quot;0&quot; + month;                        }                        rtn =                            monthStr +                            &quot;/&quot; +                            date.getDate() +                            &quot;/&quot; +                            date.getFullYear();                    } else {                        rtn = data;                    }                    return rtn;                }            },            {                &quot;data&quot;: &quot;title&quot;,                &quot;title&quot;: &quot;Title&quot;            },            {                &quot;data&quot;: &quot;type&quot;,                &quot;title&quot;: &quot;Type&quot;,                &quot;render&quot;: function (                    data,                    type,                    row,                    meta                ) {                    return data;                }            },            {                &quot;data&quot;: &quot;name&quot;,                &quot;title&quot;: &quot;Name&quot;            },            {                &quot;data&quot;: &quot;agency&quot;,                &quot;title&quot;: &quot;Agency&quot;            },            {                &quot;data&quot;: &quot;level&quot;,                &quot;title&quot;: &quot;Level&quot;            }        ]    });    /*     * Add one filter input beneath each table heading.     */    var tableHead =        document.querySelector(&quot;#example thead&quot;);    var titleRow =        tableHead.querySelector(&quot;tr&quot;);    var filterRow =        document.createElement(&quot;tr&quot;);    var titleCells =        titleRow.querySelectorAll(&quot;th&quot;);    filterRow.className = &quot;column-filter-row&quot;;    titleCells.forEach(function (        titleCell,        columnIndex    ) {        var title =            titleCell.innerText;        var filterCell =            document.createElement(&quot;th&quot;);        var input =            document.createElement(&quot;input&quot;);        input.type = &quot;text&quot;;        input.placeholder =            &quot;Filter &quot; + title;        input.setAttribute(            &quot;aria-label&quot;,            &quot;Filter by &quot; + title        );        var listener = function () {            var searchValue = this.value;            /*             * Dates are displayed as MM/DD/YYYY, while V3             * searches them as YYYY-MM-DD. Convert a complete             * date before sending it to the API.             */            if (columnIndex === 0) {                var dateMatch =                    searchValue.match(                        /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/                    );                if (dateMatch) {                    var month =                        dateMatch[1];                    if (month.length === 1) {                        month = &quot;0&quot; + month;                    }                    var day =                        dateMatch[2];                    if (day.length === 1) {                        day = &quot;0&quot; + day;                    }                    var year =                        dateMatch[3];                    searchValue =                        year +                        &quot;-&quot; +                        month +                        &quot;-&quot; +                        day;                }            }            if (                table                    .column(columnIndex)                    .search() !== searchValue            ) {                table                    .column(columnIndex)                    .search(searchValue)                    .draw();            }        };        input.addEventListener(            &quot;keyup&quot;,            listener        );        input.addEventListener(            &quot;change&quot;,            listener        );        filterCell.appendChild(input);        filterRow.appendChild(filterCell);    });    tableHead.appendChild(filterRow);});">
+
+<form onsubmit="return false;return true;" method="post" action="/web/oge.nsf/Officials%20Individual%20Disclosures%20Search%20Collection?OpenForm&amp;Seq=1" name="_DominoForm">
+<input type="hidden" name="__Click" value="0"><!--(1)begin header--><!--add this to all documents-->
+<!--add this to all documents-->
+<!--Begin skipnav-->
+<a class="usa-skipnav" href="#skipnav">Skip to Main Content</a>
+<!--end skipnav-->
+<!--use for homepage only-->
+<section class="usa-banner" aria-label="Official government website">
+        <div class="usa-accordion">
+            <header class="usa-banner__header">
+                <div class="usa-banner__inner">
+                    <div class="grid-col-auto">
+	<img class="usa-banner__header-flag" src="../oge.nsf/us_flag_small.png" alt="U.S. flag">
+                    </div>
+                    <div class="grid-col-fill tablet:grid-col-auto">
+                        <p class="usa-banner__header-text">An official website of the United States government</p>
+                        <p class="usa-banner__header-action" aria-hidden="true">Here’s how you know</p>
+                    </div>
+                    <button class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner">
+          <span class="usa-banner__button-text">Here’s how you know</span>
+        </button>
+                </div>
+            </header>
+            <div class="usa-banner__content usa-accordion__content" id="gov-banner">
+                <div class="grid-row grid-gap-md">
+                    <div class="usa-banner__guidance desktop:grid-col-5">
+                        <img class="usa-banner__icon usa-media-block__img" src="../oge.nsf/icon-dot-gov.png" alt="Dot gov">
+<div class="usa-media-block__body">
+            <p>
+              <strong>
+                Official websites use .gov
+</strong>
+              <br>
+              A <strong>.gov</strong> website belongs to an official government organization in the United States.
+            </p>
+          </div>
+                    </div>
+                    <div class="usa-banner__guidance desktop:grid-col-5">
+                        <img class="usa-banner__icon usa-media-block__img" src="../oge.nsf/icon-https.png" alt="Https">
+<div class="usa-media-block__body">
+            <p>
+              <strong>
+                Secure .gov websites use HTTPS
+</strong>
+              <br>
+              A <strong>lock</strong> (
+<span class="icon-lock"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 52 64" class="usa-banner__lock-image" role="img" aria-labelledby="banner-lock-title-default banner-lock-description-default"><title id="banner-lock-title-default">Lock</title><desc id="banner-lock-description-default">A locked padlock</desc><path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"></path></svg></span>
+) or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.
+            </p>
+          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="header">
+<div class="usa-overlay">
+</div>
+	<header class="usa-header usa-header--extended" role="banner">
+		<div class="usa-navbar">
+			<div class="usa-logo" id="extended-mega-logo">
+				<h1 class="usa-logo__text">
+<a href="../oge.nsf/home" title="Home" aria-label="Home">U.S. Office of Government Ethics</a>
+<img class="logo-img" src="../oge.nsf/oge-logo-4.png" alt="OGE">
+</h1>
+			</div>
+			<button class="usa-menu-btn"><a href="#" class="menu">Menu</a></button>
+		</div>
+	<nav role="navigation" class="usa-nav">
+	<div class="usa-nav__inner">
+		<button class="usa-nav__close"><img src="../oge.nsf/close-primary.png" alt="close"></button>
+			<ul class="usa-nav__primary usa-accordion">
+					<li class="usa-nav__primary-item">
+						<button class="usa-accordion__button usa-nav__link " aria-expanded="false" aria-controls="extended-mega-nav-section-one"><span class="main-nav-item" id="hamburger-item-1">About</span></button>
+					<div id="extended-mega-nav-section-one" class="usa-nav__submenu usa-megamenu" hidden="">
+						<div class="grid-row margin-top-1 margin-bottom-4">
+							<div class="desktop:grid-col-3">
+								<ul class="usa-nav__submenu-list">
+									<li class="usa-nav__submenu-item section-landing">
+										<strong>Our Mission, Role, and History</strong>
+									</li>
+									<li class="usa-nav__submenu-item">
+										<a href="../OGE.nsf/about_what-we-do">What We Do</a>
+									</li>
+									<li class="usa-nav__submenu-item">
+										<a href="../OGE.nsf/about_budget-performance">Budget & Performance</a>
+									</li>
+									<li class="usa-nav__submenu-item">
+										<a href="../OGE.nsf/about_our-history">Our History</a>
+									</li>
+									<li class="usa-nav__submenu-item">
+<a href="../OGE.nsf/about_information-management">Information Management</a>
+									</li>
+									<li class="usa-nav__submenu-item">
+<a href="../OGE.nsf/about_internal-agency-policies">Internal Agency Policies</a>
+									</li>
+								</ul>
+							</div>
+							<div class="desktop:grid-col-3">
+								<ul class="usa-nav__submenu-list">
+									<li class="usa-nav__submenu-item section-landing">
+										<strong>Our People &amp; Organization</strong>
+                  </li>
+									<li class="usa-nav__submenu-item">
+										<a href="../OGE.nsf/about_leadership">Agency Leadership</a>
+									</li>
+									<li class="usa-nav__submenu-item">
+										<a href="../OGE.nsf/about_organization">Organization</a>
+									</li>
+									<li class="usa-nav__submenu-item">
+										<a href="../OGE.nsf/about_engagement">Employee Engagement</a>
+									</li>
+								</ul>
+							</div>
+							<div class="desktop:grid-col-3">
+								<ul class="usa-nav__submenu-list">
+									<li class="usa-nav__submenu-item section-landing">
+										<strong>Legislative Affairs</strong>
+									</li>
+									<li class="usa-nav__submenu-item">
+										<a href="../oge.nsf/about_ethics-legislation">Ethics Legislation</a>
+									</li>
+									<li class="usa-nav__submenu-item">
+										<a href="../oge.nsf/Congressional%20Correspondence">Congressional Correspondence</a>
+									</li>
+									<li class="usa-nav__submenu-item">
+										<a href="../oge.nsf/about_reports-to-congress">Reports to Congress</a>
+									</li>
+									<li class="usa-nav__submenu-item">
+										<a href="../oge.nsf/about_appropriations">Appropriations</a>
+									</li>
+								</ul>
+							</div>
+<div class="nav-feature desktop:grid-col-3" id="pop-features-ham">
+								<div class="nav-image" style="display:none;>
+ <img class="" src="../oge.nsf/pencil-resized.jpg" alt="">
+								</div>
+								<ul class="usa-nav__submenu-list nav-feature-list" style="display:none;">
+									<li class="usa-nav__submenu-item section-landing">
+										<a href="#" id=""><strong>Popular Resources</strong></a>
+									</li>
+									<li class="usa-nav__submenu-item">
+										<a href="#" id="">Congressional Correspondence </a>
+									</li>
+									<li class="usa-nav__submenu-item">
+										<a href="#" id="">Reports to Congress</a>
+									</li>
+								</ul>								
+							</div>
+						</div>
+						<div class="grid-row margin-top-1">
+							<div class="desktop:grid-col-3">
+								<ul class="usa-nav__submenu-list">
+									<li class="usa-nav__submenu-item section-landing">
+										<strong>Partners in Government Integrity</strong>
+                  </li>
+									<li class="usa-nav__submenu-item">
+										<a href="../oge.nsf/about_reporting-misconduct">Resources for Reporting Misconduct</a>
+									</li>
+									<li class="usa-nav__submenu-item">
+										<a href="../oge.nsf/about_anti-corruption" style="line-height:1.5;">Resources for International<br><span class="">Anti-Corruption Bodies</span></a>
+									</li>
+								</ul>
+							</div>
+							<div class="desktop:grid-col-3">
+								<ul class="usa-nav__submenu-list">
+									<li class="usa-nav__submenu-item section-landing">
+										<strong>Contact</strong>
+                  </li>
+									<li class="usa-nav__submenu-item">
+										<a href="../OGE.nsf/about_contacts#">Contact Us</a>
+									</li>
+									<li class="usa-nav__submenu-item">
+										<a href="../oge.nsf/about_ethics-contact-list" style="line-height:1.5;">Agency Ethics Program Contact <br><span class="">Information</span></a>
+									</li>
+									<li class="usa-nav__submenu-item">
+										<a href="../oge.nsf/about_careers">Careers</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="desktop:grid-col-9 margin-top-4">
+<div class="star-wrapper-nav">
+<div class="star-border"></div>
+<div class="star-img-nav"></div>
+</div>
+								<a class="landing-link" href="../oge.nsf/section_landing_about"><strong>View all in About <i class="i-arrow-header right-arrow-header"></i></strong></a>
+							</div>
+						</div>
+            </div>
+					</li><!--end dropdown 1 menu-->
+					<li class="usa-nav__primary-item">
+						<button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="extended-mega-nav-section-two"><span class="main-nav-item" id="hamburger-item-2">Resources for the Public</span></button>
+					<div id="extended-mega-nav-section-two" class="usa-nav__submenu usa-megamenu" hidden="">
+<div class="grid-row margin-top-1">
+              
+							<div class="desktop:grid-col-3">              	
+								<ul class="usa-nav__submenu-list" id="nav-dropdown-2">
+									<li class="usa-nav__submenu-item section-landing link-head">
+										<strong>Freedom of Information Act</strong>
+									</li>
+<li class="usa-nav__submenu-item"> <a href="../oge.nsf/publicresources_FOIA-landing">FOIA -Getting Started</a></li>
+<li class="usa-nav__submenu-item"> <a href="../oge.nsf/publicresources_FOIA-landing#frfoia">Frequently Requested Information <br><span class=""> Available Without a FOIA Request</span></a></li>
+<li class="usa-nav__submenu-item"> <a href="../oge.nsf/Freedom+of+Information+Act+(FOIA)+Reports?openview">FOIA Reports</a></li>
+<li class="usa-nav__submenu-item"><a href="https://extapps2.oge.gov/FOIAStatus/FOIAResponse.nsf/2FC940AD2A3190BD8525811B004560CE" >FOIA-Processed Records Repository</a>	</li>
+</ul>
+<br>
+</div>
+<div class="desktop:grid-col-4" >
+    <ul class="usa-nav__submenu-list">
+									<li class="usa-nav__submenu-item section-landing">
+										<strong>Review Executive Branch Wide Ethics Program Data</strong>
+									</li>
+									<li class="usa-nav__submenu-item"><a href="../oge.nsf/publicresources_summary-reports">Oversight Summary Reports</a>		</li>
+<li class="usa-nav__submenu-item">	<a href="../OGE.nsf/publicresources_compliance">Compliance Dashboards</a>	</li>
+<br><br>
+<li class="usa-nav__submenu-item section-landing link-head">
+										<strong>Public Engagement</strong>
+									</li>
+<li class="usa-nav__submenu-item"><a href="../OGE.nsf/publicresources_Public-Participation">Public Participation Opportunities</a>			</li>
+								</ul>
+							</div>
+							<div class="nav-feature desktop:grid-col-4" id="nav-feature-ethicsdocs">
+                <div class="nav-portal-wrapper-ethics">	
+                  <div class="usa-button usa-button-red" >
+                    <a href="../OGE.nsf/Officials%20Individual%20Disclosures%20Search%20Collection?OpenForm" id="rescaling-button-text" style="color:white;">View Officials' Individual Disclosures<i class="i-arrow-header-white right-arrow-header" ="color:white;"></i></a>
+                  </div>
+                  <div class="collection-group">
+                    <div class="collection-group"><span style="color:#323a45d6;"><strong>In this collection:</strong></span>
+                      <span class="collection-item">Financial Disclosure Reports |</span>
+                      <span class="collection-item">Certificates of Divestiture |</span>
+                      <span class="collection-item">Ethics Pledge Waivers |</span>
+                      <span class="collection-item">Ethics Agreements |</span>
+                       <span class="collection-item">Certificates of Ethics Agreement Compliance |</span>
+	       <span class="collection-item">Conflict of Interest Waivers</span>
+                    </div>
+                  </div>
+                </div>		
+                
+<div class="nav-portal-wrapper margin-top-3" id="agency-ethics-butt">
+                  <div class="usa-button usa-button-red" >
+                                <a href="../OGE.nsf/Agency%20Ethics%20Documents%20Search%20Collection?OpenForm" id="rescaling-button-text" style="color:white;">View Agency Ethics Documents<i class="i-arrow-header-white right-arrow-header"></i></a>
+                              </div>	
+                <div class="collection-group" ="margin-top:5px;">
+                <div class="collection-group"><span style="color:#323a45d6;"><strong>In this collection:</strong></span>
+                <span class="collection-item">Program Review Reports |</span>
+                <span class="collection-item">Annual Agency Ethics Program Questionnaires |</span>
+                <span class="collection-item">Oversight Correspondence with Agencies |</span>
+                <span class="collection-item">1353 Travel Reports</span>
+                </div>
+                </div>
+                </div>                         
+							</div>
+						</div>
+							<div class="desktop:grid-col-9 margin-top-10" id="hamburger-collapse-2">
+                <div class="star-wrapper-nav-ethics">
+                  <div class="star-border"></div>
+                  <div class="star-img-nav-ethics"></div>
+                </div>
+<br>
+								<a class="landing-link" href="../oge.nsf/section_landing_publicresources"><strong>View all in Resources for the Public<i class="i-arrow-header right-arrow-header"></i></strong></a>
+							</div>
+						</div>
+				</li><!--end dropdown 2----------------------------------------------------->
+					<li class="usa-nav__primary-item">
+						<button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="extended-mega-nav-section-three"><span class="main-nav-item" id="hamburger-item-3">Resources for Ethics Officials</span></button>
+					<div id="extended-mega-nav-section-three" class="usa-nav__submenu usa-megamenu" hidden="">
+						<div class="grid-row margin-top-1">
+							<div class="desktop:grid-col-3">              	
+								<ul class="usa-nav__submenu-list">
+									<li class="usa-nav__submenu-item section-landing link-head">
+<strong>Managing Effective Ethics Programs</strong>
+									<li class="usa-nav__submenu-item">
+																			<a href="../oge.nsf/ethicsofficials_mission">Mission, Authority, & Key Players </a>
+									</li>
+									<li class="usa-nav__submenu-item">
+																		<a href="../oge.nsf/ethicsofficials_ethical-leadership" style="line-height:1.5;">Ethical Leadership & Building<br><span class=""> an Ethical Culture</span></a>
+									</li>
+									<li class="usa-nav__submenu-item">
+																			<a href="../oge.nsf/ethicsofficials_conflict-resolution">Conflicts Analysis & Resolution</a>
+									</li>
+									<li class="usa-nav__submenu-item">
+																			<a href="../oge.nsf/ethicsofficials_education-through-training">Education through Training & Advice </a>
+									</li>
+									<li class="usa-nav__submenu-item">
+																			<a href="../oge.nsf/ethicsofficials_financial-disc">Financial Disclosure </a>
+									</li>
+									<li class="usa-nav__submenu-item">
+																			<a href="../oge.nsf/ethicsofficials_election-readiness">Election Readiness</a>
+									</li>
+                  </li>
+								</ul>
+							</div>
+							<div class="desktop:grid-col-4 margin-left-4 eqhe-nav-ul" id="hamburger-collapse-3">
+ 								<ul class="usa-nav__submenu-list">
+									               
+                
+     							<li class="usa-nav__submenu-item">
+																			<a href="../oge.nsf/ethicsofficials_enforcement-resp">Enforcement Responsibilities</a>
+									</li>
+									<li class="usa-nav__submenu-item">
+																			<a href="../oge.nsf/ethicsofficials_oge-oversight">OGE Oversight</a>
+									</li>
+									</li>
+									<li class="usa-nav__submenu-item">
+																			<a href="../oge.nsf/ethicsofficials_oge-support">OGE Support</a>
+									</li>
+									</li>
+									<li class="usa-nav__submenu-item">
+																			<a href="../oge.nsf/ethicsofficials_professional-development">Professional Development for Ethics Officials </a>
+									</li>
+									</li>
+									<li class="usa-nav__submenu-item">
+																			<a href="../OGE.nsf/ethicsofficials_records-management">Records Management & Release</a>
+									</li>
+									</li>
+									<li class="usa-nav__submenu-item">						<a href="../OGE.nsf/OGE+Forms">OGE Forms Library</a>
+									</li>      
+									</li>  
+									<li class="usa-nav__submenu-item">						<a href="../OGE.nsf/ethicsofficials_legal-expense-funds">Legal Expense Funds</a>
+									</li>             
+                  </li>
+								</ul>
+							</div>
+							<div class="nav-feature desktop:grid-col-4 nav-feature-ethics-ham" id="nav-feature-ethics">
+                <div class="nav-portal-wrapper-ethics" style="margin-top:-1.2rem; padding-bottom:.5rem;">	
+                  <div class="usa-button margin-top-205 usa-button-red  padding-right-9">
+                    <a href="../oge.nsf/Legal%20Research%20Search%20Collection?OpenForm" style="color:white; line-height:1.2 !important;" id="rescaling-button-text-3">Conduct Legal Research<i class="i-arrow-header-white right-arrow-header" ="color:white;"></i></a>
+                  </div>
+                  <div class="collection-group">
+                    <div class="collection-group"><span style="color:#323a45d6;"><strong>In this collection:</strong></span>
+                      <span class="collection-item">Statutes |</span>
+                      <span class="collection-item">Executive Orders |</span>
+                     <span class="collection-item">OGE Regulations |</span>
+                      <span class="collection-item">Agency Supplemental Regulations |</span>
+                      <span class="collection-item">Federal Register Issuances |</span>
+                      <span class="collection-item">OGE Advisories |</span>
+                      <span class="collection-item">Legal Interpretation (DOJ and Judicial Opinions)</span>
+                    </div>
+                  </div>
+                </div>	
+                <div class="nav-portal-wrapper-ethics nav-portal-wrapper-ethics-02">	
+                  <div class="usa-button margin-top-205 buttonred-ham2 usa-button-red padding-right-8" style="text-align:left !important;">
+                    <a href="https://extapps2.oge.gov/Training/OGETraining.nsf/IEGHome.xsp" style="color:white; line-height:1.2; !important" id="rescaling-button-text-3">Visit the Institute for Ethics in Government  <i class="i-arrow-header-white right-arrow-header" ="color:white;"></i></a> 
+                  </div>
+                  <div class="collection-group">
+                    <div class="collection-group"><span style="color:#323a45d6;"><strong>In this collection:</strong></span>
+                      <span class="collection-item">Upcoming Courses |</span>
+                      <span class="collection-item">On Demand Courses |</span>
+                      <span class="collection-item">Curricula |</span>
+                      <span class="collection-item">Job Aids |</span>
+                    </div>
+                  </div>
+                </div>						
+							</div>
+						</div>
+							<div class="desktop:grid-col-9 margin-top-4">
+                <div class="star-wrapper-nav-ethics">
+                  <div class="star-border"></div>
+                  <div class="star-img-nav-ethics"></div>
+                </div>
+<br>
+								<a class="landing-link" href="../oge.nsf/section_landing_resources"><strong>View all in Resources for Ethics Officials<i class="i-arrow-header right-arrow-header"></i></strong></a>
+							</div>
+						</div>
+				</li><!--end dropdown 3----------------------------------------------------->
+				<li class="usa-nav__primary-item" id="ham-item-4">
+					<button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="extended-mega-nav-section-four"><span class="main-nav-item" id="hamburger-item-4">Resources for Federal Employees</span></button>
+				<div id="extended-mega-nav-section-four" class="usa-nav__submenu usa-megamenu" hidden="">
+					<div class="grid-container" id="subnav-wrapper">
+						<div class="grid-row margin-top-1">
+							<div class="desktop:grid-col-4">
+								<ul class="usa-nav__submenu-list">
+									<li class="usa-nav__submenu-item two-line-link">
+										<a href="../oge.nsf/about_ethics-contact-list">Agency Ethics Program Contact Information</a>
+                  </li>
+								</ul>
+							</div>
+							<div class="desktop:grid-col-4">
+								<ul class="usa-nav__submenu-list">
+									<li class="usa-nav__submenu-item two-line-link">
+																			<a href="../oge.nsf/resources_resources-fin-disc">Resources for Financial Disclosure<br><span class="">Filers</span></a>
+									</li>
+								</ul>
+							</div>
+							<div class="desktop:grid-col-4">
+								<ul class="usa-nav__submenu-list">
+									<li class="usa-nav__submenu-item">
+																			<a href="../oge.nsf/resources_standards-of-conduct" style="line-height:1.5;">Standards of Ethical Conduct for Employees<br><span class="">of the Executive Branch</span></a>
+									</li>
+								</ul>
+							</div>
+							<div class="desktop:grid-col-4">
+								<ul class="usa-nav__submenu-list">
+									<li class="usa-nav__submenu-item">
+																			<a href="../oge.nsf/resources_legal-expense-funds" style="line-height:1.5;">Resources Related to Legal Expense Funds</span></a>
+									</li>
+								</ul>
+							</div>
+							<div class="desktop:grid-col-12 margin-top-4">
+<div class="star-wrapper-nav">
+<div class="star-border"></div>
+<div class="star-img-nav-full"></div>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</li> <!--end dropdown 4----------------------------------------------------->
+    
+				<li class="usa-nav__primary-item last-item-li">
+					<button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="extended-mega-nav-section-five"><span class="main-nav-item" id="hamburger-item-5">News</span></button>
+<div id="extended-mega-nav-section-five" class="usa-nav__submenu usa-megamenu" hidden="">
+								<div class="grid-container" id="subnav-wrapper">
+						<div class="grid-row grid-gap-4">
+							<div class="desktop:grid-col-4">
+								<ul class="usa-nav__submenu-list">
+									<li class="usa-nav__submenu-item">
+																			<a href="../OGE.nsf/Leadership%20Notes">Leadership Notes</a>
+									</li>
+								</ul>
+							</div>
+							<div class="desktop:grid-col-4">
+								<ul class="usa-nav__submenu-list">
+									<li class="usa-nav__submenu-item">
+																			<a href="../OGE.nsf/News%20Releases">News Releases </a>
+									</li>
+								</ul>
+							</div>
+							<div class="desktop:grid-col-4">
+								<ul class="usa-nav__submenu-list">
+									<li class="usa-nav__submenu-item">
+																			<a href="../oge.nsf/news_press">Press Contacts</a>
+									</li>
+								</ul>
+							</div>
+							<div class="desktop:grid-col-12 margin-top-4">
+<div class="star-wrapper-nav">
+<div class="star-border"></div>
+<div class="star-img-nav-full"></div>
+</div>
+							</div>				
+						</div>
+					</div>
+  		   </div>
+				</li><!--end dropdown 5----------------------------------------------------->
+			</ul><!--closing tag for nav----------------------------------------------------->
+			
+			<div class="usa-nav__secondary">
+				<ul class="usa-nav__secondary-links">
+					<li class="usa-nav__secondary-item" style="">
+						<a href="../oge.nsf/site-index">Site Index</a>
+					</li>
+					<li class="usa-nav__secondary-item" style="">
+						<a href="/web/oge.nsf/OGE Forms">Forms Library </a>
+					</li>
+					<li class="usa-nav__secondary-item">
+						<a href="/web/oge.nsf/about_contacts">Contact Us</a>
+					</li>
+				</ul>
+	<div class="workaround" style="display:none;">
+                <form  class="usa-search usa-search--small " >
+                    <div class="search-field" role="search">
+                        <input class="usa-input" id="extended-mega-search-field-small" type="search" name="search">
+                        <button class="usa-button" id="search-button" type="submit"><span class="usa-sr-only">Search</span></button>
+                    </div>
+                </form>
+	</div>
+<form class="usa-search usa-search--small " id="search_form" action="https://search.usa.gov/search" accept-charset="UTF-8" method="get"/>
+	<div class="search-field" role="search">
+		<input type="text" name="query" id="query" autocomplete="on" class="usagov-search-autocomplete" label="autocomplete" />
+		<input class="usa-input" id=""  type="hidden" name="affiliate" id="affiliate" value="oge"/>
+		<button class="usa-button usa-search--small" id="search-button-ham" type="submit" data-disable-with="Search"><span class="usa-sr-only">Search</span></button>
+	</div>
+</form>
+            </div>
+        </div>
+    </nav>
+</header>
+</section>
+<!--end header--><!--(2)begin inner pageheader--><section class="body-content">
+    <div class="grid-container">	
+    </div>
+ <img class="" src="" alt="">
+</section><!--end inner page header--><!--(3) Begin inner page body (using subform)-->
+
+<div class="">
+<div class="grid-row grid-gap">
+<!--(04)begin breadcrumbs-->
+<div class="usa-layout-docs__main desktop:grid-col-12 usa-prose">
+<!--NOTE - since this is used with a $$Viewtemplate for etc.. the closing tags are on the form and not here on the subform-->
+<div class="breadcrumb-wrapper">
+<img src="../oge.nsf/home-icon.png" class="home-icon" alt="Home" width="">
+<ul class="breadcrumb-noboot">
+  <li><a href="../oge.nsf/home">Home</a></li>
+  <li><a href="../oge.nsf/section_landing_publicresources">Resources for the Public</a></li>
+  <li>Officials’ Individual Disclosures Search Collection</li>
+</ul>
+</div>
+<!--End breadcrumbs-->
+<div id="overlay" onclick="off()">
+  <div id="text">
+<p>Title 1 of the Ethics in Government Act of 1978, as amended, 5 U.S.C. § 13107(c), states that:
+<ol type="1" id="myol">
+	<li>It shall be unlawful for any person to obtain or use a report:
+<div style="margin-left:25px;">(A) for any unlawful purpose;</div>
+<div style="margin-left:25px;">(B) for any commercial purpose, other than by news and communications media for dissemination to the general public;</div>
+<div style="margin-left:25px;">(C) for determining or establishing the credit rating of any individual; or</div>
+<div style="margin-left:25px;">(D) for use, directly or indirectly, in the solicitation of money for any political, charitable, or other purpose.</div>
+<br/>
+	<li>The Attorney General may bring a civil action against any person who obtains or uses a report for any purpose prohibited in paragraph (1) of this subsection. The court in which such action is brought may assess against such person a penalty in any amount not to exceed $25,132. Such remedy shall be in addition to any other remedy available under statutory or common law.</li>
+</ol>
+<p><br/><b>By clicking this banner, I affirm: I am aware of these prohibitions and wish to proceed.</b>
+</p>
+</div>
+</div>
+<!--(05) begin inner page content!!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------><main class="main row full usa-layout-docs usa-section usa-prose" id="content" role="main">
+<a name="skipnav" id="skipnav" tabindex="-1"></a>
+<h1>Officials’ Individual Disclosures Search Collection</h1>
+<div class="desktop:grid-col-8 mobile:grid-col-12" id="guidance-wrapper" >
+      <div class="usa-accordion-leg">
+        <div class="usa-alert usa-alert--info">
+          <div class="usa-alert__body">
+            <h2 class="usa-accordion__heading usa-alert__heading">Using this Collection</h2> 
+<ul class="usa-list usa-list--unstyled usa-list-stackresp">
+	<li class="usa-footer__secondary-link"><a href="../OGE.nsf/publicresources_disclosure-glossary?OpenForm" target="_blank">Glossary of Document Types  |</a></li>
+	<li class="usa-footer__secondary-link"><a href="../OGE.nsf/publicresources_disclosure-quickstart?OpenForm" target="_blank">Who files, where they file, and how to access their documents  |</a></li>
+	<li class="usa-footer__secondary-link" ><a href="../OGE.nsf/publicresources_disclosure-faq" target="_blank">Frequently Asked Questions (Financial Disclosure)  |</a></li>
+	<li class="usa-footer__secondary-link" ><a href="https://extapps2.oge.gov/201/Presiden.nsf/201+Request?OpenForm" target="_blank">Request an Individual’s Ethics Documents (Online Submission) |</a></li>
+	<li class="usa-footer__secondary-link" id="link-last"><a href="../OGE.nsf/0/FE125A54B5831BEA852585B6005A2413/" target="_blank" >Request an Individual’s Ethics Documents (PDF - Download and Submit)</a></li>
+</ul>   
+</br>
+            <h2 class="usa-accordion__heading usa-alert__heading">Additional Documents</h2> 
+<ul class="usa-list usa-list--unstyled usa-list-stackresp">
+	<li class="usa-footer__secondary-link">Ethics Pledge Waivers: </li>
+	<li class="usa-footer__secondary-link"><a href="../oge.nsf/Agency+Ethics+Pledge+Waivers+(EO+13989)" target="_blank">Biden Administration (E.O. 13989)  |</a></li>
+	<li class="usa-footer__secondary-link"><a href="../oge.nsf/Agency+Ethics+Pledge+Waivers+(EO+13770)" target="_blank">Trump Administration (E.O. 13770)  </a></li>
+<br><li class="usa-footer__secondary-link">Candidates: </li>
+<li class="usa-footer__secondary-link"><a href="../OGE.nsf/resources_candidate_letters" target="_blank" >Letters to Presidential and Vice Presidential Candidates regarding their Disclosures</a></li>
+<br><li class="usa-footer__secondary-link">Legal Expense Funds: </li>
+<li class="usa-footer__secondary-link"><a href="../OGE.nsf/All%20LEF" target="_blank" >Trust Documents, Quarterly, and Termination Reports</a></li></ul>
+</br>
+            <h2 class="usa-accordion__heading usa-alert__heading">Alerts</h2> 
+<ul class="usa-list usa-list--unstyled usa-list-stackresp">
+<li class="usa-footer__secondary-link" id="link-last"><a href="https://www.archives.gov/records-mgmt/grs/grs02-8.pdf" target="_blank" >Federal law</a> requires OGE to destroy most public financial disclosure reports and associated documents 6 to 7 years after their creation, unless they are being used in an ongoing investigation.  <a href="../OGE.nsf/publicresources_disclosure-quickstart?OpenForm" target="_blank">Learn more</a>. </li></br>
+</br>
+</ul>
+          </div>
+        </div>
+      </div>
+    </div><!--begin table data-->
+<div class="table-responsive" style="margin-top:-1rem; order:2;">
+<table id='example' class='table table-striped table-bordered' style='width:80%;'>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Agency</th>
+                <th>Level</th>
+            </tr>
+        </thead>
+<tr>
+	    <td>Title</td>
+                <td>Loading</td>
+                <td>Loading</td>
+                <td>Loading</td>
+                <td>Loading</td>
+                <td>Loading</td>
+</tr>
+    </table>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!--(4)Begin inner page body CLOSING subform-->			<!--NOTE -use this subform after the view body/inner page content ends-->
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+			<!--NOTE - since this is used with a $$Viewtemplate for etc.. the closing tags are here--><!--end inner page body CLOSING subform-->
+<!--(5)begin footer--><footer class="usa-footer usa-footer--big">
+    <div class="grid-container usa-footer__return-to-top">
+        <a href="#">Return to top</a>
+    </div>
+    <div class="usa-footer__primary-section">
+        <div class="grid-container" style="">
+            <div class="grid-row">
+                <div class="tablet:grid-col-12">
+                    <nav class="usa-footer__nav">
+                        <div class="grid-row grid-gap-4 margin-top-6 margin-bottom-2 margin-left-0">
+                            <div class="mobile-lg:grid-col desktop:grid-col">
+                                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                                    <ul class="usa-list usa-list--unstyled">                                         <li class="usa-footer__secondary-link"><a href="../OGE.nsf/about_internal-agency-policies#web">Accessibility |</a></li>
+                                        <li class="usa-footer__secondary-link"><a href="../OGE.nsf/about_budget-performance">Budget and Performance |</a></li>
+                                        <li class="usa-footer__secondary-link"><a href="../OGE.nsf/publicresources_FOIA-landing">FOIA |</a></li>
+                                        <li class="usa-footer__secondary-link"><a href="../OGE.nsf/about_information-management#inf">Information Quality |</a></li>
+                                        <li class="usa-footer__secondary-link"><a href="../OGE.nsf/0/41F53E6C2B68AACF852589560066178E/$FILE/OGE%20No%20FEAR%20Data.pdf" target="_blank">EEO/No Fear Act |</a></li>
+                                        <li class="usa-footer__secondary-link"><a href="../OGE.nsf/privacy">Privacy |</a></li>
+                                        <li class="usa-footer__secondary-link"><a href="../OGE.nsf/publicresources_Public-Participation">Rulemaking |</a></li>
+                                        <li class="usa-footer__secondary-link"><a href="../oge.nsf/site-index">Site Index </a></li>
+                                       <!-- <li class="usa-footer__secondary-link"><a href="https://www.regulations.gov/">Regulations.gov</a></li> -->
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+	<div class="grid-col-12">
+            <div class="grid-row grid-gap margin-top-05" style="margin-left:-2.5%;" >
+                <div class="grid-col-8" id="footer-callout">
+			
+			<div class="footer-callout-text margin-bottom-3 " style="display:flex;">
+				<Div style="margin-left: 3%;display:flex;">
+				<img style="text-align:center;" class="usa-gov-icon" src="../oge.nsf/usa-gov.png" alt="USA.gov" width="36" height="36">
+				<div id="footer-callout">
+				<span id="footer-span">Have a question about government services?</span>
+				<a href="https://www.usa.gov/" class="">Contact USA.gov    
+                                                                                        </a>
+				</div>
+			</div>
+				<Div style=";margin-left: 10%;display:flex;">
+				<img style="text-align:right; " class="usa-gov-icon" src="../oge.nsf/reg.png" alt="USA.gov" width="36" height="36">
+				<div id="footer-callout" >
+				<span id="footer-span"></span>
+				<a href="https://www.regulations.gov/" class="">Regulation.gov</a>
+				</div>
+				</div>
+							
+			<div>
+<br>
+			<!--
+				<div class="footer-callout-text margin-bottom-3 " style="display:flex;">
+				<img style="text-align:center;" class="usa-gov-icon" src="../oge.nsf/vote.gov_png.png" alt="USA.gov" width="36" height="36">
+				<div id="footer-callout">
+				<span id="footer-span"></span>
+				<a href="https://www.vote.gov/" class="">Regulation.gov</a>
+				</div>
+				</div> ---->
+			</div>
+		    </div>
+		</div>
+	</div>
+</div>
+</div>
+    <div class="usa-footer__secondary-section">
+        <div class="grid-container">
+            <div class="grid-row">
+                <div class="mobile-lg:grid-col-12">
+                    <div class="usa-footer__social-links grid-row grid-gap-0">                        <div class="grid-col-auto">
+                            <a class="usa-social-link usa-social-link--twitter" href="https://twitter.com/OfficeGovEthics" target="_blank">
+                <span>Twitter</span>
+              </a>
+                        </div>
+                        <div class="grid-col-auto">
+                            <a class="usa-social-link usa-social-link--youtube" href="https://www.youtube.com/OGEInstitute" target="_blank">
+                <span>YouTube</span>
+              </a>
+                        </div>
+                        <div class="grid-col-auto">
+                            <a class="usa-social-link usa-social-link--rss" href="" style="display:none;">
+                <span>RSS</span>
+              </a>
+                        </div>
+                    </div>
+            <div class="usa-footer__contact-info margin-top-2 margin-right-6">
+              <div class="grid-col-auto">
+		    <h3 class="usa-footer__contact-heading"><span>U.S. Office of Government Ethics</span></h3>
+                <span><a href="mailto:contactoge@oge.gov">contactoge@oge.gov</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">(202) 482-9300 </a></span>
+              </div>
+            </div>
+                </div>
+            </div>
+        </div>
+</footer><!--end footer--><!--<br>
+<br>
+<br>
+<br>
+
+<p>/-->
+<p><style>
+
+a {
+text-decoration:underline;
+}
+
+input {
+color: rgb(118, 118, 118); 
+}
+
+.usa-alert--info {
+background-color: #f0f0f0; 
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+overflow: auto; /* Enable scroll if needed */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #112e51ab; 
+  z-index: 2;
+  cursor: pointer;
+}
+
+.usa-footer__secondary-link:last-child  {
+  content:none;
+}
+
+
+
+ @media all and (min-height:1101px) {
+#text{
+position: absolute;
+top: 50%;
+left: 50%;
+font-size: 1.2rem;
+color: #112e51;
+transform: translate(-50%,-50%);
+background-color: #ffffff;
+padding: 2rem;
+border-radius: 3px;
+z-index: 99;
+line-height:1.3;
+}
+}
+
+ @media all and (max-height:1100px) {
+ #text {
+top: 2%;
+left: 2%;
+font-size: 1.2rem;
+color: #112e51;
+background-color: #ffffff;
+padding: 2rem;
+border-radius: 3px;
+z-index: 99;
+line-height: 1.5;
+right: 2%;
+transform: translate(0%,0%);
+scroll-behavior: auto;
+ }
+}
+
+ @media all and (max-height:1100px) {
+ #text {
+     position: absolute;
+    left: 2%;
+    color: #112e51;
+    transform: translate(-30% -40%);
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 3px;
+    z-index: 99;
+    line-height: 1.5;
+    right: 2%;
+ }
+}
+
+.dataTable > thead {
+background-color: #0075ab; 
+color:white;
+}
+
+.dataTable > thead {
+background-color: #0075ab; 
+color:white;
+}
+
+.usa-alert__heading {
+margin-left:0;
+color:#006391 !important;
+}
+
+table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {
+opacity: .8; 
+}
+
+.usa-list-stackresp > li  {
+margin-bottom: 0;
+max-width: unset;
+display: inline;
+}
+
+.usa-list-stackresp > li > a {
+color:#006391;
+}
+
+.usa-list-stackresp > li > a:visited {
+color:#562b97;
+}
+
+.usa-list-stackresp > li > a:hover {
+color:#0075ab;
+}
+
+.usa-list-stackresp > li:after {
+color: #006391 !important;
+display: inline-flex;
+}
+
+#link-last {
+content:none !important;
+}
+
+
+ul.usa-alert__text {
+list-style-type:none;
+display:flex;
+}
+
+
+
+@media all and (min-width: 1029px) {
+.usa-alert--info {
+padding-bottom: .5rem; 
+}
+
+}
+	
+	
+@media all and (max-width: 3000px) {
+.usa-accordion {
+margin-left: 0rem !important;
+width: 90%;
+
+}
+
+}
+
+@media all and (max-width: 767px) {
+.usa-alert--info {
+margin-left:-1rem !important; 
+width: 100%; 
+}
+}
+
+@media (min-width:780px) and (max-width: 3000px) {
+
+
+
+.search-wrapper {
+padding-left:0 !important;
+}
+
+
+.usa-alert__heading-reverse {
+margin-left:0;
+}
+
+.legform-wrapper {
+padding-bottom:2rem;
+}
+
+.usa-list-stackresp > li:after {
+color:#006391 !important;
+display:inline-flex;
+}
+
+ul.usa-alert__text {
+display:flex;
+}
+}
+
+
+@media (max-width: 3000px)  {
+<p>.search-wrapper  {
+padding-left: 0 !important;
+width: 100%;
+margin-left: -2rem;
+}
+
+.usa-alert__heading-reverse {
+padding-bottom:1rem;
+}
+
+.search-wrapper {
+padding-left:0 !important;
+}
+
+.usa-alert__heading-reverse {
+margin-left:0;
+}
+}
+
+@media (max-width: 640px)  { 
+#example_length  {
+position: absolute;
+margin-top: 53.5rem; 
+}
+
+.dataTables_filter {
+float:right;
+padding-bottom: .9rem; 
+position:relative;
+}
+}
+
+
+
+
+</style>
+<!--END inline styles to override default datatables.net styles-->
+<p></form>
+</body>
+</html>
