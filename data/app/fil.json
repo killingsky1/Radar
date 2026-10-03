@@ -5,6 +5,56 @@
   "badge": "officiel",
   "category": "gouvernement",
   "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-10-03T02:03:24+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {
+    "entités": 2,
+    "personnes": 3
+   },
+   "communiques": [
+    "Treasury Dismantles Major Hamas Financing Network"
+   ],
+   "retraits": 0,
+   "titre_officiel": "Counter Terrorism Designations"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20261002",
+  "kind": "sanctions",
+  "notes": [
+   "Communiqué du Trésor : Treasury Dismantles Major Hamas Financing Network",
+   "Ajoutés à la liste des sanctions (SDN) : 3 personnes, 2 entités."
+  ],
+  "occurred_on": "2026-10-02",
+  "official_id": "20261002",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20261002",
+  "parser_version": "ofac-1",
+  "published_on": "2026-10-02",
+  "sha256": "6ec49dffe5df4ba11cbcf0024413f1f2adedd51b3eeaf37ae46125cdc9632cbb",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Counter Terrorism Designations"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
    "champs_requis": true,
    "dates_coherentes": true,
    "domaine_officiel": true,
@@ -723,6 +773,58 @@
   "source": "registre_federal",
   "tickers": [],
   "title": "Commerce extérieur (USTR) : Hearings, Meetings, Proceedings, etc.: Operation of the Agreement between the United States of America, the United Mexican States, and Canada"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-10-03T02:03:24+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {
+    "entités": 29,
+    "personnes": 2
+   },
+   "communiques": [
+    "Operation Economic Outcast Takes Unprecedented Action Against Sanctions Evasion Network Used by Iran",
+    "Operation Economic Outcast Targets Iran’s Remaining Industrial Lifelines"
+   ],
+   "retraits": 0,
+   "titre_officiel": "Iran-related Designations and Designations Updates; Transnational Criminal Organizations Designation; Publication of Iran-related Determination; Publication of Amended Iran-related Frequently Asked Question"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20261001",
+  "kind": "sanctions",
+  "notes": [
+   "Communiqué du Trésor : Operation Economic Outcast Takes Unprecedented Action Against Sanctions Evasion Network Used by Iran",
+   "Communiqué du Trésor : Operation Economic Outcast Targets Iran’s Remaining Industrial Lifelines",
+   "Ajoutés à la liste des sanctions (SDN) : 2 personnes, 29 entités."
+  ],
+  "occurred_on": "2026-10-01",
+  "official_id": "20261001",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20261001",
+  "parser_version": "ofac-1",
+  "published_on": "2026-10-01",
+  "sha256": "85b771290245b1a8d9f80cb3ab5e759626125defc24b73a1246bf77f0dba719f",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Iran-related Designations and Designations Updates; Transnational Criminal Organizations Designation; Publication of Iran-related Determination; Publication of Amended Iran-related Frequently Asked Question"
  },
  {
   "amount_max": null,
@@ -12102,6 +12204,579 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Watsco, Inc.",
+   "entites_visees": [
+    "Granite Group Holdings LLC"
+   ],
+   "numero": "20262326",
+   "partie_visee": "BBH Capital Partners VI, L.P.",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Watsco, Inc.",
+   "BBH Capital Partners VI, L.P."
+  ],
+  "id": "ftc_fusions:20262326",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "20262326",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262326",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-30",
+  "sha256": "edf1ebbf27ba399e9f3408484214d499e9ac08fc1a675d5ec2203c983d91b63d",
+  "source": "ftc_fusions",
+  "tickers": [
+   "WSO"
+  ],
+  "title": "FTC : feu vert antitrust anticipé, Watsco, Inc. (acquéreur) et BBH Capital Partners VI, L.P. (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Velocity I Aggregator, LP",
+   "entites_visees": [
+    "FCH Intermediate Holdings, Inc.",
+    "FCH Intermediate Holdings II, Inc."
+   ],
+   "numero": "20262310",
+   "partie_visee": "AG FCH Aggregator Holdings, LP",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Velocity I Aggregator, LP",
+   "AG FCH Aggregator Holdings, LP"
+  ],
+  "id": "ftc_fusions:20262310",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "20262310",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262310",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-30",
+  "sha256": "72c503ee93113976078484f0f399118d9ef372de636e7fa21d397217f2b8d729",
+  "source": "ftc_fusions",
+  "tickers": [],
+  "title": "FTC : feu vert antitrust anticipé, Velocity I Aggregator, LP (acquéreur) et AG FCH Aggregator Holdings, LP (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Blackstone Capital Partners VIII L.P.",
+   "entites_visees": [
+    "Delta Star, Inc."
+   ],
+   "numero": "20262303",
+   "partie_visee": "Delta Star, Inc.",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Blackstone Capital Partners VIII L.P.",
+   "Delta Star, Inc."
+  ],
+  "id": "ftc_fusions:20262303",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "20262303",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262303",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-30",
+  "sha256": "4e65aa0359ba5b85a0c7023b841d6c89f25f366cd5995263c61ed7b229dac814",
+  "source": "ftc_fusions",
+  "tickers": [],
+  "title": "FTC : feu vert antitrust anticipé, Blackstone Capital Partners VIII L.P. (acquéreur) et Delta Star, Inc. (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "OCP Trust",
+   "entites_visees": [
+    "Shelton Energy Solutions, LLC"
+   ],
+   "numero": "20262302",
+   "partie_visee": "Michael Shelton",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "OCP Trust",
+   "Michael Shelton"
+  ],
+  "id": "ftc_fusions:20262302",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "20262302",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262302",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-30",
+  "sha256": "cb721a8292d4bfe93dcea42fd15acf442b35aa2b52dcd65683094d645b328cd8",
+  "source": "ftc_fusions",
+  "tickers": [],
+  "title": "FTC : feu vert antitrust anticipé, OCP Trust (acquéreur) et Michael Shelton (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "ITOCHU Corporation",
+   "entites_visees": [
+    "TC Skyward Aviation U.S., Inc."
+   ],
+   "numero": "20262273",
+   "partie_visee": "Tokyo Century Corporation",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "ITOCHU Corporation",
+   "Tokyo Century Corporation"
+  ],
+  "id": "ftc_fusions:20262273",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "20262273",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262273",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-30",
+  "sha256": "55ef0652ce23c4d10950f086cdd341edcfbc7f5fd6f3d6ec75e541178e6f1c2a",
+  "source": "ftc_fusions",
+  "tickers": [],
+  "title": "FTC : feu vert antitrust anticipé, ITOCHU Corporation (acquéreur) et Tokyo Century Corporation (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Navitas Semiconductor Corporation",
+   "entites_visees": [
+    "Claros, Inc."
+   ],
+   "numero": "20262268",
+   "partie_visee": "Red Cell Partners, LLC",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Navitas Semiconductor Corporation",
+   "Red Cell Partners, LLC"
+  ],
+  "id": "ftc_fusions:20262268",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "20262268",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262268",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-30",
+  "sha256": "cd24ba808a6045fbbc5ed088f20a275eab074e3a1c255653b26540b743369ff1",
+  "source": "ftc_fusions",
+  "tickers": [
+   "NVTS"
+  ],
+  "title": "FTC : feu vert antitrust anticipé, Navitas Semiconductor Corporation (acquéreur) et Red Cell Partners, LLC (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Xylem Inc.",
+   "entites_visees": [
+    "Flow Controls Holding, LLC"
+   ],
+   "numero": "20262250",
+   "partie_visee": "Flow Controls Holding, LLC",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Xylem Inc.",
+   "Flow Controls Holding, LLC"
+  ],
+  "id": "ftc_fusions:20262250",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "20262250",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262250",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-30",
+  "sha256": "2b8110a5fca61235590ac9aed3390877b6ee5fe850fbc8127488a0b4ffdebd65",
+  "source": "ftc_fusions",
+  "tickers": [
+   "XYL"
+  ],
+  "title": "FTC : feu vert antitrust anticipé, Xylem Inc. (acquéreur) et Flow Controls Holding, LLC (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Nasdaq, Inc.",
+   "entites_visees": [
+    "LeveL Holdings, LLC"
+   ],
+   "numero": "20262247",
+   "partie_visee": "LeveL Holdings, LLC",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Nasdaq, Inc.",
+   "LeveL Holdings, LLC"
+  ],
+  "id": "ftc_fusions:20262247",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "20262247",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262247",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-30",
+  "sha256": "0a1779ad91a80c34f48f66789d9ac9cd60a76d42546f63c5b16aff95813f857b",
+  "source": "ftc_fusions",
+  "tickers": [
+   "NDAQ"
+  ],
+  "title": "FTC : feu vert antitrust anticipé, Nasdaq, Inc. (acquéreur) et LeveL Holdings, LLC (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "KKR Armstrong Aggregator L.P.",
+   "entites_visees": [
+    "Integer Holdings Corporation"
+   ],
+   "numero": "20262239",
+   "partie_visee": "Integer Holdings Corporation",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "KKR Armstrong Aggregator L.P.",
+   "Integer Holdings Corporation"
+  ],
+  "id": "ftc_fusions:20262239",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "20262239",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262239",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-30",
+  "sha256": "a29a97e21e5b6ddf28cfb06295e4fd7ce12a606839bcc0d8e14c2022a92e2a73",
+  "source": "ftc_fusions",
+  "tickers": [
+   "ITGR"
+  ],
+  "title": "FTC : feu vert antitrust anticipé, KKR Armstrong Aggregator L.P. (acquéreur) et Integer Holdings Corporation (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Kirin Holdings Company, Limited",
+   "entites_visees": [
+    "Jamieson Wellness Inc."
+   ],
+   "numero": "20262162",
+   "partie_visee": "Jamieson Wellness Inc.",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Kirin Holdings Company, Limited",
+   "Jamieson Wellness Inc."
+  ],
+  "id": "ftc_fusions:20262162",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "20262162",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262162",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-30",
+  "sha256": "0af8249e71cd52aa946f3d7a9d1b2a4c865afcc5aa43f3165575738d3ed970d2",
+  "source": "ftc_fusions",
+  "tickers": [],
+  "title": "FTC : feu vert antitrust anticipé, Kirin Holdings Company, Limited (acquéreur) et Jamieson Wellness Inc. (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-10-03T02:03:25+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {
+    "entités": 2,
+    "personnes": 9
+   },
+   "communiques": [
+    "Treasury Sanctions Financial Network of Foreign Terrorist Organization, Tren de Aragua, After Theft of Millions from U.S. Banks"
+   ],
+   "retraits": 6,
+   "titre_officiel": "Counter Terrorism and Transnational Criminal Organizations Designations; Belarus, Counter Narcotics, and Libya Designations Removals"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20260930",
+  "kind": "sanctions",
+  "notes": [
+   "Communiqué du Trésor : Treasury Sanctions Financial Network of Foreign Terrorist Organization, Tren de Aragua, After Theft of Millions from U.S. Banks",
+   "Ajoutés à la liste des sanctions (SDN) : 9 personnes, 2 entités.",
+   "Retirés de la liste : 6 fiches."
+  ],
+  "occurred_on": "2026-09-30",
+  "official_id": "20260930",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20260930",
+  "parser_version": "ofac-1",
+  "published_on": "2026-09-30",
+  "sha256": "c35a3fc0fe346f5a90e2e99375e56422c2833de8ad148a302ec1f5e3578f33eb",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Counter Terrorism and Transnational Criminal Organizations Designations; Belarus, Counter Narcotics, and Libya Designations Removals"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "document_officiel_sec": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "nom_officiel": "Eagle Bancorp, Inc.",
+   "sorte": "procedure"
+  },
+  "direction": -1,
+  "entities": [
+   "Eagle Bancorp, Inc."
+  ],
+  "id": "sec_poursuites:34-106555",
+  "kind": "procedure_sec",
+  "notes": [],
+  "occurred_on": "2026-09-30",
+  "official_id": "34-106555",
+  "official_url": "https://www.sec.gov/files/litigation/admin/2026/34-106555.pdf",
+  "parser_version": "sec-poursuites-1",
+  "published_on": "2026-09-30",
+  "sha256": "0d4c2912f76495c3c33f37c22541ad6be4753678dc7beac6148c69add9cd1a95",
+  "source": "sec_poursuites",
+  "tickers": [
+   "EGBN"
+  ],
+  "title": "SEC : procédure administrative visant Eagle Bancorp, Inc."
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "compagnies",
   "checks": {
    "champs_requis": true,
@@ -13186,57 +13861,6 @@
    "LESL"
   ],
   "title": "Leslie's, Inc. : contrat important signé + faillite ou mise sous séquestre + dépréciation importante d'actifs + avis de retrait de la bourse"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-03T00:30:59+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "NYSE",
-   "cik": "0001819438",
-   "items": [
-    {
-     "direction": -1,
-     "item": "3.01",
-     "libelle": "avis de retrait de la bourse",
-     "officiel": "Notice of Delisting or Failure to Satisfy a Continued Listing Rule or Standard; Transfer of Listing"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": -1,
-  "entities": [
-   "ESS Tech, Inc."
-  ],
-  "id": "sec_8k:0001819438-26-000086",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-09-24",
-  "official_id": "0001819438-26-000086",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1819438/000181943826000086/0001819438-26-000086-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-09-30",
-  "sha256": "c36d475186f08e6fd3115cafd823bcebac688dec8b81a8ccd5d93a79134bd460",
-  "source": "sec_8k",
-  "tickers": [
-   "GWH"
-  ],
-  "title": "ESS Tech, Inc. : avis de retrait de la bourse"
  },
  {
   "amount_max": null,
@@ -15222,6 +15846,60 @@
  {
   "amount_max": null,
   "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-10-03T02:03:25+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {
+    "entités": 30,
+    "personnes": 23
+   },
+   "communiques": [
+    "CHART - The Sinaloa Cartel's Los Mayos Faction - September 2026",
+    "CHART - Los Mayos Narco-Corruption in Baja California - September 2026",
+    "Operation Economic Outcast Takes Down Iranian Military Procurement Networks",
+    "Treasury Sanctions Sinaloa Cartel Leadership and Corruption Networks"
+   ],
+   "retraits": 0,
+   "titre_officiel": "Counter Narcotics, Counter Terrorism, Iran-related, and Non-Proliferation Designations"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20260929",
+  "kind": "sanctions",
+  "notes": [
+   "Communiqué du Trésor : CHART - The Sinaloa Cartel's Los Mayos Faction - September 2026",
+   "Communiqué du Trésor : CHART - Los Mayos Narco-Corruption in Baja California - September 2026",
+   "Ajoutés à la liste des sanctions (SDN) : 23 personnes, 30 entités."
+  ],
+  "occurred_on": "2026-09-29",
+  "official_id": "20260929",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20260929",
+  "parser_version": "ofac-1",
+  "published_on": "2026-09-29",
+  "sha256": "02614b268b847b39864916861885892d8a9ad10f8ca34ee7a743b7ea341a6a4a",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Counter Narcotics, Counter Terrorism, Iran-related, and Non-Proliferation Designations"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
   "badge": "confirme",
   "category": "gouvernement",
   "checks": {
@@ -16680,6 +17358,56 @@
    "GPI"
   ],
   "title": "Conifer Management, L.L.C. détient 15,4 % de GROUP 1 AUTOMOTIVE INC (13D, intentions actives, mise à jour n° 3)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "C7311",
+   "composant": "FUEL SYSTEM, DIESEL",
+   "consequence": "A fuel leak in the presence of an ignition source increases the risk of a fire. An engine stall increases the risk of a crash.",
+   "constructeur": "Cummins, Inc.",
+   "defaut": "Cummins, Inc. (Cummins) is recalling certain L9 diesel engines, part number D563027BX03. The remote fuel filter hoses may separate from the fitting, causing a fuel leak and an engine stall.",
+   "numero": "26E066000",
+   "sorte": "Equipment",
+   "sujet": "Fuel Filter Hoses May Disconnect and Leak Fuel",
+   "unites": 39052
+  },
+  "direction": -1,
+  "entities": [
+   "Cummins, Inc."
+  ],
+  "id": "nhtsa:26E066000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-09-28",
+  "official_id": "26E066000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26E066000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-09-28",
+  "sha256": "18a4ce09e4002695c9792b381ffc6fd67a78f1a24de5928712bb1fb6055dddaf",
+  "source": "nhtsa",
+  "tickers": [
+   "CMI"
+  ],
+  "title": "Rappel de Cummins, Inc. : 39 052 équipements — « Fuel Filter Hoses May Disconnect and Leak Fuel »"
  },
  {
   "amount_max": null,
@@ -20401,6 +21129,184 @@
   "badge": "officiel",
   "category": "gouvernement",
   "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "910068",
+   "composant": "ELECTRICAL SYSTEM",
+   "consequence": "While damage to the power center increases the risk of a fire, damage to the electrical system may cause the trailer brakes or exterior lightings to fail, increasing the risk of a crash.",
+   "constructeur": "Grand Design RV, LLC",
+   "defaut": "Grand Design RV, LLC (Grand Design) is recalling certain 2024-2027 Reflection fifth wheel recreational trailers. The auto detect solar controller may select a 24 volt output when the electrical system is designed for 12 volts. The incorrect voltage may damage the 7-way bulkhead power center and other circuits.",
+   "numero": "26V616000",
+   "sorte": "Vehicle",
+   "sujet": "Solar Controller May Select Incorrect Voltage Output",
+   "unites": 16128
+  },
+  "direction": -1,
+  "entities": [
+   "Grand Design RV, LLC"
+  ],
+  "id": "nhtsa:26V616000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "26V616000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V616000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-09-24",
+  "sha256": "9a4061e1c1d7494200a86a9def2731093450e5ba4787f6ad65f37d61f739638a",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Grand Design RV, LLC : 16 128 véhicules — « Solar Controller May Select Incorrect Voltage Output »"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "N262567230",
+   "composant": "ELECTRICAL SYSTEM",
+   "consequence": "A closing window that does not reverse direction as expected can pinch a passenger before retracting, increasing the risk of injury.",
+   "constructeur": "General Motors, LLC",
+   "defaut": "General Motors, LLC (GM) is recalling certain 2025-2027 Cadillac OPTIQ vehicles. When closed using the key fob's express-up function, the front windows may fail to detect an obstruction and reverse direction. As such, these vehicles fail to conform to Federal Motor Vehicle Safety Standard (FMVSS) number 118, \"Power-Operated Window Systems.\"",
+   "numero": "26V612000",
+   "sorte": "Vehicle",
+   "sujet": "Window Automatic Reversal System Malfunction/FMVSS 118",
+   "unites": 29347
+  },
+  "direction": -1,
+  "entities": [
+   "General Motors, LLC"
+  ],
+  "id": "nhtsa:26V612000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "26V612000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V612000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-09-24",
+  "sha256": "9b582e51ed0511d0bcef166d436a2bc0483e6e5b2ad41372344dcbb87f03044d",
+  "source": "nhtsa",
+  "tickers": [
+   "GM"
+  ],
+  "title": "Rappel de General Motors, LLC : 29 347 véhicules — « Window Automatic Reversal System Malfunction/FMVSS 118 »"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-10-03T02:03:26+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {},
+   "communiques": [],
+   "retraits": 8,
+   "titre_officiel": "Democratic Republic of the Congo-related Designations Removals"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20260923",
+  "kind": "sanctions",
+  "notes": [
+   "Retirés de la liste : 8 fiches."
+  ],
+  "occurred_on": "2026-09-23",
+  "official_id": "20260923",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20260923",
+  "parser_version": "ofac-1",
+  "published_on": "2026-09-23",
+  "sha256": "05b47c765a7ddc475495ff238fb4dbae70068119597828311ec521c143d7de16",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Democratic Republic of the Congo-related Designations Removals"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "communique_officiel": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "titre_officiel": "Justice Department Issues Statements on the U.S. District Court for the Western District of Michigan’s Decision in People of the State of Michigan vs. BP, P.L.C., et al."
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "doj_antitrust:justice-department-issues-statements-us-district-court-western-district-michigans-decision",
+  "kind": "antitrust",
+  "notes": [],
+  "occurred_on": "2026-09-23",
+  "official_id": "justice-department-issues-statements-us-district-court-western-district-michigans-decision",
+  "official_url": "https://www.justice.gov/opa/pr/justice-department-issues-statements-us-district-court-western-district-michigans-decision",
+  "parser_version": "doj-1",
+  "published_on": "2026-09-23",
+  "sha256": "dab55af82325ab4afad419e0de3ef23d31839bf1da1ea5f4c4fd861538a0616f",
+  "source": "doj_antitrust",
+  "tickers": [],
+  "title": "Antitrust (ministère de la Justice) : Justice Department Issues Statements on the U.S. District Court for the Western District of Michigan’s Decision in People of the State of Michigan vs. BP, P.L.C., et al."
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
    "approbation_originale": true,
    "champs_requis": true,
    "dates_coherentes": true,
@@ -20515,6 +21421,603 @@
    "LLY"
   ],
   "title": "FDA : nouveau médicament approuvé, ONSWIK (insulin efsitora alfa-gobe), de ELI LILLY AND CO"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Madison Industries Holdings LLC",
+   "entites_visees": [
+    "ebm-papst Mulfingen GmbH & Co. KGaA & Co. KG"
+   ],
+   "numero": "20262290",
+   "partie_visee": "ebm-papst Mulfingen GmbH & Co. KGaA & Co. KG",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Madison Industries Holdings LLC",
+   "ebm-papst Mulfingen GmbH & Co. KGaA & Co. KG"
+  ],
+  "id": "ftc_fusions:20262290",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-21",
+  "official_id": "20262290",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262290",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-22",
+  "sha256": "937bdd65fb6e27faaa0b8b70d75abbaec468b1b28e4507ca78d1b5f8b53153e4",
+  "source": "ftc_fusions",
+  "tickers": [],
+  "title": "FTC : feu vert antitrust anticipé, Madison Industries Holdings LLC (acquéreur) et ebm-papst Mulfingen GmbH & Co. KGaA & Co. KG (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Novo Tellus PE Fund 3, L.P.",
+   "entites_visees": [
+    "TTL Holdings, LLC"
+   ],
+   "numero": "20262284",
+   "partie_visee": "Elma Payton",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Novo Tellus PE Fund 3, L.P.",
+   "Elma Payton"
+  ],
+  "id": "ftc_fusions:20262284",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-21",
+  "official_id": "20262284",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262284",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-22",
+  "sha256": "59a3aefc6a60f606786482febe9985197285a4c6b5df76546710725f781b24ce",
+  "source": "ftc_fusions",
+  "tickers": [],
+  "title": "FTC : feu vert antitrust anticipé, Novo Tellus PE Fund 3, L.P. (acquéreur) et Elma Payton (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "nVent Electric plc",
+   "entites_visees": [
+    "Maverick Power, LLC"
+   ],
+   "numero": "20262275",
+   "partie_visee": "Dennis T. Currier",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "nVent Electric plc",
+   "Dennis T. Currier"
+  ],
+  "id": "ftc_fusions:20262275",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-21",
+  "official_id": "20262275",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262275",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-22",
+  "sha256": "e299d7217a1740314cb58e567abf0ce213328a2f9de42f79744ec8c67a851da5",
+  "source": "ftc_fusions",
+  "tickers": [
+   "NVT"
+  ],
+  "title": "FTC : feu vert antitrust anticipé, nVent Electric plc (acquéreur) et Dennis T. Currier (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "KKR Global Infrastructure Investors V (USD) SCSp",
+   "entites_visees": [
+    "DCC Energy plc"
+   ],
+   "numero": "20262265",
+   "partie_visee": "DCC Energy plc",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "KKR Global Infrastructure Investors V (USD) SCSp",
+   "DCC Energy plc"
+  ],
+  "id": "ftc_fusions:20262265",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-21",
+  "official_id": "20262265",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262265",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-22",
+  "sha256": "3f9842bdc011212a5df6af28ce345f55268d39396d2fc9117941d5a5e35b03c7",
+  "source": "ftc_fusions",
+  "tickers": [],
+  "title": "FTC : feu vert antitrust anticipé, KKR Global Infrastructure Investors V (USD) SCSp (acquéreur) et DCC Energy plc (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Vertiv Holdings Co.",
+   "entites_visees": [
+    "Utility Innovation Holding, Inc."
+   ],
+   "numero": "20262262",
+   "partie_visee": "Mr. Sidney Hinton",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Vertiv Holdings Co.",
+   "Mr. Sidney Hinton"
+  ],
+  "id": "ftc_fusions:20262262",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-21",
+  "official_id": "20262262",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262262",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-22",
+  "sha256": "b40859673197269904b02ddb67b50a6070317bc506303e16337bdef768904902",
+  "source": "ftc_fusions",
+  "tickers": [
+   "VRT"
+  ],
+  "title": "FTC : feu vert antitrust anticipé, Vertiv Holdings Co. (acquéreur) et Mr. Sidney Hinton (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Genstar Capital Partners XI, L.P.",
+   "entites_visees": [
+    "Lakehouse TopCo Inc."
+   ],
+   "numero": "20262249",
+   "partie_visee": "Apax X USD L.P.",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Genstar Capital Partners XI, L.P.",
+   "Apax X USD L.P."
+  ],
+  "id": "ftc_fusions:20262249",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-21",
+  "official_id": "20262249",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262249",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-22",
+  "sha256": "57811545625ad14afc1028c2b32277da3a36b74183b7227795a49f6ff2444568",
+  "source": "ftc_fusions",
+  "tickers": [],
+  "title": "FTC : feu vert antitrust anticipé, Genstar Capital Partners XI, L.P. (acquéreur) et Apax X USD L.P. (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Robert H. Demere, Jr.",
+   "entites_visees": [
+    "Foster Acquisition Corp.",
+    "Foster Fuels, Inc.",
+    "Foster Energy Canada, Inc.",
+    "WRF Brookneal HQ, LLC",
+    "WRF Huddleston Office, LLC",
+    "WRF Puckett Tank, LLC",
+    "Foster Propane, LLC",
+    "WRF 200 Durham Street, LLC",
+    "WRF Huddleston Tank, LLC",
+    "WRF Brookneal Tank, LLC",
+    "WRF Candler Tank, LLC",
+    "WRF Danville Tank, LLC",
+    "WRF Afton Tank, LLC",
+    "WRF Fluvanna, LLC",
+    "WRF New London Tank, LLC",
+    "WRF Danville Office, LLC",
+    "WRF Lovingston Office, LLC",
+    "WRF Montvale, LLC"
+   ],
+   "numero": "20262242",
+   "partie_visee": "Watt R. Foster, Jr.",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Robert H. Demere, Jr.",
+   "Watt R. Foster, Jr."
+  ],
+  "id": "ftc_fusions:20262242",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-21",
+  "official_id": "20262242",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262242",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-22",
+  "sha256": "4d5932def216b65aa25238b587799df1f0db5fbd95a1f6a802df076efb8e7d35",
+  "source": "ftc_fusions",
+  "tickers": [],
+  "title": "FTC : feu vert antitrust anticipé, Robert H. Demere, Jr. (acquéreur) et Watt R. Foster, Jr. (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "GA Continuity II (AM), L.P.",
+   "entites_visees": [
+    "Fleet Topco Limited"
+   ],
+   "numero": "20262215",
+   "partie_visee": "Mr. Mark Adrian Binks",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "GA Continuity II (AM), L.P.",
+   "Mr. Mark Adrian Binks"
+  ],
+  "id": "ftc_fusions:20262215",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-21",
+  "official_id": "20262215",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262215",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-22",
+  "sha256": "eb60a6251f91db64ea220ab3d1017129d333ef0585d16a6539519e3ebc1f144a",
+  "source": "ftc_fusions",
+  "tickers": [],
+  "title": "FTC : feu vert antitrust anticipé, GA Continuity II (AM), L.P. (acquéreur) et Mr. Mark Adrian Binks (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "The Hartford Insurance Group, Inc.",
+   "entites_visees": [
+    "Equitable Financial Life Insurance Company",
+    "Equitable Financial Life Insurance Company of America"
+   ],
+   "numero": "20262189",
+   "partie_visee": "Equitable Holdings, Inc.",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "The Hartford Insurance Group, Inc.",
+   "Equitable Holdings, Inc."
+  ],
+  "id": "ftc_fusions:20262189",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-21",
+  "official_id": "20262189",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262189",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-22",
+  "sha256": "5bb7b1df8179f4a22463a424094a358e780e6dc6d2e180c5127cf68342a8bc11",
+  "source": "ftc_fusions",
+  "tickers": [
+   "HIG",
+   "EQH"
+  ],
+  "title": "FTC : feu vert antitrust anticipé, The Hartford Insurance Group, Inc. (acquéreur) et Equitable Holdings, Inc. (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Prive Aggregator, LP",
+   "entites_visees": [
+    "Bowman Consulting Group Ltd."
+   ],
+   "numero": "20262177",
+   "partie_visee": "Bowman Consulting Group Ltd.",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Prive Aggregator, LP",
+   "Bowman Consulting Group Ltd."
+  ],
+  "id": "ftc_fusions:20262177",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-09-21",
+  "official_id": "20262177",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262177",
+  "parser_version": "ftc-1",
+  "published_on": "2026-09-22",
+  "sha256": "b285b43d0f45fe817fabf8966da3d5d3f61fdd3a382f22a43e2190b2f62b1915",
+  "source": "ftc_fusions",
+  "tickers": [
+   "BWMN"
+  ],
+  "title": "FTC : feu vert antitrust anticipé, Prive Aggregator, LP (acquéreur) et Bowman Consulting Group Ltd. (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "26C43",
+   "composant": "EXTERIOR LIGHTING",
+   "consequence": "A loss of exterior lighting can reduce visibility, increasing the risk of a crash.",
+   "constructeur": "Ford Motor Company",
+   "defaut": "Ford Motor Company (Ford) is recalling certain 2025-2027 Expedition, 2026 F-250 SD, F-350 SD, F-450 SD, and F-550 SD vehicles. The headlight assemblies may contain a contaminated LED chip, which can result in a loss of daytime running lights, parking lights, high beams or low beams. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 108, \"Lamps, Reflective Devices, and Associated Equipment.\"",
+   "numero": "26V606000",
+   "sorte": "Vehicle",
+   "sujet": "Exterior Lighting May Fail/FMVSS 108",
+   "unites": 41748
+  },
+  "direction": -1,
+  "entities": [
+   "Ford Motor Company"
+  ],
+  "id": "nhtsa:26V606000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-09-22",
+  "official_id": "26V606000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V606000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-09-22",
+  "sha256": "4443f5fcad61da71f3dc8400eb3b4b4a6b5d1b30764f6eb75fdf8d54bedda891",
+  "source": "nhtsa",
+  "tickers": [
+   "F"
+  ],
+  "title": "Rappel de Ford Motor Company : 41 748 véhicules — « Exterior Lighting May Fail/FMVSS 108 »"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "26C42",
+   "composant": "BACK OVER PREVENTION",
+   "consequence": "A rearview camera image that does not display reduces the driver's view behind the vehicle, increasing the risk of a crash.",
+   "constructeur": "Ford Motor Company",
+   "defaut": "Ford Motor Company (Ford) is recalling certain 2026 Ranger vehicles equipped with a 10.1-inch center stack screen. The screen may lose power and fail to display the rearview camera image. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\"",
+   "numero": "26V605000",
+   "sorte": "Vehicle",
+   "sujet": "Rearview Camera Image May Not Display/FMVSS 111",
+   "unites": 11405
+  },
+  "direction": -1,
+  "entities": [
+   "Ford Motor Company"
+  ],
+  "id": "nhtsa:26V605000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-09-22",
+  "official_id": "26V605000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V605000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-09-22",
+  "sha256": "53944e3cff7c2dfcf9f4859eea7e4a39514bd9f8290b5690b35b845bdf71d01f",
+  "source": "nhtsa",
+  "tickers": [
+   "F"
+  ],
+  "title": "Rappel de Ford Motor Company : 11 405 véhicules — « Rearview Camera Image May Not Display/FMVSS 111 »"
  },
  {
   "amount_max": null,
@@ -21557,6 +23060,50 @@
   "badge": "officiel",
   "category": "gouvernement",
   "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-10-03T02:03:26+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {},
+   "communiques": [],
+   "retraits": 11,
+   "titre_officiel": "Expiration of Emergency With Respect to the Situation in Ethiopia; Ethiopia-related Designations Removals; Issuance of Amended Russia-related General License and Associated Frequently Asked Questions"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20260918",
+  "kind": "sanctions",
+  "notes": [
+   "Retirés de la liste : 11 fiches."
+  ],
+  "occurred_on": "2026-09-18",
+  "official_id": "20260918",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20260918",
+  "parser_version": "ofac-1",
+  "published_on": "2026-09-18",
+  "sha256": "39725bcd6c770c7920d090a18588b493f04ebea8fd6881371c22928d5ec26db6",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Expiration of Emergency With Respect to the Situation in Ethiopia; Ethiopia-related Designations Removals; Issuance of Amended Russia-related General License and Associated Frequently Asked Questions"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
    "categorie_officielle_reconnue": true,
    "champs_requis": true,
    "dates_coherentes": true,
@@ -21782,6 +23329,107 @@
    "ABBV"
   ],
   "title": "Pete Sessions (Chambre, TX17) vend ABBV"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-10-03T02:03:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {
+    "entités": 10,
+    "personnes": 6
+   },
+   "communiques": [
+    "Operation Economic Outcast Disrupts Digital Asset Exchange Enabling the Iranian Regime",
+    "Further Sanctions on Cuba's Mineral Wealth and Military Modernization Apparatus"
+   ],
+   "retraits": 5,
+   "titre_officiel": "Iran-related Designations; Cuba Designations; Belarus-related Designations Removals"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20260917",
+  "kind": "sanctions",
+  "notes": [
+   "Communiqué du Trésor : Operation Economic Outcast Disrupts Digital Asset Exchange Enabling the Iranian Regime",
+   "Communiqué du Trésor : Further Sanctions on Cuba's Mineral Wealth and Military Modernization Apparatus",
+   "Ajoutés à la liste des sanctions (SDN) : 6 personnes, 10 entités.",
+   "Retirés de la liste : 5 fiches."
+  ],
+  "occurred_on": "2026-09-17",
+  "official_id": "20260917",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20260917",
+  "parser_version": "ofac-1",
+  "published_on": "2026-09-17",
+  "sha256": "0769d82a80f69c76d176ab4f51a7f3a9905e83b75423e178d59a8a3ab6218e26",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Iran-related Designations; Cuba Designations; Belarus-related Designations Removals"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "E008",
+   "composant": "ELECTRICAL SYSTEM",
+   "consequence": "A loss of drive power increases the risk of a crash.",
+   "constructeur": "Jaguar Land Rover North America, LLC",
+   "defaut": "Jaguar Land Rover North America, LLC (Land Rover) is recalling certain 2019-2024 Land Rover Range Rover Sport, 2020-2024 Land Rover Range Rover Evoque, Land Rover Range Rover, Land Rover Discovery Sport, Land Rover Defender, 2021-2024 Land Rover Range Rover Velar, Jaguar E-Pace, F-Pace, and Land Rover Discovery vehicles. The DC-DC converter may malfunction due to an electrical overload that can occur during high power demand. Additionally, a software error can cause the DC-DC converter to stop f",
+   "numero": "26V599000",
+   "sorte": "Vehicle",
+   "sujet": "Loss of Drive Power from DC-DC Converter Failure",
+   "unites": 23677
+  },
+  "direction": -1,
+  "entities": [
+   "Jaguar Land Rover North America, LLC"
+  ],
+  "id": "nhtsa:26V599000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-09-17",
+  "official_id": "26V599000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V599000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-09-17",
+  "sha256": "584edfe7795ed90eba26a5d32e93917640077f59f24253b531e1d8e429113b8d",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Jaguar Land Rover North America, LLC : 23 677 véhicules — « Loss of Drive Power from DC-DC Converter Failure »"
  },
  {
   "amount_max": null,
@@ -22613,6 +24261,92 @@
    "WMB"
   ],
   "title": "Alan Armstrong (Sénat) achète des options d’achat (call) sur WMB (2 transactions) — compte conjoint"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "FSAM-1866",
+   "composant": "BACK OVER PREVENTION",
+   "consequence": "An obstructed rearview camera image can reduce the driver's view behind the vehicle, increasing the risk of a crash.",
+   "constructeur": "Rivian Automotive, LLC",
+   "defaut": "Rivian Automotive, LLC (Rivian) is recalling certain 2022-2027 R1S, 2022-2026 R1T, and 2027 R2 vehicles. The rearview camera image may be obstructed by a notification when in reverse.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rear Visibility.\"",
+   "numero": "26V597000",
+   "sorte": "Vehicle",
+   "sujet": "Obstructed Rearview Camera Image/FMVSS 111",
+   "unites": 98828
+  },
+  "direction": -1,
+  "entities": [
+   "Rivian Automotive, LLC"
+  ],
+  "id": "nhtsa:26V597000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-09-16",
+  "official_id": "26V597000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V597000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-09-16",
+  "sha256": "0bf9331470d632c2ffb21a5b24dd09bd7b77388792e6355bc2471706010766f0",
+  "source": "nhtsa",
+  "tickers": [
+   "RIVN"
+  ],
+  "title": "Rappel de Rivian Automotive, LLC : 98 828 véhicules — « Obstructed Rearview Camera Image/FMVSS 111 »"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "communique_officiel": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "titre_officiel": "Department of Justice Again Wins Substantial Relief Against Google"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "doj_antitrust:department-justice-again-wins-substantial-relief-against-google",
+  "kind": "antitrust",
+  "notes": [],
+  "occurred_on": "2026-09-16",
+  "official_id": "department-justice-again-wins-substantial-relief-against-google",
+  "official_url": "https://www.justice.gov/opa/pr/department-justice-again-wins-substantial-relief-against-google",
+  "parser_version": "doj-1",
+  "published_on": "2026-09-16",
+  "sha256": "de5116a3cd19409498e8bb47c064edb03d4d919efe93be68019690084f002b61",
+  "source": "doj_antitrust",
+  "tickers": [],
+  "title": "Antitrust (ministère de la Justice) : Department of Justice Again Wins Substantial Relief Against Google"
  },
  {
   "amount_max": null,
@@ -23847,6 +25581,54 @@
   "badge": "officiel",
   "category": "gouvernement",
   "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "48LG, 48VT",
+   "composant": null,
+   "consequence": "A broken steering rack housing can result in a loss of steering control, increasing the risk of a crash.",
+   "constructeur": "Volkswagen Group of America, Inc.",
+   "defaut": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2018 Tiguan, 2018-2019 Atlas, and 2019-2021 Audi Q3 vehicles. One of the bolts that attaches the steering rack to the subframe may corrode and break. If this happens, the steering rack housing can break.",
+   "numero": "26V590000",
+   "sorte": "Vehicle",
+   "sujet": "Loss of Steering Control from Bolt Failure",
+   "unites": 208724
+  },
+  "direction": -1,
+  "entities": [
+   "Volkswagen Group of America, Inc."
+  ],
+  "id": "nhtsa:26V590000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-09-11",
+  "official_id": "26V590000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V590000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-09-11",
+  "sha256": "0dd4195953ab113cb695a688d2ba29cb1102e6cf32d7ddf249383738d11d7e99",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Volkswagen Group of America, Inc. : 208 724 véhicules — « Loss of Steering Control from Bolt Failure »"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
    "approbation_originale": true,
    "champs_requis": true,
    "dates_coherentes": true,
@@ -24236,6 +26018,152 @@
   "badge": "officiel",
   "category": "gouvernement",
   "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "57KL",
+   "composant": "ELECTRICAL SYSTEM",
+   "consequence": "An unexpected engine stall, loss of exterior lighting or warning lights, or failure of the rearview camera system can increase the risk of a crash.",
+   "constructeur": "Volkswagen Group of America, Inc.",
+   "defaut": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2025 Tiguan vehicles. A software error may cause the body control module (BCM) system to reset. This may result in the ignition switching off, resulting in an engine stall.  It can also lead to a loss of certain controls, warning lights, exterior lighting, or failure of the rearview camera system. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) numbers 101, \"Controls ",
+   "numero": "26V587000",
+   "sorte": "Vehicle",
+   "sujet": "Body Control Module (BCM) May Reset Unexpectedly/FMVSS 101, 102",
+   "unites": 49958
+  },
+  "direction": -1,
+  "entities": [
+   "Volkswagen Group of America, Inc."
+  ],
+  "id": "nhtsa:26V587000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-09-10",
+  "official_id": "26V587000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V587000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-09-10",
+  "sha256": "776f48b0ba7784611311a2c6ee41d7cda89f15b17c84bd00616c231ccf473358",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Volkswagen Group of America, Inc. : 49 958 véhicules — « Body Control Module (BCM) May Reset Unexpectedly/FMVSS 101, 102 »"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "81D",
+   "composant": "STRUCTURE",
+   "consequence": "Detached roof rack crossbars can create a road hazard, increasing the risk of a crash.",
+   "constructeur": "Chrysler (FCA US, LLC)",
+   "defaut": "Chrysler (FCA US, LLC) is recalling certain 2022-2025 Jeep Wagoneer, 2022-2026 Jeep Grand Wagoneer, 2023-2025 Jeep Wagoneer L, and 2023-2026 Jeep Grand Wagoneer L vehicles. The pivot bolts for the roof rack crossbars may not have been tightened properly, allowing them to detach.",
+   "numero": "26V584000",
+   "sorte": "Vehicle",
+   "sujet": "Roof Rack Crossbars May Detach",
+   "unites": 97349
+  },
+  "direction": -1,
+  "entities": [
+   "Chrysler (FCA US, LLC)"
+  ],
+  "id": "nhtsa:26V584000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-09-10",
+  "official_id": "26V584000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V584000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-09-10",
+  "sha256": "5a7fbc05d984ebe3c3ba48c3ffee2725a62ff0ae8bd921bcb4636f0e47239cd8",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Chrysler (FCA US, LLC) : 97 349 véhicules — « Roof Rack Crossbars May Detach »"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "26S69",
+   "composant": "FUEL SYSTEM, GASOLINE",
+   "consequence": "A detached tank can create a road hazard, increasing the risk of a crash. In addition, a fuel leak can cause an engine stall or increase the risk of a fire.",
+   "constructeur": "Ford Motor Company",
+   "defaut": "Ford Motor Company (Ford) is recalling certain 2023-2027 F-150 vehicles. The fuel tank may be improperly secured and leak fuel, or detach from the vehicle while driving.",
+   "numero": "26V578000",
+   "sorte": "Vehicle",
+   "sujet": "Fuel Tank May Leak or Detach",
+   "unites": 223472
+  },
+  "direction": -1,
+  "entities": [
+   "Ford Motor Company"
+  ],
+  "id": "nhtsa:26V578000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-09-09",
+  "official_id": "26V578000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V578000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-09-09",
+  "sha256": "379897289903fa25073a2cc3ae9e14161d9cbfcf09af010c2415da4246932d8f",
+  "source": "nhtsa",
+  "tickers": [
+   "F"
+  ],
+  "title": "Rappel de Ford Motor Company : 223 472 véhicules — « Fuel Tank May Leak or Detach »"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
    "categorie_officielle_reconnue": true,
    "champs_requis": true,
    "dates_coherentes": true,
@@ -24558,6 +26486,90 @@
   "source": "maison_blanche",
   "tickers": [],
   "title": "Décret présidentiel : Accelerating Access To Veterans’ Benefits And Employment Opportunities"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "2027-2 & 2026-3",
+   "composant": "ELECTRICAL SYSTEM",
+   "consequence": "An inoperative instrument cluster will fail to display critical safety information, such as vehicle speed and warning lights, increasing the risk of a crash.",
+   "constructeur": "Bombardier Recreational Products, Inc.",
+   "defaut": "Bombardier Recreational Products, Inc. (BRP) is recalling certain 2025-2026 Can-Am Origin, Can-Am Pulse, 2025-2027 Can-Am Canyon, 2024-2027 Can-Am Spyder RT, and Can-Am Spyder F3 motorcycles equipped with a touchscreen instrument cluster. The instrument cluster may reset, freeze, or go blank. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 123, \"Motorcycle Control and Displays,\" and FMVSS number 122, \"Motorcycle Brake Systems.\"",
+   "numero": "26V575000",
+   "sorte": "Vehicle",
+   "sujet": "Instrument Cluster May Fail/FMVSS 122, 123",
+   "unites": 14014
+  },
+  "direction": -1,
+  "entities": [
+   "Bombardier Recreational Products, Inc."
+  ],
+  "id": "nhtsa:26V575000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-09-07",
+  "official_id": "26V575000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V575000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-09-07",
+  "sha256": "eaa8af707d0885bc30c2da6f710d40cf3e9665f49e35cc1439b207eaca7acc05",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Bombardier Recreational Products, Inc. : 14 014 véhicules — « Instrument Cluster May Fail/FMVSS 122, 123 »"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "communique_officiel": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T02:03:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "titre_officiel": "Justice Department Reaches Proposed Consent Decree with Pinnacle,  One of America’s Largest Landlords, to Resolve Information Sharing and Algorithmic Coordination Claims"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "doj_antitrust:justice-department-reaches-proposed-consent-decree-pinnacle-one-americas-largest-landlords",
+  "kind": "antitrust",
+  "notes": [],
+  "occurred_on": "2026-09-04",
+  "official_id": "justice-department-reaches-proposed-consent-decree-pinnacle-one-americas-largest-landlords",
+  "official_url": "https://www.justice.gov/opa/pr/justice-department-reaches-proposed-consent-decree-pinnacle-one-americas-largest-landlords",
+  "parser_version": "doj-1",
+  "published_on": "2026-09-04",
+  "sha256": "dde4fe0d306a5ab23249be6e7a3acc0daccc19ecfb036b3fb6ba2229bc8c1248",
+  "source": "doj_antitrust",
+  "tickers": [],
+  "title": "Antitrust (ministère de la Justice) : Justice Department Reaches Proposed Consent Decree with Pinnacle,  One of America’s Largest Landlords, to Resolve Information Sharing and Algorithmic Coordination Claims"
  },
  {
   "amount_max": null,

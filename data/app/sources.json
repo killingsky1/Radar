@@ -6,7 +6,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-03T01:27:19+00:00",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
   "explication": "",
   "id": "sec_form4",
   "libelle": "OK",
@@ -23,7 +23,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-03T01:27:19+00:00",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
   "explication": "",
   "id": "sec_form144",
   "libelle": "OK",
@@ -40,7 +40,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-03T01:27:19+00:00",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
   "explication": "",
   "id": "sec_13dg",
   "libelle": "OK",
@@ -57,7 +57,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-03T01:27:19+00:00",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
   "explication": "",
   "id": "sec_8k",
   "libelle": "OK",
@@ -74,7 +74,7 @@
    "recus": 0
   },
   "dernier_contenu": null,
-  "dernier_succes": "2026-10-03T01:27:19+00:00",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
   "explication": "",
   "id": "sec_13f",
   "libelle": "OK",
@@ -91,7 +91,7 @@
    "recus": 0
   },
   "dernier_contenu": null,
-  "dernier_succes": "2026-10-03T01:27:19+00:00",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
   "explication": "",
   "id": "sec_offres",
   "libelle": "OK",
@@ -117,17 +117,20 @@
  },
  {
   "categorie": "compagnies",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 1.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 2
+  },
+  "dernier_contenu": "2026-09-30",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
+  "explication": "",
   "id": "sec_poursuites",
-  "libelle": "À venir",
-  "nom": "SEC : poursuites",
+  "libelle": "OK",
+  "nom": "SEC : suspensions de cotation et procédures contre des compagnies cotées",
   "officielle": true,
   "phase": 1,
-  "site": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-  "statut": "a_venir"
+  "site": "https://www.sec.gov/enforcement-litigation/trading-suspensions",
+  "statut": "ok"
  },
  {
   "categorie": "compagnies",
@@ -164,7 +167,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T01:27:19+00:00",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
   "explication": "",
   "id": "cftc_cot",
   "libelle": "OK",
@@ -209,7 +212,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-22",
-  "dernier_succes": "2026-10-03T01:27:19+00:00",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
   "explication": "",
   "id": "ventes_armes",
   "libelle": "OK",
@@ -282,7 +285,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T01:27:19+00:00",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
   "explication": "",
   "id": "nouvelles_defense_ca",
   "libelle": "OK",
@@ -313,7 +316,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-03T01:27:19+00:00",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
   "explication": "",
   "id": "chambre_ptr",
   "libelle": "OK",
@@ -330,7 +333,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-03T01:27:19+00:00",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
   "explication": "",
   "id": "senat_ptr",
   "libelle": "OK",
@@ -417,7 +420,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T01:27:19+00:00",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
   "explication": "",
   "id": "registre_federal",
   "libelle": "OK",
@@ -434,7 +437,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-29",
-  "dernier_succes": "2026-10-03T01:27:19+00:00",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
   "explication": "",
   "id": "maison_blanche",
   "libelle": "OK",
@@ -460,17 +463,20 @@
  },
  {
   "categorie": "gouvernement",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 4.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 7
+  },
+  "dernier_contenu": "2026-10-02",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
+  "explication": "",
   "id": "sanctions_us",
-  "libelle": "À venir",
-  "nom": "Sanctions américaines (OFAC, Commerce)",
+  "libelle": "OK",
+  "nom": "Sanctions américaines (OFAC)",
   "officielle": true,
   "phase": 4,
-  "site": "https://ofac.treasury.gov/",
-  "statut": "a_venir"
+  "site": "https://ofac.treasury.gov/recent-actions",
+  "statut": "ok"
  },
  {
   "categorie": "gouvernement",
@@ -479,7 +485,7 @@
    "recus": 16
   },
   "dernier_contenu": "2026-09-28",
-  "dernier_succes": "2026-10-03T01:27:19+00:00",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
   "explication": "",
   "id": "fda",
   "libelle": "OK",
@@ -491,31 +497,37 @@
  },
  {
   "categorie": "gouvernement",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 4.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 20
+  },
+  "dernier_contenu": "2026-09-30",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
+  "explication": "",
   "id": "ftc_fusions",
-  "libelle": "À venir",
+  "libelle": "OK",
   "nom": "FTC : fusions (fin anticipée de l'examen)",
   "officielle": true,
   "phase": 4,
   "site": "https://www.ftc.gov/legal-library/browse/early-termination-notices",
-  "statut": "a_venir"
+  "statut": "ok"
  },
  {
   "categorie": "gouvernement",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 4.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 3
+  },
+  "dernier_contenu": "2026-09-23",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
+  "explication": "",
   "id": "doj_antitrust",
-  "libelle": "À venir",
+  "libelle": "OK",
   "nom": "Ministère de la Justice : antitrust",
   "officielle": true,
   "phase": 4,
   "site": "https://www.justice.gov/atr/news-feeds",
-  "statut": "a_venir"
+  "statut": "ok"
  },
  {
   "categorie": "gouvernement",
@@ -524,7 +536,7 @@
    "recus": 3
   },
   "dernier_contenu": "2026-09-16",
-  "dernier_succes": "2026-10-03T01:27:19+00:00",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
   "explication": "",
   "id": "fed",
   "libelle": "OK",
@@ -550,17 +562,20 @@
  },
  {
   "categorie": "gouvernement",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 4.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 12
+  },
+  "dernier_contenu": "2026-09-28",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
+  "explication": "",
   "id": "nhtsa",
-  "libelle": "À venir",
-  "nom": "NHTSA : rappels d'autos",
+  "libelle": "OK",
+  "nom": "NHTSA : gros rappels d'autos (10 000 véhicules et plus)",
   "officielle": true,
   "phase": 4,
   "site": "https://www.nhtsa.gov/recalls",
-  "statut": "a_venir"
+  "statut": "ok"
  },
  {
   "categorie": "canada",
@@ -569,7 +584,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T01:27:19+00:00",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
   "explication": "",
   "id": "nouvelles_eco_ca",
   "libelle": "OK",
@@ -586,7 +601,7 @@
    "recus": 2
   },
   "dernier_contenu": "2026-09-02",
-  "dernier_succes": "2026-10-03T01:27:19+00:00",
+  "dernier_succes": "2026-10-03T02:03:20+00:00",
   "explication": "",
   "id": "banque_canada",
   "libelle": "OK",
