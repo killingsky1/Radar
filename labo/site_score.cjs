@@ -8,7 +8,7 @@ const fs = require("fs");
   const elusLocal = fs.readFileSync(fichierElus, "utf8");
   const lobbyingLocal = fs.readFileSync(fichierLobbying, "utf8");
   const lobbying = JSON.parse(lobbyingLocal);
-  const VERSION = "0.13.0";
+  const VERSION = "0.14.0";
   const base = process.env.BASE || "https://killingsky1.github.io/Radar/"; // BASE : essai local seulement
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
@@ -264,15 +264,37 @@ const fs = require("fs");
     dire(`Source « ${nom} » : ${etat.slice(0, 140)}`);
     ecarteesOk = ecarteesOk && etat.startsWith("Laissée de côté");
   }
-  for (const nom of ["Trésor américain : adjudications", "Douane américaine : directives"]) {
+  for (const nom of ["Trésor américain : adjudications", "Douane américaine : directives", "USAspending : contrats fédéraux américains",
+                     "Gouvernement américain actionnaire"]) {
     const s = p.locator(".source", { hasText: nom });
     const etat = (await s.count()) ? await s.first().locator(".source-etat").innerText() : "absente";
+    if (nom.startsWith("USAspending") && (await s.count())) { await s.first().evaluate((el) => el.scrollIntoView({ block: "center" })); await photo("v27-sources-usaspending"); }
     dire(`Source « ${nom} » : ${etat}`);
     ecarteesOk = ecarteesOk && etat.startsWith("OK");
   }
   await p.locator(".retour").first().click().catch(() => {});
+  // Lot 3d, livraison 2 : une participation du gouvernement (s'il y en a une) : l'extrait officiel est affiché, rien de raté.
+  // USAspending : 1re lecture silencieuse, donc aucune info attendue aujourd'hui (l'état de la source est vérifié plus haut).
+  let participationOk = true;
+  await p.locator("nav.onglets button", { hasText: "Fil" }).click();
+  await p.locator(".puce", { hasText: "Gouvernement" }).click();
+  const lp = p.locator(".ligne", { hasText: "un 8-K dit que le gouvernement américain" });
+  if (await lp.count()) {
+    await lp.first().click(); await p.waitForSelector(".feuille-fond.ouvert"); await p.waitForTimeout(400);
+    const titreP = await p.locator(".detail-titre").innerText();
+    // textContent : le texte brut (les noms des détails sont en majuscules par le CSS, innerText les rendrait en majuscules)
+    const noms = await p.locator(".details-officiels .detail-officiel-nom").allTextContents();
+    const valeurs = await p.locator(".details-officiels .detail-officiel-valeur").allTextContents();
+    const extrait = valeurs.find((v, i) => noms[i].startsWith("Extrait (")) || "";
+    if (noms.length) await p.locator(".details-officiels").evaluate((el) => el.previousElementSibling.scrollIntoView({ block: "start" }));
+    await photo("v28-participation");
+    const ratesP = await p.locator(".feuille .controle.rate").count();
+    participationOk = extrait.length > 40 && ratesP === 0;
+    dire(`Participation : « ${titreP.slice(0, 120)} » · extrait affiché : « ${extrait.slice(0, 140)}… » · ${ratesP} contrôle(s) raté(s) · conforme : ${participationOk ? "OUI" : "NON"}`);
+    await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
+  } else dire("Participation : aucune info dans le fil (aucun cas dans les 8-K lus)");
   dire(`Erreurs du navigateur : ${erreurs.length ? erreurs.join(" | ") : "aucune"}`);
-  const ok = pareil && elusPareil && lobbyingPareil && memeTop && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && !erreurs.length && js.includes(VERSION);
+  const ok = pareil && elusPareil && lobbyingPareil && memeTop && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && participationOk && !erreurs.length && js.includes(VERSION);
   dire(ok ? "VERDICT : OK" : "VERDICT : PROBLÈME");
   fs.writeFileSync(`${dossier}/site.txt`, lignes.join("\n") + "\n");
   await b.close();
