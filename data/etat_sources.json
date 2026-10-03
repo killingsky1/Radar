@@ -145,7 +145,15 @@
   "dernier_contenu": "2026-09-28",
   "dernier_succes": "2026-10-03T19:33:14+00:00",
   "derniere_erreur": "ErreurSource: https://www.parl.ca/legisinfo/fr/projets-de-loi/json?parlsession=45-1 : HTTP 403",
-  "derniere_tentative": "2026-10-03T20:28:12+00:00"
+  "derniere_tentative": "2026-10-03T21:33:07+00:00",
+  "refus": {
+   "code": 403,
+   "confirme": true,
+   "depuis": "2026-10-03T20:28:12+00:00",
+   "dernier_refus": "2026-10-03T21:33:07+00:00",
+   "essais": 2,
+   "prochain_essai": "2026-10-10T21:33:07+00:00"
+  }
  },
  "lobbying": {
   "compte": {
@@ -212,9 +220,9 @@
    "recus": 1
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T20:28:12+00:00",
+  "dernier_succes": "2026-10-03T21:33:07+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-03T20:28:12+00:00"
+  "derniere_tentative": "2026-10-03T21:33:07+00:00"
  },
  "registre_federal": {
   "compte": {

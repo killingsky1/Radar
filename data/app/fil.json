@@ -23,6 +23,7 @@
   "currency": "USD",
   "data": {
    "cik": "0002101698",
+   "corrigee": "Titre et fin d'extrait au mot entier (version 2 du lecteur, 3 octobre 2026).",
    "details": [
     [
      "Compagnie",
@@ -38,13 +39,13 @@
     ],
     [
      "Extrait (EX-99.1)",
-     "… $450 million redeemable preferred stock investment from the Department of War ‒ $200 million at close, followed by five, $50 million tranches over next few years • 5.5% payment-in-kind (PIK) dividend • Warrants representing up to 19.9% of Elmet's post- deal common stock ‒ 75.0% penny warrants (~5.7 million shares) ‒ 25.0% str …"
+     "… $450 million redeemable preferred stock investment from the Department of War ‒ $200 million at close, followed by five, $50 million tranches over next few years • 5.5% payment-in-kind (PIK) dividend • Warrants representing up to 19.9% of Elmet's post- deal common stock ‒ 75.0% penny warrants (~5.7 million shares) ‒ 25.0% …"
     ]
    ],
    "documents": [
     {
      "extraits": [
-      "… $450 million redeemable preferred stock investment from the Department of War ‒ $200 million at close, followed by five, $50 million tranches over next few years • 5.5% payment-in-kind (PIK) dividend • Warrants representing up to 19.9% of Elmet's post- deal common stock ‒ 75.0% penny warrants (~5.7 million shares) ‒ 25.0% str …"
+      "… $450 million redeemable preferred stock investment from the Department of War ‒ $200 million at close, followed by five, $50 million tranches over next few years • 5.5% payment-in-kind (PIK) dividend • Warrants representing up to 19.9% of Elmet's post- deal common stock ‒ 75.0% penny warrants (~5.7 million shares) ‒ 25.0% …"
      ],
      "type": "EX-99.1",
      "url": "https://www.sec.gov/Archives/edgar/data/2101698/000121390026106420/ea030742001ex99-1.htm"
@@ -75,7 +76,7 @@
   "tickers": [
    "ELMT"
   ],
-  "title": "Elmet Group Co. : un 8-K dit que le gouvernement américain (ministère de la Guerre (Défense)) reçoit, détient ou revend des titres de la compagnie"
+  "title": "Elmet Group Co. : un 8-K dit que le ministère américain de la Guerre (Défense) reçoit, détient ou revend des titres de la compagnie"
  },
  {
   "amount_max": null,
@@ -6429,77 +6430,9 @@
   "currency": "USD",
   "data": {
    "actions": 100000.0,
-   "bourse": "NYSE",
-   "cik_emetteur": "0001699136",
-   "plan_10b5_1": true,
-   "prix_moyen": 61.973,
-   "roles": [
-    "Chairman and CEO"
+   "aussi_declare_par": [
+    "Bender Scott"
    ],
-   "symbole_declare": "WHD",
-   "symboles_sec": [
-    "WHD"
-   ],
-   "transactions": [
-    {
-     "acquis_cede": "D",
-     "actions": 100000.0,
-     "apres": 120527.0,
-     "code": "S",
-     "date": "2026-10-01",
-     "prix": 61.973
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Bender Scott",
-   "Cactus, Inc."
-  ],
-  "id": "sec_form4:0001628280-26-064684:S",
-  "kind": "vente_initie",
-  "notes": [
-   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
-  ],
-  "occurred_on": "2026-10-01",
-  "official_id": "0001628280-26-064684:S",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1699136/000162828026064684/0001628280-26-064684-index.htm",
-  "parser_version": "sec-5",
-  "published_on": "2026-10-02",
-  "sha256": "d0f335c3b825efff65b52cf38a5c22a450e059174e48493514f73a483ff925df",
-  "source": "sec_form4",
-  "tickers": [
-   "WHD"
-  ],
-  "title": "Bender Scott (Chairman and CEO) vend 100 000 actions de Cactus, Inc."
- },
- {
-  "amount_max": 6197300.0,
-  "amount_min": 6197300.0,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "code_achat_ou_vente_reel": true,
-   "dates_coherentes": true,
-   "dates_transaction_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "montant_coherent": true,
-   "montant_plausible": true,
-   "montant_recalcule": true,
-   "prix_et_actions_positifs": true,
-   "prix_plausible": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_conforme_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T03:01:50+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 100000.0,
    "bourse": "NYSE",
    "cik_emetteur": "0001699136",
    "plan_10b5_1": true,
@@ -14196,80 +14129,9 @@
   "currency": "USD",
   "data": {
    "actions": 7250.0,
-   "automatique": null,
-   "bourse": "Nasdaq",
-   "cik_emetteur": "0001502292",
-   "hors_bourse": null,
-   "plan_10b5_1": false,
-   "prix_moyen": 6.7497,
-   "roles": [
-    "administrateur"
+   "aussi_declare_par": [
+    "O'Hanlon Isolde"
    ],
-   "symbole_declare": "PRHI",
-   "symboles_sec": [
-    "PRHI",
-    "PRHIZ"
-   ],
-   "transactions": [
-    {
-     "acquis_cede": "A",
-     "actions": 7250.0,
-     "apres": 7964.0,
-     "automatique": null,
-     "code": "P",
-     "date": "2026-09-30",
-     "hors_bourse": null,
-     "prix": 6.7497
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "O'Hanlon Isolde",
-   "Presurance Holdings, Inc."
-  ],
-  "id": "sec_form4:0001193125-26-410913:P",
-  "kind": "achat_initie",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001193125-26-410913:P",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1502292/000119312526410913/0001193125-26-410913-index.htm",
-  "parser_version": "sec-7",
-  "published_on": "2026-10-01",
-  "sha256": "d11c6a51d9b46a58169cf71eb521ce82cee5d05df05b96dd2607da7c09adf9e5",
-  "source": "sec_form4",
-  "tickers": [
-   "PRHI"
-  ],
-  "title": "O'Hanlon Isolde (administrateur) achète 7 250 actions de Presurance Holdings, Inc."
- },
- {
-  "amount_max": 48935.32,
-  "amount_min": 48935.32,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "code_achat_ou_vente_reel": true,
-   "dates_coherentes": true,
-   "dates_transaction_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "montant_coherent": true,
-   "montant_plausible": true,
-   "montant_recalcule": true,
-   "prix_et_actions_positifs": true,
-   "prix_plausible": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_conforme_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T03:54:06+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 7250.0,
    "automatique": null,
    "bourse": "Nasdaq",
    "cik_emetteur": "0001502292",
@@ -14389,6 +14251,152 @@
    "XENE"
   ],
   "title": "Kelly Thomas Patrick (Chief Financial Officer) achète 15 000 actions de Xenon Pharmaceuticals Inc."
+ },
+ {
+  "amount_max": 99250.0,
+  "amount_min": 99250.0,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:53:53+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 2000.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000039368",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 49.625,
+   "roles": [
+    "administrateur"
+   ],
+   "symbole_declare": "FUL",
+   "symboles_sec": [
+    "FUL"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 2000.0,
+     "apres": 3343.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 49.625
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Happe Michael J",
+   "FULLER H B CO"
+  ],
+  "id": "sec_form4:0001225208-26-008046:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001225208-26-008046:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/39368/000122520826008046/0001225208-26-008046-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "322dd9e073a14bcde0f84b5e2fae549d5b1769163db2ba9202fe47e094fe938c",
+  "source": "sec_form4",
+  "tickers": [
+   "FUL"
+  ],
+  "title": "Happe Michael J (administrateur) achète 2 000 actions de FULLER H B CO"
+ },
+ {
+  "amount_max": 50005.48,
+  "amount_min": 50005.48,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:53:53+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 2170.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0000017313",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 23.044,
+   "roles": [
+    "administrateur"
+   ],
+   "symbole_declare": "CSWC",
+   "symboles_sec": [
+    "CSWC"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 2170.0,
+     "apres": 22842.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-10-01",
+     "hors_bourse": null,
+     "prix": 23.044
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Thomas William R III",
+   "CAPITAL SOUTHWEST CORP"
+  ],
+  "id": "sec_form4:0000017313-26-000159:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-10-01",
+  "official_id": "0000017313-26-000159:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/17313/000001731326000159/0000017313-26-000159-index.htm",
+  "parser_version": "sec-7",
+  "published_on": "2026-10-01",
+  "sha256": "8b58c4b9802c0904781ba0073b16875661bbd0eb4f5112597eaae1ab65fdaf48",
+  "source": "sec_form4",
+  "tickers": [
+   "CSWC"
+  ],
+  "title": "Thomas William R III (administrateur) achète 2 170 actions de CAPITAL SOUTHWEST CORP"
  },
  {
   "amount_max": null,
