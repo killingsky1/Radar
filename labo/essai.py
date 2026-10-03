@@ -320,28 +320,41 @@ MOIS_EN = ["January", "February", "March", "April", "May", "June", "July", "Augu
 def texte_pdf(contenu):
     import pdfplumber
     with pdfplumber.open(io.BytesIO(contenu)) as pdf:
-        return " ".join((p.extract_text() or "") for p in pdf.pages[:4])
+        return " ".join((p.extract_text() or "") for p in pdf.pages)
 
 
 def verifier_fda(ev):
-    """2e méthode : la LETTRE D'APPROBATION officielle (PDF) et la page Drugs@FDA, pas la fiche openFDA du robot."""
+    """2e méthode, 2 documents officiels autres que la fiche openFDA du robot :
+    - la page Drugs@FDA (HTML) : date d'action, « ORIG-1 Approval », classe « Type 1 », marque, compagnie ;
+    - la lettre d'approbation (PDF) : numéro, marque, « approved » et date de la signature électronique.
+    Une lettre en image (aucun texte) n'est pas un écart : elle est signalée.
+    """
     d = ev["data"]
-    t = " ".join(texte_pdf(get(d["lettre"]).content).split()).upper()
+    jour = date.fromisoformat(ev["published_on"])
+    mmjjaaaa = f"{jour.month:02d}/{jour.day:02d}/{jour.year}"
     ecarts = []
+    page = " ".join(re.sub(r"<[^>]+>", " ", lire_page(ev["official_url"])).split()).upper()
+    if not re.search(rf"{re.escape(mmjjaaaa)} ORIG-{d['numero_soumission']} APPROVAL TYPE 1\b", page):
+        ecarts.append(f"Drugs@FDA : pas d'approbation originale de type 1 le {mmjjaaaa}")
+    for marque in d["marques"]:
+        if marque.upper() not in page:
+            ecarts.append(f"Drugs@FDA : marque {marque} absente")
+    if f"COMPANY: {str(d['sponsor']).upper()}" not in page:
+        ecarts.append(f"Drugs@FDA : compagnie {d['sponsor']} absente")
+    t = " ".join(texte_pdf(get(d["lettre"]).content).split()).upper()
+    if len(t.replace("REFERENCE ID", "")) < 200:
+        ecarts.append("NOTE lettre en image (aucun texte lisible) : vérifiée par Drugs@FDA seulement")
+        return [e for e in ecarts if not e.startswith("NOTE")] or []
     num = d["application"]
     if not re.search(rf"{num[:3]}\s*{num[3:]}", t):
-        ecarts.append(f"numéro {num} absent de la lettre")
+        ecarts.append(f"lettre : numéro {num} absent")
     for marque in d["marques"]:
         if marque.upper() not in t:
-            ecarts.append(f"marque {marque} absente de la lettre")
-    if "APPROV" not in t:
-        ecarts.append("la lettre ne parle pas d'approbation")
-    jour = date.fromisoformat(ev["published_on"])
-    if f"{MOIS_EN[jour.month - 1]} {jour.day}, {jour.year}".upper() not in t:
-        ecarts.append(f"date {MOIS_EN[jour.month - 1]} {jour.day}, {jour.year} absente de la lettre")
-    page = lire_page(ev["official_url"]).upper()
-    if d["marques"] and d["marques"][0].upper() not in page:
-        ecarts.append("la page Drugs@FDA ne nomme pas le médicament")
+            ecarts.append(f"lettre : marque {marque} absente")
+    if "APPROVED" not in t:
+        ecarts.append("lettre : le mot « approved » est absent")
+    if mmjjaaaa not in t:
+        ecarts.append(f"lettre : date de signature {mmjjaaaa} absente")
     return ecarts
 
 

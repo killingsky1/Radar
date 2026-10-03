@@ -168,3 +168,24 @@ def test_lecteur_au_complet_sur_la_journee_du_14_aout(tmp_path):
     rapport = executer(tmp_path, client=internet, maintenant=datetime(2026, 8, 17, 16, tzinfo=timezone.utc),
                        collecteurs=lecteur)
     assert rapport["sec_13f"]["nouveaux"] == 0
+
+
+def test_positions_cachees_ou_table_incomplete_rien_plutot_que_faux():
+    # Cas réel de Norges Bank (1er trimestre 2026) : « positions confidentielles omises », 1 ligne sur 1 507.
+    # Reproduit ici sur la couverture de Berkshire : mêmes champs officiels, valeurs changées.
+    acc, tab, acc0, tab0 = DEPOTS[1067983]
+    depot = DepotSec(acc, "13F-HR", "2026-08-14", "", [("1067983", "x")])
+    couv, couv0 = f.lire_couverture(lire(f"{acc}.primary_doc.xml")), f.lire_couverture(lire(f"{acc0}.primary_doc.xml"))
+    args = (lire(f"{acc}.{tab}"), couv, couv0, lire(f"{acc0}.{tab0}"), acc0, table_cusip(), symboles_sec())
+    assert len(f.evenements_13f(1067983, depot, *args)) == f.MAX_PAR_DEPOT
+    assert f.evenements_13f(1067983, depot, *args[:2], dict(couv0, confidentiel=True), *args[3:]) == []
+    assert f.evenements_13f(1067983, depot, *args[:2], dict(couv0, lignes_annoncees=1507), *args[3:]) == []
+
+
+def test_seulement_les_actions_ordinaires():
+    # Classes et noms réels vus dans les dépôts du 14 août 2026
+    assert not f.action_ordinaire("SUPER MICRO COMPUTER INC", "7 DEP CM SR A WI")  # actions privilégiées
+    assert not f.action_ordinaire("ISHARES TR", "CORE S&P 500 ETF")
+    assert not f.action_ordinaire("INVESCO EXCHANGE TRADED FD T", "S&P500 EQL WGT")
+    assert f.action_ordinaire("ALPHABET INC", "CAP STK CL C")
+    assert f.action_ordinaire("ANHEUSER BUSCH INBEV SA NV", "SPONSORED ADR")

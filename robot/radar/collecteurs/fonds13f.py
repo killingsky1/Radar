@@ -63,27 +63,48 @@ def lire_couverture(xml: bytes) -> dict:
     racine = ET.fromstring(xml)
     trimestre = _champ(racine, "reportCalendarOrQuarter")  # MM-JJ-AAAA
     m = re.fullmatch(r"(\d\d)-(\d\d)-(\d{4})", trimestre)
+    lignes = _champ(racine, "tableEntryTotal")
     return {"trimestre": f"{m.group(3)}-{m.group(1)}-{m.group(2)}" if m else None,
             "sorte": _champ(racine, "reportType").upper(),
             "modification": _champ(racine, "isAmendment").lower() == "true",
+            # Positions cachées (traitement confidentiel demandé à la SEC) : la table publique est incomplète.
+            "confidentiel": _champ(racine, "isConfidentialOmitted").lower() == "true",
+            "lignes_annoncees": int(lignes) if lignes.isdigit() else None,
             "nom": _champ(racine, "name")}
+
+
+# Seules les actions ordinaires d'une compagnie comptent : pas les actions privilégiées, bons de souscription,
+# billets, parts ni les fonds indiciels (ETF), dont les achats ne disent rien sur une compagnie en particulier.
+AUTRES_TITRES = re.compile(r"\b(PFD|PREF|PREFERRED|DEP|DEPOSITARY SH|NOTES?|BONDS?|WTS?|WARRANTS?|RIGHTS?|UNITS?|ETF|ETN|"
+                           r"DEBT|CONV|DBCV)\b")
+FONDS_INDICIELS = re.compile(r"\b(ETF|EXCHANGE TRADED|ISHARES|SPDR|SELECT SECTOR|INDEX FDS?|INDEX FUNDS?|PROSHARES|"
+                             r"DIREXION|WISDOMTREE|VANECK|GLOBAL X)\b")
+
+
+def action_ordinaire(nom: str, classe_titre: str) -> bool:
+    return not AUTRES_TITRES.search(classe_titre.upper()) and not FONDS_INDICIELS.search(nom.upper())
 
 
 def lire_positions(xml: bytes) -> dict:
     """Table officielle des positions -> {cusip: {nom, classe, actions, valeur}} (actions ordinaires seulement).
 
-    Les options (putCall) et les obligations (PRN) sont mises de côté. Valeurs en dollars ; si le fonds les
-    déclare encore en milliers (prix médian sous 1 $), elles sont converties et c'est noté.
+    Les options (putCall), les obligations (PRN), les actions privilégiées et les fonds indiciels sont mis de
+    côté (ils restent dans la valeur totale du portefeuille). Valeurs en dollars ; si le fonds les déclare
+    encore en milliers (prix médian sous 1 $), elles sont converties et c'est noté.
     """
     racine = ET.fromstring(xml)
     positions: dict[str, dict] = {}
     total = 0.0
+    lignes = 0
     for ligne in racine.iter():
         if _nom(ligne.tag) != "infoTable":
             continue
+        lignes += 1
         valeur = float(_champ(ligne, "value") or 0)
         total += valeur
         if _champ(ligne, "putCall") or _champ(ligne, "sshPrnamtType").upper() != "SH":
+            continue
+        if not action_ordinaire(_champ(ligne, "nameOfIssuer"), _champ(ligne, "titleOfClass")):
             continue
         cusip = _champ(ligne, "cusip").upper()
         p = positions.setdefault(cusip, {"nom": _champ(ligne, "nameOfIssuer"), "classe": _champ(ligne, "titleOfClass"),
@@ -96,7 +117,17 @@ def lire_positions(xml: bytes) -> dict:
         for p in positions.values():
             p["valeur"] *= 1000
         total *= 1000
-    return {"positions": positions, "total": total, "en_milliers": en_milliers}
+    return {"positions": positions, "total": total, "en_milliers": en_milliers, "lignes": lignes}
+
+
+def comparable(couverture: dict, table: dict) -> bool:
+    """Rapport complet, sans positions cachées, et table qui a bien toutes les lignes annoncées sur la couverture.
+
+    Vu le 3 octobre 2026 : Norges Bank, 1er trimestre 2026, « positions confidentielles omises » et 1 seule ligne
+    publique sur 1 507 annoncées. Comparer avec ce rapport inventait des « nouvelles positions ».
+    """
+    return (couverture["sorte"] == "13F HOLDINGS REPORT" and not couverture["confidentiel"]
+            and couverture["lignes_annoncees"] == table["lignes"])
 
 
 def trimestre_precedent(jour: str) -> str:
@@ -224,6 +255,8 @@ def titre(fonds: str, m: dict, nom: str, trimestre: str) -> str:
 def evenements_13f(cik: int, depot: DepotSec, xml_apres: bytes, couv_apres: dict, couv_avant: dict,
                    xml_avant: bytes, acc_avant: str, table: dict, syms) -> list[Evenement]:
     apres, avant = lire_positions(xml_apres), lire_positions(xml_avant)
+    if not (comparable(couv_apres, apres) and comparable(couv_avant, avant)):
+        return []  # rien plutôt que faux
     fonds = FONDS[cik]
     notes = ["Valeur estimée au prix de fin de trimestre déclaré : le prix réel des transactions n'est pas publié."]
     if apres["en_milliers"] or avant["en_milliers"]:
@@ -242,7 +275,9 @@ def evenements_13f(cik: int, depot: DepotSec, xml_apres: bytes, couv_apres: dict
             direction=1 if m["sorte"] in ("nouvelle", "hausse") else -1, notes=list(notes),
             data={**m, "fonds": fonds, "cik_fonds": cik, "trimestre": couv_apres["trimestre"],
                   "trimestre_precedent": couv_avant["trimestre"], "acc_precedent": acc_avant,
-                  "sortes_rapports": [couv_avant["sorte"], couv_apres["sorte"]]},
+                  "sortes_rapports": [couv_avant["sorte"], couv_apres["sorte"]],
+                  "positions_cachees": [couv_avant["confidentiel"], couv_apres["confidentiel"]],
+                  "lignes": [[couv_avant["lignes_annoncees"], avant["lignes"]], [couv_apres["lignes_annoncees"], apres["lignes"]]]},
         ))
     return evs
 
@@ -254,7 +289,9 @@ def controles(ev: Evenement) -> dict[str, bool]:
     sorte = "nouvelle" if a == 0 else "sortie" if b == 0 else "hausse" if b > a else "baisse"
     return {
         "trimestres_consecutifs": bool(d.get("trimestre")) and d.get("trimestre_precedent") == trimestre_precedent(d["trimestre"]),
-        "rapports_complets": d.get("sortes_rapports") == ["13F HOLDINGS REPORT", "13F HOLDINGS REPORT"],
+        "rapports_complets": d.get("sortes_rapports") == ["13F HOLDINGS REPORT", "13F HOLDINGS REPORT"]
+                             and d.get("positions_cachees") == [False, False]
+                             and all(a == b for a, b in d.get("lignes") or [[0, 1]]),
         "variation_recalculee": a >= 0 and b >= 0 and a != b and sorte == d.get("sorte")
                                 and abs(abs(b - a) * d.get("prix", 0) - d.get("montant", -1)) < 1,
         "prix_plausible": 0.01 <= d.get("prix", 0) <= 1_000_000,
@@ -270,8 +307,9 @@ def lire_un_13f(ctx, depot: DepotSec) -> list[Evenement]:
     dossier = depot.dossier(str(cik))
     fichiers = [f["name"] for f in json.loads(ctx.client.get(f"{dossier}/index.json").contenu)["directory"]["item"]]
     couv_apres = lire_couverture(ctx.client.get(f"{dossier}/primary_doc.xml").contenu)
-    if couv_apres["modification"] or couv_apres["sorte"] != "13F HOLDINGS REPORT" or not couv_apres["trimestre"]:
-        return []  # modification, avis ou rapport combiné : pas comparable
+    if (couv_apres["modification"] or couv_apres["sorte"] != "13F HOLDINGS REPORT" or not couv_apres["trimestre"]
+            or couv_apres["confidentiel"]):
+        return []  # modification, avis, rapport combiné ou positions cachées : pas comparable
     tables = [f for f in fichiers if f.endswith(".xml") and f != "primary_doc.xml"]
     if len(tables) != 1:
         raise ValueError(f"table des positions introuvable dans {depot.acc} : {fichiers}")
@@ -286,7 +324,7 @@ def lire_un_13f(ctx, depot: DepotSec) -> list[Evenement]:
     acc_avant = precedents[0]
     dossier_avant = f"{ARCHIVES}/edgar/data/{cik}/{acc_avant.replace('-', '')}"
     couv_avant = lire_couverture(ctx.client.get(f"{dossier_avant}/primary_doc.xml").contenu)
-    if couv_avant["sorte"] != "13F HOLDINGS REPORT" or couv_avant["trimestre"] != voulu:
+    if couv_avant["sorte"] != "13F HOLDINGS REPORT" or couv_avant["trimestre"] != voulu or couv_avant["confidentiel"]:
         return []
     fichiers_avant = [f["name"] for f in
                       json.loads(ctx.client.get(f"{dossier_avant}/index.json").contenu)["directory"]["item"]]
