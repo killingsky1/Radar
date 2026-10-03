@@ -89,6 +89,8 @@ def test_ofac_compte_les_fiches_sans_inventer_de_noms():
         "20261002": ({"personnes": 3, "entités": 2}, 0, "Counter Terrorism Designations"),
         "20261001": ({"personnes": 2, "entités": 29}, 0, None),
         "20260930": ({"personnes": 9, "entités": 2}, 6, None),
+        # Congo : 8 fiches retirées, puis un paragraphe administratif sans rapport qui ne doit pas compter
+        "20260923": ({}, 8, "Democratic Republic of the Congo-related Designations Removals"),
     }
     for n, (ajouts, retraits, titre) in attendus.items():
         ev = valider(r.evenement_ofac(f"https://ofac.treasury.gov/recent-actions/{n}", page_ofac(n)), JOUR)
