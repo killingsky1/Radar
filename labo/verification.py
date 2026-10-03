@@ -142,15 +142,34 @@ def main() -> None:
         except Exception as exc:  # noqa: BLE001
             resultats.append({"id": info["id"], "titre": info["title"], "ok": False, "ecarts": [f"erreur : {exc}"]})
     for r in resultats:  # un document qu'on n'a pas pu télécharger n'est pas un écart : c'est « non vérifié »
-        r["impossible"] = not r["ok"] and all(e.startswith("erreur :") for e in r["ecarts"])
+        r["impossible"] = not r["ok"] and bool(r["ecarts"]) and all(e.startswith("erreur :") for e in r["ecarts"])
+        # Mêmes faits, mais la page n'a plus les mêmes octets : on le dit tel quel (et on cherche pourquoi)
+        r["faits_identiques_page_changee"] = not r["ok"] and not r["ecarts"] and r.get("meme_document") is False
+    import pathlib
+
+    diag = pathlib.Path("labo/resultats/differents")
+    diag.mkdir(parents=True, exist_ok=True)
+    for r in [r for r in resultats if r["faits_identiques_page_changee"]][:3]:
+        a = telecharger(r["document"])
+        time.sleep(2)
+        b = telecharger(r["document"])
+        r["page_change_a_chaque_visite"] = hashlib.sha256(a).hexdigest() != hashlib.sha256(b).hexdigest()
+        nom = r["id"].split(":")[1]
+        (diag / f"{nom}.1.html").write_bytes(a)
+        (diag / f"{nom}.2.html").write_bytes(b)
     ok = sum(1 for r in resultats if r["ok"])
     impossibles = sum(1 for r in resultats if r["impossible"])
     verifiees = len(resultats) - impossibles
+    changees = sum(1 for r in resultats if r["faits_identiques_page_changee"])
     lignes = [f"# Audit de vérité : {ok}/{verifiees} infos identiques au document officiel"
-              + (f" ({impossibles} non vérifiées : site injoignable)" if impossibles else ""), "",
+              + (f" ({impossibles} non vérifiées : site injoignable)" if impossibles else "")
+              + (f" ({changees} avec les mêmes faits mais une page modifiée par le site)" if changees else ""), "",
               f"Infos publiées par le robot : {len(infos)} · échantillon au hasard : {len(resultats)}", ""]
     for r in resultats:
-        etat = "OK" if r["ok"] else "NON VÉRIFIÉE" if r["impossible"] else "ÉCART"
+        etat = ("OK" if r["ok"] else "NON VÉRIFIÉE" if r["impossible"]
+                else "MÊMES FAITS, PAGE CHANGÉE" if r["faits_identiques_page_changee"] else "ÉCART")
+        if r.get("page_change_a_chaque_visite") is not None:
+            etat += f" (page différente à chaque visite : {'oui' if r['page_change_a_chaque_visite'] else 'non'})"
         lignes.append(f"- **{etat}** · {r['titre']}")
         if r.get("document"):
             lignes.append(f"  - document : {r['document']} · même document que le robot : {'oui' if r.get('meme_document') else 'NON'}")
