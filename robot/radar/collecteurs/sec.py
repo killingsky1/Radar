@@ -22,7 +22,7 @@ from ..models import Evenement, empreinte
 from ..store import Depot
 from ..validate import controle_source, jours_ouvrables
 
-VERSION = "sec-6"  # à augmenter quand un lecteur change : les infos sont relues et mises à jour
+VERSION = "sec-7"  # à augmenter quand un lecteur change : les infos sont relues et mises à jour
 ARCHIVES = "https://www.sec.gov/Archives"
 BOURSES_GARDEES = {"Nasdaq", "NYSE", "CBOE"}
 SEUIL_ACHAT = 25_000  # $ US : sous ce montant, un achat est du bruit
@@ -42,6 +42,10 @@ HORS_BOURSE = re.compile(r"initial public offering|\bIPO\b|public offering|priva
                          r"not effected on (?:a|any) (?:national )?securities exchange|registered direct offering|"
                          r"directed share program", re.I)
 PARTIES_TRANSACTION = ("securityTitle", "transactionDate", "transactionCoding", "transactionAmounts")
+# Note du déposant qui dit que l'achat est automatique : réinvestissement de dividendes, régime d'achat d'actions des
+# employés. Ce n'est pas une décision d'acheter (ex. Simon Property, 1er oct. 2026 : 7 administrateurs).
+AUTOMATIQUE = re.compile(r"reinvest\w*\s+(?:of\s+)?(?:the\s+)?dividends?|dividends?\s+reinvest\w*|"
+                         r"employee stock purchase plan", re.I)
 SOUS_EVALUE = re.compile(r"undervalu", re.I)  # « undervalued », « undervaluation » (point 4 d'un 13D)
 
 ITEMS_8K = {  # description officielle EDGAR (début) -> (item, libellé, direction)
@@ -307,6 +311,7 @@ def lire_form4(texte: str) -> dict:
     for tr in racine.findall("nonDerivativeTable/nonDerivativeTransaction"):
         ids = sorted({f.get("id") for partie in PARTIES_TRANSACTION for el in tr.findall(partie) for f in el.iter("footnoteId")})
         hors_bourse = next((notes[i][:300] for i in ids if HORS_BOURSE.search(notes.get(i, ""))), None)
+        automatique = next((notes[i][:300] for i in ids if AUTOMATIQUE.search(notes.get(i, ""))), None)
         transactions.append({
             "code": (tr.findtext("transactionCoding/transactionCode") or "").strip(),
             "date": (tr.findtext("transactionDate/value") or "").strip()[:10],
@@ -315,6 +320,7 @@ def lire_form4(texte: str) -> dict:
             "acquis_cede": (tr.findtext("transactionAmounts/transactionAcquiredDisposedCode/value") or "").strip(),
             "apres": nombre(tr.findtext("postTransactionAmounts/sharesOwnedFollowingTransaction/value")),
             "hors_bourse": hors_bourse,
+            "automatique": automatique,
         })
     return {
         "type": racine.findtext("documentType"),
@@ -368,6 +374,11 @@ def evenements_form4(texte: str, sha: str, depot: DepotSec, syms: Symboles) -> l
         if hors_bourse:
             extrait = hors_bourse if len(hors_bourse) <= 160 else hors_bourse[:159] + "…"
             notes.append(f"Note du déposant : transaction lors d'une émission ou hors bourse (« {extrait} »).")
+        automatique = next((t["automatique"] for t in lignes if t.get("automatique")), None)
+        if automatique:
+            extrait = automatique if len(automatique) <= 160 else automatique[:159] + "…"
+            notes.append(f"Note du déposant : achat automatique (réinvestissement de dividendes ou régime d'achat des "
+                         f"employés) (« {extrait} »).")
         titre = f"{' et '.join(noms)} ({', '.join(roles)}) {verbe} {nombre_fr(actions)} actions de {cote['name']}"
         evenements.append(Evenement(
             source="sec_form4", official_id=f"{depot.acc}:{code}", category="compagnies",
@@ -380,7 +391,7 @@ def evenements_form4(texte: str, sha: str, depot: DepotSec, syms: Symboles) -> l
                 "cik_emetteur": f["cik_emetteur"], "bourse": cote["exchange"], "symbole_declare": f["symbole_declare"],
                 "symboles_sec": syms.tous(f["cik_emetteur"]), "actions": actions,
                 "prix_moyen": round(valeur / actions, 4) if actions else None, "plan_10b5_1": f["plan_10b5_1"],
-                "roles": roles, "transactions": lignes, "hors_bourse": hors_bourse,
+                "roles": roles, "transactions": lignes, "hors_bourse": hors_bourse, "automatique": automatique,
             },
         ))
     return evenements

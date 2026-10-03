@@ -40,7 +40,7 @@ def test_jour_de_calcul_a_l_heure_de_toronto():
 
 def test_listes_sur_les_vraies_infos():
     r = sc.calculer(vraies_infos(), MAINTENANT)
-    assert r["version"] == "score-2" and r["jour"] == "2026-10-02"
+    assert r["version"] == sc.VERSION and r["jour"] == "2026-10-02"
     assert len(r["hausse"]) == sc.MAX_LISTE and all(x["score"] >= sc.SEUIL for x in r["hausse"])
     assert [x["score"] for x in r["hausse"]] == sorted((x["score"] for x in r["hausse"]), reverse=True)
     assert [x["symbole"] for x in r["baisse"]] == ["LESL", "EGBN", "CBZ"]
@@ -211,7 +211,7 @@ def test_publication_ecrit_le_score(tmp_path):
         (F / "score" / "evenements_20261003.jsonl.gz").read_bytes()))
     executer(tmp_path, collecteurs={}, maintenant=MAINTENANT)
     r = json.loads((tmp_path / "app" / "aujourdhui.json").read_text(encoding="utf-8"))
-    assert r["version"] == "score-2" and r["hausse"][0]["symbole"] in ("PRHI", "XENE")
+    assert r["version"] == sc.VERSION and r["hausse"][0]["symbole"] in ("PRHI", "XENE")
     assert r["methode"]["regles"][0]["code"] == "achat_dirigeant"
     assert all(e in r["methode"]["etudes"] for regle in r["methode"]["regles"] for e in regle["etudes"])
     # Le passage suivant garde la date d'entrée de chacun
@@ -300,3 +300,49 @@ def test_note_d_une_autre_ligne_ne_marque_pas_l_achat():
     orbimed = depot_lu("0000947871-26-000910", "4", "2026-09-30", 1802369)
     assert [a.pourquoi for a in sc.evaluer(simeon, sc.achats_d_emission(orbimed))] == [sc.SANS_POINTS["emission_meme_prix"]]
     assert [a.regle for a in sc.evaluer(simeon)] == ["achat_dirigeant"]  # sans l'achat d'OrbiMed : un achat normal
+
+
+def test_achat_automatique_reinvestissement_de_dividendes():
+    # Simon Property, 1er oct. 2026 : 7 administrateurs « achètent » le même jour ; la note dit que ce sont des actions
+    # acquises par le réinvestissement des dividendes d'actions reçues en rémunération. Pas une décision d'acheter.
+    (spg,) = depot_lu("0001189793-26-000014", "4", "2026-10-01", 1063761)
+    assert spg["badge"] == "officiel" and spg["data"]["hors_bourse"] is None
+    assert "reinvestment of dividends" in spg["data"]["automatique"]
+    assert any(n.startswith("Note du déposant : achat automatique") for n in spg["notes"])
+    assert [a.pourquoi for a in sc.evaluer(spg)] == [sc.SANS_POINTS["automatique"]]
+    assert sc.calculer([spg], MAINTENANT)["compagnies_notees"] == 0
+
+
+def test_fonds_enregistre_mis_a_part():
+    # Total Return Securities Fund (SWZ) : le PDG achète, mais c'est un fonds fermé (sa fiche SEC : N-CSR, NPORT-P…).
+    infos = vraies_infos()
+    swz = une(infos, source="sec_form4", tickers=["SWZ"])
+    assert [a.regle for a in sc.evaluer(swz)] == ["achat_dirigeant"]
+    r = sc.calculer(infos, MAINTENANT, fonds={"SWZ"})
+    assert "SWZ" not in {x["symbole"] for x in r["hausse"] + r["baisse"]}
+    assert sc.calculer([swz], MAINTENANT, fonds={"SWZ"})["compagnies_notees"] == 0
+    assert sc.SANS_POINTS["fonds"] in r["methode"]["sans_points"]
+
+
+def test_publication_met_les_fonds_a_part(tmp_path):
+    (tmp_path / "evenements").mkdir()
+    (tmp_path / "evenements" / "2026-10.jsonl").write_bytes(gzip.decompress(
+        (F / "score" / "evenements_20261003.jsonl.gz").read_bytes()))
+    executer(tmp_path, collecteurs={}, maintenant=MAINTENANT)
+    avant = json.loads((tmp_path / "app" / "aujourdhui.json").read_text(encoding="utf-8"))
+    assert "SWZ" in {x["symbole"] for x in avant["hausse"]}
+    (tmp_path / "sec").mkdir()
+    (tmp_path / "sec" / "emetteurs.json").write_text(json.dumps(
+        {"SWZ": {"cik": 813623, "nom": "Total Return Securities Fund", "type": "fonds", "lu": "2026-10-03",
+                 "formulaires_fonds": ["N-CSR", "NPORT-P"]}}), encoding="utf-8")
+    executer(tmp_path, collecteurs={}, maintenant=MAINTENANT)
+    apres = json.loads((tmp_path / "app" / "aujourdhui.json").read_text(encoding="utf-8"))
+    assert "SWZ" not in {x["symbole"] for x in apres["hausse"]}
+
+
+def test_note_sur_le_total_detenu_ne_rend_pas_l_achat_automatique():
+    # PG&E : un administrateur achète 7 500 actions en bourse ; la note « dividend reinvestment » porte sur le TOTAL
+    # détenu après la transaction (des unités reçues en juillet), pas sur l'achat. L'achat compte.
+    (pcg,) = depot_lu("0001628280-26-064255", "4", "2026-10-01", 1004980)
+    assert pcg["data"]["automatique"] is None and pcg["data"]["hors_bourse"] is None
+    assert [a.regle for a in sc.evaluer(pcg)] == ["achat_dirigeant"]

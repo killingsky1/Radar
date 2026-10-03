@@ -7,7 +7,7 @@ from collections import Counter
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import __version__
+from . import __version__, emetteurs
 from .health import LIBELLES, statut
 from .registry import SOURCES
 from .score import calculer
@@ -85,6 +85,6 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
     chemin = donnees / "app" / "aujourdhui.json"
     try:
         precedent = json.loads(chemin.read_text(encoding="utf-8")) if chemin.exists() else None
-        _ecrire(chemin, calculer(fil, maintenant, precedent, symboles))
+        _ecrire(chemin, calculer(fil, maintenant, precedent, symboles, fonds=emetteurs.fonds(donnees)))
     except Exception as exc:  # noqa: BLE001
         print(f"Score : erreur, l'ancien calcul est gardé ({type(exc).__name__}: {exc})")

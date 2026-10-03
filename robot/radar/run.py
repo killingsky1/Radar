@@ -15,6 +15,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from . import emetteurs
 from .collecteurs import COLLECTEURS
 from .http import ClientPoli
 from .models import Evenement
@@ -94,6 +95,15 @@ def executer(donnees, passage=None, seulement=None, collecteurs=None, client=Non
         if dates:
             e["dernier_contenu"] = max(dates)
         rapport[sid] = {"ok": True, **bilan}
+
+    # Type officiel des émetteurs notés (fonds enregistrés mis à part du score). Jamais bloquant.
+    try:
+        tous = Depot(donnees).lire("evenements")
+        bilan = emetteurs.rafraichir(ctx, emetteurs.symboles_recents(tous, maintenant.date()))
+        if bilan.get("lues") or bilan.get("erreurs"):
+            print(f"Types d'émetteurs (fiches SEC) : {bilan}")
+    except Exception as exc:  # noqa: BLE001
+        print(f"Types d'émetteurs : erreur, l'ancien fichier est gardé ({type(exc).__name__}: {exc})")
 
     # Deux sources officielles qui publient le même acte : liées (badge « Confirmé »).
     liees = recouper(donnees)

@@ -21,7 +21,7 @@ from zoneinfo import ZoneInfo
 
 from .registry import SOURCES
 
-VERSION = "score-2"
+VERSION = "score-3"
 DEMI_VIE = 30
 DEMI_VIE_FONDS = 60  # le 13F arrive jusqu'à 45 jours après la fin du trimestre
 AGE_MAX = 90
@@ -95,6 +95,8 @@ REGLES = {
                     "×1,75 si un autre initié de la même compagnie a acheté à 2 jours ouvrables près (groupe d'achats)",
                     "Pas de bonus pour le montant",
                     "0 point si l'achat était planifié d'avance (plan 10b5-1)",
+                    "0 point si le déposant écrit que l'achat est automatique (réinvestissement de dividendes, "
+                    "régime d'achat des employés)",
                     "0 point si le déposant écrit que l'achat s'est fait lors d'une émission (entrée en bourse, "
                     "placement) ou hors bourse, ou s'il a eu lieu le même jour au même prix qu'un tel achat"],
         "etudes": ["lakonishok_lee", "cohen_malloy_pomorski", "alldredge_blank", "seyhun", "wang_shin_francis",
@@ -157,6 +159,10 @@ SANS_POINTS = {
     "emission": "Transaction lors d'une émission (entrée en bourse, placement) ou hors bourse, selon la note du "
                 "déposant : les études portent sur les achats et les ventes en bourse.",
     "emission_meme_prix": "Même jour et même prix qu'un achat déclaré lors d'une émission : c'est la même émission.",
+    "automatique": "Achat automatique (réinvestissement de dividendes, régime d'achat des employés), selon la note du "
+                   "déposant : ce n'est pas une décision d'acheter.",
+    "fonds": "Fonds de placement enregistré (il dépose des rapports de fonds N-CSR ou N-PORT à la SEC) : les études "
+             "portent sur des compagnies, pas sur des fonds.",
     "13g": "13G : placement passif (souvent un fonds indiciel qui grossit).",
     "13d_suivi": "Mise à jour d'un 13D ou passage sous 5 % : seul le premier dépôt compte.",
     "fonds_vente": "Vente ou baisse d'un grand fonds : les études portent sur les achats.",
@@ -186,9 +192,9 @@ METHODE = {
     "avertissement": "Une aide pour voir où va le gros argent, preuves à l'appui. Pas un conseil financier.",
     "regles": [{"code": c, **{k: r[k] for k in ("famille", "points", "libelle", "details", "etudes")}}
                for c, r in REGLES.items()],
-    "sans_points": [SANS_POINTS[k] for k in ("plan", "emission", "emission_meme_prix", "avis_144", "13g", "13d_autre",
-                                             "13d_pas_sous_evalue", "13d_suivi", "fonds_vente", "elu_vente", "offre",
-                                             "ftc", "8k_autre")]
+    "sans_points": [SANS_POINTS[k] for k in ("fonds", "plan", "automatique", "emission", "emission_meme_prix", "avis_144",
+                                             "13g", "13d_autre", "13d_pas_sous_evalue", "13d_suivi", "fonds_vente",
+                                             "elu_vente", "offre", "ftc", "8k_autre")]
                    + ["Fed, Banque du Canada, décrets, sanctions, ventes d'armes, CFTC : contexte, sans points."],
     "familles_noms": FAMILLES,
     "etudes": {k: {"titre": t, "constat": c, "lien": u} for k, (t, c, u) in ETUDES.items()},
@@ -243,6 +249,8 @@ def evaluer(ev: dict, emissions: frozenset = frozenset()) -> list[Apport]:
     if s == "sec_form4":
         if d.get("plan_10b5_1"):
             return contexte("plan")
+        if d.get("automatique"):
+            return contexte("automatique")
         if d.get("hors_bourse"):
             return contexte("emission")
         if k == "achat_initie" and any((symboles[0], t.get("date"), t.get("prix")) in emissions
@@ -346,7 +354,9 @@ def _infos(a: Apport, compte: bool) -> dict:
             "facteurs": [[l, m] for l, m in a.facteurs], "age": a.age, "temps": round(a.temps, 3), "compte": compte}
 
 
-def calculer(evenements: list[dict], maintenant: datetime, precedent: dict | None = None, symboles=None) -> dict:
+def calculer(evenements: list[dict], maintenant: datetime, precedent: dict | None = None, symboles=None,
+             fonds: set[str] | frozenset = frozenset()) -> dict:
+    """`fonds` : symboles des fonds enregistrés selon leur fiche SEC (voir emetteurs.py) : 0 point, contexte seulement."""
     jour = jour_de_calcul(maintenant)
     emissions = achats_d_emission(evenements)
     par_symbole: dict[str, list[Apport]] = defaultdict(list)
@@ -359,6 +369,8 @@ def calculer(evenements: list[dict], maintenant: datetime, precedent: dict | Non
             continue
         for a in evaluer(ev, emissions):
             a.age = max(age, 0)
+            if a.regle and a.symbole in fonds:
+                a.regle, a.pourquoi, a.facteurs = None, SANS_POINTS["fonds"], []
             par_symbole[a.symbole].append(a)
 
     resultats = []
