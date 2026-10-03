@@ -1,6 +1,6 @@
-# Audit de vérité : 72/75 infos identiques au document officiel (3 avec les mêmes faits mais une page modifiée par le site)
+# Audit de vérité : 92/95 infos identiques au document officiel (3 avec les mêmes faits mais une page modifiée par le site)
 
-Infos publiées par le robot : 594 · échantillon au hasard : 75
+Infos publiées par le robot : 638 · échantillon au hasard : 95
 
 - **MÊMES FAITS, PAGE CHANGÉE (page différente à chaque visite : non)** · SHERWIN WILLIAMS CO : contrat important signé + contrat important résilié
   - document : https://www.sec.gov/Archives/edgar/data/89800/000119312526405960/0001193125-26-405960-index-headers.html · même document que le robot : NON
@@ -68,87 +68,127 @@ Infos publiées par le robot : 594 · échantillon au hasard : 75
   - document : https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035431.pdf · même document que le robot : oui
 - **OK** · Josh Gottheimer (Chambre, NJ05) achète des options d’achat (call) sur MSFT (2 transactions) — compte conjoint
   - document : https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035455.pdf · même document que le robot : oui
-- **OK** · FDA : nouveau médicament approuvé, ZANVASTRO (zilganersen sodium), de IONIS PHARMS INC
-  - document : https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220210 · même document que le robot : oui
-- **OK** · FDA : nouveau médicament approuvé, ATEBRIOZ (zilurgisertib), de INCYTE CORP
-  - document : https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221198 · même document que le robot : oui
-- **OK** · FDA : nouveau médicament approuvé, ZENBEXUS (iberdomide hydrochloride), de E.R. Squibb & Sons, L.L.C.
-  - document : https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221075 · même document que le robot : oui
+- **OK** · Antitrust (ministère de la Justice) : Justice Department Issues Statements on the U.S. District Court for the Western District of Michigan’s Decision in People of the State of Michigan vs. BP, P.L.C., et al.
+  - document : https://www.justice.gov/opa/pr/justice-department-issues-statements-us-district-court-western-district-michigans-decision · même document que le robot : oui
+- **OK** · Antitrust (ministère de la Justice) : Justice Department Reaches Proposed Consent Decree with Pinnacle,  One of America’s Largest Landlords, to Resolve Information Sharing and Algorithmic Coordination Claims
+  - document : https://www.justice.gov/opa/pr/justice-department-reaches-proposed-consent-decree-pinnacle-one-americas-largest-landlords · même document que le robot : oui
+- **OK** · Antitrust (ministère de la Justice) : Department of Justice Again Wins Substantial Relief Against Google
+  - document : https://www.justice.gov/opa/pr/department-justice-again-wins-substantial-relief-against-google · même document que le robot : oui
+- **OK** · FDA : nouveau médicament approuvé, ISEMBYLD (apitegromab-mstn), de SCHOLAR ROCK INC
+  - document : https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761463 · même document que le robot : oui
 - **OK** · FDA : nouveau médicament approuvé, RASONQUE (daraxonrasib), de Revolution Medicines, Inc.
   - document : https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220910 · même document que le robot : oui
-- **OK** · FDA : nouveau médicament approuvé, LYRFIGTU (lirafugratinib hydrochloride), de ELEVAR THERAPEUTICS INC
-  - document : https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425 · même document que le robot : oui
-- **OK** · Fed : taux directeur maintenu entre 3,5 % et 3,75 % (vote : 9 pour, 3 contre)
-  - document : https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm · même document que le robot : oui
+- **OK** · FDA : nouveau médicament approuvé, LISRAYA (brepocitinib tosylate), de Priovant Therapeutics, Inc.
+  - document : https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220106 · même document que le robot : oui
+- **OK** · FDA : nouveau médicament approuvé, MIMRYLO (rusfertide acetate), de Takeda Pharmaceuticals America, Inc.
+  - document : https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220605 · même document que le robot : oui
+- **OK** · FDA : nouveau médicament approuvé, ORZEYFUL (oveporexton), de TAKEDA PHARMS USA
+  - document : https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220860 · même document que le robot : oui
 - **OK** · Fed : taux directeur maintenu entre 3,5 % et 3,75 % (vote : 12 pour, 0 contre)
   - document : https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm · même document que le robot : oui
+- **OK** · Fed : taux directeur maintenu entre 3,5 % et 3,75 % (vote : 9 pour, 3 contre)
+  - document : https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm · même document que le robot : oui
 - **OK** · Fed : taux directeur maintenu entre 3,5 % et 3,75 % (avec dissidence)
   - document : https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm · même document que le robot : oui
 - **OK** · Fed : taux directeur relevé de 0,25 point, entre 3,75 % et 4 % (vote : 12 pour, 0 contre)
   - document : https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm · même document que le robot : oui
+- **OK** · FTC : feu vert antitrust anticipé, Nasdaq, Inc. (acquéreur) et LeveL Holdings, LLC (partie visée)
+  - document : https://www.ftc.gov/legal-library/browse/early-termination-notices/20262247 · même document que le robot : oui
+- **OK** · FTC : feu vert antitrust anticipé, KKR Global Infrastructure Investors V (USD) SCSp (acquéreur) et DCC Energy plc (partie visée)
+  - document : https://www.ftc.gov/legal-library/browse/early-termination-notices/20262265 · même document que le robot : oui
+- **OK** · FTC : feu vert antitrust anticipé, Watsco, Inc. (acquéreur) et BBH Capital Partners VI, L.P. (partie visée)
+  - document : https://www.ftc.gov/legal-library/browse/early-termination-notices/20262326 · même document que le robot : oui
+- **OK** · FTC : feu vert antitrust anticipé, GA Continuity II (AM), L.P. (acquéreur) et Mr. Mark Adrian Binks (partie visée)
+  - document : https://www.ftc.gov/legal-library/browse/early-termination-notices/20262215 · même document que le robot : oui
+- **OK** · FTC : feu vert antitrust anticipé, Novo Tellus PE Fund 3, L.P. (acquéreur) et Elma Payton (partie visée)
+  - document : https://www.ftc.gov/legal-library/browse/early-termination-notices/20262284 · même document que le robot : oui
+- **OK** · Décret présidentiel : RESTORING AMERICAN SALTWATER ANGLING AND RECREATION
+  - document : https://www.whitehouse.gov/presidential-actions/2026/09/restoring-american-saltwater-angling-and-recreation/ · même document que le robot : oui
 - **OK** · Décret présidentiel : Enhancing Program Integrity and Integrity and Interagency Coordination in the Administration of the H-1B Nonimmigrant Visa Program
   - document : https://www.whitehouse.gov/presidential-actions/2026/09/enhancing-program-integrity-and-integrity-and-interagency-coordination-in-the-administration-of-the-h-1b-nonimmigrant-visa-program/ · même document que le robot : oui
-- **OK** · Proclamation présidentielle : Excluding Certain Canadian Alcoholic Beverages from Importation into the United States in Response to Continued Discrimination Against the Commerce of the United States with Respect to Alcoholic Beverages
-  - document : https://www.whitehouse.gov/presidential-actions/2026/09/excluding-certain-canadian-alcoholic-beverages-from-importation-into-the-united-states-in-response-to-continued-discrimination-against-the-commerce-of-the-united-states-with-respect-to-alcoholic-bever/ · même document que le robot : oui
-- **OK** · Décret présidentiel : Reinvigorating America’s Hunting Heritage
-  - document : https://www.whitehouse.gov/presidential-actions/2026/09/reinvigorating-americas-hunting-heritage/ · même document que le robot : oui
-- **OK** · Décret présidentiel : Providing Meaningful Water Quality Improvements Through Collaboration and Oversight of Federal Support
-  - document : https://www.whitehouse.gov/presidential-actions/2026/09/providing-meaningful-water-quality-improvements-through-collaboration-and-oversight-of-federal-support/ · même document que le robot : oui
+- **OK** · Mémorandum présidentiel : Restoring Reciprocity in Government Procurement
+  - document : https://www.whitehouse.gov/presidential-actions/2026/09/restoring-reciprocity-in-government-procurement/ · même document que le robot : oui
 - **OK** · Décret présidentiel : Adjusting Certain Delegations Under the Defense Production Act
   - document : https://www.whitehouse.gov/presidential-actions/2026/09/adjusting-certain-delegations-under-the-defense-production-act-e2de/ · même document que le robot : oui
-- **OK** · L’Aviation royale canadienne s’associe au Fanshawe College pour offrir de l’instruction
-  - document : https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/laviation-royale-canadienne-sassocie-au-fanshawe-college-pour-offrir-de-linstruction.html · même document que le robot : oui
-- **OK** · Le gouvernement du Canada franchit une nouvelle étape en vue de doter l’Aviation royale canadienne d’une capacité essentielle aux missions
-  - document : https://www.canada.ca/fr/agence-investissement-defense/nouvelles/2026/09/le-gouvernement-du-canada-franchit-une-nouvelle-etape-en-vue-de-doter-laviation-royale-canadienne-dune-capacite-essentielle-aux-missions.html · même document que le robot : oui
+- **OK** · Décret présidentiel : Honoring the American History of the Great Lakes and Renaming Lake Ontario as Lake America
+  - document : https://www.whitehouse.gov/presidential-actions/2026/08/honoring-the-american-history-of-the-great-lakes-and-renaming-lake-ontario-as-lake-america-3a36/ · même document que le robot : oui
+- **OK** · Rappel de Chrysler (FCA US, LLC) : 97 349 véhicules — « Roof Rack Crossbars May Detach »
+  - document : https://www.nhtsa.gov/recalls?nhtsaId=26V584000 · même document que le robot : oui
+- **OK** · Rappel de Rivian Automotive, LLC : 98 828 véhicules — « Obstructed Rearview Camera Image/FMVSS 111 »
+  - document : https://www.nhtsa.gov/recalls?nhtsaId=26V597000 · même document que le robot : oui
+- **OK** · Rappel de Bombardier Recreational Products, Inc. : 14 014 véhicules — « Instrument Cluster May Fail/FMVSS 122, 123 »
+  - document : https://www.nhtsa.gov/recalls?nhtsaId=26V575000 · même document que le robot : oui
+- **OK** · Rappel de Volkswagen Group of America, Inc. : 208 724 véhicules — « Loss of Steering Control from Bolt Failure »
+  - document : https://www.nhtsa.gov/recalls?nhtsaId=26V590000 · même document que le robot : oui
+- **OK** · Rappel de Grand Design RV, LLC : 16 128 véhicules — « Solar Controller May Select Incorrect Voltage Output »
+  - document : https://www.nhtsa.gov/recalls?nhtsaId=26V616000 · même document que le robot : oui
 - **OK** · Le gouvernement du Canada commence la construction d’une nouvelle installation de chauffage central à la 5e Escadre Goose Bay
   - document : https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/le-gouvernement-du-canada-commence-la-construction-dune-nouvelle-installation-de-chauffage-central-a-la-5e-escadre-goose-bay.html · même document que le robot : oui
-- **OK** · La Régie approuve le règlement de Trans Mountain établissant un nouveau cadre pour les droits
-  - document : https://www.canada.ca/fr/regie-energie-canada/nouvelles/2026/09/la-regie-approuve-le-reglement-de-trans-mountain-etablissant-un-nouveau-cadre-pour-les-droits.html · même document que le robot : oui
-- **OK** · Le gouvernement du Canada présente la nouvelle Mégadéduction à la productivité pour aider les entreprises à investir, à croître et à créer des emplois au Canada
-  - document : https://www.canada.ca/fr/ministere-finances/nouvelles/2026/10/le-gouvernement-du-canada-presente-la-nouvelle-megadeduction-a-la-productivite-pour-aider-les-entreprises-a-investir-a-croitre-et-a-creer-des-emplo.html · même document que le robot : oui
-- **OK** · La ministre McKnight visite le terminal maritime Westridge, exemple probant de la capacité du Canada de construire de grandes infrastructures énergétiques de manière responsable
-  - document : https://www.canada.ca/fr/ressources-naturelles-canada/nouvelles/2026/10/la-ministre-mcknight-visite-le-terminal-maritime-westridge-exemple-probant-de-la-capacite-du-canada-de-construire-de-grandes-infrastructures-energe0.html · même document que le robot : oui
+- **OK** · Le gouvernement du Canada franchit une nouvelle étape en vue de doter l’Aviation royale canadienne d’une capacité essentielle aux missions
+  - document : https://www.canada.ca/fr/agence-investissement-defense/nouvelles/2026/09/le-gouvernement-du-canada-franchit-une-nouvelle-etape-en-vue-de-doter-laviation-royale-canadienne-dune-capacite-essentielle-aux-missions.html · même document que le robot : oui
+- **OK** · L’Aviation royale canadienne s’associe au Fanshawe College pour offrir de l’instruction
+  - document : https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/laviation-royale-canadienne-sassocie-au-fanshawe-college-pour-offrir-de-linstruction.html · même document que le robot : oui
 - **OK** · Le Canada et l’Allemagne signent un accord sur la sécurité générale de l’information
   - document : https://www.canada.ca/fr/services-publics-approvisionnement/nouvelles/2026/09/le-canada-et-lallemagne-signent-un-accord-sur-la-securite-generale-de-linformation.html · même document que le robot : oui
-- **OK** · Le gouvernement du Canada investit dans la création de 10 000 placements professionnels liés à l’IA pour de jeunes Canadiens
-  - document : https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/09/le-gouvernement-du-canada-investit-dans-la-creation-de-10-000-placements-professionnels-lies-a-lia-pour-de-jeunes-canadiens.html · même document que le robot : oui
-- **OK** · Sanctions (Trésor, OFAC) : Iranian Transactions and Sanctions Regulations
-  - document : https://www.federalregister.gov/documents/2026/09/30/2026-19978/iranian-transactions-and-sanctions-regulations · même document que le robot : oui
-- **OK** · Sanctions (Trésor, OFAC) : Notice of OFAC Sanctions Action
-  - document : https://www.federalregister.gov/documents/2026/10/02/2026-20215/notice-of-ofac-sanctions-action · même document que le robot : oui
+- **OK** · La ministre McKnight visite le terminal maritime Westridge, exemple probant de la capacité du Canada de construire de grandes infrastructures énergétiques de manière responsable
+  - document : https://www.canada.ca/fr/ressources-naturelles-canada/nouvelles/2026/10/la-ministre-mcknight-visite-le-terminal-maritime-westridge-exemple-probant-de-la-capacite-du-canada-de-construire-de-grandes-infrastructures-energe0.html · même document que le robot : oui
+- **OK** · La Régie approuve le règlement de Trans Mountain établissant un nouveau cadre pour les droits
+  - document : https://www.canada.ca/fr/regie-energie-canada/nouvelles/2026/09/la-regie-approuve-le-reglement-de-trans-mountain-etablissant-un-nouveau-cadre-pour-les-droits.html · même document que le robot : oui
+- **OK** · Le Bureau de la concurrence craint que les consommateurs soient privés de certaines aubaines en épicerie
+  - document : https://www.canada.ca/fr/bureau-concurrence/nouvelles/2026/09/le-bureau-de-la-concurrence-craint-que-les-consommateurs-soient-prives-de-certaines-aubaines-en-epicerie.html · même document que le robot : oui
+- **OK** · Le gouvernement du Canada présente la nouvelle Mégadéduction à la productivité pour aider les entreprises à investir, à croître et à créer des emplois au Canada
+  - document : https://www.canada.ca/fr/ministere-finances/nouvelles/2026/10/le-gouvernement-du-canada-presente-la-nouvelle-megadeduction-a-la-productivite-pour-aider-les-entreprises-a-investir-a-croitre-et-a-creer-des-emplo.html · même document que le robot : oui
 - **OK** · Sanctions (Trésor, OFAC) : Cuban Assets Control Regulations
   - document : https://www.federalregister.gov/documents/2026/09/30/2026-19973/cuban-assets-control-regulations · même document que le robot : oui
+- **OK** · Sanctions (Trésor, OFAC) : Cuba Sanctions Regulations
+  - document : https://www.federalregister.gov/documents/2026/09/30/2026-19977/cuba-sanctions-regulations · même document que le robot : oui
 - **OK** · Sanctions (Trésor, OFAC) : Notice of OFAC Sanctions Action
   - document : https://www.federalregister.gov/documents/2026/09/30/2026-20032/notice-of-ofac-sanctions-action · même document que le robot : oui
+- **OK** · Sanctions (Trésor, OFAC) : Removing Duplicative Penalties Information and Reorganizing Certain Parts
+  - document : https://www.federalregister.gov/documents/2026/09/30/2026-20007/removing-duplicative-penalties-information-and-reorganizing-certain-parts · même document que le robot : oui
 - **OK** · Commerce extérieur (USTR) : Hearings, Meetings, Proceedings, etc.: Operation of the Agreement between the United States of America, the United Mexican States, and Canada
   - document : https://www.federalregister.gov/public-inspection/2026-20341/hearings-meetings-proceedings-etc-operation-of-the-agreement-between-the-united-states-of-america · même document que le robot : oui
-- **OK** · MFA Global S.a.r.l. (actionnaire de 10 %) prévoit vendre 2 638 171 actions de Target Hospitality Corp.
-  - document : https://www.sec.gov/Archives/edgar/data/1712189/000095014226002665/0000950142-26-002665-index.htm · même document que le robot : oui
-- **OK** · Stilwell Value LLC (actionnaire de 10 %) prévoit vendre 32 069 actions de Wheeler Real Estate Investment Trust, Inc.
-  - document : https://www.sec.gov/Archives/edgar/data/1527541/000139707626000016/0001397076-26-000016-index.htm · même document que le robot : oui
-- **OK** · MARTINE ROTHBLATT (administrateur, dirigeant) prévoit vendre 209 000 actions de UNITED THERAPEUTICS Corp
-  - document : https://www.sec.gov/Archives/edgar/data/1082554/000195004726009982/0001950047-26-009982-index.htm · même document que le robot : oui
-- **OK** · BRANNIN MCBEE (dirigeant) prévoit vendre 56 531 actions de CoreWeave, Inc.
-  - document : https://www.sec.gov/Archives/edgar/data/1769628/000195004726009894/0001950047-26-009894-index.htm · même document que le robot : oui
-- **OK** · SCOTT BURROWS (dirigeant) prévoit vendre 17 500 actions de Spyre Therapeutics, Inc.
-  - document : https://www.sec.gov/Archives/edgar/data/1636282/000195004726009876/0001950047-26-009876-index.htm · même document que le robot : oui
-- **OK** · John Boozman (Sénat) vend CEG — compte conjoint
-  - document : https://efdsearch.senate.gov/search/view/ptr/6298991b-e48f-4b11-9bbb-dfc94a7e1b32/ · même document que le robot : oui
-- **OK** · Sheldon Whitehouse (Sénat) vend ADI — conjoint·e
-  - document : https://efdsearch.senate.gov/search/view/ptr/6bf3b6f7-9e1b-499a-bd5a-990292ce2e72/ · même document que le robot : oui
-- **OK** · Alan Armstrong (Sénat) achète des options d’achat (call) sur WMB (2 transactions) — compte conjoint
-  - document : https://efdsearch.senate.gov/search/view/ptr/b999bc0e-3eb0-4ca9-ab07-8e8f2e04b41f/ · même document que le robot : oui
-- **OK** · Sheldon Whitehouse (Sénat) vend V (2 transactions) — conjoint·e, l'élu·e
-  - document : https://efdsearch.senate.gov/search/view/ptr/6bf3b6f7-9e1b-499a-bd5a-990292ce2e72/ · même document que le robot : oui
+- **OK** · Sanctions américaines (OFAC) : Democratic Republic of the Congo-related Designations Removals
+  - document : https://ofac.treasury.gov/recent-actions/20260923 · même document que le robot : oui
+- **OK** · Sanctions américaines (OFAC) : Expiration of Emergency With Respect to the Situation in Ethiopia; Ethiopia-related Designations Removals; Issuance of Amended Russia-related General License and Associated Frequently Asked Questions
+  - document : https://ofac.treasury.gov/recent-actions/20260918 · même document que le robot : oui
+- **OK** · Sanctions américaines (OFAC) : Counter Terrorism and Transnational Criminal Organizations Designations; Belarus, Counter Narcotics, and Libya Designations Removals
+  - document : https://ofac.treasury.gov/recent-actions/20260930 · même document que le robot : oui
+- **OK** · Sanctions américaines (OFAC) : Iran-related Designations; Cuba Designations; Belarus-related Designations Removals
+  - document : https://ofac.treasury.gov/recent-actions/20260917 · même document que le robot : oui
+- **OK** · Sanctions américaines (OFAC) : Counter Narcotics, Counter Terrorism, Iran-related, and Non-Proliferation Designations
+  - document : https://ofac.treasury.gov/recent-actions/20260929 · même document que le robot : oui
+- **OK** · JAMES L LAUFMAN (dirigeant) prévoit vendre 5 000 actions de Credo Technology Group Holding Ltd
+  - document : https://www.sec.gov/Archives/edgar/data/1807794/000195004726009924/0001950047-26-009924-index.htm · même document que le robot : oui
+- **OK** · Moeller Jon R (dirigeant, administrateur) prévoit vendre 8 087 actions de PROCTER & GAMBLE Co
+  - document : https://www.sec.gov/Archives/edgar/data/80424/000008042426000185/0000080424-26-000185-index.htm · même document que le robot : oui
+- **OK** · MICHAEL SENTONAS (dirigeant) prévoit vendre 241 944 actions de CrowdStrike Holdings, Inc.
+  - document : https://www.sec.gov/Archives/edgar/data/1535527/000195004726009890/0001950047-26-009890-index.htm · même document que le robot : oui
+- **OK** · Arrow Holdings S.a.r.l. (actionnaire de 10 %) prévoit vendre 8 361 829 actions de Target Hospitality Corp.
+  - document : https://www.sec.gov/Archives/edgar/data/1712189/000095014226002664/0000950142-26-002664-index.htm · même document que le robot : oui
+- **OK** · BENDER INVESTMENT CO (MEMBER OF 10% OWNER) prévoit vendre 100 000 actions de Cactus, Inc.
+  - document : https://www.sec.gov/Archives/edgar/data/1699136/000162828026064254/0001628280-26-064254-index.htm · même document que le robot : oui
+- **OK** · SEC : procédure administrative visant Eagle Bancorp, Inc.
+  - document : https://www.sec.gov/files/litigation/admin/2026/34-106555.pdf · même document que le robot : oui
+- **OK** · SEC : procédure administrative visant CBIZ, Inc.
+  - document : https://www.sec.gov/files/litigation/admin/2026/33-11441.pdf · même document que le robot : oui
+- **OK** · John Boozman (Sénat) achète FSLR — compte conjoint
+  - document : https://efdsearch.senate.gov/search/view/ptr/0632f542-7ac2-46e4-bd9c-603e3673f0cd/ · même document que le robot : oui
+- **OK** · A. Mitchell McConnell Jr. (Sénat) achète WFC — conjoint·e
+  - document : https://efdsearch.senate.gov/search/view/ptr/028aef33-dc0d-44a1-992f-aa35ee42685b/ · même document que le robot : oui
 - **OK** · Sheldon Whitehouse (Sénat) vend JPM (2 transactions) — conjoint·e, l'élu·e
   - document : https://efdsearch.senate.gov/search/view/ptr/6bf3b6f7-9e1b-499a-bd5a-990292ce2e72/ · même document que le robot : oui
-- **OK** · Vente d'armes à l'étranger : Géorgie (pays)
-  - document : https://www.federalregister.gov/documents/2026/08/28/2026-17560/arms-sales-notification · même document que le robot : oui
-- **OK** · Vente d'armes à l'étranger : Qatar
-  - document : https://www.federalregister.gov/documents/2026/08/28/2026-17561/arms-sales-notification · même document que le robot : oui
-- **OK** · Vente d'armes à l'étranger : Pologne
-  - document : https://www.federalregister.gov/documents/2026/08/28/2026-17568/arms-sales-notification · même document que le robot : oui
+- **OK** · Sheldon Whitehouse (Sénat) vend ADI — conjoint·e
+  - document : https://efdsearch.senate.gov/search/view/ptr/6bf3b6f7-9e1b-499a-bd5a-990292ce2e72/ · même document que le robot : oui
+- **OK** · John Boozman (Sénat) vend CEG — compte conjoint
+  - document : https://efdsearch.senate.gov/search/view/ptr/6298991b-e48f-4b11-9bbb-dfc94a7e1b32/ · même document que le robot : oui
 - **OK** · Vente d'armes à l'étranger : Norvège
   - document : https://www.federalregister.gov/documents/2026/08/28/2026-17565/arms-sales-notification · même document que le robot : oui
+- **OK** · Vente d'armes à l'étranger : Koweït — fournisseur : The Boeing Company
+  - document : https://www.federalregister.gov/documents/2026/08/28/2026-17563/arms-sales-notification · même document que le robot : oui
+- **OK** · Vente d'armes à l'étranger : Koweït — fournisseur : The Boeing Company
+  - document : https://www.federalregister.gov/documents/2026/09/02/2026-17984/arms-sales-notification-correction · même document que le robot : oui
 - **OK** · Vente d'armes à l'étranger : Canada
   - document : https://www.federalregister.gov/documents/2026/09/02/2026-17980/arms-sales-notification · même document que le robot : oui
+- **OK** · Vente d'armes à l'étranger : Suède
+  - document : https://www.federalregister.gov/documents/2026/08/28/2026-17567/arms-sales-notification · même document que le robot : oui
