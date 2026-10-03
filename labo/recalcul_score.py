@@ -49,7 +49,7 @@ for e in infos:
 def regle_de(e):
     s, d = e["source"], e.get("data") or {}
     if s == "sec_form4":
-        if d.get("plan_10b5_1") or d.get("hors_bourse"):
+        if d.get("plan_10b5_1") or d.get("hors_bourse") or d.get("automatique"):
             return None
         if e["kind"] == "achat_initie" and any((e["tickers"][0], l["date"], l["prix"]) in EMISSIONS
                                                for l in d.get("transactions", [])):
@@ -86,6 +86,11 @@ def ouvrables(a, b):
     return n
 
 
+# Fonds enregistrés selon leur fiche SEC (rapports de fonds trouvés) : mis à part du score
+fiches = racine / "sec" / "emetteurs.json"
+FONDS = {s for s, f in json.loads(fiches.read_text(encoding="utf-8")).items() if f.get("formulaires_fonds")} \
+    if fiches.exists() else set()
+
 genere = datetime.fromisoformat(pub["genere_a"])
 jour = genere.astimezone(ZoneInfo("America/Toronto")).date()
 assert jour.isoformat() == pub["jour"], (jour, pub["jour"])
@@ -101,7 +106,7 @@ for e in infos:
     r = regle_de(e)
     cibles = e["tickers"] if (r is None or e["source"] == "sec_poursuites") else e["tickers"][:1]
     for t in cibles:
-        if r is None:
+        if r is None or t in FONDS:
             contexte.setdefault(t, []).append(e)
         else:
             notes.setdefault(t, []).append([r, max(age, 0), e])
@@ -171,7 +176,7 @@ for nom, attendu in (("hausse", hausse), ("baisse", baisse)):
                 ecarts.append(f"{t} : info {i} badge {ev['badge']} ou domaine {dom} non officiel")
 
 print(f"Jour du calcul : {jour} · infos lues : {len(infos)} · compagnies notées : {len(calcule)} "
-      f"(publié : {pub['compagnies_notees']})")
+      f"(publié : {pub['compagnies_notees']}) · fonds mis à part : {len(FONDS)}")
 print(f"Hausse : {len(hausse)} · Baisse : {len(baisse)}")
 if pub["compagnies_notees"] != len(calcule):
     ecarts.append("nombre de compagnies notées différent")
