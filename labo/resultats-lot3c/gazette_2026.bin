@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<title>Canada Gazette, Part II: Volume 160 - Canada.ca</title>
+<!-- Meta data -->
+<meta name="description" content="Browse and read editions of the Canada Gazette, Part II. This part contains all enacted regulations and statutory instruments. Regular editions are published every second Wednesday and are available online at 9 am eastern time." >
+<meta name="dcterms.description" content="Browse and read editions of the Canada Gazette, Part II. This part contains all enacted regulations and statutory instruments. Regular editions are published every second Wednesday and are available online at 9 am eastern time." >
+<meta name="dcterms.creator" content="Government of Canada, Public Services and Procurement Canada, Canada Gazette" >
+<meta name="dcterms.title" content="Canada Gazette, Part II: Volume 160 - Canada.ca" >
+<meta name="dcterms.issued" title="W3CDTF" content="2026-01-01" >
+<meta name="dcterms.modified" title="W3CDTF" content="2026-09-29" >
+<meta name="dcterms.subject" title="gccore" content="Newspapers; Public notices; Legislation; Media; English; Navigation; Regulations; Modification" >
+<meta name="dcterms.language" title="ISO639-2" content="eng" >
+<meta name="keywords" content="Government du Canada, Canada Gazette, Part II, Official regulations" >
+<!-- Meta data--> 
+<!-- Start of tete-head.html / Début de tete-head.html -->
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<!-- AA-V4-DEV --> 
+<script src="//assets.adobedtm.com/be5dfd287373/0127575cd23a/launch-f7c3e6060667.min.js"></script>
+<!-- AA-V4 -->
+<meta property="dcterms:service" content="PSPC-SPAC"/>
+<meta property="dcterms:accessRights" content="2" />
+<link href="/boew-wet/wet4.0ca/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="/boew-wet/wet4.0ca/GCWeb/css/theme.min.css">
+<noscript>
+    <link rel="stylesheet" href="/boew-wet/wet4.0ca/wet-boew/css/noscript.min.css" />
+</noscript>
+<!--PSPC plugin Files -->
+<link rel="stylesheet" href="/site/wb-pspc-plugins/css/wb-pspc-plugins.css" />
+<!-- End of tete-head.html / Fin De tete-head.html -->
+</head>
+
+<body vocab="http://schema.org/" typeof="WebPage">
+
+
+<ul id="wb-tphp">
+    <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
+    <li class="wb-slc visible-sm visible-md visible-lg"> <a class="wb-sl" href="#wb-info">Skip to "About this site"</a></li>
+</ul>
+<header role="banner"> 
+    <!-- Start of header-eng.html / Début de header-eng.html -->
+<div id="wb-bnr" class="container">
+    <div class="row">
+        <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+            <h2 class="wb-inv">Language selection</h2>
+            <ul class="list-inline mrgn-bttm-0">
+                <li> <a lang="fr" href="/cgi-bin/language.pl"><span class="hidden-xs">Français</span> <abbr title="Français" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr> </a> </li>
+            </ul>
+        </section>
+        <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization"> <a href="https://www.canada.ca/en.html" property="url"><img src="/boew-wet/wet4.0ca/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span></a>
+            <meta property="name" content="Government of Canada">
+            <meta property="areaServed" typeof="Country" content="Canada">
+            <link property="logo" href="/boew-wet/wet4.0ca/GCWeb/assets/wmms-blk.svg">
+        </div>
+        <section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
+            <h2>Search</h2>
+            <form id="searchForm" action="https://www.canada.ca/en/public-services-procurement/gazette/advanced-search.html" method="get" role="search" class="form-inline" >
+                <div style="display: flex; align-items: center; gap: 0px;">
+                    <div class="form-group wb-srch-qry">
+                        <label for="wb-srch-q" class="wb-inv" id="searchLabel">Search Canada Gazette</label>
+                        <input id="wb-srch-q" name="q" type="search" class="form-control" size="34" maxlength="170" placeholder="Search Canada Gazette">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <select id="searchTarget" class="form-control">
+                            <option value="https://www.canada.ca/en/public-services-procurement/gazette/advanced-search.html" selected>gazette.gc.ca</option>
+                            <option value="https://www.canada.ca/en/public-services-procurement/search.html">canada.ca</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"> <span class="glyphicon-search glyphicon"></span> <span class="wb-inv">Search</span> </button>
+                    </div>
+                </div>
+            </form>
+            <script>
+const searchForm = document.getElementById('searchForm');
+const searchTarget = document.getElementById('searchTarget');
+const searchLabel = document.getElementById('searchLabel');
+const searchInput = document.getElementById('wb-srch-q');
+
+searchTarget.addEventListener('change', function() {
+    searchForm.action = this.value;
+
+    if (this.value.includes("gazette")) {
+        searchLabel.textContent = "Search Canada Gazette";
+        searchInput.placeholder = "Search Canada Gazette";
+    } else {
+        searchLabel.textContent = "Search Canada.ca";
+        searchInput.placeholder = "Search Canada.ca";
+    }
+});
+</script> 
+        </section>
+    </div>
+</div>
+<nav class="gcweb-menu" typeof="SiteNavigationElement" aria-label="Theme and topic menu">
+    <div class="container">
+        <h2 class="wb-inv">Menu</h2>
+        <button type="button" aria-haspopup="true" aria-expanded="false"><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
+        <ul role="menu" aria-orientation="vertical" data-ajax-replace="https://www.canada.ca/content/dam/canada/sitemenu/sitemenu-v2-en.html">
+            <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/jobs.html">Jobs and the workplace</a></li>
+            <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/immigration-citizenship.html">Immigration and citizenship</a></li>
+            <li role="presentation"><a role="menuitem" href="https://travel.gc.ca/">Travel and tourism</a></li>
+            <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/business.html">Business and industry</a></li>
+            <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/benefits.html">Benefits</a></li>
+            <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/health.html">Health</a></li>
+            <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/taxes.html">Taxes</a></li>
+            <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/environment.html">Environment and natural resources</a></li>
+            <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/defence.html">National security and defence</a></li>
+            <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
+            <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
+            <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
+            <li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
+            <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
+            <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- End of header-eng.html / Fin De header-eng.html --> 
+
+    <nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+        <h2 class="wb-inv">You are here:</h2>
+        <div class="container">
+            <div class="row">
+                <ol class="breadcrumb">
+                    <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
+<!--<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
+<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>-->
+
+                    <li><a href="/accueil-home-eng.html">Canada Gazette</a></li>
+                    <li><a href="/rp-pr/publications-eng.html">Publications</a></li>
+                </ol>
+            </div>
+        </div>
+    </nav>
+</header>
+<main role="main" property="mainContentOfPage" class="container"> 
+    <!-- MainContentStart -->
+    <h1 id="wb-cont">Canada Gazette, Part&nbsp;II: Volume 160</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Browse and read editions of the Canada Gazette, Part&nbsp;II. This part contains all enacted regulations and statutory instruments. Regular editions are published every second Wednesday and are available online at 9&nbsp;am eastern time.</p>
+            <h2>On this page</h2>
+            <ul>
+                <li><a href="#a01">Regular and extra editions</a></li>
+                <li><a href="#a02">Consolidated index</a></li>
+                <li><a href="#a03">More information</a></li>
+            </ul>
+            <table class="wb-tables table" data-wb-tables="{&quot;order&quot;:[[0,&quot;desc&quot;]]}">
+                <caption id="a01" class="text-left">
+                Part II: Regular  and extra editions
+                </caption>
+                <thead>
+                    <tr class="active">
+                        <th scope="col" data-type="date">Date</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Statutory orders and regulations (SOR) registration numbers</th>
+                        <th scope="col">Statutory instruments (SI) registration numbers</th>
+                        <th scope="col">HTML</th>
+                        <th scope="col">PDF</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     <tr>
+                        <td data-order="2026-09-23">September&nbsp;23,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2026-184 and 186 to 192</td>
+                        <td>SI/2026-49</td>
+                        <td><a href="/rp-pr/p2/2026/2026-09-23/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;19</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-09-23/pdf/g2-16019.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;19 (1.0MB)</a></td>
+                    </tr>
+                      <tr>
+                        <td data-order="2026-09-09">September&nbsp;9,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2026-182 to 183 and 185</td>
+                        <td><abbr title="not applicable">n/a</abbr></td>
+                        <td><a href="/rp-pr/p2/2026/2026-09-09/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;18</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-09-09/pdf/g2-16018.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;18 (803KB)</a></td>
+                    </tr>
+                    
+                       <tr>
+                        <td data-order="2026-08-26">August&nbsp;26,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2026-172 to 181</td>
+                        <td>SI/2026-44</td>
+                        <td><a href="/rp-pr/p2/2026/2026-08-26/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;17</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-08-26/pdf/g2-16017.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;17 (1.5MB)</a></td>
+                    </tr>
+                    <tr>
+                        <td data-order="2026-08-12">August&nbsp;12,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2026-163 to 171</td>
+                        <td>SI/2026-43</td>
+                        <td><a href="/rp-pr/p2/2026/2026-08-12/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;16</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-08-12/pdf/g2-16016.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;16 (964KB)</a></td>
+                    </tr>
+                    <tr>
+                        <td data-order="2026-07-29">July&nbsp;29,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td><abbr title="not applicable">n/a</abbr></td>
+                        <td>SI/2026-39 to 42</td>
+                        <td><a href="/rp-pr/p2/2026/2026-07-29/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;15</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-07-29/pdf/g2-16015.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;15 (4.2MB)</a></td>
+                    </tr>
+                    <tr>
+                        <td data-order="2026-07-15">July&nbsp;15,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2026-160 to 162</td>
+                        <td>SI/2026-34</td>
+                        <td><a href="/rp-pr/p2/2026/2026-07-15/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;14</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-07-15/pdf/g2-16014.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;14 (959KB)</a></td>
+                    </tr>
+                    <tr>
+                        <td data-order="2026-07-01">July&nbsp;1,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2026-117 to 120 and 122 to 133 and 135 to 159</td>
+                        <td>SI/2026-30 to 33</td>
+                        <td><a href="/rp-pr/p2/2026/2026-07-01/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;13</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-07-01/pdf/g2-16013.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;13 (8.0MB)</a></td>
+                    </tr>
+                    <tr>
+                        <td data-order="2026-06-17">June&nbsp;17,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2026-89 to 116</td>
+                        <td>SI/2026-25 to 29</td>
+                        <td><a href="/rp-pr/p2/2026/2026-06-17/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;12</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-06-17/pdf/g2-16012.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;12 (6.4MB)</a></td>
+                    </tr>
+                    <tr>
+                        <td data-order="2026-06-08">June&nbsp;8,&nbsp;2026</td>
+                        <td>Extra</td>
+                        <td><abbr title="not applicable">n/a</abbr></td>
+                        <td>SI/2026-29</td>
+                        <td><a href="/rp-pr/p2/2026/2026-06-08-x1/html/si-tr29-eng.html">Part&nbsp;II, volume&nbsp;160, Extra number&nbsp;1</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-06-08-x1/pdf/g2-160x1.pdf">Part&nbsp;II, volume&nbsp;160, Extra number&nbsp;1 (297KB)</a></td>
+                    </tr>
+                    <tr>
+                        <td data-order="2026-06-03">June&nbsp;3,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2026-82 to 88</td>
+                        <td><abbr title="not applicable">n/a</abbr></td>
+                        <td><a href="/rp-pr/p2/2026/2026-06-03/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;11</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-06-03/pdf/g2-16011.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;11 (946KB)</a></td>
+                    </tr>
+                    <tr>
+                        <td data-order="2026-05-20">May&nbsp;20,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2026-77 to 81</td>
+                        <td>SI/2026-22 to 24</td>
+                        <td><a href="/rp-pr/p2/2026/2026-05-20/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;10</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-05-20/pdf/g2-16010.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;10 (676KB)</a></td>
+                    </tr>
+                    <tr>
+                        <td data-order="2026-05-06">May&nbsp;6,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2026-68 to 76</td>
+                        <td>SI/2026-14 to 18</td>
+                        <td><a href="/rp-pr/p2/2026/2026-05-06/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;9</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-05-06/pdf/g2-16009.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;9 ( 20MB)</a></td>
+                    </tr>
+                    <tr>
+                        <td data-order="2026-04-22">April&nbsp;22,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2026-65 to 67</td>
+                        <td><abbr title="not applicable">n/a</abbr></td>
+                        <td><a href="/rp-pr/p2/2026/2026-04-22/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;8</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-04-22/pdf/g2-16008.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;8 (475KB)</a></td>
+                    </tr>
+                    <tr>
+                        <td data-order="2026-04-08">April&nbsp;8,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2026-49 to 64</td>
+                        <td>SI/2026-5 to 13</td>
+                        <td><a href="/rp-pr/p2/2026/2026-04-08/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;7</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-04-08/pdf/g2-16007.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;7 (2.3MB)</a></td>
+                    </tr>
+                    <tr>
+                        <td data-order="2026-03-25">March&nbsp;25,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2026-42 to 48</td>
+                        <td><abbr title="not applicable">n/a</abbr></td>
+                        <td><a href="/rp-pr/p2/2026/2026-03-25/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;6</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-03-25/pdf/g2-16006.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;6 (1.5MB)</a></td>
+                    </tr>
+                    <tr>
+                        <td data-order="2026-03-11">March&nbsp;11,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2026-30 to 41</td>
+                        <td>SI/2026-3 to 4</td>
+                        <td><a href="/rp-pr/p2/2026/2026-03-11/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;5</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-03-11/pdf/g2-16005.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;5 (1.5MB)</a></td>
+                    </tr>
+                    <tr>
+                        <td data-order="2026-02-25">February&nbsp;25,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2026-15 to 29</td>
+                        <td><abbr title="not applicable">n/a</abbr></td>
+                        <td><a href="/rp-pr/p2/2026/2026-02-25/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;4</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-02-25/pdf/g2-16004.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;4 (2.7MB)</a></td>
+                    </tr>
+                    <tr>
+                        <td data-order="2026-02-11">February&nbsp;11,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2026-3 to 14</td>
+                        <td>SI/2026-1 to 2</td>
+                        <td><a href="/rp-pr/p2/2026/2026-02-11/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;3</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-02-11/pdf/g2-16003.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;3 (2.3MB)</a></td>
+                    </tr>
+                    <tr>
+                        <td data-order="2026-01-28">January&nbsp;28,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2026-1 to 2</td>
+                        <td><abbr title="not applicable">n/a</abbr></td>
+                        <td><a href="/rp-pr/p2/2026/2026-01-28/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;2</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-01-28/pdf/g2-16002.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;2 (491KB)</a></td>
+                    </tr>
+                    <tr>
+                        <td data-order="2026-01-14">January&nbsp;14,&nbsp;2026</td>
+                        <td>Regular edition</td>
+                        <td>SOR/2025-289</td>
+                        <td><abbr title="not applicable">n/a</abbr></td>
+                        <td><a href="/rp-pr/p2/2026/2026-01-14/html/index-eng.html">Part&nbsp;II, volume&nbsp;160, number&nbsp;1</a></td>
+                        <td><a href="/rp-pr/p2/2026/2026-01-14/pdf/g2-16001.pdf">Part&nbsp;II, volume&nbsp;160, number&nbsp;1 (293KB)</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-hover table-bordered">
+                <caption id="a02">
+                Consolidated index
+                </caption>
+                <tr class="active">
+                    <th scope="col">Covering the period of</th>
+                    <th scope="col">HTML</th>
+                    <th scope="col">PDF</th>
+                </tr>
+                        <tr>
+                    <td>January 1, 1955 to June 30, 2026</td>
+                    <td><a href="/rp-pr/p2/2026/2026-06-30-c2/index-eng.html">Consolidated index to June 30, 2026</a></td>
+                    <td><a href="/rp-pr/p2/2026/2026-06-30-c2/pdf/g2-160c2-eng.pdf">Consolidated index to June&nbsp;30, 2026 (8.7MB)</a></td>
+                </tr>
+                <tr>
+                    <td>January&nbsp;1, 1955 to March&nbsp;31, 2026</td>
+                    <td><a href="/rp-pr/p2/2026/2026-03-31-c1/index-eng.html">Consolidated index to March&nbsp;31, 2026</a></td>
+                    <td><a href="/rp-pr/p2/2026/2026-03-31-c1/pdf/g2-160c1-eng.pdf">Consolidated index to March&nbsp;31, 2026 (8.4MB)</a></td>
+                </tr>
+             
+            </table>
+            <p>Nota: Please contact the Privy Council Office regarding any errors in the consolidated index at <a href="mailto:cindex@pco-bcp.gc.ca">cindex@pco-bcp.gc.ca</a>.</p>
+            <h2 id="a03">More information</h2>
+            <ul>
+                <li><a href="/cg-gc/lm-sp-eng.html#a2">Parts of the Canada Gazette</a>: Learn more about what is published in Part&nbsp;II and the consolidated index</li>
+                <li><a href="/cg-gc/lm-sp-eng.html#a3">Publishing the Canada Gazette</a>: Learn the difference between the official and non-official version</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row pagedetails">
+        <div class="col-sm-5 col-xs-12 datemod">
+            <dl id="wb-dtmd">
+                <dt>Date modified:</dt>
+                <dd>
+                    <time property="dateModified"> 
+                         
+                        2026-09-29 
+                    </time>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <!-- MainContentEnd --> 
+</main>
+<!-- Start of footer-eng.html / Début de footer-eng.html -->
+<footer id="wb-info">
+	<div class="landscape">
+		<nav class="container wb-navcurr">
+			<h2 class="wb-inv">About government</h2>
+			<ul class="list-unstyled colcount-sm-2 colcount-md-3">
+				<li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
+				<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+				<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
+				<li><a href="https://www.canada.ca/en/news.html">News</a></li>
+				<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
+				<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+				<li><a href="https://pm.gc.ca/en">Prime Minister</a></li>
+				<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
+				<li><a href="https://open.canada.ca/en/">Open government</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="brand">
+		<div class="container">
+			<div class="row">
+				<nav class="col-md-9 col-lg-10 ftr-urlt-lnk" aria-label="footer">
+					<h2 class="wb-inv">About this site</h2>
+					<ul>
+						<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+						<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+						<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
+						<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+						<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+					</ul>
+				</nav>
+				<div class="col-xs-6 visible-sm visible-xs tofpg"> <a href="#wb-cont">Top of page <span class="glyphicon glyphicon-chevron-up"></span></a> </div>
+				<div class="col-xs-6 col-md-3 col-lg-2 text-right"> <img src="/boew-wet/wet4.0ca/GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada"> </div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- End of footer-eng.html / Fin De footer-eng.html --> 
+
+ 
+<!-- Start of script_pied-script_footer.html / Début de script_pied-script_footer.html -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+<script src="/boew-wet/wet4.0ca/wet-boew/js/wet-boew.min.js"></script>
+<script src="/boew-wet/wet4.0ca/GCWeb/js/theme.min.js"></script>
+<!-- AA-V4 --> <script type="text/javascript">_satellite.pageBottom();</script>
+<!-- PSPC Wet-Boew Plugins -->
+<script src="/site/wb-pspc-plugins/wb-pspc-plugins.min.js"></script>
+<!-- End PSPC Wet-Boew Plugins -->
+<!-- End of script_pied-script_footer.html / Fin De script_pied-script_footer.html --> 
+ 
+<script type="text/javascript">var webpub = webpub || { piwikSiteId: 57 };</script>
+<script type="text/javascript" src="/includes/piwik/piwik-min.js"></script>
+<noscript><p><img src="http://stats.tpsgc-pwgsc.gc.ca/piwik.php?idsite=57" style="border:0;" alt="" /></p></noscript>
+</body>
+</html>

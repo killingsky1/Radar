@@ -1,0 +1,618 @@
+
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Help - LEGISinfo - Parliament of Canada</title>
+    <meta name="description" content="Help - LEGISinfo - Parliament of Canada" />
+    
+
+    <script src='/CommonElementsV3/js/jquery-3.5.1.min.js'></script>
+<script src='/CommonElementsV3/js/bootstrap.bundle.min.js'></script>
+<link rel='stylesheet' type='text/css' media='all' href='/CommonElementsV3/styles/bootstrap.min.css' />
+<link rel='stylesheet' type='text/css' media='all' href='/CommonElementsV3/styles/ce-parl-main.min.css' />
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-KHLLT5PZ");</script>
+
+
+    <link href="/legisinfo/css/site.min.css?v=QHwat6bOEjySunpFV1AuqiEMZB0J90sgQYZ_HWUER14" rel="stylesheet" type="text/css" />
+    <link href="/legisinfo/css/legisinfo-icons.css?v=rQ5L6JNE7w5GVeHoynuQblZMfIihK-XTGiDhkDD8KKY" rel="stylesheet" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link href="/legisinfo/css/tippy-light-theme-v6.2.7.min.css?v=ye9FRhX7tDhiztwCD1Lq6j1tqz_Qxn1wuWxqqThZOrg" rel="stylesheet" type="text/css" />    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/legisinfo/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/legisinfo/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/legisinfo/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/legisinfo/images/favicons/webmanifest.json">
+    <link rel="mask-icon" href="/legisinfo/images/favicons/safari-pinned-tab.svg" color="#215c66">
+    <link rel="shortcut icon" href="/legisinfo/images/favicons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="LEGISinfo">
+    <meta name="application-name" content="LEGISinfo">
+    <meta name="msapplication-TileColor" content="#215c66">
+    <meta name="msapplication-config" content="~/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">        
+</head>
+<body class="body-wrapper ce-parl vh-100">
+    <header class="d-print-none">
+		    <!-- Skip to Content -->
+		    <div id="skip local-anchor-container">
+		        <a href="#StartOfContent" class="ce-parl-skipnav sr-only sr-only-focusable">Skip to main content</a>
+		    </div>
+		    <div class="ce-global ce-parl-header-bar">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col">
+		                    <a href="//www.parl.ca" class="ce-parl-btn float-left text-nowrap" >Parliament of Canada</a>
+		                </div>
+		                <div class="col">
+		                    <ul role="menu" class="float-right">
+		                        <li role="menuitem">
+		                            <a href="https://visit.parl.ca/index-e.html"  rel="external" >
+		                                <span class="d-none d-md-block">Visit Parliament</span>
+		                                <span class="d-block d-md-none">Visit</span>
+		                            </a>
+		                        </li>
+		                        <li role="menuitem">
+		                            <a href="https://www.parl.ca:443/legisinfo/fr/aide" >
+		                                <span lang="fr-CA" class="d-none d-md-block">Français</span>
+		                                <span lang="fr-CA" class="d-block d-md-none">FR</span>
+		                            </a>
+		                        </li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</header>
+		<!-- Parl Navigation -->
+		<nav class="navbar navbar-expand ce-global ce-parl-nav" aria-label="Main">
+		    <div class="container">
+		        <div class="collapse navbar-collapse" id="navbarNav">
+		            <div class="navbar-nav">
+		                <a class="nav-link ce-parl-nav-senate-link" href="//sencanada.ca/en"  rel="external"   aria-label="Visit the Senate website" >Senate</a>
+		                <a class="nav-link ce-parl-nav-hoc-link" href="//www.ourcommons.ca"   aria-label="Visit the House of Commons website" >House of Commons</a>
+		            </div>
+		        </div>
+		    </div>
+		</nav>
+    
+<nav id="legisinfo-submenu" aria-label="LegisInfo Website Navigation">
+    <div id="top" class="submenu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- only display on md screens and up -->
+                    <div class="navbar-header navbar-expand-md navbar-light d-none d-sm-block">
+                        <a class="d-inline-block" aria-label="LEGISinfo home" href="/legisinfo/en/overview">
+                            <img class="legisinfo-logo-img" alt="LEGISinfo home" src="/legisinfo/images/legisinfo-logo.svg" />
+                        </a>
+                    </div>
+                    <!-- only display on xs screens -->
+                    <a href="javascript:void(0);" class="navbar-header navbar-expand-md navbar-light d-block d-sm-none" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <img class="legisinfo-logo-img" alt="Open LEGISinfo menu" src="/legisinfo/images/legisinfo-logo.svg" />                        
+                        <em class="hoc-navbar-toggler-icon hoc-icon icon-down"></em>
+                    </a>
+                </div>
+                <div class="col-lg-6 searchbox-container">
+                    <div class="input-group pt-2 d-none">
+                        <label for="search-text" class="sr-only" aria-hidden="true">Search bills</label>
+                        <input type="text" class="form-control mr-1" id="search-text" aria-hidden="true" required />
+                        <button type="submit" class="btn btn-clear-search-text" id="btn-clear-search-text" aria-label="Clear your search" aria-hidden="true"><em class="legisinfo-icons icon-times"></em></button>
+                        <button type="submit" class="btn btn-search" id="btn-search-bills" aria-label="Submit" aria-hidden="true"><em class="legisinfo-icons icon-search"></em></button>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar navbar-expand-sm navbar-light">
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item pr-md-3 pr-xs-0 pr-sm-0 "><a class="nav-link" href="/legisinfo/en/overview">Overview</a></li>
+                        <li class="nav-item pr-md-3 pr-xs-0 "><a class="nav-link" href="/legisinfo/en/bills">Bills</a></li>
+                        <li class="nav-item pr-md-3 pr-xs-0 "><a class="nav-link" href="/legisinfo/en/legislation-at-a-glance">Legislation at a glance</a></li>
+                        <li class="nav-item pr-md-3 pr-xs-0 active"><a class="nav-link" href="/legisinfo/en/help">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+
+    <main class="container">
+        <a id="StartOfContent" tabindex="-1"></a>
+        
+
+<div class="clearfix" />
+<div id="help-container" class="">
+
+    <header>
+        <h1>Help</h1>
+    </header>
+
+    <section>
+        <div class="row" data-spy="scroll" data-target="#help-menu" data-bs-offset="0">
+    <div class="col-md-4 side order-2">
+        <a class="sr-only" href="#content">Skip the table of contents</a>
+        <div id="help-menu">
+            <div class="clearfix"></div>
+            <h2 id="help-menu-heading">Table of contents</h2>
+            <ul class="main-list">
+                <li>
+                    <a href="#using" class="nav-link">Using LEGISinfo</a>
+                    <ul>
+                        <li>
+                            <a href="#titles" class="nav-link" aria-label="Go to the 'Main pages and features' section on this page">Main pages and features</a>
+                            <ul>
+                                <li><a href="#overview" class="nav-link" aria-label="Go to the 'Overview' section on this page">Overview</a></li>
+                                <li><a href="#bills" class="nav-link" aria-label="Go to the 'Bills' section on this page">Bills</a></li>
+                                <li><a href="#laag" class="nav-link" aria-label="Go to the 'Legislation at a glance' section on this page">Legislation at a glance</a></li>
+                                <li><a href="#bill-informations" class="nav-link" aria-label="Go to the 'Bill text and information' section on this page">Bill text and information</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#symbols" class="nav-link" aria-label="Go to the 'Icons' section on this page">Icons</a>
+                        </li>
+                        <li>
+                            <a href="#searching" class="nav-link" aria-label="Go to the 'Searching' section on this page">Searching</a>
+                            <ul>
+                                <li><a href="#keywords" class="nav-link" aria-label="Go to the 'Keyword searches' section on this page">Keyword searches</a></li>
+                                <li><a href="#refiners" class="nav-link" aria-label="Go to the 'Using refiners' section on this page">Using refiners</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#open-data" class="nav-link" aria-label="Go to the 'Open data' section on this page">Open data</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#understanding-legislation" class="nav-link" aria-label="Go to the 'Understanding legislation and bills' section on this page">Understanding legislation and bills</a>
+                    <ul>
+                        <li><a href="#legislative-process" class="nav-link" aria-label="Go to the 'Legislative process' section on this page">Legislative process</a></li>
+                        <li>
+                            <a href="#types-of-bills" class="nav-link" aria-label="Go to the 'Types of bills' section on this page">Types of bills</a>
+                            <ul>
+                                <li><a href="#public-bills" class="nav-link" aria-label="Go to the 'Public bills' section on this page">Public bills</a></li>
+                                <li><a href="#private-bills" class="nav-link" aria-label="Go to the 'Private bills' section on this page">Private bills</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#bill-numbering" class="nav-link" aria-label="Go to the 'Bill numbering' section on this page">Bill numbering</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link" aria-label="Go to the 'Contact us' section on this page">Contact us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-s-12 col-md-8 order-1 main-content-section">
+        <div id="content">
+            <p>LEGISinfo is your primary source of information regarding legislation before Parliament. Stay up to date with recently introduced bills in the Senate or House of Commons. Access a wide range of information, such as:</p>
+            <ul>
+                <li>The full text of the most recent version of a bill and any previous versions of the bill.</li>
+                <li>The bill's life cycle, from the day it is introduced for first reading until it receives royal assent.</li>
+                <li>Links to the relevant content in official parliamentary publications associated with the passage of a bill.</li>
+            </ul>
+            <p>Browse all bills from previous sessions going back to the 37th Parliament in 2001. (Note: Essential data, such as bill numbers, titles and the text of most bills considered by Parliament between 1994 and 2000 – the 35th and 36th Parliaments – are also available.)</p>
+            <p>LEGISinfo is a collaborative effort of the Senate, the House of Commons, and the Library of Parliament.</p>
+
+            <h2 id="using">Using LEGISinfo</h2>
+
+            <h3 id="titles">Main pages and features</h3>
+
+            <h4 id="overview">Overview</h4>
+            <p><cite>Overview</cite> provides a first glance at recently introduced bills, showing the last three sitting days on which a bill was introduced in either chamber. It also shows what bills are on today's agenda, if any.</p>
+            <p>To preview a particular bill, hover your cursor over the bill number. This will display a pop-up box with the bill number, its parliament and session, short and long title, last stage completed and a progress bar for quick reference.</p>
+            <p>Select <cite>Bills in the current session</cite> to search the full list of bills introduced in the current parliamentary session.</p>
+
+            <h4 id="bills">Bills</h4>
+            <p><cite>Bills</cite> allows you to search for bills going back to 1994, using a series of refiners. By default, the page provides the full list of bills introduced in the current session.</p>
+
+            <h4 id="laag">Legislation at a glance</h4>
+            <p><em>Legislation at a glance</em> provides a brief summary of the status of all bills under consideration in either chamber during a parliamentary session. Information is available for the current session, back to the 1st session of the 37th Parliament in 2001.</p>
+
+            <h4 id="bill-informations">Bill text and information</h4>
+            <div>
+                <p>Click on the bill number to view more details about, and to view the text of, a particular bill. Earlier versions of the bill, if any, will be available in the additional tabs of the publication.</p>
+                <p>The individual bill pages indicate the bill type, sponsor and current status. They are further subdivided into three sections: <cite>Progress</cite>, <cite>Details</cite> and <cite>About</cite>.</p>
+                <div class="d-flex justify-content-center">
+                    <img src="../help/images/bill-details-menu.gif" alt="Interface of a bill’s legislative progress and status in the House of Commons and Senate" class="img-thumbnail img-fluid"><br>
+                </div>
+            </div>
+
+            <h3 id="symbols">Icons</h3>
+            <p>The following icons are shown throughout this website. They represent the various stages that a bill takes to be passed into law. Red is used to represent a stage in the Senate, green is used to represent a stage in the House of Commons and blue is used to represent royal assent. A plain grey icon indicates that a bill has not reached the stage, while a grey icon with a “no symbol” indicates the stage at which the bill was defeated or not proceeded with.</p>
+            <div class="stages-container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 id="major-stages">Major stages</h4>
+                        <ul style="list-style:none;padding-left:0;margin-bottom:0">
+                            <li><div><div class="help-legend senate first-reading"></div></div>First reading in the Senate</li>
+                            <li><div><div class="help-legend senate second-reading"></div></div>Second reading in the Senate</li>
+                            <li><div><div class="help-legend senate committee"></div></div>Consideration in committee in the Senate</li>
+                            <li><div><div class="help-legend senate report-stage"></div></div>Report stage in the Senate</li>
+                            <li><div><div class="help-legend senate third-reading"></div></div>Third reading in the Senate</li>
+                            <li><div><div class="help-legend house first-reading"></div></div>First reading in the House of Commons</li>
+                            <li><div><div class="help-legend house second-reading"></div></div>Second reading in the House of Commons</li>
+                            <li><div><div class="help-legend house committee"></div></div>Consideration in committee in the House of Commons</li>
+                            <li><div><div class="help-legend house report-stage"></div></div>Report stage in the House of Commons</li>
+                            <li><div><div class="help-legend house third-reading"></div></div>Third reading in the House of Commons</li>
+                            <li><div><div class="help-legend royal-assent"></div></div>Royal assent</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 id="other-stages">Other stages</h4>
+                        <ul style="list-style:none;padding-left:0;margin-bottom:0">
+                            <li><div><div class="help-legend senate senate-pre-study"></div></div>Senate pre-study</li>
+                            <li><div><div class="help-legend house committee-before-second-reading"></div></div>Referral to committee before second reading in the House of Commons</li>
+                            <li><div><div class="help-legend house report-stage-second-reading"></div></div>Report stage and second reading in the House of Commons</li>
+                            <li><div><div class="help-legend reinstated"></div></div>Bill reinstated from previous session</li>
+                        </ul>
+                        <h4 id="stages-states">Stage states</h4>
+                        <p>The following states can apply to both the Senate and the House of Commons stages. The examples below show what can appear for the House of Commons.</p>
+                        <ul style="list-style:none;padding-left:0;margin-bottom:0">
+                            <li><div><div class="help-legend first-reading stage-completed"></div></div>The bill completed this stage</li>
+                            <li><div><div class="help-legend first-reading in-progress"></div></div>The bill is currently at this stage, and activity is in progress</li>
+                            <li><div><div class="help-legend at-stage"></div></div>The bill reached this stage, but no further activity has occurred</li>
+                            <li><div><div class="help-legend first-reading stage-not-completed"></div></div>The bill did not complete this stage</li>
+                            <li><div><div class="help-legend first-reading stage-not-reached"></div></div>The bill has not reached this stage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <h3 id="searching">Searching</h3>
+            <p>LEGISinfo contains powerful search tools. Several options are provided for searching bills:</p>
+            <ul>
+                <li>Keyword or text-based searches can be performed using the search box located at the top right of each page.</li>
+                <li>Searches can be performed using the selection of drop-down refiners provided at the top of the <cite>Bills</cite> page.</li>
+                <li>Searches can also use a combination of keywords and refiners.</li>
+            </ul>
+
+            <h4 id="keywords">Keyword searches</h4>
+            <p>To get started, enter a bill number, title or sponsor, or a keyword, in the search box. Keyword searches are neither case- nor accent-sensitive.</p>
+            <p>Note: Keyword searches, by default, will return results from the current parliamentary session. To search for historical bills, start from the <em>Bills</em> page, select a past session or “All” from the <em>Session</em> drop-down menu, and then enter your keyword.</p>
+            <p>You can improve your search results by using operators and symbols as outlined below.</p>
+
+            <table class="table table-striped">
+                <caption class="sr-only">Description for operators and symbols</caption>
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Symbol</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phrases</strong></td>
+                        <td>" "</td>
+                        <td>
+                            <p>To search for an exact phrase, enclose all the words in double quotes.</p>
+                            <p>For example, use <a href="bills?parlsession=all&view=list&keywords=%22income%20tax%22"><span class="keywords-link">"income tax"</span></a> or <a href="bills?parlsession=all&view=list&keywords=%22budget%20implementation%20act%22"><span class="keywords-link">"budget implementation act”</span></a> to retrieve bills containing those specific phrases and not just the individual terms.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wildcard</strong></td>
+                        <td>*</td>
+                        <td>
+                            <p>Use <span class="font-weight-bold">*</span> (asterisk) to represent any number of characters (including zero) after the insertion point.</p>
+                            <p>For example, <a href="bills?parlsession=all&view=list&keywords=govern*"><span class="keywords-link">govern*</span></a> will search for bills containing the words governance, governing, government or governor.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Included terms</strong></td>
+                        <td>AND<br />&<br />+</td>
+                        <td>
+                            <p>Use <span class="font-weight-bold">AND</span> or <span class="font-weight-bold">&</span> (ampersand) or <span class="font-weight-bold">+</span> (plus sign) between words to search for bills that contain both terms. </p>
+                            <p>For example, <a href="bills?parlsession=all&view=list&keywords=fisheries%20AND%20shipping" aria-label="Search example #1 for included terms"><span class="keywords-link">fisheries AND shipping</span></a> or <a href="bills?parlsession=all&view=list&keywords=fisheries%20%26%20shipping" aria-label="Search example #2 for included terms"><span class="keywords-link">fisheries & shipping</span></a> or <a href="bills?parlsession=all&view=list&keywords=fisheries%20%2B%20shipping" aria-label="Search example #3 for included terms"><span class="keywords-link">fisheries + shipping</span></a> will retrieve bills that contain both fishing and shipping.</p>
+                            <p>Note: <span class="font-weight-bold">AND</span> is the default operator and is not required. Searches using "fisheries + shipping" and "fisheries shipping" will yield the same results.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Alternate terms</strong></td>
+                        <td>OR <br /> |</td>
+                        <td>
+                            <p>Use <span class="font-weight-bold">OR</span> or <span class="font-weight-bold">|</span> (vertical line) between words to search for bills that contain either terms.</p>
+                            <p>For example, <a href="bills?parlsession=all&view=list&keywords=trade%20OR%20commerce"><span class="keywords-link">trade OR commerce</span></a> or <a href="bills?parlsession=all&view=list&keywords=trade%20%7C%20commerce"><span class="keywords-link">trade | commerce</span></a> will retrieve results that contain either trade, commerce, or both terms.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Excluded terms</strong></td>
+                        <td>NOT<br />!<br />-</td>
+                        <td>
+                            <p>Use <span class="font-weight-bold">NOT</span>, <span class="font-weight-bold">!</span> (exclamation point) or <span class="font-weight-bold">-</span> (minus sign) in front of a word or phrase to indicate that the term must not appear in the bill.</p>
+                            <p>For example, <a href="bills?parlsession=all&view=list&keywords=broadcasting%20NOT%20telecommunications" aria-label="Search example #1 for excluded terms"><span class="keywords-link">broadcasting NOT telecommunications</span></a>, <a href="bills?parlsession=all&view=list&keywords=broadcasting%20!telecommunications" aria-label="Search example #2 for excluded terms"><span class="keywords-link">broadcasting !telecommunications</span></a>, <a href="bills?parlsession=all&view=list&keywords=broadcasting%20-telecommunications" aria-label="Search example #3 for excluded terms"><span class="keywords-link">broadcasting -telecommunications</span></a> will search for bills that contain the word broadcasting but not telecommunications.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Parentheses</strong></td>
+                        <td>( )</td>
+                        <td>
+                            <p>Use parentheses to determine the order of searches using a combination of operators or symbols. The terms and operators inside the parentheses are done first. For example <a href="bills?parlsession=all&view=list&keywords=(health%20OR%20climate)%20AND%20emergency" aria-label="Search example #1 for parentheses"><span class="keywords-link">(health OR climate) AND emergency</span></a> would return bills with the following combinations of keywords: either health and emergency, climate and emergency, and/or containing health, climate and emergency.</p>
+                            <p>Placed in another location, <a href="bills?parlsession=all&view=list&keywords=health%20OR%20(climate%20AND%20emergency)" aria-label="Search example #2 for parentheses"><span class="keywords-link">health OR (climate AND emergency)</span></a> would return bills with the following combinations of keywords: either health (only), climate and emergency, and/or containing health, climate and emergency.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Proximity Search</strong></td>
+                        <td>~</td>
+                        <td>
+                            <p>Use proximity searches to find terms that are near each other in a document. Insert a tilde (<span class="font-weight-bold">~</span>) symbol at the end of a phrase followed by the number of words to specify the proximity limit of each term. </p>
+                            <p>For example, <a href="bills?parlsession=all&view=list&keywords=%22tax%20fees%22~6"><span class="keywords-link">"tax fees"~6</span></a> would find the terms "tax" and "fees" within 6 words of each other.</p>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <h4 id="refiners">Using refiners</h4>
+            <p>
+                From the <em>Bills</em> page, you can select refiners from the drop-down menus to narrow the focus of your search.
+            </p>
+
+            <table class="table table-striped">
+                <caption class="sr-only">Description for Refiners</caption>
+                <thead>
+                    <tr>
+                        <th>Refiner</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Session</strong></td>
+                        <td>To search from the 1st session of the 35th Parliament to the current session, or to include all sessions since the 1st session of the 35th Parliament.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Originating chamber</strong></td>
+                        <td>The chamber in which the bill was first introduced (i.e., the Senate or House of Commons).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bill type</strong></td>
+                        <td>The form of the bill, such as a House government bill, Senate public bill, private member's bill, etc.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Political affiliation</strong></td>
+                        <td>The political party of the sponsor of the bill.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Date range</strong></td>
+                        <td>To search for bills that were active in a specific date range within the selected session.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cabinet</strong></td>
+                        <td>The prime minister in power at the time that the bill was introduced.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Current status</strong></td>
+                        <td>The status of the bill during the current session, or the status at dissolution of a previous session (i.e., royal assent received, bill defeated, etc.).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sponsor name</strong></td>
+                        <td>The parliamentarian (minister, senator, or member) that introduced the bill.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Committee</strong></td>
+                        <td>The parliamentary committee that studied the bill.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5>Additional refiners for keyword searches</h5>
+            <div class="row pb-3">
+                <div class="col-md-12">
+                    <p>Further refine your keyword search by using the two switches that appear above your search results. </p>
+                    <p>By default, the search tool will search for the keywords in the latest version of the text of the bill.</p>
+                    <div class="d-none d-md-block" style="float:right; width:50%;">
+                        <div class="d-flex justify-content-center">
+                            <img src="../help/images/help_switch_buttons.png" alt="" style="max-width:75%;" class="img-thumbnail img-fluid">
+                        </div>
+                    </div>
+                    <p>Turn on the <em>Bill title only</em> switch  to limit your results to those that only include your keyword in the title of the bill.</p>
+                    <p>Turn on the <em>All bill versions</em> switch  to expand your keyword search to earlier versions of the bill (i.e. at first reading).</p>
+                </div>
+                <div class="col-sm-12 d-md-none d-l-none d-xl-none">
+                    <div class=" d-flex justify-content-center">
+                        <img src="../help/images/help_switch_buttons.png" alt="" class="img-thumbnail img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <h5>Sorting and displaying your results</h5>
+            <p>Search results can be sorted by relevancy, bill number, session, or latest activity.</p>
+            <p>Select <i class="legisinfo-icons icon-tile"><span class="sr-only">the "Tile View" button</span></i>  to display the results in a tile format or <i class="legisinfo-icons icon-list"><span class="sr-only">the "List View" button</span></i> to display them in a list format.</p>
+
+            <h3 id="open-data">Open data</h3>
+            <p>Exportable Open datasets in XML (Extensible Markup Language) and JSON (JavaScript Object Notation) file formats are available from the following pages:</p>
+            <ul>
+                <li><a href="overview">Overview</a>: see <em>Recently introduced bills</em> and <em>Bills on today's agenda</em> (when available)</li>
+                <li><a href="bills">Bills</a>: build a customized search and export your search results</li>
+                <li><a href="legislation-at-a-glance">Legislation at a glance</a>: select a session to export</li>
+                <li>Specific bills: select any bill to export the data and to track updates to current bills</li>
+            </ul>
+            <p>Use the <span class="btn btn-export-as"><i class="legisinfo-icons icon-download"></i> JSON</span> and <span class="btn btn-export-as"><i class="legisinfo-icons icon-download"></i> XML</span> buttons on the pages described above to export the data.</p>
+            <p>A customizable RSS feed is also available on the <em>Bills</em> page. Create a search and click the <span class="btn btn-export-as"><i class="legisinfo-icons icon-rss"></i> RSS</span> icon to access the feed.</p>
+            <p>For more information and additional datasets, see <a href="https://www.ourcommons.ca/en/open-data">Open data</a> on the House of Commons website.</p>
+
+            <h2 id="understanding-legislation">Understanding legislation and bills</h2>
+
+            <h3 id="legislative-process">Legislative process</h3>
+            <p>A bill is a proposal to create a new law, or to change or repeal an existing one. For a bill to become a law, it must go through specific stages in both the Senate and the House of Commons. The bill can originate in either chamber and the process in each chamber is similar.</p>
+            <p>For additional information on the legislative process, please see the following resources:</p>
+            <ul>
+                <li class="help-link"><a href="https://sencanada.ca/en/about/procedural-references/notes/n5">Procedural Note 5: 'Legislative Process' (Senate of Canada)</a></li>
+                <li class="help-link"><a href="https://sencanada.ca/en/about/procedural-references/rules/appendix-i/">'Appendix I: Terminology' in Rules of the Senate of Canada (Senate of Canada)</a></li>
+                <li class="help-link"><a href="https://www.ourcommons.ca/About/OurProcedure/LegislativeProcess/c_g_legislativeprocess-e.htm">'Legislative Process' in Our Procedure (House of Commons)</a></li>
+                <li class="help-link"><a href="https://www.ourcommons.ca/About/Glossary/Index-e.html">Glossary of Parliamentary Procedure (House of Commons)</a></li>
+                <li class="help-link"><a href="https://lop.parl.ca/sites/PublicWebsite/default/en_CA/ResearchPublications/202513E">The Legislative Process: From Government Policy to Proclamation (Library of Parliament)</a></li>
+            </ul>
+            <p>Once a bill passes into law, it is assigned a chapter number in the Annual Statues. For the list of annual statues and their corresponding bill numbers since 2001, see the <a href="https://www.laws-lois.justice.gc.ca/eng/AnnualStatutes/index.html">Justice Laws Website</a>.</p>
+
+            <p>Find coming into force information (the date the statute, or part of it, becomes enforceable) by consulting the <a href="https://laws-lois.justice.gc.ca/eng/tablepublicstatutes/index.html">Table of Public Statutes and Responsible Ministers</a> or by searching the <a href="https://orders-in-council.canada.ca/">Orders in Council</a> site.</p>
+
+            <h3 id="types-of-bills">Types of bills</h3>
+            <p>There are two main types of bills: public and private. Public bills are those that relate to matters of public policy. Private bills, in contrast, confer particular powers, benefits or exemptions upon a specific person or group of persons.</p>
+
+            <h4 id="public-bills">Public bills</h4>
+            <p>Public bills are classified as either government bills or non-government bills.</p>
+
+            <table class="table table-striped">
+                <caption class="sr-only">Description for Types of public bill</caption>
+                <thead>
+                    <tr>
+                        <th>Type of public bill</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Government bills</strong></td>
+                        <td>
+                            <p>In practice, most government bills are introduced in the House of Commons. However, they can also be introduced in the Senate.</p>
+                            <p>In the House of Commons, government bills are introduced by a Minister of the Crown. They are drafted by the Department of Justice on the instructions of Cabinet.</p>
+                            <p>In the Senate, government bills are usually introduced by the Representative of the Government in the Senate, although another senator typically assumes sponsorship of the bill as it moves through the legislative process.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro forma bills</strong></td>
+                        <td>
+                            <p>Pro forma bills are introduced at the beginning of each session for the sole purpose of asserting the right of the Senate and the House of Commons to conduct their proceedings.</p>
+                            <p>In the Senate, a bill is introduced by the Representative of the Government in the Senate as S-1, An Act Relating to Railways. In the House of Commons, another such bill is introduced by the Prime Minister as C-1, An Act respecting the Administration of Oaths of Office. The bills are numbered but the texts are not printed. They are given first reading, but not second reading.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Appropriation bills</strong></td>
+                        <td>
+                            <p>Appropriation bills are introduced in the House of Commons by a Minister of the Crown, usually the President of the Treasury Board, in response to the adoption of the main or supplementary estimates or interim supply. They are normally entitled, An Act for Granting to Her Majesty Certain Sums of Money for the Federal Public Administration.</p>
+                            <p>An appropriation bill cannot originate in the Senate.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Senate public bills</strong></td>
+                        <td><p>Senate public bills are introduced in the Senate by individual senators, to address matters of broad concern and of national or regional interest.</p></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Private members' bills</strong></td>
+                        <td><p>Private members' bills are bills introduced in the House of Commons by individual members who are not Cabinet ministers, typically dealing with matters of public policy under federal jurisdiction.</p></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 id="private-bills">Private bills</h4>
+            <p>Private bills are designed to provide a benefit or exemption to an individual or group from the application of the law, such as a bill to incorporate a private company. A private bill can only be introduced by a senator or a member who is not a member of the Cabinet. Private bills are almost always introduced in the Senate.</p>
+
+            <h3 id="bill-numbering">Bill numbering</h3>
+            <p>When a bill is introduced, it is assigned a number based on its chronological order of introduction in its chamber of origin. Bills introduced in the Senate start with the letter S, and those introduced in the House of Commons start with the letter C.</p>
+            <p>Government bills are numbered consecutively from 1 to 200, while Senate public bills and private members' bills are numbered consecutively from 201 to 1000.</p>
+            <p>Because the House of Commons' standing orders state that private members' bills must continue from session to session within a Parliament, their number remains unchanged throughout a Parliament. If a private member's bill received royal assent in a previous session, that number will not be displayed in the list of bills for the current session.</p>
+            <p>Private bills, which are almost always introduced in the Senate, are numbered beginning at 1001.</p>
+            <p>Before the start of the 39th Parliament in April 2006, bills originating in the Senate were numbered consecutively beginning at S-1, regardless of bill type.</p>
+
+            <h2 id="contact">Contact us</h2>
+            <h3 id="general-info">General information</h3>
+            <p>Please email your comments or questions to <a href="mailto:info@parl.gc.ca">info@parl.gc.ca</a>.</p>
+            <p>Please submit any comments or questions by mail or telephone to:</p>
+            <p>
+                <strong>Library of Parliament</strong><br>
+                Information Service<br>
+                Parliament of Canada<br>
+                Ottawa, Ontario<br>
+                K1A 0A9
+            </p>
+            <p>
+                <strong>Telephone:</strong><br>
+                1-866-599-4999 or<br>
+                (613) 992-4793
+            </p>
+            <p>
+                <strong>TTY:</strong><br>
+                (613) 995-2266
+            </p>
+            <h3 id="tech-support">Technical support</h3>
+            <p>In the event you encounter technical difficulties, please contact <a href="mailto:infonet@parl.gc.ca">infonet@parl.gc.ca</a>.</p>
+
+            <h3 id="accessibility">Accessibility</h3>
+            <p>LEGISinfo is committed to providing positive experiences for all users. For more information, please see <a href="https://www.ourcommons.ca/en/accessibility">Accessibility</a> on the House of Commons website.</p>
+        </div>
+    </div>
+</div>
+
+    </section>
+    
+</div>
+
+<script>
+    /* Set the width of the side navigation to 250px */
+
+    $('body').scrollspy({ target: '#help-menu' })
+
+   
+
+    // allow escape button to close the menu
+    document.onkeydown = function (e) {
+        if (e.which == 27) {
+            closeNav();
+            return false;
+        }
+    }
+</script>
+
+        <a href="#top" id="returnToTop" title="Top of page" class="btn btn-primary scroll-top">
+            <i class="legisinfo-icons icon-up"></i><span class="sr-only">Top of page</span>
+        </a>
+    </main>
+    <footer class="ce-global ce-parl-footer d-print-none">
+		    <div class="ce-parl-footer-top">
+		        <div class="container">
+		            <div class="row ce-parl-footer-vc">
+		                <div class="col-md-4 order-md-2 text-center">
+		                    <img src="/CommonElementsV3/images/ce-parl-emblem-e.png" alt="Parliament of Canada" />
+		                </div>
+		                <div class="col-md-4 order-md-1">
+		                    <ul class="ce-parl-footer-external-links">
+		                        <li>
+		                            <a href="//sencanada.ca/en" class="ce-parl-footer-senate-link"  rel="external" >Senate</a>
+		                        </li>
+		                        <li>
+		                            <a href="//www.ourcommons.ca" class="ce-parl-footer-hoc-link" >House of Commons</a>
+		                        </li>
+		                        <li>
+		                            <a href="//lop.parl.ca/About/Library/VirtualLibrary/library-of-parliament-e.html" class="ce-parl-footer-lop-link"  rel="external" >Library of Parliament</a>
+		                        </li>
+		                        <li>
+		                            <a href="http://jobs-emplois.parl.ca/?Language&#x3D;E" class="ce-parl-footer-employment" >Employment at Parliament</a>
+		                        </li>
+		                    </ul>
+		                </div>              
+		                <div class="col-md-4 order-md-3 d-sm-none">
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="ce-parl-footer-bottom">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col-sm-12 text-center">
+		                    <ul class="ce-parl-footer-bottom-links">
+		                        <li>
+		                            <a href="//www.parl.ca/ImportantNotices-e.html" >Important Notices</a>
+		                        </li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</footer>
+    <script src="/legisinfo/js/popper-v2.10.2.min.js?v=bO-nmpttsdqVN6-LyTk-tYpdUxuFhxYQYoP6f3BsEEc"></script>
+    <script src="/legisinfo/js/tippy-v6.3.1.min.js?v=4wdrgKucW7nC-5EaDDPdZlTtHSUg_R85Moqv2_Su-D8"></script>
+    
+    <script src="/legisinfo/js/jquery.i18n-v1.0.7.min.js?v=Xe5TCNN0b3K98e99_oWJr0FOiSTILqWWWEaDCY48V5E"></script>
+    <script src="/legisinfo/js/jquery.i18n.messagestore-v1.0.7.min.js?v=dxDziD29LGTvKo6LXzZmm8o8W87YCu4BOh-tsrDJd4k"></script>
+
+    <script src="/legisinfo/js/moment-v2.29.1.min.js?v=D_SW0JTJPBVxcKjgrxTI8e8R4GIHyxHQk8om9AQL_OY"></script>
+    <script src="/legisinfo/js/duetdatepicker-v1.4.0.min.js?v=zJELky71tytNM7sqY5ghW0ftSlw4XxyHiI37XhwV3qo" type="module"></script>
+
+    <script src="/legisinfo/js/site.min.js?v=B4y53pTSPbARBK8vLNsiLYg7b3ZAPrENs-jmGfwGK4Q"></script>    
+</body>
+</html>

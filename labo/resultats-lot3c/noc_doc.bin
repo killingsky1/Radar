@@ -1,0 +1,1166 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+        wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <title>Notice of Compliance Database (NOC) API</title>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- Meta data -->
+    <meta name="dcterms.language" title="ISO639-2" content="eng" />
+    <meta name="dcterms.title" content="Notice of Compliance Database (NOC) API" />
+    <meta name="description" content="Documentation for the Notice of Compliance Database (NOC) API." />
+    <meta name="dcterms.subject" title="scheme" content="" />
+    <meta name="dcterms.creator" content="Government of Canada, Health Canada and the Public health Agency of Canada" />
+    <meta name="dcterms.contributor" content="" />
+    <meta name="dcterms.type" title="gctype" content="" />
+    <meta name="dcterms.audience" title="gcaudience" content="public" />
+    <meta name="dcterms.issued" title="W3CDTF" content="2017-12-15" />
+    <meta name="dcterms.modified" title="W3CDTF" content="2017-12-15" />
+    <meta name="review_date" content="" />
+    <meta name="meta_date" content="" />
+
+    <!-- Load closure template scripts -->
+    <script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_28/cdts/compiled/soyutils.js"></script>
+    <script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_28/cdts/compiled/wet-en.js"></script>
+    <script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_28/cdts/compiled/plugins-en.js"></script>
+
+    <!-- Load closure template scripts -->
+    <noscript>
+        <link rel="import" href="./StaticFallbackFiles/gcweb/refTop.html">
+    </noscript>
+    <!-- Write closure template -->
+    <script type="text/javascript">
+            document.write(wet.builder.refTop({
+                cdnEnv: "prod"
+            }));
+    </script>
+
+    <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+    <script>dataLayer1 = [];</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+
+<body vocab="http://schema.org/" typeof="WebPage">
+    <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+    <noscript>
+        <iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement
+
+(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})
+
+(window,document,'script','dataLayer1','GTM-TLGQ9K');
+    </script>
+    <!-- End Google Tag Manager -->
+    <div id="def-top">
+        <!-- top-en.html-Start-->
+        <link rel="import" href="./StaticFallbackFiles/gcweb/top-en.html">
+        <!-- top-en.html-End-->
+    </div>
+    <!-- Write closure template -->
+    <script type="text/javascript">
+	var defTop = document.getElementById("def-top");
+	var jsonbread = [];
+
+	//console.log(jsonbread);
+	defTop.outerHTML = wet.builder.top({
+	    cdnEnv: "prod",
+	    search: true,
+		lngLinks: [{
+			lang: "en",
+			href: "noc-documentation-fr.html",
+			text: "Français",
+		}],
+		showPreContent: true,
+		breadcrumbs:jsonbread,
+	});
+    </script>
+    <div class="container">
+        <main role="main" property="mainContentOfPage" class="container">
+            <div class="wb-frmvld">
+                <section>
+                    <h1 id="wb-cont">Notice of Compliance Database (NOC) API Guide</h1>
+
+                    <section>
+                        <h2 id="a">Table of contents</h2>
+                        <ul>
+                            <li><a href="#a1">Introduction</a></li>
+                            <li>
+                                <a href="#a2">Drug Product</a>
+                                <ul>
+                                    <li><a href="#a2.1">Parameters</a></li>
+                                    <li><a href="#a2.2">Contents of the response</a></li>
+                                    <li><a href="#a2.3">Sample response</a></li>
+                                    <li><a href="#a2.4">jQuery example</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#a3">Notice of Compliance</a>
+                                <ul>
+                                    <li><a href="#a3.1">Parameters</a></li>
+                                    <li><a href="#a3.2">Contents of the response</a></li>
+                                    <li><a href="#a3.3">Sample response</a></li>
+                                    <li><a href="#a3.4">jQuery example</a></li>
+                                </ul>
+                            </li>
+                            <!-- Remove that section November 2017 Requested by Valerie Tweedle
+                            <li>
+                                <a href="#a4">Product</a>
+                                <ul>
+                                    <li><a href="#a4.1">Parameters</a></li>
+                                    <li><a href="#a4.2">Contents of the response</a></li>
+                                    <li><a href="#a4.3">Sample response</a></li>
+                                    <li><a href="#a4.4">jQuery example </a></li>
+                                </ul>
+                            </li>
+                            ----->
+                            <li>
+                                <a href="#a4">Dosage Form</a>
+                                <ul>
+                                    <li><a href="#a4.1">Parameters</a></li>
+                                    <li><a href="#a4.2">Contents of the response</a></li>
+                                    <li><a href="#a4.3">Sample response</a></li>
+                                    <li><a href="#a4.4">jQuery example </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#a5">Medicinal Ingredient</a>
+                                <ul>
+                                    <li><a href="#a5.1">Parameters</a></li>
+                                    <li><a href="#a5.2">Contents of the response</a></li>
+                                    <li><a href="#a5.3">Sample response</a></li>
+                                    <li><a href="#a5.4">jQuery example </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#a6">Route of Administration</a>
+                                <ul>
+                                    <li><a href="#a6.1">Parameters</a></li>
+                                    <li><a href="#a6.2">Contents of the response</a></li>
+                                    <li><a href="#a6.3">Sample response</a></li>
+                                    <li><a href="#a6.4">jQuery example </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#a7">Veterinary Species</a>
+                                <ul>
+                                    <li><a href="#a7.1">Parameters</a></li>
+                                    <li><a href="#a7.2">Contents of the response</a></li>
+                                    <li><a href="#a7.3">Sample response</a></li>
+                                    <li><a href="#a7.4">jQuery example </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2 id="a1">Introduction</h2>
+                        <p>A Notice of Compliance (NOC) is issued to a manufacturer following the satisfactory review of a submission for a new drug, and signifies compliance with the Food and Drug Regulations.</p>
+                        <p>The database is updated nightly and contains NOC information on human drugs from January 1, 1994 to date. It also contains NOC information on Veterinary drugs from September 19, 2000 to date. 
+                        Through a phased in approach Health Canada will populate the remaining NOCs for Veterinary drugs from January 1, 1994 to September 18, 2000.</p>
+                        <p>This Application Programming Interface (API) allows developers to access that information in JSON and XML format for reuse in their own applications.
+                        The base URI for the Notice of Compliance Database is <strong>https://health-products.canada.ca/api/notice-of-compliance/</strong> and you can add parameters to it. Any requests are made relative to this URI.</p>                        
+                    </section>
+                    <!--Drug Product-section-start-->  
+                    <section>                        
+                        <h2 id="a2">Drug Product</h2>
+                        <p>Basic information about the product, such as brand name and Drug Identification Number. The brand name is the unique name under which the manufacturer of a drug product advertises and sells it.</p>
+                        <!--h3-section-start-->
+                        <section>
+                            <h3 id="a2.1">Parameters</h3>
+                            <p>There are three parameters in the request: id, lang and type.</p>
+                            <table>
+                                <caption>
+                                    Request parameters
+                                </caption>
+                                <tr>
+                                    <th scope="col">Parameter</th>
+                                    <th scope="col">Meaning</th>
+                                    <th scope="col">Value</th>
+                                    <th scope="col">Required?</th>
+                                    <th scope="col">Note</th>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/drugproduct/?id=</span></td>
+                                    <td>Returns drug product(s) according to the Notice of Compliance number specified in the request.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 wrap">
+                                            #####&nbsp;- number of the Notice of Compliance
+                                        </ul>
+                                    </td>
+                                    <td><strong>Yes</strong></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/drugproduct/?lang=en</span></td>
+                                    <td>Changes language of the response.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 nowrap">
+                                            <li><code>en</code>&nbsp;- English</li>
+                                            <li><code>fr</code>&nbsp;- French</li>
+                                        </ul>
+                                    </td>
+                                    <td><strong>No</strong>, but defaults to English if not specified.</td>
+                                    <td>Determines whether the response is in English or French.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/drugproduct/?type=json</span></td>
+                                    <td>Changes the format of the result.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 nowrap">
+                                            <li><code>json</code>&nbsp;- JSON</li>
+                                            <li><code>xml</code>&nbsp;- XML</li>                                            
+                                        </ul>
+                                    </td>
+                                    <td><strong>No</strong>, but defaults to JSON if not specified.</td>
+                                    <td>Determines whether the format of the result will be in JSON or XML.</td>
+                                </tr>
+                            </table>
+                            <p>Drug Products can be accessed via these URIs:</p>
+                            <ul>
+                                <li><a href="https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?lang=en&type=json">https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?lang=en&type=json</a></li>
+                                <li><a href="https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?lang=fr&type=json">https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?lang=fr&type=json</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3 id="a2.2">Contents of the response</h3>
+                            <p>The response consists of a&nbsp;<strong>result</strong>&nbsp;that contains one or multiple objects.</p>
+
+                            <p>Each&nbsp;<strong>drug product</strong>&nbsp;object consists of the following values:</p>
+                            <table>
+                                <caption>
+                                    Drug Product object values
+                                </caption>
+                                <tr>
+                                    <th scope="col">Key</th>
+                                    <th scope="col">Value</th>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_number</strong></td>
+                                    <td>The number assigned to the Notice of Compliance.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_br_brand_id</strong></td>
+                                    <td>The identification number assigned to the brand.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_br_brandname</strong></td>
+                                    <td>The brand name for the drug product.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_br_product_id</strong></td>
+                                    <td>The identification number assigned to the DIN product.</td>
+                                </tr>                               
+                                <tr>
+                                    <td><strong>noc_br_din</strong></td>
+                                    <td>The Drug Identification Number.</td>
+                                </tr>
+                            </table>
+                        </section>
+                        <section>
+                             <h3 id="a2.3">Sample response</h3>
+                             <pre class="prettify prettyprint linenums">[{"noc_number":3369,"noc_br_brand_id":3567,"noc_br_brandname":"NORINYL 1/50 21DAY","noc_br_din":"02188724","noc_br_product_id":6363},
+    {"noc_number":3369,"noc_br_brand_id":3568,"noc_br_brandname":"NORINYL 1/50 28DAY","noc_br_din":"02188732","noc_br_product_id":6364}]</pre>
+                        </section>
+                        <section>
+                             <h3 id="a2.4">jQuery example</h3>
+                             <p>Example of a function that search for drug products given a Notice of Compliance number and language selection:</p>
+                             <pre class="prettify prettyprint linenums">function getDrugProduct(id, lang) {
+      var base = 'https://health-products.canada.ca';
+      var uri = base + '/api/notice-of-compliance/drugproduct/?lang=' + lang + '&id=' + id;
+      $.ajax({
+              url:uri,
+              type:'GET',
+              Accept:&quot;application/json&quot;,
+              dataType: 'json',
+              success:function(data){
+                           console.log(data.noc_br_brandname);
+                           var frag = document.createDocumentFragment();
+                           var h2 = document.createElement(&quot;h2&quot;);
+                           var DrugProduct = document.createTextNode(data.noc_br_brandname);
+                           var p = document.createElement(&quot;p&quot;);
+                           var text = document.createTextNode(data.panels[0].text);
+                           h2.appendChild(DrugProduct);
+                           p.appendChild(text);
+                           frag.appendChild(h2);
+                           frag.appendChild(p);
+                           $(&quot;#responses&quot;)[0].appendChild(frag);
+              },
+              error:function(error){
+              },
+      });
+      return;
+ };			</pre>                            
+                        </section>
+                    </section>
+                    <!--Brand-section-end-->
+                    <!--Notice of Compliance section-start---->
+                    <section>
+                        <h2 id="a3">Notice of Compliance</h2>
+                        <p>A Notice of Compliance is a notification, issued pursuant to paragraph C.08.004(1)(a), indicating that a manufacturer has complied with sections C.08.002 or C.08.003 and C.08.005.1 of the <i>Food and Drug Regulations</i>. Notices of Compliance are issued to a manufacturer following the satisfactory review of a submission.</p>
+                        <p>An NOC/c is the authorization to market a drug ([such as (i.e.)] a Notice of Compliance (NOC)), with the condition that the manufacturer carries out more studies to verify the clinical benefit. The NOC, qualifying under the NOC/c policy (Notice of Compliance with Conditions: Revised Policy), is issued under section C.08.004 of the <i>Food and Drug Regulations</i>.</p>
+                        <!--h3-section-start-->
+                        <section>
+                            <h3 id="a3.1">Parameters</h3>
+                            <p>There are three parameters in the request: id, lang and type.</p>
+                            <table>
+                                <caption>
+                                    Request parameters
+                                </caption>
+                                <tr>
+                                    <th scope="col">Parameter</th>
+                                    <th scope="col">Meaning</th>
+                                    <th scope="col">Value</th>
+                                    <th scope="col">Required?</th>
+                                    <th scope="col">Note</th>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/noticeofcompliancemain/?id=</span></td>
+                                    <td>Returns a Notice of Compliance according to the Notice of Compliance number specified in the request.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 wrap">
+                                            #####&nbsp;- number of the Notice of Compliance
+                                        </ul>
+                                    </td>
+                                    <td><strong>Yes</strong></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/noticeofcompliancemain/?lang=en</span></td>
+                                    <td>Changes language of the response.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 nowrap">
+                                            <li><code>en</code>&nbsp;- English</li>
+                                            <li><code>fr</code>&nbsp;- French</li>
+                                        </ul>
+                                    </td>
+                                    <td><strong>No</strong>, but defaults to English if not specified.</td>
+                                    <td>Determines whether the response is in English or French.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/noticeofcompliancemain/?type=json</span></td>
+                                    <td>Changes the format of the result.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 nowrap">
+                                            <li><code>json</code>&nbsp;- JSON</li>
+                                            <li><code>xml</code>&nbsp;- XML</li>                                            
+                                        </ul>
+                                    </td>
+                                    <td><strong>No</strong>, but defaults to JSON if not specified.</td>
+                                    <td>Determines whether the format of the result will be in JSON or XML.</td>
+                                </tr>
+                            </table>
+                            <p>Notices of Compliance can be accessed via these URIs:</p>
+                            <ul>
+                                <li><a href="https://health-products.canada.ca/api/notice-of-compliance/noticeofcompliancemain/?lang=en&type=json">https://health-products.canada.ca/api/notice-of-compliance/noticeofcompliancemain/?lang=en&type=json</a></li>
+                                <li><a href="https://health-products.canada.ca/api/notice-of-compliance/noticeofcompliancemain/?lang=fr&type=json">https://health-products.canada.ca/api/notice-of-compliance/noticeofcompliancemain/?lang=fr&type=json</a></li>                                
+                            </ul>
+                        </section>
+                        <section>
+                            <h3 id="a3.2">Contents of the response</h3>
+                            <p>The response consists of a&nbsp;<strong>result</strong>&nbsp;that contains one or multiple objects.</p>
+                            <p>Each&nbsp;<strong>Notice of Compliance</strong>&nbsp;object consists of the following values:</p>
+                            <table>
+                                <caption>
+                                    Notice of Compliance object values
+                                </caption>
+                                <tr>
+                                    <th scope="col">Key</th>
+                                    <th scope="col">Value</th>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_number</strong></td>
+                                    <td>The number assigned to the Notice of Compliance.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_date</strong></td>
+                                    <td>The date the Notice of Compliance was issued.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_manufacturer_name</strong></td>
+                                    <td>The name of the manufacturer.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_status_with_conditions</strong></td>
+                                    <td>Whether the product was authorized under the Notice of Compliance with Conditions Policy.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_on_submission_type</strong></td>
+                                    <td>The submission type.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_is_suppliment</strong></td>
+                                    <td>Whether the submission is a supplement.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_submission_class</strong></td>
+                                    <td>The submission class.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_is_admin</strong></td>
+                                    <td>Whether the submission was filed administratively.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_product_type</strong></td>
+                                    <td>The type of drug product.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_crp_product_name</strong></td>
+                                    <td>The name of the Canadian Reference Product.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_crp_company_name</strong></td>
+                                    <td>The company name for the Canadian Reference Product.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_crp_country_name</strong></td>
+                                    <td>The country name for the Canadian Reference Product.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_active_status</strong></td>
+                                    <td>Whether or not the Notice of Compliance is active or suspended.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_reason_supplement</strong></td>
+                                    <td>If the submission is a supplement, the reason for the supplement.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_reason_submission</strong></td>
+                                    <td>The reason for the submission.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_therapeutic_class</strong></td>
+                                    <td>The therapeutic class of a drug product.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_last_update_date</strong></td>
+                                    <td>The date that the Notice of Compliance was last updated.</td>
+                                </tr>
+                            </table>
+                        </section>
+                        <section>
+                             <h3 id="a3.3">Sample response</h3>
+                             <pre class="prettify prettyprint linenums">{"noc_number":403,"noc_date":"2002-03-13","noc_manufacturer_name":"AVENTIS PASTEUR LIMITED","noc_status_with_conditions":"N","noc_on_submission_type":"Supplement to a New Drug Submission (SNDS)","noc_is_suppliment":"Y","noc_submission_class":"Other","noc_is_admin":"N","noc_product_type":"Biologic","noc_crp_product_name":"","noc_crp_company_name":"","noc_crp_country_name":"","noc_active_status":"1","noc_reason_supplement":"NEW MANUFACTURING FACILITY","noc_reason_submission":"","noc_therapeutic_class":"ACTIVE IMMUNIZING AGENT","noc_last_update_date":"1111-11-11"}</pre>
+                        </section>
+                        <section>
+                             <h3 id="a3.4">jQuery example</h3>
+                             <p>Example of a function that search for a Notice of Compliance given a Notice of Compliance number and language selection:</p>
+                             <pre class="prettify prettyprint linenums">function GetNoticeOfComplianceMain(id, lang) {
+      var base = 'https://health-products.canada.ca';
+      var uri = base + '/api/notice-of-compliance/noticeofcompliancemain/?lang=' + lang + '&id=' + id;
+      $.ajax({
+              url:uri,
+              type:'GET',
+              Accept:&quot;application/json&quot;,
+              dataType: 'json',
+               success:function(data){
+                            console.log(data.noc_reason_submission);
+                            var frag = document.createDocumentFragment();
+                            var h2 = document.createElement(&quot;h2&quot;);
+                            var NoticeOfCompliance = document.createTextNode(data.noc_reason_submission);
+                            var p = document.createElement(&quot;p&quot;);
+                            var text = document.createTextNode(data.panels[0].text);
+                            h2.appendChild(NoticeOfCompliance);
+                            p.appendChild(text);
+                            frag.appendChild(h2);
+                            frag.appendChild(p);
+                            $(&quot;#responses&quot;)[0].appendChild(frag);
+               },
+               error:function(error){
+               },
+      });
+      return;
+ };			</pre>
+                        </section>
+                    </section>
+                    <!--Notice of Compliance section-end---->
+                    <!--Product section-remove
+                    <section>                       
+                        <h2 id="a4">Product</h2>
+                        <p>TODO put description of product.....</p>
+                        
+                        <section>
+                            <h3 id="a4.1">Parameters</h3>
+                            <p>There are three parameters in the request: id, lang and type.</p>
+                            <table>
+                                <caption>
+                                    Request parameters
+                                </caption>
+                                <tr>
+                                    <th scope="col">Parameter</th>
+                                    <th scope="col">Meaning</th>
+                                    <th scope="col">Value</th>
+                                    <th scope="col">Required?</th>
+                                    <th scope="col">Note</th>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/product/?id=</span></td>
+                                    <td>Returns products according to the Notice of Compliance number specified in the request.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 wrap">
+                                            #####&nbsp;- number of the Notice of Compliance
+                                        </ul>
+                                    </td>
+                                    <td><strong>Yes</strong></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/product/?lang=en</span></td>
+                                    <td>Changes language of the response.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 nowrap">
+                                            <li><code>en</code>&nbsp;- English</li>
+                                            <li><code>fr</code>&nbsp;- French</li>
+                                        </ul>
+                                    </td>
+                                    <td><strong>No</strong>, but defaults to English if not specified.</td>
+                                    <td>Determines whether the response is in English or French.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/product/?type=json</span></td>
+                                    <td>Changes the format of the result.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 nowrap">
+                                            <li><code>json</code>&nbsp;- JSON</li>
+                                            <li><code>xml</code>&nbsp;- XML</li>                                            
+                                        </ul>
+                                    </td>
+                                    <td><strong>No</strong>, but defaults to JSON if not specified.</td>
+                                    <td>Determines whether the format of the result will be in JSON or XML.</td>
+                                </tr>
+                            </table>
+                            <p>Products can be accessed via these URIs:</p>
+                            <ul>
+                                <li><a href="https://health-products.canada.ca/api/notice-of-compliance/product/?lang=en&type=json">https://health-products.canada.ca/api/notice-of-compliance/product/?lang=en&type=json</a></li>
+                                <li><a href="https://health-products.canada.ca/api/notice-of-compliance/product/?lang=fr&type=json">https://health-products.canada.ca/api/notice-of-compliance/product/?lang=fr&type=json</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3 id="a4.2">Contents of the response</h3>
+                            <p>The response consists of a&nbsp;<strong>result</strong>&nbsp;that contains one or multiple objects.</p>
+
+                            <p>Each&nbsp;<strong>product</strong>&nbsp;object consists of the following values:</p>
+                            <table>
+                                <caption>
+                                    Product object values
+                                </caption>
+                                <tr>
+                                    <th scope="col">Key</th>
+                                    <th scope="col">Value</th>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_number</strong></td>
+                                    <td>The number assigned to the Notice of Compliance.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_br_product_id</strong></td>
+                                    <td>The identification number assigned to the DIN product.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_br_brand_id</strong></td>
+                                    <td>The identification number assigned to the brand.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_br_din</strong></td>
+                                    <td>The Drug Identification Number.</td>
+                                </tr>
+                            </table>
+                        </section>
+                        <section>
+                             <h3 id="a4.3">Sample response</h3>
+                             <pre class="prettify prettyprint linenums">[{"noc_number":3369,"noc_br_product_id":6363,"noc_br_brand_id":3567,"noc_br_din":"02188724"},
+    {"noc_number":3369,"noc_br_product_id":6364,"noc_br_brand_id":3568,"noc_br_din":"02188732"}]</pre>
+                        </section>
+                        <section>
+                             <h3 id="a4.4">jQuery example</h3>
+                             <p>Example of a function that search for products given a Notice of Compliance number and language selection:</p>
+                             <pre class="prettify prettyprint linenums">function getProduct(id, lang) {
+     var base = 'https://health-products.canada.ca';
+     var uri = base + '/api/notice-of-compliance/product/?lang=' + lang + '&id=' + id;
+     $.ajax({
+             url:uri,
+             type:'GET',
+             Accept:&quot;application/json&quot;,
+             dataType: 'json',
+             success:function(data){
+                          console.log(data.product_name);
+                          var frag = document.createDocumentFragment();
+                          var h2 = document.createElement(&quot;h2&quot;);
+                          var Product = document.createTextNode(data.product_name);
+                          var p = document.createElement(&quot;p&quot;);
+                          var text = document.createTextNode(data.panels[0].text);
+                          h2.appendChild(Product);
+                          p.appendChild(text);
+                          frag.appendChild(h2);
+                          frag.appendChild(p);
+                          $(&quot;#responses&quot;)[0].appendChild(frag);
+             },
+             error:function(error){
+             },
+     });
+     return;
+ };			</pre> 
+                        </section>
+                    </section>
+                    Product section-end---->
+                    <!--Dosage Form section-start-->
+                    <section>                        
+                        <h2 id="a4">Dosage Form</h2>
+                        <p>The dosage form is the form in which the product is supplied. It is the combination of the form in which a product is presented [for example (e.g.)] in tablet, capsule or powder form, and the physical form in which it is administered, [for example, (e.g.)] in a powder to be administered in solution. </p>
+                        <!--h3-section-start-->
+                        <section>
+                            <h3 id="a4.1">Parameters</h3>
+                            <p>There are three parameters in the request: id, lang and type.</p>
+                            <table>
+                                <caption>
+                                    Request parameters
+                                </caption>
+                                <tr>
+                                    <th scope="col">Parameter</th>
+                                    <th scope="col">Meaning</th>
+                                    <th scope="col">Value</th>
+                                    <th scope="col">Required?</th>
+                                    <th scope="col">Note</th>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/dosageform/?id=</span></td>
+                                    <td>Returns dosage forms according to the Notice of Compliance number specified in the request.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 wrap">
+                                            #####&nbsp;- number of the Notice of Compliance
+                                        </ul>
+                                    </td>
+                                    <td><strong>Yes</strong></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/dosageform/?lang=en</span></td>
+                                    <td>Changes language of the response.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 nowrap">
+                                            <li><code>en</code>&nbsp;- English</li>
+                                            <li><code>fr</code>&nbsp;- French</li>
+                                        </ul>
+                                    </td>
+                                    <td><strong>No</strong>, but defaults to English if not specified.</td>
+                                    <td>Determines whether the response is in English or French.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/dosageform/?type=json</span></td>
+                                    <td>Changes the format of the result.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 nowrap">
+                                            <li><code>json</code>&nbsp;- JSON</li>
+                                            <li><code>xml</code>&nbsp;- XML</li>                                            
+                                        </ul>
+                                    </td>
+                                    <td><strong>No</strong>, but defaults to JSON if not specified.</td>
+                                    <td>Determines whether the format of the result will be in JSON or XML.</td>
+                                </tr>
+                            </table>
+                            <p>Dosage Forms can be accessed via these URIs:</p>
+                            <ul>
+                                <li><a href="https://health-products.canada.ca/api/notice-of-compliance/dosageform/?lang=en&type=json">https://health-products.canada.ca/api/notice-of-compliance/dosageform/?lang=en&type=json</a></li>
+                                <li><a href="https://health-products.canada.ca/api/notice-of-compliance/dosageform/?lang=fr&type=json">https://health-products.canada.ca/api/notice-of-compliance/dosageform/?lang=fr&type=json</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3 id="a4.2">Contents of the response</h3>
+                            <p>The response consists of a&nbsp;<strong>result</strong>&nbsp;that contains one or multiple objects.</p>
+
+                            <p>Each&nbsp;<strong>dosage form</strong>&nbsp;object consists of the following values:</p>
+                            <table>
+                                <caption>
+                                    Dosage Form object values
+                                </caption>
+                                <tr>
+                                    <th scope="col">Key</th>
+                                    <th scope="col">Value</th>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_number</strong></td>
+                                    <td>The number assigned to the Notice of Compliance.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_pf_din_product_id</strong></td>
+                                    <td>The identification number assigned to the DIN product.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_pf_form_name</strong></td>
+                                    <td>The dosage form.</td>
+                                </tr>
+                            </table>
+                        </section>
+                        <section>
+                             <h3 id="a4.3">Sample response</h3>
+                             <pre class="prettify prettyprint linenums">[{"noc_number":3369,"noc_pf_din_product_id":6363,"noc_pf_form_name":"Tablet"},
+    {"noc_number":3369,"noc_pf_din_product_id":6364,"noc_pf_form_name":"Tablet"}]</pre>
+                        </section>
+                        <section>
+                             <h3 id="a4.4">jQuery example</h3>
+                             <p>Example of a function that search for dosage forms given a Notice of Compliance number and language selection:</p>
+                             <pre class="prettify prettyprint linenums">function getDosageForm(id, lang) {
+     var base = 'https://health-products.canada.ca';
+     var uri = base + '/api/notice-of-compliance/dosageform/?lang=' + lang + '&id=' + id;
+     $.ajax({
+             url:uri,
+             type:'GET',
+             Accept:&quot;application/json&quot;,
+             dataType: 'json',
+             success:function(data){
+                          console.log(data.noc_pf_form_name);
+                          var frag = document.createDocumentFragment();
+                          var h2 = document.createElement(&quot;h2&quot;);
+                          var DosageForm = document.createTextNode(data.noc_pf_form_name);
+                          var p = document.createElement(&quot;p&quot;);
+                          var text = document.createTextNode(data.panels[0].text);
+                          h2.appendChild(DosageForm);
+                          p.appendChild(text);
+                          frag.appendChild(h2);
+                          frag.appendChild(p);
+                          $(&quot;#responses&quot;)[0].appendChild(frag);
+              },
+              error:function(error){
+              },
+     });
+     return;
+ };			</pre> 
+                        </section>
+                    </section>
+                    <!--Dosage Form section-end-->
+                    <!--Medicinal Ingredient section-start-->    
+                    <section>                        
+                        <h2 id="a5">Medicinal Ingredient</h2>
+                        <p>A medicinal ingredient is any component that has medicinal properties, and supplies pharmacological activity or other direct effect in the diagnosis, cure, mitigation, treatment or prevention of disease, or to affect the structure or any function of the body of man or other animals.</p>
+                        <!--h3-section-start-->
+                        <section>
+                            <h3 id="a5.1">Parameters</h3>
+                            <p>There are three parameters in the request: id, lang and type.</p>
+                            <table>
+                                <caption>
+                                    Request parameters
+                                </caption>
+                                <tr>
+                                    <th scope="col">Parameter</th>
+                                    <th scope="col">Meaning</th>
+                                    <th scope="col">Value</th>
+                                    <th scope="col">Required?</th>
+                                    <th scope="col">Note</th>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/medicinalingredient/?id=</span></td>
+                                    <td>Returns medicinal ingredients according to the Notice of Compliance number specified in the request.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 wrap">
+                                            #####&nbsp;- number of the Notice of Compliance
+                                        </ul>
+                                    </td>
+                                    <td><strong>Yes</strong></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/medicinalingredient/?lang=en</span></td>
+                                    <td>Changes language of the response.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 nowrap">
+                                            <li><code>en</code>&nbsp;- English</li>
+                                            <li><code>fr</code>&nbsp;- French</li>
+                                        </ul>
+                                    </td>
+                                    <td><strong>No</strong>, but defaults to English if not specified.</td>
+                                    <td>Determines whether the response is in English or French.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/medicinalingredient/?type=json</span></td>
+                                    <td>Changes the format of the result.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 nowrap">
+                                            <li><code>json</code>&nbsp;- JSON</li>
+                                            <li><code>xml</code>&nbsp;- XML</li>                                            
+                                        </ul>
+                                    </td>
+                                    <td><strong>No</strong>, but defaults to JSON if not specified.</td>
+                                    <td>Determines whether the format of the result will be in JSON or XML.</td>
+                                </tr>
+                            </table>
+                            <p>Medicinal Ingredients can be accessed via these URIs:</p>
+                            <ul>
+                                <li><a href="https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?lang=en&type=json">https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?lang=en&type=json</a></li>
+                                <li><a href="https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?lang=fr&type=json">https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?lang=fr&type=json</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3 id="a5.2">Contents of the response</h3>
+                            <p>The response consists of a&nbsp;<strong>result</strong>&nbsp;that contains one or multiple objects.</p>
+
+                            <p>Each&nbsp;<strong>medicinal ingredient</strong>&nbsp;object consists of the following values:</p>
+                            <table>
+                                <caption>
+                                    Medicinal Ingredient object values
+                                </caption>
+                                <tr>
+                                    <th scope="col">Key</th>
+                                    <th scope="col">Value</th>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_number</strong></td>
+                                    <td>The number assigned to the Notice of Compliance.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_pi_din_product_id</strong></td>
+                                    <td>The identification number assigned to the DIN product.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_pi_medic_ingr_name</strong></td>
+                                    <td>The medicinal ingredient name.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_pi_strength</strong></td>
+                                    <td>The strength of the medicinal ingredient.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_pi_unit</strong></td>
+                                    <td>The medicinal ingredient unit.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_pi_basic_unit</strong></td>
+                                    <td>The medicinal ingredient dosage unit.</td>
+                                </tr>
+                            </table>
+                        </section>
+                        <section>
+                             <h3 id="a5.3">Sample response</h3>
+                            <pre class="prettify prettyprint linenums">[{"noc_number":3369,"noc_pi_din_product_id":6363,"noc_pi_medic_ingr_name":"NORETHINDRONE","noc_pi_strength":1,"noc_pi_unit":"MG","noc_pi_basic_unit":"TAB"},
+    {"noc_number":3369,"noc_pi_din_product_id":6363,"noc_pi_medic_ingr_name":"MESTRANOL","noc_pi_strength":0.05,"noc_pi_unit":"MG","noc_pi_basic_unit":"TAB"},
+    {"noc_number":3369,"noc_pi_din_product_id":6364,"noc_pi_medic_ingr_name":"NORETHINDRONE","noc_pi_strength":1,"noc_pi_unit":"MG","noc_pi_basic_unit":"TAB"},
+    {"noc_number":3369,"noc_pi_din_product_id":6364,"noc_pi_medic_ingr_name":"MESTRANOL","noc_pi_strength":0.05,"noc_pi_unit":"MG","noc_pi_basic_unit":"TAB"}]</pre>
+                        </section>
+                        <section>
+                             <h3 id="a5.4">jQuery example</h3>
+                             <p>Example of a function that search for medicinal ingredients given a Notice of Compliance number and language selection:</p>
+                             <pre class="prettify prettyprint linenums">function getMedicinalIngredient(id, lang) {
+      var base = 'https://health-products.canada.ca';
+      var uri = base + '/api/notice-of-compliance/medicinalingredient/?lang=' + lang + '&id=' + id;
+      $.ajax({
+              url:uri,
+              type:'GET',
+              Accept:&quot;application/json&quot;,
+              dataType: 'json',
+              success:function(data){
+                           console.log(data.noc_pi_medic_ingr_name);
+                           var frag = document.createDocumentFragment();
+                           var h2 = document.createElement(&quot;h2&quot;);
+                           var MedicinalIngredient = document.createTextNode(data.noc_pi_medic_ingr_name);
+                           var p = document.createElement(&quot;p&quot;);
+                           var text = document.createTextNode(data.panels[0].text);
+                           h2.appendChild(MedicinalIngredient);
+                           p.appendChild(text);
+                           frag.appendChild(h2);
+                           frag.appendChild(p);
+                           $(&quot;#responses&quot;)[0].appendChild(frag);
+               },
+               error:function(error){
+               },
+      });
+      return;
+ };			</pre>
+                        </section>
+                    </section>
+                    <!--Medicinal Ingredient section-end-->
+                    <!--Product Route section-start-->  
+                    <section>                       
+                        <h2 id="a6">Route of Administration</h2>
+                        <p>This term indicates the part of the body on which, through which or into which the product is to be introduced. (e.g. oral, topical, intramuscular, rectal, etc.)</p>
+                        <p>A product can have more than one route of administration (e.g. intravenous, intramuscular, intra-articular, etc.).</p>
+                        <!--h3-section-start-->
+                        <section>
+                            <h3 id="a6.1">Parameters</h3>
+                            <p>There are three parameters in the request: id, lang and type.</p>
+                            <table>
+                                <caption>
+                                    Request parameters
+                                </caption>
+                                <tr>
+                                    <th scope="col">Parameter</th>
+                                    <th scope="col">Meaning</th>
+                                    <th scope="col">Value</th>
+                                    <th scope="col">Required?</th>
+                                    <th scope="col">Note</th>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/route/?id=</span></td>
+                                    <td>Returns routes of administration according to the Notice of Compliance number specified in the request.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 wrap">
+                                            #####&nbsp;- number of the Notice of Compliance
+                                        </ul>
+                                    </td>
+                                    <td><strong>Yes</strong></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/route/?lang=en</span></td>
+                                    <td>Changes language of the response.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 nowrap">
+                                            <li><code>en</code>&nbsp;- English</li>
+                                            <li><code>fr</code>&nbsp;- French</li>
+                                        </ul>
+                                    </td>
+                                    <td><strong>No</strong>, but defaults to English if not specified.</td>
+                                    <td>Determines whether the response is in English or French.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/route/?type=json</span></td>
+                                    <td>Changes the format of the result.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 nowrap">
+                                            <li><code>json</code>&nbsp;- JSON</li>
+                                            <li><code>xml</code>&nbsp;- XML</li>                                            
+                                        </ul>
+                                    </td>
+                                    <td><strong>No</strong>, but defaults to JSON if not specified.</td>
+                                    <td>Determines whether the format of the result will be in JSON or XML.</td>
+                                </tr>
+                            </table>
+                            <p>Routes of Administration can be accessed via these URIs:</p>
+                            <ul>
+                                <li><a href="https://health-products.canada.ca/api/notice-of-compliance/route/?lang=en&type=json">https://health-products.canada.ca/api/notice-of-compliance/route/?lang=en&type=json</a></li>
+                                <li><a href="https://health-products.canada.ca/api/notice-of-compliance/route/?lang=fr&type=json">https://health-products.canada.ca/api/notice-of-compliance/route/?lang=fr&type=json</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3 id="a6.2">Contents of the response</h3>
+                            <p>The response consists of a&nbsp;<strong>result</strong>&nbsp;that contains one or multiple objects.</p>
+                            <p>Each&nbsp;<strong>route of administration</strong>&nbsp;object consists of the following values:</p>
+                            <table>
+                                <caption>
+                                    Route of Administration object values
+                                </caption>
+                                <tr>
+                                    <th scope="col">Key</th>
+                                    <th scope="col">Value</th>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_number</strong></td>
+                                    <td>The number assigned to the Notice of Compliance.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_pr_din_product_id</strong></td>
+                                    <td>The identification number assigned to the DIN product.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_pr_route</strong></td>
+                                    <td>The route of administration.</td>
+                                </tr>
+                            </table>
+                        </section>
+                        <section>
+                             <h3 id="a6.3">Sample response</h3>
+                             <pre class="prettify prettyprint linenums">[{"noc_number":3369,"noc_pr_din_product_id":6363,"noc_pr_route":"Oral"},
+    {"noc_number":3369,"noc_pr_din_product_id":6364,"noc_pr_route":"Oral"}]</pre>
+                       </section>
+                       <section>
+                             <h3 id="a6.4">jQuery example</h3>
+                             <p>Example of a function that search for routes of administration given a Notice of Compliance number and language selection:</p>
+                             <pre class="prettify prettyprint linenums">function getRouteAdministration(id, lang) {
+      var base = 'https://health-products.canada.ca';
+      var uri = base + '/api/notice-of-compliance/route/?lang=' + lang + '&id=' + id;
+      $.ajax({
+              url:uri,
+              type:'GET',
+              Accept:&quot;application/json&quot;,
+              dataType: 'json',
+              success:function(data){
+                           console.log(data.noc_pr_route);
+                           var frag = document.createDocumentFragment();
+                           var h2 = document.createElement(&quot;h2&quot;);
+                           var Route = document.createTextNode(data.noc_pr_route);
+                           var p = document.createElement(&quot;p&quot;);
+                           var text = document.createTextNode(data.panels[0].text);
+                           h2.appendChild(Route);
+                           p.appendChild(text);
+                           frag.appendChild(h2);
+                           frag.appendChild(p);
+                           $(&quot;#responses&quot;)[0].appendChild(frag);
+              },
+              error:function(error){
+              },
+      });
+      return;
+ };			</pre>
+                        </section>
+                    </section>
+                    <!--Product Route section-end-->
+                    <!--Veterinary Species section-start--> 
+                    <section>                        
+                        <h2 id="a7">Veterinary Species</h2>
+                        <p>The type of species for a certain veterinary products (e.g. sheep, dog, cattle, and poultry).</p>
+                        <!--h3-section-start-->
+                        <section>
+                            <h3 id="a7.1">Parameters</h3>
+                            <p>There are three parameters in the request: id, lang and type.</p>
+                            <table>
+                                <caption>
+                                    Request parameters
+                                </caption>
+                                <tr>
+                                    <th scope="col">Parameter</th>
+                                    <th scope="col">Meaning</th>
+                                    <th scope="col">Value</th>
+                                    <th scope="col">Required?</th>
+                                    <th scope="col">Note</th>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/vetspecies/?id=</span></td>
+                                    <td>Returns veterinary species according to the Notice of Compliance number specified in the request.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 wrap">
+                                            #####&nbsp;- number of the Notice of Compliance
+                                        </ul>
+                                    </td>
+                                    <td><strong>Yes</strong></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/vetspecies/?lang=en</span></td>
+                                    <td>Changes language of the response.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 nowrap">
+                                            <li><code>en</code>&nbsp;- English</li>
+                                            <li><code>fr</code>&nbsp;- French</li>
+                                        </ul>
+                                    </td>
+                                    <td><strong>No</strong>, but defaults to English if not specified.</td>
+                                    <td>Determines whether the response is in English or French.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="nowrap">api/notice-of-compliance/vetspecies/?type=json</span></td>
+                                    <td>Changes the format of the result.</td>
+                                    <td>
+                                        <ul class="list-unstyled mrgn-lft-0 nowrap">
+                                            <li><code>json</code>&nbsp;- JSON</li>
+                                            <li><code>xml</code>&nbsp;- XML</li>                                            
+                                        </ul>
+                                    </td>
+                                    <td><strong>No</strong>, but defaults to JSON if not specified.</td>
+                                    <td>Determines whether the format of the result will be in JSON or XML.</td>
+                                </tr>
+                            </table>
+                            <p>Veterinary Species can be accessed via these URIs:</p>
+                            <ul>
+                                <li><a href="https://health-products.canada.ca/api/notice-of-compliance/vetspecies/?lang=en&type=json">https://health-products.canada.ca/api/notice-of-compliance/vetspecies/?lang=en&type=json</a></li>
+                                <li><a href="https://health-products.canada.ca/api/notice-of-compliance/vetspecies/?lang=fr&type=json">https://health-products.canada.ca/api/notice-of-compliance/vetspecies/?lang=fr&type=json</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3 id="a7.2">Contents of the response</h3>
+                            <p>The response consists of a&nbsp;<strong>result</strong>&nbsp;that contains one or multiple objects.</p>
+
+                            <p>Each&nbsp;<strong>veterinary species</strong>&nbsp;object consists of the following values:</p>
+                            <table>
+                                <caption>
+                                    Veterinary Species object values
+                                </caption>
+                                <tr>
+                                    <th scope="col">Key</th>
+                                    <th scope="col">Value</th>
+                                </tr>
+                                <tr>
+                                    <td><strong>noc_number</strong></td>
+                                    <td>The number assigned to the Notice of Compliance.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>vet_species_desc</strong></td>
+                                    <td>The animal species description.</td>
+                                </tr>
+                            </table>
+                        </section>
+                        <section>
+                             <h3 id="a7.3">Sample response</h3>
+                             <pre class="prettify prettyprint linenums">[{"noc_number":6981,"vet_species_desc":"CATTLE"},
+    {"noc_number":6981,"vet_species_desc":"DOGS"},
+    {"noc_number":6981,"vet_species_desc":"HORSES"},
+    {"noc_number":6981,"vet_species_desc":"SWINE"},
+    {"noc_number":6981,"vet_species_desc":"TURKEYS"}]</pre>
+                        </section>
+                        <section>
+                             <h3 id="a7.4">jQuery example</h3>
+                             <p>Example of a function that search for veterinary species given a Notice of Compliance number and language selection:</p>
+                             <pre class="prettify prettyprint linenums">function getVeterinarySpecies(id, lang) {
+      var base = 'https://health-products.canada.ca';
+      var uri = base + '/api/notice-of-compliance/vetspecies/?lang=' + lang + '&id=' + id;
+      $.ajax({
+              url:uri,
+              type:'GET',
+              Accept:&quot;application/json&quot;,
+              dataType: 'json',
+              success:function(data){
+                           console.log(data.vet_species_desc);
+                           var frag = document.createDocumentFragment();
+                           var h2 = document.createElement(&quot;h2&quot;);
+                           var SpeciesName = document.createTextNode(data.vet_species_desc);
+                           var p = document.createElement(&quot;p&quot;);
+                           var text = document.createTextNode(data.panels[0].text);
+                           h2.appendChild(SpeciesName);
+                           p.appendChild(text);
+                           frag.appendChild(h2);
+                           frag.appendChild(p);
+                           $(&quot;#responses&quot;)[0].appendChild(frag);
+              },
+              error:function(error){
+              },
+      });
+      return;
+ }; 			</pre>
+                        </section>
+                    </section><!--Veterinary Species Section end-->
+                </section><!--Entire Doc Section end-->
+            </div>
+            <!-- prefooter-en.html-Start-->
+            <div id="def-preFooter">
+                <link rel="import" href="./StaticFallbackFiles/gcweb/prefooter-en.html">
+            </div>
+            <!-- prefooter-en.html-End-->
+            <!-- Write closure template -->
+            <script type="text/javascript">
+                var defPreFooter = document.getElementById("def-preFooter");
+                defPreFooter.outerHTML = wet.builder.preFooter({
+                    cdnEnv: "prod",
+                    dateModified: "2020-05-19",
+                    showPostContent: true,
+                    showShare: true,
+                });
+            </script>
+        </main>
+    </div>
+
+    <!-- footer-en.html-Start-->
+    <div id="def-footer">
+        <link rel="import" href="./StaticFallbackFiles/gcweb/footer-en.html">
+    </div>
+    <!-- footer-en.html-End-->
+    <!-- Write closure template -->
+    <script type="text/javascript">
+            var defFooter = document.getElementById("def-footer");
+            defFooter.outerHTML = wet.builder.footer({
+                cdnEnv: "prod",
+                showFeatures: true,
+            });
+    </script>
+    <!-- Write closure template -->
+    <script type="text/javascript">
+                document.write(wet.builder.refFooter({
+                    cdnEnv: "prod"
+                }));
+    </script>
+    <!--[if lt IE 10 | !IE ]><!-->
+    <script src="./js/jquery.xdomainrequest.min.js"></script>
+    <!--<![endif]-->
+</body>
+</html>

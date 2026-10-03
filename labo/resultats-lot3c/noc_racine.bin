@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+        wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <title>Notice of Compliance Database</title>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- Meta data -->
+    <meta name="dcterms.language" title="ISO639-2" content="eng" />
+    <meta name="dcterms.title" content="Drug and health product inspections" />
+    <meta name="description" content="Find the latest results from the Government's drug and health product inspections." />
+    <meta name="dcterms.subject" title="scheme" content="" />
+    <meta name="dcterms.creator" content="Government of Canada, Health Canada and the Public health Agency of Canada" />
+    <meta name="dcterms.contributor" content="" />
+    <meta name="dcterms.type" title="gctype" content="" />
+    <meta name="dcterms.audience" title="gcaudience" content="" />
+    <meta name="dcterms.issued" title="W3CDTF" content="2015-04-21" />
+    <meta name="dcterms.modified" title="W3CDTF" content="2016-03-18" />
+    <meta name="review_date" content="" />
+    <meta name="meta_date" content="" />
+
+    <!-- Load closure template scripts -->
+    <script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_22/cdts/compiled/soyutils.js"></script>
+    <script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_22/cdts/compiled/wet-en.js"></script>
+    <script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_22/cdts/compiled/plugins-en.js"></script>
+    <!--<script type="text/javascript" src="./gcweb_4.0.22/wet-en.js"></script>
+    <script type="text/javascript" src="./gcweb_4.0.22/plugins-en.js"></script>-->
+    <!-- Load closure template scripts -->
+    <noscript>
+        <link rel="import" href="https://api.hres.ca/StaticFallbackFiles/4_0_22/gcweb/refTop.html">
+    </noscript>
+    <!-- Write closure template -->
+    <script type="text/javascript">
+            document.write(wet.builder.refTop({
+                cdnEnv: "prod"
+            }));
+    </script>
+
+    <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+    <script>dataLayer1 = [];</script>
+    <!-- End Google Tag Manager -->
+    <script src="./js/mdall.js"></script>
+</head>
+
+<body vocab="http://schema.org/" typeof="WebPage">
+    <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+    <noscript>
+        <iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement
+
+            (s), dl = l != 'dataLayer1' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })
+
+        (window, document, 'script', 'dataLayer1', 'GTM-TLGQ9K');
+    </script>
+    <!-- End Google Tag Manager -->
+    <div id="def-top">
+        <!-- top-en.html-Start-->
+        <link rel="import" href="https://api.hres.ca/StaticFallbackFiles/4_0_22/gcweb/top-en.html">
+        <!-- top-en.html-End-->
+    </div>
+    <!-- Write closure template -->
+    <script type="text/javascript">
+        var defTop = document.getElementById("def-top");
+        var jsonbread = [{ title: "Home", href: "http://www.canada.ca/en/index.html" },
+            { title: "Health", href: "http://healthycanadians.gc.ca/index-eng.php" },
+            { title: "Drug and health products", href: "http://healthycanadians.gc.ca/drugs-products-medicaments-produits/index-eng.php" },
+            { title: "Inspecting and monitoring drug and health products", href: "http://healthycanadians.gc.ca/drugs-products-medicaments-produits/inspecting-monitoring-inspection-controle/index-eng.php" },
+            { title: "Drug and health product inspections", href: "http://healthycanadians.gc.ca/drugs-products-medicaments-produits/inspecting-monitoring-inspection-controle/inspections/index-eng.php" },
+            { title: "Drug Product Database Search" }];
+
+        //console.log(jsonbread);
+        defTop.outerHTML = wet.builder.top({
+            cdnEnv: "prod",
+            search: true,
+            lngLinks: [{
+                lang: "en",
+                href: "instruments-medicaux.html",
+                text: "Français",
+            }],
+            showPreContent: true,
+            breadcrumbs: jsonbread,
+        });
+    </script>
+    <div class="container">
+        <main role="main" property="mainContentOfPage" class="container">
+            <div class="wb-frmvld">
+                <h1>Notice of Compliance Database</h1>
+
+                <p>The NOC is issued to a manufacturer following the satisfactory review of a submission for a new drug, and signifies compliance with the Food and Drug Regulations.  The database is updated nightly and contains NOC information on human drugs from January 1, 1994 to date. It also contains NOC information on Veterinary drugs from September 19, 2000 to date. Through a phased in approach Health Canada will populate the remaining NOCs for Veterinary drugs from January 1, 1994 to September 18, 2000.</p>
+                
+                <h2>Licence:</h2>
+
+                <a href="http://open.canada.ca/en/open-government-licence-canada">Open Government Licence - Canada</a>
+
+
+                <h2>Dataset Resources</h2>
+
+                <table class="wb-tables table table-striped table-hover" data-wb-tables='{ &quot;bDeferRender&quot;: true, &quot;pageLength&quot;: 25 }'>
+                    <thead>
+                        <tr>
+                            <th scope="col">Resource Name</th>
+                            <th class="text-center">Format</th>
+                            <th></th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dosage Form - English</td>
+                            <td class="text-center"><a class="btn btn-default" href="https://health-products-dev.hres.ca/api/notice-of-compliance/dosageform/?lang=en&type=json">JSON</a></td>
+                            <td class="text-center"><a class="btn btn-default" href="https://health-products-dev.hres.ca/api/notice-of-compliance/dosageform/?lang=en&type=xml">XML</a></td>
+                        </tr>
+                        <tr>
+                            <td>Dosage Form - French</td>
+                            <td class="text-center"><a class="btn btn-default" href="https://produits-sante-dev.hres.ca/api/avis-de-conformite/dosageform/?lang=fr&type=json">JSON</a></td>
+                            <td class="text-center"><a class="btn btn-default" href="https://produits-sante-dev.hres.ca/api/avis-de-conformite/dosageform/?lang=fr&type=xml">XML</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>Drug Product - English</td>
+                            <td class="text-center"><a class="btn btn-default" href="https://health-products-dev.hres.ca/api/notice-of-compliance/drugproduct/?type=json">JSON</a></td>
+                            <td class="text-center"><a class="btn btn-default" href="https://health-products-dev.hres.ca/api/notice-of-compliance/drugproduct/?type=xml">XML</a></td>
+                        </tr>
+                        <tr>
+                            <td>Drug Product - French</td>
+                            <td class="text-center"><a class="btn btn-default" href="https://produits-sante-dev.hres.ca/api/avis-de-conformite/drugproduct/?type=json">JSON</a></td>
+                            <td class="text-center"><a class="btn btn-default" href="https://produits-sante-dev.hres.ca/api/avis-de-conformite/drugproduct/?type=xml">XML</a></td>
+                        </tr>
+                        <tr>
+                            <td>Medicinal Ingredient - English</td>
+                            <td class="text-center"><a class="btn btn-default" href="https://health-products-dev.hres.ca/api/notice-of-compliance/medicinalingredient/?lang=en&type=json">JSON</a></td>
+                            <td class="text-center"><a class="btn btn-default" href="https://health-products-dev.hres.ca/api/notice-of-compliance/medicinalingredient/?lang=en&type=xml">XML</a></td>
+                        </tr>
+                        <tr>
+                            <td>Medicinal Ingredient - French</td>
+                            <td class="text-center"><a class="btn btn-default" href="https://produits-sante-dev.hres.ca/api/avis-de-conformite/medicinalingredient/?lang=fr&type=json">JSON</a></td>
+                            <td class="text-center"><a class="btn btn-default" href="https://produits-sante-dev.hres.ca/api/avis-de-conformite/medicinalingredient/?lang=fr&type=xml">XML</a></td>
+                        </tr>
+                        <tr>
+                            <td>Notice of Compliance - English</td>
+                            <td class="text-center"><a class="btn btn-default" href="https://health-products-dev.hres.ca/api/notice-of-compliance/noticeofcompliancemain/?lang=en&type=json">JSON</a></td>
+                            <td class="text-center"><a class="btn btn-default" href="https://health-products-dev.hres.ca/api/notice-of-compliance/noticeofcompliancemain/?lang=en&type=xml">XML</a></td>
+                        </tr>
+                        <tr>
+                            <td>Notice of Compliance - French</td>
+                            <td class="text-center"><a class="btn btn-default" href="https://produits-sante-dev.hres.ca/api/avis-de-conformite/noticeofcompliancemain/?lang=fr&type=json">JSON</a></td>
+                            <td class="text-center"><a class="btn btn-default" href="https://produits-sante-dev.hres.ca/api/avis-de-conformite/noticeofcompliancemain/?lang=fr&type=xml">XML</a></td>
+                        </tr>
+                        <tr>
+                            <td>Route of Administration - English</td>
+                            <td class="text-center"><a class="btn btn-default" href="https://health-products-dev.hres.ca/api/notice-of-compliance/route/?lang=en&type=json">JSON</a></td>
+                            <td class="text-center"><a class="btn btn-default" href="https://health-products-dev.hres.ca/api/notice-of-compliance/route/?lang=en&type=xml">XML</a></td>
+                        </tr>
+                        <tr>
+                            <td>Route of Administration - French</td>
+                            <td class="text-center"><a class="btn btn-default" href="https://produits-sante-dev.hres.ca/api/avis-de-conformite/route/?lang=fr&type=json">JSON</a></td>
+                            <td class="text-center"><a class="btn btn-default" href="https://produits-sante-dev.hres.ca/api/avis-de-conformite/route/?lang=fr&type=xml">XML</a></td>
+                        </tr>                        
+                        <tr>
+                            <td>Veterinary Species - English</td>
+                            <td class="text-center"><a class="btn btn-default" href="https://health-products-dev.hres.ca/api/notice-of-compliance/vetspecies/?lang=en&type=json">JSON</a></td>
+                            <td class="text-center"><a class="btn btn-default" href="https://health-products-dev.hres.ca/api/notice-of-compliance/vetspecies/?lang=en&type=xml">XML</a></td>
+                        </tr>
+                        <tr>
+                            <td>Veterinary Species - French</td>
+                            <td class="text-center"><a class="btn btn-default" href="https://produits-sante-dev.hres.ca/api/avis-de-conformite/vetspecies/?lang=fr&type=json">JSON</a></td>
+                            <td class="text-center"><a class="btn btn-default" href="https://produits-sante-dev.hres.ca/api/avis-de-conformite/vetspecies/?lang=fr&type=xml">XML</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!--<h2>Developer Tools</h2>
+                <p>The information on this page (the dataset metadata) is also available in JSON format</p>
+                <a href="">Link to JSON format</a>
+
+
+                <h2>Related Items</h2>
+                <p>More to come</p>-->
+
+            </div>
+    <!-- prefooter-en.html-Start-->
+    <div id="def-preFooter">
+        <link rel="import" href="https://api.hres.ca/StaticFallbackFiles/4_0_22/gcweb/prefooter-en.html">
+    </div>
+    <!-- prefooter-en.html-End-->
+    <!-- Write closure template -->
+    <script type="text/javascript">
+        var defPreFooter = document.getElementById("def-preFooter");
+        defPreFooter.outerHTML = wet.builder.preFooter({
+            cdnEnv: "prod",
+            dateModified: "2017-01-04",
+            showPostContent: true,
+            showShare: true,
+        });
+    </script>
+    </main>
+    </div>
+
+    <!-- footer-en.html-Start-->
+    <div id="def-footer">
+        <link rel="import" href="https://api.hres.ca/StaticFallbackFiles/4_0_22/gcweb/footer-en.html">
+    </div>
+    <!-- footer-en.html-End-->
+    <!-- Write closure template -->
+    <script type="text/javascript">
+        var defFooter = document.getElementById("def-footer");
+        defFooter.outerHTML = wet.builder.footer({
+            cdnEnv: "prod",
+            showFeatures: true,
+        });
+    </script>
+    <!-- Write closure template -->
+    <script type="text/javascript">
+        document.write(wet.builder.refFooter({
+            cdnEnv: "prod"
+        }));
+    </script>
+    <!--[if lt IE 10 | !IE ]><!-->
+    <script src="./js/jquery.xdomainrequest.min.js"></script>
+    <!--<![endif]-->
+</body>
+</html>

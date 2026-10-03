@@ -1,0 +1,122 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Important Notices</title>
+<meta name="institution" content="House of Commons">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<!-- #INCLUDE VIRTUAL="/CommonElements/renderer/StaticHtmlRenderer.inc" -->
+<% HtmlRenderer.IncludeResources() %>
+<link rel="stylesheet" type="text/css" href="css/parl.css" media="all">
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <% HtmlRenderer.RenderHeader() %>
+    <div id="StartofContent">
+        <div class="container" id="important-notices-main">
+            <div class="row spacer">
+                <div class="col-md-12">
+                    <h1>Important Notices</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 sidebarContainer" role="complementary" id="important-notices-nav">
+                    <div id="sidebar" class="articleNav affix-top">
+                        <h4>Content</h4>
+                        <nav class="bs-docs-sidebar">
+                            <ul class="nav nav-stacked">
+                                <li><a href="#SiteManagement">Site Management</a></li>
+                                <li><a href="#ParliamentaryPrivilege">Parliamentary Privilege</a></li>
+                                <li><a href="#OfficialLanguages">Official Languages</a></li>
+                                <li><a href="#Copyrights">Copyrights</a></li>
+                                <li><a href="#Privacy">Privacy</a></li>
+                                <li>
+                                    <a href="#ImprovingYourExperience">Improving Your Experience</a>
+                                    <ul class="nav nav-stacked">
+                                        <li><a href="#DigitalMarkers">Digital Markers</a></li>
+                                        <li><a href="#WebAnalytics">Web Analytics</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#Hyperlinks">Hyperlinks</a></li>
+                                <li><a href="#DisclaimerOfLiability">Disclaimer of Liability</a></li>
+                                <li><a href="#CommentsAndInquiries">Comments and Inquiries</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-8" id="important-notices-content">
+
+                    <h2 id="SiteManagement">Site Management</h2>
+
+                    <p>This website is managed jointly by the Senate, the House of Commons, and the Library of Parliament.</p>
+
+                    <p>The Senate, the House of Commons and the Library of Parliament each has the sole right and responsibility for the content that it posts on this site. The content contained on this website is updated on an ongoing basis, but may not always be complete or current and may not be identical from one viewing device to the other.</p>
+
+                    <h2 id="ParliamentaryPrivilege">Parliamentary Privilege</h2>
+					
+                    <p>As per the <a href="http://laws-lois.justice.gc.ca/eng/const/index.html"><em>Constitution</em></a> and the <a href="http://laws-lois.justice.gc.ca/eng/acts/p-1/index.html"><em>Parliament of Canada Act</em></a>, the general and public law of Canada includes parliamentary privilege, which consists of the privileges, immunities and powers held, enjoyed and exercised by the Senate and the House of Commons, respectively, and their respective Members. Parliamentary privilege enables them to carry out their constitutional functions free from external interference. Parliamentary privilege is one of the safeguards of the constitutional separation of powers.</p>
+
+                    <p>The Parliament of Canada website contains parliamentary proceedings, papers, reports and research, which are protected by parliamentary privilege. Their publication on this website has been authorized by the respective Houses of Parliament. Visitors should be aware that if they reproduce or republish privileged material, they may not be protected by parliamentary privilege.</p>
+
+                    <h2 id="OfficialLanguages">Official Languages</h2>
+
+                    <p>The <a href="http://laws-lois.justice.gc.ca/eng/acts/o-3.01/"><em>Official Languages Act</em></a> applies to the Senate, the House of Commons, and the Library of Parliament, which are committed to ensuring that information that is accessible to the public and services made available through this website are provided in both official languages (English and French).</p>
+
+                    <h2 id="Copyrights">Copyrights</h2>
+
+                    <p>This website has been created for the purpose of providing Members of the public with direct access to information about the Parliament of Canada.</p>
+                    <p>The content of this website are covered by the provisions of the <a href="http://laws-lois.justice.gc.ca/eng/acts/C-42/index.html"><em>Copyright Act</em></a> and related regulations and international agreements. Permission to reproduce—in whole or in part—or to otherwise use the content of this website may be sought from the appropriate source.</p>
+                    <p>This website also includes material that is subject to copyrights held by third parties. Visitors should therefore be aware that they may need to seek permission from the third party to reproduce or otherwise use such material.</p>
+					<p>For information regarding the reproduction of Senate committee proceedings, please consult <a href="https://sencanada.ca/en/important-notices/permission-regarding-reproduction/">Permission to Reproduce</a>. </p>
+					<p>For information regarding the reproduction of the proceedings of the House of Commons and its committees, please consult <a href="http://www.ourcommons.ca/en/important-notices#SpeakersPermission">Speaker's Permission</a>.</p>
+             
+
+                    <h2 id="Privacy">Privacy</h2>
+
+                    <p>The Senate, the House of Commons and the Library of Parliament respect the privacy of visitors to this website. Personal information that visitors directly provide to the Senate, the House of Commons or the Library of Parliament is used for the purpose for which that information is provided. Such information, as well as information that may be collected due to the browsing of this website by visitors, is kept in accordance with best practices in information management and IT security.</p>
+
+                    <h2 id="ImprovingYourExperience">Improving your experience</h2>
+
+                    <p>The Parliament of Canada website continuously seeks to improve the experience of its visitors while respecting their privacy.</p>
+					
+                    <h3 id="DigitalMarkers">Digital Markers (including cookies)</h3>
+					
+                    <p>A digital marker is a resource created by the visitors' browser in order to remember certain pieces of information for the Web server to reference during the same or subsequent visit to the website. Examples of digital markers are "cookies" or HTML5 web storage. Some examples of what digital markers do are as follows:</p>
+                    <ul>
+                        <li>They allow a website to recognize a visitor who has previously accessed the site;</li>
+                        <li>They track what content is viewed on a site which helps website administrators ensure visitors find what they are looking for.</li>
+                    </ul>
+
+                    <p>The Parliament of Canada uses sessional and persistent digital markers on its website. During your on-line visit, your browser exchanges data with the servers where the website is hosted. The digital markers used do not allow the Parliament of Canada to identify individuals and do not contain personal information. You may adjust your browser settings to reject digital markers, including cookies, if you so choose. However, it may affect your ability to interact with the Parliamentary website.</p>
+
+                    <h3 id="WebAnalytics">Web Analytics</h3>
+					
+                    <p>Web analytics is the collection, analysis, measurement, and reporting of data about Web traffic and visits for purposes of understanding and optimizing Web usage. Information in digital markers may be used in conjunction with computer request data to identify and track your online interactions with the website.</p>
+                    <p>The Parliament of Canada uses Google Analytics and log file analysis to improve its website. When your computer requests a page found on the website, information is collected and used for Web analytics but does not allow to personally identify you as an individual.</p>
+                    <p>If you wish, you may opt out of being tracked by Google Analytics by disabling or refusing the cookies; by disabling JavaScript within your browser; or by using the Google Analytics Opt-Out Browser Add-On. Disabling Google Analytics or JavaScript will still permit you to access comparable information or services from our websites. However, if you disable your session cookie option, you will still be able to access our public website, but you might have difficulties with some more advanced features.</p>
+
+                    <h2 id="Hyperlinks">Hyperlinks</h2>
+
+                    <p>Hyperlinks to external or unaffiliated sites found on this Parliament of Canada website are for information purposes only. The Senate, the House of Commons and the Library of Parliament are not responsible for the content or practices of such sites. While efforts are made to ensure that hyperlinks are current and up-to-date, this is not guaranteed.</p>
+
+                    <h2 id="DisclaimerOfLiability">Disclaimer of Liability</h2>
+
+                    <p>The Senate, the House of Commons and the Library of Parliament are not responsible for any damage that may result from the use of the content of this website or from any failure of performance, error, omission, interruption, deletion, defect, delay in operation or transmission, computer virus, communication line failure, theft or destruction, or unauthorized access to, alteration of, or use of information under any cause of action.</p>
+
+                    <h2 id="CommentsAndInquiries">Comments and Inquiries</h2>
+
+                    <p>Comments or inquiries about these notices may be directed to:</p>
+                    <p>Information Service<br /> Parliament of Canada<br /> Ottawa, Ontario, K1A 0A9</p>
+                    <p><a href="mailto:info@parl.gc.ca">info@parl.gc.ca</a><br /> Toll-free (Canada): 1 866-599-4999<br /> Telephone: 1 613-992-4793<br /></p>
+					
+                </div>
+            </div>            
+        </div>
+    </div>
+    <% HtmlRenderer.RenderFooter() %>
+    <section>
+        <script src="js/parl.js"></script>     
+    </section>
+</body>
+</html>
