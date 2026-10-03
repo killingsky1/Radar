@@ -20051,6 +20051,3145 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Produit intérieur brut par industrie"
+    ],
+    [
+     "Période",
+     "juillet 2026"
+    ]
+   ],
+   "indicateur": "Produit intérieur brut par industrie",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260929/dq260929a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-29T08:30:00-04:00",
+   "periode": "juillet 2026",
+   "resume": "Le produit intérieur brut réel était essentiellement inchangé en juillet, après avoir augmenté pendant trois mois consécutifs."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260929/dq260929a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "260929/dq260929a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260929/dq260929a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-29",
+  "sha256": "9b444a34659a73d81c5b2bc28b496865cafe81b8e277b2356d2934991336f0c5",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Produit intérieur brut par industrie, juillet 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Six Nations Group, InnVest Hotels Holding Limited et Singerman Real Estate LLC",
+   "cibles": [
+    "Brookfield Strategic Real Estate Partner II"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-25",
+   "details": [
+    [
+     "Acquéreur",
+     "Six Nations Group, InnVest Hotels Holding Limited et Singerman Real Estate LLC"
+    ],
+    [
+     "Visé(s)",
+     "Brookfield Strategic Real Estate Partner II"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-25"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "7211"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Six Nations Group, InnVest Hotels Holding Limited et Singerman Real Estate LLC / Brookfield Strategic Real Estate Partner II",
+   "resultat": "",
+   "scian": "7211"
+  },
+  "direction": 0,
+  "entities": [
+   "Six Nations Group, InnVest Hotels Holding Limited et Singerman Real Estate LLC",
+   "Brookfield Strategic Real Estate Partner II"
+  ],
+  "id": "concurrence_ca:2026-09-25:six-nations-group-innvest-hotels-holding-limited-et-singerman-real-estate-llc-br:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-25",
+  "official_id": "2026-09-25:six-nations-group-innvest-hotels-holding-limited-et-singerman-real-estate-llc-br:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "f61969eb576ba6c2ddbc423b65222ca1a9f4f1e35b11cd2be823414c3f577c51",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, Six Nations Group, InnVest Hotels Holding Limited et Singerman Real Estate LLC / Brookfield Strategic Real Estate Partner II"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Curaleaf Holdings Inc",
+   "cibles": [
+    "Aurora Cannabis Inc"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-23",
+   "details": [
+    [
+     "Acquéreur",
+     "Curaleaf Holdings Inc"
+    ],
+    [
+     "Visé(s)",
+     "Aurora Cannabis Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-23"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "1114"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Curaleaf Holdings Inc / Aurora Cannabis Inc",
+   "resultat": "",
+   "scian": "1114"
+  },
+  "direction": 0,
+  "entities": [
+   "Curaleaf Holdings Inc",
+   "Aurora Cannabis Inc"
+  ],
+  "id": "concurrence_ca:2026-09-23:curaleaf-holdings-inc-aurora-cannabis-inc:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-23",
+  "official_id": "2026-09-23:curaleaf-holdings-inc-aurora-cannabis-inc:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "a255c5225351cdd81080783d6d7175a4f77e7c3fd7a8becaeebc35d13870e99c",
+  "source": "concurrence_ca",
+  "tickers": [
+   "ACB"
+  ],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, Curaleaf Holdings Inc / Aurora Cannabis Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "The Carlyle Group Inc",
+   "cibles": [
+    "Parallax Energy Operating Inc"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-18",
+   "details": [
+    [
+     "Acquéreur",
+     "The Carlyle Group Inc"
+    ],
+    [
+     "Visé(s)",
+     "Parallax Energy Operating Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-18"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "2111"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "The Carlyle Group Inc / Parallax Energy Operating Inc",
+   "resultat": "",
+   "scian": "2111"
+  },
+  "direction": 0,
+  "entities": [
+   "The Carlyle Group Inc",
+   "Parallax Energy Operating Inc"
+  ],
+  "id": "concurrence_ca:2026-09-18:the-carlyle-group-inc-parallax-energy-operating-inc:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-18",
+  "official_id": "2026-09-18:the-carlyle-group-inc-parallax-energy-operating-inc:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "915a800f3ee0c0953eed0aee99abe8c61a47bd171c53def7634b262bc87b1462",
+  "source": "concurrence_ca",
+  "tickers": [
+   "CG"
+  ],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, The Carlyle Group Inc / Parallax Energy Operating Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Olin Corporation",
+   "cibles": [
+    "Huntsman Corporation"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-18",
+   "details": [
+    [
+     "Acquéreur",
+     "Olin Corporation"
+    ],
+    [
+     "Visé(s)",
+     "Huntsman Corporation"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-18"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "3259"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Olin Corporation / Huntsman Corporation",
+   "resultat": "",
+   "scian": "3259"
+  },
+  "direction": 0,
+  "entities": [
+   "Olin Corporation",
+   "Huntsman Corporation"
+  ],
+  "id": "concurrence_ca:2026-09-18:olin-corporation-huntsman-corporation:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-18",
+  "official_id": "2026-09-18:olin-corporation-huntsman-corporation:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "607504b4dfa1db825a0a67995a9ea37ecb081a9edc4f3c4fae0bf15cabcc6ee6",
+  "source": "concurrence_ca",
+  "tickers": [
+   "OLN",
+   "HUN"
+  ],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, Olin Corporation / Huntsman Corporation"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Groupe Heafey",
+   "cibles": [
+    "1201-1215 Phillips Square Phase I Development Limited Partnership",
+    "9399-6767 Québec Inc"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-18",
+   "details": [
+    [
+     "Acquéreur",
+     "Groupe Heafey"
+    ],
+    [
+     "Visé(s)",
+     "1201-1215 Phillips Square Phase I Development Limited Partnership, 9399-6767 Québec Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-18"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "5311"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Groupe Heafey / 1201-1215 Phillips Square Phase I Development Limited Partnership et 9399-6767 Québec Inc",
+   "resultat": "",
+   "scian": "5311"
+  },
+  "direction": 0,
+  "entities": [
+   "Groupe Heafey",
+   "1201-1215 Phillips Square Phase I Development Limited Partnership",
+   "9399-6767 Québec Inc"
+  ],
+  "id": "concurrence_ca:2026-09-18:groupe-heafey-1201-1215-phillips-square-phase-i-development-limited-partnership:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-18",
+  "official_id": "2026-09-18:groupe-heafey-1201-1215-phillips-square-phase-i-development-limited-partnership:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "d712886b2cb4f9725d61bd1226170e71e89415d06eb26f747f3cdada4b427240",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, Groupe Heafey / 1201-1215 Phillips Square Phase I Development Limited Partnership et 9399-6767 Québec Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Sienna Senior Living Inc",
+   "cibles": [
+    "Stonemont Retirement Living Corporation"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-17",
+   "details": [
+    [
+     "Acquéreur",
+     "Sienna Senior Living Inc"
+    ],
+    [
+     "Visé(s)",
+     "Stonemont Retirement Living Corporation"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-17"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "6233"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Sienna Senior Living Inc / Stonemont Retirement Living Corporation",
+   "resultat": "",
+   "scian": "6233"
+  },
+  "direction": 0,
+  "entities": [
+   "Sienna Senior Living Inc",
+   "Stonemont Retirement Living Corporation"
+  ],
+  "id": "concurrence_ca:2026-09-17:sienna-senior-living-inc-stonemont-retirement-living-corporation:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-17",
+  "official_id": "2026-09-17:sienna-senior-living-inc-stonemont-retirement-living-corporation:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "b3082074311e1c3f057ff144a7baeaf7e84db85bb8424f962e658859b8b74673",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, Sienna Senior Living Inc / Stonemont Retirement Living Corporation"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Go Estrie Inc",
+   "cibles": [
+    "Ronald Thibault Chevrolet Cadillac Buick GMC Ltée",
+    "Le Groupe Automobile Thibault Ltée"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-17",
+   "details": [
+    [
+     "Acquéreur",
+     "Go Estrie Inc"
+    ],
+    [
+     "Visé(s)",
+     "Ronald Thibault Chevrolet Cadillac Buick GMC Ltée, Le Groupe Automobile Thibault Ltée"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-17"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "4411"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Go Estrie Inc / Ronald Thibault Chevrolet Cadillac Buick GMC Ltée et Le Groupe Automobile Thibault Ltée",
+   "resultat": "",
+   "scian": "4411"
+  },
+  "direction": 0,
+  "entities": [
+   "Go Estrie Inc",
+   "Ronald Thibault Chevrolet Cadillac Buick GMC Ltée",
+   "Le Groupe Automobile Thibault Ltée"
+  ],
+  "id": "concurrence_ca:2026-09-17:go-estrie-inc-ronald-thibault-chevrolet-cadillac-buick-gmc-ltee-et-le-groupe-aut:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-17",
+  "official_id": "2026-09-17:go-estrie-inc-ronald-thibault-chevrolet-cadillac-buick-gmc-ltee-et-le-groupe-aut:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "6e6ed6852a7afe725ed1faca30f8abbcbdbd15efbbeadd1e67dbb33bc06acdb1",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, Go Estrie Inc / Ronald Thibault Chevrolet Cadillac Buick GMC Ltée et Le Groupe Automobile Thibault Ltée"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Power Grid Components Inc",
+   "cibles": [
+    "Delta Star Inc"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-16",
+   "details": [
+    [
+     "Acquéreur",
+     "Power Grid Components Inc"
+    ],
+    [
+     "Visé(s)",
+     "Delta Star Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-16"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "3353"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Power Grid Components Inc / Delta Star Inc",
+   "resultat": "",
+   "scian": "3353"
+  },
+  "direction": 0,
+  "entities": [
+   "Power Grid Components Inc",
+   "Delta Star Inc"
+  ],
+  "id": "concurrence_ca:2026-09-16:power-grid-components-inc-delta-star-inc:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-16",
+  "official_id": "2026-09-16:power-grid-components-inc-delta-star-inc:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "514aa3375568912ebb6fe89db8050b5b490151f9e31a56d421fd0195634992dc",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, Power Grid Components Inc / Delta Star Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Altas Corporation et L Catterton Management Limited",
+   "cibles": [
+    "Fullscript Inc"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-15",
+   "details": [
+    [
+     "Acquéreur",
+     "Altas Corporation et L Catterton Management Limited"
+    ],
+    [
+     "Visé(s)",
+     "Fullscript Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-15"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "4461"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Altas Corporation et L Catterton Management Limited / Fullscript Inc",
+   "resultat": "",
+   "scian": "4461"
+  },
+  "direction": 0,
+  "entities": [
+   "Altas Corporation et L Catterton Management Limited",
+   "Fullscript Inc"
+  ],
+  "id": "concurrence_ca:2026-09-15:altas-corporation-et-l-catterton-management-limited-fullscript-inc:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-15",
+  "official_id": "2026-09-15:altas-corporation-et-l-catterton-management-limited-fullscript-inc:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "60d079572ebd54c75c610e94add00cf06b8c37b4dbbc3324c4a1c4d4bc762094",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, Altas Corporation et L Catterton Management Limited / Fullscript Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Tamarack Valley Energy Ltd",
+   "cibles": [
+    "Headwater Exploration Inc"
+   ],
+   "code": "CDP",
+   "conclusion": "2026-09-21",
+   "debut": "2026-09-14",
+   "details": [
+    [
+     "Acquéreur",
+     "Tamarack Valley Energy Ltd"
+    ],
+    [
+     "Visé(s)",
+     "Headwater Exploration Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-14"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-21"
+    ],
+    [
+     "Résultat",
+     "certificat de décision préalable"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "2111"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Tamarack Valley Energy Ltd / Headwater Exploration Inc",
+   "resultat": "certificat de décision préalable",
+   "scian": "2111"
+  },
+  "direction": 0,
+  "entities": [
+   "Tamarack Valley Energy Ltd",
+   "Headwater Exploration Inc"
+  ],
+  "id": "concurrence_ca:2026-09-14:tamarack-valley-energy-ltd-headwater-exploration-inc:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-21",
+  "official_id": "2026-09-14:tamarack-valley-energy-ltd-headwater-exploration-inc:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "e2a1d0778c0e453526bf44b54e11cf6c66b2a01dfd2c8c44e3ef48b1ebcb3fcd",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion conclu (certificat de décision préalable), Tamarack Valley Energy Ltd / Headwater Exploration Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "JM&A Design & Development Inc et Marquee Brands LLC",
+   "cibles": [
+    "Roots Corporation"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-11",
+   "details": [
+    [
+     "Acquéreur",
+     "JM&A Design & Development Inc et Marquee Brands LLC"
+    ],
+    [
+     "Visé(s)",
+     "Roots Corporation"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-11"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "4581"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "JM&A Design & Development Inc et Marquee Brands LLC / Roots Corporation",
+   "resultat": "",
+   "scian": "4581"
+  },
+  "direction": 0,
+  "entities": [
+   "JM&A Design & Development Inc et Marquee Brands LLC",
+   "Roots Corporation"
+  ],
+  "id": "concurrence_ca:2026-09-11:jm-a-design-development-inc-et-marquee-brands-llc-roots-corporation:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-11",
+  "official_id": "2026-09-11:jm-a-design-development-inc-et-marquee-brands-llc-roots-corporation:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "27aadff2b46a3510c7d8f31e7ae47352ac3b762e72f2d2fc1c9d50b9eef4e77e",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, JM&A Design & Development Inc et Marquee Brands LLC / Roots Corporation"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Kiwa Holding Canada Inc",
+   "cibles": [
+    "CSA Group Testing & Certification Inc"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-10",
+   "details": [
+    [
+     "Acquéreur",
+     "Kiwa Holding Canada Inc"
+    ],
+    [
+     "Visé(s)",
+     "CSA Group Testing & Certification Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-10"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "5413"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Kiwa Holding Canada Inc / CSA Group Testing & Certification Inc",
+   "resultat": "",
+   "scian": "5413"
+  },
+  "direction": 0,
+  "entities": [
+   "Kiwa Holding Canada Inc",
+   "CSA Group Testing & Certification Inc"
+  ],
+  "id": "concurrence_ca:2026-09-10:kiwa-holding-canada-inc-csa-group-testing-certification-inc:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-10",
+  "official_id": "2026-09-10:kiwa-holding-canada-inc-csa-group-testing-certification-inc:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "95d934427eddec6d695954dff04f6010c324b092f39a163c9700f0e61a8f738b",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, Kiwa Holding Canada Inc / CSA Group Testing & Certification Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Deutsche Lufthansa Aktiengesellschaft",
+   "cibles": [
+    "Italia Trasporto Aereo SpA"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-10",
+   "details": [
+    [
+     "Acquéreur",
+     "Deutsche Lufthansa Aktiengesellschaft"
+    ],
+    [
+     "Visé(s)",
+     "Italia Trasporto Aereo SpA"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-10"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "4811"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Deutsche Lufthansa Aktiengesellschaft / Italia Trasporto Aereo SpA",
+   "resultat": "",
+   "scian": "4811"
+  },
+  "direction": 0,
+  "entities": [
+   "Deutsche Lufthansa Aktiengesellschaft",
+   "Italia Trasporto Aereo SpA"
+  ],
+  "id": "concurrence_ca:2026-09-10:deutsche-lufthansa-aktiengesellschaft-italia-trasporto-aereo-spa:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-10",
+  "official_id": "2026-09-10:deutsche-lufthansa-aktiengesellschaft-italia-trasporto-aereo-spa:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "cb0e49f13192880a9c1542e9ea4f900d94aa9efeec90378c041c6939bc1cf692",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, Deutsche Lufthansa Aktiengesellschaft / Italia Trasporto Aereo SpA"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "VVG Holdings LLC",
+   "cibles": [
+    "New West Truck Centres Ltd"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-08",
+   "details": [
+    [
+     "Acquéreur",
+     "VVG Holdings LLC"
+    ],
+    [
+     "Visé(s)",
+     "New West Truck Centres Ltd"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-08"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "4411"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "VVG Holdings LLC / New West Truck Centres Ltd",
+   "resultat": "",
+   "scian": "4411"
+  },
+  "direction": 0,
+  "entities": [
+   "VVG Holdings LLC",
+   "New West Truck Centres Ltd"
+  ],
+  "id": "concurrence_ca:2026-09-08:vvg-holdings-llc-new-west-truck-centres-ltd:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-08",
+  "official_id": "2026-09-08:vvg-holdings-llc-new-west-truck-centres-ltd:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "3563db76473f815b5d0cf88003cb36087220501aa809a6ffd4f6f4570a6a0659",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, VVG Holdings LLC / New West Truck Centres Ltd"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Le Groupe Agritex Inc",
+   "cibles": [
+    "Centre Agricole JLD inc"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-08",
+   "details": [
+    [
+     "Acquéreur",
+     "Le Groupe Agritex Inc"
+    ],
+    [
+     "Visé(s)",
+     "Centre Agricole JLD inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-08"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "4171"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Le Groupe Agritex Inc / Centre Agricole JLD inc",
+   "resultat": "",
+   "scian": "4171"
+  },
+  "direction": 0,
+  "entities": [
+   "Le Groupe Agritex Inc",
+   "Centre Agricole JLD inc"
+  ],
+  "id": "concurrence_ca:2026-09-08:le-groupe-agritex-inc-centre-agricole-jld-inc:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-08",
+  "official_id": "2026-09-08:le-groupe-agritex-inc-centre-agricole-jld-inc:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "c2fd24ef4568bcb0c4ddeafe20eb078d90f41156e7d615a46cebad56bf7e7fe7",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, Le Groupe Agritex Inc / Centre Agricole JLD inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "KKR & Co Inc et Energy Capital Partners Holdings LP",
+   "cibles": [
+    "DCC Energy Plc"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-08",
+   "details": [
+    [
+     "Acquéreur",
+     "KKR & Co Inc et Energy Capital Partners Holdings LP"
+    ],
+    [
+     "Visé(s)",
+     "DCC Energy Plc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-08"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "4543"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "KKR & Co Inc et Energy Capital Partners Holdings LP / DCC Energy Plc",
+   "resultat": "",
+   "scian": "4543"
+  },
+  "direction": 0,
+  "entities": [
+   "KKR & Co Inc et Energy Capital Partners Holdings LP",
+   "DCC Energy Plc"
+  ],
+  "id": "concurrence_ca:2026-09-08:kkr-co-inc-et-energy-capital-partners-holdings-lp-dcc-energy-plc:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-08",
+  "official_id": "2026-09-08:kkr-co-inc-et-energy-capital-partners-holdings-lp-dcc-energy-plc:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "9a9b00888973be92c1120e32bed702e18b0a682d31ea814a272fb5b452a6dce8",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, KKR & Co Inc et Energy Capital Partners Holdings LP / DCC Energy Plc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Gillfor Manufacturing Inc, Sumas Landco Inc et Sumas Remanufacturing Inc",
+   "cibles": [
+    "Teal Cedar Products Ltd"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-04",
+   "details": [
+    [
+     "Acquéreur",
+     "Gillfor Manufacturing Inc, Sumas Landco Inc et Sumas Remanufacturing Inc"
+    ],
+    [
+     "Visé(s)",
+     "Teal Cedar Products Ltd"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-04"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "3211"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Gillfor Manufacturing Inc, Sumas Landco Inc et Sumas Remanufacturing Inc / Teal Cedar Products Ltd",
+   "resultat": "",
+   "scian": "3211"
+  },
+  "direction": 0,
+  "entities": [
+   "Gillfor Manufacturing Inc, Sumas Landco Inc et Sumas Remanufacturing Inc",
+   "Teal Cedar Products Ltd"
+  ],
+  "id": "concurrence_ca:2026-09-04:gillfor-manufacturing-inc-sumas-landco-inc-et-sumas-remanufacturing-inc-teal-ced:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-04",
+  "official_id": "2026-09-04:gillfor-manufacturing-inc-sumas-landco-inc-et-sumas-remanufacturing-inc-teal-ced:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "2bcaf9180db5eb1cb69361050da89262f86a12474459441681ad29372fd3bd5b",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, Gillfor Manufacturing Inc, Sumas Landco Inc et Sumas Remanufacturing Inc / Teal Cedar Products Ltd"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "CVC DIF",
+   "cibles": [
+    "ATC Canada ULC"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-04",
+   "details": [
+    [
+     "Acquéreur",
+     "CVC DIF"
+    ],
+    [
+     "Visé(s)",
+     "ATC Canada ULC"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-04"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "5179"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "CVC DIF / ATC Canada ULC",
+   "resultat": "",
+   "scian": "5179"
+  },
+  "direction": 0,
+  "entities": [
+   "CVC DIF",
+   "ATC Canada ULC"
+  ],
+  "id": "concurrence_ca:2026-09-04:cvc-dif-atc-canada-ulc:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-04",
+  "official_id": "2026-09-04:cvc-dif-atc-canada-ulc:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "7b78382d32b3adf87d191fc2d932c2af3fdf32b1779c1437ec6582e19ba17ad4",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, CVC DIF / ATC Canada ULC"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Groupe Filgo-Sonic et MacEwen Petroleum Inc",
+   "cibles": [
+    "Norcan Petroleum Group Inc",
+    "Norcan Petroleum Products LP"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-03",
+   "details": [
+    [
+     "Acquéreur",
+     "Groupe Filgo-Sonic et MacEwen Petroleum Inc"
+    ],
+    [
+     "Visé(s)",
+     "Norcan Petroleum Group Inc, Norcan Petroleum Products LP"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-03"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "4121"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Groupe Filgo-Sonic et MacEwen Petroleum Inc / Norcan Petroleum Group Inc et Norcan Petroleum Products LP",
+   "resultat": "",
+   "scian": "4121"
+  },
+  "direction": 0,
+  "entities": [
+   "Groupe Filgo-Sonic et MacEwen Petroleum Inc",
+   "Norcan Petroleum Group Inc",
+   "Norcan Petroleum Products LP"
+  ],
+  "id": "concurrence_ca:2026-09-03:groupe-filgo-sonic-et-macewen-petroleum-inc-norcan-petroleum-group-inc-et-norcan:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-03",
+  "official_id": "2026-09-03:groupe-filgo-sonic-et-macewen-petroleum-inc-norcan-petroleum-group-inc-et-norcan:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "cb31353f50057f66811e909a9202fa4419a2e414b6cd57e83c5b5c7b2bd00a45",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, Groupe Filgo-Sonic et MacEwen Petroleum Inc / Norcan Petroleum Group Inc et Norcan Petroleum Products LP"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "FFI Holdings III Corp",
+   "cibles": [
+    "Everest Automation Solutions Inc",
+    "Elite Technologies Inc",
+    "Gestion Maier Inc"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-09-03",
+   "details": [
+    [
+     "Acquéreur",
+     "FFI Holdings III Corp"
+    ],
+    [
+     "Visé(s)",
+     "Everest Automation Solutions Inc, Elite Technologies Inc, Gestion Maier Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-03"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "3345"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "FFI Holdings III Corp / Everest Automation Solutions Inc, Elite Technologies Inc et Gestion Maier Inc",
+   "resultat": "",
+   "scian": "3345"
+  },
+  "direction": 0,
+  "entities": [
+   "FFI Holdings III Corp",
+   "Everest Automation Solutions Inc",
+   "Elite Technologies Inc",
+   "Gestion Maier Inc"
+  ],
+  "id": "concurrence_ca:2026-09-03:ffi-holdings-iii-corp-everest-automation-solutions-inc-elite-technologies-inc-et:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-03",
+  "official_id": "2026-09-03:ffi-holdings-iii-corp-everest-automation-solutions-inc-elite-technologies-inc-et:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "40052196ffa39ad6d157ec540df06bdabffb199c730bd7a3296bfee764f2d7fa",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, FFI Holdings III Corp / Everest Automation Solutions Inc, Elite Technologies Inc et Gestion Maier Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Acerta Operating Corporation et Acerta Energy Ltd",
+   "cibles": [
+    "Astara Energy Corporation"
+   ],
+   "code": "CDP",
+   "conclusion": "2026-09-15",
+   "debut": "2026-09-02",
+   "details": [
+    [
+     "Acquéreur",
+     "Acerta Operating Corporation et Acerta Energy Ltd"
+    ],
+    [
+     "Visé(s)",
+     "Astara Energy Corporation"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-02"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-15"
+    ],
+    [
+     "Résultat",
+     "certificat de décision préalable"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "2111"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Acerta Operating Corporation et Acerta Energy Ltd / Astara Energy Corporation",
+   "resultat": "certificat de décision préalable",
+   "scian": "2111"
+  },
+  "direction": 0,
+  "entities": [
+   "Acerta Operating Corporation et Acerta Energy Ltd",
+   "Astara Energy Corporation"
+  ],
+  "id": "concurrence_ca:2026-09-02:acerta-operating-corporation-et-acerta-energy-ltd-astara-energy-corporation:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-15",
+  "official_id": "2026-09-02:acerta-operating-corporation-et-acerta-energy-ltd-astara-energy-corporation:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "1d2fcae68753ef0bd125daaf912be9e1b4d164f81d187b2ba1fcf34c9d825d06",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion conclu (certificat de décision préalable), Acerta Operating Corporation et Acerta Energy Ltd / Astara Energy Corporation"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Bombardier Inc",
+   "cibles": [
+    "Mitsubishi Heavy Industries Ltd",
+    "MHI Canada Aerospace Inc"
+   ],
+   "code": "CDP",
+   "conclusion": "2026-09-23",
+   "debut": "2026-09-01",
+   "details": [
+    [
+     "Acquéreur",
+     "Bombardier Inc"
+    ],
+    [
+     "Visé(s)",
+     "Mitsubishi Heavy Industries Ltd, MHI Canada Aerospace Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-09-01"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-23"
+    ],
+    [
+     "Résultat",
+     "certificat de décision préalable"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "3364"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Bombardier Inc / Mitsubishi Heavy Industries Ltd et MHI Canada Aerospace Inc",
+   "resultat": "certificat de décision préalable",
+   "scian": "3364"
+  },
+  "direction": 0,
+  "entities": [
+   "Bombardier Inc",
+   "Mitsubishi Heavy Industries Ltd",
+   "MHI Canada Aerospace Inc"
+  ],
+  "id": "concurrence_ca:2026-09-01:bombardier-inc-mitsubishi-heavy-industries-ltd-et-mhi-canada-aerospace-inc:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-23",
+  "official_id": "2026-09-01:bombardier-inc-mitsubishi-heavy-industries-ltd-et-mhi-canada-aerospace-inc:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "04f02f386b9950c9c556106af3aac43112dc71b7ea6b70788bd3e5eabe70bbe8",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion conclu (certificat de décision préalable), Bombardier Inc / Mitsubishi Heavy Industries Ltd et MHI Canada Aerospace Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Dilawri Group",
+   "cibles": [
+    "OpenRoad Auto Group Limited"
+   ],
+   "code": "LNI",
+   "conclusion": "2026-09-18",
+   "debut": "2026-08-31",
+   "details": [
+    [
+     "Acquéreur",
+     "Dilawri Group"
+    ],
+    [
+     "Visé(s)",
+     "OpenRoad Auto Group Limited"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-08-31"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-18"
+    ],
+    [
+     "Résultat",
+     "lettre de non-intervention"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "4411"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Dilawri Group / OpenRoad Auto Group Limited",
+   "resultat": "lettre de non-intervention",
+   "scian": "4411"
+  },
+  "direction": 0,
+  "entities": [
+   "Dilawri Group",
+   "OpenRoad Auto Group Limited"
+  ],
+  "id": "concurrence_ca:2026-08-31:dilawri-group-openroad-auto-group-limited:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-18",
+  "official_id": "2026-08-31:dilawri-group-openroad-auto-group-limited:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "8124176e07855e9cf2f2a26ecdfd37273ed423be7ab9491450f4b8973080db69",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), Dilawri Group / OpenRoad Auto Group Limited"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Crestpoint Real Estate Investments Limited Partnership",
+   "cibles": [
+    "H&R Real Estate Investment Trust"
+   ],
+   "code": "LNI",
+   "conclusion": "2026-09-22",
+   "debut": "2026-08-31",
+   "details": [
+    [
+     "Acquéreur",
+     "Crestpoint Real Estate Investments Limited Partnership"
+    ],
+    [
+     "Visé(s)",
+     "H&R Real Estate Investment Trust"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-08-31"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-22"
+    ],
+    [
+     "Résultat",
+     "lettre de non-intervention"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "5311"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Crestpoint Real Estate Investments Limited Partnership / H&R Real Estate Investment Trust",
+   "resultat": "lettre de non-intervention",
+   "scian": "5311"
+  },
+  "direction": 0,
+  "entities": [
+   "Crestpoint Real Estate Investments Limited Partnership",
+   "H&R Real Estate Investment Trust"
+  ],
+  "id": "concurrence_ca:2026-08-31:crestpoint-real-estate-investments-limited-partnership-h-r-real-estate-investmen:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-22",
+  "official_id": "2026-08-31:crestpoint-real-estate-investments-limited-partnership-h-r-real-estate-investmen:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "623a102cb70e27906d578f62a4eaf5f9d74b50c644bd4ffcb559f13c1dc1ad2e",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), Crestpoint Real Estate Investments Limited Partnership / H&R Real Estate Investment Trust"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "CRAL Class B Limited",
+   "cibles": [
+    "H&R Real Estate Investment Trust"
+   ],
+   "code": "CDP",
+   "conclusion": "2026-09-08",
+   "debut": "2026-08-31",
+   "details": [
+    [
+     "Acquéreur",
+     "CRAL Class B Limited"
+    ],
+    [
+     "Visé(s)",
+     "H&R Real Estate Investment Trust"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-08-31"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-08"
+    ],
+    [
+     "Résultat",
+     "certificat de décision préalable"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "5311"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "CRAL Class B Limited / H&R Real Estate Investment Trust",
+   "resultat": "certificat de décision préalable",
+   "scian": "5311"
+  },
+  "direction": 0,
+  "entities": [
+   "CRAL Class B Limited",
+   "H&R Real Estate Investment Trust"
+  ],
+  "id": "concurrence_ca:2026-08-31:cral-class-b-limited-h-r-real-estate-investment-trust:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-08",
+  "official_id": "2026-08-31:cral-class-b-limited-h-r-real-estate-investment-trust:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "43336866f749d7e20642372dde54eaf6f24648a9fabad9403ab21a0c3d2bf1d5",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion conclu (certificat de décision préalable), CRAL Class B Limited / H&R Real Estate Investment Trust"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Blackstone Inc",
+   "cibles": [
+    "H&R Real Estate Investment Trust"
+   ],
+   "code": "CDP",
+   "conclusion": "2026-09-11",
+   "debut": "2026-08-31",
+   "details": [
+    [
+     "Acquéreur",
+     "Blackstone Inc"
+    ],
+    [
+     "Visé(s)",
+     "H&R Real Estate Investment Trust"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-08-31"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-11"
+    ],
+    [
+     "Résultat",
+     "certificat de décision préalable"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "5311"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Blackstone Inc / H&R Real Estate Investment Trust",
+   "resultat": "certificat de décision préalable",
+   "scian": "5311"
+  },
+  "direction": 0,
+  "entities": [
+   "Blackstone Inc",
+   "H&R Real Estate Investment Trust"
+  ],
+  "id": "concurrence_ca:2026-08-31:blackstone-inc-h-r-real-estate-investment-trust:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-11",
+  "official_id": "2026-08-31:blackstone-inc-h-r-real-estate-investment-trust:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "72f1c7dd02e4b5c7cac20ddf791d9d13016f34402d7fc80392a59e9346889a87",
+  "source": "concurrence_ca",
+  "tickers": [
+   "BX"
+  ],
+  "title": "Bureau de la concurrence : examen de fusion conclu (certificat de décision préalable), Blackstone Inc / H&R Real Estate Investment Trust"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Prysmian SpA",
+   "cibles": [
+    "Atkore Inc"
+   ],
+   "code": "LNI",
+   "conclusion": "2026-09-16",
+   "debut": "2026-08-28",
+   "details": [
+    [
+     "Acquéreur",
+     "Prysmian SpA"
+    ],
+    [
+     "Visé(s)",
+     "Atkore Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-08-28"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-16"
+    ],
+    [
+     "Résultat",
+     "lettre de non-intervention"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "3359"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Prysmian SpA / Atkore Inc",
+   "resultat": "lettre de non-intervention",
+   "scian": "3359"
+  },
+  "direction": 0,
+  "entities": [
+   "Prysmian SpA",
+   "Atkore Inc"
+  ],
+  "id": "concurrence_ca:2026-08-28:prysmian-spa-atkore-inc:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-16",
+  "official_id": "2026-08-28:prysmian-spa-atkore-inc:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "4996dba1596e403f0d0fefeeab41497e420b0b57592c4c1f38243eb8bf104098",
+  "source": "concurrence_ca",
+  "tickers": [
+   "ATKR"
+  ],
+  "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), Prysmian SpA / Atkore Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Ovintiv Canada ULC",
+   "cibles": [
+    "Advantage Energy Ltd ."
+   ],
+   "code": "CDP",
+   "conclusion": "2026-09-04",
+   "debut": "2026-08-28",
+   "details": [
+    [
+     "Acquéreur",
+     "Ovintiv Canada ULC"
+    ],
+    [
+     "Visé(s)",
+     "Advantage Energy Ltd ."
+    ],
+    [
+     "Examen ouvert le",
+     "2026-08-28"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-04"
+    ],
+    [
+     "Résultat",
+     "certificat de décision préalable"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "2111"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Ovintiv Canada ULC / Advantage Energy Ltd .",
+   "resultat": "certificat de décision préalable",
+   "scian": "2111"
+  },
+  "direction": 0,
+  "entities": [
+   "Ovintiv Canada ULC",
+   "Advantage Energy Ltd ."
+  ],
+  "id": "concurrence_ca:2026-08-28:ovintiv-canada-ulc-advantage-energy-ltd:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-04",
+  "official_id": "2026-08-28:ovintiv-canada-ulc-advantage-energy-ltd:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "de4d228a012a90158dc74d74cb112487bd59046b85059c40d342dea86578f190",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion conclu (certificat de décision préalable), Ovintiv Canada ULC / Advantage Energy Ltd ."
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Birch Hill Equity Partners Management Inc",
+   "cibles": [
+    "Rogers Communications Inc",
+    "Rogers Communications Canada Inc"
+   ],
+   "code": "LNI",
+   "conclusion": "2026-09-23",
+   "debut": "2026-08-28",
+   "details": [
+    [
+     "Acquéreur",
+     "Birch Hill Equity Partners Management Inc"
+    ],
+    [
+     "Visé(s)",
+     "Rogers Communications Inc, Rogers Communications Canada Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-08-28"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-23"
+    ],
+    [
+     "Résultat",
+     "lettre de non-intervention"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "5172"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Birch Hill Equity Partners Management Inc / Rogers Communications Inc et Rogers Communications Canada Inc",
+   "resultat": "lettre de non-intervention",
+   "scian": "5172"
+  },
+  "direction": 0,
+  "entities": [
+   "Birch Hill Equity Partners Management Inc",
+   "Rogers Communications Inc",
+   "Rogers Communications Canada Inc"
+  ],
+  "id": "concurrence_ca:2026-08-28:birch-hill-equity-partners-management-inc-rogers-communications-inc-et-rogers-co:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-23",
+  "official_id": "2026-08-28:birch-hill-equity-partners-management-inc-rogers-communications-inc-et-rogers-co:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "119b924a610bb6c671b8bfcaeb6a1c6d7053d59f1fa98365a62d515678c4c448",
+  "source": "concurrence_ca",
+  "tickers": [
+   "RCI"
+  ],
+  "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), Birch Hill Equity Partners Management Inc / Rogers Communications Inc et Rogers Communications Canada Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Shift4 Payments Inc",
+   "cibles": [
+    "Paramount Commerce Group Limited",
+    "PayDirect Billing Solutions Inc"
+   ],
+   "code": "LNI",
+   "conclusion": "2026-09-09",
+   "debut": "2026-08-26",
+   "details": [
+    [
+     "Acquéreur",
+     "Shift4 Payments Inc"
+    ],
+    [
+     "Visé(s)",
+     "Paramount Commerce Group Limited, PayDirect Billing Solutions Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-08-26"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-09"
+    ],
+    [
+     "Résultat",
+     "lettre de non-intervention"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "5223"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Shift4 Payments Inc / Paramount Commerce Group Limited et PayDirect Billing Solutions Inc",
+   "resultat": "lettre de non-intervention",
+   "scian": "5223"
+  },
+  "direction": 0,
+  "entities": [
+   "Shift4 Payments Inc",
+   "Paramount Commerce Group Limited",
+   "PayDirect Billing Solutions Inc"
+  ],
+  "id": "concurrence_ca:2026-08-26:shift4-payments-inc-paramount-commerce-group-limited-et-paydirect-billing-soluti:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-09",
+  "official_id": "2026-08-26:shift4-payments-inc-paramount-commerce-group-limited-et-paydirect-billing-soluti:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "0bfd66f14ac1301c469b70d1382d225797dd4790390de9ee91710f26f9c76801",
+  "source": "concurrence_ca",
+  "tickers": [
+   "FOUR"
+  ],
+  "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), Shift4 Payments Inc / Paramount Commerce Group Limited et PayDirect Billing Solutions Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Kirin Holdings Company Limited",
+   "cibles": [
+    "Jamieson Wellness Inc"
+   ],
+   "code": "CDP",
+   "conclusion": "2026-09-10",
+   "debut": "2026-08-20",
+   "details": [
+    [
+     "Acquéreur",
+     "Kirin Holdings Company Limited"
+    ],
+    [
+     "Visé(s)",
+     "Jamieson Wellness Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-08-20"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-10"
+    ],
+    [
+     "Résultat",
+     "certificat de décision préalable"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "3254"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Kirin Holdings Company Limited / Jamieson Wellness Inc",
+   "resultat": "certificat de décision préalable",
+   "scian": "3254"
+  },
+  "direction": 0,
+  "entities": [
+   "Kirin Holdings Company Limited",
+   "Jamieson Wellness Inc"
+  ],
+  "id": "concurrence_ca:2026-08-20:kirin-holdings-company-limited-jamieson-wellness-inc:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-10",
+  "official_id": "2026-08-20:kirin-holdings-company-limited-jamieson-wellness-inc:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "0c4c840da744629320947bd7aeb8e44ef1d3f06d426bf57f5c4f476288cafe58",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion conclu (certificat de décision préalable), Kirin Holdings Company Limited / Jamieson Wellness Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "TorQuest Partners Management Inc",
+   "cibles": [
+    "Future Transfer Co Inc"
+   ],
+   "code": "LNI",
+   "conclusion": "2026-09-10",
+   "debut": "2026-08-19",
+   "details": [
+    [
+     "Acquéreur",
+     "TorQuest Partners Management Inc"
+    ],
+    [
+     "Visé(s)",
+     "Future Transfer Co Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-08-19"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-10"
+    ],
+    [
+     "Résultat",
+     "lettre de non-intervention"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "4931"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "TorQuest Partners Management Inc / Future Transfer Co Inc",
+   "resultat": "lettre de non-intervention",
+   "scian": "4931"
+  },
+  "direction": 0,
+  "entities": [
+   "TorQuest Partners Management Inc",
+   "Future Transfer Co Inc"
+  ],
+  "id": "concurrence_ca:2026-08-19:torquest-partners-management-inc-future-transfer-co-inc:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-10",
+  "official_id": "2026-08-19:torquest-partners-management-inc-future-transfer-co-inc:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "1e3b2389f25b5bc111e3f120539da5f6782ac9b8612b0e427eef6582333c24b4",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), TorQuest Partners Management Inc / Future Transfer Co Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Nordic Capital Epsilon SCA SICAV RAIF",
+   "cibles": [
+    "BWXT Medical Ltd",
+    "Kinectrics Inc",
+    "Kinectrics Kipling Inc"
+   ],
+   "code": "LNI",
+   "conclusion": "2026-09-09",
+   "debut": "2026-08-10",
+   "details": [
+    [
+     "Acquéreur",
+     "Nordic Capital Epsilon SCA SICAV RAIF"
+    ],
+    [
+     "Visé(s)",
+     "BWXT Medical Ltd, Kinectrics Inc, Kinectrics Kipling Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-08-10"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-09"
+    ],
+    [
+     "Résultat",
+     "lettre de non-intervention"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "3254"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Nordic Capital Epsilon SCA SICAV RAIF / BWXT Medical Ltd, Kinectrics Inc et Kinectrics Kipling Inc",
+   "resultat": "lettre de non-intervention",
+   "scian": "3254"
+  },
+  "direction": 0,
+  "entities": [
+   "Nordic Capital Epsilon SCA SICAV RAIF",
+   "BWXT Medical Ltd",
+   "Kinectrics Inc",
+   "Kinectrics Kipling Inc"
+  ],
+  "id": "concurrence_ca:2026-08-10:nordic-capital-epsilon-sca-sicav-raif-bwxt-medical-ltd-kinectrics-inc-et-kinectr:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-09",
+  "official_id": "2026-08-10:nordic-capital-epsilon-sca-sicav-raif-bwxt-medical-ltd-kinectrics-inc-et-kinectr:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "fa5037b40f2f1b7df3789aa2b050dac95b52347a47d339a8fbb6f02ff911d1e1",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), Nordic Capital Epsilon SCA SICAV RAIF / BWXT Medical Ltd, Kinectrics Inc et Kinectrics Kipling Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Advanced Micro Devices Inc",
+   "cibles": [
+    "Taalas Inc"
+   ],
+   "code": "LNI",
+   "conclusion": "2026-09-21",
+   "debut": "2026-08-10",
+   "details": [
+    [
+     "Acquéreur",
+     "Advanced Micro Devices Inc"
+    ],
+    [
+     "Visé(s)",
+     "Taalas Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-08-10"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-21"
+    ],
+    [
+     "Résultat",
+     "lettre de non-intervention"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "5415"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Advanced Micro Devices Inc / Taalas Inc",
+   "resultat": "lettre de non-intervention",
+   "scian": "5415"
+  },
+  "direction": 0,
+  "entities": [
+   "Advanced Micro Devices Inc",
+   "Taalas Inc"
+  ],
+  "id": "concurrence_ca:2026-08-10:advanced-micro-devices-inc-taalas-inc:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-21",
+  "official_id": "2026-08-10:advanced-micro-devices-inc-taalas-inc:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "2099b3fc761f1e971721c7af19c527dff88c1f34cb1fef557d9a34968dd1ce4f",
+  "source": "concurrence_ca",
+  "tickers": [
+   "AMD"
+  ],
+  "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), Advanced Micro Devices Inc / Taalas Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Veritas Capital Fund Management LLC",
+   "cibles": [
+    "BGIS Group"
+   ],
+   "code": "CDP",
+   "conclusion": "2026-09-04",
+   "debut": "2026-08-06",
+   "details": [
+    [
+     "Acquéreur",
+     "Veritas Capital Fund Management LLC"
+    ],
+    [
+     "Visé(s)",
+     "BGIS Group"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-08-06"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-04"
+    ],
+    [
+     "Résultat",
+     "certificat de décision préalable"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "5612"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Veritas Capital Fund Management LLC / BGIS Group",
+   "resultat": "certificat de décision préalable",
+   "scian": "5612"
+  },
+  "direction": 0,
+  "entities": [
+   "Veritas Capital Fund Management LLC",
+   "BGIS Group"
+  ],
+  "id": "concurrence_ca:2026-08-06:veritas-capital-fund-management-llc-bgis-group:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-04",
+  "official_id": "2026-08-06:veritas-capital-fund-management-llc-bgis-group:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "6577cb316c187239d746e3bb4599fa467efcdeddd6a5488353b0c53ccf01921e",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion conclu (certificat de décision préalable), Veritas Capital Fund Management LLC / BGIS Group"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Pomerleau Inc",
+   "cibles": [
+    "Groupe Allen"
+   ],
+   "code": "LNI",
+   "conclusion": "2026-09-14",
+   "debut": "2026-08-03",
+   "details": [
+    [
+     "Acquéreur",
+     "Pomerleau Inc"
+    ],
+    [
+     "Visé(s)",
+     "Groupe Allen"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-08-03"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-14"
+    ],
+    [
+     "Résultat",
+     "lettre de non-intervention"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "2371"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Pomerleau Inc / Groupe Allen",
+   "resultat": "lettre de non-intervention",
+   "scian": "2371"
+  },
+  "direction": 0,
+  "entities": [
+   "Pomerleau Inc",
+   "Groupe Allen"
+  ],
+  "id": "concurrence_ca:2026-08-03:pomerleau-inc-groupe-allen:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-14",
+  "official_id": "2026-08-03:pomerleau-inc-groupe-allen:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "8501d3f7794caad5e11739594dcc8fd2bf1f9f78fd4a6df2f64a270f1f949e83",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), Pomerleau Inc / Groupe Allen"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Lockheed Martin Canada Inc",
+   "cibles": [
+    "Ultra Electronics Maritime Systems Inc"
+   ],
+   "code": "LNI",
+   "conclusion": "2026-09-17",
+   "debut": "2026-07-31",
+   "details": [
+    [
+     "Acquéreur",
+     "Lockheed Martin Canada Inc"
+    ],
+    [
+     "Visé(s)",
+     "Ultra Electronics Maritime Systems Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-07-31"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-17"
+    ],
+    [
+     "Résultat",
+     "lettre de non-intervention"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "3345"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Lockheed Martin Canada Inc / Ultra Electronics Maritime Systems Inc",
+   "resultat": "lettre de non-intervention",
+   "scian": "3345"
+  },
+  "direction": 0,
+  "entities": [
+   "Lockheed Martin Canada Inc",
+   "Ultra Electronics Maritime Systems Inc"
+  ],
+  "id": "concurrence_ca:2026-07-31:lockheed-martin-canada-inc-ultra-electronics-maritime-systems-inc:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-17",
+  "official_id": "2026-07-31:lockheed-martin-canada-inc-ultra-electronics-maritime-systems-inc:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "d7bb3c81e9bb7d79f066359e34c6ae249b53611b54c5d595818b42d5a0c812d3",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), Lockheed Martin Canada Inc / Ultra Electronics Maritime Systems Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Vitamin Well Group",
+   "cibles": [
+    "EMPWR Nutrition Group NV"
+   ],
+   "code": "LNI",
+   "conclusion": "2026-09-04",
+   "debut": "2026-07-20",
+   "details": [
+    [
+     "Acquéreur",
+     "Vitamin Well Group"
+    ],
+    [
+     "Visé(s)",
+     "EMPWR Nutrition Group NV"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-07-20"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-04"
+    ],
+    [
+     "Résultat",
+     "lettre de non-intervention"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "3119"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "Vitamin Well Group / EMPWR Nutrition Group NV",
+   "resultat": "lettre de non-intervention",
+   "scian": "3119"
+  },
+  "direction": 0,
+  "entities": [
+   "Vitamin Well Group",
+   "EMPWR Nutrition Group NV"
+  ],
+  "id": "concurrence_ca:2026-07-20:vitamin-well-group-empwr-nutrition-group-nv:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-04",
+  "official_id": "2026-07-20:vitamin-well-group-empwr-nutrition-group-nv:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "115bd78170786d436408bc2474c5a9d399a9eeb401df599cccb21d13fe9dfdad",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), Vitamin Well Group / EMPWR Nutrition Group NV"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "McCormick & Company Inc",
+   "cibles": [
+    "Unilever PLC"
+   ],
+   "code": "LNI",
+   "conclusion": "2026-09-10",
+   "debut": "2026-06-23",
+   "details": [
+    [
+     "Acquéreur",
+     "McCormick & Company Inc"
+    ],
+    [
+     "Visé(s)",
+     "Unilever PLC"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-06-23"
+    ],
+    [
+     "Examen conclu le",
+     "2026-09-10"
+    ],
+    [
+     "Résultat",
+     "lettre de non-intervention"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "3119"
+    ]
+   ],
+   "page_modifiee_le": "2026-09-29",
+   "parties": "McCormick & Company Inc / Unilever PLC",
+   "resultat": "lettre de non-intervention",
+   "scian": "3119"
+  },
+  "direction": 0,
+  "entities": [
+   "McCormick & Company Inc",
+   "Unilever PLC"
+  ],
+  "id": "concurrence_ca:2026-06-23:mccormick-company-inc-unilever-plc:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-09-10",
+  "official_id": "2026-06-23:mccormick-company-inc-unilever-plc:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-09-29",
+  "sha256": "8028358d55ae1fbfb173d58fc55ea4646b65ef7845d790cbd370b577f1dd6901",
+  "source": "concurrence_ca",
+  "tickers": [
+   "MKC",
+   "UL"
+  ],
+  "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), McCormick & Company Inc / Unilever PLC"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "action_officielle": true,
@@ -21567,6 +24706,146 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "etape_datee": true,
+   "lien_legisinfo": true,
+   "projet_du_gouvernement": true,
+   "sanction_confirmee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:51+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "champ": "PassedSenateSecondReadingDateTime",
+   "cle": "senat-2",
+   "date_officielle": "2026-09-28T06:15:00-04:00",
+   "details": [
+    [
+     "Projet de loi",
+     "C-27"
+    ],
+    [
+     "Titre",
+     "Loi portant mise en vigueur de l’accord définitif sur l’autonomie gouvernementale des Tlegohli Got’ine et modifiant certaines lois en conséquence"
+    ],
+    [
+     "Étape",
+     "adopté en deuxième lecture au Sénat"
+    ],
+    [
+     "Où il en est",
+     "À l'examen en comité au Sénat"
+    ]
+   ],
+   "etape": "adopté en deuxième lecture au Sénat",
+   "numero": "C-27",
+   "sanction": false,
+   "session": "45-1",
+   "statut": "À l'examen en comité au Sénat",
+   "titre": "Loi sur l’accord définitif sur l’autonomie gouvernementale des Tlegohli Got’ine",
+   "titre_long": "Loi portant mise en vigueur de l’accord définitif sur l’autonomie gouvernementale des Tlegohli Got’ine et modifiant certaines lois en conséquence",
+   "type": "Projet de loi émanant du gouvernement (Cdc)",
+   "type_en": "House Government Bill"
+  },
+  "direction": 0,
+  "entities": [
+   "Parlement du Canada"
+  ],
+  "id": "legisinfo:45-1:C-27:senat-2",
+  "kind": "etape_projet_de_loi",
+  "notes": [],
+  "occurred_on": "2026-09-28",
+  "official_id": "45-1:C-27:senat-2",
+  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-27",
+  "parser_version": "legisinfo-1",
+  "published_on": "2026-09-28",
+  "sha256": "5f2e426cf21cf8127aa12db784165b478db9cd572496011eb6b9c08c56fa3ed4",
+  "source": "legisinfo",
+  "tickers": [],
+  "title": "Projet de loi C-27 (Loi sur l’accord définitif sur l’autonomie gouvernementale des Tlegohli Got’ine) : adopté en deuxième lecture au Sénat"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "etape_datee": true,
+   "lien_legisinfo": true,
+   "projet_du_gouvernement": true,
+   "sanction_confirmee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:51+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "champ": "PassedSenateFirstReadingDateTime",
+   "cle": "senat-1",
+   "date_officielle": "2026-09-28T06:00:00-04:00",
+   "details": [
+    [
+     "Projet de loi",
+     "C-10"
+    ],
+    [
+     "Titre",
+     "Loi concernant le commissaire à la mise en œuvre des traités modernes"
+    ],
+    [
+     "Étape",
+     "première lecture au Sénat"
+    ],
+    [
+     "Où il en est",
+     "À la deuxième lecture au Sénat"
+    ]
+   ],
+   "etape": "première lecture au Sénat",
+   "numero": "C-10",
+   "sanction": false,
+   "session": "45-1",
+   "statut": "À la deuxième lecture au Sénat",
+   "titre": "Loi sur le commissaire à la mise en œuvre des traités modernes",
+   "titre_long": "Loi concernant le commissaire à la mise en œuvre des traités modernes",
+   "type": "Projet de loi émanant du gouvernement (Cdc)",
+   "type_en": "House Government Bill"
+  },
+  "direction": 0,
+  "entities": [
+   "Parlement du Canada"
+  ],
+  "id": "legisinfo:45-1:C-10:senat-1",
+  "kind": "etape_projet_de_loi",
+  "notes": [],
+  "occurred_on": "2026-09-28",
+  "official_id": "45-1:C-10:senat-1",
+  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-10",
+  "parser_version": "legisinfo-1",
+  "published_on": "2026-09-28",
+  "sha256": "64145353b52111eb3b72f4bded31e682770cd62091cdaf578b06d99f49eeff60",
+  "source": "legisinfo",
+  "tickers": [],
+  "title": "Projet de loi C-10 (Loi sur le commissaire à la mise en œuvre des traités modernes) : première lecture au Sénat"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "champs_requis": true,
@@ -21762,6 +25041,61 @@
   "source": "nouvelles_eco_ca",
   "tickers": [],
   "title": "Le Bureau de la concurrence craint que les consommateurs soient privés de certaines aubaines en épicerie"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Indicateurs nationaux du tourisme"
+    ],
+    [
+     "Période",
+     "deuxième trimestre de 2026"
+    ]
+   ],
+   "indicateur": "Indicateurs nationaux du tourisme",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260925/dq260925a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-25T08:30:00-04:00",
+   "periode": "deuxième trimestre de 2026",
+   "resume": "Le produit intérieur brut (PIB) réel du tourisme a augmenté de 0,4 % au deuxième trimestre de 2026, après avoir progressé de 0,5 % au premier trimestre. Le PIB du tourisme a représenté 1,77 % du PIB nominal au deuxième trimestre."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260925/dq260925a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-25",
+  "official_id": "260925/dq260925a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260925/dq260925a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-25",
+  "sha256": "19db924fd7ec82ca5a1c8d82c9fee95afd36e63de9c4399b63ca008de1ea8cac",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Indicateurs nationaux du tourisme, deuxième trimestre de 2026"
  },
  {
   "amount_max": null,
@@ -25331,6 +28665,116 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Emploi, rémunération et heures de travail, et postes vacants"
+    ],
+    [
+     "Période",
+     "juillet 2026"
+    ]
+   ],
+   "indicateur": "Emploi, rémunération et heures de travail, et postes vacants",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260924/dq260924b-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-24T08:30:00-04:00",
+   "periode": "juillet 2026",
+   "resume": "Le nombre d'employés recevant une rémunération et des avantages sociaux de leur employeur, mesurés en tant qu'« emploi salarié » dans le cadre de l'Enquête sur l'emploi, la rémunération et les heures de travail, a progressé de 26 100 (+0,1 %) en juillet, après avoir affiché trois augmentations consécutives de mars à juin totalisant 124 200 (+0,7 %). Par rapport à un an plus tôt, l'emploi salarié était en hausse de 171 900 (+0,9 %) en juillet."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260924/dq260924b",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "260924/dq260924b",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260924/dq260924b-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-24",
+  "sha256": "9d3d25acbcc8d4dcac606bd03cb0a5836da4ce856d1e46302bc3a4f0d8cc99cd",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Emploi, rémunération et heures de travail, et postes vacants, juillet 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Commerce de détail"
+    ],
+    [
+     "Période",
+     "juillet 2026"
+    ]
+   ],
+   "indicateur": "Commerce de détail",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260924/dq260924a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-24T08:30:00-04:00",
+   "periode": "juillet 2026",
+   "resume": "Les ventes au détail ont diminué de 0,7 % pour se chiffrer à 73,7 milliards de dollars en juillet. Les ventes ont reculé dans 8 des 9 sous-secteurs et ce sont les détaillants de marchandises diverses qui ont affiché la plus forte baisse."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260924/dq260924a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "260924/dq260924a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260924/dq260924a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-24",
+  "sha256": "105f891cc3d9d4b3eab28c618b11ac38117e8568222cfce1fdeee63e953490a5",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Commerce de détail, juillet 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "champs_requis": true,
@@ -25424,6 +28868,243 @@
    "GM"
   ],
   "title": "Rappel de General Motors, LLC : 29 347 véhicules — « Window Automatic Reversal System Malfunction/FMVSS 118 »"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "date_d_enregistrement_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "loi_liee_a_l_argent": true,
+   "meme_numero_que_l_index": true,
+   "numero_dors_ou_tr": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_officiel_lu": true
+  },
+  "collected_at": "2026-10-03T16:24:50+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "cp": "C.P. 2026-786 Le 4 septembre 2026",
+   "details": [
+    [
+     "Numéro",
+     "DORS/2026-187"
+    ],
+    [
+     "Loi",
+     "Tarif des douanes"
+    ],
+    [
+     "Enregistré le",
+     "2026-09-04"
+    ],
+    [
+     "Décret",
+     "C.P. 2026-786 Le 4 septembre 2026"
+    ],
+    [
+     "Publié dans",
+     "La Gazette du Canada, Partie II, volume 160, numéro 19"
+    ]
+   ],
+   "enjeux": "",
+   "enregistre_le": "2026-09-04",
+   "enregistrement": "Enregistrement DORS/2026-187 Le 4 septembre 2026",
+   "gazette": "La Gazette du Canada, Partie II, volume 160, numéro 19",
+   "index": "https://gazette.gc.ca/rp-pr/p2/2026/2026-09-23/html/index-fra.html",
+   "jour": "2026-09-23",
+   "loi": "Tarif des douanes",
+   "loi_page": "TARIF DES DOUANES",
+   "nouveau": false,
+   "numero": "DORS/2026-187",
+   "numero_index": "DORS/2026-187",
+   "resume": "",
+   "speciale": false,
+   "titre": "Décret modifiant le Décret imposant une surtaxe aux États-Unis (acier et aluminium, 2025)",
+   "titre_index": "Surtaxe aux États-Unis (acier et aluminium, 2025) — Décret modifiant le Décret imposant une"
+  },
+  "direction": 0,
+  "entities": [
+   "Tarif des douanes"
+  ],
+  "id": "gazette_ca:DORS/2026-187",
+  "kind": "reglement",
+  "notes": [],
+  "occurred_on": "2026-09-04",
+  "official_id": "DORS/2026-187",
+  "official_url": "https://gazette.gc.ca/rp-pr/p2/2026/2026-09-23/html/sor-dors187-fra.html",
+  "parser_version": "gazette-1",
+  "published_on": "2026-09-23",
+  "sha256": "b3dd12db253a208e92549ef28fc6ebf26f951f9ec62e4aa9c24ca13bc43ca356",
+  "source": "gazette_ca",
+  "tickers": [],
+  "title": "Gazette du Canada : Décret modifiant le Décret imposant une surtaxe aux États-Unis (acier et aluminium, 2025) (DORS/2026-187)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "date_d_enregistrement_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "loi_liee_a_l_argent": true,
+   "meme_numero_que_l_index": true,
+   "numero_dors_ou_tr": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_officiel_lu": true
+  },
+  "collected_at": "2026-10-03T16:24:50+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "cp": "C.P. 2026-785 Le 4 septembre 2026",
+   "details": [
+    [
+     "Numéro",
+     "DORS/2026-186"
+    ],
+    [
+     "Loi",
+     "Tarif des douanes"
+    ],
+    [
+     "Enregistré le",
+     "2026-09-04"
+    ],
+    [
+     "Décret",
+     "C.P. 2026-785 Le 4 septembre 2026"
+    ],
+    [
+     "Publié dans",
+     "La Gazette du Canada, Partie II, volume 160, numéro 19"
+    ]
+   ],
+   "enjeux": "Le 22 août 2026, les États-Unis ont mis en œuvre des droits de douane de 50 % sur des marchandises d’une valeur de 27,6 milliards de dollars importées du Canada en vertu de l’article 338 de la Tariff Act of 1930 (article 338). Les États-Unis prétendent que ces tarifs sont une réponse aux pratiques commerciales discriminatoires du Canada dans les secteurs de l’automobile, des boissons alcoolisées et des produits laitiers. En réponse à ces tarifs américains, le Canada a annoncé son intention de mettre en œuvre, à partir du 8 septembre 2026, des contre-mesures tarifaires, à raison d’un dollar pour un dollar, sur une série d’importations en provenance des États-Unis afin de protéger le marché intérieur des marchandises touchées par les droits de douane américains.",
+   "enregistre_le": "2026-09-04",
+   "enregistrement": "Enregistrement DORS/2026-186 Le 4 septembre 2026",
+   "gazette": "La Gazette du Canada, Partie II, volume 160, numéro 19",
+   "index": "https://gazette.gc.ca/rp-pr/p2/2026/2026-09-23/html/index-fra.html",
+   "jour": "2026-09-23",
+   "loi": "Tarif des douanes",
+   "loi_page": "TARIF DES DOUANES",
+   "nouveau": true,
+   "numero": "DORS/2026-186",
+   "numero_index": "DORS/2026-186",
+   "resume": "Le 22 août 2026, les États-Unis ont mis en œuvre des droits de douane de 50 % sur des marchandises d’une valeur de 27,6 milliards de dollars importées du Canada en vertu de l’article 338 de la Tariff Act of 1930 (article 338). Les États-Unis prétendent que ces tarifs sont une réponse aux pratiques commerciales discriminatoires du Canada dans les secteurs de l’automobile, des boissons alcoolisées et des produits laitiers. En réponse à ces tarifs américains, le Canada a annoncé son intention de mettre en œuvre, à partir du 8 septembre 2026, des contre-mesures tarifaires, à raison d’un dollar pour un dollar, sur une série d’importations en provenance des États-Unis afin de protéger le marché intérieur des marchandises touchées par les droits de douane américains.",
+   "speciale": false,
+   "titre": "Décret imposant une surtaxe aux États-Unis (2026)",
+   "titre_index": "Surtaxe aux États-Unis (2026) — Décret imposant une"
+  },
+  "direction": 0,
+  "entities": [
+   "Tarif des douanes"
+  ],
+  "id": "gazette_ca:DORS/2026-186",
+  "kind": "reglement",
+  "notes": [],
+  "occurred_on": "2026-09-04",
+  "official_id": "DORS/2026-186",
+  "official_url": "https://gazette.gc.ca/rp-pr/p2/2026/2026-09-23/html/sor-dors186-fra.html",
+  "parser_version": "gazette-1",
+  "published_on": "2026-09-23",
+  "sha256": "5a63e68100740cb96160827df45c8fabef9f8a156020c9c1e715bf0dfbd19b41",
+  "source": "gazette_ca",
+  "tickers": [],
+  "title": "Gazette du Canada : Décret imposant une surtaxe aux États-Unis (2026) (DORS/2026-186)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "date_d_enregistrement_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "loi_liee_a_l_argent": true,
+   "meme_numero_que_l_index": true,
+   "numero_dors_ou_tr": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_officiel_lu": true
+  },
+  "collected_at": "2026-10-03T16:24:49+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "cp": "C.P. 2026-787 Le 4 septembre 2026",
+   "details": [
+    [
+     "Numéro",
+     "DORS/2026-188"
+    ],
+    [
+     "Loi",
+     "Mesures économiques spéciales (Loi sur les)"
+    ],
+    [
+     "Enregistré le",
+     "2026-09-04"
+    ],
+    [
+     "Décret",
+     "C.P. 2026-787 Le 4 septembre 2026"
+    ],
+    [
+     "Publié dans",
+     "La Gazette du Canada, Partie II, volume 160, numéro 19"
+    ]
+   ],
+   "enjeux": "Depuis que la Russie a envahi l’Ukraine pour la première fois en 2014, les autorités russes ont illégalement déporté des enfants ukrainiens vers la Russie et en ont transféré d’autres de force dans les territoires temporairement occupés de l’Ukraine. La Russie a considérablement élargi ces pratiques après avoir lancé une guerre d’agression à grande échelle contre l’Ukraine en 2022. Des milliers d’enfants ukrainiens ont été victimes de déportations illégales, de transferts forcés, de la destruction de leur identité, de la militarisation, de l’endoctrinement et d’autres violations graves du droit international, et sont toujours sous le contrôle de la Fédération de Russie. […]",
+   "enregistre_le": "2026-09-04",
+   "enregistrement": "Enregistrement DORS/2026-188 Le 4 septembre 2026",
+   "gazette": "La Gazette du Canada, Partie II, volume 160, numéro 19",
+   "index": "https://gazette.gc.ca/rp-pr/p2/2026/2026-09-23/html/index-fra.html",
+   "jour": "2026-09-23",
+   "loi": "Mesures économiques spéciales (Loi sur les)",
+   "loi_page": "LOI SUR LES MESURES ÉCONOMIQUES SPÉCIALES",
+   "nouveau": false,
+   "numero": "DORS/2026-188",
+   "numero_index": "DORS/2026-188",
+   "resume": "Depuis que la Russie a envahi l’Ukraine pour la première fois en 2014, les autorités russes ont illégalement déporté des enfants ukrainiens vers la Russie et en ont transféré d’autres de force dans les territoires temporairement occupés de l’Ukraine. La Russie a considérablement élargi ces pratiques après avoir lancé une guerre d’agression à grande échelle contre l’Ukraine en 2022. Des milliers d’enfants ukrainiens ont été victimes de déportations illégales, de transferts forcés, de la destruction de leur identité, de la militarisation, de l’endoctrinement et d’autres violations graves du droit international, et sont toujours sous le contrôle de la Fédération de Russie. […]",
+   "speciale": false,
+   "titre": "Règlement modifiant le Règlement sur les mesures économiques spéciales visant la Russie",
+   "titre_index": "Mesures économiques spéciales visant la Russie — Règlement modifiant le Règlement sur les"
+  },
+  "direction": 0,
+  "entities": [
+   "Mesures économiques spéciales (Loi sur les)"
+  ],
+  "id": "gazette_ca:DORS/2026-188",
+  "kind": "reglement",
+  "notes": [],
+  "occurred_on": "2026-09-04",
+  "official_id": "DORS/2026-188",
+  "official_url": "https://gazette.gc.ca/rp-pr/p2/2026/2026-09-23/html/sor-dors188-fra.html",
+  "parser_version": "gazette-1",
+  "published_on": "2026-09-23",
+  "sha256": "3f63bca1f76f9aaba4305b2fbf576020fc0232740404a5bc499ed08542cd5df4",
+  "source": "gazette_ca",
+  "tickers": [],
+  "title": "Gazette du Canada : Règlement modifiant le Règlement sur les mesures économiques spéciales visant la Russie (DORS/2026-188)"
  },
  {
   "amount_max": null,
@@ -25625,6 +29306,214 @@
    "LLY"
   ],
   "title": "FDA : nouveau médicament approuvé, ONSWIK (insulin efsitora alfa-gobe), de ELI LILLY AND CO"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "etape_datee": true,
+   "lien_legisinfo": true,
+   "projet_du_gouvernement": true,
+   "sanction_confirmee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:51+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "champ": "PassedHouseSecondReadingDateTime",
+   "cle": "chambre-2",
+   "date_officielle": "2026-09-22T19:59:59-04:00",
+   "details": [
+    [
+     "Projet de loi",
+     "C-38"
+    ],
+    [
+     "Titre",
+     "Loi modifiant la Loi sur la taxe d'accise (prolongation de l'allègement de la taxe d'accise fédérale sur les carburants)"
+    ],
+    [
+     "Étape",
+     "adopté en deuxième lecture à la Chambre des communes"
+    ],
+    [
+     "Où il en est",
+     "À l'examen en comité à la Chambre des communes"
+    ]
+   ],
+   "etape": "adopté en deuxième lecture à la Chambre des communes",
+   "numero": "C-38",
+   "sanction": false,
+   "session": "45-1",
+   "statut": "À l'examen en comité à la Chambre des communes",
+   "titre": "Loi sur l'abordabilité des carburants au Canada",
+   "titre_long": "Loi modifiant la Loi sur la taxe d'accise (prolongation de l'allègement de la taxe d'accise fédérale sur les carburants)",
+   "type": "Projet de loi émanant du gouvernement (Cdc)",
+   "type_en": "House Government Bill"
+  },
+  "direction": 0,
+  "entities": [
+   "Parlement du Canada"
+  ],
+  "id": "legisinfo:45-1:C-38:chambre-2",
+  "kind": "etape_projet_de_loi",
+  "notes": [],
+  "occurred_on": "2026-09-22",
+  "official_id": "45-1:C-38:chambre-2",
+  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-38",
+  "parser_version": "legisinfo-1",
+  "published_on": "2026-09-22",
+  "sha256": "7e4536e875bee8bcfd5f8680892d99fea7a26c0df27431f36bfe04a9feacf83d",
+  "source": "legisinfo",
+  "tickers": [],
+  "title": "Projet de loi C-38 (Loi sur l'abordabilité des carburants au Canada) : adopté en deuxième lecture à la Chambre des communes"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Voyages entre le Canada et les autres pays"
+    ],
+    [
+     "Période",
+     "juillet 2026"
+    ]
+   ],
+   "indicateur": "Voyages entre le Canada et les autres pays",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260922/dq260922a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-22T08:30:00-04:00",
+   "periode": "juillet 2026",
+   "resume": "En juillet, le nombre de voyages de retour des États-Unis effectués par des résidents canadiens a augmenté de 10,1 % d'une année à l'autre, et le nombre de voyages au Canada effectués par des résidents des États-Unis a progressé de 9,1 %."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260922/dq260922a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-22",
+  "official_id": "260922/dq260922a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260922/dq260922a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-22",
+  "sha256": "f4feb6d183bd418c2815622e5a098e549e721b852852eb480bdfdd744d8fbc4c",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Voyages entre le Canada et les autres pays, juillet 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "chaque_inscription_nommee": true,
+   "date_d_inscription_valide": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "regime_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "annexes": [
+    "1, Part 1.1",
+    "1, Part 2"
+   ],
+   "date": "2026-09-22",
+   "details": [
+    [
+     "Régime",
+     "Iran"
+    ],
+    [
+     "Inscrites le",
+     "2026-09-22"
+    ],
+    [
+     "Personnes",
+     "Goudrazi Davoud Moazami, Momeni Eskandar, Jalili Rasoul, Fathizadeh Mohsen, Nasab Ruhollah Momen"
+    ],
+    [
+     "Entités et navires",
+     "SATRA (Iranian Audiovisual Media Regulatory Authority), The Working Group for Determining Instances of Criminal Content (WGDICC), Douran Group, Yaftar Pazhohan Pishtaz Rayanesh Limited Company, Seraj Cyberspace Organization"
+    ]
+   ],
+   "entites": [
+    "SATRA (Iranian Audiovisual Media Regulatory Authority)",
+    "The Working Group for Determining Instances of Criminal Content (WGDICC)",
+    "Douran Group",
+    "Yaftar Pazhohan Pishtaz Rayanesh Limited Company",
+    "Seraj Cyberspace Organization"
+   ],
+   "liste_xml": "https://www.international.gc.ca/world-monde/assets/office_docs/international_relations-relations_internationales/sanctions/sema-lmes.xml",
+   "navires": [],
+   "nombre": 10,
+   "personnes": [
+    "Goudrazi Davoud Moazami",
+    "Momeni Eskandar",
+    "Jalili Rasoul",
+    "Fathizadeh Mohsen",
+    "Nasab Ruhollah Momen"
+   ],
+   "regime": "Iran",
+   "resume": "10 inscription(s) le 22 septembre 2026 : 5 personne(s), 5 entité(s)."
+  },
+  "direction": 0,
+  "entities": [
+   "Iran"
+  ],
+  "id": "sanctions_ca:2026-09-22:iran",
+  "kind": "sanctions_inscriptions",
+  "notes": [
+   "La liste consolidée n'a pas force de loi : seuls les règlements font foi."
+  ],
+  "occurred_on": "2026-09-22",
+  "official_id": "2026-09-22:iran",
+  "official_url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=fra",
+  "parser_version": "sanctions-ca-1",
+  "published_on": "2026-09-22",
+  "sha256": "2f5263d8f34c4d5969a10cfc15a2019ff077483a83b70a6ae8a9ff5074f9aa53",
+  "source": "sanctions_ca",
+  "tickers": [],
+  "title": "Sanctions canadiennes (Iran) : 10 nouvelle(s) inscription(s)"
  },
  {
   "amount_max": null,
@@ -27962,6 +31851,271 @@
   "title": "Richard W. Allen (Chambre, GA12) achète AVGO — conjoint·e"
  },
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "etape_datee": true,
+   "lien_legisinfo": true,
+   "projet_du_gouvernement": true,
+   "sanction_confirmee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:51+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "champ": "PassedHouseFirstReadingDateTime",
+   "cle": "chambre-1",
+   "date_officielle": "2026-09-21T11:18:38.503-04:00",
+   "details": [
+    [
+     "Projet de loi",
+     "C-39"
+    ],
+    [
+     "Titre",
+     "Loi concernant certaines mesures visant à renforcer l'économie"
+    ],
+    [
+     "Étape",
+     "première lecture à la Chambre des communes"
+    ],
+    [
+     "Où il en est",
+     "À la deuxième lecture à la Chambre des communes"
+    ]
+   ],
+   "etape": "première lecture à la Chambre des communes",
+   "numero": "C-39",
+   "sanction": false,
+   "session": "45-1",
+   "statut": "À la deuxième lecture à la Chambre des communes",
+   "titre": "Loi visant à bâtir un Canada fort",
+   "titre_long": "Loi concernant certaines mesures visant à renforcer l'économie",
+   "type": "Projet de loi émanant du gouvernement (Cdc)",
+   "type_en": "House Government Bill"
+  },
+  "direction": 0,
+  "entities": [
+   "Parlement du Canada"
+  ],
+  "id": "legisinfo:45-1:C-39:chambre-1",
+  "kind": "etape_projet_de_loi",
+  "notes": [],
+  "occurred_on": "2026-09-21",
+  "official_id": "45-1:C-39:chambre-1",
+  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-39",
+  "parser_version": "legisinfo-1",
+  "published_on": "2026-09-21",
+  "sha256": "8bf1d13fa2497abbbe1e4245ba03de5b77a93999406de148461bf91adbbd3ebc",
+  "source": "legisinfo",
+  "tickers": [],
+  "title": "Projet de loi C-39 (Loi visant à bâtir un Canada fort) : première lecture à la Chambre des communes"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "etape_datee": true,
+   "lien_legisinfo": true,
+   "projet_du_gouvernement": true,
+   "sanction_confirmee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:51+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "champ": "PassedHouseFirstReadingDateTime",
+   "cle": "chambre-1",
+   "date_officielle": "2026-09-21T11:17:05.263-04:00",
+   "details": [
+    [
+     "Projet de loi",
+     "C-38"
+    ],
+    [
+     "Titre",
+     "Loi modifiant la Loi sur la taxe d'accise (prolongation de l'allègement de la taxe d'accise fédérale sur les carburants)"
+    ],
+    [
+     "Étape",
+     "première lecture à la Chambre des communes"
+    ],
+    [
+     "Où il en est",
+     "À l'examen en comité à la Chambre des communes"
+    ]
+   ],
+   "etape": "première lecture à la Chambre des communes",
+   "numero": "C-38",
+   "sanction": false,
+   "session": "45-1",
+   "statut": "À l'examen en comité à la Chambre des communes",
+   "titre": "Loi sur l'abordabilité des carburants au Canada",
+   "titre_long": "Loi modifiant la Loi sur la taxe d'accise (prolongation de l'allègement de la taxe d'accise fédérale sur les carburants)",
+   "type": "Projet de loi émanant du gouvernement (Cdc)",
+   "type_en": "House Government Bill"
+  },
+  "direction": 0,
+  "entities": [
+   "Parlement du Canada"
+  ],
+  "id": "legisinfo:45-1:C-38:chambre-1",
+  "kind": "etape_projet_de_loi",
+  "notes": [],
+  "occurred_on": "2026-09-21",
+  "official_id": "45-1:C-38:chambre-1",
+  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-38",
+  "parser_version": "legisinfo-1",
+  "published_on": "2026-09-21",
+  "sha256": "93a698db7738fd0b2c32ffca4774ea26827738471f0f8998f5406e07287a1e1e",
+  "source": "legisinfo",
+  "tickers": [],
+  "title": "Projet de loi C-38 (Loi sur l'abordabilité des carburants au Canada) : première lecture à la Chambre des communes"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "etape_datee": true,
+   "lien_legisinfo": true,
+   "projet_du_gouvernement": true,
+   "sanction_confirmee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:51+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "champ": "PassedHouseThirdReadingDateTime",
+   "cle": "chambre-3",
+   "date_officielle": "2026-09-21T14:15:16-04:00",
+   "details": [
+    [
+     "Projet de loi",
+     "C-10"
+    ],
+    [
+     "Titre",
+     "Loi concernant le commissaire à la mise en œuvre des traités modernes"
+    ],
+    [
+     "Étape",
+     "adopté en troisième lecture à la Chambre des communes"
+    ],
+    [
+     "Où il en est",
+     "À la deuxième lecture au Sénat"
+    ]
+   ],
+   "etape": "adopté en troisième lecture à la Chambre des communes",
+   "numero": "C-10",
+   "sanction": false,
+   "session": "45-1",
+   "statut": "À la deuxième lecture au Sénat",
+   "titre": "Loi sur le commissaire à la mise en œuvre des traités modernes",
+   "titre_long": "Loi concernant le commissaire à la mise en œuvre des traités modernes",
+   "type": "Projet de loi émanant du gouvernement (Cdc)",
+   "type_en": "House Government Bill"
+  },
+  "direction": 0,
+  "entities": [
+   "Parlement du Canada"
+  ],
+  "id": "legisinfo:45-1:C-10:chambre-3",
+  "kind": "etape_projet_de_loi",
+  "notes": [],
+  "occurred_on": "2026-09-21",
+  "official_id": "45-1:C-10:chambre-3",
+  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-10",
+  "parser_version": "legisinfo-1",
+  "published_on": "2026-09-21",
+  "sha256": "73bc0231364c6b96e8f1547e71f80a28b46b7de74582a5bcc3dc896ff14c23be",
+  "source": "legisinfo",
+  "tickers": [],
+  "title": "Projet de loi C-10 (Loi sur le commissaire à la mise en œuvre des traités modernes) : adopté en troisième lecture à la Chambre des communes"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Investissement en construction de bâtiments"
+    ],
+    [
+     "Période",
+     "juillet 2026"
+    ]
+   ],
+   "indicateur": "Investissement en construction de bâtiments",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260921/dq260921b-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-21T08:30:00-04:00",
+   "periode": "juillet 2026",
+   "resume": "La valeur totale de l'investissement en construction de bâtiments a augmenté de 270,9 millions de dollars (+1,2 %) pour atteindre 23,6 milliards de dollars en juillet."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260921/dq260921b",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-21",
+  "official_id": "260921/dq260921b",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260921/dq260921b-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-21",
+  "sha256": "8fdb09e783a35e85f8c6fd43d15a5a7c5ea6717ce8d196fa250c322f7906b69d",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Investissement en construction de bâtiments, juillet 2026"
+ },
+ {
   "amount_max": 50000.0,
   "amount_min": 15001.0,
   "badge": "officiel",
@@ -28027,6 +32181,69 @@
    "WFC"
   ],
   "title": "A. Mitchell McConnell Jr. (Sénat) achète WFC — conjoint·e"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_de_la_gazette": true,
+   "loi_visant_a_batir_le_canada": true,
+   "projet_nomme": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_officiel_de_l_avis": true
+  },
+  "collected_at": "2026-10-03T16:24:41+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "description": "",
+   "details": [
+    [
+     "Projet",
+     "Projet de dépôt géologique en profondeur (DGP) pour le combustible nucléaire irradié du Canada"
+    ],
+    [
+     "Loi",
+     "Loi visant à bâtir le Canada"
+    ],
+    [
+     "Publié dans",
+     "Gazette du Canada, Partie I, 2026-09-19"
+    ]
+   ],
+   "jour": "2026-09-19",
+   "loi": "Loi visant à bâtir le Canada",
+   "projet": "Projet de dépôt géologique en profondeur (DGP) pour le combustible nucléaire irradié du Canada",
+   "resume": "Conformément au paragraphe 5(1.1) de la Loi visant à bâtir le Canada (la Loi), avis est par les présentes donné que la gouverneure en conseil peut modifier l’annexe 1 de la Loi afin d’inscrire le projet de dépôt géologique en profondeur pour le combustible nucléaire irradié du Canada présenté par la Société de gestion des déchets nucléaires sur la liste des projets d’intérêt national. Parallèlement, au nom de la gouverneure en conseil et à titre de ministre responsable en vertu de la Loi, le président du Conseil privé du Roi pour le Canada, l’honorable Dominic LeBlanc, consultera le gouvernement de l’Ontario, la province où le projet serait réalisé.",
+   "texte": "Conformément au paragraphe 5(1.1) de la Loi visant à bâtir le Canada (la Loi), avis est par les présentes donné que la gouverneure en conseil peut modifier l’annexe 1 de la Loi afin d’inscrire le projet de dépôt géologique en profondeur pour le combustible nucléaire irradié du Canada présenté par la Société de gestion des déchets nucléaires sur la liste des projets d’intérêt national. Parallèlement, au nom de la gouverneure en conseil et à titre de ministre responsable en vertu de la Loi, le président du Conseil privé du Roi pour le Canada, l’honorable Dominic LeBlanc, consultera le gouvernement de l’Ontario, la province où le projet serait réalisé.",
+   "titre": "Avis — Projet de dépôt géologique en profondeur pour le combustible nucléaire irradié du Canada"
+  },
+  "direction": 0,
+  "entities": [
+   "Bureau des grands projets"
+  ],
+  "id": "grands_projets_ca:avis:2026-09-19:ne2",
+  "kind": "avis_projet",
+  "notes": [
+   "Étape officielle : l'avis paraît au moins 30 jours avant que le projet puisse être inscrit."
+  ],
+  "occurred_on": "2026-09-19",
+  "official_id": "avis:2026-09-19:ne2",
+  "official_url": "https://gazette.gc.ca/rp-pr/p1/2026/2026-09-19/html/notice-avis-fra.html#ne2",
+  "parser_version": "gazette-1",
+  "published_on": "2026-09-19",
+  "sha256": "f1112c9dd89aa35f8313bfe626b6a6f6d444399f94ed644ba32dce99e56e7ead",
+  "source": "grands_projets_ca",
+  "tickers": [],
+  "title": "Projet d'intérêt national : avis d'inscription possible, Projet de dépôt géologique en profondeur (DGP) pour le combustible nucléaire irradié du Canada"
  },
  {
   "amount_max": 5000000.0,
@@ -28547,6 +32764,116 @@
    "ABBV"
   ],
   "title": "Pete Sessions (Chambre, TX17) vend ABBV"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Indices des prix des produits industriels et des matières brutes"
+    ],
+    [
+     "Période",
+     "août 2026"
+    ]
+   ],
+   "indicateur": "Indices des prix des produits industriels et des matières brutes",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260917/dq260917b-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-17T08:30:00-04:00",
+   "periode": "août 2026",
+   "resume": "En août, l'Indice des prix des produits industriels a augmenté de 1,3 % d'un mois à l'autre et de 13,5 % d'une année à l'autre. Parallèlement, l'Indice des prix des matières brutes a progressé de 3,1 % d'un mois à l'autre et de 22,8 % d'une année à l'autre."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260917/dq260917b",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-17",
+  "official_id": "260917/dq260917b",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260917/dq260917b-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-17",
+  "sha256": "ad4968b6a3021f1b501fe7efc8a1bd3fe56ac2b48e7bcd808120917e5403a505",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Indices des prix des produits industriels et des matières brutes, août 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Opérations internationales du Canada en valeurs mobilières"
+    ],
+    [
+     "Période",
+     "juillet 2026"
+    ]
+   ],
+   "indicateur": "Opérations internationales du Canada en valeurs mobilières",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260917/dq260917a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-17T08:30:00-04:00",
+   "periode": "juillet 2026",
+   "resume": "Les investisseurs canadiens ont réduit leur exposition aux titres étrangers de 30,6 milliards de dollars en juillet, principalement par la vente d'actions américaines. Parallèlement, les investisseurs étrangers ont augmenté leurs avoirs en titres canadiens de 20,7 milliards de dollars, et cette activité a surtout pris la forme d'un investissement important en obligations de l'administration publique fédérale."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260917/dq260917a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-17",
+  "official_id": "260917/dq260917a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260917/dq260917a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-17",
+  "sha256": "11846656ab145c1e840a97390b2027b1915db7cf64460d75eb47e7c2e0ccb7b8",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Opérations internationales du Canada en valeurs mobilières, juillet 2026"
  },
  {
   "amount_max": null,
@@ -29484,6 +33811,116 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Estimations des principales grandes cultures basées sur des modèles"
+    ],
+    [
+     "Période",
+     "août 2026"
+    ]
+   ],
+   "indicateur": "Estimations des principales grandes cultures basées sur des modèles",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260916/dq260916b-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-16T08:30:00-04:00",
+   "periode": "août 2026",
+   "resume": "Selon les récents modèles de rendement fondés sur l'imagerie satellitaire et des données agroclimatiques, en 2026, les agriculteurs canadiens devraient produire plus de maïs-grain et de soya, comparativement à 2025, mais moins de blé, de canola, d'orge et d'avoine."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260916/dq260916b",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-16",
+  "official_id": "260916/dq260916b",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260916/dq260916b-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-16",
+  "sha256": "fbc16bf2a1bfd7f251db17c05741febf2a5c6b149d7c7d6fcbf1671da5b4952f",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Estimations des principales grandes cultures basées sur des modèles, août 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Permis de bâtir"
+    ],
+    [
+     "Période",
+     "juillet 2026"
+    ]
+   ],
+   "indicateur": "Permis de bâtir",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260916/dq260916a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-16T08:30:00-04:00",
+   "periode": "juillet 2026",
+   "resume": "En juillet, la valeur totale des permis de bâtir délivrés au Canada a diminué de 2,6 milliards de dollars (-17,3 %) pour s'établir à 12,2 milliards de dollars."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260916/dq260916a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-16",
+  "official_id": "260916/dq260916a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260916/dq260916a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-16",
+  "sha256": "8494e58d5859684b955f00e88255f72397eb81b703e9d9576e1fdf3fb8d08b36",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Permis de bâtir, juillet 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "champs_requis": true,
@@ -29705,6 +34142,61 @@
   "source": "maison_blanche",
   "tickers": [],
   "title": "Décret présidentiel : Providing Meaningful Water Quality Improvements Through Collaboration and Oversight of Federal Support"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Commerce de gros"
+    ],
+    [
+     "Période",
+     "juillet 2026"
+    ]
+   ],
+   "indicateur": "Commerce de gros",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260915/dq260915b-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-15T08:30:00-04:00",
+   "periode": "juillet 2026",
+   "resume": "En juillet, les ventes du commerce de gros (excluant le pétrole, les produits pétroliers, et autres hydrocarbures, ainsi que les graines oléagineuses et les grains céréaliers) ont augmenté de 0,3 %."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260915/dq260915b",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-15",
+  "official_id": "260915/dq260915b",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260915/dq260915b-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-15",
+  "sha256": "46d3409bc18bd88089c3d20e814aa2c50621bed020051fcc3cc9f4e4efd72e4c",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Commerce de gros, juillet 2026"
  },
  {
   "amount_max": 30000.0,
@@ -29942,6 +34434,116 @@
    "HWM"
   ],
   "title": "Byron Donalds (Chambre, FL19) vend HWM (2 transactions) — conjoint·e, l'élu·e"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Enquête mensuelle sur les industries manufacturières"
+    ],
+    [
+     "Période",
+     "juillet 2026"
+    ]
+   ],
+   "indicateur": "Enquête mensuelle sur les industries manufacturières",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260914/dq260914b-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-14T08:30:00-04:00",
+   "periode": "juillet 2026",
+   "resume": "Les ventes du secteur de la fabrication ont reculé de 0,4 % en juillet, principalement sous l'effet de la baisse des ventes de la fabrication de produits chimiques et de la fabrication d'aliments. Parallèlement, ce sont les ventes du sous-secteur de la fabrication de produits du pétrole et du charbon qui ont affiché la plus importante croissance."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260914/dq260914b",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-14",
+  "official_id": "260914/dq260914b",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260914/dq260914b-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-14",
+  "sha256": "380fd13026c89abf4335ea0a3a10717fdd523f75da5e22b76afbeaa38a86933a",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Enquête mensuelle sur les industries manufacturières, juillet 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Indice des prix à la consommation"
+    ],
+    [
+     "Période",
+     "août 2026"
+    ]
+   ],
+   "indicateur": "Indice des prix à la consommation",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260914/dq260914a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-14T08:30:00-04:00",
+   "periode": "août 2026",
+   "resume": "L'Indice des prix à la consommation (IPC) a augmenté de 3,0 % d'une année à l'autre en août, ce qui est une hausse identique à celle observée en juillet (+3,0 %). Sur une base mensuelle désaisonnalisée, l'IPC a progressé de 0,2 % en août."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260914/dq260914a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-14",
+  "official_id": "260914/dq260914a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260914/dq260914a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-14",
+  "sha256": "3be1a4da8748bd9da4600421ddb5c78a91354ea803014db543161ee7cecfff80",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Indice des prix à la consommation, août 2026"
  },
  {
   "amount_max": 15000.0,
@@ -30797,6 +35399,61 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Comptes du bilan national et des flux financiers"
+    ],
+    [
+     "Période",
+     "deuxième trimestre de 2026"
+    ]
+   ],
+   "indicateur": "Comptes du bilan national et des flux financiers",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260911/dq260911a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-11T08:30:00-04:00",
+   "periode": "deuxième trimestre de 2026",
+   "resume": "La valeur nette des ménages canadiens, c'est-à-dire la valeur de tous les actifs moins tous les passifs, a augmenté de 2,9 % au deuxième trimestre de 2026 pour s'établir à plus de 19 billions de dollars, la vigueur des marchés boursiers ayant entraîné une croissance de la valeur nette des ménages grâce à la hausse des valeurs des actifs."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260911/dq260911a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-11",
+  "official_id": "260911/dq260911a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260911/dq260911a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-11",
+  "sha256": "46e9b2b8324218ffd325113473a3fba53c165c949e1a40c01c964dc9f8a768bf",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Comptes du bilan national et des flux financiers, deuxième trimestre de 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "champs_requis": true,
@@ -31229,6 +35886,61 @@
    "CEG"
   ],
   "title": "John Boozman (Sénat) vend CEG — compte conjoint"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Bilan des investissements internationaux du Canada"
+    ],
+    [
+     "Période",
+     "deuxième trimestre de 2026"
+    ]
+   ],
+   "indicateur": "Bilan des investissements internationaux du Canada",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260910/dq260910a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-10T08:30:00-04:00",
+   "periode": "deuxième trimestre de 2026",
+   "resume": "La position d'actif net étranger du Canada, soit la différence entre son actif financier international et son passif international, a progressé de 619,2 milliards de dollars pour atteindre 1 945,5 milliards de dollars à la fin du deuxième trimestre."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260910/dq260910a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-10",
+  "official_id": "260910/dq260910a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260910/dq260910a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-10",
+  "sha256": "a2dd96214d3d24efb93a6e8e3b1131992276bb4ad2a164aaa602562c35be7da0",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Bilan des investissements internationaux du Canada, deuxième trimestre de 2026"
  },
  {
   "amount_max": null,
@@ -31870,6 +36582,61 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Stocks des principales grandes cultures"
+    ],
+    [
+     "Période",
+     "31 juillet 2026"
+    ]
+   ],
+   "indicateur": "Stocks des principales grandes cultures",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260909/dq260909b-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-09T08:30:00-04:00",
+   "periode": "31 juillet 2026",
+   "resume": "Au 31 juillet, les stocks totaux de blé, de canola, de pois secs, de lentilles et d'avoine étaient en hausse par rapport à la même date un an plus tôt, tandis que les stocks d'orge étaient en baisse."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260909/dq260909b",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-09",
+  "official_id": "260909/dq260909b",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260909/dq260909b-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-09",
+  "sha256": "c26c2ed811683c1db5266da63b37191c8ac9055937234d4fcf69cc3f379a8a6d",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Stocks des principales grandes cultures, 31 juillet 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "politiciens",
   "checks": {
    "champs_requis": true,
@@ -32397,6 +37164,136 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Enquête sur la population active"
+    ],
+    [
+     "Période",
+     "août 2026"
+    ]
+   ],
+   "indicateur": "Enquête sur la population active",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260904/dq260904a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-04T08:30:00-04:00",
+   "periode": "août 2026",
+   "resume": "L'emploi a diminué de 42 000 (-0,2 %) en août et le taux d'emploi a reculé de 0,1 point de pourcentage pour s'établir à 60,8 %. Le taux de chômage s'est maintenu à 6,4 %."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260904/dq260904a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-04",
+  "official_id": "260904/dq260904a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260904/dq260904a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-04",
+  "sha256": "91bca42cb0dca67ac53d43c447627ef3d7ddcc6b68a0b87b2f7bf2b6dab6c929",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Enquête sur la population active, août 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "chaque_inscription_nommee": true,
+   "date_d_inscription_valide": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "regime_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:31+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "annexes": [
+    "1, Part 1"
+   ],
+   "date": "2026-09-04",
+   "details": [
+    [
+     "Régime",
+     "Russie"
+    ],
+    [
+     "Inscrites le",
+     "2026-09-04"
+    ],
+    [
+     "Personnes",
+     "Denis Sergeyevich CHERNOBAY, Grigory Alexandrovich GUROV, Vladimir Viktorovich KHROMOV, Alexandra Dmitrievna KULGINA, Aleksandr Vyacheslavovich KURENKOV, Elena Igorevna MILSKAYA, Artur Valeriyevich ORLOV, Vitaliy Aleksandrovich SUK"
+    ]
+   ],
+   "entites": [],
+   "liste_xml": "https://www.international.gc.ca/world-monde/assets/office_docs/international_relations-relations_internationales/sanctions/sema-lmes.xml",
+   "navires": [],
+   "nombre": 8,
+   "personnes": [
+    "Denis Sergeyevich CHERNOBAY",
+    "Grigory Alexandrovich GUROV",
+    "Vladimir Viktorovich KHROMOV",
+    "Alexandra Dmitrievna KULGINA",
+    "Aleksandr Vyacheslavovich KURENKOV",
+    "Elena Igorevna MILSKAYA",
+    "Artur Valeriyevich ORLOV",
+    "Vitaliy Aleksandrovich SUK"
+   ],
+   "regime": "Russie",
+   "resume": "8 inscription(s) le 4 septembre 2026 : 8 personne(s)."
+  },
+  "direction": 0,
+  "entities": [
+   "Russie"
+  ],
+  "id": "sanctions_ca:2026-09-04:russie",
+  "kind": "sanctions_inscriptions",
+  "notes": [
+   "La liste consolidée n'a pas force de loi : seuls les règlements font foi."
+  ],
+  "occurred_on": "2026-09-04",
+  "official_id": "2026-09-04:russie",
+  "official_url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=fra",
+  "parser_version": "sanctions-ca-1",
+  "published_on": "2026-09-04",
+  "sha256": "ec52de397fe388562a29918842ef340b3389e837b36d7c47a84d1976475252b3",
+  "source": "sanctions_ca",
+  "tickers": [],
+  "title": "Sanctions canadiennes (Russie) : 8 nouvelle(s) inscription(s)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "champs_requis": true,
@@ -32581,6 +37478,116 @@
   "source": "maison_blanche",
   "tickers": [],
   "title": "Décret présidentiel : Promoting Fair Competition In Livestock Markets And Expanding Market Access for American Meat Producers"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Productivité du travail, rémunération horaire et coût unitaire de main-d'œuvre"
+    ],
+    [
+     "Période",
+     "deuxième trimestre de 2026"
+    ]
+   ],
+   "indicateur": "Productivité du travail, rémunération horaire et coût unitaire de main-d'œuvre",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260903/dq260903c-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-03T08:30:00-04:00",
+   "periode": "deuxième trimestre de 2026",
+   "resume": "La productivité du travail dans les entreprises canadiennes a augmenté de 1,0 % au deuxième trimestre. Il s'agit de l'augmentation la plus marquée depuis celle du deuxième trimestre de 2020 (+7,7 %), provoquée par la pandémie de COVID-19. La croissance observée au deuxième trimestre de 2026 s'explique par une hausse de la valeur ajoutée dans le secteur des entreprises et une baisse du nombre d'heures travaillées."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260903/dq260903c",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-03",
+  "official_id": "260903/dq260903c",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260903/dq260903c-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-03",
+  "sha256": "5a5b96747bc6f9a4728145f043bde0053a1e9fad05c4a677b0b54f2c8f52ff16",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Productivité du travail, rémunération horaire et coût unitaire de main-d'œuvre, deuxième trimestre de 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T16:24:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Commerce international de marchandises du Canada"
+    ],
+    [
+     "Période",
+     "juillet 2026"
+    ]
+   ],
+   "indicateur": "Commerce international de marchandises du Canada",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/260903/dq260903a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-09-03T08:30:00-04:00",
+   "periode": "juillet 2026",
+   "resume": "En juillet, les exportations de marchandises du Canada ont diminué de 2,3 %, tandis que les importations ont augmenté de 2,2 %. Par conséquent, l'excédent commercial de marchandises du Canada avec le monde a reculé pour passer de 4,2 milliards de dollars en juin à 769 millions de dollars en juillet. Il s'agit du cinquième excédent commercial mensuel d'affilée."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:260903/dq260903a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-09-03",
+  "official_id": "260903/dq260903a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260903/dq260903a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-09-03",
+  "sha256": "b98069a7d783dd65db77795e78417fa569b2b6df6ecc45a9e02fc4448f492115",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Commerce international de marchandises du Canada, juillet 2026"
  },
  {
   "amount_max": null,
@@ -32824,6 +37831,140 @@
   "source": "ventes_armes",
   "tickers": [],
   "title": "Vente d'armes à l'étranger : Canada"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_de_la_gazette": true,
+   "loi_visant_a_batir_le_canada": true,
+   "projet_nomme": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_officiel_de_l_avis": true
+  },
+  "collected_at": "2026-10-03T16:24:39+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "description": "Le projet Terminal 2 à Roberts Bank est un terminal à conteneurs proposé qui augmenterait la capacité de conteneurs du port de Vancouver de près de 50 %. Il s’agit d’un projet clé dans le cadre de la Stratégie sur la porte d’entrée du port de Vancouver, qui contribuerait à l’atteinte des objectifs du Canada en matière de croissance économique et de diversification des échanges commerciaux, notamment en doublant les exportations vers les marchés autres que celui des États-Unis d’ici 2035.",
+   "details": [
+    [
+     "Projet",
+     "Terminal 2 à Roberts Bank"
+    ],
+    [
+     "Loi",
+     "Loi visant à bâtir le Canada"
+    ],
+    [
+     "Publié dans",
+     "Gazette du Canada, Partie I, 2026-08-29"
+    ],
+    [
+     "Description",
+     "Le projet Terminal 2 à Roberts Bank est un terminal à conteneurs proposé qui augmenterait la capacité de conteneurs du port de Vancouver de près de 50 %. Il s’agit d’un projet clé dans le cadre de la Stratégie sur la porte d’entrée du port de Vancouver, qui contribuerait à l’atteinte des objectifs du Canada en matière de croissance économique et de diversification des échanges commerciaux, notamment en doublant les exportations vers les marchés autres que celui des États-Unis d’ici 2035."
+    ]
+   ],
+   "jour": "2026-08-29",
+   "loi": "Loi visant à bâtir le Canada",
+   "projet": "Terminal 2 à Roberts Bank",
+   "resume": "Conformément au paragraphe 5(1.1) de la Loi visant à bâtir le Canada (la Loi), avis est par les présentes donné que la gouverneure en conseil peut modifier l’annexe 1 de la Loi afin d’y inscrire le terminal 2 à Roberts Bank à titre de projet d’intérêt national. Parallèlement, au nom de la gouverneure en conseil et à titre de ministre responsable en vertu de la Loi, le président du Conseil privé du Roi pour le Canada, l’honorable Dominic LeBlanc, consultera le gouvernement de la Colombie-Britannique, province où le projet sera réalisé.",
+   "texte": "Conformément au paragraphe 5(1.1) de la Loi visant à bâtir le Canada (la Loi), avis est par les présentes donné que la gouverneure en conseil peut modifier l’annexe 1 de la Loi afin d’y inscrire le terminal 2 à Roberts Bank à titre de projet d’intérêt national. Parallèlement, au nom de la gouverneure en conseil et à titre de ministre responsable en vertu de la Loi, le président du Conseil privé du Roi pour le Canada, l’honorable Dominic LeBlanc, consultera le gouvernement de la Colombie-Britannique, province où le projet sera réalisé.",
+   "titre": "Avis — Terminal 2 à Roberts Bank"
+  },
+  "direction": 0,
+  "entities": [
+   "Bureau des grands projets"
+  ],
+  "id": "grands_projets_ca:avis:2026-08-29:nb3",
+  "kind": "avis_projet",
+  "notes": [
+   "Étape officielle : l'avis paraît au moins 30 jours avant que le projet puisse être inscrit."
+  ],
+  "occurred_on": "2026-08-29",
+  "official_id": "avis:2026-08-29:nb3",
+  "official_url": "https://gazette.gc.ca/rp-pr/p1/2026/2026-08-29/html/notice-avis-fra.html#nb3",
+  "parser_version": "gazette-1",
+  "published_on": "2026-08-29",
+  "sha256": "0dfd274d365cdbd709651585083c58332e9b022b35c94c6917f208d65140d2eb",
+  "source": "grands_projets_ca",
+  "tickers": [],
+  "title": "Projet d'intérêt national : avis d'inscription possible, Terminal 2 à Roberts Bank"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_de_la_gazette": true,
+   "loi_visant_a_batir_le_canada": true,
+   "projet_nomme": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_officiel_de_l_avis": true
+  },
+  "collected_at": "2026-10-03T16:24:39+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "description": "La route de la vallée du Mackenzie (RVM) proposée est une route quatre saisons d’environ 800 km qui se situerait dans les Territoires du Nord-Ouest. La route s’étendrait sur toute la longueur de la vallée du fleuve Mackenzie au nord de Wrigley et passerait près des collectivités de Tulita, Norman Wells et Fort Good Hope avant de rejoindre la route de Dempster, au sud d’Inuvik. Le projet prévoit également la construction de nouveaux ponts, notamment sur la rivière Great Bear, près de Tulita, ainsi que sur la rivière Liard et le fleuve Mackenzie, près de Fort Simpson.",
+   "details": [
+    [
+     "Projet",
+     "Route de la vallée du Mackenzie"
+    ],
+    [
+     "Loi",
+     "Loi visant à bâtir le Canada"
+    ],
+    [
+     "Publié dans",
+     "Gazette du Canada, Partie I, 2026-08-29"
+    ],
+    [
+     "Description",
+     "La route de la vallée du Mackenzie (RVM) proposée est une route quatre saisons d’environ 800 km qui se situerait dans les Territoires du Nord-Ouest. La route s’étendrait sur toute la longueur de la vallée du fleuve Mackenzie au nord de Wrigley et passerait près des collectivités de Tulita, Norman Wells et Fort Good Hope avant de rejoindre la route de Dempster, au sud d’Inuvik. Le projet prévoit également la construction de nouveaux ponts, notamment sur la rivière Great Bear, près de Tulita, ainsi que sur la rivière Liard et le fleuve Mackenzie, près de Fort Simpson."
+    ]
+   ],
+   "jour": "2026-08-29",
+   "loi": "Loi visant à bâtir le Canada",
+   "projet": "Route de la vallée du Mackenzie",
+   "resume": "Conformément au paragraphe 5(1.1) de la Loi visant à bâtir le Canada (la Loi), avis est par les présentes donné que le gouverneur en conseil peut modifier l’annexe 1 de la Loi afin d’inscrire la route de la vallée du Mackenzie sur la liste des projets d’intérêt national. Parallèlement, au nom du gouverneur en conseil et à titre de ministre responsable en vertu de la Loi, le président du Conseil privé du Roi pour le Canada, l’honorable Dominic LeBlanc, consultera le gouvernement des Territoires du Nord-Ouest, soit le territoire dans lequel le projet serait situé.",
+   "texte": "Conformément au paragraphe 5(1.1) de la Loi visant à bâtir le Canada (la Loi), avis est par les présentes donné que le gouverneur en conseil peut modifier l’annexe 1 de la Loi afin d’inscrire la route de la vallée du Mackenzie sur la liste des projets d’intérêt national. Parallèlement, au nom du gouverneur en conseil et à titre de ministre responsable en vertu de la Loi, le président du Conseil privé du Roi pour le Canada, l’honorable Dominic LeBlanc, consultera le gouvernement des Territoires du Nord-Ouest, soit le territoire dans lequel le projet serait situé.",
+   "titre": "Avis — Route de la vallée du Mackenzie"
+  },
+  "direction": 0,
+  "entities": [
+   "Bureau des grands projets"
+  ],
+  "id": "grands_projets_ca:avis:2026-08-29:nb2",
+  "kind": "avis_projet",
+  "notes": [
+   "Étape officielle : l'avis paraît au moins 30 jours avant que le projet puisse être inscrit."
+  ],
+  "occurred_on": "2026-08-29",
+  "official_id": "avis:2026-08-29:nb2",
+  "official_url": "https://gazette.gc.ca/rp-pr/p1/2026/2026-08-29/html/notice-avis-fra.html#nb2",
+  "parser_version": "gazette-1",
+  "published_on": "2026-08-29",
+  "sha256": "c885e7e68f687f659149a9fa6f25a5bf7cd46ddf5c26eb7cdcbda81076a64067",
+  "source": "grands_projets_ca",
+  "tickers": [],
+  "title": "Projet d'intérêt national : avis d'inscription possible, Route de la vallée du Mackenzie"
  },
  {
   "amount_max": null,
@@ -33716,6 +38857,322 @@
   "source": "maison_blanche",
   "tickers": [],
   "title": "Décret présidentiel : Honoring the American History of the Great Lakes and Renaming Lake Ontario as Lake America"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "date_d_enregistrement_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "loi_liee_a_l_argent": true,
+   "meme_numero_que_l_index": true,
+   "numero_dors_ou_tr": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_officiel_lu": true
+  },
+  "collected_at": "2026-10-03T16:24:48+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "cp": "C.P. 2026-732 Le 6 août 2026",
+   "details": [
+    [
+     "Numéro",
+     "DORS/2026-173"
+    ],
+    [
+     "Loi",
+     "Tarif des douanes"
+    ],
+    [
+     "Enregistré le",
+     "2026-08-07"
+    ],
+    [
+     "Décret",
+     "C.P. 2026-732 Le 6 août 2026"
+    ],
+    [
+     "Publié dans",
+     "La Gazette du Canada, Partie II, volume 160, numéro 17"
+    ]
+   ],
+   "enjeux": "Le présent décret vise à éliminer les droits de douane applicables aux batteries au lithium-ion utilisées comme intrants dans la fabrication de vélos électriques au Canada. Auparavant, les batteries au lithium-ion importées pour être utilisées dans la fabrication de vélos électriques au Canada étaient assujetties à un droit de douane de 7 %.",
+   "enregistre_le": "2026-08-07",
+   "enregistrement": "Enregistrement DORS/2026-173 Le 7 août 2026",
+   "gazette": "La Gazette du Canada, Partie II, volume 160, numéro 17",
+   "index": "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-26/html/index-fra.html",
+   "jour": "2026-08-26",
+   "loi": "Tarif des douanes",
+   "loi_page": "TARIF DES DOUANES",
+   "nouveau": false,
+   "numero": "DORS/2026-173",
+   "numero_index": "DORS/2026-173",
+   "resume": "Le présent décret vise à éliminer les droits de douane applicables aux batteries au lithium-ion utilisées comme intrants dans la fabrication de vélos électriques au Canada. Auparavant, les batteries au lithium-ion importées pour être utilisées dans la fabrication de vélos électriques au Canada étaient assujetties à un droit de douane de 7 %.",
+   "speciale": false,
+   "titre": "Décret modifiant l’annexe du Tarif des douanes",
+   "titre_index": "Tarif des douanes — Décret modifiant l’annexe du"
+  },
+  "direction": 0,
+  "entities": [
+   "Tarif des douanes"
+  ],
+  "id": "gazette_ca:DORS/2026-173",
+  "kind": "reglement",
+  "notes": [],
+  "occurred_on": "2026-08-07",
+  "official_id": "DORS/2026-173",
+  "official_url": "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-26/html/sor-dors173-fra.html",
+  "parser_version": "gazette-1",
+  "published_on": "2026-08-26",
+  "sha256": "cdbf35c62f087acf63daff63a532e8e1e10ccc79d21ff01b9f551a0158f909ab",
+  "source": "gazette_ca",
+  "tickers": [],
+  "title": "Gazette du Canada : Décret modifiant l’annexe du Tarif des douanes (DORS/2026-173)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "date_d_enregistrement_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "loi_liee_a_l_argent": true,
+   "meme_numero_que_l_index": true,
+   "numero_dors_ou_tr": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_officiel_lu": true
+  },
+  "collected_at": "2026-10-03T16:24:47+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "cp": "C.P. 2026-756 Le 13 août 2026",
+   "details": [
+    [
+     "Numéro",
+     "DORS/2026-178"
+    ],
+    [
+     "Loi",
+     "Mesures économiques spéciales (Loi sur les)"
+    ],
+    [
+     "Enregistré le",
+     "2026-08-13"
+    ],
+    [
+     "Décret",
+     "C.P. 2026-756 Le 13 août 2026"
+    ],
+    [
+     "Publié dans",
+     "La Gazette du Canada, Partie II, volume 160, numéro 17"
+    ]
+   ],
+   "enjeux": "La ministre des Affaires étrangères (la ministre) a reçu une demande de radiation de la part d’Anatoly Borisovich Chubais, laquelle établit l’existence de motifs raisonnables de recommander sa radiation de l’annexe 1 du Règlement modifiant le Règlement sur les mesures économiques spéciales visant la Russie (le Règlement visant la Russie). Le maintien de l’intégrité et de l’exactitude du régime de sanctions du Canada exige que le Règlement visant la Russie soit modifié afin de radier des personnes lorsqu’il existe des motifs raisonnables de le faire.",
+   "enregistre_le": "2026-08-13",
+   "enregistrement": "Enregistrement DORS/2026-178 Le 13 août 2026",
+   "gazette": "La Gazette du Canada, Partie II, volume 160, numéro 17",
+   "index": "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-26/html/index-fra.html",
+   "jour": "2026-08-26",
+   "loi": "Mesures économiques spéciales (Loi sur les)",
+   "loi_page": "LOI SUR LES MESURES ÉCONOMIQUES SPÉCIALES",
+   "nouveau": false,
+   "numero": "DORS/2026-178",
+   "numero_index": "DORS/2026-178",
+   "resume": "La ministre des Affaires étrangères (la ministre) a reçu une demande de radiation de la part d’Anatoly Borisovich Chubais, laquelle établit l’existence de motifs raisonnables de recommander sa radiation de l’annexe 1 du Règlement modifiant le Règlement sur les mesures économiques spéciales visant la Russie (le Règlement visant la Russie). Le maintien de l’intégrité et de l’exactitude du régime de sanctions du Canada exige que le Règlement visant la Russie soit modifié afin de radier des personnes lorsqu’il existe des motifs raisonnables de le faire.",
+   "speciale": false,
+   "titre": "Règlement modifiant le Règlement sur les mesures économiques spéciales visant la Russie",
+   "titre_index": "Mesures économiques spéciales visant la Russie — Règlement modifiant le Règlement sur les"
+  },
+  "direction": 0,
+  "entities": [
+   "Mesures économiques spéciales (Loi sur les)"
+  ],
+  "id": "gazette_ca:DORS/2026-178",
+  "kind": "reglement",
+  "notes": [],
+  "occurred_on": "2026-08-13",
+  "official_id": "DORS/2026-178",
+  "official_url": "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-26/html/sor-dors178-fra.html",
+  "parser_version": "gazette-1",
+  "published_on": "2026-08-26",
+  "sha256": "989a1f8baba1670a92542bf7d42c3071d3c2a874262307b23a64914b15f56cda",
+  "source": "gazette_ca",
+  "tickers": [],
+  "title": "Gazette du Canada : Règlement modifiant le Règlement sur les mesures économiques spéciales visant la Russie (DORS/2026-178)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "date_d_enregistrement_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "loi_liee_a_l_argent": true,
+   "meme_numero_que_l_index": true,
+   "numero_dors_ou_tr": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_officiel_lu": true
+  },
+  "collected_at": "2026-10-03T16:24:46+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "cp": "C.P. 2026-757 Le 13 août 2026",
+   "details": [
+    [
+     "Numéro",
+     "DORS/2026-179"
+    ],
+    [
+     "Loi",
+     "Mesures économiques spéciales (Loi sur les)"
+    ],
+    [
+     "Enregistré le",
+     "2026-08-13"
+    ],
+    [
+     "Décret",
+     "C.P. 2026-757 Le 13 août 2026"
+    ],
+    [
+     "Publié dans",
+     "La Gazette du Canada, Partie II, volume 160, numéro 17"
+    ]
+   ],
+   "enjeux": "La République islamique d’Iran (l’Iran) continue de menacer la paix et la sécurité internationales par ses activités déstabilisatrices dans la région du Moyen-Orient et au-delà, notamment à partir d’attaques armées contre les États voisins et d’actions malveillantes visant à perturber la navigation à l’intérieur et autour du détroit d’Ormuz. De tels agissements sont contraires au droit international. Les actions de l’Iran menacent la stabilité des marchés mondiaux de l’énergie, l’économie mondiale et les chaînes d’approvisionnement essentielles, notamment liées aux denrées alimentaires, au carburant et aux biens humanitaires.",
+   "enregistre_le": "2026-08-13",
+   "enregistrement": "Enregistrement DORS/2026-179 Le 13 août 2026",
+   "gazette": "La Gazette du Canada, Partie II, volume 160, numéro 17",
+   "index": "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-26/html/index-fra.html",
+   "jour": "2026-08-26",
+   "loi": "Mesures économiques spéciales (Loi sur les)",
+   "loi_page": "LOI SUR LES MESURES ÉCONOMIQUES SPÉCIALES",
+   "nouveau": false,
+   "numero": "DORS/2026-179",
+   "numero_index": "DORS/2026-179",
+   "resume": "La République islamique d’Iran (l’Iran) continue de menacer la paix et la sécurité internationales par ses activités déstabilisatrices dans la région du Moyen-Orient et au-delà, notamment à partir d’attaques armées contre les États voisins et d’actions malveillantes visant à perturber la navigation à l’intérieur et autour du détroit d’Ormuz. De tels agissements sont contraires au droit international. Les actions de l’Iran menacent la stabilité des marchés mondiaux de l’énergie, l’économie mondiale et les chaînes d’approvisionnement essentielles, notamment liées aux denrées alimentaires, au carburant et aux biens humanitaires.",
+   "speciale": false,
+   "titre": "Règlement modifiant le Règlement sur les mesures économiques spéciales visant l’Iran",
+   "titre_index": "Mesures économiques spéciales visant l’Iran — Règlement modifiant le Règlement sur les"
+  },
+  "direction": 0,
+  "entities": [
+   "Mesures économiques spéciales (Loi sur les)"
+  ],
+  "id": "gazette_ca:DORS/2026-179",
+  "kind": "reglement",
+  "notes": [],
+  "occurred_on": "2026-08-13",
+  "official_id": "DORS/2026-179",
+  "official_url": "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-26/html/sor-dors179-fra.html",
+  "parser_version": "gazette-1",
+  "published_on": "2026-08-26",
+  "sha256": "94d58ce1acb10cd91e42cdcc7befe79810f7cba6fc90ff62633451456b96cae8",
+  "source": "gazette_ca",
+  "tickers": [],
+  "title": "Gazette du Canada : Règlement modifiant le Règlement sur les mesures économiques spéciales visant l’Iran (DORS/2026-179)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "date_d_enregistrement_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "loi_liee_a_l_argent": true,
+   "meme_numero_que_l_index": true,
+   "numero_dors_ou_tr": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_officiel_lu": true
+  },
+  "collected_at": "2026-10-03T16:24:46+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "cp": "C.P. 2026-731 Le 6 août 2026",
+   "details": [
+    [
+     "Numéro",
+     "DORS/2026-172"
+    ],
+    [
+     "Loi",
+     "Mesures économiques spéciales (Loi sur les)"
+    ],
+    [
+     "Enregistré le",
+     "2026-08-06"
+    ],
+    [
+     "Décret",
+     "C.P. 2026-731 Le 6 août 2026"
+    ],
+    [
+     "Publié dans",
+     "La Gazette du Canada, Partie II, volume 160, numéro 17"
+    ]
+   ],
+   "enjeux": "La guerre d’agression de la Russie contre l’Ukraine constitue une violation du droit international et a bouleversé l’architecture de sécurité européenne. Bien que les sanctions internationales aient constitué un moyen efficace d’entraver les efforts de guerre de la Russie, pour maintenir la pression, le Canada et ses partenaires doivent adapter continuellement leurs régimes de sanctions afin de contrer les tentatives de contournement de la Russie.",
+   "enregistre_le": "2026-08-06",
+   "enregistrement": "Enregistrement DORS/2026-172 Le 6 août 2026",
+   "gazette": "La Gazette du Canada, Partie II, volume 160, numéro 17",
+   "index": "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-26/html/index-fra.html",
+   "jour": "2026-08-26",
+   "loi": "Mesures économiques spéciales (Loi sur les)",
+   "loi_page": "LOI SUR LES MESURES ÉCONOMIQUES SPÉCIALES",
+   "nouveau": false,
+   "numero": "DORS/2026-172",
+   "numero_index": "DORS/2026-172",
+   "resume": "La guerre d’agression de la Russie contre l’Ukraine constitue une violation du droit international et a bouleversé l’architecture de sécurité européenne. Bien que les sanctions internationales aient constitué un moyen efficace d’entraver les efforts de guerre de la Russie, pour maintenir la pression, le Canada et ses partenaires doivent adapter continuellement leurs régimes de sanctions afin de contrer les tentatives de contournement de la Russie.",
+   "speciale": false,
+   "titre": "Règlement modifiant le Règlement sur les mesures économiques spéciales visant la Russie",
+   "titre_index": "Mesures économiques spéciales visant la Russie — Règlement modifiant le Règlement sur les"
+  },
+  "direction": 0,
+  "entities": [
+   "Mesures économiques spéciales (Loi sur les)"
+  ],
+  "id": "gazette_ca:DORS/2026-172",
+  "kind": "reglement",
+  "notes": [],
+  "occurred_on": "2026-08-06",
+  "official_id": "DORS/2026-172",
+  "official_url": "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-26/html/sor-dors172-fra.html",
+  "parser_version": "gazette-1",
+  "published_on": "2026-08-26",
+  "sha256": "a91dbfe3c03e4f3cad4c5da9443ede4a835032713ee555b8854e18a6bf723754",
+  "source": "gazette_ca",
+  "tickers": [],
+  "title": "Gazette du Canada : Règlement modifiant le Règlement sur les mesures économiques spéciales visant la Russie (DORS/2026-172)"
  },
  {
   "amount_max": null,
@@ -35129,6 +40586,85 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "date_d_enregistrement_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "loi_liee_a_l_argent": true,
+   "meme_numero_que_l_index": true,
+   "numero_dors_ou_tr": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_officiel_lu": true
+  },
+  "collected_at": "2026-10-03T16:24:45+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "cp": "C.P. 2026-727 Le 31 juillet 2026",
+   "details": [
+    [
+     "Numéro",
+     "DORS/2026-169"
+    ],
+    [
+     "Loi",
+     "Tarif des douanes"
+    ],
+    [
+     "Enregistré le",
+     "2026-07-31"
+    ],
+    [
+     "Décret",
+     "C.P. 2026-727 Le 31 juillet 2026"
+    ],
+    [
+     "Publié dans",
+     "La Gazette du Canada, Partie II, volume 160, numéro 16"
+    ]
+   ],
+   "enjeux": "Les données actuelles suggèrent qu’il y a une indication raisonnable que certains articles d’armoires et de meubles-lavabos en bois sont importés au Canada en quantités de plus en plus élevées et dans des conditions telles qu’ils causent un dommage grave à l’industrie canadienne des armoires et meubles-lavabos en bois. De 2023 à 2025, la valeur des importations a augmenté de 25 %, avec 340 millions de dollars d’armoires et de meubles-lavabos en bois importés au Canada en 2025. Cette augmentation semble être le résultat des obligations du Canada en vertu des accords de l’Organisation mondiale du commerce (OMC), y compris les concessions tarifaires, combinées à des développements imprévus dans le commerce mondial. […]",
+   "enregistre_le": "2026-07-31",
+   "enregistrement": "Enregistrement DORS/2026-169 Le 31 juillet 2026",
+   "gazette": "La Gazette du Canada, Partie II, volume 160, numéro 16",
+   "index": "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-12/html/index-fra.html",
+   "jour": "2026-08-12",
+   "loi": "Tarif des douanes",
+   "loi_page": "TARIF DES DOUANES",
+   "nouveau": true,
+   "numero": "DORS/2026-169",
+   "numero_index": "DORS/2026-169",
+   "resume": "Les données actuelles suggèrent qu’il y a une indication raisonnable que certains articles d’armoires et de meubles-lavabos en bois sont importés au Canada en quantités de plus en plus élevées et dans des conditions telles qu’ils causent un dommage grave à l’industrie canadienne des armoires et meubles-lavabos en bois. De 2023 à 2025, la valeur des importations a augmenté de 25 %, avec 340 millions de dollars d’armoires et de meubles-lavabos en bois importés au Canada en 2025. Cette augmentation semble être le résultat des obligations du Canada en vertu des accords de l’Organisation mondiale du commerce (OMC), y compris les concessions tarifaires, combinées à des développements imprévus dans le commerce mondial. […]",
+   "speciale": false,
+   "titre": "Décret imposant une surtaxe sur certaines armoires et certains meubles-lavabos en bois",
+   "titre_index": "Surtaxe sur certaines armoires et certains meubles-lavabos en bois — Décret imposant une"
+  },
+  "direction": 0,
+  "entities": [
+   "Tarif des douanes"
+  ],
+  "id": "gazette_ca:DORS/2026-169",
+  "kind": "reglement",
+  "notes": [],
+  "occurred_on": "2026-07-31",
+  "official_id": "DORS/2026-169",
+  "official_url": "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-12/html/sor-dors169-fra.html",
+  "parser_version": "gazette-1",
+  "published_on": "2026-08-12",
+  "sha256": "e32a69ce0a592d51d4d36ca2d0de16f96b73a118b950b9186ea8a3a9a4f027b6",
+  "source": "gazette_ca",
+  "tickers": [],
+  "title": "Gazette du Canada : Décret imposant une surtaxe sur certaines armoires et certains meubles-lavabos en bois (DORS/2026-169)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "politiciens",
   "checks": {
    "champs_requis": true,
@@ -35609,5 +41145,72 @@
   "source": "fda",
   "tickers": [],
   "title": "FDA : nouveau médicament approuvé, ORZEYFUL (oveporexton), de TAKEDA PHARMS USA"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_de_la_gazette": true,
+   "loi_visant_a_batir_le_canada": true,
+   "projet_nomme": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_officiel_de_l_avis": true
+  },
+  "collected_at": "2026-10-03T16:24:36+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "description": "L’oléoduc pétrolier de la côte Ouest est un projet d’oléoduc interprovincial capable de transporter un million de barils par jour de pétrole brut canadien, de Bruderheim, en Alberta (à environ 50 km au nord-est d’Edmonton) jusqu’à un port en eaux profondes près de Delta, en Colombie-Britannique (à environ 35 km au sud de Vancouver), où le pétrole serait transféré sur des navires et expédié sur les marchés mondiaux.",
+   "details": [
+    [
+     "Projet",
+     "Oléoduc pétrolier de la côte ouest"
+    ],
+    [
+     "Loi",
+     "Loi visant à bâtir le Canada"
+    ],
+    [
+     "Publié dans",
+     "Gazette du Canada, Partie I, 2026-08-01"
+    ],
+    [
+     "Description",
+     "L’oléoduc pétrolier de la côte Ouest est un projet d’oléoduc interprovincial capable de transporter un million de barils par jour de pétrole brut canadien, de Bruderheim, en Alberta (à environ 50 km au nord-est d’Edmonton) jusqu’à un port en eaux profondes près de Delta, en Colombie-Britannique (à environ 35 km au sud de Vancouver), où le pétrole serait transféré sur des navires et expédié sur les marchés mondiaux."
+    ]
+   ],
+   "jour": "2026-08-01",
+   "loi": "Loi visant à bâtir le Canada",
+   "projet": "Oléoduc pétrolier de la côte ouest",
+   "resume": "Conformément au paragraphe 5(1.1) de la Loi visant à bâtir le Canada (la Loi), avis est par les présentes donné que la gouverneure en conseil peut modifier l’annexe 1 de la Loi afin d’inscrire l’oléoduc pétrolier de la côte Ouest sur la liste des projets d’intérêt national. Parallèlement, au nom de la gouverneure en conseil et à titre de ministre responsable en vertu de la Loi, le président du Conseil privé du Roi pour le Canada, l’honorable Dominic LeBlanc, consultera les gouvernements de l’Alberta et de la Colombie-Britannique, les provinces où le projet sera réalisé.",
+   "texte": "Conformément au paragraphe 5(1.1) de la Loi visant à bâtir le Canada (la Loi), avis est par les présentes donné que la gouverneure en conseil peut modifier l’annexe 1 de la Loi afin d’inscrire l’oléoduc pétrolier de la côte Ouest sur la liste des projets d’intérêt national. Parallèlement, au nom de la gouverneure en conseil et à titre de ministre responsable en vertu de la Loi, le président du Conseil privé du Roi pour le Canada, l’honorable Dominic LeBlanc, consultera les gouvernements de l’Alberta et de la Colombie-Britannique, les provinces où le projet sera réalisé.",
+   "titre": "Avis — Oléoduc pétrolier de la côte Ouest"
+  },
+  "direction": 0,
+  "entities": [
+   "Bureau des grands projets"
+  ],
+  "id": "grands_projets_ca:avis:2026-08-01:sup1",
+  "kind": "avis_projet",
+  "notes": [
+   "Étape officielle : l'avis paraît au moins 30 jours avant que le projet puisse être inscrit."
+  ],
+  "occurred_on": "2026-08-01",
+  "official_id": "avis:2026-08-01:sup1",
+  "official_url": "https://gazette.gc.ca/rp-pr/p1/2026/2026-08-01/html/sup1-fra.html",
+  "parser_version": "gazette-1",
+  "published_on": "2026-08-01",
+  "sha256": "bdf020d30dfd2c7dce169b623e167472b0891bc369f4ef1dc924ae0ae86d3422",
+  "source": "grands_projets_ca",
+  "tickers": [],
+  "title": "Projet d'intérêt national : avis d'inscription possible, Oléoduc pétrolier de la côte ouest"
  }
 ]
