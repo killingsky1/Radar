@@ -100,7 +100,7 @@
    "symbole": "CBZ"
   }
  ],
- "compagnies_notees": 114,
+ "compagnies_notees": 112,
  "evenements": {
   "sec_13dg:0000921895-26-002669": {
    "amount_max": null,
@@ -222,17 +222,19 @@
     "source_officielle": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-03T03:04:33+00:00",
+   "collected_at": "2026-10-03T03:17:14+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 45383306.0,
     "amendement": "20",
     "bourse": "NYSE",
+    "but_sous_evalue": null,
     "cik_emetteur": "0001326380",
     "cik_sujet_entete": "0001326380",
     "date_evenement": "2026-10-02",
     "declarant": "Cohen Ryan",
+    "extrait_but": null,
     "nb_personnes": 1,
     "nom_emetteur": "GameStop Corp.",
     "pourcentage": 8.9,
@@ -252,7 +254,7 @@
    "occurred_on": "2026-10-02",
    "official_id": "0000921895-26-002718",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1326380/000092189526002718/0000921895-26-002718-index.htm",
-   "parser_version": "sec-5",
+   "parser_version": "sec-6",
    "published_on": "2026-10-02",
    "sha256": "a7d251441ec429220d21f3e3e7b33be220d44b93668856c97ef3045fe9e81f4b",
    "source": "sec_13dg",
@@ -260,64 +262,6 @@
     "GME"
    ],
    "title": "Cohen Ryan détient 8,9 % de GameStop Corp. (13D, intentions actives, mise à jour n° 20)"
-  },
-  "sec_13dg:0000947871-26-000917": {
-   "amount_max": null,
-   "amount_min": null,
-   "badge": "officiel",
-   "category": "baleines",
-   "checks": {
-    "champs_requis": true,
-    "dates_coherentes": true,
-    "domaine_officiel": true,
-    "emetteur_coherent": true,
-    "empreinte": true,
-    "pourcentage_valide": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-03T03:04:31+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 14913764.0,
-    "amendement": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001802369",
-    "cik_sujet_entete": "0001802369",
-    "date_evenement": "2026-09-28",
-    "declarant": "ORBIMED ADVISORS LLC",
-    "nb_personnes": 5,
-    "nom_emetteur": "ADARx Pharmaceuticals, Inc.",
-    "pourcentage": 14.0,
-    "type": "SCHEDULE 13D",
-    "types_declarants": [
-     "CO",
-     "IA",
-     "OO",
-     "PN"
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "ORBIMED ADVISORS LLC",
-    "ADARx Pharmaceuticals, Inc."
-   ],
-   "id": "sec_13dg:0000947871-26-000917",
-   "kind": "plus_5_pourcent",
-   "notes": [],
-   "occurred_on": "2026-09-28",
-   "official_id": "0000947871-26-000917",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1802369/000094787126000917/0000947871-26-000917-index.htm",
-   "parser_version": "sec-5",
-   "published_on": "2026-10-02",
-   "sha256": "a00384d600a196d7fc313b92a42ef1f8be6a4f6f5199cfafe957a356843bdfb4",
-   "source": "sec_13dg",
-   "tickers": [
-    "ADRX"
-   ],
-   "title": "ORBIMED ADVISORS LLC détient 14 % de ADARx Pharmaceuticals, Inc. (13D, intentions actives)"
   },
   "sec_13dg:0001013594-26-000998": {
    "amount_max": null,
@@ -335,17 +279,19 @@
     "source_officielle": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-03T03:04:20+00:00",
+   "collected_at": "2026-10-03T03:17:00+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 554736.0,
     "amendement": null,
     "bourse": "Nasdaq",
+    "but_sous_evalue": true,
     "cik_emetteur": "0001549966",
     "cik_sujet_entete": "0001549966",
     "date_evenement": "2026-09-23",
     "declarant": "Equinox Partners Investment Management LLC",
+    "extrait_but": "The Reporting Persons purchased the Shares based on the Reporting Persons' belief that the Shares, when purchased, were undervalued and represented an attractive investment opportunity.",
     "nb_personnes": 3,
     "nom_emetteur": "Silvercrest Asset Management Group Inc.",
     "pourcentage": 7.1,
@@ -367,7 +313,7 @@
    "occurred_on": "2026-09-23",
    "official_id": "0001013594-26-000998",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1549966/000101359426000998/0001013594-26-000998-index.htm",
-   "parser_version": "sec-5",
+   "parser_version": "sec-6",
    "published_on": "2026-09-30",
    "sha256": "25e5f711af0549072ff67eaa5cc9f2b955cba9719c57b4912e4b465cee343a23",
    "source": "sec_13dg",
@@ -392,17 +338,19 @@
     "source_officielle": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-03T03:04:20+00:00",
+   "collected_at": "2026-10-03T03:17:00+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 2519703.0,
     "amendement": null,
     "bourse": "NYSE",
+    "but_sous_evalue": true,
     "cik_emetteur": "0000836412",
     "cik_sujet_entete": "0000836412",
     "date_evenement": "2026-09-28",
     "declarant": "Saba Capital Management, L.P.",
+    "extrait_but": "The Reporting Persons acquired the Common Shares to which this Schedule 13D relates in the ordinary course of business for investment purposes because they believe that the Common Shares are undervalued and represent an attractive investment opportunity.",
     "nb_personnes": 3,
     "nom_emetteur": "Virtus Total Return Fund Inc.",
     "pourcentage": 5.04,
@@ -424,7 +372,7 @@
    "occurred_on": "2026-09-28",
    "official_id": "0001062993-26-005116",
    "official_url": "https://www.sec.gov/Archives/edgar/data/836412/000106299326005116/0001062993-26-005116-index.htm",
-   "parser_version": "sec-5",
+   "parser_version": "sec-6",
    "published_on": "2026-09-30",
    "sha256": "bdc907c5239c102d82778eb3eca8b021d191007ea3b52ebb925e0ce8bf64df3e",
    "source": "sec_13dg",
@@ -432,61 +380,6 @@
     "ZTR"
    ],
    "title": "Saba Capital Management, L.P. détient 5,04 % de Virtus Total Return Fund Inc. (13D, intentions actives)"
-  },
-  "sec_13dg:0001193125-26-410626": {
-   "amount_max": null,
-   "amount_min": null,
-   "badge": "officiel",
-   "category": "baleines",
-   "checks": {
-    "champs_requis": true,
-    "dates_coherentes": true,
-    "domaine_officiel": true,
-    "emetteur_coherent": true,
-    "empreinte": true,
-    "pourcentage_valide": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-03T03:04:28+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 6728970.0,
-    "amendement": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001802369",
-    "cik_sujet_entete": "0001802369",
-    "date_evenement": "2026-09-24",
-    "declarant": "BCLS Fund III Investments, LP",
-    "nb_personnes": 1,
-    "nom_emetteur": "ADARx Pharmaceuticals, Inc.",
-    "pourcentage": 6.3,
-    "type": "SCHEDULE 13G",
-    "types_declarants": [
-     "PN"
-    ]
-   },
-   "direction": 0,
-   "entities": [
-    "BCLS Fund III Investments, LP",
-    "ADARx Pharmaceuticals, Inc."
-   ],
-   "id": "sec_13dg:0001193125-26-410626",
-   "kind": "plus_5_pourcent",
-   "notes": [],
-   "occurred_on": "2026-09-24",
-   "official_id": "0001193125-26-410626",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1802369/000119312526410626/0001193125-26-410626-index.htm",
-   "parser_version": "sec-5",
-   "published_on": "2026-10-01",
-   "sha256": "0f144b9f59c82c1aee24cc6afaa1669f4eb337fac2ed290898e8305fe66096f5",
-   "source": "sec_13dg",
-   "tickers": [
-    "ADRX"
-   ],
-   "title": "BCLS Fund III Investments, LP détient 6,3 % de ADARx Pharmaceuticals, Inc. (13G, placement passif)"
   },
   "sec_13dg:0001193805-26-001309": {
    "amount_max": null,
@@ -504,17 +397,19 @@
     "source_officielle": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-03T03:04:25+00:00",
+   "collected_at": "2026-10-03T03:17:06+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 364083258.0,
     "amendement": "21",
     "bourse": "NYSE",
+    "but_sous_evalue": null,
     "cik_emetteur": "0000896493",
     "cik_sujet_entete": "0000896493",
     "date_evenement": "2026-09-30",
     "declarant": "AULT MILTON C III",
+    "extrait_but": null,
     "nb_personnes": 5,
     "nom_emetteur": "Hyperscale Data, Inc.",
     "pourcentage": 64.1,
@@ -535,7 +430,7 @@
    "occurred_on": "2026-09-30",
    "official_id": "0001193805-26-001309",
    "official_url": "https://www.sec.gov/Archives/edgar/data/896493/000119380526001309/0001193805-26-001309-index.htm",
-   "parser_version": "sec-5",
+   "parser_version": "sec-6",
    "published_on": "2026-10-01",
    "sha256": "21ee9bbd859b3cdfed28f8ff5a8ba9763d5f0322ce9f5c4647e1ef6a4b082da6",
    "source": "sec_13dg",
@@ -560,17 +455,19 @@
     "source_officielle": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-03T03:04:29+00:00",
+   "collected_at": "2026-10-03T03:17:09+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 38687808.0,
     "amendement": "2",
     "bourse": "Nasdaq",
+    "but_sous_evalue": false,
     "cik_emetteur": "0001836242",
     "cik_sujet_entete": "0001836242",
     "date_evenement": "2026-09-29",
     "declarant": "Mei Kanayama",
+    "extrait_but": "Mr. Mei Kanayama serves as Representative Director and Director of the Issuer. In such capacities, Mr. Mei Kanayama may engage in communications with the Issuer's Board of Directors, members of management, other shareholders, financial and legal advisers, and other parties regarding the Issuer, incl",
     "nb_personnes": 1,
     "nom_emetteur": "Tokyo Lifestyle Co., Ltd.",
     "pourcentage": 69.3,
@@ -590,7 +487,7 @@
    "occurred_on": "2026-09-29",
    "official_id": "0001213900-26-105762",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1836242/000121390026105762/0001213900-26-105762-index.htm",
-   "parser_version": "sec-5",
+   "parser_version": "sec-6",
    "published_on": "2026-10-01",
    "sha256": "d21ad6526dd802963c09c6d9b069f3034e2631e0e730bff305ed92ac208aeef2",
    "source": "sec_13dg",
@@ -615,17 +512,19 @@
     "source_officielle": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-03T03:04:27+00:00",
+   "collected_at": "2026-10-03T03:17:08+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 484749.0,
     "amendement": null,
     "bourse": "Nasdaq",
+    "but_sous_evalue": true,
     "cik_emetteur": "0001672909",
     "cik_sujet_entete": "0001672909",
     "date_evenement": "2026-09-30",
     "declarant": "Gate City Capital Management, LLC",
+    "extrait_but": "The Reporting Person purchased the Common Stock based on the Reporting Person's belief that the Common Stock, when purchased, were undervalued and did not adequately reflect the potential value of the Company's underlying business and assets.",
     "nb_personnes": 2,
     "nom_emetteur": "CANTERBURY PARK HOLDING CORPORATION",
     "pourcentage": 9.35,
@@ -646,7 +545,7 @@
    "occurred_on": "2026-09-30",
    "official_id": "0001398344-26-017759",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1672909/000139834426017759/0001398344-26-017759-index.htm",
-   "parser_version": "sec-5",
+   "parser_version": "sec-6",
    "published_on": "2026-10-01",
    "sha256": "cfb4f48816cf4a62e3004cfd8d91a0dd26af163bd6600e39e2df45e351c24e3f",
    "source": "sec_13dg",
@@ -654,65 +553,6 @@
     "CPHC"
    ],
    "title": "Gate City Capital Management, LLC détient 9,35 % de Canterbury Park Holding Corp (13D, intentions actives)"
-  },
-  "sec_13dg:0001493152-26-045190": {
-   "amount_max": null,
-   "amount_min": null,
-   "badge": "officiel",
-   "category": "baleines",
-   "checks": {
-    "champs_requis": true,
-    "dates_coherentes": true,
-    "domaine_officiel": true,
-    "emetteur_coherent": true,
-    "empreinte": true,
-    "pourcentage_valide": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-03T03:04:22+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 4987103.0,
-    "amendement": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001846416",
-    "cik_sujet_entete": "0001846416",
-    "date_evenement": "2026-09-23",
-    "declarant": "NCCS Management, LLC",
-    "nb_personnes": 5,
-    "nom_emetteur": "ONE Nuclear Energy Inc. (f/k/a Hennessy Capital Investment Corp. VII)",
-    "pourcentage": 4.6,
-    "type": "SCHEDULE 13D",
-    "types_declarants": [
-     "HC",
-     "IA",
-     "IN",
-     "OO",
-     "PN"
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "NCCS Management, LLC",
-    "ONE Nuclear Energy Inc."
-   ],
-   "id": "sec_13dg:0001493152-26-045190",
-   "kind": "plus_5_pourcent",
-   "notes": [],
-   "occurred_on": "2026-09-23",
-   "official_id": "0001493152-26-045190",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1846416/000149315226045190/0001493152-26-045190-index.htm",
-   "parser_version": "sec-5",
-   "published_on": "2026-09-30",
-   "sha256": "87f1af2840f50e213783f26426bd459a2cee5aeca364ded33d3c525794b6895e",
-   "source": "sec_13dg",
-   "tickers": [
-    "ONEN"
-   ],
-   "title": "NCCS Management, LLC détient 4,6 % de ONE Nuclear Energy Inc. (13D, intentions actives)"
   },
   "sec_8k:0001193125-26-408874": {
    "amount_max": null,
@@ -833,69 +673,6 @@
     "GPUS"
    ],
    "title": "Hyperscale Data, Inc. : contrat important signé"
-  },
-  "sec_8k:0001493152-26-044924": {
-   "amount_max": null,
-   "amount_min": null,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "dates_coherentes": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "items_officiels_reconnus": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symboles_valides": true,
-    "type_8k": true
-   },
-   "collected_at": "2026-10-02T20:01:37+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "bourse": "Nasdaq",
-    "cik": "0001846416",
-    "items": [
-     {
-      "direction": 0,
-      "item": "1.01",
-      "libelle": "contrat important signé",
-      "officiel": "Entry into a Material Definitive Agreement"
-     },
-     {
-      "direction": 0,
-      "item": "2.01",
-      "libelle": "acquisition ou vente d'actifs complétée",
-      "officiel": "Completion of Acquisition or Disposition of Assets"
-     },
-     {
-      "direction": 0,
-      "item": "5.01",
-      "libelle": "changement de contrôle",
-      "officiel": "Changes in Control of Registrant"
-     }
-    ],
-    "type": "8-K"
-   },
-   "direction": 0,
-   "entities": [
-    "ONE Nuclear Energy Inc."
-   ],
-   "id": "sec_8k:0001493152-26-044924",
-   "kind": "evenement_8k",
-   "notes": [],
-   "occurred_on": "2026-09-23",
-   "official_id": "0001493152-26-044924",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1846416/000149315226044924/0001493152-26-044924-index.htm",
-   "parser_version": "sec-2",
-   "published_on": "2026-09-29",
-   "sha256": "76bf4a14f4660fb2c7e9e274109fdbf31433f2777a5678a0b1a1b7503f77080e",
-   "source": "sec_8k",
-   "tickers": [
-    "ONEN"
-   ],
-   "title": "ONE Nuclear Energy Inc. : contrat important signé + acquisition ou vente d'actifs complétée + changement de contrôle"
   },
   "sec_form4:0000912282-26-001334:P": {
    "amount_max": 38730.0,
@@ -1114,249 +891,6 @@
    ],
    "title": "Cohen Ryan (President, CEO and Chairman) achète 700 000 actions de GameStop Corp."
   },
-  "sec_form4:0000947871-26-000910:P": {
-   "amount_max": 16150000.0,
-   "amount_min": 16150000.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-02T19:57:34+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 950000.0,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001802369",
-    "plan_10b5_1": false,
-    "prix_moyen": 17.0,
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "ADRX",
-    "symboles_sec": [
-     "ADRX"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 300249.0,
-      "apres": 14325529.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "prix": 17.0
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 61516.0,
-      "apres": 9292025.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "prix": 17.0
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 588235.0,
-      "apres": 588235.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "prix": 17.0
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "ORBIMED ADVISORS LLC",
-    "OrbiMed Capital GP VII LLC",
-    "OrbiMed Israel GP II, L.P.",
-    "OrbiMed Advisors Israel II Ltd",
-    "OrbiMed Genesis GP LLC",
-    "ADARx Pharmaceuticals, Inc."
-   ],
-   "id": "sec_form4:0000947871-26-000910:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-28",
-   "official_id": "0000947871-26-000910:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1802369/000094787126000910/0000947871-26-000910-index.htm",
-   "parser_version": "sec-2",
-   "published_on": "2026-09-30",
-   "sha256": "8087b0e8b53de8d41f04e268ef6e805eda9fc65c3f077732e3076f17294820c3",
-   "source": "sec_form4",
-   "tickers": [
-    "ADRX"
-   ],
-   "title": "ORBIMED ADVISORS LLC et OrbiMed Capital GP VII LLC et OrbiMed Israel GP II, L.P. et OrbiMed Advisors Israel II Ltd et OrbiMed Genesis GP LLC (administrateur) achète 950 000 actions de ADARx Pharmaceuticals, Inc."
-  },
-  "sec_form4:0000947871-26-000911:P": {
-   "amount_max": 16150000.0,
-   "amount_min": 16150000.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-02T19:57:48+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 950000.0,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001802369",
-    "plan_10b5_1": false,
-    "prix_moyen": 17.0,
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "ADRX",
-    "symboles_sec": [
-     "ADRX"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 300249.0,
-      "apres": 14325529.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "prix": 17.0
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 61516.0,
-      "apres": 9292025.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "prix": 17.0
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 588235.0,
-      "apres": 588235.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "prix": 17.0
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "GORDON CARL L",
-    "ADARx Pharmaceuticals, Inc."
-   ],
-   "id": "sec_form4:0000947871-26-000911:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-28",
-   "official_id": "0000947871-26-000911:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1802369/000094787126000911/0000947871-26-000911-index.htm",
-   "parser_version": "sec-2",
-   "published_on": "2026-09-30",
-   "sha256": "0afa834e1494a6af3efc108b877e137afc7fff5f39db207f9244eb471d0b404e",
-   "source": "sec_form4",
-   "tickers": [
-    "ADRX"
-   ],
-   "title": "GORDON CARL L (administrateur) achète 950 000 actions de ADARx Pharmaceuticals, Inc."
-  },
-  "sec_form4:0000947871-26-000912:P": {
-   "amount_max": 1045772.0,
-   "amount_min": 1045772.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-02T19:58:08+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 61516.0,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001802369",
-    "plan_10b5_1": false,
-    "prix_moyen": 17.0,
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "ADRX",
-    "symboles_sec": [
-     "ADRX"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 61516.0,
-      "apres": 9292025.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "prix": 17.0
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Chimovits Erez",
-    "ADARx Pharmaceuticals, Inc."
-   ],
-   "id": "sec_form4:0000947871-26-000912:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-28",
-   "official_id": "0000947871-26-000912:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1802369/000094787126000912/0000947871-26-000912-index.htm",
-   "parser_version": "sec-2",
-   "published_on": "2026-09-30",
-   "sha256": "d227ddfa3dc6661f0aa4629614639c369811b31aee10e9a93c9615f96ae5c858",
-   "source": "sec_form4",
-   "tickers": [
-    "ADRX"
-   ],
-   "title": "Chimovits Erez (administrateur) achète 61 516 actions de ADARx Pharmaceuticals, Inc."
-  },
   "sec_form4:0001104659-26-112076:P": {
    "amount_max": 340099.98,
    "amount_min": 340099.98,
@@ -1379,13 +913,14 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:58:16+00:00",
+   "collected_at": "2026-10-03T03:16:45+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 150600.0,
     "bourse": "NYSE",
     "cik_emetteur": "0001815846",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 2.2583,
     "roles": [
@@ -1403,6 +938,7 @@
       "apres": 394474.0,
       "code": "P",
       "date": "2026-09-29",
+      "hors_bourse": null,
       "prix": 2.2583
      }
     ]
@@ -1418,7 +954,7 @@
    "occurred_on": "2026-09-29",
    "official_id": "0001104659-26-112076:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1815846/000110465926112076/0001104659-26-112076-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-6",
    "published_on": "2026-09-30",
    "sha256": "38011e9a4c9135774774f22fb85a5f85113eafd0513f21f7e1cc110d1e209200",
    "source": "sec_form4",
@@ -1565,176 +1101,6 @@
     "SPG"
    ],
    "title": "GLASSCOCK LARRY C (administrateur) achète 367 actions de SIMON PROPERTY GROUP INC."
-  },
-  "sec_form4:0001193125-26-408061:P": {
-   "amount_max": 27200000.0,
-   "amount_min": 27200000.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-02T19:56:48+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 1600000.0,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001802369",
-    "plan_10b5_1": false,
-    "prix_moyen": 17.0,
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "ADRX",
-    "symboles_sec": [
-     "ADRX"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 592593.0,
-      "apres": 5554094.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "prix": 17.0
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 414814.0,
-      "apres": 1953505.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "prix": 17.0
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 592593.0,
-      "apres": 592593.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "prix": 17.0
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "George Simeon",
-    "ADARx Pharmaceuticals, Inc."
-   ],
-   "id": "sec_form4:0001193125-26-408061:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-28",
-   "official_id": "0001193125-26-408061:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1802369/000119312526408061/0001193125-26-408061-index.htm",
-   "parser_version": "sec-2",
-   "published_on": "2026-09-29",
-   "sha256": "08492bb9ee0abb633474d9c468dcd3f3ac56e57a97aa8f0ed09be22afa30e3d6",
-   "source": "sec_form4",
-   "tickers": [
-    "ADRX"
-   ],
-   "title": "George Simeon (administrateur) achète 1 600 000 actions de ADARx Pharmaceuticals, Inc."
-  },
-  "sec_form4:0001193125-26-408064:P": {
-   "amount_max": 27200000.0,
-   "amount_min": 27200000.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-02T19:57:07+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 1600000.0,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001802369",
-    "plan_10b5_1": false,
-    "prix_moyen": 17.0,
-    "roles": [
-     "actionnaire de 10 %"
-    ],
-    "symbole_declare": "ADRX",
-    "symboles_sec": [
-     "ADRX"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 592593.0,
-      "apres": 5554094.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "prix": 17.0
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 414814.0,
-      "apres": 1953505.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "prix": 17.0
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 592593.0,
-      "apres": 592593.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "prix": 17.0
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "SR ONE CAPITAL MANAGEMENT, LLC",
-    "ADARx Pharmaceuticals, Inc."
-   ],
-   "id": "sec_form4:0001193125-26-408064:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-28",
-   "official_id": "0001193125-26-408064:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1802369/000119312526408064/0001193125-26-408064-index.htm",
-   "parser_version": "sec-2",
-   "published_on": "2026-09-29",
-   "sha256": "834ccc815ab423a751bba52655b5313a2f7bcad4f4c87006ffd2aee01dc715f6",
-   "source": "sec_form4",
-   "tickers": [
-    "ADRX"
-   ],
-   "title": "SR ONE CAPITAL MANAGEMENT, LLC (actionnaire de 10 %) achète 1 600 000 actions de ADARx Pharmaceuticals, Inc."
   },
   "sec_form4:0001193125-26-409999:P": {
    "amount_max": 1121400.0,
@@ -2543,13 +1909,14 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:58:21+00:00",
+   "collected_at": "2026-10-03T03:16:51+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 2040.0,
     "bourse": "NYSE",
     "cik_emetteur": "0000039368",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 49.0779,
     "roles": [
@@ -2566,6 +1933,7 @@
       "apres": 3346.0,
       "code": "P",
       "date": "2026-09-28",
+      "hors_bourse": null,
       "prix": 49.06
      },
      {
@@ -2574,6 +1942,7 @@
       "apres": 3386.0,
       "code": "P",
       "date": "2026-09-29",
+      "hors_bourse": null,
       "prix": 49.9726
      }
     ]
@@ -2589,7 +1958,7 @@
    "occurred_on": "2026-09-28",
    "official_id": "0001225208-26-008011:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/39368/000122520826008011/0001225208-26-008011-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-6",
    "published_on": "2026-09-30",
    "sha256": "5efef98b11fbbd63ce7b8c9e07ba05ac50ac9d81676cebc9269a02afe9e67a61",
    "source": "sec_form4",
@@ -2620,13 +1989,14 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:58:03+00:00",
+   "collected_at": "2026-10-03T03:16:32+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 2005.0,
     "bourse": "NYSE",
     "cik_emetteur": "0000039368",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 49.8676,
     "roles": [
@@ -2643,6 +2013,7 @@
       "apres": 3356.0,
       "code": "P",
       "date": "2026-09-29",
+      "hors_bourse": null,
       "prix": 49.8676
      }
     ]
@@ -2658,7 +2029,7 @@
    "occurred_on": "2026-09-29",
    "official_id": "0001225208-26-008012:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/39368/000122520826008012/0001225208-26-008012-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-6",
    "published_on": "2026-09-30",
    "sha256": "7f0865d72107a03204780a3645770a07c5595ac3656bd77a37446bab2cdf4c14",
    "source": "sec_form4",
@@ -2689,13 +2060,14 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:58:18+00:00",
+   "collected_at": "2026-10-03T03:16:47+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 2042.0,
     "bourse": "NYSE",
     "cik_emetteur": "0000039368",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 48.9639,
     "roles": [
@@ -2712,6 +2084,7 @@
       "apres": 3552.873,
       "code": "P",
       "date": "2026-09-28",
+      "hors_bourse": null,
       "prix": 48.9587
      },
      {
@@ -2720,6 +2093,7 @@
       "apres": 4052.873,
       "code": "P",
       "date": "2026-09-28",
+      "hors_bourse": null,
       "prix": 48.98
      }
     ]
@@ -2735,7 +2109,7 @@
    "occurred_on": "2026-09-28",
    "official_id": "0001225208-26-008013:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/39368/000122520826008013/0001225208-26-008013-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-6",
    "published_on": "2026-09-30",
    "sha256": "e244d57db1616e3877d09e2f721af818b201e98868675709a9612a0e8b8114ea",
    "source": "sec_form4",
@@ -2766,13 +2140,14 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:57:48+00:00",
+   "collected_at": "2026-10-03T03:16:17+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 2000.0,
     "bourse": "NYSE",
     "cik_emetteur": "0000039368",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 49.41,
     "roles": [
@@ -2789,6 +2164,7 @@
       "apres": 2000.0,
       "code": "P",
       "date": "2026-09-28",
+      "hors_bourse": null,
       "prix": 49.41
      }
     ]
@@ -2804,7 +2180,7 @@
    "occurred_on": "2026-09-28",
    "official_id": "0001225208-26-008014:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/39368/000122520826008014/0001225208-26-008014-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-6",
    "published_on": "2026-09-30",
    "sha256": "e3b58f3f05304ff28a219b563b515c8ba97540363c53887a05fe9ae312104f6a",
    "source": "sec_form4",
@@ -2835,13 +2211,14 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:57:31+00:00",
+   "collected_at": "2026-10-03T03:16:01+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 2030.0,
     "bourse": "NYSE",
     "cik_emetteur": "0000039368",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 49.34,
     "roles": [
@@ -2858,6 +2235,7 @@
       "apres": 3381.0,
       "code": "P",
       "date": "2026-09-28",
+      "hors_bourse": null,
       "prix": 49.34
      }
     ]
@@ -2873,7 +2251,7 @@
    "occurred_on": "2026-09-28",
    "official_id": "0001225208-26-008015:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/39368/000122520826008015/0001225208-26-008015-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-6",
    "published_on": "2026-09-30",
    "sha256": "e00257afe6a29a81859680e268384daaa120633305fff6d54799dcea7b84f126",
    "source": "sec_form4",
@@ -3091,6 +2469,99 @@
    ],
    "title": "Aeppel Glyn (administrateur) achète 222 actions de SIMON PROPERTY GROUP INC."
   },
+  "sec_form4:0001398344-26-017532:P": {
+   "amount_max": 115813.51,
+   "amount_min": 115813.51,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-02T19:56:33+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 20000.0,
+    "bourse": "NYSE",
+    "cik_emetteur": "0000813623",
+    "plan_10b5_1": false,
+    "prix_moyen": 5.7907,
+    "roles": [
+     "President and CEO"
+    ],
+    "symbole_declare": "SWZ",
+    "symboles_sec": [
+     "SWZ"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 7649.0,
+      "apres": 47649.0,
+      "code": "P",
+      "date": "2026-09-25",
+      "prix": 5.81
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 2351.0,
+      "apres": 50000.0,
+      "code": "P",
+      "date": "2026-09-25",
+      "prix": 5.82
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 1000.0,
+      "apres": 51000.0,
+      "code": "P",
+      "date": "2026-09-28",
+      "prix": 5.76
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 9000.0,
+      "apres": 60000.0,
+      "code": "P",
+      "date": "2026-09-28",
+      "prix": 5.77
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Dakos Andrew",
+    "Total Return Securities Fund"
+   ],
+   "id": "sec_form4:0001398344-26-017532:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-09-25",
+   "official_id": "0001398344-26-017532:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/813623/000139834426017532/0001398344-26-017532-index.htm",
+   "parser_version": "sec-2",
+   "published_on": "2026-09-29",
+   "sha256": "afbb790157a27c20f1c537a3f1ae28fdcc63ef7de9683afff3691c94c2d0c2b7",
+   "source": "sec_form4",
+   "tickers": [
+    "SWZ"
+   ],
+   "title": "Dakos Andrew (President and CEO) achète 20 000 actions de Total Return Securities Fund"
+  },
   "sec_form4:0001398344-26-017659:P": {
    "amount_max": 59963.28,
    "amount_min": 59963.28,
@@ -3113,13 +2584,14 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:58:02+00:00",
+   "collected_at": "2026-10-03T03:16:31+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 4780.0,
     "bourse": "NYSE",
     "cik_emetteur": "0001551047",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 12.5446,
     "roles": [
@@ -3136,6 +2608,7 @@
       "apres": 13672.0,
       "code": "P",
       "date": "2026-09-28",
+      "hors_bourse": null,
       "prix": 12.4897
      },
      {
@@ -3144,6 +2617,7 @@
       "apres": 16052.0,
       "code": "P",
       "date": "2026-09-30",
+      "hors_bourse": null,
       "prix": 12.6
      }
     ]
@@ -3159,7 +2633,7 @@
    "occurred_on": "2026-09-28",
    "official_id": "0001398344-26-017659:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1551047/000139834426017659/0001398344-26-017659-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-6",
    "published_on": "2026-09-30",
    "sha256": "1a7bf508479fea4d71dcfc0a8f3e613e58a570120af2f30072f21bc39b35c31f",
    "source": "sec_form4",
@@ -3190,13 +2664,14 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:57:39+00:00",
+   "collected_at": "2026-10-03T03:16:09+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 425590.0,
     "bourse": "NYSE",
     "cik_emetteur": "0001551047",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 12.5737,
     "roles": [
@@ -3213,6 +2688,7 @@
       "apres": 616439.0,
       "code": "P",
       "date": "2026-09-28",
+      "hors_bourse": null,
       "prix": 12.5011
      },
      {
@@ -3221,6 +2697,7 @@
       "apres": 752256.0,
       "code": "P",
       "date": "2026-09-29",
+      "hors_bourse": null,
       "prix": 12.6029
      },
      {
@@ -3229,6 +2706,7 @@
       "apres": 906360.0,
       "code": "P",
       "date": "2026-09-30",
+      "hors_bourse": null,
       "prix": 12.6119
      }
     ]
@@ -3244,7 +2722,7 @@
    "occurred_on": "2026-09-28",
    "official_id": "0001398344-26-017661:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1551047/000139834426017661/0001398344-26-017661-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-6",
    "published_on": "2026-09-30",
    "sha256": "ec932d57c3bcb222fc7b4d0c8327364ba8562822b95023ca049bfdb417422ec6",
    "source": "sec_form4",
@@ -3275,13 +2753,14 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:57:35+00:00",
+   "collected_at": "2026-10-03T03:16:04+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 93091.0,
     "bourse": "Nasdaq",
     "cik_emetteur": "0001069530",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 0.84,
     "roles": [
@@ -3298,6 +2777,7 @@
       "apres": 1031151.0,
       "code": "P",
       "date": "2026-09-28",
+      "hors_bourse": null,
       "prix": 0.84
      }
     ]
@@ -3313,7 +2793,7 @@
    "occurred_on": "2026-09-28",
    "official_id": "0001437749-26-031597:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1069530/000143774926031597/0001437749-26-031597-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-6",
    "published_on": "2026-09-30",
    "sha256": "6ce1721db187b762b0c548eabe5de2af1c110a5cea1c9b56ca69a25a652a1dd1",
    "source": "sec_form4",
@@ -3398,6 +2878,76 @@
     "FLNA"
    ],
    "title": "Barry Richard (President & CEO) achète 306 813 actions de FILANA THERAPEUTICS, INC."
+  },
+  "sec_form4:0001437749-26-031876:P": {
+   "amount_max": 822013.56,
+   "amount_min": 822013.56,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-03T03:00:21+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 99277.0,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001408534",
+    "plan_10b5_1": false,
+    "prix_moyen": 8.28,
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "FGBI",
+    "symboles_sec": [
+     "FGBI",
+     "FGBIP"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 99277.0,
+      "apres": 958523.0,
+      "code": "P",
+      "date": "2026-09-30",
+      "prix": 8.28
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Smith Edgar R. III",
+    "First Guaranty Bancshares, Inc."
+   ],
+   "id": "sec_form4:0001437749-26-031876:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-09-30",
+   "official_id": "0001437749-26-031876:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1408534/000143774926031876/0001437749-26-031876-index.htm",
+   "parser_version": "sec-5",
+   "published_on": "2026-10-02",
+   "sha256": "cae068f2ffb497190ca773e196080c9373cd4f54f8e4f28bfd228b6bdcb3c444",
+   "source": "sec_form4",
+   "tickers": [
+    "FGBI"
+   ],
+   "title": "Smith Edgar R. III (administrateur) achète 99 277 actions de First Guaranty Bancshares, Inc."
   },
   "sec_form4:0001464273-26-000010:P": {
    "amount_max": 70973.0,
@@ -3631,13 +3181,14 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-02T19:58:21+00:00",
+   "collected_at": "2026-10-03T03:16:50+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
     "actions": 46935.0,
     "bourse": "Nasdaq",
     "cik_emetteur": "0001901279",
+    "hors_bourse": null,
     "plan_10b5_1": false,
     "prix_moyen": 44.9042,
     "roles": [
@@ -3654,6 +3205,7 @@
       "apres": 7441558.0,
       "code": "P",
       "date": "2026-09-28",
+      "hors_bourse": null,
       "prix": 44.71
      },
      {
@@ -3662,6 +3214,7 @@
       "apres": 7442558.0,
       "code": "P",
       "date": "2026-09-28",
+      "hors_bourse": null,
       "prix": 45.4865
      },
      {
@@ -3670,6 +3223,7 @@
       "apres": 7448062.0,
       "code": "P",
       "date": "2026-09-28",
+      "hors_bourse": null,
       "prix": 45.0231
      },
      {
@@ -3678,6 +3232,7 @@
       "apres": 7457704.0,
       "code": "P",
       "date": "2026-09-28",
+      "hors_bourse": null,
       "prix": 45.2055
      },
      {
@@ -3686,6 +3241,7 @@
       "apres": 7476704.0,
       "code": "P",
       "date": "2026-09-29",
+      "hors_bourse": null,
       "prix": 44.7953
      },
      {
@@ -3694,6 +3250,7 @@
       "apres": 7477704.0,
       "code": "P",
       "date": "2026-09-29",
+      "hors_bourse": null,
       "prix": 45.49
      },
      {
@@ -3702,6 +3259,7 @@
       "apres": 7480493.0,
       "code": "P",
       "date": "2026-09-29",
+      "hors_bourse": null,
       "prix": 44.5085
      }
     ]
@@ -3717,7 +3275,7 @@
    "occurred_on": "2026-09-28",
    "official_id": "0001976408-26-000874:P",
    "official_url": "https://www.sec.gov/Archives/edgar/data/1901279/000197640826000874/0001976408-26-000874-index.htm",
-   "parser_version": "sec-2",
+   "parser_version": "sec-6",
    "published_on": "2026-09-30",
    "sha256": "a008a101297096c550a337355109da963c4d7e09a71efea391580645750f512b",
    "source": "sec_form4",
@@ -4121,132 +3679,8 @@
    "title": "SEC : procédure administrative visant Eagle Bancorp, Inc."
   }
  },
- "genere_a": "2026-10-03T02:58:14+00:00",
+ "genere_a": "2026-10-03T03:15:57+00:00",
  "hausse": [
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.25
-   },
-   "contexte": [
-    {
-     "id": "sec_13dg:0001193125-26-410626",
-     "pourquoi": "13G : placement passif (souvent un fonds indiciel qui grossit)."
-    }
-   ],
-   "depuis": null,
-   "derniere_info": "2026-10-02",
-   "groupes": [
-    {
-     "famille": "activistes",
-     "infos": [
-      {
-       "age": 0,
-       "base": 5.0,
-       "compte": true,
-       "facteurs": [],
-       "id": "sec_13dg:0000947871-26-000917",
-       "points": 5.0,
-       "regle": "activiste_13d",
-       "temps": 1.0
-      }
-     ],
-     "points": 5.0,
-     "sens": 1
-    },
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 2,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "Groupe d'achats",
-         1.75
-        ]
-       ],
-       "id": "sec_form4:0000947871-26-000912:P",
-       "points": 3.34,
-       "regle": "achat_dirigeant",
-       "temps": 0.955
-      },
-      {
-       "age": 2,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Groupe d'achats",
-         1.75
-        ]
-       ],
-       "id": "sec_form4:0000947871-26-000911:P",
-       "points": 3.34,
-       "regle": "achat_dirigeant",
-       "temps": 0.955
-      },
-      {
-       "age": 2,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Groupe d'achats",
-         1.75
-        ]
-       ],
-       "id": "sec_form4:0000947871-26-000910:P",
-       "points": 3.34,
-       "regle": "achat_dirigeant",
-       "temps": 0.955
-      },
-      {
-       "age": 3,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Groupe d'achats",
-         1.75
-        ]
-       ],
-       "id": "sec_form4:0001193125-26-408061:P",
-       "points": 3.27,
-       "regle": "achat_dirigeant",
-       "temps": 0.933
-      },
-      {
-       "age": 3,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Seulement un actionnaire de 10 %",
-         0.5
-        ],
-        [
-         "Groupe d'achats",
-         1.75
-        ]
-       ],
-       "id": "sec_form4:0001193125-26-408064:P",
-       "points": 1.63,
-       "regle": "achat_dirigeant",
-       "temps": 0.933
-      }
-     ],
-     "points": 3.34,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "ADARx Pharmaceuticals, Inc.",
-   "plus": 10.43,
-   "score": 10.43,
-   "symbole": "ADRX"
-  },
   {
    "bonus": {
     "moins": 1.0,
@@ -4535,44 +3969,6 @@
    "plus": 4.89,
    "score": 4.89,
    "symbole": "CPHC"
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [
-    {
-     "id": "sec_8k:0001493152-26-044924",
-     "pourquoi": "Autre point du 8-K (contrat, acquisition, avis de retrait de la bourse…) : effet incertain."
-    }
-   ],
-   "depuis": null,
-   "derniere_info": "2026-09-30",
-   "groupes": [
-    {
-     "famille": "activistes",
-     "infos": [
-      {
-       "age": 2,
-       "base": 5.0,
-       "compte": true,
-       "facteurs": [],
-       "id": "sec_13dg:0001493152-26-045190",
-       "points": 4.77,
-       "regle": "activiste_13d",
-       "temps": 0.955
-      }
-     ],
-     "points": 4.77,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "ONE Nuclear Energy Inc.",
-   "plus": 4.77,
-   "score": 4.77,
-   "symbole": "ONEN"
   },
   {
    "bonus": {
@@ -5334,6 +4730,77 @@
    "plus": 2.8,
    "score": 2.8,
    "symbole": "QTEX"
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depuis": "2026-10-03T03:15:57+00:00",
+   "derniere_info": "2026-09-29",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 3,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001398344-26-017532:P",
+       "points": 2.8,
+       "regle": "achat_dirigeant",
+       "temps": 0.933
+      }
+     ],
+     "points": 2.8,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "Total Return Securities Fund",
+   "plus": 2.8,
+   "score": 2.8,
+   "symbole": "SWZ"
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depuis": "2026-10-03T03:15:57+00:00",
+   "derniere_info": "2026-10-02",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [],
+       "id": "sec_form4:0001437749-26-031876:P",
+       "points": 2.0,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
+      }
+     ],
+     "points": 2.0,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "First Guaranty Bancshares, Inc.",
+   "plus": 2.0,
+   "score": 2.0,
+   "symbole": "FGBI"
   }
  ],
  "jour": "2026-10-02",
@@ -5433,7 +4900,8 @@
      "×0,5 si c'est seulement un actionnaire de 10 %",
      "×1,75 si un autre initié de la même compagnie a acheté à 2 jours ouvrables près (groupe d'achats)",
      "Pas de bonus pour le montant",
-     "0 point si l'achat était planifié d'avance (plan 10b5-1)"
+     "0 point si l'achat était planifié d'avance (plan 10b5-1)",
+     "0 point si le déposant écrit que l'achat s'est fait lors d'une émission (entrée en bourse, placement) ou hors bourse, ou s'il a eu lieu le même jour au même prix qu'un tel achat"
     ],
     "etudes": [
      "lakonishok_lee",
@@ -5463,7 +4931,8 @@
    {
     "code": "activiste_13d",
     "details": [
-     "Seulement le premier dépôt, et seulement si un déclarant est un gestionnaire de placements (type « IA » dans le document) : il pourrait déclarer en 13G (passif) mais choisit le 13D"
+     "Seulement le premier dépôt d'un gestionnaire de placements (type « IA » dans le document) : il pourrait déclarer en 13G (passif) mais choisit le 13D",
+     "Et seulement s'il écrit au point 4 (le but de l'achat) que l'action est sous-évaluée : c'est ce qu'écrivent les fonds activistes dans environ 2 cas sur 3"
     ],
     "etudes": [
      "brav"
@@ -5566,9 +5035,12 @@
   "resume": "Chaque info officielle sur une compagnie vaut des points selon ce que les études ont mesuré. Les points fondent avec le temps, seule l'info la plus forte de chaque famille compte, et plusieurs familles d'accord donnent un bonus.",
   "sans_points": [
    "Planifié d'avance (plan 10b5-1) : comme les achats « routiniers » des études, ça ne prédit rien.",
+   "Transaction lors d'une émission (entrée en bourse, placement) ou hors bourse, selon la note du déposant : les études portent sur les achats et les ventes en bourse.",
+   "Même jour et même prix qu'un achat déclaré lors d'une émission : c'est la même émission.",
    "Avis d'intention de vente : la même vente arrive ensuite dans le formulaire 4 (sinon elle compterait deux fois).",
    "13G : placement passif (souvent un fonds indiciel qui grossit).",
    "13D d'un déclarant qui n'est pas un gestionnaire de fonds (individu, compagnie, commanditaire de SPAC…) : l'étude ne porte pas sur ce cas.",
+   "13D d'un gestionnaire de fonds qui n'écrit pas que l'action est sous-évaluée (ex. achat lors d'une entrée en bourse, financement d'une fusion) : ce n'est pas le cas mesuré par l'étude.",
    "Mise à jour d'un 13D ou passage sous 5 % : seul le premier dépôt compte.",
    "Vente ou baisse d'un grand fonds : les études portent sur les achats.",
    "Vente d'un élu : les études ne montrent rien.",
@@ -5579,8 +5051,8 @@
   ],
   "seuil": "Une compagnie entre dans la liste à partir de 1,5 point (hausse) ou de −1,5 point (baisse).",
   "temps": "Moitié des points après 30 jours (60 pour les grands fonds, qui déclarent en retard). Après 90 jours, une info ne compte plus.",
-  "version": "score-1"
+  "version": "score-2"
  },
  "note": "Une aide pour voir où va le gros argent, preuves à l'appui. Pas un conseil financier.",
- "version": "score-1"
+ "version": "score-2"
 }

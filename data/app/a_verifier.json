@@ -228,13 +228,14 @@
    "symbole_conforme_sec": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-10-02T19:57:45+00:00",
+  "collected_at": "2026-10-03T03:16:14+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
    "actions": 63000.0,
    "bourse": "NYSE",
    "cik_emetteur": "0000809559",
+   "hors_bourse": null,
    "plan_10b5_1": false,
    "prix_moyen": 4.2419,
    "roles": [
@@ -251,6 +252,7 @@
      "apres": 22722.203,
      "code": "P",
      "date": "2026-09-29",
+     "hors_bourse": null,
      "prix": 4.2419
     }
    ]
@@ -266,7 +268,7 @@
   "occurred_on": "2026-09-29",
   "official_id": "0001193125-26-408652:P",
   "official_url": "https://www.sec.gov/Archives/edgar/data/809559/000119312526408652/0001193125-26-408652-index.htm",
-  "parser_version": "sec-2",
+  "parser_version": "sec-6",
   "published_on": "2026-09-30",
   "sha256": "c0e64c2b3f160c7bab86d909b90dac0e40f8d786152d5fa19a95e0d5fc3f6a64",
   "source": "sec_form4",
