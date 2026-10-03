@@ -42,11 +42,14 @@ def client(reponses, contact="mathieu@example.com"):
     return ClientPoli(contact, session=session, dormir=h.dormir, horloge=h), session, h
 
 
-def test_le_robot_s_identifie_dans_chaque_requete():
-    c, session, _ = client([Reponse(200)])
+def test_le_robot_s_identifie_et_le_courriel_ne_part_qu_a_la_sec():
+    c, session, _ = client([Reponse(200), Reponse(200), Reponse(200)])
+    c.get("https://www.sec.gov/Archives/edgar/daily-index/")
     c.get("https://www.federalregister.gov/api/v1/documents.json")
-    entetes = session.appels[0][1]
-    assert "Radar" in entetes["User-Agent"] and "mathieu@example.com" in entetes["User-Agent"]
+    c.get("https://efts.sec.gov/LATEST/search-index")
+    sec, autre, sous_domaine_sec = (a[1]["User-Agent"] for a in session.appels)
+    assert sec == sous_domaine_sec == "Radar projet personnel mathieu@example.com"  # exigé par la SEC
+    assert autre == "Radar projet personnel"  # les autres sites ne reçoivent pas le courriel
 
 
 def test_sec_refusee_sans_courriel():
