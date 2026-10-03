@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.4.0";
+const VERSION = "0.5.0";
 
 // ---------- Constantes ----------
 
@@ -76,6 +76,13 @@ const CONTROLES_SOURCES = {
   marche_attendu: "Bon marché (code officiel)",
   positions_coherentes: "Positions cohérentes",
   variation_coherente: "Variation cohérente",
+  approbation_originale: "Approbation originale (pas un générique)",
+  nouvelle_molecule: "Nouvelle molécule (classe officielle 1)",
+  lettre_officielle: "Lettre d'approbation officielle",
+  trimestres_consecutifs: "Trimestres consécutifs comparés",
+  rapports_complets: "Deux rapports complets comparés",
+  variation_recalculee: "Variation recalculée",
+  part_du_portefeuille_coherente: "Montant cohérent avec le portefeuille",
 };
 
 // Qui détient l'actif, selon les codes officiels du Congrès.
@@ -760,6 +767,12 @@ function FeuilleDetail({ ev, fermer }) {
           <>
             <br />
             Rapports publics du Congrès : usage personnel et non commercial seulement (loi américaine 5 U.S.C. § 13107).
+          </>
+        )}
+        {ev.source === "fda" && (
+          <>
+            <br />
+            Données fournies par la Food and Drug Administration des États-Unis (open.fda.gov).
           </>
         )}
       </p>

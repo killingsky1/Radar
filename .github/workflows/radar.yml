@@ -4,7 +4,7 @@ on:
   schedule:
     # Heures en UTC. Entre parenthèses : l'heure de l'Est en été (HAE) / en hiver (HNE).
     - cron: "7 11 * * 1-5"   # matin (7 h 07 / 6 h 07)
-    - cron: "47 13 * * 1-5"  # jour  (9 h 47 / 8 h 47) : après la mise à jour de CanadaBuys
+    - cron: "47 13 * * 1-5"  # jour  (9 h 47 / 8 h 47)
     - cron: "37 16 * * 1-5"  # midi  (12 h 37 / 11 h 37)
     - cron: "17 22 * * 1-5"  # soir  (18 h 17 / 17 h 17) : après les contrats du Pentagone
     - cron: "17 3 * * 2-6"   # nuit  (23 h 17 / 22 h 17) : après la fermeture de la SEC
