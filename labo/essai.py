@@ -436,16 +436,17 @@ def verifier_sec_poursuites(ev):
 
 
 def verifier_ofac(ev):
-    """2e méthode : compter les paragraphes HTML de chaque liste (le robot compte les étiquettes [PROGRAMME])."""
+    """2e méthode : découper chaque liste HTML en fiches (séparées par des sauts de ligne <br><br> ou des fins de
+    paragraphe) et compter celles qui portent une étiquette [PROGRAMME] (le robot compte les étiquettes du texte)."""
     page = lire_page(ev["official_url"])
     corps = page[page.find("field--name-field-body"):]
     ajouts, retraits = {}, 0
     noms = {"individual": "personnes", "entit": "entités", "vessel": "navires", "aircraft": "aéronefs"}
-    morceaux = re.split(r"(The following [^:<]{5,90}OFAC(?:&#039;|')s SDN List:)", corps)
-    for i in range(1, len(morceaux) - 1, 2):
-        entete = morceaux[i].lower()
-        suite = re.split(r"The following [^:<]{5,90}SDN List:|</div>", morceaux[i + 1])[0]
-        n = len([p for p in re.findall(r"<p[^>]*>(.*?)</p>", suite, re.S) if "[" in p])
+    sections = re.split(r"(The following[^<]{5,120}:)", corps)
+    for i in range(1, len(sections) - 1, 2):
+        entete = sections[i].lower()
+        bloc = sections[i + 1].split("The following")[0]
+        n = len([f for f in re.split(r"<br\s*/?>\s*<br\s*/?>|</p>", bloc) if re.search(r"\[[A-Z0-9-]+\]", f)])
         if "added" in entete:
             cat = next((v for k, v in noms.items() if k in entete), "fiches")
             ajouts[cat] = ajouts.get(cat, 0) + n
