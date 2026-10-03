@@ -1,0 +1,30 @@
+name: "Labo (lot 3c, 3e passage : Canada)"
+
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/reconnaissance18.py", ".github/workflows/labo34.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  canada3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get install -y poppler-utils && pip install requests
+      - run: rm -rf labo/resultats-lot3c3 && python labo/reconnaissance18.py
+      - name: Sauvegarder
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/resultats-lot3c3
+          git commit -m "Labo : Canada 3e passage du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
