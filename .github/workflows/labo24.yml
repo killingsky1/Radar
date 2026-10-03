@@ -1,0 +1,29 @@
+name: "Labo (fiches SEC de test)"
+
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/fixtures_emetteurs.py", ".github/workflows/labo24.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  fiches:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - run: rm -rf labo/fixtures-emetteurs && python labo/fixtures_emetteurs.py
+      - name: Sauvegarder
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/fixtures-emetteurs
+          git commit -m "Labo : fiches SEC de test du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
