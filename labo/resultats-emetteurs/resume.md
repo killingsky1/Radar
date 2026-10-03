@@ -1,0 +1,517 @@
+# Émetteurs : 513 fiches SEC lues ; symboles sans CIK : aucun
+
+- **BPRE** · Bluerock Private Real Estate Fund · type=other · SIC   · fonds=['N-2', 'N-CEN', 'N-CSR', 'N-CSR/A', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- **CBZ** · CBIZ, Inc. · type=operating · SIC 7389 Services-Business Services, NEC · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- **CPHC** · Canterbury Park Holding Corp · type=operating · SIC 7948 Services-Racing, Including Track Operation · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- **CRESY** · CRESUD INC · type=other · SIC 6500 Real Estate · fonds=[] · BDC=False · 10-K=0 20-F=12 40-F=0
+- **EGBN** · EAGLE BANCORP INC · type=operating · SIC 6022 State Commercial Banks · fonds=[] · BDC=False · 10-K=14 20-F=0 40-F=0
+- **FGBI** · First Guaranty Bancshares, Inc. · type=operating · SIC 6035 Savings Institution, Federally Chartered · fonds=[] · BDC=False · 10-K=19 20-F=0 40-F=0
+- **FLNA** · FILANA THERAPEUTICS, INC. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=20 20-F=0 40-F=0
+- **FUL** · FULLER H B CO · type=operating · SIC 2891 Adhesives & Sealants · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- **GME** · GameStop Corp. · type=operating · SIC 5734 Retail-Computer & Computer Software Stores · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- **GPUS** · Hyperscale Data, Inc. · type=operating · SIC 3533 Oil & Gas Field Machinery & Equipment · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- **HELP** · Helus Pharma Inc. · type=other · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=5
+- **LESL** · Leslie's, Inc. · type=operating · SIC 5990 Retail-Retail Stores, NEC · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- **MNSO** · MINISO Group Holding Ltd · type=other · SIC 5331 Retail-Variety Stores · fonds=[] · BDC=False · 10-K=0 20-F=6 40-F=0
+- **NYAX** · Nayax Ltd. · type=other · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=0 20-F=4 40-F=0
+- **PAM** · Pampa Energy Inc. · type=other · SIC 4911 Electric Services · fonds=[] · BDC=False · 10-K=0 20-F=17 40-F=0
+- **PRHI** · Presurance Holdings, Inc. · type=operating · SIC 6331 Fire, Marine & Casualty Insurance · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- **QTEX** · QTREX Quantum Ltd. · type=other · SIC 3841 Surgical & Medical Instruments & Apparatus · fonds=[] · BDC=False · 10-K=0 20-F=5 40-F=0
+- **SAMG** · Silvercrest Asset Management Group Inc. · type=operating · SIC 6282 Investment Advice · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- **SPG** · SIMON PROPERTY GROUP INC. · type=operating · SIC 6798 Real Estate Investment Trusts · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- **SWZ** · Total Return Securities Fund · type=other · SIC   · fonds=['N-2', 'N-30D', 'N-CEN', 'N-CSR', 'N-CSR/A', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P', 'NPORT-P/A'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- **TKLF** · Tokyo Lifestyle Co., Ltd. · type=other · SIC 5990 Retail-Retail Stores, NEC · fonds=[] · BDC=False · 10-K=0 20-F=5 40-F=0
+- **XENE** · Xenon Pharmaceuticals Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- **ZTR** · Virtus Total Return Fund Inc. · type=other · SIC   · fonds=['N-2', 'N-30D', 'N-CEN', 'N-CSR', 'N-CSR/A', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- AAPL · Apple Inc. · type=operating · SIC 3571 Electronic Computers · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- ABBV · AbbVie Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- ABNB · Airbnb, Inc. · type=operating · SIC 7340 Services-To Dwellings & Other Buildings · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- ACCV · Accelevation Holdings Corp. · type=other · SIC 3620 Electrical Industrial Apparatus · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- ACN · Accenture plc · type=operating · SIC 7389 Services-Business Services, NEC · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- ACOG · Alpha Cognition Inc. · type=operating · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- ACT · Enact Holdings, Inc. · type=operating · SIC 6411 Insurance Agents, Brokers & Service · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- ADI · ANALOG DEVICES INC · type=operating · SIC 3674 Semiconductors & Related Devices · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- ADRX · ADARx Pharmaceuticals, Inc. · type=other · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- AFB · ALLIANCEBERNSTEIN NATIONAL MUNICIPAL INCOME FUND · type=other · SIC   · fonds=['N-2', 'N-30D', 'N-CEN', 'N-CSR', 'N-CSR/A', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P', 'NPORT-P/A'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- AFCG · Advanced Flower Capital Inc. · type=operating · SIC 0000  · fonds=[] · BDC=True · 10-K=5 20-F=0 40-F=0
+- AFL · AFLAC INC · type=operating · SIC 6321 Accident & Health Insurance · fonds=['N-PX'] · BDC=False · 10-K=10 20-F=0 40-F=0
+- AHT · ASHFORD HOSPITALITY TRUST INC · type=operating · SIC 6798 Real Estate Investment Trusts · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- AIO · Virtus Artificial Intelligence & Technology Opportunities Fund · type=other · SIC   · fonds=['N-2', 'N-CEN', 'N-CSR', 'N-CSRS', 'N-PX', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- AIR · AAR CORP · type=operating · SIC 3720 Aircraft & Parts · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- ALG · ALAMO GROUP INC · type=operating · SIC 3523 Farm Machinery & Equipment · fonds=[] · BDC=False · 10-K=16 20-F=0 40-F=0
+- ALLO · Allogene Therapeutics, Inc. · type=operating · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- AMAT · APPLIED MATERIALS INC /DE · type=operating · SIC 3674 Semiconductors & Related Devices · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- AMBQ · Ambiq Micro, Inc. · type=operating · SIC 3674 Semiconductors & Related Devices · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- AMCR · Amcor plc · type=operating · SIC 3990 Miscellaneous Manufacturing Industries · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- AMGN · AMGEN INC · type=operating · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- AMOD · ALPHA MODUS HOLDINGS, INC. · type=operating · SIC 6794 Patent Owners & Lessors · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- AMSF · AMERISAFE INC · type=operating · SIC 6331 Fire, Marine & Casualty Insurance · fonds=[] · BDC=False · 10-K=21 20-F=0 40-F=0
+- AMZE · AMAZE HOLDINGS, INC. · type=operating · SIC 5961 Retail-Catalog & Mail-Order Houses · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- AN · AUTONATION, INC. · type=operating · SIC 5500 Retail-Auto Dealers & Gasoline Stations · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- ANET · Arista Networks, Inc. · type=operating · SIC 3576 Computer Communications Equipment · fonds=[] · BDC=False · 10-K=4 20-F=0 40-F=0
+- ANGX · Angel Studios, Inc. · type=operating · SIC 7812 Services-Motion Picture & Video Tape Production · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- ANRO · Alto Neuroscience, Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- AOMR · Angel Oak Mortgage REIT, Inc. · type=operating · SIC 6500 Real Estate · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- ARI · Apollo Commercial Real Estate Finance, Inc. · type=operating · SIC 6798 Real Estate Investment Trusts · fonds=[] · BDC=False · 10-K=17 20-F=0 40-F=0
+- ARLO · Arlo Technologies, Inc. · type=operating · SIC 7381 Services-Detective, Guard & Armored Car Services · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- ARX · Accelerant Holdings · type=operating · SIC 6411 Insurance Agents, Brokers & Service · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- ASBP · Aspire-Lakewood Holdings, Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=4 20-F=0 40-F=0
+- ASPI · ASP Isotopes Inc. · type=operating · SIC 2890 Miscellaneous Chemical Products · fonds=[] · BDC=False · 10-K=4 20-F=0 40-F=0
+- ASST · Strive, Inc. · type=operating · SIC 6199 Finance Services · fonds=[] · BDC=False · 10-K=4 20-F=0 40-F=0
+- ATER · Aterian, Inc. · type=operating · SIC 3634 Electric Housewares & Fans · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- ATXG · ADDENTAX GROUP CORP. · type=operating · SIC 7330 Services-Mailing, Reproduction, Commercial Art & Photography · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- AURA · Aura Biosciences, Inc. · type=operating · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- AVGO · Broadcom Inc. · type=operating · SIC 3674 Semiconductors & Related Devices · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- AVR · Anteris Technologies Global Corp. · type=operating · SIC 3842 Orthopedic, Prosthetic & Surgical Appliances & Supplies · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- AVX · AVAX ONE TECHNOLOGY LTD. · type=operating · SIC 6199 Finance Services · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- AXGN · Axogen, Inc. · type=operating · SIC 3845 Electromedical & Electrotherapeutic Apparatus · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- AZN · ASTRAZENECA PLC · type=other · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=0 20-F=7 40-F=0
+- BA · BOEING CO · type=operating · SIC 3721 Aircraft · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- BABA · Alibaba Group Holding Ltd · type=other · SIC 7389 Services-Business Services, NEC · fonds=['N-PX'] · BDC=False · 10-K=0 20-F=12 40-F=0
+- BALY · Bally's Corp · type=operating · SIC 7011 Hotels & Motels · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- BATRA · Atlanta Braves Holdings, Inc. · type=operating · SIC 7900 Services-Amusement & Recreation Services · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- BBD · BANK BRADESCO · type=other · SIC 6022 State Commercial Banks · fonds=[] · BDC=False · 10-K=0 20-F=14 40-F=0
+- BBGI · BEASLEY BROADCAST GROUP INC · type=operating · SIC 4832 Radio Broadcasting Stations · fonds=[] · BDC=False · 10-K=20 20-F=0 40-F=0
+- BBW · BUILD-A-BEAR WORKSHOP INC · type=operating · SIC 5945 Retail-Hobby, Toy & Game Shops · fonds=[] · BDC=False · 10-K=15 20-F=0 40-F=0
+- BCBP · BCB BANCORP INC · type=operating · SIC 6035 Savings Institution, Federally Chartered · fonds=[] · BDC=False · 10-K=15 20-F=0 40-F=0
+- BDMD · Baird Medical Investment Holdings Ltd · type=other · SIC 3841 Surgical & Medical Instruments & Apparatus · fonds=[] · BDC=False · 10-K=0 20-F=2 40-F=0
+- BE · Bloom Energy Corp · type=operating · SIC 3620 Electrical Industrial Apparatus · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- BEKE · KE Holdings Inc. · type=other · SIC 6531 Real Estate Agents & Managers (For Others) · fonds=[] · BDC=False · 10-K=0 20-F=6 40-F=0
+- BGX · Blackstone Long-Short Credit Income Fund · type=other · SIC   · fonds=['N-2', 'N-CEN', 'N-CSR', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- BHR · Braemar Hotels & Resorts Inc. · type=operating · SIC 6798 Real Estate Investment Trusts · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- BHRB · Burke & Herbert Financial Services Corp. · type=operating · SIC 6021 National Commercial Banks · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- BKYI · BIO KEY INTERNATIONAL INC · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=18 20-F=0 40-F=0
+- BLLN · BillionToOne, Inc. · type=operating · SIC 8071 Services-Medical Laboratories · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- BLMN · Bloomin' Brands, Inc. · type=operating · SIC 5812 Retail-Eating  Places · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- BMBL · Bumble Inc. · type=operating · SIC 7370 Services-Computer Programming, Data Processing, Etc. · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- BMRN · BIOMARIN PHARMACEUTICAL INC · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- BMY · BRISTOL MYERS SQUIBB CO · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- BNTC · Benitec Biopharma Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- BNTX · BioNTech SE · type=other · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=0 20-F=7 40-F=0
+- BRK-B · BERKSHIRE HATHAWAY INC · type=operating · SIC 6331 Fire, Marine & Casualty Insurance · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- BRRKU · Bluerock Acquisition Corp. II · type=other · SIC 6770 Blank Checks · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- BRSP · BrightSpire Capital, Inc. · type=operating · SIC 6798 Real Estate Investment Trusts · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- BSAA · BEST SPAC I Acquisition Corp. · type=operating · SIC 8200 Services-Educational Services · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- BSEM · BioStem Technologies, Inc. · type=operating · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- BSX · BOSTON SCIENTIFIC CORP · type=operating · SIC 3841 Surgical & Medical Instruments & Apparatus · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- BTLN · Brightline Interactive, Inc./NV · type=operating · SIC 7371 Services-Computer Programming Services · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- BWMN · Bowman Consulting Group Ltd. · type=operating · SIC 8742 Services-Management Consulting Services · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- BYSI · BeyondSpring Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=2 20-F=8 40-F=0
+- BZAI · Blaize Holdings, Inc. · type=operating · SIC 3674 Semiconductors & Related Devices · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- BZFD · BuzzFeed, Inc. · type=operating · SIC 4899 Communications Services, NEC · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- CABO · Cable One, Inc. · type=operating · SIC 4841 Cable & Other Pay Television Services · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- CB · Chubb Ltd · type=operating · SIC 6331 Fire, Marine & Casualty Insurance · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- CBNK · Capital Bancorp Inc · type=operating · SIC 6021 National Commercial Banks · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- CBOE · Cboe Global Markets, Inc. · type=operating · SIC 6200 Security & Commodity Brokers, Dealers, Exchanges & Services · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- CBRS · Cerebras Systems Inc. · type=operating · SIC 3674 Semiconductors & Related Devices · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- CCS · Century Communities, Inc. · type=operating · SIC 1531 Operative Builders · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- CDNS · CADENCE DESIGN SYSTEMS INC · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- CDRE · Cadre Holdings, Inc. · type=operating · SIC 3842 Orthopedic, Prosthetic & Surgical Appliances & Supplies · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- CDW · CDW Corp · type=operating · SIC 5961 Retail-Catalog & Mail-Order Houses · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- CEG · Constellation Energy Corp · type=operating · SIC 4911 Electric Services · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- CELZ · CREATIVE MEDICAL TECHNOLOGY HOLDINGS, INC. · type=operating · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=18 20-F=0 40-F=0
+- CHE · CHEMED CORP · type=operating · SIC 8082 Services-Home Health Care Services · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- CHGA · Change Agents Corporation. · type=operating · SIC 7371 Services-Computer Programming Services · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- CHTR · CHARTER COMMUNICATIONS, INC. /MO/ · type=operating · SIC 4841 Cable & Other Pay Television Services · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- CIK · UBS ASSET MANAGEMENT INCOME FUND, INC. · type=other · SIC   · fonds=['N-2', 'N-30D', 'N-CEN', 'N-CSR', 'N-CSR/A', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- CL · COLGATE PALMOLIVE CO · type=operating · SIC 2844 Perfumes, Cosmetics & Other Toilet Preparations · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- CLAR · Clarus Corp · type=operating · SIC 3949 Sporting & Athletic Goods, NEC · fonds=[] · BDC=False · 10-K=27 20-F=0 40-F=0
+- CLOV · CLOVER HEALTH INVESTMENTS, CORP. /DE · type=operating · SIC 6324 Hospital & Medical Service Plans · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- CLPR · Clipper Realty Inc. · type=operating · SIC 6798 Real Estate Investment Trusts · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- CMI · CUMMINS INC · type=operating · SIC 3510 Engines & Turbines · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- CNP · CENTERPOINT ENERGY INC · type=operating · SIC 4911 Electric Services · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- CNTY · CENTURY CASINOS INC /CO/ · type=operating · SIC 7011 Hotels & Motels · fonds=[] · BDC=False · 10-K=24 20-F=0 40-F=0
+- COLA · Columbus Acquisition Corp/Cayman Islands · type=operating · SIC 6770 Blank Checks · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- COST · COSTCO WHOLESALE CORP /NEW · type=operating · SIC 5331 Retail-Variety Stores · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- COUR · Coursera, Inc. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- CPK · CHESAPEAKE UTILITIES CORP · type=operating · SIC 4923 Natural Gas Transmisison & Distribution · fonds=[] · BDC=False · 10-K=15 20-F=0 40-F=0
+- CR · Crane Co · type=operating · SIC 3490 Miscellaneous Fabricated Metal Products · fonds=[] · BDC=False · 10-K=4 20-F=0 40-F=0
+- CRBG · Corebridge Financial, Inc. · type=operating · SIC 6311 Life Insurance · fonds=['N-PX'] · BDC=False · 10-K=4 20-F=0 40-F=0
+- CRBP · Corbus Pharmaceuticals Holdings, Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- CRDO · Credo Technology Group Holding Ltd · type=operating · SIC 3674 Semiconductors & Related Devices · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- CRMT · AMERICAS CARMART INC · type=operating · SIC 5500 Retail-Auto Dealers & Gasoline Stations · fonds=[] · BDC=False · 10-K=20 20-F=0 40-F=0
+- CRWD · CrowdStrike Holdings, Inc. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- CRWV · CoreWeave, Inc. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- CSAI · CLOUDASTRUCTURE, INC. · type=operating · SIC 7370 Services-Computer Programming, Data Processing, Etc. · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- CSHR · CoinShares PLC · type=other · SIC 6211 Security Brokers, Dealers & Flotation Companies · fonds=[] · BDC=False · 10-K=0 20-F=2 40-F=0
+- CSV · CARRIAGE SERVICES INC · type=operating · SIC 7200 Services-Personal Services · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- CSWC · CAPITAL SOUTHWEST CORP · type=operating · SIC   · fonds=['N-2'] · BDC=False · 10-K=16 20-F=0 40-F=0
+- CSX · CSX CORP · type=operating · SIC 4011 Railroads, Line-Haul Operating · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- CTO · CTO Realty Growth, Inc. · type=operating · SIC 6798 Real Estate Investment Trusts · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- CTRE · CareTrust REIT, Inc. · type=operating · SIC 6798 Real Estate Investment Trusts · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- CVRX · CVRx, Inc. · type=operating · SIC 3841 Surgical & Medical Instruments & Apparatus · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- CWH · Camping World Holdings, Inc. · type=operating · SIC 5500 Retail-Auto Dealers & Gasoline Stations · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- CX · CEMEX SAB DE CV · type=other · SIC 3241 Cement, Hydraulic · fonds=[] · BDC=False · 10-K=0 20-F=14 40-F=0
+- CXT · Crane NXT, Co. · type=operating · SIC 3490 Miscellaneous Fabricated Metal Products · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- DAIC · CID Holdco, Inc. · type=operating · SIC 7373 Services-Computer Integrated Systems Design · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- DARE · Dare Bioscience, Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- DASH · DoorDash, Inc. · type=operating · SIC 7389 Services-Business Services, NEC · fonds=[] · BDC=False · 10-K=4 20-F=0 40-F=0
+- DBRG · DigitalBridge Group, Inc. · type=operating · SIC 6282 Investment Advice · fonds=['N-PX'] · BDC=False · 10-K=10 20-F=0 40-F=0
+- DFLI · Dragonfly Energy Holdings Corp. · type=operating · SIC 3690 Miscellaneous Electrical Machinery, Equipment & Supplies · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- DFTX · Definium Therapeutics, Inc. · type=operating · SIC 2833 Medicinal Chemicals & Botanical Products · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- DH · Definitive Healthcare Corp. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- DHR · DANAHER CORP /DE/ · type=operating · SIC 3823 Industrial Instruments For Measurement, Display, and Control · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- DJT · Trump Media & Technology Group Corp. · type=operating · SIC 7370 Services-Computer Programming, Data Processing, Etc. · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- DK · Delek US Holdings, Inc. · type=operating · SIC 2911 Petroleum Refining · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- DKS · DICK'S SPORTING GOODS, INC. · type=operating · SIC 5940 Retail-Miscellaneous Shopping Goods Stores · fonds=[] · BDC=False · 10-K=14 20-F=0 40-F=0
+- DLHC · DLH Holdings Corp. · type=operating · SIC 7363 Services-Help Supply Services · fonds=[] · BDC=False · 10-K=22 20-F=0 40-F=0
+- DMB · BNY Mellon Municipal Bond Infrastructure Fund, Inc. · type=other · SIC   · fonds=['N-2', 'N-CEN', 'N-CSR', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- DMRC · Digimarc Corp · type=operating · SIC 7373 Services-Computer Integrated Systems Design · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- DOCU · DOCUSIGN, INC. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- DRCT · Direct Digital Holdings, Inc. · type=operating · SIC 7310 Services-Advertising · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- DSM · BNY MELLON STRATEGIC MUNICIPAL BOND FUND, INC. · type=other · SIC   · fonds=['N-2', 'N-30D', 'N-CEN', 'N-CSR', 'N-CSR/A', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- DVN · DEVON ENERGY CORP/DE · type=operating · SIC 1311 Crude Petroleum & Natural Gas · fonds=['N-PX'] · BDC=False · 10-K=13 20-F=0 40-F=0
+- ECHO · EchoStar CORP · type=operating · SIC 4899 Communications Services, NEC · fonds=[] · BDC=False · 10-K=15 20-F=0 40-F=0
+- EDBL · Edible Garden AG Inc · type=operating · SIC 0100 Agricultural Production-Crops · fonds=[] · BDC=False · 10-K=4 20-F=0 40-F=0
+- ELME · Elme Communities · type=operating · SIC 6798 Real Estate Investment Trusts · fonds=[] · BDC=False · 10-K=15 20-F=0 40-F=0
+- EMR · EMERSON ELECTRIC CO · type=operating · SIC 3600 Electronic & Other Electrical Equipment (No Computer Equip) · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- EOG · EOG RESOURCES INC · type=operating · SIC 1311 Crude Petroleum & Natural Gas · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- EPD · ENTERPRISE PRODUCTS PARTNERS L.P. · type=operating · SIC 4922 Natural Gas Transmission · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- EQH · Equitable Holdings, Inc. · type=operating · SIC 6411 Insurance Agents, Brokers & Service · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- ESE · ESCO TECHNOLOGIES INC · type=operating · SIC 3669 Communications Equipment, NEC · fonds=[] · BDC=False · 10-K=15 20-F=0 40-F=0
+- ESTC · Elastic N.V. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- ETN · Eaton Corp plc · type=operating · SIC 3590 Misc Industrial & Commercial Machinery & Equipment · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- ETV · Eaton Vance Tax-Managed Buy-Write Opportunities Fund · type=other · SIC   · fonds=['N-2', 'N-CEN', 'N-CSR', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- EVV · Eaton Vance Ltd Duration Income Fund · type=other · SIC   · fonds=['N-2', 'N-CEN', 'N-CSR', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- EXTR · EXTREME NETWORKS INC · type=operating · SIC 3576 Computer Communications Equipment · fonds=[] · BDC=False · 10-K=14 20-F=0 40-F=0
+- EZRA · Reliance Global Group, Inc. · type=operating · SIC 6411 Insurance Agents, Brokers & Service · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- F · FORD MOTOR CO · type=operating · SIC 3711 Motor Vehicles & Passenger Car Bodies · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- FANG · Diamondback Energy, Inc. · type=operating · SIC 1311 Crude Petroleum & Natural Gas · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- FBNC · FIRST BANCORP /NC/ · type=operating · SIC 6022 State Commercial Banks · fonds=[] · BDC=False · 10-K=15 20-F=0 40-F=0
+- FBYD · Falcon's Beyond Global, Inc. · type=operating · SIC 7990 Services-Miscellaneous Amusement & Recreation · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- FEAM · 5E Advanced Materials, Inc. · type=operating · SIC 1400 Mining & Quarrying of  Nonmetallic Minerals (No Fuels) · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- FLEX · FLEX LTD. · type=operating · SIC 3672 Printed Circuit Boards · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- FLOC · Flowco Holdings Inc. · type=operating · SIC 3533 Oil & Gas Field Machinery & Equipment · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- FLWS · 1 800 FLOWERS COM INC · type=operating · SIC 5990 Retail-Retail Stores, NEC · fonds=[] · BDC=False · 10-K=14 20-F=0 40-F=0
+- FNGR · FingerMotion, Inc. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- FOXF · FOX FACTORY HOLDING CORP · type=operating · SIC 3751 Motorcycles, Bicycles & Parts · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- FPH · Five Point Holdings, LLC · type=operating · SIC 6500 Real Estate · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- FSLR · FIRST SOLAR, INC. · type=operating · SIC 3674 Semiconductors & Related Devices · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- FTHY · FIRST TRUST HIGH YIELD OPPORTUNITIES 2027 TERM FUND · type=other · SIC   · fonds=['N-2', 'N-CEN', 'N-CSR', 'N-CSRS', 'N-PX', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- FUND · SPROTT FOCUS TRUST INC. · type=other · SIC 0000  · fonds=['N-2', 'N-30D', 'N-CEN', 'N-CSR', 'N-CSR/A', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- FWAC · Futurewave Acquisition Corp · type=operating · SIC 6770 Blank Checks · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- GAP · GAP INC · type=operating · SIC 5651 Retail-Family Clothing Stores · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- GBR · New Concept Energy, Inc. · type=operating · SIC 1311 Crude Petroleum & Natural Gas · fonds=[] · BDC=False · 10-K=28 20-F=0 40-F=0
+- GENK · GEN Restaurant Group, Inc. · type=operating · SIC 5812 Retail-Eating  Places · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- GETY · Getty Images Holdings, Inc. · type=operating · SIC 7389 Services-Business Services, NEC · fonds=[] · BDC=False · 10-K=4 20-F=0 40-F=0
+- GF · NEW GERMANY FUND INC · type=other · SIC 0000  · fonds=['N-30D', 'N-CEN', 'N-CSR', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- GILD · GILEAD SCIENCES, INC. · type=operating · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=['N-PX'] · BDC=False · 10-K=8 20-F=0 40-F=0
+- GM · General Motors Co · type=operating · SIC 3711 Motor Vehicles & Passenger Car Bodies · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- GNRC · GENERAC HOLDINGS INC. · type=operating · SIC 3621 Motors & Generators · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- GNTA · Genenta Science S.p.A. · type=other · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=0 20-F=5 40-F=0
+- GOLD · Gold.com, Inc. · type=operating · SIC 5094 Wholesale-Jewelry, Watches, Precious Stones & Metals · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- GOOG/GOOGL · Alphabet Inc. · type=operating · SIC 7370 Services-Computer Programming, Data Processing, Etc. · fonds=['N-PX'] · BDC=False · 10-K=3 20-F=0 40-F=0
+- GOW · GOWell Energy Technology · type=other · SIC 3533 Oil & Gas Field Machinery & Equipment · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- GPI · GROUP 1 AUTOMOTIVE INC · type=operating · SIC 5500 Retail-Auto Dealers & Gasoline Stations · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- GRND · Grindr Inc. · type=operating · SIC 7370 Services-Computer Programming, Data Processing, Etc. · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- GTLB · Gitlab Inc. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- GWH · ESS Tech, Inc. · type=operating · SIC 3690 Miscellaneous Electrical Machinery, Equipment & Supplies · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- GXAI · GAXOS.AI INC. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=4 20-F=0 40-F=0
+- GYGY · Game Your Game Inc. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- HAVA · Harvard Ave Acquisition Corp · type=operating · SIC 6770 Blank Checks · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- HAWK · HawkEye 360, Inc. · type=operating · SIC 7374 Services-Computer Processing & Data Preparation · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- HCAC · Hall Chadwick Acquisition Corp · type=operating · SIC 3341 Secondary Smelting & Refining of  Nonferrous Metals · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- HCTI · Healthcare Triangle, Inc. · type=operating · SIC 7373 Services-Computer Integrated Systems Design · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- HD · HOME DEPOT, INC. · type=operating · SIC 5211 Retail-Lumber & Other Building Materials Dealers · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- HERZ · Herzfeld Credit Income Fund, Inc · type=other · SIC   · fonds=['N-2', 'N-30D', 'N-CEN', 'N-CSR', 'N-CSR/A', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- HGBL · Heritage Global Inc. · type=operating · SIC 7389 Services-Business Services, NEC · fonds=[] · BDC=False · 10-K=28 20-F=0 40-F=0
+- HIG · HARTFORD INSURANCE GROUP, INC. · type=operating · SIC 6331 Fire, Marine & Casualty Insurance · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- HIT · Health In Tech, Inc. · type=operating · SIC 6411 Insurance Agents, Brokers & Service · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- HNGE · Hinge Health, Inc. · type=operating · SIC 7374 Services-Computer Processing & Data Preparation · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- HON · HONEYWELL INTERNATIONAL INC · type=operating · SIC 3724 Aircraft Engines & Engine Parts · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- HPE · Hewlett Packard Enterprise Co · type=operating · SIC 3570 Computer & office Equipment · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- HRL · HORMEL FOODS CORP /DE/ · type=operating · SIC 2011 Meat Packing Plants · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- HRTX · HERON THERAPEUTICS, INC. /DE/ · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=15 20-F=0 40-F=0
+- HSCS · HeartSciences Inc. · type=operating · SIC 6199 Finance Services · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- HSY · HERSHEY CO · type=operating · SIC 2060 Sugar & Confectionery Products · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- HTH · Hilltop Holdings Inc. · type=operating · SIC 6022 State Commercial Banks · fonds=['N-PX'] · BDC=False · 10-K=8 20-F=0 40-F=0
+- HTO · H2O AMERICA · type=operating · SIC 4941 Water Supply · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- HUT · Hut 8 Corp. · type=operating · SIC 6199 Finance Services · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- HWM · Howmet Aerospace Inc. · type=operating · SIC 3350 Rolling Drawing & Extruding of  Nonferrous Metals · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- HYPD · HYPERION DEFI, INC. · type=operating · SIC 6199 Finance Services · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- IBP · Installed Building Products, Inc. · type=operating · SIC 1520 General Bldg Contractors - Residential Bldgs · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- IIIV · i3 Verticals, Inc. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- IIPR · INNOVATIVE INDUSTRIAL PROPERTIES INC · type=operating · SIC 6500 Real Estate · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- IMCC · IM Cannabis Corp. · type=other · SIC 2833 Medicinal Chemicals & Botanical Products · fonds=[] · BDC=False · 10-K=0 20-F=4 40-F=2
+- IMNN · Imunon, Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=15 20-F=0 40-F=0
+- INCY · INCYTE CORP · type=operating · SIC 8731 Services-Commercial Physical & Biological Research · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- INDP · Indaptus Therapeutics, Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- INDV · Indivior Pharmaceuticals, Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=2 20-F=1 40-F=0
+- INGN · Inogen Inc · type=operating · SIC 3842 Orthopedic, Prosthetic & Surgical Appliances & Supplies · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- INSG · INSEEGO CORP. · type=operating · SIC 3669 Communications Equipment, NEC · fonds=[] · BDC=False · 10-K=16 20-F=0 40-F=0
+- IOT · Samsara Inc. · type=operating · SIC 7373 Services-Computer Integrated Systems Design · fonds=[] · BDC=False · 10-K=4 20-F=0 40-F=0
+- IQV · IQVIA HOLDINGS INC. · type=operating · SIC 8731 Services-Commercial Physical & Biological Research · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- IRD · Opus Genetics, Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=18 20-F=0 40-F=0
+- IREN · IREN Ltd · type=operating · SIC 6199 Finance Services · fonds=[] · BDC=False · 10-K=2 20-F=3 40-F=0
+- ITGR · Integer Holdings Corp · type=operating · SIC 3845 Electromedical & Electrotherapeutic Apparatus · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- ITW · ILLINOIS TOOL WORKS INC · type=operating · SIC 3560 General Industrial Machinery & Equipment · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- JCTC · JEWETT CAMERON TRADING CO LTD · type=operating · SIC 5211 Retail-Lumber & Other Building Materials Dealers · fonds=[] · BDC=False · 10-K=27 20-F=0 40-F=0
+- JELD · JELD-WEN Holding, Inc. · type=operating · SIC 2430 Millwood, Veneer, Plywood, & Structural Wood Members · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- JKS · JinkoSolar Holding Co., Ltd. · type=other · SIC 3674 Semiconductors & Related Devices · fonds=[] · BDC=False · 10-K=0 20-F=16 40-F=0
+- JNJ · JOHNSON & JOHNSON · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=['N-PX'] · BDC=False · 10-K=8 20-F=0 40-F=0
+- JPM · JPMORGAN CHASE & CO · type=operating · SIC 6021 National Commercial Banks · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- JYNT · JOINT Corp · type=operating · SIC 6794 Patent Owners & Lessors · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- KARD · Kardigan, Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- KBDC · Kayne Anderson BDC, Inc. · type=operating · SIC   · fonds=['N-2'] · BDC=True · 10-K=6 20-F=0 40-F=0
+- KEYS · Keysight Technologies, Inc. · type=operating · SIC 3823 Industrial Instruments For Measurement, Display, and Control · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- KITT · Nauticus Robotics, Inc. · type=operating · SIC 3569 General Industrial Machinery & Equipment, NEC · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- KLXE · KLX Energy Services Holdings, Inc. · type=operating · SIC 1389 Oil & Gas Field Services, NEC · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- KMI · KINDER MORGAN, INC. · type=operating · SIC 4922 Natural Gas Transmission · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- KO · COCA COLA CO · type=operating · SIC 2080 Beverages · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- KOD · Kodiak Sciences Inc. · type=operating · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- KPLT · Katapult Holdings, Inc. · type=operating · SIC 7359 Services-Equipment Rental & Leasing, NEC · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- KTF · DWS MUNICIPAL INCOME TRUST · type=investment · SIC   · fonds=['N-2', 'N-30D', 'N-CEN', 'N-CSR', 'N-CSR/A', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- KWR · QUAKER CHEMICAL CORP · type=operating · SIC 2990 Miscellaneous Products of  Petroleum & Coal · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- KWY · KINGSWAY Corp · type=operating · SIC 6331 Fire, Marine & Casualty Insurance · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- KYMR · Kymera Therapeutics, Inc. · type=operating · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- LAB · STANDARD BIOTOOLS INC. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- LB · LandBridge Co LLC · type=operating · SIC 6792 Oil Royalty Traders · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- LEN · LENNAR CORP /NEW/ · type=operating · SIC 1520 General Bldg Contractors - Residential Bldgs · fonds=['N-PX'] · BDC=False · 10-K=11 20-F=0 40-F=0
+- LEO · BNY MELLON STRATEGIC MUNICIPALS, INC. · type=other · SIC   · fonds=['N-2', 'N-30D', 'N-CEN', 'N-CSR', 'N-CSR/A', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- LFCR · LIFECORE BIOMEDICAL, INC. \DE\ · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=14 20-F=0 40-F=0
+- LGCY · Legacy Education Inc. · type=operating · SIC 8200 Services-Educational Services · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- LILA · Liberty Latin America Ltd. · type=operating · SIC 4841 Cable & Other Pay Television Services · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- LIMN · Liminatus Pharma, Inc. · type=operating · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- LIN · LINDE PLC · type=operating · SIC 2810 Industrial Inorganic Chemicals · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- LITE · Lumentum Holdings Inc. · type=operating · SIC 3669 Communications Equipment, NEC · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- LLY · ELI LILLY & Co · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- LMT · LOCKHEED MARTIN CORP · type=operating · SIC 3760 Guided Missiles & Space Vehicles & Parts · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- LOPE · Grand Canyon Education, Inc. · type=operating · SIC 8200 Services-Educational Services · fonds=[] · BDC=False · 10-K=17 20-F=0 40-F=0
+- LOVIU · Live Oak Acquisition Corp. VI · type=other · SIC 6770 Blank Checks · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- LOW · LOWES COMPANIES INC · type=operating · SIC 5211 Retail-Lumber & Other Building Materials Dealers · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- LPCN · Lipocine Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=15 20-F=0 40-F=0
+- LQDT · LIQUIDITY SERVICES INC · type=operating · SIC 7389 Services-Business Services, NEC · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- LRHC · La Rosa Holdings Corp. · type=operating · SIC 6531 Real Estate Agents & Managers (For Others) · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- LSAK · LESAKA TECHNOLOGIES INC · type=operating · SIC 6099 Functions Related To Depository Banking, NEC · fonds=[] · BDC=False · 10-K=19 20-F=0 40-F=0
+- LSPD · Lightspeed Commerce Inc. · type=other · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=6
+- LTRN · Lantern Pharma Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- LXEO · Lexeo Therapeutics, Inc. · type=operating · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- MAIR · Madison Air Solutions Corp · type=operating · SIC 3564 Industrial & Commercial Fans & Blowers & Air Purifing Equip · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- MAMO · Massimo Group · type=operating · SIC 3790 Miscellaneous Transportation Equipment · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- MAR · MARRIOTT INTERNATIONAL INC /MD/ · type=operating · SIC 7011 Hotels & Motels · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- MASK · 3 E Network Technology Group Ltd · type=other · SIC 7371 Services-Computer Programming Services · fonds=[] · BDC=False · 10-K=0 20-F=1 40-F=0
+- MATW · MATTHEWS INTERNATIONAL CORP · type=operating · SIC 3360 Nonferrous Foundries (Castings) · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- MATX · Matson, Inc. · type=operating · SIC 4400 Water Transportation · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- MCD · MCDONALDS CORP · type=operating · SIC 5812 Retail-Eating  Places · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- MCY · MERCURY GENERAL CORP · type=operating · SIC 6331 Fire, Marine & Casualty Insurance · fonds=[] · BDC=False · 10-K=30 20-F=0 40-F=0
+- MEDP · Medpace Holdings, Inc. · type=operating · SIC 8731 Services-Commercial Physical & Biological Research · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- META · Meta Platforms, Inc. · type=operating · SIC 7370 Services-Computer Programming, Data Processing, Etc. · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- MGRX · MANGOCEUTICALS, INC. · type=operating · SIC 8090 Services-Misc Health & Allied Services, NEC · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- MHD · BLACKROCK MUNIHOLDINGS FUND, INC. · type=other · SIC   · fonds=['N-2', 'N-30D', 'N-CEN', 'N-CSR', 'N-CSR/A', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- MLYS · Mineralys Therapeutics, Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=4 20-F=0 40-F=0
+- MNOV · MEDICINOVA INC · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=22 20-F=0 40-F=0
+- MNY · MoneyHero Ltd · type=other · SIC 7389 Services-Business Services, NEC · fonds=[] · BDC=False · 10-K=0 20-F=4 40-F=0
+- MOD · MODINE MANUFACTURING CO · type=operating · SIC 3714 Motor Vehicle Parts & Accessories · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- MPC · Marathon Petroleum Corp · type=operating · SIC 2911 Petroleum Refining · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- MPWR · MONOLITHIC POWER SYSTEMS, INC. · type=operating · SIC 3674 Semiconductors & Related Devices · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- MRDN · Meridian Holdings Inc./NV · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=16 20-F=0 40-F=0
+- MRT · Marti Technologies, Inc. · type=operating · SIC 7510 Services-Auto Rental & Leasing (No Drivers) · fonds=[] · BDC=False · 10-K=2 20-F=4 40-F=0
+- MRVI · MARAVAI LIFESCIENCES HOLDINGS, INC. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- MRVL · Marvell Technology, Inc. · type=operating · SIC 3674 Semiconductors & Related Devices · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- MSFT · MICROSOFT CORP · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- MSGS · Madison Square Garden Sports Corp. · type=operating · SIC 7990 Services-Miscellaneous Amusement & Recreation · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- MSGY · Masonglory Ltd · type=other · SIC 1700 Construction - Special Trade Contractors · fonds=[] · BDC=False · 10-K=0 20-F=2 40-F=0
+- MSS · Maison Solutions Inc. · type=operating · SIC 5411 Retail-Grocery Stores · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- MTG · MGIC INVESTMENT CORP · type=operating · SIC 6351 Surety Insurance · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- MTN · VAIL RESORTS INC · type=operating · SIC 7990 Services-Miscellaneous Amusement & Recreation · fonds=[] · BDC=False · 10-K=15 20-F=0 40-F=0
+- MTZ · MASTEC INC · type=operating · SIC 1623 Water, Sewer, Pipeline, Comm & Power Line Construction · fonds=[] · BDC=False · 10-K=14 20-F=0 40-F=0
+- MUA · BLACKROCK MUNIASSETS FUND, INC. · type=other · SIC   · fonds=['N-2', 'N-30D', 'N-CEN', 'N-CSR', 'N-CSR/A', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- MXF · MEXICO FUND INC · type=other · SIC   · fonds=['N-2', 'N-30D', 'N-CEN', 'N-CSR', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- NAMS · NewAmsterdam Pharma Co N.V. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=3 20-F=2 40-F=0
+- NBHC · National Bank Holdings Corp · type=operating · SIC 6021 National Commercial Banks · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- NCT · Intercont (Cayman) Ltd · type=other · SIC 4412 Deep Sea Foreign Transportation of  Freight · fonds=[] · BDC=False · 10-K=0 20-F=1 40-F=0
+- NDAQ · NASDAQ, INC. · type=operating · SIC 6200 Security & Commodity Brokers, Dealers, Exchanges & Services · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- NDRA · ENDRA Life Sciences Inc. · type=operating · SIC 3845 Electromedical & Electrotherapeutic Apparatus · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- NEE · NEXTERA ENERGY INC · type=operating · SIC 4911 Electric Services · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- NFG · NATIONAL FUEL GAS CO · type=operating · SIC 4924 Natural Gas Distribution · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- NFLX · NETFLIX INC · type=operating · SIC 7841 Services-Video Tape Rental · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- NHP · National Healthcare Properties, Inc. · type=operating · SIC 6798 Real Estate Investment Trusts · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- NMAD · NOMAD POWER SOLUTIONS, INC. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=18 20-F=0 40-F=0
+- NMCO · Nuveen Municipal Credit Opportunities Fund · type=other · SIC   · fonds=['N-2', 'N-CEN', 'N-CSR', 'N-CSRS', 'N-PX', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- NNDM · Nano Dimension Ltd. · type=operating · SIC 3672 Printed Circuit Boards · fonds=[] · BDC=False · 10-K=1 20-F=10 40-F=0
+- NNE · Nano Nuclear Energy Inc. · type=operating · SIC 4911 Electric Services · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- NOC · NORTHROP GRUMMAN CORP /DE/ · type=operating · SIC 3812 Search, Detection, Navigation, Guidance, Aeronautical Sys · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- NSAI · NorthStrive Acquisition Corp I. · type=other · SIC 6770 Blank Checks · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- NSTS · NSTS Bancorp, Inc. · type=operating · SIC 6035 Savings Institution, Federally Chartered · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- NTAP · NetApp, Inc. · type=operating · SIC 3572 Computer Storage Devices · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- NTRA · Natera, Inc. · type=operating · SIC 8071 Services-Medical Laboratories · fonds=[] · BDC=False · 10-K=4 20-F=0 40-F=0
+- NTST · NETSTREIT Corp. · type=operating · SIC 6798 Real Estate Investment Trusts · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- NTWO · Newbury Street II Acquisition Corp · type=operating · SIC 6770 Blank Checks · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- NUR · Nuran Wireless Inc. · type=other · SIC 3576 Computer Communications Equipment · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- NVO · NOVO NORDISK A S · type=other · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=0 20-F=10 40-F=0
+- NVS · NOVARTIS AG · type=other · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=0 20-F=17 40-F=0
+- NVT · nVent Electric plc · type=operating · SIC 3550 Special Industry Machinery (No Metalworking Machinery) · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- NVTS · Navitas Semiconductor Corp · type=operating · SIC 3674 Semiconductors & Related Devices · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- NWL · NEWELL BRANDS INC. · type=operating · SIC 3089 Plastics Products, NEC · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- NWPX · NWPX Infrastructure, Inc. · type=operating · SIC 3317 Steel Pipe & Tubes · fonds=[] · BDC=False · 10-K=17 20-F=0 40-F=0
+- NXDR · Nextdoor Holdings, Inc. · type=operating · SIC 7370 Services-Computer Programming, Data Processing, Etc. · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- NXL · Nexalin Technology, Inc. · type=operating · SIC 3845 Electromedical & Electrotherapeutic Apparatus · fonds=[] · BDC=False · 10-K=4 20-F=0 40-F=0
+- OBAI · Our Bond, Inc. · type=operating · SIC 4899 Communications Services, NEC · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- OCLT · OceanLight Acquisition Corp · type=operating · SIC 6770 Blank Checks · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- OKE · ONEOK INC /NEW/ · type=operating · SIC 4923 Natural Gas Transmisison & Distribution · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- ON · ON SEMICONDUCTOR CORP · type=operating · SIC 3674 Semiconductors & Related Devices · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- ONC · BeOne Medicines Ltd. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- ONEN · ONE Nuclear Energy Inc. · type=operating · SIC 4911 Electric Services · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- ORCL · ORACLE CORP · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- ORKA · Oruka Therapeutics, Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=17 20-F=0 40-F=0
+- ORLY · O REILLY AUTOMOTIVE INC · type=operating · SIC 5531 Retail-Auto & Home Supply Stores · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- OTEX · OPEN TEXT CORP · type=operating · SIC 7373 Services-Computer Integrated Systems Design · fonds=[] · BDC=False · 10-K=25 20-F=0 40-F=0
+- OTIS · Otis Worldwide Corp · type=operating · SIC 3600 Electronic & Other Electrical Equipment (No Computer Equip) · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- OTLK · Outlook Therapeutics, Inc. · type=operating · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- P · Everpure, Inc. · type=operating · SIC 3572 Computer Storage Devices · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- PARA · Banzai International, Inc. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- PBA · PEMBINA PIPELINE CORP · type=other · SIC 1382 Oil & Gas Field Exploration Services · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=14
+- PBF · PBF Energy Inc. · type=operating · SIC 2911 Petroleum Refining · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- PBI · PITNEY BOWES INC /DE/ · type=operating · SIC 3579 Office Machines, NEC · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- PCG · PG&E Corp · type=operating · SIC 4931 Electric & Other Services Combined · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- PD · PagerDuty, Inc. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- PEBO · PEOPLES BANCORP INC · type=operating · SIC 6022 State Commercial Banks · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- PEP · PEPSICO INC · type=operating · SIC 2080 Beverages · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- PG · PROCTER & GAMBLE Co · type=operating · SIC 2840 Soap, Detergents, Cleang Preparations, Perfumes, Cosmetics · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- PH · Parker-Hannifin Corp · type=operating · SIC 3490 Miscellaneous Fabricated Metal Products · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- PINS · PINTEREST, INC. · type=operating · SIC 7370 Services-Computer Programming, Data Processing, Etc. · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- PK · Park Hotels & Resorts Inc. · type=operating · SIC 7011 Hotels & Motels · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- PLAG · Planet Green Holdings Corp. · type=operating · SIC 2030 Canned, Frozen & Preservd Fruit, Veg & Food Specialties · fonds=[] · BDC=False · 10-K=19 20-F=0 40-F=0
+- PLCE · Childrens Place, Inc. · type=operating · SIC 5651 Retail-Family Clothing Stores · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- PONY · Pony AI Inc. · type=other · SIC 7373 Services-Computer Integrated Systems Design · fonds=[] · BDC=False · 10-K=0 20-F=2 40-F=0
+- PPLI · People Inc · type=operating · SIC 7370 Services-Computer Programming, Data Processing, Etc. · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- PRGS · PROGRESS SOFTWARE CORP /MA · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- PRTA · PROTHENA CORP PUBLIC LTD CO · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=14 20-F=0 40-F=0
+- PSIX · POWER SOLUTIONS INTERNATIONAL, INC. · type=operating · SIC 3510 Engines & Turbines · fonds=[] · BDC=False · 10-K=17 20-F=0 40-F=0
+- PTC · PTC INC. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- PTGX · Protagonist Therapeutics, Inc · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- PUSA · Aureus Greenway Holdings Inc · type=operating · SIC 7997 Services-Membership Sports & Recreation Clubs · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- PYXS · Pyxis Oncology, Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- QNME · Quanome Technologies, Inc. · type=operating · SIC 4731 Arrangement of  Transportation of  Freight & Cargo · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- QSR · Restaurant Brands International Inc. · type=operating · SIC 5812 Retail-Eating  Places · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- QVCG · QVC Group, Inc. · type=operating · SIC 5961 Retail-Catalog & Mail-Order Houses · fonds=[] · BDC=False · 10-K=14 20-F=0 40-F=0
+- RA · Brookfield Real Assets Income Fund Inc. · type=other · SIC   · fonds=['N-2', 'N-CEN', 'N-CSR', 'N-CSR/A', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P', 'NPORT-P/A'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- RBRK · Rubrik, Inc. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- RDDT · Reddit, Inc. · type=operating · SIC 7374 Services-Computer Processing & Data Preparation · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- REED · REED'S, INC. · type=operating · SIC 2086 Bottled & Canned Soft Drinks & Carbonated Waters · fonds=[] · BDC=False · 10-K=18 20-F=0 40-F=0
+- REGN · REGENERON PHARMACEUTICALS, INC. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=['N-PX'] · BDC=False · 10-K=9 20-F=0 40-F=0
+- REX · REX AMERICAN RESOURCES Corp · type=operating · SIC 2860 Industrial Organic Chemicals · fonds=[] · BDC=False · 10-K=21 20-F=0 40-F=0
+- RILY · BRC Group Holdings, Inc. · type=operating · SIC 6282 Investment Advice · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- RIVN · Rivian Automotive, Inc. / DE · type=operating · SIC 3711 Motor Vehicles & Passenger Car Bodies · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- RKDA · Arcadia Biosciences, Inc. · type=operating · SIC 1311 Crude Petroleum & Natural Gas · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- RKLB · Rocket Lab Corp · type=operating · SIC 3760 Guided Missiles & Space Vehicles & Parts · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- RKT · Rocket Companies, Inc. · type=operating · SIC 6162 Mortgage Bankers & Loan Correspondents · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- RNAZ · Transcode Therapeutics, Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- ROC · Rank One Computing Corp · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- ROIV · Roivant Sciences Ltd. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- ROK · ROCKWELL AUTOMATION, INC · type=operating · SIC 3829 Measuring & Controlling Devices, NEC · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- ROL · ROLLINS INC · type=operating · SIC 7340 Services-To Dwellings & Other Buildings · fonds=[] · BDC=False · 10-K=14 20-F=0 40-F=0
+- RSG · REPUBLIC SERVICES, INC. · type=operating · SIC 4953 Refuse Systems · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- RTX · RTX Corp · type=operating · SIC 3724 Aircraft Engines & Engine Parts · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- RVMD · Revolution Medicines, Inc. · type=operating · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- RWAY · Runway Growth Finance Corp. · type=operating · SIC   · fonds=['N-2'] · BDC=True · 10-K=10 20-F=0 40-F=0
+- SAFT · SAFETY INSURANCE GROUP INC · type=operating · SIC 6331 Fire, Marine & Casualty Insurance · fonds=[] · BDC=False · 10-K=20 20-F=0 40-F=0
+- SBUX · STARBUCKS CORP · type=operating · SIC 5810 Retail-Eating & Drinking Places · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- SCLX · Scilex Holding Co · type=operating · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- SDOT · Sadot Group Inc. · type=operating · SIC 5810 Retail-Eating & Drinking Places · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- SDST · Stardust Power Inc. · type=operating · SIC 3330 Primary Smelting & Refining of  Nonferrous Metals · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- SEI · Solaris Energy Infrastructure, Inc. · type=operating · SIC 3533 Oil & Gas Field Machinery & Equipment · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- SEIC · SEI INVESTMENTS CO · type=operating · SIC 6211 Security Brokers, Dealers & Flotation Companies · fonds=['N-PX'] · BDC=False · 10-K=12 20-F=0 40-F=0
+- SG · Sweetgreen, Inc. · type=operating · SIC 5812 Retail-Eating  Places · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- SGMT · Sagimet Biosciences Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- SHAZ · SharonAI Holdings Inc. · type=operating · SIC 7374 Services-Computer Processing & Data Preparation · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- SHW · SHERWIN WILLIAMS CO · type=operating · SIC 5200 Retail-Building Materials, Hardware, Garden Supply · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- SILC · SILICOM LTD. · type=other · SIC 3576 Computer Communications Equipment · fonds=[] · BDC=False · 10-K=0 20-F=25 40-F=0
+- SILO · Silo Pharma, Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=True · 10-K=15 20-F=0 40-F=0
+- SKYX · SKYX Platforms Corp. · type=operating · SIC 3640 Electric Lighting & Wiring Equipment · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- SLBT · SL Science Holding Ltd · type=other · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=0 20-F=1 40-F=0
+- SLE · Super League Enterprise, Inc. · type=operating · SIC 7373 Services-Computer Integrated Systems Design · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- SLSN · SOLESENCE, INC. · type=operating · SIC 2844 Perfumes, Cosmetics & Other Toilet Preparations · fonds=[] · BDC=False · 10-K=21 20-F=0 40-F=0
+- SLXN · Silexion Therapeutics Corp · type=operating · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- SMMT · Summit Therapeutics Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=6 20-F=6 40-F=0
+- SNDK · Sandisk Corp · type=operating · SIC 3572 Computer Storage Devices · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- SNDR · Schneider National, Inc. · type=operating · SIC 4213 Trucking (No Local) · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- SNEX · StoneX Group Inc. · type=operating · SIC 6200 Security & Commodity Brokers, Dealers, Exchanges & Services · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- SNOW · Snowflake Inc. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=4 20-F=0 40-F=0
+- SNX · TD SYNNEX CORP · type=operating · SIC 5045 Wholesale-Computers & Peripheral Equipment & Software · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- SON · SONOCO PRODUCTS CO · type=operating · SIC 2650 Paperboard Containers & Boxes · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- SPKL · Spark I Acquisition Corp · type=operating · SIC 3690 Miscellaneous Electrical Machinery, Equipment & Supplies · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- SRZN · Surrozen, Inc./DE · type=operating · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- SSM · Sono Group N.V. · type=operating · SIC 6199 Finance Services · fonds=[] · BDC=False · 10-K=2 20-F=3 40-F=0
+- SSTI · SOUNDTHINKING, INC. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- STE · STERIS plc · type=operating · SIC 3842 Orthopedic, Prosthetic & Surgical Appliances & Supplies · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- STHO · Star Holdings · type=operating · SIC 6519 Lessors of  Real Property, NEC · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- STOK · Stoke Therapeutics, Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- STX · Seagate Technology Holdings plc · type=operating · SIC 3572 Computer Storage Devices · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- SUI · SUN COMMUNITIES INC · type=operating · SIC 6798 Real Estate Investment Trusts · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- SUPN · SUPERNUS PHARMACEUTICALS, INC. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- SURG · SurgePays, Inc. · type=operating · SIC 4813 Telephone Communications (No Radiotelephone) · fonds=[] · BDC=False · 10-K=18 20-F=0 40-F=0
+- SWRD · Stewards, Inc. · type=operating · SIC 6153 Short-Term Business Credit Institutions · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- SXC · SunCoke Energy, Inc. · type=operating · SIC 3312 Steel Works, Blast Furnaces & Rolling Mills (Coke Ovens) · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- SYNA · SYNAPTICS Inc · type=operating · SIC 3674 Semiconductors & Related Devices · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- SYRE · Spyre Therapeutics, Inc. · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- SZZL · Sizzle Acquisition Corp. II · type=operating · SIC 6770 Blank Checks · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- TAVI · Tavia Acquisition Corp. · type=operating · SIC 6770 Blank Checks · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- TBN · Tamboran Resources Corp · type=operating · SIC 1311 Crude Petroleum & Natural Gas · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- TDG · TransDigm Group INC · type=operating · SIC 3728 Aircraft Parts & Auxiliary Equipment, NEC · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- TE · T1 Energy Inc. · type=operating · SIC 3674 Semiconductors & Related Devices · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- TELA · TELA Bio, Inc. · type=operating · SIC 3841 Surgical & Medical Instruments & Apparatus · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- TGL · TREASURE GLOBAL INC · type=operating · SIC 7389 Services-Business Services, NEC · fonds=[] · BDC=False · 10-K=4 20-F=0 40-F=0
+- TH · Target Hospitality Corp. · type=operating · SIC 7000 Hotels, Rooming Houses, Camps & Other Lodging Places · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- THRM · Gentherm Inc · type=operating · SIC 3714 Motor Vehicle Parts & Accessories · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- TJX · TJX COMPANIES INC /DE/ · type=operating · SIC 5651 Retail-Family Clothing Stores · fonds=[] · BDC=False · 10-K=14 20-F=0 40-F=0
+- TP · Ticketplus Ltd. · type=other · SIC 7990 Services-Miscellaneous Amusement & Recreation · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- TPET · Trio Petroleum Corp · type=operating · SIC 1311 Crude Petroleum & Natural Gas · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- TRMB · TRIMBLE INC. · type=operating · SIC 3829 Measuring & Controlling Devices, NEC · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- TSLA · Tesla, Inc. · type=operating · SIC 3711 Motor Vehicles & Passenger Car Bodies · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- TSM · TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD · type=other · SIC 3674 Semiconductors & Related Devices · fonds=[] · BDC=False · 10-K=0 20-F=13 40-F=0
+- TTMI · TTM TECHNOLOGIES INC · type=operating · SIC 3672 Printed Circuit Boards · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- TTWO · TAKE TWO INTERACTIVE SOFTWARE INC · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- TWLO · TWILIO INC · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- TWST · Twist Bioscience Corp · type=operating · SIC 2836 Biological Products, (No Diagnostic Substances) · fonds=[] · BDC=False · 10-K=4 20-F=0 40-F=0
+- UAA · Under Armour, Inc. · type=operating · SIC 2300 Apparel & Other Finishd Prods of  Fabrics & Similar Matl · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- UGI · UGI CORP /PA/ · type=operating · SIC 4932 Gas & Other Services Combined · fonds=[] · BDC=False · 10-K=13 20-F=0 40-F=0
+- ULH · UNIVERSAL LOGISTICS HOLDINGS, INC. · type=operating · SIC 4213 Trucking (No Local) · fonds=[] · BDC=False · 10-K=22 20-F=0 40-F=0
+- UMH · UMH PROPERTIES, INC. · type=operating · SIC 6798 Real Estate Investment Trusts · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- UNH · UNITEDHEALTH GROUP INC · type=operating · SIC 6324 Hospital & Medical Service Plans · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- USAR · USA Rare Earth, Inc. · type=operating · SIC 1000 Metal Mining · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- USBC · USBC, Inc. · type=operating · SIC 6199 Finance Services · fonds=[] · BDC=False · 10-K=18 20-F=0 40-F=0
+- USFD · US Foods Holding Corp. · type=operating · SIC 5140 Wholesale-Groceries & Related Products · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- UTHR · UNITED THERAPEUTICS Corp · type=operating · SIC 2834 Pharmaceutical Preparations · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+- UTL · UNITIL CORP · type=operating · SIC 4931 Electric & Other Services Combined · fonds=[] · BDC=False · 10-K=20 20-F=0 40-F=0
+- UUU · UNIVERSAL SAFETY PRODUCTS, INC. · type=operating · SIC 5065 Wholesale-Electronic Parts & Equipment, NEC · fonds=[] · BDC=False · 10-K=31 20-F=0 40-F=0
+- UWMC · UWM Holdings Corp · type=operating · SIC 6162 Mortgage Bankers & Loan Correspondents · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- V · VISA INC. · type=operating · SIC 7389 Services-Business Services, NEC · fonds=['N-PX'] · BDC=False · 10-K=11 20-F=0 40-F=0
+- VBNB · VanEck BNB ETF · type=operating · SIC 6221 Commodity Contracts Brokers & Dealers · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- VEEA · VEEA INC. · type=operating · SIC 7373 Services-Computer Integrated Systems Design · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- VEEV · VEEVA SYSTEMS INC · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- VELO · Velo3D, Inc. · type=operating · SIC 3559 Special Industry Machinery, NEC · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- VENU · Venu Holding Corp · type=operating · SIC 7900 Services-Amusement & Recreation Services · fonds=[] · BDC=False · 10-K=2 20-F=0 40-F=0
+- VERI · Veritone, Inc. · type=operating · SIC 7374 Services-Computer Processing & Data Preparation · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- VHC · VirnetX Holding Corp · type=operating · SIC 6794 Patent Owners & Lessors · fonds=[] · BDC=False · 10-K=19 20-F=0 40-F=0
+- VIP · Vulcan Infrastructure & Power Inc. · type=operating · SIC 6199 Finance Services · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- VIVK · Vivakor, Inc. · type=operating · SIC 4953 Refuse Systems · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- VNO · VORNADO REALTY TRUST · type=operating · SIC 6798 Real Estate Investment Trusts · fonds=[] · BDC=False · 10-K=14 20-F=0 40-F=0
+- VRM · Vroom, Inc. · type=operating · SIC 5500 Retail-Auto Dealers & Gasoline Stations · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- VRME · OpenWorld, Inc. · type=operating · SIC 6199 Finance Services · fonds=[] · BDC=False · 10-K=15 20-F=0 40-F=0
+- VRT · Vertiv Holdings Co · type=operating · SIC 3679 Electronic Components, NEC · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- VUZI · Vuzix Corp · type=operating · SIC 3663 Radio & Tv Broadcasting & Communications Equipment · fonds=[] · BDC=False · 10-K=17 20-F=0 40-F=0
+- VVOS · Vivos Therapeutics, Inc. · type=operating · SIC 3841 Surgical & Medical Instruments & Apparatus · fonds=[] · BDC=False · 10-K=6 20-F=0 40-F=0
+- VWAV · VisionWave Holdings, Inc. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- WDAY · Workday, Inc. · type=operating · SIC 7374 Services-Computer Processing & Data Preparation · fonds=[] · BDC=False · 10-K=7 20-F=0 40-F=0
+- WEAV · Weave Communications, Inc. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- WFC · WELLS FARGO & COMPANY/MN · type=operating · SIC 6021 National Commercial Banks · fonds=[] · BDC=False · 10-K=1 20-F=0 40-F=0
+- WHD · Cactus, Inc. · type=operating · SIC 3533 Oil & Gas Field Machinery & Equipment · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- WHLR · Wheeler Real Estate Investment Trust, Inc. · type=operating · SIC 6798 Real Estate Investment Trusts · fonds=[] · BDC=False · 10-K=8 20-F=0 40-F=0
+- WIA · WESTERN ASSET INFLATION-LINKED INCOME FUND · type=other · SIC   · fonds=['N-2', 'N-CEN', 'N-CSR', 'N-CSRS', 'N-PX', 'N-Q', 'NPORT-P'] · BDC=False · 10-K=0 20-F=0 40-F=0
+- WMB · WILLIAMS COMPANIES, INC. · type=operating · SIC 4922 Natural Gas Transmission · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- WMT · Walmart Inc. · type=operating · SIC 5331 Retail-Variety Stores · fonds=['N-PX'] · BDC=False · 10-K=3 20-F=0 40-F=0
+- WOR · WORTHINGTON ENTERPRISES, INC. · type=operating · SIC 3310 Steel Works, Blast Furnaces & Rolling & Finishing Mills · fonds=[] · BDC=False · 10-K=9 20-F=0 40-F=0
+- WRBY · Warby Parker Inc. · type=operating · SIC 3851 Ophthalmic Goods · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- WSO · WATSCO INC · type=operating · SIC 5070 Wholesale-Hardware & Plumbing & Heating Equipment & Supplies · fonds=[] · BDC=False · 10-K=20 20-F=0 40-F=0
+- XAIR · Beyond Air, Inc. · type=operating · SIC 3841 Surgical & Medical Instruments & Apparatus · fonds=[] · BDC=False · 10-K=11 20-F=0 40-F=0
+- XELB · XCel Brands, Inc. · type=operating · SIC 6794 Patent Owners & Lessors · fonds=[] · BDC=False · 10-K=19 20-F=0 40-F=0
+- XMTR · Xometry, Inc. · type=operating · SIC 7389 Services-Business Services, NEC · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- XOM · ExxonMobil Holdings Corp · type=operating · SIC 2911 Petroleum Refining · fonds=[] · BDC=False · 10-K=0 20-F=0 40-F=0
+- XPOF · Xponential Fitness, Inc. · type=operating · SIC 7990 Services-Miscellaneous Amusement & Recreation · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- XYL · Xylem Inc. · type=operating · SIC 3561 Pumps & Pumping Equipment · fonds=[] · BDC=False · 10-K=12 20-F=0 40-F=0
+- XYZ · Block, Inc. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=5 20-F=0 40-F=0
+- ZDGE · Zedge, Inc. · type=operating · SIC 7372 Services-Prepackaged Software · fonds=[] · BDC=False · 10-K=10 20-F=0 40-F=0
+- ZONE · Zone Frontier Inc. · type=operating · SIC 2842 Specialty Cleaning, Polishing and Sanitation Preparations · fonds=[] · BDC=False · 10-K=3 20-F=0 40-F=0
+
+entityType : {'operating': 452, 'other': 60, 'investment': 1}
