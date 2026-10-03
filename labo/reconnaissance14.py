@@ -63,7 +63,7 @@ def regles(hote):
         try:
             r = requests.get(f"https://{hote}/robots.txt", headers=H, timeout=(20, 40))
             robots[hote] = {"statut": r.status_code, "texte": r.text[:3000]}
-            if r.status_code >= 500:
+            if r.status_code in (401, 403) or r.status_code >= 500:
                 rp.disallow_all = True
             elif r.status_code >= 400:
                 rp.allow_all = True
