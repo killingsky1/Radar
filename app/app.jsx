@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.11.0";
+const VERSION = "0.12.0";
 
 // ---------- Constantes ----------
 
@@ -109,6 +109,19 @@ const CONTROLES_SOURCES = {
   projet_du_gouvernement: "Projet de loi du gouvernement",
   sanction_confirmee: "Sanction royale confirmée",
   lien_legisinfo: "Lien LEGISinfo",
+  nouvelle_substance_active: "Nouvelle substance active (NSA ou Priorité-NSA)",
+  avis_actif: "Avis de conformité actif",
+  marque_et_ingredient_lus: "Marque et ingrédient lus",
+  fiches_du_meme_avis: "Fiches du même avis (marque, ingrédient)",
+  seuil_de_10_millions: "10 M$ et plus (nouveau contrat ou hausse)",
+  valeurs_lues: "Valeurs du contrat lues",
+  type_d_instrument_connu: "Type connu (contrat, modification, commande)",
+  trimestre_declare_valide: "Trimestre déclaré valide",
+  lien_de_la_fiche_du_contrat: "Lien de la fiche publique du contrat",
+  periode_lue: "Période du rapport lue",
+  meme_periode_que_le_lien: "Même période que le lien de la page des rapports",
+  lignes_lues: "Chaque ligne lue (exportateur, destination, description)",
+  fourchettes_reconnues: "Fourchettes de montants reconnues",
   lettre_officielle: "Lettre d'approbation officielle",
   trimestres_consecutifs: "Trimestres consécutifs comparés",
   rapports_complets: "Deux rapports complets comparés",
@@ -801,6 +814,8 @@ function FeuilleDetail({ ev, fermer }) {
 
       {ev.source === "oge_278t" && ev.data?.transactions?.length > 0 && <LignesOge ev={ev} />}
 
+      {ev.source === "ccc" && ev.data?.transactions?.length > 0 && <LignesCcc ev={ev} />}
+
       {(ev.source === "chambre_ptr" || ev.source === "senat_ptr") && ev.data?.transactions?.length > 0 && (
         <>
           <h3 className="section">Transactions déclarées</h3>
@@ -870,7 +885,7 @@ function MentionCanada({ ev }) {
   const s = ev.source;
   const gazette = s === "gazette_ca" || (s === "grands_projets_ca" && ev.kind !== "projet_soutenu");
   let texte = null;
-  if (s === "concurrence_ca" || s === "sanctions_ca")
+  if (s === "concurrence_ca" || s === "sanctions_ca" || s === "sante_canada" || s === "contrats_ca_10k")
     texte = (
       <>
         Contient de l'information visée par la{" "}
@@ -888,11 +903,37 @@ function MentionCanada({ ev }) {
     texte = "Reproduction de la version disponible à l'adresse officielle (Bureau des grands projets, Bureau du Conseil privé) : usage personnel et non commercial.";
   else if (s === "legisinfo")
     texte = "Source : LEGISinfo, Parlement du Canada. Reproduction exacte et non officielle, pour un usage personnel et non commercial.";
+  else if (s === "ccc")
+    texte = "Source : Corporation commerciale canadienne. Usage personnel et non commercial seulement (conditions d'utilisation de la CCC).";
   if (!texte) return null;
   return (
     <>
       <br />
       <span className="mention">{texte}</span>
+    </>
+  );
+}
+
+// ---------- CCC : les transactions d'un rapport trimestriel (telles qu'écrites dans le PDF officiel) ----------
+
+function LignesCcc({ ev }) {
+  const ts = ev.data.transactions;
+  return (
+    <>
+      <h3 className="section">{`Les ${ts.length} transactions du rapport`}</h3>
+      <div className="carte liste lignes-oge lignes-ccc">
+        {ts.map((t, i) => (
+          <div key={i} className="ligne-oge">
+            <div className="transaction">
+              <span className="transaction-qui">
+                {t.exportateur} · {t.destination}
+              </span>
+              <span className="transaction-montant">{t.fourchette}</span>
+            </div>
+            <p className="ligne-oge-desc">{t.description}</p>
+          </div>
+        ))}
+      </div>
     </>
   );
 }

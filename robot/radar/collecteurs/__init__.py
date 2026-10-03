@@ -12,8 +12,8 @@ from ..models import Evenement
 
 Collecteur = Callable[["object"], list[Evenement]]
 
-from . import (banques, canada, canada_eco, cftc, congres, elus, fda, fonds13f, gazette, legisinfo,  # noqa: E402
-               lobbying, maison_blanche, oge, registre, regulateurs, sec)
+from . import (banques, canada, canada_eco, ccc, cftc, congres, contrats_ca, elus, fda, fonds13f, gazette,  # noqa: E402
+               legisinfo, lobbying, maison_blanche, oge, registre, regulateurs, sante_canada, sec)
 
 # L'ordre compte : les lecteurs SEC chargent la liste officielle des symboles, réutilisée ensuite.
 COLLECTEURS: dict[str, Collecteur] = {
@@ -50,4 +50,7 @@ COLLECTEURS: dict[str, Collecteur] = {
     "gazette_ca": gazette.collecter_reglements,  # les 2 sources de la Gazette se partagent une seule lecture
     "grands_projets_ca": gazette.collecter_projets,
     "legisinfo": legisinfo.collecter,
+    "sante_canada": sante_canada.collecter,
+    "contrats_ca_10k": contrats_ca.collecter,  # 1re lecture d'un trimestre : silencieuse (voir contrats_ca.py)
+    "ccc": ccc.collecter,
 }

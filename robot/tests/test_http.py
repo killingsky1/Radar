@@ -91,3 +91,12 @@ def test_vitesse_limitee_a_la_sec():
     c.get("https://www.sec.gov/a")
     c.get("https://data.sec.gov/b")  # même domaine racine : doit attendre son tour
     assert h.pauses and abs(h.pauses[-1] - 0.2) < 1e-9  # 5 requêtes/seconde
+
+
+def test_open_canada_20_secondes_sans_ralentir_les_autres_sites_canada_ca():
+    c, session, h = client([Reponse(200)] * 4)
+    c.get("https://open.canada.ca/data/api/action/datastore_search?x=1")
+    c.get("https://www.canada.ca/fr/page.html")  # autre site canada.ca : pas d'attente de 20 s
+    assert not h.pauses
+    c.get("https://open.canada.ca/data/api/action/datastore_search?x=2")
+    assert h.pauses and abs(h.pauses[-1] - 20.0) < 1e-9  # robots.txt : Crawl-delay: 20

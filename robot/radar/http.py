@@ -12,9 +12,12 @@ from urllib.parse import urlparse
 
 from .models import empreinte, maintenant_utc
 
-# Requêtes par seconde, par domaine. CFTC : son robots.txt demande 1 seconde entre deux requêtes.
+# Requêtes par seconde, par domaine (ou par site précis). CFTC : son robots.txt demande 1 seconde entre deux requêtes.
 # LDA.gov : robots.txt demande 4 secondes entre deux requêtes (15 par minute sans compte) : on en attend 4,5.
-VITESSE_MAX = {"sec.gov": 5.0, "federalregister.gov": 1.0, "cftc.gov": 1.0, "lda.gov": 1 / 4.5}
+# open.canada.ca : son robots.txt demande 20 secondes ; limite propre à ce site, pour ne pas ralentir les autres canada.ca.
+# www150.statcan.gc.ca : son robots.txt demande 2 secondes.
+VITESSE_MAX = {"sec.gov": 5.0, "federalregister.gov": 1.0, "cftc.gov": 1.0, "lda.gov": 1 / 4.5,
+               "open.canada.ca": 1 / 20, "www150.statcan.gc.ca": 1 / 2}
 VITESSE_DEFAUT = 2.0
 CODES_A_REESSAYER = {429, 500, 502, 503, 504}
 
@@ -77,11 +80,12 @@ class ClientPoli:
     def _requete(self, methode: str, url: str, entetes: dict | None, donnees: dict | None = None) -> Telechargement:
         hote = (urlparse(url).hostname or "").lower()
         domaine = _domaine_racine(hote)
+        cle_vitesse = hote if hote in VITESSE_MAX else domaine
         if domaine == "sec.gov" and "@" not in self.contact:
             raise ErreurSource("Courriel de contact manquant : la SEC l'exige dans chaque requête.")
         derniere_erreur = "aucun essai"
         for essai in range(self.essais):
-            self._attendre_son_tour(domaine)
+            self._attendre_son_tour(cle_vitesse)
             try:
                 h = {**(self.entetes_sec if domaine == "sec.gov" else self.entetes), **(entetes or {})}
                 if methode == "post":

@@ -183,6 +183,10 @@ SANS_POINTS = {
     "offre": "Offre d'achat : le prix a déjà bondi à l'annonce.",
     "ftc": "Feu vert antitrust (FTC) : aucune étude solide trouvée.",
     "concurrence": "Examen de fusion du Bureau de la concurrence (Canada) : aucune étude solide trouvée.",
+    "sante_canada": "Approbation de Santé Canada : aucune étude solide trouvée (les études trouvées portent sur la FDA).",
+    "contrat_ca": "Contrat fédéral canadien : aucune étude solide trouvée sur les contrats canadiens.",
+    "ccc": "Transaction de la Corporation commerciale canadienne : aucune étude solide trouvée ; montants publiés en "
+           "fourchettes.",
     "lobbying": "Lobbying à Washington (LDA.gov) : montré sur la fiche de la compagnie, sans points. L'étude de Chen, "
                 "Parsley et Yang (2015) mesure un effet sur 3 ans, selon le lobbying par rapport à la taille de la "
                 "compagnie, que Radar ne mesure pas.",
@@ -317,6 +321,12 @@ def evaluer(ev: dict, emissions: frozenset = frozenset(), chefs: frozenset = fro
         return contexte("ftc")
     if s == "concurrence_ca":
         return contexte("concurrence")
+    if s == "sante_canada":
+        return contexte("sante_canada")
+    if s == "contrats_ca_10k":
+        return contexte("contrat_ca")
+    if s == "ccc":
+        return contexte("ccc")
     return contexte("contexte")
 
 

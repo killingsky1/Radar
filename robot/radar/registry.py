@@ -69,11 +69,14 @@ _LISTE = [
       "https://www.gao.gov/legal/bid-protests/search"),
     S("participations_gouv", "Gouvernement américain actionnaire", "gouvernement",
       ("sec.gov", "war.gov", "energy.gov", "commerce.gov", "whitehouse.gov"), 2, "https://www.sec.gov/edgar/search/"),
-    S("contrats_ca_10k", "Contrats fédéraux de plus de 10 000 $", "canada", ("open.canada.ca",), 2,
-      "https://search.open.canada.ca/contracts/", attente_heures=24 * 8, publication_max_jours=130),
+    # Lot 3c : contrats de 10 M$ et plus (nouveaux ou hausses), lus chaque matin sur l'API du portail (20 s entre 2 requêtes)
+    S("contrats_ca_10k", "Contrats fédéraux de 10 M$ et plus (publication proactive)", "canada",
+      ("open.canada.ca", "ouvert.canada.ca"), 2, "https://rechercher.ouvert.canada.ca/contrats/",
+      attente_heures=24 * 8, publication_max_jours=130, passages=("matin",)),
     S("nouvelles_defense_ca", "Canada : nouvelles de la Défense nationale", "militaire", ("canada.ca",), 2,
       "https://www.canada.ca/fr/nouvelles.html", publication_max_jours=21),
-    S("ccc", "Corporation commerciale canadienne", "canada", ("ccc.ca",), 2, "https://www.ccc.ca/en/announcements/"),
+    S("ccc", "Corporation commerciale canadienne : transactions signées (rapport trimestriel)", "canada", ("ccc.ca",), 2,
+      "https://www.ccc.ca/en/about/corporate-reports/", passages=("matin",)),
     # Phase 3 : politiciens
     S("chambre_ptr", "Chambre des représentants : transactions des élus", "politiciens", ("house.gov",), 3,
       "https://disclosures-clerk.house.gov/FinancialDisclosure", publication_max_jours=21),
@@ -126,8 +129,8 @@ _LISTE = [
     # Gazette : Partie II un mercredi sur deux (9 h), Partie I le samedi ; les 2 sources se partagent la lecture
     S("gazette_ca", "Gazette du Canada : règlements liés à l'argent (surtaxes, sanctions, commerce)", "canada",
       ("gazette.gc.ca",), 4, "https://gazette.gc.ca/rp-pr/p2/2026/index-fra.html", passages=("matin", "soir")),
-    S("sante_canada", "Santé Canada : approbations de médicaments", "canada", ("canada.ca",), 4,
-      "https://health-products.canada.ca/"),
+    S("sante_canada", "Santé Canada : nouveaux médicaments (nouvelles substances actives)", "canada", ("canada.ca",), 4,
+      "https://health-products.canada.ca/noc-ac/?lang=fre", passages=("matin",)),
     S("concurrence_ca", "Bureau de la concurrence : examens de fusion", "canada", ("canada.ca",), 4,
       "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
       publication_max_jours=21, passages=("matin",)),

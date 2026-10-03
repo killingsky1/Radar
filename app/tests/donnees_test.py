@@ -5,6 +5,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "robot"))
 from radar.models import Confirmation, Evenement, empreinte
 from radar.run import executer
+from radar.collecteurs.contrats_ca import fiche as fiche_contrat, trimestre
 
 J = date.today()
 def jour(n): return (J - timedelta(days=n)).isoformat()
@@ -12,6 +13,14 @@ def ev(i, source, cat, kind, titre, publie, url, **x):
     return Evenement(source=source, official_id=x.pop("numero", f"TEST-{i}"), category=cat, kind=kind, title=f"TEST : {titre}",
                      occurred_on=x.pop("occ", publie), published_on=publie, official_url=url,
                      sha256=empreinte(f"test{i}".encode()), parser_version="test", **x)
+
+# Une ligne au format du portail du gouvernement ouvert (champs lus par le robot), avec des valeurs d'exemple
+CONTRAT_TEST = {"_id": 1, "reference_number": "TEST-6", "owner_org": "dnd-mdn",
+                "owner_org_title": "National Defence | Défense nationale", "vendor_name": "Colt Canada",
+                "contract_date": jour(12), "contract_value": "307000000.00", "original_value": "307000000.00",
+                "amendment_value": None, "description_fr": "Armes (exemple)", "instrument_type": "C",
+                "reporting_period": trimestre(J), "fournisseur": "Colt Canada", "ministere": "Défense nationale",
+                "montant": 3.07e8, "type": "contrat"}
 
 def faux(ctx):
     return [
@@ -39,9 +48,9 @@ def faux(ctx):
                  "elu": "Élu·e (exemple)", "circonscription": "ZZ01",
                  "transactions": [{"proprietaire": "SP", "actif": "Microsoft Corporation - Common Stock (MSFT) [ST]",
                                    "date": jour(20), "montant": "$15,001 - $50,000", "partielle": False}]}),
-        ev(6, "contrats_ca_10k", "canada", "contrat", "contrat de fusils pour les Forces armées canadiennes", jour(2),
-           "https://open.canada.ca/test", amount_min=3.07e8, amount_max=3.07e8, currency="CAD",
-           entities=["Colt Canada"]),
+        ev(6, "contrats_ca_10k", "canada", "contrat_federal", "contrat de fusils pour les Forces armées canadiennes", jour(2),
+           fiche_contrat(CONTRAT_TEST), numero="dnd-mdn:TEST-6", occ=jour(12), amount_min=3.07e8, amount_max=3.07e8,
+           currency="CAD", entities=["Colt Canada", "Défense nationale"], data=CONTRAT_TEST),
         ev(7, "sec_8k", "compagnies", "evenement", "Apple annonce une acquisition", jour(3),
            "https://www.sec.gov/test/aapl-8k.htm", tickers=["AAPL"], entities=["Apple Inc."],
            data={"type": "8-K", "items": [{"item": "2.01", "libelle": "acquisition", "direction": 0}]}),
@@ -97,6 +106,24 @@ def faux(ctx):
                  "resultat": "lettre de non-intervention",
                  "details": [["Acquéreur", "Acheteur (exemple)"], ["Visé(s)", "Cible (exemple)"],
                              ["Résultat", "lettre de non-intervention"]]}),
+        # Canada (lot 3c, livraison 2) : un nouveau médicament de Santé Canada et un rapport de la CCC (ses lignes)
+        ev(17, "sante_canada", "canada", "approbation_sante_canada", "Santé Canada : nouveau médicament autorisé, EXEMPLA (exemple)",
+           jour(7), "https://health-products.canada.ca/noc-ac/nocInfo?lang=fre&no=99999", numero="99999",
+           entities=["Fabricant (exemple)"], currency="CAD",
+           data={"numero": 99999, "classe": "Nouvelle substance active (NSA)", "actif": "1", "marques": ["EXEMPLA"],
+                 "ingredients": [{"nom": "exemplamab", "dose": "10 MG"}], "fiches_meme_avis": True,
+                 "details": [["Médicament", "EXEMPLA"], ["Ingrédient(s)", "exemplamab 10 MG"], ["Fabricant", "Fabricant (exemple)"]]}),
+        ev(18, "ccc", "canada", "transactions_signees", "Corporation commerciale canadienne : 2 transactions signées (exemple)",
+           jour(9), "https://www.ccc.ca/wp-content/uploads/2026/07/TEST.pdf", occ=jour(40), numero="TEST-ccc",
+           entities=["Corporation commerciale canadienne"], currency="CAD", amount_min=1.1e6, amount_max=6.0e6,
+           data={"debut": jour(130), "fin": jour(40), "fin_lien": jour(40), "nombre": 2,
+                 "transactions": [
+                     {"exportateur": "Exportateur (exemple)", "destination": "United States",
+                      "description": "Defence Products / Produits de défense", "min": 1.0e6, "max": 5.0e6,
+                      "fourchette": "1 M$ à 5 M$"},
+                     {"exportateur": "Canadian Exporter", "destination": "Canada",
+                      "description": "Medical Equipment / Équipement médical", "min": 100000.0, "max": 1.0e6,
+                      "fourchette": "100 000 $ à 1 M$"}]}),
         ev(13, "sec_form4", "compagnies", "vente_initie", "le PDG d'Exemple Corp. vend 100 000 actions", jour(1),
            "https://www.sec.gov/test/xmpl-form4.xml", tickers=["XMPL"], amount_min=1.5e6, amount_max=1.5e6,
            entities=["PDG (exemple)", "Exemple Corp."], direction=-1,
