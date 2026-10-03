@@ -33,6 +33,21 @@ INTERESSANTS = re.compile(r"\.(csv|json|xml|pdf|xlsx|atom|rss|zip)\b|rss|feed|ap
                           r"|legal|copyright|policy|polic|exclu|holding|investments|press|news|bulletin|fails", re.I)
 robots, resultats, dernier = {}, {}, {}
 AUJ = date.today()
+# Des pages publiques contiennent parfois des clés d'accès (ex. une clé Mapbox dans la page de NBIM) : on ne les garde
+# jamais. Elles sont masquées avant tout enregistrement.
+CLES = [re.compile(rb"\b(?:pk|sk|tk)\.[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}"), re.compile(rb"AIza[0-9A-Za-z_-]{35}"),
+        re.compile(rb"\b(?:AKIA|ASIA)[0-9A-Z]{16}\b"),
+        re.compile(rb"(?i)((?:access_?token|api_?key|apikey|secret|token)[\"']?\s*[:=]\s*[\"']?)[A-Za-z0-9._~+/-]{16,}")]
+
+
+def masquer(contenu, type_contenu):
+    if not re.search(r"html|json|xml|javascript|text", type_contenu or ""):
+        return contenu, 0
+    n = 0
+    for motif in CLES:
+        contenu, k = motif.subn(lambda m: (m.group(1) if m.groups() else b"") + b"[cle masquee]", contenu)
+        n += k
+    return contenu, n
 
 
 def ua(hote):
@@ -109,7 +124,8 @@ def visiter(nom, url, corps=None, garde=MAX_GARDE):
                 if taille > MAX_LU:
                     break
             r.close()
-            contenu = b"".join(morceaux)[:garde]
+            contenu, masquees = masquer(b"".join(morceaux)[:garde], r.headers.get("content-type"))
+            res["cles_masquees"] = masquees
             res.update({"statut": r.status_code, "type": r.headers.get("content-type"), "taille": taille,
                         "complet": taille <= garde,
                         "entetes": {k: v for k, v in r.headers.items()
