@@ -83,7 +83,7 @@
    "statut": 200,
    "taille": 7242,
    "type": "application/json",
-   "longueur": "1916"
+   "longueur": "1865"
   },
   {
    "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=NAYAX",
@@ -131,7 +131,7 @@
    "statut": 200,
    "taille": 10767,
    "type": "application/json",
-   "longueur": "2065"
+   "longueur": "2004"
   },
   {
    "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=MINISO",
@@ -147,7 +147,7 @@
    "statut": 200,
    "taille": 98509,
    "type": "application/json",
-   "longueur": "12940"
+   "longueur": "12881"
   },
   {
    "url": "https://lda.gov/api/v1/filings/?client_name=QUANTUM&filing_period=second_quarter&filing_year=2026&page=2&page_size=25",
@@ -155,7 +155,7 @@
    "statut": 200,
    "taille": 6723,
    "type": "application/json",
-   "longueur": "1787"
+   "longueur": "1757"
   },
   {
    "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=GUARANTY",
@@ -163,7 +163,7 @@
    "statut": 200,
    "taille": 33145,
    "type": "application/json",
-   "longueur": "5411"
+   "longueur": "5373"
   },
   {
    "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=ISOTOPES",
@@ -179,7 +179,7 @@
    "statut": 200,
    "taille": 116473,
    "type": "application/json",
-   "longueur": "14262"
+   "longueur": "14271"
   },
   {
    "url": "https://lda.gov/api/v1/filings/?client_name=SOUTHWEST&filing_period=second_quarter&filing_year=2026&page=2&page_size=25",
@@ -187,7 +187,7 @@
    "statut": 200,
    "taille": 34629,
    "type": "application/json",
-   "longueur": "6034"
+   "longueur": "6095"
   },
   {
    "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=SPORTING",
@@ -195,7 +195,7 @@
    "statut": 200,
    "taille": 2139,
    "type": "application/json",
-   "longueur": "955"
+   "longueur": "913"
   },
   {
    "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=LIPOCINE",
@@ -219,7 +219,7 @@
    "statut": 200,
    "taille": 30773,
    "type": "application/json",
-   "longueur": "5065"
+   "longueur": "5025"
   },
   {
    "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=CBIZ",
@@ -235,15 +235,11 @@
    "statut": 200,
    "taille": 75851,
    "type": "application/json",
-   "longueur": "9457"
+   "longueur": "9407"
   },
   {
    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1014264",
-   "methode": "GET",
-   "statut": 403,
-   "taille": 5637,
-   "type": "text/html; charset=UTF-8",
-   "longueur": null
+   "refus": "robots.txt"
   }
  ]
 }
