@@ -1,0 +1,92 @@
+{
+ "noc_drugproduct_38296": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38296&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=38296&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 124,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "124",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38296,\"noc_br_brand_id\":41110,\"noc_br_brandname\":\"AMMIVO\",\"noc_br_din\":\"02571595\",\"noc_br_product_id\":78776}]"
+ },
+ "noc_medicinalingredient_38296": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38296&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=38296&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 336,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "336",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":38296,\"noc_pi_din_product_id\":78776,\"noc_pi_medic_ingr_name\":\"BENZOATE DE SODIUM\",\"noc_pi_strength\":100.0,\"noc_pi_unit\":\"MG\",\"noc_pi_basic_unit\":\"ML\"},{\"noc_number\":38296,\"noc_pi_din_product_id\":78776,\"noc_pi_medic_ingr_name\":\"PHÉNYLACÉTATE SODIQUE\",\"noc_pi_strength\":100.0,\"noc_pi_unit\":\"MG\",\"noc_pi_basic_unit\":\"ML\"}]"
+ },
+ "noc_drugproduct_37862": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37862&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37862&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 124,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "124",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37862,\"noc_br_brand_id\":40641,\"noc_br_brandname\":\"JOENJA\",\"noc_br_din\":\"02569809\",\"noc_br_product_id\":77837}]"
+ },
+ "noc_medicinalingredient_37862": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37862&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37862&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 172,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "172",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37862,\"noc_pi_din_product_id\":77837,\"noc_pi_medic_ingr_name\":\"PHOSPHATE DE LÉNIOLISIB\",\"noc_pi_strength\":70.0,\"noc_pi_unit\":\"MG\",\"noc_pi_basic_unit\":\"TAB\"}]"
+ },
+ "noc_drugproduct_37708": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37708&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/drugproduct/?id=37708&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 126,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "126",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37708,\"noc_br_brand_id\":40475,\"noc_br_brandname\":\"PIMJETMI\",\"noc_br_din\":\"02569035\",\"noc_br_product_id\":77475}]"
+ },
+ "noc_medicinalingredient_37708": {
+  "url": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37708&lang=fr&type=json",
+  "permis_robots_txt": true,
+  "url_finale": "https://health-products.canada.ca/api/notice-of-compliance/medicinalingredient/?id=37708&lang=fr&type=json",
+  "statut": 200,
+  "type": "application/json; charset=utf-8",
+  "taille": 175,
+  "complet": true,
+  "lecture_arretee": false,
+  "entetes": {
+   "Content-Length": "175",
+   "Cache-Control": "no-cache"
+  },
+  "debut": "[{\"noc_number\":37708,\"noc_pi_din_product_id\":77475,\"noc_pi_medic_ingr_name\":\"CHLORHYDRATE DE PIMICOTINIB\",\"noc_pi_strength\":25.0,\"noc_pi_unit\":\"MG\",\"noc_pi_basic_unit\":\"CAP\"}]"
+ }
+}
