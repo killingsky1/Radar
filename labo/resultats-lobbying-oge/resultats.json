@@ -1,0 +1,186 @@
+{
+ "lda_tos": {
+  "url": "https://lda.gov/api/tos/",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "text/html; charset=utf-8",
+  "taille": 18941,
+  "entetes": {
+   "x-frame-options": "DENY",
+   "x-content-type-options": "nosniff"
+  },
+  "debut": "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n\n  <title>API Help | LDA.gov</title>\n  <link href=\"https://cdn.datatables.net/2.3.2/css/dataTables.bootstrap5.css\" rel=\"stylesheet\">\n  \n\n  \n<link rel=\"stylesheet\" media=\"all\" href=\"https://"
+ },
+ "lda_tos_senat": {
+  "url": "https://lda.senate.gov/api/tos/",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "text/html; charset=utf-8",
+  "taille": 18941,
+  "entetes": {
+   "x-frame-options": "DENY",
+   "x-content-type-options": "nosniff"
+  },
+  "debut": "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n\n  <title>API Help | LDA.gov</title>\n  <link href=\"https://cdn.datatables.net/2.3.2/css/dataTables.bootstrap5.css\" rel=\"stylesheet\">\n  \n\n  \n<link rel=\"stylesheet\" media=\"all\" href=\"https://"
+ },
+ "lda_racine": {
+  "url": "https://lda.gov/api/v1/",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "application/json",
+  "taille": 963,
+  "entetes": {
+   "x-frame-options": "DENY",
+   "x-content-type-options": "nosniff"
+  },
+  "debut": "{\"filings\":\"https://lda.gov/api/v1/filings/\",\"contributions\":\"https://lda.gov/api/v1/contributions/\",\"registrants\":\"https://lda.gov/api/v1/registrants/\",\"clients\":\"https://lda.gov/api/v1/clients/\",\"lobbyists\":\"https://lda.gov/api/v1/lobbyists/\",\"constants/filing/filingtypes\":\"https://lda.gov/api/v1/constants/filing/filingtypes/\",\"constants/filing/lobbyingactivityissues\":\"https://lda.gov/api/v1/con"
+ },
+ "lda_sujets": {
+  "url": "https://lda.gov/api/v1/constants/filing/lobbyingactivityissues/",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "application/json",
+  "taille": 3596,
+  "entetes": {
+   "x-frame-options": "DENY",
+   "x-content-type-options": "nosniff"
+  },
+  "debut": "[{\"value\":\"ACC\",\"name\":\"Accounting\"},{\"value\":\"ADV\",\"name\":\"Advertising\"},{\"value\":\"AER\",\"name\":\"Aerospace\"},{\"value\":\"AGR\",\"name\":\"Agriculture\"},{\"value\":\"ALC\",\"name\":\"Alcohol and Drug Abuse\"},{\"value\":\"ANI\",\"name\":\"Animals\"},{\"value\":\"APP\",\"name\":\"Apparel/Clothing Industry/Textiles\"},{\"value\":\"ART\",\"name\":\"Arts/Entertainment\"},{\"value\":\"AUT\",\"name\":\"Automotive Industry\"},{\"value\":\"AVI\",\"name\":\"A"
+ },
+ "lda_types": {
+  "url": "https://lda.gov/api/v1/constants/filing/filingtypes/",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "application/json",
+  "taille": 2803,
+  "entetes": {
+   "x-frame-options": "DENY",
+   "x-content-type-options": "nosniff"
+  },
+  "debut": "[{\"value\":\"RR\",\"name\":\"Registration\"},{\"value\":\"RA\",\"name\":\"Registration - Amendment\"},{\"value\":\"Q1\",\"name\":\"1st Quarter - Report\"},{\"value\":\"Q1Y\",\"name\":\"1st Quarter - Report (No Activity)\"},{\"value\":\"1T\",\"name\":\"1st Quarter - Termination\"},{\"value\":\"1TY\",\"name\":\"1st Quarter - Termination (No Activity)\"},{\"value\":\"1A\",\"name\":\"1st Quarter - Amendment\"},{\"value\":\"1AY\",\"name\":\"1st Quarter - Amendmen"
+ },
+ "lda_gamestop": {
+  "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=GameStop",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "application/json",
+  "taille": 52,
+  "entetes": {
+   "x-frame-options": "DENY",
+   "x-content-type-options": "nosniff"
+  },
+  "debut": "{\"count\":0,\"next\":null,\"previous\":null,\"results\":[]}"
+ },
+ "lda_dicks": {
+  "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=Dick%27s%20Sporting%20Goods",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "application/json",
+  "taille": 52,
+  "entetes": {
+   "x-frame-options": "DENY",
+   "x-content-type-options": "nosniff"
+  },
+  "debut": "{\"count\":0,\"next\":null,\"previous\":null,\"results\":[]}"
+ },
+ "lda_fuller": {
+  "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=Fuller",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "application/json",
+  "taille": 7242,
+  "entetes": {
+   "x-frame-options": "DENY",
+   "x-content-type-options": "nosniff"
+  },
+  "debut": "{\"count\":2,\"next\":null,\"previous\":null,\"results\":[{\"url\":\"https://lda.gov/api/v1/filings/2e87997f-ab34-444d-a119-408270a322e8/\",\"filing_uuid\":\"2e87997f-ab34-444d-a119-408270a322e8\",\"filing_type\":\"Q2\",\"filing_type_display\":\"2nd Quarter - Report\",\"filing_year\":2026,\"filing_period\":\"second_quarter\",\"filing_period_display\":\"2nd Quarter (Apr 1 - June 30)\",\"filing_document_url\":\"https://lda.gov/filings/"
+ },
+ "lda_hbfuller": {
+  "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=H.B.%20Fuller",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "application/json",
+  "taille": 52,
+  "entetes": {
+   "x-frame-options": "DENY",
+   "x-content-type-options": "nosniff"
+  },
+  "debut": "{\"count\":0,\"next\":null,\"previous\":null,\"results\":[]}"
+ },
+ "lda_cbiz": {
+  "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=CBIZ",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "application/json",
+  "taille": 52,
+  "entetes": {
+   "x-frame-options": "DENY",
+   "x-content-type-options": "nosniff"
+  },
+  "debut": "{\"count\":0,\"next\":null,\"previous\":null,\"results\":[]}"
+ },
+ "lda_lockheed": {
+  "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=Lockheed%20Martin",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "application/json",
+  "taille": 75851,
+  "entetes": {
+   "x-frame-options": "DENY",
+   "x-content-type-options": "nosniff"
+  },
+  "debut": "{\"count\":17,\"next\":null,\"previous\":null,\"results\":[{\"url\":\"https://lda.gov/api/v1/filings/267f9eb6-4d3c-4f1a-9229-f1378e317da9/\",\"filing_uuid\":\"267f9eb6-4d3c-4f1a-9229-f1378e317da9\",\"filing_type\":\"Q2\",\"filing_type_display\":\"2nd Quarter - Report\",\"filing_year\":2026,\"filing_period\":\"second_quarter\",\"filing_period_display\":\"2nd Quarter (Apr 1 - June 30)\",\"filing_document_url\":\"https://lda.gov/filings"
+ },
+ "lda_lockheed_100": {
+  "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=100&client_name=Lockheed%20Martin",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "application/json",
+  "taille": 75851,
+  "entetes": {
+   "x-frame-options": "DENY",
+   "x-content-type-options": "nosniff"
+  },
+  "debut": "{\"count\":17,\"next\":null,\"previous\":null,\"results\":[{\"url\":\"https://lda.gov/api/v1/filings/267f9eb6-4d3c-4f1a-9229-f1378e317da9/\",\"filing_uuid\":\"267f9eb6-4d3c-4f1a-9229-f1378e317da9\",\"filing_type\":\"Q2\",\"filing_type_display\":\"2nd Quarter - Report\",\"filing_year\":2026,\"filing_period\":\"second_quarter\",\"filing_period_display\":\"2nd Quarter (Apr 1 - June 30)\",\"filing_document_url\":\"https://lda.gov/filings"
+ },
+ "lda_clients_lockheed": {
+  "url": "https://lda.gov/api/v1/clients/?page_size=25&client_name=Lockheed%20Martin",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "application/json",
+  "taille": 26153,
+  "entetes": {
+   "x-frame-options": "DENY",
+   "x-content-type-options": "nosniff"
+  },
+  "debut": "{\"count\":181,\"next\":\"https://lda.gov/api/v1/clients/?client_name=Lockheed+Martin&page=2&page_size=25\",\"previous\":null,\"results\":[{\"id\":57071,\"url\":\"https://lda.gov/api/v1/clients/57071/\",\"client_id\":57071,\"name\":\"LOCKHEED MARTIN CORPORATION\",\"general_description\":\"Defense and aerospace technology company\",\"client_government_entity\":null,\"client_self_select\":false,\"state\":\"MD\",\"state_display\":\"Mary"
+ },
+ "lda_t3": {
+  "url": "https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=third_quarter&page_size=1",
+  "permis_robots_txt": true,
+  "statut": 200,
+  "type": "application/json",
+  "taille": 2987,
+  "entetes": {
+   "x-frame-options": "DENY",
+   "x-content-type-options": "nosniff"
+  },
+  "debut": "{\"count\":1594,\"next\":\"https://lda.gov/api/v1/filings/?filing_period=third_quarter&filing_year=2026&page=2&page_size=1\",\"previous\":null,\"results\":[{\"url\":\"https://lda.gov/api/v1/filings/29c6a500-ec45-493b-908d-e68543e66f83/\",\"filing_uuid\":\"29c6a500-ec45-493b-908d-e68543e66f83\",\"filing_type\":\"3T\",\"filing_type_display\":\"3rd Quarter - Termination\",\"filing_year\":2026,\"filing_period\":\"third_quarter\",\"fi"
+ },
+ "oge_par_date": {
+  "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%20Filings%20by%20Date?OpenView",
+  "permis_robots_txt": false
+ },
+ "oge_par_date_200": {
+  "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%20Filings%20by%20Date?OpenView&Count=200",
+  "permis_robots_txt": false
+ },
+ "oge_president_vp": {
+  "url": "https://www.oge.gov/web/OGE.nsf/Officials%20Individual%20Disclosures%20Search%20Collection",
+  "permis_robots_txt": false
+ },
+ "oge_formulaire_201": {
+  "url": "https://www.oge.gov/web/oge.nsf/Resources/OGE+Form+201:+Request+an+Individual%E2%80%99s+Ethics+Documents",
+  "permis_robots_txt": false
+ }
+}

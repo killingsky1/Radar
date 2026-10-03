@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>API Help | LDA.gov</title>
+  <link href="https://cdn.datatables.net/2.3.2/css/dataTables.bootstrap5.css" rel="stylesheet">
+  
+
+  
+<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/themes/smoothness/jquery-ui.min.css" 
+      integrity="sha512-hQrNVZL4jUAHcqbF25UiEFZ/NGCbhAWI9aVAUfI5H+sG17C1Lc4Tm4HpU5A69E1jquKr3f0LnxD3uzfoCj/koQ==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer" />
+<link rel="stylesheet" media="all" href="/static/shared/timepicker/jquery.timepicker.css">
+<link rel="stylesheet" media="all" href="/static/shared/css/bootstrap-fileupload.css">
+<link rel="stylesheet" href="/static/shared/selectWoo/selectWoo.min.css"/>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		  integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+		  crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdn.datatables.net/rowgroup/1.4.0/css/rowGroup.bootstrap5.min.css"/>
+
+<link rel="stylesheet" media="all" href="/static/shared/css/main.css"><!-- includes bootstrap and theme-starter-site -->
+
+  
+
+  
+
+  <script>window.CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/';</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" 
+          integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" 
+          crossorigin="anonymous" 
+          referrerpolicy="no-referrer"></script>
+  <script src="/static/shared/base.js"></script>
+  
+  <script src="/static/shared/lobby-disclosure.js"></script>
+  
+  
+    <script>
+    </script>
+
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon" sizes="144x144" href="/static/shared/images/touch-icon-144.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/static/shared/images/touch-icon-114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/static/shared/images/touch-icon-72.png">
+  <link rel="apple-touch-icon" href="/static/shared/images/touch-icon-57.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/static/shared/images/favicon.ico">
+</head>
+
+<body role="document">
+<div class="container-wrap" id="top">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="banner">
+    <nav
+        class="navbar navbar-expand-xl navbar-dark bg-primary fixed-top">
+      <div class="container">
+        <a href="#content" class="visually-hidden visually-hidden-focusable skipLink">Skip to main content</a>
+
+        
+            <a class="navbar-brand"
+    href="/system/public/">
+    
+    <span class="navbar-brand-type">
+        <small class="d-none d-md-block d-xl-none d-xxl-block">United States Congress</small>
+        <small class="d-block d-md-none d-xl-block d-xxl-none">U.S. Congress</small>
+        <br />
+        <span class="d-block">LDA.gov</span>
+    </span>
+</a>
+        
+
+        <button class="navbar-toggler navbar-toggler-right"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse" style="align-items:stretch">
+          
+            <ul class="navbar-nav navbar-nav--public w-100">
+              <li class="nav-item">
+                <a class="nav-link" href="/filings/public/filing/search/">
+                  <i class="fas fa-search me-1" aria-hidden="true"></i>
+                  <strong class="nav-link-text">
+                    Registrations &
+                    <span class="d-inline d-xl-block d-xxl-inline"> Quarterly Activity</span>
+                  </strong>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/filings/public/contribution/search/">
+                  <i class="fas fa-search me-1" aria-hidden="true"></i>
+                  <strong class="nav-link-text">
+                    Contributions
+                  </strong>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/api/">
+                  <i class="fas fa-download me-1" aria-hidden="true"></i>
+                  <strong class="nav-link-text">
+                    Download API
+                  </strong>
+                </a>
+              </li>
+
+              <li class="nav-item ms-xl-auto">
+                <a class="nav-link" href="/registrants/public/registrant-client/lookup/">
+                  <i class="far fa-address-card me-2" aria-hidden="true"></i>
+                  <strong class="nav-link-text">
+                    Lookup
+                    <span class="d-inline d-xl-block d-xxl-block d-xxxl-inline">
+                      Registrant & Client
+                      <abbr class='abbr-id' title='Identification Number'>ID</abbr>s
+                    </span>
+                   
+                  </strong>
+                </a>
+              </li>
+            </ul>
+          
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div id="content" class="container">
+    
+    <main class="pgContent" role="main">
+      
+      
+      <!--MESSAGE BLOCK-->
+      
+      <!--END MESSAGE BLOCK-->
+
+
+      
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb--sm">
+            <li class="breadcrumb-item">
+                <a href="/api/">Download API</a>
+            </li>
+            <li class="breadcrumb-item active">Terms of Service</li>
+        </ol>
+    </nav>
+
+    <h1>
+        Terms of Service for<br/>
+        Lobbying Disclosure Act (LDA)<br/>
+        Document Downloads via REST API
+    </h1>
+
+    <hr/>
+
+    <div class="jumbotron">
+        <p class="lead mb-0">
+            The Lobbing Disclosure Act (LDA), as amended, requires the Secretary of the United States Senate to make
+            available to the public, in a downloadable manner to the extent technically practicable, all electronically
+            filed LDA registrations and reports. These documents are offered via an Application Programming Interface
+            (API) using Representational State Transfer (REST) and is subject to your acceptance of the terms and
+            conditions contained herein (collectively, the "Agreement").
+        </p>
+    </div>
+
+    <h3>Authentication</h3>
+    <p class="mb-1">
+        There are two ways to <a href="/api/redoc/v1/#section/Authentication">authenticate</a> through
+        the REST API:
+    </p>
+    <ul>
+        <li>API Key (Registered)</li>
+        <li>Unauthenticated (Anonymous)</li>
+    </ul>
+    <p class="mb-1">
+        For clients without an API Key, no special authentication is required, however anonymous clients are subject to
+        more strict
+        <a href="/api/redoc/v1/#section/Request-Throttling">request throttling</a>
+        to prevent abuse and to ensure stability. Our API is rate limited depending on the type of authentication
+        option you choose:
+    </p>
+    <ul>
+        <li>API Key (Registered): 120/minute</li>
+        <li>Unauthenticated (Anonymous): 15/minute</li>
+    </ul>
+
+
+    <h3>Secondary Use</h3>
+    <p>
+        Data accessed through LDA.gov do not, and should not, include controls over its end use. However, as the
+        data owners or authoritative sources, the U.S. Senate Office of Public Records retains version control. Once
+        the data have been downloaded from LDA.gov, the U.S. Senate cannot vouch for the quality and timeliness
+        of any analyses conducted with retrieved data.
+    </p>
+
+    <h3>Citing Data</h3>
+    <p>
+        Users of the public API should cite the date that data were accessed or retrieved using the API. Users must
+        clearly state that “Senate Office of Public Records cannot vouch for the data or analyses derived from these
+        data after the data have been retrieved from LDA.gov.” The U.S. Senate Seal is protected by 18 U.S.C. §
+        713 and may not be used by persons who are not U.S. Senate employees or on products (including web pages) that
+        are not U.S. Senate sponsored.
+    </p>
+
+    <h3>Modification or False Representation of Content</h3>
+    <p>
+        Users may not modify or falsely represent content accessed through LDA.gov and still cite the source as
+        LDA.gov.
+    </p>
+
+    <h3>Right to Limit</h3>
+    <p>
+        Use of the APIs may be subject to certain limitations on access, calls, or use as set forth within this
+        Agreement or otherwise provided by the U.S. Senate. If the U.S. Senate reasonably believes that a user has
+        attempted to exceed or circumvent these limits, that user's access to the API may be permanently or temporarily
+        blocked.
+    </p>
+
+    <p>
+        The U.S. Senate may monitor your use of its services to improve the service or to ensure compliance with this
+        Agreement.
+    </p>
+
+    <h3>Service Termination</h3>
+    <p>
+        If a user wishes to terminate this Agreement, he/she may do so by refraining from further use of the services.
+        The U.S. Senate reserves the right (though not the obligation) to (1) refuse to provide the services to a user,
+        if it is the U.S. Senate's opinion that use violates any U.S. Senate policy, or (2) terminate or deny a user's
+        access to and use of all or part of the services at any time for any other reason in its sole discretion. Any
+        hosted applications may also be shut down or removed. All provisions of this Agreement, which by their nature
+        should survive termination, shall survive termination including, without limitation, warranty disclaimers,
+        indemnity, and limitations of liability.
+    </p>
+
+    <h3>Changes</h3>
+    <p>
+        The U.S. Senate reserves the right, at its sole discretion, to modify or replace this Agreement, in whole or in
+        part. Continued use of or access to the LDA.gov services following posting of any changes to this
+        Agreement constitutes acceptance of those modified terms. The U.S. Senate may, in the future, offer new
+        services and/or features. Such new features and/or services shall be subject to the terms and conditions of
+        this Agreement.
+    </p>
+
+    <h3>Disclaimer of Warranties</h3>
+    <p>
+        LDA.gov services are provided "as is" and on an "as-available" basis. The U.S. Senate hereby disclaims
+        all warranties of any kind, express or implied, including without limitation the warranties of merchantability,
+        fitness for a particular purpose, and non-infringement. The U.S. Senate makes no warranty that the services
+        will be error free or that access thereto will be continuous or uninterrupted.
+    </p>
+
+    <h3>Limitations on Liability</h3>
+    <p>
+        In no event will the U.S. Senate be liable with to respect to any subject matter of this Agreement under any
+        contract, negligence, strict liability or other legal or equitable theory for: (1) any special, incidental, or
+        consequential damages; (2) the cost of procurement of substitute products or services; or (3) interruption of
+        use or loss or corruption of data.
+    </p>
+
+    <h3>General Representations</h3>
+    <p>
+        The user hereby warrant that (1) his/her use of the services will be in strict accordance with the <a
+            href="https://www.senate.gov/general/privacy.htm">US Senate privacy policy</a>, this Agreement, and all
+        applicable laws and regulations, and (2) his/her use of the services will not infringe or misappropriate the
+        intellectual property rights of any third party.
+    </p>
+
+    <h3>Indemnification</h3>
+    <p>
+        The user agrees to indemnify and hold harmless the U.S. Senate, its contractors, employees, agents, and the
+        like from and against any and all claims and expenses including attorney's fees, arising out of your use of the
+        APIs, including but not limited to violation of this Agreement. This Indemnification clause shall not apply to
+        government entities.
+    </p>
+
+    <h3>Miscellaneous</h3>
+    <p>
+        This Agreement constitutes the entire Agreement between the U.S. Senate and the user concerning the subject
+        matter hereof, and may only be modified by the posting of a revised version on this page by the U.S. Senate.
+    </p>
+
+    <h3>Disputes</h3>
+    <p>
+        Any disputes arising out of this Agreement and access to or use of the services shall be governed by federal
+        law.
+    </p>
+
+    <h3>No Waiver of Rights</h3>
+    <p>
+        The U.S. Senate's failure to exercise or enforce any right or provision of this Agreement shall not constitute
+        waiver of such right or provision.
+    </p>
+
+    <h5>Last Modified Date</h5>
+    <p>August 22nd, 2019</p>
+
+
+      <a href="#" class="back-to-top"><i class="fas fa-3x fa-arrow-circle-up" title="Back to top"></i><span class="visually-hidden">Back to Top</span></a>
+
+
+
+    </main>
+  </div>
+</div>
+
+
+    <footer id="footer" class="p-4">
+  <div class="container">
+    <div class="row gx-5 text-body-secondary text-muted">
+      <div class="col-12 col-xl-3 d-flex align-items-center mb-3 mb-xl-0">
+        <h2 class="h5 fw-medium">
+          For more about the Lobbying Disclosure Act (LDA)
+        </h2>
+        <div class="vr d-none d-xl-inline-block"></div>
+      </div>
+
+      <div class="col-12 col-lg-6 col-xl-4">
+        <address>
+          <strong class="d-block fw-semibold"
+            >House Legislative Resource Center (LRC)</strong
+          >
+          <div class="d-block">
+            B-81 Cannon House Office Building, Washington, DC 20515
+          </div>
+          <div class="d-flex flex-wrap">
+            <span class="text-nowrap me-4"> Phone: (202) 226-5200 </span>
+            <span class="text-nowrap">
+              Email:
+              <a href="mailto:lobbyinfo@mail.house.gov"
+                >lobbyinfo@mail.house.gov</a
+              >
+            </span>
+          </div>
+          <div class="d-block">
+            Website:
+            <a href="https://lobbyingdisclosure.house.gov" target="_blank"
+              >lobbyingdisclosure.house.gov</a
+            >
+          </div>
+        </address>
+      </div>
+
+      <div class="col-12 col-lg-6 col-xl-4">
+        <address>
+          <strong class="d-block">Senate Office of Public Records (OPR)</strong>
+          <div class="d-block">
+            144 Hart Senate Office Building, Washington, DC 20510
+          </div>
+          <div class="d-flex flex-wrap">
+            <span class="text-nowrap me-4"> Phone: (202) 224-0758 </span>
+            <span class="text-nowrap">
+              Email:
+              <a href="mailto:lobby@sec.senate.gov">lobby@sec.senate.gov</a>
+            </span>
+          </div>
+          <div class="d-block">
+            Website:
+            <a href="https://disclosure.senate.gov" target="_blank"
+              >disclosure.senate.gov</a
+            >
+          </div>
+        </address>
+      </div>
+    </div>
+    
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+<!-- Jquery UI -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js" 
+        integrity="sha512-MSOo1aY+3pXCOCdGAYoBZ6YGI0aragoQsg1mKKBHXCYPIWxamwOE7Drh+N5CPgGI5SA9IEKJiPjdfqWFWmZtRA==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"></script>
+<!-- plugins -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"
+        integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y="
+        crossorigin="anonymous"></script>
+<script src="/static/shared/timepicker/jquery.timepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"
+        integrity="sha256-u7MY6EG5ass8JhTuxBek18r5YG6pllB9zLqE4vZyTn4="
+        crossorigin="anonymous"></script>
+
+<script src="/static/shared/selectWoo/selectWoo.full.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/2.3.2/js/dataTables.bootstrap5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/rowgroup/1.5.1/js/dataTables.rowGroup.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/3.2.3/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/3.2.3/js/buttons.print.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/select/3.0.1/js/dataTables.select.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/fixedcolumns/5.0.4/js/dataTables.fixedColumns.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+        integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/plug-ins/1.10.8/sorting/datetime-moment.js"
+        integrity="sha384-fHYStNRCRyY7W3cTlelGvbP20FYYQ8sdkAKFZn/nSh7LVbplxsBJ5pptaNluip5E"
+        crossorigin="anonymous"></script>
+
+<!-- Bootstrap -->
+ <script src="/static/shared/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugins -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-filestyle/2.1.0/bootstrap-filestyle.min.js"
+        integrity="sha256-b/0VIRZZWI4ziE8r1Zz0S9Q3otdXV3uCLab9Inhb6q4="
+        crossorigin="anonymous"></script>
+
+<script>
+$.extend( $.fn.dataTable.defaults, {
+    pageLength: 100
+});
+
+
+
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+        const triggers = document.querySelectorAll('[rel="popover"]');
+        triggers.forEach(el => bootstrap.Popover.getOrCreateInstance(el));
+        document.addEventListener('click', function (e) {
+                const popover = document.querySelector('.popover');
+
+                triggers.forEach(trigger => {
+                        const instance = bootstrap.Popover.getInstance(trigger);
+                        const isClickInside =
+                                trigger.contains(e.target) ||
+                                (popover && popover.contains(e.target));
+
+                        if (instance && !isClickInside) {
+                                instance.hide();
+                        }
+                });
+        });
+});
+</script>
+</body>
+</html>
+

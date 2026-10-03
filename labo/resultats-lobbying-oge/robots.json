@@ -1,0 +1,18 @@
+{
+ "lda.gov": {
+  "statut": 200,
+  "texte": "User-agent: *\nAllow: /\n\n# All REST API requests are throttled to prevent abuse and to ensure stability.\n# Our API is rate limited depending the type of authentication option you choose:\n# - API Key (Registered): 120/minute\n# - Unauthenticated (Anonymous): 15/minute\nUser-agent: *\nAllow: /api/v1/\nCrawl-delay: 4  # 60 seconds / 4 seconds = 15/minute"
+ },
+ "lda.senate.gov": {
+  "statut": 200,
+  "texte": "User-agent: *\nAllow: /\n\n# All REST API requests are throttled to prevent abuse and to ensure stability.\n# Our API is rate limited depending the type of authentication option you choose:\n# - API Key (Registered): 120/minute\n# - Unauthenticated (Anonymous): 15/minute\nUser-agent: *\nAllow: /api/v1/\nCrawl-delay: 4  # 60 seconds / 4 seconds = 15/minute"
+ },
+ "extapps2.oge.gov": {
+  "statut": null,
+  "erreur": "HTTPSConnectionPool(host='extapps2.oge.gov', port=443): Max retries exceeded with url: /robots.txt (Caused by ConnectTimeoutError(<HTTPSConnection(host='extapps2.oge.gov', port=443) at 0x7f657ba30710>"
+ },
+ "www.oge.gov": {
+  "statut": null,
+  "erreur": "HTTPSConnectionPool(host='www.oge.gov', port=443): Max retries exceeded with url: /robots.txt (Caused by NewConnectionError(\"HTTPSConnection(host='www.oge.gov', port=443): Failed to establish a new co"
+ }
+}
