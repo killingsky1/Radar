@@ -8,7 +8,7 @@ const fs = require("fs");
   const elusLocal = fs.readFileSync(fichierElus, "utf8");
   const lobbyingLocal = fs.readFileSync(fichierLobbying, "utf8");
   const lobbying = JSON.parse(lobbyingLocal);
-  const VERSION = "0.11.0";
+  const VERSION = "0.12.0";
   const base = process.env.BASE || "https://killingsky1.github.io/Radar/"; // BASE : essai local seulement
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
@@ -183,6 +183,9 @@ const fs = require("fs");
     ["v17-statcan", "Statistique Canada :", "Source : Statistique Canada, Le Quotidien"],
     ["v18-legisinfo", "Projet de loi ", "Source : LEGISinfo, Parlement du Canada"],
     ["v19-sanctions", "Sanctions canadiennes", "Contient de l'information visée par la Licence du gouvernement ouvert"],
+    // Lot 3c, livraison 2
+    ["v20-sante-canada", "Santé Canada : nouveau médicament", "Contient de l'information visée par la Licence du gouvernement ouvert"],
+    ["v21-ccc", "Corporation commerciale canadienne :", "Source : Corporation commerciale canadienne. Usage personnel et non commercial"],
   ];
   let canadaOk = true;
   for (const [nom, debut, mention] of CANADA) {
@@ -201,8 +204,35 @@ const fs = require("fs");
     await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
   }
   dire(`Fiches du Canada affichées : ${canadaOk ? "OUI" : "NON"}`);
+  // CCC : chaque transaction du rapport est listée (autant de lignes que le nombre écrit dans le titre)
+  let cccOk = false;
+  const lc = p.locator(".ligne", { hasText: "Corporation commerciale canadienne :" });
+  if (await lc.count()) {
+    await lc.first().click(); await p.waitForSelector(".feuille-fond.ouvert"); await p.waitForTimeout(400);
+    const titreCcc = await p.locator(".detail-titre").innerText();
+    const n = Number((titreCcc.match(/(\d+) transactions signées/) || [])[1]);
+    const lignesCcc = await p.locator(".lignes-ccc .ligne-oge").count();
+    if (lignesCcc) await p.locator(".lignes-ccc").evaluate((el) => el.previousElementSibling.scrollIntoView({ block: "start" }));
+    await photo("v22-ccc-transactions");
+    const premiere = lignesCcc ? (await p.locator(".lignes-ccc .ligne-oge").first().innerText()).replace(/\s+/g, " ") : "";
+    cccOk = n > 0 && lignesCcc === n;
+    dire(`CCC : ${n} transactions dans le titre, ${lignesCcc} lignes listées · 1re : « ${premiere.slice(0, 110)} » · conforme : ${cccOk ? "OUI" : "NON"}`);
+    await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
+  } else dire("CCC : aucune info dans le fil");
+  // Contrats fédéraux : 1re lecture silencieuse (aucune info), l'état de la source se voit dans l'écran Sources
+  await p.locator("nav.onglets button", { hasText: "Accueil" }).click(); await p.waitForTimeout(400);
+  await p.locator(".tuile", { hasText: "Sources actives" }).click(); await p.waitForTimeout(600);
+  let sourcesOk = true;
+  for (const nom of ["Santé Canada : nouveaux médicaments", "Contrats fédéraux de 10 M$ et plus", "Corporation commerciale canadienne : transactions"]) {
+    const s = p.locator(".source", { hasText: nom });
+    const etat = (await s.count()) ? await s.first().locator(".source-etat").innerText() : "absente";
+    if (nom.startsWith("Contrats")) { await s.first().evaluate((el) => el.scrollIntoView({ block: "center" })); await photo("v23-sources-canada"); }
+    dire(`Source « ${nom} » : ${etat}`);
+    sourcesOk = sourcesOk && etat.startsWith("OK");
+  }
+  await p.locator(".ecran-retour, .retour").first().click().catch(() => {});
   dire(`Erreurs du navigateur : ${erreurs.length ? erreurs.join(" | ") : "aucune"}`);
-  const ok = pareil && elusPareil && lobbyingPareil && memeTop && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && !erreurs.length && js.includes(VERSION);
+  const ok = pareil && elusPareil && lobbyingPareil && memeTop && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && !erreurs.length && js.includes(VERSION);
   dire(ok ? "VERDICT : OK" : "VERDICT : PROBLÈME");
   fs.writeFileSync(`${dossier}/site.txt`, lignes.join("\n") + "\n");
   await b.close();

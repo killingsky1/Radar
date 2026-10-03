@@ -4,7 +4,7 @@ on:
   push:
     branches: [labo]
     paths: ["labo/declencheur-score.txt", "labo/recalcul_score.py", "labo/site_score.cjs", "labo/verif_congres.py",
-            "labo/verif_canada3c.py", ".github/workflows/labo20.yml"]
+            "labo/verif_canada3c.py", "labo/verif_canada3c2.py", ".github/workflows/labo20.yml"]
 
 permissions:
   contents: write
@@ -12,7 +12,7 @@ permissions:
 jobs:
   score:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
@@ -34,6 +34,11 @@ jobs:
       - name: Canada (lot 3c) contre-vérifié aux sources officielles
         if: always()
         run: python labo/verif_canada3c.py principal/data labo/resultats-score/canada3c.txt
+      - name: Canada (lot 3c, livraison 2) contre-vérifié aux sources officielles (PDF lu par pdftotext)
+        if: always()
+        run: |
+          which pdftotext || (sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils)
+          python labo/verif_canada3c2.py principal/data labo/resultats-score/canada3c2.txt
       - name: Navigateur (installé même si une vérification a échoué)
         if: always()
         run: npm i --no-save playwright@1.56.1
