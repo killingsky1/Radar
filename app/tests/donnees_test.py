@@ -36,9 +36,10 @@ def faux(ctx):
            confirmations=[Confirmation("sec_8k", "https://www.sec.gov/test/8k.htm", "TEST-8K")]),
         ev(2, "sec_form4", "compagnies", "achat_initie", "le PDG de Nvidia achète 50 000 actions", jour(0),
            "https://www.sec.gov/test/form4.xml", occ=jour(2), tickers=["NVDA"], amount_min=6.2e6, amount_max=6.2e6,
-           entities=["Jensen Huang, PDG"], direction=1,
-           data={"symbole_declare": "NVDA", "symboles_sec": ["NVDA"], "actions": 50000, "roles": ["CEO"],
-                 "transactions": [{"code": "P", "acquis_cede": "A", "actions": 50000, "prix": 124.0, "date": jour(2)}]}),
+           entities=["Jensen Huang", "NVIDIA CORP"], direction=1,
+           data={"symbole_declare": "NVDA", "symboles_sec": ["NVDA"], "actions": 50000, "roles": ["CEO"], "prix_moyen": 124.0,
+                 "transactions": [{"code": "P", "acquis_cede": "A", "actions": 50000, "prix": 124.0, "date": jour(2),
+                                   "apres": 1050000}]}),
         ev(3, "registre_federal", "gouvernement", "presidentiel", "nouveaux tarifs sur l'acier (publication demain)", jour(0),
            "https://www.federalregister.gov/public-inspection/2026-99999/test", numero="2026-99999",
            entities=["Executive Office of the President"],
@@ -163,13 +164,17 @@ def faux(ctx):
            "https://www.sec.gov/test/xmpl-form4.xml", tickers=["XMPL"], amount_min=1.5e6, amount_max=1.5e6,
            entities=["PDG (exemple)", "Exemple Corp."], direction=-1,
            data={"symbole_declare": "XMPL", "symboles_sec": ["XMPL"], "actions": 100000, "roles": ["CEO"], "plan_10b5_1": False,
-                 "transactions": [{"code": "S", "acquis_cede": "D", "actions": 100000, "prix": 15.0, "date": jour(1)}]}),
+                 "prix_moyen": 15.0,
+                 "transactions": [{"code": "S", "acquis_cede": "D", "actions": 100000, "prix": 15.0, "date": jour(1),
+                                   "apres": 400000}]}),
         # La même vente, déclarée aussi par une entité liée (ex. le fonds du PDG) : une seule ligne dans le fil
         ev(22, "sec_form4", "compagnies", "vente_initie", "Fonds lié (exemple) vend 100 000 actions d'Exemple Corp.", jour(1),
            "https://www.sec.gov/test/xmpl-form4-fonds.xml", tickers=["XMPL"], amount_min=1.5e6, amount_max=1.5e6,
            entities=["Fonds lié (exemple)", "Exemple Corp."], direction=-1,
            data={"symbole_declare": "XMPL", "symboles_sec": ["XMPL"], "actions": 100000, "roles": ["10% owner"], "plan_10b5_1": False,
-                 "transactions": [{"code": "S", "acquis_cede": "D", "actions": 100000, "prix": 15.0, "date": jour(1)}]}),
+                 "prix_moyen": 15.0,
+                 "transactions": [{"code": "S", "acquis_cede": "D", "actions": 100000, "prix": 15.0, "date": jour(1),
+                                   "apres": 400000}]}),
     ]
 
 def sans_amd(ctx):

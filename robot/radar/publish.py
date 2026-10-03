@@ -7,11 +7,11 @@ from collections import Counter
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import __version__, emetteurs
+from . import __version__, argent, emetteurs
 from .collecteurs import congres, lobbying
 from .health import LIBELLES, statut
 from .registry import SOURCES
-from .score import calculer
+from .score import calculer, jour_de_calcul
 from .store import Depot
 
 MAX_PAR_CATEGORIE = 150  # chaque catégorie garde ses infos les plus récentes (les élus ne cachent pas le reste)
@@ -22,6 +22,13 @@ PHASE_ACTUELLE = 1
 def _ecrire(chemin: Path, contenu) -> None:
     chemin.parent.mkdir(parents=True, exist_ok=True)
     chemin.write_text(json.dumps(contenu, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def _ecrire_compact(chemin: Path, contenu) -> None:
+    """Fichiers lus par l'iPhone et refaits à chaque passage (section Argent) : sans espaces, pour peser moins."""
+    chemin.parent.mkdir(parents=True, exist_ok=True)
+    chemin.write_text(json.dumps(contenu, ensure_ascii=False, separators=(",", ":"), sort_keys=True) + "\n",
+                      encoding="utf-8")
 
 
 def _plus_recent(d: dict):
@@ -85,6 +92,14 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
             fil_app.append(e)
     _ecrire(donnees / "app" / "fil.json", fil_app)
     _ecrire(donnees / "app" / "a_verifier.json", a_verifier[:MAX_A_VERIFIER])
+    # Section « Argent » : les vrais montants des 30 derniers jours (chaque transaction une fois), et les infos
+    # complètes à part (l'app les charge seulement quand on touche une ligne). En cas d'erreur : ancien fichier gardé.
+    try:
+        lignes, infos = argent.preparer(fil, jour_de_calcul(maintenant))
+        _ecrire_compact(donnees / "app" / "argent.json", lignes)
+        _ecrire_compact(donnees / "app" / "argent_infos.json", infos)
+    except Exception as exc:  # noqa: BLE001
+        print(f"Argent : erreur, l'ancien fichier est gardé ({type(exc).__name__}: {exc})")
     # Chefs, comités et votes des élus (listes officielles du Congrès). En cas d'erreur : aucun chef, donc aucun bonus.
     chefs: set[str] = set()
     try:

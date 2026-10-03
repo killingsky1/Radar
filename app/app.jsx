@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.16.0";
+const VERSION = "0.17.0";
 
 // ---------- Constantes ----------
 
@@ -207,6 +207,15 @@ const REGLAGES_DEFAUT = {
 
 const ICONES = {
   accueil: <path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" />,
+  billet: (
+    <>
+      <rect x="2.5" y="6" width="19" height="12" rx="2.5" />
+      <circle cx="12" cy="12" r="2.6" />
+      <path d="M6 9.5v5M18 9.5v5" />
+    </>
+  ),
+  "fleche-haut": <path d="M12 19V5M6 11l6-6 6 6" />,
+  "fleche-bas": <path d="M12 5v14M6 13l6 6 6-6" />,
   fil: <path d="M4 6h16M4 12h16M4 18h10" />,
   etoile: <path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" />,
   reglages: (
@@ -1689,6 +1698,214 @@ function Fil({ filtre: filtreChoisi, setFiltre, recherche, setRecherche }) {
   );
 }
 
+// ---------- Argent : les vrais montants des dépôts officiels (robot : data/app/argent.json) ----------
+
+// 254 540 → « 255 k$ US » ; 17 084 270 → « 17,1 M$ US » ; 2 000 000 000 → « 2 G$ US ».
+function argentCourt(n, devise) {
+  return new Intl.NumberFormat("fr-CA", {
+    style: "currency", currency: devise || "USD", notation: "compact",
+    minimumFractionDigits: 0, maximumFractionDigits: Math.abs(n) >= 1e9 ? 2 : 1,
+  }).format(n);
+}
+
+// Le prix écrit dans le dépôt : 24.4061 → « 24,41 $ US ».
+function prixAction(n, devise) {
+  return new Intl.NumberFormat("fr-CA", { style: "currency", currency: devise || "USD", minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(n);
+}
+
+function nombre(n) {
+  return Math.round(n).toLocaleString("fr-CA");
+}
+
+function pourcent(n) {
+  return `${n.toLocaleString("fr-CA", { maximumFractionDigits: n < 1 ? 2 : 1 })} %`;
+}
+
+const FAMILLES_ARGENT = [["tout", "Tout"], ["achats", "Achats"], ["ventes", "Ventes"], ["elus", "Élus"], ["contrats", "Contrats"]];
+
+function dansFamille(l, f) {
+  if (f === "achats") return l.famille === "dirigeants" && l.sens > 0;
+  if (f === "ventes") return (l.famille === "dirigeants" && l.sens < 0) || l.famille === "intentions";
+  if (f === "elus") return l.famille === "elus";
+  if (f === "contrats") return l.famille === "contrats";
+  return true;
+}
+
+// La phrase d'une ligne : qui fait quoi, avec les chiffres du dépôt.
+function phraseArgent(l) {
+  const qui = l.role && l.famille !== "elus" ? `${l.qui} (${l.role})` : l.qui;
+  if (l.famille === "dirigeants") {
+    const verbe = l.sens > 0 ? "achète" : "vend";
+    if (l.prix_multiples) return `${qui} ${verbe} : ${l.nb_lignes} lignes à des prix très différents (plusieurs titres)`;
+    return `${qui} ${verbe} ${nombre(l.actions)} actions à ${prixAction(l.prix, l.devise)}`;
+  }
+  if (l.famille === "intentions") return `${qui} prévoit vendre ${nombre(l.actions)} actions (≈ ${prixAction(l.prix, l.devise)} l'action, avis 144 à la SEC)`;
+  if (l.famille === "elus") return `${qui} ${l.sens > 0 ? "achète" : "vend"}${l.role === "options" ? " des options" : ""} · fourchette officielle`;
+  return `${l.qui}${l.role ? ` · ${l.role}` : ""}`;
+}
+
+function partArgent(l) {
+  if (!l.part) return null;
+  if (l.part.nouvelle) return "nouvelle position";
+  if (l.part.pourcentage_compagnie != null) return `${pourcent(l.part.pourcentage_compagnie)} des actions de la compagnie`;
+  return l.sens > 0 ? `+${pourcent(l.part.pourcentage)} de ses actions` : `${pourcent(l.part.pourcentage)} de ses actions vendues`;
+}
+
+function montantArgent(l) {
+  if (l.montant != null) return argentCourt(l.montant, l.devise);
+  if (l.montant_max == null) return `plus de ${argentCourt(l.montant_min, l.devise)}`;
+  return `${argentCourt(l.montant_min, l.devise)} à ${argentCourt(l.montant_max, l.devise)}`;
+}
+
+function LigneArgent({ l, ouvrir }) {
+  const genre = l.sens > 0 ? "achat" : l.sens < 0 ? "vente" : "contrat";
+  const part = partArgent(l);
+  return (
+    <button type="button" className="ligne argent presse" onClick={() => ouvrir(l)}>
+      <span className={`argent-sens ${genre}`}>
+        <Icone nom={l.sens > 0 ? "fleche-haut" : l.sens < 0 ? "fleche-bas" : "document"} taille={18} epaisseur={2.4} />
+      </span>
+      <span className="ligne-centre">
+        <span className="ligne-titre">
+          {l.symbole && <span className="symbole">{l.symbole}</span>} {l.compagnie}
+        </span>
+        <span className="argent-phrase">{fr(phraseArgent(l))}</span>
+        <span className="ligne-meta">
+          <span>{dateCourte(l.publie)}</span>
+          {part && <span>{fr(part)}</span>}
+          {l.plan && <span className="argent-plan">planifiée d'avance</span>}
+          {l.aussi?.length > 0 && <span>{`aussi déclarée par ${l.aussi.length}`}</span>}
+        </span>
+      </span>
+      <span className={`argent-montant ${genre}`}>{montantArgent(l)}</span>
+    </button>
+  );
+}
+
+function Thermometre({ t }) {
+  const achats = t.achats.montant;
+  const ventes = t.ventes_libres.montant;
+  const part = achats + ventes > 0 ? Math.round((achats / (achats + ventes)) * 100) : 50;
+  return (
+    <div className="carte thermo">
+      <p className="thermo-titre">{fr(`Dirigeants, 7 derniers jours (depuis le ${dateCourte(t.depuis)})`)}</p>
+      <div className="thermo-barre" role="img" aria-label={`Achats ${part} %, ventes décidées sur le moment ${100 - part} %`}>
+        <span style={{ width: `${part}%` }} />
+      </div>
+      <div className="thermo-chiffres">
+        <span className="t-vert">
+          <b>{argentCourt(achats)}</b> achetés ({t.achats.nombre})
+        </span>
+        <span className="t-rouge">
+          <b>{argentCourt(ventes)}</b> vendus ({t.ventes_libres.nombre})
+        </span>
+      </div>
+      <p className="thermo-note">
+        {fr(`Ventes planifiées d'avance (plan 10b5-1) : ${argentCourt(t.ventes_planifiees.montant)} (${t.ventes_planifiees.nombre}) — elles disent peu de choses. Intentions de vente (144) : ${argentCourt(t.intentions.montant)} (${t.intentions.nombre}).`)}
+      </p>
+    </div>
+  );
+}
+
+// Les infos complètes ne se chargent qu'au premier toucher d'une ligne absente du fil.
+let promesseInfosArgent = null;
+function infosArgent() {
+  promesseInfosArgent ??= fetch("./data/app/argent_infos.json", { cache: "no-store" })
+    .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
+    .catch((e) => {
+      promesseInfosArgent = null;
+      throw e;
+    });
+  return promesseInfosArgent;
+}
+
+const MAX_LIGNES_ARGENT = 60;
+
+function EcranArgent() {
+  const { donnees, ouvrirDetail } = useApp();
+  const [etat, setEtat] = useState({ chargement: true, erreur: null, a: null });
+  const [famille, setFamille] = useState("tout");
+  const [periode, setPeriode] = useState("7");
+  const [tout, setTout] = useState(false);
+  const [ouverture, setOuverture] = useState(null);
+  useEffect(() => {
+    let fini = false;
+    fetch("./data/app/argent.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
+      .then((a) => !fini && setEtat({ chargement: false, erreur: null, a }))
+      .catch((e) => !fini && setEtat({ chargement: false, erreur: String(e.message || e), a: null }));
+    return () => {
+      fini = true;
+    };
+  }, []);
+  const a = etat.a;
+  const liste = useMemo(() => {
+    if (!a) return [];
+    const depuis = periode === "jour" ? a.dernier_jour : periode === "7" ? a.thermometre.depuis : a.depuis;
+    return a.lignes.filter((l) => l.publie >= depuis && dansFamille(l, famille));
+  }, [a, famille, periode]);
+  const ouvrir = async (l) => {
+    const ev = (donnees.fil || []).find((e) => e.id === l.id);
+    if (ev) return ouvrirDetail(ev);
+    setOuverture(l.id);
+    try {
+      const infos = await infosArgent();
+      if (infos[l.id]) ouvrirDetail(infos[l.id]);
+    } catch {
+      /* hors ligne : la ligne reste affichée */
+    } finally {
+      setOuverture(null);
+    }
+  };
+  const visibles = tout ? liste : liste.slice(0, MAX_LIGNES_ARGENT);
+  return (
+    <Ecran titre="Argent" sousTitre="Les vrais montants des dépôts officiels">
+      {etat.chargement && <p className="explication">Chargement des montants…</p>}
+      {etat.erreur && (
+        <div className="carte">
+          <Vide icone="alerte" titre="Montants indisponibles" texte={etat.erreur} />
+        </div>
+      )}
+      {a && (
+        <>
+          <Thermometre t={a.thermometre} />
+          <div className="puces" role="tablist" aria-label="Genre de transaction">
+            {FAMILLES_ARGENT.map(([k, label]) => (
+              <button key={k} type="button" role="tab" aria-selected={famille === k} className={famille === k ? "puce actif" : "puce"} onClick={() => { setFamille(k); setTout(false); }}>
+                {label}
+              </button>
+            ))}
+          </div>
+          <Segments
+            valeur={periode}
+            onChange={(v) => { setPeriode(v); setTout(false); }}
+            label="Période"
+            options={[["jour", `Dernier jour${a.dernier_jour ? ` (${dateCourte(a.dernier_jour)})` : ""}`], ["7", "7 jours"], ["30", "30 jours"]]}
+          />
+          <p className="explication">{fr(`${liste.length} transaction${liste.length > 1 ? "s" : ""}, du plus gros montant au plus petit. Touchez une ligne pour le document officiel.`)}</p>
+          {liste.length === 0 ? (
+            <div className="carte">
+              <Vide icone="billet" titre="Rien pour cette période" texte="Essaie 30 jours ou un autre genre." />
+            </div>
+          ) : (
+            <div className={ouverture ? "carte liste attente" : "carte liste"}>
+              {visibles.map((l) => (
+                <LigneArgent key={l.id} l={l} ouvrir={ouvrir} />
+              ))}
+            </div>
+          )}
+          {!tout && liste.length > MAX_LIGNES_ARGENT && (
+            <button type="button" className="bouton-second presse plein" onClick={() => setTout(true)}>
+              {`Voir les ${liste.length - MAX_LIGNES_ARGENT} autres`}
+            </button>
+          )}
+          <p className="avertissement">{fr(`${a.seuils} Pas de cours de bourse en direct : les prix sont ceux écrits dans les dépôts.`)}</p>
+        </>
+      )}
+    </Ecran>
+  );
+}
+
 function Favoris() {
   const { donnees, favoris, basculerFavori } = useApp();
   const [saisie, setSaisie] = useState("");
@@ -1899,6 +2116,7 @@ function EcranVerification({ retour }) {
 
 const ONGLETS = [
   { id: "accueil", label: "Accueil", icone: "accueil" },
+  { id: "argent", label: "Argent", icone: "billet" },
   { id: "fil", label: "Fil", icone: "fil" },
   { id: "favoris", label: "Favoris", icone: "etoile" },
   { id: "reglages", label: "Réglages", icone: "reglages" },
@@ -1923,7 +2141,7 @@ function useDerniereVisite() {
   }, []);
   return vu;
 }
-const TITRES_ONGLETS = { accueil: "Radar", fil: "Fil", favoris: "Favoris", reglages: "Réglages" };
+const TITRES_ONGLETS = { accueil: "Radar", argent: "Argent", fil: "Fil", favoris: "Favoris", reglages: "Réglages" };
 
 function Squelette() {
   return (
@@ -2016,6 +2234,8 @@ function App() {
     contenu = <Squelette />;
   } else if (Page) {
     contenu = <Page key={page} retour={retour} />;
+  } else if (onglet === "argent") {
+    contenu = <EcranArgent />;
   } else if (onglet === "fil") {
     contenu = <Fil filtre={filtreFil} setFiltre={setFiltreFil} recherche={rechercheFil} setRecherche={setRechercheFil} />;
   } else if (onglet === "favoris") {
@@ -2350,6 +2570,24 @@ input { font: inherit; color: var(--texte); }
 .etapes li { display: flex; align-items: center; gap: 12px; padding: 10px 0; font-size: 1rem; flex-wrap: wrap; }
 .etape-num { flex: none; width: 28px; height: 28px; border-radius: 14px; display: inline-flex; align-items: center; justify-content: center; background: var(--accent); color: #fff; font-weight: 700; font-size: .875rem; }
 .icone-inline { display: inline-flex; color: var(--accent); }
+
+/* Argent */
+.argent { align-items: flex-start; }
+.argent-sens { flex: none; width: 34px; height: 34px; margin-top: 2px; border-radius: 11px; display: inline-flex; align-items: center; justify-content: center; }
+.argent-sens.achat { background: color-mix(in srgb, var(--vert) 16%, transparent); color: var(--vert); }
+.argent-sens.vente { background: color-mix(in srgb, var(--rouge) 16%, transparent); color: var(--rouge); }
+.argent-sens.contrat { background: color-mix(in srgb, var(--bleu) 16%, transparent); color: var(--bleu); }
+.argent-phrase { display: block; margin-top: 2px; color: var(--texte-2); font-size: .875rem; line-height: 1.35; }
+.argent-montant { flex: none; max-width: 38%; margin-top: 2px; text-align: right; font-weight: 800; font-size: .9375rem; font-variant-numeric: tabular-nums; }
+.argent-montant.achat { color: var(--vert); } .argent-montant.vente { color: var(--rouge); } .argent-montant.contrat { color: var(--bleu); }
+.argent-plan { color: var(--jaune); }
+.thermo { padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
+.thermo-titre { margin: 0; font-size: .8125rem; font-weight: 700; color: var(--texte-2); text-transform: uppercase; letter-spacing: .04em; }
+.thermo-barre { height: 10px; border-radius: 5px; overflow: hidden; background: var(--rouge); }
+.thermo-barre span { display: block; height: 100%; background: var(--vert); border-radius: 5px 0 0 5px; }
+.thermo-chiffres { display: flex; justify-content: space-between; gap: 8px; font-size: .9375rem; font-variant-numeric: tabular-nums; }
+.thermo-note { margin: 0; color: var(--texte-3); font-size: .8125rem; line-height: 1.4; }
+.carte.liste.attente { opacity: .6; }
 
 /* Barre d'onglets floue */
 .onglets { position: fixed; z-index: 30; left: 0; right: 0; bottom: 0; display: flex; justify-content: center;
