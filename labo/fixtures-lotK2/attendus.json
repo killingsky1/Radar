@@ -1,0 +1,553 @@
+{
+ "AAPL": {
+  "accn": "0000320193-25-000079",
+  "cik": 320193,
+  "criteres": {
+   "ACCRUAL": 0,
+   "CFO": 1,
+   "EQ_OFFER": 1,
+   "ROA": 1,
+   "ΔLEVER": 1,
+   "ΔLIQUID": 1,
+   "ΔMARGIN": 1,
+   "ΔROA": 1,
+   "ΔTURN": 1
+  },
+  "debut": "2024-09-29",
+  "debut1": "2023-10-01",
+  "depose": "2025-10-31",
+  "doubles": [],
+  "etiquettes": {
+   "ac": "AssetsCurrent",
+   "actif": "Assets",
+   "benefice": "NetIncomeLoss",
+   "brute": "GrossProfit",
+   "cout": "CostOfGoodsAndServicesSold",
+   "dette": "LongTermDebtNoncurrent",
+   "flux": "NetCashProvidedByUsedInOperatingActivities",
+   "pc": "LiabilitiesCurrent",
+   "ventes": "RevenueFromContractWithCustomerExcludingAssessedTax"
+  },
+  "f_score": 8,
+  "fin": "2025-09-27",
+  "fin1": "2024-09-28",
+  "fin2": "2023-09-30",
+  "forme": "10-K",
+  "instance": "aapl-20250927_htm.xml",
+  "source_t2": "0000320193-24-000123",
+  "valeurs": {
+   "t": {
+    "ac": 147957000000,
+    "actif": 359241000000,
+    "benefice": 112010000000,
+    "brute": 195201000000,
+    "cout": 220960000000,
+    "dette": 78328000000,
+    "flux": 111482000000,
+    "pc": 165631000000,
+    "ventes": 416161000000
+   },
+   "t1": {
+    "ac": 152987000000,
+    "actif": 364980000000,
+    "benefice": 93736000000,
+    "brute": 180683000000,
+    "cout": 210352000000,
+    "dette": 85750000000,
+    "flux": 118254000000,
+    "pc": 176392000000,
+    "ventes": 391035000000
+   },
+   "t2": {
+    "actif": 352583000000
+   }
+  }
+ },
+ "AMD": {
+  "accn": "0000002488-26-000018",
+  "cik": 2488,
+  "criteres": {
+   "ACCRUAL": 1,
+   "CFO": 1,
+   "EQ_OFFER": 1,
+   "ROA": 1,
+   "ΔLEVER": 0,
+   "ΔLIQUID": 1,
+   "ΔMARGIN": 1,
+   "ΔROA": 1,
+   "ΔTURN": 1
+  },
+  "debut": "2024-12-29",
+  "debut1": "2023-12-31",
+  "depose": "2026-02-04",
+  "doubles": [],
+  "etiquettes": {
+   "ac": "AssetsCurrent",
+   "actif": "Assets",
+   "benefice": "NetIncomeLoss",
+   "brute": "GrossProfit",
+   "cout": "CostOfGoodsAndServicesSold",
+   "dette": "LongTermDebtNoncurrent",
+   "flux": "NetCashProvidedByUsedInOperatingActivities",
+   "pc": "LiabilitiesCurrent",
+   "ventes": "RevenueFromContractWithCustomerExcludingAssessedTax"
+  },
+  "f_score": 8,
+  "fin": "2025-12-27",
+  "fin1": "2024-12-28",
+  "fin2": "2023-12-30",
+  "forme": "10-K",
+  "instance": "amd-20251227_htm.xml",
+  "source_t2": "0000002488-25-000012",
+  "valeurs": {
+   "t": {
+    "ac": 26947000000,
+    "actif": 76926000000,
+    "benefice": 4335000000,
+    "brute": 17152000000,
+    "cout": 17487000000,
+    "dette": 2348000000,
+    "flux": 7709000000,
+    "pc": 9455000000,
+    "ventes": 34639000000
+   },
+   "t1": {
+    "ac": 19049000000,
+    "actif": 69226000000,
+    "benefice": 1641000000,
+    "brute": 12725000000,
+    "cout": 13060000000,
+    "dette": 1721000000,
+    "flux": 3041000000,
+    "pc": 7281000000,
+    "ventes": 25785000000
+   },
+   "t2": {
+    "actif": 67885000000
+   }
+  }
+ },
+ "FUL": {
+  "accn": "0001437749-26-001767",
+  "cik": 39368,
+  "criteres": {
+   "ACCRUAL": 1,
+   "CFO": 1,
+   "EQ_OFFER": 1,
+   "ROA": 1,
+   "ΔLEVER": 1,
+   "ΔLIQUID": 0,
+   "ΔMARGIN": 1,
+   "ΔROA": 1,
+   "ΔTURN": 0
+  },
+  "debut": "2024-12-01",
+  "debut1": "2023-12-03",
+  "depose": "2026-01-22",
+  "doubles": [],
+  "etiquettes": {
+   "ac": "AssetsCurrent",
+   "actif": "Assets",
+   "benefice": "NetIncomeLoss",
+   "brute": "GrossProfit",
+   "cout": "CostOfRevenue",
+   "dette": "LongTermDebtNoncurrent",
+   "flux": "NetCashProvidedByUsedInOperatingActivities",
+   "pc": "LiabilitiesCurrent",
+   "ventes": "RevenueFromContractWithCustomerIncludingAssessedTax"
+  },
+  "f_score": 7,
+  "fin": "2025-11-29",
+  "fin1": "2024-11-30",
+  "fin2": "2023-12-02",
+  "forme": "10-K",
+  "instance": "ful20251130_10k_htm.xml",
+  "source_t2": "0001437749-25-001699",
+  "valeurs": {
+   "t": {
+    "ac": 1263265000,
+    "actif": 5182706000,
+    "benefice": 151967000,
+    "brute": 1080655000,
+    "cout": 2392934000,
+    "dette": 2016937000,
+    "flux": 263493000,
+    "pc": 743359000,
+    "ventes": 3473589000
+   },
+   "t1": {
+    "ac": 1299205000,
+    "actif": 4933244000,
+    "benefice": 130256000,
+    "brute": 1061877000,
+    "cout": 2506859000,
+    "dette": 2010052000,
+    "flux": 302437000,
+    "pc": 719290000,
+    "ventes": 3568736000
+   },
+   "t2": {
+    "actif": 4723575000
+   }
+  }
+ },
+ "GME": {
+  "accn": "0001326380-26-000013",
+  "cik": 1326380,
+  "criteres": {
+   "ACCRUAL": 1,
+   "CFO": 1,
+   "EQ_OFFER": 1,
+   "ROA": 1,
+   "ΔLEVER": 0,
+   "ΔLIQUID": 1,
+   "ΔMARGIN": 1,
+   "ΔROA": 1,
+   "ΔTURN": 0
+  },
+  "debut": "2025-02-02",
+  "debut1": "2024-02-04",
+  "depose": "2026-03-24",
+  "doubles": [],
+  "etiquettes": {
+   "ac": "AssetsCurrent",
+   "actif": "Assets",
+   "benefice": "NetIncomeLoss",
+   "brute": "GrossProfit",
+   "cout": "CostOfRevenue",
+   "dette": "LongTermDebt",
+   "emission": "ProceedsFromIssuanceOfCommonStock",
+   "flux": "NetCashProvidedByUsedInOperatingActivities",
+   "pc": "LiabilitiesCurrent",
+   "ventes": "Revenues"
+  },
+  "f_score": 7,
+  "fin": "2026-01-31",
+  "fin1": "2025-02-01",
+  "fin2": "2024-02-03",
+  "forme": "10-K",
+  "instance": "gme-20260131_htm.xml",
+  "source_t2": "0001628280-25-014731",
+  "valeurs": {
+   "t": {
+    "ac": 10011600000,
+    "actif": 10388400000,
+    "benefice": 418400000,
+    "brute": 1196100000,
+    "cout": 2433800000,
+    "dette": 4164300000,
+    "emission": 0,
+    "flux": 614800000,
+    "pc": 654500000,
+    "ventes": 3629900000
+   },
+   "t1": {
+    "ac": 5355000000,
+    "actif": 5875400000,
+    "benefice": 131300000,
+    "brute": 1113900000,
+    "cout": 2709100000,
+    "dette": 16900000,
+    "emission": 3453800000,
+    "flux": 145700000,
+    "pc": 665400000,
+    "ventes": 3823000000
+   },
+   "t2": {
+    "actif": 2709000000
+   }
+  }
+ },
+ "GPUS": {
+  "accn": "0001214659-26-004697",
+  "cik": 896493,
+  "criteres": {
+   "ACCRUAL": 1,
+   "CFO": 0,
+   "EQ_OFFER": 1,
+   "ROA": 0,
+   "ΔLEVER": 0,
+   "ΔLIQUID": 1,
+   "ΔMARGIN": 0,
+   "ΔROA": 0,
+   "ΔTURN": 1
+  },
+  "debut": "2025-01-01",
+  "debut1": "2024-01-01",
+  "depose": "2026-04-15",
+  "doubles": [],
+  "etiquettes": {
+   "ac": "AssetsCurrent",
+   "actif": "Assets",
+   "benefice": "NetIncomeLoss",
+   "brute": "GrossProfit",
+   "dette": "LongTermDebt",
+   "flux": "NetCashProvidedByUsedInOperatingActivities",
+   "pc": "LiabilitiesCurrent",
+   "ventes": "RevenueFromContractWithCustomerIncludingAssessedTax"
+  },
+  "f_score": 4,
+  "fin": "2025-12-31",
+  "fin1": "2024-12-31",
+  "fin2": "2023-12-31",
+  "forme": "10-K",
+  "instance": "hdi32026010k_htm.xml",
+  "source_t2": "0001214659-25-005868",
+  "valeurs": {
+   "t": {
+    "ac": 129702000,
+    "actif": 313707000,
+    "benefice": -66397000,
+    "brute": 21573000,
+    "dette": 83121000,
+    "flux": -62516000,
+    "pc": 170374000,
+    "ventes": 102112000
+   },
+   "t1": {
+    "ac": 58413000,
+    "actif": 220766000,
+    "benefice": -56204000,
+    "brute": 24217000,
+    "flux": -19411000,
+    "pc": 215503000,
+    "ventes": 106662000
+   },
+   "t2": {
+    "actif": 299190000
+   }
+  }
+ },
+ "LESL": {
+  "accn": "0001193125-25-323811",
+  "cik": 1821806,
+  "criteres": {
+   "ACCRUAL": 1,
+   "CFO": 1,
+   "EQ_OFFER": 1,
+   "ROA": 0,
+   "ΔLEVER": 0,
+   "ΔLIQUID": 0,
+   "ΔMARGIN": 0,
+   "ΔROA": 0,
+   "ΔTURN": 0
+  },
+  "debut": "2024-09-29",
+  "debut1": "2023-10-01",
+  "depose": "2025-12-18",
+  "doubles": [],
+  "etiquettes": {
+   "ac": "AssetsCurrent",
+   "actif": "Assets",
+   "benefice": "NetIncomeLoss",
+   "brute": "GrossProfit",
+   "cout": "CostOfGoodsAndServicesSold",
+   "dette": "LongTermDebtNoncurrent",
+   "flux": "NetCashProvidedByUsedInOperatingActivities",
+   "pc": "LiabilitiesCurrent",
+   "ventes": "RevenueFromContractWithCustomerExcludingAssessedTax"
+  },
+  "f_score": 3,
+  "fin": "2025-10-04",
+  "fin1": "2024-09-28",
+  "fin2": "2023-09-30",
+  "forme": "10-K",
+  "instance": "lesl-20251004_htm.xml",
+  "source_t2": "0000950170-24-131476",
+  "valeurs": {
+   "t": {
+    "ac": 328789000,
+    "actif": 741475000,
+    "benefice": -236970000,
+    "brute": 439647000,
+    "cout": 802268000,
+    "dette": 752055000,
+    "flux": 8822000,
+    "pc": 209061000,
+    "ventes": 1241915000
+   },
+   "t1": {
+    "ac": 422434000,
+    "actif": 1050325000,
+    "benefice": -23379000,
+    "brute": 476790000,
+    "cout": 853331000,
+    "dette": 769065000,
+    "flux": 107466000,
+    "pc": 246919000,
+    "ventes": 1330121000
+   },
+   "t2": {
+    "actif": 1034435000
+   }
+  }
+ },
+ "MSFT": {
+  "accn": "0001193125-26-323660",
+  "cik": 789019,
+  "criteres": {
+   "ACCRUAL": 1,
+   "CFO": 1,
+   "EQ_OFFER": 0,
+   "ROA": 1,
+   "ΔLEVER": 1,
+   "ΔLIQUID": 0,
+   "ΔMARGIN": 0,
+   "ΔROA": 1,
+   "ΔTURN": 0
+  },
+  "debut": "2025-07-01",
+  "debut1": "2024-07-01",
+  "depose": "2026-07-29",
+  "doubles": [],
+  "etiquettes": {
+   "ac": "AssetsCurrent",
+   "actif": "Assets",
+   "benefice": "NetIncomeLoss",
+   "brute": "GrossProfit",
+   "cout": "CostOfGoodsAndServicesSold",
+   "dette": "LongTermDebtNoncurrent",
+   "emission": "ProceedsFromIssuanceOfCommonStock",
+   "flux": "NetCashProvidedByUsedInOperatingActivities",
+   "pc": "LiabilitiesCurrent",
+   "ventes": "RevenueFromContractWithCustomerExcludingAssessedTax"
+  },
+  "f_score": 5,
+  "fin": "2026-06-30",
+  "fin1": "2025-06-30",
+  "fin2": "2024-06-30",
+  "forme": "10-K",
+  "instance": "msft-20260630_htm.xml",
+  "source_t2": "0000950170-25-100235",
+  "valeurs": {
+   "t": {
+    "ac": 207710000000,
+    "actif": 758376000000,
+    "benefice": 133749000000,
+    "brute": 225465000000,
+    "cout": 106374000000,
+    "dette": 31067000000,
+    "emission": 2009000000,
+    "flux": 182935000000,
+    "pc": 168825000000,
+    "ventes": 331839000000
+   },
+   "t1": {
+    "ac": 191131000000,
+    "actif": 619003000000,
+    "benefice": 101832000000,
+    "brute": 193893000000,
+    "cout": 87831000000,
+    "dette": 40152000000,
+    "emission": 2056000000,
+    "flux": 136162000000,
+    "pc": 141218000000,
+    "ventes": 281724000000
+   },
+   "t2": {
+    "actif": 512163000000
+   }
+  }
+ },
+ "PRHI": {
+  "accn": "0001193125-26-129019",
+  "cik": 1502292,
+  "debut": "2025-01-01",
+  "debut1": "2024-01-01",
+  "depose": "2026-03-27",
+  "doubles": [
+   [
+    "LongTermDebt",
+    null,
+    "2025-12-31"
+   ],
+   [
+    "LongTermDebt",
+    null,
+    "2024-12-31"
+   ]
+  ],
+  "etiquettes": {
+   "actif": "Assets",
+   "benefice": "ProfitLoss",
+   "dette": "LongTermDebt",
+   "flux": "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations",
+   "ventes": "Revenues"
+  },
+  "f_score": null,
+  "fin": "2025-12-31",
+  "fin1": "2024-12-31",
+  "fin2": "2023-12-31",
+  "forme": "10-K",
+  "instance": "prhi-20251231_htm.xml",
+  "raison": "donnée manquante : 'ac'",
+  "source_t2": "0000950170-25-046719",
+  "valeurs": {
+   "t": {
+    "actif": 239283000,
+    "benefice": -18438000,
+    "dette": 12187000,
+    "flux": -43882000,
+    "ventes": 43304000
+   },
+   "t1": {
+    "actif": 281656000,
+    "benefice": 24347000,
+    "dette": 11932000,
+    "flux": -32679000,
+    "ventes": 67271000
+   },
+   "t2": {
+    "actif": 315606000
+   }
+  }
+ },
+ "XENE": {
+  "accn": "0001193125-26-076650",
+  "cik": 1582313,
+  "debut": "2025-01-01",
+  "debut1": "2024-01-01",
+  "depose": "2026-02-26",
+  "doubles": [],
+  "etiquettes": {
+   "ac": "AssetsCurrent",
+   "actif": "Assets",
+   "benefice": "NetIncomeLoss",
+   "emission": "StockIssuedDuringPeriodValueNewIssues",
+   "flux": "NetCashProvidedByUsedInOperatingActivities",
+   "pc": "LiabilitiesCurrent",
+   "ventes": "RevenueFromContractWithCustomerIncludingAssessedTax"
+  },
+  "f_score": null,
+  "fin": "2025-12-31",
+  "fin1": "2024-12-31",
+  "fin2": "2023-12-31",
+  "forme": "10-K",
+  "instance": "xene-20251231_htm.xml",
+  "raison": "donnée manquante : 'cout'",
+  "source_t2": "0000950170-25-029149",
+  "valeurs": {
+   "t": {
+    "ac": 560649000,
+    "actif": 633163000,
+    "benefice": -345910000,
+    "emission": 112151000,
+    "flux": -279118000,
+    "pc": 41792000,
+    "ventes": 7500000
+   },
+   "t1": {
+    "ac": 635264000,
+    "actif": 798139000,
+    "benefice": -234330000,
+    "emission": 12083000,
+    "flux": -181389000,
+    "pc": 35590000,
+    "ventes": 0
+   },
+   "t2": {
+    "actif": 964798000
+   }
+  }
+ }
+}
