@@ -239,8 +239,7 @@ METHODE = {
               "Depuis 2002, le cours réagit surtout dans les jours qui entourent le dépôt (Brochet, 2010).",
     "etudes_note": ["brochet"],
     "badges": "Seules les infos « Officiel » ou « Confirmé » comptent ; les « À vérifier » n'entrent jamais.",
-    "prix": "Aucune source de prix gratuite et permise aux robots : le score suit les règles des études, sans vérifier "
-            "lui-même s'il gagne.",
+    "prix": "Les résultats de Radar sont mesurés avec les prix officiels de la SEC (page « Résultats de Radar »).",
     "avertissement": "Une aide pour voir où va le gros argent, preuves à l'appui. Pas un conseil financier.",
     "regles": [{"code": c, **{k: r[k] for k in ("famille", "points", "libelle", "details", "etudes")}}
                for c, r in REGLES.items()],
