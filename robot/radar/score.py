@@ -199,6 +199,9 @@ SANS_POINTS = {
            "fourchettes.",
     "usaspending": "Contrat fédéral américain (USAspending) : publié des jours après la signature (90 jours pour la "
                    "Défense) ; aucune étude solide trouvée sur ces données publiées plus tard.",
+    "fin_blocage": "Fin prévue du blocage après une entrée en bourse : information seulement. Les études (Field et Hanka "
+                   "2001 ; Brav et Gompers 2003) trouvent −1,2 à −1,5 % sur 3 jours, sur des données de 1988 à 1997 ; "
+                   "rien de solide trouvé depuis 2015.",
     "participation_gouv": "Participation du gouvernement américain : aucune étude solide trouvée sur les cas de 2025-2026 ; "
                           "les études plus anciennes trouvent l'effet surtout à l'annonce.",
     "lobbying": "Lobbying à Washington (LDA.gov) : montré sur la fiche de la compagnie, sans points. L'étude de Chen, "
@@ -351,6 +354,8 @@ def evaluer(ev: dict, emissions: frozenset = frozenset(), chefs: frozenset = fro
         return contexte("usaspending")
     if s == "participations_gouv":
         return contexte("participation_gouv")
+    if s == "sec_blocage":
+        return contexte("fin_blocage")
     return contexte("contexte")
 
 

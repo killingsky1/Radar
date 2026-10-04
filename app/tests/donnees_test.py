@@ -228,9 +228,39 @@ from radar.http import ErreurSource  # noqa: E402
 def refuse(ctx):
     raise ErreurSource("https://www.parl.ca/legisinfo/fr/projets-de-loi/json?parlsession=45-1 : HTTP 403")
 lecteurs["legisinfo"] = refuse
+# Fins de blocage (lot F) : 4 entrées en bourse fictives (TEST) faites par la vraie fonction du lecteur (blocage.evenement),
+# fins dans 10, 40 et 80 jours, et une fin passée il y a 3 jours (montrée « Blocage terminé » dans la page du calendrier) ;
+# prospectus de plus de 3 mois : hors du fil, comme les vrais du rattrapage (les compteurs de l'accueil ne changent pas).
+from radar.collecteurs import blocage as bl  # noqa: E402
+from radar.collecteurs.sec import DepotSec  # noqa: E402
+def blocage_test(i, nom, symbole, fin_dans, duree=180):
+    fin = J + timedelta(days=fin_dans)
+    pros = fin - timedelta(days=duree)
+    r = {"date_prospectus": pros.isoformat(), "duree_jours": duree, "fin_blocage": fin.isoformat(), "entree_en_bourse": True,
+         "levee_anticipee": False, "ecart_ouvrables": 1,
+         "preuves_date": [{"sorte": "couverture", "date": pros.isoformat(), "directe": True,
+                           "phrase": f"The date of this prospectus is {pros:%B} {pros.day}, {pros.year}"}],
+         "phrase_blocage": f"TEST : We, our directors and officers have agreed with the underwriters that for a period of "
+                           f"{duree} days after the date of this prospectus, we and they will not sell."}
+    depot = DepotSec(f"0009999999-26-00000{i}", "424B4", (pros + timedelta(days=1)).isoformat(),
+                     f"edgar/data/999999{i}/0009999999-26-00000{i}.txt")
+    e = bl.evenement(depot, f"999999{i}", nom, {"ticker": symbole, "exchange": "Nasdaq"}, r, empreinte(f"blocage{i}".encode()))
+    e.title = "TEST : " + e.title
+    return e
+BLOCAGES = [blocage_test(1, "Fusée Exemple Inc.", "FXMP", 10), blocage_test(2, "Biotech Exemple Inc.", "BXMP", 40),
+            blocage_test(3, "Ferme Exemple Inc.", "AXMP", 80), blocage_test(4, "Ancienne Exemple Inc.", "PXMP", -3)]
+
 # 2 passages : AMD entre dans les suggestions au 2e (pastille « Nouveau ») ; les autres y étaient déjà au 1er.
 maintenant = datetime.now(timezone.utc).replace(microsecond=0)
 lecteurs["sec_form4"] = sans_amd
 print(executer(sys.argv[1], collecteurs=lecteurs, maintenant=maintenant - timedelta(hours=2)))
 lecteurs["sec_form4"] = faux
 print(executer(sys.argv[1], collecteurs=lecteurs, maintenant=maintenant))
+# Le calendrier : les blocages TEST sont ajoutés APRÈS les passages (leurs prospectus ont plus de 3 mois ; les données de
+# test n'ont pas un fichier par mois comme les vraies, donc ils entreraient dans le fil de test). Même calcul que le robot.
+from radar import calendrier  # noqa: E402
+from radar.publish import _ecrire_compact  # noqa: E402
+from radar.store import Depot  # noqa: E402
+from radar.validate import valider  # noqa: E402
+Depot(sys.argv[1]).enregistrer([valider(e, J) for e in BLOCAGES])
+_ecrire_compact(Path(sys.argv[1]) / "app" / "calendrier.json", calendrier.preparer(Depot(sys.argv[1]), J))

@@ -5,9 +5,10 @@ import pytest
 from radar.models import Confirmation, Evenement, empreinte
 
 AUJOURD_HUI = date(2026, 10, 2)
-# Une source officielle de la SEC SANS contrôles propres (sinon ses contrôles s'ajoutent aux tests génériques).
-# À changer si cette source reçoit un jour son lecteur et ses contrôles.
-SOURCE_GENERIQUE = "sec_blocage"
+# Une source officielle SANS contrôles propres (sinon ses contrôles s'ajoutent aux tests génériques) : les chefs et
+# comités du Congrès (house.gov). Avant le lot F, c'était « sec_blocage », qui a reçu son lecteur et ses contrôles.
+# À changer si cette source reçoit un jour ses propres contrôles.
+SOURCE_GENERIQUE = "comites"
 
 
 def bonne_info(**changements) -> Evenement:
@@ -20,7 +21,7 @@ def bonne_info(**changements) -> Evenement:
         title="Le PDG achète 1 000 actions",
         occurred_on="2026-09-28",
         published_on="2026-09-30",
-        official_url="https://www.sec.gov/Archives/edgar/data/320193/000123456726000001/form4.xml",
+        official_url="https://clerk.house.gov/xml/lists/MemberData.xml",
         sha256=empreinte(b"document original"),
         parser_version="test-1",
         tickers=["AAPL"],

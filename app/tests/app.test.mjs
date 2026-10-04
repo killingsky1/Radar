@@ -135,7 +135,10 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     const age = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Toronto" }).format(new Date()) === new Date().toISOString().slice(0, 10) ? 1 : 0;
     assert.ok(t.includes("bonus ×1,25 (2 familles d'accord)") && t.includes(`Score : ${age ? "−6,7" : "−6,9"} points → note 0,0/10`), t);
     assert.equal((await p.locator(".fiche-score").innerText()).replace(/\s+/g, ""), "0,0/10");
-    assert.ok(t.includes(`Note = 5 + (${age ? "−6,7" : "−6,9"}`) && t.includes(") × 5/6, entre 0 et 10, arrondie au dixième"), t);
+    // La formule montre les points avec 2 décimales (ex. « −6,88 ») : arrondis au dixième, ce sont ceux du score
+    const formule = t.match(/Note = 5 \+ \((−?\d+(?:,\d+)?)\)/);
+    assert.ok(formule && (Math.round(parseFloat(formule[1].replace("−", "-").replace(",", ".")) * 10) / 10).toLocaleString("fr-CA")
+      .replace("-", "−") === (age ? "−6,7" : "−6,9") && t.includes(") × 5/6, entre 0 et 10, arrondie au dixième"), t);
   });
   await verifier("Retour : Suggestions puis Accueil", async () => {
     await p.locator(".retour").click(); await p.waitForTimeout(200);
@@ -407,6 +410,61 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     await p.locator(".ligne", { hasText: "Intel" }).click(); await p.waitForSelector(".feuille-fond.ouvert");
     assert.ok((await p.locator(".feuille").innerText()).includes("But écrit par le déclarant (point 4 du 13D) : « The Reporting Persons believe the Shares are undervalued (exemple). »"));
     await fermer();
+  });
+  await verifier("Radar : la page ne dépasse jamais l'écran sur le côté pendant le balayage (390 px)", async () => {
+    await onglet("Radar");
+    const largeurMax = await p.evaluate(() => new Promise((ok) => {
+      let max = 0; const t0 = performance.now();
+      const f = () => { max = Math.max(max, document.documentElement.scrollWidth); performance.now() - t0 < 4200 ? requestAnimationFrame(f) : ok(max); };
+      requestAnimationFrame(f);
+    }));
+    assert.equal(largeurMax, 390); // un tour complet du balayage (4 s)
+  });
+  await verifier("Calendrier : sur le Radar, les 3 prochaines fins de blocage (pas la passée), dans l'ordre", async () => {
+    await onglet("Radar");
+    const l = p.locator(".carte.calendrier .cal-ligne");
+    assert.equal(await l.count(), 3);
+    const noms = (await l.locator(".ligne-titre").allInnerTexts()).map((t) => t.split("\n").pop().trim());
+    assert.deepEqual(noms, ["Fusée Exemple Inc.", "Biotech Exemple Inc.", "Ferme Exemple Inc."]);
+    assert.ok((await l.nth(0).innerText()).includes("Fin du blocage de 180 jours"));
+  });
+  await verifier("Calendrier : toucher une fin de blocage ouvre la fiche officielle (0 point)", async () => {
+    await p.locator(".carte.calendrier .cal-ligne").first().click(); await p.waitForSelector(".feuille-fond.ouvert");
+    const t = (await p.locator(".feuille").textContent()).replace(/\u00a0/g, " ");
+    assert.ok(t.includes("TEST : Fusée Exemple Inc. : fin prévue du blocage de 180 jours le") && t.includes("Fin prévue du blocage")
+      && t.includes("0 point dans la note"), t.slice(0, 300));
+    for (const c of ["Vraie entrée en bourse (pas un SPAC ni une inscription directe)", "Date du prospectus écrite dans le document",
+      "Une seule durée de blocage, dans la phrase citée", "Fin = date du prospectus + durée", "Aucune levée anticipée mentionnée"]) {
+      assert.ok(t.includes(c), c);
+    }
+    assert.equal(await p.locator(".feuille .controle.rate").count(), 0);
+    await fermer();
+  });
+  await verifier("Calendrier : « Tout voir » groupe par mois, la fin passée est marquée", async () => {
+    try {
+      await p.locator(".section-ligne", { hasText: "Fins de blocage à venir" }).locator(".lien").click(); await p.waitForTimeout(250);
+      assert.equal(await p.locator(".grand-titre h1").innerText(), "Calendrier");
+      const noms = (await p.locator(".cal-ligne .ligne-titre").allInnerTexts()).map((t) => t.split("\n").pop().trim());
+      assert.deepEqual(noms, ["Ancienne Exemple Inc.", "Fusée Exemple Inc.", "Biotech Exemple Inc.", "Ferme Exemple Inc."]);
+      assert.equal(await p.locator(".cal-ligne.passee").count(), 1);
+      assert.ok((await p.locator(".cal-ligne.passee").innerText()).includes("Blocage terminé le"));
+      const mois = await p.locator(".groupe .section").allInnerTexts();
+      assert.ok(mois.length >= 2 && mois.every((m) => /^[a-zéû]+ \d{4}$/i.test(m)), mois.join(" | "));
+      assert.ok((await p.locator(".explication").innerText()).includes("0 point dans la note"));
+    } finally {
+      await onglet("Radar");
+    }
+  });
+  await verifier("Aide : le calendrier (0 point), sa limite et son lien", async () => {
+    try {
+      await p.getByRole("button", { name: "Aide" }).click(); await p.waitForSelector(".flux-etape");
+      const t = (await p.locator(".ecran").innerText()).replace(/\u00a0/g, " ");
+      assert.ok(t.includes("Information seulement : 0 point dans la note.") && t.includes("Fins de blocage (prospectus 424B4)"), t.slice(0, 200));
+      await p.locator(".lien-rangee", { hasText: "Voir le calendrier" }).click(); await p.waitForTimeout(250);
+      assert.equal(await p.locator(".grand-titre h1").innerText(), "Calendrier");
+    } finally {
+      await onglet("Radar");
+    }
   });
   await verifier("Tuiles des catégories : un nombre partout (toutes branchées)", async () => {
     await onglet("Radar"); assert.equal(await p.locator(".cat-phase").count(), 0); assert.equal(await p.locator(".cat-nombre").count(), 6);

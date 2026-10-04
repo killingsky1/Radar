@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.19.0";
+const VERSION = "0.20.0";
 
 // ---------- Constantes ----------
 
@@ -141,6 +141,11 @@ const CONTROLES_SOURCES = {
   gouvernement_nomme: "Gouvernement américain nommé dans l'extrait",
   titre_de_propriete: "Actions ou bons de souscription dans l'extrait",
   point_8k_retenu: "Point du 8-K lu (1.01, 3.02 ou 8.01)",
+  entree_en_bourse: "Vraie entrée en bourse (pas un SPAC ni une inscription directe)",
+  date_du_prospectus_prouvee: "Date du prospectus écrite dans le document",
+  une_seule_duree: "Une seule durée de blocage, dans la phrase citée",
+  fin_calculee: "Fin = date du prospectus + durée",
+  sans_levee_anticipee: "Aucune levée anticipée mentionnée",
   compagnie_cotee: "Compagnie cotée en bourse",
   lettre_officielle: "Lettre d'approbation officielle",
   trimestres_consecutifs: "Trimestres consécutifs comparés",
@@ -207,6 +212,12 @@ const REGLAGES_DEFAUT = {
 
 const ICONES = {
   accueil: <path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" />,
+  calendrier: (
+    <>
+      <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" />
+      <path d="M3.5 10h17M8 3v4M16 3v4M8 14h2M14 14h2M8 17h2" />
+    </>
+  ),
   billet: (
     <>
       <rect x="2.5" y="6" width="19" height="12" rx="2.5" />
@@ -453,7 +464,7 @@ function enGroupesParJour(liste) {
 // ---------- Données ----------
 
 const FICHIERS = ["meta", "aujourdhui", "fil", "a_verifier", "sources"];
-const FICHIERS_OPTIONNELS = ["elus", "lobbying"]; // absents ou illisibles : l'app fonctionne sans
+const FICHIERS_OPTIONNELS = ["elus", "lobbying", "calendrier"]; // absents ou illisibles : l'app fonctionne sans
 
 function useDonnees() {
   const [etat, setEtat] = useState({ chargement: true, erreur: null, donnees: null });
@@ -804,7 +815,11 @@ function RadarSuggestions({ hausse, baisse }) {
           ))}
           <path d="M50 .5V99.5M.5 50H99.5" />
         </svg>
-        <div className="radar-balai" aria-hidden="true" />
+        {/* Le balayage tourne : en diagonale, sa boîte dépasse le cercle (et l'écran : la page passait à 405 px, l'iPhone
+            dézoomait). Le masque rond le coupe ; les étiquettes, à côté, ne sont pas coupées. */}
+        <div className="radar-masque" aria-hidden="true">
+          <div className="radar-balai" />
+        </div>
         {points.map(({ s, sens }, i) => {
           // Distance au centre selon le RANG de force (|note − 5|) : les points ne se tassent pas, l'ordre reste exact,
           // et deux notes égales sont à la même distance.
@@ -1719,6 +1734,8 @@ function Accueil({ pousser, allerAuFil }) {
         </>
       )}
 
+      <CarteCalendrier />
+
       <div className="tuiles">
         <button type="button" className="tuile presse" onClick={() => allerAuFil("tout")}>
           <Icone nom="eclair" taille={20} epaisseur={2} className="t-accent" />
@@ -1827,6 +1844,98 @@ function Fil({ filtre: filtreChoisi, setFiltre, recherche, setRecherche }) {
       ) : (
         <ListeEvenements liste={liste} groupee={reglages.tri === "recent"} />
       )}
+    </Ecran>
+  );
+}
+
+// ---------- Calendrier : fins prévues de blocage après une entrée en bourse (robot : data/app/calendrier.json) ----------
+
+const MOIS_COURTS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
+
+function LigneCalendrier({ l, ev }) {
+  const { ouvrirDetail } = useApp();
+  const [, mois, jour] = l.fin.split("-").map(Number);
+  return (
+    <button type="button" className={l.passee ? "ligne presse cal-ligne passee" : "ligne presse cal-ligne"} onClick={() => ev && ouvrirDetail(ev)}>
+      <span className="cal-date" aria-hidden="true">
+        <span className="cal-jour">{jour}</span>
+        <span className="cal-mois">{MOIS_COURTS[mois - 1]}</span>
+      </span>
+      <span className="ligne-centre">
+        <span className="ligne-titre">
+          <span className="cache">{dateLongue(l.fin)} : </span>
+          {l.compagnie}
+        </span>
+        <span className="ligne-meta">
+          {l.symbole && <span className="symbole">{l.symbole}</span>}
+          <span>{l.passee ? `Blocage terminé le ${dateLongue(l.fin)}` : `Fin du blocage de ${l.duree} jours`}</span>
+        </span>
+        <span className="cal-sous">Entrée en bourse : prospectus du {dateLongue(l.prospectus)}</span>
+      </span>
+      <Icone nom="chevron-d" taille={18} epaisseur={2.2} className="chevron" />
+    </button>
+  );
+}
+
+function CarteCalendrier() {
+  const { donnees, pousser } = useApp();
+  const cal = donnees.calendrier;
+  const prochaines = (cal?.lignes || []).filter((l) => !l.passee).slice(0, 3);
+  if (prochaines.length === 0) return null;
+  return (
+    <>
+      <div className="section-ligne">
+        <h2 className="section">Fins de blocage à venir</h2>
+        <button type="button" className="lien" onClick={() => pousser("calendrier")}>
+          Tout voir
+        </button>
+      </div>
+      <div className="carte liste calendrier">
+        {prochaines.map((l) => (
+          <LigneCalendrier key={l.id} l={l} ev={cal.evenements?.[l.id]} />
+        ))}
+      </div>
+    </>
+  );
+}
+
+function EcranCalendrier({ retour }) {
+  const { donnees } = useApp();
+  const cal = donnees.calendrier;
+  const parMois = useMemo(() => {
+    const groupes = [];
+    for (const l of cal?.lignes || []) {
+      const mois = majuscule(new Date(`${l.fin}T12:00:00`).toLocaleDateString("fr-CA", { month: "long", year: "numeric" }));
+      if (groupes.length === 0 || groupes[groupes.length - 1][0] !== mois) groupes.push([mois, []]);
+      groupes[groupes.length - 1][1].push(l);
+    }
+    return groupes;
+  }, [cal]);
+  return (
+    <Ecran titre="Calendrier" sousTitre="Fins de blocage" retour={retour}>
+      <p className="explication">
+        {fr(cal?.explication || "Après une entrée en bourse, les dirigeants et les anciens actionnaires s'engagent à ne pas vendre pendant une période écrite dans le prospectus.")}
+      </p>
+      {!cal ? (
+        <div className="carte">
+          <Vide icone="calendrier" titre="Calendrier pas encore publié" texte="Le robot le publie à son prochain passage." />
+        </div>
+      ) : parMois.length === 0 ? (
+        <div className="carte">
+          <Vide icone="calendrier" titre="Rien à venir" texte="Aucune fin de blocage dans les prospectus lus." />
+        </div>
+      ) : (
+        parMois.map(([mois, lignes]) => (
+          <Groupe key={mois} titre={mois}>
+            {lignes.map((l) => (
+              <LigneCalendrier key={l.id} l={l} ev={cal.evenements?.[l.id]} />
+            ))}
+          </Groupe>
+        ))
+      )}
+      <p className="groupe-pied">
+        {fr("Source : prospectus finals (424B4) déposés à la SEC. Radar publie une date seulement si tout est écrit clairement : une vraie entrée en bourse, la date du prospectus, une seule durée et aucune levée anticipée. Sinon, rien.")}
+      </p>
     </Ecran>
   );
 }
@@ -2265,6 +2374,7 @@ const DELAIS_AIDE = [
   ["Grands fonds (13F)", "jusqu'à 45 jours après la fin du trimestre"],
   ["Élus du Congrès", "jusqu'à 45 jours après la transaction"],
   ["Contrats de la Défense (USAspending)", "publiés avec 90 jours de délai"],
+  ["Fins de blocage (prospectus 424B4)", "dates prévues ; les banques peuvent lever le blocage plus tôt"],
 ];
 
 function EcranAide({ retour }) {
@@ -2354,6 +2464,13 @@ function EcranAide({ retour }) {
         </div>
       </Groupe>
 
+      <Groupe titre="Le calendrier">
+        <div className="rangee bloc">
+          <span className="rangee-texte">{fr("Après une entrée en bourse, les dirigeants et les anciens actionnaires s'engagent à ne pas vendre pendant une période (souvent 180 jours). Le robot lit chaque prospectus final et publie la fin seulement si tout est écrit clairement. Information seulement : 0 point dans la note.")}</span>
+        </div>
+        <RangeeLien icone="calendrier" couleur="accent" label="Voir le calendrier" onClick={() => pousser("calendrier")} />
+      </Groupe>
+
       <Groupe titre="Les limites, franchement" pied={m.prix ? fr(m.prix) : undefined}>
         {DELAIS_AIDE.map(([qui, delai]) => (
           <div key={qui} className="rangee bloc delai">
@@ -2388,6 +2505,7 @@ const PAGES = {
   compagnie: EcranCompagnie,
   methode: EcranMethode,
   aide: EcranAide,
+  calendrier: EcranCalendrier,
 };
 
 // « Nouveau » : entrée dans les listes depuis la dernière visite (1re visite : depuis 24 h).
@@ -2693,6 +2811,14 @@ input { font: inherit; color: var(--texte); }
 .badge { display: inline-flex; align-items: center; gap: 5px; padding: 4px 9px; border-radius: 999px; font-size: .75rem; font-weight: 700; }
 .badge.grand { font-size: .875rem; padding: 6px 12px; }
 
+/* Calendrier (fins de blocage) */
+.cal-date { flex: none; width: 36px; height: 40px; border-radius: 10px; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent); }
+.cal-jour { font-size: 1rem; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.cal-mois { font-size: .625rem; font-weight: 700; line-height: 1; text-transform: uppercase; letter-spacing: .04em; margin-top: 3px; }
+.cal-sous { color: var(--texte-2); font-size: .75rem; }
+.cal-ligne.passee .cal-date { background: var(--carte-2); color: var(--texte-2); }
+
 /* Vide */
 .vide { text-align: center; padding: 36px 20px; }
 .vide-icone { display: inline-flex; width: 60px; height: 60px; border-radius: 30px; align-items: center; justify-content: center;
@@ -2838,6 +2964,7 @@ input { font: inherit; color: var(--texte); }
 .radar { position: relative; width: min(100%, 300px); aspect-ratio: 1; border-radius: 50%; isolation: isolate;
   background: radial-gradient(circle, color-mix(in srgb, var(--radar-hausse) 9%, transparent), transparent 72%); }
 .radar-grille { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: var(--ligne-radar); stroke-width: .35; }
+.radar-masque { position: absolute; inset: 0; border-radius: 50%; overflow: hidden; z-index: 0; pointer-events: none; }
 .radar-balai { position: absolute; inset: 0; border-radius: 50%; z-index: 0; pointer-events: none;
   background: conic-gradient(from 0deg, transparent 0deg 285deg, color-mix(in srgb, var(--radar-hausse) 24%, transparent) 352deg, color-mix(in srgb, var(--radar-hausse) 55%, transparent) 360deg);
   animation: balayage 4s linear infinite; will-change: transform; }

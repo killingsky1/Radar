@@ -44,7 +44,8 @@ _LISTE = [
       "https://www.sec.gov/data-research/sec-markets-data/form-13f-data-sets", publication_max_jours=100),
     S("sec_offres", "SEC : offres d'achat de compagnies entières et privatisations", "compagnies", ("sec.gov",), 1,
       "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=SC+TO-T"),
-    S("sec_blocage", "SEC : fins de blocage après entrée en bourse", "compagnies", ("sec.gov",), 1,
+    # Lot F : prospectus finals (424B4) des entrées en bourse ; information seulement (0 point), voir blocage.py
+    S("sec_blocage", "SEC : fins de blocage après une entrée en bourse (prospectus 424B4)", "compagnies", ("sec.gov",), 1,
       "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=424B4"),
     S("sec_poursuites", "SEC : suspensions de cotation et procédures contre des compagnies cotées", "compagnies",
       ("sec.gov",), 1, "https://www.sec.gov/enforcement-litigation/trading-suspensions"),
@@ -142,8 +143,10 @@ _LISTE = [
       ecartee="Payant : aucun accès gratuit pour un robot"),
     S("sedar", "SEDAR+ : documents des compagnies canadiennes", "canada", ("sedarplus.ca",), 0,
       "https://www.sedarplus.ca/", ecartee="Robots interdits par ses conditions d'utilisation"),
+    # Lu en direct le 4 octobre 2026 : finra.org/terms-of-use ; robots.txt de cdn.finra.org : erreur 403
     S("finra", "FINRA : ventes à découvert", "compagnies", ("finra.org",), 0, "https://www.finra.org/finra-data",
-      ecartee="Compte obligatoire"),
+      ecartee="Ses conditions d'utilisation interdisent les robots et l'usage commercial ; son serveur de fichiers refuse "
+              "le robot (erreur 403) et son API exige un compte"),
     S("sam_gov", "SAM.gov : contrats fédéraux", "militaire", ("sam.gov",), 0, "https://sam.gov/",
       ecartee="Compte obligatoire (USAspending le remplace)"),
     S("prix_payants", "Prix officiels payants (EODHD)", "compagnies", ("eodhd.com",), 0, "https://eodhd.com/",

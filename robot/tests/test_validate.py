@@ -21,8 +21,8 @@ def test_confirmee_par_une_autre_source_officielle(aujourd_hui):
 
 PIEGES = [
     ("site non officiel", dict(official_url="https://www.capitoltrades.com/trades/1"), "domaine_officiel"),
-    ("http au lieu de https", dict(official_url="http://www.sec.gov/x"), "domaine_officiel"),
-    ("faux domaine qui ressemble", dict(official_url="https://sec.gov.faux-site.com/x"), "domaine_officiel"),
+    ("http au lieu de https", dict(official_url="http://clerk.house.gov/x"), "domaine_officiel"),
+    ("faux domaine qui ressemble", dict(official_url="https://house.gov.faux-site.com/x"), "domaine_officiel"),
     ("date dans le futur", dict(published_on="2026-12-25"), "dates_coherentes"),
     ("action après la publication", dict(occurred_on="2026-10-01", published_on="2026-09-30"), "dates_coherentes"),
     ("date illisible", dict(occurred_on="28/09/2026"), "dates_coherentes"),
@@ -47,7 +47,7 @@ def test_piege_va_dans_a_verifier(nom, changements, controle, aujourd_hui):
 
 
 def test_une_source_ne_peut_pas_se_confirmer_elle_meme(aujourd_hui):
-    soi_meme = Confirmation(SOURCE_GENERIQUE, "https://www.sec.gov/autre.xml", "0001234567-26-000002")
+    soi_meme = Confirmation(SOURCE_GENERIQUE, "https://clerk.house.gov/autre.xml", "0001234567-26-000002")
     ev = valider(bonne_info(confirmations=[soi_meme]), aujourd_hui)
     assert ev.badge == "a_verifier"
     assert ev.checks["confirmations_valides"] is False

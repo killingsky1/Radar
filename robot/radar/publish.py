@@ -7,7 +7,7 @@ from collections import Counter
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import __version__, argent, emetteurs
+from . import __version__, argent, calendrier, emetteurs
 from .collecteurs import congres, lobbying
 from .health import LIBELLES, statut
 from .registry import SOURCES
@@ -100,6 +100,12 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
         _ecrire_compact(donnees / "app" / "argent_infos.json", infos)
     except Exception as exc:  # noqa: BLE001
         print(f"Argent : erreur, l'ancien fichier est gardé ({type(exc).__name__}: {exc})")
+    # Calendrier : fins prévues de blocage après une entrée en bourse (tous les mois gardés). En cas d'erreur : ancien
+    # fichier gardé.
+    try:
+        _ecrire_compact(donnees / "app" / "calendrier.json", calendrier.preparer(depot, jour_de_calcul(maintenant)))
+    except Exception as exc:  # noqa: BLE001
+        print(f"Calendrier : erreur, l'ancien fichier est gardé ({type(exc).__name__}: {exc})")
     # Chefs, comités et votes des élus (listes officielles du Congrès). En cas d'erreur : aucun chef, donc aucun bonus.
     chefs: set[str] = set()
     try:

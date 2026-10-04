@@ -89,6 +89,7 @@ def lire_index(texte: str) -> dict[str, DepotSec]:
         if len(morceaux) != 5 or not morceaux[0].strip().isdigit():
             continue
         cik, nom, forme, depose, fichier = (m.strip() for m in morceaux)
+        depose = depose.replace("-", "")  # index du jour : 20260813 ; index du trimestre : 2026-08-13
         acc = fichier.rsplit("/", 1)[-1].removesuffix(".txt")
         d = depots.setdefault(acc, DepotSec(acc, forme, f"{depose[:4]}-{depose[4:6]}-{depose[6:8]}", fichier))
         d.filers.append((cik, nom))
