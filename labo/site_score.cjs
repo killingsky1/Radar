@@ -8,7 +8,7 @@ const fs = require("fs");
   const elusLocal = fs.readFileSync(fichierElus, "utf8");
   const lobbyingLocal = fs.readFileSync(fichierLobbying, "utf8");
   const lobbying = JSON.parse(lobbyingLocal);
-  const VERSION = "0.19.0";
+  const VERSION = "0.20.0";
   const base = process.env.BASE || "https://killingsky1.github.io/Radar/"; // BASE : essai local seulement
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
@@ -98,6 +98,47 @@ const fs = require("fs");
     await p.locator(".retour").click(); await p.waitForTimeout(300);
   } catch (e) {
     dire(`Aide : ERREUR ${String(e).slice(0, 200)}`);
+  }
+  // Lot F : le calendrier (fins de blocage) servi = fichier du robot ; carte du Radar (3 prochaines), page complète,
+  // fiche officielle (titre du robot, 0 point)
+  let calOk = false;
+  try {
+    const calLocal = JSON.parse(fs.readFileSync(fichierMain.replace(/aujourdhui\.json$/, "calendrier.json"), "utf8"));
+    let calServi = null;
+    for (let i = 0; i < 12; i++) {
+      calServi = await (await ctx.request.get(`${base}data/app/calendrier.json?x=${Date.now()}`)).json().catch(() => null);
+      if (JSON.stringify(calServi) === JSON.stringify(calLocal)) break;
+      await new Promise((ok) => setTimeout(ok, 15000));
+    }
+    const servi = JSON.stringify(calServi) === JSON.stringify(calLocal);
+    const prochaines = calLocal.lignes.filter((l) => !l.passee).slice(0, 3).map((l) => l.compagnie);
+    const nom = (t) => t.split("\n").pop().trim(); // la date cachée (lecteurs d'écran) est sur sa propre ligne
+    if (prochaines.length === 0) {
+      calOk = servi && (await p.locator(".carte.calendrier").count()) === 0;
+      dire(`Calendrier : aucune fin de blocage à venir · carte absente du Radar · conforme : ${calOk ? "OUI" : "NON"}`);
+    } else {
+      await p.locator(".carte.calendrier").evaluate((e) => e.scrollIntoView({ block: "center" }));
+      await photo("v38-calendrier-radar");
+      const carte = (await p.locator(".carte.calendrier .cal-ligne .ligne-titre").allInnerTexts()).map(nom);
+      await p.locator(".section-ligne", { hasText: "Fins de blocage à venir" }).locator(".lien").click(); await p.waitForTimeout(500);
+      await photo("v39-calendrier");
+      const page = (await p.locator(".cal-ligne .ligne-titre").allInnerTexts()).map(nom);
+      const l0 = calLocal.lignes[0];
+      await p.locator(".cal-ligne").first().click(); await p.waitForSelector(".feuille-fond.ouvert"); await p.waitForTimeout(500);
+      await photo("v40-fiche-blocage");
+      const fiche = (await p.locator(".feuille").textContent()).replace(/\u00a0/g, " ");
+      const ratesC = await p.locator(".feuille .controle.rate").count();
+      await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
+      await p.locator(".retour").click(); await p.waitForTimeout(300);
+      calOk = servi && JSON.stringify(carte) === JSON.stringify(prochaines)
+        && JSON.stringify(page) === JSON.stringify(calLocal.lignes.map((l) => l.compagnie))
+        && fiche.includes(calLocal.evenements[l0.id].title) && fiche.includes("0 point dans la note") && ratesC === 0;
+      dire(`Calendrier : ${calLocal.lignes.length} fins de blocage (${calLocal.lignes.filter((l) => l.passee).length} passée) · `
+        + `carte du Radar ${carte.join(", ")} · page ${page.length} lignes · fiche de ${l0.compagnie} (${ratesC} contrôle raté) · `
+        + `servi = fichier du robot : ${servi ? "OUI" : "NON"} · conforme : ${calOk ? "OUI" : "NON"}`);
+    }
+  } catch (e) {
+    dire(`Calendrier : ERREUR ${String(e).slice(0, 200)}`);
   }
   const affiches = await p.locator(".ligne.suggestion .symbole").allInnerTexts();
   const attendus = a.hausse.slice(0, 5).map((x) => x.symbole);
@@ -384,7 +425,7 @@ const fs = require("fs");
     await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
   } else dire("Participation : aucune info dans le fil (aucun cas dans les 8-K lus)");
   dire(`Erreurs du navigateur : ${erreurs.length ? erreurs.join(" | ") : "aucune"}`);
-  const ok = pareil && elusPareil && lobbyingPareil && memeTop && radarOk && aideOk && ficheOk && methodeOk && argentOk && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && participationOk && !erreurs.length && js.includes(VERSION);
+  const ok = pareil && elusPareil && lobbyingPareil && memeTop && radarOk && aideOk && calOk && ficheOk && methodeOk && argentOk && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && participationOk && !erreurs.length && js.includes(VERSION);
   dire(ok ? "VERDICT : OK" : "VERDICT : PROBLÈME");
   fs.writeFileSync(`${dossier}/site.txt`, lignes.join("\n") + "\n");
   await b.close();
