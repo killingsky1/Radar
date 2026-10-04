@@ -18,6 +18,6 @@ Source « GAO : contestations de contrats » : Laissée de côté · Le site ref
 Source « Fonds souverain de la Norvège (NBIM) » : Laissée de côté · Ses conditions interdisent les copies automatiques du site ; ses actions américaines restent suivies par son 13F (SEC)
 Source « Communiqués officiels des compagnies » : Laissée de côté · Conditions des agences de presse : lecture personnelle, sans robots ni copie (GlobeNewswire : robots.txt sans réponse) ; les communiqués importants arrivent par les 8-K de la SEC
 Source « Prix des actions (Yahoo, non officiel) » : Laissée de côté · Robots interdits par le robots.txt de son API des prix et par ses conditions d'utilisation
-Source « SEC : prix de clôture des fichiers d'échecs de livraison (seulement pour mesurer les résultats de Radar) » : OK · 
-source sec_ftd : statut ok (attendu : laissée de côté, avec la raison)
-VERDICT : PROBLÈME
+Source « SEC : prix de clôture des fichiers d'échecs de livraison (seulement pour mesurer les résultats de Radar) » : OK (lot G : seulement ses prix, jamais un signal)
+AUCUN ÉCART : chaque info relue à sa source officielle.
+VERDICT : OK
