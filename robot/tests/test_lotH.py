@@ -20,6 +20,10 @@ from radar.validate import valider
 
 F = Path(__file__).parent / "fixtures" / "lotH"
 PAGES = json.loads((F / "pages.json").read_text(encoding="utf-8"))
+# Vérification de nouveauté : vraies fiches officielles (data.sec.gov/submissions, réduites aux 200 derniers dépôts) et
+# vrais 8-K des 90 jours avant, de 4 compagnies (Accenture, National Bank Holdings, American Outdoor Brands, Coursera)
+F2 = Path(__file__).parent / "fixtures" / "lotH2"
+PAGES2 = json.loads((F2 / "pages.json").read_text(encoding="utf-8"))
 SEC = Path(__file__).parent / "fixtures" / "sec" / "company_tickers_exchange_complet.json.gz"
 FRAMES = json.loads((F / "frames_CY2025_extrait.json").read_text(encoding="utf-8"))
 MAINTENANT = datetime(2026, 10, 2, 3, 0, tzinfo=timezone.utc)
@@ -43,6 +47,8 @@ class FauxInternet:
             c = gzip.decompress(SEC.read_bytes())
         elif url.startswith("https://data.sec.gov/api/xbrl/frames/"):
             c = json.dumps(FRAMES).encode()
+        elif url in PAGES2:
+            c = gzip.decompress((F2 / PAGES2[url]).read_bytes())
         else:
             c = lu(PAGES[url])
         return type("T", (), {"contenu": c, "sha256": empreinte(c)})()
@@ -79,6 +85,8 @@ def test_accenture_hausse_de_6_milliards_dans_le_communique(tmp_path):
         "•Accenture’s total outstanding authority is approximately $6.9 billion, which includes $6.0 billion in additional "
         "share repurchase authority approved by the company’s Board of Directors in September 2026."]
     assert e.data["points"] == ["2.02"] and e.data["sorte"] == "hausse"
+    assert e.data["nouveaute"] == {"jours": 90, "depots_relus": ["0001193125-26-300813"]}  # 8-K du 10 juillet relu
+    assert e.checks["pas_deja_annonce"] is True
     assert [(a.regle, a.pourquoi) for a in evaluer(e.to_dict())] == [(None, SANS_POINTS["rachat_annonce"])]
 
 
@@ -89,6 +97,7 @@ def test_national_bank_hausse_de_40_1_millions_datee_du_jour_de_l_autorisation(t
     assert e.badge == "officiel", e.checks
     assert e.title == "National Bank Holdings Corp : programme de rachat d'actions augmenté de 40,1 M$"
     assert (e.occurred_on, e.amount_min, e.data["points"]) == ("2026-09-30", 40.1e6, ["8.01"])
+    assert e.data["nouveaute"]["depots_relus"] == ["0001104659-26-090375", "0001104659-26-087128", "0001104659-26-085408"]
     assert e.data["documents"][0]["extraits"] == [
         "On September 30, 2026, the Board of Directors of the Company approved an additional authorization to repurchase "
         "up to $40.1 million of the Company's Class A common stock."]  # « Item 8.01.Other Events » n'est pas collé devant
@@ -234,9 +243,12 @@ def test_documents_deja_lus_par_les_participations_pas_relus(tmp_path):
     internet = FauxInternet()
     ctx = contexte(tmp_path, internet)
     assert pa.lire_un(ctx, depot(*NBHC)) == []  # point 8.01 : les participations lisent le 8-K (rien pour elles)
-    avant = len(internet.appels)
+    avant = list(internet.appels)
     assert len(ra.lire_un(ctx, depot(*NBHC))) == 1
-    assert len(internet.appels) == avant  # ni en-tête, ni index, ni document relu
+    nouveaux = internet.appels[len(avant):]
+    assert not set(nouveaux) & set(avant)  # ni en-tête, ni index, ni document relu
+    assert nouveaux[0] == "https://data.sec.gov/submissions/CIK0001475841.json"  # seulement la vérification de nouveauté
+    assert all("112856" not in u for u in nouveaux)
 
 
 def test_controle_rate_si_l_extrait_ne_dit_plus_la_meme_chose(tmp_path):
@@ -411,4 +423,72 @@ def test_temoin_vraies_annonces_trouvees(acc, attendu):
 ])
 def test_temoin_rien_a_publier(acc):
     x = TEMOIN[acc]
+    assert ra.retenir([(None, t, v) for t, v in x["docs"].items()], date.fromisoformat(x["jour"]))[1] is None
+
+
+# ---------- Vérification de nouveauté : les vrais 8-K de Coursera (fiche officielle et dépôts de mai et juin 2026) ----------
+
+def test_coursera_le_29_juillet_decrit_le_programme_de_mai(tmp_path):
+    """Le vrai dépôt du 29 juillet (résultats) : « In May, our Board authorized a $500 million share repurchase program,
+    and we moved quickly to execute against that authorization… » : écarté par la règle (mois de mai, programme qui sert
+    déjà)."""
+    assert ra.lire_un(contexte(tmp_path), depot("0001651562-26-000059", 1651562, "Coursera, Inc.", "2026-07-29")) == []
+
+
+def test_nouveaute_le_meme_montant_deja_annonce_dans_un_8k_precedent(tmp_path):
+    """Même si une phrase passait la règle, le vrai 8-K du 18 mai 2026 annonçait déjà ce programme de 500 M$ (« the board
+    of directors of Coursera, Inc. … approved a stock repurchase program … up to $500 million ») : rien de publié."""
+    phrase = ["On July 28, 2026, the Board of Directors approved a share repurchase program of up to $500 million."]
+    pages, d = faux_8k(phrase, cik=1651562, acc="0001651562-26-000099")
+    d.depose = "2026-07-29"
+    ctx = contexte(tmp_path, FauxInternet(pages))
+    assert ra.deja_annoncee(ctx, 1651562, d, ("nouveau", 5e8, None))[0] == "0001651562-26-000041"
+    assert ra.lire_un(ctx, d) == []
+    # Un autre montant : publié, avec les 3 vrais 8-K relus (23 juin, 18 mai, 11 mai)
+    pages, d = faux_8k(["On July 28, 2026, the Board of Directors approved a share repurchase program of up to $600 "
+                        "million."], cik=1651562, acc="0001651562-26-000098")
+    d.depose = "2026-07-29"
+    e = valider(ra.lire_un(contexte(tmp_path, FauxInternet(pages)), d)[0], date(2026, 7, 29))
+    assert e.badge == "officiel", e.checks
+    assert e.data["nouveaute"]["depots_relus"] == ["0001651562-26-000051", "0001651562-26-000041", "0001140361-26-020399"]
+
+
+# ---------- 2e mesure TÉMOIN (28 au 31 juillet 2026, jamais regardée avant la version 2) : 22 vrais dépôts ----------
+
+TEMOIN2 = json.loads(gzip.decompress((F / "textes_temoin2.json.gz").read_bytes()))
+
+
+@pytest.mark.parametrize("acc, attendu", [
+    ("0001628280-26-051029", ("hausse", 5e8, None)),  # Monolithic Power : « has authorized an additional $500 million »
+    ("0001334036-26-000050", ("hausse", 1.5e9, None)),  # Crocs : 8-K et communiqué disent la même chose
+    ("0001628280-26-051046", ("hausse", 2.5e9, None)),  # LPL Financial : « approved a $2.5 billion increase »
+    ("0000860731-26-000048", ("nouveau", 1.5e9, None)),  # Tyler : « approved a share repurchase plan … up to $1.5 billion »
+    ("0000004127-26-000047", ("nouveau", 2e9, None)),  # Skyworks
+    ("0000712537-26-000026", ("hausse", 7.5e7, None)),  # First Commonwealth : « an additional $75.0 million … program »
+    ("0001171843-26-005042", ("hausse", 1.5e9, None)),  # WTW : « … share repurchase authority in the amount of $1.5 billion »
+    ("0001193125-26-326149", ("hausse", 3.5e8, None)),  # Dolby : « approved increasing the size of its … program by »
+    ("0001104659-26-088462", ("total", 4e9, None)),  # ICE : « Board approved increase in share repurchase authorization up to »
+    ("0001628280-26-050792", ("hausse", 1.5e8, None)),  # Laureate : « an additional $150 million increase to the existing … »
+    ("0000920148-26-000162", ("hausse", 1e9, None)),  # LabCorp : « In July, the Board … approved an increase of $1.0 billion »
+    ("0001058090-26-000063", ("nouveau", 1.3e9, None)),  # Chipotle : « … with a total aggregate purchase price of $1.3 billion »
+    ("0001410384-26-000051", ("hausse", 3.5e8, None)),  # Q2 : « has authorized up to $350 million of additional repurchases »
+    ("0001562528-26-000025", ("total", 5e7, None)),  # Franklin BSP : « reauthorized … making $50.0 million available »
+    ("0001193125-26-318759", ("hausse", 8e8, None)),  # Armstrong : « an additional $800 million to be added to … »
+])
+def test_temoin2_vraies_annonces_trouvees(acc, attendu):
+    x = TEMOIN2[acc]
+    documents, cle = ra.retenir([(None, t, v) for t, v in x["docs"].items()], date.fromisoformat(x["jour"]))
+    assert cle == attendu, [(s, [p[:120] for p, _ in ts]) for _, s, ts in documents]
+
+
+@pytest.mark.parametrize("acc", [
+    "0001651562-26-000059",  # Coursera : « In May, our Board authorized … and we moved quickly to execute against it »
+    "0001628280-26-051320",  # Greif : « we asked our stock repurchase committee of the Board to approve … » (pas encore)
+    "0001193125-26-328715",  # FTI Consulting : autorisé le 3 juin (plus de 30 jours)
+    "0001171843-26-005081",  # Exponent : vraie hausse, sans signe d'annonce récente (manquée, voulu)
+    "0000876437-26-000026",  # MGIC : « authorizing us to purchase an additional $750 million » (même raison)
+    "0001628280-26-050815",  # Vericel : « •Board of Directors authorized $200 million share repurchase program » (même raison)
+])
+def test_temoin2_rien_a_publier(acc):
+    x = TEMOIN2[acc]
     assert ra.retenir([(None, t, v) for t, v in x["docs"].items()], date.fromisoformat(x["jour"]))[1] is None

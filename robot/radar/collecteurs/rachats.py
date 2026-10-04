@@ -23,15 +23,21 @@
      ni une année passée écrite seule (« 2025 Repurchase Program ») ; une date écrite après « prior », « replacing »…
      est celle d'un autre programme et ne compte pas.
    Toutes les phrases retenues d'un même dépôt doivent dire la même chose (sorte et montant), sinon rien ; si le même
-   programme est daté de plus de 30 jours ailleurs dans le dépôt, rien. La même annonce dans un autre 8-K de la
-   compagnie (30 jours) : une seule fois. Seulement 10 M$ et plus (un nombre d'actions : dans le fil seulement, sans
-   montant).
+   programme est certainement plus vieux ailleurs dans le dépôt (date, ou « we moved quickly to execute against it »),
+   rien. La même annonce dans un autre 8-K de la compagnie (30 jours) : une seule fois. NOUVEAUTÉ : les 8-K de la
+   compagnie des 90 jours avant (sa fiche officielle, data.sec.gov/submissions ; points 2.02, 7.01 ou 8.01) sont relus
+   avec la même règle ; le même montant déjà annoncé : rien (ex. Coursera, 29 juillet : le programme de 500 M$ du 18 mai).
+   Seulement 10 M$ et plus (un nombre d'actions : dans le fil seulement, sans montant).
    Mesuré au labo (labo/mesure_lotH.py), dépôts lus en entier et revus à la main :
    - 10 jours (21 sept. au 2 oct. 2026 : 1 922 8-K, 981 lus) : 9 vraies annonces, 9 trouvées, aucune de trop ;
    - 1re mesure témoin (3 au 7 août 2026, 1 852 lus) avec la version 1 : 28 retenues dont 6 erreurs (3 programmes
      déjà connus décrits dans une diapo, un avertissement légal ou une note ; 1 mauvaise sorte ; 2 programmes de juin)
-     et 2 douteuses (juillet), 14 vraies manquées ; la version 2 corrige ces cas (tests) ;
-   - 2e mesure témoin (28 au 31 juillet 2026, jamais regardée) avec la version 2 : labo/resultats-lotH-temoin2.
+     et 2 douteuses (juillet), 14 vraies manquées ;
+   - 2e mesure témoin (28 au 31 juillet 2026, 1 046 lus) avec la version 2 : 7 retenues dont 1 erreur (Coursera, le
+     programme de mai), 13 vraies manquées ;
+   - la version 3 (mois sans jour, programme qui sert déjà, nouvelles formules, nouveauté) corrige ces cas (tests) ;
+     3e mesure témoin (28 avril au 1er mai 2026, jamais regardée) : labo/resultats-lotH-temoin3.
+   Des vraies annonces restent manquées exprès : une phrase sans signe d'annonce récente (ex. BorgWarner, Exponent).
 2. Rachats faits (source « sec_rachats_xbrl ») : l'argent dépensé pour racheter ses actions pendant un exercice,
    déclaré par la compagnie dans son rapport annuel (étiquette XBRL « PaymentsForRepurchaseOfCommonStock »), lu sur
    l'API officielle de la SEC (data.sec.gov, « frames ») : un seul fichier pour toutes les compagnies. Montré sur la
@@ -42,7 +48,8 @@ from __future__ import annotations
 
 import json
 import re
-from datetime import date
+from calendar import monthrange
+from datetime import date, timedelta
 from pathlib import Path
 
 from .. import emetteurs
@@ -63,6 +70,8 @@ MONTANT_MIN = 10_000_000
 JOURS_MAX = 30  # une date plus vieille dans la phrase : un ancien programme décrit de nouveau
 JOURS_AVANCE = 400  # une date à venir (ex. « beginning August 10, 2026 ») montre aussi que l'annonce est récente
 JOURS_MEME_ANNONCE = 30  # même compagnie, même sorte, même montant dans un autre 8-K : la même annonce
+JOURS_NOUVEAUTE = 90  # le même montant déjà annoncé dans un 8-K de la compagnie des 90 jours avant : pas nouveau
+FICHE_SEC = "https://data.sec.gov/submissions/CIK{cik:010d}.json"
 PHRASE_MAX = 1500  # au-delà, c'est un tableau aplati, pas une phrase
 MOIS = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November",
         "December")
@@ -76,7 +85,7 @@ ACTIONS = (r"(?P<a>\d{1,3}(?:,\d{3})+|\d+(?:\.\d+)?\s*million)\s+(?:(?:of\s+)?(?
 V = f"(?:{DOLLARS}|{ACTIONS})"
 VERBE = r"(?:approved|authorized|authorised|adopted)"
 OBJET = r"(?:(?:common\s+)?(?:share|stock|equity)\s+)?(?:repurchase|buy-?back)"
-PROGRAMME = OBJET + r"\s+(?:program|programme|plan|authori[sz]ation)"
+PROGRAMME = OBJET + r"\s+(?:program|programme|plan|authori[sz]ation|authority)"
 # « its », « our », « the Company's », ou le nom de la compagnie au possessif (« Evertec's », « Diamondback's »)
 SA = r"(?:its|the|our|the\s+Company['’]s|[A-Z][\w&.\-]*(?:\s+[A-Z][\w&.\-]*){0,3}['’]s)"
 QUALIF = r"(?:existing\s+|aggregate\s+|total\s+|current\s+)?"
@@ -91,15 +100,18 @@ FORMULES = {
     "hausse": [
         VERBE + r"\s+an?\s+" + PLUS + r"\s+(?:share\s+|stock\s+)?(?:repurchase\s+)?authori(?:[sz]ation|ty)\s+to\s+"
         r"(?:re)?purchase\s+(?:up\s+to\s+)?" + V,
-        VERBE + r"\s+an?\s+" + PLUS + r"\s+" + V + r"\s+(?:for|of|in|to|under)\s+(?:" + SA + r"\s+)?" + QUALIF
-        + OBJET + r"s?",
+        # « authorized an additional $800 million to be added to the Company's existing share repurchase program » (Armstrong)
+        VERBE + r"\s+an?\s+" + PLUS + r"\s+" + V + r"\s+(?:to\s+be\s+added\s+to|for|of|in|to|under)\s+(?:" + SA + r"\s+)?"
+        + QUALIF + OBJET + r"s?",
         VERBE + r"\s+an?\s+" + PLUS + r"\s+" + V + r"\s+" + OBJET,
         V + r"\s+(?:in\s+)?" + PLUS + r"\s+" + OBJET + r"\s+authori(?:ty|[sz]ation)\s+(?:was\s+|has\s+been\s+)?"
         r"(?:approved|authorized|authorised)",
         r"(?:increased|expanded|upsized)\s+" + SA + r"\s+" + QUALIF + PROGRAMME + PAREN + r"\s+by\s+(?:an\s+additional\s+)?"
         + V,
-        VERBE + r"\s+an?\s+" + V + r"\s+(?:increase|expansion|addition)\s+(?:to|in|of)\s+" + SA + r"\s+" + QUALIF
-        + PROGRAMME,
+        # « approved an additional $150 million increase to the existing authorization for the Company's stock repurchase
+        # program » (Laureate)
+        VERBE + r"\s+an?\s+(?:additional\s+)?" + V + r"\s+(?:increase|expansion|addition)\s+(?:to|in|of)\s+" + SA + r"\s+"
+        + QUALIF + r"(?:(?:authori[sz]ation|authority)\s+(?:for|under)\s+" + SA + r"\s+" + QUALIF + r")?" + PROGRAMME,
         VERBE + r"\s+an?\s+(?:increase|expansion)\s+(?:of|in\s+the\s+amount\s+of)\s+" + V + r"\s+(?:to|in)\s+" + SA
         + r"\s+" + QUALIF + PROGRAMME,
         # « approved the upsizing of its existing share repurchase program (…) by $1.5 billion » (Talen Energy),
@@ -110,7 +122,14 @@ FORMULES = {
         # « authorized an increase to its share repurchase program of $1 billion » (BorgWarner), « … program (the “Stock
         # Buyback Program”) of an additional $100 million » (BlackLine)
         VERBE + r"\s+an?\s+(?:increase|expansion)\s+(?:to|in)\s+" + SA + r"\s+" + QUALIF + PROGRAMME + PAREN
-        + r"\s+(?:of|by)\s+(?:an\s+additional\s+)?" + V,
+        + r"\s+(?:of|by|in\s+the\s+amount\s+of)\s+(?:an\s+additional\s+)?" + V,
+        # « approved increasing the size of its stock repurchase program by $350 million » (Dolby)
+        VERBE + r"\s+(?:increasing|expanding|upsizing)\s+(?:the\s+(?:size|amount)\s+of\s+)?" + SA + r"\s+" + QUALIF
+        + PROGRAMME + PAREN + r"\s+by\s+(?:an\s+additional\s+)?" + V,
+        # « has authorized up to $350 million of additional repurchases », « has approved up to an additional $350 million
+        # of share repurchases » (Q2 Holdings)
+        VERBE + r"\s+up\s+to\s+" + V + r"\s+(?:of|in)\s+additional\s+(?:share\s+|stock\s+)?repurchases",
+        VERBE + r"\s+up\s+to\s+an\s+additional\s+" + V + r"\s+(?:of|in)\s+(?:share\s+|stock\s+)?repurchases",
         # « approved a share repurchase authorization increase of $15 million » (ATN International)
         VERBE + r"\s+(?:a|an|the)\s+" + PROGRAMME + r"\s+(?:increase|expansion)\s+(?:of|in\s+the\s+amount\s+of)\s+" + V,
         # « has authorized the repurchase of up to an additional 832,000 shares » (HomeTrust)
@@ -129,13 +148,16 @@ FORMULES = {
         VERBE + r"\s+(?:the\s+)?(?:re)?purchase\s+of\s+" + AGREGAT + r"up\s+to\s+" + V,
         VERBE + r"\s+an?\s+" + ADJ + r"(?:program|programme|plan)\s+to\s+(?:re)?purchase\s+(?:up\s+to\s+)?" + V,
         VERBE + r"\s+(?:the\s+Company|us|it|management)\s+to\s+(?:re)?purchase\s+" + AGREGAT + r"up\s+to\s+" + V,
+        # « has authorized repurchases of common stock with a total aggregate purchase price of $1.3 billion » (Chipotle)
+        VERBE + r"\s+(?:the\s+)?repurchases?\s+of\s+(?:its\s+|our\s+|the\s+Company['’]s\s+)?(?:common\s+)?(?:stock|shares)"
+        r"\s+with\s+an?\s+(?:total\s+)?(?:aggregate\s+)?purchase\s+price\s+of\s+(?:up\s+to\s+)?" + V,
     ],
     # Le nouveau plafond TOTAL (le montant ajouté n'est pas écrit) : « approved an increase to the Company's share
     # repurchase authorization to $1.5 billion » (Lear), « has increased our share buyback authorization back to $250
     # million » (Jefferies), « doubled the Company's share repurchase authorization to $16.0 billion » (Diamondback).
     # Gardé seulement si le dépôt n'annonce pas aussi un nouveau programme ou une hausse.
     "total": [
-        VERBE + r"\s+(?:the|an?)\s+(?:increase|expansion|doubling)" + PAREN + r"\s+(?:to|in|of)\s+(?:" + SA + r"\s+)?"
+        VERBE + r"\s+(?:(?:the|an?)\s+)?(?:increase|expansion|doubling)" + PAREN + r"\s+(?:to|in|of)\s+(?:" + SA + r"\s+)?"
         + QUALIF + PROGRAMME + PAREN + r"\s+(?:back\s+)?(?:up\s+)?to\s+(?:a\s+total\s+of\s+|an\s+aggregate\s+(?:of\s+)?)?"
         + V,
         r"(?:(?:refreshed|renewed)\s+and\s+)?(?:increased|expanded|upsized|replenished|raised|doubled|refreshed)\s+" + SA
@@ -145,6 +167,8 @@ FORMULES = {
         # to an aggregate of $150 million » (Evertec)
         VERBE + r"\s+an?\s+(?:increase|expansion)\s+to\s+" + SA + r"\s+" + QUALIF + PROGRAMME + r"[^;$]{0,80}?\bup\s+to\s+"
         r"(?:an\s+aggregate\s+of\s+|a\s+total\s+of\s+)?" + V,
+        r"(?:reauthorized|reauthorised|renewed|replenished)\s+" + SA + r"\s+" + QUALIF + PROGRAMME + PAREN
+        + r"\s*,?\s+(?:again\s+)?(?:making|providing|bringing)\s+(?:again\s+)?" + V + r"\s+available",
     ],
 }
 FORMULES = {sorte: [re.compile(m, re.I) for m in motifs] for sorte, motifs in FORMULES.items()}
@@ -174,6 +198,11 @@ RECENT = re.compile(r"\btoday\b|\brecently\b|\bannounc\w*|\b(?:has|have)\s+(?:al
 DATE = re.compile(r"\b(" + "|".join(MOIS) + r"|" + "|".join(MOIS_COURTS) + r")\.?(?:\s+(\d{1,2})(?:st|nd|rd|th)?)?"
                   r"(?:,?\s+(\d{4}))?\b")
 ANNEE = re.compile(r"\b(20\d\d)\b")
+MOIS_SEUL = re.compile(r"\b(?:[Ii]n|[Dd]uring|[Ss]ince)\s+(?:(?:early|late)\s+|mid-?)?(" + "|".join(MOIS) + r")\b(?![\s,]*\d)")
+# Après la formule, le programme sert déjà : un vieux programme décrit de nouveau (Coursera : « … and we moved quickly to
+# execute against it, repurchasing $90 million of shares … »)
+DEJA_UTILISE = re.compile(r"\brepurchas(?:ing|ed)\s+(?:approximately\s+|about\s+|a\s+total\s+of\s+)?(?:\$|[\d,.]+\s+"
+                          r"(?:million\s+)?shares)|\bexecut\w*\s+(?:against|under|on)\b", re.I)
 # Pas de coupure de phrase après ces abréviations (« Accenture plc », « Inc. », « U.S. »)
 ABREVIATIONS = {"Inc", "Corp", "Co", "Ltd", "Mr", "Ms", "Mrs", "Dr", "Jr", "Sr", "St", "No", "Nos", "U.S", "N.V", "S.A",
                 "L.P", "L.L.C", "LLC", "plc", "approx", "vs", "e.g", "i.e", "U.K", "Bros", "Mfg", "Intl", "Hldgs", "Cos",
@@ -219,36 +248,46 @@ def valeur(m: re.Match) -> tuple[float | None, float | None]:
     return None, float(a.replace(",", "").replace("million", "").strip()) * (1e6 if "million" in a else 1)
 
 
-def dates_ecrites(texte: str, depose: date) -> list[tuple[date, bool]]:
-    """Les dates écrites, (date, jour écrit). « September 2026 » : le 1er du mois (le plus ancien possible) ;
-    « August 3 » sans année : l'année du dépôt (l'année d'avant si la date serait plus de 30 jours après le dépôt)."""
+def dates_ecrites(texte: str, depose: date) -> list[tuple[date, date, bool]]:
+    """Les dates écrites : (plus tôt possible, plus tard possible, jour écrit). « September 2026 » : du 1er au 30
+    septembre ; « In May » sans année : mai de l'année du dépôt ; « August 3 » sans année : l'année du dépôt (l'année
+    d'avant si la date serait plus de 30 jours après le dépôt)."""
     out = []
+
+    def annee_probable(mois: int, jour: int) -> int:
+        return depose.year - 1 if (date(depose.year, mois, jour) - depose).days > JOURS_MAX else depose.year
+
     for m in DATE.finditer(texte):
         nom, jour, annee = m.group(1), m.group(2), m.group(3)
         if not jour and not annee:
-            continue  # un mois seul (« In July ») : pas une date
+            continue  # un mois seul sans « In » devant : pas une date (voir MOIS_SEUL)
         mois = MOIS.index(nom) + 1 if nom in MOIS else MOIS_COURTS[nom]
         try:
-            if annee:
-                d = date(int(annee), mois, int(jour) if jour else 1)
+            if annee and not jour:
+                a = int(annee)
+                out.append((date(a, mois, 1), date(a, mois, monthrange(a, mois)[1]), False))
             else:
-                d = date(depose.year, mois, int(jour))
-                if (d - depose).days > JOURS_MAX:
-                    d = date(depose.year - 1, mois, int(jour))
+                a = int(annee) if annee else annee_probable(mois, int(jour))
+                d = date(a, mois, int(jour))
+                out.append((d, d, True))
         except ValueError:
             continue
-        out.append((d, bool(jour)))
+    for m in MOIS_SEUL.finditer(texte):
+        mois = MOIS.index(m.group(1)) + 1
+        a = annee_probable(mois, 1)
+        out.append((date(a, mois, 1), date(a, mois, monthrange(a, mois)[1]), False))
     return out
 
 
-def vieille_date(phrase: str, depose: date) -> str | None:
-    """Une date de plus de 30 jours avant le dépôt, ou une année passée écrite seule (« 2025 Repurchase Program »)."""
-    for d, _ in dates_ecrites(phrase, depose):
-        if (depose - d).days > JOURS_MAX:
-            return d.isoformat()
-    for annee in ANNEE.findall(DATE.sub(" ", phrase)):
+def vieille_date(phrase: str, depose: date) -> tuple[str, bool] | None:
+    """(date, certaine) : une date peut-être de plus de 30 jours avant le dépôt (le 1er du mois pour un mois sans jour),
+    ou une année passée écrite seule (« 2025 Repurchase Program ») ; « certaine » : vieille même au dernier jour possible."""
+    for tot, tard, _ in dates_ecrites(phrase, depose):
+        if (depose - tot).days > JOURS_MAX:
+            return tot.isoformat(), (depose - tard).days > JOURS_MAX
+    for annee in ANNEE.findall(MOIS_SEUL.sub(" ", DATE.sub(" ", phrase))):
         if int(annee) < depose.year:
-            return annee
+            return annee, (depose - date(int(annee), 12, 31)).days > JOURS_MAX
     return None
 
 
@@ -261,8 +300,8 @@ def zone_du_programme(phrase: str, m: re.Match) -> str:
 
 def recente(phrase: str, depose: date) -> bool:
     """Un signe que l'annonce est récente : « today », « has approved »…, ou une date de moins de 30 jours (ou à venir)."""
-    return bool(RECENT.search(phrase)) or any(-JOURS_AVANCE <= (depose - d).days <= JOURS_MAX
-                                              for d, _ in dates_ecrites(phrase, depose))
+    return bool(RECENT.search(phrase)) or any((depose - tard).days <= JOURS_MAX and (depose - tot).days >= -JOURS_AVANCE
+                                              for tot, tard, _ in dates_ecrites(phrase, depose))
 
 
 def analyser(phrase: str, depose: date) -> dict:
@@ -289,8 +328,11 @@ def analyser(phrase: str, depose: date) -> dict:
         return {"rejet": f"ancien programme : {a.group(0)}", "cle": cle}
     if d := DEJA_ANNONCE.search(phrase[m.end():]):
         return {"rejet": f"ancien programme : {d.group(0)}", "cle": cle}
-    if v := vieille_date(zone_du_programme(phrase, m), depose):
-        return {"rejet": f"ancienne date : {v}", "cle": cle}
+    zone = zone_du_programme(phrase, m)
+    if u := DEJA_UTILISE.search(zone[m.end():]):
+        return {"rejet": f"programme déjà utilisé : {u.group(0)}", "cle": cle, "sure": True}
+    if v := vieille_date(zone, depose):
+        return {"rejet": f"ancienne date : {v[0]}", "cle": cle, "sure": v[1]}
     if not recente(phrase, depose):
         return {"rejet": "pas de signe d'une annonce récente", "cle": cle}
     if dollars is not None and dollars < 1_000_000:
@@ -333,7 +375,7 @@ def retenir(documents_lus, depose: date) -> tuple[list, tuple | None]:
             a = analyser(p, depose)
             if "sorte" in a:
                 trouves.append((p, a))
-            elif a["rejet"].startswith("ancienne date"):
+            elif a.get("sure"):  # le même programme, certainement plus vieux (date ou programme qui sert déjà)
                 vieilles.add(a["cle"])
         if trouves:
             documents.append((url, sorte, trouves))
@@ -350,6 +392,42 @@ def retenir(documents_lus, depose: date) -> tuple[list, tuple | None]:
     if cle[1] is not None and cle[1] < MONTANT_MIN:
         return documents, None
     return documents, cle
+
+
+def montants_annonces(documents_lus, depose: date) -> set[tuple]:
+    """Les montants (dollars, actions) des phrases d'un 8-K qui suivent la règle (même sans décision)."""
+    return {(a["dollars"], a["actions"]) for _, _, texte in documents_lus for p in phrases(texte)
+            if RACHAT.search(p) and "sorte" in (a := analyser(p, depose))}
+
+
+def fiche_sec(ctx, cik) -> dict:
+    """La fiche officielle de la compagnie (data.sec.gov/submissions) : ses dépôts récents, lue une fois par passage."""
+    cache = ctx.cache.setdefault("fiches_sec", {})
+    if int(cik) not in cache:
+        cache[int(cik)] = json.loads(ctx.client.get(FICHE_SEC.format(cik=int(cik))).contenu)
+    return cache[int(cik)]
+
+
+def deja_annoncee(ctx, cik, depot, cle) -> tuple[str | None, list[str]]:
+    """(numéro du 8-K qui annonçait déjà ce montant, numéros des 8-K relus). Relit, avec la même règle et à leur propre
+    date, les 8-K de la compagnie déposés dans les 90 jours AVANT celui-ci avec un point 2.02, 7.01 ou 8.01 (liste de
+    sa fiche officielle). Ex. Coursera, 29 juillet 2026 : « our Board authorized a $500 million share repurchase
+    program » décrit le programme de mai."""
+    from .sec import DepotSec
+    r = fiche_sec(ctx, cik)["filings"]["recent"]
+    depose = date.fromisoformat(depot.depose)
+    relus = []
+    for forme, jour, acc, items in zip(r["form"], r["filingDate"], r["accessionNumber"], r.get("items") or []):
+        j = date.fromisoformat(jour)
+        if forme != "8-K" or acc == depot.acc or not timedelta(days=1) <= depose - j <= timedelta(days=JOURS_NOUVEAUTE):
+            continue
+        if not {x.strip() for x in (items or "").split(",")} & set(POINTS_EDGAR.values()):
+            continue
+        relus.append(acc)
+        ancien = DepotSec(acc, "8-K", jour, "", [(str(int(cik)), "")])
+        if (cle[1], cle[2]) in montants_annonces(documents_8k(ctx, ancien, str(int(cik))), j):
+            return acc, relus
+    return None, relus
 
 
 def annonces_connues(ctx) -> dict:
@@ -384,14 +462,19 @@ def lire_un(ctx, depot) -> list[Evenement]:
     connues = annonces_connues(ctx).setdefault((cote["ticker"], *cle), [])
     if any(acc != depot.acc and abs((depose - date.fromisoformat(jour)).days) <= JOURS_MEME_ANNONCE for jour, acc in connues):
         return []
+    deja, relus = deja_annoncee(ctx, cik, depot, cle)
+    if deja:
+        return []  # le même montant était déjà annoncé dans un 8-K précédent de la compagnie : pas une nouvelle annonce
     connues.append((depot.depose, depot.acc))
     extraits = [p for _, _, ts in documents for p, _ in ts]
     # Date de l'autorisation : la seule date complète des extraits dans les 30 jours avant le dépôt (ex. « On September
     # 30, 2026, the Board… »), sinon le jour du dépôt. Pas la « période » de l'en-tête : elle peut venir d'un autre point
     # du même 8-K (ex. National Bank Holdings : dépréciation du 28 septembre, rachat autorisé le 30).
-    dates = {d for x in extraits for d, jour in dates_ecrites(x, depose) if jour and 0 <= (depose - d).days <= JOURS_MAX}
+    dates = {tot for x in extraits for tot, tard, jour in dates_ecrites(x, depose)
+             if jour and tot == tard and 0 <= (depose - tot).days <= JOURS_MAX}
     quand = dates.pop().isoformat() if len(dates) == 1 else depot.depose
     d = {"cik": cik, "points": lus, "sorte": sorte, "dollars": dollars, "actions": actions,
+         "nouveaute": {"jours": JOURS_NOUVEAUTE, "depots_relus": relus},
          "documents": [{"url": url, "type": s, "extraits": list(dict.fromkeys(p for p, _ in ts))[:3]}
                        for url, s, ts in documents],
          "formules": list(dict.fromkeys(a["formule"] for _, _, ts in documents for _, a in ts)),
@@ -426,6 +509,7 @@ def controles(ev: Evenement) -> dict[str, bool]:
         "meme_montant_partout": cles == {(d.get("sorte"), d.get("dollars"), d.get("actions"))},
         "point_8k_des_rachats": bool(set(d.get("points") or []) & set(POINTS_EDGAR.values())),
         "compagnie_cotee": bool(ev.tickers),
+        "pas_deja_annonce": isinstance((d.get("nouveaute") or {}).get("depots_relus"), list),
         "rachat_de_10_millions_et_plus": (d.get("dollars") or 0) >= MONTANT_MIN
         or (d.get("dollars") is None and (d.get("actions") or 0) > 0),
     }

@@ -320,6 +320,9 @@ class FauxDepot8k:
                 ('<table><tr><td>1</td><td><a href="/Archives/edgar/data/2488/000000248826000099/test-ex99.htm">test-ex99.htm</a>'
                  '</td><td>EX-99.1</td><td>1</td></tr></table>').encode(),
             "https://www.sec.gov/Archives/edgar/data/2488/000000248826000099/test-ex99.htm": f"<p>{phrase}</p>".encode(),
+            # Fiche officielle (vérification de nouveauté) : aucun 8-K dans les 90 jours avant
+            "https://data.sec.gov/submissions/CIK0000002488.json": json.dumps({"filings": {"recent": {
+                "accessionNumber": [], "filingDate": [], "form": [], "items": []}}}).encode(),
         }
     def get(self, url, entetes=None):
         c = self.pages[url]

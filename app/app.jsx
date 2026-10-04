@@ -152,6 +152,7 @@ const CONTROLES_SOURCES = {
   meme_montant_partout: "Même plafond partout dans le dépôt",
   point_8k_des_rachats: "Point du 8-K lu (2.02, 7.01 ou 8.01)",
   rachat_de_10_millions_et_plus: "10 M$ et plus (ou un nombre d'actions)",
+  pas_deja_annonce: "Pas déjà annoncé dans ses 8-K des 90 jours avant",
   lettre_officielle: "Lettre d'approbation officielle",
   trimestres_consecutifs: "Trimestres consécutifs comparés",
   rapports_complets: "Deux rapports complets comparés",
@@ -2671,7 +2672,7 @@ function EcranAide({ retour }) {
           <span className="rangee-texte">{fr("Les vrais montants des dépôts officiels des 30 derniers jours : nombre d'actions × prix écrit dans le dépôt, pourcentage de leurs actions quand le dépôt le permet, fourchettes officielles pour les élus. Pas de cours de bourse en direct.")}</span>
         </div>
         <div className="rangee bloc">
-          <span className="rangee-texte">{fr("Rachats : quand le conseil d'une compagnie autorise un rachat de ses actions (8-K), le plafond annoncé, pas un achat fait. Le robot publie seulement une phrase claire : le conseil, une formule d'autorisation, un montant, un signe que c'est récent (une date de moins de 30 jours, « today »), rien d'un ancien programme. 0 point dans la note : l'étude d'Ikenberry, Lakonishok et Vermaelen trouve l'effet surtout pour les actions bon marché, et Radar ne mesure pas ce prix par rapport à la valeur comptable. Sur la fiche : les rachats vraiment faits, selon le rapport annuel.")}</span>
+          <span className="rangee-texte">{fr("Rachats : quand le conseil d'une compagnie autorise un rachat de ses actions (8-K), le plafond annoncé, pas un achat fait. Le robot publie seulement une phrase claire : le conseil, une formule d'autorisation, un montant, un signe que c'est récent (une date de moins de 30 jours, « today »), rien d'un ancien programme ; et il vérifie que la compagnie ne l'avait pas déjà annoncé dans ses 8-K des 90 jours avant. 0 point dans la note : l'étude d'Ikenberry, Lakonishok et Vermaelen trouve l'effet surtout pour les actions bon marché, et Radar ne mesure pas ce prix par rapport à la valeur comptable. Sur la fiche : les rachats vraiment faits, selon le rapport annuel.")}</span>
         </div>
         <div className="rangee bloc">
           <a className="etude" href="https://www.nber.org/papers/w4965" target="_blank" rel="noopener noreferrer">

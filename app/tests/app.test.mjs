@@ -410,7 +410,7 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       const d = (await p.locator(".feuille").innerText()).replace(/\u00a0/g, " ");
       assert.ok(d.includes("the Board of Directors approved a new $1.5 billion share repurchase program") && d.includes("pas un achat fait"), d.slice(0, 400));
       assert.equal(await p.locator(".feuille .controle.rate").count(), 0);
-      for (const c of ["Formule d'autorisation lue (nouveau programme, hausse ou nouveau total)", "Conseil d'administration nommé dans la phrase", "Même plafond partout dans le dépôt", "Point du 8-K lu (2.02, 7.01 ou 8.01)", "10 M$ et plus (ou un nombre d'actions)"]) {
+      for (const c of ["Formule d'autorisation lue (nouveau programme, hausse ou nouveau total)", "Conseil d'administration nommé dans la phrase", "Même plafond partout dans le dépôt", "Point du 8-K lu (2.02, 7.01 ou 8.01)", "10 M$ et plus (ou un nombre d'actions)", "Pas déjà annoncé dans ses 8-K des 90 jours avant"]) {
         assert.equal(await p.locator(".feuille .controle", { hasText: c }).count(), 1, c);
       }
       await fermer();
