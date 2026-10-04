@@ -1,0 +1,30 @@
+name: "Labo (lot K refait : companyfacts pour les tests du robot, attendus tirés des fichiers XBRL des rapports annuels)"
+
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/fixtures_lotK2.py", ".github/workflows/labo64.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  extraits:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - run: rm -rf labo/fixtures-lotK2 && python labo/fixtures_lotK2.py
+      - name: Sauvegarder
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/fixtures-lotK2
+          git commit -m "Labo : lot K refait, extraits et attendus du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
