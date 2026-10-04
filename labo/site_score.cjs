@@ -8,7 +8,7 @@ const fs = require("fs");
   const elusLocal = fs.readFileSync(fichierElus, "utf8");
   const lobbyingLocal = fs.readFileSync(fichierLobbying, "utf8");
   const lobbying = JSON.parse(lobbyingLocal);
-  const VERSION = "0.22.0";
+  const VERSION = "0.23.0";
   const base = process.env.BASE || "https://killingsky1.github.io/Radar/"; // BASE : essai local seulement
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
@@ -84,19 +84,19 @@ const fs = require("fs");
   let aideOk = false;
   try {
     const sourcesAide = JSON.parse(fs.readFileSync(fichierMain.replace(/aujourdhui\.json$/, "sources.json"), "utf8"));
-    const branchees = sourcesAide.filter((x) => !["ecartee", "a_venir"].includes(x.statut)).length;
-    const ecartees = sourcesAide.filter((x) => x.statut === "ecartee").length;
+    const branchees = sourcesAide.filter((x) => !["ecartee", "refusee", "a_venir"].includes(x.statut)).length;
     await p.getByRole("button", { name: "Aide" }).click(); await p.waitForSelector(".flux-etape"); await p.waitForTimeout(900);
     await photo("v36-aide");
     const etapesAide = await p.locator(".flux-etape b").allInnerTexts();
     const texteAide = (await p.locator(".ecran").innerText()).replace(/\u00a0/g, " ");
     await p.locator(".delai").first().evaluate((e) => e.scrollIntoView({ block: "center" }));
-    await photo("v37-aide-limites");
-    aideOk = etapesAide.length === 5 && texteAide.includes(`${branchees} sources branchées`) && texteAide.includes(`${ecartees} laissées de côté`)
+    await photo("v37-aide-bon-a-savoir");
+    const aideSansEchec = !/laissées de côté|erreur 403|dans ce cas|les limites|vente de l'app|aucune source de prix|ne mesure pas/i.test(texteAide);
+    aideOk = etapesAide.length === 5 && texteAide.includes(`${branchees} sources branchées`) && aideSansEchec && texteAide.toLowerCase().includes("bon à savoir")
       && texteAide.includes("2 jours ouvrables après la transaction") && texteAide.includes("Pas un conseil financier")
       && texteAide.includes("Rachats : quand le conseil d'une compagnie autorise un rachat de ses actions (8-K)")
       && (await p.locator('a.etude[href="https://www.nber.org/papers/w4965"]').count()) === 1;
-    dire(`Aide : ${etapesAide.join(" → ")} · ${branchees} sources branchées et ${ecartees} laissées de côté (fichier du robot) · conforme : ${aideOk ? "OUI" : "NON"}`);
+    dire(`Aide : ${etapesAide.join(" → ")} · ${branchees} sources branchées (fichier du robot, sans les sources laissées de côté ou refusées) · rien sur les sources laissées de côté, le 403, « les limites », une vente ou l'absence de prix : ${aideSansEchec ? "OUI" : "NON"} · conforme : ${aideOk ? "OUI" : "NON"}`);
     await p.locator(".retour").click(); await p.waitForTimeout(300);
   } catch (e) {
     dire(`Aide : ERREUR ${String(e).slice(0, 200)}`);
@@ -196,16 +196,20 @@ const fs = require("fs");
   // Le lobbying de cette compagnie, comme dans lobbying.json
   let lobbyingOk = false;
   const entree = lobbying.par_symbole[titre];
+  // Lot I : la section n'apparaît que s'il y a des rapports (pas encore lu, recherche trop large ou aucun rapport : absente)
+  const lobbyingAttendu = !!(entree && entree.complet && entree.total != null);
   if (await p.locator(".lobbying").count()) {
     await p.locator(".lobbying").evaluate((el) => el.previousElementSibling.scrollIntoView({ block: "start" }));
     await photo("v9-fiche-lobbying");
     const texte = (await p.locator(".lobbying").innerText()).replace(/\u00a0|\u202f/g, " ");
     const pied = await p.locator(".congres-source").last().innerText();
-    const attendu = !entree ? "Pas encore lu" : !entree.complet ? "Recherche trop large" : entree.total == null
-      ? "Aucun rapport de lobbying au nom exact" : entree.base === "compagnie" ? "Dépenses déclarées par la compagnie" : "Payés à";
-    lobbyingOk = texte.includes(attendu) && pied.includes("Senate Office of Public Records cannot vouch");
+    const attendu = lobbyingAttendu && entree.base === "compagnie" ? "Dépenses déclarées par la compagnie" : "Payés à";
+    lobbyingOk = lobbyingAttendu && texte.includes(attendu) && pied.includes("Senate Office of Public Records cannot vouch");
     dire(`Lobbying sur la fiche ${titre} : « ${texte.split("\n")[0]} » · conforme : ${lobbyingOk ? "OUI" : "NON"}`);
-  } else dire("Lobbying : section absente de la fiche");
+  } else {
+    lobbyingOk = !lobbyingAttendu && !(await p.locator(".ecran").last().innerText()).includes("Lobbying à Washington");
+    dire(`Lobbying sur la fiche ${titre} : rien à montrer ce trimestre (${!entree ? "pas encore lu" : !entree.complet ? "recherche trop large" : "aucun rapport"}) → section absente, comme prévu : ${lobbyingOk ? "OUI" : "NON"}`);
+  }
   // Lot H : rachats d'actions faits (XBRL de la SEC) sur la même fiche, comme dans rachats.json (servi = fichier du robot)
   let rachatsFaitsOk = false;
   try {
@@ -218,17 +222,26 @@ const fs = require("fs");
     }
     const servi = JSON.stringify(rfServi) === JSON.stringify(rfLocal);
     const x = rfLocal.par_symbole[titre];
-    await p.locator(".rachats-faits").evaluate((el) => el.previousElementSibling.scrollIntoView({ block: "start" }));
-    await photo("v46-fiche-rachats-faits");
-    const texteRf = (await p.locator(".rachats-faits").innerText()).replace(/\u00a0|\u202f/g, " ");
-    const sans = (t) => t.replace(/\s+/g, "");
-    const court = (n) => new Intl.NumberFormat("fr-CA", { style: "currency", currency: "USD", notation: "compact", minimumFractionDigits: 0, maximumFractionDigits: Math.abs(n) >= 1e9 ? 2 : 1 }).format(n);
-    const attendu = !x ? "Pas encore lu" : x.illisible ? "Montant négatif" : x.montant == null ? "Aucun montant de rachat"
-      : x.montant > 0 ? "Argent dépensé pour racheter ses actions" : "Aucun rachat d'actions pendant l'exercice";
-    const montantOk = !x || x.montant == null || sans(await p.locator(".rachats-total").innerText()) === sans(court(x.montant));
-    const lienOk = !x || x.montant == null || (await p.locator(".rachats-faits a.transaction").getAttribute("href")) === x.lien;
-    rachatsFaitsOk = servi && texteRf.includes(attendu) && montantOk && lienOk;
-    dire(`Rachats faits sur la fiche ${titre} : « ${texteRf.split("\n").slice(0, 2).join(" · ")} » · ${Object.keys(rfLocal.par_symbole).length} compagnies dans le fichier (${rfLocal.cadre}) · servi = fichier du robot : ${servi ? "OUI" : "NON"} · conforme : ${rachatsFaitsOk ? "OUI" : "NON"}`);
+    // Lot I : la section n'apparaît que s'il y a un montant (pas encore lu, aucun montant ou montant illisible : absente)
+    const rfAttendu = !!(x && !x.illisible && x.montant != null);
+    if (await p.locator(".rachats-faits").count()) {
+      await p.locator(".rachats-faits").evaluate((el) => el.previousElementSibling.scrollIntoView({ block: "start" }));
+      await photo("v46-fiche-rachats-faits");
+      const texteRf = (await p.locator(".rachats-faits").innerText()).replace(/\u00a0|\u202f/g, " ");
+      const sans = (t) => t.replace(/\s+/g, "");
+      const court = (n) => new Intl.NumberFormat("fr-CA", { style: "currency", currency: "USD", notation: "compact", minimumFractionDigits: 0, maximumFractionDigits: Math.abs(n) >= 1e9 ? 2 : 1 }).format(n);
+      const attendu = rfAttendu && x.montant > 0 ? "Argent dépensé pour racheter ses actions" : "Aucun rachat d'actions pendant l'exercice";
+      const montantOk = rfAttendu && sans(await p.locator(".rachats-total").innerText()) === sans(court(x.montant));
+      const lienOk = rfAttendu && (await p.locator(".rachats-faits a.transaction").getAttribute("href")) === x.lien;
+      rachatsFaitsOk = servi && texteRf.includes(attendu) && montantOk && lienOk;
+      dire(`Rachats faits sur la fiche ${titre} : « ${texteRf.split("\n").slice(0, 2).join(" · ")} » · ${Object.keys(rfLocal.par_symbole).length} compagnies dans le fichier (${rfLocal.cadre}) · servi = fichier du robot : ${servi ? "OUI" : "NON"} · conforme : ${rachatsFaitsOk ? "OUI" : "NON"}`);
+    } else {
+      await p.locator(".avertissement").last().evaluate((el) => el.scrollIntoView({ block: "end" }));
+      await photo("v46-fiche-sans-section-vide");
+      const texteFiche = await p.locator(".ecran").last().innerText();
+      rachatsFaitsOk = servi && !rfAttendu && !texteFiche.includes("Rachats d'actions faits") && !texteFiche.includes("Aucun montant");
+      dire(`Rachats faits sur la fiche ${titre} : aucun montant dans le fichier de la SEC (${rfLocal.cadre}) → section absente, comme prévu · servi = fichier du robot : ${servi ? "OUI" : "NON"} · conforme : ${rachatsFaitsOk ? "OUI" : "NON"}`);
+    }
   } catch (e) {
     dire(`Rachats faits : ERREUR ${String(e).slice(0, 200)}`);
   }
@@ -239,8 +252,10 @@ const fs = require("fs");
   await photo("v5-methode");
   const regles = await p.locator(".regle").count();
   const calculTxt = (await p.locator(".groupe", { hasText: "Le calcul" }).innerText()).replace(/\u00a0/g, " ");
-  const methodeOk = calculTxt.includes("Note sur 10 = 5 + points × 5/6") && calculTxt.includes("à partir de 7/10") && calculTxt.includes("Brochet (2010)");
-  dire(`Page de la méthode : ${regles} règles · note sur 10 et seuil de 7/10 expliqués : ${methodeOk ? "OUI" : "NON"}`);
+  const texteMethode = (await p.locator(".ecran").last().innerText()).replace(/\u00a0/g, " ");
+  const methodeSansEchec = !/aucune source de prix|ne mesure pas|en liste seulement|images numérisées/i.test(texteMethode);
+  const methodeOk = calculTxt.includes("Note sur 10 = 5 + points × 5/6") && calculTxt.includes("à partir de 7/10") && calculTxt.includes("Brochet (2010)") && methodeSansEchec;
+  dire(`Page de la méthode : ${regles} règles · note sur 10 et seuil de 7/10 expliqués · rien qui dit « pas de prix », « ne mesure pas » ou « en liste seulement » : ${methodeSansEchec ? "OUI" : "NON"} · conforme : ${methodeOk ? "OUI" : "NON"}`);
   await p.locator(".regle", { hasText: "Un chef du Congrès achète" }).scrollIntoViewIfNeeded();
   await p.evaluate(() => window.scrollBy(0, -120));
   await photo("v5b-methode-chefs");
@@ -285,6 +300,18 @@ const fs = require("fs");
     dire(`Rapport de l'OGE : « ${(await p.locator(".detail-titre").innerText()).slice(0, 90)} » · ${rates} contrôle(s) raté(s) · conforme : ${ogeOk ? "OUI" : "NON"}`);
     await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
   } else dire("Rapport de l'OGE : aucun dans le fil Politiciens");
+  // Lot I : un rapport du président (OGE) : titre sans « image numérisée », note « Les transactions sont dans le document officiel. »
+  let presidentOk = true;
+  const lignePres = p.locator(".ligne", { hasText: "président des États-Unis" });
+  if (await lignePres.count()) {
+    await lignePres.first().click(); await p.waitForSelector(".feuille-fond.ouvert"); await p.waitForTimeout(400);
+    await photo("v47-rapport-du-president");
+    const titreP = (await p.locator(".detail-titre").innerText()).replace(/\u00a0/g, " ");
+    const texteP = await p.locator(".feuille").innerText();
+    presidentOk = titreP.endsWith("(278-T)") && texteP.includes("Les transactions sont dans le document officiel.") && !/numérisée|ne lit pas|trop de risque/i.test(texteP);
+    dire(`Rapport du président (OGE) : « ${titreP.slice(0, 100)} » · note « Les transactions sont dans le document officiel. » · conforme : ${presidentOk ? "OUI" : "NON"}`);
+    await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
+  } else dire("Rapport du président (OGE) : aucun dans le fil Politiciens");
   // Transactions du cabinet : un rapport lu (ses lignes) et une info de compagnie
   let cabinetOk = false;
   const ligneRapport = p.locator(".ligne", { hasText: /278-T\), \d+ transactions?/ });
@@ -403,15 +430,18 @@ const fs = require("fs");
   }
   await p.locator("nav.onglets button", { hasText: "Radar" }).click(); await p.waitForTimeout(400);
   await p.locator(".tuile", { hasText: "Sources actives" }).click(); await p.waitForTimeout(600);
+  // Lot I : la page Sources montre seulement les sources qui servent (fichier du robot) : ni laissées de côté, ni refusées
   let ecarteesOk = true;
-  for (const nom of ["Pentagone : contrats du jour", "GAO : contestations", "Fonds souverain de la Norvège", "Communiqués officiels",
-                     "Prix des actions (Yahoo"]) {
-    const s = p.locator(".source", { hasText: nom });
-    const etat = (await s.count()) ? await s.first().locator(".source-etat").innerText() : "absente";
-    if (nom.startsWith("Fonds souverain")) { await s.first().evaluate((el) => el.scrollIntoView({ block: "center" })); await photo("v26-sources-laissees-de-cote"); }
-    dire(`Source « ${nom} » : ${etat.slice(0, 140)}`);
-    ecarteesOk = ecarteesOk && etat.startsWith("Laissée de côté");
-  }
+  const sourcesMain = JSON.parse(fs.readFileSync(fichierMain.replace("aujourdhui.json", "sources.json"), "utf8"));
+  const cachees = sourcesMain.filter((s) => ["ecartee", "refusee", "a_venir"].includes(s.statut));
+  const montrees = sourcesMain.filter((s) => !["ecartee", "refusee", "a_venir"].includes(s.statut));
+  await photo("v26-sources");
+  const nAffichees = await p.locator(".source").count();
+  const texteSources = await p.locator(".ecran").last().innerText();
+  let cacheesVues = 0;
+  for (const c of cachees) if (await p.locator(".source-nom", { hasText: c.nom }).count()) cacheesVues += 1;
+  ecarteesOk = nAffichees === montrees.length && cacheesVues === 0 && !/laissée|refusée|erreur 403|payant/i.test(texteSources);
+  dire(`Sources : ${nAffichees} affichées = ${montrees.length} qui servent dans le fichier du robot · ${cachees.length} cachées (laissées de côté ou refusées), dont ${cacheesVues} affichée(s) · rien qui dit « Laissée », « Refusée » ou « 403 » · conforme : ${ecarteesOk ? "OUI" : "NON"}`);
   // Lot G : la source des échecs de livraison est branchée, seulement pour ses prix (jamais un signal)
   for (const nom of ["Trésor américain : adjudications", "Douane américaine : directives", "USAspending : contrats fédéraux américains",
                      "Gouvernement américain actionnaire", "SEC : prix de clôture des fichiers d'échecs de livraison"]) {
@@ -421,15 +451,6 @@ const fs = require("fs");
     dire(`Source « ${nom} » : ${etat}`);
     ecarteesOk = ecarteesOk && etat.startsWith("OK");
   }
-  // Lot A : l'état affiché de LEGISinfo = celui publié par le robot (OK, ou « Refusée par le site » après 2 refus)
-  const sourcesMain = JSON.parse(fs.readFileSync(fichierMain.replace("aujourdhui.json", "sources.json"), "utf8"));
-  const leg = sourcesMain.find((s) => s.id === "legisinfo");
-  const sl = p.locator(".source", { hasText: "LEGISinfo" });
-  const etatLeg = (await sl.count()) ? await sl.first().locator(".source-etat").innerText() : "absente";
-  if (await sl.count()) { await sl.first().evaluate((el) => el.scrollIntoView({ block: "center" })); await photo("v30-sources-legisinfo"); }
-  const legOk = etatLeg.startsWith(leg.libelle) && (leg.statut !== "refusee" || etatLeg.includes("Radar respecte ce refus"));
-  dire(`Source LEGISinfo : affichée « ${etatLeg.slice(0, 150)} » · publiée par le robot : ${leg.statut} · conforme : ${legOk ? "OUI" : "NON"}`);
-  ecarteesOk = ecarteesOk && legOk;
   await p.locator(".retour").first().click().catch(() => {});
   // Lot C : l'onglet Argent = le fichier du robot (montants, ordre, thermomètre) ; une ligne ouvre son info officielle
   let argentOk = false;
@@ -503,7 +524,7 @@ const fs = require("fs");
     await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
   } else dire("Participation : aucune info dans le fil (aucun cas dans les 8-K lus)");
   dire(`Erreurs du navigateur : ${erreurs.length ? erreurs.join(" | ") : "aucune"}`);
-  const ok = pareil && elusPareil && lobbyingPareil && memeTop && radarOk && aideOk && calOk && resOk && ficheOk && methodeOk && argentOk && rachatsOk && rachatsFaitsOk && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && participationOk && !erreurs.length && js.includes(VERSION);
+  const ok = pareil && elusPareil && lobbyingPareil && memeTop && radarOk && aideOk && calOk && resOk && ficheOk && methodeOk && argentOk && rachatsOk && rachatsFaitsOk && presidentOk && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && participationOk && !erreurs.length && js.includes(VERSION);
   dire(ok ? "VERDICT : OK" : "VERDICT : PROBLÈME");
   fs.writeFileSync(`${dossier}/site.txt`, lignes.join("\n") + "\n");
   await b.close();
