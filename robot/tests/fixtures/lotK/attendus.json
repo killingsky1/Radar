@@ -1,0 +1,122 @@
+{
+ "AAPL": {
+  "cik": 320193,
+  "f_score": 8,
+  "signaux": {
+   "ACCRUAL": 0,
+   "CFO": 1,
+   "EQ_OFFER": 1,
+   "ROA": 1,
+   "ΔLEVER": 1,
+   "ΔLIQUID": 1,
+   "ΔMARGIN": 1,
+   "ΔROA": 1,
+   "ΔTURN": 1
+  }
+ },
+ "AMD": {
+  "cik": 2488,
+  "f_score": 8,
+  "signaux": {
+   "ACCRUAL": 1,
+   "CFO": 1,
+   "EQ_OFFER": 1,
+   "ROA": 1,
+   "ΔLEVER": 0,
+   "ΔLIQUID": 1,
+   "ΔMARGIN": 1,
+   "ΔROA": 1,
+   "ΔTURN": 1
+  }
+ },
+ "FUL": {
+  "cik": 39368,
+  "f_score": 7,
+  "signaux": {
+   "ACCRUAL": 1,
+   "CFO": 1,
+   "EQ_OFFER": 1,
+   "ROA": 1,
+   "ΔLEVER": 1,
+   "ΔLIQUID": 0,
+   "ΔMARGIN": 1,
+   "ΔROA": 1,
+   "ΔTURN": 0
+  }
+ },
+ "GME": {
+  "cik": 1326380,
+  "f_score": 7,
+  "signaux": {
+   "ACCRUAL": 1,
+   "CFO": 1,
+   "EQ_OFFER": 1,
+   "ROA": 1,
+   "ΔLEVER": 0,
+   "ΔLIQUID": 1,
+   "ΔMARGIN": 1,
+   "ΔROA": 1,
+   "ΔTURN": 0
+  }
+ },
+ "GPUS": {
+  "cik": 896493,
+  "f_score": 5,
+  "signaux": {
+   "ACCRUAL": 1,
+   "CFO": 0,
+   "EQ_OFFER": 1,
+   "ROA": 0,
+   "ΔLEVER": 1,
+   "ΔLIQUID": 1,
+   "ΔMARGIN": 0,
+   "ΔROA": 0,
+   "ΔTURN": 1
+  }
+ },
+ "LESL": {
+  "cik": 1821806,
+  "f_score": 3,
+  "signaux": {
+   "ACCRUAL": 1,
+   "CFO": 1,
+   "EQ_OFFER": 1,
+   "ROA": 0,
+   "ΔLEVER": 0,
+   "ΔLIQUID": 0,
+   "ΔMARGIN": 0,
+   "ΔROA": 0,
+   "ΔTURN": 0
+  }
+ },
+ "PRHI": {
+  "cik": 1502292,
+  "f_score": null,
+  "signaux": {
+   "ACCRUAL": 0,
+   "CFO": 0,
+   "EQ_OFFER": 1,
+   "ROA": 0,
+   "ΔLEVER": 0,
+   "ΔLIQUID": null,
+   "ΔMARGIN": null,
+   "ΔROA": 0,
+   "ΔTURN": 0
+  }
+ },
+ "XENE": {
+  "cik": 1582313,
+  "f_score": null,
+  "signaux": {
+   "ACCRUAL": 1,
+   "CFO": 0,
+   "EQ_OFFER": 0,
+   "ROA": 0,
+   "ΔLEVER": 0,
+   "ΔLIQUID": 0,
+   "ΔMARGIN": null,
+   "ΔROA": 0,
+   "ΔTURN": 1
+  }
+ }
+}

@@ -94,6 +94,8 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       assert.ok(texte.includes("2 jours ouvrables après la transaction") && texte.toLowerCase().includes("bon à savoir")
         && texte.includes("Note sur 10 = 5 + points × 5/6") && texte.includes("Pas un conseil financier"), texte.slice(0, 300));
       for (const mot of ["laissées de côté", "403", "dans ce cas", "les limites", "vente de l'app", "aucune source de prix", "ne mesure pas"]) assert.ok(!texte.toLowerCase().includes(mot), mot);
+      assert.ok(texte.includes("Santé financière : sur la fiche, 9 critères") && texte.includes("Piotroski (2000)"), "santé financière dans l'aide");
+      assert.equal(await p.locator('a.etude[href*="ivey.uwo.ca"]').count(), 1);
       await p.locator(".lien-rangee", { hasText: "État des sources" }).click(); await p.waitForTimeout(250);
       assert.equal(await p.locator(".grand-titre h1").innerText(), "Sources");
       await p.locator(".retour").click(); await p.waitForTimeout(200);
@@ -207,6 +209,28 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     assert.equal(await p.locator(".rachats-faits").count(), 0);
     const t = await p.locator(".ecran").last().innerText();
     assert.ok(!t.includes("Rachats d'actions faits") && !t.includes("Aucun montant") && !t.includes("autre étiquette"), t);
+  }));
+  await verifier("Fiche AMD : santé financière 8/9 (9 critères en clair, rapport annuel à la SEC, étude de Piotroski)", () => fiche("AMD", async () => {
+    assert.equal((await p.locator(".sante-total").innerText()).replace(/\s/g, ""), "8/9");
+    assert.equal(await p.locator(".sante .critere").count(), 9);
+    assert.equal(await p.locator(".sante .critere.oui").count(), 8);
+    assert.equal(await p.locator(".sante .critere-titre").first().innerText(), "Fait des profits");
+    const titre = (await p.locator("h2.section", { hasText: "Santé financière" }).innerText()).toLowerCase().replace(/\u00a0|\u202f/g, " ");
+    assert.ok(titre.includes("santé financière · exercice terminé le"), titre);
+    assert.ok(/^https:\/\/www\.sec\.gov\/Archives\/edgar\/data\/2488\/\d{18}\/\d{10}-\d{2}-\d{6}-index\.htm$/.test(await p.locator(".sante a.transaction").getAttribute("href")));
+    // Le numéro du rapport tient sur une seule ligne (iPhone 390 px : pas coupé au trait d'union)
+    const lignesAccn = await p.locator(".sante a.transaction .accn").evaluate((el) => {
+      const r = document.createRange();
+      r.selectNodeContents(el);
+      return new Set([...r.getClientRects()].map((x) => Math.round(x.top))).size;
+    });
+    assert.equal(lignesAccn, 1);
+    const pied = (await p.locator(".sante-source").innerText()).replace(/\u00a0/g, " ");
+    assert.ok(pied.includes("Piotroski (2000)") && pied.includes("0 point dans la note"), pied);
+  }));
+  await verifier("Fiche NVDA : santé financière incomplète → pas de section", () => fiche("NVDA", async () => {
+    assert.equal(await p.locator(".sante").count(), 0);
+    assert.ok(!(await p.locator(".ecran").last().innerText()).toLowerCase().includes("santé financière"));
   }));
   await verifier("Fiche XMPL : recherche de lobbying trop large → pas de section (ni « pas vérifié »)", () => fiche("XMPL", async () => {
     assert.equal(await p.locator(".lobbying").count(), 0);

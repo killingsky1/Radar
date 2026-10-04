@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.24.0";
+const VERSION = "0.25.0";
 
 // ---------- Constantes ----------
 
@@ -478,7 +478,7 @@ function enGroupesParJour(liste) {
 // ---------- Données ----------
 
 const FICHIERS = ["meta", "aujourdhui", "fil", "a_verifier", "sources"];
-const FICHIERS_OPTIONNELS = ["elus", "lobbying", "calendrier", "resultats", "rachats"]; // absents ou illisibles : l'app fonctionne sans
+const FICHIERS_OPTIONNELS = ["elus", "lobbying", "calendrier", "resultats", "rachats", "sante"]; // absents ou illisibles : l'app fonctionne sans
 
 function useDonnees() {
   const [etat, setEtat] = useState({ chargement: true, erreur: null, donnees: null });
@@ -1512,6 +1512,7 @@ function EcranCompagnie({ retour }) {
           <small>{fr(`Note = 5 + ${formule(c.score)} × 5/6, entre 0 et 10, arrondie au dixième`)}</small>
         </p>
       </div>
+      <SanteFinanciere symbole={c.symbole} />
 
       {c.contexte.length > 0 && (
         <>
@@ -1567,6 +1568,61 @@ function RachatsFaits({ symbole }) {
       <h2 className="section">Rachats d'actions faits</h2>
       <div className="carte liste rachats-faits">{contenu}</div>
       <p className="rachats-source">{fr(`Données XBRL déclarées par la compagnie (« Payments for Repurchase of Common Stock »), API officielle de la SEC, exercice le plus proche de l'année ${r.cadre?.slice(2) || ""}. 0 point dans le score.`)}</p>
+    </>
+  );
+}
+
+// Santé financière : les 9 critères de Piotroski (2000), d'après le rapport annuel (données XBRL de la SEC). Montrée
+// seulement si les 9 critères se calculent (sinon la section n'apparaît pas) ; 0 point dans la note.
+const pct = (x) => `${(x * 100).toFixed(1).replace(".", ",").replace("-", "−")} %`;
+const ratio2 = (x) => x.toFixed(2).replace(".", ",");
+const CRITERES_SANTE = [
+  ["ROA", "Fait des profits", (c) => `Bénéfice : ${pct(c.roa)} de l'actif`],
+  ["CFO", "Génère de l'argent", (c) => `Flux de trésorerie d'exploitation : ${pct(c.cfo)} de l'actif`],
+  ["ΔROA", "Profits en hausse", (c) => `${pct(c.roa_avant)} → ${pct(c.roa)} de l'actif`],
+  ["ACCRUAL", "Profits appuyés par de l'argent réel", (c) => `Flux de trésorerie ${pct(c.cfo)}, bénéfice ${pct(c.roa)}`],
+  ["ΔLEVER", "Dette à long terme en baisse", (c) => `${pct(c.levier_avant)} → ${pct(c.levier)} de l'actif`],
+  ["ΔLIQUID", "Liquidité en hausse", (c) => `Actif à court terme ÷ passif à court terme : ${ratio2(c.liquidite_avant)} → ${ratio2(c.liquidite)}`],
+  ["EQ_OFFER", "Aucune nouvelle action émise", (c) => (c.emission > 0 ? `${argent(c.emission, "USD")} d'actions émises` : "Aucune émission d'actions déclarée")],
+  ["ΔMARGIN", "Marge brute en hausse", (c) => `${pct(c.marge_avant)} → ${pct(c.marge)} des ventes`],
+  ["ΔTURN", "Plus de ventes par dollar d'actif", (c) => `${ratio2(c.rotation_avant)} $ → ${ratio2(c.rotation)} $`],
+];
+
+function SanteFinanciere({ symbole }) {
+  const { donnees } = useApp();
+  const x = donnees.sante?.par_symbole?.[symbole];
+  if (!x) return null; // pas de score complet : la section n'apparaît pas
+  return (
+    <>
+      <h2 className="section">{fr(`Santé financière · exercice terminé le ${dateLongue(x.fin)}`)}</h2>
+      <div className="carte liste sante">
+        <p className="sante-total">
+          {x.f_score}
+          <small>/9</small>
+        </p>
+        <p className="sante-texte">{fr("critères positifs dans son dernier rapport annuel. Plus c'est haut, plus la compagnie est solide.")}</p>
+        {CRITERES_SANTE.map(([code, titre, detail]) => {
+          const oui = x.criteres[code] === 1;
+          return (
+            <div key={code} className={oui ? "critere oui" : "critere non"}>
+              <Icone nom={oui ? "double" : "x"} taille={16} epaisseur={2.4} />
+              <span className="critere-texte">
+                <span className="critere-titre">{titre}</span>
+                <span className="critere-detail">{fr(detail(x.chiffres))}</span>
+              </span>
+            </div>
+          );
+        })}
+        <a className="transaction presse" href={x.lien} target="_blank" rel="noopener noreferrer">
+          <span className="transaction-qui">
+            Rapport annuel à la SEC <span className="accn">({x.accn})</span>
+          </span>
+          <span className="transaction-montant">
+            <Icone nom="externe" taille={16} />
+          </span>
+        </a>
+      </div>
+      <p className="sante-source">{fr("Données XBRL officielles de la SEC. Critères de l'étude de Piotroski (2000), testée sur les actions bon marché par rapport à leur valeur comptable. 0 point dans la note.")}</p>
     </>
   );
 }
@@ -2586,6 +2642,7 @@ const DELAIS_AIDE = [
   ["Contrats de la Défense (USAspending)", "publiés avec 90 jours de délai"],
   ["Fins de blocage (prospectus 424B4)", "dates prévues ; les banques peuvent lever le blocage plus tôt"],
   ["Rachats d'actions (8-K)", "un plafond, pas un achat ; les rachats faits arrivent dans le rapport annuel, jusqu'à 90 jours après la fin de l'exercice"],
+  ["Santé financière (rapport annuel)", "jusqu'à 90 jours après la fin de l'exercice ; le score change une fois par année"],
 ];
 
 function EcranAide({ retour }) {
@@ -2666,7 +2723,7 @@ function EcranAide({ retour }) {
 
       <Groupe titre="L'onglet Argent">
         <div className="rangee bloc">
-          <span className="rangee-texte">{fr("Les vrais montants des dépôts officiels des 30 derniers jours : nombre d'actions × prix écrit dans le dépôt, pourcentage de leurs actions quand le dépôt le permet, fourchettes officielles pour les élus. Pas de cours de bourse en direct.")}</span>
+          <span className="rangee-texte">{fr("Les vrais montants des dépôts officiels des 30 derniers jours : nombre d'actions × prix écrit dans le dépôt, pourcentage de leurs actions quand le dépôt le permet, fourchettes officielles pour les élus. Le cours de l'action : bouton « Voir le cours » sur la fiche.")}</span>
         </div>
         <div className="rangee bloc">
           <span className="rangee-texte">{fr("Rachats : quand le conseil d'une compagnie autorise un rachat de ses actions (8-K), le plafond annoncé, pas un achat fait. Le robot publie seulement une phrase claire : le conseil, une formule d'autorisation, un montant, un signe que c'est récent (une date de moins de 30 jours, « today »), rien d'un ancien programme ; et il vérifie que la compagnie ne l'avait pas déjà annoncé dans ses 8-K des 90 jours avant. 0 point dans la note : l'étude d'Ikenberry, Lakonishok et Vermaelen trouve l'effet surtout pour les actions bon marché. Sur la fiche : les rachats vraiment faits, selon le rapport annuel.")}</span>
@@ -2677,6 +2734,18 @@ function EcranAide({ retour }) {
             <span>
               <b>Ikenberry, Lakonishok et Vermaelen (1995)</b>
               {fr(" : annonces de 1980 à 1990 ; +12,1 % sur 4 ans par rapport à des actions comparables, +45,3 % pour les actions bon marché, rien pour les chères.")}
+            </span>
+          </a>
+        </div>
+        <div className="rangee bloc">
+          <span className="rangee-texte">{fr("Santé financière : sur la fiche, 9 critères tirés du dernier rapport annuel (profits, argent réel, dette, liquidité, actions émises, marge brute, ventes par dollar d'actif), quand les 9 se calculent avec les données de la SEC. 0 point dans la note.")}</span>
+        </div>
+        <div className="rangee bloc">
+          <a className="etude" href="https://www.ivey.uwo.ca/media/3775523/value_investing_the_use_of_historical_financial_statement_information.pdf" target="_blank" rel="noopener noreferrer">
+            <Icone nom="document" taille={16} epaisseur={2} />
+            <span>
+              <b>Piotroski (2000)</b>
+              {fr(" : chez les actions bon marché (1976 à 1996), garder les compagnies solides ajoutait au moins 7,5 % par an.")}
             </span>
           </a>
         </div>
@@ -3165,7 +3234,19 @@ input { font: inherit; color: var(--texte); }
 .ligne-oge .transaction-qui { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .ligne-oge-desc { margin: 0; padding: 0 16px; color: var(--texte); font-size: .875rem; line-height: 1.4; overflow-wrap: anywhere; }
 .ligne-oge-note { margin: 4px 0 0; padding: 0 16px; color: var(--texte-2); font-size: .8125rem; line-height: 1.4; }
-.congres-source, .rachats-source { color: var(--texte-3); font-size: .75rem; margin: 8px 4px 0; line-height: 1.5; }
+.congres-source, .rachats-source, .sante-source { color: var(--texte-3); font-size: .75rem; margin: 8px 4px 0; line-height: 1.5; }
+.sante .accn { white-space: nowrap; } /* le numéro du rapport reste entier (pas coupé au trait d'union) */
+.sante-total { margin: 0; padding: 14px 16px 0; text-align: center; font-size: 2.25rem; font-weight: 750; font-variant-numeric: tabular-nums; }
+.sante-total small { font-size: 1rem; font-weight: 600; color: var(--texte-3); }
+.sante-texte { margin: 2px 16px 12px; text-align: center; color: var(--texte-2); font-size: .875rem; line-height: 1.4; }
+.critere { display: flex; align-items: flex-start; gap: 10px; padding: 10px 16px; border-top: 1px solid var(--ligne); }
+.critere svg { flex: none; margin-top: 2px; }
+.critere.oui svg { color: var(--vert); }
+.critere.non svg { color: var(--texte-3); }
+.critere-texte { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.critere-titre { font-size: .9375rem; font-weight: 600; color: var(--texte); }
+.critere.non .critere-titre { color: var(--texte-2); }
+.critere-detail { font-size: .8125rem; color: var(--texte-3); font-variant-numeric: tabular-nums; }
 .lobbying-total, .rachats-total { margin: 0; padding: 12px 16px 0; font-size: 1.375rem; font-weight: 750; font-variant-numeric: tabular-nums; }
 .lobbying-texte, .rachats-texte { margin: 0; padding: 8px 16px 12px; color: var(--texte-2); font-size: .9375rem; line-height: 1.45; }
 .lobbying-sujets { margin: 0; padding: 0 16px 12px; font-size: .875rem; line-height: 1.45; }

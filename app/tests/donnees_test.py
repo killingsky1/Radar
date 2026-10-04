@@ -349,3 +349,23 @@ ra.chemin_xbrl(sys.argv[1]).write_text(json.dumps({"cadre": "CY2025", "adresse":
 score = json.loads((Path(sys.argv[1]) / "app" / "aujourdhui.json").read_text(encoding="utf-8"))
 _ecrire(Path(sys.argv[1]) / "app" / "rachats.json",
         ra.pour_app(Path(sys.argv[1]), [x["symbole"] for l in ("hausse", "baisse") for x in score.get(l, [])]))
+# Santé financière (lot K) : le vrai calcul du robot (sante.collecter puis sante.pour_app) sur les vrais extraits des
+# fichiers « frames » de la SEC des tests du robot : AMD a ses 9 critères (8/9) ; NVDA n'est pas dans les extraits, donc
+# pas de section. Date fixe : les extraits sont ceux de l'exercice 2025.
+from radar.collecteurs import sante as sa  # noqa: E402
+EXTRAITS_K = json.loads((Path(__file__).resolve().parents[2] / "robot" / "tests" / "fixtures" / "lotK"
+                         / "frames_extraits.json").read_text(encoding="utf-8"))
+
+
+class FauxSec:
+    def get(self, url, entetes=None):
+        tag, _, periode = url.removeprefix("https://data.sec.gov/api/xbrl/frames/us-gaap/").removesuffix(".json").split("/")
+        if f"{tag}|{periode}" not in EXTRAITS_K:
+            raise ErreurSource(f"{url} : HTTP 404")
+        c = json.dumps(EXTRAITS_K[f"{tag}|{periode}"]).encode()
+        return type("T", (), {"contenu": c, "sha256": empreinte(c)})()
+
+
+sa.collecter(Contexte(client=FauxSec(), maintenant=datetime(2026, 10, 5, 11, 7, tzinfo=timezone.utc), donnees=Path(sys.argv[1])))
+_ecrire(Path(sys.argv[1]) / "app" / "sante.json",
+        sa.pour_app(Path(sys.argv[1]), [x["symbole"] for l in ("hausse", "baisse") for x in score.get(l, [])]))
