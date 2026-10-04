@@ -23,12 +23,15 @@ sys.path.insert(0, str(Path(__file__).parent))
 from detecteur_rachats import CANDIDAT, analyser, decision, phrases  # noqa: E402
 
 UA_SEC = "Radar projet personnel math-veronneau1@hotmail.com"
-SORTIE = Path("labo/resultats-lotH")
+# Arguments : dernier jour, nombre de jours ouvrables, dossier de sortie (par défaut : les 10 jours du 21 sept. au 2 oct.)
+FIN = date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else date(2026, 10, 2)
+NOMBRE = int(sys.argv[2]) if len(sys.argv) > 2 else 10
+SORTIE = Path(sys.argv[3]) if len(sys.argv) > 3 else Path("labo/resultats-lotH")
 SORTIE.mkdir(parents=True, exist_ok=True)
 DEBUT = time.monotonic()
 LIMITE_S = 270 * 60
-JOURS = [date(2026, 10, 2) - timedelta(days=i) for i in range(14)]
-JOURS = [j for j in JOURS if j.weekday() < 5][:10]
+JOURS = [FIN - timedelta(days=i) for i in range(3 * NOMBRE)]
+JOURS = [j for j in JOURS if j.weekday() < 5][:NOMBRE]
 POINTS = {"results of operations and financial condition": "2.02", "regulation fd disclosure": "7.01",
           "other events": "8.01"}
 AUTORISE = re.compile(r"authoriz|authoris|approv|increas|expand|adopt|upsiz|replenish", re.I)
