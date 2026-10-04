@@ -36,7 +36,8 @@
    - 2e mesure témoin (28 au 31 juillet 2026, 1 046 lus) avec la version 2 : 7 retenues dont 1 erreur (Coursera, le
      programme de mai), 13 vraies manquées ;
    - la version 3 (mois sans jour, programme qui sert déjà, nouvelles formules, nouveauté) corrige ces cas (tests) ;
-     3e mesure témoin (28 avril au 1er mai 2026, jamais regardée) : labo/resultats-lotH-temoin3.
+     3e mesure témoin (28 avril au 1er mai 2026, 1 085 lus, jamais regardée) avec la version 3 : 25 retenues, les 25
+     justes à la revue (aucune de trop) ; environ 9 vraies manquées (Visa, Regeneron, KLA, Renasant, Allegion…).
    Des vraies annonces restent manquées exprès : une phrase sans signe d'annonce récente (ex. BorgWarner, Exponent).
 2. Rachats faits (source « sec_rachats_xbrl ») : l'argent dépensé pour racheter ses actions pendant un exercice,
    déclaré par la compagnie dans son rapport annuel (étiquette XBRL « PaymentsForRepurchaseOfCommonStock »), lu sur
@@ -190,7 +191,8 @@ DEJA_ANNONCE = re.compile(r"previously\s+(?:announced|reported|disclosed)|as\s+p
 AUTRE_PROGRAMME = re.compile(r"\bprior\b|\bprevious\b|\breplac\w*|\bexisting\b|\bsupersed\w*|\bfollow\w*", re.I)
 # Une autorisation qui dépend d'autre chose (ex. Inogen : « Subject to the closing of the transaction ») : pas encore réelle
 CONDITION = re.compile(r"subject\s+to\s+(?:the\s+)?(?:closing|completion|consummation|approval)|upon\s+(?:the\s+)?"
-                       r"(?:closing|completion|consummation)|contingent\s+(?:on|upon)|conditioned\s+(?:on|upon)", re.I)
+                       r"(?:closing|completion|consummation)|contingent\s+(?:on|upon)|conditioned\s+(?:on|upon)"
+                       r"|pending\s+(?:regulatory\s+|shareholder\s+|stockholder\s+)?approval", re.I)
 # Une annonce RÉCENTE se reconnaît : une date de moins de 30 jours (ou à venir), « today », « has approved »… Sans ce
 # signe, la phrase décrit souvent un programme déjà connu (diapo d'une présentation, avertissement légal, note).
 RECENT = re.compile(r"\btoday\b|\brecently\b|\bannounc\w*|\b(?:has|have)\s+(?:also\s+|now\s+|recently\s+)?(?:approved|"

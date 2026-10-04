@@ -170,6 +170,9 @@ def test_regle_stricte_annonces_retenues(phrase, attendu):
      "authorized to repurchase up to an aggregate of $100.0 million.", "ancienne date"),
     ("On September 30, 2026, the Board approved a new $50 million share repurchase program, as previously announced.",
      "ancien programme"),
+    # Beacon Financial, 29 avril 2026 : « Board authorizes $50 million stock buyback pending regulatory approval »
+    ("On April 29, 2026, the Board approved a $50 million stock buyback program, pending regulatory approval.",
+     "conditionnel"),
 ])
 def test_regle_stricte_phrases_ecartees(phrase, raison):
     a = ra.analyser(phrase, J)
