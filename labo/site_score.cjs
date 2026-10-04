@@ -8,7 +8,7 @@ const fs = require("fs");
   const elusLocal = fs.readFileSync(fichierElus, "utf8");
   const lobbyingLocal = fs.readFileSync(fichierLobbying, "utf8");
   const lobbying = JSON.parse(lobbyingLocal);
-  const VERSION = "0.24.0";
+  const VERSION = "0.25.0";
   const base = process.env.BASE || "https://killingsky1.github.io/Radar/"; // BASE : essai local seulement
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
@@ -101,7 +101,9 @@ const fs = require("fs");
     aideOk = etapesAide.length === 5 && texteAide.includes(`${branchees} sources branchées`) && aideSansEchec && texteAide.toLowerCase().includes("bon à savoir")
       && texteAide.includes("2 jours ouvrables après la transaction") && texteAide.includes("Pas un conseil financier")
       && texteAide.includes("Rachats : quand le conseil d'une compagnie autorise un rachat de ses actions (8-K)")
-      && (await p.locator('a.etude[href="https://www.nber.org/papers/w4965"]').count()) === 1;
+      && (await p.locator('a.etude[href="https://www.nber.org/papers/w4965"]').count()) === 1
+      && texteAide.includes("Santé financière : sur la fiche, 9 critères")
+      && (await p.locator('a.etude[href*="ivey.uwo.ca"][href$=".pdf"]').count()) === 1;
     dire(`Aide : ${etapesAide.join(" → ")} · ${branchees} sources branchées (fichier du robot, sans les sources laissées de côté ou refusées) · rien sur les sources laissées de côté, le 403, « les limites », une vente ou l'absence de prix : ${aideSansEchec ? "OUI" : "NON"} · conforme : ${aideOk ? "OUI" : "NON"}`);
     await p.locator(".retour").click(); await p.waitForTimeout(300);
   } catch (e) {
@@ -255,6 +257,56 @@ const fs = require("fs");
     }
   } catch (e) {
     dire(`Rachats faits : ERREUR ${String(e).slice(0, 200)}`);
+  }
+  // Lot K : santé financière (9 critères de Piotroski) sur la même fiche, comme dans sante.json (servi = fichier du robot)
+  let santeOk = false;
+  try {
+    const saLocal = JSON.parse(fs.readFileSync(fichierMain.replace(/aujourdhui\.json$/, "sante.json"), "utf8"));
+    let saServi = null;
+    for (let i = 0; i < 12; i++) {
+      saServi = await (await ctx.request.get(`${base}data/app/sante.json?x=${Date.now()}`)).json().catch(() => null);
+      if (JSON.stringify(saServi) === JSON.stringify(saLocal)) break;
+      await new Promise((ok) => setTimeout(ok, 15000));
+    }
+    const servi = JSON.stringify(saServi) === JSON.stringify(saLocal);
+    const x = (saLocal.par_symbole || {})[titre];
+    // Ordre de l'étude ; le titre montré pour chaque critère (le sens, pas le code)
+    const ORDRE = ["ROA", "CFO", "ΔROA", "ACCRUAL", "ΔLEVER", "ΔLIQUID", "EQ_OFFER", "ΔMARGIN", "ΔTURN"];
+    const TITRES = ["Fait des profits", "Génère de l'argent", "Profits en hausse", "Profits appuyés par de l'argent réel",
+      "Dette à long terme en baisse", "Liquidité en hausse", "Aucune nouvelle action émise", "Marge brute en hausse",
+      "Plus de ventes par dollar d'actif"];
+    const nb = (t) => t.replace(/\u00a0|\u202f/g, " ");
+    if (await p.locator(".sante").count()) {
+      // Le titre de la section sous la barre du haut (64 px), pas caché par elle
+      await p.locator(".sante").evaluate((el) => { el.previousElementSibling.style.scrollMarginTop = "64px"; el.previousElementSibling.scrollIntoView({ block: "start" }); });
+      await photo("v49-fiche-sante");
+      const enTete = nb(await p.locator(".sante").evaluate((el) => el.previousElementSibling.textContent));
+      const fin = x ? new Date(`${x.fin}T12:00:00Z`).toLocaleDateString("fr-CA", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : "";
+      const total = (await p.locator(".sante-total").innerText()).replace(/\s+/g, "");
+      const lignes = await p.locator(".sante .critere").evaluateAll((els) => els.map((e) => [e.classList.contains("oui") ? 1 : 0, e.querySelector(".critere-titre").textContent]));
+      const attendu = x ? ORDRE.map((k, i) => [x.criteres[k], TITRES[i]]) : [];
+      const somme = x ? ORDRE.reduce((n, k) => n + x.criteres[k], 0) : -1;
+      const lien = await p.locator(".sante a.transaction").getAttribute("href");
+      const pied = nb(await p.locator(".sante-source").innerText());
+      // Au-dessus de la barre d'onglets du bas (pas cachée par elle)
+      await p.locator(".sante-source").evaluate((el) => { el.style.scrollMarginBottom = "110px"; el.scrollIntoView({ block: "end" }); });
+      await photo("v50-fiche-sante-lien-et-source");
+      // Le numéro du rapport tient sur une seule ligne (pas coupé au trait d'union)
+      const lignesAccn = await p.locator(".sante a.transaction .accn").evaluate((el) => {
+        const r = document.createRange();
+        r.selectNodeContents(el);
+        return new Set([...r.getClientRects()].map((q) => Math.round(q.top))).size;
+      });
+      santeOk = servi && !!x && somme === x.f_score && total === `${x.f_score}/9` && JSON.stringify(lignes) === JSON.stringify(attendu)
+        && lien === x.lien && lignesAccn === 1 && enTete === `Santé financière · exercice terminé le ${fin}` && pied.includes("0 point dans la note");
+      dire(`Santé financière sur la fiche ${titre} : ${total} · « ${enTete} » · ${lignes.filter((l) => l[0]).length} critères positifs sur ${lignes.length}, dans l'ordre de l'étude : ${JSON.stringify(lignes) === JSON.stringify(attendu) ? "OUI" : "NON"} · lien ${lien} (numéro sur ${lignesAccn} ligne) · ${Object.keys(saLocal.par_symbole || {}).length} compagnies dans le fichier (${saLocal.cadre}) · servi = fichier du robot : ${servi ? "OUI" : "NON"} · conforme : ${santeOk ? "OUI" : "NON"}`);
+    } else {
+      const texteFiche = await p.locator(".ecran").last().innerText();
+      santeOk = servi && !x && !/santé financière/i.test(texteFiche);
+      dire(`Santé financière sur la fiche ${titre} : pas de score complet dans le fichier (${saLocal.cadre}) → section absente, comme prévu · servi = fichier du robot : ${servi ? "OUI" : "NON"} · conforme : ${santeOk ? "OUI" : "NON"}`);
+    }
+  } catch (e) {
+    dire(`Santé financière : ERREUR ${String(e).slice(0, 200)}`);
   }
   await p.locator(".retour").click();
   await p.locator(".segment", { hasText: "Baisse" }).click();
@@ -535,7 +587,7 @@ const fs = require("fs");
     await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
   } else dire("Participation : aucune info dans le fil (aucun cas dans les 8-K lus)");
   dire(`Erreurs du navigateur : ${erreurs.length ? erreurs.join(" | ") : "aucune"}`);
-  const ok = pareil && elusPareil && lobbyingPareil && memeTop && radarOk && aideOk && calOk && resOk && ficheOk && methodeOk && argentOk && rachatsOk && rachatsFaitsOk && presidentOk && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && participationOk && !erreurs.length && js.includes(VERSION);
+  const ok = pareil && elusPareil && lobbyingPareil && memeTop && radarOk && aideOk && calOk && resOk && ficheOk && methodeOk && argentOk && rachatsOk && rachatsFaitsOk && santeOk && presidentOk && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && participationOk && !erreurs.length && js.includes(VERSION);
   dire(ok ? "VERDICT : OK" : "VERDICT : PROBLÈME");
   fs.writeFileSync(`${dossier}/site.txt`, lignes.join("\n") + "\n");
   await b.close();
