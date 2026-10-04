@@ -204,6 +204,40 @@
   "statut": "ok"
  },
  {
+  "categorie": "compagnies",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 4
+  },
+  "dernier_contenu": "2026-10-01",
+  "dernier_succes": "2026-10-04T15:37:36+00:00",
+  "explication": "",
+  "id": "sec_rachats",
+  "libelle": "OK",
+  "nom": "SEC : annonces de rachat d'actions (8-K)",
+  "officielle": true,
+  "phase": 1,
+  "site": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=8-K",
+  "statut": "ok"
+ },
+ {
+  "categorie": "compagnies",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 0
+  },
+  "dernier_contenu": null,
+  "dernier_succes": "2026-10-04T15:37:36+00:00",
+  "explication": "",
+  "id": "sec_rachats_xbrl",
+  "libelle": "OK",
+  "nom": "SEC : rachats d'actions faits (rapports annuels, données XBRL)",
+  "officielle": true,
+  "phase": 1,
+  "site": "https://data.sec.gov/api/xbrl/frames/us-gaap/PaymentsForRepurchaseOfCommonStock/USD/CY2025.json",
+  "statut": "ok"
+ },
+ {
   "categorie": "canada",
   "compte": {
    "a_verifier": 0,
