@@ -119,14 +119,16 @@ def test_anciens_programmes_decrits_de_nouveau_ecartes(tmp_path, cas):
 # ---------- La règle stricte, phrase par phrase ----------
 
 @pytest.mark.parametrize("phrase, attendu", [
-    ("The Board of Directors approved a new $5 billion share repurchase program.", ("nouveau", 5e9, None)),
-    ("The Board approved a new share repurchase program under which the Company may repurchase up to $500 million of "
-     "its common stock, which replaces the prior program.", ("nouveau", 5e8, None)),
-    ("The Company's board of directors authorized a $1 billion increase to its existing share repurchase program.",
+    ("On September 29, 2026, the Board of Directors approved a new $5 billion share repurchase program.",
+     ("nouveau", 5e9, None)),
+    ("Today the Board approved a new share repurchase program under which the Company may repurchase up to $500 million of "
+     "its common stock, which replaces the prior program approved on March 3, 2025.", ("nouveau", 5e8, None)),
+    ("The Company's board of directors has authorized a $1 billion increase to its existing share repurchase program.",
      ("hausse", 1e9, None)),
-    ("The Company's Board of Directors increased its share repurchase authorization by $2.0 billion.", ("hausse", 2e9, None)),
-    ("The Board of Directors approved a stock repurchase program of up to 5,000,000 shares of the Company's common stock.",
-     ("nouveau", None, 5e6)),
+    ("On September 30, the Company's Board of Directors increased its share repurchase authorization by $2.0 billion.",
+     ("hausse", 2e9, None)),
+    ("On Sept. 28, 2026, the Board of Directors approved a stock repurchase program of up to 5,000,000 shares of the "
+     "Company's common stock.", ("nouveau", None, 5e6)),
     ("XYZ Corp. (NYSE: XYZ) today announced that its Board of Directors authorized the repurchase of up to $250,000,000 "
      "of its common stock.", ("nouveau", 2.5e8, None)),
 ])
@@ -150,6 +152,15 @@ def test_regle_stricte_annonces_retenues(phrase, attendu):
      "aucune formule"),
     ("During the quarter, the Company repurchased 1.2 million shares for $45 million under its share repurchase program.",
      "aucune formule"),
+    # Aucun signe d'annonce récente : souvent un programme déjà connu (diapo, avertissement légal, note de bas de page)
+    ("• $150M share repurchase program authorized by Board through December 2026", "aucune formule"),
+    ("The Board of Directors approved a new $5 billion share repurchase program.", "pas de signe d'une annonce récente"),
+    ("5. Share Repurchase Program was the program which the Board of Directors authorized the repurchase of up to $12.0 "
+     "million of the Exzeo's common stock.", "ancien programme"),
+    ("In June 2026, the Company's Board of Directors approved a share repurchase program pursuant to which the Company is "
+     "authorized to repurchase up to an aggregate of $100.0 million.", "ancienne date"),
+    ("On September 30, 2026, the Board approved a new $50 million share repurchase program, as previously announced.",
+     "ancien programme"),
 ])
 def test_regle_stricte_phrases_ecartees(phrase, raison):
     a = ra.analyser(phrase, J)
@@ -180,16 +191,20 @@ def faux_8k(phrases_doc, items=("Other Events",), cik=1808997, acc="0001808997-2
 
 
 def test_deux_montants_differents_dans_le_meme_depot_rien(tmp_path):
-    pages, d = faux_8k(["The Board of Directors approved a new $50 million share repurchase program.",
-                        "The Board of Directors approved a new $75 million share repurchase program."])
+    pages, d = faux_8k(["On October 1, 2026, the Board of Directors approved a new $50 million share repurchase program.",
+                        "On October 1, 2026, the Board of Directors approved a new $75 million share repurchase program."])
+    documents, cle = ra.retenir([(None, "EX-99.1", texte_doc(pages[next(u for u in pages if u.endswith("ex99.htm"))]))], J)
+    assert cle is None and len(documents) == 1 and len(documents[0][2]) == 2  # 2 phrases retenues, 2 montants : rien
     assert ra.lire_un(contexte(tmp_path, FauxInternet(pages)), d) == []
 
 
 def test_sous_10_millions_rien_mais_un_nombre_d_actions_va_au_fil_sans_montant(tmp_path):
-    pages, d = faux_8k(["The Board of Directors approved a new $5 million share repurchase program."])
+    pages, d = faux_8k(["On October 1, 2026, the Board of Directors approved a new $5 million share repurchase program."])
+    assert ra.retenir([(None, "EX-99.1", "On October 1, 2026, the Board of Directors approved a new $5 million share "
+                                         "repurchase program.")], J)[1] is None
     assert ra.lire_un(contexte(tmp_path, FauxInternet(pages)), d) == []
-    pages, d = faux_8k(["The Board of Directors approved a stock repurchase program of up to 2,000,000 shares of the "
-                        "Company's common stock."])
+    pages, d = faux_8k(["On October 1, 2026, the Board of Directors approved a stock repurchase program of up to "
+                        "2,000,000 shares of the Company's common stock."])
     e = valider(ra.lire_un(contexte(tmp_path, FauxInternet(pages)), d)[0], J)
     assert e.badge == "officiel", e.checks
     assert (e.amount_min, e.data["actions"]) == (None, 2e6)
@@ -198,7 +213,7 @@ def test_sous_10_millions_rien_mais_un_nombre_d_actions_va_au_fil_sans_montant(t
 
 
 def test_sans_point_2_02_7_01_ou_8_01_les_documents_ne_sont_pas_lus(tmp_path):
-    pages, d = faux_8k(["The Board of Directors approved a new $50 million share repurchase program."],
+    pages, d = faux_8k(["On October 1, 2026, the Board of Directors approved a new $50 million share repurchase program."],
                        items=("Entry into a Material Definitive Agreement",))
     internet = FauxInternet(pages)
     assert ra.lire_un(contexte(tmp_path, internet), d) == []
@@ -206,7 +221,8 @@ def test_sans_point_2_02_7_01_ou_8_01_les_documents_ne_sont_pas_lus(tmp_path):
 
 
 def test_compagnie_non_cotee_ignoree_sans_lire_ses_documents(tmp_path):
-    pages, d = faux_8k(["The Board of Directors approved a new $50 million share repurchase program."], cik=999999999,
+    pages, d = faux_8k(["On October 1, 2026, the Board of Directors approved a new $50 million share repurchase "
+                        "program."], cik=999999999,
                        acc="0000999999-26-000001")
     internet = FauxInternet(pages)
     assert ra.lire_un(contexte(tmp_path, internet), d) == []
@@ -350,3 +366,49 @@ def test_la_meme_annonce_dans_deux_8k_de_la_compagnie_une_seule_fois(tmp_path):
     Depot(tmp_path).enregistrer([valider(ra.lire_un(contexte(tmp_path, FauxInternet(pages1)), d1)[0], J)])
     assert ra.lire_un(contexte(tmp_path, FauxInternet(pages2)), d2) == []  # passage suivant (déjà publiée)
     assert len(ra.lire_un(contexte(tmp_path, FauxInternet(pages1)), d1)) == 1  # le même dépôt relu : pas écarté
+
+
+# ---------- Mesure TÉMOIN du labo (3 au 7 août 2026, jours jamais regardés avant la règle v2) : 27 vrais dépôts ----------
+
+TEMOIN = json.loads(gzip.decompress((F / "textes_temoin.json.gz").read_bytes()))  # phrases qui parlent de rachat
+
+
+@pytest.mark.parametrize("acc, attendu", [
+    ("0001104659-26-091377", ("hausse", 15e6, None)),  # ATN : « authorization increase of $15 million » (pas « nouveau »)
+    ("0001628280-26-052541", ("hausse", 1e8, None)),  # BlackLine : « increase … (the “Stock Buyback Program”) of an additional »
+    ("0001193125-26-335025", ("hausse", 5e8, None)),  # CoreCivic : « … may purchase up to an additional $500.0 million »
+    ("0000785161-26-000183", ("total", 1e9, None)),  # Encompass Health : « increase in the aggregate … authorization to $1 billion »
+    ("0001559865-26-000043", ("total", 1.5e8, None)),  # Evertec : « increase to Evertec's existing … up to an aggregate of »
+    ("0001539838-26-000137", ("total", 1.6e10, None)),  # Diamondback : « doubled … authorization to $16.0 billion »
+    ("0002089271-26-000020", ("nouveau", 3.5e9, None)),  # Honeywell Aerospace : « accelerated share repurchase agreements » permis
+    ("0001538263-26-000101", ("hausse", None, 832000.0)),  # HomeTrust : « the repurchase of up to an additional 832,000 shares »
+    ("0001193125-26-335148", ("nouveau", 1e9, None)),  # HubSpot : « … in an aggregate amount of up to $1.0 billion »
+    ("0000051253-26-000028", ("nouveau", 2.5e9, None)),  # IFF : « an enhanced $2.5 billion share repurchase program »
+    ("0001104659-26-091178", ("hausse", 3e7, None)),  # ISG : la phrase « new … authorization » sans signe récent est écartée
+    ("0001193125-26-336057", ("nouveau", 1e8, None)),  # LifeStance : la date du 24 février est celle de l'ANCIEN programme
+    ("0001099219-26-000048", ("nouveau", 3e9, None)),  # MetLife : « approved a new $3.0 billion authorization to repurchase »
+    ("0001104485-26-000030", ("hausse", 1.5e8, None)),  # NOG : autorisé le 10 juillet, déposé le 6 août (27 jours)
+    ("0001193125-26-333913", ("nouveau", 2.5e7, None)),  # SmartRent : « On July 24 » sans année = l'année du dépôt
+    ("0001628280-26-053346", ("nouveau", 1.4e10, None)),  # Sandisk : « a $14 billion (exclusive of fees …) share repurchase »
+    ("0001193125-26-333122", ("total", 2e8, None)),  # Talos : « recently authorized an increase … back up to $200 million »
+])
+def test_temoin_vraies_annonces_trouvees(acc, attendu):
+    x = TEMOIN[acc]
+    documents, cle = ra.retenir([(None, t, v) for t, v in x["docs"].items()], date.fromisoformat(x["jour"]))
+    assert cle == attendu, [(s, [p[:120] for p, _ in ts]) for _, s, ts in documents]
+
+
+@pytest.mark.parametrize("acc", [
+    "0001628280-26-053849",  # Collegium : « • $150M share repurchase program authorized by Board through December 2026 » (diapo)
+    "0001193125-26-336562",  # GEO : le programme de 500 M$ nommé dans l'avertissement légal (« forward-looking statements »)
+    "0001193125-26-338098",  # Exzeo : note de bas de page « Share Repurchase Program was the program which the Board … »
+    "0001371285-26-000171",  # Trupanion : le même programme de 100 M$ « In June 2026 » dans le 8-K (plus de 30 jours)
+    "0001421461-26-000020",  # Intrepid Potash : « In June 2026, Intrepid's Board approved an expansion … to $50 million »
+    "0000749251-26-000243",  # Gartner : « … by $500 million in July 2026 » (le 1er juillet : 34 jours, on ne devine pas le jour)
+    "0001628280-26-052608",  # Healthpeak : « In July 2026, … authorized a new $500 million … » (même raison)
+    "0000908255-26-000049",  # BorgWarner : vraie hausse, mais aucun signe d'annonce récente dans la phrase (manquée, voulu)
+    "0001827090-26-000026",  # Certara : « In the third quarter, the Board approved an additional $50 million » (même raison)
+])
+def test_temoin_rien_a_publier(acc):
+    x = TEMOIN[acc]
+    assert ra.retenir([(None, t, v) for t, v in x["docs"].items()], date.fromisoformat(x["jour"]))[1] is None
