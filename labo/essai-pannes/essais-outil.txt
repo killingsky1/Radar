@@ -1,0 +1,13 @@
+OK     connexion coupée 2 fois puis réponse : 2 nouveaux essais (15 s, 60 s), puis lu
+OK     toujours coupée : non vérifiable après 3 essais, puis plus aucune requête vers ce site
+OK     refus 403 : non vérifiable tout de suite, sans nouvel essai
+OK     404 (pas de robots.txt) : passe tel quel, comme avant (tout est permis)
+OK     erreur 503 puis réponse : réessayé une fois après 15 s
+OK     coupure au milieu du téléchargement : réessayé
+OK     LABO_PANNE : seul le site nommé est en panne simulée, sans réseau ; les autres sont lus
+NON VÉRIFIABLE : USAspending : api.usaspending.gov : le site ne répond pas
+OK     section : un site en panne n'arrête que sa partie ; verdicts OK / OK sauf / PROBLÈME
+OK     arrêt sur un site en panne : fichier écrit (ce qui a été vérifié + NON VÉRIFIABLE), code 0
+OK     autre arrêt (bogue) : fichier écrit avec PROBLÈME, code 1 (pour qu'on regarde)
+
+10/10 réussis
