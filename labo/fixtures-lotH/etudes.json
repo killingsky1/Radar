@@ -1,0 +1,41 @@
+{
+ "fu_huang_2016": {
+  "doi": "10.1287/mnsc.2014.2165",
+  "crossref": 404,
+  "openalex": 404
+ },
+ "ikenberry_1995": {
+  "doi": "10.1016/0304-405X(95)00826-Z",
+  "crossref": 200,
+  "titre": "Market underreaction to open market share repurchases",
+  "revue": "Journal of Financial Economics",
+  "auteurs": [
+   "Ikenberry",
+   "Lakonishok",
+   "Vermaelen"
+  ],
+  "annee": 1995,
+  "resume_crossref": null,
+  "openalex": 200,
+  "resume_openalex": null
+ },
+ "peyer_vermaelen_2009": {
+  "doi": "10.1093/rfs/hhn024",
+  "crossref": 200,
+  "titre": "The Nature and Persistence of Buyback Anomalies",
+  "revue": "Review of Financial Studies",
+  "auteurs": [
+   "Peyer",
+   "Vermaelen"
+  ],
+  "annee": 2008,
+  "resume_crossref": null,
+  "openalex": 200,
+  "resume_openalex": "Using recent data, we reject the hypothesis that the buyback anomalies first reported by Lakonishok and Vermaelen (1990, Journal of Finance 45:455--77) and Ikenberry, Lakonishok, and Vermaelen (1995, Journal of Financial Economics 39:181--208) have disappeared over time. We find evidence consistent with the hypothesis that open market repurchases are a response to a market overreaction to bad news: significant analyst downgrades, combined with overly pessimistic forecasts of long-term earnings. Stock prices after tender offers are set as if all investors tender their shares, but empirically they do not. Thus, the arbitrage opportunity persists because the market sets prices as if the average, not the marginal investor, determines the stock price. The Author 2008. Published by Oxford University Press on behalf of The Society for Financial Studies. All rights reserved. For Permissions, please e-mail: journals.permissions@oxfordjournals.org, Oxford University Press."
+ },
+ "nber_w4965": {
+  "statut": 200,
+  "titre": "Market Underreaction to Open Market Share Repurchases | NBER",
+  "texte": "We examine long-run firm performance following open market share repurchase announcements which occurred during the period 1980 to 1990. We find that the average abnormal four-year buy-and-hold return measured after the initial announcement is 12.1 percent. For `value' stocks, companies more likely to be repurchasing shares because of undervaluation, the average abnormal return is 45.3 percent. For repurchases announced by `glamour' stocks where undervaluation is less likely to be an important motive, no positive drift in abnormal returns is observed. Thus, at least with respect to value stocks, the market errs in its initial response and appears to ignore much of the information conveyed through repurchase announcements. function getCookieValue(name) { var cookies = \"; \" + document.cookie, parts = cookies.split(\"; \" + name + \"=\"); if (parts.length == 2) { return parts.pop().split(\";\").shift(); } } fetch(\"/api/v1/auth/84157\", { credentials: \"include\" }) .then( function(response) { if (response.status !== 200) { console.log('Looks like there was a problem. Status Code: ' + response.status); return; } response.text().then(function(data) { var cookieValue = getCookieValue('STYXKEY_expecting_cookie'), userEmailInput = document.getElementById('user_email'); document.getElementById('authorize-banner').innerHTML = data; if (userEmailInput) { userEmailInput.value = cookieValue ? cookieValue : ''; } window.dataLayer = window.dataLayer || []; let can_view = Boolean(response.headers.get('X-NBER-CAN-VIEW-PAPER')); let sub_type = response.headers.get('X-NBER-SUBSCRIBER-TYPE'); dataLayer.push({ \"event\": \"can_view_paper_response\", \"can_view_paper\": can_view, \"subscriber_type\": sub_type, }); }); } ) .catch(function(err) { console.log('Fetch Error :-S', err); }); Acknowledgements and Disclosures Citation and Citation Data Copy Citation David Ikenberry, Josef Lakonishok, and Theo Vermaelen, \"Market Underreaction to Open Market Share Repurchases,\" NBER Working Paper 4965 (1994), https"
+ }
+}
