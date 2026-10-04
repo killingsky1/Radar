@@ -132,7 +132,8 @@ DEJA_ANNONCE = re.compile(r"previously\s+(?:announced|reported|disclosed)|as\s+p
 AUTRE_PROGRAMME = re.compile(r"\bprior\b|\bprevious\b|\breplac\w*|\bexisting\b|\bsupersed\w*|\bfollow\w*", re.I)
 # Une autorisation qui dépend d'autre chose (ex. Inogen : « Subject to the closing of the transaction ») : pas encore réelle
 CONDITION = re.compile(r"subject\s+to\s+(?:the\s+)?(?:closing|completion|consummation|approval)|upon\s+(?:the\s+)?"
-                       r"(?:closing|completion|consummation)|contingent\s+(?:on|upon)|conditioned\s+(?:on|upon)", re.I)
+                       r"(?:closing|completion|consummation)|contingent\s+(?:on|upon)|conditioned\s+(?:on|upon)"
+                       r"|pending\s+(?:regulatory\s+|shareholder\s+|stockholder\s+)?approval", re.I)
 # Une annonce RÉCENTE se reconnaît : une date de moins de 30 jours (ou à venir), « today », « has approved »… Sans ce
 # signe, la phrase décrit souvent un programme déjà connu (diapo d'une présentation, avertissement légal, note).
 RECENT = re.compile(r"\btoday\b|\brecently\b|\bannounc\w*|\b(?:has|have)\s+(?:also\s+|now\s+|recently\s+)?(?:approved|"

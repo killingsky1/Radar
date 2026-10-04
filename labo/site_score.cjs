@@ -8,7 +8,7 @@ const fs = require("fs");
   const elusLocal = fs.readFileSync(fichierElus, "utf8");
   const lobbyingLocal = fs.readFileSync(fichierLobbying, "utf8");
   const lobbying = JSON.parse(lobbyingLocal);
-  const VERSION = "0.21.0";
+  const VERSION = "0.22.0";
   const base = process.env.BASE || "https://killingsky1.github.io/Radar/"; // BASE : essai local seulement
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
@@ -93,7 +93,9 @@ const fs = require("fs");
     await p.locator(".delai").first().evaluate((e) => e.scrollIntoView({ block: "center" }));
     await photo("v37-aide-limites");
     aideOk = etapesAide.length === 5 && texteAide.includes(`${branchees} sources branchées`) && texteAide.includes(`${ecartees} laissées de côté`)
-      && texteAide.includes("2 jours ouvrables après la transaction") && texteAide.includes("Pas un conseil financier");
+      && texteAide.includes("2 jours ouvrables après la transaction") && texteAide.includes("Pas un conseil financier")
+      && texteAide.includes("Rachats : quand le conseil d'une compagnie autorise un rachat de ses actions (8-K)")
+      && (await p.locator('a.etude[href="https://www.nber.org/papers/w4965"]').count()) === 1;
     dire(`Aide : ${etapesAide.join(" → ")} · ${branchees} sources branchées et ${ecartees} laissées de côté (fichier du robot) · conforme : ${aideOk ? "OUI" : "NON"}`);
     await p.locator(".retour").click(); await p.waitForTimeout(300);
   } catch (e) {
@@ -204,6 +206,32 @@ const fs = require("fs");
     lobbyingOk = texte.includes(attendu) && pied.includes("Senate Office of Public Records cannot vouch");
     dire(`Lobbying sur la fiche ${titre} : « ${texte.split("\n")[0]} » · conforme : ${lobbyingOk ? "OUI" : "NON"}`);
   } else dire("Lobbying : section absente de la fiche");
+  // Lot H : rachats d'actions faits (XBRL de la SEC) sur la même fiche, comme dans rachats.json (servi = fichier du robot)
+  let rachatsFaitsOk = false;
+  try {
+    const rfLocal = JSON.parse(fs.readFileSync(fichierMain.replace(/aujourdhui\.json$/, "rachats.json"), "utf8"));
+    let rfServi = null;
+    for (let i = 0; i < 12; i++) {
+      rfServi = await (await ctx.request.get(`${base}data/app/rachats.json?x=${Date.now()}`)).json().catch(() => null);
+      if (JSON.stringify(rfServi) === JSON.stringify(rfLocal)) break;
+      await new Promise((ok) => setTimeout(ok, 15000));
+    }
+    const servi = JSON.stringify(rfServi) === JSON.stringify(rfLocal);
+    const x = rfLocal.par_symbole[titre];
+    await p.locator(".rachats-faits").evaluate((el) => el.previousElementSibling.scrollIntoView({ block: "start" }));
+    await photo("v46-fiche-rachats-faits");
+    const texteRf = (await p.locator(".rachats-faits").innerText()).replace(/\u00a0|\u202f/g, " ");
+    const sans = (t) => t.replace(/\s+/g, "");
+    const court = (n) => new Intl.NumberFormat("fr-CA", { style: "currency", currency: "USD", notation: "compact", minimumFractionDigits: 0, maximumFractionDigits: Math.abs(n) >= 1e9 ? 2 : 1 }).format(n);
+    const attendu = !x ? "Pas encore lu" : x.illisible ? "Montant négatif" : x.montant == null ? "Aucun montant de rachat"
+      : x.montant > 0 ? "Argent dépensé pour racheter ses actions" : "Aucun rachat d'actions pendant l'exercice";
+    const montantOk = !x || x.montant == null || sans(await p.locator(".rachats-total").innerText()) === sans(court(x.montant));
+    const lienOk = !x || x.montant == null || (await p.locator(".rachats-faits a.transaction").getAttribute("href")) === x.lien;
+    rachatsFaitsOk = servi && texteRf.includes(attendu) && montantOk && lienOk;
+    dire(`Rachats faits sur la fiche ${titre} : « ${texteRf.split("\n").slice(0, 2).join(" · ")} » · ${Object.keys(rfLocal.par_symbole).length} compagnies dans le fichier (${rfLocal.cadre}) · servi = fichier du robot : ${servi ? "OUI" : "NON"} · conforme : ${rachatsFaitsOk ? "OUI" : "NON"}`);
+  } catch (e) {
+    dire(`Rachats faits : ERREUR ${String(e).slice(0, 200)}`);
+  }
   await p.locator(".retour").click();
   await p.locator(".segment", { hasText: "Baisse" }).click();
   await photo("v4-baisse");
@@ -405,6 +433,7 @@ const fs = require("fs");
   await p.locator(".retour").first().click().catch(() => {});
   // Lot C : l'onglet Argent = le fichier du robot (montants, ordre, thermomètre) ; une ligne ouvre son info officielle
   let argentOk = false;
+  let rachatsOk = false;
   try {
     const dossierMain = fichierMain.replace(/aujourdhui\.json$/, "");
     const ag = JSON.parse(fs.readFileSync(dossierMain + "argent.json", "utf8"));
@@ -428,10 +457,27 @@ const fs = require("fs");
     await photo("v32-argent-detail");
     const ratesA = await p.locator(".feuille .controle.rate").count();
     await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
-    await p.locator(".puce", { hasText: "Achats" }).click(); await p.waitForTimeout(300);
+    await p.locator(".puce", { hasText: /^Achats$/ }).click(); await p.waitForTimeout(300);
     await photo("v33-argent-achats");
     argentOk = JSON.stringify(vus) === JSON.stringify(attendus) && thermoOk && titreA === agInfos[ag.lignes[0].id].title && ratesA === 0;
     dire(`Argent : ${ag.lignes.length} lignes · 5 premiers montants affichés ${vus.join(" | ")} · attendus ${attendus.join(" | ")} · thermomètre conforme : ${thermoOk ? "OUI" : "NON"} · 1re ligne ouverte « ${titreA.slice(0, 90)} » (${ratesA} contrôle raté) · conforme : ${argentOk ? "OUI" : "NON"}`);
+    // Lot H : filtre Rachats (30 jours) = les lignes « rachats » du fichier ; la 1re ouvre son 8-K, aucun contrôle raté
+    const rachats = ag.lignes.filter((l) => l.famille === "rachats");
+    await p.locator(".puce", { hasText: "Rachats" }).click(); await p.waitForTimeout(300);
+    await photo("v44-argent-rachats");
+    const nR = await p.locator(".ligne.argent").count();
+    const montantsR = (await p.locator(".ligne.argent .argent-montant").allInnerTexts()).map(sans);
+    let titreR = "", ratesR = 0;
+    if (rachats.length) {
+      await p.locator(".ligne.argent").first().click(); await p.waitForSelector(".feuille-fond.ouvert", { timeout: 20000 }); await p.waitForTimeout(400);
+      titreR = await p.locator(".detail-titre").innerText();
+      await photo("v45-rachat-detail");
+      ratesR = await p.locator(".feuille .controle.rate").count();
+      await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
+    }
+    rachatsOk = nR === rachats.length && JSON.stringify(montantsR) === JSON.stringify(rachats.map((l) => sans(court(l.montant))))
+      && (!rachats.length || (titreR === agInfos[rachats[0].id].title && ratesR === 0));
+    dire(`Argent, Rachats : ${nR} annonces affichées · ${rachats.length} dans le fichier · ${montantsR.join(" | ")}${rachats.length ? ` · 1re ouverte « ${titreR.slice(0, 90)} » (${ratesR} contrôle raté)` : ""} · conforme : ${rachatsOk ? "OUI" : "NON"}`);
   } catch (e) {
     dire(`Argent : ERREUR ${String(e).slice(0, 200)}`);
   }
@@ -457,7 +503,7 @@ const fs = require("fs");
     await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
   } else dire("Participation : aucune info dans le fil (aucun cas dans les 8-K lus)");
   dire(`Erreurs du navigateur : ${erreurs.length ? erreurs.join(" | ") : "aucune"}`);
-  const ok = pareil && elusPareil && lobbyingPareil && memeTop && radarOk && aideOk && calOk && resOk && ficheOk && methodeOk && argentOk && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && participationOk && !erreurs.length && js.includes(VERSION);
+  const ok = pareil && elusPareil && lobbyingPareil && memeTop && radarOk && aideOk && calOk && resOk && ficheOk && methodeOk && argentOk && rachatsOk && rachatsFaitsOk && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && participationOk && !erreurs.length && js.includes(VERSION);
   dire(ok ? "VERDICT : OK" : "VERDICT : PROBLÈME");
   fs.writeFileSync(`${dossier}/site.txt`, lignes.join("\n") + "\n");
   await b.close();
