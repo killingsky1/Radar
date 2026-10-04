@@ -29,6 +29,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
 
+import acces  # labo/acces.py : un site qui ne répond pas = « non vérifiable », jamais un plantage
+
 racine = Path(sys.argv[1])
 SORTIE = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("lotF.txt")
 TOUT = "--tout" in sys.argv
@@ -36,6 +38,7 @@ UA = "Radar projet personnel"
 UA_SEC = "Radar projet personnel math-veronneau1@hotmail.com"
 ROBOTS, DERNIER = {}, {}
 ecarts, sortie = [], []
+acces.installer(sortie, SORTIE)
 MOIS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November",
            "December"]
 DATE_EN = r"((?:" + "|".join(MOIS_EN) + r")\s+\d{1,2},\s+\d{4})"
@@ -52,7 +55,7 @@ def lire(url):
     if hote not in ROBOTS:
         rp = urllib.robotparser.RobotFileParser()
         try:
-            with urllib.request.urlopen(urllib.request.Request(f"https://{hote}/robots.txt", headers={"User-Agent": ua}),
+            with acces.ouvrir(urllib.request.Request(f"https://{hote}/robots.txt", headers={"User-Agent": ua}),
                                         timeout=60) as r:
                 rp.parse(r.read().decode("utf-8", "replace").splitlines())
         except urllib.error.HTTPError as exc:
@@ -62,11 +65,11 @@ def lire(url):
                 rp.allow_all = True
         ROBOTS[hote] = rp
     if not ROBOTS[hote].can_fetch(ua, url):
-        raise SystemExit(f"robots.txt ne permet pas {url}")
+        raise acces.NonVerifiable(f"robots.txt ne permet pas {url}")
     attente = 1.5 - (time.monotonic() - DERNIER.get(hote, 0.0))
     if attente > 0:
         time.sleep(attente)
-    with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": ua, "Accept-Encoding": "gzip"}),
+    with acces.ouvrir(urllib.request.Request(url, headers={"User-Agent": ua, "Accept-Encoding": "gzip"}),
                                 timeout=180) as r:
         contenu = r.read()
         if r.headers.get("Content-Encoding") == "gzip":
@@ -192,45 +195,48 @@ for f in sorted((racine / "evenements").glob("*.jsonl")):
 etat_robot = racine / "sec" / "blocage.json"
 if etat_robot.exists():
     attente = json.loads(etat_robot.read_text(encoding="utf-8")).get("en_attente", {})
-symboles = json.loads(lire("https://www.sec.gov/files/company_tickers_exchange.json"))
-par_cik = {}
-for cik, nom, symbole, bourse in symboles["data"]:
-    par_cik.setdefault(int(cik), []).append((symbole, bourse))
 dire(f"Fins de blocage publiées par le robot : {len(publiees)} (en attente d'un symbole : {len(attente)})")
+par_cik = {}
 
-ok = 0
-for i, e in sorted(publiees.items(), key=lambda x: x[1]["data"]["fin_blocage"]):
-    d, pb = e["data"], []
-    acc, cik = e["official_id"], d["cik"]
-    t, depose = texte_424b4(lire(f"https://www.sec.gov/Archives/edgar/data/{int(cik)}/{acc}.txt"))
-    if t is None:
-        ecarts.append(f"{i} : pas de document 424B4 dans le dépôt")
-        continue
-    raisons, d0, n = regle(t, depose)
-    if raisons:
-        pb.append("la règle d'ici refuse : " + ", ".join(raisons))
-    if d0 and d0.isoformat() != d["date_prospectus"]:
-        pb.append(f"date du prospectus {d0} ≠ {d['date_prospectus']}")
-    if depose and depose.isoformat() != e["published_on"]:
-        pb.append(f"dépôt {depose} ≠ {e['published_on']}")
-    if n and n != d["duree_jours"]:
-        pb.append(f"durée {n} ≠ {d['duree_jours']}")
-    if d0 and n and (d0 + timedelta(days=n)).isoformat() != d["fin_blocage"]:
-        pb.append(f"fin {(d0 + timedelta(days=n))} ≠ {d['fin_blocage']}")
-    for morceau in d["phrase_blocage"].removesuffix(" …").split(" … "):
-        if morceau not in t:
-            pb.append(f"phrase pas mot pour mot : « {morceau[:80]} »")
-    if (e["tickers"][0], d["bourse"]) not in par_cik.get(int(cik), []):
-        pb.append(f"symbole {e['tickers'][0]} ({d['bourse']}) pas celui de la SEC pour le CIK {cik}")
-    if e.get("direction") != 0 or e.get("badge") not in ("officiel", "confirme"):
-        pb.append(f"direction {e.get('direction')} ou badge {e.get('badge')}")
-    if pb:
-        ecarts.append(f"{i} ({e['tickers'][0]}) : " + " ; ".join(pb))
-    else:
-        ok += 1
-        dire(f"  OK {e['tickers'][0]:5} {e['entities'][0][:34]:34} prospectus {d['date_prospectus']} + {d['duree_jours']} j "
-             f"= fin {d['fin_blocage']}")
-dire(f"Relues à la SEC : {ok}/{len(publiees)} = prospectus officiel (entrée en bourse, date, durée, fin, phrase, symbole)")
+# ---------- Chaque fin de blocage relue à la SEC (fichier des symboles, prospectus 424B4) ----------
+with acces.section('Fins de blocage (prospectus relus à la SEC)'):
+    symboles = json.loads(lire("https://www.sec.gov/files/company_tickers_exchange.json"))
+    for cik, nom, symbole, bourse in symboles["data"]:
+        par_cik.setdefault(int(cik), []).append((symbole, bourse))
+
+    ok = 0
+    for i, e in sorted(publiees.items(), key=lambda x: x[1]["data"]["fin_blocage"]):
+        d, pb = e["data"], []
+        acc, cik = e["official_id"], d["cik"]
+        t, depose = texte_424b4(lire(f"https://www.sec.gov/Archives/edgar/data/{int(cik)}/{acc}.txt"))
+        if t is None:
+            ecarts.append(f"{i} : pas de document 424B4 dans le dépôt")
+            continue
+        raisons, d0, n = regle(t, depose)
+        if raisons:
+            pb.append("la règle d'ici refuse : " + ", ".join(raisons))
+        if d0 and d0.isoformat() != d["date_prospectus"]:
+            pb.append(f"date du prospectus {d0} ≠ {d['date_prospectus']}")
+        if depose and depose.isoformat() != e["published_on"]:
+            pb.append(f"dépôt {depose} ≠ {e['published_on']}")
+        if n and n != d["duree_jours"]:
+            pb.append(f"durée {n} ≠ {d['duree_jours']}")
+        if d0 and n and (d0 + timedelta(days=n)).isoformat() != d["fin_blocage"]:
+            pb.append(f"fin {(d0 + timedelta(days=n))} ≠ {d['fin_blocage']}")
+        for morceau in d["phrase_blocage"].removesuffix(" …").split(" … "):
+            if morceau not in t:
+                pb.append(f"phrase pas mot pour mot : « {morceau[:80]} »")
+        if (e["tickers"][0], d["bourse"]) not in par_cik.get(int(cik), []):
+            pb.append(f"symbole {e['tickers'][0]} ({d['bourse']}) pas celui de la SEC pour le CIK {cik}")
+        if e.get("direction") != 0 or e.get("badge") not in ("officiel", "confirme"):
+            pb.append(f"direction {e.get('direction')} ou badge {e.get('badge')}")
+        if pb:
+            ecarts.append(f"{i} ({e['tickers'][0]}) : " + " ; ".join(pb))
+        else:
+            ok += 1
+            dire(f"  OK {e['tickers'][0]:5} {e['entities'][0][:34]:34} prospectus {d['date_prospectus']} + {d['duree_jours']} j "
+                 f"= fin {d['fin_blocage']}")
+    dire(f"Relues à la SEC : {ok}/{len(publiees)} = prospectus officiel (entrée en bourse, date, durée, fin, phrase, symbole)")
 
 # ---------- 0 point dans la note ----------
 auj = json.loads((racine / "app" / "aujourdhui.json").read_text(encoding="utf-8"))
@@ -260,53 +266,59 @@ for l in cal["lignes"][:12]:
     dire(f"  {l['fin']} {l['symbole']:5} {l['compagnie'][:40]} ({l['duree']} jours après le {l['prospectus']})")
 
 # ---------- --tout : tous les 424B4 depuis le 1er avril 2026, règle d'ici contre le robot ----------
-if TOUT:
-    depots = []
-    aujourdhui = date.fromisoformat(cal["jour"])
-    for annee, trim in ((2026, 2), (2026, 3)):
-        brut = lire(f"https://www.sec.gov/Archives/edgar/full-index/{annee}/QTR{trim}/master.idx").decode("latin-1")
-        depots += [l.split("|") for l in brut.splitlines() if l.count("|") == 4 and l.split("|")[2] == "424B4"
-                   and l.split("|")[3] >= "2026-04-01"]
-    j = date(2026, 10, 1)
-    while j < aujourdhui:
-        if j.weekday() < 5:
+with acces.section('Tous les 424B4 depuis avril (--tout)'):
+    if TOUT:
+        depots = []
+        aujourdhui = date.fromisoformat(cal["jour"])
+        for annee, trim in ((2026, 2), (2026, 3)):
+            brut = lire(f"https://www.sec.gov/Archives/edgar/full-index/{annee}/QTR{trim}/master.idx").decode("latin-1")
+            depots += [l.split("|") for l in brut.splitlines() if l.count("|") == 4 and l.split("|")[2] == "424B4"
+                       and l.split("|")[3] >= "2026-04-01"]
+        j = date(2026, 10, 1)
+        while j < aujourdhui:
+            if j.weekday() < 5:
+                try:
+                    brut = lire(f"https://www.sec.gov/Archives/edgar/daily-index/2026/QTR4/master.{j:%Y%m%d}.idx").decode("latin-1")
+                    depots += [l.split("|") for l in brut.splitlines() if l.count("|") == 4 and l.split("|")[2] == "424B4"]
+                except urllib.error.HTTPError:
+                    pass
+            j += timedelta(days=1)
+        vus, publiables = set(), {}
+        for cik, nom, forme, depose_idx, fichier in depots:
+            acc = fichier.rsplit("/", 1)[1][:-4]
+            if acc in vus:
+                continue
+            vus.add(acc)
             try:
-                brut = lire(f"https://www.sec.gov/Archives/edgar/daily-index/2026/QTR4/master.{j:%Y%m%d}.idx").decode("latin-1")
-                depots += [l.split("|") for l in brut.splitlines() if l.count("|") == 4 and l.split("|")[2] == "424B4"]
-            except urllib.error.HTTPError:
-                pass
-        j += timedelta(days=1)
-    vus, publiables = set(), {}
-    for cik, nom, forme, depose_idx, fichier in depots:
-        acc = fichier.rsplit("/", 1)[1][:-4]
-        if acc in vus:
-            continue
-        vus.add(acc)
-        try:
-            t, depose = texte_424b4(lire(f"https://www.sec.gov/Archives/{fichier}"))
-        except Exception as exc:  # noqa: BLE001
-            dire(f"  illisible : {acc} ({exc})")
-            continue
-        if t is None:
-            continue
-        raisons, d0, n = regle(t, depose)
-        if not raisons:
-            publiables[acc] = (cik, nom, d0, n)
-    ids_robot = {e["official_id"] for e in publiees.values()}
-    cotes = {acc for acc, (cik, *_ ) in publiables.items() if any(b in ("Nasdaq", "NYSE", "CBOE") for _, b in par_cik.get(int(cik), []))}
-    manquees = sorted(cotes - ids_robot - set(attente))
-    en_trop = sorted(ids_robot - set(publiables))
-    dire(f"Tous les 424B4 depuis le 1er avril 2026 : {len(vus)} relus ; publiables selon la règle d'ici : {len(publiables)} "
-         f"(cotés au Nasdaq, au NYSE ou au CBOE : {len(cotes)}) ; publiées par le robot : {len(ids_robot)}")
-    for acc in manquees:
-        ecarts.append(f"publiable ici mais pas publiée par le robot : {acc} {publiables[acc][1]}")
-    for acc in en_trop:
-        ecarts.append(f"publiée par le robot mais refusée ici : {acc}")
-    for acc, (cik, nom, d0, n) in sorted(publiables.items(), key=lambda x: x[1][2] + timedelta(days=x[1][3])):
-        dire(f"  {'publiée ' if acc in ids_robot else ('attente  ' if acc in attente else 'NON COTÉE' if acc not in cotes else 'MANQUÉE  ')}"
-             f" {nom[:36]:36} {d0} + {n} j = {d0 + timedelta(days=n)}")
+                t, depose = texte_424b4(lire(f"https://www.sec.gov/Archives/{fichier}"))
+            except acces.NonVerifiable:
+                raise  # la SEC ne répond pas : toute cette partie est « non vérifiable », pas une liste à trous
+            except Exception as exc:  # noqa: BLE001
+                dire(f"  illisible : {acc} ({exc})")
+                continue
+            if t is None:
+                continue
+            raisons, d0, n = regle(t, depose)
+            if not raisons:
+                publiables[acc] = (cik, nom, d0, n)
+        ids_robot = {e["official_id"] for e in publiees.values()}
+        cotes = {acc for acc, (cik, *_ ) in publiables.items() if any(b in ("Nasdaq", "NYSE", "CBOE") for _, b in par_cik.get(int(cik), []))}
+        manquees = sorted(cotes - ids_robot - set(attente))
+        en_trop = sorted(ids_robot - set(publiables))
+        dire(f"Tous les 424B4 depuis le 1er avril 2026 : {len(vus)} relus ; publiables selon la règle d'ici : {len(publiables)} "
+             f"(cotés au Nasdaq, au NYSE ou au CBOE : {len(cotes)}) ; publiées par le robot : {len(ids_robot)}")
+        for acc in manquees:
+            ecarts.append(f"publiable ici mais pas publiée par le robot : {acc} {publiables[acc][1]}")
+        for acc in en_trop:
+            ecarts.append(f"publiée par le robot mais refusée ici : {acc}")
+        for acc, (cik, nom, d0, n) in sorted(publiables.items(), key=lambda x: x[1][2] + timedelta(days=x[1][3])):
+            dire(f"  {'publiée ' if acc in ids_robot else ('attente  ' if acc in attente else 'NON COTÉE' if acc not in cotes else 'MANQUÉE  ')}"
+                 f" {nom[:36]:36} {d0} + {n} j = {d0 + timedelta(days=n)}")
 
-dire("\n".join(ecarts) if ecarts else "AUCUN ÉCART : chaque fin de blocage relue à son prospectus officiel.")
-dire("VERDICT : " + ("PROBLÈME" if ecarts else "OK"))
+dire("\n".join(ecarts) if ecarts else ("AUCUN ÉCART dans ce qui a pu être relu." if acces.NON_VERIFIABLES
+                                       else "AUCUN ÉCART : chaque fin de blocage relue à son prospectus officiel."))
+for ligne in acces.lignes_non_verifiables():
+    dire(ligne)
+dire(acces.verdict(ecarts))
 SORTIE.write_text("\n".join(sortie) + "\n", encoding="utf-8")
 sys.exit(1 if ecarts else 0)

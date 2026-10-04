@@ -2,6 +2,9 @@
 const { chromium } = require("playwright");
 const fs = require("fs");
 
+// Gardées hors de la vérification : si elle s'arrête (site qui ne répond pas), le fichier est quand même écrit
+const lignes = [];
+
 (async () => {
   const [fichierMain, dossier, fichierElus, fichierLobbying] = process.argv.slice(2);
   const local = fs.readFileSync(fichierMain, "utf8");
@@ -13,10 +16,11 @@ const fs = require("fs");
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
   const p = await ctx.newPage();
+  // Une connexion coupée (ECONNRESET) est réessayée 2 fois avant d'abandonner
+  const obtenir = (url) => ctx.request.get(url, { maxRetries: 2 });
   const erreurs = [];
   p.on("pageerror", (e) => erreurs.push(String(e)));
   p.on("console", (m) => m.type() === "error" && erreurs.push(m.text()));
-  const lignes = [];
   const dire = (t) => { console.log(t); lignes.push(t); };
   const photo = async (nom) => { await p.waitForTimeout(600); await p.screenshot({ path: `${dossier}/${nom}.png` }); };
   // Les chiffres défilent 0,65 s : on lit la valeur finale (data-final="1")
@@ -24,28 +28,28 @@ const fs = require("fs");
 
   // Attendre que GitHub Pages serve la nouvelle app (au plus 6 minutes).
   for (let i = 0; i < 24; i++) {
-    const t = await (await ctx.request.get(`${base}app.js?x=${Date.now()}`)).text();
+    const t = await (await obtenir(`${base}app.js?x=${Date.now()}`)).text();
     if (t.includes(VERSION)) break;
     await new Promise((ok) => setTimeout(ok, 15000));
   }
   // Attendre que le site serve le score publié par le robot sur main (au plus 6 minutes).
   let r, servi;
   for (let i = 0; i < 24; i++) {
-    r = await ctx.request.get(`${base}data/app/aujourdhui.json?x=${Date.now()}`);
+    r = await obtenir(`${base}data/app/aujourdhui.json?x=${Date.now()}`);
     servi = await r.text();
     if (servi === local) break;
     await new Promise((ok) => setTimeout(ok, 15000));
   }
   let elusServi = "";
   for (let i = 0; i < 12; i++) {
-    elusServi = await (await ctx.request.get(`${base}data/app/elus.json?x=${Date.now()}`)).text();
+    elusServi = await (await obtenir(`${base}data/app/elus.json?x=${Date.now()}`)).text();
     if (elusServi === elusLocal) break;
     await new Promise((ok) => setTimeout(ok, 15000));
   }
   const elusPareil = elusServi === elusLocal;
   let lobbyingServi = "";
   for (let i = 0; i < 12; i++) {
-    lobbyingServi = await (await ctx.request.get(`${base}data/app/lobbying.json?x=${Date.now()}`)).text();
+    lobbyingServi = await (await obtenir(`${base}data/app/lobbying.json?x=${Date.now()}`)).text();
     if (lobbyingServi === lobbyingLocal) break;
     await new Promise((ok) => setTimeout(ok, 15000));
   }
@@ -60,7 +64,7 @@ const fs = require("fs");
   dire(`Hausse (${a.hausse.length}) : ${a.hausse.map((x) => `${x.symbole} ${x.score} pts = ${x.note10}/10${x.recent ? " récent" : ""}`).join(", ")}`);
   dire(`Baisse (${a.baisse.length}) : ${a.baisse.map((x) => `${x.symbole} ${x.score} pts = ${x.note10}/10`).join(", ")}`);
   const sur10 = (n) => n.toLocaleString("fr-CA", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "/10";
-  const js = await (await ctx.request.get(`${base}app.js?x=${Date.now()}`)).text();
+  const js = await (await obtenir(`${base}app.js?x=${Date.now()}`)).text();
   dire(`App en ligne : version ${VERSION} ${js.includes(VERSION) ? "OUI" : "NON"}`);
 
   await p.goto(base);
@@ -116,7 +120,7 @@ const fs = require("fs");
     const calLocal = JSON.parse(fs.readFileSync(fichierMain.replace(/aujourdhui\.json$/, "calendrier.json"), "utf8"));
     let calServi = null;
     for (let i = 0; i < 12; i++) {
-      calServi = await (await ctx.request.get(`${base}data/app/calendrier.json?x=${Date.now()}`)).json().catch(() => null);
+      calServi = await (await obtenir(`${base}data/app/calendrier.json?x=${Date.now()}`)).json().catch(() => null);
       if (JSON.stringify(calServi) === JSON.stringify(calLocal)) break;
       await new Promise((ok) => setTimeout(ok, 15000));
     }
@@ -156,7 +160,7 @@ const fs = require("fs");
     const resLocal = JSON.parse(fs.readFileSync(fichierMain.replace(/aujourdhui\.json$/, "resultats.json"), "utf8"));
     let resServi = null;
     for (let i = 0; i < 12; i++) {
-      resServi = await (await ctx.request.get(`${base}data/app/resultats.json?x=${Date.now()}`)).json().catch(() => null);
+      resServi = await (await obtenir(`${base}data/app/resultats.json?x=${Date.now()}`)).json().catch(() => null);
       if (JSON.stringify(resServi) === JSON.stringify(resLocal)) break;
       await new Promise((ok) => setTimeout(ok, 15000));
     }
@@ -229,7 +233,7 @@ const fs = require("fs");
     const rfLocal = JSON.parse(fs.readFileSync(fichierMain.replace(/aujourdhui\.json$/, "rachats.json"), "utf8"));
     let rfServi = null;
     for (let i = 0; i < 12; i++) {
-      rfServi = await (await ctx.request.get(`${base}data/app/rachats.json?x=${Date.now()}`)).json().catch(() => null);
+      rfServi = await (await obtenir(`${base}data/app/rachats.json?x=${Date.now()}`)).json().catch(() => null);
       if (JSON.stringify(rfServi) === JSON.stringify(rfLocal)) break;
       await new Promise((ok) => setTimeout(ok, 15000));
     }
@@ -264,7 +268,7 @@ const fs = require("fs");
     const saLocal = JSON.parse(fs.readFileSync(fichierMain.replace(/aujourdhui\.json$/, "sante.json"), "utf8"));
     let saServi = null;
     for (let i = 0; i < 12; i++) {
-      saServi = await (await ctx.request.get(`${base}data/app/sante.json?x=${Date.now()}`)).json().catch(() => null);
+      saServi = await (await obtenir(`${base}data/app/sante.json?x=${Date.now()}`)).json().catch(() => null);
       if (JSON.stringify(saServi) === JSON.stringify(saLocal)) break;
       await new Promise((ok) => setTimeout(ok, 15000));
     }
@@ -592,4 +596,17 @@ const fs = require("fs");
   fs.writeFileSync(`${dossier}/site.txt`, lignes.join("\n") + "\n");
   await b.close();
   process.exit(ok ? 0 : 1);
-})();
+})().catch((e) => {
+  // Le vrai site ne répond pas : « non vérifiable », avec ce qui a été vérifié avant ; toute autre erreur : PROBLÈME
+  const message = String((e && e.message) || e);
+  const reseau = /net::ERR_|ECONNRESET|ECONNREFUSED|ETIMEDOUT|ENOTFOUND|EAI_AGAIN|socket hang up|page\.goto: Timeout/i.test(message);
+  const fin = reseau ? `VERDICT : NON VÉRIFIABLE (le site ne répond pas : ${message.split("\n")[0].slice(0, 300)} ; ce qui précède a été vérifié)`
+    : `VERDICT : PROBLÈME (vérification arrêtée : ${message.split("\n")[0].slice(0, 300)})`;
+  console.log(fin);
+  lignes.push(fin);
+  try {
+    fs.writeFileSync(`${process.argv[3]}/site.txt`, lignes.join("\n") + "\n");
+  } finally {
+    process.exit(reseau ? 0 : 1);
+  }
+});

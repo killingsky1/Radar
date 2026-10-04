@@ -22,12 +22,15 @@ from datetime import date, timedelta
 from pathlib import Path
 from urllib.parse import urlparse
 
+import acces  # labo/acces.py : un site qui ne répond pas = « non vérifiable », jamais un plantage
+
 racine = Path(sys.argv[1])
 SORTIE = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("argent.txt")
 UA = "Radar projet personnel"
 UA_SEC = "Radar projet personnel math-veronneau1@hotmail.com"
 ROBOTS, DERNIER = {}, {}
 ecarts, lignes_sortie = [], []
+acces.installer(lignes_sortie, SORTIE)
 
 
 def dire(t):
@@ -41,7 +44,7 @@ def lire(url):
     if site not in ROBOTS:
         rp = urllib.robotparser.RobotFileParser()
         try:
-            with urllib.request.urlopen(urllib.request.Request(site + "/robots.txt", headers={"User-Agent": ua}),
+            with acces.ouvrir(urllib.request.Request(site + "/robots.txt", headers={"User-Agent": ua}),
                                         timeout=60) as r:
                 rp.parse(r.read().decode("utf-8", "replace").splitlines())
         except urllib.error.HTTPError as exc:
@@ -51,11 +54,11 @@ def lire(url):
                 rp.allow_all = True
         ROBOTS[site] = rp
     if not ROBOTS[site].can_fetch(ua, url):
-        raise SystemExit(f"robots.txt ne permet pas {url}")
+        raise acces.NonVerifiable(f"robots.txt ne permet pas {url}")
     attente = max(1.5, float(ROBOTS[site].crawl_delay(ua) or 0)) - (time.monotonic() - DERNIER.get(site, 0.0))
     if attente > 0:
         time.sleep(attente)
-    with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": ua}), timeout=120) as r:
+    with acces.ouvrir(urllib.request.Request(url, headers={"User-Agent": ua}), timeout=120) as r:
         contenu = r.read()
     DERNIER[site] = time.monotonic()
     return contenu.decode("utf-8", "replace")
@@ -92,62 +95,63 @@ jour = date.fromisoformat(a["jour"])
 dire(f"Section Argent du {a['jour']} : {len(a['lignes'])} lignes depuis le {a['depuis']} (dernier jour : {a['dernier_jour']})")
 
 # ---------- Formulaires 4 et 144 : relus à la SEC ----------
-relus, ok = 0, 0
-for l in a["lignes"]:
-    if l["source"] not in ("sec_form4", "sec_form144"):
-        continue
-    ev = infos[l["id"]]
-    texte = lire(txt_du_depot(ev["official_url"]))
-    relus += 1
-    pb = []
-    if l["source"] == "sec_form4":
-        doc = xml_officiel(texte, "ownershipDocument")
-        code = "P" if l["sens"] > 0 else "S"
-        ts = [(nb(t, "transactionAmounts/transactionShares/value"), nb(t, "transactionAmounts/transactionPricePerShare/value"),
-               nb(t, "postTransactionAmounts/sharesOwnedFollowingTransaction/value"))
-              for t in doc.findall("nonDerivativeTable/nonDerivativeTransaction")
-              if (t.findtext("transactionCoding/transactionCode") or "").strip() == code]
-        total_actions = sum(s or 0 for s, _, _ in ts)
-        total = sum((s or 0) * (p or 0) for s, p, _ in ts)
-        prix = [p for _, p, _ in ts if p]
-        multiples = bool(prix) and max(prix) / min(prix) > 2
-        if abs(total - l["montant"]) > 1:
-            pb.append(f"total {total:.2f} ≠ {l['montant']}")
-        if multiples != l["prix_multiples"]:
-            pb.append("prix multiples différents")
-        if not multiples and (l["actions"] != total_actions or abs((l["prix"] or 0) - round(total / total_actions, 4)) > 0.0001):
-            pb.append(f"actions ou prix : {total_actions} à {total / total_actions if total_actions else 0:.4f}")
-        # Part de ses actions : seulement si chaque « détenues après » suit le précédent (même compte)
-        signe = 1 if code == "P" else -1
-        suite = all(x[2] is not None and x[0] for x in ts) and all(
-            abs(b[2] - (a_[2] + signe * b[0])) <= 0.5 for a_, b in zip(ts, ts[1:]))
-        attendu = None
-        if ts and suite:
-            avant = ts[0][2] - signe * ts[0][0]
-            if code == "P" and avant < 0.5:
-                attendu = {"nouvelle": True}
-            elif avant >= 0.5:
-                attendu = {"pourcentage": round(total_actions / avant * 100, 2)}
-        if attendu != l["part"]:
-            pb.append(f"part {l['part']} ≠ {attendu}")
-    else:
-        doc = xml_officiel(texte, "edgarSubmission")
-        infos144 = doc.findall("formData/securitiesInformation")
-        actions = sum(nb(t, "noOfUnitsSold") or 0 for t in infos144)
-        valeur = sum(nb(t, "aggregateMarketValue") or 0 for t in infos144)
-        totaux = {nb(t, "noOfUnitsOutstanding") for t in infos144 if nb(t, "noOfUnitsOutstanding")}
-        titres = {(t.findtext("securitiesClassTitle") or "").strip().lower() for t in infos144}
-        attendu = ({"pourcentage_compagnie": round(actions / next(iter(totaux)) * 100, 3)}
-                   if len(totaux) == 1 and len(titres) == 1 and actions else None)
-        if abs(valeur - l["montant"]) > 1 or actions != l["actions"]:
-            pb.append(f"144 : {actions} actions pour {valeur} ≠ {l['actions']} pour {l['montant']}")
-        if attendu != l["part"]:
-            pb.append(f"part {l['part']} ≠ {attendu}")
-    if pb:
-        ecarts.append(f"{l['id']} ({l['symbole']}) : " + " ; ".join(pb))
-    else:
-        ok += 1
-dire(f"Dirigeants et avis 144 : {ok}/{relus} lignes = dépôt officiel relu à la SEC (actions, prix, total, part)")
+with acces.section('Dirigeants et avis 144 (relus à la SEC)'):
+    relus, ok = 0, 0
+    for l in a["lignes"]:
+        if l["source"] not in ("sec_form4", "sec_form144"):
+            continue
+        ev = infos[l["id"]]
+        texte = lire(txt_du_depot(ev["official_url"]))
+        relus += 1
+        pb = []
+        if l["source"] == "sec_form4":
+            doc = xml_officiel(texte, "ownershipDocument")
+            code = "P" if l["sens"] > 0 else "S"
+            ts = [(nb(t, "transactionAmounts/transactionShares/value"), nb(t, "transactionAmounts/transactionPricePerShare/value"),
+                   nb(t, "postTransactionAmounts/sharesOwnedFollowingTransaction/value"))
+                  for t in doc.findall("nonDerivativeTable/nonDerivativeTransaction")
+                  if (t.findtext("transactionCoding/transactionCode") or "").strip() == code]
+            total_actions = sum(s or 0 for s, _, _ in ts)
+            total = sum((s or 0) * (p or 0) for s, p, _ in ts)
+            prix = [p for _, p, _ in ts if p]
+            multiples = bool(prix) and max(prix) / min(prix) > 2
+            if abs(total - l["montant"]) > 1:
+                pb.append(f"total {total:.2f} ≠ {l['montant']}")
+            if multiples != l["prix_multiples"]:
+                pb.append("prix multiples différents")
+            if not multiples and (l["actions"] != total_actions or abs((l["prix"] or 0) - round(total / total_actions, 4)) > 0.0001):
+                pb.append(f"actions ou prix : {total_actions} à {total / total_actions if total_actions else 0:.4f}")
+            # Part de ses actions : seulement si chaque « détenues après » suit le précédent (même compte)
+            signe = 1 if code == "P" else -1
+            suite = all(x[2] is not None and x[0] for x in ts) and all(
+                abs(b[2] - (a_[2] + signe * b[0])) <= 0.5 for a_, b in zip(ts, ts[1:]))
+            attendu = None
+            if ts and suite:
+                avant = ts[0][2] - signe * ts[0][0]
+                if code == "P" and avant < 0.5:
+                    attendu = {"nouvelle": True}
+                elif avant >= 0.5:
+                    attendu = {"pourcentage": round(total_actions / avant * 100, 2)}
+            if attendu != l["part"]:
+                pb.append(f"part {l['part']} ≠ {attendu}")
+        else:
+            doc = xml_officiel(texte, "edgarSubmission")
+            infos144 = doc.findall("formData/securitiesInformation")
+            actions = sum(nb(t, "noOfUnitsSold") or 0 for t in infos144)
+            valeur = sum(nb(t, "aggregateMarketValue") or 0 for t in infos144)
+            totaux = {nb(t, "noOfUnitsOutstanding") for t in infos144 if nb(t, "noOfUnitsOutstanding")}
+            titres = {(t.findtext("securitiesClassTitle") or "").strip().lower() for t in infos144}
+            attendu = ({"pourcentage_compagnie": round(actions / next(iter(totaux)) * 100, 3)}
+                       if len(totaux) == 1 and len(titres) == 1 and actions else None)
+            if abs(valeur - l["montant"]) > 1 or actions != l["actions"]:
+                pb.append(f"144 : {actions} actions pour {valeur} ≠ {l['actions']} pour {l['montant']}")
+            if attendu != l["part"]:
+                pb.append(f"part {l['part']} ≠ {attendu}")
+        if pb:
+            ecarts.append(f"{l['id']} ({l['symbole']}) : " + " ; ".join(pb))
+        else:
+            ok += 1
+    dire(f"Dirigeants et avis 144 : {ok}/{relus} lignes = dépôt officiel relu à la SEC (actions, prix, total, part)")
 
 # ---------- Élus, contrats et rachats : recopie exacte ----------
 autres = [l for l in a["lignes"] if l["source"] not in ("sec_form4", "sec_form144")]
@@ -194,7 +198,10 @@ dire(f"Thermomètre (depuis le {depuis}) : achats {th['achats'][0]} pour {th['ac
      f"sur le moment {th['ventes_libres'][0]} pour {th['ventes_libres'][1] / 1e6:.1f} M$ · ventes planifiées "
      f"{th['ventes_planifiees'][0]} pour {th['ventes_planifiees'][1] / 1e6:.1f} M$")
 
-dire("\n".join(ecarts) if ecarts else "AUCUN ÉCART : chaque ligne relue à son dépôt officiel.")
-dire("VERDICT : " + ("PROBLÈME" if ecarts else "OK"))
+dire("\n".join(ecarts) if ecarts else ("AUCUN ÉCART dans ce qui a pu être relu." if acces.NON_VERIFIABLES
+                                       else "AUCUN ÉCART : chaque ligne relue à son dépôt officiel."))
+for ligne in acces.lignes_non_verifiables():
+    dire(ligne)
+dire(acces.verdict(ecarts))
 SORTIE.write_text("\n".join(lignes_sortie) + "\n", encoding="utf-8")
 sys.exit(1 if ecarts else 0)

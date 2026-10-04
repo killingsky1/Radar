@@ -14,11 +14,14 @@ import re
 import sys
 import time
 import unicodedata
+import urllib.error
 import urllib.request
 import urllib.robotparser
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.parse import urlparse
+
+import acces  # labo/acces.py : un site qui ne répond pas = « non vérifiable », jamais un plantage
 
 racine = Path(sys.argv[1])
 ELUS = json.loads((racine / "app" / "elus.json").read_text(encoding="utf-8"))
@@ -26,6 +29,10 @@ CONGRES = json.loads((racine / "elus" / "congres.json").read_text(encoding="utf-
 UA = "Radar projet personnel"
 ROBOTS, DERNIER = {}, [0.0]
 ecarts, lignes = [], []
+SORTIE = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("congres.txt")
+# Les parties se suivent (la 3 utilise les listes officielles lues aux 1 et 2) : un site en panne arrête la relecture,
+# et le fichier dit ce qui a été vérifié avant (acces.installer).
+acces.installer(lignes, SORTIE)
 
 
 def dire(t):
@@ -36,15 +43,19 @@ def dire(t):
 def lire(url):
     site = f"{urlparse(url).scheme}://{urlparse(url).netloc}"
     if site not in ROBOTS:
-        rp = urllib.robotparser.RobotFileParser(site + "/robots.txt")
-        rp.read()  # 404 : tout est permis ; 401/403 : rien n'est permis
+        rp = urllib.robotparser.RobotFileParser()
+        try:  # robots.txt lu avec notre identification ; 401/403 : acces.NonVerifiable (on respecte)
+            with acces.ouvrir(urllib.request.Request(site + "/robots.txt", headers={"User-Agent": UA}), timeout=60) as r:
+                rp.parse(r.read().decode("utf-8", "replace").splitlines())
+        except urllib.error.HTTPError:
+            rp.allow_all = True  # 404 : pas de robots.txt, tout est permis
         ROBOTS[site] = rp
     if not ROBOTS[site].can_fetch(UA, url):
-        raise SystemExit(f"robots.txt ne permet pas {url}")
+        raise acces.NonVerifiable(f"robots.txt ne permet pas {url}")
     attente = 1.0 - (time.monotonic() - DERNIER[0])
     if attente > 0:
         time.sleep(attente)
-    with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=60) as r:
+    with acces.ouvrir(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=60) as r:
         contenu = r.read()
     DERNIER[0] = time.monotonic()
     return contenu
@@ -176,5 +187,5 @@ for nom_rapport, info in sorted(ELUS.get("par_elu", {}).items()):
 
 dire("\n".join(ecarts) if ecarts else "AUCUN ÉCART : chefs, comités, étape et votes = pages officielles relues.")
 dire("VERDICT : " + ("PROBLÈME" if ecarts else "OK"))
-(Path(sys.argv[2]) if len(sys.argv) > 2 else Path("congres.txt")).write_text("\n".join(lignes) + "\n", encoding="utf-8")
+SORTIE.write_text("\n".join(lignes) + "\n", encoding="utf-8")
 sys.exit(1 if ecarts else 0)

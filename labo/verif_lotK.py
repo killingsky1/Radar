@@ -22,10 +22,13 @@ import xml.etree.ElementTree as ET
 from datetime import date, timedelta
 from pathlib import Path
 
+import acces  # labo/acces.py : un site qui ne répond pas = « non vérifiable », jamais un plantage
+
 racine = Path(sys.argv[1])
 SORTIE = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("lotK.txt")
 UA_SEC = "Radar projet personnel math-veronneau1@hotmail.com"
 ecarts, sortie, dernier, robots = [], [], [0.0], {}
+acces.installer(sortie, SORTIE)
 
 
 def dire(t=""):
@@ -38,7 +41,7 @@ def lire(url):
     if hote not in robots:
         rp = urllib.robotparser.RobotFileParser()
         try:
-            with urllib.request.urlopen(urllib.request.Request(f"https://{hote}/robots.txt", headers={"User-Agent": UA_SEC}),
+            with acces.ouvrir(urllib.request.Request(f"https://{hote}/robots.txt", headers={"User-Agent": UA_SEC}),
                                         timeout=60) as r:
                 rp.parse(r.read().decode("utf-8", "replace").splitlines())
         except urllib.error.HTTPError as e:
@@ -48,12 +51,12 @@ def lire(url):
                 rp.allow_all = True  # 404 : pas de robots.txt, tout est permis
         robots[hote] = rp
     if not robots[hote].can_fetch(UA_SEC, url):
-        raise SystemExit(f"robots.txt ne permet pas {url}")
+        raise acces.NonVerifiable(f"robots.txt ne permet pas {url}")
     attente = 1.5 - (time.monotonic() - dernier[0])
     if attente > 0:
         time.sleep(attente)
     try:
-        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA_SEC}), timeout=180) as r:
+        with acces.ouvrir(urllib.request.Request(url, headers={"User-Agent": UA_SEC}), timeout=180) as r:
             return r.read()
     finally:
         dernier[0] = time.monotonic()
@@ -221,49 +224,56 @@ if set(montres) - set(listes):
     ecarts.append(f"montrées sans être dans les listes : {sorted(set(montres) - set(listes))}")
 tickers = {x["ticker"].upper(): int(x["cik_str"])
            for x in json.loads(lire("https://www.sec.gov/files/company_tickers.json")).values()}
-for s in listes:
-    cik = next((tickers[v] for v in (s, s.replace(".", "-"), s.replace("-", ".")) if v in tickers), None)
-    x = montres.get(s)
-    if cik is None:
-        if x is not None:
-            ecarts.append(f"{s} : montrée, mais absente du fichier des symboles de la SEC")
-        dire(f"- {s} : pas dans le fichier des symboles de la SEC, pas de score")
-        continue
-    if x is not None and x.get("cik") != cik:
-        ecarts.append(f"{s} : numéro SEC {x.get('cik')} dans l'app, {cik} selon la SEC")
-    try:
-        refait = calcul(cik)
-    except Exception as exc:  # noqa: BLE001
-        refait = {"f_score": None, "raison": f"le labo n'a pas pu lire : {type(exc).__name__}: {str(exc)[:150]}"}
-        if x is not None:
-            ecarts.append(f"{s} : montrée {x['f_score']}/9, le labo n'a pas pu la refaire ({refait['raison']})")
-    if x is None and refait["f_score"] is None:
-        dire(f"- {s} : pas de score ici non plus ({refait.get('raison')}) · absente de l'app, comme il faut")
-        continue
-    if x is None:
-        ecarts.append(f"{s} : le labo calcule {refait['f_score']}/9 ({refait['forme']} {refait['accn']}), mais l'app ne montre rien")
-        dire(f"- {s} : ÉCART, le labo calcule {refait['f_score']}/9 avec son {refait['forme']} {refait['accn']}")
-        continue
-    if refait["f_score"] is None:
-        ecarts.append(f"{s} : l'app montre {x['f_score']}/9, le labo ne peut pas le calculer ({refait.get('raison')})")
-        dire(f"- {s} : ÉCART, montrée {x['f_score']}/9 · labo : {refait.get('raison')}")
-        continue
-    pareil = refait["criteres"] == x["criteres"] and refait["f_score"] == x["f_score"]
-    meme_rapport = (refait["accn"], refait["forme"], refait["debut"], refait["fin"]) == (x["accn"], x["forme"], x["debut"], x["fin"])
-    lien_attendu = f"https://www.sec.gov/Archives/edgar/data/{cik}/{refait['accn'].replace('-', '')}/{refait['accn']}-index.htm"
-    page = lire(x["lien"]).decode("utf-8", "replace") if x["lien"] == lien_attendu else ""
-    forme = re.search(r"Form ([0-9A-Z][0-9A-Z/\-]*(?: \d+[A-Z]?)?)", page)
-    forme = forme.group(1) if forme else None
-    lien_ok = x["lien"] == lien_attendu and refait["accn"] in page and forme in ANNUELS
-    if not (pareil and meme_rapport and lien_ok):
-        ecarts.append(f"{s} : app {x['f_score']}/9 {x['criteres']} {x['forme']} {x['accn']} {x['debut']}→{x['fin']} · labo "
-                      f"{refait['f_score']}/9 {refait['criteres']} {refait['forme']} {refait['accn']} {refait['debut']}→{refait['fin']}"
-                      f" · lien {x['lien']} (page de la SEC : formulaire {forme})")
-    dire(f"- {s} : app {x['f_score']}/9 · labo {refait['f_score']}/9 (fichier {refait['instance']}) · 9 critères identiques : "
-         f"{'OUI' if pareil else 'NON'} · même rapport annuel ({refait['forme']} {refait['accn']}, exercice {refait['debut']} → "
-         f"{refait['fin']}, bilan t-2 au {refait['fin2']}) : {'OUI' if meme_rapport else 'NON'} · lien ouvert à la SEC : "
-         f"formulaire {forme} {'OK' if lien_ok else 'NON'}")
-dire("\n".join(ecarts) if ecarts else "AUCUN ÉCART : chaque score refait en lisant le fichier XBRL du rapport annuel de la compagnie.")
-dire("VERDICT : " + ("PROBLÈME" if ecarts else "OK"))
+# ---------- Chaque compagnie des listes : rapport annuel relu à la SEC ----------
+with acces.section('Santé financière (rapports annuels relus à la SEC)'):
+    for s in listes:
+        cik = next((tickers[v] for v in (s, s.replace(".", "-"), s.replace("-", ".")) if v in tickers), None)
+        x = montres.get(s)
+        if cik is None:
+            if x is not None:
+                ecarts.append(f"{s} : montrée, mais absente du fichier des symboles de la SEC")
+            dire(f"- {s} : pas dans le fichier des symboles de la SEC, pas de score")
+            continue
+        if x is not None and x.get("cik") != cik:
+            ecarts.append(f"{s} : numéro SEC {x.get('cik')} dans l'app, {cik} selon la SEC")
+        try:
+            refait = calcul(cik)
+        except acces.NonVerifiable:
+            raise  # la SEC ne répond pas : la suite est « non vérifiable », pas un écart ni un faux « comme il faut »
+        except Exception as exc:  # noqa: BLE001
+            refait = {"f_score": None, "raison": f"le labo n'a pas pu lire : {type(exc).__name__}: {str(exc)[:150]}"}
+            if x is not None:
+                ecarts.append(f"{s} : montrée {x['f_score']}/9, le labo n'a pas pu la refaire ({refait['raison']})")
+        if x is None and refait["f_score"] is None:
+            dire(f"- {s} : pas de score ici non plus ({refait.get('raison')}) · absente de l'app, comme il faut")
+            continue
+        if x is None:
+            ecarts.append(f"{s} : le labo calcule {refait['f_score']}/9 ({refait['forme']} {refait['accn']}), mais l'app ne montre rien")
+            dire(f"- {s} : ÉCART, le labo calcule {refait['f_score']}/9 avec son {refait['forme']} {refait['accn']}")
+            continue
+        if refait["f_score"] is None:
+            ecarts.append(f"{s} : l'app montre {x['f_score']}/9, le labo ne peut pas le calculer ({refait.get('raison')})")
+            dire(f"- {s} : ÉCART, montrée {x['f_score']}/9 · labo : {refait.get('raison')}")
+            continue
+        pareil = refait["criteres"] == x["criteres"] and refait["f_score"] == x["f_score"]
+        meme_rapport = (refait["accn"], refait["forme"], refait["debut"], refait["fin"]) == (x["accn"], x["forme"], x["debut"], x["fin"])
+        lien_attendu = f"https://www.sec.gov/Archives/edgar/data/{cik}/{refait['accn'].replace('-', '')}/{refait['accn']}-index.htm"
+        page = lire(x["lien"]).decode("utf-8", "replace") if x["lien"] == lien_attendu else ""
+        forme = re.search(r"Form ([0-9A-Z][0-9A-Z/\-]*(?: \d+[A-Z]?)?)", page)
+        forme = forme.group(1) if forme else None
+        lien_ok = x["lien"] == lien_attendu and refait["accn"] in page and forme in ANNUELS
+        if not (pareil and meme_rapport and lien_ok):
+            ecarts.append(f"{s} : app {x['f_score']}/9 {x['criteres']} {x['forme']} {x['accn']} {x['debut']}→{x['fin']} · labo "
+                          f"{refait['f_score']}/9 {refait['criteres']} {refait['forme']} {refait['accn']} {refait['debut']}→{refait['fin']}"
+                          f" · lien {x['lien']} (page de la SEC : formulaire {forme})")
+        dire(f"- {s} : app {x['f_score']}/9 · labo {refait['f_score']}/9 (fichier {refait['instance']}) · 9 critères identiques : "
+             f"{'OUI' if pareil else 'NON'} · même rapport annuel ({refait['forme']} {refait['accn']}, exercice {refait['debut']} → "
+             f"{refait['fin']}, bilan t-2 au {refait['fin2']}) : {'OUI' if meme_rapport else 'NON'} · lien ouvert à la SEC : "
+             f"formulaire {forme} {'OK' if lien_ok else 'NON'}")
+dire("\n".join(ecarts) if ecarts else ("AUCUN ÉCART dans ce qui a pu être relu." if acces.NON_VERIFIABLES else
+                                       "AUCUN ÉCART : chaque score refait en lisant le fichier XBRL du rapport annuel de la compagnie."))
+for ligne in acces.lignes_non_verifiables():
+    dire(ligne)
+dire(acces.verdict(ecarts))
 SORTIE.write_text("\n".join(sortie) + "\n", encoding="utf-8")
 sys.exit(1 if ecarts else 0)

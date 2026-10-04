@@ -1,0 +1,54 @@
+name: "Labo (essai : un site en panne simulée → « non vérifiable », le reste vérifié avec les vrais sites)"
+
+on:
+  push:
+    branches: [labo]
+    paths: [".github/workflows/labo65.yml", "labo/test_acces.py"]
+
+permissions:
+  contents: write
+
+jobs:
+  pannes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: principal
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: rm -rf labo/essai-pannes && mkdir -p labo/essai-pannes
+      - name: Les 10 essais de l'outil (sans réseau)
+        shell: bash  # avec pipefail : un essai raté fait échouer l'étape malgré tee
+        run: python labo/test_acces.py | tee labo/essai-pannes/essais-outil.txt
+      - name: USAspending en panne simulée, la SEC répond (lot 3d, livraison 2)
+        if: always()
+        env:
+          LABO_PANNE: api.usaspending.gov
+          LABO_ATTENTES: "1,1"
+        run: python labo/verif_lot3d2.py principal/data labo/essai-pannes/lot3d2-usaspending-en-panne.txt
+      - name: Statistique Canada en panne simulée, les autres sites répondent (lot 3c)
+        if: always()
+        env:
+          LABO_PANNE: www150.statcan.gc.ca
+          LABO_ATTENTES: "1,1"
+        run: python labo/verif_canada3c.py principal/data labo/essai-pannes/canada3c-statcan-en-panne.txt
+      - name: data.sec.gov en panne simulée, www.sec.gov répond (lot H)
+        if: always()
+        env:
+          LABO_PANNE: data.sec.gov
+          LABO_ATTENTES: "1,1"
+        run: python labo/verif_lotH.py principal/data labo/essai-pannes/lotH-data-sec-en-panne.txt
+      - name: Sauvegarder
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/essai-pannes
+          git commit -m "Labo : essai des pannes simulées du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
