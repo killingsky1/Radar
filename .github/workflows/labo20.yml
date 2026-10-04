@@ -6,7 +6,7 @@ on:
     paths: ["labo/declencheur-score.txt", "labo/recalcul_score.py", "labo/site_score.cjs", "labo/verif_congres.py",
             "labo/verif_canada3c.py", "labo/verif_canada3c2.py", "labo/verif_lot3d.py",
             "labo/verif_lot3d2.py", "labo/verif_lotA.py",
-            "labo/verif_argent.py", "labo/verif_lotF.py", ".github/workflows/labo20.yml"]
+            "labo/verif_argent.py", "labo/verif_lotF.py", "labo/verif_lotG.py", ".github/workflows/labo20.yml"]
 
 permissions:
   contents: write
@@ -56,6 +56,9 @@ jobs:
       - name: Fins de blocage (lot F) contre-vérifiées (chaque prospectus 424B4 relu à la SEC)
         if: always()
         run: python labo/verif_lotF.py principal/data labo/resultats-score/lotF.txt
+      - name: Résultats de Radar (lot G) refaits à partir des fichiers officiels de la SEC
+        if: always()
+        run: python labo/verif_lotG.py principal/data labo/resultats-score/lotG.txt
       - name: Navigateur (installé même si une vérification a échoué)
         if: always()
         run: npm i --no-save playwright@1.56.1
