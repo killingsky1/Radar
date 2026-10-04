@@ -1,0 +1,14 @@
+# Lot G : vrais extraits des fichiers d'échecs de livraison de la SEC, pour les tests du robot
+- 202604a : cnsfails202604a · 49847 lignes · Last-Modified gardé dans le manifeste
+- 202607b : cnsfails202607b.txt · 73340 lignes · Last-Modified gardé dans le manifeste
+- 202608a : cnsfails202608a.txt · 59957 lignes · Last-Modified gardé dans le manifeste
+- 202608b : cnsfails202608b.txt · 61553 lignes · Last-Modified gardé dans le manifeste
+- 202609a : cnsfails202609a.txt · 50335 lignes · Last-Modified gardé dans le manifeste
+- symboles avec plusieurs CUSIP (juillet-septembre) : 172 · ex. [('CCG', 32, ['G20707108', 'G20707124']), ('SXTC', 33, ['G2161P165', 'G2161P173']), ('HAO', 18, ['G4290F126', 'G4290F134']), ('ALP', 30, ['G7185A136', 'G7185A144']), ('TANH', 27, ['G8675X156', 'G8675X164']), ('TNMG', 28, ['G8924F121', 'G8924F139'])]
+- sauts de prix d'un jour à l'autre (×1,8 ou ÷1,8) avec le même CUSIP : 175 · ex. [('CRE', '20260820', '20260827', 2.58, 6.81, 2.64), ('CRE', '20260828', '20260903', 5.9, 2.95, 0.5), ('INLF', '20260805', '20260806', 3.18, 6.27, 1.972), ('KXIN', '20260826', '20260828', 5.5, 1.5, 0.273), ('MCDIF', '20260716', '20260717', 15.6, 6.0, 0.385), ('JDZG', '20260731', '20260803', 50.0, 6.01, 0.12), ('RETO', '20260810', '20260812', 3.16, 1.2, 0.38), ('RFAI', '20260821', '20260824', 13.15, 58.0, 4.411)]
+- gardés aussi : changement de CUSIP MSTU · saut de prix CRE
+  - 202604a : extrait 70 lignes sur 49847 · 9 dates de règlement
+  - 202607b : extrait 112 lignes sur 73340 · 13 dates de règlement
+  - 202608a : extrait 88 lignes sur 59957 · 10 dates de règlement
+  - 202608b : extrait 97 lignes sur 61553 · 11 dates de règlement
+  - 202609a : extrait 77 lignes sur 50335 · 9 dates de règlement
