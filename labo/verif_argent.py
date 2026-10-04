@@ -6,7 +6,8 @@ requêtes au même site ; « Radar projet personnel » et le courriel seulement 
   .txt du dépôt, son XML officiel) ; refaits ici : nombre d'actions, prix moyen, total en dollars (au dollar près), part
   de ses actions (seulement si les lignes se suivent dans un même compte), part des actions de la compagnie (144 : un
   seul titre et un seul total en circulation).
-- Élus et contrats : la ligne = l'info enregistrée (fourchette officielle déjà contrôlée à sa lecture).
+- Élus, contrats et rachats : la ligne = l'info enregistrée (fourchette officielle déjà contrôlée à sa lecture ; chaque
+  annonce de rachat est aussi relue à son 8-K par verif_lotH.py).
 - Thermomètre (7 jours) refait à partir des lignes ; jamais deux lignes pour la même transaction ; tri par montant.
 """
 import json
@@ -148,15 +149,18 @@ for l in a["lignes"]:
         ok += 1
 dire(f"Dirigeants et avis 144 : {ok}/{relus} lignes = dépôt officiel relu à la SEC (actions, prix, total, part)")
 
-# ---------- Élus et contrats : recopie exacte ----------
+# ---------- Élus, contrats et rachats : recopie exacte ----------
 autres = [l for l in a["lignes"] if l["source"] not in ("sec_form4", "sec_form144")]
 for l in autres:
     ev = infos[l["id"]]
-    attendu = (l["montant"] if l["famille"] == "contrats" else (l["montant_min"], l["montant_max"]))
-    vrai = (ev.get("amount_min") if l["famille"] == "contrats" else (ev.get("amount_min"), ev.get("amount_max")))
+    seul = l["famille"] in ("contrats", "rachats")  # un seul montant (contrat signé, plafond de rachat autorisé)
+    attendu = (l["montant"] if seul else (l["montant_min"], l["montant_max"]))
+    vrai = (ev.get("amount_min") if seul else (ev.get("amount_min"), ev.get("amount_max")))
     if attendu != vrai or l["symbole"] != (ev.get("tickers") or [None])[0]:
         ecarts.append(f"{l['id']} : montant ou symbole ≠ info enregistrée")
-dire(f"Élus, cabinet et contrats : {len(autres)} lignes = infos enregistrées (fourchettes officielles)")
+n_rachats = sum(1 for l in autres if l["famille"] == "rachats")
+dire(f"Élus, cabinet, contrats et rachats : {len(autres)} lignes (dont {n_rachats} rachats) = infos enregistrées "
+     f"(fourchettes officielles ; les rachats aussi relus à leur 8-K par verif_lotH.py)")
 
 # ---------- Doublons, tri, période, thermomètre ----------
 cles = {}
