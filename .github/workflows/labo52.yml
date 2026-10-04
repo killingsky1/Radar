@@ -1,0 +1,33 @@
+name: "Labo (lot F : tous les 424B4 depuis avril, règle du labo contre le robot)"
+
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/declencheur-lotF-tout.txt", ".github/workflows/labo52.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  recherche:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: principal
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: mkdir -p labo/resultats-lotF && python labo/verif_lotF.py principal/data labo/resultats-lotF/tout.txt --tout
+      - name: Sauvegarder
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/resultats-lotF
+          git commit -m "Labo : lot F, tous les 424B4 relus, du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
