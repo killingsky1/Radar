@@ -8,7 +8,7 @@ const fs = require("fs");
   const elusLocal = fs.readFileSync(fichierElus, "utf8");
   const lobbyingLocal = fs.readFileSync(fichierLobbying, "utf8");
   const lobbying = JSON.parse(lobbyingLocal);
-  const VERSION = "0.23.0";
+  const VERSION = "0.24.0";
   const base = process.env.BASE || "https://killingsky1.github.io/Radar/"; // BASE : essai local seulement
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
@@ -67,9 +67,15 @@ const fs = require("fs");
   await p.waitForSelector(".tuiles");
   await chiffresFinis();
   await photo("v1-accueil");
-  // Lot D : le radar = les compagnies du score (8 premières à la hausse, 3 à la baisse) ; un point ouvre sa fiche
+  // Lot D, puis lot J : le radar = les 8 premières compagnies à la hausse (les baisses ont leur carte) ; plus près du
+  // centre = note plus haute ; un point ouvre sa fiche
   const etiquettesRadar = (await p.locator(".radar-etiquette").allInnerTexts()).sort();
-  const attendusRadar = [...a.hausse.slice(0, 8), ...a.baisse.slice(0, 3)].map((x) => x.symbole).sort();
+  const attendusRadar = a.hausse.slice(0, 8).map((x) => x.symbole).sort();
+  const baissesSurRadar = await p.locator(".radar-cible.baisse").count();
+  const legendeRadar = (await p.locator(".radar-legende").innerText()).replace(/\u00a0|\u202f/g, " ");
+  const distances = await p.locator(".radar-cible").evaluateAll((els) => els.map((e) => [e.querySelector(".radar-etiquette").textContent, Math.hypot(parseFloat(e.style.left) - 50, parseFloat(e.style.top) - 50)]));
+  const noteDe = (sym) => a.hausse.find((x) => x.symbole === sym)?.note10 ?? 0;
+  const ordreOk = [...distances].sort((x, y) => noteDe(y[0]) - noteDe(x[0])).every((x, i, t) => i === 0 || x[1] >= t[i - 1][1] - 0.01);
   const balai = await p.locator(".radar-balai").evaluate((e) => getComputedStyle(e).animationName);
   await p.locator(".radar").evaluate((e) => e.scrollIntoView({ block: "center" }));
   await photo("v34-radar");
@@ -77,8 +83,8 @@ const fs = require("fs");
   const ficheRadar = await p.locator(".grand-titre h1").innerText();
   await photo("v35-fiche-anneau");
   const radarOk = JSON.stringify(etiquettesRadar) === JSON.stringify(attendusRadar) && balai === "balayage"
-    && attendusRadar.includes(ficheRadar);
-  dire(`Radar : ${etiquettesRadar.length} points ${etiquettesRadar.join(", ")} · attendus ${attendusRadar.join(", ")} · balayage ${balai} · point touché → fiche ${ficheRadar} · conforme : ${radarOk ? "OUI" : "NON"}`);
+    && attendusRadar.includes(ficheRadar) && baissesSurRadar === 0 && ordreOk && legendeRadar.includes("Plus près du centre : note plus haute");
+  dire(`Radar : ${etiquettesRadar.length} points ${etiquettesRadar.join(", ")} · attendus (8 premières à la hausse) ${attendusRadar.join(", ")} · baisse sur le radar : ${baissesSurRadar} · note plus haute = plus près du centre : ${ordreOk ? "OUI" : "NON"} · balayage ${balai} · point touché → fiche ${ficheRadar} · conforme : ${radarOk ? "OUI" : "NON"}`);
   await p.locator(".retour").click(); await p.waitForTimeout(300);
   // Lot E : l'aide (bouton « ? ») : 5 étapes, nombre de sources = fichier du robot, délais légaux, avertissement
   let aideOk = false;
@@ -191,8 +197,13 @@ const fs = require("fs");
   const titre = await p.locator(".grand-titre h1").innerText();
   await chiffresFinis();
   const noteFiche = (await p.locator(".fiche-score").innerText()).replace(/\s+/g, "");
-  const ficheOk = noteFiche === sur10(a.hausse[0].note10) && titre === a.hausse[0].symbole;
-  dire(`Fiche ouverte : ${titre} · note affichée ${noteFiche} · publiée ${sur10(a.hausse[0].note10)} · conforme : ${ficheOk ? "OUI" : "NON"}`);
+  // Lot J : le bouton « Voir le cours » ouvre la page publique de l'action dans un nouvel onglet (jamais lue par le labo)
+  const cours = p.locator("a.bouton-cours");
+  const lienAttendu = `https://finance.yahoo.com/quote/${encodeURIComponent(titre.replace(/\./g, "-"))}/`;
+  const coursOk = (await cours.count()) === 1 && (await cours.getAttribute("href")) === lienAttendu && (await cours.getAttribute("target")) === "_blank";
+  await photo("v48-fiche-voir-le-cours");
+  const ficheOk = noteFiche === sur10(a.hausse[0].note10) && titre === a.hausse[0].symbole && coursOk;
+  dire(`Fiche ouverte : ${titre} · note affichée ${noteFiche} · publiée ${sur10(a.hausse[0].note10)} · bouton « Voir le cours » → ${coursOk ? lienAttendu : "ABSENT OU FAUX"} · conforme : ${ficheOk ? "OUI" : "NON"}`);
   // Le lobbying de cette compagnie, comme dans lobbying.json
   let lobbyingOk = false;
   const entree = lobbying.par_symbole[titre];
