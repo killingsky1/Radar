@@ -20,7 +20,7 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).parent))
-from detecteur_rachats import CANDIDAT, analyser, decider, phrases  # noqa: E402
+from detecteur_rachats import CANDIDAT, analyser, decider, nouveaute, phrases  # noqa: E402
 
 UA_SEC = "Radar projet personnel math-veronneau1@hotmail.com"
 # Arguments : dernier jour, nombre de jours ouvrables, dossier de sortie (par défaut : les 10 jours du 21 sept. au 2 oct.)
@@ -66,6 +66,13 @@ def lire(url, max_octets=30_000_000):
         return f"erreur {type(exc).__name__}", b""
     finally:
         dernier[0] = time.monotonic()
+
+
+def lire_ok(url):
+    statut, c = lire(url)
+    if statut != 200:
+        raise RuntimeError(f"HTTP {statut} : {url}")
+    return c
 
 
 def texte_doc(brut: str) -> str:
@@ -148,6 +155,15 @@ for jour in JOURS:
             if garder:
                 textes.setdefault(d["acc"], {})[typ] = t
         d["decision"] = decider(lus_docs, jour)
+        if d["decision"]["statut"] == "annonce":  # vérification de nouveauté : les 8-K des 90 jours avant
+            x = d["decision"]
+            try:
+                deja, relus = nouveaute(lire_ok, cik, d["acc"], jour, (x["dollars"], x["actions"]))
+                x["nouveaute_relus"] = relus
+                if deja:
+                    d["decision"] = {"statut": "déjà annoncée", "dans": deja, "avant": x}
+            except Exception as exc:  # noqa: BLE001
+                d["decision"] = {"statut": "nouveauté pas vérifiée", "erreur": str(exc)[:200], "avant": x}
         depots.append(d)
     dire(f"- {jour} : {len(par_acc)} 8-K · lus (cotés, points 2.02/7.01/8.01) : {n_jour}")
     (SORTIE / "depots.json").write_text(json.dumps(depots, ensure_ascii=False, indent=0), encoding="utf-8")
