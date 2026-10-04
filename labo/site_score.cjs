@@ -377,15 +377,16 @@ const fs = require("fs");
   await p.locator(".tuile", { hasText: "Sources actives" }).click(); await p.waitForTimeout(600);
   let ecarteesOk = true;
   for (const nom of ["Pentagone : contrats du jour", "GAO : contestations", "Fonds souverain de la Norvège", "Communiqués officiels",
-                     "Prix des actions (Yahoo", "SEC : échecs de livraison"]) {
+                     "Prix des actions (Yahoo"]) {
     const s = p.locator(".source", { hasText: nom });
     const etat = (await s.count()) ? await s.first().locator(".source-etat").innerText() : "absente";
     if (nom.startsWith("Fonds souverain")) { await s.first().evaluate((el) => el.scrollIntoView({ block: "center" })); await photo("v26-sources-laissees-de-cote"); }
     dire(`Source « ${nom} » : ${etat.slice(0, 140)}`);
     ecarteesOk = ecarteesOk && etat.startsWith("Laissée de côté");
   }
+  // Lot G : la source des échecs de livraison est branchée, seulement pour ses prix (jamais un signal)
   for (const nom of ["Trésor américain : adjudications", "Douane américaine : directives", "USAspending : contrats fédéraux américains",
-                     "Gouvernement américain actionnaire"]) {
+                     "Gouvernement américain actionnaire", "SEC : prix de clôture des fichiers d'échecs de livraison"]) {
     const s = p.locator(".source", { hasText: nom });
     const etat = (await s.count()) ? await s.first().locator(".source-etat").innerText() : "absente";
     if (nom.startsWith("USAspending") && (await s.count())) { await s.first().evaluate((el) => el.scrollIntoView({ block: "center" })); await photo("v27-sources-usaspending"); }

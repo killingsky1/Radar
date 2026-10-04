@@ -30,7 +30,8 @@ UA = "Radar projet personnel"
 NY = ZoneInfo("America/New_York")
 RESULTATS = "https://fiscaldata.treasury.gov/static-data/published-reports/auctions-query/results/"
 MTS = "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1"
-ECARTEES = ("war_contrats", "gao_contestations", "nbim", "communiques", "prix_yahoo", "sec_ftd")
+# sec_ftd : laissée de côté au lot 3d comme SIGNAL ; branchée au lot G seulement pour ses prix (vérifié plus bas)
+ECARTEES = ("war_contrats", "gao_contestations", "nbim", "communiques", "prix_yahoo")
 ROBOTS, DERNIER = {}, {}
 ecarts, lignes = [], []
 
@@ -176,13 +177,18 @@ for e in csms:
     dire(f"Douane {e['official_id']} : « {e['title'][:110]} » · {'conforme' if not pb else 'ÉCART'}")
 dire(f"Douane : {ok}/{len(csms)} messages = page officielle (numéro, titre, envoi, proclamations, numéros du tarif, extrait)")
 
-# ---------- Les 6 sources laissées de côté ----------
+# ---------- Les 5 sources laissées de côté, et sec_ftd (lot G) ----------
 sources = {s["id"]: s for s in json.loads((racine / "app" / "sources.json").read_text(encoding="utf-8"))}
 for s in ECARTEES:
     x = sources.get(s, {})
     dire(f"Source « {x.get('nom')} » : {x.get('libelle')} · {x.get('explication')}")
     if x.get("statut") != "ecartee" or not x.get("explication"):
         ecarts.append(f"source {s} : statut {x.get('statut')} (attendu : laissée de côté, avec la raison)")
+x = sources.get("sec_ftd", {})
+dire(f"Source « {x.get('nom')} » : {x.get('libelle')} (lot G : seulement ses prix, jamais un signal)")
+if x.get("statut") == "ecartee" or "seulement pour mesurer" not in (x.get("nom") or "") or x.get("officielle") is not False:
+    ecarts.append(f"source sec_ftd : {x.get('statut')} · officielle={x.get('officielle')} (attendu : branchée, seulement pour "
+                  f"mesurer, jamais une info)")
 
 dire("\n".join(ecarts) if ecarts else "AUCUN ÉCART : chaque info relue à sa source officielle.")
 dire("VERDICT : " + ("PROBLÈME" if ecarts else "OK"))

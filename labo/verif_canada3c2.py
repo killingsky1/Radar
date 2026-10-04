@@ -101,7 +101,10 @@ for s in SOURCES + ("contrats_ca_10k",):
 # ---------- Santé Canada : la liste officielle complète ----------
 lu_le = datetime.fromisoformat(etat["sante_canada"]["dernier_succes"]).date()  # date UTC, comme le robot
 depuis = (lu_le - timedelta(days=60)).isoformat()
-avis = json.loads(lire(LISTE_NOC).decode("utf-8-sig"))
+brut_noc = lire(LISTE_NOC)
+avis = json.loads(brut_noc.decode("utf-8-sig"))
+if not avis:  # liste vide : montrer la réponse exacte du site (pour savoir si c'est le site ou Radar)
+    dire(f"Santé Canada : RÉPONSE VIDE · {len(brut_noc)} octets · en-têtes {ENTETES.get(LISTE_NOC)} · début {brut_noc[:200]!r}")
 fenetre = [x for x in avis if (x.get("noc_date") or "") >= depuis]
 classes = Counter(x.get("noc_submission_class") for x in fenetre)
 dire(f"Santé Canada : liste officielle {len(avis)} avis ; {len(fenetre)} depuis le {depuis} (60 jours avant la lecture "
