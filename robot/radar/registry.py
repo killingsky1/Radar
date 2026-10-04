@@ -174,10 +174,11 @@ _LISTE = [
               "sans réponse) ; les communiqués importants arrivent par les 8-K de la SEC"),
     S("prix_yahoo", "Prix des actions (Yahoo, non officiel)", "compagnies", ("yahoo.com",), 0, "https://finance.yahoo.com/",
       officielle=False, ecartee="Robots interdits par le robots.txt de son API des prix et par ses conditions d'utilisation"),
-    S("sec_ftd", "SEC : échecs de livraison d'actions", "compagnies", ("sec.gov",), 0,
-      "https://www.sec.gov/data-research/sec-markets-data/fails-deliver-data",
-      ecartee="Mise de côté par choix : publiée 2 semaines plus tard, et la SEC précise que ce n'est pas une preuve de "
-              "vente à découvert abusive ; aucune étude solide après publication"),
+    # Lot G : jamais un signal (la SEC précise que ce n'est pas une preuve de vente à découvert abusive) ; seulement le
+    # prix de clôture de la veille de chaque ligne, pour mesurer les résultats de Radar (voir resultats.py)
+    S("sec_ftd", "SEC : prix de clôture des fichiers d'échecs de livraison (seulement pour mesurer les résultats de Radar)",
+      "compagnies", ("sec.gov",), 1, "https://www.sec.gov/data-research/sec-markets-data/fails-deliver-data",
+      officielle=False, passages=("soir",)),
 ]
 
 SOURCES: dict[str, Source] = {s.id: s for s in _LISTE}

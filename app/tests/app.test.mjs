@@ -466,6 +466,44 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       await onglet("Radar");
     }
   });
+  await verifier("Résultats : carte du Radar (taux sur les prix officiels de la SEC)", async () => {
+    await onglet("Radar");
+    const t = (await p.locator(".res-carte").innerText()).replace(/\u00a0/g, " ");
+    assert.equal(t.trim(), "1 semaine : 1 sur 1 ont frappé juste · 1 mois : 0 sur 1 ont frappé juste");
+  });
+  await verifier("Résultats : page — taux, verdicts en mots, cas douteux montrés mais pas comptés", async () => {
+    try {
+      await p.locator(".res-carte").click(); await p.waitForTimeout(300);
+      assert.equal(await p.locator(".grand-titre h1").innerText(), "Résultats");
+      const t = (await p.locator(".ecran").textContent()).replace(/\u00a0/g, " ");
+      for (const attendu of [
+        "1 sur 1 · écart moyen +6,1 points", // 1 semaine, hausse : AAPL
+        "0 sur 1 · écart moyen -7,5 points", // 1 mois, hausse : AAPL
+        "+3,8 % au 30 juill. · marché -2,4 % (IVV) : a battu le marché", // fr-CA : « juill. »
+        "-5,1 % au 24 août · marché +2,5 % (SPY) : n'a pas battu le marché",
+        "pas comparable : nouveau code de titre (CUSIP 26923N173 → 26923Y708)",
+        "+172,4 % à vérifier : saut de prix anormal",
+        "Départ : en attente des prix de la SEC (vers le 15 octobre 2026)",
+        "Départ : pas de prix officiel ces jours-là",
+        "Prix de la SEC publiés jusqu'au 14 septembre 2026.",
+      ]) assert.ok(t.replace(/−/g, "-").includes(attendu), attendu);
+      assert.equal(await p.locator(".res-horizon.vert").count(), 1);
+      assert.equal(await p.locator(".res-horizon.rouge").count(), 1);
+      assert.equal(await p.locator(".res-ligne").count(), 6);
+      assert.ok(t.includes("jamais une clôture que Radar connaissait"));
+    } finally {
+      await onglet("Radar");
+    }
+  });
+  await verifier("Aide : les résultats de Radar et leur lien", async () => {
+    try {
+      await p.getByRole("button", { name: "Aide" }).click(); await p.waitForSelector(".flux-etape");
+      await p.locator(".lien-rangee", { hasText: "Voir les résultats" }).click(); await p.waitForTimeout(250);
+      assert.equal(await p.locator(".grand-titre h1").innerText(), "Résultats");
+    } finally {
+      await onglet("Radar");
+    }
+  });
   await verifier("Tuiles des catégories : un nombre partout (toutes branchées)", async () => {
     await onglet("Radar"); assert.equal(await p.locator(".cat-phase").count(), 0); assert.equal(await p.locator(".cat-nombre").count(), 6);
     await onglet("Fil");

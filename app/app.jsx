@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.20.0";
+const VERSION = "0.21.0";
 
 // ---------- Constantes ----------
 
@@ -464,7 +464,7 @@ function enGroupesParJour(liste) {
 // ---------- Données ----------
 
 const FICHIERS = ["meta", "aujourdhui", "fil", "a_verifier", "sources"];
-const FICHIERS_OPTIONNELS = ["elus", "lobbying", "calendrier"]; // absents ou illisibles : l'app fonctionne sans
+const FICHIERS_OPTIONNELS = ["elus", "lobbying", "calendrier", "resultats"]; // absents ou illisibles : l'app fonctionne sans
 
 function useDonnees() {
   const [etat, setEtat] = useState({ chargement: true, erreur: null, donnees: null });
@@ -1735,6 +1735,7 @@ function Accueil({ pousser, allerAuFil }) {
       )}
 
       <CarteCalendrier />
+      <CarteResultats />
 
       <div className="tuiles">
         <button type="button" className="tuile presse" onClick={() => allerAuFil("tout")}>
@@ -1936,6 +1937,160 @@ function EcranCalendrier({ retour }) {
       <p className="groupe-pied">
         {fr("Source : prospectus finals (424B4) déposés à la SEC. Radar publie une date seulement si tout est écrit clairement : une vraie entrée en bourse, la date du prospectus, une seule durée et aucune levée anticipée. Sinon, rien.")}
       </p>
+    </Ecran>
+  );
+}
+
+// ---------- Résultats de Radar : prix officiels de la SEC (robot : data/app/resultats.json) ----------
+
+const SENS_RESULTATS = { hausse: "À la hausse", baisse: "À la baisse" };
+
+function variationSignee(v) {
+  return `${v > 0 ? "+" : ""}${(v * 100).toLocaleString("fr-CA", { minimumFractionDigits: 1, maximumFractionDigits: 1 })} %`;
+}
+
+function points(v) {
+  return `${v > 0 ? "+" : ""}${(v * 100).toLocaleString("fr-CA", { minimumFractionDigits: 1, maximumFractionDigits: 1 })} points`;
+}
+
+function jourSec(aaaammjj) {
+  return dateCourte(`${aaaammjj.slice(0, 4)}-${aaaammjj.slice(4, 6)}-${aaaammjj.slice(6, 8)}`);
+}
+
+function verdict(h, sens) {
+  if (h.battu === true) return sens === "hausse" ? "a battu le marché" : "a fait moins bien que le marché, comme prévu";
+  if (h.battu === false) return sens === "hausse" ? "n'a pas battu le marché" : "n'a pas fait moins bien que le marché";
+  return h.pourquoi || "pas de verdict";
+}
+
+function LigneHorizon({ nom, h, sens }) {
+  let texte;
+  let classe = "gris";
+  if (h.statut === "mesure") {
+    texte = `${variationSignee(h.variation)} au ${jourSec(h.date)}${h.marche ? ` · marché ${variationSignee(h.marche.variation)} (${h.marche.fonds})` : ""} : ${verdict(h, sens)}`;
+    classe = h.battu === true ? "vert" : h.battu === false ? "rouge" : "gris";
+  } else if (h.statut === "en_attente") {
+    texte = `en attente des prix de la SEC (vers le ${dateLongue(h.attendu_vers)})`;
+  } else if (h.statut === "pas_de_prix") {
+    texte = "pas de prix officiel ces jours-là";
+  } else if (h.statut === "pas_comparable") {
+    texte = `pas comparable : ${h.pourquoi}`;
+  } else {
+    texte = `${variationSignee(h.variation)} à vérifier : ${h.pourquoi}`;
+    classe = "jaune";
+  }
+  return (
+    <span className={`res-horizon ${classe}`}>
+      <b>{nom}</b> {fr(texte)}
+    </span>
+  );
+}
+
+function LigneResultat({ l, horizons }) {
+  const d = l.depart;
+  return (
+    <div className="rangee bloc res-ligne">
+      <span className="res-tete">
+        <span className="symbole">{l.symbole}</span> <b>{l.nom}</b>
+      </span>
+      <span className="res-sous">
+        {SENS_RESULTATS[l.sens]} · entrée le {dateLongue(l.entree.slice(0, 10))}
+        {l.note10 != null ? ` · ${String(l.note10).replace(".", ",")}/10` : ""}
+      </span>
+      <span className="res-sous">
+        {d.statut === "ok"
+          ? `Départ : ${d.prix.toLocaleString("fr-CA", { style: "currency", currency: "USD" })} (prix de la SEC du ${jourSec(d.date)})`
+          : d.statut === "en_attente"
+            ? `Départ : en attente des prix de la SEC (vers le ${dateLongue(d.attendu_vers)})`
+            : "Départ : pas de prix officiel ces jours-là"}
+      </span>
+      {d.statut === "ok" && Object.entries(horizons).map(([k, nom]) => <LigneHorizon key={k} nom={nom} h={l.horizons[k]} sens={l.sens} />)}
+    </div>
+  );
+}
+
+function resumeResultats(r) {
+  const morceaux = [];
+  for (const [k, nom] of Object.entries(r.horizons)) {
+    const h = r.resume[`hausse_${k}`];
+    const b = r.resume[`baisse_${k}`];
+    const n = h.mesurees + b.mesurees;
+    if (n) morceaux.push(`${nom} : ${h.battu + b.battu} sur ${n} ont frappé juste`);
+  }
+  return morceaux.length ? morceaux.join(" · ") : null;
+}
+
+function CarteResultats() {
+  const { donnees, pousser } = useApp();
+  const r = donnees.resultats;
+  if (!r || !r.lignes?.length) return null;
+  const resume = resumeResultats(r);
+  return (
+    <>
+      <div className="section-ligne">
+        <h2 className="section">Résultats de Radar</h2>
+        <button type="button" className="lien" onClick={() => pousser("resultats")}>
+          Voir
+        </button>
+      </div>
+      <button type="button" className="carte presse res-carte" onClick={() => pousser("resultats")}>
+        <span className="pastille petite fond-accent">
+          <Icone nom="tarte" taille={17} epaisseur={2} />
+        </span>
+        <span className="res-carte-texte">
+          {resume ||
+            fr(`${r.lignes.length} compagnies suivies. Premiers prix officiels de la SEC vers le ${dateLongue(r.prochains_prix_vers)}.`)}
+        </span>
+        <Icone nom="chevron-d" taille={18} epaisseur={2.2} className="chevron" />
+      </button>
+    </>
+  );
+}
+
+function EcranResultats({ retour }) {
+  const { donnees } = useApp();
+  const r = donnees.resultats;
+  if (!r) {
+    return (
+      <Ecran titre="Résultats" retour={retour}>
+        <div className="carte">
+          <Vide icone="tarte" titre="Résultats pas encore publiés" texte="Le robot les publie à son prochain passage." />
+        </div>
+      </Ecran>
+    );
+  }
+  const lignes = [...r.lignes].reverse(); // les plus récentes d'abord
+  return (
+    <Ecran titre="Résultats" sousTitre="Radar a-t-il frappé juste ?" retour={retour}>
+      <p className="explication">
+        {fr("Chaque compagnie qui entre dans une liste est suivie avec les prix officiels de la SEC, 1 semaine et 1 mois plus tard, et comparée au marché (fonds qui suivent le S&P 500).")}
+      </p>
+      <Groupe titre="Taux de réussite" pied={r.prix_jusqu_au ? fr(`Prix de la SEC publiés jusqu'au ${dateLongue(r.prix_jusqu_au)}.`) : undefined}>
+        {Object.entries(r.horizons).flatMap(([k, nom]) =>
+          ["hausse", "baisse"].map((sens) => {
+            const x = r.resume[`${sens}_${k}`];
+            return (
+              <Rangee key={`${k}-${sens}`} label={`${nom} · ${SENS_RESULTATS[sens].toLowerCase()}`}>
+                <span className="rangee-valeur">
+                  {x.mesurees ? `${x.battu} sur ${x.mesurees} · écart moyen ${points(x.ecart_moyen)}` : x.en_attente ? "en attente" : "aucune mesure"}
+                </span>
+              </Rangee>
+            );
+          }),
+        )}
+      </Groupe>
+      <Groupe titre={`Compagnies suivies (${r.lignes.length})`}>
+        {lignes.map((l) => (
+          <LigneResultat key={`${l.symbole}-${l.sens}-${l.entree}`} l={l} horizons={r.horizons} />
+        ))}
+      </Groupe>
+      <Groupe titre="Comment c'est mesuré">
+        {r.methode.map((m) => (
+          <div key={m} className="rangee bloc">
+            <span className="rangee-texte">{fr(m)}</span>
+          </div>
+        ))}
+      </Groupe>
     </Ecran>
   );
 }
@@ -2464,6 +2619,13 @@ function EcranAide({ retour }) {
         </div>
       </Groupe>
 
+      <Groupe titre="Les résultats de Radar">
+        <div className="rangee bloc">
+          <span className="rangee-texte">{fr("Chaque compagnie qui entre dans une liste est suivie avec les prix officiels de la SEC (clôture de la veille, publiée 2 à 4 semaines plus tard), 1 semaine et 1 mois après, et comparée au marché. Les cas douteux (pas de prix, nouveau code de titre, saut anormal) sont montrés mais pas comptés.")}</span>
+        </div>
+        <RangeeLien icone="tarte" couleur="accent" label="Voir les résultats" onClick={() => pousser("resultats")} />
+      </Groupe>
+
       <Groupe titre="Le calendrier">
         <div className="rangee bloc">
           <span className="rangee-texte">{fr("Après une entrée en bourse, les dirigeants et les anciens actionnaires s'engagent à ne pas vendre pendant une période (souvent 180 jours). Le robot lit chaque prospectus final et publie la fin seulement si tout est écrit clairement. Information seulement : 0 point dans la note.")}</span>
@@ -2506,6 +2668,7 @@ const PAGES = {
   methode: EcranMethode,
   aide: EcranAide,
   calendrier: EcranCalendrier,
+  resultats: EcranResultats,
 };
 
 // « Nouveau » : entrée dans les listes depuis la dernière visite (1re visite : depuis 24 h).
@@ -2818,6 +2981,19 @@ input { font: inherit; color: var(--texte); }
 .cal-mois { font-size: .625rem; font-weight: 700; line-height: 1; text-transform: uppercase; letter-spacing: .04em; margin-top: 3px; }
 .cal-sous { color: var(--texte-2); font-size: .75rem; }
 .cal-ligne.passee .cal-date { background: var(--carte-2); color: var(--texte-2); }
+
+/* Résultats de Radar */
+.res-carte { width: 100%; display: flex; align-items: center; gap: 12px; padding: 14px; text-align: left; }
+.res-carte-texte { flex: 1; font-size: .9375rem; font-weight: 600; line-height: 1.35; }
+.res-ligne { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; }
+.res-tete { font-size: .9375rem; line-height: 1.3; }
+.res-tete .symbole { margin-right: 2px; vertical-align: 1px; }
+.res-sous { color: var(--texte-2); font-size: .8125rem; }
+.res-horizon { font-size: .8125rem; line-height: 1.35; padding: 6px 9px; border-radius: 10px; background: var(--carte-2); }
+.res-horizon.vert { color: var(--vert); background: color-mix(in srgb, var(--vert) 13%, transparent); }
+.res-horizon.rouge { color: var(--rouge); background: color-mix(in srgb, var(--rouge) 12%, transparent); }
+.res-horizon.jaune { color: var(--jaune); background: color-mix(in srgb, var(--jaune) 13%, transparent); }
+.res-horizon b { color: var(--texte); }
 
 /* Vide */
 .vide { text-align: center; padding: 36px 20px; }

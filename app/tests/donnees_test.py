@@ -264,3 +264,37 @@ from radar.store import Depot  # noqa: E402
 from radar.validate import valider  # noqa: E402
 Depot(sys.argv[1]).enregistrer([valider(e, J) for e in BLOCAGES])
 _ecrire_compact(Path(sys.argv[1]) / "app" / "calendrier.json", calendrier.preparer(Depot(sys.argv[1]), J))
+# Résultats de Radar (lot G) : entrées TEST de juillet à septembre 2026, mesurées par le vrai calcul du robot sur de VRAIS
+# extraits des fichiers de la SEC (robot/tests/fixtures/lotG) : mesurée, en attente, pas de prix, nouveau CUSIP, à vérifier.
+import io  # noqa: E402
+import zipfile  # noqa: E402
+from radar import resultats as rs  # noqa: E402
+from radar.collecteurs import prix_sec as ps  # noqa: E402
+from radar.run import Contexte  # noqa: E402
+FG = Path(__file__).resolve().parents[2] / "robot" / "tests" / "fixtures" / "lotG"
+class FauxSec:
+    def get(self, url, entetes=None):
+        if url == ps.PAGE:
+            c = gzip.decompress((FG / "page_ftd.html.gz").read_bytes())
+        else:
+            cle = url.rsplit("cnsfails", 1)[1][:7]
+            tampon = io.BytesIO()
+            with zipfile.ZipFile(tampon, "w") as z:
+                z.writestr(f"cnsfails{cle}.txt", (FG / f"cnsfails{cle}.txt").read_bytes())
+            c = tampon.getvalue()
+        return type("T", (), {"contenu": c, "sha256": empreinte(c)})()
+def entree_test(symbole, nom, sens, quand, note):
+    return {"symbole": symbole, "nom": f"TEST {nom}", "sens": sens, "entree": quand, "vue": quand[:10], "note10": note,
+            "methode": "score-7"}
+(Path(sys.argv[1]) / "resultats").mkdir(parents=True, exist_ok=True)
+(Path(sys.argv[1]) / "resultats" / "suggestions.json").write_text(json.dumps({"entrees": [
+    entree_test("AAPL", "Apple", "hausse", "2026-07-20T14:00:00+00:00", 8.1),
+    entree_test("LESL", "Leslie's", "baisse", "2026-07-20T14:00:00+00:00", 1.1),
+    entree_test("XMPL", "Exemple Corp.", "hausse", "2026-07-20T14:00:00+00:00", 7.4),
+    entree_test("MSTU", "T-REX 2X", "hausse", "2026-08-14T21:00:00+00:00", 7.2),
+    entree_test("CRE", "CRE8 Enterprise", "baisse", "2026-08-17T12:00:00+00:00", 2.0),
+    entree_test("GME", "GameStop", "hausse", "2026-09-11T15:00:00+00:00", 9.3)]}), encoding="utf-8")
+ps.PREMIER_FICHIER = "202607b"  # les vrais extraits gardés pour les tests : juillet à septembre 2026
+ps.collecter(Contexte(client=FauxSec(), maintenant=maintenant, donnees=Path(sys.argv[1])))
+from radar.publish import _ecrire  # noqa: E402
+_ecrire(Path(sys.argv[1]) / "app" / "resultats.json", rs.calculer(Path(sys.argv[1]), maintenant))

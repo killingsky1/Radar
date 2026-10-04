@@ -7,7 +7,7 @@ from collections import Counter
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import __version__, argent, calendrier, emetteurs
+from . import __version__, argent, calendrier, emetteurs, resultats
 from .collecteurs import congres, lobbying
 from .health import LIBELLES, statut
 from .registry import SOURCES
@@ -129,3 +129,15 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
         _ecrire(donnees / "app" / "lobbying.json", lobbying.pour_app(donnees, symboles_listes, maintenant))
     except Exception as exc:  # noqa: BLE001
         print(f"Lobbying : erreur, fichier de l'app pas mis à jour ({type(exc).__name__}: {exc})")
+    # Résultats de Radar (lot G) : l'historique des entrées dans les listes (score publié), puis la mesure avec les prix
+    # officiels de la SEC. En cas d'erreur : ancien fichier gardé.
+    try:
+        score = json.loads(chemin.read_text(encoding="utf-8")) if chemin.exists() else {}
+        historique = resultats.lire_historique(donnees)
+        avant = json.dumps(historique, sort_keys=True)
+        resultats.noter_entrees(historique, score, maintenant)
+        if json.dumps(historique, sort_keys=True) != avant:  # nouvelle entrée, ou un nouveau jour « vu »
+            _ecrire(resultats.chemin_historique(donnees), historique)
+        _ecrire(donnees / "app" / "resultats.json", resultats.calculer(donnees, maintenant))
+    except Exception as exc:  # noqa: BLE001
+        print(f"Résultats : erreur, l'ancien fichier est gardé ({type(exc).__name__}: {exc})")
