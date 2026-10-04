@@ -67,9 +67,10 @@ _LISTE = [
     S("sec_rachats_xbrl", "SEC : rachats d'actions faits (rapports annuels, données XBRL)", "compagnies", ("sec.gov",), 1,
       "https://data.sec.gov/api/xbrl/frames/us-gaap/PaymentsForRepurchaseOfCommonStock/USD/CY2025.json",
       passages=("matin",)),
-    # Lot K : santé financière (9 critères de Piotroski) des rapports annuels : montrée sur la fiche, 0 point
-    S("sec_sante", "SEC : santé financière des compagnies (rapports annuels, données XBRL)", "compagnies", ("sec.gov",), 1,
-      "https://data.sec.gov/api/xbrl/frames/us-gaap/Assets/USD/CY2025Q4I.json", passages=("matin",)),
+    # Lot K : santé financière (9 critères de Piotroski) tirée du dernier rapport annuel de chaque compagnie des listes
+    # (dossier XBRL de la SEC) : montrée sur la fiche, 0 point. Lue à chaque passage, chaque compagnie une fois par jour.
+    S("sec_sante", "SEC : santé financière des compagnies des listes (rapport annuel, données XBRL)", "compagnies",
+      ("sec.gov",), 1, "https://data.sec.gov/api/xbrl/companyfacts/CIK0001326380.json"),
     # Lot 3c : contrats de 10 M$ et plus (nouveaux ou hausses), lus chaque matin sur l'API du portail (20 s entre 2 requêtes)
     S("contrats_ca_10k", "Contrats fédéraux de 10 M$ et plus (publication proactive)", "canada",
       ("open.canada.ca", "ouvert.canada.ca"), 2, "https://rechercher.ouvert.canada.ca/contrats/",

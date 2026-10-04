@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 from . import __version__, argent, calendrier, emetteurs, resultats
-from .collecteurs import congres, lobbying, rachats
+from .collecteurs import congres, lobbying, rachats, sante
 from .health import LIBELLES, statut
 from .registry import SOURCES
 from .score import calculer, jour_de_calcul
@@ -136,12 +136,11 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
         _ecrire(donnees / "app" / "rachats.json", rachats.pour_app(donnees, symboles_listes))
     except Exception as exc:  # noqa: BLE001
         print(f"Rachats : erreur, fichier de l'app pas mis à jour ({type(exc).__name__}: {exc})")
-    # Santé financière (9 critères de Piotroski, rapports annuels XBRL de la SEC) des compagnies des listes (lot K)
-    # EN PAUSE (4 oct. 2026) : le labo a trouvé deux erreurs (bilans trimestriels pour les exercices qui ne finissent pas
-    # vers décembre, lien vers une circulaire au lieu du rapport annuel). Fichier vide : la fiche ne montre rien tant que
-    # le calcul n'est pas refait avec le rapport annuel de chaque compagnie (sante.pour_app n'est plus appelé).
+    # Santé financière (9 critères de Piotroski, dernier rapport annuel XBRL de la SEC) des compagnies des listes (lot K)
     try:
-        _ecrire(donnees / "app" / "sante.json", {})
+        score = json.loads(chemin.read_text(encoding="utf-8")) if chemin.exists() else {}
+        symboles_listes = [x["symbole"] for liste in ("hausse", "baisse") for x in score.get(liste, [])]
+        _ecrire(donnees / "app" / "sante.json", sante.pour_app(donnees, symboles_listes))
     except Exception as exc:  # noqa: BLE001
         print(f"Santé financière : erreur, fichier de l'app pas mis à jour ({type(exc).__name__}: {exc})")
     # Résultats de Radar (lot G) : l'historique des entrées dans les listes (score publié), puis la mesure avec les prix

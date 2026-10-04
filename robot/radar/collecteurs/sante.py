@@ -1,6 +1,6 @@
-"""Santé financière d'une compagnie : les 9 critères de Piotroski (2000), calculés avec ses rapports annuels (XBRL),
-lus sur l'API officielle de la SEC (data.sec.gov, « frames » : un fichier par donnée et par année, toutes les
-compagnies d'un coup).
+"""Santé financière d'une compagnie : les 9 critères de Piotroski (2000), calculés avec SON DERNIER RAPPORT ANNUEL
+(10-K, ou 20-F / 40-F), aux dates exactes de son exercice, lus sur l'API officielle de la SEC (data.sec.gov,
+« companyfacts » : tous les chiffres XBRL déposés par la compagnie, avec le rapport d'où vient chacun).
 
 L'étude : J. D. Piotroski, « Value Investing: The Use of Historical Financial Statement Information to Separate Winners
 from Losers », Journal of Accounting Research 38 (supplément, 2000), p. 1-41 (texte lu par le labo). Testée sur les
@@ -16,25 +16,39 @@ Les 9 critères (1 = bon signe), comme dans l'étude :
 - ΔMARGIN > 0 : la marge brute (en % des ventes) monte ; ΔTURN > 0 : les ventes divisées par l'actif du début de
   l'année montent.
 
+Les chiffres (refait le 4 oct. 2026 après la contre-vérification du labo) :
+- l'exercice étudié (t) = le plus récent exercice complet (350 à 380 jours) dont un rapport annuel donne le bénéfice ;
+  son rapport = le dernier déposé pour cet exercice (un rapport modifié remplace l'original) ;
+- les chiffres de t et de l'exercice d'avant (t-1) sont ceux que CE rapport donne ; le bilan de fin t-2 (l'actif) vient
+  de ce rapport s'il le donne, sinon du dernier rapport annuel déposé qui le donne ;
+- un rapport trimestriel (10-Q) ou une circulaire (DEF 14A) ne compte jamais, même s'il répète un chiffre.
+Avant ce correctif, les fichiers « frames » de la SEC donnaient le bilan le plus proche de la fin de l'année civile : un
+bilan trimestriel pour les exercices qui ne finissent pas vers décembre (ex. LESL : 3 janvier 2026 au lieu du
+4 octobre 2025), et le lien menait parfois à la circulaire de procuration (ex. GME : DEF 14A).
+
 Rien plutôt que faux : un score seulement si les 9 critères se calculent. Une dette à long terme non déclarée compte
-pour 0 (compagnie sans dette) et une émission d'actions non déclarée pour aucune émission. Mesuré au labo le 4 oct. 2026
-sur 512 compagnies connues de Radar : 47 % ont alors les 9 critères (10 % si chaque donnée devait être déclarée) ; il
-manque surtout la marge brute (biotechs, banques), la liquidité (banques) et les compagnies étrangères (normes IFRS).
+pour 0 (compagnie sans dette) et une émission d'actions non déclarée pour aucune émission.
+
+Lu pour les compagnies des listes seulement (data/app/aujourdhui.json du passage précédent) : une fois par jour (date
+UTC), et une compagnie qui vient d'entrer dans les listes au passage suivant. Un dossier par compagnie.
 """
 from __future__ import annotations
 
 import json
+from datetime import date, timedelta
 from pathlib import Path
 
 from .. import emetteurs
 from ..http import ErreurSource
 from ..models import Evenement
-from .rachats import annee_xbrl
 
-VERSION = "sante-1"
-FRAMES = "https://data.sec.gov/api/xbrl/frames/us-gaap/{tag}/USD/{periode}.json"
+VERSION = "sante-2"
+DOSSIER = "https://data.sec.gov/api/xbrl/companyfacts/CIK{cik:010d}.json"
 ETUDE = "https://www.ivey.uwo.ca/media/3775523/value_investing_the_use_of_historical_financial_statement_information.pdf"
-# Pour chaque donnée, les étiquettes XBRL dans l'ordre de préférence : la première trouvée pour la compagnie compte.
+ANNUELS = {"10-K", "10-K/A", "10-KT", "10-KT/A", "20-F", "20-F/A", "40-F", "40-F/A"}
+JOURS_EXERCICE = (350, 380)  # un exercice complet : 52 ou 53 semaines, ou une année
+# Pour chaque donnée, les étiquettes XBRL dans l'ordre de préférence : la première que le rapport donne pour t compte,
+# et la même sert pour t-1.
 DUREE = {
     "benefice": ["NetIncomeLoss", "ProfitLoss", "IncomeLossFromContinuingOperations"],
     "flux": ["NetCashProvidedByUsedInOperatingActivities", "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations"],
@@ -57,49 +71,109 @@ def chemin(donnees) -> Path:
     return Path(donnees) / "sec" / "sante_xbrl.json"
 
 
-def periodes(annee: int) -> dict:
-    """t = l'exercice étudié, t1 = celui d'avant ; les bilans (instants) de fin t, t1 et t2."""
-    return {"duree": {"t": f"CY{annee}", "t1": f"CY{annee - 1}"},
-            "instant": {"t": f"CY{annee}Q4I", "t1": f"CY{annee - 1}Q4I", "t2": f"CY{annee - 2}Q4I"}}
+def lien(cik, accn: str) -> str:
+    return f"https://www.sec.gov/Archives/edgar/data/{int(cik)}/{accn.replace('-', '')}/{accn}-index.htm"
 
 
-def lire_frame(ctx, tag: str, periode: str) -> list[dict]:
-    """Les lignes d'un fichier « frames » ; [] si la SEC n'a pas ce fichier (étiquette abandonnée : HTTP 404)."""
+def lire_dossier(ctx, cik) -> dict | None:
+    """Le dossier XBRL de la compagnie ; None si la SEC n'en a pas (HTTP 404 : aucune donnée XBRL)."""
     try:
-        r = json.loads(ctx.client.get(FRAMES.format(tag=tag, periode=periode)).contenu)
+        d = json.loads(ctx.client.get(DOSSIER.format(cik=int(cik))).contenu)
     except ErreurSource as exc:
         if str(exc).endswith("HTTP 404"):
-            return []
+            return None
         raise
-    if (r.get("tag"), r.get("ccp"), r.get("uom")) != (tag, periode, "USD") or not isinstance(r.get("data"), list):
-        raise RuntimeError(f"réponse inattendue de l'API de la SEC pour {tag} {periode} (format changé ?)")
-    return r["data"]
+    if not isinstance(d, dict) or str(d.get("cik")).lstrip("0") != str(int(cik)) or not isinstance(d.get("facts"), dict):
+        raise RuntimeError(f"réponse inattendue de l'API de la SEC pour le CIK {cik} (format changé ?)")
+    return d
+
+
+def _annuels(dossier: dict, tag: str) -> list[dict]:
+    """Les chiffres en dollars US d'une étiquette qui viennent d'un rapport annuel."""
+    faits = dossier.get("facts", {}).get("us-gaap", {}).get(tag, {}).get("units", {}).get("USD", [])
+    return [f for f in faits if f.get("form") in ANNUELS and f.get("val") is not None and f.get("end") and f.get("accn")]
+
+
+def _jours(f: dict) -> int:
+    return (date.fromisoformat(f["end"]) - date.fromisoformat(f["start"])).days
+
+
+def extraire(dossier: dict) -> dict:
+    """Les chiffres des 9 critères tirés du dernier rapport annuel, aux dates de l'exercice de la compagnie ;
+    {"rien": raison} si l'exercice ou son rapport manquent."""
+    exercices = [f for tag in DUREE["benefice"] for f in _annuels(dossier, tag)
+                 if f.get("start") and JOURS_EXERCICE[0] <= _jours(f) <= JOURS_EXERCICE[1]]
+    if not exercices:
+        return {"rien": "aucun bénéfice annuel dans un rapport annuel"}
+    fin = max(f["end"] for f in exercices)
+    ref = max((f for f in exercices if f["end"] == fin), key=lambda f: (f.get("filed", ""), f["accn"]))
+    debut, accn = ref["start"], ref["accn"]
+    d0 = date.fromisoformat(debut)
+    avant = [f for f in exercices if f["accn"] == accn and d0 - timedelta(days=7) <= date.fromisoformat(f["end"]) < d0]
+    if not avant:
+        return {"rien": "le rapport ne donne pas l'exercice précédent"}
+    debut1, fin1 = max((f["start"], f["end"]) for f in avant)
+    d1 = date.fromisoformat(debut1)
+    bilans_t2 = [f for f in _annuels(dossier, "Assets")
+                 if not f.get("start") and d1 - timedelta(days=7) <= date.fromisoformat(f["end"]) < d1]
+    if not bilans_t2:
+        return {"rien": "aucun bilan de fin t-2 dans un rapport annuel"}
+    fin2 = max(f["end"] for f in bilans_t2)
+
+    def du_rapport(tag: str, debut_: str | None, fin_: str):
+        faits = [f for f in _annuels(dossier, tag) if f["accn"] == accn and f["end"] == fin_ and f.get("start") == debut_]
+        return faits[0]["val"] if faits else None
+
+    t: dict = {}
+    t1: dict = {}
+    etiquettes: dict = {}
+    for groupe, (p, p1) in ((DUREE, ((debut, fin), (debut1, fin1))), (INSTANT, ((None, fin), (None, fin1)))):
+        for concept, tags in groupe.items():
+            for tag in tags:
+                x = du_rapport(tag, *p)
+                if x is None:
+                    continue
+                etiquettes[concept], t[concept] = tag, x
+                x1 = du_rapport(tag, *p1)
+                if x1 is not None:
+                    t1[concept] = x1
+                break
+    # L'actif de fin t-2 : de ce rapport s'il le donne, sinon du dernier rapport annuel déposé qui le donne
+    a2 = max((f for f in bilans_t2 if f["end"] == fin2), key=lambda f: (f["accn"] == accn, f.get("filed", ""), f["accn"]))
+    return {"rapport": {"accn": accn, "forme": ref["form"], "depose": ref.get("filed")},
+            "debut": debut, "fin": fin, "debut1": debut1, "fin1": fin1, "fin2": fin2, "source_t2": a2["accn"],
+            "etiquettes": etiquettes, "t": t, "t1": t1, "t2": {"actif": a2["val"]}}
+
+
+def listes(donnees) -> list[str]:
+    """Les symboles des listes publiées au passage précédent (hausse puis baisse)."""
+    p = Path(donnees) / "app" / "aujourdhui.json"
+    if not p.exists():
+        return []
+    a = json.loads(p.read_text(encoding="utf-8"))
+    return [x["symbole"] for liste in ("hausse", "baisse") for x in a.get(liste, [])]
 
 
 def collecter(ctx) -> list[Evenement]:
-    """Chaque matin : les données des 9 critères pour les compagnies connues de Radar (fiches SEC, voir emetteurs.py).
-    Le fichier n'est réécrit que s'il change."""
-    annee = annee_xbrl(ctx.maintenant.date())
-    connus = {int(f["cik"]) for f in emetteurs.charger(ctx.donnees).values() if f.get("cik")}
-    par_cik: dict = {}
-    p = periodes(annee)
-    for genre, groupe in (("duree", DUREE), ("instant", INSTANT)):
-        for concept, tags in groupe.items():
-            for cle, periode in p[genre].items():
-                for tag in tags:
-                    for x in lire_frame(ctx, tag, periode):
-                        if x.get("cik") not in connus or x.get("val") is None:
-                            continue
-                        d = par_cik.setdefault(str(x["cik"]), {})
-                        valeurs = d.setdefault(cle, {})
-                        if concept in valeurs:
-                            continue  # une étiquette préférée a déjà donné cette donnée
-                        valeurs[concept] = x["val"]
-                        if (concept, cle) == ("benefice", "t"):  # le rapport annuel de l'exercice étudié
-                            d.update({"accn": x.get("accn"), "debut": x.get("start"), "fin": x.get("end")})
-    nouveau = {"version": VERSION, "cadre": f"CY{annee}", "par_cik": par_cik}
+    """À chaque passage : le dossier XBRL des compagnies des listes qui n'ont pas encore été lues aujourd'hui (date UTC).
+    Le fichier ne garde que les compagnies des listes ; il n'est réécrit que s'il change."""
+    aujourdhui = ctx.maintenant.date().isoformat()
+    ciks = {s: f.get("cik") for s, f in emetteurs.charger(ctx.donnees).items() if f.get("cik")}
     c = chemin(ctx.donnees)
-    if not c.exists() or json.loads(c.read_text(encoding="utf-8")) != nouveau:
+    ancien = json.loads(c.read_text(encoding="utf-8")) if c.exists() else {}
+    deja = ancien.get("par_cik", {}) if ancien.get("version") == VERSION else {}
+    par_cik: dict = {}
+    for s in listes(ctx.donnees):
+        if s not in ciks or str(int(ciks[s])) in par_cik:
+            continue
+        cle = str(int(ciks[s]))
+        if deja.get(cle, {}).get("lu") == aujourdhui:
+            par_cik[cle] = deja[cle]
+            continue
+        dossier = lire_dossier(ctx, ciks[s])
+        par_cik[cle] = {"lu": aujourdhui, **(extraire(dossier) if dossier else {"rien": "aucune donnée XBRL à la SEC"})}
+    nouveau = {"version": VERSION, "par_cik": par_cik}
+    if ancien != nouveau:
         c.parent.mkdir(parents=True, exist_ok=True)
         c.write_text(json.dumps(nouveau, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n", encoding="utf-8")
     return []
@@ -145,20 +219,19 @@ def criteres(v: dict) -> dict | None:
 def pour_app(donnees, symboles_listes: list[str]) -> dict:
     """Le fichier de l'app (data/app/sante.json) : le score des compagnies des listes, seulement s'il est complet."""
     c = chemin(donnees)
-    if not c.exists():
-        return {}
-    x = json.loads(c.read_text(encoding="utf-8"))
-    ciks = {s: f.get("cik") for s, f in emetteurs.charger(donnees).items()}
+    x = json.loads(c.read_text(encoding="utf-8")) if c.exists() else {}
+    if x.get("version") != VERSION:
+        return {}  # pas encore lu avec le rapport annuel : rien plutôt que l'ancien calcul
+    ciks = {s: f.get("cik") for s, f in emetteurs.charger(donnees).items() if f.get("cik")}
     par_symbole = {}
     for s in symboles_listes:
-        cik = ciks.get(s)
-        v = x["par_cik"].get(str(cik)) if cik else None
-        r = criteres(v) if v else None
-        if r is None or not v.get("accn"):
+        v = x["par_cik"].get(str(int(ciks[s]))) if s in ciks else None
+        r = criteres(v) if v and v.get("rapport") else None
+        if r is None:
             continue
-        accn = v["accn"]
-        par_symbole[s] = {"cik": cik, "f_score": sum(r["criteres"].values()), **r, "debut": v.get("debut"),
-                          "fin": v.get("fin"), "accn": accn,
-                          "lien": f"https://www.sec.gov/Archives/edgar/data/{cik}/{accn.replace('-', '')}/{accn}-index.htm"}
-    return {"version": x.get("version", VERSION), "cadre": x["cadre"], "etude": ETUDE,
-            "source": "https://data.sec.gov/api/xbrl/frames/", "par_symbole": par_symbole}
+        rapport = v["rapport"]
+        par_symbole[s] = {"cik": int(ciks[s]), "f_score": sum(r["criteres"].values()), **r, "debut": v["debut"],
+                          "fin": v["fin"], "accn": rapport["accn"], "forme": rapport["forme"], "depose": rapport["depose"],
+                          "lien": lien(ciks[s], rapport["accn"])}
+    return {"version": VERSION, "etude": ETUDE, "source": "https://data.sec.gov/api/xbrl/companyfacts/",
+            "par_symbole": par_symbole}

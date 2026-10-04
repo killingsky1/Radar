@@ -349,20 +349,19 @@ ra.chemin_xbrl(sys.argv[1]).write_text(json.dumps({"cadre": "CY2025", "adresse":
 score = json.loads((Path(sys.argv[1]) / "app" / "aujourdhui.json").read_text(encoding="utf-8"))
 _ecrire(Path(sys.argv[1]) / "app" / "rachats.json",
         ra.pour_app(Path(sys.argv[1]), [x["symbole"] for l in ("hausse", "baisse") for x in score.get(l, [])]))
-# Santé financière (lot K) : le vrai calcul du robot (sante.collecter puis sante.pour_app) sur les vrais extraits des
-# fichiers « frames » de la SEC des tests du robot : AMD a ses 9 critères (8/9) ; NVDA n'est pas dans les extraits, donc
-# pas de section. Date fixe : les extraits sont ceux de l'exercice 2025.
+# Santé financière (lot K) : le vrai calcul du robot (sante.collecter puis sante.pour_app) sur les vrais dossiers
+# « companyfacts » de la SEC des tests du robot : AMD a ses 9 critères dans son dernier rapport annuel (8/9) ; NVDA n'a
+# pas de dossier dans les extraits (la SEC répondrait 404 ici), donc pas de section. Date fixe : le 5 octobre 2026.
 from radar.collecteurs import sante as sa  # noqa: E402
-EXTRAITS_K = json.loads((Path(__file__).resolve().parents[2] / "robot" / "tests" / "fixtures" / "lotK"
-                         / "frames_extraits.json").read_text(encoding="utf-8"))
+DOSSIERS_K = Path(__file__).resolve().parents[2] / "robot" / "tests" / "fixtures" / "lotK" / "companyfacts"
 
 
 class FauxSec:
     def get(self, url, entetes=None):
-        tag, _, periode = url.removeprefix("https://data.sec.gov/api/xbrl/frames/us-gaap/").removesuffix(".json").split("/")
-        if f"{tag}|{periode}" not in EXTRAITS_K:
+        cik = int(url.removeprefix("https://data.sec.gov/api/xbrl/companyfacts/CIK").removesuffix(".json"))
+        if not (DOSSIERS_K / f"{cik}.json").exists():
             raise ErreurSource(f"{url} : HTTP 404")
-        c = json.dumps(EXTRAITS_K[f"{tag}|{periode}"]).encode()
+        c = (DOSSIERS_K / f"{cik}.json").read_bytes()
         return type("T", (), {"contenu": c, "sha256": empreinte(c)})()
 
 

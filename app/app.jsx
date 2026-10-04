@@ -2642,7 +2642,7 @@ const DELAIS_AIDE = [
   ["Contrats de la Défense (USAspending)", "publiés avec 90 jours de délai"],
   ["Fins de blocage (prospectus 424B4)", "dates prévues ; les banques peuvent lever le blocage plus tôt"],
   ["Rachats d'actions (8-K)", "un plafond, pas un achat ; les rachats faits arrivent dans le rapport annuel, jusqu'à 90 jours après la fin de l'exercice"],
-  ["Santé financière (rapport annuel)", "jusqu'à 90 jours après la fin de l'exercice ; le score change une fois par année"],
+  ["Santé financière (rapport annuel)", "jusqu'à 90 jours après la fin de l'exercice (4 mois pour une compagnie étrangère, rapport 20-F) ; le score change une fois par année"],
 ];
 
 function EcranAide({ retour }) {
