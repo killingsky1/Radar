@@ -299,11 +299,11 @@ const fs = require("fs");
       });
       santeOk = servi && !!x && somme === x.f_score && total === `${x.f_score}/9` && JSON.stringify(lignes) === JSON.stringify(attendu)
         && lien === x.lien && lignesAccn === 1 && enTete === `Santé financière · exercice terminé le ${fin}` && pied.includes("0 point dans la note");
-      dire(`Santé financière sur la fiche ${titre} : ${total} · « ${enTete} » · ${lignes.filter((l) => l[0]).length} critères positifs sur ${lignes.length}, dans l'ordre de l'étude : ${JSON.stringify(lignes) === JSON.stringify(attendu) ? "OUI" : "NON"} · lien ${lien} (numéro sur ${lignesAccn} ligne) · ${Object.keys(saLocal.par_symbole || {}).length} compagnies dans le fichier (${saLocal.cadre}) · servi = fichier du robot : ${servi ? "OUI" : "NON"} · conforme : ${santeOk ? "OUI" : "NON"}`);
+      dire(`Santé financière sur la fiche ${titre} : ${total} · « ${enTete} » · ${lignes.filter((l) => l[0]).length} critères positifs sur ${lignes.length}, dans l'ordre de l'étude : ${JSON.stringify(lignes) === JSON.stringify(attendu) ? "OUI" : "NON"} · lien ${lien} (numéro sur ${lignesAccn} ligne) · ${Object.keys(saLocal.par_symbole || {}).length} compagnies dans le fichier (calcul ${saLocal.version}) · servi = fichier du robot : ${servi ? "OUI" : "NON"} · conforme : ${santeOk ? "OUI" : "NON"}`);
     } else {
       const texteFiche = await p.locator(".ecran").last().innerText();
       santeOk = servi && !x && !/santé financière/i.test(texteFiche);
-      dire(`Santé financière sur la fiche ${titre} : pas de score complet dans le fichier (${saLocal.cadre}) → section absente, comme prévu · servi = fichier du robot : ${servi ? "OUI" : "NON"} · conforme : ${santeOk ? "OUI" : "NON"}`);
+      dire(`Santé financière sur la fiche ${titre} : pas de score complet dans le fichier (calcul ${saLocal.version}) → section absente, comme prévu · servi = fichier du robot : ${servi ? "OUI" : "NON"} · conforme : ${santeOk ? "OUI" : "NON"}`);
     }
   } catch (e) {
     dire(`Santé financière : ERREUR ${String(e).slice(0, 200)}`);
