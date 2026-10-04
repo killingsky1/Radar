@@ -56,20 +56,23 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     }
     assert.equal(await l.nth(1).locator(".recent").count(), 1); // NVDA : déposé aujourd'hui
   });
-  await verifier("Radar animé : 3 points (AMD et NVDA en hausse, XMPL en baisse), plus près du centre = note plus forte", async () => {
+  await verifier("Radar animé : seulement les hausses (AMD, NVDA), la baisse (XMPL) dans sa carte, plus près du centre = note plus haute", async () => {
     const cibles = p.locator(".radar-cible");
-    assert.equal(await cibles.count(), 3);
+    assert.equal(await cibles.count(), 2);
     const etiquettes = await p.locator(".radar-etiquette").allInnerTexts();
-    assert.deepEqual([...etiquettes].sort(), ["AMD", "NVDA", "XMPL"]);
-    assert.equal(await p.locator(".radar-cible.baisse").count(), 1);
-    assert.ok((await p.locator(".radar-cible.baisse").getAttribute("aria-label")).startsWith("XMPL, à la baisse, note 0,0 sur 10"));
+    assert.deepEqual([...etiquettes].sort(), ["AMD", "NVDA"]);
+    assert.equal(await p.locator(".radar-cible.baisse").count(), 0);
+    assert.ok((await p.locator(".alerte-baisse").innerText()).includes("1 à surveiller à la baisse"));
+    const legende = (await p.locator(".radar-legende").innerText()).replace(/\u00a0|\u202f/g, " ");
+    assert.ok(legende.includes("À la hausse") && legende.includes("Plus près du centre : note plus haute") && !legende.includes("Baisse"), legende);
     // Le balayage tourne et chaque point s'allume (animations CSS actives)
     assert.equal(await p.locator(".radar-balai").evaluate((e) => getComputedStyle(e).animationName), "balayage");
-    // Distance au centre : la note la plus forte (la plus loin de 5) est la plus proche du centre
+    // Distance au centre : la note la plus haute est la plus proche du centre
     const pos = await cibles.evaluateAll((els) => els.map((e) => [e.getAttribute("aria-label"), Math.hypot(parseFloat(e.style.left) - 50, parseFloat(e.style.top) - 50)]));
-    const note = (l) => Math.abs(parseFloat(l.match(/note (\d+,\d)/)[1].replace(",", ".")) - 5);
+    const note = (l) => parseFloat(l.match(/note (\d+,\d)/)[1].replace(",", "."));
     const tries = [...pos].sort((a, b) => note(b[0]) - note(a[0]));
     assert.ok(tries.every((x, i) => i === 0 || x[1] >= tries[i - 1][1] - 0.01), JSON.stringify(pos));
+    assert.ok(tries[0][1] < tries[tries.length - 1][1], JSON.stringify(pos));
   });
   await verifier("Radar : toucher un point ouvre la fiche, avec la note dans un anneau", async () => {
     await p.locator(".radar-cible", { hasText: "NVDA" }).click(); await p.waitForTimeout(250);
@@ -161,6 +164,19 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       if (baisse) { await p.locator(".retour").click(); await p.waitForTimeout(200); }
     }
   };
+  await verifier("Fiche : bouton « Voir le cours » (Yahoo Finance, nouvel onglet), aussi pour une baisse", async () => {
+    for (const [sym, baisse] of [["AMD", false], ["XMPL", true]]) {
+      await fiche(sym, async () => {
+        const a = p.locator("a.bouton-cours");
+        assert.equal(await a.count(), 1);
+        assert.equal((await a.innerText()).trim(), "Voir le cours");
+        assert.equal(await a.getAttribute("href"), `https://finance.yahoo.com/quote/${sym}/`);
+        assert.equal(await a.getAttribute("target"), "_blank");
+        assert.ok((await a.getAttribute("rel")).includes("noopener"));
+        assert.ok((await p.locator(".fiche-cours-source").innerText()).includes("Yahoo Finance, un site externe"));
+      }, baisse);
+    }
+  });
   await verifier("Fiche AMD : lobbying (total, firme incluse, sujets, 2 rapports, phrase du Sénat)", () => fiche("AMD", async () => {
     // Le format compact varie selon la version de Chrome (« 1,23 M$ US » ou « 1,23 M $ US ») : on compare sans espaces
     const total = (await p.locator(".lobbying-total").innerText()).replace(/\s/g, "");

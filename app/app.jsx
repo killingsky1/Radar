@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.23.0";
+const VERSION = "0.24.0";
 
 // ---------- Constantes ----------
 
@@ -803,8 +803,9 @@ function AnneauNote({ valeur, baisse }) {
   );
 }
 
-// Le radar de l'accueil : les compagnies notées. Plus près du centre = note plus forte (loin de 5, le neutre).
-// Rond = hausse, losange = baisse (jamais la couleur seule), symbole écrit à côté ; toucher un point ouvre la fiche.
+// Le radar de l'accueil : les compagnies à la hausse (7/10 et plus). Plus près du centre = note plus haute.
+// Les baisses n'y sont pas : elles ont leur carte « à surveiller à la baisse », juste en dessous (une note basse près du
+// centre se lisait à l'envers). Symbole écrit à côté ; toucher un point ouvre la fiche.
 // Angles : pas de 360/n, avec un saut pour que deux rangs qui se suivent ne soient pas voisins (étiquettes lisibles).
 const TOUR_RADAR = 4; // secondes par tour du balayage
 
@@ -812,17 +813,17 @@ function pgcd(a, b) {
   return b ? pgcd(b, a % b) : a;
 }
 
-function RadarSuggestions({ hausse, baisse }) {
+function RadarSuggestions({ hausse }) {
   const { ouvrirCompagnie } = useApp();
-  const points = [...hausse.slice(0, 8).map((s) => ({ s, sens: 1 })), ...baisse.slice(0, 3).map((s) => ({ s, sens: -1 }))];
+  const points = hausse.slice(0, 8);
   const n = points.length;
-  const force = (x) => Math.round(Math.abs((x.note10 ?? 5) - 5) * 10) / 10;
-  const niveaux = [...new Set(points.map(({ s }) => force(s)))].sort((a, b) => b - a); // du plus fort au plus faible
+  const noteDe = (s) => s.note10 ?? 5;
+  const niveaux = [...new Set(points.map(noteDe))].sort((a, b) => b - a); // de la plus haute à la plus basse
   let saut = Math.max(1, Math.round(n / 3));
   while (n > 1 && pgcd(saut, n) !== 1) saut += 1;
   return (
     <div className="carte radar-carte">
-      <div className="radar" role="group" aria-label={`Radar : ${n} compagnies notées. Plus près du centre, note plus forte.`}>
+      <div className="radar" role="group" aria-label={`Radar : ${n} compagnies à la hausse. Plus près du centre, note plus haute.`}>
         <svg className="radar-grille" viewBox="0 0 100 100" aria-hidden="true">
           {[12.5, 25, 37.5, 49.5].map((r) => (
             <circle key={r} cx="50" cy="50" r={r} />
@@ -834,10 +835,10 @@ function RadarSuggestions({ hausse, baisse }) {
         <div className="radar-masque" aria-hidden="true">
           <div className="radar-balai" />
         </div>
-        {points.map(({ s, sens }, i) => {
-          // Distance au centre selon le RANG de force (|note − 5|) : les points ne se tassent pas, l'ordre reste exact,
+        {points.map((s, i) => {
+          // Distance au centre selon le RANG de la note : les points ne se tassent pas, l'ordre reste exact,
           // et deux notes égales sont à la même distance.
-          const niveau = niveaux.indexOf(force(s));
+          const niveau = niveaux.indexOf(noteDe(s));
           const rayon = 0.24 + (niveaux.length > 1 ? (0.66 * niveau) / (niveaux.length - 1) : 0.3);
           const angle = (((i * saut) % n) * 360) / n;
           const rad = (angle * Math.PI) / 180;
@@ -848,12 +849,12 @@ function RadarSuggestions({ hausse, baisse }) {
           const dy = -Math.cos(rad) * 15;
           return (
             <button
-              key={`${sens}${s.symbole}`}
+              key={s.symbole}
               type="button"
-              className={`radar-cible ${sens > 0 ? "hausse" : "baisse"}`}
+              className="radar-cible hausse"
               style={{ left: `${x}%`, top: `${y}%`, "--delai": `${((angle / 360 - 1) * TOUR_RADAR).toFixed(2)}s` }}
               onClick={() => ouvrirCompagnie(s.symbole)}
-              aria-label={`${s.symbole}, ${sens > 0 ? "à la hausse" : "à la baisse"}, note ${note(s.note10)} sur 10`}
+              aria-label={`${s.symbole}, note ${note(s.note10)} sur 10`}
             >
               <span className="radar-marque" />
               <span className="radar-etiquette" style={{ transform: `translate(calc(-50% + ${dx.toFixed(1)}px), calc(-50% + ${dy.toFixed(1)}px))` }}>
@@ -864,9 +865,8 @@ function RadarSuggestions({ hausse, baisse }) {
         })}
       </div>
       <p className="radar-legende">
-        <span className="legende-marque hausse" /> Hausse
-        <span className="legende-marque baisse" /> Baisse
-        <span className="legende-texte">{fr("Plus près du centre : note plus forte. Touchez un point.")}</span>
+        <span className="legende-marque hausse" /> À la hausse
+        <span className="legende-texte">{fr("Plus près du centre : note plus haute. Touchez un point.")}</span>
       </p>
     </div>
   );
@@ -1422,6 +1422,10 @@ function EcranSuggestions({ retour }) {
   );
 }
 
+// Le cours de l'action : un lien vers une page publique, ouverte dans Safari par la personne (le robot ne lit jamais ce
+// site). Format de Yahoo Finance : le point d'une catégorie d'actions devient un tiret (ex. BRK.B → BRK-B).
+const lienCours = (symbole) => `https://finance.yahoo.com/quote/${encodeURIComponent(symbole.replace(/\./g, "-"))}/`;
+
 function EcranCompagnie({ retour }) {
   const { donnees, compagnie, ouvrirDetail, favoris, basculerFavori, estNouveau } = useApp();
   const s = donnees.aujourdhui || {};
@@ -1462,10 +1466,17 @@ function EcranCompagnie({ retour }) {
           {estNouveau(c) && <span className="nouveau">Nouveau</span>}
           {c.recent && <span className="recent">Récent</span>}
         </p>
-        <button type="button" className={suivi ? "symbole-grand bouton-favori suivi presse" : "symbole-grand bouton-favori presse"} onClick={() => basculerFavori(c.symbole)} aria-pressed={suivi}>
-          <Icone nom="etoile" taille={16} rempli={suivi} epaisseur={2} />
-          {suivi ? "Dans mes favoris" : "Ajouter aux favoris"}
-        </button>
+        <div className="fiche-boutons">
+          <button type="button" className={suivi ? "symbole-grand bouton-favori suivi presse" : "symbole-grand bouton-favori presse"} onClick={() => basculerFavori(c.symbole)} aria-pressed={suivi}>
+            <Icone nom="etoile" taille={16} rempli={suivi} epaisseur={2} />
+            {suivi ? "Dans mes favoris" : "Ajouter aux favoris"}
+          </button>
+          <a className="symbole-grand bouton-cours presse" href={lienCours(c.symbole)} target="_blank" rel="noopener noreferrer">
+            <Icone nom="externe" taille={16} epaisseur={2} />
+            Voir le cours
+          </a>
+        </div>
+        <p className="fiche-cours-source">Le cours s'ouvre sur Yahoo Finance, un site externe.</p>
       </div>
 
       {c.groupes.map((g) => (
@@ -1743,7 +1754,7 @@ function Accueil({ pousser, allerAuFil }) {
         </div>
       ) : (
         <>
-          <RadarSuggestions hausse={hausse} baisse={baisse} />
+          {hausse.length > 0 && <RadarSuggestions hausse={hausse} />}
           <div className="section-ligne">
             <h2 className="section">À regarder aujourd'hui</h2>
             <button type="button" className="lien" onClick={() => ouvrirSuggestions("hausse")}>
@@ -2986,6 +2997,9 @@ input { font: inherit; color: var(--texte); }
 .etude b { color: var(--accent); font-weight: 600; }
 .bloc-lien { display: block; margin: 20px auto 0; }
 .symbole-grand.bouton-favori { font-family: inherit; font-weight: 600; } /* plus précis que .symbole-grand (police à chasse fixe) */
+.fiche-boutons { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.symbole-grand.bouton-cours { font-family: inherit; font-weight: 600; text-decoration: none; }
+.fiche-cours-source { margin: 8px 0 0; color: var(--texte-3); font-size: .75rem; }
 
 /* Catégories */
 .grille-cat { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
@@ -3199,12 +3213,10 @@ input { font: inherit; color: var(--texte); }
 .radar-cible { position: absolute; z-index: 1; width: 44px; height: 44px; margin: -22px 0 0 -22px; display: flex; align-items: center; justify-content: center; }
 .radar-marque { width: 10px; height: 10px; border-radius: 50%; color: var(--radar-hausse); background: currentColor; box-shadow: 0 0 0 2px var(--carte);
   animation: eclat 4s linear infinite; animation-delay: var(--delai, 0s); }
-.radar-cible.baisse .radar-marque { color: var(--radar-baisse); border-radius: 2px; transform: rotate(45deg); }
 @keyframes eclat { 0% { opacity: 1; box-shadow: 0 0 0 2px var(--carte), 0 0 14px 4px currentColor; } 55%, 100% { opacity: .6; box-shadow: 0 0 0 2px var(--carte); } }
 .radar-etiquette { position: absolute; left: 50%; top: 50%; font-size: .6875rem; font-weight: 700; letter-spacing: .02em; color: var(--texte-2); white-space: nowrap; pointer-events: none; }
 .radar-legende { margin: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 6px; font-size: .75rem; color: var(--texte-2); }
 .legende-marque { display: inline-block; width: 8px; height: 8px; margin-left: 4px; border-radius: 50%; background: var(--radar-hausse); }
-.legende-marque.baisse { border-radius: 1px; transform: rotate(45deg); background: var(--radar-baisse); }
 .legende-texte { flex-basis: 100%; text-align: center; color: var(--texte-3); }
 
 /* Anneau de la note (fiche) */
