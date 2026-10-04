@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.21.0";
+const VERSION = "0.22.0";
 
 // ---------- Constantes ----------
 
@@ -147,6 +147,11 @@ const CONTROLES_SOURCES = {
   fin_calculee: "Fin = date du prospectus + durée",
   sans_levee_anticipee: "Aucune levée anticipée mentionnée",
   compagnie_cotee: "Compagnie cotée en bourse",
+  formule_d_autorisation: "Formule d'autorisation lue (nouveau programme, hausse ou nouveau total)",
+  conseil_nomme: "Conseil d'administration nommé dans la phrase",
+  meme_montant_partout: "Même plafond partout dans le dépôt",
+  point_8k_des_rachats: "Point du 8-K lu (2.02, 7.01 ou 8.01)",
+  rachat_de_10_millions_et_plus: "10 M$ et plus (ou un nombre d'actions)",
   lettre_officielle: "Lettre d'approbation officielle",
   trimestres_consecutifs: "Trimestres consécutifs comparés",
   rapports_complets: "Deux rapports complets comparés",
@@ -464,7 +469,7 @@ function enGroupesParJour(liste) {
 // ---------- Données ----------
 
 const FICHIERS = ["meta", "aujourdhui", "fil", "a_verifier", "sources"];
-const FICHIERS_OPTIONNELS = ["elus", "lobbying", "calendrier", "resultats"]; // absents ou illisibles : l'app fonctionne sans
+const FICHIERS_OPTIONNELS = ["elus", "lobbying", "calendrier", "resultats", "rachats"]; // absents ou illisibles : l'app fonctionne sans
 
 function useDonnees() {
   const [etat, setEtat] = useState({ chargement: true, erreur: null, donnees: null });
@@ -1509,9 +1514,45 @@ function EcranCompagnie({ retour }) {
         </>
       )}
       <Lobbying symbole={c.symbole} />
+      <RachatsFaits symbole={c.symbole} />
       <LienMethode />
       <p className="avertissement">{s.note || "Pas des conseils financiers"}</p>
     </Ecran>
+  );
+}
+
+// Rachats d'actions faits pendant un exercice (rapport annuel, données XBRL de la SEC) : montré sur la fiche, 0 point.
+function RachatsFaits({ symbole }) {
+  const { donnees } = useApp();
+  const r = donnees.rachats;
+  if (!r?.par_symbole) return null;
+  const x = r.par_symbole[symbole];
+  let contenu;
+  if (!x) contenu = <p className="rachats-texte">Pas encore lu : le robot lit les données de la SEC chaque matin.</p>;
+  else if (x.illisible) contenu = <p className="rachats-texte">Montant négatif dans les données XBRL de la compagnie : une erreur de saisie, pas montré.</p>;
+  else if (x.montant == null)
+    contenu = <p className="rachats-texte">{fr("Aucun montant de rachat dans les données XBRL de la SEC pour cet exercice (la compagnie peut employer une autre étiquette, ou ne rien racheter).")}</p>;
+  else
+    contenu = (
+      <>
+        <p className="rachats-total">{argent(x.montant, "USD")}</p>
+        <p className="rachats-texte">
+          {fr(x.montant > 0 ? `Argent dépensé pour racheter ses actions pendant l'exercice du ${dateLongue(x.debut)} au ${dateLongue(x.fin)}, selon son rapport annuel.` : `Aucun rachat d'actions pendant l'exercice du ${dateLongue(x.debut)} au ${dateLongue(x.fin)}, selon son rapport annuel.`)}
+        </p>
+        <a className="transaction presse" href={x.lien} target="_blank" rel="noopener noreferrer">
+          <span className="transaction-qui">Rapport à la SEC ({x.accn})</span>
+          <span className="transaction-montant">
+            <Icone nom="externe" taille={16} />
+          </span>
+        </a>
+      </>
+    );
+  return (
+    <>
+      <h2 className="section">Rachats d'actions faits</h2>
+      <div className="carte liste rachats-faits">{contenu}</div>
+      <p className="rachats-source">{fr(`Données XBRL déclarées par la compagnie (« Payments for Repurchase of Common Stock »), API officielle de la SEC, exercice le plus proche de l'année ${r.cadre?.slice(2) || ""}. 0 point dans le score.`)}</p>
+    </>
   );
 }
 
@@ -2118,13 +2159,14 @@ function pourcent(n) {
   return `${n.toLocaleString("fr-CA", { maximumFractionDigits: n < 1 ? 2 : 1 })} %`;
 }
 
-const FAMILLES_ARGENT = [["tout", "Tout"], ["achats", "Achats"], ["ventes", "Ventes"], ["elus", "Élus"], ["contrats", "Contrats"]];
+const FAMILLES_ARGENT = [["tout", "Tout"], ["achats", "Achats"], ["ventes", "Ventes"], ["elus", "Élus"], ["contrats", "Contrats"], ["rachats", "Rachats"]];
 
 function dansFamille(l, f) {
   if (f === "achats") return l.famille === "dirigeants" && l.sens > 0;
   if (f === "ventes") return (l.famille === "dirigeants" && l.sens < 0) || l.famille === "intentions";
   if (f === "elus") return l.famille === "elus";
   if (f === "contrats") return l.famille === "contrats";
+  if (f === "rachats") return l.famille === "rachats";
   return true;
 }
 
@@ -2138,6 +2180,10 @@ function phraseArgent(l) {
   }
   if (l.famille === "intentions") return `${qui} prévoit vendre ${nombre(l.actions)} actions (≈ ${prixAction(l.prix, l.devise)} l'action, avis 144 à la SEC)`;
   if (l.famille === "elus") return `${qui} ${l.sens > 0 ? "achète" : "vend"}${l.role === "options" ? " des options" : ""} · fourchette officielle`;
+  if (l.famille === "rachats") {
+    const quoi = { hausse: "Programme de rachat d'actions augmenté par le conseil", total: "Programme de rachat d'actions porté à ce total par le conseil" }[l.role] || "Nouveau programme de rachat d'actions autorisé par le conseil";
+    return `${quoi} : un plafond, pas un achat fait`;
+  }
   return `${l.qui}${l.role ? ` · ${l.role}` : ""}`;
 }
 
@@ -2155,12 +2201,12 @@ function montantArgent(l) {
 }
 
 function LigneArgent({ l, ouvrir }) {
-  const genre = l.sens > 0 ? "achat" : l.sens < 0 ? "vente" : "contrat";
+  const genre = l.famille === "rachats" ? "rachat" : l.sens > 0 ? "achat" : l.sens < 0 ? "vente" : "contrat";
   const part = partArgent(l);
   return (
     <button type="button" className="ligne argent presse" onClick={() => ouvrir(l)}>
       <span className={`argent-sens ${genre}`}>
-        <Icone nom={l.sens > 0 ? "fleche-haut" : l.sens < 0 ? "fleche-bas" : "document"} taille={18} epaisseur={2.4} />
+        <Icone nom={genre === "rachat" ? "rafraichir" : l.sens > 0 ? "fleche-haut" : l.sens < 0 ? "fleche-bas" : "document"} taille={18} epaisseur={2.4} />
       </span>
       <span className="ligne-centre">
         <span className="ligne-titre">
@@ -2285,7 +2331,13 @@ function EcranArgent() {
             label="Période"
             options={[["jour", `Dernier jour${a.dernier_jour ? ` (${dateCourte(a.dernier_jour)})` : ""}`], ["7", "7 jours"], ["30", "30 jours"]]}
           />
-          <p className="explication">{fr(`${liste.length} transaction${liste.length > 1 ? "s" : ""}, du plus gros montant au plus petit. Touchez une ligne pour le document officiel.`)}</p>
+          <p className="explication">
+            {fr(
+              famille === "rachats"
+                ? `${liste.length} annonce${liste.length > 1 ? "s" : ""} de rachat d'actions, du plus gros plafond au plus petit. Un plafond autorisé par le conseil, pas un achat fait : la compagnie peut racheter moins, ou rien. 0 point dans la note.`
+                : `${liste.length} transaction${liste.length > 1 ? "s" : ""}, du plus gros montant au plus petit${liste.some((l) => l.famille === "rachats") ? " (les rachats annoncés sont des plafonds, pas des achats faits)" : ""}. Touchez une ligne pour le document officiel.`,
+            )}
+          </p>
           {liste.length === 0 ? (
             <div className="carte">
               <Vide icone="billet" titre="Rien pour cette période" texte="Essaie 30 jours ou un autre genre." />
@@ -2530,6 +2582,7 @@ const DELAIS_AIDE = [
   ["Élus du Congrès", "jusqu'à 45 jours après la transaction"],
   ["Contrats de la Défense (USAspending)", "publiés avec 90 jours de délai"],
   ["Fins de blocage (prospectus 424B4)", "dates prévues ; les banques peuvent lever le blocage plus tôt"],
+  ["Rachats d'actions (8-K)", "un plafond, pas un achat ; les rachats faits arrivent dans le rapport annuel, jusqu'à 90 jours après la fin de l'exercice"],
 ];
 
 function EcranAide({ retour }) {
@@ -2616,6 +2669,18 @@ function EcranAide({ retour }) {
       <Groupe titre="L'onglet Argent">
         <div className="rangee bloc">
           <span className="rangee-texte">{fr("Les vrais montants des dépôts officiels des 30 derniers jours : nombre d'actions × prix écrit dans le dépôt, pourcentage de leurs actions quand le dépôt le permet, fourchettes officielles pour les élus. Pas de cours de bourse en direct.")}</span>
+        </div>
+        <div className="rangee bloc">
+          <span className="rangee-texte">{fr("Rachats : quand le conseil d'une compagnie autorise un rachat de ses actions (8-K), le plafond annoncé, pas un achat fait. Le robot publie seulement une phrase claire : le conseil, une formule d'autorisation, un montant, rien d'un ancien programme. 0 point dans la note : l'étude d'Ikenberry, Lakonishok et Vermaelen trouve l'effet surtout pour les actions bon marché, et Radar ne mesure pas ce prix par rapport à la valeur comptable. Sur la fiche : les rachats vraiment faits, selon le rapport annuel.")}</span>
+        </div>
+        <div className="rangee bloc">
+          <a className="etude" href="https://www.nber.org/papers/w4965" target="_blank" rel="noopener noreferrer">
+            <Icone nom="document" taille={16} epaisseur={2} />
+            <span>
+              <b>Ikenberry, Lakonishok et Vermaelen (1995)</b>
+              {fr(" : annonces de 1980 à 1990 ; +12,1 % sur 4 ans par rapport à des actions comparables, +45,3 % pour les actions bon marché, rien pour les chères.")}
+            </span>
+          </a>
         </div>
       </Groupe>
 
@@ -3100,12 +3165,12 @@ input { font: inherit; color: var(--texte); }
 .ligne-oge .transaction-qui { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .ligne-oge-desc { margin: 0; padding: 0 16px; color: var(--texte); font-size: .875rem; line-height: 1.4; overflow-wrap: anywhere; }
 .ligne-oge-note { margin: 4px 0 0; padding: 0 16px; color: var(--texte-2); font-size: .8125rem; line-height: 1.4; }
-.congres-source { color: var(--texte-3); font-size: .75rem; margin: 8px 4px 0; line-height: 1.5; }
-.lobbying-total { margin: 0; padding: 12px 16px 0; font-size: 1.375rem; font-weight: 750; font-variant-numeric: tabular-nums; }
-.lobbying-texte { margin: 0; padding: 8px 16px 12px; color: var(--texte-2); font-size: .9375rem; line-height: 1.45; }
+.congres-source, .rachats-source { color: var(--texte-3); font-size: .75rem; margin: 8px 4px 0; line-height: 1.5; }
+.lobbying-total, .rachats-total { margin: 0; padding: 12px 16px 0; font-size: 1.375rem; font-weight: 750; font-variant-numeric: tabular-nums; }
+.lobbying-texte, .rachats-texte { margin: 0; padding: 8px 16px 12px; color: var(--texte-2); font-size: .9375rem; line-height: 1.45; }
 .lobbying-sujets { margin: 0; padding: 0 16px 12px; font-size: .875rem; line-height: 1.45; }
-.lobbying .transaction { color: inherit; text-decoration: none; }
-.lobbying-sujets + .transaction::before, .lobbying-texte + .transaction::before { content: ""; position: absolute; top: 0; left: 16px; right: 0; height: 1px; background: var(--ligne); transform: scaleY(.5); }
+.lobbying .transaction, .rachats-faits .transaction { color: inherit; text-decoration: none; }
+.lobbying-sujets + .transaction::before, .lobbying-texte + .transaction::before, .rachats-texte + .transaction::before { content: ""; position: absolute; top: 0; left: 16px; right: 0; height: 1px; background: var(--ligne); transform: scaleY(.5); }
 .congres-chef + .transaction::before { content: ""; position: absolute; top: 0; left: 16px; right: 0; height: 1px; background: var(--ligne); transform: scaleY(.5); }
 .congres-chef.est-chef { color: var(--texte); background: color-mix(in srgb, var(--violet) 14%, transparent); }
 .congres .transaction-qui { overflow-wrap: anywhere; }
@@ -3203,9 +3268,10 @@ input { font: inherit; color: var(--texte); }
 .argent-sens.achat { background: color-mix(in srgb, var(--vert) 16%, transparent); color: var(--vert); }
 .argent-sens.vente { background: color-mix(in srgb, var(--rouge) 16%, transparent); color: var(--rouge); }
 .argent-sens.contrat { background: color-mix(in srgb, var(--bleu) 16%, transparent); color: var(--bleu); }
+.argent-sens.rachat { background: color-mix(in srgb, var(--violet) 16%, transparent); color: var(--violet); }
 .argent-phrase { display: block; margin-top: 2px; color: var(--texte-2); font-size: .875rem; line-height: 1.35; }
 .argent-montant { flex: none; max-width: 38%; margin-top: 2px; text-align: right; font-weight: 800; font-size: .9375rem; font-variant-numeric: tabular-nums; }
-.argent-montant.achat { color: var(--vert); } .argent-montant.vente { color: var(--rouge); } .argent-montant.contrat { color: var(--bleu); }
+.argent-montant.achat { color: var(--vert); } .argent-montant.vente { color: var(--rouge); } .argent-montant.contrat { color: var(--bleu); } .argent-montant.rachat { color: var(--violet); }
 .argent-plan { color: var(--jaune); }
 .thermo { padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
 .thermo-titre { margin: 0; font-size: .8125rem; font-weight: 700; color: var(--texte-2); text-transform: uppercase; letter-spacing: .04em; }

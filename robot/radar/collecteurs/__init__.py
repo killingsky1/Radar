@@ -13,8 +13,8 @@ from ..models import Evenement
 Collecteur = Callable[["object"], list[Evenement]]
 
 from . import (banques, blocage, canada, canada_eco, ccc, cftc, congres, contrats_ca, douane, elus, fda,  # noqa: E402
-               fonds13f, gazette, legisinfo, lobbying, maison_blanche, oge, participations, prix_sec, registre,
-               regulateurs, sante_canada, sec, tresor, usaspending)
+               fonds13f, gazette, legisinfo, lobbying, maison_blanche, oge, participations, prix_sec, rachats,
+               registre, regulateurs, sante_canada, sec, tresor, usaspending)
 
 # L'ordre compte : les lecteurs SEC chargent la liste officielle des symboles, réutilisée ensuite.
 COLLECTEURS: dict[str, Collecteur] = {
@@ -26,6 +26,7 @@ COLLECTEURS: dict[str, Collecteur] = {
     "sec_offres": sec.collecter_offres,
     "sec_blocage": blocage.collecter,  # 1re lecture : rattrapage des prospectus d'avril à septembre 2026
     "sec_ftd": prix_sec.collecter,  # prix pour mesurer les résultats de Radar (jamais un signal)
+    "sec_rachats_xbrl": rachats.collecter_xbrl,  # rachats faits (rapports annuels) : un seul fichier de l'API de la SEC
     "sec_poursuites": regulateurs.collecter_sec_poursuites,
     "cftc_cot": cftc.collecter,
     "maison_blanche": maison_blanche.collecter,
@@ -60,4 +61,5 @@ COLLECTEURS: dict[str, Collecteur] = {
     "tarifs": douane.collecter,
     "usaspending": usaspending.collecter,  # 1re lecture silencieuse (voir usaspending.py)
     "participations_gouv": participations.collecter,  # après sec_8k : réutilise les en-têtes déjà lus
+    "sec_rachats": rachats.collecter,  # après participations_gouv : réutilise les documents 8.01 déjà lus
 }

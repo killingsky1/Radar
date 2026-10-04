@@ -176,6 +176,19 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     const t = await p.locator(".lobbying").innerText();
     assert.ok(t.includes("Aucun rapport de lobbying au nom exact « NVIDIA CORP »") && !t.includes("$"), t);
   }));
+  await verifier("Fiche AMD : rachats d'actions faits (rapport annuel, XBRL de la SEC), lien du rapport", () => fiche("AMD", async () => {
+    const total = (await p.locator(".rachats-total").innerText()).replace(/\s/g, "");
+    assert.ok(total.includes("1,23G$US"), total);
+    const t = (await p.locator(".rachats-faits").innerText()).replace(/\u00a0|\u202f/g, " ");
+    assert.ok(t.includes("pendant l'exercice du 29 décembre 2024 au 27 décembre 2025, selon son rapport annuel") && t.includes("0000002488-26-000018"), t);
+    assert.equal(await p.locator(".rachats-faits a.transaction").getAttribute("href"), "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/0000002488-26-000018-index.htm");
+    const pied = (await p.locator(".rachats-source").innerText()).replace(/\u00a0/g, " ");
+    assert.ok(pied.includes("Payments for Repurchase of Common Stock") && pied.includes("l'année 2025") && pied.includes("0 point"), pied);
+  }));
+  await verifier("Fiche NVDA : aucun montant de rachat dans les données XBRL (et pas « 0 $ »)", () => fiche("NVDA", async () => {
+    const t = await p.locator(".rachats-faits").innerText();
+    assert.ok(t.includes("Aucun montant de rachat dans les données XBRL de la SEC") && !t.includes("$"), t);
+  }));
   await verifier("Fiche XMPL : recherche trop large, pas vérifié", () => fiche("XMPL", async () => {
     assert.ok((await p.locator(".lobbying").innerText()).includes("Recherche trop large (« EXEMPLE ») : pas vérifié."));
   }, true));
@@ -369,7 +382,7 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
   });
   await verifier("Argent : filtres Achats, Élus (fourchette officielle) et Contrats", async () => {
     try {
-      await p.locator(".puce", { hasText: "Achats" }).click(); await p.waitForTimeout(150);
+      await p.locator(".puce", { hasText: /^Achats$/ }).click(); await p.waitForTimeout(150);
       assert.equal(await p.locator(".ligne.argent").count(), 3);
       assert.equal(await p.locator(".ligne.argent .argent-sens.achat").count(), 3);
       await p.locator(".puce", { hasText: "Élus" }).click(); await p.waitForTimeout(150);
@@ -377,6 +390,30 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       assert.ok(elu.includes("fourchetteofficielle") && elu.includes("15k$USà50k$US"), elu);
       await p.locator(".puce", { hasText: "Contrats" }).click(); await p.waitForTimeout(150);
       assert.equal(await p.locator(".ligne.argent").count(), 2);
+    } finally {
+      await p.locator(".puce", { hasText: "Tout" }).click(); await p.waitForTimeout(150); // même en cas d'échec
+    }
+  });
+  await verifier("Argent : filtre Rachats (un plafond, pas un achat fait ; 0 point), détail avec l'extrait officiel", async () => {
+    try {
+      await p.locator(".puce", { hasText: "Rachats" }).click(); await p.waitForTimeout(150);
+      assert.equal(await p.locator(".ligne.argent").count(), 1);
+      const l = (await p.locator(".ligne.argent").first().innerText()).replace(/\s+/g, " ");
+      assert.ok(l.includes("AMD") && l.includes("Nouveau programme de rachat d'actions autorisé par le conseil : un plafond, pas un achat fait"), l);
+      assert.ok(l.replace(/\s/g, "").includes("1,5G$US"), l);
+      assert.equal(await p.locator(".ligne.argent .argent-sens.rachat").count(), 1);
+      const e = (await p.locator(".explication").last().innerText()).replace(/\u00a0/g, " ");
+      assert.ok(e.includes("1 annonce de rachat d'actions") && e.includes("pas un achat fait") && e.includes("0 point dans la note"), e);
+      await p.locator(".ligne.argent").first().click(); await p.waitForSelector(".feuille-fond.ouvert");
+      const titre = await p.locator(".detail-titre").innerText();
+      assert.ok(titre.includes("nouveau programme de rachat d'actions, jusqu'à 1,5 G$"), titre);
+      const d = (await p.locator(".feuille").innerText()).replace(/\u00a0/g, " ");
+      assert.ok(d.includes("the Board of Directors approved a new $1.5 billion share repurchase program") && d.includes("pas un achat fait"), d.slice(0, 400));
+      assert.equal(await p.locator(".feuille .controle.rate").count(), 0);
+      for (const c of ["Formule d'autorisation lue (nouveau programme, hausse ou nouveau total)", "Conseil d'administration nommé dans la phrase", "Même plafond partout dans le dépôt", "Point du 8-K lu (2.02, 7.01 ou 8.01)", "10 M$ et plus (ou un nombre d'actions)"]) {
+        assert.equal(await p.locator(".feuille .controle", { hasText: c }).count(), 1, c);
+      }
+      await fermer();
     } finally {
       await p.locator(".puce", { hasText: "Tout" }).click(); await p.waitForTimeout(150); // même en cas d'échec
     }
@@ -451,6 +488,17 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       const mois = await p.locator(".groupe .section").allInnerTexts();
       assert.ok(mois.length >= 2 && mois.every((m) => /^[a-zéû]+ \d{4}$/i.test(m)), mois.join(" | "));
       assert.ok((await p.locator(".explication").innerText()).includes("0 point dans la note"));
+    } finally {
+      await onglet("Radar");
+    }
+  });
+  await verifier("Aide : les rachats d'actions (0 point, l'étude et sa limite)", async () => {
+    try {
+      await p.getByRole("button", { name: "Aide" }).click(); await p.waitForSelector(".flux-etape");
+      const t = (await p.locator(".ecran").innerText()).replace(/\u00a0/g, " ");
+      assert.ok(t.includes("Rachats : quand le conseil d'une compagnie autorise un rachat de ses actions (8-K), le plafond annoncé, pas un achat fait.") && t.includes("Rachats d'actions (8-K)"), t.slice(0, 200));
+      assert.ok(t.includes("+12,1 % sur 4 ans") && t.includes("+45,3 % pour les actions bon marché"), t.slice(0, 200));
+      assert.equal(await p.locator('a.etude[href="https://www.nber.org/papers/w4965"]').count(), 1);
     } finally {
       await onglet("Radar");
     }
@@ -549,7 +597,7 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     await reglages(); await p.getByRole("button", { name: /Réinitialiser/ }).click(); await p.waitForTimeout(200);
     assert.equal(await p.evaluate(() => document.documentElement.dataset.theme), "sombre");
   });
-  await verifier("État des sources : 55 sources listées", async () => { await reglages(); await p.getByRole("button", { name: /État des sources/ }).click(); await p.waitForSelector(".source"); assert.equal(await p.locator(".source").count(), 55); });
+  await verifier("État des sources : 57 sources listées", async () => { await reglages(); await p.getByRole("button", { name: /État des sources/ }).click(); await p.waitForSelector(".source"); assert.equal(await p.locator(".source").count(), 57); });
   await verifier("Sources : un site qui refuse le robot (403) : « Refusée par le site », point violet, nouvel essai daté", async () => {
     const s = p.locator(".source", { hasText: "LEGISinfo" });
     const etat = await s.locator(".source-etat").innerText();

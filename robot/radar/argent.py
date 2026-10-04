@@ -8,6 +8,7 @@ lois). Chaque ligne vient d'une info validée (« Officiel » ou « Confirmé »
 - Intentions de vente (formulaire 144) : actions et valeur au marché déclarées ; part des actions en circulation.
 - Élus du Congrès et cabinet (OGE) : fourchettes officielles (la loi ne demande pas le montant exact).
 - Contrats (USAspending, contrats fédéraux canadiens) : sommes engagées.
+- Rachats d'actions annoncés (8-K, lot H) : le plafond autorisé par le conseil, pas un achat fait.
 La même transaction déclarée par plusieurs entités liées ne compte qu'une fois (lot A). Seulement ce que le robot
 garde : achats de dirigeants de 25 000 $ et plus, ventes de 1 M$ et plus, avis 144 de 1 M$ et plus (25 M$ si planifiés).
 """
@@ -106,10 +107,20 @@ def ligne_contrat(ev: dict) -> dict:
     }
 
 
+def ligne_rachat(ev: dict) -> dict:
+    return {
+        "famille": "rachats", "sens": 0, "qui": (ev.get("entities") or [""])[0], "role": ev["data"].get("sorte") or "",
+        "actions": None, "prix": None, "prix_multiples": False, "nb_lignes": 1, "montant": ev.get("amount_min"),
+        "part": None, "plan": False, "aussi": [],
+    }
+
+
 def compagnie(ev: dict) -> str:
     d = ev.get("data") or {}
     if ev["source"] in ("sec_form4", "sec_form144"):
         return (ev.get("entities") or [""])[-1]
+    if ev["source"] == "sec_rachats":
+        return (ev.get("entities") or [""])[0]
     if ev["source"] in ("chambre_ptr", "senat_ptr", "oge_278t"):
         return d.get("nom_sec") or ""
     return d.get("fournisseur") or ""
@@ -125,6 +136,8 @@ def ligne(ev: dict) -> dict | None:
         corps = ligne_elu(ev)
     elif s in ("usaspending", "contrats_ca_10k") and ev.get("amount_min"):
         corps = ligne_contrat(ev)
+    elif s == "sec_rachats" and k == "rachat_annonce" and ev.get("amount_min"):
+        corps = ligne_rachat(ev)
     else:
         return None
     return {"id": ev["id"], "source": s, "symbole": (ev.get("tickers") or [None])[0], "compagnie": compagnie(ev),
@@ -170,5 +183,5 @@ def preparer(fil: list[dict], jour: date) -> tuple[dict, dict]:
     return ({"jour": jour.isoformat(), "depuis": depuis, "dernier_jour": dernier, "lignes": lignes,
              "thermometre": thermometre(lignes, jour),
              "seuils": "Ce que Radar garde : achats de dirigeants de 25 000 $ et plus, ventes de 1 M$ et plus, avis "
-                       "de vente (144) de 1 M$ et plus (25 M$ si planifiés d'avance). Élus et cabinet : fourchettes "
-                       "officielles."}, infos)
+                       "de vente (144) de 1 M$ et plus (25 M$ si planifiés d'avance), rachats d'actions annoncés de 10 M$ et "
+                       "plus (un plafond autorisé, pas un achat fait). Élus et cabinet : fourchettes officielles."}, infos)

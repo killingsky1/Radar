@@ -204,6 +204,10 @@ SANS_POINTS = {
                    "rien de solide trouvé depuis 2015.",
     "participation_gouv": "Participation du gouvernement américain : aucune étude solide trouvée sur les cas de 2025-2026 ; "
                           "les études plus anciennes trouvent l'effet surtout à l'annonce.",
+    "rachat_annonce": "Annonce de rachat d'actions : un plafond autorisé, pas un achat fait. L'étude d'Ikenberry, "
+                      "Lakonishok et Vermaelen (annonces de 1980 à 1990) trouve +12,1 % sur 4 ans par rapport à des "
+                      "actions comparables, mais surtout pour les actions bon marché (+45,3 %) et rien pour les actions "
+                      "chères ; Radar ne mesure pas le prix par rapport à la valeur comptable.",
     "lobbying": "Lobbying à Washington (LDA.gov) : montré sur la fiche de la compagnie, sans points. L'étude de Chen, "
                 "Parsley et Yang (2015) mesure un effet sur 3 ans, selon le lobbying par rapport à la taille de la "
                 "compagnie, que Radar ne mesure pas.",
@@ -356,6 +360,8 @@ def evaluer(ev: dict, emissions: frozenset = frozenset(), chefs: frozenset = fro
         return contexte("participation_gouv")
     if s == "sec_blocage":
         return contexte("fin_blocage")
+    if s == "sec_rachats":
+        return contexte("rachat_annonce")
     return contexte("contexte")
 
 

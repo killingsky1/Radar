@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 from . import __version__, argent, calendrier, emetteurs, resultats
-from .collecteurs import congres, lobbying
+from .collecteurs import congres, lobbying, rachats
 from .health import LIBELLES, statut
 from .registry import SOURCES
 from .score import calculer, jour_de_calcul
@@ -129,6 +129,13 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
         _ecrire(donnees / "app" / "lobbying.json", lobbying.pour_app(donnees, symboles_listes, maintenant))
     except Exception as exc:  # noqa: BLE001
         print(f"Lobbying : erreur, fichier de l'app pas mis à jour ({type(exc).__name__}: {exc})")
+    # Rachats d'actions faits (rapports annuels, XBRL de la SEC) des compagnies des listes (lot H)
+    try:
+        score = json.loads(chemin.read_text(encoding="utf-8")) if chemin.exists() else {}
+        symboles_listes = [x["symbole"] for liste in ("hausse", "baisse") for x in score.get(liste, [])]
+        _ecrire(donnees / "app" / "rachats.json", rachats.pour_app(donnees, symboles_listes))
+    except Exception as exc:  # noqa: BLE001
+        print(f"Rachats : erreur, fichier de l'app pas mis à jour ({type(exc).__name__}: {exc})")
     # Résultats de Radar (lot G) : l'historique des entrées dans les listes (score publié), puis la mesure avec les prix
     # officiels de la SEC. En cas d'erreur : ancien fichier gardé.
     try:

@@ -167,11 +167,28 @@ def documents_du_depot(page_index: str) -> list[tuple[str, str]]:
     return docs[:4]
 
 
+def entete_8k(ctx, depot) -> str:
+    """L'en-tête officiel d'un 8-K : déjà lu par le lecteur des 8-K à ce passage, sinon on le lit (une seule fois)."""
+    cache = ctx.cache.setdefault("entetes_8k", {})
+    if depot.acc not in cache:
+        cache[depot.acc] = ctx.client.get(f"{depot.dossier(depot.filers[0][0])}/{depot.acc}-index-headers.html").contenu.decode(
+            "utf-8", "replace")
+    return cache[depot.acc]
+
+
+def documents_8k(ctx, depot, cik: str) -> list[tuple[str, str, str]]:
+    """(adresse, sorte, texte) du document principal et des communiqués (EX-99) d'un 8-K. Lus une seule fois par
+    passage : le lecteur des rachats d'actions (point 8.01, comme ici) réutilise ce qui est déjà lu."""
+    cache = ctx.cache.setdefault("documents_8k", {})
+    if depot.acc not in cache:
+        page = ctx.client.get(depot.page_officielle(cik)).contenu.decode("utf-8", "replace")
+        cache[depot.acc] = [(url, sorte, texte_doc(ctx.client.get(url).contenu)) for url, sorte in documents_du_depot(page)]
+    return cache[depot.acc]
+
+
 def lire_un(ctx, depot) -> list[Evenement]:
     cik = depot.filers[0][0]
-    entete = ctx.cache.get("entetes_8k", {}).get(depot.acc)  # déjà lue par le lecteur des 8-K, sinon on la lit
-    if entete is None:
-        entete = ctx.client.get(f"{depot.dossier(cik)}/{depot.acc}-index-headers.html").contenu.decode("utf-8", "replace")
+    entete = entete_8k(ctx, depot)
     f = lire_8k(entete)  # pour les déposants
     items = points(entete)
     if not items:
@@ -180,10 +197,7 @@ def lire_un(ctx, depot) -> list[Evenement]:
     cik_cote, cote = next(((c, syms.cote(c)) for c, _ in f["filers"] if syms.cote(c)), (None, None))
     if cote is None:
         return []  # comme le lecteur des 8-K : seulement les compagnies cotées
-    page = ctx.client.get(depot.page_officielle(cik)).contenu.decode("utf-8", "replace")
-    documents = []
-    for url, sorte in documents_du_depot(page):
-        documents.append((url, sorte, passages(texte_doc(ctx.client.get(url).contenu))))
+    documents = [(url, sorte, passages(texte)) for url, sorte, texte in documents_8k(ctx, depot, cik)]
     if not any(ts for _, _, ts in documents):
         return []
     return [evenement(depot, cik_cote, cote, documents, items,

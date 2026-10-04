@@ -298,3 +298,50 @@ ps.PREMIER_FICHIER = "202607b"  # les vrais extraits gardés pour les tests : ju
 ps.collecter(Contexte(client=FauxSec(), maintenant=maintenant, donnees=Path(sys.argv[1])))
 from radar.publish import _ecrire  # noqa: E402
 _ecrire(Path(sys.argv[1]) / "app" / "resultats.json", rs.calculer(Path(sys.argv[1]), maintenant))
+# Rachats d'actions (lot H) : une annonce TEST (faite par la vraie fonction du lecteur à partir d'un faux dépôt dont la
+# phrase suit la règle stricte), ajoutée APRÈS les passages comme les blocages (les compteurs du fil ne changent pas) ;
+# l'onglet Argent est refait par le même calcul que le robot. Rachats faits (XBRL) : 2 compagnies des listes, au format
+# exact du robot (rachats.pour_app).
+from radar import argent  # noqa: E402
+from radar.collecteurs import rachats as ra  # noqa: E402
+from radar.score import jour_de_calcul  # noqa: E402
+quand = jour_de_calcul(maintenant)
+phrase = (f"TEST : On {quand:%B} {quand.day}, {quand.year}, the Board of Directors approved a new $1.5 billion share "
+          f"repurchase program.")
+class FauxDepot8k:
+    def __init__(self):
+        self.pages = {
+            "https://www.sec.gov/files/company_tickers_exchange.json": json.dumps({"fields": ["cik", "name", "ticker", "exchange"],
+                "data": [[2488, "ADVANCED MICRO DEVICES INC", "AMD", "Nasdaq"]]}).encode(),
+            "https://www.sec.gov/Archives/edgar/data/2488/000000248826000099/0000002488-26-000099-index-headers.html":
+                (f"<SEC-HEADER>CONFORMED PERIOD OF REPORT:\t{quand:%Y%m%d}\nITEM INFORMATION:\t\tOther Events\n"
+                 "COMPANY CONFORMED NAME:\t\t\tADVANCED MICRO DEVICES INC\nCENTRAL INDEX KEY:\t\t\t0000002488\n</SEC-HEADER>").encode(),
+            "https://www.sec.gov/Archives/edgar/data/2488/000000248826000099/0000002488-26-000099-index.htm":
+                ('<table><tr><td>1</td><td><a href="/Archives/edgar/data/2488/000000248826000099/test-ex99.htm">test-ex99.htm</a>'
+                 '</td><td>EX-99.1</td><td>1</td></tr></table>').encode(),
+            "https://www.sec.gov/Archives/edgar/data/2488/000000248826000099/test-ex99.htm": f"<p>{phrase}</p>".encode(),
+        }
+    def get(self, url, entetes=None):
+        c = self.pages[url]
+        return type("T", (), {"contenu": c, "sha256": empreinte(c)})()
+depot8k = DepotSec("0000002488-26-000099", "8-K", quand.isoformat(), "edgar/data/2488/0000002488-26-000099.txt",
+                   [("2488", "ADVANCED MICRO DEVICES INC")])
+annonces = ra.lire_un(Contexte(client=FauxDepot8k(), maintenant=maintenant, donnees=Path(sys.argv[1])), depot8k)
+assert len(annonces) == 1, annonces
+annonces[0].title = "TEST : " + annonces[0].title
+Depot(sys.argv[1]).enregistrer([valider(e, quand) for e in annonces])
+tous = Depot(sys.argv[1]).lire("evenements")
+fil = sorted((e for e in tous if not e.get("data", {}).get("meme_acte_que") and not e.get("data", {}).get("meme_transaction_que")),
+             key=lambda d: (d["published_on"], d["collected_at"], d["id"]), reverse=True)
+lignes, infos = argent.preparer(fil, quand)
+_ecrire_compact(Path(sys.argv[1]) / "app" / "argent.json", lignes)
+_ecrire_compact(Path(sys.argv[1]) / "app" / "argent_infos.json", infos)
+(Path(sys.argv[1]) / "sec").mkdir(parents=True, exist_ok=True)
+(Path(sys.argv[1]) / "sec" / "emetteurs.json").write_text(json.dumps({
+    "AMD": {"cik": 2488, "nom": "Advanced Micro Devices, Inc.", "type": "compagnie", "formulaires_fonds": [], "lu": jour(1)},
+    "NVDA": {"cik": 1045810, "nom": "NVIDIA CORP", "type": "compagnie", "formulaires_fonds": [], "lu": jour(1)}}), encoding="utf-8")
+ra.chemin_xbrl(sys.argv[1]).write_text(json.dumps({"cadre": "CY2025", "adresse": ra.FRAMES.format(annee=2025),
+    "par_cik": {"2488": [1_230_000_000, "2024-12-29", "2025-12-27", "0000002488-26-000018"]}}), encoding="utf-8")
+score = json.loads((Path(sys.argv[1]) / "app" / "aujourdhui.json").read_text(encoding="utf-8"))
+_ecrire(Path(sys.argv[1]) / "app" / "rachats.json",
+        ra.pour_app(Path(sys.argv[1]), [x["symbole"] for l in ("hausse", "baisse") for x in score.get(l, [])]))

@@ -61,6 +61,12 @@ _LISTE = [
     # Lot 3d : la phrase exacte d'un 8-K où le gouvernement reçoit, détient ou revend des titres de la compagnie
     S("participations_gouv", "Gouvernement américain actionnaire (8-K de la SEC)", "gouvernement", ("sec.gov",), 2,
       "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=8-K"),
+    # Lot H : rachats d'actions, information seulement (0 point), voir rachats.py
+    S("sec_rachats", "SEC : annonces de rachat d'actions (8-K)", "compagnies", ("sec.gov",), 1,
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=8-K"),
+    S("sec_rachats_xbrl", "SEC : rachats d'actions faits (rapports annuels, données XBRL)", "compagnies", ("sec.gov",), 1,
+      "https://data.sec.gov/api/xbrl/frames/us-gaap/PaymentsForRepurchaseOfCommonStock/USD/CY2025.json",
+      passages=("matin",)),
     # Lot 3c : contrats de 10 M$ et plus (nouveaux ou hausses), lus chaque matin sur l'API du portail (20 s entre 2 requêtes)
     S("contrats_ca_10k", "Contrats fédéraux de 10 M$ et plus (publication proactive)", "canada",
       ("open.canada.ca", "ouvert.canada.ca"), 2, "https://rechercher.ouvert.canada.ca/contrats/",
