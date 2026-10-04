@@ -11274,6 +11274,101 @@
   "title": "Commerce extérieur (USTR) : Hearings, Meetings, Proceedings, etc.: Operation of the Agreement between the United States of America, the United Mexican States, and Canada"
  },
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "compagnie_cotee": true,
+   "date_du_prospectus_prouvee": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "entree_en_bourse": true,
+   "fin_calculee": true,
+   "sans_levee_anticipee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "une_seule_duree": true
+  },
+  "collected_at": "2026-10-04T01:14:09+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "bourse": "Nasdaq",
+   "cik": "2141406",
+   "date_prospectus": "2026-09-29",
+   "details": [
+    [
+     "Compagnie",
+     "Accelevation Holdings Corp."
+    ],
+    [
+     "Date du prospectus",
+     "29 septembre 2026"
+    ],
+    [
+     "Durée du blocage",
+     "180 jours"
+    ],
+    [
+     "Fin prévue du blocage",
+     "dimanche 28 mars 2027 (inclus)"
+    ],
+    [
+     "Phrase du prospectus",
+     "We and all directors, executive officers and the holders of all of our outstanding stock and securities exercisable for or convertible into our common stock have signed lock-up agreements that prevent us and them from selling any of our common stock or any securities exercisable for or convertible into our common stock for a period of not less than 180 days from the date of this prospectus without the prior written consent of Morgan Stanley & Co."
+    ],
+    [
+     "Date du prospectus prouvée par",
+     "« Prospectus dated September 29, 2026 » ; « Through and including October 24, 2026 (the 25th day after the date of this prospectus) »"
+    ]
+   ],
+   "duree_jours": 180,
+   "ecart_ouvrables": 2,
+   "entree_en_bourse": true,
+   "fin_blocage": "2027-03-28",
+   "levee_anticipee": false,
+   "phrase_blocage": "We and all directors, executive officers and the holders of all of our outstanding stock and securities exercisable for or convertible into our common stock have signed lock-up agreements that prevent us and them from selling any of our common stock or any securities exercisable for or convertible into our common stock for a period of not less than 180 days from the date of this prospectus without the prior written consent of Morgan Stanley & Co.",
+   "preuves_date": [
+    {
+     "date": "2026-09-29",
+     "directe": true,
+     "phrase": "Prospectus dated September 29, 2026",
+     "sorte": "couverture"
+    },
+    {
+     "date": "2026-09-29",
+     "directe": true,
+     "phrase": "Through and including October 24, 2026 (the 25th day after the date of this prospectus)",
+     "sorte": "25 jours"
+    }
+   ]
+  },
+  "direction": 0,
+  "entities": [
+   "Accelevation Holdings Corp."
+  ],
+  "id": "sec_blocage:0001628280-26-064097",
+  "kind": "fin_blocage",
+  "notes": [
+   "Date prévue par le prospectus : les banques qui ont mené l'entrée en bourse peuvent lever le blocage plus tôt, en tout ou en partie. Information seulement : 0 point dans la note."
+  ],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001628280-26-064097",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/2141406/000162828026064097/0001628280-26-064097-index.htm",
+  "parser_version": "blocage-1",
+  "published_on": "2026-10-01",
+  "sha256": "8a2c697677c5e833a5c3378994e56ca176b89a39b83c34730876696d3f20762f",
+  "source": "sec_blocage",
+  "tickers": [
+   "ACCV"
+  ],
+  "title": "Accelevation Holdings Corp. : fin prévue du blocage de 180 jours le 28 mars 2027 (entrée en bourse, prospectus du 29 septembre 2026)"
+ },
+ {
   "amount_max": 2127535.0,
   "amount_min": 2127535.0,
   "badge": "officiel",
@@ -14324,79 +14419,6 @@
    "FUL"
   ],
   "title": "Happe Michael J (administrateur) achète 2 000 actions de FULLER H B CO"
- },
- {
-  "amount_max": 50005.48,
-  "amount_min": 50005.48,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "code_achat_ou_vente_reel": true,
-   "dates_coherentes": true,
-   "dates_transaction_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "montant_coherent": true,
-   "montant_plausible": true,
-   "montant_recalcule": true,
-   "prix_et_actions_positifs": true,
-   "prix_plausible": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_conforme_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T03:53:53+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 2170.0,
-   "automatique": null,
-   "bourse": "Nasdaq",
-   "cik_emetteur": "0000017313",
-   "hors_bourse": null,
-   "plan_10b5_1": false,
-   "prix_moyen": 23.044,
-   "roles": [
-    "administrateur"
-   ],
-   "symbole_declare": "CSWC",
-   "symboles_sec": [
-    "CSWC"
-   ],
-   "transactions": [
-    {
-     "acquis_cede": "A",
-     "actions": 2170.0,
-     "apres": 22842.0,
-     "automatique": null,
-     "code": "P",
-     "date": "2026-10-01",
-     "hors_bourse": null,
-     "prix": 23.044
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Thomas William R III",
-   "CAPITAL SOUTHWEST CORP"
-  ],
-  "id": "sec_form4:0000017313-26-000159:P",
-  "kind": "achat_initie",
-  "notes": [],
-  "occurred_on": "2026-10-01",
-  "official_id": "0000017313-26-000159:P",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/17313/000001731326000159/0000017313-26-000159-index.htm",
-  "parser_version": "sec-7",
-  "published_on": "2026-10-01",
-  "sha256": "8b58c4b9802c0904781ba0073b16875661bbd0eb4f5112597eaae1ab65fdaf48",
-  "source": "sec_form4",
-  "tickers": [
-   "CSWC"
-  ],
-  "title": "Thomas William R III (administrateur) achète 2 170 actions de CAPITAL SOUTHWEST CORP"
  },
  {
   "amount_max": null,

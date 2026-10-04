@@ -103,17 +103,20 @@
  },
  {
   "categorie": "compagnies",
-  "compte": null,
-  "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Prévue à la phase 1.",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 39
+  },
+  "dernier_contenu": "2026-10-01",
+  "dernier_succes": "2026-10-04T01:12:48+00:00",
+  "explication": "",
   "id": "sec_blocage",
-  "libelle": "À venir",
-  "nom": "SEC : fins de blocage après entrée en bourse",
+  "libelle": "OK",
+  "nom": "SEC : fins de blocage après une entrée en bourse (prospectus 424B4)",
   "officielle": true,
   "phase": 1,
   "site": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=424B4",
-  "statut": "a_venir"
+  "statut": "ok"
  },
  {
   "categorie": "compagnies",
@@ -726,7 +729,7 @@
   "compte": null,
   "dernier_contenu": null,
   "dernier_succes": null,
-  "explication": "Compte obligatoire",
+  "explication": "Ses conditions d'utilisation interdisent les robots et l'usage commercial ; son serveur de fichiers refuse le robot (erreur 403) et son API exige un compte",
   "id": "finra",
   "libelle": "Laissée de côté",
   "nom": "FINRA : ventes à découvert",
