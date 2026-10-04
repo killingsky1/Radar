@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.22.0";
+const VERSION = "0.23.0";
 
 // ---------- Constantes ----------
 
@@ -189,9 +189,17 @@ const STATUTS = {
   en_retard: { label: "En retard", couleur: "jaune" },
   en_panne: { label: "En panne", couleur: "rouge" },
   en_pause: { label: "En pause", couleur: "bleu" },
-  refusee: { label: "Refusée par le site", pluriel: "Refusées par le site", couleur: "violet" },
-  a_venir: { label: "À venir", couleur: "gris" },
-  ecartee: { label: "Laissée de côté", pluriel: "Laissées de côté", couleur: "gris" },
+};
+
+// Les sources affichées : celles qui servent. Une source laissée de côté, refusée par son site ou pas encore branchée
+// reste dans les données du robot mais n'est pas montrée ; si elle revient (ex. un site qui accepte de nouveau), elle
+// réapparaît toute seule. Les alertes en direct (en retard, en panne, en pause) restent montrées.
+const CACHES = ["ecartee", "refusee", "a_venir"];
+const sourcesAffichees = (sources) => (sources || []).filter((s) => !CACHES.includes(s.statut));
+// Actives = celles qui lisent (OK ou en retard) ; une source en panne ou en pause fait baisser le compte.
+const compteSources = (sources) => {
+  const vues = sourcesAffichees(sources);
+  return { total: vues.length, actives: vues.filter((s) => s.statut === "ok" || s.statut === "en_retard").length };
 };
 
 const ACCENTS = { bleu: "#4F8CFF", vert: "#2BD9A0", violet: "#9B7BFF", orange: "#FF8A3D" };
@@ -1526,28 +1534,23 @@ function EcranCompagnie({ retour }) {
 function RachatsFaits({ symbole }) {
   const { donnees } = useApp();
   const r = donnees.rachats;
-  if (!r?.par_symbole) return null;
-  const x = r.par_symbole[symbole];
-  let contenu;
-  if (!x) contenu = <p className="rachats-texte">Pas encore lu : le robot lit les données de la SEC chaque matin.</p>;
-  else if (x.illisible) contenu = <p className="rachats-texte">Montant négatif dans les données XBRL de la compagnie : une erreur de saisie, pas montré.</p>;
-  else if (x.montant == null)
-    contenu = <p className="rachats-texte">{fr("Aucun montant de rachat dans les données XBRL de la SEC pour cet exercice (la compagnie peut employer une autre étiquette, ou ne rien racheter).")}</p>;
-  else
-    contenu = (
-      <>
-        <p className="rachats-total">{argent(x.montant, "USD")}</p>
-        <p className="rachats-texte">
-          {fr(x.montant > 0 ? `Argent dépensé pour racheter ses actions pendant l'exercice du ${dateLongue(x.debut)} au ${dateLongue(x.fin)}, selon son rapport annuel.` : `Aucun rachat d'actions pendant l'exercice du ${dateLongue(x.debut)} au ${dateLongue(x.fin)}, selon son rapport annuel.`)}
-        </p>
-        <a className="transaction presse" href={x.lien} target="_blank" rel="noopener noreferrer">
-          <span className="transaction-qui">Rapport à la SEC ({x.accn})</span>
-          <span className="transaction-montant">
-            <Icone nom="externe" taille={16} />
-          </span>
-        </a>
-      </>
-    );
+  const x = r?.par_symbole?.[symbole];
+  // Rien à montrer (pas encore lu, aucun montant, montant illisible) : la section n'apparaît pas.
+  if (!x || x.illisible || x.montant == null) return null;
+  const contenu = (
+    <>
+      <p className="rachats-total">{argent(x.montant, "USD")}</p>
+      <p className="rachats-texte">
+        {fr(x.montant > 0 ? `Argent dépensé pour racheter ses actions pendant l'exercice du ${dateLongue(x.debut)} au ${dateLongue(x.fin)}, selon son rapport annuel.` : `Aucun rachat d'actions pendant l'exercice du ${dateLongue(x.debut)} au ${dateLongue(x.fin)}, selon son rapport annuel.`)}
+      </p>
+      <a className="transaction presse" href={x.lien} target="_blank" rel="noopener noreferrer">
+        <span className="transaction-qui">Rapport à la SEC ({x.accn})</span>
+        <span className="transaction-montant">
+          <Icone nom="externe" taille={16} />
+        </span>
+      </a>
+    </>
+  );
   return (
     <>
       <h2 className="section">Rachats d'actions faits</h2>
@@ -1563,42 +1566,34 @@ function Lobbying({ symbole }) {
   const l = donnees.lobbying;
   if (!l?.trimestre) return null;
   const x = l.par_symbole?.[symbole];
-  let contenu;
-  if (!x) contenu = <p className="lobbying-texte">Pas encore lu : le robot lit LDA.gov chaque matin de semaine.</p>;
-  else if (!x.complet) contenu = <p className="lobbying-texte">Recherche trop large (« {x.recherche} ») : pas vérifié.</p>;
-  else if (x.total == null)
-    contenu = (
+  // Rien à montrer (pas encore lu, recherche trop large, aucun rapport ce trimestre) : la section n'apparaît pas.
+  if (!x || !x.complet || x.total == null) return null;
+  const contenu = (
+    <>
+      <p className="lobbying-total">{argent(x.total, "USD")}</p>
       <p className="lobbying-texte">
-        Aucun rapport de lobbying au nom exact « {x.nom} » ce trimestre. Les filiales et les noms écrits autrement ne sont pas cherchés.
+        {x.base === "compagnie"
+          ? `Dépenses déclarées par la compagnie elle-même${x.firmes ? ` : elles incluent ce qu'elle paie à ${x.firmes} firme${x.firmes > 1 ? "s" : ""} de lobbying, qui ${x.firmes > 1 ? "déclarent ensemble" : "déclare"} ${argent(x.revenus_firmes, "USD")}` : ""}.`
+          : `Payés à ${x.firmes} firme${x.firmes > 1 ? "s" : ""} de lobbying (la compagnie n'a pas ses propres lobbyistes).`}
+        {x.moins_de_5000 > 0 && ` ${x.moins_de_5000} rapport${x.moins_de_5000 > 1 ? "s" : ""} « moins de 5 000 $ » sans montant.`}
       </p>
-    );
-  else
-    contenu = (
-      <>
-        <p className="lobbying-total">{argent(x.total, "USD")}</p>
-        <p className="lobbying-texte">
-          {x.base === "compagnie"
-            ? `Dépenses déclarées par la compagnie elle-même${x.firmes ? ` : elles incluent ce qu'elle paie à ${x.firmes} firme${x.firmes > 1 ? "s" : ""} de lobbying, qui ${x.firmes > 1 ? "déclarent ensemble" : "déclare"} ${argent(x.revenus_firmes, "USD")}` : ""}.`
-            : `Payés à ${x.firmes} firme${x.firmes > 1 ? "s" : ""} de lobbying (la compagnie n'a pas ses propres lobbyistes).`}
-          {x.moins_de_5000 > 0 && ` ${x.moins_de_5000} rapport${x.moins_de_5000 > 1 ? "s" : ""} « moins de 5 000 $ » sans montant.`}
+      {x.sujets.length > 0 && (
+        <p className="lobbying-sujets">
+          Sujets : {x.sujets.slice(0, 6).map((u) => u.nom).join(" · ")}
+          {x.sujets.length > 6 ? ` · et ${x.sujets.length - 6} autres` : ""}
         </p>
-        {x.sujets.length > 0 && (
-          <p className="lobbying-sujets">
-            Sujets : {x.sujets.slice(0, 6).map((u) => u.nom).join(" · ")}
-            {x.sujets.length > 6 ? ` · et ${x.sujets.length - 6} autres` : ""}
-          </p>
-        )}
-        {x.rapports.map((r) => (
-          <a key={r.uuid} className="transaction presse" href={r.url} target="_blank" rel="noopener noreferrer">
-            <span className="transaction-qui">
-              {r.soi_meme ? "La compagnie elle-même" : r.registrant}
-              {r.sans_activite ? " · sans activité" : ""}
-            </span>
-            <span className="transaction-montant">{r.montant != null ? argent(r.montant, "USD") : r.sans_activite ? "—" : "< 5 000 $"}</span>
-          </a>
-        ))}
-      </>
-    );
+      )}
+      {x.rapports.map((r) => (
+        <a key={r.uuid} className="transaction presse" href={r.url} target="_blank" rel="noopener noreferrer">
+          <span className="transaction-qui">
+            {r.soi_meme ? "La compagnie elle-même" : r.registrant}
+            {r.sans_activite ? " · sans activité" : ""}
+          </span>
+          <span className="transaction-montant">{r.montant != null ? argent(r.montant, "USD") : r.sans_activite ? "—" : "< 5 000 $"}</span>
+        </a>
+      ))}
+    </>
+  );
   return (
     <>
       <h2 className="section">Lobbying à Washington · {l.trimestre.libelle}</h2>
@@ -1679,11 +1674,6 @@ function EcranMethode({ retour }) {
           </div>
         ))}
       </Groupe>
-      <Groupe titre="Les prix">
-        <div className="rangee bloc">
-          <span className="rangee-texte">{fr(m.prix)}</span>
-        </div>
-      </Groupe>
       <p className="avertissement">{m.avertissement}</p>
     </Ecran>
   );
@@ -1718,7 +1708,8 @@ function Accueil({ pousser, allerAuFil }) {
   }, [donnees.sources]);
   const hausse = aujourdhui?.hausse || [];
   const baisse = aujourdhui?.baisse || [];
-  const pourcentage = meta.sources_total ? Math.round((meta.sources_branchees / meta.sources_total) * 100) : 0;
+  const nbSources = compteSources(donnees.sources);
+  const pourcentage = nbSources.total ? Math.round((nbSources.actives / nbSources.total) * 100) : 0;
   const date = majuscule(new Date().toLocaleDateString("fr-CA", { weekday: "long", day: "numeric", month: "long" }));
 
   return (
@@ -1738,15 +1729,15 @@ function Accueil({ pousser, allerAuFil }) {
         <div className="heros">
           <RadarAnime />
           <div className="heros-texte">
-            <p className="heros-titre">{aujourdhui?.version ? "Rien d'assez fort aujourd'hui" : "Pas encore de suggestions"}</p>
+            <p className="heros-titre">{aujourdhui?.version ? "Rien d'assez fort aujourd'hui" : "Aucune suggestion pour l'instant"}</p>
             <p className="heros-sous">
-              {aujourdhui?.version ? "Aucune compagnie n'atteint 7/10." : "Le score arrive bientôt."} En attendant, le fil montre tout ce que le robot lit.
+              {aujourdhui?.version ? "Aucune compagnie n'atteint 7/10." : "Le robot publie le score à son prochain passage."} En attendant, le fil montre tout ce que le robot lit.
             </p>
             <div className="mini-barre">
               <div style={{ width: `${Math.max(pourcentage, 3)}%` }} />
             </div>
             <p className="heros-pied">
-              {meta.sources_branchees} sur {meta.sources_total} sources branchées
+              {nbSources.actives} sur {nbSources.total} sources actives
             </p>
           </div>
         </div>
@@ -1798,8 +1789,8 @@ function Accueil({ pousser, allerAuFil }) {
         <button type="button" className="tuile presse" onClick={() => pousser("sources")}>
           <Icone nom="antenne" taille={20} epaisseur={2} className="t-bleu" />
           <span className="tuile-valeur">
-            {meta.sources_branchees}
-            <small>/{meta.sources_total}</small>
+            {nbSources.actives}
+            <small>/{nbSources.total}</small>
           </span>
           <span className="tuile-label">Sources actives</span>
         </button>
@@ -1830,7 +1821,7 @@ function Accueil({ pousser, allerAuFil }) {
       </div>
       {visibles.length === 0 ? (
         <div className="carte">
-          <Vide titre="Rien pour l'instant" texte="Les premières infos arrivent avec la phase 1 (SEC)." />
+          <Vide titre="Rien pour l'instant" texte="Aucune info avec ces réglages." />
         </div>
       ) : (
         <ListeEvenements liste={visibles.slice(0, 5)} groupee={false} />
@@ -1882,7 +1873,7 @@ function Fil({ filtre: filtreChoisi, setFiltre, recherche, setRecherche }) {
         <Vide
           icone={recherche ? "loupe" : "radar"}
           titre={recherche ? "Aucun résultat" : "Rien pour l'instant"}
-          texte={recherche ? "Essaie un autre mot ou un symbole (ex. LMT)." : "Les premières infos arrivent avec la phase 1 (SEC)."}
+          texte={recherche ? "Essaie un autre mot ou un symbole (ex. LMT)." : "Aucune info avec ces filtres."}
         />
       ) : (
         <ListeEvenements liste={liste} groupee={reglages.tri === "recent"} />
@@ -2456,7 +2447,7 @@ function Reglages({ pousser, ouvrirInstaller }) {
       </Groupe>
 
       <Groupe titre="Fiabilité">
-        <RangeeLien icone="antenne" couleur="bleu" label="État des sources" valeur={`${meta.sources_branchees}/${meta.sources_total}`} onClick={() => pousser("sources")} />
+        <RangeeLien icone="antenne" couleur="bleu" label="État des sources" valeur={`${sourcesAffichees(donnees.sources).length} sources`} onClick={() => pousser("sources")} />
         <RangeeLien icone="alerte" couleur="jaune" label="À vérifier" valeur={donnees.a_verifier.length} onClick={() => pousser("a_verifier")} />
         <RangeeLien icone="info" couleur="accent" label="Comment marche Radar (aide)" onClick={() => pousser("aide")} />
         <RangeeLien icone="bouclier-ok" couleur="vert" label="Comment c'est vérifié" onClick={() => pousser("verification")} />
@@ -2479,7 +2470,7 @@ function Reglages({ pousser, ouvrirInstaller }) {
 
 function EcranSources({ retour }) {
   const { donnees } = useApp();
-  const sources = donnees.sources;
+  const sources = sourcesAffichees(donnees.sources);
   const compte = {};
   for (const s of sources) compte[s.statut] = (compte[s.statut] || 0) + 1;
   return (
@@ -2502,7 +2493,7 @@ function EcranSources({ retour }) {
             <h2 className="section">{c.label}</h2>
             <div className="carte liste">
               {groupe.map((s) => (
-                <a key={s.id} className={s.statut === "ecartee" ? "source ecartee presse" : "source presse"} href={s.site} target="_blank" rel="noopener noreferrer">
+                <a key={s.id} className="source presse" href={s.site} target="_blank" rel="noopener noreferrer">
                   <span className={`point ${STATUTS[s.statut]?.couleur || "gris"}`} />
                   <span className="source-texte">
                     <span className="source-nom">
@@ -2589,12 +2580,10 @@ const DELAIS_AIDE = [
 function EcranAide({ retour }) {
   const { donnees, pousser } = useApp();
   const sources = donnees.sources || [];
-  const branchees = sources.filter((x) => !["ecartee", "a_venir"].includes(x.statut)).length;
-  const ecartees = sources.filter((x) => x.statut === "ecartee").length;
-  const refusees = sources.filter((x) => x.statut === "refusee").length;
+  const branchees = sourcesAffichees(sources).length;
   const m = donnees.aujourdhui?.methode || {};
   const etapes = [
-    ["antenne", "Sources officielles", `${branchees} sources branchées : SEC, Congrès, Trésor, Maison-Blanche, gouvernement du Canada… ${ecartees} laissées de côté, avec la raison.`],
+    ["antenne", "Sources officielles", `${branchees} sources branchées : SEC, Congrès, Trésor, Maison-Blanche, gouvernement du Canada…`],
     ["radar", "Robots", "5 passages par jour de semaine. Ils respectent les règles de chaque site et attendent entre deux lectures."],
     ["bouclier-ok", "Contrôles", "Chaque info reçoit un badge : Officiel, Confirmé ou À vérifier. Une info « À vérifier » ne compte jamais."],
     ["double", "Labo", "Un programme à part relit les documents officiels et refait le calcul, sans rien prendre du robot."],
@@ -2633,9 +2622,6 @@ function EcranAide({ retour }) {
             </span>
           ))}
         </div>
-        <div className="rangee bloc">
-          <span className="rangee-texte">{fr(`Un site qui refuse le robot (erreur 403) deux fois de suite est mis en pause 7 jours : Radar ne le sollicite plus et réessaie une fois. Aujourd'hui : ${refusees} source${refusees > 1 ? "s" : ""} dans ce cas.`)}</span>
-        </div>
         <RangeeLien icone="antenne" couleur="bleu" label="État des sources" valeur={`${branchees} branchées`} onClick={() => pousser("sources")} />
       </Groupe>
 
@@ -2672,7 +2658,7 @@ function EcranAide({ retour }) {
           <span className="rangee-texte">{fr("Les vrais montants des dépôts officiels des 30 derniers jours : nombre d'actions × prix écrit dans le dépôt, pourcentage de leurs actions quand le dépôt le permet, fourchettes officielles pour les élus. Pas de cours de bourse en direct.")}</span>
         </div>
         <div className="rangee bloc">
-          <span className="rangee-texte">{fr("Rachats : quand le conseil d'une compagnie autorise un rachat de ses actions (8-K), le plafond annoncé, pas un achat fait. Le robot publie seulement une phrase claire : le conseil, une formule d'autorisation, un montant, un signe que c'est récent (une date de moins de 30 jours, « today »), rien d'un ancien programme ; et il vérifie que la compagnie ne l'avait pas déjà annoncé dans ses 8-K des 90 jours avant. 0 point dans la note : l'étude d'Ikenberry, Lakonishok et Vermaelen trouve l'effet surtout pour les actions bon marché, et Radar ne mesure pas ce prix par rapport à la valeur comptable. Sur la fiche : les rachats vraiment faits, selon le rapport annuel.")}</span>
+          <span className="rangee-texte">{fr("Rachats : quand le conseil d'une compagnie autorise un rachat de ses actions (8-K), le plafond annoncé, pas un achat fait. Le robot publie seulement une phrase claire : le conseil, une formule d'autorisation, un montant, un signe que c'est récent (une date de moins de 30 jours, « today »), rien d'un ancien programme ; et il vérifie que la compagnie ne l'avait pas déjà annoncé dans ses 8-K des 90 jours avant. 0 point dans la note : l'étude d'Ikenberry, Lakonishok et Vermaelen trouve l'effet surtout pour les actions bon marché. Sur la fiche : les rachats vraiment faits, selon le rapport annuel.")}</span>
         </div>
         <div className="rangee bloc">
           <a className="etude" href="https://www.nber.org/papers/w4965" target="_blank" rel="noopener noreferrer">
@@ -2699,7 +2685,7 @@ function EcranAide({ retour }) {
         <RangeeLien icone="calendrier" couleur="accent" label="Voir le calendrier" onClick={() => pousser("calendrier")} />
       </Groupe>
 
-      <Groupe titre="Les limites, franchement" pied={m.prix ? fr(m.prix) : undefined}>
+      <Groupe titre="Bon à savoir">
         {DELAIS_AIDE.map(([qui, delai]) => (
           <div key={qui} className="rangee bloc delai">
             <span className="rangee-texte">
@@ -2708,7 +2694,7 @@ function EcranAide({ retour }) {
           </div>
         ))}
         <div className="rangee bloc">
-          <span className="rangee-texte">{fr("La note mesure la force des preuves officielles, pas une promesse de hausse : les études parlent de moyennes sur beaucoup de transactions. Certaines sources sont pour un usage personnel seulement (à revoir avant une vente de l'app).")}</span>
+          <span className="rangee-texte">{fr("La note mesure la force des preuves officielles, pas une promesse de hausse : les études parlent de moyennes sur beaucoup de transactions. Certaines sources sont pour un usage personnel seulement.")}</span>
         </div>
       </Groupe>
       <p className="avertissement">{m.avertissement || "Pas un conseil financier."}</p>
@@ -3128,7 +3114,6 @@ input { font: inherit; color: var(--texte); }
 .point.violet { background: var(--violet); }
 .source { position: relative; display: flex; align-items: center; gap: 12px; padding: 12px 16px; color: var(--texte); }
 .source + .source::before { left: 37px; }
-.source.ecartee { opacity: .55; }
 .source-texte { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .source-nom { font-size: .9375rem; font-weight: 550; }
 .source-etat { font-size: .8125rem; color: var(--texte-2); }

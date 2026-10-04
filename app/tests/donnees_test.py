@@ -87,7 +87,8 @@ def faux(ctx):
         ev(14, "oge_278t", "politiciens", "rapport_278t", "une ministre (exemple) dépose un rapport de transactions (278-T)",
            jour(4), "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/0123456789ABCDEF0123456789ABCDEF/$FILE/Test-278T.pdf",
            numero="0123456789ABCDEF0123456789ABCDEF", entities=["Ministre (exemple)", "Department of Test"],
-           notes=["Liste seulement : le robot ne lit pas le contenu du rapport."],
+           notes=["2 lignes lues : 1 reliée à une action cotée à la SEC ; les autres sont des fonds, des obligations, "
+                  "des placements privés ou un symbole introuvable à la SEC."],
            data={"nom": "Exemple, Ministre", "titre": "Secretary", "agence": "Department of Test", "niveau": "Level I",
                  "ajoute_le": jour(4), "modifie_le": None, "pdf_valide": True, "taille": 5000,
                  "lecture_complete": True, "declarant_concorde": True, "signe_le": jour(4),

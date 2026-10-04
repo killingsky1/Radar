@@ -31,7 +31,7 @@ from ..validate import controle_source
 from .elus import iso_us, nom_coherent, plage
 from .regulateurs import deja
 
-VERSION = "oge-2"  # oge-2 : lit les lignes des rapports du cabinet
+VERSION = "oge-3"  # oge-2 : lit les lignes des rapports du cabinet ; oge-3 : titre et note sans « image numérisée »
 API = "https://extapps2.oge.gov/201/Presiden.nsf/API.xsp/v3/rest"
 COLONNES = ("docDate", "title", "type", "name", "agency", "level")
 # Les 2 recherches de la page officielle : les 278-T des niveaux I et II, et ceux dont le poste contient « President »
@@ -182,10 +182,12 @@ def evenement(x: dict, sha256: str, rapport: dict | None = None, reliees: int = 
     """Le rapport lui-même (liste) ; avec ses lignes si c'est un rapport du cabinet en texte."""
     nom = nom_affiche(x["nom"])
     data = {k: x[k] for k in ("nom", "titre", "agence", "niveau", "ajoute_le", "modifie_le", "pdf_valide", "taille")}
-    if rapport is None:
-        quoi = "image numérisée" if x["pdf_valide"] else "document illisible"
-        notes = [f"{quoi.capitalize()} : le robot ne lit pas ses transactions (trop de risque d'erreur). Ouvrez le "
-                 "document officiel pour les voir."]
+    if rapport is None and x["pdf_valide"]:  # rapport du président (image numérisée) : en liste, avec son lien officiel
+        quoi = None
+        notes = ["Les transactions sont dans le document officiel."]
+    elif rapport is None:  # pas un PDF valide : l'info reste « À vérifier » (contrôle du document raté)
+        quoi = "document illisible"
+        notes = ["Document illisible : ce n'est pas un PDF valide. Ouvrez le lien officiel pour le voir."]
     else:
         n = len(rapport["lignes"])
         quoi = f"{n} transaction{'s' if n > 1 else ''}"
@@ -205,7 +207,7 @@ def evenement(x: dict, sha256: str, rapport: dict | None = None, reliees: int = 
         notes.append(f"Rapport modifié (amended) le {x['modifie_le']}, selon l'OGE.")
     return Evenement(
         source="oge_278t", official_id=x["unid"], category="politiciens", kind="rapport_278t",
-        title=f"{nom} ({poste_fr(x)}) : rapport de transactions (278-T), {quoi}",
+        title=f"{nom} ({poste_fr(x)}) : rapport de transactions (278-T)" + (f", {quoi}" if quoi else ""),
         occurred_on=x["ajoute_le"], published_on=x["ajoute_le"], official_url=x["pdf"], sha256=sha256,
         parser_version=VERSION, entities=[nom, x["agence"]], notes=notes, data=data,
     )

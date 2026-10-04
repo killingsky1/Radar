@@ -207,14 +207,14 @@ SANS_POINTS = {
     "rachat_annonce": "Annonce de rachat d'actions : un plafond autorisé, pas un achat fait. L'étude d'Ikenberry, "
                       "Lakonishok et Vermaelen (annonces de 1980 à 1990) trouve +12,1 % sur 4 ans par rapport à des "
                       "actions comparables, mais surtout pour les actions bon marché (+45,3 %) et rien pour les actions "
-                      "chères ; Radar ne mesure pas le prix par rapport à la valeur comptable.",
+                      "chères.",
     "lobbying": "Lobbying à Washington (LDA.gov) : montré sur la fiche de la compagnie, sans points. L'étude de Chen, "
                 "Parsley et Yang (2015) mesure un effet sur 3 ans, selon le lobbying par rapport à la taille de la "
-                "compagnie, que Radar ne mesure pas.",
+                "compagnie.",
     "cabinet": "Transaction d'un ministre ou d'un haut fonctionnaire (rapport 278-T de l'OGE) : aucune étude ne mesure "
                "d'effet pour ces postes (les études portent sur le Congrès), et une vente peut être imposée par "
                "l'entente d'éthique du poste.",
-    "oge": "Rapports du président (OGE) : images numérisées, en liste seulement ; transactions du cabinet : sans points.",
+    "oge": "Rapports de transactions du président (OGE) : sans points ; le détail est dans le document officiel.",
     "8k_autre": "Autre point du 8-K (contrat, acquisition, avis de retrait de la bourse…) : effet incertain.",
     "contexte": "Contexte seulement.",
 }

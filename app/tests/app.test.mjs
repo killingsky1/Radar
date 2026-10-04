@@ -80,7 +80,7 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     assert.equal(await p.locator(".anneau").getAttribute("aria-label"), `Note ${n.replace("/10", "")} sur 10`);
     await p.locator(".retour").click(); await p.waitForTimeout(200);
   });
-  await verifier("Aide : bouton « ? » du Radar, chemin en 5 étapes, heures des robots, sources refusées, liens", async () => {
+  await verifier("Aide : bouton « ? » du Radar, chemin en 5 étapes, heures des robots, « Bon à savoir », liens", async () => {
     try {
       await p.getByRole("button", { name: "Aide" }).click(); await p.waitForSelector(".flux-etape");
       assert.equal(await p.locator(".grand-titre h1").innerText(), "Aide");
@@ -88,8 +88,9 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       assert.deepEqual(etapes, ["1. Sources officielles", "2. Robots", "3. Contrôles", "4. Labo", "5. Note"]);
       assert.deepEqual(await p.locator(".passage b").allInnerTexts(), ["7 h 07", "9 h 47", "12 h 37", "18 h 17", "23 h 17"]);
       const texte = (await p.locator(".ecran").innerText()).replace(/\u00a0/g, " ");
-      assert.ok(texte.includes("Aujourd'hui : 1 source dans ce cas.") && texte.includes("2 jours ouvrables après la transaction")
+      assert.ok(texte.includes("2 jours ouvrables après la transaction") && texte.toLowerCase().includes("bon à savoir")
         && texte.includes("Note sur 10 = 5 + points × 5/6") && texte.includes("Pas un conseil financier"), texte.slice(0, 300));
+      for (const mot of ["laissées de côté", "403", "dans ce cas", "les limites", "vente de l'app", "aucune source de prix", "ne mesure pas"]) assert.ok(!texte.toLowerCase().includes(mot), mot);
       await p.locator(".lien-rangee", { hasText: "État des sources" }).click(); await p.waitForTimeout(250);
       assert.equal(await p.locator(".grand-titre h1").innerText(), "Sources");
       await p.locator(".retour").click(); await p.waitForTimeout(200);
@@ -172,9 +173,10 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     const pied = await p.locator(".congres-source").last().innerText();
     assert.ok(pied.includes("Senate Office of Public Records cannot vouch for the data") && pied.includes("Lu sur LDA.gov le"), pied);
   }));
-  await verifier("Fiche NVDA : aucun rapport au nom exact (et pas « 0 $ »)", () => fiche("NVDA", async () => {
-    const t = await p.locator(".lobbying").innerText();
-    assert.ok(t.includes("Aucun rapport de lobbying au nom exact « NVIDIA CORP »") && !t.includes("$"), t);
+  await verifier("Fiche NVDA : aucun rapport de lobbying ce trimestre → pas de section (ni « Aucun rapport »)", () => fiche("NVDA", async () => {
+    assert.equal(await p.locator(".lobbying").count(), 0);
+    const t = await p.locator(".ecran").last().innerText();
+    assert.ok(!t.includes("Lobbying à Washington") && !t.includes("Aucun rapport") && !t.includes("ne sont pas cherchés"), t);
   }));
   await verifier("Fiche AMD : rachats d'actions faits (rapport annuel, XBRL de la SEC), lien du rapport", () => fiche("AMD", async () => {
     const total = (await p.locator(".rachats-total").innerText()).replace(/\s/g, "");
@@ -185,12 +187,14 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     const pied = (await p.locator(".rachats-source").innerText()).replace(/\u00a0/g, " ");
     assert.ok(pied.includes("Payments for Repurchase of Common Stock") && pied.includes("l'année 2025") && pied.includes("0 point"), pied);
   }));
-  await verifier("Fiche NVDA : aucun montant de rachat dans les données XBRL (et pas « 0 $ »)", () => fiche("NVDA", async () => {
-    const t = await p.locator(".rachats-faits").innerText();
-    assert.ok(t.includes("Aucun montant de rachat dans les données XBRL de la SEC") && !t.includes("$"), t);
+  await verifier("Fiche NVDA : aucun montant de rachat (XBRL) → pas de section (ni « Aucun montant »)", () => fiche("NVDA", async () => {
+    assert.equal(await p.locator(".rachats-faits").count(), 0);
+    const t = await p.locator(".ecran").last().innerText();
+    assert.ok(!t.includes("Rachats d'actions faits") && !t.includes("Aucun montant") && !t.includes("autre étiquette"), t);
   }));
-  await verifier("Fiche XMPL : recherche trop large, pas vérifié", () => fiche("XMPL", async () => {
-    assert.ok((await p.locator(".lobbying").innerText()).includes("Recherche trop large (« EXEMPLE ») : pas vérifié."));
+  await verifier("Fiche XMPL : recherche de lobbying trop large → pas de section (ni « pas vérifié »)", () => fiche("XMPL", async () => {
+    assert.equal(await p.locator(".lobbying").count(), 0);
+    assert.ok(!(await p.locator(".ecran").last().innerText()).includes("pas vérifié"));
   }, true));
   await verifier("Sans fichier du lobbying : la fiche s'affiche sans la section", async () => {
     const avant = erreurs.length;
@@ -597,14 +601,18 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     await reglages(); await p.getByRole("button", { name: /Réinitialiser/ }).click(); await p.waitForTimeout(200);
     assert.equal(await p.evaluate(() => document.documentElement.dataset.theme), "sombre");
   });
-  await verifier("État des sources : 57 sources listées", async () => { await reglages(); await p.getByRole("button", { name: /État des sources/ }).click(); await p.waitForSelector(".source"); assert.equal(await p.locator(".source").count(), 57); });
-  await verifier("Sources : un site qui refuse le robot (403) : « Refusée par le site », point violet, nouvel essai daté", async () => {
-    const s = p.locator(".source", { hasText: "LEGISinfo" });
-    const etat = await s.locator(".source-etat").innerText();
-    assert.ok(etat.startsWith("Refusée par le site") && etat.includes("Le site refuse l'accès au robot (erreur 403) depuis le ")
-      && etat.includes("Radar respecte ce refus et réessaie une fois le "), etat);
-    assert.equal(await s.locator(".point.violet").count(), 1);
-    assert.ok((await p.locator(".resume").innerText()).includes("Refusées par le site · 1"));
+  await verifier("État des sources : seulement les sources qui servent (ni laissées de côté, ni refusées)", async () => {
+    await reglages(); await p.getByRole("button", { name: /État des sources/ }).click(); await p.waitForSelector(".source");
+    const toutes = await p.evaluate(async () => (await (await fetch("data/app/sources.json")).json()).map((s) => s.statut));
+    const attendues = toutes.filter((s) => !["ecartee", "refusee", "a_venir"].includes(s)).length;
+    assert.ok(toutes.includes("ecartee") && toutes.includes("refusee") && attendues < toutes.length, "les données de test doivent en avoir");
+    assert.equal(await p.locator(".source").count(), attendues);
+  });
+  await verifier("Sources : rien qui dit « Refusée », « Laissée de côté » ou « 403 » ; LEGISinfo (refusée) pas affichée", async () => {
+    assert.equal(await p.locator(".source", { hasText: "LEGISinfo" }).count(), 0);
+    const t = await p.locator(".ecran").last().innerText();
+    for (const mot of ["Refusée", "Laissée", "laissée", "403", "Payant", "interdit"]) assert.ok(!t.includes(mot), mot);
+    assert.ok((await p.locator(".resume").innerText()).startsWith("OK ·"));
   });
   await verifier("Bouton retour vers Réglages", async () => { await p.locator(".retour").click(); await p.waitForTimeout(200); assert.ok(await p.getByRole("button", { name: /Comment c'est vérifié/ }).isVisible()); });
   await verifier("Réglages : « Comment marche Radar (aide) » ouvre l'aide", async () => {
@@ -620,6 +628,41 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     await p.locator(".ligne").first().click(); await p.waitForSelector(".feuille-fond.ouvert");
     const rates = await p.locator(".controle.rate").allInnerTexts();
     assert.ok(rates.some((r) => r.includes("site officiel")), rates.join(" | ")); await fermer();
+  });
+  await verifier("App finie : aucun écran ne dit qu'une chose n'a pas marché ou n'a pas pu être ajoutée", async () => {
+    // Comparé en minuscules : les titres de groupe sont écrits en majuscules par le style (« BON À SAVOIR »).
+    const interdits = ["laissée de côté", "laissées de côté", "refusée par le site", "erreur 403", "phase 1", "arrive bientôt",
+      "aucune source de prix", "vente de l'app", "ne sont pas cherchés", "autre étiquette", "pas vérifié", "ne lit pas",
+      "image numérisée", "ne mesure pas", "en liste seulement", "les limites"];
+    const vus = [];
+    const lire = async (ou, selecteur = ".ecran") => {
+      const t = (await p.locator(selecteur).last().innerText()).replace(/\u00a0|\u202f/g, " ").toLowerCase();
+      for (const mot of interdits) assert.ok(!t.includes(mot), `« ${mot} » sur ${ou}`);
+      vus.push(ou);
+    };
+    try {
+      for (const o of ["Radar", "Argent", "Fil", "Favoris", "Réglages"]) { await onglet(o); await lire(o); }
+      for (const b of [/État des sources/, /Comment marche Radar/, /Comment c'est vérifié/, /Comment le score est calculé/]) {
+        await reglages(); await p.getByRole("button", { name: b }).click(); await p.waitForTimeout(250);
+        await lire(String(b));
+        await p.locator(".retour").click(); await p.waitForTimeout(200);
+      }
+      for (const lien of ["Voir le calendrier", "Voir les résultats"]) {
+        await reglages(); await p.getByRole("button", { name: /Comment marche Radar/ }).click(); await p.waitForTimeout(250);
+        await p.locator(".lien-rangee", { hasText: lien }).click(); await p.waitForTimeout(250);
+        await lire(lien);
+        await p.locator(".retour").click(); await p.waitForTimeout(200);
+      }
+      await onglet("Fil");
+      await p.locator(".ligne", { hasText: "278-T" }).first().click(); await p.waitForSelector(".feuille-fond.ouvert", { timeout: 20000 }); await p.waitForTimeout(300);
+      await lire("détail d'un rapport de l'OGE", ".feuille");
+      await p.locator(".feuille-fermer").click(); await p.waitForTimeout(300);
+      await onglet("Radar");
+      for (const s of ["AMD", "NVDA"]) await fiche(s, () => lire(`fiche ${s}`));
+    } finally {
+      await onglet("Radar");
+    }
+    assert.equal(vus.length, 14, vus.join(" | "));
   });
   await verifier("Hors ligne : l'app s'ouvre quand même (copie gardée)", async () => {
     await p.evaluate(async () => { await navigator.serviceWorker.register("./sw.js"); await navigator.serviceWorker.ready; });

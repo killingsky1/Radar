@@ -191,7 +191,8 @@ def test_info_d_une_compagnie(evs):
 
 def test_rapport_du_cabinet_avec_ses_lignes_et_du_president_en_liste(evs):
     t = [e for e in evs if e.kind == "rapport_278t" and e.title.startswith("Donald J Trump")]
-    assert len(t) == 2 and all(e.title.endswith("image numérisée") and "transactions" not in e.data for e in t)
+    assert len(t) == 2 and all(e.title.endswith("rapport de transactions (278-T)") and "transactions" not in e.data
+                               and e.notes == ["Les transactions sont dans le document officiel."] for e in t)
     m = next(e for e in evs if e.kind == "rapport_278t" and e.official_url.endswith("Markwayne-Mullin-06.24.2026-278T.pdf"))
     assert m.title.endswith("rapport de transactions (278-T), 68 transactions") and len(m.data["transactions"]) == 68
     assert m.notes[0].startswith("68 lignes lues : 48 reliées à une action cotée à la SEC")
