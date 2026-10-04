@@ -20,7 +20,7 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).parent))
-from detecteur_rachats import CANDIDAT, analyser, decision, phrases  # noqa: E402
+from detecteur_rachats import CANDIDAT, analyser, decider, phrases  # noqa: E402
 
 UA_SEC = "Radar projet personnel math-veronneau1@hotmail.com"
 # Arguments : dernier jour, nombre de jours ouvrables, dossier de sortie (par défaut : les 10 jours du 21 sept. au 2 oct.)
@@ -126,29 +126,28 @@ for jour in JOURS:
             continue
         compte["lus"] += 1
         n_jour += 1
-        txt = brut.decode("latin-1")
+        txt = brut.decode("utf-8", "replace")  # comme le robot (documents lus en UTF-8)
         d.update({"cik": cik, "nom": cote[1], "symbole": cotes[cik][0], "bourse": cotes[cik][1], "points": items,
                   "docs": []})
-        trouves, garder = [], False
+        lus_docs, garder = [], False
         for m in re.finditer(r"<DOCUMENT>\s*<TYPE>([^\n<]+)(.*?)</DOCUMENT>", txt, re.S):
             typ = m.group(1).strip().upper()
             if not (typ.startswith("8-K") or typ.startswith("EX-99")):
                 continue
             t = texte_doc(m.group(2))
             d["docs"].append(typ)
+            lus_docs.append((typ, t))
             for i, p in enumerate(phrases(t)):
                 if not CANDIDAT.search(p):
                     continue
                 a = analyser(p, jour)
                 phr.append({"acc": d["acc"], "nom": cote[1], "symbole": cotes[cik][0], "jour": d["jour"], "doc": typ,
                             "phrase": p[:2000], **a})
-                if "sorte" in a:
-                    trouves.append(a)
                 if AUTORISE.search(p):
                     garder = True
             if garder:
                 textes.setdefault(d["acc"], {})[typ] = t
-        d["decision"] = decision(trouves)
+        d["decision"] = decider(lus_docs, jour)
         depots.append(d)
     dire(f"- {jour} : {len(par_acc)} 8-K · lus (cotés, points 2.02/7.01/8.01) : {n_jour}")
     (SORTIE / "depots.json").write_text(json.dumps(depots, ensure_ascii=False, indent=0), encoding="utf-8")
@@ -166,13 +165,12 @@ for d in annonces:
     x = d["decision"]
     montant = f"{x['dollars'] / 1e6:,.1f} M$" if x["dollars"] else f"{x['actions']:,.0f} actions"
     dire(f"- {d['jour']} · {d['nom']} ({d['symbole']}) · {x['sorte']} · {montant} · {d['acc']}")
-    for p in phr:
-        if p["acc"] == d["acc"] and "sorte" in p:
-            dire(f"  - [{p['doc']}] {p['phrase'][:400]}")
-contra = [d for d in depots if d.get("decision", {}).get("statut") == "contradictoire"]
-dire(f"## Dépôts écartés parce que leurs phrases ne disent pas la même chose : {len(contra)}")
+    for doc, phrase in x["phrases"]:
+        dire(f"  - [{doc}] {phrase[:400]}")
+contra = [d for d in depots if d.get("decision", {}).get("statut") not in (None, "rien", "annonce")]
+dire(f"## Dépôts écartés (phrases qui ne disent pas la même chose, même programme plus vieux, moins de 10 M$) : {len(contra)}")
 for d in contra:
-    dire(f"- {d['nom']} ({d['symbole']}) · {d['decision']['cles']} · {d['acc']}")
+    dire(f"- {d['nom']} ({d['symbole']}) · {d['decision']} · {d['acc']}")
 dire("## Phrases rejetées qui parlent d'autoriser ou d'augmenter un rachat (à relire à la main)")
 raisons = {}
 for p in phr:
