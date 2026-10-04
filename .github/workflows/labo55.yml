@@ -1,0 +1,30 @@
+name: "Labo (lot H : vrais 8-K pour les tests, rachats réels XBRL, résumés des études)"
+
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/fixtures_lotH.py", ".github/workflows/labo55.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  recherche:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - run: rm -rf labo/fixtures-lotH && python labo/fixtures_lotH.py
+      - name: Sauvegarder
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/fixtures-lotH
+          git commit -m "Labo : lot H, vrais dépôts et données du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
