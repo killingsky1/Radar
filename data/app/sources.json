@@ -238,6 +238,23 @@
   "statut": "ok"
  },
  {
+  "categorie": "compagnies",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 0
+  },
+  "dernier_contenu": null,
+  "dernier_succes": "2026-10-04T21:42:38+00:00",
+  "explication": "",
+  "id": "sec_sante",
+  "libelle": "OK",
+  "nom": "SEC : santé financière des compagnies (rapports annuels, données XBRL)",
+  "officielle": true,
+  "phase": 1,
+  "site": "https://data.sec.gov/api/xbrl/frames/us-gaap/Assets/USD/CY2025Q4I.json",
+  "statut": "ok"
+ },
+ {
   "categorie": "canada",
   "compte": {
    "a_verifier": 0,
