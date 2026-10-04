@@ -880,16 +880,19 @@
  },
  {
   "categorie": "compagnies",
-  "compte": null,
+  "compte": {
+   "a_verifier": 0,
+   "recus": 0
+  },
   "dernier_contenu": null,
-  "dernier_succes": null,
-  "explication": "Mise de côté par choix : publiée 2 semaines plus tard, et la SEC précise que ce n'est pas une preuve de vente à découvert abusive ; aucune étude solide après publication",
+  "dernier_succes": "2026-10-04T02:07:16+00:00",
+  "explication": "",
   "id": "sec_ftd",
-  "libelle": "Laissée de côté",
-  "nom": "SEC : échecs de livraison d'actions",
-  "officielle": true,
-  "phase": 0,
+  "libelle": "OK",
+  "nom": "SEC : prix de clôture des fichiers d'échecs de livraison (seulement pour mesurer les résultats de Radar)",
+  "officielle": false,
+  "phase": 1,
   "site": "https://www.sec.gov/data-research/sec-markets-data/fails-deliver-data",
-  "statut": "ecartee"
+  "statut": "ok"
  }
 ]
