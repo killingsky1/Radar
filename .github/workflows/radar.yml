@@ -3,6 +3,7 @@ name: Radar
 on:
   schedule:
     # Heures en UTC. Entre parenthèses : l'heure de l'Est en été (HAE) / en hiver (HNE).
+    # GitHub relit cet horaire quand ce fichier change (5 octobre 2026 : aucun passage prévu depuis le 3 octobre).
     - cron: "7 11 * * 1-5"   # matin (7 h 07 / 6 h 07)
     - cron: "47 13 * * 1-5"  # jour  (9 h 47 / 8 h 47)
     - cron: "37 16 * * 1-5"  # midi  (12 h 37 / 11 h 37)
