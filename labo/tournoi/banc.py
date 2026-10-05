@@ -16,7 +16,13 @@ Une règle = un fichier Python (labo/tournoi/regles/<id>.py) qui définit :
     UNE_ENTREE_PAR_SYMBOLE_JOURS = 0    # après un achat, aucun nouvel achat du même symbole pendant N jours civils
 
 `ctx` ne montre QUE ce qui était connu au moment de la décision : toute demande d'une donnée plus récente lève une
-erreur (garde-fou contre le futur). Le banc fait tout le reste, pareil pour tous :
+erreur (garde-fou contre le futur). `ctx.evenements_marche(depuis)` donne tous les formulaires 4 (toutes compagnies)
+déposés depuis une date jusqu'au jour de la décision : pour une « météo » des initiés, sans garder de mémoire.
+garder() est appelé dans l'ordre des dépôts, au fil des jours (un dépôt n'est lu que le jour de bourse qui suit) : même
+une règle qui se souviendrait des dépôts déjà vus ne pourrait pas voir le futur.
+Les données peuvent contenir des dépôts d'avant le début de la période (contexte, 1 an) : jamais achetés ; le début et
+la fin de la période sont dans periode.json.
+Le banc fait tout le reste, pareil pour tous :
 - Achat : clôture de la SEC du N-ième jour de bourse après le dépôt ; pas de prix ce jour-là : jusqu'à 3 jours de bourse
   plus tard, sinon pas acheté (l'argent attend).
 - Vente : clôture du jour prévu ; pas de prix : 1re clôture suivante (jusqu'à 10 jours de bourse), sinon la dernière
@@ -85,6 +91,10 @@ class Donnees:
                     x = json.loads(l)
                     self.treize[x["cik"]] = sorted(tuple(v) for v in x["depots"])
         self.calendrier = json.loads((d / "calendrier.json").read_text(encoding="utf-8"))
+        self.evenements.sort(key=lambda e: (e["depot"], e["id"]))
+        self.depots = [e["depot"] for e in self.evenements]
+        f = d / "periode.json"
+        self.periode = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
         self.par_cie = defaultdict(list)
         for e in self.evenements:
             self.par_cie[e["cik"]].append(e)
@@ -155,6 +165,11 @@ class Contexte:
         """Les formulaires 4 (achats et ventes) sur la compagnie DÉPOSÉS de `depuis` à aujourd'hui."""
         return [e for e in self._d.par_cie.get(cik, []) if depuis <= e["depot"] <= self.jour]
 
+    def evenements_marche(self, depuis):
+        """Tous les formulaires 4 (achats et ventes, toutes compagnies) DÉPOSÉS de `depuis` à aujourd'hui."""
+        d = self._d
+        return d.evenements[bisect_left(d.depots, depuis):bisect_right(d.depots, self.jour)]
+
     def jours_de_bourse(self, depuis):
         i, j = bisect_left(self._d.calendrier, depuis), bisect_right(self._d.calendrier, self.jour)
         return self._d.calendrier[i:j]
@@ -215,25 +230,33 @@ def simuler(regle, d, debut=None, fin_prix=None):
     dernier_achat = {}
     if jours_entree < 1:
         raise ValueError("JOURS_ENTREE doit être au moins 1 : l'heure du dépôt est inconnue")
-    # 1. Les signaux : chaque événement gardé, le soir de son dépôt ; achat prévu le N-ième jour de bourse après
+    # 1. Les signaux : chaque événement gardé, le soir de son dépôt ; achat prévu le N-ième jour de bourse après.
+    #    Lus au fil des jours : au début d'un jour de bourse, seulement les dépôts faits AVANT ce jour.
     signaux = defaultdict(list)
-    for e in d.evenements:
-        if not e.get("symbole"):
-            continue
-        if regle.garder(e, Contexte(d, e["depot"])):
-            jour = jour_de_bourse(cal, e["depot"], jours_entree)
-            if jour:
-                signaux[jour].append(e)
+    a_lire = [e for e in d.evenements if e.get("symbole")]
+    lus = 0
+
+    def lire_signaux(avant_le):
+        nonlocal lus
+        while lus < len(a_lire) and a_lire[lus]["depot"] < avant_le:
+            e = a_lire[lus]
+            lus += 1
+            # garder() voit aussi les dépôts du contexte (avant le début), mais ils ne sont jamais achetés
+            if regle.garder(e, Contexte(d, e["depot"])) and e["depot"] >= debut:
+                jour = jour_de_bourse(cal, e["depot"], jours_entree)
+                if jour:
+                    signaux[jour].append(e)
     spy = d.prix["SPY"]
 
     def spy_au(jour):
         return spy[1][bisect_right(spy[0], jour) - 1]
 
-    debut = debut or min(e["depot"] for e in d.evenements)
+    debut = debut or d.periode.get("debut") or min(e["depot"] for e in d.evenements)
     jours = [j for j in cal if debut <= j <= fin_prix]
     argent, parts_spy, positions, attente, transactions, valeur_jour = CAPITAL, 0.0, [], [], [], []
     veille = None
     for jour in jours:
+        lire_signaux(jour)
         ctx_veille = Contexte(d, veille) if veille else None
         # a) ventes : prévues, ou plus tôt selon la règle (décidé la veille) ; seulement s'il y a un prix CE jour-là,
         #    sinon on réessaie le lendemain ; 10 jours de bourse sans prix après la date prévue : dernière clôture connue
@@ -334,7 +357,7 @@ def statistiques(transactions, valeur_jour, d, positions_ouvertes):
         moy = sum(e) / n if n else None
         sd = math.sqrt(sum((x - moy) ** 2 for x in e) / (n - 1)) if n > 2 else None
         annees[an] = {
-            "transactions": n, "en_attente": attente.get(an, 0),
+            "transactions": n, "en_attente": attente.get(an, 0), "achats": n + attente.get(an, 0),
             "mesurable": n > 0 and attente.get(an, 0) <= EN_ATTENTE_MAX * (n + attente.get(an, 0)),
             "ecart_moyen": round(moy, 4) if n else None,
             "ecart_median": round(sorted(e)[n // 2] if n % 2 else (sorted(e)[n // 2 - 1] + sorted(e)[n // 2]) / 2, 4) if n else None,
@@ -370,7 +393,7 @@ def main():
     a.add_argument("regle")
     a.add_argument("--donnees", default="labo/tournoi/donnees")
     a.add_argument("--sortie")
-    a.add_argument("--debut", help="1er jour du portefeuille (par défaut : le 1er dépôt des données)")
+    a.add_argument("--debut", help="1er jour du portefeuille (par défaut : le début de periode.json)")
     x = a.parse_args()
     regle = charger_regle(x.regle)
     d = Donnees(x.donnees)

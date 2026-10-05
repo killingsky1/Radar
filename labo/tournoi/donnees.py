@@ -532,9 +532,14 @@ def ecrire_jsonl(chemin, lignes):
     return n
 
 
+CONTEXTE_JOURS = 365  # dépôts d'avant le début gardés comme contexte (météo des initiés, ventes récentes) : jamais achetés
+
+
 def ecrire_periode(dossier, evs, prix, finances, treize_par_cie, debut, fin, prix_depuis, calendrier):
-    choisis = [e for e in evs if debut.isoformat() <= e["depot"] <= fin.isoformat()]
-    achats = {e["symbole"] for e in choisis if e["sens"] == "achat" and e["symbole"]}
+    contexte = (debut - timedelta(days=CONTEXTE_JOURS)).isoformat()
+    choisis = [e for e in evs if contexte <= e["depot"] <= fin.isoformat()]
+    periode = [e for e in choisis if e["depot"] >= debut.isoformat()]
+    achats = {e["symbole"] for e in periode if e["sens"] == "achat" and e["symbole"]}
     ciks = {e["cik"] for e in choisis}
     n_ev = ecrire_jsonl(dossier / "evenements.jsonl.gz", sorted(choisis, key=lambda e: (e["depot"], e["id"])))
     n_px = ecrire_jsonl(dossier / "prix.jsonl.gz", prix.lignes(achats | set(MARCHE), prix_depuis))
@@ -545,7 +550,10 @@ def ecrire_periode(dossier, evs, prix, finances, treize_par_cie, debut, fin, pri
                          if c in ciks))
     (dossier / "calendrier.json").write_text(json.dumps([iso(x) for x in calendrier if iso(x) >= prix_depuis]),
                                              encoding="utf-8")
-    return {"evenements": n_ev, "achats": sum(e["sens"] == "achat" for e in choisis), "symboles_prix": n_px,
+    (dossier / "periode.json").write_text(json.dumps({"debut": debut.isoformat(), "fin": fin.isoformat(),
+                                                      "contexte_depuis": contexte}), encoding="utf-8")
+    return {"evenements": n_ev, "evenements_contexte": n_ev - len(periode),
+            "achats": sum(e["sens"] == "achat" for e in periode), "symboles_prix": n_px,
             "compagnies_finances": n_fi, "compagnies_13": n_13}
 
 

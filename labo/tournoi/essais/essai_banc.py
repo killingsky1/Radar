@@ -153,5 +153,48 @@ d = ecrire([ev("a", "AAA", "2023-07-10"), ev("b", "AAA2", "2023-07-10"), ev("c",
            {"SPY": SPY, "AAA": AAA, "AAA2": AAA, "AAA3": AAA})
 t, v, _ = banc.simuler(regle(priorite=lambda e, ctx: {"a": 1, "b": 3, "c": 2}[e["id"]]), d, debut="2023-07-03")
 verifier("Priorité : 1 place, 3 signaux → le plus prioritaire (b)", [x["id"] for x in t] == ["b"])
+# 9. Une règle qui se souvient des dépôts vus dans garder() ne voit jamais le futur (dépôts lus au fil des jours) ;
+#    evenements_marche() ne donne que le passé
+EVS9 = [ev(f"e{i}", "AAA", j) for i, j in enumerate(["2023-07-05", "2023-07-14", "2023-08-01", "2023-09-15", "2023-11-20"])]
+d = ecrire(EVS9, {"SPY": SPY, "AAA": AAA})
+vus, controles = [], []
+
+
+def garder_memoire(e, ctx):
+    vus.append(e["depot"])
+    return False
+
+
+def investir_memoire(jour, ctx):
+    lendemain = banc.jour_de_bourse(d.calendrier, jour, 1)
+    marche = ctx.evenements_marche("2000-01-01")
+    controles.append((jour, max(vus, default=""), lendemain, max((e["depot"] for e in marche), default="")))
+    return True
+
+
+banc.simuler(regle(garder=garder_memoire, investir=investir_memoire), d, debut="2023-07-03")
+verifier("Mémoire de garder() : au moment de chaque décision, seulement des dépôts d'AVANT le jour de bourse",
+         controles and all(m < l for _, m, l, _ in controles), str([c for c in controles if not c[1] < c[2]][:2]))
+verifier("evenements_marche() : seulement les dépôts jusqu'à la veille de la décision",
+         all(m <= j for j, _, _, m in controles) and any(m == "2023-11-20" for *_, m in controles))
+
+# 10. Contexte : un dépôt d'avant le début de la période (periode.json) n'est jamais acheté, même si son jour d'achat
+#     tombe dans la période ; garder() le voit quand même
+d = ecrire([ev("x", "AAA", "2023-07-07"), ev("y", "AAA2", "2023-07-10")], {"SPY": SPY, "AAA": AAA, "AAA2": AAA})
+(ICI / "periode.json").write_text(json.dumps({"debut": "2023-07-10", "fin": "2023-12-29"}))
+d = banc.Donnees(ICI)
+vus = []
+t, v, _ = banc.simuler(regle(garder=lambda e, ctx: vus.append(e["id"]) or True, MAX_POSITIONS=2), d)
+verifier("Dépôt du contexte (7 juillet, achat prévu le 10, 1er jour de la période) : pas acheté ; celui du 10 : acheté le 11",
+         [(x["id"], x["achat"]) for x in t] == [("y", "2023-07-11")] and vus == ["x", "y"], str([(x["id"], x["achat"]) for x in t]))
+verifier("Début par défaut = celui de periode.json", v[0][0] == "2023-07-10", v[0][0])
+
+# 11. Statistiques : achats de l'année = transactions fermées + positions encore ouvertes
+d = ecrire([ev("a", "AAA", "2023-07-10"), ev("b", "AAA2", "2023-12-20")], {"SPY": SPY, "AAA": AAA, "AAA2": AAA})
+t, v, ouvertes = banc.simuler(regle(MAX_POSITIONS=2), d, debut="2023-07-03")
+s = banc.statistiques(t, v, d, ouvertes)
+an = s["annees"]["2023-2024"]
+verifier("Achats de l'année = 1 fermée + 1 encore ouverte", (an["transactions"], an["en_attente"], an["achats"]) == (1, 1, 2), str(an))
+
 print(f"\n{sum(ok)}/{len(ok)} vérifications réussies")
 sys.exit(0 if all(ok) else 1)

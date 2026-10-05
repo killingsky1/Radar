@@ -137,14 +137,22 @@ def lire(ch):
 
 S, C = TMP / "sortie", TMP / "cache" / "coffre"
 dec, cof = lire(S / "evenements.jsonl.gz"), lire(C / "evenements.jsonl.gz")
-verifier("Découverte : seulement les dépôts du 2023-07-01 au 2026-06-30",
-         dec and all("2023-07-01" <= e["depot"] <= "2026-06-30" for e in dec), f"({len(dec)} infos)")
-verifier("Coffre-fort : seulement 2016 à juin 2023, et dans le cache (pas dans la sortie)",
-         cof and all("2016-01-01" <= e["depot"] <= "2023-06-30" for e in cof) and not (S / "coffre").exists(),
+dec_p = [e for e in dec if e["depot"] >= "2023-07-01"]
+dec_c = [e for e in dec if e["depot"] < "2023-07-01"]
+verifier("Découverte : dépôts du 2023-07-01 au 2026-06-30, plus 1 an de contexte (dès le 2022-07-01)",
+         dec_p and dec_c and all("2022-07-01" <= e["depot"] <= "2026-06-30" for e in dec), f"({len(dec_p)} + {len(dec_c)} de contexte)")
+verifier("periode.json de la découverte : début, fin, contexte", json.loads((S / "periode.json").read_text()) ==
+         {"debut": "2023-07-01", "fin": "2026-06-30", "contexte_depuis": "2022-07-01"})
+verifier("periode.json du coffre-fort", json.loads((C / "periode.json").read_text()) ==
+         {"debut": "2016-01-01", "fin": "2023-06-30", "contexte_depuis": "2015-01-01"})
+verifier("Coffre-fort : seulement 2015 (contexte) à juin 2023, et dans le cache (pas dans la sortie)",
+         cof and all("2015-01-01" <= e["depot"] <= "2023-06-30" for e in cof) and not (S / "coffre").exists(),
          f"({len(cof)} infos)")
-verifier("Aucune info en double entre découverte et coffre-fort", not ({e["id"] for e in dec} & {e["id"] for e in cof}))
+verifier("Aucune info de la période de découverte dans le coffre-fort", not ({e["id"] for e in dec_p} & {e["id"] for e in cof}))
+verifier("Le contexte de la découverte = les dépôts du coffre-fort depuis le 2022-07-01, à l'identique",
+         dec_c == [e for e in cof if e["depot"] >= "2022-07-01"])
 verifier("Toutes les infos des fichiers de test (2023-2025) sont là",
-         len(dec) + len(cof) == sum(1 for e in EVS if e["depot"] >= "2016-01-01"), f"({len(dec) + len(cof)} / {len(EVS)})")
+         len(dec_p) + len(cof) == sum(1 for e in EVS if e["depot"] >= "2016-01-01"), f"({len(dec_p) + len(cof)} / {len(EVS)})")
 gme = next(e for e in dec if e["symbole"] == "GME" and e["sens"] == "achat" and e["depot"] == "2025-04-07")
 verifier("GME, achat de Ryan Cohen du 2025-04-07 : 500 000 actions à 21,55 $",
          gme["actions"] == 500000 and gme["prix_moyen"] == 21.55 and gme["montant"] == 10775000.0, str(gme["montant"]))
@@ -172,7 +180,10 @@ verifier("Calendrier des clôtures trié, sans fin de semaine", cal == sorted(ca
     date.fromisoformat(x).weekday() < 5 for x in cal))
 res = json.loads((S / "resume.json").read_text())
 verifier("Résumé : nombres seulement pour le coffre-fort (aucun rendement)", set(res["coffre"]) == {
-    "evenements", "achats", "symboles_prix", "compagnies_finances", "compagnies_13"})
+    "evenements", "evenements_contexte", "achats", "symboles_prix", "compagnies_finances", "compagnies_13"})
+verifier("Résumé : les achats comptés sont ceux de la période (pas du contexte)",
+         res["decouverte"]["achats"] == sum(e["sens"] == "achat" for e in dec_p)
+         and res["decouverte"]["evenements_contexte"] == len(dec_c))
 avant = len(APPELS)
 d.main()  # 2e passage : tout vient du cache
 verifier("Le 2e passage relit le cache : aucune nouvelle requête", len(APPELS) == avant, f"({len(APPELS) - avant} nouvelles)")

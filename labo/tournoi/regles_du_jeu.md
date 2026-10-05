@@ -25,7 +25,7 @@ Une règle passe si les 3 conditions sont vraies :
 1. Son portefeuille, après TOUS les frais, fait mieux que le S&P 500 gardé, **chacune** des 3 années (juillet à juin) ;
 2. Son écart mensuel avec le S&P 500 a un **t de 3 ou plus** sur les 36 mois (seuil de Harvey, Liu et Zhu pour des
    recherches qui essaient beaucoup d'idées) ;
-3. Au moins **30 transactions sur les 3 ans**, dont au moins 5 dans chaque année.
+3. Au moins **30 achats sur les 3 ans**, dont au moins 5 dans chaque année (une position encore ouverte compte).
 
 ## 4. Le débat
 
@@ -47,8 +47,15 @@ pour Radar (un lot normal : code, tests, labo, photos), jamais une garantie de g
 ## Changements (avec la raison)
 
 - 5 octobre 2026, 20 h UTC, AVANT que le jeu de recherche existe (l'étape 0 n'a pas encore tourné) : critère 3
-  « 30 transactions par année » remplacé par « 30 transactions sur les 3 ans, dont au moins 5 dans chaque année ».
+  « 30 transactions par année » remplacé par « 30 achats sur les 3 ans, dont au moins 5 dans chaque année ».
   Raison : les chercheurs ne connaissaient pas ce critère, et il éliminait d'office, sans regarder leurs résultats, les
-  règles qui gardent 6 à 12 mois (10 positions gardées 12 mois = 10 transactions par an), alors que les études
+  règles qui gardent 6 à 12 mois (10 positions gardées 12 mois = 10 achats par an), alors que les études
   trouvent justement l'effet des achats d'initiés sur 6 à 12 mois. Le hasard reste contrôlé par les critères 1 et 2
   (battre le S&P 500 chacune des 3 années, et t de 3 ou plus).
+  Un achat compte même si la position est encore ouverte à la fin des prix (sinon les règles de 12 mois n'auraient
+  presque aucune transaction fermée dans la 3e année).
+- 5 octobre 2026, 20 h 30 UTC, AVANT que le jeu de recherche existe : le banc lit les dépôts au fil des jours (une
+  règle qui se souviendrait des dépôts vus ne peut plus voir le futur), donne `ctx.evenements_marche()` (tous les dépôts
+  jusqu'au jour de la décision, pour la météo des initiés), et chaque période contient 1 an de dépôts de contexte, jamais
+  achetés. Raison : sans cela, une règle « météo » aurait pu tricher sans que le garde-fou le voie, ou manquer de
+  données pour ses premières décisions.

@@ -6,6 +6,10 @@ d'un événement n'utilise que ce qui était DÉPOSÉ avant le formulaire 4 de c
 - **Découverte** (pour les testeurs) : formulaires 4 déposés du 1er juillet 2023 au 30 juin 2026 → `labo/tournoi/donnees/`.
 - **Coffre-fort** (examen final) : déposés du 1er janvier 2016 au 30 juin 2023. Jamais dans la branche ; personne ne le
   voit avant l'examen final, où chaque règle finaliste est testée UNE fois.
+- Chaque période contient aussi **1 an de dépôts d'avant son début (contexte)** : une règle peut s'en servir (météo des
+  initiés, ventes récentes), mais le banc ne les achète jamais. `periode.json` : `{"debut", "fin", "contexte_depuis"}`.
+- Dans une règle, `ctx.evenements_avant(cik, depuis)` donne les dépôts d'une compagnie et `ctx.evenements_marche(depuis)`
+  ceux de toutes les compagnies, jusqu'au jour de la décision seulement.
 
 ## evenements.jsonl.gz (une ligne par formulaire 4 et par sens)
 
