@@ -1,19 +1,24 @@
-Santé financière : 4 compagnie(s) montrée(s) sur 16 des listes · calcul sante-2
-- GME : app 7/9 · labo 7/9 (fichier gme-20260131_htm.xml) · 9 critères identiques : OUI · même rapport annuel (10-K 0001326380-26-000013, exercice 2025-02-02 → 2026-01-31, bilan t-2 au 2024-02-03) : OUI · lien ouvert à la SEC : formulaire 10-K OK
+Santé financière : 3 compagnie(s) montrée(s) sur 21 des listes · calcul sante-2
 - PRHI : pas de score ici non plus (donnée manquante : 'ac') · absente de l'app, comme il faut
+- GME : app 7/9 · labo 7/9 (fichier gme-20260131_htm.xml) · 9 critères identiques : OUI · même rapport annuel (10-K 0001326380-26-000013, exercice 2025-02-02 → 2026-01-31, bilan t-2 au 2024-02-03) : OUI · lien ouvert à la SEC : formulaire 10-K OK
 - XENE : pas de score ici non plus (donnée manquante : 'cout') · absente de l'app, comme il faut
 - CPHC : pas de score ici non plus (donnée manquante : 'cout') · absente de l'app, comme il faut
 - SAMG : pas de score ici non plus (donnée manquante : 'ac') · absente de l'app, comme il faut
+- FLNA : pas de score ici non plus (donnée manquante : 'ventes') · absente de l'app, comme il faut
 - PAM : pas de score ici non plus (aucun rapport annuel avec le bénéfice de son exercice) · absente de l'app, comme il faut
 - FUL : app 7/9 · labo 7/9 (fichier ful20251130_10k_htm.xml) · 9 critères identiques : OUI · même rapport annuel (10-K 0001437749-26-001767, exercice 2024-12-01 → 2025-11-29, bilan t-2 au 2023-12-02) : OUI · lien ouvert à la SEC : formulaire 10-K OK
+- FGBI : pas de score ici non plus (donnée manquante : 'ac') · absente de l'app, comme il faut
 - NYAX : pas de score ici non plus (aucun rapport annuel avec le bénéfice de son exercice) · absente de l'app, comme il faut
+- ASPI : ÉCART, le labo calcule 4/9 avec son 10-K 0001193125-26-151294
 - CRESY : pas de score ici non plus (aucun rapport annuel avec le bénéfice de son exercice) · absente de l'app, comme il faut
-- FLNA : pas de score ici non plus (donnée manquante : 'ventes') · absente de l'app, comme il faut
-- GPUS : app 4/9 · labo 4/9 (fichier hdi32026010k_htm.xml) · 9 critères identiques : OUI · même rapport annuel (10-K 0001214659-26-004697, exercice 2025-01-01 → 2025-12-31, bilan t-2 au 2023-12-31) : OUI · lien ouvert à la SEC : formulaire 10-K OK
+- CSWC : pas de score ici non plus (donnée manquante : 'ac') · absente de l'app, comme il faut
 - HELP : pas de score ici non plus (aucun rapport annuel avec le bénéfice de son exercice) · absente de l'app, comme il faut
+- LPCN : pas de score ici non plus (donnée manquante : 'cout') · absente de l'app, comme il faut
 - TKLF : pas de score ici non plus (donnée manquante : 'cout') · absente de l'app, comme il faut
-- MNSO : pas de score ici non plus (aucun rapport annuel avec le bénéfice de son exercice) · absente de l'app, comme il faut
-- QTEX : pas de score ici non plus (donnée manquante : division by zero) · absente de l'app, comme il faut
+- VENU : pas de score ici non plus (donnée manquante : 'cout') · absente de l'app, comme il faut
+- AFCG : pas de score ici non plus (donnée manquante : 'ac') · absente de l'app, comme il faut
+- CLPR : pas de score ici non plus (donnée manquante : 'ac') · absente de l'app, comme il faut
+- KBDC : pas de score ici non plus (donnée manquante : 'ac') · absente de l'app, comme il faut
 - LESL : app 3/9 · labo 3/9 (fichier lesl-20251004_htm.xml) · 9 critères identiques : OUI · même rapport annuel (10-K 0001193125-25-323811, exercice 2024-09-29 → 2025-10-04, bilan t-2 au 2023-09-30) : OUI · lien ouvert à la SEC : formulaire 10-K OK
-AUCUN ÉCART : chaque score refait en lisant le fichier XBRL du rapport annuel de la compagnie.
-VERDICT : OK
+ASPI : le labo calcule 4/9 (10-K 0001193125-26-151294), mais l'app ne montre rien
+VERDICT : PROBLÈME
