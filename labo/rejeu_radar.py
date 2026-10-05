@@ -586,7 +586,7 @@ def main():
 
     # --- Prix officiels de la SEC (échecs de livraison) ---
     liens_ftd = prix_sec.fichiers_de_la_page(brut(prix_sec.PAGE, "pages/ftd.html").decode("utf-8", "replace"))
-    cles = sorted(c for c in liens_ftd if PREMIER_DEPOT.strftime("%Y%m") + "a" <= c <= "202609a")
+    cles = sorted(c for c in liens_ftd if mois_avant(PREMIER_DEPOT, 12).strftime("%Y%m") + "a" <= c <= "202609a")
     voulus = {e["tickers"][0] for e in bons} | set(prix_sec.MARCHE)
     prix, calendrier, derniers = defaultdict(dict), set(), {}
     exacts = set()
@@ -686,6 +686,13 @@ def main():
         res = score.calculer(visibles, maintenant, precedent, None, fonds=fonds, chefs=frozenset(),
                              routiniers=routiniers, tailles=tailles)
         nouvelles = resultats.noter_entrees(historique, res, maintenant)
+        if nouvelles:
+            lignes_score = {r["symbole"]: r for r in res["hausse"]}
+            for e in nouvelles:
+                r = lignes_score.get(e["symbole"])
+                if e["sens"] == "hausse" and r:
+                    e["infos"] = [[i["id"], i["regle"], i["compte"]] for g in r["groupes"] for i in g["infos"]]
+                    e["valeur_m"] = (r.get("taille") or {}).get("valeur_m")
         listes[jour.isoformat()] = {
             "hausse": [[r["symbole"], r["note10"], (r.get("taille") or {}).get("taille")] for r in res["hausse"]],
             "baisse": [[r["symbole"], r["note10"]] for r in res["baisse"]],
@@ -725,7 +732,7 @@ def main():
         if e["sens"] == "hausse" and DEBUT <= j <= FIN:
             entrees.append({**e, "jour": j.isoformat(), "mois": j.isoformat()[:7]})
     (SORTIE / "entrees.json").write_text(json.dumps(entrees, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    debut_prix = (DEBUT - timedelta(days=10)).strftime("%Y%m%d")
+    debut_prix = mois_avant(PREMIER_DEPOT, 12).strftime("%Y%m%d")  # un an avant : pour facteurs.py
     garder = {e["symbole"] for e in entrees} | set(prix_sec.MARCHE)
     (TRAVAIL / "prix.json").write_text(json.dumps({
         "calendrier": [j for j in calendrier if j >= debut_prix], "couvert": couvert,

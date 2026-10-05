@@ -3,7 +3,8 @@ name: "Labo (rejeu de 3 ans de Radar : quelle règle fait le plus d'argent ?)"
 on:
   push:
     branches: [labo]
-    paths: ["labo/rejeu_radar.py", "labo/strategies.py", "labo/verif_rejeu3.py", ".github/workflows/labo77.yml"]
+    paths: ["labo/rejeu_radar.py", "labo/strategies.py", "labo/verif_rejeu3.py", "labo/facteurs.py",
+            "labo/verif_facteurs.py", ".github/workflows/labo77.yml"]
 
 permissions:
   contents: write
@@ -40,6 +41,10 @@ jobs:
         run: python labo/strategies.py
       - name: Vérification indépendante
         run: python labo/verif_rejeu3.py
+      - name: LE point qui fait la différence ?
+        run: python labo/facteurs.py
+      - name: Vérification indépendante des facteurs
+        run: python labo/verif_facteurs.py
       - name: Garder les fichiers lus (cache)
         if: always()
         uses: actions/cache/save@v4
