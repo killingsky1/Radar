@@ -9,8 +9,15 @@ centile et plus ; moyenne entre les deux (les 3, 4 et 3 déciles de Lakonishok e
 - Seuils : les centiles de valeur en bourse des compagnies du NYSE que Kenneth French publie chaque mois (fichier
   ME_Breakpoints_CSV.zip, données CRSP, en millions de dollars) : le dernier mois du fichier.
 - Valeur en bourse = actions en circulation déclarées à la SEC sur la page couverture des rapports
-  (dei:EntityCommonStockSharesOutstanding, fichiers « frames » des 5 derniers trimestres : la plus récente)
-  × dernier prix de clôture de la SEC (les 2 derniers fichiers d'échecs de livraison, voir prix_sec.py).
+  (dei:EntityCommonStockSharesOutstanding) × dernier prix de clôture de la SEC (les 2 derniers fichiers d'échecs de
+  livraison, voir prix_sec.py). Les actions : le fait le plus récent de 2 API de la SEC, qui ne concordent pas toujours
+  (recherche 29, 5 octobre 2026) :
+  - les fichiers « frames » des 5 derniers trimestres (toutes les compagnies, mais un seul fait par trimestre : un
+    10-Q peut y manquer ; ex. XAIR : 14 410 621 actions au 23 juin, alors qu'elle en déclare 957 631 au 12 août après un
+    regroupement d'actions, soit une valeur 15 fois trop haute avec le prix de septembre) ;
+  - le dossier « companyconcept » de chaque compagnie qui compte : un achat de dirigeant depuis 90 jours (numéro CIK du
+    formulaire 4) ou une place dans les listes publiées (ex. ASPI : 153 309 380 au 14 août, absent des frames ; FLNA :
+    le 10-Q de juillet est dans les frames, pas dans companyconcept).
 - Taille inconnue, donc aucun bonus :
   - compagnie qui ne dépose pas de rapports américains (10-K, 10-Q) ou qui dépose ceux d'un émetteur étranger (20-F,
     40-F, 6-K) : ses titres cotés aux États-Unis sont souvent des certificats (ADS) qui valent plusieurs actions, la
@@ -39,6 +46,8 @@ from . import prix_sec
 
 SEUILS = "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/ME_Breakpoints_CSV.zip"
 FRAMES = "https://data.sec.gov/api/xbrl/frames/dei/EntityCommonStockSharesOutstanding/shares/{}.json"
+CONCEPT = "https://data.sec.gov/api/xbrl/companyconcept/CIK{:010d}/dei/EntityCommonStockSharesOutstanding.json"
+JOURS_ACHATS = 90  # comme l'âge maximal d'une info dans le score
 TRIMESTRES = 5
 FICHIERS_PRIX = 2
 ACTIONS_MAX_JOURS = 200
@@ -97,6 +106,32 @@ def lire_prix(contenu: bytes) -> dict[str, list]:
     return prix
 
 
+def ciks_a_relire(donnees, jour: date) -> list[int]:
+    """Les compagnies dont la taille compte : un achat de dirigeant publié depuis 90 jours (CIK écrit dans le formulaire
+    4), et celles des listes publiées (leur fiche montre la taille)."""
+    from ..emetteurs import charger as fiches_sec  # import ici : emetteurs n'est pas un collecteur
+    from ..store import Depot
+
+    depuis = (jour - timedelta(days=JOURS_ACHATS)).isoformat()
+    ciks = {int(str(e["data"]["cik_emetteur"]).strip()) for e in Depot(donnees).lire("evenements", mois_max=4)
+            if e.get("source") == "sec_form4" and e.get("kind") == "achat_initie" and e.get("published_on", "") >= depuis
+            and str((e.get("data") or {}).get("cik_emetteur") or "").strip().isdigit()}
+    chemin_listes = Path(donnees) / "app" / "aujourdhui.json"
+    if chemin_listes.exists():
+        listes = json.loads(chemin_listes.read_text(encoding="utf-8"))
+        fiches = fiches_sec(donnees)
+        ciks |= {fiches[x["symbole"]]["cik"] for n in ("hausse", "baisse") for x in listes.get(n, [])
+                 if (fiches.get(x["symbole"]) or {}).get("cik")}
+    return sorted(ciks)
+
+
+def fait_recent(faits: list) -> list | None:
+    """[actions, date] du fait le plus récent (date de la page couverture, puis date de dépôt), ou None."""
+    bons = [f for f in faits if isinstance(f.get("val"), (int, float)) and f["val"] > 0 and f.get("end")]
+    f = max(bons, key=lambda f: (f["end"], f.get("filed") or ""), default=None)
+    return [f["val"], f["end"]] if f else None
+
+
 def _sans_heures(e: dict) -> str:
     """Le contenu sans les heures de lecture (pour ne pas réécrire le fichier quand rien n'a changé)."""
     return json.dumps({k: ({c: w for c, w in v.items() if c != "lu"} if k == "seuils" else v) for k, v in e.items()
@@ -126,6 +161,17 @@ def collecter(ctx) -> list[Evenement]:
     if not actions:
         raise RuntimeError("aucune action en circulation dans les fichiers frames de la SEC")
     e["actions"], e["frames"], e["actions_lues"] = actions, frames, lu
+    concept = {}
+    for cik in ciks_a_relire(ctx.donnees, ctx.maintenant.date()):
+        try:
+            d = json.loads(ctx.client.get(CONCEPT.format(cik)).contenu)
+        except ErreurSource as exc:
+            if not str(exc).endswith("HTTP 404"):  # pas de dossier pour cette compagnie (ex. fonds) : normal
+                raise
+            continue
+        if fait := fait_recent((d.get("units") or {}).get("shares") or []):
+            concept[str(cik)] = fait
+    e["actions_concept"] = concept
     liens = prix_sec.fichiers_de_la_page(ctx.client.get(prix_sec.PAGE).contenu.decode("utf-8", "replace"))
     if not liens:
         raise RuntimeError("aucun fichier d'échecs de livraison sur la page officielle (la page a changé ?)")
@@ -157,7 +203,10 @@ def classer(fiche: dict | None, t: dict, symbole: str, jour: date) -> dict:
     if rapports & ETRANGERS or not rapports & AMERICAINS:
         return {**x, "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux "
                                "États-Unis peuvent valoir plusieurs actions"}
-    actions = (t.get("actions") or {}).get(str(cik))
+    sources = [(a, n) for a, n in (((t.get("actions") or {}).get(str(cik)), "frames"),
+                                    ((t.get("actions_concept") or {}).get(str(cik)), "companyconcept")) if a]
+    actions, source = max(sources, key=lambda x: x[0][1], default=(None, None))  # même date : les frames d'abord
+    x["source_actions"] = source
     if not actions or date.fromisoformat(actions[1]) < jour - timedelta(days=ACTIONS_MAX_JOURS):
         return {**x, "raison": f"pas d'actions en circulation déclarées depuis {ACTIONS_MAX_JOURS} jours"}
     if actions[0] < ACTIONS_MIN:

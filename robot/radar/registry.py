@@ -119,10 +119,13 @@ _LISTE = [
       "https://www.justice.gov/atr/news-feeds", publication_max_jours=45),
     S("fed", "Réserve fédérale (Fed) : décisions de taux", "gouvernement", ("federalreserve.gov",), 4,
       "https://www.federalreserve.gov/newsevents/pressreleases.htm"),
-    # Lot 3d : les résultats arrivent sur Fiscal Data vers 23 h UTC (calendrier officiel) : lus la nuit, le matin en secours
+    # Lot 3d : les résultats arrivent sur Fiscal Data vers 23 h UTC (calendrier officiel) : lus la nuit, le matin en secours.
+    # « En pause » après 21 jours sans rien : mesuré sur Fiscal Data (recherche 29, 5 octobre 2026), jusqu'à 19 jours entre
+    # 2 adjudications d'obligations depuis 2023 (24 décembre 2025 → 12 janvier 2026 ; souvent 13 ou 14). Avec 10 jours, la
+    # source s'affichait « en pause » le 5 octobre 2026 alors que les adjudications du 6 au 8 octobre étaient annoncées.
     S("tresor", "Trésor américain : adjudications d'obligations et déficit mensuel (Fiscal Data)", "gouvernement",
       ("fiscaldata.treasury.gov", "treasury.gov"), 4,
-      "https://fiscaldata.treasury.gov/datasets/treasury-securities-auctions-data/", publication_max_jours=10,
+      "https://fiscaldata.treasury.gov/datasets/treasury-securities-auctions-data/", publication_max_jours=21,
       passages=("nuit", "matin")),
     S("nhtsa", "NHTSA : gros rappels d'autos (10 000 véhicules et plus)", "gouvernement", ("nhtsa.gov",), 4,
       "https://www.nhtsa.gov/recalls", publication_max_jours=21),

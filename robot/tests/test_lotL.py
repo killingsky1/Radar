@@ -66,6 +66,10 @@ class FauxInternet:
             return telechargement((F / "page_echecs.html").read_bytes())
         if url.startswith("https://www.sec.gov/files/data/fails-deliver-data/") and (F / nom).exists():
             return telechargement((F / nom).read_bytes())
+        if url.startswith("https://data.sec.gov/api/xbrl/companyconcept/"):
+            fichier = F / "concept" / f"concept_{url.split('/')[6]}.json"  # vrais dossiers lus le 5 octobre (recherche 29)
+            if fichier.exists():
+                return telechargement(fichier.read_bytes())
         raise ErreurSource(f"{url} : HTTP 404")
 
 
@@ -443,3 +447,44 @@ def test_resume_par_signal_sur_de_vrais_prix(tmp_path, monkeypatch):
     assert "facteur:Petite compagnie" not in p["hausse"]  # déjà dans « taille:petite »
     assert p["hausse"]["regle:achat_dirigeant"]["libelle"] == "Achat d'actions par un dirigeant ou un administrateur"
     assert p["hausse"]["regle:achat_dirigeant"]["7"]["mesurees"] >= 1  # au moins une vraie mesure (AAPL, juillet)
+
+
+# ---------- Actions en circulation : le fait le plus récent de 2 API de la SEC (recherche 29) ----------
+
+
+def test_les_compagnies_qui_comptent_sont_relues_dans_companyconcept(tmp_path):
+    (tmp_path / "evenements").mkdir()
+    (tmp_path / "evenements" / "2026-10.jsonl").write_text(
+        "\n".join(json.dumps(e, ensure_ascii=False) for e in EVENEMENTS) + "\n", encoding="utf-8")
+    ciks = ta.ciks_a_relire(tmp_path, MAINTENANT.date())
+    assert ciks == sorted({int(e["data"]["cik_emetteur"]) for e in EVENEMENTS if e["kind"] == "achat_initie"})
+    assert ciks == [39368, 896493, 1069530, 1326380, 1469395, 1502292]  # FUL, GPUS, FLNA, GME, PAM, PRHI
+    assert ta.ciks_a_relire(tmp_path, date(2027, 2, 1)) == []  # achats de plus de 90 jours : plus relus
+    internet = collecter_taille(tmp_path)
+    assert [u for u in internet.appels if "companyconcept" in u] == [ta.CONCEPT.format(c) for c in ciks]
+    concept = ta.charger(tmp_path)["actions_concept"]
+    assert concept == {"39368": [53829119, "2026-09-18"], "1326380": [504500990, "2026-09-03"],
+                       "1502292": [3746092, "2026-08-12"]}  # FLNA : dossier vide à la SEC ; GPUS, PAM : pas de dossier ici
+
+
+def test_le_fait_le_plus_recent_gagne(tmp_path):
+    collecter_taille(tmp_path)
+    t = ta.charger(tmp_path)
+    fiche = {"cik": 1921865, "rapports": ["10-K", "10-Q"]}
+    # ASPI (vrais chiffres, recherche 29) : 125 903 447 au 20 mai dans les frames, 153 309 380 au 14 août dans companyconcept
+    t["actions"]["1921865"], t["prix"]["ASPI"] = [125903447, "2026-05-20"], ["20260914", 3.31]
+    t["actions_concept"] = {"1921865": [153309380, "2026-08-14"]}
+    x = ta.classer(fiche, t, "ASPI", MAINTENANT.date())
+    assert (x["actions"], x["source_actions"], x["taille"], x["valeur_m"]) == ([153309380, "2026-08-14"], "companyconcept",
+                                                                             "petite", 507.5)  # 507,45 M$
+    # XAIR : regroupement d'actions (14 410 621 au 23 juin → 957 631 au 12 août) : la valeur avec le prix de septembre
+    t["actions"]["1641631"], t["prix"]["XAIR"] = [14410621, "2026-06-23"], ["20260914", 3.2]
+    t["actions_concept"]["1641631"] = [957631, "2026-08-12"]
+    x = ta.classer({"cik": 1641631, "rapports": ["10-K", "10-Q"]}, t, "XAIR", MAINTENANT.date())
+    assert (x["valeur_m"], x["source_actions"]) == (3.1, "companyconcept")  # et non 46,1 M$ avec l'ancien nombre
+    # FLNA : son 10-Q de juillet est dans les frames seulement ; même date dans les 2 : les frames
+    flna = ta.classer({"cik": CIKS["FLNA"], "rapports": ["10-K", "10-Q"]}, t, "FLNA", MAINTENANT.date())
+    assert (flna["actions"], flna["source_actions"]) == ([48307896, "2026-07-27"], "frames")
+    t["actions_concept"][str(CIKS["FLNA"])] = [48307896, "2026-07-27"]
+    assert ta.classer({"cik": CIKS["FLNA"], "rapports": ["10-K", "10-Q"]}, t, "FLNA", MAINTENANT.date())[
+        "source_actions"] == "frames"

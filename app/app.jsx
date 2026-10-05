@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.26.0";
+const VERSION = "0.26.1";
 
 // ---------- Constantes ----------
 
