@@ -33,6 +33,7 @@ import sys
 import time
 import zipfile
 from bisect import bisect_left, bisect_right
+from calendar import monthrange
 from collections import Counter, defaultdict
 from datetime import date, datetime, time as heure, timedelta
 from email.utils import parsedate_to_datetime
@@ -283,7 +284,6 @@ class Cotes:
                     return {**actuel, "ticker": symbole or actuel["ticker"]}
                 radiation = moi.radiee_apres(cik, jour)
                 if radiation and symbole:
-                    compte["infos de compagnies retirées de la bourse depuis"] += 1
                     nom = (moi.fiches.get(cik) or {}).get("nom") or moi.nom_declare(cik) or symbole
                     return {"cik": int(cik), "ticker": symbole, "name": nom, "exchange": f"retirée ({radiation})"}
                 return None
@@ -380,16 +380,29 @@ def main():
     for cik in declares:
         declares[cik].sort()
         noms[cik].sort()
-    publication = garde("inities/publication.json.gz",
-                        lambda: {q: publie_le(liens[q]) for q in ("2023q4", "2024q4", "2025q4")})
+    publication = garde("inities/publication_toutes.json.gz",
+                        lambda: {q: publie_le(liens[q]) for q in TRIMESTRES})
+
+    def fin_trimestre(q):
+        a, m = int(q[:4]), 3 * int(q[5])
+        return date(a, m, monthrange(a, m)[1])
+
+    blocs = {d for d, n in Counter(publication.values()).items() if d and n >= 3}
+    delais = {q: (date.fromisoformat(d) - fin_trimestre(q)).days for q, d in publication.items() if d and d not in blocs}
+    delai_max = max(delais.values())
+    dire(f"mise en ligne des jeux de données (en-tête Last-Modified) : {publication}")
+    dire(f"dates partagées par 3 fichiers ou plus (remise en ligne en bloc, pas la 1re mise en ligne) : {sorted(blocs)} · "
+         f"délais mesurés sur les autres fichiers (jours après la fin du trimestre) : {delais} · le plus long : {delai_max}")
     classements, dispo = {}, {}
     for y in ANNEES_CLASSEMENT:
         annees = list(range(y - inities.ANNEES_D_HISTORIQUE, y))
         lignes = [tuple(t) for q in TRIMESTRES if int(q[:4]) in annees for t in routine[q] if t[3] in annees]
         classements[str(y)] = {**inities.classer(lignes, annees), "transactions": len(lignes)}
-        dispo[str(y)] = publication.get(f"{y - 1}q4")
+        q4 = f"{y - 1}q4"
+        d4 = publication.get(q4)
+        dispo[str(y)] = d4 if d4 and d4 not in blocs else (fin_trimestre(q4) + timedelta(days=delai_max)).isoformat()
         dire(f"classement des routiniers pour {y} (transactions de {annees[0]} à {annees[-1]}) : "
-             f"{classements[str(y)]['compte']} · fichier du 4e trimestre {y - 1} mis en ligne le {dispo[str(y)]}")
+             f"{classements[str(y)]['compte']} · utilisable à partir du {dispo[str(y)]}")
     del routine
 
     # --- Formulaires 4 au-dessus des seuils du robot ---
@@ -499,6 +512,8 @@ def main():
     rates = Counter(c for e in evenements if e["badge"] == "a_verifier" for c, ok in e["checks"].items() if not ok)
     dire(f"contrôles ratés (infos « à vérifier », 0 point) : {dict(rates.most_common())}")
     bons = sorted((e for e in evenements if e["badge"] in ("officiel", "confirme")), key=lambda e: (e["published_on"], e["id"]))
+    compte["infos de compagnies retirées de la bourse depuis (comptent)"] = sum(
+        str(e["data"].get("bourse", "")).startswith("retirée") for e in bons)
 
     # --- Symbole -> CIK (pour fonds, taille) ---
     cik_de = {}
@@ -690,48 +705,63 @@ def main():
         hors = saut > resultats.SAUT_MAX or not resultats.VARIATION_MIN <= r["variation"] <= resultats.VARIATION_MAX
         return {**r, "statut": "a_verifier" if hors else "mesure"}
 
-    positions = []
-    for e in sorted(historique["entrees"], key=lambda x: (x["entree"], x["symbole"])):
-        if e["sens"] != "hausse":
-            continue
-        j = datetime.fromisoformat(e["entree"]).astimezone(TORONTO).date()
-        if not DEBUT <= j <= FIN:
-            continue
-        p = prix.get(e["symbole"], {})
-        d = resultats.depart(e, p, calendrier, couvert)
-        pos = {"symbole": e["symbole"], "nom": e["nom"], "entree": e["entree"], "jour": j.isoformat(),
-               "mois": j.isoformat()[:7], "note10": e["note10"], "signaux": e.get("signaux"),
-               "taille": e.get("taille"), "depart": d}
-        if d["statut"] != "ok":
-            pos.update(achetee=False, pourquoi="pas de prix officiel de la SEC au départ : pas acheté")
-            positions.append(pos)
-            continue
-        m = resultats.mesurer(e, d, p, marche, calendrier, couvert, 30)
-        pos["arrivee_robot"] = m
-        if m["statut"] == "pas_de_prix":
-            s = secours(d, p)
-            if s is None:
-                pos.update(achetee=True, statut="aucun_prix_apres", rendement=0.0, rendement_pire=-1.0,
-                           sortie=None, pourquoi="aucun prix après l'achat (0 % ; pire cas −100 %)")
+    def depart_large(e, p):
+        """Variante : le 1er prix de la SEC parmi les 10 dates de règlement après la 1re (au lieu de 3)."""
+        jour = resultats.jour_toronto(e["entree"])
+        for j in [x for x in calendrier if x > jour][1:11]:
+            if j in p:
+                return {"statut": "ok", "date": j, "prix": p[j][0], "cusip": p[j][1]}
+        return {"statut": "pas_de_prix"}
+
+    def faire_positions(depart):
+        positions = []
+        for e in sorted(historique["entrees"], key=lambda x: (x["entree"], x["symbole"])):
+            if e["sens"] != "hausse":
+                continue
+            j = datetime.fromisoformat(e["entree"]).astimezone(TORONTO).date()
+            if not DEBUT <= j <= FIN:
+                continue
+            p = prix.get(e["symbole"], {})
+            d = depart(e, p)
+            pos = {"symbole": e["symbole"], "nom": e["nom"], "entree": e["entree"], "jour": j.isoformat(),
+                   "mois": j.isoformat()[:7], "note10": e["note10"], "signaux": e.get("signaux"),
+                   "taille": e.get("taille"), "depart": d}
+            if d["statut"] != "ok":
+                pos.update(achetee=False, pourquoi="pas de prix officiel de la SEC au départ : pas acheté")
+                positions.append(pos)
+                continue
+            m = resultats.mesurer(e, d, p, marche, calendrier, couvert, 30)
+            pos["arrivee_robot"] = m
+            if m["statut"] == "pas_de_prix":
+                s = secours(d, p)
+                if s is None:
+                    pos.update(achetee=True, statut="aucun_prix_apres", rendement=0.0, rendement_pire=-1.0,
+                               sortie=None, pourquoi="aucun prix après l'achat (0 % ; pire cas −100 %)")
+                else:
+                    pos.update(achetee=True, statut=s["statut"], sortie=s["date"], prix_sortie=s["prix"],
+                               variation=s["variation"], pourquoi=s["genre"],
+                               rendement=0.0 if s["statut"] == "pas_comparable" else s["variation"])
+            elif m["statut"] == "en_attente":
+                raise SystemExit(f"prix pas encore publiés pour {e['symbole']} ({m})")
             else:
-                pos.update(achetee=True, statut=s["statut"], sortie=s["date"], prix_sortie=s["prix"],
-                           variation=s["variation"], pourquoi=s["genre"],
-                           rendement=0.0 if s["statut"] == "pas_comparable" else s["variation"])
-        elif m["statut"] == "en_attente":
-            raise SystemExit(f"prix pas encore publiés pour {e['symbole']} ({m})")
-        else:
-            pos.update(achetee=True, statut=m["statut"], sortie=m["date"], prix_sortie=m["prix"],
-                       variation=m["variation"], rendement=0.0 if m["statut"] == "pas_comparable" else m["variation"],
-                       pourquoi=m.get("pourquoi"))
-        pos["prix_achat"] = d["prix"]
-        if pos.get("sortie"):
-            f, r = marche_entre(d["date"], pos["sortie"])
-            pos.update(fonds_marche=f, marche=r)
-        else:
-            pos.update(fonds_marche=None, marche=None)
-        pos.setdefault("rendement_pire", pos["rendement"])
-        pos["rendement_sans_sauts"] = 0.0 if pos["statut"] == "a_verifier" else pos["rendement"]
-        positions.append(pos)
+                pos.update(achetee=True, statut=m["statut"], sortie=m["date"], prix_sortie=m["prix"],
+                           variation=m["variation"], rendement=0.0 if m["statut"] == "pas_comparable" else m["variation"],
+                           pourquoi=m.get("pourquoi"))
+            pos["prix_achat"] = d["prix"]
+            if pos.get("sortie"):
+                f, r = marche_entre(d["date"], pos["sortie"])
+                pos.update(fonds_marche=f, marche=r)
+            else:
+                pos.update(fonds_marche=None, marche=None)
+            pos.setdefault("rendement_pire", pos["rendement"])
+            pos["rendement_sans_sauts"] = 0.0 if pos["statut"] == "a_verifier" else pos["rendement"]
+            if pos.get("sortie"):
+                pos["jours_tenus"] = (datetime.strptime(pos["sortie"], "%Y%m%d") - datetime.strptime(d["date"], "%Y%m%d")).days
+            positions.append(pos)
+        return positions
+
+    positions = faire_positions(lambda e, p: resultats.depart(e, p, calendrier, couvert))
+    positions_large = faire_positions(depart_large)
 
     # --- L'argent ---
     mois = []
@@ -748,7 +778,7 @@ def main():
     def valeur_position(alloc, r, frais):
         return max(0.0, (alloc - frais) * (1 + r) - frais) if frais else alloc * (1 + r)
 
-    def portefeuille(cle, frais=0.0):
+    def portefeuille(cle, frais=0.0, achetees=achetees):
         etale, reinvesti, chemin = 0.0, 0.0, []
         for mo in mois:
             ps = [p for p in achetees if p["mois"] == mo and p[cle] is not None]
@@ -767,6 +797,10 @@ def main():
         "Radar, sauts anormaux à 0 %": portefeuille("rendement_sans_sauts"),
         "Radar, pire cas (sans prix après l'achat = −100 %)": portefeuille("rendement_pire"),
         "S&P 500 (SPY) aux mêmes dates": portefeuille("marche"),
+        "Variante : achat jusqu'à 10 jours de bourse plus tard": portefeuille(
+            "rendement", achetees=[p for p in positions_large if p["achetee"]]),
+        "Variante : S&P 500 aux mêmes dates que la variante": portefeuille(
+            "marche", achetees=[p for p in positions_large if p["achetee"]]),
     }
     # S&P 500 acheté chaque mois et gardé jusqu'à la dernière vente de Radar
     fin_tout = max([p["sortie"] for p in achetees if p.get("sortie")] + [plus_jours(compact(FIN), 30)])
@@ -798,10 +832,19 @@ def main():
     pire = min(achetees, key=lambda p: p["rendement"], default=None)
     chemin = versions["Radar"][2]
     investi = [MENSUEL * (i + 1) for i in range(len(mois))]
-    sommet, baisse_max = 0.0, 0.0
-    for v in chemin:
-        sommet = max(sommet, v)
-        baisse_max = min(baisse_max, v / sommet - 1 if sommet else 0)
+    def pire_baisse(cle):
+        indice, sommet, baisse = 1.0, 1.0, 0.0
+        for x in mensuel:
+            indice *= 1 + (x[cle] or 0)
+            sommet = max(sommet, indice)
+            baisse = min(baisse, indice / sommet - 1)
+        return round(baisse, 4)
+
+    baisse_max, baisse_max_spy = pire_baisse("rendement_moyen"), pire_baisse("marche_moyen")
+    avec = [x for x in mensuel if x["rendement_moyen"] is not None]
+    pire_mois = min(avec, key=lambda x: x["rendement_moyen"]) if avec else None
+    tenus = sorted(p["jours_tenus"] for p in achetees if p.get("jours_tenus") is not None)
+    large = [p for p in positions_large if p["achetee"]]
 
     bilan = {
         "periode": [DEBUT.isoformat(), FIN.isoformat()], "derniere_vente": fin_tout,
@@ -816,11 +859,18 @@ def main():
         "marche_moyen": round(mean(p["marche"] for p in achetees if p["marche"] is not None), 4) if achetees else None,
         "meilleure": meilleure and {k: meilleure[k] for k in ("symbole", "nom", "jour", "rendement", "marche")},
         "pire": pire and {k: pire[k] for k in ("symbole", "nom", "jour", "rendement", "marche")},
-        "pire_baisse_reinvesti": round(baisse_max, 4),
+        "pire_baisse_indice": baisse_max, "pire_baisse_indice_spy": baisse_max_spy,
+        "pire_mois": pire_mois and {k: pire_mois[k] for k in ("mois", "rendement_moyen", "marche_moyen")},
+        "jours_tenus": {"mediane": tenus[len(tenus) // 2] if tenus else None, "max": max(tenus, default=None),
+                        "plus_de_33": sum(t > 33 for t in tenus)},
+        "variante_large": {"positions": len(positions_large), "achetees": len(large)},
+        "dispo_classements": dispo, "publication_jeux": publication, "blocs": sorted(blocs),
         "statuts": dict(Counter(p.get("statut", "pas_achetee") for p in positions)),
         "compteurs": dict(compte),
     }
     (SORTIE / "positions.json").write_text(json.dumps(positions, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    (SORTIE / "positions_variante.json").write_text(json.dumps(positions_large, ensure_ascii=False, indent=1) + "\n",
+                                                   encoding="utf-8")
     (SORTIE / "mensuel.json").write_text(json.dumps({"bilan": bilan, "mois": mensuel}, ensure_ascii=False, indent=1)
                                          + "\n", encoding="utf-8")
     (SORTIE / "listes.json").write_text(json.dumps(listes, ensure_ascii=False, separators=(",", ":")) + "\n",
@@ -841,8 +891,9 @@ def main():
          f"Dernière vente : {resultats.iso(fin_tout)}. Montants en dollars américains, sans impôt ni change.", "",
          "## Résultat", "", "| Version | Étalé (833 $ par mois, pas réinvesti) | Réinvesti chaque mois |", "|---|---|---|"]
     for k, v in versions.items():
-        l.append(f"| {k} | {argent(v[0])} | {argent(v[1])} |")
-    l.append(f"| S&P 500 (SPY) acheté chaque mois et gardé jusqu'au {resultats.iso(fin_tout)} | {argent(garde_spy)} | — |")
+        l.append(f"| {k} | {argent(v[0])} ({pc(v[0] / 10_000 - 1)}) | {argent(v[1])} ({pc(v[1] / 10_000 - 1)}) |")
+    l.append(f"| S&P 500 (SPY) acheté chaque mois et gardé jusqu'au {resultats.iso(fin_tout)} | {argent(garde_spy)} "
+             f"({pc(garde_spy / 10_000 - 1)}) | — |")
     l += ["", "## Les positions", "",
           f"- Nouvelles entrées « hausse » : {len(positions)} · achetées : {len(achetees)} · pas de prix au départ : "
           f"{len(positions) - len(achetees)}",
@@ -852,7 +903,15 @@ def main():
           f"{pc(bilan['marche_moyen'])}",
           f"- Meilleure : {meilleure and meilleure['symbole']} {pc(meilleure and meilleure['rendement'])} · pire : "
           f"{pire and pire['symbole']} {pc(pire and pire['rendement'])}",
-          f"- Pire baisse de la version réinvestie (d'un sommet mensuel au creux suivant) : {pc(baisse_max)}",
+          f"- Pire baisse (rendement mis bout à bout, d'un sommet mensuel au creux suivant) : Radar {pc(baisse_max)} · "
+          f"S&P 500 mêmes dates {pc(baisse_max_spy)} · pire mois : {pire_mois and pire_mois['mois']} "
+          f"{pc(pire_mois and pire_mois['rendement_moyen'])}",
+          f"- Durée réelle des positions : médiane {bilan['jours_tenus']['mediane']} jours · max {bilan['jours_tenus']['max']} · "
+          f"vendues après le 33e jour faute de prix : {bilan['jours_tenus']['plus_de_33']}",
+          f"- Variante achat jusqu'à 10 jours de bourse plus tard : {len(large)} achetées sur {len(positions_large)}",
+          f"- Routiniers : classement {', '.join(f'{y} dès le {d}' for y, d in dispo.items())} (jeux de données remis en "
+          f"ligne en bloc le {', '.join(sorted(blocs))} : 1re mise en ligne = fin du trimestre + {delai_max} jours, le plus "
+          f"long délai mesuré)",
           f"- Statuts : {bilan['statuts']}", "", "## Mois par mois", "",
           "| Mois | Entrées | Achetées | Rendement moyen | S&P 500 mêmes dates | Gagnantes | Mieux que le S&P | "
           "Réinvesti (fin du mois) |", "|---|---|---|---|---|---|---|---|"]

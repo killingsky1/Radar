@@ -167,7 +167,22 @@ AUTO = re.compile(r"reinvest\w*\s+(of\s+)?(the\s+)?dividends?|dividends?\s+reinv
                   re.I)
 session = requests.Session()
 dernier = 0.0
-identiques = 0
+identiques, arrondis, ecart_montant = 0, 0, 0.0
+
+
+def memes_lignes(a, b, tol):
+    """Les mêmes lignes (date, actions, prix), à `tol` près sur les actions et le prix (chaque ligne une seule fois)."""
+    if len(a) != len(b):
+        return False
+    libres = list(b)
+    for d, x, px in a:
+        k = next((i for i, (d2, x2, px2) in enumerate(libres)
+                  if d2 == d and abs(x2 - x) <= tol and abs(px2 - px) <= tol), None)
+        if k is None:
+            return False
+        libres.pop(k)
+    return True
+
 for e in choix:
     acc, code = e["official_id"].split(":")
     cik = int(e["data"]["cik_emetteur"])
@@ -208,8 +223,14 @@ for e in choix:
         differences.append(f"date de dépôt {depose} ≠ {e['published_on']}")
     if int(racine.findtext("issuer/issuerCik")) != cik:
         differences.append("compagnie")
-    if sorted(vrai) != sorted(rejeu):
-        differences.append(f"lignes {sorted(vrai)} ≠ {sorted(rejeu)}")
+    arrondi = False
+    if not memes_lignes(vrai, rejeu, 1e-9):
+        if memes_lignes(vrai, rejeu, 0.005 + 1e-9):
+            arrondi = True  # les jeux de données gardent 2 décimales (prix, actions) ; le document en a parfois plus
+            m1, m2 = sum(x * px for _, x, px in vrai), sum(x * px for _, x, px in rejeu)
+            ecart_montant = max(ecart_montant, abs(m2 / m1 - 1) if m1 else 0)
+        else:
+            differences.append(f"lignes {sorted(vrai)} ≠ {sorted(rejeu)}")
     if proprios != sorted(e["entities"][:-1]):
         differences.append(f"déclarants {proprios} ≠ {sorted(e['entities'][:-1])}")
     if plan != bool(e["data"]["plan_10b5_1"]):
@@ -219,10 +240,13 @@ for e in choix:
                            f"{bool(e['data'].get('automatique'))}")
     if differences:
         ecart(f"{e['id']} ({e['tickers'][0]}) : {' ; '.join(differences)}")
+    elif arrondi:
+        arrondis += 1
     else:
         identiques += 1
 dire(f"- formulaires 4 comparés : {len(choix)} (20 liés aux entrées, 10 autres achats, 10 ventes) · identiques : "
-     f"{identiques}")
+     f"{identiques} · identiques sauf l'arrondi à 2 décimales des jeux de données (prix ou actions) : {arrondis} · "
+     f"écart maximal sur le montant à cause de l'arrondi : {ecart_montant * 100:.3f} %")
 
 # ---------- 4. Score : recalcul indépendant sur 3 jours ----------
 dire("\n## 4. Score du rejeu contre le recalcul indépendant (labo/recalcul_score.py)")
