@@ -1,6 +1,41 @@
 {
  "etude": "https://www.ivey.uwo.ca/media/3775523/value_investing_the_use_of_historical_financial_statement_information.pdf",
  "par_symbole": {
+  "ASPI": {
+   "accn": "0001193125-26-151294",
+   "chiffres": {
+    "cfo": -0.400432,
+    "emission": 320304000,
+    "levier": 0.004967,
+    "levier_avant": 0.023644,
+    "liquidite": 12.231435,
+    "liquidite_avant": 9.3135,
+    "marge": 0.142773,
+    "marge_avant": 0.385859,
+    "roa": -1.694185,
+    "roa_avant": -1.177224,
+    "rotation": 0.252777,
+    "rotation_avant": 0.150462
+   },
+   "cik": 1921865,
+   "criteres": {
+    "ACCRUAL": 1,
+    "CFO": 0,
+    "EQ_OFFER": 0,
+    "ROA": 0,
+    "ΔLEVER": 1,
+    "ΔLIQUID": 1,
+    "ΔMARGIN": 0,
+    "ΔROA": 0,
+    "ΔTURN": 1
+   },
+   "debut": "2025-01-01",
+   "depose": "2026-04-10",
+   "f_score": 4,
+   "fin": "2025-12-31",
+   "forme": "10-K",
+   "lien": "https://www.sec.gov/Archives/edgar/data/1921865/000119312526151294/0001193125-26-151294-index.htm"
+  },
   "FUL": {
    "accn": "0001437749-26-001767",
    "chiffres": {
