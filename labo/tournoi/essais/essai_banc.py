@@ -1,0 +1,136 @@
+"""Essai du banc d'essai du tournoi sur des données faites à la main, où la bonne réponse est connue d'avance."""
+import gzip
+import json
+import shutil
+import sys
+import types
+from datetime import date, timedelta
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import banc  # noqa: E402
+
+ICI = Path(__file__).parent / "tmp_banc"
+ok = []
+
+
+def verifier(nom, condition, detail=""):
+    ok.append(bool(condition))
+    print(f"{'OK    ' if condition else 'ÉCHEC '} {nom} {detail}")
+
+
+JOURS = []
+j = date(2023, 7, 3)
+while j <= date(2023, 12, 29):
+    if j.weekday() < 5:
+        JOURS.append(j.isoformat())
+    j += timedelta(days=1)
+
+
+def ecrire(evenements, prix):
+    shutil.rmtree(ICI, ignore_errors=True)
+    ICI.mkdir()
+    with gzip.open(ICI / "evenements.jsonl.gz", "wt") as f:
+        for e in evenements:
+            f.write(json.dumps(e) + "\n")
+    with gzip.open(ICI / "prix.jsonl.gz", "wt") as f:
+        for s, lignes in prix.items():
+            f.write(json.dumps({"s": s, "d": [int(x[0].replace("-", "")) for x in lignes], "p": [x[1] for x in lignes],
+                                "c": [x[2] for x in lignes], "q": [0] * len(lignes)}) + "\n")
+    (ICI / "calendrier.json").write_text(json.dumps(JOURS))
+    return banc.Donnees(ICI)
+
+
+def ev(id_, symbole, depot, valeur_m=None):
+    return {"id": id_, "sens": "achat", "depot": depot, "symbole": symbole, "cik": id_, "valeur_m": valeur_m,
+            "inities": []}
+
+
+def regle(**x):
+    r = types.SimpleNamespace(ID="essai", garder=lambda e, ctx: True, ARGENT_QUI_ATTEND="rien", MAX_POSITIONS=1, DUREE=21)
+    for k, v in x.items():
+        setattr(r, k, v)
+    return r
+
+
+SPY = [(j, 100.0, "S") for j in JOURS]
+# AAA : 10 $ jusqu'au 2023-08-01, puis 11 $ (+10 %)
+AAA = [(j, 10.0 if j < "2023-08-02" else 11.0, "A") for j in JOURS]
+
+# 1. Une transaction simple : dépôt lundi 10 juillet → achat à la clôture du mardi 11 → vente 21 jours de bourse après
+d = ecrire([ev("a", "AAA", "2023-07-10")], {"SPY": SPY, "AAA": AAA})
+t, v, ouvertes = banc.simuler(regle(), d, debut="2023-07-03")
+x = t[0]
+sortie = JOURS[JOURS.index("2023-07-11") + 21]
+verifier("Achat à la clôture du 1er jour de bourse APRÈS le dépôt", x["achat"] == "2023-07-11", x["achat"])
+verifier("Vente 21 jours de bourse plus tard", x["vente"] == sortie, f"{x['vente']} (attendu {sortie})")
+verifier("Rendement +10 %, marché 0 %, écart +10 %", (x["rendement"], x["marche"], x["ecart"]) == (0.1, 0.0, 0.1))
+investi = (10000 - 10) * (1 - 0.01)          # 10 $ de frais, puis 1 % de demi-écart (taille inconnue)
+vendu = investi * 1.1 * (1 - 0.01) - 10      # 1 % de demi-écart et 10 $ à la vente
+verifier("Frais : 10 $ + 1 % à l'achat ET à la vente (taille inconnue)", abs(v[-1][1] - vendu) < 0.01,
+         f"{v[-1][1]:.2f} contre {vendu:.2f}")
+s = banc.statistiques(t, v, d, ouvertes)
+verifier("Statistiques : portefeuille total = valeur finale ÷ 10 000 − 1", s["total"]["portefeuille"] == round(vendu / 10000 - 1, 4))
+
+# 2. Prix rares : BBB a un prix un jour sur 4 → achat au 1er jour AVEC prix (3 jours de bourse au plus)
+BBB = [(j, 20.0, "B") for i, j in enumerate(JOURS) if i % 4 == 0]
+d = ecrire([ev("b", "BBB", "2023-07-10")], {"SPY": SPY, "BBB": BBB})
+t, v, _ = banc.simuler(regle(), d, debut="2023-07-03")
+premier_prix = next(j for j, _, _ in BBB if j >= "2023-07-11")
+verifier("Prix rares : achat au 1er jour de bourse avec un prix (au plus 3 jours après)",
+         t and t[0]["achat"] == premier_prix, f"{t[0]['achat'] if t else None} (attendu {premier_prix})")
+CCC = [("2023-07-20", 5.0, "C"), ("2023-09-01", 5.0, "C")]  # 1er prix 7 jours de bourse après le 11 juillet
+d = ecrire([ev("c", "CCC", "2023-07-10")], {"SPY": SPY, "CCC": CCC})
+t, v, _ = banc.simuler(regle(), d, debut="2023-07-03")
+verifier("Prix trop rares (aucun dans les 3 jours de bourse) : pas acheté, l'argent reste", not t and abs(v[-1][1] - 10000) < 1e-6)
+
+# 3. Changement de CUSIP (regroupement 1 pour 10) : 1 $ → 10 $ sans changement de valeur → rendement 0, pas +900 %
+DDD = [(j, 1.0 if j < "2023-07-20" else 10.0, "D1" if j < "2023-07-20" else "D2") for j in JOURS]
+d = ecrire([ev("d", "DDD", "2023-07-10")], {"SPY": SPY, "DDD": DDD})
+t, v, _ = banc.simuler(regle(), d, debut="2023-07-03")
+verifier("CUSIP changé : rendement enchaîné (0 %), pas +900 %", t and t[0]["rendement"] == 0.0, str(t[0]["rendement"] if t else None))
+
+# 4. Garde-fou contre le futur
+def triche(e, ctx):
+    ctx.cloture("AAA", "2023-08-15")
+    return True
+
+
+d = ecrire([ev("a", "AAA", "2023-07-10")], {"SPY": SPY, "AAA": AAA})
+try:
+    banc.simuler(regle(garder=triche), d, debut="2023-07-03")
+    verifier("Une règle qui regarde le futur est arrêtée", False)
+except banc.Futur as exc:
+    verifier("Une règle qui regarde le futur est arrêtée", True, str(exc))
+
+# 5. Météo : investir() faux → aucun achat ; l'argent attend
+t, v, _ = banc.simuler(regle(investir=lambda jour, ctx: False), d, debut="2023-07-03")
+verifier("Météo défavorable : aucun achat", not t and abs(v[-1][1] - 10000) < 1e-6)
+
+# 6. Vente plus tôt : seuil de perte −10 % décidé sur la clôture de la VEILLE, vendu à la clôture du jour
+EEE = [(j, 10.0 if j < "2023-07-17" else 8.0, "E") for j in JOURS]
+d = ecrire([ev("e", "EEE", "2023-07-10")], {"SPY": SPY, "EEE": EEE})
+
+
+def stop(pos, jour, ctx):
+    c = ctx.cloture(pos["s"])
+    return c is not None and c[1] <= pos["entree"][1] * 0.9
+
+
+t, v, _ = banc.simuler(regle(sortir_avant=stop), d, debut="2023-07-03")
+verifier("Seuil de perte : vu à la clôture du 17 juillet, vendu à celle du 18 (pas le même jour)",
+         t and t[0]["vente"] == "2023-07-18" and t[0]["plus_tot"] and t[0]["rendement"] == -0.2,
+         str(t[0] if t else None))
+
+# 7. Plusieurs positions : 2 places, 3 signaux le même jour → les 2 premiers ; l'argent qui attend suit SPY
+SPY2 = [(j, 100.0 * 1.001 ** i, "S") for i, j in enumerate(JOURS)]
+d = ecrire([ev("a", "AAA", "2023-07-10"), ev("b", "AAA2", "2023-07-10"), ev("c", "AAA3", "2023-07-10")],
+           {"SPY": SPY2, "AAA": AAA, "AAA2": AAA, "AAA3": AAA})
+t, v, _ = banc.simuler(regle(MAX_POSITIONS=2, ARGENT_QUI_ATTEND="SPY"), d, debut="2023-07-03")
+verifier("2 places : les 2 premiers signaux (par dépôt puis numéro), pas le 3e", sorted(x["id"] for x in t) == ["a", "b"])
+m = t[0]["marche"]
+verifier("Marché aux mêmes dates : SPY de l'achat à la vente", abs(m - (1.001 ** 21 - 1)) < 1e-3, str(m))
+s = banc.statistiques(t, v, d, [])
+verifier("Écart mensuel : calculé sur les fins de mois", s["total"]["mois"] >= 4, str(s["total"]))
+print(f"\n{sum(ok)}/{len(ok)} vérifications réussies")
+sys.exit(0 if all(ok) else 1)
