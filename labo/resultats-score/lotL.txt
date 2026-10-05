@@ -1,4 +1,4 @@
-# Lot L contre-vérifié (2026-10-05T02:12:12+00:00, version du score score-8)
+# Lot L contre-vérifié (2026-10-05T02:45:12+00:00, version du score score-8)
 
 - page officielle : 82 fichiers trimestriels, le plus récent 2026q2
 - 2026 (avec [2023, 2024, 2025]) par cik : robot 2,506 paires routinières · labo 2,506 · identiques : OUI
@@ -16,6 +16,7 @@
   - CHE · MCNAMARA KEVIN J · 2026-09-28 · mois : mai et août (2023, 2024 et 2025)
 - seuils du NYSE (labo) : {'mois': '202608', 'p30': 2236.27, 'p70': 13366.01}
 - prix (labo) : fichiers ['202608b', '202609a'] · 14,415 symboles
+- frames (labo) : 5,640 compagnies avec des actions déclarées
 - PRHI : robot petite (32.6 M$) · labo petite · actions du dossier SEC 3,746,092 au 2026-08-12 · prix ['20260914', 8.7] · rapports ['10-K', '10-Q']
 - GME : robot moyenne (10670.2 M$) · labo moyenne · actions du dossier SEC 504,500,990 au 2026-09-03 · prix ['20260914', 21.15] · rapports ['10-K', '10-Q']
 - XENE : robot moyenne (5831.7 M$) · labo moyenne · actions du dossier SEC 96,840,432 au 2026-08-03 · prix ['20260901', 60.22] · rapports ['10-K', '10-Q']
@@ -40,7 +41,8 @@
 - entrées : 24 · du lot L (score-8) : 8 · sans raisons notées (avant) : 16
 - par signal (hausse) : 3 signaux refaits · grace_a_la_taille 8, regle:achat_dirigeant 8, taille:petite 8
 - par signal (baisse) : 0 signaux refaits · 
-Note : FLNA : fait plus récent dans le dossier de la SEC (48,307,896 au 2026-05-04) que dans les fichiers frames lus par le robot (48,307,896 au 2026-07-27)
-Note : ASPI : fait plus récent dans le dossier de la SEC (153,309,380 au 2026-08-14) que dans les fichiers frames lus par le robot (125,903,447 au 2026-05-20)
-FLNA : actions [48307896, '2026-07-27'] absentes du dossier de la compagnie à la SEC
-VERDICT : PROBLÈME
+Note : FLNA : 48,307,896 actions au 2026-07-27 selon les frames ; le dossier companyfacts a le même nombre à une autre date (dernier : 2026-05-04) : les 2 API de la SEC ne concordent pas sur la date
+Note : FLNA : fait le plus récent du dossier companyfacts (48,307,896 au 2026-05-04) ≠ frames (48,307,896 au 2026-07-27)
+Note : ASPI : fait le plus récent du dossier companyfacts (153,309,380 au 2026-08-14) ≠ frames (125,903,447 au 2026-05-20)
+AUCUN ÉCART : routiniers, tailles et raisons refaits aux sources officielles.
+VERDICT : OK
