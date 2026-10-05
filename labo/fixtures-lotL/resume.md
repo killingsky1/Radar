@@ -1,0 +1,86 @@
+# Extraits du lot L (2026-10-05)
+
+- symboles → CIK : {'AAPL': 320193, 'ORCL': 1341439, 'CRBG': 1889539, 'GME': 1326380, 'PAM': 1469395, 'XENE': 1582313, 'FUL': 39368, 'MNSO': 1815846, 'NYAX': 1901279, 'HELP': 1833141, 'CRESY': 1034957, 'SAMG': 1549966, 'CPHC': 1672909, 'QTEX': 1837493, 'FLNA': 1069530, 'PRHI': 1502292, 'GPUS': 896493, 'TKLF': 1836242, 'LESL': 1821806} · absents : []
+- page des jeux de données : 82 fichiers trimestriels · du 2006q1 au 2026q2
+- 2023q1 : 13,882,049 octets · 25,128 transactions en bourse (P ou S) de 2023 à 2025
+- 2023q2 : 10,742,628 octets · 23,260 transactions en bourse (P ou S) de 2023 à 2025
+- 2023q3 : 8,202,487 octets · 23,268 transactions en bourse (P ou S) de 2023 à 2025
+- 2023q4 : 8,497,639 octets · 25,054 transactions en bourse (P ou S) de 2023 à 2025
+- 2024q1 : 13,874,620 octets · 32,576 transactions en bourse (P ou S) de 2023 à 2025
+- 2024q2 : 10,286,787 octets · 25,596 transactions en bourse (P ou S) de 2023 à 2025
+- 2024q3 : 8,163,472 octets · 26,167 transactions en bourse (P ou S) de 2023 à 2025
+- 2024q4 : 8,954,329 octets · 29,710 transactions en bourse (P ou S) de 2023 à 2025
+- 2025q1 : 12,804,783 octets · 27,276 transactions en bourse (P ou S) de 2023 à 2025
+- 2025q2 : 9,860,984 octets · 23,592 transactions en bourse (P ou S) de 2023 à 2025
+- 2025q3 : 7,956,025 octets · 27,020 transactions en bourse (P ou S) de 2023 à 2025
+- 2025q4 : 8,309,708 octets · 27,921 transactions en bourse (P ou S) de 2023 à 2025
+- paires initié-compagnie (par CIK) : 41,056 · {'sans historique': 34756, 'inhabituel': 3794, 'routinier': 2506}
+- paires nom-compagnie : 41,130 · {'sans historique': 34853, 'inhabituel': 3779, 'routinier': 2498}
+- noms avec 2 CIK ou plus, routiniers seulement par le nom : 0
+- CIK 1000383 chez 812152 ['BRONSON STEVEN N'] : sans historique · mois communs [] · {2023: [], 2024: [4], 2025: []}
+- CIK 1005483 chez 1091596 ['SHEEDY CHARLES E'] : inhabituel · mois communs [] · {2023: [8, 12], 2024: [5, 9], 2025: [7]}
+- CIK 1006394 chez 764478 ['SCHULZE RICHARD M'] : routinier · mois communs [6] · {2023: [6, 7, 12], 2024: [2, 3, 5, 6, 7], 2025: [6, 9, 10]}
+- CIK 1212502 chez 896493 ['AULT MILTON C III'] : routinier · mois communs [6, 11] · {2023: [4, 5, 6, 7, 11], 2024: [3, 5, 6, 8, 9, 11, 12], 2025: [6, 8, 9, 11, 12]}
+- CIK 1532734 chez 1819574 ['Ibrahim Zahir'] : inhabituel · mois communs [] · {2023: [2, 6], 2024: [11], 2025: [6]}
+- CIK 1555428 chez 1587732 ['Hutchinson Michael G'] : sans historique · mois communs [] · {2023: [], 2024: [], 2025: [3, 12]}
+- CIK 1598716 chez 745732 ['Hartshorn Michael J.'] : routinier · mois communs [3] · {2023: [3], 2024: [3, 9], 2025: [3]}
+- CIK 1734770 chez 896493 ['Ault & Company, Inc.'] : sans historique · mois communs [] · {2023: [], 2024: [], 2025: [8, 9, 11, 12]}
+- CIK 1767470 chez 1326380 ['Cohen Ryan'] : sans historique · mois communs [] · {2023: [6], 2024: [], 2025: [4]}
+- CIK 1784791 chez 723646 ['Rzomp Kimberly'] : inhabituel · mois communs [] · {2023: [5], 2024: [5], 2025: [12]}
+- CIK 1807898 chez 1783180 ['Crockett Kyle'] : routinier · mois communs [2] · {2023: [2, 7], 2024: [2, 5, 11], 2025: [2]}
+- CIK 1828079 chez 1824502 ['Diaz Deborah'] : sans historique · mois communs [] · {2023: [6], 2024: [11], 2025: []}
+- nom « AULT COMPANY INC » chez 896493 (CIK ['1734770']) : sans historique · mois communs []
+- nom « AULT MILTON C III » chez 896493 (CIK ['1212502']) : routinier · mois communs [6, 11]
+- nom « BRONSON STEVEN N » chez 812152 (CIK ['1000383']) : sans historique · mois communs []
+- nom « COHEN RYAN » chez 1326380 (CIK ['1767470']) : sans historique · mois communs []
+- nom « CROCKETT KYLE » chez 1783180 (CIK ['1807898']) : routinier · mois communs [2]
+- nom « DIAZ DEBORAH » chez 1824502 (CIK ['1828079']) : sans historique · mois communs []
+- nom « HARTSHORN MICHAEL J » chez 745732 (CIK ['1598716']) : routinier · mois communs [3]
+- nom « HUTCHINSON MICHAEL G » chez 1587732 (CIK ['1555428']) : sans historique · mois communs []
+- nom « IBRAHIM ZAHIR » chez 1819574 (CIK ['1532734']) : inhabituel · mois communs []
+- nom « RZOMP KIMBERLY » chez 723646 (CIK ['1784791']) : inhabituel · mois communs []
+- nom « SCHULZE RICHARD M » chez 764478 (CIK ['1006394']) : routinier · mois communs [6]
+- nom « SHEEDY CHARLES E » chez 1091596 (CIK ['1005483']) : inhabituel · mois communs []
+- extrait 2023q1 : 13 dépôts gardés
+- extrait 2023q2 : 17 dépôts gardés
+- extrait 2023q3 : 7 dépôts gardés
+- extrait 2023q4 : 9 dépôts gardés
+- extrait 2024q1 : 14 dépôts gardés
+- extrait 2024q2 : 14 dépôts gardés
+- extrait 2024q3 : 20 dépôts gardés
+- extrait 2024q4 : 15 dépôts gardés
+- extrait 2025q1 : 11 dépôts gardés
+- extrait 2025q2 : 12 dépôts gardés
+- extrait 2025q3 : 11 dépôts gardés
+- extrait 2025q4 : 14 dépôts gardés
+- échecs de livraison 202608b : 61,553 lignes · gardées 81
+- échecs de livraison 202609a : 50,335 lignes · gardées 76
+- symboles avec un prix (2 derniers fichiers) : 14,415
+- actions CY2026Q4I : 404
+- actions CY2026Q3I : 200
+- actions CY2026Q2I : 200
+- actions CY2026Q1I : 200
+- actions CY2025Q4I : 200
+- compagnies avec des actions déclarées : 5,691
+- seuils du NYSE : mois 202608 · 1071 compagnies · 30e centile 2236.27 M$ · 70e 13366.01 M$
+- GPUS : CIK 896493 · rapports ['10-K', '10-Q'] · actions None · prix ['20260911', 0.19] · valeur None M$ · taille None actions en circulation absentes ou trop vieilles
+- FUL : CIK 39368 · rapports ['10-K', '10-Q'] · actions [53829119, '2026-09-18', '0001437749-26-031145'] · prix ['20260911', 51.65] · valeur 2780.27 M$ · taille moyenne 
+- GME : CIK 1326380 · rapports ['10-K', '10-Q'] · actions [504500990, '2026-09-03', '0001326380-26-000055'] · prix ['20260914', 21.15] · valeur 10670.2 M$ · taille moyenne 
+- FLNA : CIK 1069530 · rapports ['10-K', '10-Q'] · actions [48307896, '2026-07-27', '0001437749-26-024752'] · prix ['20260914', 0.77] · valeur 37.2 M$ · taille petite 
+- PRHI : CIK 1502292 · rapports ['10-K', '10-Q'] · actions [3746092, '2026-08-12', '0001193125-26-346778'] · prix ['20260914', 8.7] · valeur 32.59 M$ · taille petite 
+- XENE : CIK 1582313 · rapports ['10-K', '10-Q'] · actions [96840432, '2026-08-03', '0001193125-26-338244'] · prix ['20260901', 60.22] · valeur 5831.73 M$ · taille moyenne 
+- LESL : CIK 1821806 · rapports ['10-K', '10-Q'] · actions [9365475, '2026-08-03', '0001193125-26-347169'] · prix ['20260914', 0.5] · valeur 4.68 M$ · taille petite 
+- CRBG : CIK 1889539 · rapports ['10-K', '10-Q'] · actions [445772522, '2026-07-31', '0001889539-26-000141'] · prix ['20260914', 34.67] · valeur 15454.93 M$ · taille grande 
+- ORCL : CIK 1341439 · rapports ['10-K', '10-Q'] · actions [3023736000, '2026-09-07', '0001193125-26-389274'] · prix ['20260914', 150.28] · valeur 454407.05 M$ · taille grande 
+- AAPL : CIK 320193 · rapports ['10-K', '10-Q'] · actions [14594180000, '2026-07-17', '0000320193-26-000020'] · prix ['20260914', 332.27] · valeur 4849208.19 M$ · taille grande 
+- PAM : CIK 1469395 · rapports ['20-F', '6-K'] · actions [1359606137, '2025-12-31', '0001292814-26-002185'] · prix ['20260911', 88.45] · valeur None M$ · taille None pas de rapports américains (10-K, 10-Q) ou rapports d'émetteur étranger
+- CRESY : CIK 1034957 · rapports ['20-F', '6-K'] · actions None · prix ['20260911', 12.61] · valeur None M$ · taille None pas de rapports américains (10-K, 10-Q) ou rapports d'émetteur étranger
+- MNSO : CIK 1815846 · rapports ['20-F', '6-K'] · actions [1237564177, '2025-12-31', '0001104659-26-078419'] · prix ['20260914', 9.07] · valeur None M$ · taille None pas de rapports américains (10-K, 10-Q) ou rapports d'émetteur étranger
+- NYAX : CIK 1901279 · rapports ['20-F', '6-K'] · actions [37301367, '2025-12-31', '0001178913-26-000779'] · prix ['20260914', 47.2] · valeur None M$ · taille None pas de rapports américains (10-K, 10-Q) ou rapports d'émetteur étranger
+- TKLF : CIK 1836242 · rapports ['20-F', '6-K'] · actions [42327806, '2026-03-31', '0001213900-26-077137'] · prix ['20260910', 1.77] · valeur None M$ · taille None pas de rapports américains (10-K, 10-Q) ou rapports d'émetteur étranger
+- QTEX : CIK 1837493 · rapports ['20-F', '6-K'] · actions [35949247, '2025-12-31', '0001185185-26-001072'] · prix ['20260910', 0.83] · valeur None M$ · taille None pas de rapports américains (10-K, 10-Q) ou rapports d'émetteur étranger
+- HELP : CIK 1833141 · rapports ['40-F', '6-K'] · actions None · prix ['20260914', 12.97] · valeur None M$ · taille None pas de rapports américains (10-K, 10-Q) ou rapports d'émetteur étranger
+- SAMG : CIK 1549966 · rapports ['10-K', '10-Q'] · actions None · prix ['20260911', 10.0] · valeur None M$ · taille None actions en circulation absentes ou trop vieilles
+- CPHC : CIK 1672909 · rapports ['10-K', '10-Q'] · actions [5183394, '2026-08-11', '0001437749-26-027210'] · prix None · valeur None M$ · taille None pas de prix récent
+
+VERDICT : extraits écrits
