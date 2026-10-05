@@ -84,6 +84,15 @@ def plat(fragment):
     return " ".join(html.unescape(re.sub(r"<[^>]+>", " ", fragment or "")).replace("\xa0", " ").split())
 
 
+def json_sc(brut: bytes, url: str):
+    """Une réponse de l'API de Santé Canada. Vide (0 octet, mesuré le 5 octobre 2026 à 02 h 48 UTC, alors que la même
+    adresse répondait normalement à 02 h 17) : le site n'a rien donné, « non vérifiable » ; un autre texte qui n'est pas
+    du JSON reste une erreur (le format a peut-être changé)."""
+    if not brut.strip():
+        raise acces.NonVerifiable(f"{url.split('/')[2]} : réponse vide (0 octet) du site")
+    return json.loads(brut.decode("utf-8-sig"))
+
+
 # ---------- Les infos publiées ----------
 evs = []
 for f in sorted((racine / "evenements").glob("*.jsonl"))[-3:]:
@@ -106,7 +115,7 @@ with acces.section('Santé Canada (liste officielle et fiches publiques)'):
     lu_le = datetime.fromisoformat(etat["sante_canada"]["dernier_succes"]).date()  # date UTC, comme le robot
     depuis = (lu_le - timedelta(days=60)).isoformat()
     brut_noc = lire(LISTE_NOC)
-    avis = json.loads(brut_noc.decode("utf-8-sig"))
+    avis = json_sc(brut_noc, LISTE_NOC)
     if not avis:  # liste vide : montrer la réponse exacte du site (pour savoir si c'est le site ou Radar)
         dire(f"Santé Canada : RÉPONSE VIDE · {len(brut_noc)} octets · en-têtes {ENTETES.get(LISTE_NOC)} · début {brut_noc[:200]!r}")
     fenetre = [x for x in avis if (x.get("noc_date") or "") >= depuis]
@@ -119,8 +128,8 @@ with acces.section('Santé Canada (liste officielle et fiches publiques)'):
     attendus = {str(x["noc_number"]): x for x in fenetre if x.get("noc_submission_class") in CLASSES_NSA}
     publies = {e["official_id"]: e for e in par_source["sante_canada"]}
     for n in sorted(set(attendus) - set(publies)):
-        produits = json.loads(lire(f"{API_NOC}drugproduct/?id={n}&lang=fr&type=json").decode("utf-8-sig"))
-        ingr = json.loads(lire(f"{API_NOC}medicinalingredient/?id={n}&lang=fr&type=json").decode("utf-8-sig"))
+        produits = json_sc(lire(f"{API_NOC}drugproduct/?id={n}&lang=fr&type=json"), API_NOC)
+        ingr = json_sc(lire(f"{API_NOC}medicinalingredient/?id={n}&lang=fr&type=json"), API_NOC)
         if produits and ingr:
             ecarts.append(f"avis {n} ({attendus[n]['noc_submission_class']}, {attendus[n]['noc_date']}) : absent de Radar")
         else:
