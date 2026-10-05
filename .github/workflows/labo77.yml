@@ -1,0 +1,57 @@
+name: "Labo (rejeu de 3 ans de Radar : quelle règle fait le plus d'argent ?)"
+
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/strategies.py", "labo/verif_rejeu3.py", ".github/workflows/labo77.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  rejeu3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      REJEU_DEBUT: "2023-07-01"
+      REJEU_FIN: "2026-06-30"
+      REJEU_SORTIE: "labo/rejeu3"
+      REJEU_ARGENT: "0"
+      REJEU_VERIF: "2023-10-16,2024-06-14,2025-03-14,2026-04-15"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: principal
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests -r principal/robot/requirements.txt
+      - name: Reprendre les fichiers déjà lus (cache)
+        uses: actions/cache/restore@v4
+        with:
+          path: cache
+          key: rejeu-${{ github.run_id }}
+          restore-keys: rejeu-
+      - name: Rejeu de 3 ans
+        run: python labo/rejeu_radar.py
+      - name: Analyse des règles
+        run: python labo/strategies.py
+      - name: Vérification indépendante
+        run: python labo/verif_rejeu3.py
+      - name: Garder les fichiers lus (cache)
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: cache
+          key: rejeu-${{ github.run_id }}
+      - name: Sauvegarder
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/rejeu3
+          git commit -m "Labo : rejeu de 3 ans du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo

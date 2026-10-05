@@ -22,9 +22,15 @@ suggestion ; vente 30 jours plus tard). Pas de prix au départ : pas acheté (ar
 Saut anormal (« à vérifier ») : gardé, et une version à 0 % pour voir son effet.
 
 Sortie : labo/rejeu/ (resume.md, positions.json, mensuel.json, listes.json, journal.md) ; rejeu/ (pour verif_rejeu.py).
+
+Période réglable (variables d'environnement) : REJEU_DEBUT et REJEU_FIN (AAAA-MM-JJ), REJEU_SORTIE (dossier),
+REJEU_ARGENT=0 pour ne pas faire le calcul d'argent d'un an (le rejeu de 3 ans le fait dans strategies.py), REJEU_VERIF
+(jours des photos pour le recalcul, séparés par des virgules). Rodage : les 3 mois avant le début.
+Toujours écrits : entrees.json (les nouvelles entrées « hausse » de la période) et rejeu/prix.json (prix pour l'analyse).
 """
 import csv
 import gzip
+import os
 import hashlib
 import io
 import json
@@ -52,17 +58,36 @@ from radar.validate import SYMBOLE_RE, valider  # noqa: E402
 csv.field_size_limit(sys.maxsize)
 TORONTO = ZoneInfo("America/Toronto")
 CACHE = Path("cache")
-SORTIE = Path("labo/rejeu")
+SORTIE = Path(os.environ.get("REJEU_SORTIE", "labo/rejeu"))
 TRAVAIL = Path("rejeu")  # pour verif_rejeu.py (pas sauvegardé dans la branche)
-RODAGE, DEBUT, FIN = date(2025, 4, 1), date(2025, 7, 1), date(2026, 6, 30)
-PREMIER_DEPOT = date(2025, 2, 1)  # au 1er avril 2025, le robot voit les dépôts de février, mars et avril
+DEBUT = date.fromisoformat(os.environ.get("REJEU_DEBUT", "2025-07-01"))
+FIN = date.fromisoformat(os.environ.get("REJEU_FIN", "2026-06-30"))
+ARGENT = os.environ.get("REJEU_ARGENT", "1") == "1"
+
+
+def mois_avant(j, n):
+    a, m = j.year, j.month - n
+    while m <= 0:
+        a, m = a - 1, m + 12
+    return date(a, m, 1)
+
+
+def trimestre(j):
+    return f"{j.year}q{(j.month - 1) // 3 + 1}"
+
+
+RODAGE = mois_avant(DEBUT, 3)
+PREMIER_DEPOT = mois_avant(RODAGE, 2)  # au 1er jour du rodage, le robot voit les dépôts des 3 derniers mois
 MENSUEL = 10_000 / 12
 FRAIS = 10.0  # $ par transaction (achat ou vente), variante avec frais
 HEURE = heure(23, 17)
-TRIMESTRES_EVENEMENTS = ["2025q1", "2025q2", "2025q3", "2025q4", "2026q1", "2026q2"]
-TRIMESTRES = [f"{a}q{q}" for a in range(2021, 2026) for q in (1, 2, 3, 4)] + ["2026q1", "2026q2"]
-ANNEES_CLASSEMENT = (2024, 2025, 2026)
-JOURS_VERIF = (date(2025, 8, 15), date(2025, 12, 15), date(2026, 4, 15))
+# Classements des routiniers : le robot garde l'année en cours et la précédente
+ANNEES_CLASSEMENT = tuple(range(RODAGE.year - 1, FIN.year + 1))
+TOUS_LES_TRIMESTRES = [f"{a}q{q}" for a in range(2006, FIN.year + 1) for q in (1, 2, 3, 4)]
+TRIMESTRES = [q for q in TOUS_LES_TRIMESTRES if f"{ANNEES_CLASSEMENT[0] - 3}q1" <= q <= trimestre(FIN)]
+TRIMESTRES_EVENEMENTS = [q for q in TRIMESTRES if trimestre(PREMIER_DEPOT) <= q <= trimestre(FIN)]
+JOURS_VERIF = tuple(date.fromisoformat(j) for j in os.environ.get(
+    "REJEU_VERIF", "2025-08-15,2025-12-15,2026-04-15").split(","))
 SYMBOLES_VIDES = {"NONE", "NA", "N-A", "NULL", "N", "TBD"}
 FN = ("SECURITY_TITLE_FN", "TRANS_DATE_FN", "EQUITY_SWAP_TRANS_CD_FN", "TRANS_SHARES_FN", "TRANS_PRICEPERSHARE_FN",
       "TRANS_ACQUIRED_DISP_CD_FN")
@@ -354,7 +379,7 @@ def compact(j):
 
 
 def main():
-    dire("# Rejeu d'un an de Radar (juillet 2025 → juin 2026)")
+    dire(f"# Rejeu de Radar du {DEBUT} au {FIN} (rodage dès le {RODAGE})")
     dire(f"Code du robot : {Path('principal/robot/radar/score.py').resolve()} · {score.VERSION}")
 
     # --- Liste officielle d'aujourd'hui ---
@@ -380,7 +405,7 @@ def main():
     for cik in declares:
         declares[cik].sort()
         noms[cik].sort()
-    publication = garde("inities/publication_toutes.json.gz",
+    publication = garde(f"inities/publication_{TRIMESTRES[0]}_{TRIMESTRES[-1]}.json.gz",
                         lambda: {q: publie_le(liens[q]) for q in TRIMESTRES})
 
     def fin_trimestre(q):
@@ -425,14 +450,15 @@ def main():
     # --- 13D originaux ---
     def index_13d():
         sortie = []
-        for an, tr in ((2025, 1), (2025, 2), (2025, 3), (2025, 4), (2026, 1), (2026, 2)):
+        for q in TRIMESTRES_EVENEMENTS:
+            an, tr = int(q[:4]), int(q[5])
             texte = brut(f"{sec.ARCHIVES}/edgar/full-index/{an}/QTR{tr}/master.idx").decode("latin-1")
             for d in sec.lire_index(texte).values():
                 if d.forme == "SCHEDULE 13D" and PREMIER_DEPOT.isoformat() <= d.depose <= FIN.isoformat():
                     sortie.append([d.acc, d.forme, d.depose, d.fichier, d.filers])
         return sortie
 
-    liste_13d = garde("13d/index.json.gz", index_13d)
+    liste_13d = garde(f"13d/index_{TRIMESTRES_EVENEMENTS[0]}_{TRIMESTRES_EVENEMENTS[-1]}.json.gz", index_13d)
     dire(f"13D originaux déposés du {PREMIER_DEPOT} au {FIN} (index EDGAR) : {len(liste_13d):,}")
 
     def texte_13d(acc, fichier):
@@ -541,7 +567,7 @@ def main():
 
     # --- Prix officiels de la SEC (échecs de livraison) ---
     liens_ftd = prix_sec.fichiers_de_la_page(brut(prix_sec.PAGE, "pages/ftd.html").decode("utf-8", "replace"))
-    cles = sorted(c for c in liens_ftd if "202501a" <= c <= "202609a")
+    cles = sorted(c for c in liens_ftd if PREMIER_DEPOT.strftime("%Y%m") + "a" <= c <= "202609a")
     voulus = {e["tickers"][0] for e in bons} | set(prix_sec.MARCHE)
     prix, calendrier, derniers = defaultdict(dict), set(), {}
     exacts = set()
@@ -673,7 +699,31 @@ def main():
         (racine / "prix").mkdir(parents=True, exist_ok=True)
         (racine / "prix" / "taille.json").write_text(json.dumps(etat_taille), encoding="utf-8")
 
-    # --- Les positions : chaque nouvelle entrée « hausse » de juillet 2025 à juin 2026 ---
+    # --- Les nouvelles entrées « hausse » de la période, et leurs prix (pour strategies.py) ---
+    entrees = []
+    for e in sorted(historique["entrees"], key=lambda x: (x["entree"], x["symbole"])):
+        j = datetime.fromisoformat(e["entree"]).astimezone(TORONTO).date()
+        if e["sens"] == "hausse" and DEBUT <= j <= FIN:
+            entrees.append({**e, "jour": j.isoformat(), "mois": j.isoformat()[:7]})
+    (SORTIE / "entrees.json").write_text(json.dumps(entrees, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    debut_prix = (DEBUT - timedelta(days=10)).strftime("%Y%m%d")
+    garder = {e["symbole"] for e in entrees} | set(prix_sec.MARCHE)
+    (TRAVAIL / "prix.json").write_text(json.dumps({
+        "calendrier": [j for j in calendrier if j >= debut_prix], "couvert": couvert,
+        "prix": {s: {j: v for j, v in prix.get(s, {}).items() if j >= debut_prix} for s in sorted(garder)}},
+        separators=(",", ":")), encoding="utf-8")
+    (TRAVAIL / "ftd.json").write_text(json.dumps({"cles": cles, "liens": {c: liens_ftd[c] for c in cles}}),
+                                      encoding="utf-8")
+    (TRAVAIL / "evenements.json").write_text(json.dumps(bons, ensure_ascii=False), encoding="utf-8")
+    (SORTIE / "listes.json").write_text(json.dumps(listes, ensure_ascii=False, separators=(",", ":")) + "\n",
+                                        encoding="utf-8")
+    par_mois = Counter(e["mois"] for e in entrees)
+    dire(f"nouvelles entrées « hausse » du {DEBUT} au {FIN} : {len(entrees)} · par mois : {dict(sorted(par_mois.items()))}")
+    if not ARGENT:
+        dire("rejeu fini · entrées et prix écrits (l'argent est calculé par strategies.py)")
+        return
+
+    # --- Les positions : chaque nouvelle entrée « hausse » de la période ---
     marche = {f: prix.get(f, {}) for f in prix_sec.MARCHE}
 
     def marche_entre(d1, d2):
