@@ -3,7 +3,7 @@ name: "Labo (rejeu de 3 ans de Radar : quelle règle fait le plus d'argent ?)"
 on:
   push:
     branches: [labo]
-    paths: ["labo/strategies.py", "labo/verif_rejeu3.py", ".github/workflows/labo77.yml"]
+    paths: ["labo/rejeu_radar.py", "labo/strategies.py", "labo/verif_rejeu3.py", ".github/workflows/labo77.yml"]
 
 permissions:
   contents: write

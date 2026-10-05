@@ -222,7 +222,13 @@ def lire_trimestre(q, url):
             sortie["depots"] = {acc: {**soumis[acc], "proprios": proprios[acc], "lignes": sorted(ls),
                                       "notes": notes.get(acc, {})} for acc, ls in lignes.items()}
         return sortie
-    return garde(f"inities/{q}.json.gz", faire)
+    r = garde(f"inities/{q}.json.gz", faire)
+    if q in TRIMESTRES_EVENEMENTS and "depots" not in r:
+        # Gardé par un rejeu d'une autre période, sans les dépôts : on relit le fichier
+        (CACHE / f"inities/{q}.json.gz").unlink()
+        compte["jeux de données relus (gardés sans les dépôts)"] += 1
+        r = garde(f"inities/{q}.json.gz", faire)
+    return r
 
 
 INTERDITS_XML = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\ufffe\uffff]")
@@ -538,6 +544,19 @@ def main():
     evenements = [e.to_dict() for e in evenements]
     badges = Counter((e["source"], e["kind"], e["badge"]) for e in evenements)
     dire(f"infos créées par les lecteurs du robot : {len(evenements):,} · {dict(sorted(badges.items()))}")
+    # Contrôle de complétude : chaque mois de dépôt doit avoir des formulaires 4 (un trou = des données manquantes)
+    par_mois_f4 = Counter(e["published_on"][:7] for e in evenements if e["source"] == "sec_form4")
+    attendus, m = [], PREMIER_DEPOT
+    while m <= FIN:
+        attendus.append(m.isoformat()[:7])
+        m = (m.replace(day=28) + timedelta(days=4)).replace(day=1)
+    # Référence : un mois « normal » (75e centile), pas la médiane (des trimestres entiers vides la mettraient à 0)
+    nombres = sorted(par_mois_f4.get(x, 0) for x in attendus)
+    reference = nombres[(3 * len(nombres)) // 4]
+    dire(f"formulaires 4 au-dessus des seuils, par mois de dépôt : {dict((x, par_mois_f4.get(x, 0)) for x in attendus)}")
+    trous = [x for x in attendus if par_mois_f4.get(x, 0) == 0 or par_mois_f4.get(x, 0) < 0.3 * reference]
+    if trous and os.environ.get("REJEU_ESSAI_HORS_LIGNE") != "1":  # fausses données de l'essai hors ligne : peu d'infos
+        raise SystemExit(f"TROU dans les données : mois avec moins de 30 % d'un mois normal ({reference}) : {trous}")
     rates = Counter(c for e in evenements if e["badge"] == "a_verifier" for c, ok in e["checks"].items() if not ok)
     dire(f"contrôles ratés (infos « à vérifier », 0 point) : {dict(rates.most_common())}")
     bons = sorted((e for e in evenements if e["badge"] in ("officiel", "confirme")), key=lambda e: (e["published_on"], e["id"]))

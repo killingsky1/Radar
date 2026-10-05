@@ -3,7 +3,7 @@ name: "Labo (rejeu d'un an de Radar : 10 000 $ de juillet 2025 à juin 2026)"
 on:
   push:
     branches: [labo]
-    paths: ["labo/rejeu_radar.py", "labo/verif_rejeu.py", ".github/workflows/labo75.yml"]
+    paths: ["labo/verif_rejeu.py"]
 
 permissions:
   contents: write
