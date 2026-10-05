@@ -1,9 +1,9 @@
 name: "Labo (tournoi, étape 0 : le jeu de recherche, 2016 à juin 2026)"
 
+# Lancé à la main seulement (workflow_dispatch), juste après un passage du robot : un envoi dans la branche ne doit
+# jamais le lancer, car il entrerait dans la file du robot (groupe radar) et pourrait y remplacer un passage en attente.
 on:
-  push:
-    branches: [labo]
-    paths: ["labo/tournoi/donnees.py", ".github/workflows/labo80.yml"]
+  workflow_dispatch:
 
 permissions:
   contents: write
