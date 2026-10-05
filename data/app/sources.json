@@ -6,7 +6,7 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-02",
-  "dernier_succes": "2026-10-03T20:28:12+00:00",
+  "dernier_succes": "2026-10-05T02:12:12+00:00",
   "explication": "",
   "id": "sec_form4",
   "libelle": "OK",
@@ -568,14 +568,14 @@
   },
   "dernier_contenu": "2026-09-24",
   "dernier_succes": "2026-10-03T20:28:12+00:00",
-  "explication": "",
+  "explication": "Rien de publié depuis 11 jours (fermeture du gouvernement ?).",
   "id": "tresor",
-  "libelle": "OK",
+  "libelle": "En pause",
   "nom": "Trésor américain : adjudications d'obligations et déficit mensuel (Fiscal Data)",
   "officielle": true,
   "phase": 4,
   "site": "https://fiscaldata.treasury.gov/datasets/treasury-securities-auctions-data/",
-  "statut": "ok"
+  "statut": "en_pause"
  },
  {
   "categorie": "gouvernement",
@@ -944,6 +944,40 @@
   "officielle": false,
   "phase": 1,
   "site": "https://www.sec.gov/data-research/sec-markets-data/fails-deliver-data",
+  "statut": "ok"
+ },
+ {
+  "categorie": "compagnies",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 0
+  },
+  "dernier_contenu": null,
+  "dernier_succes": "2026-10-05T02:12:12+00:00",
+  "explication": "",
+  "id": "sec_historique_inities",
+  "libelle": "OK",
+  "nom": "SEC : historique des transactions des initiés (pour reconnaître les achats et ventes de routine)",
+  "officielle": false,
+  "phase": 1,
+  "site": "https://www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets",
+  "statut": "ok"
+ },
+ {
+  "categorie": "compagnies",
+  "compte": {
+   "a_verifier": 0,
+   "recus": 0
+  },
+  "dernier_contenu": null,
+  "dernier_succes": "2026-10-05T02:12:12+00:00",
+  "explication": "",
+  "id": "taille_bourse",
+  "libelle": "OK",
+  "nom": "Taille des compagnies en bourse (actions déclarées à la SEC × prix de la SEC, seuils du NYSE de Kenneth French)",
+  "officielle": false,
+  "phase": 1,
+  "site": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
   "statut": "ok"
  }
 ]

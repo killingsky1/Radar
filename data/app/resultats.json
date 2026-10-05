@@ -1,8 +1,23 @@
 {
- "genere_a": "2026-10-04T22:37:47+00:00",
+ "genere_a": "2026-10-05T02:12:12+00:00",
  "horizons": {
   "30": "1 mois",
   "7": "1 semaine"
+ },
+ "libelles_regles": {
+  "achat_chef": "Un chef du Congrès achète (actions ou options d'achat)",
+  "achat_dirigeant": "Achat d'actions par un dirigeant ou un administrateur",
+  "achat_elu": "Un élu du Congrès achète (actions ou options d'achat)",
+  "activiste_13d": "Un gestionnaire de fonds dépasse 5 % avec des intentions actives (13D)",
+  "etats_financiers": "États financiers passés à ne plus croire (8-K, point 4.02)",
+  "faillite": "Faillite ou mise sous séquestre (8-K, point 1.03)",
+  "fda": "La FDA approuve un nouveau médicament (nouvelle molécule)",
+  "fonds_13f": "Un grand fonds suivi ouvre ou grossit une position importante (13F)",
+  "rappel": "Gros rappel de véhicules (10 000 et plus)",
+  "sec_procedure": "La SEC ouvre une procédure contre la compagnie",
+  "sec_suspension": "La SEC suspend la cotation de la compagnie",
+  "vente_chef": "Un chef du Congrès vend des actions",
+  "vente_dirigeant": "Vente d'actions par un dirigeant ou un administrateur"
  },
  "lignes": [
   {
@@ -372,6 +387,310 @@
    "sens": "hausse",
    "symbole": "XENE",
    "vue": "2026-10-04"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-05T02:12:12+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-8",
+   "nom": "Advanced Flower Capital Inc.",
+   "note10": 7.3,
+   "note10_sans_bonus": 7.3,
+   "note10_sans_taille": 6.5,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "AFCG",
+   "taille": "petite",
+   "vue": "2026-10-04"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-05T02:12:12+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-8",
+   "nom": "ASP Isotopes Inc.",
+   "note10": 7.3,
+   "note10_sans_bonus": 7.3,
+   "note10_sans_taille": 6.6,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "ASPI",
+   "taille": "petite",
+   "vue": "2026-10-04"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-05T02:12:12+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-8",
+   "nom": "Clipper Realty Inc.",
+   "note10": 7.3,
+   "note10_sans_bonus": 7.3,
+   "note10_sans_taille": 6.5,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "CLPR",
+   "taille": "petite",
+   "vue": "2026-10-04"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-05T02:12:12+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-8",
+   "nom": "CAPITAL SOUTHWEST CORP",
+   "note10": 7.3,
+   "note10_sans_bonus": 7.3,
+   "note10_sans_taille": 6.6,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "CSWC",
+   "taille": "petite",
+   "vue": "2026-10-04"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-05T02:12:12+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-8",
+   "nom": "First Guaranty Bancshares, Inc.",
+   "note10": 7.4,
+   "note10_sans_bonus": 7.4,
+   "note10_sans_taille": 6.6,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "FGBI",
+   "taille": "petite",
+   "vue": "2026-10-04"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-05T02:12:12+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-8",
+   "nom": "Kayne Anderson BDC, Inc.",
+   "note10": 7.3,
+   "note10_sans_bonus": 7.3,
+   "note10_sans_taille": 6.5,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "KBDC",
+   "taille": "petite",
+   "vue": "2026-10-04"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-05T02:12:12+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-8",
+   "nom": "Lipocine Inc.",
+   "note10": 7.3,
+   "note10_sans_bonus": 7.3,
+   "note10_sans_taille": 6.6,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "LPCN",
+   "taille": "petite",
+   "vue": "2026-10-04"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-05T02:12:12+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-8",
+   "nom": "Venu Holding Corp",
+   "note10": 7.3,
+   "note10_sans_bonus": 7.3,
+   "note10_sans_taille": 6.6,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "VENU",
+   "taille": "petite",
+   "vue": "2026-10-04"
   }
  ],
  "methode": [
@@ -380,8 +699,57 @@
   "Arrivée : 7 jours (1 semaine) ou 30 jours (1 mois) après le départ, ou jusqu'à 3 jours plus tard s'il n'y a pas de prix ce jour-là.",
   "Marché : SPY, sinon IVV, sinon VOO (fonds qui suivent le S&P 500), aux mêmes dates. Hausse : battu si la compagnie a fait mieux que le marché ; baisse : si elle a fait moins bien.",
   "Pas de prix, nouveau code de titre (CUSIP) ou saut anormal (possible fractionnement ou prix erroné) : montré, mais hors du taux de réussite.",
-  "Publication de la SEC : la 1re moitié d'un mois à la fin du mois, la 2e moitié vers le 15 du mois suivant."
+  "Publication de la SEC : la 1re moitié d'un mois à la fin du mois, la 2e moitié vers le 15 du mois suivant.",
+  "Par signal : chaque entrée garde ses raisons depuis le 5 octobre 2026 (règle, facteurs, taille de la compagnie, bonus). Une entrée compte dans chacun de ses signaux. Peu d'entrées = résultat fragile."
  ],
+ "par_signal": {
+  "baisse": {},
+  "hausse": {
+   "grace_a_la_taille": {
+    "30": {
+     "battu": 0,
+     "ecart_moyen": null,
+     "mesurees": 0
+    },
+    "7": {
+     "battu": 0,
+     "ecart_moyen": null,
+     "mesurees": 0
+    },
+    "entrees": 8,
+    "libelle": "Entrée grâce au bonus de petite compagnie (×1,5)"
+   },
+   "regle:achat_dirigeant": {
+    "30": {
+     "battu": 0,
+     "ecart_moyen": null,
+     "mesurees": 0
+    },
+    "7": {
+     "battu": 0,
+     "ecart_moyen": null,
+     "mesurees": 0
+    },
+    "entrees": 8,
+    "libelle": "Achat d'actions par un dirigeant ou un administrateur"
+   },
+   "taille:petite": {
+    "30": {
+     "battu": 0,
+     "ecart_moyen": null,
+     "mesurees": 0
+    },
+    "7": {
+     "battu": 0,
+     "ecart_moyen": null,
+     "mesurees": 0
+    },
+    "entrees": 8,
+    "libelle": "Petite compagnie (sous le 30e centile du NYSE)"
+   }
+  },
+  "sans_raisons": 16
+ },
  "prix_jusqu_au": null,
  "prochains_prix_vers": "2026-10-31",
  "resume": {
@@ -400,13 +768,13 @@
   "hausse_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 15,
+   "en_attente": 23,
    "mesurees": 0
   },
   "hausse_7": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 15,
+   "en_attente": 23,
    "mesurees": 0
   }
  }
