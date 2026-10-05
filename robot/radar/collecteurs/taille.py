@@ -17,6 +17,8 @@ centile et plus ; moyenne entre les deux (les 3, 4 et 3 déciles de Lakonishok e
     valeur serait fausse (mesuré le 5 octobre 2026 : Pampa Energía, 1,36 milliard d'actions × 88,45 $ par certificat
     = 120 G$, alors qu'un certificat vaut 25 actions) ;
   - actions déclarées il y a plus de 200 jours (une compagnie américaine les déclare à chaque rapport trimestriel) ;
+  - moins de 500 000 actions déclarées : impossible pour une action cotée (le Nasdaq exige au moins 500 000 actions dans
+    le public pour garder une compagnie inscrite) ; mesuré le 5 octobre 2026 : QVCG, 1 action déclarée au 30 juin 2026 ;
   - pas de prix de la SEC depuis 60 jours (un titre a un prix seulement les jours où il a des échecs de livraison).
 Lu au passage du matin : les seuils (1 fichier), les actions (5 fichiers), et les prix seulement quand la SEC publie un
 nouveau fichier (2 fois par mois).
@@ -40,6 +42,7 @@ FRAMES = "https://data.sec.gov/api/xbrl/frames/dei/EntityCommonStockSharesOutsta
 TRIMESTRES = 5
 FICHIERS_PRIX = 2
 ACTIONS_MAX_JOURS = 200
+ACTIONS_MIN = 500_000
 PRIX_MAX_JOURS = 60
 AMERICAINS = {"10-K", "10-Q", "10-KT", "10-QT"}
 ETRANGERS = {"20-F", "40-F", "6-K"}
@@ -157,6 +160,10 @@ def classer(fiche: dict | None, t: dict, symbole: str, jour: date) -> dict:
     actions = (t.get("actions") or {}).get(str(cik))
     if not actions or date.fromisoformat(actions[1]) < jour - timedelta(days=ACTIONS_MAX_JOURS):
         return {**x, "raison": f"pas d'actions en circulation déclarées depuis {ACTIONS_MAX_JOURS} jours"}
+    if actions[0] < ACTIONS_MIN:
+        n = f"{actions[0]:,.0f}".replace(",", " ")
+        return {**x, "actions": actions, "raison": f"{n} {'action déclarée' if actions[0] < 2 else 'actions déclarées'} à la "
+                                                   f"SEC : impossible pour une action cotée (au moins 500 000 dans le public)"}
     prix = (t.get("prix") or {}).get(symbole)
     if not prix or datetime.strptime(prix[0], "%Y%m%d").date() < jour - timedelta(days=PRIX_MAX_JOURS):
         return {**x, "actions": actions, "raison": f"pas de prix de la SEC depuis {PRIX_MAX_JOURS} jours"}

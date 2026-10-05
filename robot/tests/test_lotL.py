@@ -250,6 +250,12 @@ def test_raisons_des_tailles_inconnues(tmp_path):
     assert t["HELP"]["raison"].startswith("compagnie étrangère")  # 40-F
     assert t["GPUS"]["raison"].startswith("pas d'actions en circulation")
     assert t["CPHC"]["raison"].startswith("pas de prix de la SEC")
+    t1 = ta.charger(tmp_path)
+    t1["actions"][str(CIKS["FLNA"])] = [1, "2026-06-30"]  # comme QVCG le 5 octobre 2026 : 1 action déclarée
+    ta.chemin(tmp_path).write_text(json.dumps(t1), encoding="utf-8")
+    un = ta.pour_score(tmp_path, fiches(), MAINTENANT.date())["FLNA"]
+    assert un["taille"] is None and un["raison"].startswith("1 action déclarée à la SEC : impossible"), un
+    collecter_taille(tmp_path)  # les vrais chiffres reviennent à la lecture suivante
     plus_tard = ta.pour_score(tmp_path, fiches(), date(2026, 12, 1))  # prix du 14 septembre : plus de 60 jours
     assert plus_tard["FLNA"]["taille"] is None and plus_tard["FLNA"]["raison"].startswith("pas de prix")
     assert ta.pour_score(tmp_path, {"FLNA": {"cik": CIKS["FLNA"]}}, MAINTENANT.date())["FLNA"]["raison"] == \
