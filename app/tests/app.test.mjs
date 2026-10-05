@@ -670,8 +670,9 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       await p.locator(".ligne.suggestion", { hasText: "MIKR" }).click(); await p.waitForTimeout(250);
       assert.ok((await p.locator(".fiche-sens").innerText()).startsWith("Écartée : moins de 100 M$ en bourse")); // + « Récent »
       const taille = (await p.locator(".taille").innerText()).replace(/\u00a0|\u202f/g, " ");
-      assert.ok(taille.includes("Petite compagnie") && taille.includes("50 M$") && taille.includes("20 000 000 actions")
-        && taille.includes("Moins de 100 M$ : hors de la liste « hausse »."), taille);
+      const sans = taille.replace(/\s/g, ""); // les espaces des montants varient d'un navigateur à l'autre (« 50 M $ US »)
+      assert.ok(taille.includes("Petite compagnie") && sans.includes("50M$US") && sans.includes("20000000actions")
+        && sans.includes("Moinsde100M$:horsdelaliste«hausse»."), taille.replace(/\n/g, " | "));
       const calcul = (await p.locator(".ecran").innerText()).replace(/\u00a0/g, " ");
       assert.ok(calcul.includes("la directrice financière de Micro Exemple achète 40 000 actions"), calcul);
     } finally {
