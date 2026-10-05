@@ -154,7 +154,7 @@ for genre in ("points", "a_eviter"):
                 if x["annee"] == an and x["mesures"][c["facteur"]] == c["categorie"]:
                     p = pos[c["duree"]][i]
                     if p["statut"] == "achetée" and p["marche"] is not None:
-                        res.append(p["rendement_estime"] - p["marche"])
+                        res.append(round(p["rendement_estime"] - p["marche"], 4))  # même définition : écart arrondi
             ok = len(res) == s["n"] and abs(round(median(res), 4) - s["mediane"]) < 1e-4 and \
                 abs(round(sum(r > 0 for r in res) / len(res), 4) - s["bat"]) < 1e-4
             dire(f"- {genre} · {c['facteur']} = {c['categorie']} · {c['duree']} mois · {an} : "
