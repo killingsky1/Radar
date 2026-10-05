@@ -11,7 +11,7 @@ const lignes = [];
   const elusLocal = fs.readFileSync(fichierElus, "utf8");
   const lobbyingLocal = fs.readFileSync(fichierLobbying, "utf8");
   const lobbying = JSON.parse(lobbyingLocal);
-  const VERSION = "0.26.1";
+  const VERSION = "0.27.0";
   const base = process.env.BASE || "https://killingsky1.github.io/Radar/"; // BASE : essai local seulement
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
@@ -165,12 +165,14 @@ const lignes = [];
       await new Promise((ok) => setTimeout(ok, 15000));
     }
     const servi = JSON.stringify(resServi) === JSON.stringify(resLocal);
-    const mesurees = Object.values(resLocal.resume).reduce((n, x) => n + x.mesurees, 0);
+    // Lot M : les écartées sont suivies à part (ni dans la carte, ni dans « Compagnies suivies »)
+    const mesurees = Object.entries(resLocal.resume).filter(([k]) => !k.startsWith("ecartee")).reduce((n, [, x]) => n + x.mesurees, 0);
+    const suivies = resLocal.lignes.filter((l) => l.sens !== "ecartee").length;
     const vers = await p.evaluate((j) => new Date(`${j}T12:00:00`).toLocaleDateString("fr-CA", { day: "numeric", month: "long", year: "numeric" }), resLocal.prochains_prix_vers || "2026-01-01");
     await p.locator(".res-carte").evaluate((e) => e.scrollIntoView({ block: "center" }));
     await photo("v41-resultats-radar");
     const carte = (await p.locator(".res-carte").innerText()).replace(/\u00a0/g, " ").trim();
-    const carteOk = mesurees === 0 ? carte === `${resLocal.lignes.length} compagnies suivies. Premiers prix officiels de la SEC vers le ${vers}.`
+    const carteOk = mesurees === 0 ? carte === `${suivies} compagnies suivies. Premiers prix officiels de la SEC vers le ${vers}.`
       : carte.includes("ont frappé juste");
     await p.locator(".res-carte").click(); await p.waitForTimeout(500);
     await photo("v42-resultats");
@@ -185,7 +187,7 @@ const lignes = [];
     const signauxAff = await p.locator(".res-signal").count();
     const signauxAtt = Object.keys(ps.hausse || {}).length + Object.keys(ps.baisse || {}).length;
     const pourquoiAff = await p.locator(".res-ligne", { hasText: "Pourquoi" }).count();
-    const pourquoiAtt = resLocal.lignes.filter((l) => l.signaux && (l.signaux.some((x) => x.sens === (l.sens === "hausse" ? 1 : -1)) || l.taille || l.grace_au_bonus || l.grace_a_la_taille)).length;
+    const pourquoiAtt = resLocal.lignes.filter((l) => l.signaux && (l.signaux.some((x) => x.sens === (l.sens === "baisse" ? -1 : 1)) || l.taille || l.grace_au_bonus || l.grace_a_la_taille)).length;
     if (signauxAff) {
       await p.locator(".res-signal").first().evaluate((e) => { e.style.scrollMarginTop = "110px"; e.scrollIntoView({ block: "start" }); });
       await photo("v51-resultats-par-signal");

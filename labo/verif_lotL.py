@@ -147,12 +147,12 @@ def mots_mois(mois, annees):
 
 pub = json.loads((racine / "app" / "aujourdhui.json").read_text(encoding="utf-8"))
 jour = date.fromisoformat(pub["jour"])
-listes = [x for nom in ("hausse", "baisse") for x in pub[nom]]
+listes = [x for nom in ("hausse", "baisse", "ecartees") for x in pub.get(nom, [])]  # lot M : les écartées aussi
 fichier_r = racine / "sec" / "inities_routiniers.json"
 robot_r = json.loads(fichier_r.read_text(encoding="utf-8")) if fichier_r.exists() else {}
 dire(f"# Lot L contre-vérifié ({pub['genere_a']}, version du score {pub['version']})\n")
-if pub["version"] != "score-8":
-    ecarts.append(f"version du score publiée : {pub['version']} (attendu : score-8)")
+if pub["version"] != "score-9":  # lot M (0.27.0) : score-9 = règles du lot L + règle des 100 M$
+    ecarts.append(f"version du score publiée : {pub['version']} (attendu : score-9)")
 LABO = {}  # année -> paires routinières refaites par le labo
 
 # ---------- 1. Les paires routinières, refaites aux fichiers de la SEC ----------
@@ -343,13 +343,14 @@ with acces.section("Taille des compagnies des listes (Kenneth French, fiches et 
 with acces.section("Résultats : raisons des entrées et résumé par signal"):
     r = json.loads((racine / "app" / "resultats.json").read_text(encoding="utf-8"))
     hist = json.loads((racine / "resultats" / "suggestions.json").read_text(encoding="utf-8"))["entrees"]
-    lot_l = [e for e in hist if e.get("methode") == "score-8"]
+    lot_l = [e for e in hist if e.get("methode") in ("score-8", "score-9")]
     sans = [e for e in lot_l if not isinstance(e.get("signaux"), list) or "taille" not in e]
     if sans:
         ecarts.append(f"entrées du lot L sans raisons : {[e['symbole'] for e in sans]}")
-    dire(f"- entrées : {len(hist)} · du lot L (score-8) : {len(lot_l)} · sans raisons notées (avant) : "
+    dire(f"- entrées : {len(hist)} · du lot L et après (score-8 et 9) : {len(lot_l)} · sans raisons notées (avant) : "
          f"{sum('signaux' not in e for e in hist)}")
-    rows = {(nom, x["symbole"]): x for nom in ("hausse", "baisse") for x in pub[nom]}
+    rows = {(sens, x["symbole"]): x for sens, nom in (("hausse", "hausse"), ("baisse", "baisse"), ("ecartee", "ecartees"))
+            for x in pub.get(nom, [])}
     for e in lot_l:
         x = rows.get((e["sens"], e["symbole"]))
         if x and x.get("depuis") == e["entree"]:  # toujours dans la liste depuis son entrée : mêmes raisons
@@ -359,6 +360,8 @@ with acces.section("Résultats : raisons des entrées et résumé par signal"):
                 notes.append(f"{e['symbole']} : raisons notées à l'entrée {e['signaux']}, aujourd'hui {attendu}")
     refait = {"hausse": {}, "baisse": {}, "sans_raisons": 0}
     for l in r["lignes"]:
+        if l["sens"] not in ("hausse", "baisse"):  # écartées (lot M) : à part, voir plus bas
+            continue
         if "signaux" not in l:
             refait["sans_raisons"] += 1
             continue
@@ -394,6 +397,28 @@ with acces.section("Résultats : raisons des entrées et résumé par signal"):
                                   f"{y[h][:2]} {moy}")
         dire(f"- par signal ({sens}) : {len(refait[sens])} signaux refaits · "
              + ", ".join(f"{c} {y['entrees']}" for c, y in sorted(refait[sens].items())))
+
+# ---------- 5. Lot M : les écartées (moins de 100 M$) ----------
+with acces.section("Lot M : écartées (moins de 100 M$) et leur suivi à part dans les Résultats"):
+    trop = [x["symbole"] for x in pub["hausse"] if (x.get("taille") or {}).get("valeur_m") is not None
+            and x["taille"]["valeur_m"] < 100]
+    pas_trop = [x["symbole"] for x in pub.get("ecartees", []) if not (x.get("taille") or {}).get("valeur_m", 1e9) < 100]
+    if trop or pas_trop:
+        ecarts.append(f"lot M : sous 100 M$ dans la liste « hausse » {trop} ; écartées à 100 M$ et plus {pas_trop}")
+    publiees = ", ".join(f"{x['symbole']} {x['taille']['valeur_m']} M$" for x in pub.get("ecartees", [])) or "aucune"
+    dire(f"- écartées publiées : {publiees} · liste « hausse » : aucune sous 100 M$ : {'OUI' if not trop else 'NON'}")
+    ec = [l for l in r["lignes"] if l["sens"] == "ecartee"]
+    for h in ("7", "30"):
+        m = [l["horizons"][h] for l in ec if l["horizons"][h]["statut"] == "mesure" and l["horizons"][h].get("battu") is not None]
+        faux = [x for x in m if x["battu"] != (x["variation"] < x["marche"]["variation"])]
+        attendu = {"mesurees": len(m), "battu": sum(x["battu"] for x in m),
+                   "ecart_moyen": round(sum(x["ecart"] for x in m) / len(m), 4) if m else None,
+                   "en_attente": sum(l["horizons"][h]["statut"] == "en_attente" for l in ec)}
+        publie_e = r["resume"].get(f"ecartee_{h}")
+        if publie_e != attendu or faux:
+            ecarts.append(f"écartées ({h} jours) : publié {publie_e} ≠ labo {attendu} ; verdicts faux : {len(faux)}")
+        dire(f"- écartées suivies : {len(ec)} · {h} jours : {attendu} · identique au publié : "
+             f"{'OUI' if publie_e == attendu and not faux else 'NON'}")
 
 for n in notes:
     dire(f"Note : {n}")

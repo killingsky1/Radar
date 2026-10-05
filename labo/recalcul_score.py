@@ -8,6 +8,8 @@ Lot B : note sur 10 = 5 + points × 5/6 (0 à 10, au dixième, 5 vers le haut) ;
 Lot L : un achat ou une vente d'un initié routinier (classement gardé par le robot, refait aux fichiers de la SEC par
 verif_lotL.py) ne compte pas ; un achat de dirigeant dans une petite compagnie compte ×1,5 (taille refaite ici avec les
 chiffres gardés par le robot, et aux sources officielles par verif_lotL.py).
+Lot M (score-9 et plus) : une compagnie dont la valeur en bourse (refaite ici) est connue et sous 100 M$ n'entre pas dans
+la liste « hausse » : elle va dans « écartées » (mêmes vérifications que la liste). Taille inconnue : jamais écartée.
 """
 import json
 import re
@@ -37,7 +39,9 @@ DOMAINES = {"sec.gov", "accessdata.fda.gov", "fda.gov", "nhtsa.gov", "house.gov"
 
 
 def principal(titre):
-    t = " " + titre.upper().replace("-", " ").replace(",", " ").replace("&", " ").replace("(", " ").replace(")", " ") + " "
+    """PDG, directeur financier ou président du conseil (pas un vice-président). Les mots sont séparés par TOUT signe
+    qui n'est pas une lettre ou un chiffre (« CEO/President », « Pres. & CEO ») ; avant le lot M, seulement par - , & ( )."""
+    t = " " + " ".join(re.findall(r"[A-Z0-9]+", titre.upper())) + " "
     for vice in (" VICE PRESIDENT", " VICE CHAIRMAN", " VICE CHAIRPERSON", " VICE CHAIRWOMAN", " VICE CHAIR"):
         t = t.replace(vice, " ")
     mots = t.split()
@@ -166,6 +170,14 @@ FICHES = json.loads(fiches.read_text(encoding="utf-8")) if fiches.exists() else 
 
 
 def taille_de(t):
+    v, s = valeur_de(t), TAILLE.get("seuils")
+    if v is None:
+        return None
+    return "petite" if v < s["p30"] else "grande" if v >= s["p70"] else "moyenne"
+
+
+def valeur_de(t):
+    """Valeur en bourse en M$ (actions déclarées × prix de la SEC), None si la taille est inconnue."""
     f, s = FICHES.get(t), TAILLE.get("seuils")
     if f is None or not s or "rapports" not in f or f.get("cik") is None:
         return None
@@ -181,8 +193,7 @@ def taille_de(t):
     p = (TAILLE.get("prix") or {}).get(t)
     if not p or (jour - date(int(p[0][:4]), int(p[0][4:6]), int(p[0][6:]))).days > 60:
         return None
-    v = a[0] * p[1] / 1e6
-    return "petite" if v < s["p30"] else "grande" if v >= s["p70"] else "moyenne"
+    return a[0] * p[1] / 1e6
 
 notes = {}  # symbole -> liste de (regle, points, info)
 contexte = {}
@@ -199,6 +210,21 @@ for e in infos:
             contexte.setdefault(t, []).append(e)
         else:
             notes.setdefault(t, []).append([r, max(age, 0), e])
+
+def principal_avant(titre):  # découpage d'avant le lot M, gardé pour montrer les désaccords
+    t = " " + titre.upper().replace("-", " ").replace(",", " ").replace("&", " ").replace("(", " ").replace(")", " ") + " "
+    for vice in (" VICE PRESIDENT", " VICE CHAIRMAN", " VICE CHAIRPERSON", " VICE CHAIRWOMAN", " VICE CHAIR"):
+        t = t.replace(vice, " ")
+    mots = t.split()
+    return (any(m in ("CEO", "CFO", "PEO", "PFO", "COB") for m in mots) or "CHIEF EXECUTIVE" in t
+            or "CHIEF FINANCIAL" in t or any(m.startswith("CHAIR") for m in mots))
+
+
+desaccords = sorted({(t, x) for t, liste in notes.items() for r, _, e in liste if r == "achat_dirigeant"
+                     for x in e["data"].get("roles") or [] if principal(x) != principal_avant(x)})
+for t, x in desaccords:
+    print(f"Découpage du titre : {t} « {x} » → PDG, directeur financier ou président du conseil : "
+          f"{'oui' if principal(x) else 'non'} (avant le lot M : {'oui' if principal_avant(x) else 'non'})")
 
 calcule = {}
 for t, liste in notes.items():
@@ -251,23 +277,39 @@ def sur_10(points):
     return float(min(max(n, Decimal(0)), Decimal(10)).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP))
 
 
-hausse = sorted((t for t in calcule if sur_10(calcule[t][0]) >= 7.0), key=lambda t: (-calcule[t][0], t))[:20]
+candidates = sorted((t for t in calcule if sur_10(calcule[t][0]) >= 7.0), key=lambda t: (-calcule[t][0], t))
+LOT_M = int(pub["version"].split("-")[1]) >= 9  # score-9 : règle des 100 M$
+
+
+def trop_petite(t):
+    return LOT_M and valeur_de(t) is not None and valeur_de(t) < 100
+
+
+hausse = [t for t in candidates if not trop_petite(t)][:20]
+ecartees = [t for t in candidates if trop_petite(t)][:20]
 baisse = sorted((t for t in calcule if sur_10(calcule[t][0]) <= 3.0), key=lambda t: (calcule[t][0], t))[:20]
 
 ecarts = []
-for nom, attendu in (("hausse", hausse), ("baisse", baisse)):
-    publie = [x["symbole"] for x in pub[nom]]
+if not LOT_M and pub.get("ecartees"):
+    ecarts.append(f"écartées publiées avec {pub['version']} (la règle des 100 M$ arrive avec score-9)")
+for nom, attendu in (("hausse", hausse), ("baisse", baisse), ("ecartees", ecartees)):
+    publie = [x["symbole"] for x in pub.get(nom, [])]
     if publie != attendu:
         ecarts.append(f"{nom} : publié {publie} ≠ recalculé {attendu}")
-    for x in pub[nom]:
+    for x in pub.get(nom, []):
         t = x["symbole"]
         if t not in calcule:
             continue
+        v = valeur_de(t)
+        if nom == "ecartees" and (v is None or abs((x.get("taille") or {}).get("valeur_m", -1) - round(v, 1)) > 0.05):
+            ecarts.append(f"{t} : valeur publiée {(x.get('taille') or {}).get('valeur_m')} ≠ recalculée {v}")
         if abs(x["score"] - calcule[t][0]) > 0.01:
-            ecarts.append(f"{t} : score publié {x['score']} ≠ recalculé {calcule[t][0]:.4f}")
+            ecarts.append(f"{t} : score publié {x['score']} ≠ recalculé {calcule[t][0]:.4f} ; achats de dirigeants : "
+                          + "; ".join(f"{e['id']} {e['occurred_on']} {e.get('amount_min')} {e['data'].get('roles')}"
+                                      for r, _, e in notes.get(t, []) if r == "achat_dirigeant"))
         if x.get("note10") != sur_10(calcule[t][0]):
             ecarts.append(f"{t} : note publiée {x.get('note10')} ≠ recalculée {sur_10(calcule[t][0])}")
-        depot = calcule[t][2][1 if nom == "hausse" else -1]
+        depot = calcule[t][2][-1 if nom == "baisse" else 1]
         recent = bool(depot) and ouvrables(date.fromisoformat(depot), jour) < 3
         if x.get("depot_recent") != depot or x.get("recent") is not recent:
             ecarts.append(f"{t} : « Récent » publié {x.get('recent')} ({x.get('depot_recent')}) ≠ recalculé {recent} ({depot})")
@@ -293,7 +335,9 @@ for nom, attendu in (("hausse", hausse), ("baisse", baisse)):
 
 print(f"Jour du calcul : {jour} · infos lues : {len(infos)} · compagnies notées : {len(calcule)} "
       f"(publié : {pub['compagnies_notees']}) · fonds mis à part : {len(FONDS)}")
-print(f"Hausse (7/10 et plus) : {len(hausse)} · Baisse (3/10 et moins) : {len(baisse)}")
+print(f"Hausse (7/10 et plus) : {len(hausse)} · Baisse (3/10 et moins) : {len(baisse)}"
+      + (f" · Écartées (moins de 100 M$) : {', '.join(f'{t} {valeur_de(t):.1f} M$' for t in ecartees) or 'aucune'}"
+         if LOT_M else ""))
 for nom, liste in (("Hausse", hausse), ("Baisse", baisse)):
     print(f"{nom} : " + ", ".join(f"{t} {str(sur_10(calcule[t][0])).replace('.', ',')}/10" + (" (récent)" if
           ouvrables(date.fromisoformat(calcule[t][2][1 if nom == 'Hausse' else -1]), jour) < 3 else "") for t in liste))
