@@ -24,6 +24,8 @@ Une règle = un fichier Python (labo/tournoi/regles/<id>.py) qui définit :
 erreur (garde-fou contre le futur). Les quantités d'échecs de livraison ne sont visibles que 35 jours civils après
 (la SEC les publie par demi-mois, quelques semaines plus tard) ; les finances, à partir de leur date de dépôt. `ctx.evenements_marche(depuis)` donne tous les formulaires 4 (toutes compagnies)
 déposés depuis une date jusqu'au jour de la décision : pour une « météo » des initiés, sans garder de mémoire.
+`ctx.historique_initie(cik)` donne tout l'historique d'un initié (achats et ventes en bourse, toutes compagnies, depuis
+2006 ou le plus tôt disponible), seulement les dépôts faits au plus tard le jour de la décision.
 garder() est appelé dans l'ordre des dépôts, au fil des jours (un dépôt n'est lu que le jour de bourse qui suit) : même
 une règle qui se souviendrait des dépôts déjà vus ne pourrait pas voir le futur.
 Les données peuvent contenir des dépôts d'avant le début de la période (contexte, 1 an) : jamais achetés ; le début et
@@ -98,6 +100,12 @@ class Donnees:
                     x = json.loads(l)
                     self.treize[x["cik"]] = sorted(tuple(v) for v in x["depots"])
         self.calendrier = json.loads((d / "calendrier.json").read_text(encoding="utf-8"))
+        self.historiques = {}  # initié → [[dépôt, cik, symbole, sens, jour_premier, jour_dernier, actions, prix_moyen]]
+        if (d / "historiques.jsonl.gz").exists():
+            with gzip.open(d / "historiques.jsonl.gz", "rt", encoding="utf-8") as f:
+                for l in f:
+                    x = json.loads(l)
+                    self.historiques[x["initie"]] = sorted(x["depots"], key=lambda r: (r[0], r[1], r[3]))
         self.evenements.sort(key=lambda e: (e["depot"], e["id"]))
         self.depots = [e["depot"] for e in self.evenements]
         f = d / "periode.json"
@@ -175,6 +183,12 @@ class Contexte:
     def evenements_avant(self, cik, depuis):
         """Les formulaires 4 (achats et ventes) sur la compagnie DÉPOSÉS de `depuis` à aujourd'hui."""
         return [e for e in self._d.par_cie.get(cik, []) if depuis <= e["depot"] <= self.jour]
+
+    def historique_initie(self, cik, depuis="0000-00-00"):
+        """L'historique d'un initié : [[dépôt, cik de la compagnie, symbole, sens, jour_premier, jour_dernier, actions,
+        prix_moyen], ...] — un dépôt par sens (achat ou vente en bourse), toutes compagnies, DÉPOSÉS de `depuis` à aujourd'hui."""
+        h = self._d.historiques.get(cik) or []
+        return [r for r in h[bisect_left(h, [depuis]):] if r[0] <= self.jour]
 
     def evenements_marche(self, depuis):
         """Tous les formulaires 4 (achats et ventes, toutes compagnies) DÉPOSÉS de `depuis` à aujourd'hui."""

@@ -17,6 +17,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 CONTEXTE, DEBUT, FIN, FIN_PRIX = "2022-07-01", "2023-07-01", "2026-06-30", "2026-09-15"
+PRIX_DEPUIS = "2016-01-04"  # comme le vrai jeu : prix depuis 2015-2016 (pour juger les achats passés d'un initié)
 TITRES = [("Chief Executive Officer", ["dirigeant"]), ("CEO/President", ["administrateur", "dirigeant"]),
           ("EVP, CFO", ["dirigeant"]), ("Chief Financial Officer", ["dirigeant"]), ("COO", ["dirigeant"]),
           ("General Counsel", ["dirigeant"]), ("", ["administrateur"]), ("", ["administrateur"]),
@@ -34,7 +35,7 @@ def jours_ouvrables(a, b):
 
 def fabriquer(dossier, graine=7):
     r = random.Random(graine)
-    cal = jours_ouvrables(CONTEXTE, FIN_PRIX)
+    cal = jours_ouvrables(PRIX_DEPUIS, FIN_PRIX)
     # --- Marché : SPY, IVV, VOO (même indice), IWM (petites compagnies, plus volatil)
     prix, niveau, petites = {}, 400.0, 180.0
     series = {"SPY": [], "IWM": []}
@@ -190,6 +191,25 @@ def fabriquer(dossier, graine=7):
                                        (c["revenus"], rev), ("GrossProfit", rev * r.uniform(0.2, 0.6))):
                         faits[concept].append([deb, fin_q.isoformat(), round(v), accn, depose, forme])
         finances[c["cik"]] = {k: sorted(v, key=lambda x: (x[1], x[0] or "")) for k, v in faits.items()}
+    # --- Historique de chaque initié (comme donnees.py) : ses dépôts passés depuis 2016 (même compagnie surtout,
+    #     parfois une autre), puis ceux du jeu ; un dépôt par sens
+    cies_par_cik = {c["cik"]: c for c in cies}
+    historiques = defaultdict(list)
+    jours_vieux = jours_ouvrables(PRIX_DEPUIS, "2022-06-30")
+    for c in cies:
+        for ini in c["inities"]:
+            for _ in range(r.randint(0, 14)):
+                autre = c if r.random() < 0.8 else r.choice(cies)
+                dep = r.choice(jours_vieux)
+                px = [x for x in prix[autre["s"]] if x[0] <= dep][-1:] or prix[autre["s"]][:1]
+                jour_tr = (date.fromisoformat(dep) - timedelta(days=r.randint(0, 3))).isoformat()
+                historiques[ini["cik"]].append([dep, autre["cik"], autre["s"], "achat" if r.random() < 0.45 else "vente",
+                                                jour_tr, jour_tr, float(r.choice([1000, 5000, 20000])), round(px[0][1], 4)])
+    for e in evs:
+        for i in e["inities"]:
+            historiques[i["cik"]].append([e["depot"], e["cik"], e["symbole"], e["sens"], e["jour_premier"],
+                                          e["jour_dernier"], e["actions"], e["prix_moyen"]])
+    acheteurs = {i["cik"] for e in evs if e["sens"] == "achat" for i in e["inities"]}
     # --- Écriture, au format de donnees.py
     d = Path(dossier)
     d.mkdir(parents=True, exist_ok=True)
@@ -207,6 +227,9 @@ def fabriquer(dossier, graine=7):
     with gzip.open(d / "13d13g.jsonl.gz", "wt", encoding="utf-8") as f:
         for cik, v in sorted(treize.items()):
             f.write(json.dumps({"cik": cik, "depots": v}) + "\n")
+    with gzip.open(d / "historiques.jsonl.gz", "wt", encoding="utf-8") as f:
+        for ini in sorted(acheteurs):
+            f.write(json.dumps({"initie": ini, "depots": sorted(historiques[ini])}, ensure_ascii=False) + "\n")
     (d / "calendrier.json").write_text(json.dumps(cal), encoding="utf-8")
     (d / "periode.json").write_text(json.dumps({"debut": DEBUT, "fin": FIN, "contexte_depuis": CONTEXTE}), encoding="utf-8")
     (d / "LISEZ-MOI.txt").write_text("FAUX jeu de recherche (au hasard, graine fixe) : pour programmer et comparer les "

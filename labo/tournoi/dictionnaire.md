@@ -3,7 +3,9 @@
 Fait par `labo/tournoi/donnees.py` à partir de sources officielles gratuites de la SEC. Rien du futur : chaque champ
 d'un événement n'utilise que ce qui était DÉPOSÉ avant le formulaire 4 de cet événement.
 
-- **Découverte** (pour les testeurs) : formulaires 4 déposés du 1er juillet 2023 au 30 juin 2026 → `labo/tournoi/donnees/`.
+- **Découverte** : formulaires 4 déposés du 1er juillet 2023 au 30 juin 2026 → cache du labo (`cache/decouverte/`, trop
+  gros pour la branche) ; le résumé et le journal du calcul → `labo/tournoi/donnees/`. Les programmeurs des règles
+  travaillent sur un FAUX jeu au même format (`essais/faux_jeu.py`) ; le juge passe les règles sur le vrai, au labo.
 - **Coffre-fort** (examen final) : déposés du 1er janvier 2016 au 30 juin 2023. Jamais dans la branche ; personne ne le
   voit avant l'examen final, où chaque règle finaliste est testée UNE fois.
 - Chaque période contient aussi **1 an de dépôts d'avant son début (contexte)** : une règle peut s'en servir (météo des
@@ -66,6 +68,14 @@ SalesRevenueNet, GrossProfit (durées : un trimestre de 80 à 100 jours, ou un e
 - Dans une règle : `ctx.finances(cik)` → `{concept: [[début, fin, valeur, forme], ...]}` (déposés au plus tard ce
   jour-là, la fin la plus récente en dernier).
 - Gardé : périodes finies au plus 2 ans (et 1 mois) avant le début de la période (assez pour comparer 2 exercices).
+
+## historiques.jsonl.gz (une ligne par initié qui achète dans la période)
+
+`{"initie": cik, "depots": [[dépôt, cik de la compagnie, symbole, sens, jour_premier, jour_dernier, actions, prix_moyen], ...]}`
+— TOUS ses dépôts de formulaires 4 originaux avec un achat ou une vente en bourse (un par sens), dans toutes ses
+compagnies, depuis le plus ancien jeu de données de la SEC offert (2006 si disponible). Dans une règle :
+`ctx.historique_initie(cik, depuis)` ne donne que les dépôts faits au plus tard le jour de la décision. Pour juger un
+achat passé, `ctx.clotures(symbole, depuis, jusqu_a)` (prix depuis juillet 2015).
 
 ## 13d13g.jsonl.gz (une ligne par compagnie)
 

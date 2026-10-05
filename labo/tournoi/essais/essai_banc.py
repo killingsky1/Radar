@@ -240,5 +240,20 @@ journal = {}
 t14, _, _ = banc.simuler(regle(MAX_POSITIONS=1, MONTANT_MIN=20000), d, debut="2023-07-03", journal=journal)
 verifier("MONTANT_MIN : une position plus petite n'est pas achetée", not t14 and journal["montant_trop_petit"] >= 1, str(journal))
 
+# 15. Historique d'un initié : seulement les dépôts faits au plus tard le jour de la décision
+d = ecrire([ev("a", "AAA", "2023-07-10")], {"SPY": SPY, "AAA": AAA})
+with gzip.open(ICI / "historiques.jsonl.gz", "wt") as f:
+    f.write(json.dumps({"initie": "900", "depots": [
+        ["2021-03-01", "11", "AAA", "achat", "2021-02-26", "2021-02-26", 100, 9.5],
+        ["2023-07-12", "12", "ZZZ", "vente", "2023-07-10", "2023-07-11", 50, 20.0],
+        ["2019-05-02", "12", "ZZZ", "vente", "2019-04-30", "2019-04-30", 10, 15.0]]}) + "\n")
+d = banc.Donnees(ICI)
+h = banc.Contexte(d, "2023-07-11").historique_initie("900")
+verifier("Historique de l'initié : dépôts d'avant seulement, du plus ancien au plus récent",
+         [r[0] for r in h] == ["2019-05-02", "2021-03-01"], str(h))
+verifier("Historique : depuis une date", [r[0] for r in banc.Contexte(d, "2023-07-12").historique_initie("900", "2020-01-01")]
+         == ["2021-03-01", "2023-07-12"])
+verifier("Historique : initié inconnu → liste vide", banc.Contexte(d, "2023-07-12").historique_initie("1") == [])
+
 print(f"\n{sum(ok)}/{len(ok)} vérifications réussies")
 sys.exit(0 if all(ok) else 1)
