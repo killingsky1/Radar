@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.26.1";
+const VERSION = "0.27.0";
 
 // ---------- Constantes ----------
 
@@ -1416,6 +1416,15 @@ function EcranSuggestions({ retour }) {
       ) : (
         <ListeSuggestions liste={liste} />
       )}
+      {!baisse && s.ecartees?.length > 0 && (
+        <>
+          <h2 className="section">{`Écartées · ${s.ecartees.length}`}</h2>
+          <p className="explication">
+            {fr("Moins de 100 M$ en bourse : hors de la liste « hausse ». Dans le rejeu de 3 ans du labo, ces compagnies ont fait pire que le S&P 500 chacune des 3 années. Elles restent suivies dans les Résultats, pour vérifier la règle.")}
+          </p>
+          <ListeSuggestions liste={s.ecartees} />
+        </>
+      )}
       <LienMethode />
       <p className="avertissement">{s.note || "Pas des conseils financiers"}</p>
     </Ecran>
@@ -1429,7 +1438,8 @@ const lienCours = (symbole) => `https://finance.yahoo.com/quote/${encodeURICompo
 function EcranCompagnie({ retour }) {
   const { donnees, compagnie, ouvrirDetail, favoris, basculerFavori, estNouveau } = useApp();
   const s = donnees.aujourdhui || {};
-  const c = [...(s.hausse || []), ...(s.baisse || [])].find((x) => x.symbole === compagnie);
+  const c = [...(s.hausse || []), ...(s.baisse || []), ...(s.ecartees || [])].find((x) => x.symbole === compagnie);
+  const ecartee = (s.ecartees || []).some((x) => x.symbole === compagnie);
   if (!c) {
     return (
       <Ecran titre={compagnie || "Compagnie"} retour={retour}>
@@ -1462,7 +1472,7 @@ function EcranCompagnie({ retour }) {
         <AnneauNote valeur={c.note10} baisse={baisse} />
         <p className="fiche-points">{fr(`${pts(c.score)} points`)}</p>
         <p className="fiche-sens">
-          {baisse ? "À surveiller à la baisse" : "À regarder à la hausse"}
+          {baisse ? "À surveiller à la baisse" : ecartee ? "Écartée : moins de 100 M$ en bourse" : "À regarder à la hausse"}
           {estNouveau(c) && <span className="nouveau">Nouveau</span>}
           {c.recent && <span className="recent">Récent</span>}
         </p>
@@ -1512,7 +1522,7 @@ function EcranCompagnie({ retour }) {
           <small>{fr(`Note = 5 + ${formule(c.score)} × 5/6, entre 0 et 10, arrondie au dixième`)}</small>
         </p>
       </div>
-      <TailleBourse t={c.taille} />
+      <TailleBourse t={c.taille} regle100={Boolean(s.methode?.trop_petites)} />
       <SanteFinanciere symbole={c.symbole} />
 
       {c.contexte.length > 0 && (
@@ -1599,14 +1609,14 @@ function moisAnnee(aaaamm) {
   return `${MOIS_LONGS[Number(aaaamm.slice(4, 6)) - 1]} ${aaaamm.slice(0, 4)}`;
 }
 
-function TailleBourse({ t }) {
+function TailleBourse({ t, regle100 }) {
   if (!t) return null;
   const s = t.seuils;
   const seuils = s
     ? `Petite : moins de ${argentCourt(s.p30 * 1e6)} (30e centile des compagnies du NYSE, ${moisAnnee(s.mois)}) ; grande : ${argentCourt(s.p70 * 1e6)} et plus (70e centile).`
     : "";
   const texte = t.taille
-    ? `${nombre(t.actions[0])} actions déclarées au ${dateLongue(t.actions[1])} × ${prixAction(t.prix[1])} (prix de la SEC du ${jourSec(t.prix[0])}). ${seuils}${t.taille === "petite" ? " Les achats de dirigeants comptent ×1,5." : ""}`
+    ? `${nombre(t.actions[0])} actions déclarées au ${dateLongue(t.actions[1])} × ${prixAction(t.prix[1])} (prix de la SEC du ${jourSec(t.prix[0])}). ${seuils}${t.taille === "petite" ? " Les achats de dirigeants comptent ×1,5." : ""}${regle100 && t.valeur_m < 100 ? " Moins de 100 M$ : hors de la liste « hausse »." : ""}`
     : `Pas calculée : ${t.raison}. Pas de bonus de petite compagnie.`;
   return (
     <>
@@ -1752,11 +1762,22 @@ function EcranMethode({ retour }) {
         ))}
       </Groupe>
       <Groupe titre="Le calcul">
-        {[m.temps, m.familles, m.bonus, m.taille, m.routiniers, m.note10, m.seuil, m.recent, m.badges].filter(Boolean).map((t) => (
+        {[m.temps, m.familles, m.bonus, m.taille, m.trop_petites, m.routiniers, m.note10, m.seuil, m.recent, m.badges].filter(Boolean).map((t) => (
           <div key={t} className="rangee bloc">
             <span className="rangee-texte">{fr(t)}</span>
           </div>
         ))}
+        {m.lien_labo && (
+          <div className="rangee bloc">
+            <a className="etude" href={m.lien_labo} target="_blank" rel="noopener noreferrer">
+              <Icone nom="document" taille={16} epaisseur={2} />
+              <span>
+                <b>Rejeu de 3 ans du labo</b>
+                {fr(" : les chiffres des compagnies de moins de 100 M$, année par année (GitHub).")}
+              </span>
+            </a>
+          </div>
+        )}
         {(m.etudes_note || [])
           .filter((e) => m.etudes[e])
           .map((e) => (
@@ -2079,7 +2100,7 @@ function EcranCalendrier({ retour }) {
 
 // ---------- Résultats de Radar : prix officiels de la SEC (robot : data/app/resultats.json) ----------
 
-const SENS_RESULTATS = { hausse: "À la hausse", baisse: "À la baisse" };
+const SENS_RESULTATS = { hausse: "À la hausse", baisse: "À la baisse", ecartee: "Écartée (moins de 100 M$)" };
 
 function variationSignee(v) {
   return `${v > 0 ? "+" : ""}${(v * 100).toLocaleString("fr-CA", { minimumFractionDigits: 1, maximumFractionDigits: 1 })} %`;
@@ -2094,6 +2115,8 @@ function jourSec(aaaammjj) {
 }
 
 function verdict(h, sens) {
+  if (sens === "ecartee" && h.battu != null)
+    return h.battu ? "a fait moins bien que le marché : la règle avait raison" : "a fait mieux que le marché : la règle s'est trompée";
   if (h.battu === true) return sens === "hausse" ? "a battu le marché" : "a fait moins bien que le marché, comme prévu";
   if (h.battu === false) return sens === "hausse" ? "n'a pas battu le marché" : "n'a pas fait moins bien que le marché";
   return h.pourquoi || "pas de verdict";
@@ -2125,7 +2148,7 @@ function LigneHorizon({ nom, h, sens }) {
 // Pourquoi la compagnie est entrée (lot L) : « Achat d'actions par un dirigeant… (PDG…, Petite compagnie) · petite compagnie ».
 function pourquoiEntree(l, libelles) {
   if (!l.signaux) return null;
-  const s = l.sens === "hausse" ? 1 : -1;
+  const s = l.sens === "baisse" ? -1 : 1;
   const morceaux = l.signaux
     .filter((x) => x.sens === s)
     .map((x) => `${(libelles || {})[x.regle] || x.regle}${x.facteurs.length ? ` (${x.facteurs.join(", ")})` : ""}`);
@@ -2221,7 +2244,7 @@ function CarteResultats() {
         </span>
         <span className="res-carte-texte">
           {resume ||
-            fr(`${r.lignes.length} compagnies suivies. Premiers prix officiels de la SEC vers le ${dateLongue(r.prochains_prix_vers)}.`)}
+            fr(`${r.lignes.filter((l) => l.sens !== "ecartee").length} compagnies suivies. Premiers prix officiels de la SEC vers le ${dateLongue(r.prochains_prix_vers)}.`)}
         </span>
         <Icone nom="chevron-d" taille={18} epaisseur={2.2} className="chevron" />
       </button>
@@ -2241,7 +2264,8 @@ function EcranResultats({ retour }) {
       </Ecran>
     );
   }
-  const lignes = [...r.lignes].reverse(); // les plus récentes d'abord
+  const lignes = r.lignes.filter((l) => l.sens !== "ecartee").reverse(); // les plus récentes d'abord
+  const ecartees = r.lignes.filter((l) => l.sens === "ecartee").reverse(); // lot M : suivies à part
   return (
     <Ecran titre="Résultats" sousTitre="Radar a-t-il frappé juste ?" retour={retour}>
       <p className="explication">
@@ -2262,11 +2286,32 @@ function EcranResultats({ retour }) {
         )}
       </Groupe>
       {r.par_signal && <ParSignal p={r.par_signal} horizons={r.horizons} />}
-      <Groupe titre={`Compagnies suivies (${r.lignes.length})`}>
+      {r.resume.ecartee_7 && (
+        <Groupe titre="Écartées : la règle des 100 M$ a-t-elle raison ?" pied={fr("Compagnies de moins de 100 M$ en bourse, hors de la liste « hausse » depuis la version 0.27, suivies de la même façon. La règle a raison quand la compagnie fait moins bien que le marché.")}>
+          {Object.entries(r.horizons).map(([k, nom]) => {
+            const x = r.resume[`ecartee_${k}`];
+            return (
+              <Rangee key={k} label={nom}>
+                <span className="rangee-valeur">
+                  {x.mesurees ? `${x.battu} sur ${x.mesurees} · écart moyen ${points(x.ecart_moyen)}` : x.en_attente ? "en attente" : "aucune mesure"}
+                </span>
+              </Rangee>
+            );
+          })}
+        </Groupe>
+      )}
+      <Groupe titre={`Compagnies suivies (${lignes.length})`}>
         {lignes.map((l) => (
           <LigneResultat key={`${l.symbole}-${l.sens}-${l.entree}`} l={l} horizons={r.horizons} libelles={r.libelles_regles} />
         ))}
       </Groupe>
+      {ecartees.length > 0 && (
+        <Groupe titre={`Écartées suivies (${ecartees.length})`}>
+          {ecartees.map((l) => (
+            <LigneResultat key={`${l.symbole}-${l.sens}-${l.entree}`} l={l} horizons={r.horizons} libelles={r.libelles_regles} />
+          ))}
+        </Groupe>
+      )}
       <Groupe titre="Comment c'est mesuré">
         {r.methode.map((m) => (
           <div key={m} className="rangee bloc">
@@ -2796,7 +2841,7 @@ function EcranAide({ retour }) {
       </Groupe>
 
       <Groupe titre="La note sur 10">
-        {[m.resume, m.temps, m.familles, m.bonus, m.taille, m.routiniers, m.note10, m.seuil, m.recent].filter(Boolean).map((t) => (
+        {[m.resume, m.temps, m.familles, m.bonus, m.taille, m.trop_petites, m.routiniers, m.note10, m.seuil, m.recent].filter(Boolean).map((t) => (
           <div key={t} className="rangee bloc">
             <span className="rangee-texte">{fr(t)}</span>
           </div>

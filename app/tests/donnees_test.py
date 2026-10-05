@@ -286,6 +286,37 @@ from radar import calendrier  # noqa: E402
 from radar.publish import _ecrire_compact  # noqa: E402
 from radar.store import Depot  # noqa: E402
 from radar.validate import valider  # noqa: E402
+# Lot M : Micro Exemple Inc. (MIKR, fiche SEC avec 10-K) vaut 20 000 000 actions × 2,50 $ = 50 M$ en bourse ; sa
+# directrice financière achète → 7/10 et plus, mais moins de 100 M$ : écartée de la liste « hausse ». Son achat n'est
+# donné QU'AU score, refait après les passages par le calcul du robot (le fil et l'onglet Argent ne changent pas).
+from radar.publish import _ecrire as _ecrire_m  # noqa: E402
+from radar import emetteurs as em_m, score as sc_m  # noqa: E402
+from radar.collecteurs import inities as ini_m, taille as ta_m  # noqa: E402
+EMETTEURS_TEST["MIKR"] = {"cik": 9999990, "nom": "Micro Exemple Inc.", "type": "compagnie", "formulaires_fonds": [],
+                          "rapports": ["10-K", "10-Q"], "lu": jour(1)}
+(Path(sys.argv[1]) / "sec" / "emetteurs.json").write_text(json.dumps(EMETTEURS_TEST), encoding="utf-8")
+t_m = json.loads(ta_m.chemin(sys.argv[1]).read_text(encoding="utf-8"))
+t_m["actions"]["9999990"] = [20_000_000, jour(30)]
+t_m["prix"]["MIKR"] = [jour(3).replace("-", ""), 2.5]
+ta_m.chemin(sys.argv[1]).write_text(json.dumps(t_m), encoding="utf-8")
+achat_mikr = valider(ev(40, "sec_form4", "compagnies", "achat_initie",
+    "la directrice financière de Micro Exemple achète 40 000 actions", jour(1), "https://www.sec.gov/test/mikr-form4.xml",
+    tickers=["MIKR"], amount_min=1.0e5, amount_max=1.0e5, entities=["Directrice financière (exemple)", "MICRO EXEMPLE INC"],
+    direction=1, data={"symbole_declare": "MIKR", "symboles_sec": ["MIKR"], "actions": 40000,
+                       "roles": ["Chief Financial Officer"], "prix_moyen": 2.5,
+                       "transactions": [{"code": "P", "acquis_cede": "A", "actions": 40000, "prix": 2.5, "date": jour(1),
+                                         "apres": 140000}]}), J).to_dict()
+assert achat_mikr["badge"] == "officiel", achat_mikr
+chemin_m = Path(sys.argv[1]) / "app" / "aujourdhui.json"
+_ecrire_m(chemin_m, sc_m.calculer(
+    sorted((e for e in Depot(sys.argv[1]).lire("evenements") + [achat_mikr] if not e.get("data", {}).get("meme_acte_que")),
+           key=lambda d: (d["published_on"], d["collected_at"], d["id"]), reverse=True),
+    maintenant, json.loads(chemin_m.read_text(encoding="utf-8")), None, fonds=em_m.fonds(sys.argv[1]),
+    chefs={nom for nom, x in json.loads((Path(sys.argv[1]) / "app" / "elus.json").read_text(encoding="utf-8"))[
+        "par_elu"].items() if x["chef"]},
+    routiniers=ini_m.charger(sys.argv[1]),
+    tailles=ta_m.pour_score(sys.argv[1], em_m.charger(sys.argv[1]), sc_m.jour_de_calcul(maintenant))))
+assert [x["symbole"] for x in json.loads(chemin_m.read_text(encoding="utf-8"))["ecartees"]] == ["MIKR"]
 Depot(sys.argv[1]).enregistrer([valider(e, J) for e in BLOCAGES])
 _ecrire_compact(Path(sys.argv[1]) / "app" / "calendrier.json", calendrier.preparer(Depot(sys.argv[1]), J))
 # Résultats de Radar (lot G) : entrées TEST de juillet à septembre 2026, mesurées par le vrai calcul du robot sur de VRAIS
@@ -330,7 +361,14 @@ def entree_test(symbole, nom, sens, quand, note):
     entree_test("XMPL", "Exemple Corp.", "hausse", "2026-07-20T14:00:00+00:00", 7.4),
     entree_test("MSTU", "T-REX 2X", "hausse", "2026-08-14T21:00:00+00:00", 7.2),
     entree_test("CRE", "CRE8 Enterprise", "baisse", "2026-08-17T12:00:00+00:00", 2.0),
-    entree_test("GME", "GameStop", "hausse", "2026-09-11T15:00:00+00:00", 9.3)]}), encoding="utf-8")
+    entree_test("GME", "GameStop", "hausse", "2026-09-11T15:00:00+00:00", 9.3),
+    # Lot M : une écartée (moins de 100 M$) aux dates et aux vrais prix d'AAPL : 1 semaine mieux que le marché (la règle
+    # s'est trompée), 1 mois moins bien (la règle avait raison)
+    {"symbole": "AAPL", "nom": "TEST Petite écartée (prix d'Apple)", "sens": "ecartee", "entree": "2026-07-20T14:00:00+00:00",
+     "vue": "2026-07-20", "note10": 7.6, "methode": "score-9", "taille": "petite", "note10_sans_bonus": 7.6,
+     "grace_au_bonus": False, "note10_sans_taille": 6.9, "grace_a_la_taille": True,
+     "signaux": [{"famille": "inities", "sens": 1, "regle": "achat_dirigeant", "facteurs": ["Petite compagnie"]}]}]}),
+    encoding="utf-8")
 ps.PREMIER_FICHIER = "202607b"  # les vrais extraits gardés pour les tests : juillet à septembre 2026
 ps.collecter(Contexte(client=FauxSec(), maintenant=maintenant, donnees=Path(sys.argv[1])))
 from radar.publish import _ecrire  # noqa: E402

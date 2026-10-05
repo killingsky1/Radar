@@ -120,10 +120,11 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     await p.locator(".ligne.raison").first().click(); await p.waitForSelector(".feuille-fond.ouvert");
     assert.ok(await p.getByText("Document officiel").isVisible()); await fermer();
   });
-  await verifier("Comment le score est calculé : 13 règles, 21 liens d'études (dont Brochet pour « Récent »), règles des chefs", async () => {
+  await verifier("Comment le score est calculé : 13 règles, 21 liens d'études (dont Brochet pour « Récent ») + le rejeu du labo, règles des chefs", async () => {
     await p.getByRole("button", { name: "Comment le score est calculé" }).click(); await p.waitForTimeout(250);
     assert.equal(await p.locator(".regle").count(), 13);
-    assert.equal(await p.locator("a.etude").count(), 21); // lot L : Cohen, Malloy et Pomorski aussi sous les ventes (routiniers)
+    // lot L : Cohen, Malloy et Pomorski aussi sous les ventes (routiniers) ; lot M : + le rejeu de 3 ans du labo
+    assert.equal(await p.locator("a.etude").count(), 22);
     const calcul = (await p.locator(".groupe", { hasText: "Le calcul" }).innerText()).replace(/\u00a0/g, " ");
     assert.ok(calcul.includes("Note sur 10 = 5 + points × 5/6") && calcul.includes("à partir de 7/10") && calcul.includes("Brochet (2010)"), calcul);
     const chef = (await p.locator(".regle", { hasText: "Un chef du Congrès achète" }).innerText()).replace(/\u00a0/g, " ");
@@ -149,7 +150,8 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
   await verifier("Retour : Suggestions puis Accueil", async () => {
     await p.locator(".retour").click(); await p.waitForTimeout(200);
     assert.equal(await p.locator(".grand-titre h1").innerText(), "Suggestions");
-    await p.locator(".segment", { hasText: "Hausse" }).click(); assert.equal(await p.locator(".ligne.suggestion").count(), 2);
+    // Hausse : AMD et NVDA, puis MIKR dans « Écartées » (lot M)
+    await p.locator(".segment", { hasText: "Hausse" }).click(); assert.equal(await p.locator(".ligne.suggestion").count(), 3);
     await p.locator(".retour").click(); await p.waitForTimeout(200); assert.ok(await p.locator(".tuiles").isVisible());
   });
   await verifier("Nouveau : disparaît une fois la liste vue (visite suivante)", async () => {
@@ -600,9 +602,11 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
         "Départ : pas de prix officiel ces jours-là",
         "Prix de la SEC publiés jusqu'au 14 septembre 2026.",
       ]) assert.ok(t.replace(/−/g, "-").includes(attendu), attendu);
-      assert.equal(await p.locator(".res-horizon.vert").count(), 1);
-      assert.equal(await p.locator(".res-horizon.rouge").count(), 1);
-      assert.equal(await p.locator(".res-ligne").count(), 6);
+      // + l'écartée (lot M, à part) : 1 semaine rouge (la règle s'est trompée), 1 mois vert (la règle avait raison)
+      assert.equal(await p.locator(".res-horizon.vert").count(), 2);
+      assert.equal(await p.locator(".res-horizon.rouge").count(), 2);
+      assert.equal(await p.locator(".res-ligne").count(), 7);
+      assert.equal(await p.locator(".groupe", { hasText: "Compagnies suivies (6)" }).locator(".res-ligne").count(), 6);
       assert.ok(t.includes("jamais une clôture que Radar connaissait"));
     } finally {
       await onglet("Radar");
@@ -623,7 +627,7 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       assert.ok(t.includes("2 entrées d'avant le 5 octobre 2026 : raisons pas notées"), t);
       assert.ok(t.includes("Pourquoi : Achat d'actions par un dirigeant ou un administrateur (Petite compagnie) · petite compagnie · entrée grâce au bonus de petite compagnie"), t);
       assert.ok(t.includes("Pourquoi : Achat d'actions par un dirigeant ou un administrateur · Un gestionnaire de fonds dépasse 5 % avec des intentions actives (13D) · compagnie moyenne · entrée grâce au bonus de familles"), t);
-      assert.equal(await p.locator(".res-ligne", { hasText: "Pourquoi" }).count(), 4); // LESL et XMPL : d'avant (sans raisons)
+      assert.equal(await p.locator(".res-ligne", { hasText: "Pourquoi" }).count(), 5); // LESL et XMPL : d'avant (sans raisons) ; + l'écartée
     } finally {
       await onglet("Radar");
     }
@@ -638,6 +642,72 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       await p.locator(".lien-rangee", { hasText: "Comment le score est calculé" }).click(); await p.waitForTimeout(250);
       const r = (await p.locator(".regle", { hasText: "Achat d'actions par un dirigeant" }).innerText()).replace(/\u00a0/g, " ");
       assert.ok(r.includes("×1,5 si c'est une petite compagnie") && r.includes("0 point si l'initié est « routinier »"), r);
+    } finally {
+      await onglet("Radar");
+    }
+  });
+  await verifier("Suggestions : les écartées (moins de 100 M$) sous la liste hausse, avec la raison ; rien sous la baisse", async () => {
+    try {
+      await onglet("Radar"); await p.locator(".alerte-baisse").click(); await p.waitForTimeout(250);
+      assert.equal(await p.locator("h2.section", { hasText: "Écartées" }).count(), 0); // vue « baisse »
+      await p.locator(".segment", { hasText: "Hausse" }).click(); await p.waitForTimeout(150);
+      assert.equal(await p.locator(".segment.actif").innerText(), "Hausse · 2");
+      assert.equal(await p.locator("h2.section", { hasText: "Écartées" }).textContent(), "Écartées · 1");
+      const t = (await p.locator(".ecran").innerText()).replace(/\u00a0/g, " ");
+      assert.ok(t.includes("Moins de 100 M$ en bourse : hors de la liste « hausse ». Dans le rejeu de 3 ans du labo, ces compagnies ont fait pire que le S&P 500 chacune des 3 années."), t);
+      const listes = p.locator(".carte.liste");
+      assert.deepEqual(await listes.nth(0).locator(".symbole").allTextContents(), ["AMD", "NVDA"]);
+      assert.deepEqual(await listes.nth(1).locator(".symbole").allTextContents(), ["MIKR"]);
+      assert.equal((await listes.nth(1).locator(".score-pastille").innerText()).replace(/\s+/g, ""), "8,7/10");
+    } finally {
+      await onglet("Radar");
+    }
+  });
+  await verifier("Fiche MIKR (écartée) : la raison, la taille de 50 M$ et sa preuve officielle", async () => {
+    try {
+      await onglet("Radar"); await p.locator(".alerte-baisse").click(); await p.waitForTimeout(250);
+      await p.locator(".segment", { hasText: "Hausse" }).click(); await p.waitForTimeout(150);
+      await p.locator(".ligne.suggestion", { hasText: "MIKR" }).click(); await p.waitForTimeout(250);
+      assert.ok((await p.locator(".fiche-sens").innerText()).startsWith("Écartée : moins de 100 M$ en bourse")); // + « Récent »
+      const taille = (await p.locator(".taille").innerText()).replace(/\u00a0|\u202f/g, " ");
+      assert.ok(taille.includes("Petite compagnie") && taille.includes("50 M$") && taille.includes("20 000 000 actions")
+        && taille.includes("Moins de 100 M$ : hors de la liste « hausse »."), taille);
+      const calcul = (await p.locator(".ecran").innerText()).replace(/\u00a0/g, " ");
+      assert.ok(calcul.includes("la directrice financière de Micro Exemple achète 40 000 actions"), calcul);
+    } finally {
+      await onglet("Radar");
+    }
+  });
+  await verifier("Fiche AMD (grande) : pas de phrase des 100 M$", () => fiche("AMD", async () => {
+    assert.ok(!(await p.locator(".taille").innerText()).includes("100 M$"));
+  }));
+  await verifier("Résultats : écartées à part — la règle a-t-elle raison, verdicts en mots, pas dans le taux des listes", async () => {
+    try {
+      await p.locator(".res-carte").click(); await p.waitForTimeout(300);
+      const g = (await p.locator(".groupe", { hasText: "la règle des 100 M$ a-t-elle raison" }).innerText()).replace(/\u00a0/g, " ").replace(/−/g, "-");
+      assert.ok(g.includes("0 sur 1 · écart moyen +6,1 points") && g.includes("1 sur 1 · écart moyen -7,5 points"), g);
+      assert.ok(g.includes("La règle a raison quand la compagnie fait moins bien que le marché."), g);
+      const e = (await p.locator(".groupe", { hasText: "Écartées suivies (1)" }).innerText()).replace(/\u00a0/g, " ").replace(/−/g, "-");
+      assert.ok(e.includes("Écartée (moins de 100 M$) · entrée le 20 juillet 2026 · 7,6/10"), e);
+      assert.ok(e.includes("+3,8 % au 30 juill. · marché -2,4 % (IVV) : a fait mieux que le marché : la règle s'est trompée"), e);
+      assert.ok(e.includes("-5,1 % au 24 août · marché +2,5 % (SPY) : a fait moins bien que le marché : la règle avait raison"), e);
+      assert.ok(e.includes("Pourquoi : Achat d'actions par un dirigeant ou un administrateur (Petite compagnie) · petite compagnie"), e);
+      const t = (await p.locator(".ecran").textContent()).replace(/\u00a0/g, " ");
+      assert.ok(t.includes("Écartées : les compagnies de moins de 100 M$ en bourse, hors de la liste « hausse » depuis la version 0.27"), t);
+    } finally {
+      await onglet("Radar");
+    }
+  });
+  await verifier("Méthode et aide : la règle des 100 M$ et le lien du rejeu du labo", async () => {
+    try {
+      await reglages(); await p.getByRole("button", { name: /Comment le score est calculé/ }).click(); await p.waitForTimeout(250);
+      const calcul = (await p.locator(".groupe", { hasText: "Le calcul" }).innerText()).replace(/\u00a0/g, " ");
+      assert.ok(calcul.includes("Moins de 100 M$ en bourse : la compagnie n'entre pas dans la liste « hausse ».") && calcul.includes("Taille inconnue : rien n'est écarté."), calcul);
+      assert.equal(await p.locator("a.etude", { hasText: "Rejeu de 3 ans du labo" }).getAttribute("href"),
+        "https://github.com/killingsky1/Radar/blob/labo/labo/rejeu3/facteurs.md");
+      await p.locator(".retour").click(); await p.waitForTimeout(200);
+      await p.getByRole("button", { name: /Comment marche Radar/ }).click(); await p.waitForTimeout(250);
+      assert.ok((await p.locator(".ecran").last().innerText()).replace(/\u00a0/g, " ").includes("Moins de 100 M$ en bourse : la compagnie n'entre pas dans la liste « hausse »."));
     } finally {
       await onglet("Radar");
     }
