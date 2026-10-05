@@ -1,0 +1,72 @@
+name: "Labo (lot M : rejeu de 3 ans avant et après la règle des 100 M$)"
+
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/compare_lotM.py", "labo/recalcul_score_lotM.py", ".github/workflows/labo78.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  lotM:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      REJEU_DEBUT: "2023-07-01"
+      REJEU_FIN: "2026-06-30"
+      REJEU_SORTIE: "labo/rejeu3"
+      REJEU_ARGENT: "0"
+      REJEU_VERIF: "2023-10-16,2024-06-14,2025-03-14,2026-04-15"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Robot de la branche travail (score-9, pas encore en ligne)
+        uses: actions/checkout@v4
+        with:
+          ref: travail
+          path: principal
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests -r principal/robot/requirements.txt
+      - name: Reprendre les fichiers déjà lus (cache)
+        uses: actions/cache/restore@v4
+        with:
+          path: cache
+          key: rejeu-${{ github.run_id }}
+          restore-keys: rejeu-
+      - name: Garder le rejeu d'avant (score-8) et le recalcul indépendant qui connaît la règle des 100 M$
+        run: |
+          cp -r labo/rejeu3 /tmp/avant
+          cp labo/recalcul_score_lotM.py labo/recalcul_score.py
+      - name: Rejeu de 3 ans (score-9)
+        run: python labo/rejeu_radar.py
+      - name: Analyse des règles
+        run: python labo/strategies.py
+      - name: Vérification indépendante
+        run: python labo/verif_rejeu3.py
+      - name: Facteurs
+        run: python labo/facteurs.py
+      - name: Vérification indépendante des facteurs
+        run: python labo/verif_facteurs.py
+      - name: Avant et après
+        run: python labo/compare_lotM.py /tmp/avant labo/rejeu3
+      - name: Garder les fichiers lus (cache)
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: cache
+          key: rejeu-${{ github.run_id }}
+      - name: Sauvegarder (labo/rejeu3-lotM ; le rejeu d'avant reste dans labo/rejeu3)
+        if: always()
+        run: |
+          rm -rf labo/rejeu3-lotM && mkdir -p labo/rejeu3-lotM
+          cp -r labo/rejeu3/. labo/rejeu3-lotM/
+          git checkout -- labo/rejeu3 labo/recalcul_score.py
+          git clean -fdq -- labo/rejeu3
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/rejeu3-lotM
+          git commit -m "Labo : lot M, rejeu de 3 ans avec la règle des 100 M\$ ($(date -u +'%Y-%m-%d %H:%M') UTC)" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
