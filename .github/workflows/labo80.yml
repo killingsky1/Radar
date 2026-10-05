@@ -1,0 +1,54 @@
+name: "Labo (tournoi, étape 0 : le jeu de recherche, 2016 à juin 2026)"
+
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/tournoi/donnees.py", ".github/workflows/labo80.yml"]
+
+permissions:
+  contents: write
+
+# Même groupe que le robot (radar.yml) : jamais les deux en même temps, donc la SEC voit un seul client à la fois
+# (5 requêtes par seconde au plus).
+concurrency:
+  group: radar
+  cancel-in-progress: false
+
+jobs:
+  donnees:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: principal
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests -r principal/robot/requirements.txt
+      - name: Reprendre les fichiers déjà lus (cache)
+        uses: actions/cache/restore@v4
+        with:
+          path: cache
+          key: rejeu-${{ github.run_id }}
+          restore-keys: rejeu-
+      - name: Jeu de recherche (découverte → branche labo ; coffre-fort → cache seulement)
+        run: python labo/tournoi/donnees.py
+      - name: Garder les fichiers lus et le coffre-fort (cache)
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: cache
+          key: rejeu-${{ github.run_id }}
+      - name: Sauvegarder la découverte seulement
+        if: always()
+        run: |
+          test ! -e labo/tournoi/donnees/coffre
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/tournoi/donnees
+          git commit -m "Labo : tournoi, jeu de recherche de la découverte ($(date -u +'%Y-%m-%d %H:%M') UTC)" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
