@@ -127,8 +127,21 @@ for n, p in enumerate(pages, 1):
         elif re.match(r"^(Small|Medium|Large|All|Total|Purchase|Sale|Quintile|Q[1-5]|1|5|Spread|Difference|High|Low)\b", s) \
                 and len(re.findall(r"[−-]?\d+\.\d+", s)) >= 2:
             dire(f"- p. {n} : {s[:220]}")
+for n in (24, 28):
+    if n <= len(pages):
+        dire(f"\n### Lakonishok et Lee, page {n} (tableau tel quel)\n```")
+        for l in pages[n - 1].splitlines():
+            if l.strip():
+                dire(l.rstrip()[:200])
+        dire("```")
 dire("\n## A bis. Cohen, Malloy et Pomorski (2012) : résultats par taille")
 pages = texte_pdf("https://www.nber.org/system/files/working_papers/w16454/w16454.pdf")
+if len(pages) >= 45:
+    dire("\n### Cohen, Malloy et Pomorski, page 45 (tableau tel quel)\n```")
+    for l in pages[44].splitlines():
+        if l.strip():
+            dire(l.rstrip()[:220])
+    dire("```")
 for n, p in enumerate(pages, 1):
     plat = " ".join(p.split())
     for m in re.finditer(r"(small(er)? (firms|stocks)|large(r)? (firms|stocks)|size (quintile|tercile|decile)|market cap)", plat, re.I):
@@ -150,9 +163,9 @@ if statut == 200:
     brut = z.read(z.namelist()[0]).decode("latin-1").splitlines()
     rangs = [l for l in brut if re.match(r"^\s*\d{6}\s*,", l)]
     dire(f"- {URL_ME} : 200 · {len(rangs)} mois · en-tête : {' | '.join(brut[:4])[:400]}")
-    dernier = [x.strip() for x in rangs[-1].split(",")]
-    dire(f"- dernier mois : {dernier[0]} · nombre de compagnies du NYSE : {dernier[1]} · centiles 5 à 100 (M$) : {dernier[2:]}")
-    seuils = {"mois": dernier[0], "p30": float(dernier[2 + 5]), "p70": float(dernier[2 + 13])}
+    mois_nyse = [x.strip() for x in rangs[-1].split(",")]  # (pas « dernier » : c'est l'espacement des requêtes)
+    dire(f"- dernier mois : {mois_nyse[0]} · nombre de compagnies du NYSE : {mois_nyse[1]} · centiles 5 à 100 (M$) : {mois_nyse[2:]}")
+    seuils = {"mois": mois_nyse[0], "p30": float(mois_nyse[2 + 5]), "p70": float(mois_nyse[2 + 13])}
     dire(f"- petites (sous le 30e centile) : moins de {seuils['p30']:,.1f} M$ · grandes (au-dessus du 70e) : plus de "
          f"{seuils['p70']:,.1f} M$")
 else:
