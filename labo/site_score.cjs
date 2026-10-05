@@ -504,12 +504,16 @@ const lignes = [];
   await p.locator("nav.onglets button", { hasText: "Radar" }).click(); await p.waitForTimeout(400);
   await p.locator(".tuile", { hasText: "Sources actives" }).click(); await p.waitForTimeout(600);
   let sourcesOk = true;
+  // L'état affiché doit être celui que le robot a publié (ex. « En pause » quand une source n'a rien publié depuis trop
+  // longtemps, comme le Trésor le 5 octobre 2026) : le labo vérifie l'affichage, pas la santé du site officiel.
+  const etatsRobot = JSON.parse(fs.readFileSync(fichierMain.replace("aujourdhui.json", "sources.json"), "utf8"));
+  const etatAttendu = (nom) => (etatsRobot.find((x) => x.nom.startsWith(nom)) || {}).libelle || "OK";
   for (const nom of ["Santé Canada : nouveaux médicaments", "Contrats fédéraux de 10 M$ et plus", "Corporation commerciale canadienne : transactions"]) {
     const s = p.locator(".source", { hasText: nom });
     const etat = (await s.count()) ? await s.first().locator(".source-etat").innerText() : "absente";
     if (nom.startsWith("Contrats")) { await s.first().evaluate((el) => el.scrollIntoView({ block: "center" })); await photo("v23-sources-canada"); }
-    dire(`Source « ${nom} » : ${etat}`);
-    sourcesOk = sourcesOk && etat.startsWith("OK");
+    dire(`Source « ${nom} » : ${etat} · état publié par le robot : ${etatAttendu(nom)}`);
+    sourcesOk = sourcesOk && etat.startsWith(etatAttendu(nom));
   }
   await p.locator(".ecran-retour, .retour").first().click().catch(() => {});
   // Lot 3d : une adjudication du Trésor et un message de la douane (catégorie Gouvernement), puis les sources laissées de côté
@@ -554,8 +558,8 @@ const lignes = [];
     const s = p.locator(".source", { hasText: nom });
     const etat = (await s.count()) ? await s.first().locator(".source-etat").innerText() : "absente";
     if (nom.startsWith("USAspending") && (await s.count())) { await s.first().evaluate((el) => el.scrollIntoView({ block: "center" })); await photo("v27-sources-usaspending"); }
-    dire(`Source « ${nom} » : ${etat}`);
-    ecarteesOk = ecarteesOk && etat.startsWith("OK");
+    dire(`Source « ${nom} » : ${etat} · état publié par le robot : ${etatAttendu(nom)}`);
+    ecarteesOk = ecarteesOk && etat.startsWith(etatAttendu(nom));
   }
   await p.locator(".retour").first().click().catch(() => {});
   // Lot C : l'onglet Argent = le fichier du robot (montants, ordre, thermomètre) ; une ligne ouvre son info officielle
