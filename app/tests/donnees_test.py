@@ -173,6 +173,7 @@ def faux(ctx):
            "https://www.sec.gov/test/xmpl-form4-fonds.xml", tickers=["XMPL"], amount_min=1.5e6, amount_max=1.5e6,
            entities=["Fonds lié (exemple)", "Exemple Corp."], direction=-1,
            data={"symbole_declare": "XMPL", "symboles_sec": ["XMPL"], "actions": 100000, "roles": ["10% owner"], "plan_10b5_1": False,
+                 "cik_emetteur": "0009999999", "proprietaires_cik": ["7777777"],
                  "prix_moyen": 15.0,
                  "transactions": [{"code": "S", "acquis_cede": "D", "actions": 100000, "prix": 15.0, "date": jour(1),
                                    "apres": 400000}]}),
@@ -251,6 +252,28 @@ def blocage_test(i, nom, symbole, fin_dans, duree=180):
 BLOCAGES = [blocage_test(1, "Fusée Exemple Inc.", "FXMP", 10), blocage_test(2, "Biotech Exemple Inc.", "BXMP", 40),
             blocage_test(3, "Ferme Exemple Inc.", "AXMP", 80), blocage_test(4, "Ancienne Exemple Inc.", "PXMP", -3)]
 
+# Lot L, avant les passages : fiches SEC (AMD, NVDA : rapports américains), taille en bourse (vrais seuils du NYSE du
+# fichier de Kenneth French gardé pour les tests du robot ; actions et prix : EXEMPLES, datés par rapport à aujourd'hui)
+# et un initié routinier (exemple) : le « Fonds lié (exemple) » d'Exemple Corp., qui vendrait chaque mars et septembre.
+from radar.collecteurs import inities as ini_l, taille as ta_l  # noqa: E402
+FL = Path(__file__).resolve().parents[2] / "robot" / "tests" / "fixtures" / "lotL"
+EMETTEURS_TEST = {
+    "AMD": {"cik": 2488, "nom": "Advanced Micro Devices, Inc.", "type": "compagnie", "formulaires_fonds": [],
+            "rapports": ["10-K", "10-Q"], "lu": jour(1)},
+    "NVDA": {"cik": 1045810, "nom": "NVIDIA CORP", "type": "compagnie", "formulaires_fonds": [],
+             "rapports": ["10-K", "10-Q"], "lu": jour(1)}}
+(Path(sys.argv[1]) / "sec").mkdir(parents=True, exist_ok=True)
+(Path(sys.argv[1]) / "sec" / "emetteurs.json").write_text(json.dumps(EMETTEURS_TEST), encoding="utf-8")
+ta_l.chemin(sys.argv[1]).parent.mkdir(parents=True, exist_ok=True)
+ta_l.chemin(sys.argv[1]).write_text(json.dumps({
+    "seuils": {**ta_l.lire_seuils((FL / "ME_Breakpoints_CSV.zip").read_bytes()), "adresse": ta_l.SEUILS, "lu": jour(1)},
+    "actions": {"2488": [1_620_000_000, jour(30)], "1045810": [24_300_000_000, jour(40)]},
+    "prix": {"AMD": [jour(20).replace("-", ""), 160.0], "NVDA": [jour(75).replace("-", ""), 180.0]},  # NVDA : trop vieux
+    "fichiers_prix": ["exemple"]}), encoding="utf-8")
+ini_l.chemin(sys.argv[1]).write_text(json.dumps({"version": ini_l.VERSION, "annees": {str(J.year): {
+    "depuis": [J.year - 3, J.year - 2, J.year - 1], "cik": {"9999999": {"7777777": [3, 9]}}, "noms": {}, "compte": {}}}}),
+    encoding="utf-8")
+
 # 2 passages : AMD entre dans les suggestions au 2e (pastille « Nouveau ») ; les autres y étaient déjà au 1er.
 maintenant = datetime.now(timezone.utc).replace(microsecond=0)
 lecteurs["sec_form4"] = sans_amd
@@ -284,9 +307,22 @@ class FauxSec:
                 z.writestr(f"cnsfails{cle}.txt", (FG / f"cnsfails{cle}.txt").read_bytes())
             c = tampon.getvalue()
         return type("T", (), {"contenu": c, "sha256": empreinte(c)})()
+RAISONS_TEST = {
+    "AAPL": {"signaux": [{"famille": "inities", "sens": 1, "regle": "achat_dirigeant", "facteurs": ["Groupe d'achats"]}],
+             "taille": "grande", "note10_sans_bonus": 8.1, "grace_au_bonus": False, "note10_sans_taille": 8.1,
+             "grace_a_la_taille": False},
+    "GME": {"signaux": [{"famille": "inities", "sens": 1, "regle": "achat_dirigeant", "facteurs": []},
+                        {"famille": "activistes", "sens": 1, "regle": "activiste_13d", "facteurs": []}],
+            "taille": "moyenne", "note10_sans_bonus": 6.9, "grace_au_bonus": True, "note10_sans_taille": 9.3,
+            "grace_a_la_taille": False},
+    "MSTU": {"signaux": [{"famille": "inities", "sens": 1, "regle": "achat_dirigeant", "facteurs": ["Petite compagnie"]}],
+             "taille": "petite", "note10_sans_bonus": 7.2, "grace_au_bonus": False, "note10_sans_taille": 6.7,
+             "grace_a_la_taille": True},
+    "CRE": {"signaux": [{"famille": "sec", "sens": -1, "regle": "sec_procedure", "facteurs": []}], "taille": None},
+}
 def entree_test(symbole, nom, sens, quand, note):
     return {"symbole": symbole, "nom": f"TEST {nom}", "sens": sens, "entree": quand, "vue": quand[:10], "note10": note,
-            "methode": "score-7"}
+            "methode": "score-8" if symbole in RAISONS_TEST else "score-7", **RAISONS_TEST.get(symbole, {})}
 (Path(sys.argv[1]) / "resultats").mkdir(parents=True, exist_ok=True)
 (Path(sys.argv[1]) / "resultats" / "suggestions.json").write_text(json.dumps({"entrees": [
     entree_test("AAPL", "Apple", "hausse", "2026-07-20T14:00:00+00:00", 8.1),
@@ -340,10 +376,7 @@ fil = sorted((e for e in tous if not e.get("data", {}).get("meme_acte_que") and 
 lignes, infos = argent.preparer(fil, quand)
 _ecrire_compact(Path(sys.argv[1]) / "app" / "argent.json", lignes)
 _ecrire_compact(Path(sys.argv[1]) / "app" / "argent_infos.json", infos)
-(Path(sys.argv[1]) / "sec").mkdir(parents=True, exist_ok=True)
-(Path(sys.argv[1]) / "sec" / "emetteurs.json").write_text(json.dumps({
-    "AMD": {"cik": 2488, "nom": "Advanced Micro Devices, Inc.", "type": "compagnie", "formulaires_fonds": [], "lu": jour(1)},
-    "NVDA": {"cik": 1045810, "nom": "NVIDIA CORP", "type": "compagnie", "formulaires_fonds": [], "lu": jour(1)}}), encoding="utf-8")
+(Path(sys.argv[1]) / "sec" / "emetteurs.json").write_text(json.dumps(EMETTEURS_TEST), encoding="utf-8")
 ra.chemin_xbrl(sys.argv[1]).write_text(json.dumps({"cadre": "CY2025", "adresse": ra.FRAMES.format(annee=2025),
     "par_cik": {"2488": [1_230_000_000, "2024-12-29", "2025-12-27", "0000002488-26-000018"]}}), encoding="utf-8")
 score = json.loads((Path(sys.argv[1]) / "app" / "aujourdhui.json").read_text(encoding="utf-8"))

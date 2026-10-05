@@ -17,6 +17,9 @@ au départ, puis 1 semaine (7 jours) et 1 mois (30 jours) plus tard, comparé au
 - En attente : la SEC n'a pas encore publié ces dates (1re moitié du mois : fin du mois ; 2e moitié : vers le 15 du mois
   suivant ; elle ne garantit pas la date).
 Une compagnie compte une seule fois par sens tant qu'elle n'est pas sortie de la liste depuis 30 jours.
+Lot L : chaque nouvelle entrée garde aussi ses raisons (les familles de sources qui comptent, la règle et les facteurs de
+l'info retenue, la taille de la compagnie, la note sans le bonus de familles et sans le bonus de petite compagnie), pour
+mesurer chaque signal à part (« par signal »). Les entrées d'avant le 5 octobre 2026 n'ont pas de raisons notées.
 """
 
 from __future__ import annotations
@@ -27,6 +30,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from .collecteurs import prix_sec
+from .score import NOTE_BAISSE, NOTE_HAUSSE, REGLES
 
 HORIZONS = {"7": "1 semaine", "30": "1 mois"}
 TOLERANCE_ARRIVEE = 3  # jours
@@ -61,10 +65,86 @@ def noter_entrees(historique: dict, score: dict, maintenant: datetime) -> list[d
                 continue
             e = {"symbole": r["symbole"], "nom": r.get("nom") or r["symbole"], "sens": sens,
                  "entree": r.get("depuis") or maintenant.isoformat(), "vue": aujourd_hui.isoformat(),
-                 "note10": r.get("note10"), "methode": score.get("version")}
+                 "note10": r.get("note10"), "methode": score.get("version"), **raisons(r, sens)}
             historique["entrees"].append(e)
             nouvelles.append(e)
     return nouvelles
+
+
+def raisons(r: dict, sens: str) -> dict:
+    """Pourquoi la compagnie entre dans la liste (lot L) : l'info retenue de chaque famille (règle, facteurs), la taille,
+    et si elle serait entrée sans le bonus de familles ou sans le bonus de petite compagnie."""
+    signaux = []
+    for g in r.get("groupes") or []:
+        i = next((i for i in g.get("infos") or [] if i.get("compte")), None)
+        if i:
+            signaux.append({"famille": g["famille"], "sens": g["sens"], "regle": i["regle"],
+                            "facteurs": [f[0] for f in i.get("facteurs") or []]})
+    x = {"signaux": signaux, "taille": (r.get("taille") or {}).get("taille")}
+    for cle, nom in (("note10_sans_bonus", "grace_au_bonus"), ("note10_sans_taille", "grace_a_la_taille")):
+        if r.get(cle) is not None and r.get("note10") is not None:
+            x[cle] = r[cle]
+            x[nom] = r[cle] < NOTE_HAUSSE if sens == "hausse" else r[cle] > NOTE_BAISSE
+    return x
+
+
+LIBELLES_SIGNAUX = {
+    "plusieurs_familles": "Plusieurs familles de sources d'accord",
+    "grace_au_bonus": "Entrée grâce au bonus de familles (+25 % par famille de plus)",
+    "grace_a_la_taille": "Entrée grâce au bonus de petite compagnie (×1,5)",
+    "taille:petite": "Petite compagnie (sous le 30e centile du NYSE)",
+    "taille:moyenne": "Compagnie moyenne",
+    "taille:grande": "Grande compagnie (70e centile du NYSE et plus)",
+    "taille:inconnue": "Taille inconnue (compagnie étrangère, ou actions ou prix trop vieux)",
+}
+
+
+def cles_signal(l: dict) -> list[str] | None:
+    """Les signaux d'une entrée, pour le résumé par signal ; None pour une entrée d'avant le lot L."""
+    if "signaux" not in l:
+        return None
+    s = 1 if l["sens"] == "hausse" else -1
+    memes = [x for x in l["signaux"] if x["sens"] == s]
+    cles = [f"regle:{x['regle']}" for x in memes]
+    cles += [f"facteur:{f}" for x in memes for f in x["facteurs"] if f != "Petite compagnie"]  # voir taille:petite
+    cles += ["plusieurs_familles"] * (len(memes) >= 2)
+    cles += [c for c in ("grace_au_bonus", "grace_a_la_taille") if l.get(c)]
+    return sorted(set(cles)) + [f"taille:{l.get('taille') or 'inconnue'}"]
+
+
+def libelle_signal(cle: str) -> str:
+    if cle.startswith("regle:"):
+        return REGLES.get(cle[6:], {}).get("libelle", cle[6:])
+    if cle.startswith("facteur:"):
+        return cle[8:]
+    return LIBELLES_SIGNAUX.get(cle, cle)
+
+
+def par_signal(lignes: list[dict]) -> dict:
+    """{sens : {signal : {libelle, entrees, "7" : {mesurees, battu, ecart_moyen}, "30" : …}}} ; les entrées d'avant le lot
+    L sont comptées à part (« sans_raisons »)."""
+    sortie = {"hausse": {}, "baisse": {}, "sans_raisons": 0}
+    for l in lignes:
+        cles = cles_signal(l)
+        if cles is None:
+            sortie["sans_raisons"] += 1
+            continue
+        for c in cles:
+            x = sortie[l["sens"]].setdefault(c, {"libelle": libelle_signal(c), "entrees": 0,
+                                                **{h: {"mesurees": 0, "battu": 0, "ecarts": []} for h in HORIZONS}})
+            x["entrees"] += 1
+            for h in HORIZONS:
+                m = l["horizons"][h]
+                if m["statut"] == "mesure" and m.get("battu") is not None:
+                    x[h]["mesurees"] += 1
+                    x[h]["battu"] += m["battu"]
+                    x[h]["ecarts"].append(m["ecart"])
+    for sens in ("hausse", "baisse"):
+        for x in sortie[sens].values():
+            for h in HORIZONS:
+                e = x[h].pop("ecarts")
+                x[h]["ecart_moyen"] = round(sum(e) / len(e), 4) if e else None
+    return sortie
 
 
 def jour_toronto(iso: str) -> str:
@@ -155,6 +235,8 @@ def calculer(donnees, maintenant: datetime) -> dict:
     attentes = [l["horizons"][h]["attendu_vers"] for l in lignes for h in HORIZONS if "attendu_vers" in l["horizons"][h]]
     return {
         "genere_a": maintenant.isoformat(), "lignes": lignes, "resume": resume, "horizons": HORIZONS,
+        "par_signal": par_signal(lignes),
+        "libelles_regles": {c: r["libelle"] for c, r in REGLES.items()},
         "prix_jusqu_au": iso(couvert) if couvert else None, "prochains_prix_vers": min(attentes) if attentes else None,
         "methode": [
             "Prix : les fichiers d'échecs de livraison de la SEC. Pour une date de règlement, la SEC donne la clôture de la "
@@ -168,5 +250,7 @@ def calculer(donnees, maintenant: datetime) -> dict:
             "Pas de prix, nouveau code de titre (CUSIP) ou saut anormal (possible fractionnement ou prix erroné) : montré, "
             "mais hors du taux de réussite.",
             "Publication de la SEC : la 1re moitié d'un mois à la fin du mois, la 2e moitié vers le 15 du mois suivant.",
+            "Par signal : chaque entrée garde ses raisons depuis le 5 octobre 2026 (règle, facteurs, taille de la "
+            "compagnie, bonus). Une entrée compte dans chacun de ses signaux. Peu d'entrées = résultat fragile.",
         ],
     }

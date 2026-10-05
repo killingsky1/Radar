@@ -189,6 +189,16 @@ _LISTE = [
     S("sec_ftd", "SEC : prix de clôture des fichiers d'échecs de livraison (seulement pour mesurer les résultats de Radar)",
       "compagnies", ("sec.gov",), 1, "https://www.sec.gov/data-research/sec-markets-data/fails-deliver-data",
       officielle=False, passages=("soir",)),
+    # Lot L : jamais un signal ; servent au score. Les initiés « routiniers » (même mois chaque année, Cohen, Malloy et
+    # Pomorski 2012) : 0 point ; la taille en bourse : ×1,5 sur les achats de dirigeants des petites compagnies.
+    S("sec_historique_inities", "SEC : historique des transactions des initiés (pour reconnaître les achats et ventes de "
+      "routine)", "compagnies", ("sec.gov",), 1,
+      "https://www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets", officielle=False,
+      passages=("matin",)),
+    S("taille_bourse", "Taille des compagnies en bourse (actions déclarées à la SEC × prix de la SEC, seuils du NYSE de "
+      "Kenneth French)", "compagnies", ("sec.gov", "dartmouth.edu"), 1,
+      "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html", officielle=False,
+      passages=("matin",)),
 ]
 
 SOURCES: dict[str, Source] = {s.id: s for s in _LISTE}

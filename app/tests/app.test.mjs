@@ -120,10 +120,10 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     await p.locator(".ligne.raison").first().click(); await p.waitForSelector(".feuille-fond.ouvert");
     assert.ok(await p.getByText("Document officiel").isVisible()); await fermer();
   });
-  await verifier("Comment le score est calculé : 13 règles, 20 liens d'études (dont Brochet pour « Récent »), règles des chefs", async () => {
+  await verifier("Comment le score est calculé : 13 règles, 21 liens d'études (dont Brochet pour « Récent »), règles des chefs", async () => {
     await p.getByRole("button", { name: "Comment le score est calculé" }).click(); await p.waitForTimeout(250);
     assert.equal(await p.locator(".regle").count(), 13);
-    assert.equal(await p.locator("a.etude").count(), 20);
+    assert.equal(await p.locator("a.etude").count(), 21); // lot L : Cohen, Malloy et Pomorski aussi sous les ventes (routiniers)
     const calcul = (await p.locator(".groupe", { hasText: "Le calcul" }).innerText()).replace(/\u00a0/g, " ");
     assert.ok(calcul.includes("Note sur 10 = 5 + points × 5/6") && calcul.includes("à partir de 7/10") && calcul.includes("Brochet (2010)"), calcul);
     const chef = (await p.locator(".regle", { hasText: "Un chef du Congrès achète" }).innerText()).replace(/\u00a0/g, " ");
@@ -232,6 +232,27 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     assert.equal(await p.locator(".sante").count(), 0);
     assert.ok(!(await p.locator(".ecran").last().innerText()).toLowerCase().includes("santé financière"));
   }));
+  await verifier("Fiche AMD : taille en bourse (grande, actions × prix de la SEC, vrais seuils du NYSE), pas de bonus", () => fiche("AMD", async () => {
+    const t = (await p.locator(".taille").innerText()).replace(/\u00a0|\u202f/g, " ");
+    const sans = t.replace(/\s/g, "");
+    assert.ok(t.includes("Grande compagnie") && t.includes("1 620 000 000 actions déclarées au") && t.includes("(prix de la SEC du"), t);
+    assert.ok(sans.includes("259,2G$US") && sans.includes("Petite:moinsde2,24G$US(30ecentiledescompagniesduNYSE,août2026);grande:13,37G$USetplus(70ecentile)."), t);
+    assert.ok(!t.includes("×1,5"), t);
+    assert.ok((await p.locator(".taille-source").innerText()).includes("Kenneth French"));
+    assert.ok(!(await p.locator(".calcul").innerText()).includes("Petite compagnie"));
+  }));
+  await verifier("Fiche NVDA : taille inconnue (prix de la SEC trop vieux), avec la raison", () => fiche("NVDA", async () => {
+    const t = (await p.locator(".taille").innerText()).replace(/\u00a0|\u202f/g, " ");
+    assert.ok(t.includes("Taille inconnue") && t.includes("Pas calculée : pas de prix de la SEC depuis 60 jours. Pas de bonus de petite compagnie."), t);
+  }));
+  await verifier("Fiche XMPL : sans fiche SEC → pas de section taille ; vente d'un initié routinier (exemple) : 0 point, raison et mois", () => fiche("XMPL", async () => {
+    assert.equal(await p.locator(".taille").count(), 0);
+    const t = (await p.locator(".ecran").last().innerText()).replace(/\u00a0|\u202f/g, " ");
+    const an = new Date().getFullYear();
+    assert.ok(t.toLowerCase().includes("autres infos (0 point)") && t.includes("Fonds lié (exemple) vend"), t); // titre en majuscules (CSS)
+    assert.ok(t.includes("Initié « routinier » : il a acheté ou vendu des actions de cette compagnie en bourse dans le même mois de l'année") &&
+      t.includes(`Mois : mars et septembre (${an - 3}, ${an - 2} et ${an - 1}).`), t);
+  }, true));
   await verifier("Fiche XMPL : recherche de lobbying trop large → pas de section (ni « pas vérifié »)", () => fiche("XMPL", async () => {
     assert.equal(await p.locator(".lobbying").count(), 0);
     assert.ok(!(await p.locator(".ecran").last().innerText()).includes("pas vérifié"));
@@ -583,6 +604,40 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       assert.equal(await p.locator(".res-horizon.rouge").count(), 1);
       assert.equal(await p.locator(".res-ligne").count(), 6);
       assert.ok(t.includes("jamais une clôture que Radar connaissait"));
+    } finally {
+      await onglet("Radar");
+    }
+  });
+  await verifier("Résultats : par signal (une entrée compte dans chacun de ses signaux) et pourquoi de chaque entrée", async () => {
+    try {
+      await p.locator(".res-carte").click(); await p.waitForTimeout(300);
+      const groupes = await p.locator("h2.section", { hasText: "Par signal" }).allTextContents(); // texte, pas les majuscules du CSS
+      assert.deepEqual(groupes, ["Par signal · à la hausse", "Par signal · à la baisse"]);
+      const achat = (await p.locator(".res-signal", { hasText: "Achat d'actions par un dirigeant ou un administrateur" }).innerText()).replace(/\u00a0/g, " ").replace(/−/g, "-");
+      assert.ok(achat.includes("3 entrées · 1 semaine : 1 sur 1 (+6,1 points) · 1 mois : 0 sur 1 (-7,5 points)"), achat);
+      const taille = (await p.locator(".res-signal", { hasText: "Entrée grâce au bonus de petite compagnie" }).innerText()).replace(/\u00a0/g, " ");
+      assert.ok(taille.includes("1 entrée · pas encore mesuré"), taille);
+      const baisse = (await p.locator(".res-signal", { hasText: "La SEC ouvre une procédure contre la compagnie" }).innerText()).replace(/\u00a0/g, " ");
+      assert.ok(baisse.includes("1 entrée"), baisse);
+      const t = (await p.locator(".ecran").textContent()).replace(/\u00a0/g, " ");
+      assert.ok(t.includes("2 entrées d'avant le 5 octobre 2026 : raisons pas notées"), t);
+      assert.ok(t.includes("Pourquoi : Achat d'actions par un dirigeant ou un administrateur (Petite compagnie) · petite compagnie · entrée grâce au bonus de petite compagnie"), t);
+      assert.ok(t.includes("Pourquoi : Achat d'actions par un dirigeant ou un administrateur · Un gestionnaire de fonds dépasse 5 % avec des intentions actives (13D) · compagnie moyenne · entrée grâce au bonus de familles"), t);
+      assert.equal(await p.locator(".res-ligne", { hasText: "Pourquoi" }).count(), 4); // LESL et XMPL : d'avant (sans raisons)
+    } finally {
+      await onglet("Radar");
+    }
+  });
+  await verifier("Aide et méthode : petite compagnie ×1,5 et initiés routiniers à 0 point expliqués", async () => {
+    try {
+      await p.getByRole("button", { name: "Aide" }).click(); await p.waitForSelector(".flux-etape");
+      const t = (await p.locator(".ecran").last().innerText()).replace(/\u00a0/g, " ");
+      assert.ok(t.includes("Taille en bourse = actions en circulation déclarées à la SEC × dernier prix de la SEC") && t.includes("30e centile"), t);
+      assert.ok(t.includes("Un initié qui achète ou vend en bourse dans le même mois de l'année, chacune des 3 années précédentes"), t);
+      assert.ok(t.includes("chaque entrée garde ses raisons"), t);
+      await p.locator(".lien-rangee", { hasText: "Comment le score est calculé" }).click(); await p.waitForTimeout(250);
+      const r = (await p.locator(".regle", { hasText: "Achat d'actions par un dirigeant" }).innerText()).replace(/\u00a0/g, " ");
+      assert.ok(r.includes("×1,5 si c'est une petite compagnie") && r.includes("0 point si l'initié est « routinier »"), r);
     } finally {
       await onglet("Radar");
     }

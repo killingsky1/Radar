@@ -13,8 +13,8 @@ from ..models import Evenement
 Collecteur = Callable[["object"], list[Evenement]]
 
 from . import (banques, blocage, canada, canada_eco, ccc, cftc, congres, contrats_ca, douane, elus, fda,  # noqa: E402
-               fonds13f, gazette, legisinfo, lobbying, maison_blanche, oge, participations, prix_sec, rachats,
-               registre, regulateurs, sante, sante_canada, sec, tresor, usaspending)
+               fonds13f, gazette, inities, legisinfo, lobbying, maison_blanche, oge, participations, prix_sec, rachats,
+               registre, regulateurs, sante, sante_canada, sec, taille, tresor, usaspending)
 
 # L'ordre compte : les lecteurs SEC chargent la liste officielle des symboles, réutilisée ensuite.
 COLLECTEURS: dict[str, Collecteur] = {
@@ -26,6 +26,8 @@ COLLECTEURS: dict[str, Collecteur] = {
     "sec_offres": sec.collecter_offres,
     "sec_blocage": blocage.collecter,  # 1re lecture : rattrapage des prospectus d'avril à septembre 2026
     "sec_ftd": prix_sec.collecter,  # prix pour mesurer les résultats de Radar (jamais un signal)
+    "sec_historique_inities": inities.collecter,  # initiés routiniers (lot L) : une fois par année, 12 fichiers
+    "taille_bourse": taille.collecter,  # taille en bourse (lot L) : seuils du NYSE, actions, prix de la SEC
     "sec_rachats_xbrl": rachats.collecter_xbrl,  # rachats faits (rapports annuels) : un seul fichier de l'API de la SEC
     "sec_sante": sante.collecter,  # santé financière (9 critères de Piotroski) : dernier rapport annuel (companyfacts)
     "sec_poursuites": regulateurs.collecter_sec_poursuites,

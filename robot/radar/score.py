@@ -7,6 +7,9 @@ Chaque info officielle sur une compagnie cotée vaut des points selon ce que les
   forment UN groupe d'achats (avec son bonus), pas 7 fois les points. Le même achat déclaré par un administrateur
   et par son fonds ne compte donc qu'une fois.
 - Plusieurs familles qui pointent dans le même sens : +25 % par famille de plus (choix du modèle, pas une étude).
+- Lot L : un achat ou une vente d'un initié « routinier » (même mois chaque année, Cohen, Malloy et Pomorski 2012) :
+  0 point ; un achat de dirigeant dans une petite compagnie (sous le 30e centile du NYSE) : ×1,5 (Lakonishok et Lee
+  2001 ; voir collecteurs/inities.py et collecteurs/taille.py).
 - Seules les infos « Officiel » ou « Confirmé » de sources officielles comptent.
 Les infos sans points (contexte) restent visibles avec la raison.
 """
@@ -20,9 +23,10 @@ from datetime import date, datetime, timedelta
 from decimal import ROUND_HALF_UP, Decimal
 from zoneinfo import ZoneInfo
 
+from .collecteurs import inities
 from .registry import SOURCES
 
-VERSION = "score-7"
+VERSION = "score-8"
 DEMI_VIE = 30
 DEMI_VIE_FONDS = 60  # le 13F arrive jusqu'à 45 jours après la fin du trimestre
 AGE_MAX = 90
@@ -39,15 +43,21 @@ JOURS_GROUPE = 2  # jours ouvrables (comme dans l'étude d'Alldredge et Blank)
 ROLE_PRINCIPAL = 1.5
 ROLE_GROS_ACTIONNAIRE = 0.5
 GROUPE = 1.75  # 2,1 % contre 1,2 % le mois suivant (Alldredge et Blank)
+# Lakonishok et Lee (2001, tableau 8) : signal d'achat fort 7,27 % par an dans les petites compagnies contre 4,82 % pour
+# l'ensemble (×1,51) ; Cohen, Malloy et Pomorski (2012, tableau IX) : 0,80 contre 0,55 % par mois (×1,45).
+PETITE = 1.5
 
 # PDG, directeur financier, président du conseil (pas les vice-présidents ni les vice-présidents du conseil)
 PRINCIPAL = re.compile(r"\b(CEO|CFO|PEO|PFO|COB)\b|CHIEF EXECUTIVE|CHIEF FINANCIAL|(?<!VICE )(?<!VICE-)\bCHAIR", re.I)
 
 ETUDES = {
-    "lakonishok_lee": ("Lakonishok et Lee (2001)", "Les achats des dirigeants prédisent les rendements ; leurs ventes, non.",
+    "lakonishok_lee": ("Lakonishok et Lee (2001)",
+                       "Les achats des dirigeants prédisent les rendements, surtout dans les petites compagnies (7,27 % "
+                       "par an contre 4,82 % pour l'ensemble) ; leurs ventes, non.",
                        "https://www.lsvasset.com/pdf/research-papers/Insider-Trades-Informative.pdf"),
     "cohen_malloy_pomorski": ("Cohen, Malloy et Pomorski (2012)",
-                              "Les achats inhabituels rapportent 0,82 % par mois ; les achats routiniers, rien.",
+                              "Les achats et ventes inhabituels rapportent 0,82 % par mois ; ceux des initiés "
+                              "routiniers (même mois chaque année), rien.",
                               "https://www.nber.org/digest/apr11/decoding-inside-information"),
     "alldredge_blank": ("Alldredge et Blank (2019)",
                         "Un achat fait à 2 jours d'un autre initié : 2,1 % le mois suivant, contre 1,2 % pour un achat seul.",
@@ -105,8 +115,13 @@ REGLES = {
         "details": ["×1,5 si c'est le PDG, le directeur financier ou le président du conseil",
                     "×0,5 si c'est seulement un actionnaire de 10 %",
                     "×1,75 si un autre initié de la même compagnie a acheté à 2 jours ouvrables près (groupe d'achats)",
+                    "×1,5 si c'est une petite compagnie : valeur en bourse sous le 30e centile des compagnies du NYSE "
+                    "(seuil de Kenneth French, environ 2,2 G$ en août 2026) ; compagnies étrangères et tailles "
+                    "inconnues : pas de bonus",
                     "Pas de bonus pour le montant",
                     "0 point si l'achat était planifié d'avance (plan 10b5-1)",
+                    "0 point si l'initié est « routinier » : il a acheté ou vendu en bourse dans le même mois de l'année, "
+                    "chacune des 3 années précédentes (jeux de données officiels de la SEC)",
                     "0 point si le déposant écrit que l'achat est automatique (réinvestissement de dividendes, "
                     "régime d'achat des employés)",
                     "0 point si le déposant écrit que l'achat s'est fait lors d'une émission (entrée en bourse, "
@@ -116,8 +131,9 @@ REGLES = {
     "vente_dirigeant": {
         "famille": "inities", "points": -0.5, "libelle": "Vente d'actions par un dirigeant ou un administrateur",
         "details": ["Seulement les ventes de 1 M$ et plus, décidées sur le moment (pas de plan 10b5-1)",
+                    "0 point si l'initié est « routinier » (même mois de l'année, chacune des 3 années précédentes)",
                     "Les ventes disent peu de choses : un dirigeant vend aussi pour payer une maison ou diversifier"],
-        "etudes": ["lakonishok_lee"]},
+        "etudes": ["lakonishok_lee", "cohen_malloy_pomorski"]},
     "activiste_13d": {
         "famille": "activistes", "points": 5.0,
         "libelle": "Un gestionnaire de fonds dépasse 5 % avec des intentions actives (13D)",
@@ -171,6 +187,9 @@ REGLES = {
 
 SANS_POINTS = {
     "plan": "Planifié d'avance (plan 10b5-1) : comme les achats « routiniers » des études, ça ne prédit rien.",
+    "routinier": "Initié « routinier » : il a acheté ou vendu des actions de cette compagnie en bourse dans le même mois de "
+                 "l'année, chacune des 3 années précédentes (jeux de données officiels de la SEC). Selon Cohen, Malloy "
+                 "et Pomorski (2012), ces transactions ne prédisent rien ; celles des autres initiés, oui.",
     "avis_144": "Avis d'intention de vente : la même vente arrive ensuite dans le formulaire 4 (sinon elle compterait "
                 "deux fois).",
     "13d_autre": "13D d'un déclarant qui n'est pas un gestionnaire de fonds (individu, compagnie, commanditaire de SPAC…) : "
@@ -243,7 +262,15 @@ METHODE = {
     "avertissement": "Une aide pour voir où va le gros argent, preuves à l'appui. Pas un conseil financier.",
     "regles": [{"code": c, **{k: r[k] for k in ("famille", "points", "libelle", "details", "etudes")}}
                for c, r in REGLES.items()],
-    "sans_points": [SANS_POINTS[k] for k in ("fonds", "plan", "automatique", "emission", "emission_meme_prix", "avis_144",
+    "taille": "Taille en bourse = actions en circulation déclarées à la SEC × dernier prix de la SEC. Petite : sous le "
+              "30e centile des compagnies du NYSE ; grande : au 70e et plus (seuils publiés chaque mois par Kenneth "
+              "French). Compagnie étrangère (20-F, 6-K), actions ou prix trop vieux : taille inconnue, pas de bonus.",
+    "etudes_taille": ["lakonishok_lee", "cohen_malloy_pomorski"],
+    "routiniers": "Un initié qui achète ou vend en bourse dans le même mois de l'année, chacune des 3 années précédentes "
+                  "(« routinier ») : 0 point, ses transactions ne prédisent rien (Cohen, Malloy et Pomorski 2012). "
+                  "Vérifié dans les jeux de données officiels de la SEC sur les formulaires 3, 4 et 5.",
+    "sans_points": [SANS_POINTS[k] for k in ("fonds", "plan", "routinier", "automatique", "emission", "emission_meme_prix",
+                                             "avis_144",
                                              "13g", "13d_autre", "13d_pas_sous_evalue", "13d_suivi", "fonds_vente",
                                              "elu_vente", "cabinet", "offre", "ftc", "8k_autre", "lobbying", "oge")]
                    + ["Fed, Banque du Canada, décrets, sanctions, ventes d'armes, CFTC : contexte, sans points."],
@@ -282,19 +309,21 @@ def facteurs_role(roles: list[str]) -> list:
     return []
 
 
-def evaluer(ev: dict, emissions: frozenset = frozenset(), chefs: frozenset = frozenset()) -> list[Apport]:
+def evaluer(ev: dict, emissions: frozenset = frozenset(), chefs: frozenset = frozenset(),
+            routiniers: dict | None = None) -> list[Apport]:
     """Les apports d'une info, un par compagnie visée.
 
     `emissions` : (symbole, date, prix) des achats déclarés lors d'une émission (voir achats_d_emission).
     `chefs` : les élus (nom écrit dans leur rapport) qui sont chefs du Congrès selon les listes officielles.
+    `routiniers` : le classement des initiés routiniers (collecteurs/inities.py), None si pas encore lu.
     """
     s, k, d, symboles = ev["source"], ev["kind"], ev.get("data") or {}, ev.get("tickers") or []
 
     def regle(code, facteurs=(), viser=None):
         return [Apport(t, ev, regle=code, facteurs=list(facteurs)) for t in (viser or symboles[:1])]
 
-    def contexte(raison):
-        return [Apport(t, ev, pourquoi=SANS_POINTS[raison]) for t in symboles]
+    def contexte(raison, detail=""):
+        return [Apport(t, ev, pourquoi=SANS_POINTS[raison] + detail) for t in symboles]
 
     if not symboles:
         return []
@@ -308,6 +337,8 @@ def evaluer(ev: dict, emissions: frozenset = frozenset(), chefs: frozenset = fro
         if k == "achat_initie" and any((symboles[0], t.get("date"), t.get("prix")) in emissions
                                        for t in d.get("transactions") or []):
             return contexte("emission_meme_prix")
+        if k in ("achat_initie", "vente_initie") and (r := inities.routinier(routiniers, ev)):
+            return contexte("routinier", f" Mois : {inities.en_mots(r)}.")
         return regle("achat_dirigeant", facteurs_role(d.get("roles") or [])) if k == "achat_initie" else (
             regle("vente_dirigeant") if k == "vente_initie" else contexte("contexte"))
     if s == "sec_form144":
@@ -441,9 +472,12 @@ def _infos(a: Apport, compte: bool) -> dict:
 
 
 def calculer(evenements: list[dict], maintenant: datetime, precedent: dict | None = None, symboles=None,
-             fonds: set[str] | frozenset = frozenset(), chefs: set[str] | frozenset = frozenset()) -> dict:
+             fonds: set[str] | frozenset = frozenset(), chefs: set[str] | frozenset = frozenset(),
+             routiniers: dict | None = None, tailles: dict | None = None) -> dict:
     """`fonds` : symboles des fonds enregistrés selon leur fiche SEC (voir emetteurs.py) : 0 point, contexte seulement.
-    `chefs` : noms des élus chefs du Congrès (voir congres.relier_elus)."""
+    `chefs` : noms des élus chefs du Congrès (voir congres.relier_elus).
+    `routiniers` : classement des initiés routiniers (collecteurs/inities.py) ; `tailles` : {symbole : taille en bourse}
+    (collecteurs/taille.py). Absents : aucune info n'est mise à 0 comme routinière, aucun bonus de taille."""
     jour = jour_de_calcul(maintenant)
     emissions = achats_d_emission(evenements)
     chefs = frozenset(chefs)
@@ -455,7 +489,7 @@ def calculer(evenements: list[dict], maintenant: datetime, precedent: dict | Non
         age = (jour - date.fromisoformat(ev["published_on"])).days
         if age > AGE_MAX:
             continue
-        for a in evaluer(ev, emissions, chefs):
+        for a in evaluer(ev, emissions, chefs, routiniers):
             a.age = max(age, 0)
             if a.regle and a.symbole in fonds:
                 a.regle, a.pourquoi, a.facteurs = None, SANS_POINTS["fonds"], []
@@ -469,6 +503,8 @@ def calculer(evenements: list[dict], maintenant: datetime, precedent: dict | Non
                 continue
             if a.regle == "achat_dirigeant" and groupe_d_achats(a, achats):
                 a.facteurs.append(("Groupe d'achats", GROUPE))
+            if a.regle == "achat_dirigeant" and ((tailles or {}).get(symbole) or {}).get("taille") == "petite":
+                a.facteurs.append(("Petite compagnie", PETITE))
             a.temps = 0.5 ** (a.age / (DEMI_VIE_FONDS if a.famille == "fonds" else DEMI_VIE))
             a.points = REGLES[a.regle]["points"] * a.temps
             for _, m in a.facteurs:
@@ -480,10 +516,13 @@ def calculer(evenements: list[dict], maintenant: datetime, precedent: dict | Non
         if not groupes:
             continue
         sortie_groupes, totaux, frais = [], {1: 0.0, -1: 0.0}, {1: None, -1: None}
+        sans_taille = {1: 0.0, -1: 0.0}  # la même chose sans le bonus de petite compagnie (pour les Résultats)
         for (famille, sens), membres in groupes.items():
             membres.sort(key=lambda a: (abs(a.points), a.ev["published_on"], a.ev["id"]), reverse=True)
             retenu = membres[0]
             totaux[sens] += retenu.points
+            sans_taille[sens] += max((a.points / PETITE if ("Petite compagnie", PETITE) in a.facteurs else a.points
+                                      for a in membres), key=abs)
             frais[sens] = max(frais[sens] or "", retenu.ev["published_on"])  # dépôt le plus récent qui compte
             sortie_groupes.append({"famille": famille, "sens": sens, "points": round(retenu.points, 2),
                                    "infos": [_infos(a, a is retenu) for a in membres]})
@@ -499,6 +538,11 @@ def calculer(evenements: list[dict], maintenant: datetime, precedent: dict | Non
             "plus": round(plus, 2), "moins": round(moins, 2), "bonus": {"plus": bonus[1], "moins": bonus[-1]},
             "derniere_info": max(a.ev["published_on"] for a in apports if a.regle),
             "groupes": sortie_groupes, "contexte": [{"id": a.ev["id"], "pourquoi": a.pourquoi} for a in contexte],
+            "taille": (tailles or {}).get(symbole),
+            # Pour mesurer les choix du modèle (page Résultats) : la note sans le bonus de familles, et sans le bonus de
+            # petite compagnie
+            "note10_sans_bonus": note_sur_10(totaux[1] + totaux[-1]),
+            "note10_sans_taille": note_sur_10(sans_taille[1] * bonus[1] + sans_taille[-1] * bonus[-1]),
             "_brut": plus + moins, "_apports": apports, "_frais": frais,
         })
 

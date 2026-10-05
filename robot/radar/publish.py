@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 from . import __version__, argent, calendrier, emetteurs, resultats
-from .collecteurs import congres, lobbying, rachats, sante
+from .collecteurs import congres, inities, lobbying, rachats, sante, taille
 from .health import LIBELLES, statut
 from .registry import SOURCES
 from .score import calculer, jour_de_calcul
@@ -117,9 +117,18 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
     # Le score : calculé sur TOUTES les infos validées ; la liste précédente sert à savoir qui vient d'entrer.
     # S'il plante, les infos sont quand même publiées et l'ancien score reste (l'app montre son heure de calcul).
     chemin = donnees / "app" / "aujourdhui.json"
+    # Lot L : initiés routiniers (0 point) et taille en bourse (×1,5 pour les petites compagnies). En cas d'erreur : le
+    # score est calculé sans ces deux règles (comme avant le lot L), jamais avec des données fausses.
+    routiniers, tailles = None, None
+    try:
+        routiniers = inities.charger(donnees)
+        tailles = taille.pour_score(donnees, emetteurs.charger(donnees), jour_de_calcul(maintenant))
+    except Exception as exc:  # noqa: BLE001
+        print(f"Score : routiniers ou tailles illisibles, calcul sans eux ({type(exc).__name__}: {exc})")
     try:
         precedent = json.loads(chemin.read_text(encoding="utf-8")) if chemin.exists() else None
-        _ecrire(chemin, calculer(pour_score, maintenant, precedent, symboles, fonds=emetteurs.fonds(donnees), chefs=chefs))
+        _ecrire(chemin, calculer(pour_score, maintenant, precedent, symboles, fonds=emetteurs.fonds(donnees), chefs=chefs,
+                                 routiniers=routiniers, tailles=tailles))
     except Exception as exc:  # noqa: BLE001
         print(f"Score : erreur, l'ancien calcul est gardé ({type(exc).__name__}: {exc})")
     # Lobbying des compagnies des listes (celles du score publié)

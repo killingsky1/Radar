@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.25.0";
+const VERSION = "0.26.0";
 
 // ---------- Constantes ----------
 
@@ -1512,6 +1512,7 @@ function EcranCompagnie({ retour }) {
           <small>{fr(`Note = 5 + ${formule(c.score)} × 5/6, entre 0 et 10, arrondie au dixième`)}</small>
         </p>
       </div>
+      <TailleBourse t={c.taille} />
       <SanteFinanciere symbole={c.symbole} />
 
       {c.contexte.length > 0 && (
@@ -1587,6 +1588,41 @@ const CRITERES_SANTE = [
   ["ΔMARGIN", "Marge brute en hausse", (c) => `${pct(c.marge_avant)} → ${pct(c.marge)} des ventes`],
   ["ΔTURN", "Plus de ventes par dollar d'actif", (c) => `${ratio2(c.rotation_avant)} $ → ${ratio2(c.rotation)} $`],
 ];
+
+// ---------- Taille en bourse (lot L) : petite compagnie = ×1,5 sur les achats de dirigeants ----------
+
+const TAILLES = { petite: "Petite compagnie", moyenne: "Compagnie moyenne", grande: "Grande compagnie" };
+const MOIS_LONGS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+
+// « 202608 » → « août 2026 »
+function moisAnnee(aaaamm) {
+  return `${MOIS_LONGS[Number(aaaamm.slice(4, 6)) - 1]} ${aaaamm.slice(0, 4)}`;
+}
+
+function TailleBourse({ t }) {
+  if (!t) return null;
+  const s = t.seuils;
+  const seuils = s
+    ? `Petite : moins de ${argentCourt(s.p30 * 1e6)} (30e centile des compagnies du NYSE, ${moisAnnee(s.mois)}) ; grande : ${argentCourt(s.p70 * 1e6)} et plus (70e centile).`
+    : "";
+  const texte = t.taille
+    ? `${nombre(t.actions[0])} actions déclarées au ${dateLongue(t.actions[1])} × ${prixAction(t.prix[1])} (prix de la SEC du ${jourSec(t.prix[0])}). ${seuils}${t.taille === "petite" ? " Les achats de dirigeants comptent ×1,5." : ""}`
+    : `Pas calculée : ${t.raison}. Pas de bonus de petite compagnie.`;
+  return (
+    <>
+      <h2 className="section">Taille en bourse</h2>
+      <div className="carte liste taille">
+        <Rangee label={t.taille ? TAILLES[t.taille] : "Taille inconnue"}>
+          {t.taille && <span className="rangee-valeur">{argentCourt(t.valeur_m * 1e6)}</span>}
+        </Rangee>
+        <div className="rangee bloc">
+          <span className="rangee-texte">{fr(texte)}</span>
+        </div>
+      </div>
+      <p className="taille-source">{fr("Actions en circulation déclarées à la SEC × prix officiel de la SEC ; seuils publiés chaque mois par Kenneth French (données CRSP). Lakonishok et Lee (2001) : les achats des dirigeants prédisent plus dans les petites compagnies.")}</p>
+    </>
+  );
+}
 
 function SanteFinanciere({ symbole }) {
   const { donnees } = useApp();
@@ -1716,7 +1752,7 @@ function EcranMethode({ retour }) {
         ))}
       </Groupe>
       <Groupe titre="Le calcul">
-        {[m.temps, m.familles, m.bonus, m.note10, m.seuil, m.recent, m.badges].filter(Boolean).map((t) => (
+        {[m.temps, m.familles, m.bonus, m.taille, m.routiniers, m.note10, m.seuil, m.recent, m.badges].filter(Boolean).map((t) => (
           <div key={t} className="rangee bloc">
             <span className="rangee-texte">{fr(t)}</span>
           </div>
@@ -2086,8 +2122,22 @@ function LigneHorizon({ nom, h, sens }) {
   );
 }
 
-function LigneResultat({ l, horizons }) {
+// Pourquoi la compagnie est entrée (lot L) : « Achat d'actions par un dirigeant… (PDG…, Petite compagnie) · petite compagnie ».
+function pourquoiEntree(l, libelles) {
+  if (!l.signaux) return null;
+  const s = l.sens === "hausse" ? 1 : -1;
+  const morceaux = l.signaux
+    .filter((x) => x.sens === s)
+    .map((x) => `${(libelles || {})[x.regle] || x.regle}${x.facteurs.length ? ` (${x.facteurs.join(", ")})` : ""}`);
+  if (l.taille) morceaux.push(TAILLES[l.taille].toLowerCase());
+  if (l.grace_au_bonus) morceaux.push("entrée grâce au bonus de familles");
+  if (l.grace_a_la_taille) morceaux.push("entrée grâce au bonus de petite compagnie");
+  return morceaux.length ? `Pourquoi : ${morceaux.join(" · ")}` : null;
+}
+
+function LigneResultat({ l, horizons, libelles }) {
   const d = l.depart;
+  const pourquoi = pourquoiEntree(l, libelles);
   return (
     <div className="rangee bloc res-ligne">
       <span className="res-tete">
@@ -2097,6 +2147,7 @@ function LigneResultat({ l, horizons }) {
         {SENS_RESULTATS[l.sens]} · entrée le {dateLongue(l.entree.slice(0, 10))}
         {l.note10 != null ? ` · ${String(l.note10).replace(".", ",")}/10` : ""}
       </span>
+      {pourquoi && <span className="res-sous">{fr(pourquoi)}</span>}
       <span className="res-sous">
         {d.statut === "ok"
           ? `Départ : ${d.prix.toLocaleString("fr-CA", { style: "currency", currency: "USD" })} (prix de la SEC du ${jourSec(d.date)})`
@@ -2118,6 +2169,37 @@ function resumeResultats(r) {
     if (n) morceaux.push(`${nom} : ${h.battu + b.battu} sur ${n} ont frappé juste`);
   }
   return morceaux.length ? morceaux.join(" · ") : null;
+}
+
+// Le taux de réussite de chaque signal (lot L) : une entrée compte dans chacun de ses signaux.
+function ParSignal({ p, horizons }) {
+  return ["hausse", "baisse"].map((sens) => {
+    const signaux = Object.entries(p[sens] || {}).sort((a, b) => b[1].entrees - a[1].entrees || a[1].libelle.localeCompare(b[1].libelle));
+    if (!signaux.length) return null;
+    return (
+      <Groupe
+        key={sens}
+        titre={`Par signal · ${SENS_RESULTATS[sens].toLowerCase()}`}
+        pied={sens === "hausse" && p.sans_raisons ? fr(`${p.sans_raisons} entrées d'avant le 5 octobre 2026 : raisons pas notées, comptées seulement dans le taux de réussite.`) : undefined}
+      >
+        {signaux.map(([cle, x]) => {
+          const mesures = Object.entries(horizons)
+            .filter(([k]) => x[k].mesurees)
+            .map(([k, nom]) => `${nom} : ${x[k].battu} sur ${x[k].mesurees} (${points(x[k].ecart_moyen)})`);
+          return (
+            <div key={cle} className="rangee bloc res-signal">
+              <span className="res-tete">
+                <b>{fr(x.libelle)}</b>
+              </span>
+              <span className="res-sous">
+                {fr(`${x.entrees} ${x.entrees > 1 ? "entrées" : "entrée"} · ${mesures.length ? mesures.join(" · ") : "pas encore mesuré"}`)}
+              </span>
+            </div>
+          );
+        })}
+      </Groupe>
+    );
+  });
 }
 
 function CarteResultats() {
@@ -2179,9 +2261,10 @@ function EcranResultats({ retour }) {
           }),
         )}
       </Groupe>
+      {r.par_signal && <ParSignal p={r.par_signal} horizons={r.horizons} />}
       <Groupe titre={`Compagnies suivies (${r.lignes.length})`}>
         {lignes.map((l) => (
-          <LigneResultat key={`${l.symbole}-${l.sens}-${l.entree}`} l={l} horizons={r.horizons} />
+          <LigneResultat key={`${l.symbole}-${l.sens}-${l.entree}`} l={l} horizons={r.horizons} libelles={r.libelles_regles} />
         ))}
       </Groupe>
       <Groupe titre="Comment c'est mesuré">
@@ -2713,7 +2796,7 @@ function EcranAide({ retour }) {
       </Groupe>
 
       <Groupe titre="La note sur 10">
-        {[m.resume, m.temps, m.familles, m.bonus, m.note10, m.seuil, m.recent].filter(Boolean).map((t) => (
+        {[m.resume, m.temps, m.familles, m.bonus, m.taille, m.routiniers, m.note10, m.seuil, m.recent].filter(Boolean).map((t) => (
           <div key={t} className="rangee bloc">
             <span className="rangee-texte">{fr(t)}</span>
           </div>
@@ -2754,6 +2837,9 @@ function EcranAide({ retour }) {
       <Groupe titre="Les résultats de Radar">
         <div className="rangee bloc">
           <span className="rangee-texte">{fr("Chaque compagnie qui entre dans une liste est suivie avec les prix officiels de la SEC (clôture de la veille, publiée 2 à 4 semaines plus tard), 1 semaine et 1 mois après, et comparée au marché. Les cas douteux (pas de prix, nouveau code de titre, saut anormal) sont montrés mais pas comptés.")}</span>
+        </div>
+        <div className="rangee bloc">
+          <span className="rangee-texte">{fr("Depuis le 5 octobre 2026, chaque entrée garde ses raisons (achat d'un dirigeant, groupe d'achats, petite compagnie, bonus de familles…) : la page montre le taux de réussite de chaque signal, pour savoir lesquels marchent vraiment.")}</span>
         </div>
         <RangeeLien icone="tarte" couleur="accent" label="Voir les résultats" onClick={() => pousser("resultats")} />
       </Groupe>
@@ -3121,6 +3207,7 @@ input { font: inherit; color: var(--texte); }
 .res-carte { width: 100%; display: flex; align-items: center; gap: 12px; padding: 14px; text-align: left; }
 .res-carte-texte { flex: 1; font-size: .9375rem; font-weight: 600; line-height: 1.35; }
 .res-ligne { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; }
+.res-signal { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
 .res-tete { font-size: .9375rem; line-height: 1.3; }
 .res-tete .symbole { margin-right: 2px; vertical-align: 1px; }
 .res-sous { color: var(--texte-2); font-size: .8125rem; }
@@ -3234,7 +3321,7 @@ input { font: inherit; color: var(--texte); }
 .ligne-oge .transaction-qui { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .ligne-oge-desc { margin: 0; padding: 0 16px; color: var(--texte); font-size: .875rem; line-height: 1.4; overflow-wrap: anywhere; }
 .ligne-oge-note { margin: 4px 0 0; padding: 0 16px; color: var(--texte-2); font-size: .8125rem; line-height: 1.4; }
-.congres-source, .rachats-source, .sante-source { color: var(--texte-3); font-size: .75rem; margin: 8px 4px 0; line-height: 1.5; }
+.congres-source, .rachats-source, .sante-source, .taille-source { color: var(--texte-3); font-size: .75rem; margin: 8px 4px 0; line-height: 1.5; }
 .sante .accn { white-space: nowrap; } /* le numéro du rapport reste entier (pas coupé au trait d'union) */
 .sante-total { margin: 0; padding: 14px 16px 0; text-align: center; font-size: 2.25rem; font-weight: 750; font-variant-numeric: tabular-nums; }
 .sante-total small { font-size: 1rem; font-weight: 600; color: var(--texte-3); }

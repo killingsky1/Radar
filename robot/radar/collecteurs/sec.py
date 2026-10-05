@@ -393,6 +393,8 @@ def evenements_form4(texte: str, sha: str, depot: DepotSec, syms: Symboles) -> l
                 "symboles_sec": syms.tous(f["cik_emetteur"]), "actions": actions,
                 "prix_moyen": round(valeur / actions, 4) if actions else None, "plan_10b5_1": f["plan_10b5_1"],
                 "roles": roles, "transactions": lignes, "hors_bourse": hors_bourse, "automatique": automatique,
+                # Lot L : pour reconnaître les initiés routiniers (même numéro CIK que dans les jeux de données)
+                "proprietaires_cik": [str(int(p["cik"])) for p in f["proprietaires"] if (p["cik"] or "").strip().isdigit()],
             },
         ))
     return evenements
