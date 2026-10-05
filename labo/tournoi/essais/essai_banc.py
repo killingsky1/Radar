@@ -132,5 +132,26 @@ m = t[0]["marche"]
 verifier("Marché aux mêmes dates : SPY de l'achat à la vente", abs(m - (1.001 ** 21 - 1)) < 1e-3, str(m))
 s = banc.statistiques(t, v, d, [])
 verifier("Écart mensuel : calculé sur les fins de mois", s["total"]["mois"] >= 4, str(s["total"]))
+# 8. Réglages par règle : tolérance d'entrée 0, frais du SPY, une entrée par symbole, priorité
+BBB = [(j, 20.0, "B") for i, j in enumerate(JOURS) if i % 4 == 0]
+d = ecrire([ev("b", "BBB", "2023-07-10")], {"SPY": SPY, "BBB": BBB})
+premier_prix = next(j for j, _, _ in BBB if j >= "2023-07-11")
+t, v, _ = banc.simuler(regle(TOLERANCE_ENTREE=0), d, debut="2023-07-03")
+verifier("TOLERANCE_ENTREE = 0 : pas de prix le jour prévu → pas acheté", (premier_prix != "2023-07-11") and not t)
+d = ecrire([ev("a", "AAA", "2023-07-10")], {"SPY": SPY, "AAA": AAA})
+t, v, _ = banc.simuler(regle(ARGENT_QUI_ATTEND="SPY"), d, debut="2023-07-03")
+montant = 10000 - 10 - 10                        # 10 $ pour vendre du SPY, 10 $ pour l'achat
+attendu = montant * 0.99 * 1.1 * 0.99 - 10 - 10  # 10 $ pour la vente, 10 $ pour racheter du SPY
+verifier("Argent dans le SPY : 10 $ de plus à l'achat et à la vente", abs(v[-1][1] - attendu) < 0.01,
+         f"{v[-1][1]:.2f} contre {attendu:.2f}")
+d = ecrire([ev("a", "AAA", "2023-07-10"), ev("a2", "AAA", "2023-07-24")], {"SPY": SPY, "AAA": AAA})
+t, v, _ = banc.simuler(regle(DUREE=5, UNE_ENTREE_PAR_SYMBOLE_JOURS=30), d, debut="2023-07-03")
+verifier("Une entrée par symbole sur 30 jours : le 2e signal (14 jours après) est sauté", [x["id"] for x in t] == ["a"])
+t, v, _ = banc.simuler(regle(DUREE=5), d, debut="2023-07-03")
+verifier("Sans ce réglage : les 2 signaux sont achetés", [x["id"] for x in t] == ["a", "a2"])
+d = ecrire([ev("a", "AAA", "2023-07-10"), ev("b", "AAA2", "2023-07-10"), ev("c", "AAA3", "2023-07-10")],
+           {"SPY": SPY, "AAA": AAA, "AAA2": AAA, "AAA3": AAA})
+t, v, _ = banc.simuler(regle(priorite=lambda e, ctx: {"a": 1, "b": 3, "c": 2}[e["id"]]), d, debut="2023-07-03")
+verifier("Priorité : 1 place, 3 signaux → le plus prioritaire (b)", [x["id"] for x in t] == ["b"])
 print(f"\n{sum(ok)}/{len(ok)} vérifications réussies")
 sys.exit(0 if all(ok) else 1)

@@ -11,6 +11,9 @@ Une règle = un fichier Python (labo/tournoi/regles/<id>.py) qui définit :
     def sortir_avant(pos, jour, ctx) -> bool   # vendre plus tôt (ex. seuil de perte), vu à la clôture du `jour`
     def investir(jour, ctx) -> bool     # « météo » : acheter de nouvelles positions ce jour-là ? (sinon S&P 500)
     def poids(e, ctx) -> float          # part relative d'une position (1 = normale), 0.25 à 4
+    def priorite(e, ctx) -> float       # trop de signaux le même jour : le plus haut d'abord (sinon : dépôt, numéro)
+    TOLERANCE_ENTREE = 3                # pas de prix le jour prévu : réessayer jusqu'à N jours de bourse (0 = abandon)
+    UNE_ENTREE_PAR_SYMBOLE_JOURS = 0    # après un achat, aucun nouvel achat du même symbole pendant N jours civils
 
 `ctx` ne montre QUE ce qui était connu au moment de la décision : toute demande d'une donnée plus récente lève une
 erreur (garde-fou contre le futur). Le banc fait tout le reste, pareil pour tous :
@@ -19,7 +22,8 @@ erreur (garde-fou contre le futur). Le banc fait tout le reste, pareil pour tous
 - Vente : clôture du jour prévu ; pas de prix : 1re clôture suivante (jusqu'à 10 jours de bourse), sinon la dernière
   connue. Changement de CUSIP (regroupement d'actions) : rendement enchaîné de part et d'autre du changement.
 - Frais : 10 $ par transaction + demi-écart achat-vente selon la valeur en bourse (moins de 300 M$ ou inconnue : 1 % ;
-  300 M$ à 2 G$ : 0,5 % ; 2 à 10 G$ : 0,2 % ; 10 G$ et plus : 0,05 %), à l'achat ET à la vente.
+  300 M$ à 2 G$ : 0,5 % ; 2 à 10 G$ : 0,2 % ; 10 G$ et plus : 0,05 %), à l'achat ET à la vente. Argent qui attend dans
+  SPY : 10 $ de plus par achat (vendre du SPY) et par vente (racheter du SPY), sans écart (SPY est très liquide).
 - Comparaison : 10 000 $ dans le S&P 500 (SPY) gardés tout le long, mêmes dates ; et chaque transaction contre SPY aux
   mêmes dates.
 - Années de juillet à juin. Une année « pas encore mesurable » si plus de 5 % de ses transactions attendent des prix.
@@ -205,6 +209,10 @@ def simuler(regle, d, debut=None, fin_prix=None):
     duree = getattr(regle, "DUREE", 21)
     max_pos = getattr(regle, "MAX_POSITIONS", 10)
     attend = getattr(regle, "ARGENT_QUI_ATTEND", "SPY")
+    tol_entree = getattr(regle, "TOLERANCE_ENTREE", TOLERANCE_ENTREE)
+    pause = getattr(regle, "UNE_ENTREE_PAR_SYMBOLE_JOURS", 0)
+    frais_spy = FRAIS if attend == "SPY" else 0.0
+    dernier_achat = {}
     if jours_entree < 1:
         raise ValueError("JOURS_ENTREE doit être au moins 1 : l'heure du dépôt est inconnue")
     # 1. Les signaux : chaque événement gardé, le soir de son dépôt ; achat prévu le N-ième jour de bourse après
@@ -241,7 +249,7 @@ def simuler(regle, d, debut=None, fin_prix=None):
                 garder.append(pos)
                 continue
             r = rendement_enchaine(d, pos["s"], pos["entree"], px)
-            net = pos["montant"] * (1 + r) * (1 - pos["demi_ecart"]) - FRAIS
+            net = pos["montant"] * (1 + r) * (1 - pos["demi_ecart"]) - FRAIS - frais_spy
             argent += net
             m = spy_au(px[0]) / spy_au(pos["entree"][0]) - 1
             transactions.append({"id": pos["id"], "s": pos["s"], "achat": pos["entree"][0], "vente": px[0],
@@ -254,26 +262,34 @@ def simuler(regle, d, debut=None, fin_prix=None):
             argent += parts_spy * spy_au(jour)
             parts_spy = 0.0
         meteo = not hasattr(regle, "investir") or (ctx_veille is not None and regle.investir(veille, ctx_veille))
-        attente = [(e, n + 1) for e, n in attente if n + 1 <= TOLERANCE_ENTREE] + [(e, 0) for e in signaux.get(jour, [])]
+        attente = [(e, n + 1) for e, n in attente if n + 1 <= tol_entree] + [(e, 0) for e in signaux.get(jour, [])]
         valeur = argent + sum(p["montant"] * (1 + rendement_enchaine(d, p["s"], p["entree"], x))
                               for p in positions if (x := _dernier(d, p["s"], jour)))
         reste = []
-        for e, n in sorted(attente, key=lambda x: (x[0]["depot"], x[0]["id"])):
+        if hasattr(regle, "priorite"):
+            ordre = sorted(attente, key=lambda x: (-regle.priorite(x[0], Contexte(d, x[0]["depot"])), x[0]["depot"], x[0]["id"]))
+        else:
+            ordre = sorted(attente, key=lambda x: (x[0]["depot"], x[0]["id"]))
+        for e, n in ordre:
             px = prix_au(d, e["symbole"], jour)
             if px is None:
                 reste.append((e, n))
                 continue
             if not meteo or len(positions) >= max_pos or any(p["s"] == e["symbole"] for p in positions):
                 continue
+            if pause and e["symbole"] in dernier_achat and \
+                    (date.fromisoformat(jour) - date.fromisoformat(dernier_achat[e["symbole"]])).days < pause:
+                continue
             w = min(max(regle.poids(e, Contexte(d, e["depot"])), 0.25), 4.0) if hasattr(regle, "poids") else 1.0
-            montant = min(argent, valeur / max_pos * w) - FRAIS
+            montant = min(argent - frais_spy, valeur / max_pos * w) - FRAIS
             if montant < 50:
                 continue
             ecart = demi_ecart(e.get("valeur_m"))
-            argent -= montant + FRAIS
+            argent -= montant + FRAIS + frais_spy
+            dernier_achat[e["symbole"]] = jour
             sortie_prevue = jour_de_bourse(cal, jour, duree) or "9999-12-31"
             positions.append({"id": e["id"], "s": e["symbole"], "cik": e["cik"], "entree": px,
-                              "montant": montant * (1 - ecart), "cout": montant + FRAIS, "demi_ecart": ecart,
+                              "montant": montant * (1 - ecart), "cout": montant + FRAIS + frais_spy, "demi_ecart": ecart,
                               "sortie_prevue": sortie_prevue,
                               "sortie_limite": jour_de_bourse(cal, sortie_prevue, TOLERANCE_SORTIE) or "9999-12-31"})
         attente = reste
