@@ -4,7 +4,7 @@
 - positions comparées (8 jeux : 2 règles d'achat × 4 durées) : 12,776 · identiques : 12,776
 
 ## 2. Argent refait à partir des positions
-- cases d'argent refaites : 56 · identiques : 56
+- cases d'argent refaites : 84 · identiques : 84
 
 ## 3. Formulaires 4 du rejeu contre le document officiel d'EDGAR (XML)
 - formulaires 4 comparés : 40 · identiques : 25 · identiques sauf l'arrondi à 2 décimales des jeux de données : 15 · écart maximal sur le montant à cause de l'arrondi : 0.498 %
