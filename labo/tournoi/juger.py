@@ -29,6 +29,10 @@ sys.path.insert(0, str(ICI))
 import banc  # noqa: E402
 
 T_MIN, ACHATS_MIN, ACHATS_ANNEE_MIN = 3.0, 30, 5
+T_MIN_EXAMEN, ANNEES_MIN_EXAMEN = 2.0, 5  # examen final (coffre-fort) : regles_du_jeu.md, partie 5
+NOMS = {"1_bat_spy_chaque_annee": "1. bat le S&P 500 chaque année", "2_t_3_ou_plus": "2. t ≥ 3", "3_achats": "3. achats",
+        "1_bat_spy_sur_la_periode": "1. bat le S&P 500 sur 7,5 ans", "2_au_moins_5_annees_sur_7": "2. au moins 5 années sur 7",
+        "3_t_2_ou_plus": "3. t ≥ 2"}
 
 
 def t_mensuel(valeur_jour, d, fin):
@@ -63,7 +67,7 @@ def rendement(serie, a, b):
     return round(serie[1][j] / serie[1][i] - 1, 4) if i >= 0 and j >= 0 else None
 
 
-def passer(regle, d):
+def passer(regle, d, examen=False):
     journal = {}
     transactions, valeur_jour, ouvertes = banc.simuler(regle, d, journal=journal)
     s = banc.statistiques(transactions, valeur_jour, d, ouvertes)
@@ -82,9 +86,15 @@ def passer(regle, d):
              "iwm": rendement(d.prix["IWM"], dans[0][0], dans[-1][0]) if dans and "IWM" in d.prix else None,
              "annees_gagnees": sum(1 for x in par_an.values() if x.get("portefeuille") is not None
                                    and x.get("spy_garde") is not None and x["portefeuille"] > x["spy_garde"])}
+    if examen:  # une seule fois par règle finaliste, sur le coffre-fort
+        criteres = {"1_bat_spy_sur_la_periode": total["portefeuille"] is not None and total["spy"] is not None
+                    and total["portefeuille"] > total["spy"],
+                    "2_au_moins_5_annees_sur_7": total["annees_gagnees"] >= ANNEES_MIN_EXAMEN,
+                    "3_t_2_ou_plus": t is not None and t >= T_MIN_EXAMEN}
+    else:
+        criteres = {"1_bat_spy_chaque_annee": c1, "2_t_3_ou_plus": c2, "3_achats": c3}
     return {"stats": s, "mois": mois, "ecart_mensuel_moyen": moy, "t_periode": t, "achats": achats,
-            "periode_entiere": total, "signaux": journal,
-            "criteres": {"1_bat_spy_chaque_annee": c1, "2_t_3_ou_plus": c2, "3_achats": c3},
+            "periode_entiere": total, "signaux": journal, "criteres": criteres,
             "par_annee": {a: {k: x.get(k) for k in ("achats", "portefeuille", "spy_garde", "ecart_moyen", "t")}
                           for a, x in par_an.items()}}, transactions
 
@@ -100,6 +110,7 @@ def main():
     a.add_argument("--sortie", default=str(ICI / "resultats"))
     a.add_argument("--regles", default=str(ICI / "regles"))
     a.add_argument("--verif", default=str(ICI / "regles_verif"))
+    a.add_argument("--examen", action="store_true", help="critères de l'examen final (coffre-fort)")
     x = a.parse_args()
     d = banc.Donnees(x.donnees)
     sortie = Path(x.sortie)
@@ -119,11 +130,11 @@ def main():
                 (sortie / f"{f.stem}.json").write_text(json.dumps(r, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
                 lignes.append(f"| {f.stem} | ÉCARTÉE : {r['ecartee'][:150]} | | | | | | | | | | non |")
                 continue
-            res, trans = passer(regle, d)
+            res, trans = passer(regle, d, x.examen)
             r.update(res)
             verif = Path(x.verif) / f.name
             if verif.exists():
-                _, trans_v = passer(banc.charger_regle(verif), d)
+                _, trans_v = passer(banc.charger_regle(verif), d, x.examen)
                 a_, b_ = {cle(t) for t in trans}, {cle(t) for t in trans_v}
                 r["deux_programmations"] = "identiques" if a_ == b_ else "différentes"
                 r["ecarts"] = {"seulement_testeur": sorted(a_ - b_)[:10], "seulement_verificateur": sorted(b_ - a_)[:10],
@@ -146,15 +157,18 @@ def main():
         pct = lambda v: "—" if v is None else f"{v * 100:+.1f}"  # noqa: E731
         lignes.append(f"| {f.stem} | {pa} | {pct(pe['portefeuille'])} / {pct(pe['spy'])} / {pct(pe['iwm'])} | "
                       f"{pe['annees_gagnees']} | {sg.get('sans_prix', 0)} sur {sg.get('signaux', 0)} | "
-                      f"{r['t_periode']} | {r['achats']} | {'oui' if c['1_bat_spy_chaque_annee'] else 'non'} | "
-                      f"{'oui' if c['2_t_3_ou_plus'] else 'non'} | {'oui' if c['3_achats'] else 'non'} | "
-                      f"{r['deux_programmations']} | {'témoin' if r.get('temoin') else '**OUI**' if r['passe'] else 'non'} |")
-    entete = ["# Tournoi : découverte (juillet 2023 à juin 2026)", "",
+                      f"{r['t_periode']} | {r['achats']} | " + " | ".join('oui' if v else 'non' for v in c.values()) +
+                      f" | {r['deux_programmations']} | {'témoin' if r.get('temoin') else '**OUI**' if r['passe'] else 'non'} |")
+    noms = [NOMS[k] for k in (["1_bat_spy_sur_la_periode", "2_au_moins_5_annees_sur_7", "3_t_2_ou_plus"] if x.examen
+                              else ["1_bat_spy_chaque_annee", "2_t_3_ou_plus", "3_achats"])]
+    titre = ("# Tournoi : EXAMEN FINAL (coffre-fort, janvier 2016 à juin 2023), une seule fois par règle" if x.examen
+             else "# Tournoi : découverte (juillet 2023 à juin 2026)")
+    entete = [titre, "",
               f"Données : `{x.donnees}`. Par année : portefeuille / S&P 500 gardé, en % (achats). Période entière : "
               "portefeuille / S&P 500 / petites compagnies (IWM), en %. t = écart mensuel avec le S&P 500, sur les mois "
               "de la période. Sans prix : signaux jamais achetés faute de prix de la SEC.", "",
-              "| Règle | Années | Période entière | Années gagnées | Sans prix | t | Achats | 1. bat le S&P 500 chaque année "
-              "| 2. t ≥ 3 | 3. achats | 2 programmations | Passe |",
+              "| Règle | Années | Période entière | Années gagnées | Sans prix | t | Achats | " + " | ".join(noms) +
+              " | 2 programmations | Passe |",
               "|---|---|---|---|---|---|---|---|---|---|---|---|"]
     (sortie / "resume.md").write_text("\n".join(entete + lignes) + "\n", encoding="utf-8")
     (sortie / "tous.json").write_text(json.dumps(tous, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

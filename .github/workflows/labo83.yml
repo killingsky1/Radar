@@ -1,0 +1,73 @@
+name: "Labo (tournoi, étape 4 : EXAMEN FINAL au coffre-fort, une seule fois par règle)"
+
+# Lancé à la main seulement, après le débat : au plus 3 règles, chacune UNE seule fois (regles_du_jeu.md, partie 5).
+on:
+  workflow_dispatch:
+    inputs:
+      regles:
+        description: "ids des règles finalistes (3 au plus, séparés par des espaces)"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: labo83
+  cancel-in-progress: false
+
+jobs:
+  examen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Au plus 3 règles, jamais une règle déjà examinée
+        env:
+          REGLES: ${{ github.event.inputs.regles }}
+        run: |
+          set -f
+          n=0
+          for r in $REGLES; do
+            n=$((n + 1))
+            if [ -e "labo/tournoi/resultats/examen/$r.json" ]; then echo "DÉJÀ EXAMINÉE : $r (une seule fois par règle)"; exit 1; fi
+            test -f "labo/tournoi/regles/$r.py"
+          done
+          if [ "$n" -lt 1 ] || [ "$n" -gt 3 ]; then echo "Il faut 1 à 3 règles (reçu : $n)"; exit 1; fi
+      - name: Le coffre-fort (cache de l'étape 0)
+        uses: actions/cache/restore@v4
+        with:
+          path: cache
+          key: tournoi-aucun
+          restore-keys: tournoi-
+      - name: Le coffre-fort est là
+        run: |
+          test -f cache/coffre/evenements.jsonl.gz
+          rm -rf cache/decouverte
+          ls -la cache/coffre
+      - name: Examen final (2 programmations comparées, 3 critères de l'examen)
+        env:
+          REGLES: ${{ github.event.inputs.regles }}
+        run: python labo/tournoi/juger.py $REGLES --examen --donnees cache/coffre --sortie labo/tournoi/resultats/examen-tmp
+      - name: Sauvegarder les résultats (ajoutés à ceux des examens d'avant)
+        if: always()
+        run: |
+          mkdir -p labo/tournoi/resultats/examen
+          if [ -d labo/tournoi/resultats/examen-tmp ]; then
+            for f in labo/tournoi/resultats/examen-tmp/*; do
+              b=$(basename "$f")
+              case "$b" in
+                resume.md|tous.json) cp "$f" "labo/tournoi/resultats/examen/$(date -u +%Y%m%d-%H%M)-$b" ;;
+                *) cp "$f" labo/tournoi/resultats/examen/ ;;
+              esac
+            done
+            rm -rf labo/tournoi/resultats/examen-tmp
+          fi
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/tournoi/resultats/examen
+          git commit -m "Labo : tournoi, EXAMEN FINAL au coffre-fort ($(date -u +'%Y-%m-%d %H:%M') UTC)" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo

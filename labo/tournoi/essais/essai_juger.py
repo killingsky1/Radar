@@ -67,6 +67,18 @@ verifier("Règle écartée (IMPOSSIBLE) : notée avec sa raison, pas simulée, n
          tous["e"].get("ecartee", "").startswith("décide") and not tous["e"]["passe"] and "stats" not in tous["e"])
 verifier("Témoin : simulé et comparé, mais ne peut jamais passer", tous["f"]["temoin"] and not tous["f"]["passe"]
          and tous["f"]["deux_programmations"] == "identiques")
+r2 = subprocess.run([sys.executable, str(ICI.parent / "juger.py"), "a", "--examen", "--donnees", str(TMP / "donnees"), "--sortie",
+                     str(TMP / "examen"), "--regles", str(TMP / "regles"), "--verif", str(TMP / "verif")],
+                    capture_output=True, text=True)
+ex = json.loads((TMP / "examen" / "tous.json").read_text())["a"]
+pe = ex["periode_entiere"]
+verifier("Examen : les 3 critères de l'examen final, recalculés à la main",
+         ex["criteres"] == {"1_bat_spy_sur_la_periode": pe["portefeuille"] > pe["spy"],
+                            "2_au_moins_5_annees_sur_7": pe["annees_gagnees"] >= 5,
+                            "3_t_2_ou_plus": ex["t_periode"] is not None and ex["t_periode"] >= 2}, str(ex["criteres"]))
+verifier("Examen : mêmes transactions qu'en découverte pour la même règle et les mêmes données",
+         json.loads((TMP / "examen" / "a.transactions.json").read_text()) == trans)
+verifier("Examen : le résumé le dit", "EXAMEN FINAL" in (TMP / "examen" / "resume.md").read_text())
 shutil.rmtree(TMP, ignore_errors=True)
 print(f"\n{sum(ok)}/{len(ok)} vérifications réussies")
 sys.exit(0 if all(ok) else 1)
