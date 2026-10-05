@@ -20,6 +20,9 @@ Une compagnie compte une seule fois par sens tant qu'elle n'est pas sortie de la
 Lot L : chaque nouvelle entrée garde aussi ses raisons (les familles de sources qui comptent, la règle et les facteurs de
 l'info retenue, la taille de la compagnie, la note sans le bonus de familles et sans le bonus de petite compagnie), pour
 mesurer chaque signal à part (« par signal »). Les entrées d'avant le 5 octobre 2026 n'ont pas de raisons notées.
+Lot M : les compagnies écartées de la liste « hausse » parce qu'elles valent moins de 100 M$ en bourse sont suivies de la
+même façon (sens « ecartee »), à part : « a frappé juste » = elle a fait moins bien que le marché (la règle avait raison).
+Elles ne comptent ni dans le taux de réussite des listes, ni dans le résumé par signal.
 """
 
 from __future__ import annotations
@@ -56,7 +59,8 @@ def noter_entrees(historique: dict, score: dict, maintenant: datetime) -> list[d
     nouvelle entrée seulement si elle n'y était pas depuis plus de 30 jours ; retourne les nouvelles entrées."""
     aujourd_hui = maintenant.astimezone(TORONTO).date()
     nouvelles = []
-    for sens, liste in (("hausse", score.get("hausse", [])), ("baisse", score.get("baisse", []))):
+    for sens, liste in (("hausse", score.get("hausse", [])), ("baisse", score.get("baisse", [])),
+                        ("ecartee", score.get("ecartees", []))):
         for r in liste:
             les_siennes = [e for e in historique["entrees"] if e["symbole"] == r["symbole"] and e["sens"] == sens]
             derniere = max(les_siennes, key=lambda e: e["entree"], default=None)
@@ -84,7 +88,7 @@ def raisons(r: dict, sens: str) -> dict:
     for cle, nom in (("note10_sans_bonus", "grace_au_bonus"), ("note10_sans_taille", "grace_a_la_taille")):
         if r.get(cle) is not None and r.get("note10") is not None:
             x[cle] = r[cle]
-            x[nom] = r[cle] < NOTE_HAUSSE if sens == "hausse" else r[cle] > NOTE_BAISSE
+            x[nom] = r[cle] > NOTE_BAISSE if sens == "baisse" else r[cle] < NOTE_HAUSSE
     return x
 
 
@@ -125,6 +129,8 @@ def par_signal(lignes: list[dict]) -> dict:
     L sont comptées à part (« sans_raisons »)."""
     sortie = {"hausse": {}, "baisse": {}, "sans_raisons": 0}
     for l in lignes:
+        if l["sens"] not in ("hausse", "baisse"):  # écartées (lot M) : à part
+            continue
         cles = cles_signal(l)
         if cles is None:
             sortie["sans_raisons"] += 1
@@ -202,7 +208,7 @@ def mesurer(e: dict, d: dict, prix: dict, marche: dict, jours: list[str], couver
                 "pourquoi": f"les fonds du S&P 500 ne concordent pas ({fonds}) : pas de verdict"}
     choisi = next(f for f in prix_sec.MARCHE if f in fonds)
     m = fonds[choisi]
-    battu = r["variation"] > m if e["sens"] == "hausse" else r["variation"] < m
+    battu = r["variation"] > m if e["sens"] == "hausse" else r["variation"] < m  # baisse, écartée : moins bien que lui
     return {**r, "statut": "mesure", "marche": {"fonds": choisi, "variation": m}, "ecart": round(r["variation"] - m, 4),
             "battu": battu}
 
@@ -224,7 +230,7 @@ def calculer(donnees, maintenant: datetime) -> dict:
         lignes.append(ligne)
     resume = {}
     for h in HORIZONS:
-        for sens in ("hausse", "baisse"):
+        for sens in ("hausse", "baisse", "ecartee"):
             mesures = [l["horizons"][h] for l in lignes if l["sens"] == sens and l["horizons"][h]["statut"] == "mesure"
                        and l["horizons"][h]["battu"] is not None]
             resume[f"{sens}_{h}"] = {"mesurees": len(mesures), "battu": sum(m["battu"] for m in mesures),
@@ -252,5 +258,8 @@ def calculer(donnees, maintenant: datetime) -> dict:
             "Publication de la SEC : la 1re moitié d'un mois à la fin du mois, la 2e moitié vers le 15 du mois suivant.",
             "Par signal : chaque entrée garde ses raisons depuis le 5 octobre 2026 (règle, facteurs, taille de la "
             "compagnie, bonus). Une entrée compte dans chacun de ses signaux. Peu d'entrées = résultat fragile.",
+            "Écartées : les compagnies de moins de 100 M$ en bourse, hors de la liste « hausse » depuis la version 0.27, "
+            "sont suivies de la même façon, à part. La règle a frappé juste quand la compagnie a fait moins bien que le "
+            "marché.",
         ],
     }

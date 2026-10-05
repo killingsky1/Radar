@@ -10,6 +10,9 @@ Chaque info officielle sur une compagnie cotée vaut des points selon ce que les
 - Lot L : un achat ou une vente d'un initié « routinier » (même mois chaque année, Cohen, Malloy et Pomorski 2012) :
   0 point ; un achat de dirigeant dans une petite compagnie (sous le 30e centile du NYSE) : ×1,5 (Lakonishok et Lee
   2001 ; voir collecteurs/inities.py et collecteurs/taille.py).
+- Lot M : une compagnie de moins de 100 M$ en bourse n'entre pas dans la liste « hausse » : dans le rejeu de 3 ans du
+  labo (juillet 2023 à juin 2026), ces entrées ont fait pire que le S&P 500 chacune des 3 années. Elle est montrée à
+  part (« écartées ») et suivie dans les Résultats, pour vérifier la règle en vrai.
 - Seules les infos « Officiel » ou « Confirmé » de sources officielles comptent.
 Les infos sans points (contexte) restent visibles avec la raison.
 """
@@ -26,7 +29,7 @@ from zoneinfo import ZoneInfo
 from .collecteurs import inities
 from .registry import SOURCES
 
-VERSION = "score-8"
+VERSION = "score-9"
 DEMI_VIE = 30
 DEMI_VIE_FONDS = 60  # le 13F arrive jusqu'à 45 jours après la fin du trimestre
 AGE_MAX = 90
@@ -46,6 +49,10 @@ GROUPE = 1.75  # 2,1 % contre 1,2 % le mois suivant (Alldredge et Blank)
 # Lakonishok et Lee (2001, tableau 8) : signal d'achat fort 7,27 % par an dans les petites compagnies contre 4,82 % pour
 # l'ensemble (×1,51) ; Cohen, Malloy et Pomorski (2012, tableau IX) : 0,80 contre 0,55 % par mois (×1,45).
 PETITE = 1.5
+# Lot M : sous 100 M$ en bourse (taille connue), pas dans la liste « hausse ». Rejeu de 3 ans du labo, garder 1 mois :
+# écart médian avec le S&P 500 de −11,8 / −6,6 / −1,3 % (2023-2024 / 2024-2025 / 2025-2026), contre −2,0 / −3,1 / −0,2 %
+# pour les autres entrées ; 35 / 30 / 48 % ont battu le S&P 500, contre 41 / 41 / 49 %.
+TROP_PETITE = 100  # M$
 
 # PDG, directeur financier, président du conseil (pas les vice-présidents ni les vice-présidents du conseil)
 PRINCIPAL = re.compile(r"\b(CEO|CFO|PEO|PFO|COB)\b|CHIEF EXECUTIVE|CHIEF FINANCIAL|(?<!VICE )(?<!VICE-)\bCHAIR", re.I)
@@ -277,6 +284,12 @@ METHODE = {
                    + ["Fed, Banque du Canada, décrets, sanctions, ventes d'armes, CFTC : contexte, sans points."],
     "familles_noms": FAMILLES,
     "etudes": {k: {"titre": t, "constat": c, "lien": u} for k, (t, c, u) in ETUDES.items()},
+    "trop_petites": f"Moins de {TROP_PETITE} M$ en bourse : la compagnie n'entre pas dans la liste « hausse ». Dans le "
+                    "rejeu de 3 ans du labo (juillet 2023 à juin 2026, prix de la SEC), ces compagnies ont fait pire que "
+                    "le S&P 500 chacune des 3 années : écart médian de −11,8, −6,6 et −1,3 % un mois après l'achat, "
+                    "contre −2,0, −3,1 et −0,2 % pour les autres. Elles restent visibles à part (« écartées ») et sont "
+                    "suivies dans les Résultats pour vérifier la règle. Taille inconnue : rien n'est écarté.",
+    "lien_labo": "https://github.com/killingsky1/Radar/blob/labo/labo/rejeu3/facteurs.md",
 }
 
 
@@ -434,6 +447,12 @@ def groupe_d_achats(a: Apport, achats: list[Apport]) -> bool:
     return False
 
 
+def trop_petite(r: dict) -> bool:
+    """Valeur en bourse connue et sous TROP_PETITE M$ (lot M). Taille inconnue : jamais écartée."""
+    v = (r.get("taille") or {}).get("valeur_m")
+    return v is not None and v < TROP_PETITE
+
+
 def note_sur_10(score: float) -> float:
     """5 + points × 5/6, bornée entre 0 et 10, arrondie au dixième (5 vers le haut), à partir du score publié
     (2 décimales) : le labo la recalcule à l'identique. 5,13 points -> 9,3 ; −4,67 -> 1,1."""
@@ -547,20 +566,22 @@ def calculer(evenements: list[dict], maintenant: datetime, precedent: dict | Non
             "_brut": plus + moins, "_apports": apports, "_frais": frais,
         })
 
-    hausse = sorted((r for r in resultats if r["note10"] >= NOTE_HAUSSE),
-                    key=lambda r: (-r["_brut"], r["symbole"]))[:MAX_LISTE]
+    candidates = sorted((r for r in resultats if r["note10"] >= NOTE_HAUSSE), key=lambda r: (-r["_brut"], r["symbole"]))
+    hausse = [r for r in candidates if not trop_petite(r)][:MAX_LISTE]
+    ecartees = [r for r in candidates if trop_petite(r)][:MAX_LISTE]  # lot M : montrées à part, suivies dans les Résultats
     baisse = sorted((r for r in resultats if r["note10"] <= NOTE_BAISSE),
                     key=lambda r: (r["_brut"], r["symbole"]))[:MAX_LISTE]
 
     # « Nouveau » : la date où la compagnie est entrée dans sa liste (gardée tant qu'elle y reste).
     premier_calcul = not precedent or precedent.get("version", "").split("-")[0] != "score"
-    avant = {(nom, r["symbole"]): r.get("depuis") for nom in ("hausse", "baisse") for r in (precedent or {}).get(nom, [])}
+    avant = {(nom, r["symbole"]): r.get("depuis") for nom in ("hausse", "baisse", "ecartees")
+             for r in (precedent or {}).get(nom, [])}
     evenements_cites = {}
-    for nom, liste in (("hausse", hausse), ("baisse", baisse)):
+    for nom, liste in (("hausse", hausse), ("baisse", baisse), ("ecartees", ecartees)):
         for r in liste:
             r["depuis"] = avant[(nom, r["symbole"])] if (nom, r["symbole"]) in avant else (
                 None if premier_calcul else maintenant.isoformat())
-            r["depot_recent"] = r.pop("_frais")[1 if nom == "hausse" else -1]
+            r["depot_recent"] = r.pop("_frais")[-1 if nom == "baisse" else 1]
             r["recent"] = recent(r["depot_recent"], jour)
             for a in r.pop("_apports"):
                 if a.regle or any(c["id"] == a.ev["id"] for c in r["contexte"]):
@@ -568,7 +589,7 @@ def calculer(evenements: list[dict], maintenant: datetime, precedent: dict | Non
             del r["_brut"]
     return {
         "version": VERSION, "genere_a": maintenant.isoformat(), "jour": jour.isoformat(),
-        "hausse": hausse, "baisse": baisse, "evenements": evenements_cites,
+        "hausse": hausse, "baisse": baisse, "ecartees": ecartees, "evenements": evenements_cites,
         "compagnies_notees": len(resultats), "methode": METHODE,
         "note": METHODE["avertissement"],
     }

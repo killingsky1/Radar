@@ -331,7 +331,7 @@ def regles(classement, tmp_path_factory):
 
 
 def lignes(score):
-    return {r["symbole"]: r for liste in ("hausse", "baisse") for r in score[liste]}
+    return {r["symbole"]: r for liste in ("hausse", "baisse", "ecartees") for r in score.get(liste, [])}
 
 
 def facteurs(r):
@@ -342,8 +342,11 @@ def test_score_avant_et_apres(regles):
     routiniers, tailles = regles
     avant = lignes(sc.calculer(EVENEMENTS, MAINTENANT))
     apres = sc.calculer(EVENEMENTS, MAINTENANT, routiniers=routiniers, tailles=tailles)
-    assert apres["version"] == "score-8"
+    assert apres["version"] == "score-9"
     l = lignes(apres)
+    # Lot M : FLNA (37 M$) et PRHI (33 M$) sont sous 100 M$ → écartées de la liste « hausse », gardées à part
+    assert {r["symbole"] for r in apres["ecartees"]} == {"FLNA", "PRHI"}
+    assert not {"FLNA", "PRHI"} & {r["symbole"] for r in apres["hausse"]}
     # GPUS : son seul achat vient d'un initié routinier → 0 point, hors des listes
     assert "GPUS" in avant and "GPUS" not in l
     # FLNA (37 M$) et PRHI (33 M$) : petites → ×1,5 sur les achats du dirigeant
@@ -394,19 +397,20 @@ def test_chaque_nouvelle_entree_garde_ses_raisons(regles):
     h = {"entrees": []}
     nouvelles = {e["symbole"]: e for e in rs.noter_entrees(h, score, MAINTENANT)}
     flna = nouvelles["FLNA"]
+    assert flna["sens"] == "ecartee"  # lot M : sous 100 M$, suivie à part
     assert flna["signaux"] == [{"famille": "inities", "sens": 1, "regle": "achat_dirigeant",
                                 "facteurs": ["PDG, directeur financier ou président du conseil", "Petite compagnie"]}]
     assert flna["taille"] == "petite" and flna["note10_sans_taille"] == 7.3 and flna["grace_a_la_taille"] is False
     assert flna["note10_sans_bonus"] == flna["note10"] and flna["grace_au_bonus"] is False  # une seule famille
     assert nouvelles["FUL"]["taille"] == "moyenne" and "Groupe d'achats" in nouvelles["FUL"]["signaux"][0]["facteurs"]
     assert nouvelles["PAM"]["taille"] is None and nouvelles["PAM"]["note10_sans_taille"] == nouvelles["PAM"]["note10"]
-    assert list(nouvelles) == ["PRHI", "GME", "FLNA", "PAM", "FUL"]  # GPUS (routinier) n'entre pas
+    assert list(nouvelles) == ["GME", "PAM", "FUL", "PRHI", "FLNA"]  # GPUS (routinier) n'entre pas ; écartées à la fin
     # Un administrateur seul de PRHI (petite) : 7,3/10 avec le bonus de taille, 6,5 sans → entré grâce à lui
     smith = evenement("sec_form4:0001193125-26-410905:P")
     seul = rs.noter_entrees({"entrees": []}, sc.calculer([smith], MAINTENANT, routiniers=routiniers, tailles=tailles),
                             MAINTENANT)
-    assert [(e["symbole"], e["note10"], e["note10_sans_taille"], e["grace_a_la_taille"]) for e in seul] == [
-        ("PRHI", 7.3, 6.5, True)]
+    assert [(e["symbole"], e["sens"], e["note10"], e["note10_sans_taille"], e["grace_a_la_taille"]) for e in seul] == [
+        ("PRHI", "ecartee", 7.3, 6.5, True)]
     assert sc.calculer([smith], MAINTENANT)["hausse"] == []  # sans la règle de taille : pas dans la liste
 
 
