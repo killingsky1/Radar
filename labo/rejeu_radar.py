@@ -387,12 +387,15 @@ def main():
         a, m = int(q[:4]), 3 * int(q[5])
         return date(a, m, monthrange(a, m)[1])
 
-    blocs = {d for d, n in Counter(publication.values()).items() if d and n >= 3}
-    delais = {q: (date.fromisoformat(d) - fin_trimestre(q)).days for q, d in publication.items() if d and d not in blocs}
+    # Une date plus de 90 jours après la fin du trimestre est une remise en ligne (mesuré : les autres fichiers sont mis
+    # en ligne de 5 à 49 jours après la fin du trimestre), pas la 1re mise en ligne.
+    ecarts_jours = {q: (date.fromisoformat(d) - fin_trimestre(q)).days for q, d in publication.items() if d}
+    delais = {q: n for q, n in ecarts_jours.items() if 0 <= n <= 90}
+    blocs = sorted({publication[q] for q, n in ecarts_jours.items() if n > 90})
     delai_max = max(delais.values())
     dire(f"mise en ligne des jeux de données (en-tête Last-Modified) : {publication}")
-    dire(f"dates partagées par 3 fichiers ou plus (remise en ligne en bloc, pas la 1re mise en ligne) : {sorted(blocs)} · "
-         f"délais mesurés sur les autres fichiers (jours après la fin du trimestre) : {delais} · le plus long : {delai_max}")
+    dire(f"remises en ligne (plus de 90 jours après la fin du trimestre) : {blocs} · délais des 1res mises en ligne "
+         f"mesurées (jours après la fin du trimestre) : {delais} · le plus long : {delai_max}")
     classements, dispo = {}, {}
     for y in ANNEES_CLASSEMENT:
         annees = list(range(y - inities.ANNEES_D_HISTORIQUE, y))
@@ -400,7 +403,7 @@ def main():
         classements[str(y)] = {**inities.classer(lignes, annees), "transactions": len(lignes)}
         q4 = f"{y - 1}q4"
         d4 = publication.get(q4)
-        dispo[str(y)] = d4 if d4 and d4 not in blocs else (fin_trimestre(q4) + timedelta(days=delai_max)).isoformat()
+        dispo[str(y)] = d4 if q4 in delais else (fin_trimestre(q4) + timedelta(days=delai_max)).isoformat()
         dire(f"classement des routiniers pour {y} (transactions de {annees[0]} à {annees[-1]}) : "
              f"{classements[str(y)]['compte']} · utilisable à partir du {dispo[str(y)]}")
     del routine
@@ -864,7 +867,7 @@ def main():
         "jours_tenus": {"mediane": tenus[len(tenus) // 2] if tenus else None, "max": max(tenus, default=None),
                         "plus_de_33": sum(t > 33 for t in tenus)},
         "variante_large": {"positions": len(positions_large), "achetees": len(large)},
-        "dispo_classements": dispo, "publication_jeux": publication, "blocs": sorted(blocs),
+        "dispo_classements": dispo, "publication_jeux": publication, "remises_en_ligne": blocs, "delais": delais,
         "statuts": dict(Counter(p.get("statut", "pas_achetee") for p in positions)),
         "compteurs": dict(compte),
     }
@@ -909,9 +912,8 @@ def main():
           f"- Durée réelle des positions : médiane {bilan['jours_tenus']['mediane']} jours · max {bilan['jours_tenus']['max']} · "
           f"vendues après le 33e jour faute de prix : {bilan['jours_tenus']['plus_de_33']}",
           f"- Variante achat jusqu'à 10 jours de bourse plus tard : {len(large)} achetées sur {len(positions_large)}",
-          f"- Routiniers : classement {', '.join(f'{y} dès le {d}' for y, d in dispo.items())} (jeux de données remis en "
-          f"ligne en bloc le {', '.join(sorted(blocs))} : 1re mise en ligne = fin du trimestre + {delai_max} jours, le plus "
-          f"long délai mesuré)",
+          f"- Routiniers : classement {', '.join(f'{y} dès le {d}' for y, d in dispo.items())} (fichier du 4e trimestre remis en "
+          f"ligne plus tard : fin du trimestre + {delai_max} jours, le plus long délai mesuré d'une 1re mise en ligne)",
           f"- Statuts : {bilan['statuts']}", "", "## Mois par mois", "",
           "| Mois | Entrées | Achetées | Rendement moyen | S&P 500 mêmes dates | Gagnantes | Mieux que le S&P | "
           "Réinvesti (fin du mois) |", "|---|---|---|---|---|---|---|---|"]
