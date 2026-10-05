@@ -8,8 +8,13 @@
 2. Dans le score publié : aucune info comptée n'est celle d'un initié routinier selon le labo ; une info routinière d'une
    compagnie des listes est dans « Autres infos (0 point) », avec la raison et les mêmes mois.
 3. Taille de chaque compagnie des listes : le labo relit les seuils du NYSE (fichier de Kenneth French), la fiche de la
-   SEC (rapports déposés), le dossier companyfacts de la compagnie (actions en circulation, dei) et les 2 derniers
-   fichiers d'échecs de livraison (prix), refait la valeur et la taille, et les compare à la fiche (aujourdhui.json).
+   SEC (rapports déposés), les fichiers « frames » des actions en circulation (dei, 5 derniers trimestres, le fait le
+   plus récent : il doit être exactement celui du robot), le dossier companyfacts de la compagnie (recoupement : le même
+   nombre d'actions doit y être) et les 2 derniers fichiers d'échecs de livraison (prix), refait la valeur et la taille,
+   et les compare à la fiche (aujourdhui.json). Mesuré le 5 octobre 2026 (sonde_lotL.py) : les deux API de la SEC ne
+   concordent pas toujours (FLNA : un 10-Q d'août dans les frames, absent de companyfacts ; ASPI : un fait du 14 août
+   dans companyfacts, dans aucun fichier frames) ; une date différente pour le même nombre d'actions est notée, pas un
+   écart.
 4. Résultats : chaque entrée du lot L a ses raisons, et le résumé par signal est refait ici.
 Mêmes règles d'accès : robots.txt lu d'abord, 1,5 s entre deux requêtes ; le courriel est envoyé seulement à la SEC.
 """
@@ -245,6 +250,20 @@ with acces.section("Taille des compagnies des listes (Kenneth French, fiches et 
     dire(f"- prix (labo) : fichiers {sorted(ftd)[-2:]} · {len(prix):,} symboles")
     tickers = {x["ticker"].upper(): int(x["cik_str"])
                for x in json_de("https://www.sec.gov/files/company_tickers.json").values()}
+    # Les fichiers frames, relus ici : le fait le plus récent de chaque compagnie (code du labo)
+    a_, q_ = jour.year, (jour.month - 1) // 3 + 1
+    frames = {}
+    for _ in range(5):
+        try:
+            for r in json_de(f"https://data.sec.gov/api/xbrl/frames/dei/EntityCommonStockSharesOutstanding/shares/"
+                             f"CY{a_}Q{q_}I.json")["data"]:
+                if r["val"] > 0 and (r["cik"] not in frames or r["end"] > frames[r["cik"]]["end"]):
+                    frames[r["cik"]] = r
+        except urllib.error.HTTPError as exc:
+            if exc.code != 404:
+                raise
+        a_, q_ = (a_, q_ - 1) if q_ > 1 else (a_ - 1, 4)
+    dire(f"- frames (labo) : {len(frames):,} compagnies avec des actions déclarées")
     for x in listes:
         t, s = x.get("taille"), x["symbole"]
         if t is None:
@@ -266,6 +285,8 @@ with acces.section("Taille des compagnies des listes (Kenneth French, fiches et 
             if exc.code != 404:
                 raise
         recent = max(faits, key=lambda f: (f["end"], f["filed"]), default=None)
+        fr_ = frames.get(cik)
+        fait_frames = {"val": fr_["val"], "end": fr_["end"]} if fr_ else None
         pr = prix.get(s)
 
         def classe(fait):
@@ -279,16 +300,12 @@ with acces.section("Taille des compagnies des listes (Kenneth French, fiches et 
             v = fait["val"] * pr[1] / 1e6
             return ("petite" if v < seuils["p30"] else "grande" if v >= seuils["p70"] else "moyenne"), None
 
-        labo_t, raison = classe(recent)
+        labo_t, raison = classe(fait_frames)  # la règle publiée : le fait le plus récent des fichiers frames
         if t["taille"] != labo_t:
-            robot_a = t.get("actions")
-            fait_robot = next((f for f in faits if robot_a and f["end"] == robot_a[1] and f["val"] == robot_a[0]), None)
-            if fait_robot and classe(fait_robot)[0] == t["taille"]:  # le fichier frames du trimestre n'a pas encore ce fait
-                notes.append(f"{s} : avec le fait le plus récent du dossier de la SEC ({recent['val']:,} au {recent['end']}), "
-                             f"la taille serait {labo_t} ; avec celui des fichiers frames ({robot_a[0]:,} au {robot_a[1]}) : "
-                             f"{t['taille']}, comme le robot")
-            else:
-                ecarts.append(f"{s} : taille {t['taille']} ({t.get('raison')}) ≠ labo {labo_t} ({raison})")
+            ecarts.append(f"{s} : taille {t['taille']} ({t.get('raison')}) ≠ labo {labo_t} ({raison})")
+        if recent and labo_t and classe(recent)[0] != labo_t:
+            notes.append(f"{s} : avec le fait le plus récent du dossier companyfacts ({recent['val']:,} au {recent['end']}), "
+                         f"la taille serait {classe(recent)[0]} (frames : {labo_t})")
         flottant = max(cf.get("facts", {}).get("dei", {}).get("EntityPublicFloat", {}).get("units", {}).get("USD", [])
                        if faits else [], key=lambda f: (f["end"], f["filed"]), default=None)
         if t["taille"] == "petite" and flottant and flottant["val"] / 1e6 >= seuils["p30"]:
@@ -296,12 +313,19 @@ with acces.section("Taille des compagnies des listes (Kenneth French, fiches et 
                          f"{flottant['end']} (seuil {seuils['p30']:,} M$) : cours tombé depuis, ou une seule catégorie d'actions ?")
         if t["taille"]:
             robot_a = t["actions"]
-            meme_fait = any(f["end"] == robot_a[1] and f["val"] == robot_a[0] for f in faits)
-            if not meme_fait:
-                ecarts.append(f"{s} : actions {robot_a} absentes du dossier de la compagnie à la SEC")
+            if not fait_frames or [fait_frames["val"], fait_frames["end"]] != robot_a:
+                ecarts.append(f"{s} : actions du robot {robot_a} ≠ fait le plus récent des frames relus par le labo {fait_frames}")
+            if any(f["end"] == robot_a[1] and f["val"] == robot_a[0] for f in faits):
+                pass  # confirmé par le dossier companyfacts
+            elif any(f["val"] == robot_a[0] for f in faits):
+                notes.append(f"{s} : {robot_a[0]:,} actions au {robot_a[1]} selon les frames ; le dossier companyfacts a le "
+                             f"même nombre à une autre date (dernier : {recent['end'] if recent else '—'}) : les 2 API de la "
+                             f"SEC ne concordent pas sur la date")
+            else:
+                ecarts.append(f"{s} : {robot_a[0]:,} actions (frames) introuvables dans le dossier companyfacts de la SEC")
             if recent and [recent["val"], recent["end"]] != robot_a:
-                notes.append(f"{s} : fait plus récent dans le dossier de la SEC ({recent['val']:,} au {recent['end']}) "
-                             f"que dans les fichiers frames lus par le robot ({robot_a[0]:,} au {robot_a[1]})")
+                notes.append(f"{s} : fait le plus récent du dossier companyfacts ({recent['val']:,} au {recent['end']}) ≠ "
+                             f"frames ({robot_a[0]:,} au {robot_a[1]})")
             if t["prix"] != pr:
                 ecarts.append(f"{s} : prix {t['prix']} ≠ labo {pr}")
             v = robot_a[0] * pr[1] / 1e6 if pr else None
