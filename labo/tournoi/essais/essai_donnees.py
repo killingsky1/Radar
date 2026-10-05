@@ -82,6 +82,29 @@ MASTER = ("Description: Master Index\n\nCIK|Company Name|Form Type|Date Filed|Fi
 APPELS = []
 
 
+def faits_zip():
+    """Faux companyfacts.zip : actions en circulation pour chaque compagnie ; pour GME, un actif CORRIGÉ en 2026 (la 1re
+    version doit rester), un bénéfice annuel, un trimestre, un cumul de 6 mois (à écarter) et un fait d'un 8-K (à écarter)."""
+    t = io.BytesIO()
+    actions = {"shares": [{"end": "2024-12-31", "val": 5_000_000, "filed": "2025-02-14", "form": "10-K"},
+                          {"end": "2025-06-30", "val": 6_000_000, "filed": "2025-08-10", "form": "10-Q"}]}
+    with zipfile.ZipFile(t, "w") as z:
+        for cik in CIKS:
+            faits = {"dei": {"EntityCommonStockSharesOutstanding": {"units": actions}}}
+            if cik == CIK_13D:
+                faits["us-gaap"] = {
+                    "Assets": {"units": {"USD": [
+                        {"end": "2024-12-31", "val": 123456, "accn": "A1", "filed": "2025-03-25", "form": "10-K"},
+                        {"end": "2024-12-31", "val": 999999, "accn": "A2", "filed": "2026-03-02", "form": "10-K"}]}},
+                    "NetIncomeLoss": {"units": {"USD": [
+                        {"start": "2024-01-01", "end": "2024-12-31", "val": 5000, "accn": "A1", "filed": "2025-03-25", "form": "10-K"},
+                        {"start": "2025-01-01", "end": "2025-06-30", "val": 2000, "accn": "Q2", "filed": "2025-08-10", "form": "10-Q"},
+                        {"start": "2025-04-01", "end": "2025-06-30", "val": 1200, "accn": "Q2", "filed": "2025-08-10", "form": "10-Q"},
+                        {"start": "2025-04-01", "end": "2025-06-30", "val": 7777, "accn": "E1", "filed": "2025-07-01", "form": "8-K"}]}}}
+            z.writestr(f"CIK{int(cik):010d}.json", json.dumps({"cik": int(cik), "facts": faits}))
+    return t.getvalue()
+
+
 def servir(url):
     APPELS.append(url)
     if url == inities.PAGE:
@@ -94,19 +117,10 @@ def servir(url):
         return "".join(f'<a href="/files/data/fails-deliver-data/cnsfails{c}.zip">x</a>' for c in CLES).encode()
     if "cnsfails" in url:
         return ftd(url.rsplit("cnsfails", 1)[1][:7])
-    if "companyconcept" in url:
-        cik = int(url.split("CIK")[1][:10])
-        return json.dumps({"units": {"shares": [{"end": "2024-12-31", "val": 5_000_000, "filed": "2025-02-14"},
-                                                {"end": "2025-06-30", "val": 6_000_000, "filed": "2025-08-10"}]}}).encode() \
-            if str(cik) in CIKS else None
+    if url == d.FAITS_ZIP:
+        return faits_zip()
     if url.endswith("master.idx"):
         return MASTER.encode() if "/2025/QTR1/" in url else b"CIK|Company Name|Form Type|Date Filed|Filename\n"
-    if "/frames/" in url:
-        concept, periode = url.split("/us-gaap/")[1].split("/USD/")
-        periode = periode.removesuffix(".json")
-        if concept == "Assets" and periode == "CY2024Q4I":
-            return json.dumps({"data": [{"cik": int(CIK_13D), "end": "2024-12-31", "val": 123456, "accn": "x"}]}).encode()
-        return None
     return None
 
 
@@ -164,9 +178,13 @@ verifier("GME : actions en circulation = le fait DÉPOSÉ avant (5 000 000, pas 
 verifier("GME : le 13D du 2025-03-20 compte dans les 90 jours avant", gme["13d_90j"] == 1 and gme["13g_90j"] == 0)
 verifier("GME : 1 initié dans le groupe de 30 jours", gme["groupe_30j"] == 1)
 fin = [json.loads(l) for l in gzip.open(S / "finances.jsonl.gz", "rt")]
-verifier("Finances : l'actif de GME fin 2024, utilisable 90 jours après", any(
-    x["cik"] == CIK_13D and x["faits"]["Assets"][0][1:3] == ["2024-12-31", 123456] and x["faits"]["Assets"][0][4] == "2025-03-31"
-    for x in fin), str(fin[:1])[:200])
+gfi = next((x["faits"] for x in fin if x["cik"] == CIK_13D), {})
+verifier("Finances : l'actif de GME fin 2024 = la 1re version (pas la correction de 2026), utilisable à sa date de dépôt",
+         gfi.get("Assets") == [[None, "2024-12-31", 123456, "A1", "2025-03-25", "10-K"]], str(gfi.get("Assets")))
+verifier("Finances : exercice et trimestre gardés ; cumul de 6 mois et fait d'un 8-K écartés",
+         gfi.get("NetIncomeLoss") == [["2024-01-01", "2024-12-31", 5000, "A1", "2025-03-25", "10-K"],
+                                      ["2025-04-01", "2025-06-30", 1200, "Q2", "2025-08-10", "10-Q"]], str(gfi.get("NetIncomeLoss")))
+verifier("companyfacts.zip : une seule requête pour toutes les compagnies", sum(u == d.FAITS_ZIP for u in APPELS) == 1)
 px = {x["s"]: x for x in lire(S / "prix.jsonl.gz")}
 verifier("Prix : SPY, IVV, VOO, IWM et les symboles avec un achat", {"SPY", "IVV", "VOO", "IWM", "GME"} <= set(px))
 spy = px["SPY"]
@@ -230,5 +248,36 @@ verifier("Bilan : un achat de moins de 60 jours avant ne compte pas encore", e3[
 treize = d.lire_13(MASTER, {CIK_13D})
 verifier("13D : le dépôt est rangé sur la compagnie visée seulement (pas le fonds), le 10-K ignoré",
          treize == [["2025-03-20", "13D", [CIK_13D]]], str(treize))
+# ---- Dates des prix : un achat d'un jour doit être plus proche de la clôture de CE jour ----
+import math  # noqa: E402
+import random  # noqa: E402
+hasard = random.Random(3)
+jours_px = [x for x in (date(2024, 1, 1) + timedelta(days=i) for i in range(400)) if x.weekday() < 5]
+cal_px = [int(f"{x:%Y%m%d}") for x in jours_px]
+px = d.Prix()
+niveau = 50.0
+for j in cal_px:
+    niveau *= math.exp(hasard.gauss(0, 0.02))
+    px.d["XX"].append(j)
+    px.p["XX"].append(niveau)
+    px.q["XX"].append(0)
+    px.c["XX"].append("C")
+cloture = {d.iso(str(j)): float(v) for j, v in zip(px.d["XX"], px.p["XX"])}
+isos = [d.iso(str(j)) for j in cal_px]
+
+
+def achats(decalage):
+    return [{"sens": "achat", "symbole": "XX", "jour_premier": isos[i], "jour_dernier": isos[i],
+             "prix_moyen": cloture[isos[i + decalage]] * math.exp(hasard.gauss(0, 0.005))} for i in range(5, len(isos) - 5)]
+
+
+bon = d.verifier_dates_prix(achats(0), px, cal_px)
+verifier("Dates des prix : achats au prix du jour → bon alignement", bon["bon_alignement"] and bon["achats_compares"] > 200, str(bon))
+mauvais = d.verifier_dates_prix(achats(1), px, cal_px)
+verifier("Dates des prix décalées d'un jour → alerte (le lendemain est plus proche)",
+         not mauvais["bon_alignement"] and min(mauvais["ecart_median_veille_jour_lendemain"],
+                                               key=mauvais["ecart_median_veille_jour_lendemain"].get) == "1", str(mauvais))
+verifier("Résumé : l'alignement des prix est publié", "alignement_des_prix" in res)
+
 print(f"\n{sum(ok)}/{len(ok)} vérifications réussies")
 sys.exit(0 if all(ok) else 1)

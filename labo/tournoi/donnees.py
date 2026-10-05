@@ -8,10 +8,10 @@
   jour ouvrable d'avant : la date de clôture gardée ici est la date de règlement précédente du calendrier des fichiers
   (peut être décalée d'un jour autour des congés des banques où la bourse est ouverte). Un titre a un prix seulement les
   jours où il a des échecs de livraison.
-- Valeur en bourse : actions en circulation (dossier companyconcept de la SEC, le fait DÉPOSÉ le plus récent avant le
-  dépôt du formulaire 4) × dernière clôture de la SEC dans les 30 jours avant le dépôt.
-- Finances : frames XBRL annuelles de la SEC (us-gaap), utilisables 90 jours après la fin de l'exercice (délai le plus
-  long du 10-K).
+- Faits XBRL : le fichier complet de la SEC (companyfacts.zip, une seule requête), avec la date de DÉPÔT de chaque
+  chiffre. Valeur en bourse : actions en circulation (le fait DÉPOSÉ le plus récent avant le dépôt du formulaire 4) ×
+  dernière clôture de la SEC dans les 30 jours avant le dépôt. Finances (10-K et 10-Q) : pour chaque période, la
+  PREMIÈRE version déposée, utilisable à partir de sa date de dépôt (pas les chiffres corrigés plus tard).
 - 13D et 13G : index trimestriels officiels d'EDGAR ; une compagnie « visée » = un CIK du dépôt qui est aussi une
   compagnie des formulaires 4 (un déposant qui est lui-même une compagnie cotée est donc compté aussi : rare).
 
@@ -26,6 +26,7 @@ import csv
 import gzip
 import io
 import json
+import math
 import os
 import re
 import sys
@@ -53,15 +54,12 @@ PRIX_DEBUT = "201507a"  # fichiers d'échecs de livraison : 2e moitié de juin 2
 MARCHE = ("SPY", "IVV", "VOO", "IWM")
 FORMES_13 = {"SC 13D": "13D", "SCHEDULE 13D": "13D", "SC 13D/A": "13D/A", "SCHEDULE 13D/A": "13D/A",
              "SC 13G": "13G", "SCHEDULE 13G": "13G", "SC 13G/A": "13G/A", "SCHEDULE 13G/A": "13G/A"}
-CONCEPT = "https://data.sec.gov/api/xbrl/companyconcept/CIK{:010d}/dei/EntityCommonStockSharesOutstanding.json"
-FRAME = "https://data.sec.gov/api/xbrl/frames/us-gaap/{}/USD/{}.json"
-# (concept, période) : I = au dernier jour de l'année civile (bilan) ; sinon l'exercice annuel (résultats)
-CONCEPTS = [("Assets", "I"), ("Liabilities", "I"), ("StockholdersEquity", "I"), ("AssetsCurrent", "I"),
-            ("LiabilitiesCurrent", "I"), ("LongTermDebtNoncurrent", "I"), ("NetIncomeLoss", ""),
-            ("NetCashProvidedByUsedInOperatingActivities", ""), ("Revenues", ""),
-            ("RevenueFromContractWithCustomerExcludingAssessedTax", ""), ("SalesRevenueNet", ""), ("GrossProfit", "")]
-ANNEES_FINANCES = range(2013, 2026)
-DELAI_FINANCES = 90
+FAITS_ZIP = "https://www.sec.gov/Archives/edgar/daily-index/xbrl/companyfacts.zip"
+CONCEPTS = ["Assets", "Liabilities", "StockholdersEquity", "AssetsCurrent", "LiabilitiesCurrent", "LongTermDebtNoncurrent",
+            "NetIncomeLoss", "NetCashProvidedByUsedInOperatingActivities", "Revenues",
+            "RevenueFromContractWithCustomerExcludingAssessedTax", "SalesRevenueNet", "GrossProfit"]
+FORMES_FINANCES = {"10-K", "10-K/A", "10-Q", "10-Q/A", "10-KT", "10-KT/A"}
+HISTOIRE_FINANCES = 3 * 365  # finances gardées dans une période : périodes finies jusqu'à 3 ans avant son contexte
 VIDES = {"NONE", "NA", "N-A", "NULL", "N", "TBD", ""}
 
 compte = Counter()
@@ -104,6 +102,13 @@ def brut(url, nom=None):
         (CACHE / nom).parent.mkdir(parents=True, exist_ok=True)
         (CACHE / nom).write_bytes(t.contenu)
     return t.contenu
+
+
+def fichier(url, nom):
+    """Un gros fichier gardé dans le cache : téléchargé une fois, puis lu sur le disque (pas en mémoire)."""
+    if not (CACHE / nom).exists():
+        brut(url, nom)
+    return CACHE / nom
 
 
 def ou_rien(url):
@@ -427,6 +432,27 @@ def ajouter_marche_et_valeur(evs, prix, faits_de):
         e["valeur_m"] = round(actions * veille[1] / 1e6, 2) if actions and veille else None
 
 
+def verifier_dates_prix(evs, prix, calendrier):
+    """Les dates des prix de la SEC sont-elles les bonnes ? (vérification interne, sans autre site) Un achat en bourse fait
+    en un seul jour doit être plus proche, en médiane, de la clôture de CE jour que de celle du jour de bourse d'avant ou
+    d'après. Si les dates étaient décalées d'un jour, une règle rapide aurait l'air gagnante par erreur."""
+    cal = [iso(str(x)) for x in calendrier]
+    ecarts = {-1: [], 0: [], 1: []}
+    for e in evs:
+        if e["sens"] != "achat" or not e["symbole"] or not e.get("prix_moyen") or e["jour_premier"] != e["jour_dernier"]:
+            continue
+        k = bisect_left(cal, e["jour_premier"] or "")
+        if not (0 < k < len(cal) - 1) or cal[k] != e["jour_premier"]:
+            continue
+        c = [prix.dernier(e["symbole"], cal[k + lag], 0) for lag in (-1, 0, 1)]
+        if all(c) and all(x[1] > 0 for x in c):
+            for lag, x in zip((-1, 0, 1), c):
+                ecarts[lag].append(abs(math.log(e["prix_moyen"] / x[1])))
+    med = {str(lag): round(sorted(v)[len(v) // 2], 5) for lag, v in ecarts.items() if v}
+    return {"achats_compares": len(ecarts[0]), "ecart_median_veille_jour_lendemain": med,
+            "bon_alignement": bool(med) and min(med, key=med.get) == "0"}
+
+
 def ajouter_bilan_initie(evs, prix):
     """Bilan de l'initié AVANT l'info : ses achats en bourse passés (dépôt ≥ 60 jours avant, prix de la SEC dès juillet
     2015), chacun mesuré 1 mois : achat à la 1re clôture au moins 1 jour après son dépôt (≤ 10 jours), vente à la 1re
@@ -512,12 +538,34 @@ def ajouter_13(evs, treize):
     return par_cie
 
 
-# ---------- 4. Finances (frames XBRL annuelles) ----------
+# ---------- 4. Faits XBRL (companyfacts.zip) ----------
 
-def lire_frame(contenu, garder):
-    j = json.loads(contenu)
-    return [[str(r["cik"]), r.get("start"), r["end"], r["val"], r.get("accn")] for r in j.get("data", [])
-            if garder is None or str(r.get("cik")) in garder]
+def extraire_faits(contenu):
+    """companyfacts d'une compagnie → (actions [[fin, valeur, déposé]], finances {concept: [[début, fin, valeur, numéro,
+    déposé, forme]]}). Pour chaque période d'un concept : la PREMIÈRE version déposée dans un 10-K ou un 10-Q (une
+    correction déposée plus tard n'était pas connue avant). Durées gardées : un trimestre (80 à 100 jours) ou un
+    exercice (350 à 380 jours) ; les bilans (sans début) tous."""
+    faits = json.loads(contenu).get("facts", {})
+    actions = [[f.get("end"), f.get("val"), f.get("filed")] for f in
+               faits.get("dei", {}).get("EntityCommonStockSharesOutstanding", {}).get("units", {}).get("shares", [])]
+    finances = {}
+    for concept in CONCEPTS:
+        premiers = {}
+        for f in faits.get("us-gaap", {}).get(concept, {}).get("units", {}).get("USD", []):
+            if f.get("form") not in FORMES_FINANCES or not f.get("end") or not f.get("filed") or f.get("val") is None:
+                continue
+            debut = f.get("start")
+            if debut:
+                n = (date.fromisoformat(f["end"]) - date.fromisoformat(debut)).days
+                if not (80 <= n <= 100 or 350 <= n <= 380):
+                    continue
+            x = [debut, f["end"], f["val"], f.get("accn"), f["filed"], f["form"]]
+            cle = (debut, f["end"])
+            if cle not in premiers or (x[4], x[3] or "") < (premiers[cle][4], premiers[cle][3] or ""):
+                premiers[cle] = x
+        if premiers:
+            finances[concept] = sorted(premiers.values(), key=lambda x: (x[1], x[0] or ""))
+    return actions, finances
 
 
 # ---------- Écriture ----------
@@ -543,8 +591,10 @@ def ecrire_periode(dossier, evs, prix, finances, treize_par_cie, debut, fin, pri
     ciks = {e["cik"] for e in choisis}
     n_ev = ecrire_jsonl(dossier / "evenements.jsonl.gz", sorted(choisis, key=lambda e: (e["depot"], e["id"])))
     n_px = ecrire_jsonl(dossier / "prix.jsonl.gz", prix.lignes(achats | set(MARCHE), prix_depuis))
-    n_fi = ecrire_jsonl(dossier / "finances.jsonl.gz",
-                        ({"cik": c, "faits": v} for c, v in sorted(finances.items()) if c in ciks))
+    depuis_fi = (debut - timedelta(days=CONTEXTE_JOURS + HISTOIRE_FINANCES)).isoformat()
+    n_fi = ecrire_jsonl(dossier / "finances.jsonl.gz", (
+        {"cik": c, "faits": {k: [f for f in fs if f[1] >= depuis_fi] for k, fs in v.items()}}
+        for c, v in sorted(finances.items()) if c in ciks))
     n_13 = ecrire_jsonl(dossier / "13d13g.jsonl.gz",
                         ({"cik": c, "depots": [x for x in v if x[0] >= prix_depuis]} for c, v in sorted(treize_par_cie.items())
                          if c in ciks))
@@ -623,25 +673,34 @@ def main():
         if m not in prix.d:
             raise SystemExit(f"pas de prix pour {m} : le banc d'essai ne peut pas comparer au marché")
 
-    # --- Actions en circulation (companyconcept) des compagnies avec un achat ---
+    # --- Faits XBRL (actions en circulation, finances) des compagnies avec un achat : companyfacts.zip, une requête ---
     ciks_achat = sorted({e["cik"] for e in evs if e["sens"] == "achat" and e["depot"] >= DEBUT.isoformat()}, key=int)
-    faits_de = {}
-    for i, cik in enumerate(ciks_achat):
-        def faire(cik=cik):
-            b = ou_rien(CONCEPT.format(int(cik)))
-            if b in (None, "ERREUR"):
-                return [] if b is None else b
-            return [[f.get("end"), f.get("val"), f.get("filed")] for f in json.loads(b).get("units", {}).get("shares", [])]
-        x = garde(f"concept/{int(cik)}.json.gz", faire)
-        if x == "ERREUR":
-            compte["actions en circulation illisibles"] += 1
-            continue
-        faits_de[cik] = x
-        if i % 1000 == 0:
-            dire(f"actions en circulation : {i:,}/{len(ciks_achat):,}")
+    faits_de, finances = {}, {}
+    with zipfile.ZipFile(fichier(FAITS_ZIP, "tournoi/companyfacts.zip")) as z:
+        noms = set(z.namelist())
+        for i, cik in enumerate(ciks_achat):
+            nom = f"CIK{int(cik):010d}.json"
+            if nom not in noms:
+                compte["compagnies sans faits XBRL"] += 1
+                continue
+            try:
+                faits_de[cik], fi = extraire_faits(z.read(nom))
+            except (ValueError, KeyError, TypeError):
+                compte["faits XBRL illisibles"] += 1
+                continue
+            if fi:
+                finances[cik] = fi
+            if i % 2000 == 0:
+                dire(f"faits XBRL : {i:,}/{len(ciks_achat):,}")
+    dire(f"faits XBRL : {len(faits_de):,} compagnies sur {len(ciks_achat):,} · avec finances : {len(finances):,} · "
+         f"sans faits : {compte['compagnies sans faits XBRL']} · illisibles : {compte['faits XBRL illisibles']}")
     ajouter_marche_et_valeur(evs, prix, faits_de)
     ajouter_bilan_initie(evs, prix)
-    dire(f"valeur en bourse et bilan des initiés calculés · illisibles : {compte['actions en circulation illisibles']}")
+    alignement = verifier_dates_prix(evs, prix, calendrier)
+    dire(f"dates des prix : {alignement}")
+    if not alignement["bon_alignement"]:
+        dire("ALERTE : les achats sont plus proches de la clôture d'un AUTRE jour : dates des prix à revoir avant les tests")
+    dire("valeur en bourse et bilan des initiés calculés")
 
     # --- 13D et 13G ---
     garder = {e["cik"] for e in evs}
@@ -661,31 +720,13 @@ def main():
     treize_par_cie = ajouter_13(evs, treize)
     dire(f"13D et 13G sur des compagnies des formulaires 4 : {len(treize):,}")
 
-    # --- Finances (frames XBRL annuelles) ---
-    finances = defaultdict(lambda: defaultdict(list))
-    for concept, genre in CONCEPTS:
-        for an in ANNEES_FINANCES:
-            periode = f"CY{an}Q4I" if genre == "I" else f"CY{an}"
-            def faire(concept=concept, periode=periode):
-                b = ou_rien(FRAME.format(concept, periode))
-                if b in (None, "ERREUR"):
-                    return [] if b is None else b
-                return lire_frame(b, None)
-            x = garde(f"tournoi/frames/{concept}_{periode}.json.gz", faire)
-            if x == "ERREUR":
-                raise SystemExit(f"frame XBRL illisible : {concept} {periode}")
-            for cik, debut, fin, val, accn in x:
-                if cik in garder:
-                    finances[cik][concept].append([debut, fin, val, accn,
-                                                   (date.fromisoformat(fin) + timedelta(days=DELAI_FINANCES)).isoformat()])
-    dire(f"finances XBRL : {len(finances):,} compagnies")
-
     # --- Sorties : découverte (branche labo) et coffre-fort (cache seulement) ---
     resume = {
         "decouverte": ecrire_periode(SORTIE, evs, prix, finances, treize_par_cie, DECOUVERTE, FIN, "2022-07-01", calendrier),
         "coffre": ecrire_periode(COFFRE, evs, prix, finances, treize_par_cie, DEBUT, DECOUVERTE - timedelta(days=1),
                                  "2015-07-01", calendrier),
         "couverture_decouverte": couverture([e for e in evs if e["depot"] >= DECOUVERTE.isoformat()]),
+        "alignement_des_prix": alignement,
         "compte": dict(compte)}
     (SORTIE / "resume.json").write_text(json.dumps(resume, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     # Le résumé du coffre-fort ne dit QUE les nombres de lignes (rien sur les rendements)

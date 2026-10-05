@@ -14,9 +14,15 @@ Une règle = un fichier Python (labo/tournoi/regles/<id>.py) qui définit :
     def priorite(e, ctx) -> float       # trop de signaux le même jour : le plus haut d'abord (sinon : dépôt, numéro)
     TOLERANCE_ENTREE = 3                # pas de prix le jour prévu : réessayer jusqu'à N jours de bourse (0 = abandon)
     UNE_ENTREE_PAR_SYMBOLE_JOURS = 0    # après un achat, aucun nouvel achat du même symbole pendant N jours civils
+    LIQUIDE_JOURS = 0                   # avec "SPY" : l'argent d'une vente reste en liquide N jours de bourse pour payer
+                                        # le prochain achat (évite 2 transactions SPY), puis va dans SPY
+    MONTANT_MIN = 50                    # une position plus petite n'est pas achetée
+    TOLERANCE_SORTIE = 10               # pas de prix le jour de vente : 1re clôture des N jours de bourse suivants, sinon
+                                        # la dernière connue
 
 `ctx` ne montre QUE ce qui était connu au moment de la décision : toute demande d'une donnée plus récente lève une
-erreur (garde-fou contre le futur). `ctx.evenements_marche(depuis)` donne tous les formulaires 4 (toutes compagnies)
+erreur (garde-fou contre le futur). Les quantités d'échecs de livraison ne sont visibles que 35 jours civils après
+(la SEC les publie par demi-mois, quelques semaines plus tard) ; les finances, à partir de leur date de dépôt. `ctx.evenements_marche(depuis)` donne tous les formulaires 4 (toutes compagnies)
 déposés depuis une date jusqu'au jour de la décision : pour une « météo » des initiés, sans garder de mémoire.
 garder() est appelé dans l'ordre des dépôts, au fil des jours (un dépôt n'est lu que le jour de bourse qui suit) : même
 une règle qui se souviendrait des dépôts déjà vus ne pourrait pas voir le futur.
@@ -51,6 +57,7 @@ CAPITAL = 10_000.0
 FRAIS = 10.0
 TOLERANCE_ENTREE = 3   # jours de bourse
 TOLERANCE_SORTIE = 10  # jours de bourse
+DELAI_ECHECS = 35  # jours civils avant qu'une quantité d'échecs de livraison soit publiée (demi-mois + quelques semaines)
 EN_ATTENTE_MAX = 0.05
 
 
@@ -140,21 +147,25 @@ class Contexte:
         return (p[0][i], p[1][i], p[2][i])
 
     def echecs(self, symbole, depuis):
-        """[(date, quantité d'échecs de livraison)] depuis une date."""
+        """[(date, quantité d'échecs de livraison)] depuis une date, seulement celles PUBLIÉES au jour de la décision :
+        au moins 35 jours civils avant (la SEC les publie par demi-mois, quelques semaines plus tard)."""
         self._verifier(self.jour)
         p = self._d.prix.get(symbole)
         if not p:
             return []
-        i, j = bisect_left(p[0], depuis), bisect_right(p[0], self.jour)
+        limite = (date.fromisoformat(self.jour) - timedelta(days=DELAI_ECHECS)).isoformat()
+        i, j = bisect_left(p[0], depuis), bisect_right(p[0], limite)
         return [(p[0][k], p[3][k]) for k in range(i, j)]
 
     def finances(self, cik):
-        """{concept: [début, fin, valeur]} des exercices annuels UTILISABLES aujourd'hui (le plus récent en dernier)."""
+        """{concept: [[début, fin, valeur, forme], ...]} DÉPOSÉS au plus tard aujourd'hui (fin la plus récente en dernier).
+        Début None = un bilan (à la date de fin) ; sinon une durée : un trimestre (80 à 100 jours) ou un exercice (350 à
+        380 jours). Forme : « 10-K » (rapport annuel) ou « 10-Q » (trimestriel), ou leurs modifications « /A »."""
         sortie = {}
         for concept, faits in (self._d.finances.get(cik) or {}).items():
-            ok = sorted((f for f in faits if f[4] <= self.jour), key=lambda f: f[1])
+            ok = sorted((f for f in faits if f[4] <= self.jour), key=lambda f: (f[1], f[0] or ""))
             if ok:
-                sortie[concept] = [[f[0], f[1], f[2]] for f in ok]
+                sortie[concept] = [[f[0], f[1], f[2], f[5] if len(f) > 5 else None] for f in ok]
         return sortie
 
     def depots_13(self, cik, depuis):
@@ -215,9 +226,10 @@ def rendement_enchaine(d, s, entree, sortie):
     return r * p[1][j] / base - 1
 
 
-def simuler(regle, d, debut=None, fin_prix=None):
+def simuler(regle, d, debut=None, fin_prix=None, journal=None):
     """Le portefeuille, jour de bourse par jour de bourse. Chaque décision n'utilise que ce qui était connu AVANT la
-    clôture où l'on achète ou vend : garder() voit le soir du dépôt ; investir() et sortir_avant() voient la veille."""
+    clôture où l'on achète ou vend : garder() voit le soir du dépôt ; investir() et sortir_avant() voient la veille.
+    `journal` (dict, facultatif) : ce que sont devenus les signaux (achetés, sans prix, places pleines, etc.)."""
     cal = d.calendrier
     fin_prix = fin_prix or cal[-1]
     jours_entree = getattr(regle, "JOURS_ENTREE", 1)
@@ -225,8 +237,15 @@ def simuler(regle, d, debut=None, fin_prix=None):
     max_pos = getattr(regle, "MAX_POSITIONS", 10)
     attend = getattr(regle, "ARGENT_QUI_ATTEND", "SPY")
     tol_entree = getattr(regle, "TOLERANCE_ENTREE", TOLERANCE_ENTREE)
+    tol_sortie = getattr(regle, "TOLERANCE_SORTIE", TOLERANCE_SORTIE)
     pause = getattr(regle, "UNE_ENTREE_PAR_SYMBOLE_JOURS", 0)
     frais_spy = FRAIS if attend == "SPY" else 0.0
+    liquide_jours = getattr(regle, "LIQUIDE_JOURS", 0) if attend == "SPY" else 0
+    montant_min = getattr(regle, "MONTANT_MIN", 50.0)
+    j_ = journal if journal is not None else {}
+    for k in ("signaux", "achats", "sans_prix", "meteo_fermee", "places_pleines", "deja_en_portefeuille",
+              "pause_symbole", "montant_trop_petit"):
+        j_.setdefault(k, 0)
     dernier_achat = {}
     if jours_entree < 1:
         raise ValueError("JOURS_ENTREE doit être au moins 1 : l'heure du dépôt est inconnue")
@@ -246,6 +265,7 @@ def simuler(regle, d, debut=None, fin_prix=None):
                 jour = jour_de_bourse(cal, e["depot"], jours_entree)
                 if jour:
                     signaux[jour].append(e)
+                    j_["signaux"] += 1
     spy = d.prix["SPY"]
 
     def spy_au(jour):
@@ -254,6 +274,7 @@ def simuler(regle, d, debut=None, fin_prix=None):
     debut = debut or d.periode.get("debut") or min(e["depot"] for e in d.evenements)
     jours = [j for j in cal if debut <= j <= fin_prix]
     argent, parts_spy, positions, attente, transactions, valeur_jour = CAPITAL, 0.0, [], [], [], []
+    liquide = []  # [montant, dernier jour de bourse où il attend] : l'argent des ventes gardé en liquide (LIQUIDE_JOURS)
     veille = None
     for jour in jours:
         lire_signaux(jour)
@@ -272,8 +293,12 @@ def simuler(regle, d, debut=None, fin_prix=None):
                 garder.append(pos)
                 continue
             r = rendement_enchaine(d, pos["s"], pos["entree"], px)
-            net = pos["montant"] * (1 + r) * (1 - pos["demi_ecart"]) - FRAIS - frais_spy
-            argent += net
+            if liquide_jours:  # gardé en liquide : le SPY ne sera racheté (10 $) que s'il n'a pas servi à temps
+                net = pos["montant"] * (1 + r) * (1 - pos["demi_ecart"]) - FRAIS
+                liquide.append([net, jour_de_bourse(cal, jour, liquide_jours) or "9999-12-31"])
+            else:
+                net = pos["montant"] * (1 + r) * (1 - pos["demi_ecart"]) - FRAIS - frais_spy
+                argent += net
             m = spy_au(px[0]) / spy_au(pos["entree"][0]) - 1
             transactions.append({"id": pos["id"], "s": pos["s"], "achat": pos["entree"][0], "vente": px[0],
                                  "jour_vente": jour, "rendement": round(r, 4), "marche": round(m, 4),
@@ -285,9 +310,10 @@ def simuler(regle, d, debut=None, fin_prix=None):
             argent += parts_spy * spy_au(jour)
             parts_spy = 0.0
         meteo = not hasattr(regle, "investir") or (ctx_veille is not None and regle.investir(veille, ctx_veille))
+        j_["sans_prix"] += sum(n + 1 > tol_entree for _, n in attente)
         attente = [(e, n + 1) for e, n in attente if n + 1 <= tol_entree] + [(e, 0) for e in signaux.get(jour, [])]
-        valeur = argent + sum(p["montant"] * (1 + rendement_enchaine(d, p["s"], p["entree"], x))
-                              for p in positions if (x := _dernier(d, p["s"], jour)))
+        valeur = argent + sum(x[0] for x in liquide) + sum(p["montant"] * (1 + rendement_enchaine(d, p["s"], p["entree"], x))
+                                                           for p in positions if (x := _dernier(d, p["s"], jour)))
         reste = []
         if hasattr(regle, "priorite"):
             ordre = sorted(attente, key=lambda x: (-regle.priorite(x[0], Contexte(d, x[0]["depot"])), x[0]["depot"], x[0]["id"]))
@@ -298,27 +324,52 @@ def simuler(regle, d, debut=None, fin_prix=None):
             if px is None:
                 reste.append((e, n))
                 continue
-            if not meteo or len(positions) >= max_pos or any(p["s"] == e["symbole"] for p in positions):
+            if not meteo:
+                j_["meteo_fermee"] += 1
+                continue
+            if len(positions) >= max_pos:
+                j_["places_pleines"] += 1
+                continue
+            if any(p["s"] == e["symbole"] for p in positions):
+                j_["deja_en_portefeuille"] += 1
                 continue
             if pause and e["symbole"] in dernier_achat and \
                     (date.fromisoformat(jour) - date.fromisoformat(dernier_achat[e["symbole"]])).days < pause:
+                j_["pause_symbole"] += 1
                 continue
             w = min(max(regle.poids(e, Contexte(d, e["depot"])), 0.25), 4.0) if hasattr(regle, "poids") else 1.0
-            montant = min(argent - frais_spy, valeur / max_pos * w) - FRAIS
-            if montant < 50:
+            cible, liq = valeur / max_pos * w, sum(x[0] for x in liquide)
+            if liq >= cible:  # payé avec le liquide seulement : pas de SPY à vendre
+                montant, frais_achat = cible - FRAIS, 0.0
+            else:
+                montant, frais_achat = min(liq + argent - frais_spy, cible) - FRAIS, frais_spy
+            if montant < montant_min:
+                j_["montant_trop_petit"] += 1
                 continue
             ecart = demi_ecart(e.get("valeur_m"))
-            argent -= montant + FRAIS + frais_spy
+            a_payer = montant + FRAIS + frais_achat
+            while a_payer > 1e-9 and liquide:  # le liquide d'abord (le plus ancien), puis le SPY vendu
+                prise = min(liquide[0][0], a_payer)
+                liquide[0][0] -= prise
+                a_payer -= prise
+                if liquide[0][0] <= 1e-9:
+                    liquide.pop(0)
+            argent -= a_payer
+            j_["achats"] += 1
             dernier_achat[e["symbole"]] = jour
             sortie_prevue = jour_de_bourse(cal, jour, duree) or "9999-12-31"
             positions.append({"id": e["id"], "s": e["symbole"], "cik": e["cik"], "entree": px,
-                              "montant": montant * (1 - ecart), "cout": montant + FRAIS + frais_spy, "demi_ecart": ecart,
+                              "montant": montant * (1 - ecart), "cout": montant + FRAIS + frais_achat, "demi_ecart": ecart,
                               "sortie_prevue": sortie_prevue,
-                              "sortie_limite": jour_de_bourse(cal, sortie_prevue, TOLERANCE_SORTIE) or "9999-12-31"})
+                              "sortie_limite": jour_de_bourse(cal, sortie_prevue, tol_sortie) or "9999-12-31"})
         attente = reste
+        expire = [x for x in liquide if x[1] <= jour]
+        if expire:  # le liquide qui n'a pas servi à temps va dans SPY : 1 achat de SPY (10 $)
+            argent += sum(x[0] for x in expire) - frais_spy
+            liquide = [x for x in liquide if x[1] > jour]
         if attend == "SPY" and argent > 0:
             parts_spy, argent = argent / spy_au(jour), 0.0
-        valeur_jour.append((jour, argent + parts_spy * spy_au(jour) + sum(
+        valeur_jour.append((jour, argent + parts_spy * spy_au(jour) + sum(x[0] for x in liquide) + sum(
             p["montant"] * (1 + rendement_enchaine(d, p["s"], p["entree"], x))
             for p in positions if (x := _dernier(d, p["s"], jour)))))
         veille = jour
@@ -372,8 +423,10 @@ def statistiques(transactions, valeur_jour, d, positions_ouvertes):
     fins = {}
     for j, v in valeur_jour:
         fins[j[:7]] = (j, v)
-    mois = sorted(fins)
-    ecarts = [(fins[b][1] / fins[a][1] - 1) - (spy_au(fins[b][0]) / spy_au(fins[a][0]) - 1) for a, b in zip(mois, mois[1:])]
+    points = ([valeur_jour[0]] if valeur_jour else []) + [fins[m] for m in sorted(fins)]  # le 1er mois depuis le 1er jour
+    if len(points) > 1 and points[1][0] == points[0][0]:  # 1er jour = fin de son mois : pas de doublon
+        points.pop(0)
+    ecarts = [(b[1] / a[1] - 1) - (spy_au(b[0]) / spy_au(a[0]) - 1) for a, b in zip(points, points[1:])]
     if len(ecarts) > 2:
         moy = sum(ecarts) / len(ecarts)
         sd = math.sqrt(sum((x - moy) ** 2 for x in ecarts) / (len(ecarts) - 1))

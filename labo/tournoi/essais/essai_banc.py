@@ -196,5 +196,49 @@ s = banc.statistiques(t, v, d, ouvertes)
 an = s["annees"]["2023-2024"]
 verifier("Achats de l'année = 1 fermée + 1 encore ouverte", (an["transactions"], an["en_attente"], an["achats"]) == (1, 1, 2), str(an))
 
+# 12. Échecs de livraison : seulement ceux publiés (35 jours civils avant la décision) ; finances : à leur date de dépôt
+d = ecrire([ev("a", "AAA", "2023-07-10")], {"SPY": SPY, "AAA": AAA})
+d.prix["AAA"] = (d.prix["AAA"][0], d.prix["AAA"][1], d.prix["AAA"][2], list(range(len(d.prix["AAA"][0]))))
+vus = banc.Contexte(d, "2023-09-15").echecs("AAA", "2023-07-01")
+verifier("Échecs : le plus récent visible le 15 septembre est celui du 11 août (35 jours avant)", vus[-1][0] == "2023-08-11", str(vus[-1]))
+d.finances = {"a": {"Assets": [[None, "2023-06-30", 100, "n1", "2023-08-01", "10-Q"],
+                               [None, "2023-09-30", 120, "n2", "2023-11-05", "10-Q"]]}}
+verifier("Finances : le 1er octobre, seulement le bilan déposé avant (avec sa forme)",
+         banc.Contexte(d, "2023-10-01").finances("a") == {"Assets": [[None, "2023-06-30", 100, "10-Q"]]})
+
+# 13. Liquide gardé 10 jours (LIQUIDE_JOURS) : SPY plat à 100 $, AAA et BBB plats à 10 $ ; taille inconnue (1 %)
+BBB = [(j, 10.0, "B") for j in JOURS]
+d = ecrire([ev("a", "AAA", "2023-07-10"), ev("b", "BBB", "2023-07-19")], {"SPY": SPY, "AAA": AAA[:20] + [(j, 10.0, "A") for j in JOURS[20:]], "BBB": BBB})
+d.prix["AAA"] = ([j for j in JOURS], [10.0] * len(JOURS), ["A"] * len(JOURS), [0] * len(JOURS))
+journal = {}
+t13, v13, _ = banc.simuler(regle(MAX_POSITIONS=1, DUREE=5, ARGENT_QUI_ATTEND="SPY", LIQUIDE_JOURS=10), d, debut="2023-07-03",
+                           journal=journal)
+p1 = (10000 - 10 - 10) * 0.99                 # achat 1 : 10 $ + 10 $ (SPY vendu), 1 % d'écart
+l1 = p1 * 0.99 - 10                           # vente 1 : gardée en liquide (pas de SPY racheté)
+p2 = (l1 - 10) * 0.99                         # achat 2 : payé avec le liquide, pas de SPY vendu
+l2 = p2 * 0.99 - 10                           # vente 2 : liquide, puis dans SPY 10 jours de bourse plus tard (10 $)
+attendu = l2 - 10
+verifier("Liquide 10 jours : 2 transactions SPY évitées, au cent près", abs(v13[-1][1] - attendu) < 0.01,
+         f"{v13[-1][1]:.4f} contre {attendu:.4f}")
+sans = (((10000 - 20) * 0.99 * 0.99 - 20) - 20) * 0.99 * 0.99 - 20
+t13b, v13b, _ = banc.simuler(regle(MAX_POSITIONS=1, DUREE=5, ARGENT_QUI_ATTEND="SPY"), d, debut="2023-07-03")
+verifier("Sans liquide (par défaut) : 4 transactions SPY, au cent près", abs(v13b[-1][1] - sans) < 0.01,
+         f"{v13b[-1][1]:.4f} contre {sans:.4f}")
+liq_jour = [x for x in v13 if x[0] == "2023-08-09"][0][1]
+verifier("Le liquide ne suit pas le S&P 500 avant d'y aller (valeur constante jusqu'au 10 août)", abs(liq_jour - l2) < 0.01,
+         f"{liq_jour:.4f} contre {l2:.4f}")
+
+# 14. Journal des signaux : 1 acheté, 1 place pleine, 1 sans prix ; montant minimal
+CCC = [("2023-09-01", 5.0, "C")]
+d = ecrire([ev("a", "AAA", "2023-07-10"), ev("b", "AAA2", "2023-07-10"), ev("c", "CCC", "2023-07-10")],
+           {"SPY": SPY, "AAA": AAA, "AAA2": AAA, "CCC": CCC})
+journal = {}
+banc.simuler(regle(MAX_POSITIONS=1), d, debut="2023-07-03", journal=journal)
+verifier("Journal : 3 signaux, 1 achat, 1 place pleine, 1 sans prix",
+         (journal["signaux"], journal["achats"], journal["places_pleines"], journal["sans_prix"]) == (3, 1, 1, 1), str(journal))
+journal = {}
+t14, _, _ = banc.simuler(regle(MAX_POSITIONS=1, MONTANT_MIN=20000), d, debut="2023-07-03", journal=journal)
+verifier("MONTANT_MIN : une position plus petite n'est pas achetée", not t14 and journal["montant_trop_petit"] >= 1, str(journal))
+
 print(f"\n{sum(ok)}/{len(ok)} vérifications réussies")
 sys.exit(0 if all(ok) else 1)

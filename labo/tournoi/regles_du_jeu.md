@@ -59,3 +59,25 @@ pour Radar (un lot normal : code, tests, labo, photos), jamais une garantie de g
   jusqu'au jour de la décision, pour la météo des initiés), et chaque période contient 1 an de dépôts de contexte, jamais
   achetés. Raison : sans cela, une règle « météo » aurait pu tricher sans que le garde-fou le voie, ou manquer de
   données pour ses premières décisions.
+- 5 octobre 2026, vers 21 h UTC, AVANT que le jeu de recherche existe, après le critique de l'étape 1 :
+  1. **Échecs de livraison** : publiés par demi-mois, quelques semaines plus tard. Le banc ne montre une quantité
+     d'échecs que 35 jours civils après. `liquidite_taille-2`, telle qu'écrite, décide avec les échecs des 20 jours
+     avant l'achat, pas encore publiés : **écartée** (règle impossible sans information du futur), pas modifiée.
+  2. **Finances** : la PREMIÈRE version de chaque chiffre (10-K et 10-Q), utilisable à partir de sa vraie date de
+     dépôt (companyfacts.zip de la SEC), au lieu des « frames » (dernière version, parfois corrigée plus tard) et d'un
+     délai fixe de 90 jours. `prix_bas-2` est donc appliquée sans fuite : un rapport n'est vu qu'une fois déposé.
+  3. **`initie-2-historique`** : un achat passé de l'initié ne compte que si sa mesure était finie avant la décision
+     (les chercheurs devaient n'utiliser que l'information connue au moment de la décision ; le banc l'impose).
+  4. **Doublons** signalés par le critique : testés quand même (ils sont pré-enregistrés), mais montrés comme
+     doublons ; le choix des finalistes en tient compte (tests multiples).
+  5. **Publié en plus** (les critères ne changent pas) : résultat sur toute la période contre le S&P 500 et contre les
+     petites compagnies (IWM), nombre d'années gagnées, et signaux perdus faute de prix de la SEC (biais possible :
+     un prix n'existe que les jours d'échecs).
+  6. **Témoin de la météo** (`temoin-meteo`, dans `regles_preenregistrees.json`, partie `temoins`) : le panier des
+     règles meteo-*, toujours allumé. Il sert seulement à voir si un interrupteur aide ; il ne peut pas être finaliste.
+  7. **Banc** : options ajoutées pour toutes les règles, demandées par des règles pré-enregistrées : argent gardé en
+     liquide N jours après une vente (`LIQUIDE_JOURS`, critique-1 à 3), montant minimal (`MONTANT_MIN`), délai de
+     vente sans prix (`TOLERANCE_SORTIE`, meteo-*). Par défaut, rien ne change.
+  8. **Dates des prix** : vérifiées à l'étape 0, sans autre site — un achat d'initié fait en un seul jour doit être
+     plus proche de la clôture de CE jour que de celle de la veille ou du lendemain (médiane sur des milliers
+     d'achats). Sinon : ALERTE, et aucun test avant d'avoir corrigé.

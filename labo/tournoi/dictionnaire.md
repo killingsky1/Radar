@@ -41,7 +41,9 @@ d'un événement n'utilise que ce qui était DÉPOSÉ avant le formulaire 4 de c
 
 `{"s": symbole, "d": [dates de clôture AAAAMMJJ], "p": [prix], "q": [quantité d'échecs de livraison], "c": [CUSIP]}`
 
-- Source : fichiers d'échecs de livraison de la SEC. Pour une date de règlement, la SEC donne la clôture du jour ouvrable
+- Source : fichiers d'échecs de livraison de la SEC. Les QUANTITÉS d'échecs sont publiées par demi-mois, quelques
+  semaines plus tard : dans une règle, `ctx.echecs()` ne montre que celles d'au moins 35 jours civils avant.
+  Pour une date de règlement, la SEC donne la clôture du jour ouvrable
   d'avant ; la date gardée est la date de règlement précédente du calendrier des fichiers (décalage possible d'un jour
   autour des congés des banques où la bourse est ouverte).
 - **Un titre a un prix seulement les jours où il a des échecs de livraison** : souvent pas tous les jours pour les
@@ -51,14 +53,19 @@ d'un événement n'utilise que ce qui était DÉPOSÉ avant le formulaire 4 de c
 - Découverte : prix du 1er juillet 2022 à mi-septembre 2026 (les derniers fichiers publiés).
 - Aucune source gratuite des clôtures de CHAQUE jour n'est permise : Stooq interdit les robots (robots.txt).
 
-## finances.jsonl.gz (une ligne par compagnie)
+## finances.jsonl.gz (une ligne par compagnie avec un achat)
 
-`{"cik": ..., "faits": {concept: [[début, fin, valeur, numéro du dépôt, utilisable_le], ...]}}` — frames XBRL annuelles de
-la SEC : bilan au 31 décembre (Assets, Liabilities, StockholdersEquity, AssetsCurrent, LiabilitiesCurrent,
-LongTermDebtNoncurrent) et résultats de l'exercice (NetIncomeLoss, NetCashProvidedByUsedInOperatingActivities, Revenues,
-RevenueFromContractWithCustomerExcludingAssessedTax, SalesRevenueNet, GrossProfit). `utilisable_le` = fin + 90 jours
-(délai le plus long du 10-K) : n'utiliser une valeur qu'à partir de cette date. Un exercice qui ne finit pas en décembre
-est rangé par la SEC dans l'année civile la plus proche.
+`{"cik": ..., "faits": {concept: [[début, fin, valeur, numéro du dépôt, déposé_le, forme], ...]}}` — tiré du fichier
+complet de la SEC (companyfacts.zip). Concepts : Assets, Liabilities, StockholdersEquity, AssetsCurrent,
+LiabilitiesCurrent, LongTermDebtNoncurrent (bilans : `début` = null, à la date `fin`) ; NetIncomeLoss,
+NetCashProvidedByUsedInOperatingActivities, Revenues, RevenueFromContractWithCustomerExcludingAssessedTax,
+SalesRevenueNet, GrossProfit (durées : un trimestre de 80 à 100 jours, ou un exercice de 350 à 380 jours).
+- Formes : 10-K (rapport annuel), 10-Q (trimestriel), et leurs modifications (/A).
+- Pour chaque période : la **PREMIÈRE version déposée** (une correction déposée plus tard n'était pas connue avant).
+- `déposé_le` = la vraie date de dépôt : le banc ne montre un chiffre qu'à partir de cette date.
+- Dans une règle : `ctx.finances(cik)` → `{concept: [[début, fin, valeur, forme], ...]}` (déposés au plus tard ce
+  jour-là, la fin la plus récente en dernier).
+- Gardé : périodes finies jusqu'à 3 ans avant le début du contexte.
 
 ## 13d13g.jsonl.gz (une ligne par compagnie)
 
