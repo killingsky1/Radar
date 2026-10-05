@@ -1,0 +1,54 @@
+name: "Labo (tournoi, étape 2 : les règles sur la découverte, juillet 2023 à juin 2026)"
+
+# Lancé à la main seulement, quand le jeu de recherche existe (étape 0) et que les règles sont programmées 2 fois.
+# Ne lit aucun site : seulement le cache du labo (la découverte). Le coffre-fort n'est jamais lu ici.
+on:
+  workflow_dispatch:
+    inputs:
+      regles:
+        description: "ids des règles (séparés par des espaces) ; vide = toutes"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: labo82
+  cancel-in-progress: false
+
+jobs:
+  juger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Le jeu de recherche (cache de l'étape 0)
+        uses: actions/cache/restore@v4
+        with:
+          path: cache
+          key: tournoi-aucun
+          restore-keys: tournoi-
+      - name: La découverte est là, le coffre-fort ne sert pas
+        run: |
+          test -f cache/decouverte/evenements.jsonl.gz
+          rm -rf cache/coffre
+          ls -la cache/decouverte
+      - name: Essais du banc et du juge
+        run: |
+          python labo/tournoi/essais/essai_banc.py
+          python labo/tournoi/essais/essai_juger.py
+      - name: Juger les règles (2 programmations comparées, 3 critères)
+        run: python labo/tournoi/juger.py ${{ github.event.inputs.regles }} --donnees cache/decouverte --sortie labo/tournoi/resultats/decouverte
+      - name: Sauvegarder les résultats
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/tournoi/resultats
+          git commit -m "Labo : tournoi, règles jugées sur la découverte ($(date -u +'%Y-%m-%d %H:%M') UTC)" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo

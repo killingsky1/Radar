@@ -149,7 +149,7 @@ def lire(ch):
         return [json.loads(l) for l in f]
 
 
-S, C = TMP / "sortie", TMP / "cache" / "coffre"
+S, C, R = TMP / "cache" / "decouverte", TMP / "cache" / "coffre", TMP / "sortie"
 dec, cof = lire(S / "evenements.jsonl.gz"), lire(C / "evenements.jsonl.gz")
 dec_p = [e for e in dec if e["depot"] >= "2023-07-01"]
 dec_c = [e for e in dec if e["depot"] < "2023-07-01"]
@@ -160,7 +160,7 @@ verifier("periode.json de la découverte : début, fin, contexte", json.loads((S
 verifier("periode.json du coffre-fort", json.loads((C / "periode.json").read_text()) ==
          {"debut": "2016-01-01", "fin": "2023-06-30", "contexte_depuis": "2015-01-01"})
 verifier("Coffre-fort : seulement 2015 (contexte) à juin 2023, et dans le cache (pas dans la sortie)",
-         cof and all("2015-01-01" <= e["depot"] <= "2023-06-30" for e in cof) and not (S / "coffre").exists(),
+         cof and all("2015-01-01" <= e["depot"] <= "2023-06-30" for e in cof) and not (S / "coffre").exists() and not (R / "evenements.jsonl.gz").exists(),
          f"({len(cof)} infos)")
 verifier("Aucune info de la période de découverte dans le coffre-fort", not ({e["id"] for e in dec_p} & {e["id"] for e in cof}))
 verifier("Le contexte de la découverte = les dépôts du coffre-fort depuis le 2022-07-01, à l'identique",
@@ -192,13 +192,27 @@ i = spy["d"].index(20250404)
 n_reg = (date(2025, 4, 7) - date(2023, 1, 1)).days
 verifier("Prix : le prix du règlement du lundi est rangé à la clôture du vendredi",
          abs(spy["p"][i] - 400 * 1.0001 ** n_reg) < 0.01, f"{spy['p'][i]:.4f} contre {400 * 1.0001 ** n_reg:.4f}")
-verifier("Prix de la découverte : à partir de juillet 2022 seulement", min(spy["d"]) >= 20220701)
+verifier("Prix de la découverte : à partir de juillet 2015 (pour juger les achats passés des initiés)", min(spy["d"]) >= 20150701)
 cal = json.loads((S / "calendrier.json").read_text())
 verifier("Calendrier des clôtures trié, sans fin de semaine", cal == sorted(cal) and all(
     date.fromisoformat(x).weekday() < 5 for x in cal))
-res = json.loads((S / "resume.json").read_text())
+res = json.loads((R / "resume.json").read_text())
+verifier("Branche : seulement le résumé et le journal (les données restent dans le cache)",
+         sorted(x.name for x in R.iterdir()) == ["journal.md", "resume.json"], str(sorted(x.name for x in R.iterdir())))
 verifier("Résumé : nombres seulement pour le coffre-fort (aucun rendement)", set(res["coffre"]) == {
-    "evenements", "evenements_contexte", "achats", "symboles_prix", "compagnies_finances", "compagnies_13"})
+    "evenements", "evenements_contexte", "inities_avec_historique", "achats", "symboles_prix", "compagnies_finances",
+    "compagnies_13"})
+his = {x["initie"]: x["depots"] for x in lire(S / "historiques.jsonl.gz")}
+acheteurs = {i["cik"] for e in dec_p if e["sens"] == "achat" for i in e["inities"]}
+verifier("Historiques : un par initié qui achète dans la découverte", set(his) == acheteurs, f"{len(his)} / {len(acheteurs)}")
+cohen = next(i["cik"] for i in gme["inities"])
+lignes_cohen = his.get(cohen, [])
+verifier("Historique de l'initié de GME : son achat du 2025-04-07 y est, trié, rien après juin 2026",
+         any(r[0] == "2025-04-07" and r[3] == "achat" and r[2] == "GME" for r in lignes_cohen)
+         and lignes_cohen == sorted(lignes_cohen) and all(r[0] <= "2026-06-30" for r in lignes_cohen), str(lignes_cohen[:3]))
+tous_his = [r for v in his.values() for r in v]
+verifier("Historiques : toutes compagnies et ventes comprises (pas seulement les achats de la période)",
+         any(r[3] == "vente" for r in tous_his) and any(r[0] < "2023-07-01" for r in tous_his))
 verifier("Résumé : les achats comptés sont ceux de la période (pas du contexte)",
          res["decouverte"]["achats"] == sum(e["sens"] == "achat" for e in dec_p)
          and res["decouverte"]["evenements_contexte"] == len(dec_c))
@@ -221,11 +235,32 @@ verifier("Routinier : même mois (mars) en 2021, 2022 et 2023 → routinier", a[
 verifier("Routinier : la ligne de 2023 déposée APRÈS l'info ne compte pas → pas routinier", not b["routinier"])
 x = [ev("1", "achat", "2024-01-01", "5", "A"), ev("2", "achat", "2024-01-20", "5", "B"), ev("3", "achat", "2024-02-15", "5", "C"),
      ev("4", "vente", "2024-02-10", "5", "D"), ev("5", "achat", "2024-03-01", "6", "A")]
-d.ajouter_contexte(x)
+historiques = {}
+for e in x:
+    for i in e["inities"]:
+        historiques.setdefault(i["cik"], []).append([e["depot"], e["cik"], e["symbole"], e["sens"], e["jour_premier"],
+                                                     e["jour_premier"], 100.0, 10.0])
+historiques["A"].append(["2009-06-01", "6", "TST", "achat", "2009-05-29", "2009-05-29", 50.0, 3.0])  # seulement dans l'historique
+for v in historiques.values():
+    v.sort()
+d.ajouter_contexte(x, historiques)
 verifier("Groupe 30 jours : B (A à 19 jours) → 2 ; C (B à 26 jours, A à 45) → 2", x[1]["groupe_30j"] == 2 and x[2]["groupe_30j"] == 2)
 verifier("Ventes 90 jours avant C : 1 ; achats 90 jours avant C : 2", x[2]["ventes_90j"] == 1 and x[2]["achats_90j"] == 2)
-verifier("Historique : A a 1 achat avant celui du 2024-03-01 (autre compagnie) ; même compagnie : aucun",
-         x[4]["historique"]["achats_avant"] == 1 and x[4]["historique"]["jours_depuis_achat_meme_cie"] is None)
+verifier("Historique : A a 2 achats avant celui du 2024-03-01 (2024 ailleurs, et 2009 dans l'historique seulement) ; "
+         "même compagnie : le 2009-06-01", x[4]["historique"]["achats_avant"] == 2
+         and x[4]["historique"]["jours_depuis_achat_meme_cie"] == (date(2024, 3, 1) - date(2009, 6, 1)).days, str(x[4]["historique"]))
+brut_ = {"acc1": {"s": ["2024-05-02", "77", "abc", "ABC Inc", None],
+                  "l": [[1, "P", "2024-04-30", 100.0, 10.0, "A", 1100.0, "D", "Common Stock"],
+                        [2, "S", "2024-04-30", 40.0, 12.0, "D", 1060.0, "D", "Common Stock"],
+                        [3, "P", "2024-05-01", 0.0, 10.0, "A", 1060.0, "D", "Common Stock"]],
+                  "p": [["501", "Initie Un", "Director", ""], ["502", "Fonds", "TenPercentOwner", ""]]}}
+lh = sorted(d.lignes_historique(brut_))
+verifier("Historique brut : un dépôt par sens et par déclarant (2 × 2), lignes à 0 action ignorées",
+         lh == sorted([("501", "2024-05-02", "77", "ABC", "achat", "2024-04-30", "2024-04-30", 100.0, 10.0),
+                       ("501", "2024-05-02", "77", "ABC", "vente", "2024-04-30", "2024-04-30", 40.0, 12.0),
+                       ("502", "2024-05-02", "77", "ABC", "achat", "2024-04-30", "2024-04-30", 100.0, 10.0),
+                       ("502", "2024-05-02", "77", "ABC", "vente", "2024-04-30", "2024-04-30", 40.0, 12.0)]), str(lh))
+verifier("Trimestre d'une date", (d.trimestre_de("2014-10-01"), d.trimestre_de("2015-03-31")) == ("2014q4", "2015q1"))
 
 p = d.Prix()
 cloture = {"20240102": "20231229", "20240103": "20240102", "20240201": "20240131", "20240202": "20240201",

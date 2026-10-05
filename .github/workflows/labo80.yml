@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 # Même groupe que le robot (radar.yml) : jamais les deux en même temps, donc la SEC voit un seul client à la fois
-# (5 requêtes par seconde au plus).
+# (5 requêtes par seconde au plus). Le coffre-fort ne quitte jamais le cache (aucune copie téléchargeable).
 concurrency:
   group: radar
   cancel-in-progress: false
@@ -34,7 +34,7 @@ jobs:
           path: cache
           key: tournoi-${{ github.run_id }}
           restore-keys: tournoi-
-      - name: Jeu de recherche (découverte → branche labo ; coffre-fort → cache seulement)
+      - name: Jeu de recherche (découverte et coffre-fort → cache ; résumé → branche labo)
         run: python labo/tournoi/donnees.py
       - name: Garder les fichiers lus et le coffre-fort (cache)
         if: always()
@@ -42,7 +42,14 @@ jobs:
         with:
           path: cache
           key: tournoi-${{ github.run_id }}
-      - name: Sauvegarder la découverte seulement
+      - name: Copie de la découverte (30 jours), au cas où le cache serait effacé
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: decouverte
+          path: cache/decouverte
+          retention-days: 30
+      - name: Sauvegarder le résumé et le journal de la découverte (les données restent dans le cache)
         if: always()
         run: |
           test ! -e labo/tournoi/donnees/coffre

@@ -33,7 +33,7 @@ d'un événement n'utilise que ce qui était DÉPOSÉ avant le formulaire 4 de c
 | `routinier`, `mois_routine` | règle de Radar (Cohen, Malloy et Pomorski 2012) : un des déclarants a acheté ou vendu en bourse des actions de cette compagnie dans un même mois, chacune des 3 années civiles avant ; d'après les formulaires déposés avant |
 | `groupe_30j` | achats seulement : nombre d'initiés différents qui ont acheté la même compagnie dans les 30 jours avant le dépôt (celui-ci compris) |
 | `achats_90j`, `ventes_90j` | nombre de formulaires d'achat et de vente sur la même compagnie dans les 90 jours avant (pas le jour même) |
-| `historique` | achats seulement : `achats_avant` (achats en bourse de l'initié depuis 2012, toutes compagnies) et `jours_depuis_achat_meme_cie` ; s'il y a plusieurs déclarants, celui qui a le plus d'achats |
+| `historique` | achats seulement : `achats_avant` (achats en bourse de l'initié, toutes compagnies, depuis le plus ancien jeu de données de la SEC : 2006 si offert) et `jours_depuis_achat_meme_cie` ; s'il y a plusieurs déclarants, celui qui a le plus d'achats. L'historique complet : `ctx.historique_initie()` |
 | `bilan_initie` | achats seulement : ses achats passés (déposés 60 jours ou plus avant, dès juillet 2015) mesurés 1 mois contre le S&P 500 (SPY) : `mesures`, `ecart_moyen`, `part_gagnante` |
 | `cloture_avant` | [date, prix, CUSIP] : dernière clôture de la SEC au plus tard la veille du dépôt (30 jours au plus) |
 | `actions_circulation`, `valeur_m` | actions en circulation (fait XBRL déposé avant) et valeur en bourse en M$ |

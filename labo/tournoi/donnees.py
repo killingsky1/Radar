@@ -15,10 +15,13 @@
 - 13D et 13G : index trimestriels officiels d'EDGAR ; une compagnie « visée » = un CIK du dépôt qui est aussi une
   compagnie des formulaires 4 (un déposant qui est lui-même une compagnie cotée est donc compté aussi : rare).
 
-Deux sorties séparées :
-- DÉCOUVERTE (formulaires 4 déposés du 1er juillet 2023 au 30 juin 2026) → labo/tournoi/donnees/ (branche labo) ;
-- COFFRE-FORT (déposés du 1er janvier 2016 au 30 juin 2023) → cache/coffre/ (cache du labo seulement, jamais dans la
-  branche : personne ne le voit avant l'examen final).
+- Historique de chaque initié : tous ses dépôts avec un achat ou une vente en bourse, toutes compagnies, depuis le plus
+  ancien jeu de données offert par la SEC (2006 si disponible ; 2012 au moins).
+
+Deux sorties séparées, dans le cache du labo (trop grosses pour la branche) :
+- DÉCOUVERTE (formulaires 4 déposés du 1er juillet 2023 au 30 juin 2026) → cache/decouverte/ ; son résumé et le journal
+  du calcul → labo/tournoi/donnees/ (branche labo) ;
+- COFFRE-FORT (déposés du 1er janvier 2016 au 30 juin 2023) → cache/coffre/ (personne ne le voit avant l'examen final).
 Lecture polie : le client du robot (5 requêtes par seconde au plus à la SEC, courriel dans l'en-tête comme la SEC le
 demande) ; 401 ou 403 = arrêt, on ne contourne jamais un refus.
 """
@@ -29,6 +32,7 @@ import json
 import math
 import os
 import re
+import resource
 import sys
 import time
 import zipfile
@@ -47,9 +51,12 @@ csv.field_size_limit(sys.maxsize)
 CACHE = Path(os.environ.get("TOURNOI_CACHE", "cache"))
 SORTIE = Path(os.environ.get("TOURNOI_SORTIE", "labo/tournoi/donnees"))
 COFFRE = CACHE / "coffre"
+DECOUVERTE_DOSSIER = CACHE / "decouverte"
 
 DEBUT, DECOUVERTE, FIN = date(2016, 1, 1), date(2023, 7, 1), date(2026, 6, 30)
-HISTOIRE = "2012q1"  # 3 ans avant 2016 pour les initiés routiniers, et l'historique de chaque initié
+HISTOIRE_MIN = "2006q1"  # historique des initiés : depuis le plus ancien jeu de données offert, au plus tôt 2006
+HISTOIRE = "2012q1"  # obligatoire : 3 ans avant 2016 pour les initiés routiniers (un trou ici = arrêt)
+EVENEMENTS_DEPUIS = "2014-10-01"  # infos complètes (dictionnaires) : 90 jours avant le contexte du coffre-fort (2015)
 PRIX_DEBUT = "201507a"  # fichiers d'échecs de livraison : 2e moitié de juin 2015 → prix dès juillet 2015
 MARCHE = ("SPY", "IVV", "VOO", "IWM")
 FORMES_13 = {"SC 13D": "13D", "SCHEDULE 13D": "13D", "SC 13D/A": "13D/A", "SCHEDULE 13D/A": "13D/A",
@@ -68,7 +75,8 @@ T0 = time.time()
 
 
 def dire(t=""):
-    t = f"[{(time.time() - T0) / 60:6.1f} min] {t}" if t else t
+    memoire = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024 / 1024  # Go (Linux : en Ko)
+    t = f"[{(time.time() - T0) / 60:6.1f} min · {memoire:4.1f} Go] {t}" if t else t
     print(t, flush=True)
     journal.append(t)
 
@@ -259,6 +267,27 @@ def faire_evenements(depots):
     return sortie
 
 
+def lignes_historique(depots):
+    """Historique des initiés : (initié, dépôt, cik, symbole, sens, jour_premier, jour_dernier, actions, prix_moyen), un par
+    formulaire, par sens et par déclarant (mêmes lignes P ou S que les infos)."""
+    for d in depots.values():
+        depose, cik, ecrit, _nom, _aff = d["s"]
+        for sens, code, ad in (("achat", "P", "A"), ("vente", "S", "D")):
+            ls = [l for l in d["l"] if l[1] == code and l[5] == ad and l[3] and l[3] > 0]
+            if not ls:
+                continue
+            dates = sorted(l[2] for l in ls if l[2])
+            avec_prix = [l for l in ls if l[4] and l[4] > 0]
+            prix_moyen = round(sum(l[3] * l[4] for l in avec_prix) / sum(l[3] for l in avec_prix), 4) if avec_prix else None
+            for p in d["p"]:
+                yield (p[0], depose, cik, symbole(ecrit), sens, dates[0] if dates else None, dates[-1] if dates else None,
+                       round(sum(l[3] for l in ls), 4), prix_moyen)
+
+
+def trimestre_de(jour):
+    return f"{jour[:4]}q{(int(jour[5:7]) - 1) // 3 + 1}"
+
+
 def transactions_hist(depots):
     """(initié, compagnie, année, mois, dépôt) de chaque ligne P ou S, pour le classement des routiniers."""
     for d in depots.values():
@@ -291,16 +320,12 @@ def ajouter_routiniers(evs, hist):
         ev["mois_routine"] = sorted({m for x in trouves.values() for m in x})
 
 
-def ajouter_contexte(evs):
+def ajouter_contexte(evs, historiques):
     """Groupe, historique de l'initié et activité récente sur la compagnie (seulement ce qui était déposé avant)."""
     par_cie = defaultdict(list)
-    par_initie = defaultdict(list)
     for e in evs:
         par_cie[e["cik"]].append(e)
-        if e["sens"] == "achat":
-            for i in e["inities"]:
-                par_initie[i["cik"]].append(e)
-    for liste in list(par_cie.values()) + list(par_initie.values()):
+    for liste in par_cie.values():
         liste.sort(key=lambda e: (e["depot"], e["id"]))
     for cik, liste in par_cie.items():
         depots = [e["depot"] for e in liste]
@@ -313,18 +338,20 @@ def ajouter_contexte(evs):
                 e["groupe_30j"] = len({i["cik"] for x in fen30 if x["sens"] == "achat" for i in x["inities"]})
             e["achats_90j"] = sum(x["sens"] == "achat" for x in avant90)
             e["ventes_90j"] = sum(x["sens"] == "vente" for x in avant90)
-    depots_initie = {c: [x["depot"] for x in liste] for c, liste in par_initie.items()}
+    # Achats passés de l'initié : d'après son historique complet (depuis le plus ancien jeu de données), déposés AVANT
+    depots_initie = {c: [r[0] for r in v if r[3] == "achat"] for c, v in historiques.items()}
     par_paire = defaultdict(list)  # (initié, compagnie) → dépôts de ses achats
-    for c, liste in par_initie.items():
-        for x in liste:
-            par_paire[(c, x["cik"])].append(x["depot"])
+    for c, v in historiques.items():
+        for r in v:
+            if r[3] == "achat":
+                par_paire[(c, r[1])].append(r[0])
     for e in evs:
         if e["sens"] != "achat":
             continue
         meilleur = None
         for i in e["inities"]:
-            n = bisect_left(depots_initie[i["cik"]], e["depot"])
-            meme = par_paire[(i["cik"], e["cik"])]
+            n = bisect_left(depots_initie.get(i["cik"], []), e["depot"])
+            meme = par_paire.get((i["cik"], e["cik"]), [])
             k = bisect_left(meme, e["depot"])
             r = {"cik": i["cik"], "achats_avant": n,
                  "jours_depuis_achat_meme_cie": jours(meme[k - 1], e["depot"]) if k else None}
@@ -583,14 +610,20 @@ def ecrire_jsonl(chemin, lignes):
 CONTEXTE_JOURS = 365  # dépôts d'avant le début gardés comme contexte (météo des initiés, ventes récentes) : jamais achetés
 
 
-def ecrire_periode(dossier, evs, prix, finances, treize_par_cie, debut, fin, prix_depuis, calendrier):
+def ecrire_periode(dossier, evs, prix, finances, treize_par_cie, debut, fin, prix_depuis, calendrier, historiques):
     contexte = (debut - timedelta(days=CONTEXTE_JOURS)).isoformat()
     choisis = [e for e in evs if contexte <= e["depot"] <= fin.isoformat()]
     periode = [e for e in choisis if e["depot"] >= debut.isoformat()]
     achats = {e["symbole"] for e in periode if e["sens"] == "achat" and e["symbole"]}
     ciks = {e["cik"] for e in choisis}
     n_ev = ecrire_jsonl(dossier / "evenements.jsonl.gz", sorted(choisis, key=lambda e: (e["depot"], e["id"])))
-    n_px = ecrire_jsonl(dossier / "prix.jsonl.gz", prix.lignes(achats | set(MARCHE), prix_depuis))
+    # Historique complet des initiés qui achètent dans la période (dépôts jusqu'à la fin de la période), et les prix des
+    # compagnies de leurs achats passés (pour juger s'ils ont « bien acheté »)
+    acheteurs = sorted({i["cik"] for e in periode if e["sens"] == "achat" for i in e["inities"]}, key=int)
+    hist_p = {c: [r for r in historiques.get(c, []) if r[0] <= fin.isoformat()] for c in acheteurs}
+    n_hi = ecrire_jsonl(dossier / "historiques.jsonl.gz", ({"initie": c, "depots": v} for c, v in hist_p.items()))
+    passes = {r[2] for v in hist_p.values() for r in v if r[3] == "achat" and r[2] and r[0] >= prix_depuis}
+    n_px = ecrire_jsonl(dossier / "prix.jsonl.gz", prix.lignes(achats | passes | set(MARCHE), prix_depuis))
     depuis_fi = (debut - timedelta(days=HISTOIRE_FINANCES)).isoformat()
     n_fi = ecrire_jsonl(dossier / "finances.jsonl.gz", (
         {"cik": c, "faits": {k: [f for f in fs if f[1] >= depuis_fi] for k, fs in v.items()}}
@@ -602,7 +635,7 @@ def ecrire_periode(dossier, evs, prix, finances, treize_par_cie, debut, fin, pri
                                              encoding="utf-8")
     (dossier / "periode.json").write_text(json.dumps({"debut": debut.isoformat(), "fin": fin.isoformat(),
                                                       "contexte_depuis": contexte}), encoding="utf-8")
-    return {"evenements": n_ev, "evenements_contexte": n_ev - len(periode),
+    return {"evenements": n_ev, "evenements_contexte": n_ev - len(periode), "inities_avec_historique": n_hi,
             "achats": sum(e["sens"] == "achat" for e in periode), "symboles_prix": n_px,
             "compagnies_finances": n_fi, "compagnies_13": n_13}
 
@@ -623,19 +656,22 @@ def main():
     dire("# Tournoi Radar, étape 0 : le jeu de recherche")
     # --- Jeux de données des initiés ---
     liens = inities.fichiers_de_la_page(brut(inities.PAGE, "tournoi/pages/inities.html").decode("utf-8", "replace"))
-    voulus = trimestres(HISTOIRE, "2026q2")
+    voulus = [q for q in trimestres(HISTOIRE_MIN, "2026q2") if q >= HISTOIRE or q in liens]
     manque = [q for q in voulus if q not in liens]
     if manque:
         raise SystemExit(f"jeux de données absents de la page officielle : {manque}")
-    depots = {}
-    for q in voulus:
+    dire(f"jeux de données des initiés : {voulus[0]} à {voulus[-1]} ({len(voulus)} trimestres)")
+    evs_tous, hist, hist_initie = [], [], []
+    for q in voulus:  # un trimestre à la fois : seules les lignes utiles restent en mémoire
         r = garde(f"tournoi/ds/{q}.json.gz", lambda: lire_ds(brut(liens[q])))
-        depots.update(r)
+        hist.extend(transactions_hist(r))
+        hist_initie.extend(lignes_historique(r))
+        if q >= trimestre_de(EVENEMENTS_DEPUIS):
+            evs_tous.extend(e for e in faire_evenements(r) if e["depot"] >= EVENEMENTS_DEPUIS)
         dire(f"jeu de données {q} : {len(r):,} formulaires 4 originaux avec achat ou vente en bourse")
-    evs_tous = faire_evenements(depots)
-    hist = list(transactions_hist(depots))
-    del depots
-    dire(f"infos (achats et ventes) depuis {HISTOIRE} : {len(evs_tous):,} · lignes d'historique : {len(hist):,}")
+        del r
+    dire(f"infos (achats et ventes) depuis {EVENEMENTS_DEPUIS} : {len(evs_tous):,} · lignes d'historique : {len(hist):,} "
+         f"· dépôts dans l'historique des initiés : {len(hist_initie):,}")
     # Contrôle de complétude : chaque mois de 2016 à juin 2026 doit avoir des achats (un trou = données manquantes)
     par_mois = Counter(e["depot"][:7] for e in evs_tous if e["sens"] == "achat")
     mois_voulus = sorted({f"{a}-{m:02d}" for a in range(DEBUT.year, FIN.year + 1) for m in range(1, 13)
@@ -647,10 +683,16 @@ def main():
         raise SystemExit(f"TROU dans les données : mois avec moins de 30 % d'un mois normal ({normal}) : {trous}")
     ajouter_routiniers(evs_tous, hist)
     del hist
-    ajouter_contexte(evs_tous)
-    evs = [e for e in evs_tous if e["depot"] >= "2015-07-01"]
+    historiques = defaultdict(list)  # initié → [[dépôt, cik, symbole, sens, jour_premier, jour_dernier, actions, prix]]
+    for x in hist_initie:
+        historiques[x[0]].append(list(x[1:]))
+    del hist_initie
+    for v in historiques.values():
+        v.sort()
+    ajouter_contexte(evs_tous, historiques)
+    evs = [e for e in evs_tous if e["depot"] >= "2015-01-01"]
     del evs_tous
-    dire(f"infos gardées (dépôts dès juillet 2015, pour le bilan des initiés) : {len(evs):,}")
+    dire(f"infos gardées (dépôts dès 2015 : contexte du coffre-fort, bilan des initiés dès juillet) : {len(evs):,}")
 
     # --- Prix de la SEC ---
     liens_ftd = prix_sec.fichiers_de_la_page(brut(prix_sec.PAGE, "tournoi/pages/ftd.html").decode("utf-8", "replace"))
@@ -722,17 +764,21 @@ def main():
 
     # --- Sorties : découverte (branche labo) et coffre-fort (cache seulement) ---
     resume = {
-        "decouverte": ecrire_periode(SORTIE, evs, prix, finances, treize_par_cie, DECOUVERTE, FIN, "2022-07-01", calendrier),
+        "decouverte": ecrire_periode(DECOUVERTE_DOSSIER, evs, prix, finances, treize_par_cie, DECOUVERTE, FIN, "2015-07-01",
+                                     calendrier, historiques),
         "coffre": ecrire_periode(COFFRE, evs, prix, finances, treize_par_cie, DEBUT, DECOUVERTE - timedelta(days=1),
-                                 "2015-07-01", calendrier),
+                                 "2015-07-01", calendrier, historiques),
         "couverture_decouverte": couverture([e for e in evs if e["depot"] >= DECOUVERTE.isoformat()]),
         "alignement_des_prix": alignement,
         "compte": dict(compte)}
-    (SORTIE / "resume.json").write_text(json.dumps(resume, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    SORTIE.mkdir(parents=True, exist_ok=True)
+    for dossier in (SORTIE, DECOUVERTE_DOSSIER):
+        (dossier / "resume.json").write_text(json.dumps(resume, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     # Le résumé du coffre-fort ne dit QUE les nombres de lignes (rien sur les rendements)
     dire(f"découverte : {resume['decouverte']} · coffre-fort (nombres seulement) : {resume['coffre']}")
     dire(f"couverture des achats de la découverte : {resume['couverture_decouverte']}")
-    (SORTIE / "journal.md").write_text("\n".join(journal) + "\n", encoding="utf-8")
+    for dossier in (SORTIE, DECOUVERTE_DOSSIER):
+        (dossier / "journal.md").write_text("\n".join(journal) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":
