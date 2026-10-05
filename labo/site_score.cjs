@@ -11,7 +11,7 @@ const lignes = [];
   const elusLocal = fs.readFileSync(fichierElus, "utf8");
   const lobbyingLocal = fs.readFileSync(fichierLobbying, "utf8");
   const lobbying = JSON.parse(lobbyingLocal);
-  const VERSION = "0.25.0";
+  const VERSION = "0.26.0";
   const base = process.env.BASE || "https://killingsky1.github.io/Radar/"; // BASE : essai local seulement
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
@@ -178,8 +178,23 @@ const lignes = [];
     await p.locator(".res-ligne").first().evaluate((e) => e.scrollIntoView({ block: "start" }));
     await photo("v43-resultats-lignes");
     const titreRes = await p.locator(".grand-titre h1").innerText();
+    // Lot L : « Par signal » (un groupe par sens qui a des entrées du lot L) et « Pourquoi » de chaque entrée du lot L
+    const ps = resLocal.par_signal || { hausse: {}, baisse: {} };
+    const groupesAtt = ["hausse", "baisse"].filter((sn) => Object.keys(ps[sn] || {}).length).length;
+    const groupesAff = await p.locator("h2.section", { hasText: "Par signal" }).count();
+    const signauxAff = await p.locator(".res-signal").count();
+    const signauxAtt = Object.keys(ps.hausse || {}).length + Object.keys(ps.baisse || {}).length;
+    const pourquoiAff = await p.locator(".res-ligne", { hasText: "Pourquoi" }).count();
+    const pourquoiAtt = resLocal.lignes.filter((l) => l.signaux && (l.signaux.some((x) => x.sens === (l.sens === "hausse" ? 1 : -1)) || l.taille || l.grace_au_bonus || l.grace_a_la_taille)).length;
+    if (signauxAff) {
+      await p.locator(".res-signal").first().evaluate((e) => { e.style.scrollMarginTop = "110px"; e.scrollIntoView({ block: "start" }); });
+      await photo("v51-resultats-par-signal");
+    }
+    const signalOk = groupesAff === groupesAtt && signauxAff === signauxAtt && pourquoiAff === pourquoiAtt;
+    dire(`Résultats par signal : ${groupesAff} groupe(s) (attendu ${groupesAtt}) · ${signauxAff} signaux (attendu ${signauxAtt}) · `
+      + `« Pourquoi » sur ${pourquoiAff} entrées (attendu ${pourquoiAtt}) · ${ps.sans_raisons ?? "?"} entrées d'avant · conforme : ${signalOk ? "OUI" : "NON"}`);
     await p.locator(".retour").click(); await p.waitForTimeout(300);
-    resOk = servi && carteOk && nLignes === resLocal.lignes.length && titreRes === "Résultats";
+    resOk = servi && carteOk && nLignes === resLocal.lignes.length && titreRes === "Résultats" && signalOk;
     dire(`Résultats : ${resLocal.lignes.length} compagnies suivies, ${mesurees} mesures · carte « ${carte} » · page ${nLignes} lignes · `
       + `servi = fichier du robot : ${servi ? "OUI" : "NON"} · conforme : ${resOk ? "OUI" : "NON"}`);
   } catch (e) {
@@ -311,6 +326,30 @@ const lignes = [];
     }
   } catch (e) {
     dire(`Santé financière : ERREUR ${String(e).slice(0, 200)}`);
+  }
+  // Lot L : taille en bourse sur la même fiche, comme dans aujourdhui.json (servi = fichier du robot, vérifié plus haut)
+  let tailleOk = false;
+  try {
+    const tx = a.hausse[0].taille;
+    const NOMS = { petite: "Petite compagnie", moyenne: "Compagnie moyenne", grande: "Grande compagnie" };
+    if (!tx) {
+      tailleOk = (await p.locator(".taille").count()) === 0;
+      dire(`Taille sur la fiche ${titre} : pas de fiche SEC chez le robot → section absente : ${tailleOk ? "OUI" : "NON"}`);
+    } else {
+      await p.locator(".taille").evaluate((el) => { el.previousElementSibling.style.scrollMarginTop = "64px"; el.previousElementSibling.scrollIntoView({ block: "start" }); });
+      await photo("v52-fiche-taille");
+      const t = (await p.locator(".taille").innerText()).replace(/\u00a0|\u202f/g, " ");
+      const calcul = (await p.locator(".calcul").innerText()).replace(/\u00a0/g, " ");
+      const facteur = a.hausse[0].groupes.some((g) => g.infos.some((i) => i.facteurs.some((f) => f[0] === "Petite compagnie")));
+      const infosTexte = (await p.locator(".ecran").last().innerText());
+      tailleOk = t.includes(tx.taille ? NOMS[tx.taille] : "Taille inconnue")
+        && (tx.taille ? t.includes(`${Math.round(tx.actions[0]).toLocaleString("fr-CA").replace(/\u00a0|\u202f/g, " ")} actions déclarées`) : t.includes(tx.raison))
+        && (tx.taille === "petite") === t.includes("Les achats de dirigeants comptent ×1,5")
+        && facteur === infosTexte.includes("Petite compagnie ×1,5");
+      dire(`Taille sur la fiche ${titre} : « ${t.split("\n").slice(0, 2).join(" · ")} » · bonus ×1,5 dans le calcul : ${facteur ? "OUI" : "NON"} · conforme au fichier : ${tailleOk ? "OUI" : "NON"}`);
+    }
+  } catch (e) {
+    dire(`Taille : ERREUR ${String(e).slice(0, 200)}`);
   }
   await p.locator(".retour").click();
   await p.locator(".segment", { hasText: "Baisse" }).click();
@@ -591,7 +630,7 @@ const lignes = [];
     await p.locator(".feuille-fermer").click(); await p.waitForTimeout(400);
   } else dire("Participation : aucune info dans le fil (aucun cas dans les 8-K lus)");
   dire(`Erreurs du navigateur : ${erreurs.length ? erreurs.join(" | ") : "aucune"}`);
-  const ok = pareil && elusPareil && lobbyingPareil && memeTop && radarOk && aideOk && calOk && resOk && ficheOk && methodeOk && argentOk && rachatsOk && rachatsFaitsOk && santeOk && presidentOk && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && participationOk && !erreurs.length && js.includes(VERSION);
+  const ok = pareil && elusPareil && lobbyingPareil && memeTop && radarOk && aideOk && calOk && resOk && ficheOk && methodeOk && argentOk && rachatsOk && rachatsFaitsOk && santeOk && tailleOk && presidentOk && regles === a.methode.regles.length && carteOk && congresOk && lobbyingOk && ogeOk && cabinetOk && canadaOk && cccOk && sourcesOk && etatsUnisOk && ecarteesOk && participationOk && !erreurs.length && js.includes(VERSION);
   dire(ok ? "VERDICT : OK" : "VERDICT : PROBLÈME");
   fs.writeFileSync(`${dossier}/site.txt`, lignes.join("\n") + "\n");
   await b.close();

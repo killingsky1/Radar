@@ -6,7 +6,7 @@ on:
     paths: ["labo/declencheur-score.txt", "labo/recalcul_score.py", "labo/site_score.cjs", "labo/verif_congres.py",
             "labo/verif_canada3c.py", "labo/verif_canada3c2.py", "labo/verif_lot3d.py",
             "labo/verif_lot3d2.py", "labo/verif_lotA.py",
-            "labo/verif_argent.py", "labo/verif_lotF.py", "labo/verif_lotG.py", "labo/verif_lotH.py", "labo/verif_lotK.py", "labo/acces.py",
+            "labo/verif_argent.py", "labo/verif_lotF.py", "labo/verif_lotG.py", "labo/verif_lotH.py", "labo/verif_lotK.py", "labo/verif_lotL.py", "labo/acces.py",
             "labo/detecteur_rachats.py", ".github/workflows/labo20.yml"]
 
 permissions:
@@ -15,7 +15,7 @@ permissions:
 jobs:
   score:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
@@ -66,6 +66,9 @@ jobs:
       - name: Santé financière (lot K) refaite à partir du dossier de chaque compagnie à la SEC (companyfacts)
         if: always()
         run: python labo/verif_lotK.py principal/data labo/resultats-score/lotK.txt
+      - name: Lot L contre-vérifié (initiés routiniers refaits aux jeux de données de la SEC, tailles refaites aux sources)
+        if: always()
+        run: python labo/verif_lotL.py principal/data labo/resultats-score/lotL.txt
       - name: Navigateur (installé même si une vérification a échoué)
         if: always()
         run: npm i --no-save playwright@1.56.1

@@ -5,6 +5,9 @@ Vérifie : mêmes compagnies dans le même ordre, mêmes points (±0,01), mêmes
 et que chaque info citée existe, est « officiel »/« confirmé », et pointe vers un domaine officiel.
 Lot B : note sur 10 = 5 + points × 5/6 (0 à 10, au dixième, 5 vers le haut) ; listes à 7/10 et plus, 3/10 et moins ;
 « Récent » = l'info comptée la plus récente du sens de la liste, déposée il y a moins de 3 jours de bourse.
+Lot L : un achat ou une vente d'un initié routinier (classement gardé par le robot, refait aux fichiers de la SEC par
+verif_lotL.py) ne compte pas ; un achat de dirigeant dans une petite compagnie compte ×1,5 (taille refaite ici avec les
+chiffres gardés par le robot, et aux sources officielles par verif_lotL.py).
 """
 import json
 import re
@@ -81,6 +84,26 @@ def est_chef(e):
     return False
 
 
+# Lot L : initiés routiniers (règle publiée : même CIK, ou même nom en lettres et chiffres, dans la même compagnie ;
+# classement de l'année de la transaction)
+fichier_r = racine / "sec" / "inities_routiniers.json"
+ROUTINIERS = json.loads(fichier_r.read_text(encoding="utf-8")).get("annees", {}) if fichier_r.exists() else {}
+
+
+def nom_simple(n):
+    return " ".join(re.sub(r"[^A-Z0-9]+", " ", (n or "").upper()).split())
+
+
+def routinier(e):
+    c, d = ROUTINIERS.get(e["occurred_on"][:4]), e["data"]
+    cik = str(d.get("cik_emetteur") or "").strip()
+    if not c or not cik.isdigit():
+        return False
+    em = str(int(cik))
+    return any(str(o).isdigit() and str(int(o)) in c["cik"].get(em, {}) for o in d.get("proprietaires_cik") or []) or \
+        any(nom_simple(n) in c["noms"].get(em, {}) for n in e["entities"][:-1])
+
+
 def regle_de(e):
     s, d = e["source"], e.get("data") or {}
     if s == "sec_form4":
@@ -88,6 +111,8 @@ def regle_de(e):
             return None
         if e["kind"] == "achat_initie" and any((e["tickers"][0], l["date"], l["prix"]) in EMISSIONS
                                                for l in d.get("transactions", [])):
+            return None
+        if e["kind"] in ("achat_initie", "vente_initie") and routinier(e):
             return None
         return {"achat_initie": "achat_dirigeant", "vente_initie": "vente_dirigeant"}.get(e["kind"])
     if s == "sec_13dg":
@@ -133,6 +158,29 @@ genere = datetime.fromisoformat(pub["genere_a"])
 jour = genere.astimezone(ZoneInfo("America/Toronto")).date()
 assert jour.isoformat() == pub["jour"], (jour, pub["jour"])
 
+# Lot L : la taille en bourse (règles publiées : étrangère, actions de plus de 200 jours ou moins de 500 000, prix de plus
+# de 60 jours = inconnue ; petite sous le 30e centile du NYSE, grande au 70e et plus)
+fichier_t = racine / "prix" / "taille.json"
+TAILLE = json.loads(fichier_t.read_text(encoding="utf-8")) if fichier_t.exists() else {}
+FICHES = json.loads(fiches.read_text(encoding="utf-8")) if fiches.exists() else {}
+
+
+def taille_de(t):
+    f, s = FICHES.get(t), TAILLE.get("seuils")
+    if f is None or not s or "rapports" not in f or f.get("cik") is None:
+        return None
+    r = set(f["rapports"])
+    if r & {"20-F", "40-F", "6-K"} or not r & {"10-K", "10-Q", "10-KT", "10-QT"}:
+        return None
+    a = (TAILLE.get("actions") or {}).get(str(f["cik"]))
+    if not a or (jour - date.fromisoformat(a[1])).days > 200 or a[0] < 500_000:
+        return None
+    p = (TAILLE.get("prix") or {}).get(t)
+    if not p or (jour - date(int(p[0][:4]), int(p[0][4:6]), int(p[0][6:]))).days > 60:
+        return None
+    v = a[0] * p[1] / 1e6
+    return "petite" if v < s["p30"] else "grande" if v >= s["p70"] else "moyenne"
+
 notes = {}  # symbole -> liste de (regle, points, info)
 contexte = {}
 for e in infos:
@@ -154,7 +202,9 @@ for t, liste in notes.items():
     achats = [x for x in liste if x[0] == "achat_dirigeant"]
     lignes = []
     for r, age, e in liste:
-        m = 1.0
+        m, petite = 1.0, False
+        if r == "achat_dirigeant" and taille_de(t) == "petite":
+            m, petite = 1.5, True
         if r == "achat_dirigeant":
             roles = e["data"].get("roles") or []
             if any(principal(x) for x in roles):
@@ -171,9 +221,13 @@ for t, liste in notes.items():
                     m *= 1.75
                     break
         demi = 60 if r == "fonds_13f" else 30
-        lignes.append((FAMILLE[r], POINTS[r] * m * 2 ** (-age / demi), e["id"], e["published_on"]))
-    meilleurs = {}
-    for fam, p, i, d in lignes:
+        lignes.append((FAMILLE[r], POINTS[r] * m * 2 ** (-age / demi), e["id"], e["published_on"], petite))
+    meilleurs, sans_taille = {}, {}
+    for fam, p, i, d, petite in lignes:
+        cle = (fam, 1 if p > 0 else -1)
+        q = p / 1.5 if petite else p
+        sans_taille[cle] = max(sans_taille.get(cle, 0.0), q, key=abs)
+    for fam, p, i, d, _ in lignes:
         cle = (fam, 1 if p > 0 else -1)
         if cle not in meilleurs or (abs(p), d, i) > (abs(meilleurs[cle][0]), meilleurs[cle][2], meilleurs[cle][1]):
             meilleurs[cle] = (p, i, d)
@@ -183,7 +237,10 @@ for t, liste in notes.items():
         if groupe:
             total += sum(groupe) * (1 + 0.25 * (len(groupe) - 1))
     frais = {sens: max((v[2] for k, v in meilleurs.items() if k[1] == sens), default=None) for sens in (1, -1)}
-    calcule[t] = (total, {k: v[1] for k, v in meilleurs.items()}, frais)
+    sans_bonus = sum(v[0] for v in meilleurs.values())
+    total_st = sum(sum(v for k, v in sans_taille.items() if k[1] == sens) * (1 + 0.25 * (sum(1 for k in sans_taille if k[1] == sens) - 1))
+                   for sens in (1, -1) if any(k[1] == sens for k in sans_taille))
+    calcule[t] = (total, {k: v[1] for k, v in meilleurs.items()}, frais, sans_bonus, total_st)
 
 
 def sur_10(points):
@@ -211,6 +268,11 @@ for nom, attendu in (("hausse", hausse), ("baisse", baisse)):
         recent = bool(depot) and ouvrables(date.fromisoformat(depot), jour) < 3
         if x.get("depot_recent") != depot or x.get("recent") is not recent:
             ecarts.append(f"{t} : « Récent » publié {x.get('recent')} ({x.get('depot_recent')}) ≠ recalculé {recent} ({depot})")
+        if (x.get("taille") or {}).get("taille") != taille_de(t):
+            ecarts.append(f"{t} : taille publiée {(x.get('taille') or {}).get('taille')} ≠ recalculée {taille_de(t)}")
+        if x.get("note10_sans_bonus") != sur_10(calcule[t][3]) or x.get("note10_sans_taille") != sur_10(calcule[t][4]):
+            ecarts.append(f"{t} : notes sans bonus / sans taille publiées {x.get('note10_sans_bonus')} / "
+                          f"{x.get('note10_sans_taille')} ≠ recalculées {sur_10(calcule[t][3])} / {sur_10(calcule[t][4])}")
         comptees = {(g["famille"], g["sens"]): next(i["id"] for i in g["infos"] if i["compte"]) for g in x["groupes"]}
         if comptees != calcule[t][1]:
             ecarts.append(f"{t} : infos comptées {comptees} ≠ {calcule[t][1]}")
@@ -236,6 +298,10 @@ if not pub["methode"].get("seuil", "").startswith("Une compagnie entre dans la l
     ecarts.append("méthode publiée : le seuil n'est pas 7/10")
 transactions_chefs = {e["id"] for e in infos if e["source"] in ("chambre_ptr", "senat_ptr") and est_chef(e)}
 print(f"Chefs du Congrès dans la liste officielle : {len(CHEFS)} · leurs transactions (3 mois) : {len(transactions_chefs)}")
+routinieres = [e["id"] for e in infos if e["source"] == "sec_form4" and e["badge"] in ("officiel", "confirme")
+               and (jour - date.fromisoformat(e["published_on"])).days <= 90 and routinier(e)]
+print(f"Lot L : formulaires 4 d'initiés routiniers (0 point) : {len(routinieres)} · listes : "
+      + ", ".join(f"{x['symbole']} {taille_de(x['symbole']) or 'inconnue'}" for n in ("hausse", "baisse") for x in pub[n]))
 publiees = {r["code"]: r["points"] for r in pub["methode"]["regles"]}
 if publiees != POINTS:
     ecarts.append(f"règles publiées {publiees} ≠ règles du recalcul {POINTS}")
