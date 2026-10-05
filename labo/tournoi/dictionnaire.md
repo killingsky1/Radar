@@ -65,7 +65,7 @@ SalesRevenueNet, GrossProfit (durées : un trimestre de 80 à 100 jours, ou un e
 - `déposé_le` = la vraie date de dépôt : le banc ne montre un chiffre qu'à partir de cette date.
 - Dans une règle : `ctx.finances(cik)` → `{concept: [[début, fin, valeur, forme], ...]}` (déposés au plus tard ce
   jour-là, la fin la plus récente en dernier).
-- Gardé : périodes finies jusqu'à 3 ans avant le début du contexte.
+- Gardé : périodes finies au plus 2 ans (et 1 mois) avant le début de la période (assez pour comparer 2 exercices).
 
 ## 13d13g.jsonl.gz (une ligne par compagnie)
 

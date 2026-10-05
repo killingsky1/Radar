@@ -59,7 +59,7 @@ CONCEPTS = ["Assets", "Liabilities", "StockholdersEquity", "AssetsCurrent", "Lia
             "NetIncomeLoss", "NetCashProvidedByUsedInOperatingActivities", "Revenues",
             "RevenueFromContractWithCustomerExcludingAssessedTax", "SalesRevenueNet", "GrossProfit"]
 FORMES_FINANCES = {"10-K", "10-K/A", "10-Q", "10-Q/A", "10-KT", "10-KT/A"}
-HISTOIRE_FINANCES = 3 * 365  # finances gardées dans une période : périodes finies jusqu'à 3 ans avant son contexte
+HISTOIRE_FINANCES = 2 * 365 + 31  # finances gardées : périodes finies jusqu'à 2 ans (et 1 mois) avant le début
 VIDES = {"NONE", "NA", "N-A", "NULL", "N", "TBD", ""}
 
 compte = Counter()
@@ -591,7 +591,7 @@ def ecrire_periode(dossier, evs, prix, finances, treize_par_cie, debut, fin, pri
     ciks = {e["cik"] for e in choisis}
     n_ev = ecrire_jsonl(dossier / "evenements.jsonl.gz", sorted(choisis, key=lambda e: (e["depot"], e["id"])))
     n_px = ecrire_jsonl(dossier / "prix.jsonl.gz", prix.lignes(achats | set(MARCHE), prix_depuis))
-    depuis_fi = (debut - timedelta(days=CONTEXTE_JOURS + HISTOIRE_FINANCES)).isoformat()
+    depuis_fi = (debut - timedelta(days=HISTOIRE_FINANCES)).isoformat()
     n_fi = ecrire_jsonl(dossier / "finances.jsonl.gz", (
         {"cik": c, "faits": {k: [f for f in fs if f[1] >= depuis_fi] for k, fs in v.items()}}
         for c, v in sorted(finances.items()) if c in ciks))

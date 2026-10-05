@@ -32,8 +32,8 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: cache
-          key: rejeu-${{ github.run_id }}
-          restore-keys: rejeu-
+          key: tournoi-${{ github.run_id }}
+          restore-keys: tournoi-
       - name: Jeu de recherche (découverte → branche labo ; coffre-fort → cache seulement)
         run: python labo/tournoi/donnees.py
       - name: Garder les fichiers lus et le coffre-fort (cache)
@@ -41,11 +41,14 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: cache
-          key: rejeu-${{ github.run_id }}
+          key: tournoi-${{ github.run_id }}
       - name: Sauvegarder la découverte seulement
         if: always()
         run: |
           test ! -e labo/tournoi/donnees/coffre
+          ls -la labo/tournoi/donnees
+          # GitHub refuse les fichiers de plus de 100 Mo : on s'arrête avant avec un message clair
+          if find labo/tournoi/donnees -type f -size +95M | grep -q .; then echo "FICHIER TROP GROS (plus de 95 Mo)"; exit 1; fi
           git config user.name "radar-robot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add labo/tournoi/donnees
