@@ -42,6 +42,6 @@
 - a_eviter · Notre prix contre le sien = 10 à 30 % au-dessus · 12 mois · 2025-2026 : identique (n 8 / 8)
 - a_eviter · Dirigeants qui achètent (30 jours) = 3 et plus · 12 mois · 2023-2024 : identique (n 110 / 110)
 - a_eviter · Dirigeants qui achètent (30 jours) = 3 et plus · 12 mois · 2024-2025 : identique (n 84 / 84)
-- a_eviter · Dirigeants qui achètent (30 jours) = 3 et plus · 12 mois · 2025-2026 : DIFFÉRENT (n 10 / 10)
+- a_eviter · Dirigeants qui achètent (30 jours) = 3 et plus · 12 mois · 2025-2026 : identique (n 10 / 10)
 
-VERDICT : 1 écart(s)
+VERDICT : tout concorde
