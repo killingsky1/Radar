@@ -39,7 +39,9 @@ DOMAINES = {"sec.gov", "accessdata.fda.gov", "fda.gov", "nhtsa.gov", "house.gov"
 
 
 def principal(titre):
-    t = " " + titre.upper().replace("-", " ").replace(",", " ").replace("&", " ").replace("(", " ").replace(")", " ") + " "
+    """PDG, directeur financier ou président du conseil (pas un vice-président). Les mots sont séparés par TOUT signe
+    qui n'est pas une lettre ou un chiffre (« CEO/President », « Pres. & CEO ») ; avant le lot M, seulement par - , & ( )."""
+    t = " " + " ".join(re.findall(r"[A-Z0-9]+", titre.upper())) + " "
     for vice in (" VICE PRESIDENT", " VICE CHAIRMAN", " VICE CHAIRPERSON", " VICE CHAIRWOMAN", " VICE CHAIR"):
         t = t.replace(vice, " ")
     mots = t.split()
@@ -209,6 +211,21 @@ for e in infos:
         else:
             notes.setdefault(t, []).append([r, max(age, 0), e])
 
+def principal_avant(titre):  # découpage d'avant le lot M, gardé pour montrer les désaccords
+    t = " " + titre.upper().replace("-", " ").replace(",", " ").replace("&", " ").replace("(", " ").replace(")", " ") + " "
+    for vice in (" VICE PRESIDENT", " VICE CHAIRMAN", " VICE CHAIRPERSON", " VICE CHAIRWOMAN", " VICE CHAIR"):
+        t = t.replace(vice, " ")
+    mots = t.split()
+    return (any(m in ("CEO", "CFO", "PEO", "PFO", "COB") for m in mots) or "CHIEF EXECUTIVE" in t
+            or "CHIEF FINANCIAL" in t or any(m.startswith("CHAIR") for m in mots))
+
+
+desaccords = sorted({(t, x) for t, liste in notes.items() for r, _, e in liste if r == "achat_dirigeant"
+                     for x in e["data"].get("roles") or [] if principal(x) != principal_avant(x)})
+for t, x in desaccords:
+    print(f"Découpage du titre : {t} « {x} » → PDG, directeur financier ou président du conseil : "
+          f"{'oui' if principal(x) else 'non'} (avant le lot M : {'oui' if principal_avant(x) else 'non'})")
+
 calcule = {}
 for t, liste in notes.items():
     achats = [x for x in liste if x[0] == "achat_dirigeant"]
@@ -287,7 +304,9 @@ for nom, attendu in (("hausse", hausse), ("baisse", baisse), ("ecartees", ecarte
         if nom == "ecartees" and (v is None or abs((x.get("taille") or {}).get("valeur_m", -1) - round(v, 1)) > 0.05):
             ecarts.append(f"{t} : valeur publiée {(x.get('taille') or {}).get('valeur_m')} ≠ recalculée {v}")
         if abs(x["score"] - calcule[t][0]) > 0.01:
-            ecarts.append(f"{t} : score publié {x['score']} ≠ recalculé {calcule[t][0]:.4f}")
+            ecarts.append(f"{t} : score publié {x['score']} ≠ recalculé {calcule[t][0]:.4f} ; achats de dirigeants : "
+                          + "; ".join(f"{e['id']} {e['occurred_on']} {e.get('amount_min')} {e['data'].get('roles')}"
+                                      for r, _, e in notes.get(t, []) if r == "achat_dirigeant"))
         if x.get("note10") != sur_10(calcule[t][0]):
             ecarts.append(f"{t} : note publiée {x.get('note10')} ≠ recalculée {sur_10(calcule[t][0])}")
         depot = calcule[t][2][-1 if nom == "baisse" else 1]
