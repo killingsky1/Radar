@@ -20,10 +20,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250716",
+   "prix": 13.08,
+   "cusip": "458685104"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250902",
+  "prix_sortie": 17.0,
+  "variation": 0.2997,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.2997,
+  "prix_achat": 13.08,
+  "fonds_marche": "SPY",
+  "marche": 0.0368,
+  "rendement_pire": 0.2997,
+  "rendement_sans_sauts": 0.2997,
+  "jours_tenus": 48
  },
  {
   "symbole": "FGBI",
@@ -332,10 +349,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250731",
+   "prix": 52.42,
+   "cusip": "164024101"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250904",
+  "prix_sortie": 53.33,
+  "variation": 0.0174,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0174,
+  "prix_achat": 52.42,
+  "fonds_marche": "SPY~",
+  "marche": 0.0092,
+  "rendement_pire": 0.0174,
+  "rendement_sans_sauts": 0.0174,
+  "jours_tenus": 35
  },
  {
   "symbole": "ASIC",
@@ -407,10 +441,27 @@
   ],
   "taille": "moyenne",
   "depart": {
+   "statut": "ok",
+   "date": "20250730",
+   "prix": 31.53,
+   "cusip": "82900L102"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250916",
+  "prix_sortie": 26.14,
+  "variation": -0.1709,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.1709,
+  "prix_achat": 31.53,
+  "fonds_marche": "SPY~",
+  "marche": 0.0376,
+  "rendement_pire": -0.1709,
+  "rendement_sans_sauts": -0.1709,
+  "jours_tenus": 48
  },
  {
   "symbole": "PGC",
@@ -583,10 +634,27 @@
   ],
   "taille": "moyenne",
   "depart": {
+   "statut": "ok",
+   "date": "20250805",
+   "prix": 79.09,
+   "cusip": "816300107"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251003",
+  "prix_sortie": 82.19,
+  "variation": 0.0392,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0392,
+  "prix_achat": 79.09,
+  "fonds_marche": "SPY",
+  "marche": 0.0603,
+  "rendement_pire": 0.0392,
+  "rendement_sans_sauts": 0.0392,
+  "jours_tenus": 59
  },
  {
   "symbole": "CVM",
@@ -718,10 +786,27 @@
   ],
   "taille": "moyenne",
   "depart": {
+   "statut": "ok",
+   "date": "20250805",
+   "prix": 46.94,
+   "cusip": "87161C501"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250918",
+  "prix_sortie": 51.42,
+  "variation": 0.0954,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0954,
+  "prix_achat": 46.94,
+  "fonds_marche": "SPY",
+  "marche": 0.0444,
+  "rendement_pire": 0.0954,
+  "rendement_sans_sauts": 0.0954,
+  "jours_tenus": 44
  },
  {
   "symbole": "EPD",
@@ -792,10 +877,36 @@
   ],
   "taille": null,
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20250808",
+   "prix": 14.7,
+   "cusip": "45175G207"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20250908",
+   "prix": 7.96,
+   "variation": -0.4585,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0237
+   },
+   "ecart": -0.4822,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250908",
+  "prix_sortie": 7.96,
+  "variation": -0.4585,
+  "rendement": -0.4585,
+  "pourquoi": null,
+  "prix_achat": 14.7,
+  "fonds_marche": "SPY",
+  "marche": 0.0237,
+  "rendement_pire": -0.4585,
+  "rendement_sans_sauts": -0.4585,
+  "jours_tenus": 31
  },
  {
   "symbole": "TLRY",
@@ -863,10 +974,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250807",
+   "prix": 30.76,
+   "cusip": "58844R108"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250924",
+  "prix_sortie": 31.76,
+  "variation": 0.0325,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0325,
+  "prix_achat": 30.76,
+  "fonds_marche": "SPY",
+  "marche": 0.0481,
+  "rendement_pire": 0.0325,
+  "rendement_sans_sauts": 0.0325,
+  "jours_tenus": 48
  },
  {
   "symbole": "FBIZ",
@@ -914,10 +1042,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250818",
+   "prix": 18.99,
+   "cusip": "47805L101"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251021",
+  "prix_sortie": 19.0,
+  "variation": 0.0005,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0005,
+  "prix_achat": 18.99,
+  "fonds_marche": "SPY",
+  "marche": 0.0433,
+  "rendement_pire": 0.0005,
+  "rendement_sans_sauts": 0.0005,
+  "jours_tenus": 64
  },
  {
   "symbole": "PLBC",
@@ -965,10 +1110,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250813",
+   "prix": 3.44,
+   "cusip": "G9087Q102"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250919",
+  "prix_sortie": 5.06,
+  "variation": 0.4709,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.4709,
+  "prix_achat": 3.44,
+  "fonds_marche": "SPY",
+  "marche": 0.0305,
+  "rendement_pire": 0.4709,
+  "rendement_sans_sauts": 0.4709,
+  "jours_tenus": 37
  },
  {
   "symbole": "UPS",
@@ -990,10 +1152,27 @@
   ],
   "taille": null,
   "depart": {
+   "statut": "ok",
+   "date": "20250812",
+   "prix": 86.31,
+   "cusip": "911312106"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250919",
+  "prix_sortie": 85.05,
+  "variation": -0.0146,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0146,
+  "prix_achat": 86.31,
+  "fonds_marche": "SPY",
+  "marche": 0.0414,
+  "rendement_pire": -0.0146,
+  "rendement_sans_sauts": -0.0146,
+  "jours_tenus": 38
  },
  {
   "symbole": "ALRS",
@@ -1175,10 +1354,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250813",
+   "prix": 20.49,
+   "cusip": "178867107"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250919",
+  "prix_sortie": 21.3,
+  "variation": 0.0395,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0395,
+  "prix_achat": 20.49,
+  "fonds_marche": "SPY",
+  "marche": 0.0305,
+  "rendement_pire": 0.0395,
+  "rendement_sans_sauts": 0.0395,
+  "jours_tenus": 37
  },
  {
   "symbole": "CNOB",
@@ -1242,10 +1438,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250813",
+   "prix": 42.15,
+   "cusip": "292218104"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250918",
+  "prix_sortie": 42.24,
+  "variation": 0.0021,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0021,
+  "prix_achat": 42.15,
+  "fonds_marche": "SPY",
+  "marche": 0.0257,
+  "rendement_pire": 0.0021,
+  "rendement_sans_sauts": 0.0021,
+  "jours_tenus": 36
  },
  {
   "symbole": "THRY",
@@ -1267,10 +1480,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250812",
+   "prix": 12.41,
+   "cusip": "886029206"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251002",
+  "prix_sortie": 11.7,
+  "variation": -0.0572,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0572,
+  "prix_achat": 12.41,
+  "fonds_marche": "SPY",
+  "marche": 0.0512,
+  "rendement_pire": -0.0572,
+  "rendement_sans_sauts": -0.0572,
+  "jours_tenus": 51
  },
  {
   "symbole": "XELB",
@@ -1371,10 +1601,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250814",
+   "prix": 6.24,
+   "cusip": "64049M209"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250918",
+  "prix_sortie": 8.11,
+  "variation": 0.2997,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.2997,
+  "prix_achat": 6.24,
+  "fonds_marche": "SPY~",
+  "marche": 0.0257,
+  "rendement_pire": 0.2997,
+  "rendement_sans_sauts": 0.2997,
+  "jours_tenus": 35
  },
  {
   "symbole": "NSP",
@@ -1396,10 +1643,36 @@
   ],
   "taille": "moyenne",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20250815",
+   "prix": 52.28,
+   "cusip": "45778Q107"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20250915",
+   "prix": 52.93,
+   "variation": 0.0124,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0193
+   },
+   "ecart": -0.0069,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250915",
+  "prix_sortie": 52.93,
+  "variation": 0.0124,
+  "rendement": 0.0124,
+  "pourquoi": null,
+  "prix_achat": 52.28,
+  "fonds_marche": "SPY",
+  "marche": 0.0193,
+  "rendement_pire": 0.0124,
+  "rendement_sans_sauts": 0.0124,
+  "jours_tenus": 31
  },
  {
   "symbole": "PRLB",
@@ -1464,10 +1737,24 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250820",
+   "prix": 3.49,
+   "cusip": "18270P109"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "aucun_prix_apres",
+  "rendement": 0.0,
+  "rendement_pire": -1.0,
+  "sortie": null,
+  "pourquoi": "aucun prix après l'achat (0 % ; pire cas −100 %)",
+  "prix_achat": 3.49,
+  "fonds_marche": null,
+  "marche": null,
+  "rendement_sans_sauts": 0.0
  },
  {
   "symbole": "MKZR",
@@ -1541,10 +1828,27 @@
   ],
   "taille": "moyenne",
   "depart": {
+   "statut": "ok",
+   "date": "20250818",
+   "prix": 13.37,
+   "cusip": "67098H104"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250923",
+  "prix_sortie": 13.14,
+  "variation": -0.0172,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0172,
+  "prix_achat": 13.37,
+  "fonds_marche": "SPY",
+  "marche": 0.0364,
+  "rendement_pire": -0.0172,
+  "rendement_sans_sauts": -0.0172,
+  "jours_tenus": 36
  },
  {
   "symbole": "TFX",
@@ -1642,10 +1946,27 @@
   ],
   "taille": "grande",
   "depart": {
+   "statut": "ok",
+   "date": "20250818",
+   "prix": 65.82,
+   "cusip": "459506101"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251007",
+  "prix_sortie": 61.5,
+  "variation": -0.0656,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0656,
+  "prix_achat": 65.82,
+  "fonds_marche": "SPY",
+  "marche": 0.0438,
+  "rendement_pire": -0.0656,
+  "rendement_sans_sauts": -0.0656,
+  "jours_tenus": 50
  },
  {
   "symbole": "OSPN",
@@ -1836,10 +2157,27 @@
   ],
   "taille": null,
   "depart": {
+   "statut": "ok",
+   "date": "20250826",
+   "prix": 24.45,
+   "cusip": "05368J103"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251003",
+  "prix_sortie": 25.42,
+  "variation": 0.0397,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0397,
+  "prix_achat": 24.45,
+  "fonds_marche": "SPY",
+  "marche": 0.0416,
+  "rendement_pire": 0.0397,
+  "rendement_sans_sauts": 0.0397,
+  "jours_tenus": 38
  },
  {
   "symbole": "CSR",
@@ -1961,10 +2299,27 @@
   ],
   "taille": null,
   "depart": {
+   "statut": "ok",
+   "date": "20250819",
+   "prix": 29.49,
+   "cusip": "37959R103"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250922",
+  "prix_sortie": 29.88,
+  "variation": 0.0132,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0132,
+  "prix_achat": 29.49,
+  "fonds_marche": "SPY",
+  "marche": 0.0317,
+  "rendement_pire": 0.0132,
+  "rendement_sans_sauts": 0.0132,
+  "jours_tenus": 34
  },
  {
   "symbole": "SBH",
@@ -2039,10 +2394,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250818",
+   "prix": 12.96,
+   "cusip": "83570H108"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250922",
+  "prix_sortie": 15.57,
+  "variation": 0.2014,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.2014,
+  "prix_achat": 12.96,
+  "fonds_marche": "SPY",
+  "marche": 0.0315,
+  "rendement_pire": 0.2014,
+  "rendement_sans_sauts": 0.2014,
+  "jours_tenus": 35
  },
  {
   "symbole": "TNDM",
@@ -2065,10 +2437,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20250818",
+   "prix": 10.82,
+   "cusip": "875372203"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20250919",
+   "prix": 13.24,
+   "variation": 0.2237,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0292
+   },
+   "ecart": 0.1945,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250919",
+  "prix_sortie": 13.24,
+  "variation": 0.2237,
+  "rendement": 0.2237,
+  "pourquoi": null,
+  "prix_achat": 10.82,
+  "fonds_marche": "SPY",
+  "marche": 0.0292,
+  "rendement_pire": 0.2237,
+  "rendement_sans_sauts": 0.2237,
+  "jours_tenus": 32
  },
  {
   "symbole": "AKAM",
@@ -2262,10 +2660,27 @@
   ],
   "taille": "moyenne",
   "depart": {
+   "statut": "ok",
+   "date": "20250821",
+   "prix": 17.66,
+   "cusip": "61774A103"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250929",
+  "prix_sortie": 16.88,
+  "variation": -0.0442,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0442,
+  "prix_achat": 17.66,
+  "fonds_marche": "SPY",
+  "marche": 0.0372,
+  "rendement_pire": -0.0442,
+  "rendement_sans_sauts": -0.0442,
+  "jours_tenus": 39
  },
  {
   "symbole": "MXCT",
@@ -2288,10 +2703,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250821",
+   "prix": 1.39,
+   "cusip": "57777K106"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251001",
+  "prix_sortie": 1.58,
+  "variation": 0.1367,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.1367,
+  "prix_achat": 1.39,
+  "fonds_marche": "SPY",
+  "marche": 0.044,
+  "rendement_pire": 0.1367,
+  "rendement_sans_sauts": 0.1367,
+  "jours_tenus": 41
  },
  {
   "symbole": "AAOI",
@@ -2414,10 +2846,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250826",
+   "prix": 4.64,
+   "cusip": "73931J109"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251007",
+  "prix_sortie": 5.42,
+  "variation": 0.1681,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.1681,
+  "prix_achat": 4.64,
+  "fonds_marche": "SPY",
+  "marche": 0.0454,
+  "rendement_pire": 0.1681,
+  "rendement_sans_sauts": 0.1681,
+  "jours_tenus": 42
  },
  {
   "symbole": "AEBI",
@@ -2755,10 +3204,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250829",
+   "prix": 13.5,
+   "cusip": "35922N100"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251014",
+  "prix_sortie": 13.85,
+  "variation": 0.0259,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0259,
+  "prix_achat": 13.5,
+  "fonds_marche": "IVV",
+  "marche": 0.0216,
+  "rendement_pire": 0.0259,
+  "rendement_sans_sauts": 0.0259,
+  "jours_tenus": 46
  },
  {
   "symbole": "ENOV",
@@ -2781,10 +3247,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20250903",
+   "prix": 30.84,
+   "cusip": "194014502"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251006",
+   "prix": 32.02,
+   "variation": 0.0383,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0452
+   },
+   "ecart": -0.0069,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251006",
+  "prix_sortie": 32.02,
+  "variation": 0.0383,
+  "rendement": 0.0383,
+  "pourquoi": null,
+  "prix_achat": 30.84,
+  "fonds_marche": "SPY",
+  "marche": 0.0452,
+  "rendement_pire": 0.0383,
+  "rendement_sans_sauts": 0.0383,
+  "jours_tenus": 33
  },
  {
   "symbole": "AFCG",
@@ -2906,10 +3398,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250908",
+   "prix": 6.83,
+   "cusip": "89677Y100"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251017",
+  "prix_sortie": 5.51,
+  "variation": -0.1933,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.1933,
+  "prix_achat": 6.83,
+  "fonds_marche": "SPY~",
+  "marche": 0.0232,
+  "rendement_pire": -0.1933,
+  "rendement_sans_sauts": -0.1933,
+  "jours_tenus": 39
  },
  {
   "symbole": "SINT",
@@ -3085,10 +3594,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250922",
+   "prix": 45.59,
+   "cusip": "06654A103"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251208",
+  "prix_sortie": 47.34,
+  "variation": 0.0384,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0384,
+  "prix_achat": 45.59,
+  "fonds_marche": "SPY",
+  "marche": 0.0331,
+  "rendement_pire": 0.0384,
+  "rendement_sans_sauts": 0.0384,
+  "jours_tenus": 77
  },
  {
   "symbole": "MLYS",
@@ -3116,10 +3642,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250922",
+   "prix": 39.27,
+   "cusip": "603170101"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251027",
+  "prix_sortie": 39.9,
+  "variation": 0.016,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.016,
+  "prix_achat": 39.27,
+  "fonds_marche": "SPY",
+  "marche": 0.0204,
+  "rendement_pire": 0.016,
+  "rendement_sans_sauts": 0.016,
+  "jours_tenus": 35
  },
  {
   "symbole": "SEI",
@@ -3147,10 +3690,33 @@
   ],
   "taille": null,
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20250916",
+   "prix": 32.2,
+   "cusip": "83418M103"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251016",
+   "prix": 54.9,
+   "variation": 0.705,
+   "statut": "mesure",
+   "marche": null,
+   "battu": null,
+   "pourquoi": "pas de prix du marché à ces dates"
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251016",
+  "prix_sortie": 54.9,
+  "variation": 0.705,
+  "rendement": 0.705,
+  "pourquoi": "pas de prix du marché à ces dates",
+  "prix_achat": 32.2,
+  "fonds_marche": "SPY~",
+  "marche": 0.002,
+  "rendement_pire": 0.705,
+  "rendement_sans_sauts": 0.705,
+  "jours_tenus": 30
  },
  {
   "symbole": "OCTO",
@@ -3268,10 +3834,36 @@
   ],
   "taille": null,
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20250923",
+   "prix": 5.15,
+   "cusip": "24869P104"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251023",
+   "prix": 5.15,
+   "variation": 0.0,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0014
+   },
+   "ecart": -0.0014,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251023",
+  "prix_sortie": 5.15,
+  "variation": 0.0,
+  "rendement": 0.0,
+  "pourquoi": null,
+  "prix_achat": 5.15,
+  "fonds_marche": "SPY",
+  "marche": 0.0014,
+  "rendement_pire": 0.0,
+  "rendement_sans_sauts": 0.0,
+  "jours_tenus": 30
  },
  {
   "symbole": "GSBD",
@@ -3293,10 +3885,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250923",
+   "prix": 11.06,
+   "cusip": "38147U107"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251027",
+  "prix_sortie": 9.81,
+  "variation": -0.113,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.113,
+  "prix_achat": 11.06,
+  "fonds_marche": "SPY",
+  "marche": 0.0156,
+  "rendement_pire": -0.113,
+  "rendement_sans_sauts": -0.113,
+  "jours_tenus": 34
  },
  {
   "symbole": "MTDR",
@@ -3318,10 +3927,36 @@
   ],
   "taille": "moyenne",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20250929",
+   "prix": 49.01,
+   "cusip": "576485205"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251029",
+   "prix": 39.2,
+   "variation": -0.2002,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0381
+   },
+   "ecart": -0.2383,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251029",
+  "prix_sortie": 39.2,
+  "variation": -0.2002,
+  "rendement": -0.2002,
+  "pourquoi": null,
+  "prix_achat": 49.01,
+  "fonds_marche": "SPY",
+  "marche": 0.0381,
+  "rendement_pire": -0.2002,
+  "rendement_sans_sauts": -0.2002,
+  "jours_tenus": 30
  },
  {
   "symbole": "RAPP",
@@ -3434,10 +4069,36 @@
   ],
   "taille": "moyenne",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20250923",
+   "prix": 6.88,
+   "cusip": "65342K105"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251024",
+   "prix": 5.84,
+   "variation": -0.1512,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0074
+   },
+   "ecart": -0.1586,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251024",
+  "prix_sortie": 5.84,
+  "variation": -0.1512,
+  "rendement": -0.1512,
+  "pourquoi": null,
+  "prix_achat": 6.88,
+  "fonds_marche": "SPY",
+  "marche": 0.0074,
+  "rendement_pire": -0.1512,
+  "rendement_sans_sauts": -0.1512,
+  "jours_tenus": 31
  },
  {
   "symbole": "STRR",
@@ -3501,10 +4162,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20250926",
+   "prix": 1.79,
+   "cusip": "00166B105"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251104",
+  "prix_sortie": 1.57,
+  "variation": -0.1229,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.1229,
+  "prix_achat": 1.79,
+  "fonds_marche": "SPY",
+  "marche": 0.0384,
+  "rendement_pire": -0.1229,
+  "rendement_sans_sauts": -0.1229,
+  "jours_tenus": 39
  },
  {
   "symbole": "NMFC",
@@ -3654,10 +4332,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20250929",
+   "prix": 1.54,
+   "cusip": "405217100"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251029",
+   "prix": 1.35,
+   "variation": -0.1234,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0381
+   },
+   "ecart": -0.1615,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251029",
+  "prix_sortie": 1.35,
+  "variation": -0.1234,
+  "rendement": -0.1234,
+  "pourquoi": null,
+  "prix_achat": 1.54,
+  "fonds_marche": "SPY",
+  "marche": 0.0381,
+  "rendement_pire": -0.1234,
+  "rendement_sans_sauts": -0.1234,
+  "jours_tenus": 30
  },
  {
   "symbole": "STAA",
@@ -3676,10 +4380,27 @@
   ],
   "taille": null,
   "depart": {
+   "statut": "ok",
+   "date": "20251003",
+   "prix": 27.42,
+   "cusip": "852312305"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251107",
+  "prix_sortie": 26.63,
+  "variation": -0.0288,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0288,
+  "prix_achat": 27.42,
+  "fonds_marche": "SPY",
+  "marche": 0.0016,
+  "rendement_pire": -0.0288,
+  "rendement_sans_sauts": -0.0288,
+  "jours_tenus": 35
  },
  {
   "symbole": "CULP",
@@ -3988,10 +4709,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20251006",
+   "prix": 12.73,
+   "cusip": "26817Q886"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251106",
+   "prix": 13.44,
+   "variation": 0.0558,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0125
+   },
+   "ecart": 0.0433,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251106",
+  "prix_sortie": 13.44,
+  "variation": 0.0558,
+  "rendement": 0.0558,
+  "pourquoi": null,
+  "prix_achat": 12.73,
+  "fonds_marche": "SPY",
+  "marche": 0.0125,
+  "rendement_pire": 0.0558,
+  "rendement_sans_sauts": 0.0558,
+  "jours_tenus": 31
  },
  {
   "symbole": "RYM",
@@ -4163,10 +4910,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20251008",
+   "prix": 8.64,
+   "cusip": "023139884"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251113",
+  "prix_sortie": 9.91,
+  "variation": 0.147,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.147,
+  "prix_achat": 8.64,
+  "fonds_marche": "SPY",
+  "marche": 0.0213,
+  "rendement_pire": 0.147,
+  "rendement_sans_sauts": 0.147,
+  "jours_tenus": 36
  },
  {
   "symbole": "PEPG",
@@ -4264,10 +5028,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20251014",
+   "prix": 12.27,
+   "cusip": "167239102"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251219",
+  "prix_sortie": 13.17,
+  "variation": 0.0733,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0733,
+  "prix_achat": 12.27,
+  "fonds_marche": "IVV",
+  "marche": 0.0169,
+  "rendement_pire": 0.0733,
+  "rendement_sans_sauts": 0.0733,
+  "jours_tenus": 66
  },
  {
   "symbole": "SPWH",
@@ -4290,10 +5071,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20251015",
+   "prix": 2.84,
+   "cusip": "84920Y106"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251211",
+  "prix_sortie": 1.62,
+  "variation": -0.4296,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.4296,
+  "prix_achat": 2.84,
+  "fonds_marche": "SPY",
+  "marche": 0.0383,
+  "rendement_pire": -0.4296,
+  "rendement_sans_sauts": -0.4296,
+  "jours_tenus": 57
  },
  {
   "symbole": "WTI",
@@ -4721,10 +5519,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20251027",
+   "prix": 15.01,
+   "cusip": "055645303"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251224",
+  "prix_sortie": 14.33,
+  "variation": -0.0453,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0453,
+  "prix_achat": 15.01,
+  "fonds_marche": "SPY",
+  "marche": 0.0158,
+  "rendement_pire": -0.0453,
+  "rendement_sans_sauts": -0.0453,
+  "jours_tenus": 58
  },
  {
   "symbole": "CBK",
@@ -4939,10 +5754,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20251104",
+   "prix": 1.67,
+   "cusip": "77467X101"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251222",
+  "prix_sortie": 1.57,
+  "variation": -0.0599,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0599,
+  "prix_achat": 1.67,
+  "fonds_marche": "SPY",
+  "marche": -0.004,
+  "rendement_pire": -0.0599,
+  "rendement_sans_sauts": -0.0599,
+  "jours_tenus": 48
  },
  {
   "symbole": "NETD",
@@ -4961,10 +5793,36 @@
   ],
   "taille": null,
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20251030",
+   "prix": 11.32,
+   "cusip": "G6363K106"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251201",
+   "prix": 11.52,
+   "variation": 0.0177,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0058
+   },
+   "ecart": 0.0235,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251201",
+  "prix_sortie": 11.52,
+  "variation": 0.0177,
+  "rendement": 0.0177,
+  "pourquoi": null,
+  "prix_achat": 11.32,
+  "fonds_marche": "SPY",
+  "marche": -0.0058,
+  "rendement_pire": 0.0177,
+  "rendement_sans_sauts": 0.0177,
+  "jours_tenus": 32
  },
  {
   "symbole": "ASIC",
@@ -4986,10 +5844,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20251106",
+   "prix": 18.78,
+   "cusip": "04681Y103"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251208",
+   "prix": 17.95,
+   "variation": -0.0442,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.012
+   },
+   "ecart": -0.0562,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251208",
+  "prix_sortie": 17.95,
+  "variation": -0.0442,
+  "rendement": -0.0442,
+  "pourquoi": null,
+  "prix_achat": 18.78,
+  "fonds_marche": "SPY",
+  "marche": 0.012,
+  "rendement_pire": -0.0442,
+  "rendement_sans_sauts": -0.0442,
+  "jours_tenus": 32
  },
  {
   "symbole": "MCB",
@@ -5104,10 +5988,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20251107",
+   "prix": 35.14,
+   "cusip": "68621T102"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251216",
+  "prix_sortie": 39.07,
+  "variation": 0.1118,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.1118,
+  "prix_achat": 35.14,
+  "fonds_marche": "SPY",
+  "marche": 0.0155,
+  "rendement_pire": 0.1118,
+  "rendement_sans_sauts": 0.1118,
+  "jours_tenus": 39
  },
  {
   "symbole": "TTRX",
@@ -5179,10 +6080,36 @@
   ],
   "taille": "moyenne",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20251114",
+   "prix": 197.98,
+   "cusip": "929236107"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251216",
+   "prix": 206.37,
+   "variation": 0.0424,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0129
+   },
+   "ecart": 0.0295,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251216",
+  "prix_sortie": 206.37,
+  "variation": 0.0424,
+  "rendement": 0.0424,
+  "pourquoi": null,
+  "prix_achat": 197.98,
+  "fonds_marche": "SPY",
+  "marche": 0.0129,
+  "rendement_pire": 0.0424,
+  "rendement_sans_sauts": 0.0424,
+  "jours_tenus": 32
  },
  {
   "symbole": "INBK",
@@ -5205,10 +6132,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20251106",
+   "prix": 18.26,
+   "cusip": "320557101"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260109",
+  "prix_sortie": 21.59,
+  "variation": 0.1824,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.1824,
+  "prix_achat": 18.26,
+  "fonds_marche": "SPY",
+  "marche": 0.0176,
+  "rendement_pire": 0.1824,
+  "rendement_sans_sauts": 0.1824,
+  "jours_tenus": 64
  },
  {
   "symbole": "SON",
@@ -5230,10 +6174,27 @@
   ],
   "taille": null,
   "depart": {
+   "statut": "ok",
+   "date": "20251106",
+   "prix": 40.85,
+   "cusip": "835495102"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251217",
+  "prix_sortie": 43.0,
+  "variation": 0.0526,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0526,
+  "prix_achat": 40.85,
+  "fonds_marche": "SPY",
+  "marche": 0.0019,
+  "rendement_pire": 0.0526,
+  "rendement_sans_sauts": 0.0526,
+  "jours_tenus": 41
  },
  {
   "symbole": "UHT",
@@ -5255,10 +6216,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20251114",
+   "prix": 39.55,
+   "cusip": "91359E105"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251230",
+  "prix_sortie": 39.3,
+  "variation": -0.0063,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0063,
+  "prix_achat": 39.55,
+  "fonds_marche": "SPY",
+  "marche": 0.0235,
+  "rendement_pire": -0.0063,
+  "rendement_sans_sauts": -0.0063,
+  "jours_tenus": 46
  },
  {
   "symbole": "GCBC",
@@ -5322,10 +6300,33 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20251110",
+   "prix": 38.97,
+   "cusip": "598511103"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251211",
+   "prix": 41.11,
+   "variation": 0.0549,
+   "statut": "mesure",
+   "marche": null,
+   "battu": null,
+   "pourquoi": "pas de prix du marché à ces dates"
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251211",
+  "prix_sortie": 41.11,
+  "variation": 0.0549,
+  "rendement": 0.0549,
+  "pourquoi": "pas de prix du marché à ces dates",
+  "prix_achat": 38.97,
+  "fonds_marche": "SPY~",
+  "marche": 0.0257,
+  "rendement_pire": 0.0549,
+  "rendement_sans_sauts": 0.0549,
+  "jours_tenus": 31
  },
  {
   "symbole": "OPK",
@@ -5347,10 +6348,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20251113",
+   "prix": 1.32,
+   "cusip": "68375N103"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251215",
+   "prix": 1.38,
+   "variation": 0.0455,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0024
+   },
+   "ecart": 0.0479,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251215",
+  "prix_sortie": 1.38,
+  "variation": 0.0455,
+  "rendement": 0.0455,
+  "pourquoi": null,
+  "prix_achat": 1.32,
+  "fonds_marche": "SPY",
+  "marche": -0.0024,
+  "rendement_pire": 0.0455,
+  "rendement_sans_sauts": 0.0455,
+  "jours_tenus": 32
  },
  {
   "symbole": "IRDM",
@@ -5372,10 +6399,36 @@
   ],
   "taille": "moyenne",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20251113",
+   "prix": 16.85,
+   "cusip": "46269C102"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251216",
+   "prix": 17.6,
+   "variation": 0.0445,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0039
+   },
+   "ecart": 0.0484,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251216",
+  "prix_sortie": 17.6,
+  "variation": 0.0445,
+  "rendement": 0.0445,
+  "pourquoi": null,
+  "prix_achat": 16.85,
+  "fonds_marche": "SPY",
+  "marche": -0.0039,
+  "rendement_pire": 0.0445,
+  "rendement_sans_sauts": 0.0445,
+  "jours_tenus": 33
  },
  {
   "symbole": "MBIN",
@@ -5473,10 +6526,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20251110",
+   "prix": 10.27,
+   "cusip": "652526203"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251215",
+  "prix_sortie": 11.92,
+  "variation": 0.1607,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.1607,
+  "prix_achat": 10.27,
+  "fonds_marche": "SPY~",
+  "marche": 0.0171,
+  "rendement_pire": 0.1607,
+  "rendement_sans_sauts": 0.1607,
+  "jours_tenus": 35
  },
  {
   "symbole": "NIC",
@@ -5498,10 +6568,36 @@
   ],
   "taille": "moyenne",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20251112",
+   "prix": 124.37,
+   "cusip": "65406E102"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251212",
+   "prix": 132.61,
+   "variation": 0.0663,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.009
+   },
+   "ecart": 0.0573,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251212",
+  "prix_sortie": 132.61,
+  "variation": 0.0663,
+  "rendement": 0.0663,
+  "pourquoi": null,
+  "prix_achat": 124.37,
+  "fonds_marche": "SPY",
+  "marche": 0.009,
+  "rendement_pire": 0.0663,
+  "rendement_sans_sauts": 0.0663,
+  "jours_tenus": 30
  },
  {
   "symbole": "OBT",
@@ -5716,10 +6812,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20251114",
+   "prix": 29.87,
+   "cusip": "21676P103"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251222",
+  "prix_sortie": 34.81,
+  "variation": 0.1654,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.1654,
+  "prix_achat": 29.87,
+  "fonds_marche": "SPY",
+  "marche": 0.0127,
+  "rendement_pire": 0.1654,
+  "rendement_sans_sauts": 0.1654,
+  "jours_tenus": 38
  },
  {
   "symbole": "EIG",
@@ -5741,10 +6854,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20251119",
+   "prix": 39.53,
+   "cusip": "292218104"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251222",
+   "prix": 42.94,
+   "variation": 0.0863,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0311
+   },
+   "ecart": 0.0552,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251222",
+  "prix_sortie": 42.94,
+  "variation": 0.0863,
+  "rendement": 0.0863,
+  "pourquoi": null,
+  "prix_achat": 39.53,
+  "fonds_marche": "SPY",
+  "marche": 0.0311,
+  "rendement_pire": 0.0863,
+  "rendement_sans_sauts": 0.0863,
+  "jours_tenus": 33
  },
  {
   "symbole": "GBCI",
@@ -5766,10 +6905,27 @@
   ],
   "taille": "moyenne",
   "depart": {
+   "statut": "ok",
+   "date": "20251117",
+   "prix": 42.34,
+   "cusip": "37637Q105"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251226",
+  "prix_sortie": 45.79,
+  "variation": 0.0815,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0815,
+  "prix_achat": 42.34,
+  "fonds_marche": "SPY",
+  "marche": 0.0275,
+  "rendement_pire": 0.0815,
+  "rendement_sans_sauts": 0.0815,
+  "jours_tenus": 39
  },
  {
   "symbole": "BPRN",
@@ -5816,10 +6972,36 @@
   ],
   "taille": "moyenne",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20251120",
+   "prix": 17.78,
+   "cusip": "G66721104"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251222",
+   "prix": 23.04,
+   "variation": 0.2958,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0271
+   },
+   "ecart": 0.2687,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251222",
+  "prix_sortie": 23.04,
+  "variation": 0.2958,
+  "rendement": 0.2958,
+  "pourquoi": null,
+  "prix_achat": 17.78,
+  "fonds_marche": "SPY",
+  "marche": 0.0271,
+  "rendement_pire": 0.2958,
+  "rendement_sans_sauts": 0.2958,
+  "jours_tenus": 32
  },
  {
   "symbole": "NVCT",
@@ -6022,10 +7204,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20251124",
+   "prix": 44.75,
+   "cusip": "31609R100"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260121",
+  "prix_sortie": 43.62,
+  "variation": -0.0253,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0253,
+  "prix_achat": 44.75,
+  "fonds_marche": "SPY",
+  "marche": 0.0281,
+  "rendement_pire": -0.0253,
+  "rendement_sans_sauts": -0.0253,
+  "jours_tenus": 58
  },
  {
   "symbole": "KREF",
@@ -6313,10 +7512,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20251119",
+   "prix": 3.37,
+   "cusip": "03615A108"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251219",
+   "prix": 3.67,
+   "variation": 0.089,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0248
+   },
+   "ecart": 0.0642,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251219",
+  "prix_sortie": 3.67,
+  "variation": 0.089,
+  "rendement": 0.089,
+  "pourquoi": null,
+  "prix_achat": 3.37,
+  "fonds_marche": "SPY",
+  "marche": 0.0248,
+  "rendement_pire": 0.089,
+  "rendement_sans_sauts": 0.089,
+  "jours_tenus": 30
  },
  {
   "symbole": "BBSI",
@@ -6485,10 +7710,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20251119",
+   "prix": 33.22,
+   "cusip": "92552R406"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251230",
+  "prix_sortie": 33.69,
+  "variation": 0.0141,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0141,
+  "prix_achat": 33.22,
+  "fonds_marche": "SPY",
+  "marche": 0.0421,
+  "rendement_pire": 0.0141,
+  "rendement_sans_sauts": 0.0141,
+  "jours_tenus": 41
  },
  {
   "symbole": "RHLD",
@@ -6556,10 +7798,27 @@
   ],
   "taille": null,
   "depart": {
+   "statut": "ok",
+   "date": "20251126",
+   "prix": 18.72,
+   "cusip": "88822Q103"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260107",
+  "prix_sortie": 17.74,
+  "variation": -0.0524,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0524,
+  "prix_achat": 18.72,
+  "fonds_marche": "SPY",
+  "marche": 0.0249,
+  "rendement_pire": -0.0524,
+  "rendement_sans_sauts": -0.0524,
+  "jours_tenus": 42
  },
  {
   "symbole": "WEST",
@@ -6796,10 +8055,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20251125",
+   "prix": 5.39,
+   "cusip": "75776W103"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20251226",
+   "prix": 7.82,
+   "variation": 0.4508,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0324
+   },
+   "ecart": 0.4184,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251226",
+  "prix_sortie": 7.82,
+  "variation": 0.4508,
+  "rendement": 0.4508,
+  "pourquoi": null,
+  "prix_achat": 5.39,
+  "fonds_marche": "SPY",
+  "marche": 0.0324,
+  "rendement_pire": 0.4508,
+  "rendement_sans_sauts": 0.4508,
+  "jours_tenus": 31
  },
  {
   "symbole": "WHF",
@@ -6865,10 +8150,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20251125",
+   "prix": 31.75,
+   "cusip": "37954A303"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260116",
+  "prix_sortie": 36.07,
+  "variation": 0.1361,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.1361,
+  "prix_achat": 31.75,
+  "fonds_marche": "SPY",
+  "marche": 0.0352,
+  "rendement_pire": 0.1361,
+  "rendement_sans_sauts": 0.1361,
+  "jours_tenus": 52
  },
  {
   "symbole": "TPVG",
@@ -7525,10 +8827,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20251210",
+   "prix": 8.79,
+   "cusip": "00486H105"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260223",
+  "prix_sortie": 10.07,
+  "variation": 0.1456,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.1456,
+  "prix_achat": 8.79,
+  "fonds_marche": "SPY",
+  "marche": 0.0094,
+  "rendement_pire": 0.1456,
+  "rendement_sans_sauts": 0.1456,
+  "jours_tenus": 75
  },
  {
   "symbole": "IIPR",
@@ -7551,10 +8870,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20251210",
+   "prix": 51.16,
+   "cusip": "45781V101"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260114",
+  "prix_sortie": 49.89,
+  "variation": -0.0248,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0248,
+  "prix_achat": 51.16,
+  "fonds_marche": "SPY",
+  "marche": 0.0157,
+  "rendement_pire": -0.0248,
+  "rendement_sans_sauts": -0.0248,
+  "jours_tenus": 35
  },
  {
   "symbole": "MAIA",
@@ -7841,10 +9177,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20251222",
+   "prix": 4.64,
+   "cusip": "387432107"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260123",
+   "prix": 4.59,
+   "variation": -0.0108,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0123
+   },
+   "ecart": -0.0231,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260123",
+  "prix_sortie": 4.59,
+  "variation": -0.0108,
+  "rendement": -0.0108,
+  "pourquoi": null,
+  "prix_achat": 4.64,
+  "fonds_marche": "SPY",
+  "marche": 0.0123,
+  "rendement_pire": -0.0108,
+  "rendement_sans_sauts": -0.0108,
+  "jours_tenus": 32
  },
  {
   "symbole": "AIRJ",
@@ -8013,10 +9375,27 @@
   ],
   "taille": "moyenne",
   "depart": {
+   "statut": "ok",
+   "date": "20251222",
+   "prix": 42.29,
+   "cusip": "150870103"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260127",
+  "prix_sortie": 47.53,
+  "variation": 0.1239,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.1239,
+  "prix_achat": 42.29,
+  "fonds_marche": "SPY",
+  "marche": 0.0178,
+  "rendement_pire": 0.1239,
+  "rendement_sans_sauts": 0.1239,
+  "jours_tenus": 36
  },
  {
   "symbole": "ELAN",
@@ -8038,10 +9417,36 @@
   ],
   "taille": "grande",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20251222",
+   "prix": 22.3,
+   "cusip": "28414H103"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260123",
+   "prix": 24.91,
+   "variation": 0.117,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0123
+   },
+   "ecart": 0.1047,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260123",
+  "prix_sortie": 24.91,
+  "variation": 0.117,
+  "rendement": 0.117,
+  "pourquoi": null,
+  "prix_achat": 22.3,
+  "fonds_marche": "SPY",
+  "marche": 0.0123,
+  "rendement_pire": 0.117,
+  "rendement_sans_sauts": 0.117,
+  "jours_tenus": 32
  },
  {
   "symbole": "RZLT",
@@ -8064,10 +9469,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20251222",
+   "prix": 1.77,
+   "cusip": "76200L309"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260121",
+   "prix": 2.89,
+   "variation": 0.6328,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0044
+   },
+   "ecart": 0.6372,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260121",
+  "prix_sortie": 2.89,
+  "variation": 0.6328,
+  "rendement": 0.6328,
+  "pourquoi": null,
+  "prix_achat": 1.77,
+  "fonds_marche": "SPY",
+  "marche": -0.0044,
+  "rendement_pire": 0.6328,
+  "rendement_sans_sauts": 0.6328,
+  "jours_tenus": 30
  },
  {
   "symbole": "SI",
@@ -8090,10 +9521,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20251229",
+   "prix": 15.25,
+   "cusip": "82537J108"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260128",
+   "prix": 14.27,
+   "variation": -0.0643,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0075
+   },
+   "ecart": -0.0718,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260128",
+  "prix_sortie": 14.27,
+  "variation": -0.0643,
+  "rendement": -0.0643,
+  "pourquoi": null,
+  "prix_achat": 15.25,
+  "fonds_marche": "SPY",
+  "marche": 0.0075,
+  "rendement_pire": -0.0643,
+  "rendement_sans_sauts": -0.0643,
+  "jours_tenus": 30
  },
  {
   "symbole": "VRA",
@@ -8294,10 +9751,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20251223",
+   "prix": 4.49,
+   "cusip": "75955J402"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260129",
+  "prix_sortie": 3.95,
+  "variation": -0.1203,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.1203,
+  "prix_achat": 4.49,
+  "fonds_marche": "SPY",
+  "marche": 0.0155,
+  "rendement_pire": -0.1203,
+  "rendement_sans_sauts": -0.1203,
+  "jours_tenus": 37
  },
  {
   "symbole": "EML",
@@ -8618,10 +10092,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260105",
+   "prix": 6.58,
+   "cusip": "29430C102"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260209",
+  "prix_sortie": 7.18,
+  "variation": 0.0912,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0912,
+  "prix_achat": 6.58,
+  "fonds_marche": "SPY",
+  "marche": 0.0109,
+  "rendement_pire": 0.0912,
+  "rendement_sans_sauts": 0.0912,
+  "jours_tenus": 35
  },
  {
   "symbole": "XZO",
@@ -8686,10 +10177,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20251231",
+   "prix": 3.61,
+   "cusip": "02155H200"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260130",
+   "prix": 5.1,
+   "variation": 0.4127,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0102
+   },
+   "ecart": 0.4025,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260130",
+  "prix_sortie": 5.1,
+  "variation": 0.4127,
+  "rendement": 0.4127,
+  "pourquoi": null,
+  "prix_achat": 3.61,
+  "fonds_marche": "SPY",
+  "marche": 0.0102,
+  "rendement_pire": 0.4127,
+  "rendement_sans_sauts": 0.4127,
+  "jours_tenus": 30
  },
  {
   "symbole": "HQI",
@@ -8711,10 +10228,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260109",
+   "prix": 10.78,
+   "cusip": "433535101"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260213",
+  "prix_sortie": 10.67,
+  "variation": -0.0102,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0102,
+  "prix_achat": 10.78,
+  "fonds_marche": "SPY",
+  "marche": -0.012,
+  "rendement_pire": -0.0102,
+  "rendement_sans_sauts": -0.0102,
+  "jours_tenus": 35
  },
  {
   "symbole": "MNPR",
@@ -9206,10 +10740,27 @@
   ],
   "taille": null,
   "depart": {
+   "statut": "ok",
+   "date": "20260115",
+   "prix": 22.28,
+   "cusip": "940923105"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260218",
+  "prix_sortie": 24.97,
+  "variation": 0.1207,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.1207,
+  "prix_achat": 22.28,
+  "fonds_marche": "SPY",
+  "marche": -0.0109,
+  "rendement_pire": 0.1207,
+  "rendement_sans_sauts": 0.1207,
+  "jours_tenus": 34
  },
  {
   "symbole": "ADC",
@@ -9357,10 +10908,33 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260127",
+   "prix": 20.32,
+   "cusip": "86889P208"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260226",
+   "prix": 27.03,
+   "variation": 0.3302,
+   "statut": "mesure",
+   "marche": null,
+   "battu": null,
+   "pourquoi": "pas de prix du marché à ces dates"
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260226",
+  "prix_sortie": 27.03,
+  "variation": 0.3302,
+  "rendement": 0.3302,
+  "pourquoi": "pas de prix du marché à ces dates",
+  "prix_achat": 20.32,
+  "fonds_marche": "SPY~",
+  "marche": -0.0078,
+  "rendement_pire": 0.3302,
+  "rendement_sans_sauts": 0.3302,
+  "jours_tenus": 30
  },
  {
   "symbole": "CABA",
@@ -9708,10 +11282,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260206",
+   "prix": 4.9,
+   "cusip": "150837706"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260309",
+   "prix": 3.94,
+   "variation": -0.1959,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0077
+   },
+   "ecart": -0.1882,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260309",
+  "prix_sortie": 3.94,
+  "variation": -0.1959,
+  "rendement": -0.1959,
+  "pourquoi": null,
+  "prix_achat": 4.9,
+  "fonds_marche": "SPY",
+  "marche": -0.0077,
+  "rendement_pire": -0.1959,
+  "rendement_sans_sauts": -0.1959,
+  "jours_tenus": 31
  },
  {
   "symbole": "STEX",
@@ -9822,10 +11422,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260206",
+   "prix": 29.7,
+   "cusip": "12326C105"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260317",
+  "prix_sortie": 26.35,
+  "variation": -0.1128,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.1128,
+  "prix_achat": 29.7,
+  "fonds_marche": "SPY",
+  "marche": -0.0127,
+  "rendement_pire": -0.1128,
+  "rendement_sans_sauts": -0.1128,
+  "jours_tenus": 39
  },
  {
   "symbole": "INTC",
@@ -9921,10 +11538,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260209",
+   "prix": 31.89,
+   "cusip": "669549107"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260402",
+  "prix_sortie": 29.8,
+  "variation": -0.0655,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0655,
+  "prix_achat": 31.89,
+  "fonds_marche": "SPY",
+  "marche": -0.0512,
+  "rendement_pire": -0.0655,
+  "rendement_sans_sauts": -0.0655,
+  "jours_tenus": 52
  },
  {
   "symbole": "Q",
@@ -9945,10 +11579,27 @@
   ],
   "taille": "grande",
   "depart": {
+   "statut": "ok",
+   "date": "20260209",
+   "prix": 98.22,
+   "cusip": "74743L100"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260316",
+  "prix_sortie": 109.05,
+  "variation": 0.1103,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.1103,
+  "prix_achat": 98.22,
+  "fonds_marche": "SPY",
+  "marche": -0.041,
+  "rendement_pire": 0.1103,
+  "rendement_sans_sauts": 0.1103,
+  "jours_tenus": 35
  },
  {
   "symbole": "ANIX",
@@ -9969,10 +11620,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260205",
+   "prix": 2.92,
+   "cusip": "03528H109"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260309",
+   "prix": 2.85,
+   "variation": -0.024,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0201
+   },
+   "ecart": -0.0039,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260309",
+  "prix_sortie": 2.85,
+  "variation": -0.024,
+  "rendement": -0.024,
+  "pourquoi": null,
+  "prix_achat": 2.92,
+  "fonds_marche": "SPY",
+  "marche": -0.0201,
+  "rendement_pire": -0.024,
+  "rendement_sans_sauts": -0.024,
+  "jours_tenus": 32
  },
  {
   "symbole": "USAR",
@@ -10045,10 +11722,27 @@
   ],
   "taille": null,
   "depart": {
+   "statut": "ok",
+   "date": "20260211",
+   "prix": 25.61,
+   "cusip": "666762109"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260320",
+  "prix_sortie": 22.67,
+  "variation": -0.1148,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.1148,
+  "prix_achat": 25.61,
+  "fonds_marche": "SPY",
+  "marche": -0.0467,
+  "rendement_pire": -0.1148,
+  "rendement_sans_sauts": -0.1148,
+  "jours_tenus": 37
  },
  {
   "symbole": "CR",
@@ -10094,10 +11788,36 @@
   ],
   "taille": null,
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260217",
+   "prix": 1.05,
+   "cusip": "05479K106"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260319",
+   "prix": 1.08,
+   "variation": 0.0286,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0298
+   },
+   "ecart": 0.0584,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260319",
+  "prix_sortie": 1.08,
+  "variation": 0.0286,
+  "rendement": 0.0286,
+  "pourquoi": null,
+  "prix_achat": 1.05,
+  "fonds_marche": "SPY",
+  "marche": -0.0298,
+  "rendement_pire": 0.0286,
+  "rendement_sans_sauts": 0.0286,
+  "jours_tenus": 30
  },
  {
   "symbole": "IP",
@@ -10369,10 +12089,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260212",
+   "prix": 14.04,
+   "cusip": "74167B109"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260406",
+  "prix_sortie": 13.36,
+  "variation": -0.0484,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0484,
+  "prix_achat": 14.04,
+  "fonds_marche": "IVV",
+  "marche": -0.0519,
+  "rendement_pire": -0.0484,
+  "rendement_sans_sauts": -0.0484,
+  "jours_tenus": 53
  },
  {
   "symbole": "CVCO",
@@ -10617,10 +12354,36 @@
   ],
   "taille": "grande",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260218",
+   "prix": 19.51,
+   "cusip": "83406F102"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260323",
+   "prix": 16.9,
+   "variation": -0.1338,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0502
+   },
+   "ecart": -0.0836,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260323",
+  "prix_sortie": 16.9,
+  "variation": -0.1338,
+  "rendement": -0.1338,
+  "pourquoi": null,
+  "prix_achat": 19.51,
+  "fonds_marche": "SPY",
+  "marche": -0.0502,
+  "rendement_pire": -0.1338,
+  "rendement_sans_sauts": -0.1338,
+  "jours_tenus": 33
  },
  {
   "symbole": "ARCC",
@@ -10717,10 +12480,27 @@
   ],
   "taille": "moyenne",
   "depart": {
+   "statut": "ok",
+   "date": "20260217",
+   "prix": 44.13,
+   "cusip": "750940108"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260323",
+  "prix_sortie": 40.8,
+  "variation": -0.0755,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0755,
+  "prix_achat": 44.13,
+  "fonds_marche": "SPY",
+  "marche": -0.0487,
+  "rendement_pire": -0.0755,
+  "rendement_sans_sauts": -0.0755,
+  "jours_tenus": 34
  },
  {
   "symbole": "LSAK",
@@ -10742,10 +12522,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260226",
+   "prix": 4.65,
+   "cusip": "64107N206"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260401",
+  "prix_sortie": 5.09,
+  "variation": 0.0946,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0946,
+  "prix_achat": 4.65,
+  "fonds_marche": "SPY~",
+  "marche": -0.0538,
+  "rendement_pire": 0.0946,
+  "rendement_sans_sauts": 0.0946,
+  "jours_tenus": 34
  },
  {
   "symbole": "NG",
@@ -10817,10 +12614,27 @@
   ],
   "taille": "moyenne",
   "depart": {
+   "statut": "ok",
+   "date": "20260220",
+   "prix": 57.86,
+   "cusip": "05969A105"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260326",
+  "prix_sortie": 52.5,
+  "variation": -0.0926,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0926,
+  "prix_achat": 57.86,
+  "fonds_marche": "SPY",
+  "marche": -0.0404,
+  "rendement_pire": -0.0926,
+  "rendement_sans_sauts": -0.0926,
+  "jours_tenus": 34
  },
  {
   "symbole": "VRNS",
@@ -10884,10 +12698,36 @@
   ],
   "taille": "moyenne",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260220",
+   "prix": 161.89,
+   "cusip": "056525108"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260323",
+   "prix": 147.94,
+   "variation": -0.0862,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0525
+   },
+   "ecart": -0.0337,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260323",
+  "prix_sortie": 147.94,
+  "variation": -0.0862,
+  "rendement": -0.0862,
+  "pourquoi": null,
+  "prix_achat": 161.89,
+  "fonds_marche": "SPY",
+  "marche": -0.0525,
+  "rendement_pire": -0.0862,
+  "rendement_sans_sauts": -0.0862,
+  "jours_tenus": 31
  },
  {
   "symbole": "MMS",
@@ -10909,10 +12749,36 @@
   ],
   "taille": "moyenne",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260219",
+   "prix": 75.28,
+   "cusip": "577933104"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260323",
+   "prix": 68.39,
+   "variation": -0.0915,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.055
+   },
+   "ecart": -0.0365,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260323",
+  "prix_sortie": 68.39,
+  "variation": -0.0915,
+  "rendement": -0.0915,
+  "pourquoi": null,
+  "prix_achat": 75.28,
+  "fonds_marche": "SPY",
+  "marche": -0.055,
+  "rendement_pire": -0.0915,
+  "rendement_sans_sauts": -0.0915,
+  "jours_tenus": 32
  },
  {
   "symbole": "TECX",
@@ -10985,10 +12851,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260223",
+   "prix": 18.98,
+   "cusip": "05369T100"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260323",
+  "prix_sortie": 18.84,
+  "variation": -0.0074,
+  "pourquoi": "vendue plus tôt (plus aucun prix après)",
+  "rendement": -0.0074,
+  "prix_achat": 18.98,
+  "fonds_marche": "SPY",
+  "marche": -0.0593,
+  "rendement_pire": -0.0074,
+  "rendement_sans_sauts": -0.0074,
+  "jours_tenus": 28
  },
  {
   "symbole": "CHRW",
@@ -11366,10 +13249,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260225",
+   "prix": 0.64,
+   "cusip": "163092109"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260330",
+   "prix": 0.68,
+   "variation": 0.0625,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0775
+   },
+   "ecart": 0.14,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260330",
+  "prix_sortie": 0.68,
+  "variation": 0.0625,
+  "rendement": 0.0625,
+  "pourquoi": null,
+  "prix_achat": 0.64,
+  "fonds_marche": "SPY",
+  "marche": -0.0775,
+  "rendement_pire": 0.0625,
+  "rendement_sans_sauts": 0.0625,
+  "jours_tenus": 33
  },
  {
   "symbole": "KKR",
@@ -11391,10 +13300,36 @@
   ],
   "taille": "grande",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260302",
+   "prix": 87.68,
+   "cusip": "48251W104"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260401",
+   "prix": 92.5,
+   "variation": 0.055,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.052
+   },
+   "ecart": 0.107,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260401",
+  "prix_sortie": 92.5,
+  "variation": 0.055,
+  "rendement": 0.055,
+  "pourquoi": null,
+  "prix_achat": 87.68,
+  "fonds_marche": "SPY",
+  "marche": -0.052,
+  "rendement_pire": 0.055,
+  "rendement_sans_sauts": 0.055,
+  "jours_tenus": 30
  },
  {
   "symbole": "AAT",
@@ -11551,10 +13486,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260302",
+   "prix": 13.41,
+   "cusip": "637372202"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260402",
+   "prix": 17.34,
+   "variation": 0.2931,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0448
+   },
+   "ecart": 0.3379,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260402",
+  "prix_sortie": 17.34,
+  "variation": 0.2931,
+  "rendement": 0.2931,
+  "pourquoi": null,
+  "prix_achat": 13.41,
+  "fonds_marche": "SPY",
+  "marche": -0.0448,
+  "rendement_pire": 0.2931,
+  "rendement_sans_sauts": 0.2931,
+  "jours_tenus": 31
  },
  {
   "symbole": "CNDT",
@@ -11787,10 +13748,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260304",
+   "prix": 41.83,
+   "cusip": "292218104"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260410",
+  "prix_sortie": 42.65,
+  "variation": 0.0196,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0196,
+  "prix_achat": 41.83,
+  "fonds_marche": "SPY",
+  "marche": -0.0006,
+  "rendement_pire": 0.0196,
+  "rendement_sans_sauts": 0.0196,
+  "jours_tenus": 37
  },
  {
   "symbole": "HLNE",
@@ -11812,10 +13790,27 @@
   ],
   "taille": null,
   "depart": {
+   "statut": "ok",
+   "date": "20260305",
+   "prix": 107.4,
+   "cusip": "407497106"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260408",
+  "prix_sortie": 96.57,
+  "variation": -0.1008,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.1008,
+  "prix_achat": 107.4,
+  "fonds_marche": "SPY",
+  "marche": -0.0378,
+  "rendement_pire": -0.1008,
+  "rendement_sans_sauts": -0.1008,
+  "jours_tenus": 34
  },
  {
   "symbole": "TBI",
@@ -12035,10 +14030,27 @@
   ],
   "taille": null,
   "depart": {
+   "statut": "ok",
+   "date": "20260306",
+   "prix": 15.59,
+   "cusip": "92538J106"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260414",
+  "prix_sortie": 11.56,
+  "variation": -0.2585,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.2585,
+  "prix_achat": 15.59,
+  "fonds_marche": "SPY",
+  "marche": 0.007,
+  "rendement_pire": -0.2585,
+  "rendement_sans_sauts": -0.2585,
+  "jours_tenus": 39
  },
  {
   "symbole": "SXC",
@@ -12061,10 +14073,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260305",
+   "prix": 6.39,
+   "cusip": "86722A103"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260417",
+  "prix_sortie": 6.27,
+  "variation": -0.0188,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0188,
+  "prix_achat": 6.39,
+  "fonds_marche": "SPY",
+  "marche": 0.0241,
+  "rendement_pire": -0.0188,
+  "rendement_sans_sauts": -0.0188,
+  "jours_tenus": 43
  },
  {
   "symbole": "ABCL",
@@ -12391,10 +14420,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260313",
+   "prix": 63.28,
+   "cusip": "880345103"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260413",
+   "prix": 77.5,
+   "variation": 0.2247,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0201
+   },
+   "ecart": 0.2046,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260413",
+  "prix_sortie": 77.5,
+  "variation": 0.2247,
+  "rendement": 0.2247,
+  "pourquoi": null,
+  "prix_achat": 63.28,
+  "fonds_marche": "SPY",
+  "marche": 0.0201,
+  "rendement_pire": 0.2247,
+  "rendement_sans_sauts": 0.2247,
+  "jours_tenus": 31
  },
  {
   "symbole": "AHCO",
@@ -12416,10 +14471,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260311",
+   "prix": 9.7,
+   "cusip": "00653Q102"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260421",
+  "prix_sortie": 12.67,
+  "variation": 0.3062,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.3062,
+  "prix_achat": 9.7,
+  "fonds_marche": "SPY",
+  "marche": 0.0466,
+  "rendement_pire": 0.3062,
+  "rendement_sans_sauts": 0.3062,
+  "jours_tenus": 41
  },
  {
   "symbole": "CMTG",
@@ -12493,10 +14565,36 @@
   ],
   "taille": "grande",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260310",
+   "prix": 48.42,
+   "cusip": "22160N109"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260410",
+   "prix": 37.32,
+   "variation": -0.2292,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0024
+   },
+   "ecart": -0.2316,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260410",
+  "prix_sortie": 37.32,
+  "variation": -0.2292,
+  "rendement": -0.2292,
+  "pourquoi": null,
+  "prix_achat": 48.42,
+  "fonds_marche": "SPY",
+  "marche": 0.0024,
+  "rendement_pire": -0.2292,
+  "rendement_sans_sauts": -0.2292,
+  "jours_tenus": 31
  },
  {
   "symbole": "LEE",
@@ -12570,10 +14668,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260316",
+   "prix": 14.61,
+   "cusip": "61774A103"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260416",
+   "prix": 15.32,
+   "variation": 0.0486,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0568
+   },
+   "ecart": -0.0082,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260416",
+  "prix_sortie": 15.32,
+  "variation": 0.0486,
+  "rendement": 0.0486,
+  "pourquoi": null,
+  "prix_achat": 14.61,
+  "fonds_marche": "SPY",
+  "marche": 0.0568,
+  "rendement_pire": 0.0486,
+  "rendement_sans_sauts": 0.0486,
+  "jours_tenus": 31
  },
  {
   "symbole": "NMFC",
@@ -12875,10 +14999,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260313",
+   "prix": 13.13,
+   "cusip": "67090S108"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260421",
+  "prix_sortie": 14.58,
+  "variation": 0.1104,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.1104,
+  "prix_achat": 13.13,
+  "fonds_marche": "SPY",
+  "marche": 0.064,
+  "rendement_pire": 0.1104,
+  "rendement_sans_sauts": 0.1104,
+  "jours_tenus": 39
  },
  {
   "symbole": "DOMO",
@@ -13215,10 +15356,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260318",
+   "prix": 81.69,
+   "cusip": "59064R109"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260424",
+  "prix_sortie": 96.9,
+  "variation": 0.1862,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.1862,
+  "prix_achat": 81.69,
+  "fonds_marche": "SPY",
+  "marche": 0.0561,
+  "rendement_pire": 0.1862,
+  "rendement_sans_sauts": 0.1862,
+  "jours_tenus": 37
  },
  {
   "symbole": "SSII",
@@ -13472,10 +15630,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260319",
+   "prix": 39.83,
+   "cusip": "374689107"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260427",
+  "prix_sortie": 39.57,
+  "variation": -0.0065,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0065,
+  "prix_achat": 39.83,
+  "fonds_marche": "SPY",
+  "marche": 0.0794,
+  "rendement_pire": -0.0065,
+  "rendement_sans_sauts": -0.0065,
+  "jours_tenus": 39
  },
  {
   "symbole": "ALKT",
@@ -13539,10 +15714,33 @@
   ],
   "taille": "moyenne",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260326",
+   "prix": 24.64,
+   "cusip": "30190A104"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260428",
+   "prix": 28.18,
+   "variation": 0.1437,
+   "statut": "mesure",
+   "marche": null,
+   "battu": null,
+   "pourquoi": "les fonds du S&P 500 ne concordent pas ({'SPY': 0.0888, 'VOO': 0.0856}) : pas de verdict"
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260428",
+  "prix_sortie": 28.18,
+  "variation": 0.1437,
+  "rendement": 0.1437,
+  "pourquoi": "les fonds du S&P 500 ne concordent pas ({'SPY': 0.0888, 'VOO': 0.0856}) : pas de verdict",
+  "prix_achat": 24.64,
+  "fonds_marche": "SPY",
+  "marche": 0.0888,
+  "rendement_pire": 0.1437,
+  "rendement_sans_sauts": 0.1437,
+  "jours_tenus": 33
  },
  {
   "symbole": "MTN",
@@ -13701,10 +15899,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260327",
+   "prix": 26.88,
+   "cusip": "124805102"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260429",
+   "prix": 32.48,
+   "variation": 0.2083,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.1032
+   },
+   "ecart": 0.1051,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260429",
+  "prix_sortie": 32.48,
+  "variation": 0.2083,
+  "rendement": 0.2083,
+  "pourquoi": null,
+  "prix_achat": 26.88,
+  "fonds_marche": "SPY",
+  "marche": 0.1032,
+  "rendement_pire": 0.2083,
+  "rendement_sans_sauts": 0.2083,
+  "jours_tenus": 33
  },
  {
   "symbole": "EML",
@@ -14050,10 +16274,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260331",
+   "prix": 1.21,
+   "cusip": "483467106"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260430",
+   "prix": 1.42,
+   "variation": 0.1736,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.126
+   },
+   "ecart": 0.0476,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260430",
+  "prix_sortie": 1.42,
+  "variation": 0.1736,
+  "rendement": 0.1736,
+  "pourquoi": null,
+  "prix_achat": 1.21,
+  "fonds_marche": "SPY",
+  "marche": 0.126,
+  "rendement_pire": 0.1736,
+  "rendement_sans_sauts": 0.1736,
+  "jours_tenus": 30
  },
  {
   "symbole": "LODE",
@@ -14214,10 +16464,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260407",
+   "prix": 10.52,
+   "cusip": "58470H101"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260507",
+   "prix": 12.69,
+   "variation": 0.2063,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.1137
+   },
+   "ecart": 0.0926,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260507",
+  "prix_sortie": 12.69,
+  "variation": 0.2063,
+  "rendement": 0.2063,
+  "pourquoi": null,
+  "prix_achat": 10.52,
+  "fonds_marche": "SPY",
+  "marche": 0.1137,
+  "rendement_pire": 0.2063,
+  "rendement_sans_sauts": 0.2063,
+  "jours_tenus": 30
  },
  {
   "symbole": "PICS",
@@ -14239,10 +16515,36 @@
   ],
   "taille": null,
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260413",
+   "prix": 11.93,
+   "cusip": "N69958101"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260513",
+   "prix": 12.25,
+   "variation": 0.0268,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0864
+   },
+   "ecart": -0.0596,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260513",
+  "prix_sortie": 12.25,
+  "variation": 0.0268,
+  "rendement": 0.0268,
+  "pourquoi": null,
+  "prix_achat": 11.93,
+  "fonds_marche": "SPY",
+  "marche": 0.0864,
+  "rendement_pire": 0.0268,
+  "rendement_sans_sauts": 0.0268,
+  "jours_tenus": 30
  },
  {
   "symbole": "IPX",
@@ -14420,10 +16722,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260410",
+   "prix": 38.79,
+   "cusip": "704699107"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260513",
+   "prix": 41.97,
+   "variation": 0.082,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0857
+   },
+   "ecart": -0.0037,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260513",
+  "prix_sortie": 41.97,
+  "variation": 0.082,
+  "rendement": 0.082,
+  "pourquoi": null,
+  "prix_achat": 38.79,
+  "fonds_marche": "SPY",
+  "marche": 0.0857,
+  "rendement_pire": 0.082,
+  "rendement_sans_sauts": 0.082,
+  "jours_tenus": 33
  },
  {
   "symbole": "TISI",
@@ -14545,10 +16873,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260415",
+   "prix": 9.73,
+   "cusip": "32043P106"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260519",
+  "prix_sortie": 8.82,
+  "variation": -0.0935,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0935,
+  "prix_achat": 9.73,
+  "fonds_marche": "SPY~",
+  "marche": 0.0644,
+  "rendement_pire": -0.0935,
+  "rendement_sans_sauts": -0.0935,
+  "jours_tenus": 34
  },
  {
   "symbole": "ZBIO",
@@ -14895,10 +17240,33 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260422",
+   "prix": 9.32,
+   "cusip": "33817P405"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260522",
+   "prix": 10.37,
+   "variation": 0.1127,
+   "statut": "mesure",
+   "marche": null,
+   "battu": null,
+   "pourquoi": "pas de prix du marché à ces dates"
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260522",
+  "prix_sortie": 10.37,
+  "variation": 0.1127,
+  "rendement": 0.1127,
+  "pourquoi": "pas de prix du marché à ces dates",
+  "prix_achat": 9.32,
+  "fonds_marche": "SPY~",
+  "marche": 0.048,
+  "rendement_pire": 0.1127,
+  "rendement_sans_sauts": 0.1127,
+  "jours_tenus": 30
  },
  {
   "symbole": "NKE",
@@ -15121,10 +17489,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260501",
+   "prix": 15.81,
+   "cusip": "54738L109"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260601",
+   "prix": 15.38,
+   "variation": -0.0272,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0526
+   },
+   "ecart": -0.0798,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260601",
+  "prix_sortie": 15.38,
+  "variation": -0.0272,
+  "rendement": -0.0272,
+  "pourquoi": null,
+  "prix_achat": 15.81,
+  "fonds_marche": "SPY",
+  "marche": 0.0526,
+  "rendement_pire": -0.0272,
+  "rendement_sans_sauts": -0.0272,
+  "jours_tenus": 31
  },
  {
   "symbole": "AVEX",
@@ -15386,10 +17780,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260506",
+   "prix": 30.79,
+   "cusip": "126128107"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260615",
+  "prix_sortie": 32.8,
+  "variation": 0.0653,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0653,
+  "prix_achat": 30.79,
+  "fonds_marche": "SPY",
+  "marche": 0.0248,
+  "rendement_pire": 0.0653,
+  "rendement_sans_sauts": 0.0653,
+  "jours_tenus": 40
  },
  {
   "symbole": "EFOR",
@@ -15411,10 +17822,33 @@
   ],
   "taille": null,
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260504",
+   "prix": 21.18,
+   "cusip": "00191U102"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260604",
+   "prix": 20.53,
+   "variation": -0.0307,
+   "statut": "mesure",
+   "marche": null,
+   "battu": null,
+   "pourquoi": "pas de prix du marché à ces dates"
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260604",
+  "prix_sortie": 20.53,
+  "variation": -0.0307,
+  "rendement": -0.0307,
+  "pourquoi": "pas de prix du marché à ces dates",
+  "prix_achat": 21.18,
+  "fonds_marche": "SPY~",
+  "marche": 0.054,
+  "rendement_pire": -0.0307,
+  "rendement_sans_sauts": -0.0307,
+  "jours_tenus": 31
  },
  {
   "symbole": "KREF",
@@ -15463,10 +17897,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260512",
+   "prix": 20.11,
+   "cusip": "63945M107"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260803",
+  "prix_sortie": 23.01,
+  "variation": 0.1442,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.1442,
+  "prix_achat": 20.11,
+  "fonds_marche": "SPY",
+  "marche": 0.0105,
+  "rendement_pire": 0.1442,
+  "rendement_sans_sauts": 0.1442,
+  "jours_tenus": 83
  },
  {
   "symbole": "ABT",
@@ -15898,10 +18349,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260513",
+   "prix": 28.54,
+   "cusip": "20112C106"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260615",
+   "prix": 30.78,
+   "variation": 0.0785,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0048
+   },
+   "ecart": 0.0737,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260615",
+  "prix_sortie": 30.78,
+  "variation": 0.0785,
+  "rendement": 0.0785,
+  "pourquoi": null,
+  "prix_achat": 28.54,
+  "fonds_marche": "SPY",
+  "marche": 0.0048,
+  "rendement_pire": 0.0785,
+  "rendement_sans_sauts": 0.0785,
+  "jours_tenus": 33
  },
  {
   "symbole": "SUNE",
@@ -15966,10 +18443,27 @@
   ],
   "taille": null,
   "depart": {
+   "statut": "ok",
+   "date": "20260512",
+   "prix": 14.54,
+   "cusip": "035255108"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260623",
+  "prix_sortie": 14.2,
+  "variation": -0.0234,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0234,
+  "prix_achat": 14.54,
+  "fonds_marche": "SPY",
+  "marche": 0.0069,
+  "rendement_pire": -0.0234,
+  "rendement_sans_sauts": -0.0234,
+  "jours_tenus": 42
  },
  {
   "symbole": "FND",
@@ -16075,10 +18569,36 @@
   ],
   "taille": null,
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260515",
+   "prix": 403.92,
+   "cusip": "78409V104"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260617",
+   "prix": 433.25,
+   "variation": 0.0726,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0029
+   },
+   "ecart": 0.0697,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260617",
+  "prix_sortie": 433.25,
+  "variation": 0.0726,
+  "rendement": 0.0726,
+  "pourquoi": null,
+  "prix_achat": 403.92,
+  "fonds_marche": "SPY",
+  "marche": 0.0029,
+  "rendement_pire": 0.0726,
+  "rendement_sans_sauts": 0.0726,
+  "jours_tenus": 33
  },
  {
   "symbole": "SRAD",
@@ -16198,10 +18718,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260513",
+   "prix": 0.68,
+   "cusip": "784933103"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260612",
+   "prix": 0.84,
+   "variation": 0.2353,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0006
+   },
+   "ecart": 0.2359,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260612",
+  "prix_sortie": 0.84,
+  "variation": 0.2353,
+  "rendement": 0.2353,
+  "pourquoi": null,
+  "prix_achat": 0.68,
+  "fonds_marche": "SPY",
+  "marche": -0.0006,
+  "rendement_pire": 0.2353,
+  "rendement_sans_sauts": 0.2353,
+  "jours_tenus": 30
  },
  {
   "symbole": "PATK",
@@ -16229,10 +18775,27 @@
   ],
   "taille": "moyenne",
   "depart": {
+   "statut": "ok",
+   "date": "20260519",
+   "prix": 90.32,
+   "cusip": "703343103"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260622",
+  "prix_sortie": 87.37,
+  "variation": -0.0327,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0327,
+  "prix_achat": 90.32,
+  "fonds_marche": "VOO",
+  "marche": 0.0136,
+  "rendement_pire": -0.0327,
+  "rendement_sans_sauts": -0.0327,
+  "jours_tenus": 34
  },
  {
   "symbole": "WSBK",
@@ -16296,10 +18859,36 @@
   ],
   "taille": "grande",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260513",
+   "prix": 251.44,
+   "cusip": "G96629103"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260612",
+   "prix": 260.79,
+   "variation": 0.0372,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0006
+   },
+   "ecart": 0.0378,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260612",
+  "prix_sortie": 260.79,
+  "variation": 0.0372,
+  "rendement": 0.0372,
+  "pourquoi": null,
+  "prix_achat": 251.44,
+  "fonds_marche": "SPY",
+  "marche": -0.0006,
+  "rendement_pire": 0.0372,
+  "rendement_sans_sauts": 0.0372,
+  "jours_tenus": 30
  },
  {
   "symbole": "MMSI",
@@ -16873,10 +19462,27 @@
   ],
   "taille": "moyenne",
   "depart": {
+   "statut": "ok",
+   "date": "20260519",
+   "prix": 215.36,
+   "cusip": "45780R101"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260624",
+  "prix_sortie": 210.68,
+  "variation": -0.0217,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0217,
+  "prix_achat": 215.36,
+  "fonds_marche": "VOO",
+  "marche": -0.0038,
+  "rendement_pire": -0.0217,
+  "rendement_sans_sauts": -0.0217,
+  "jours_tenus": 36
  },
  {
   "symbole": "INFU",
@@ -16974,10 +19580,27 @@
   ],
   "taille": null,
   "depart": {
+   "statut": "ok",
+   "date": "20260519",
+   "prix": 51.48,
+   "cusip": "70202L102"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260622",
+  "prix_sortie": 52.21,
+  "variation": 0.0142,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0142,
+  "prix_achat": 51.48,
+  "fonds_marche": "VOO",
+  "marche": 0.0136,
+  "rendement_pire": 0.0142,
+  "rendement_sans_sauts": 0.0142,
+  "jours_tenus": 34
  },
  {
   "symbole": "XRN",
@@ -17133,10 +19756,27 @@
   ],
   "taille": "moyenne",
   "depart": {
+   "statut": "ok",
+   "date": "20260526",
+   "prix": 154.09,
+   "cusip": "302941109"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260630",
+  "prix_sortie": 149.29,
+  "variation": -0.0312,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.0312,
+  "prix_achat": 154.09,
+  "fonds_marche": "SPY",
+  "marche": -0.0062,
+  "rendement_pire": -0.0312,
+  "rendement_sans_sauts": -0.0312,
+  "jours_tenus": 35
  },
  {
   "symbole": "FUN",
@@ -17439,10 +20079,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260526",
+   "prix": 33.0,
+   "cusip": "415858109"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260625",
+   "prix": 42.68,
+   "variation": 0.2933,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0166
+   },
+   "ecart": 0.3099,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260625",
+  "prix_sortie": 42.68,
+  "variation": 0.2933,
+  "rendement": 0.2933,
+  "pourquoi": null,
+  "prix_achat": 33.0,
+  "fonds_marche": "SPY",
+  "marche": -0.0166,
+  "rendement_pire": 0.2933,
+  "rendement_sans_sauts": 0.2933,
+  "jours_tenus": 30
  },
  {
   "symbole": "KBR",
@@ -17507,10 +20173,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260601",
+   "prix": 13.06,
+   "cusip": "67090S108"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260701",
+   "prix": 12.42,
+   "variation": -0.049,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0128
+   },
+   "ecart": -0.0362,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260701",
+  "prix_sortie": 12.42,
+  "variation": -0.049,
+  "rendement": -0.049,
+  "pourquoi": null,
+  "prix_achat": 13.06,
+  "fonds_marche": "SPY",
+  "marche": -0.0128,
+  "rendement_pire": -0.049,
+  "rendement_sans_sauts": -0.049,
+  "jours_tenus": 30
  },
  {
   "symbole": "ONON",
@@ -17626,10 +20318,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260522",
+   "prix": 114.31,
+   "cusip": "76134H101"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260622",
+   "prix": 128.76,
+   "variation": 0.1264,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0054
+   },
+   "ecart": 0.121,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260622",
+  "prix_sortie": 128.76,
+  "variation": 0.1264,
+  "rendement": 0.1264,
+  "pourquoi": null,
+  "prix_achat": 114.31,
+  "fonds_marche": "SPY",
+  "marche": 0.0054,
+  "rendement_pire": 0.1264,
+  "rendement_sans_sauts": 0.1264,
+  "jours_tenus": 31
  },
  {
   "symbole": "VVV",
@@ -17753,10 +20471,36 @@
   ],
   "taille": "grande",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260601",
+   "prix": 119.86,
+   "cusip": "46982L108"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260701",
+   "prix": 126.0,
+   "variation": 0.0512,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0128
+   },
+   "ecart": 0.064,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260701",
+  "prix_sortie": 126.0,
+  "variation": 0.0512,
+  "rendement": 0.0512,
+  "pourquoi": null,
+  "prix_achat": 119.86,
+  "fonds_marche": "SPY",
+  "marche": -0.0128,
+  "rendement_pire": 0.0512,
+  "rendement_sans_sauts": 0.0512,
+  "jours_tenus": 30
  },
  {
   "symbole": "MYO",
@@ -17905,10 +20649,33 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260528",
+   "prix": 3.19,
+   "cusip": "89680M101"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260629",
+   "prix": 4.73,
+   "variation": 0.4828,
+   "statut": "mesure",
+   "marche": null,
+   "battu": null,
+   "pourquoi": "pas de prix du marché à ces dates"
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260629",
+  "prix_sortie": 4.73,
+  "variation": 0.4828,
+  "rendement": 0.4828,
+  "pourquoi": "pas de prix du marché à ces dates",
+  "prix_achat": 3.19,
+  "fonds_marche": "SPY~",
+  "marche": -0.0223,
+  "rendement_pire": 0.4828,
+  "rendement_sans_sauts": 0.4828,
+  "jours_tenus": 32
  },
  {
   "symbole": "VITL",
@@ -17982,10 +20749,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260527",
+   "prix": 12.71,
+   "cusip": "H00501108"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260626",
+   "prix": 13.2,
+   "variation": 0.0386,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "IVV",
+    "variation": -0.0232
+   },
+   "ecart": 0.0618,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260626",
+  "prix_sortie": 13.2,
+  "variation": 0.0386,
+  "rendement": 0.0386,
+  "pourquoi": null,
+  "prix_achat": 12.71,
+  "fonds_marche": "IVV",
+  "marche": -0.0232,
+  "rendement_pire": 0.0386,
+  "rendement_sans_sauts": 0.0386,
+  "jours_tenus": 30
  },
  {
   "symbole": "CTEV",
@@ -18393,10 +21186,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260609",
+   "prix": 38.39,
+   "cusip": "374689107"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260715",
+  "prix_sortie": 41.6,
+  "variation": 0.0836,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0836,
+  "prix_achat": 38.39,
+  "fonds_marche": "SPY",
+  "marche": 0.0171,
+  "rendement_pire": 0.0836,
+  "rendement_sans_sauts": 0.0836,
+  "jours_tenus": 36
  },
  {
   "symbole": "CELH",
@@ -18635,10 +21445,36 @@
   ],
   "taille": "petite",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260609",
+   "prix": 5.87,
+   "cusip": "46520M204"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260709",
+   "prix": 7.19,
+   "variation": 0.2249,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0084
+   },
+   "ecart": 0.2165,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260709",
+  "prix_sortie": 7.19,
+  "variation": 0.2249,
+  "rendement": 0.2249,
+  "pourquoi": null,
+  "prix_achat": 5.87,
+  "fonds_marche": "SPY",
+  "marche": 0.0084,
+  "rendement_pire": 0.2249,
+  "rendement_sans_sauts": 0.2249,
+  "jours_tenus": 30
  },
  {
   "symbole": "MTDR",
@@ -18702,10 +21538,36 @@
   ],
   "taille": "grande",
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260612",
+   "prix": 87.08,
+   "cusip": "165167735"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260715",
+   "prix": 87.81,
+   "variation": 0.0084,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0191
+   },
+   "ecart": -0.0107,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260715",
+  "prix_sortie": 87.81,
+  "variation": 0.0084,
+  "rendement": 0.0084,
+  "pourquoi": null,
+  "prix_achat": 87.08,
+  "fonds_marche": "SPY",
+  "marche": 0.0191,
+  "rendement_pire": 0.0084,
+  "rendement_sans_sauts": 0.0084,
+  "jours_tenus": 33
  },
  {
   "symbole": "NVRI",
@@ -19125,10 +21987,36 @@
   ],
   "taille": null,
   "depart": {
-   "statut": "pas_de_prix"
+   "statut": "ok",
+   "date": "20260622",
+   "prix": 6.32,
+   "cusip": "250565108"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "arrivee_robot": {
+   "date": "20260724",
+   "prix": 5.36,
+   "variation": -0.1519,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0115
+   },
+   "ecart": -0.1404,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260724",
+  "prix_sortie": 5.36,
+  "variation": -0.1519,
+  "rendement": -0.1519,
+  "pourquoi": null,
+  "prix_achat": 6.32,
+  "fonds_marche": "SPY",
+  "marche": -0.0115,
+  "rendement_pire": -0.1519,
+  "rendement_sans_sauts": -0.1519,
+  "jours_tenus": 32
  },
  {
   "symbole": "GUTS",
@@ -19192,10 +22080,27 @@
   ],
   "taille": "petite",
   "depart": {
+   "statut": "ok",
+   "date": "20260625",
+   "prix": 24.37,
+   "cusip": "024013104"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260731",
+  "prix_sortie": 24.03,
+  "variation": -0.014,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.014,
+  "prix_achat": 24.37,
+  "fonds_marche": "SPY",
+  "marche": 0.0115,
+  "rendement_pire": -0.014,
+  "rendement_sans_sauts": -0.014,
+  "jours_tenus": 36
  },
  {
   "symbole": "AVO",
@@ -20158,10 +23063,27 @@
   ],
   "taille": null,
   "depart": {
+   "statut": "ok",
+   "date": "20260708",
+   "prix": 8.43,
+   "cusip": "M0854Q105"
+  },
+  "arrivee_robot": {
    "statut": "pas_de_prix"
   },
-  "achetee": false,
-  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260824",
+  "prix_sortie": 7.48,
+  "variation": -0.1127,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.1127,
+  "prix_achat": 8.43,
+  "fonds_marche": "SPY",
+  "marche": 0.0241,
+  "rendement_pire": -0.1127,
+  "rendement_sans_sauts": -0.1127,
+  "jours_tenus": 47
  },
  {
   "symbole": "ALKT",
