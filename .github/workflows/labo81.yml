@@ -1,0 +1,40 @@
+name: "Labo (tournoi, étape 1 : les études citées existent-elles ?)"
+
+# Ne lit pas la SEC : n'entre pas dans la file du robot (groupe radar).
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/tournoi/verif_liens.py", "labo/tournoi/regles_preenregistrees.json", ".github/workflows/labo81.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: labo81
+  cancel-in-progress: false
+
+jobs:
+  liens:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Lecteur de PDF
+        run: pip install pypdf
+      - name: Essai hors ligne (faux sites sur la machine)
+        run: python labo/tournoi/essais/essai_liens.py
+      - name: Vérifier les études citées (robots.txt respectés)
+        run: python labo/tournoi/verif_liens.py
+      - name: Sauvegarder (labo/tournoi/liens)
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/tournoi/liens
+          git commit -m "Labo : tournoi, études citées vérifiées ($(date -u +'%Y-%m-%d %H:%M') UTC)" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
