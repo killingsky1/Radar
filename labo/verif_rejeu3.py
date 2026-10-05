@@ -104,7 +104,13 @@ def refaire(e, essais, h):
             avant = [j for j in cal if dep < j < cible and j in p]
             arr = avant[-1] if avant else dep
     r = 0.0 if p[arr][1] != p[dep][1] else round(p[arr][0] / p[dep][0] - 1, 4)
-    return {"statut": "achetée", "depart": dep, "sortie": arr, "rendement": r, "marche": marche(dep, arr)}
+    estime = round(p[arr][0] / p[dep][0] - 1, 4)
+    if p[arr][1] != p[dep][1]:  # nouveau CUSIP : le saut de prix au changement est traité comme le regroupement
+        jours = [j for j in cal if dep <= j <= arr and j in p]
+        k = next(i for i, j in enumerate(jours) if p[j][1] != p[dep][1])
+        estime = round(p[arr][0] / (p[jours[k]][0] / p[jours[k - 1]][0]) / p[dep][0] - 1, 4)
+    return {"statut": "achetée", "depart": dep, "sortie": arr, "rendement": r, "estime": estime,
+            "marche": marche(dep, arr)}
 
 
 identiques, total = 0, 0
@@ -122,6 +128,7 @@ for nom, essais in ESSAIS.items():
                 continue
             if y["statut"] == "achetée" and (x["depart"] != y["depart"] or x["sortie"] != y["sortie"]
                                             or abs(x["rendement"] - y["rendement"]) > 1e-4
+                                            or abs(x["rendement_estime"] - y["estime"]) > 1e-4
                                             or (x["marche"] is None) != (y["marche"] is None)
                                             or (y["marche"] is not None and abs(x["marche"] - y["marche"]) > 1e-4)):
                 ecart(f"{e['symbole']} {e['jour']} ({nom}, {h} mois) : {x.get('depart')}→{x.get('sortie')} "
@@ -135,7 +142,7 @@ dire(f"- positions comparées (8 jeux : 2 règles d'achat × 4 durées) : {total
 dire("\n## 2. Argent refait à partir des positions")
 MENSUEL, CAPITAL = 10_000 / 12, 10_000.0
 ANNEES = {"2023-2024": "2023-07", "2024-2025": "2024-07", "2025-2026": "2025-07"}
-COUTS = {"aucun": (0.0, 0.0), "10 $ + écart 1 %": (10.0, 0.01)}
+COUTS = {"aucun": (0.0, 0.0), "10 $ + écart 1 %": (10.0, 0.01), "aucun, CUSIP estimés": (0.0, 0.0)}
 
 
 def mois_de(debut):
@@ -168,14 +175,15 @@ for annee, debut in ANNEES.items():
                   if e["mois"] in mois and selection(nom_sel, e, rangs[id(e)]) and y["statut"] == "achetée"]
             coh = {mo: [y for e, y in ps if e["mois"] == mo] for mo in mois}
             for nom_cout, (frais, ecart_) in COUTS.items():
-                etale = sum(sum(val(MENSUEL / len(coh[mo]), y["rendement"], frais, ecart_) for y in coh[mo])
+                cle = "estime" if "CUSIP" in nom_cout else "rendement"
+                etale = sum(sum(val(MENSUEL / len(coh[mo]), y[cle], frais, ecart_) for y in coh[mo])
                             if coh[mo] else MENSUEL for mo in mois)
                 tranches = 0.0
                 for k in range(h):
                     v = CAPITAL / h
                     for i in range(k, 12, h):
                         if coh[mois[i]]:
-                            v = sum(val(v / len(coh[mois[i]]), y["rendement"], frais, ecart_) for y in coh[mois[i]])
+                            v = sum(val(v / len(coh[mois[i]]), y[cle], frais, ecart_) for y in coh[mois[i]])
                     tranches += v
                 comparees += 1
                 a1, a2 = theirs["argent"][nom_cout]["833_par_mois"], theirs["argent"][nom_cout]["10000_d_un_coup"]

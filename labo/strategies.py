@@ -9,8 +9,10 @@ rejeu/prix.json (prix officiels de la SEC). Pour chaque année (juillet à juin)
   variante : jusqu'à 10 dates de règlement plus tard (beaucoup de petites compagnies n'ont pas de prix de la SEC
   chaque jour).
 - Vente : le prix de la SEC à la date voulue (3 jours de plus au plus), sinon le 1er prix suivant (60 jours de plus au
-  plus), sinon le dernier prix avant. Nouveau CUSIP (regroupement d'actions, nouveau titre) : 0 %. Prix pas encore
-  publiés : position mise de côté (comptée).
+  plus), sinon le dernier prix avant. Prix pas encore publiés : position mise de côté (comptée).
+- Nouveau CUSIP pendant la position (souvent un regroupement d'actions, fréquent après une forte baisse) : 3 façons de
+  compter, montrées côte à côte : 0 % (comme la page Résultats) ; position exclue ; estimée (le saut de prix au
+  changement de CUSIP est traité comme le regroupement : prix de vente ÷ ce saut).
 - Coûts : aucun ; 10 $ par achat et par vente ; écart achat-vente de 1 % ou de 2 % (hypothèse des études, pas mesurée :
   aucune source gratuite ne donne l'écart) ; 10 $ + écart de 1 %.
 - Argent : (a) 833 $ par mois pendant 12 mois, divisés également entre les choix du mois, pas réinvesti ;
@@ -101,9 +103,17 @@ def position(e, nom_depart, h):
     saut = max((max(x / y, y / x) for x, y in zip(suite, suite[1:])), default=1.0)
     f, m = marche_entre(dep, arr)
     nouveau_cusip = a[1] != b[1]
+    estime = r
+    if nouveau_cusip:
+        # Le saut de prix au 1er changement de CUSIP : dernier prix avec l'ancien CUSIP → 1er prix avec le nouveau
+        jours = [c for c in cal[bisect_left(cal, dep):bisect_right(cal, arr)] if c in p]
+        k = next(i for i, c in enumerate(jours) if p[c][1] != a[1])
+        ratio = p[jours[k]][0] / p[jours[k - 1]][0]
+        estime = round(b[0] / ratio / a[0] - 1, 4)
     return {**pos, "statut": "achetée", "depart": dep, "prix_achat": a[0], "sortie": arr, "prix_vente": b[0],
             "comment": comment, "variation": r, "nouveau_cusip": nouveau_cusip, "saut": round(saut, 3),
-            "rendement": 0.0 if nouveau_cusip else r, "marche": m, "fonds_marche": f}
+            "rendement": 0.0 if nouveau_cusip else r, "rendement_exclu": None if nouveau_cusip else r,
+            "rendement_estime": estime, "marche": m, "fonds_marche": f}
 
 
 positions = {(d, h): [position(e, d, h) for e in entrees] for d in DEPARTS for h in DUREES}
@@ -177,23 +187,38 @@ def case(annee, nom_sel, h, nom_depart):
         "marche_moyen": round(mean(mk), 4) if mk else None,
         "ecart_moyen": round(mean(p["rendement"] - p["marche"] for p in achetees if p["marche"] is not None), 4)
         if mk else None,
+        "ecart_median": round(median(p["rendement"] - p["marche"] for p in achetees if p["marche"] is not None), 4)
+        if mk else None,
         "gagnantes": sum(x > 0 for x in r),
         "battent_le_marche": sum(p["marche"] is not None and p["rendement"] > p["marche"] for p in achetees),
         "sans_marche": sum(p["marche"] is None for p in achetees),
         "meilleure": max(((p["symbole"], p["jour"], p["rendement"]) for p in achetees), key=lambda x: x[2]),
         "pire": min(((p["symbole"], p["jour"], p["rendement"]) for p in achetees), key=lambda x: x[2]),
         "rendement_moyen_sans_sauts": round(mean(0.0 if p["saut"] > SAUT_MAX else p["rendement"] for p in achetees), 4),
+        "nouveaux_cusip": sum(p["nouveau_cusip"] for p in achetees),
+        "ventes_plus_tot": sum(p["comment"].startswith("plus tôt") for p in achetees),
+        "sauts": sum(p["saut"] > SAUT_MAX for p in achetees),
+        "part_de_la_meilleure": round(max(p["rendement"] for p in achetees) / len(achetees) / mean(r), 3)
+        if mean(r) > 0 else None,
     })
+    for cle in ("rendement_exclu", "rendement_estime"):
+        gardees = [p for p in achetees if p[cle] is not None and p["marche"] is not None]
+        sortie_[f"ecart_moyen_{cle.split('_')[1]}"] = round(mean(p[cle] - p["marche"] for p in gardees), 4) \
+            if gardees else None
+        sortie_[f"ecart_median_{cle.split('_')[1]}"] = round(median(p[cle] - p["marche"] for p in gardees), 4) \
+            if gardees else None
     cohortes = {mo: [p for p in achetees if p["mois"] == mo] for mo in mois}
     fin = max(p["sortie"] for p in achetees)
     sortie_["derniere_vente"] = fin
     argent = {}
-    for nom_cout, (frais, ecart) in COUTS.items():
+    for nom_cout, (frais, ecart) in list(COUTS.items()) + [("aucun, CUSIP estimés", (0.0, 0.0)),
+                                                            ("10 $ + écart 1 %, CUSIP estimés", (10.0, 0.01))]:
+        cle_r = "rendement_estime" if "CUSIP estimés" in nom_cout else "rendement"
         etale, etale_spy = 0.0, 0.0
         for mo in mois:
             ps = cohortes[mo]
             if ps:
-                etale += sum(valeur(MENSUEL / len(ps), p["rendement"], frais, ecart) for p in ps)
+                etale += sum(valeur(MENSUEL / len(ps), p[cle_r], frais, ecart) for p in ps)
                 etale_spy += sum(MENSUEL / len(ps) * (1 + (p["marche"] or 0)) for p in ps)
             else:
                 etale += MENSUEL
@@ -204,7 +229,7 @@ def case(annee, nom_sel, h, nom_depart):
             for i in range(k, len(mois), h):
                 ps = cohortes[mois[i]]
                 if ps:
-                    v = sum(valeur(v / len(ps), p["rendement"], frais, ecart) for p in ps)
+                    v = sum(valeur(v / len(ps), p[cle_r], frais, ecart) for p in ps)
                     v_spy = sum(v_spy / len(ps) * (1 + (p["marche"] or 0)) for p in ps)
             tranches += v
             tranches_spy += v_spy
@@ -264,6 +289,8 @@ l = ["# Quelle règle aurait fait le plus d'argent ? Rejeu de Radar, juillet 202
      f"Entrées « hausse » : {len(entrees)} · prix de la SEC jusqu'au {couvert}. Règles du robot actuel. Dirigeants "
      "(formulaires 4) les 3 années ; 13D seulement depuis décembre 2024 (avant, pas de format XML).", ""]
 for titre, cle in (("Rendement moyen par compagnie, moins le S&P 500 aux mêmes dates (sans coûts)", "ecart"),
+                   ("Pareil, nouveaux CUSIP estimés (au lieu de 0 %)", "ecart_estime"),
+                   ("Écart médian (la compagnie du milieu), nouveaux CUSIP estimés", "median_estime"),
                    ("Compagnies qui font mieux que le S&P 500 aux mêmes dates", "battent")):
     l += [f"## {titre}", ""]
     for dep in DEPARTS:
@@ -279,7 +306,11 @@ for titre, cle in (("Rendement moyen par compagnie, moins le S&P 500 aux mêmes 
                     elif not c.get("achetees"):
                         cel.append("aucune")
                     elif cle == "ecart":
-                        cel.append(f"{pc(c['ecart_moyen'])} ({c['achetees']})")
+                        cel.append(f"{pc(c['ecart_moyen'])} ({c['achetees']}, {c['nouveaux_cusip']} CUSIP)")
+                    elif cle == "ecart_estime":
+                        cel.append(f"{pc(c['ecart_moyen_estime'])}")
+                    elif cle == "median_estime":
+                        cel.append(f"{pc(c['ecart_median_estime'])}")
                     else:
                         cel.append(f"{c['battent_le_marche'] / c['achetees'] * 100:.0f} %")
                 l.append(f"| {sel} | {h} mois | " + " | ".join(cel) + " |")
@@ -315,6 +346,18 @@ for mini, sel, h, ok in sorted(gagnantes, key=lambda x: -x[0]):
                                                                 for c in ok) + " |")
 if not gagnantes:
     l.append("| aucune | | | |")
+l.append("")
+# Les cas extrêmes : le chemin des prix, pour voir si le mouvement est réel
+l += ["## Cas extrêmes (départ strict, 12 mois) : chemin des prix de la SEC", ""]
+extremes = sorted((p for p in positions[("strict", 12)] if p["statut"] == "achetée"),
+                  key=lambda p: -abs(p["rendement_estime"]))[:8]
+for x in extremes:
+    pp = prix[x["symbole"]]
+    chemin = [(c, pp[c][0], pp[c][1]) for c in cal[bisect_left(cal, x["depart"]):bisect_right(cal, x["sortie"])] if c in pp]
+    pas = max(1, len(chemin) // 8)
+    l.append(f"- {x['symbole']} ({x['jour']}) : {pc(x['rendement'])} (estimé {pc(x['rendement_estime'])}) · "
+             f"{len(chemin)} prix · plus grand saut ×{x['saut']} · " +
+             " → ".join(f"{c[:4]}-{c[4:6]}-{c[6:]} {v} [{cu}]" for c, v, cu in chemin[::pas] + [chemin[-1]]))
 l.append("")
 l += ["## Comptes", "", f"- Positions (départ strict) par statut et durée : " + str(
     {h: dict(Counter(p["statut"] for p in positions[('strict', h)])) for h in DUREES}),
