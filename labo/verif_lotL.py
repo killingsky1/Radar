@@ -300,32 +300,31 @@ with acces.section("Taille des compagnies des listes (Kenneth French, fiches et 
             v = fait["val"] * pr[1] / 1e6
             return ("petite" if v < seuils["p30"] else "grande" if v >= seuils["p70"] else "moyenne"), None
 
-        labo_t, raison = classe(fait_frames)  # la règle publiée : le fait le plus récent des fichiers frames
+        # La règle publiée (0.26.1) : le fait le plus récent des frames et du dossier de la compagnie à la SEC
+        robot_a = t.get("actions")
+        fait_robot = {"val": robot_a[0], "end": robot_a[1]} if robot_a else None
+        officiel = bool(fait_robot) and (fait_robot == fait_frames or any(
+            f["end"] == fait_robot["end"] and f["val"] == fait_robot["val"] for f in faits))
+        if fait_robot and not officiel:
+            ecarts.append(f"{s} : actions du robot {robot_a} introuvables dans les frames et dans le dossier companyfacts")
+        if fait_robot and fait_frames and fait_robot["end"] < fait_frames["end"]:
+            ecarts.append(f"{s} : actions du robot {robot_a} plus vieilles que celles des frames {fait_frames}")
+        labo_t, raison = classe(fait_robot or fait_frames)
         if t["taille"] != labo_t:
             ecarts.append(f"{s} : taille {t['taille']} ({t.get('raison')}) ≠ labo {labo_t} ({raison})")
-        if recent and labo_t and classe(recent)[0] != labo_t:
-            notes.append(f"{s} : avec le fait le plus récent du dossier companyfacts ({recent['val']:,} au {recent['end']}), "
-                         f"la taille serait {classe(recent)[0]} (frames : {labo_t})")
+        plus_recent = max([x for x in (recent, fait_frames) if x], key=lambda x: x["end"], default=None)
+        if plus_recent and fait_robot and plus_recent["end"] > fait_robot["end"]:
+            notes.append(f"{s} : fait plus récent à la SEC ({plus_recent['val']:,} au {plus_recent['end']}) que celui du "
+                         f"robot ({robot_a[0]:,} au {robot_a[1]}), lu le matin : taille avec lui {classe(plus_recent)[0]}")
         flottant = max(cf.get("facts", {}).get("dei", {}).get("EntityPublicFloat", {}).get("units", {}).get("USD", [])
                        if faits else [], key=lambda f: (f["end"], f["filed"]), default=None)
         if t["taille"] == "petite" and flottant and flottant["val"] / 1e6 >= seuils["p30"]:
             notes.append(f"{s} : petite selon actions × prix, mais flottant public de {flottant['val'] / 1e6:,.0f} M$ au "
                          f"{flottant['end']} (seuil {seuils['p30']:,} M$) : cours tombé depuis, ou une seule catégorie d'actions ?")
         if t["taille"]:
-            robot_a = t["actions"]
-            if not fait_frames or [fait_frames["val"], fait_frames["end"]] != robot_a:
-                ecarts.append(f"{s} : actions du robot {robot_a} ≠ fait le plus récent des frames relus par le labo {fait_frames}")
-            if any(f["end"] == robot_a[1] and f["val"] == robot_a[0] for f in faits):
-                pass  # confirmé par le dossier companyfacts
-            elif any(f["val"] == robot_a[0] for f in faits):
-                notes.append(f"{s} : {robot_a[0]:,} actions au {robot_a[1]} selon les frames ; le dossier companyfacts a le "
-                             f"même nombre à une autre date (dernier : {recent['end'] if recent else '—'}) : les 2 API de la "
-                             f"SEC ne concordent pas sur la date")
-            else:
-                ecarts.append(f"{s} : {robot_a[0]:,} actions (frames) introuvables dans le dossier companyfacts de la SEC")
-            if recent and [recent["val"], recent["end"]] != robot_a:
-                notes.append(f"{s} : fait le plus récent du dossier companyfacts ({recent['val']:,} au {recent['end']}) ≠ "
-                             f"frames ({robot_a[0]:,} au {robot_a[1]})")
+            if fait_robot == fait_frames and not any(f["end"] == robot_a[1] for f in faits):  # ex. FLNA
+                notes.append(f"{s} : {robot_a[0]:,} actions au {robot_a[1]} (frames) ; pas ce fait dans le dossier "
+                             f"companyfacts (dernier : {recent['end'] if recent else '—'}) : les API de la SEC ne concordent pas")
             if t["prix"] != pr:
                 ecarts.append(f"{s} : prix {t['prix']} ≠ labo {pr}")
             v = robot_a[0] * pr[1] / 1e6 if pr else None

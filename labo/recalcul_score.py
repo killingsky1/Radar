@@ -172,7 +172,10 @@ def taille_de(t):
     r = set(f["rapports"])
     if r & {"20-F", "40-F", "6-K"} or not r & {"10-K", "10-Q", "10-KT", "10-QT"}:
         return None
-    a = (TAILLE.get("actions") or {}).get(str(f["cik"]))
+    # le fait le plus récent : fichiers frames ou dossier companyconcept (même date : les frames)
+    faits = [x for x in ((TAILLE.get("actions") or {}).get(str(f["cik"])),
+                         (TAILLE.get("actions_concept") or {}).get(str(f["cik"]))) if x]
+    a = max(faits, key=lambda x: x[1], default=None)
     if not a or (jour - date.fromisoformat(a[1])).days > 200 or a[0] < 500_000:
         return None
     p = (TAILLE.get("prix") or {}).get(t)
