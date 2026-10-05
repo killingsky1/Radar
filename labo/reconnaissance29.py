@@ -150,7 +150,7 @@ def classe(val, prix):
     return "petite" if v < p30 else "grande" if v >= p70 else "moyenne"
 
 
-resume = {"concept plus récent": 0, "frames plus récent": 0, "pareil": 0, "sans fait": 0, "classe change": 0}
+bilan = {"concept plus récent": 0, "frames plus récent": 0, "pareil": 0, "sans fait": 0, "classe change": 0}
 garder = {"ASPI", "FLNA", "GME", "PRHI", "FUL", "QVCG"}
 for s in achats:
     f = em.get(s)
@@ -165,24 +165,24 @@ for s in achats:
     frames = taille["actions"].get(str(cik))
     prix = taille["prix"].get(s)
     if not concept and not frames:
-        resume["sans fait"] += 1
+        bilan["sans fait"] += 1
         quoi = "aucun fait"
     elif concept and (not frames or concept["end"] > frames[1]):
-        resume["concept plus récent"] += 1
+        bilan["concept plus récent"] += 1
         quoi = "companyconcept plus récent"
     elif frames and (not concept or frames[1] > concept["end"]):
-        resume["frames plus récent"] += 1
+        bilan["frames plus récent"] += 1
         quoi = "frames plus récent"
     else:
-        resume["pareil"] += 1
+        bilan["pareil"] += 1
         quoi = "même date"
     change = ""
     if concept and frames and prix and concept["val"] >= 500_000 and frames[0] >= 500_000:
         a, n = classe(frames[0], prix[1]), classe(concept["val"], prix[1])
         if a != n:
-            resume["classe change"] += 1
+            bilan["classe change"] += 1
             change = f" · CLASSE {a} → {n}"
     dire(f"- {s} (CIK {cik}) : companyconcept {statut} {(concept['val'], concept['end'], concept.get('form')) if concept else None} · "
          f"frames {frames} · {quoi}{change}")
-dire(f"- résumé : {resume}")
+dire(f"- bilan : {bilan}")
 dire("\nVERDICT : recherche faite")
