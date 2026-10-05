@@ -33,6 +33,10 @@ def garder(e, ctx):
 (TMP / "verif" / "b.py").write_text(REGLE.format(id="b", seuil=500))
 (TMP / "regles" / "c.py").write_text('ID = "c"\ndef garder(e, ctx):\n    return 1 / 0\n')
 (TMP / "regles" / "d.py").write_text(REGLE.format(id="d", seuil=300))
+(TMP / "regles" / "e.py").write_text('ID = "e"\nIMPOSSIBLE = "décide avec des échecs pas encore publiés"\n'
+                                     'def garder(e, ctx):\n    return False\n')
+(TMP / "regles" / "f.py").write_text(REGLE.format(id="f", seuil=300) + "TEMOIN = True\n")
+(TMP / "verif" / "f.py").write_text(REGLE.format(id="f", seuil=300) + "TEMOIN = True\n")
 r = subprocess.run([sys.executable, str(ICI.parent / "juger.py"), "--donnees", str(TMP / "donnees"), "--sortie",
                     str(TMP / "res"), "--regles", str(TMP / "regles"), "--verif", str(TMP / "verif")],
                    capture_output=True, text=True)
@@ -58,7 +62,11 @@ verifier("Signaux : achetés + perdus + écartés ≤ signaux", sum(v for k, v i
 trans = json.loads((TMP / "res" / "a.transactions.json").read_text())
 verifier("Aucun achat d'un dépôt du contexte (avant le 1er juillet 2023)", all(t["achat"] >= "2023-07-01" for t in trans))
 resume = (TMP / "res" / "resume.md").read_text()
-verifier("Résumé : une ligne par règle", all(f"| {k} |" in resume for k in "abcd"))
+verifier("Résumé : une ligne par règle", all(f"| {k} |" in resume for k in "abcdef"))
+verifier("Règle écartée (IMPOSSIBLE) : notée avec sa raison, pas simulée, ne passe pas",
+         tous["e"].get("ecartee", "").startswith("décide") and not tous["e"]["passe"] and "stats" not in tous["e"])
+verifier("Témoin : simulé et comparé, mais ne peut jamais passer", tous["f"]["temoin"] and not tous["f"]["passe"]
+         and tous["f"]["deux_programmations"] == "identiques")
 shutil.rmtree(TMP, ignore_errors=True)
 print(f"\n{sum(ok)}/{len(ok)} vérifications réussies")
 sys.exit(0 if all(ok) else 1)

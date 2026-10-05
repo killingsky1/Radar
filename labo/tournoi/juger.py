@@ -113,6 +113,12 @@ def main():
         try:
             regle = banc.charger_regle(f)
             r["id"] = regle.ID
+            if getattr(regle, "IMPOSSIBLE", None):  # écartée : impossible sans information du futur ou sans données
+                r.update(ecartee=regle.IMPOSSIBLE, passe=False)
+                tous[f.stem] = r
+                (sortie / f"{f.stem}.json").write_text(json.dumps(r, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+                lignes.append(f"| {f.stem} | ÉCARTÉE : {r['ecartee'][:150]} | | | | | | | | | | non |")
+                continue
             res, trans = passer(regle, d)
             r.update(res)
             verif = Path(x.verif) / f.name
@@ -124,7 +130,8 @@ def main():
                                "nombres": [len(a_), len(b_), len(a_ & b_)]}
             else:
                 r["deux_programmations"] = "vérificateur absent"
-            r["passe"] = all(r["criteres"].values()) and r["deux_programmations"] == "identiques"
+            r["temoin"] = bool(getattr(regle, "TEMOIN", False))  # un témoin sert à comparer : il ne peut pas passer
+            r["passe"] = all(r["criteres"].values()) and r["deux_programmations"] == "identiques" and not r["temoin"]
             (sortie / f"{f.stem}.transactions.json").write_text(json.dumps(trans, ensure_ascii=False), encoding="utf-8")
         except Exception as exc:  # noqa: BLE001 — une règle qui plante est notée, les autres continuent
             r.update(erreur=f"{type(exc).__name__}: {exc}", trace=traceback.format_exc()[-1500:], passe=False)
@@ -141,7 +148,7 @@ def main():
                       f"{pe['annees_gagnees']} | {sg.get('sans_prix', 0)} sur {sg.get('signaux', 0)} | "
                       f"{r['t_periode']} | {r['achats']} | {'oui' if c['1_bat_spy_chaque_annee'] else 'non'} | "
                       f"{'oui' if c['2_t_3_ou_plus'] else 'non'} | {'oui' if c['3_achats'] else 'non'} | "
-                      f"{r['deux_programmations']} | {'**OUI**' if r['passe'] else 'non'} |")
+                      f"{r['deux_programmations']} | {'témoin' if r.get('temoin') else '**OUI**' if r['passe'] else 'non'} |")
     entete = ["# Tournoi : découverte (juillet 2023 à juin 2026)", "",
               f"Données : `{x.donnees}`. Par année : portefeuille / S&P 500 gardé, en % (achats). Période entière : "
               "portefeuille / S&P 500 / petites compagnies (IWM), en %. t = écart mensuel avec le S&P 500, sur les mois "
