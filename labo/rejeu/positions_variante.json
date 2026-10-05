@@ -1090,49 +1090,6 @@
   "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
  },
  {
-  "symbole": "TROX",
-  "nom": "Tronox Holdings plc",
-  "entree": "2025-08-01T23:17:00-04:00",
-  "jour": "2025-08-01",
-  "mois": "2025-08",
-  "note10": 10.0,
-  "signaux": [
-   {
-    "famille": "inities",
-    "sens": 1,
-    "regle": "achat_dirigeant",
-    "facteurs": [
-     "PDG, directeur financier ou président du conseil",
-     "Groupe d'achats",
-     "Petite compagnie"
-    ]
-   }
-  ],
-  "taille": "petite",
-  "depart": {
-   "statut": "ok",
-   "date": "20250813",
-   "prix": 3.44,
-   "cusip": "G9087Q102"
-  },
-  "arrivee_robot": {
-   "statut": "pas_de_prix"
-  },
-  "achetee": true,
-  "statut": "mesure",
-  "sortie": "20250919",
-  "prix_sortie": 5.06,
-  "variation": 0.4709,
-  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
-  "rendement": 0.4709,
-  "prix_achat": 3.44,
-  "fonds_marche": "SPY",
-  "marche": 0.0305,
-  "rendement_pire": 0.4709,
-  "rendement_sans_sauts": 0.4709,
-  "jours_tenus": 37
- },
- {
   "symbole": "UPS",
   "nom": "UNITED PARCEL SERVICE INC",
   "entree": "2025-08-01T23:17:00-04:00",
@@ -2322,6 +2279,48 @@
   "jours_tenus": 34
  },
  {
+  "symbole": "ICHR",
+  "nom": "ICHOR HOLDINGS, LTD.",
+  "entree": "2025-08-11T23:17:00-04:00",
+  "jour": "2025-08-11",
+  "mois": "2025-08",
+  "note10": 9.4,
+  "signaux": [
+   {
+    "famille": "inities",
+    "sens": 1,
+    "regle": "achat_dirigeant",
+    "facteurs": [
+     "Groupe d'achats",
+     "Petite compagnie"
+    ]
+   }
+  ],
+  "taille": "petite",
+  "depart": {
+   "statut": "ok",
+   "date": "20250818",
+   "prix": 17.95,
+   "cusip": "G4740B105"
+  },
+  "arrivee_robot": {
+   "statut": "pas_de_prix"
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251002",
+  "prix_sortie": 19.81,
+  "variation": 0.1036,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.1036,
+  "prix_achat": 17.95,
+  "fonds_marche": "SPY",
+  "marche": 0.0389,
+  "rendement_pire": 0.1036,
+  "rendement_sans_sauts": 0.1036,
+  "jours_tenus": 45
+ },
+ {
   "symbole": "SBH",
   "nom": "Sally Beauty Holdings, Inc.",
   "entree": "2025-08-11T23:17:00-04:00",
@@ -2563,6 +2562,57 @@
   "jours_tenus": 33
  },
  {
+  "symbole": "LLY",
+  "nom": "ELI LILLY & Co",
+  "entree": "2025-08-12T23:17:00-04:00",
+  "jour": "2025-08-12",
+  "mois": "2025-08",
+  "note10": 9.4,
+  "signaux": [
+   {
+    "famille": "inities",
+    "sens": 1,
+    "regle": "achat_dirigeant",
+    "facteurs": [
+     "PDG, directeur financier ou président du conseil",
+     "Groupe d'achats"
+    ]
+   }
+  ],
+  "taille": "grande",
+  "depart": {
+   "statut": "ok",
+   "date": "20250815",
+   "prix": 684.43,
+   "cusip": "532457108"
+  },
+  "arrivee_robot": {
+   "date": "20250915",
+   "prix": 755.39,
+   "variation": 0.1037,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0193
+   },
+   "ecart": 0.0844,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250915",
+  "prix_sortie": 755.39,
+  "variation": 0.1037,
+  "rendement": 0.1037,
+  "pourquoi": null,
+  "prix_achat": 684.43,
+  "fonds_marche": "SPY",
+  "marche": 0.0193,
+  "rendement_pire": 0.1037,
+  "rendement_sans_sauts": 0.1037,
+  "jours_tenus": 31
+ },
+ {
   "symbole": "SMRT",
   "nom": "SmartRent, Inc.",
   "entree": "2025-08-12T23:17:00-04:00",
@@ -2774,6 +2824,57 @@
   "jours_tenus": 30
  },
  {
+  "symbole": "AMPY",
+  "nom": "Amplify Energy Corp.",
+  "entree": "2025-08-14T23:17:00-04:00",
+  "jour": "2025-08-14",
+  "mois": "2025-08",
+  "note10": 9.4,
+  "signaux": [
+   {
+    "famille": "inities",
+    "sens": 1,
+    "regle": "achat_dirigeant",
+    "facteurs": [
+     "Groupe d'achats",
+     "Petite compagnie"
+    ]
+   }
+  ],
+  "taille": "petite",
+  "depart": {
+   "statut": "ok",
+   "date": "20250826",
+   "prix": 4.14,
+   "cusip": "03212B103"
+  },
+  "arrivee_robot": {
+   "date": "20250926",
+   "prix": 5.84,
+   "variation": 0.4106,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0243
+   },
+   "ecart": 0.3863,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20250926",
+  "prix_sortie": 5.84,
+  "variation": 0.4106,
+  "rendement": 0.4106,
+  "pourquoi": null,
+  "prix_achat": 4.14,
+  "fonds_marche": "SPY",
+  "marche": 0.0243,
+  "rendement_pire": 0.4106,
+  "rendement_sans_sauts": 0.4106,
+  "jours_tenus": 31
+ },
+ {
   "symbole": "KODK",
   "nom": "EASTMAN KODAK CO",
   "entree": "2025-08-14T23:17:00-04:00",
@@ -2945,53 +3046,6 @@
   },
   "achetee": false,
   "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
- },
- {
-  "symbole": "BW",
-  "nom": "Babcock & Wilcox Enterprises, Inc.",
-  "entree": "2025-08-20T23:17:00-04:00",
-  "jour": "2025-08-20",
-  "mois": "2025-08",
-  "note10": 10.0,
-  "signaux": [
-   {
-    "famille": "inities",
-    "sens": 1,
-    "regle": "achat_dirigeant",
-    "facteurs": [
-     "PDG, directeur financier ou président du conseil",
-     "Groupe d'achats",
-     "Petite compagnie"
-    ]
-   }
-  ],
-  "taille": "petite",
-  "depart": {
-   "statut": "ok",
-   "date": "20250822",
-   "prix": 1.6,
-   "cusip": "05614L209"
-  },
-  "arrivee_robot": {
-   "date": "20250922",
-   "prix": 3.27,
-   "variation": 1.0437,
-   "statut": "a_verifier",
-   "pourquoi": "saut de prix anormal : possible fractionnement d'actions ou prix erroné (la SEC ne garantit pas ses prix)"
-  },
-  "achetee": true,
-  "statut": "a_verifier",
-  "sortie": "20250922",
-  "prix_sortie": 3.27,
-  "variation": 1.0437,
-  "rendement": 1.0437,
-  "pourquoi": "saut de prix anormal : possible fractionnement d'actions ou prix erroné (la SEC ne garantit pas ses prix)",
-  "prix_achat": 1.6,
-  "fonds_marche": "SPY",
-  "marche": 0.0443,
-  "rendement_pire": 1.0437,
-  "rendement_sans_sauts": 0.0,
-  "jours_tenus": 31
  },
  {
   "symbole": "EONR",
@@ -3575,48 +3629,6 @@
   "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
  },
  {
-  "symbole": "BWFG",
-  "nom": "Bankwell Financial Group, Inc.",
-  "entree": "2025-09-05T23:17:00-04:00",
-  "jour": "2025-09-05",
-  "mois": "2025-09",
-  "note10": 9.4,
-  "signaux": [
-   {
-    "famille": "inities",
-    "sens": 1,
-    "regle": "achat_dirigeant",
-    "facteurs": [
-     "Groupe d'achats",
-     "Petite compagnie"
-    ]
-   }
-  ],
-  "taille": "petite",
-  "depart": {
-   "statut": "ok",
-   "date": "20250922",
-   "prix": 45.59,
-   "cusip": "06654A103"
-  },
-  "arrivee_robot": {
-   "statut": "pas_de_prix"
-  },
-  "achetee": true,
-  "statut": "mesure",
-  "sortie": "20251208",
-  "prix_sortie": 47.34,
-  "variation": 0.0384,
-  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
-  "rendement": 0.0384,
-  "prix_achat": 45.59,
-  "fonds_marche": "SPY",
-  "marche": 0.0331,
-  "rendement_pire": 0.0384,
-  "rendement_sans_sauts": 0.0384,
-  "jours_tenus": 77
- },
- {
   "symbole": "MLYS",
   "nom": "Mineralys Therapeutics, Inc.",
   "entree": "2025-09-08T23:17:00-04:00",
@@ -3662,6 +3674,48 @@
   "marche": 0.0204,
   "rendement_pire": 0.016,
   "rendement_sans_sauts": 0.016,
+  "jours_tenus": 35
+ },
+ {
+  "symbole": "ACDC",
+  "nom": "ProFrac Holding Corp.",
+  "entree": "2025-09-09T23:17:00-04:00",
+  "jour": "2025-09-09",
+  "mois": "2025-09",
+  "note10": 8.8,
+  "signaux": [
+   {
+    "famille": "inities",
+    "sens": 1,
+    "regle": "achat_dirigeant",
+    "facteurs": [
+     "PDG, directeur financier ou président du conseil",
+     "Petite compagnie"
+    ]
+   }
+  ],
+  "taille": "petite",
+  "depart": {
+   "statut": "ok",
+   "date": "20250916",
+   "prix": 3.71,
+   "cusip": "74319N100"
+  },
+  "arrivee_robot": {
+   "statut": "pas_de_prix"
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251021",
+  "prix_sortie": 3.94,
+  "variation": 0.062,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.062,
+  "prix_achat": 3.71,
+  "fonds_marche": "SPY",
+  "marche": 0.0157,
+  "rendement_pire": 0.062,
+  "rendement_sans_sauts": 0.062,
   "jours_tenus": 35
  },
  {
@@ -3719,6 +3773,54 @@
   "jours_tenus": 30
  },
  {
+  "symbole": "AARD",
+  "nom": "Aardvark Therapeutics, Inc.",
+  "entree": "2025-09-10T23:17:00-04:00",
+  "jour": "2025-09-10",
+  "mois": "2025-09",
+  "note10": 8.8,
+  "signaux": [
+   {
+    "famille": "inities",
+    "sens": 1,
+    "regle": "achat_dirigeant",
+    "facteurs": [
+     "PDG, directeur financier ou président du conseil",
+     "Petite compagnie"
+    ]
+   }
+  ],
+  "taille": "petite",
+  "depart": {
+   "statut": "ok",
+   "date": "20250912",
+   "prix": 7.79,
+   "cusip": "002942100"
+  },
+  "arrivee_robot": {
+   "date": "20251014",
+   "prix": 14.63,
+   "variation": 0.878,
+   "statut": "mesure",
+   "marche": null,
+   "battu": null,
+   "pourquoi": "pas de prix du marché à ces dates"
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251014",
+  "prix_sortie": 14.63,
+  "variation": 0.878,
+  "rendement": 0.878,
+  "pourquoi": "pas de prix du marché à ces dates",
+  "prix_achat": 7.79,
+  "fonds_marche": "SPY~",
+  "marche": 0.0206,
+  "rendement_pire": 0.878,
+  "rendement_sans_sauts": 0.878,
+  "jours_tenus": 32
+ },
+ {
   "symbole": "OCTO",
   "nom": "Eightco Holdings Inc.",
   "entree": "2025-09-10T23:17:00-04:00",
@@ -3744,55 +3846,6 @@
   "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
  },
  {
-  "symbole": "AARD",
-  "nom": "Aardvark Therapeutics, Inc.",
-  "entree": "2025-09-12T23:17:00-04:00",
-  "jour": "2025-09-12",
-  "mois": "2025-09",
-  "note10": 10.0,
-  "signaux": [
-   {
-    "famille": "inities",
-    "sens": 1,
-    "regle": "achat_dirigeant",
-    "facteurs": [
-     "PDG, directeur financier ou président du conseil",
-     "Groupe d'achats",
-     "Petite compagnie"
-    ]
-   }
-  ],
-  "taille": "petite",
-  "depart": {
-   "statut": "ok",
-   "date": "20250916",
-   "prix": 9.95,
-   "cusip": "002942100"
-  },
-  "arrivee_robot": {
-   "date": "20251017",
-   "prix": 13.3,
-   "variation": 0.3367,
-   "statut": "mesure",
-   "marche": null,
-   "battu": null,
-   "pourquoi": "pas de prix du marché à ces dates"
-  },
-  "achetee": true,
-  "statut": "mesure",
-  "sortie": "20251017",
-  "prix_sortie": 13.3,
-  "variation": 0.3367,
-  "rendement": 0.3367,
-  "pourquoi": "pas de prix du marché à ces dates",
-  "prix_achat": 9.95,
-  "fonds_marche": "SPY~",
-  "marche": 0.002,
-  "rendement_pire": 0.3367,
-  "rendement_sans_sauts": 0.3367,
-  "jours_tenus": 31
- },
- {
   "symbole": "AROW",
   "nom": "ARROW FINANCIAL CORP",
   "entree": "2025-09-12T23:17:00-04:00",
@@ -3816,6 +3869,48 @@
   },
   "achetee": false,
   "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+ },
+ {
+  "symbole": "NWTG",
+  "nom": "Newton Golf Company, Inc.",
+  "entree": "2025-09-12T23:17:00-04:00",
+  "jour": "2025-09-12",
+  "mois": "2025-09",
+  "note10": 8.8,
+  "signaux": [
+   {
+    "famille": "inities",
+    "sens": 1,
+    "regle": "achat_dirigeant",
+    "facteurs": [
+     "PDG, directeur financier ou président du conseil",
+     "Petite compagnie"
+    ]
+   }
+  ],
+  "taille": "petite",
+  "depart": {
+   "statut": "ok",
+   "date": "20250917",
+   "prix": 2.02,
+   "cusip": "78577G301"
+  },
+  "arrivee_robot": {
+   "statut": "pas_de_prix"
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251024",
+  "prix_sortie": 1.73,
+  "variation": -0.1436,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": -0.1436,
+  "prix_achat": 2.02,
+  "fonds_marche": "IVV",
+  "marche": 0.0207,
+  "rendement_pire": -0.1436,
+  "rendement_sans_sauts": -0.1436,
+  "jours_tenus": 37
  },
  {
   "symbole": "DENN",
@@ -6329,57 +6424,6 @@
   "jours_tenus": 31
  },
  {
-  "symbole": "OPK",
-  "nom": "OPKO HEALTH, INC.",
-  "entree": "2025-10-31T23:17:00-04:00",
-  "jour": "2025-10-31",
-  "mois": "2025-10",
-  "note10": 8.8,
-  "signaux": [
-   {
-    "famille": "inities",
-    "sens": 1,
-    "regle": "achat_dirigeant",
-    "facteurs": [
-     "PDG, directeur financier ou président du conseil",
-     "Petite compagnie"
-    ]
-   }
-  ],
-  "taille": "petite",
-  "depart": {
-   "statut": "ok",
-   "date": "20251113",
-   "prix": 1.32,
-   "cusip": "68375N103"
-  },
-  "arrivee_robot": {
-   "date": "20251215",
-   "prix": 1.38,
-   "variation": 0.0455,
-   "statut": "mesure",
-   "marche": {
-    "fonds": "SPY",
-    "variation": -0.0024
-   },
-   "ecart": 0.0479,
-   "battu": true
-  },
-  "achetee": true,
-  "statut": "mesure",
-  "sortie": "20251215",
-  "prix_sortie": 1.38,
-  "variation": 0.0455,
-  "rendement": 0.0455,
-  "pourquoi": null,
-  "prix_achat": 1.32,
-  "fonds_marche": "SPY",
-  "marche": -0.0024,
-  "rendement_pire": 0.0455,
-  "rendement_sans_sauts": 0.0455,
-  "jours_tenus": 32
- },
- {
   "symbole": "IRDM",
   "nom": "Iridium Communications Inc.",
   "entree": "2025-11-03T23:17:00-05:00",
@@ -6505,48 +6549,6 @@
   "rendement_pire": 0.1944,
   "rendement_sans_sauts": 0.1944,
   "jours_tenus": 33
- },
- {
-  "symbole": "NEWT",
-  "nom": "NewtekOne, Inc.",
-  "entree": "2025-11-03T23:17:00-05:00",
-  "jour": "2025-11-03",
-  "mois": "2025-11",
-  "note10": 8.8,
-  "signaux": [
-   {
-    "famille": "inities",
-    "sens": 1,
-    "regle": "achat_dirigeant",
-    "facteurs": [
-     "PDG, directeur financier ou président du conseil",
-     "Petite compagnie"
-    ]
-   }
-  ],
-  "taille": "petite",
-  "depart": {
-   "statut": "ok",
-   "date": "20251110",
-   "prix": 10.27,
-   "cusip": "652526203"
-  },
-  "arrivee_robot": {
-   "statut": "pas_de_prix"
-  },
-  "achetee": true,
-  "statut": "mesure",
-  "sortie": "20251215",
-  "prix_sortie": 11.92,
-  "variation": 0.1607,
-  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
-  "rendement": 0.1607,
-  "prix_achat": 10.27,
-  "fonds_marche": "SPY~",
-  "marche": 0.0171,
-  "rendement_pire": 0.1607,
-  "rendement_sans_sauts": 0.1607,
-  "jours_tenus": 35
  },
  {
   "symbole": "NIC",
@@ -7009,14 +7011,13 @@
   "entree": "2025-11-06T23:17:00-05:00",
   "jour": "2025-11-06",
   "mois": "2025-11",
-  "note10": 10.0,
+  "note10": 9.4,
   "signaux": [
    {
     "famille": "inities",
     "sens": 1,
     "regle": "achat_dirigeant",
     "facteurs": [
-     "PDG, directeur financier ou président du conseil",
      "Groupe d'achats",
      "Petite compagnie"
     ]
@@ -7182,49 +7183,6 @@
   "rendement_pire": 0.0495,
   "rendement_sans_sauts": 0.0495,
   "jours_tenus": 30
- },
- {
-  "symbole": "FDBC",
-  "nom": "FIDELITY D & D BANCORP INC",
-  "entree": "2025-11-10T23:17:00-05:00",
-  "jour": "2025-11-10",
-  "mois": "2025-11",
-  "note10": 10.0,
-  "signaux": [
-   {
-    "famille": "inities",
-    "sens": 1,
-    "regle": "achat_dirigeant",
-    "facteurs": [
-     "PDG, directeur financier ou président du conseil",
-     "Groupe d'achats",
-     "Petite compagnie"
-    ]
-   }
-  ],
-  "taille": "petite",
-  "depart": {
-   "statut": "ok",
-   "date": "20251124",
-   "prix": 44.75,
-   "cusip": "31609R100"
-  },
-  "arrivee_robot": {
-   "statut": "pas_de_prix"
-  },
-  "achetee": true,
-  "statut": "mesure",
-  "sortie": "20260121",
-  "prix_sortie": 43.62,
-  "variation": -0.0253,
-  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
-  "rendement": -0.0253,
-  "prix_achat": 44.75,
-  "fonds_marche": "SPY",
-  "marche": 0.0281,
-  "rendement_pire": -0.0253,
-  "rendement_sans_sauts": -0.0253,
-  "jours_tenus": 58
  },
  {
   "symbole": "KREF",
@@ -7586,6 +7544,31 @@
   "jours_tenus": 41
  },
  {
+  "symbole": "FRSH",
+  "nom": "Freshworks Inc.",
+  "entree": "2025-11-12T23:17:00-05:00",
+  "jour": "2025-11-12",
+  "mois": "2025-11",
+  "note10": 9.4,
+  "signaux": [
+   {
+    "famille": "inities",
+    "sens": 1,
+    "regle": "achat_dirigeant",
+    "facteurs": [
+     "PDG, directeur financier ou président du conseil",
+     "Groupe d'achats"
+    ]
+   }
+  ],
+  "taille": null,
+  "depart": {
+   "statut": "pas_de_prix"
+  },
+  "achetee": false,
+  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+ },
+ {
   "symbole": "GBFH",
   "nom": "GBank Financial Holdings Inc.",
   "entree": "2025-11-12T23:17:00-05:00",
@@ -7688,6 +7671,73 @@
   "rendement_pire": -0.0134,
   "rendement_sans_sauts": -0.0134,
   "jours_tenus": 32
+ },
+ {
+  "symbole": "LINE",
+  "nom": "Lineage, Inc.",
+  "entree": "2025-11-12T23:17:00-05:00",
+  "jour": "2025-11-12",
+  "mois": "2025-11",
+  "note10": 9.4,
+  "signaux": [
+   {
+    "famille": "inities",
+    "sens": 1,
+    "regle": "achat_dirigeant",
+    "facteurs": [
+     "PDG, directeur financier ou président du conseil",
+     "Groupe d'achats"
+    ]
+   }
+  ],
+  "taille": "moyenne",
+  "depart": {
+   "statut": "pas_de_prix"
+  },
+  "achetee": false,
+  "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+ },
+ {
+  "symbole": "PEBO",
+  "nom": "PEOPLES BANCORP INC",
+  "entree": "2025-11-12T23:17:00-05:00",
+  "jour": "2025-11-12",
+  "mois": "2025-11",
+  "note10": 9.4,
+  "signaux": [
+   {
+    "famille": "inities",
+    "sens": 1,
+    "regle": "achat_dirigeant",
+    "facteurs": [
+     "Groupe d'achats",
+     "Petite compagnie"
+    ]
+   }
+  ],
+  "taille": "petite",
+  "depart": {
+   "statut": "ok",
+   "date": "20251117",
+   "prix": 29.06,
+   "cusip": "709789101"
+  },
+  "arrivee_robot": {
+   "statut": "pas_de_prix"
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251222",
+  "prix_sortie": 31.28,
+  "variation": 0.0764,
+  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
+  "rendement": 0.0764,
+  "prix_achat": 29.06,
+  "fonds_marche": "SPY",
+  "marche": 0.0129,
+  "rendement_pire": 0.0764,
+  "rendement_sans_sauts": 0.0764,
+  "jours_tenus": 35
  },
  {
   "symbole": "PRSU",
@@ -7821,58 +7871,6 @@
   "jours_tenus": 42
  },
  {
-  "symbole": "WEST",
-  "nom": "Westrock Coffee Co",
-  "entree": "2025-11-12T23:17:00-05:00",
-  "jour": "2025-11-12",
-  "mois": "2025-11",
-  "note10": 10.0,
-  "signaux": [
-   {
-    "famille": "inities",
-    "sens": 1,
-    "regle": "achat_dirigeant",
-    "facteurs": [
-     "PDG, directeur financier ou président du conseil",
-     "Groupe d'achats",
-     "Petite compagnie"
-    ]
-   }
-  ],
-  "taille": "petite",
-  "depart": {
-   "statut": "ok",
-   "date": "20251114",
-   "prix": 4.33,
-   "cusip": "96145W103"
-  },
-  "arrivee_robot": {
-   "date": "20251217",
-   "prix": 4.12,
-   "variation": -0.0485,
-   "statut": "mesure",
-   "marche": {
-    "fonds": "SPY",
-    "variation": 0.0102
-   },
-   "ecart": -0.0587,
-   "battu": false
-  },
-  "achetee": true,
-  "statut": "mesure",
-  "sortie": "20251217",
-  "prix_sortie": 4.12,
-  "variation": -0.0485,
-  "rendement": -0.0485,
-  "pourquoi": null,
-  "prix_achat": 4.33,
-  "fonds_marche": "SPY",
-  "marche": 0.0102,
-  "rendement_pire": -0.0485,
-  "rendement_sans_sauts": -0.0485,
-  "jours_tenus": 33
- },
- {
   "symbole": "ARQ",
   "nom": "Arq, Inc.",
   "entree": "2025-11-13T23:17:00-05:00",
@@ -7930,14 +7928,13 @@
   "entree": "2025-11-13T23:17:00-05:00",
   "jour": "2025-11-13",
   "mois": "2025-11",
-  "note10": 10.0,
+  "note10": 9.4,
   "signaux": [
    {
     "famille": "inities",
     "sens": 1,
     "regle": "achat_dirigeant",
     "facteurs": [
-     "PDG, directeur financier ou président du conseil",
      "Groupe d'achats",
      "Petite compagnie"
     ]
@@ -8027,6 +8024,57 @@
   },
   "achetee": false,
   "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
+ },
+ {
+  "symbole": "FTAI",
+  "nom": "FTAI Aviation Ltd.",
+  "entree": "2025-11-13T23:17:00-05:00",
+  "jour": "2025-11-13",
+  "mois": "2025-11",
+  "note10": 9.4,
+  "signaux": [
+   {
+    "famille": "inities",
+    "sens": 1,
+    "regle": "achat_dirigeant",
+    "facteurs": [
+     "PDG, directeur financier ou président du conseil",
+     "Groupe d'achats"
+    ]
+   }
+  ],
+  "taille": "grande",
+  "depart": {
+   "statut": "ok",
+   "date": "20251121",
+   "prix": 157.51,
+   "cusip": "G3730V105"
+  },
+  "arrivee_robot": {
+   "date": "20251222",
+   "prix": 168.49,
+   "variation": 0.0697,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.043
+   },
+   "ecart": 0.0267,
+   "battu": true
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20251222",
+  "prix_sortie": 168.49,
+  "variation": 0.0697,
+  "rendement": 0.0697,
+  "pourquoi": null,
+  "prix_achat": 157.51,
+  "fonds_marche": "SPY",
+  "marche": 0.043,
+  "rendement_pire": 0.0697,
+  "rendement_sans_sauts": 0.0697,
+  "jours_tenus": 31
  },
  {
   "symbole": "RDW",
@@ -8805,6 +8853,58 @@
   "rendement_pire": 0.0337,
   "rendement_sans_sauts": 0.0337,
   "jours_tenus": 31
+ },
+ {
+  "symbole": "ABR",
+  "nom": "ARBOR REALTY TRUST INC",
+  "entree": "2025-12-01T23:17:00-05:00",
+  "jour": "2025-12-01",
+  "mois": "2025-12",
+  "note10": 9.8,
+  "signaux": [
+   {
+    "famille": "inities",
+    "sens": 1,
+    "regle": "achat_dirigeant",
+    "facteurs": [
+     "PDG, directeur financier ou président du conseil",
+     "Groupe d'achats",
+     "Petite compagnie"
+    ]
+   }
+  ],
+  "taille": "petite",
+  "depart": {
+   "statut": "ok",
+   "date": "20251203",
+   "prix": 8.92,
+   "cusip": "038923108"
+  },
+  "arrivee_robot": {
+   "date": "20260102",
+   "prix": 7.76,
+   "variation": -0.13,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": 0.0006
+   },
+   "ecart": -0.1306,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260102",
+  "prix_sortie": 7.76,
+  "variation": -0.13,
+  "rendement": -0.13,
+  "pourquoi": null,
+  "prix_achat": 8.92,
+  "fonds_marche": "SPY",
+  "marche": 0.0006,
+  "rendement_pire": -0.13,
+  "rendement_sans_sauts": -0.13,
+  "jours_tenus": 30
  },
  {
   "symbole": "ADTN",
@@ -9731,49 +9831,6 @@
   "jours_tenus": 39
  },
  {
-  "symbole": "RLMD",
-  "nom": "RELMADA THERAPEUTICS, INC.",
-  "entree": "2025-12-16T23:17:00-05:00",
-  "jour": "2025-12-16",
-  "mois": "2025-12",
-  "note10": 10.0,
-  "signaux": [
-   {
-    "famille": "inities",
-    "sens": 1,
-    "regle": "achat_dirigeant",
-    "facteurs": [
-     "PDG, directeur financier ou président du conseil",
-     "Groupe d'achats",
-     "Petite compagnie"
-    ]
-   }
-  ],
-  "taille": "petite",
-  "depart": {
-   "statut": "ok",
-   "date": "20251223",
-   "prix": 4.49,
-   "cusip": "75955J402"
-  },
-  "arrivee_robot": {
-   "statut": "pas_de_prix"
-  },
-  "achetee": true,
-  "statut": "mesure",
-  "sortie": "20260129",
-  "prix_sortie": 3.95,
-  "variation": -0.1203,
-  "pourquoi": "vendue plus tard (pas de prix le 30e jour)",
-  "rendement": -0.1203,
-  "prix_achat": 4.49,
-  "fonds_marche": "SPY",
-  "marche": 0.0155,
-  "rendement_pire": -0.1203,
-  "rendement_sans_sauts": -0.1203,
-  "jours_tenus": 37
- },
- {
   "symbole": "EML",
   "nom": "EASTERN CO",
   "entree": "2025-12-17T23:17:00-05:00",
@@ -10534,8 +10591,8 @@
   "pourquoi": "pas de prix officiel de la SEC au départ : pas acheté"
  },
  {
-  "symbole": "GLSI",
-  "nom": "Greenwich LifeSciences, Inc.",
+  "symbole": "LSAK",
+  "nom": "LESAKA TECHNOLOGIES INC",
   "entree": "2026-01-02T23:17:00-05:00",
   "jour": "2026-01-02",
   "mois": "2026-01",
@@ -10555,33 +10612,33 @@
   "depart": {
    "statut": "ok",
    "date": "20260106",
-   "prix": 21.21,
-   "cusip": "396879108"
+   "prix": 4.92,
+   "cusip": "64107N206"
   },
   "arrivee_robot": {
    "date": "20260205",
-   "prix": 27.01,
-   "variation": 0.2735,
+   "prix": 4.56,
+   "variation": -0.0732,
    "statut": "mesure",
    "marche": {
     "fonds": "VOO",
     "variation": -0.0025
    },
-   "ecart": 0.276,
-   "battu": true
+   "ecart": -0.0707,
+   "battu": false
   },
   "achetee": true,
   "statut": "mesure",
   "sortie": "20260205",
-  "prix_sortie": 27.01,
-  "variation": 0.2735,
-  "rendement": 0.2735,
+  "prix_sortie": 4.56,
+  "variation": -0.0732,
+  "rendement": -0.0732,
   "pourquoi": null,
-  "prix_achat": 21.21,
+  "prix_achat": 4.92,
   "fonds_marche": "VOO",
   "marche": -0.0025,
-  "rendement_pire": 0.2735,
-  "rendement_sans_sauts": 0.2735,
+  "rendement_pire": -0.0732,
+  "rendement_sans_sauts": -0.0732,
   "jours_tenus": 30
  },
  {
@@ -10790,8 +10847,8 @@
  {
   "symbole": "AKTS",
   "nom": "Aktis Oncology, Inc.",
-  "entree": "2026-01-15T23:17:00-05:00",
-  "jour": "2026-01-15",
+  "entree": "2026-01-14T23:17:00-05:00",
+  "jour": "2026-01-14",
   "mois": "2026-01",
   "note10": 7.9,
   "signaux": [
@@ -10807,35 +10864,35 @@
   "taille": null,
   "depart": {
    "statut": "ok",
-   "date": "20260122",
-   "prix": 20.4,
+   "date": "20260116",
+   "prix": 20.56,
    "cusip": "01021M104"
   },
   "arrivee_robot": {
-   "date": "20260224",
-   "prix": 19.43,
-   "variation": -0.0475,
+   "date": "20260217",
+   "prix": 17.76,
+   "variation": -0.1362,
    "statut": "mesure",
    "marche": {
     "fonds": "SPY",
-    "variation": -0.0044
+    "variation": -0.0152
    },
-   "ecart": -0.0431,
+   "ecart": -0.121,
    "battu": false
   },
   "achetee": true,
   "statut": "mesure",
-  "sortie": "20260224",
-  "prix_sortie": 19.43,
-  "variation": -0.0475,
-  "rendement": -0.0475,
+  "sortie": "20260217",
+  "prix_sortie": 17.76,
+  "variation": -0.1362,
+  "rendement": -0.1362,
   "pourquoi": null,
-  "prix_achat": 20.4,
+  "prix_achat": 20.56,
   "fonds_marche": "SPY",
-  "marche": -0.0044,
-  "rendement_pire": -0.0475,
-  "rendement_sans_sauts": -0.0475,
-  "jours_tenus": 33
+  "marche": -0.0152,
+  "rendement_pire": -0.1362,
+  "rendement_sans_sauts": -0.1362,
+  "jours_tenus": 32
  },
  {
   "symbole": "ACRV",
@@ -11087,6 +11144,56 @@
   "marche": -0.0027,
   "rendement_pire": 0.0339,
   "rendement_sans_sauts": 0.0339,
+  "jours_tenus": 30
+ },
+ {
+  "symbole": "YYAI",
+  "nom": "AIRWA INC.",
+  "entree": "2026-01-22T23:17:00-05:00",
+  "jour": "2026-01-22",
+  "mois": "2026-01",
+  "note10": 7.5,
+  "signaux": [
+   {
+    "famille": "inities",
+    "sens": 1,
+    "regle": "achat_dirigeant",
+    "facteurs": [
+     "Petite compagnie"
+    ]
+   }
+  ],
+  "taille": "petite",
+  "depart": {
+   "statut": "ok",
+   "date": "20260126",
+   "prix": 1.54,
+   "cusip": "831445507"
+  },
+  "arrivee_robot": {
+   "date": "20260225",
+   "prix": 0.91,
+   "variation": -0.4091,
+   "statut": "mesure",
+   "marche": {
+    "fonds": "SPY",
+    "variation": -0.0027
+   },
+   "ecart": -0.4064,
+   "battu": false
+  },
+  "achetee": true,
+  "statut": "mesure",
+  "sortie": "20260225",
+  "prix_sortie": 0.91,
+  "variation": -0.4091,
+  "rendement": -0.4091,
+  "pourquoi": null,
+  "prix_achat": 1.54,
+  "fonds_marche": "SPY",
+  "marche": -0.0027,
+  "rendement_pire": -0.4091,
+  "rendement_sans_sauts": -0.4091,
   "jours_tenus": 30
  },
  {
