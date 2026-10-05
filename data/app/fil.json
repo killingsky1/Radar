@@ -3,6 +3,503 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-05T21:26:21+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-canada-rend-hommage-a-ses-meilleurs-educateurs-en-decernant-les-prix-du-premier-ministre.html",
+   "ministere": "Innovation, Sciences et Développement économique Canada",
+   "mis_a_jour": "2026-10-05T15:00:25-04:00",
+   "resume": "Les prix soulignent l’excellence d’éducateurs exceptionnels qui inspirent les jeunes Canadiens",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Innovation, Sciences et Développement économique Canada"
+  ],
+  "id": "nouvelles_eco_ca:innovation-sciences-developpement-economique/nouvelles/2026/10/le-canada-rend-hommage-a-ses-meilleurs-educateurs-en-decernant-les-prix-du-premier-ministre.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "innovation-sciences-developpement-economique/nouvelles/2026/10/le-canada-rend-hommage-a-ses-meilleurs-educateurs-en-decernant-les-prix-du-premier-ministre.html",
+  "official_url": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-canada-rend-hommage-a-ses-meilleurs-educateurs-en-decernant-les-prix-du-premier-ministre.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-05",
+  "sha256": "984eb01b396b08859b146d338636d2ae3ad745fb581fc4c41b6b29c84d9dd796",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le Canada rend hommage à ses meilleurs éducateurs en décernant les Prix du premier ministre"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-05T21:26:21+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/larmee-canadienne-se-reorganise-pour-mieux-defendre-le-canada.html",
+   "ministere": "Défense nationale",
+   "mis_a_jour": "2026-10-05T11:11:53-04:00",
+   "resume": "Dans le cadre de sa modernisation, l’Armée canadienne a adopté une nouvelle structure axée sur sa mission pour renforcer la défense du Canada, accroître son niveau de préparation et mieux soutenir les opérations au pays et à l’étranger.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Défense nationale"
+  ],
+  "id": "nouvelles_defense_ca:ministere-defense-nationale/nouvelles/2026/10/larmee-canadienne-se-reorganise-pour-mieux-defendre-le-canada.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "ministere-defense-nationale/nouvelles/2026/10/larmee-canadienne-se-reorganise-pour-mieux-defendre-le-canada.html",
+  "official_url": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/larmee-canadienne-se-reorganise-pour-mieux-defendre-le-canada.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-05",
+  "sha256": "ea713e28b624e972d560990237109f651dfcf0b4d09bde7dc39b3d8fab3c3c1b",
+  "source": "nouvelles_defense_ca",
+  "tickers": [],
+  "title": "L’Armée canadienne se réorganise pour mieux défendre le Canada"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-05T21:26:17+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Foreign Assets Control Office"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-20475",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-10-06",
+   "sorte": "sanctions",
+   "sous_type": null,
+   "titre_officiel": "Sanctions Action",
+   "type": "Notice"
+  },
+  "direction": 0,
+  "entities": [
+   "Foreign Assets Control Office"
+  ],
+  "id": "registre_federal:2026-20475",
+  "kind": "sanctions",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "2026-20475",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-20475/sanctions-action",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-05",
+  "sha256": "d67a3e73326d1fc5a92461e3bf9cee07d9db10dfa944081d6405e0dd1fd8aaab",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Sanctions (Trésor, OFAC) : Sanctions Action"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-05T21:26:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Foreign Assets Control Office"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-20425",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-10-06",
+   "sorte": "sanctions",
+   "sous_type": null,
+   "titre_officiel": "Sanctions Action",
+   "type": "Notice"
+  },
+  "direction": 0,
+  "entities": [
+   "Foreign Assets Control Office"
+  ],
+  "id": "registre_federal:2026-20425",
+  "kind": "sanctions",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "2026-20425",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-20425/sanctions-action",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-05",
+  "sha256": "1901de0e8f7cfff211dbb7a08649acb66f9e339b120f9ae6798d77075f82064f",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Sanctions (Trésor, OFAC) : Sanctions Action"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-05T21:26:15+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Foreign Assets Control Office"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-20395",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-10-06",
+   "sorte": "sanctions",
+   "sous_type": null,
+   "titre_officiel": "Sanctions Action",
+   "type": "Notice"
+  },
+  "direction": 0,
+  "entities": [
+   "Foreign Assets Control Office"
+  ],
+  "id": "registre_federal:2026-20395",
+  "kind": "sanctions",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "2026-20395",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-20395/sanctions-action",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-05",
+  "sha256": "1b5b82972fdfa7f8a3b47eaea76bcb21a90a432e0e349ed77acd39898fdb1ed8",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Sanctions (Trésor, OFAC) : Sanctions Action"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-10-05T21:26:05+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {},
+   "communiques": [
+    "Treasury Announces Third Round of Sanctions Removals, Updates in Modernization Initiative"
+   ],
+   "retraits": 181,
+   "titre_officiel": "Designations Removals; Designations Updates; Publication of Iran-related OFAC Alert; Publication of Amended Iran-related Frequently Asked Question"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20261005",
+  "kind": "sanctions",
+  "notes": [
+   "Communiqué du Trésor : Treasury Announces Third Round of Sanctions Removals, Updates in Modernization Initiative",
+   "Retirés de la liste : 181 fiches."
+  ],
+  "occurred_on": "2026-10-05",
+  "official_id": "20261005",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20261005",
+  "parser_version": "ofac-1",
+  "published_on": "2026-10-05",
+  "sha256": "d6e9935673f9e87b8315999364caee5a8014d5f0b4dbb19fc15691db8c922a83",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Designations Removals; Designations Updates; Publication of Iran-related OFAC Alert; Publication of Amended Iran-related Frequently Asked Question"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-05T21:26:20+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OH06",
+   "elu": "Michael Rulli",
+   "lecture_complete": true,
+   "nom_sec": "WELLS FARGO & COMPANY/MN",
+   "rapport": "20035558",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Wells Fargo & Company Common Stock (WFC) [ST]",
+     "avis": "2026-09-04",
+     "date": "2026-09-03",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Michael Rulli",
+   "WELLS FARGO & COMPANY/MN"
+  ],
+  "id": "chambre_ptr:20035558:WFC:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-03",
+  "official_id": "20035558:WFC:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035558.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-02",
+  "sha256": "778116b7d115d864b66f1e4085e51b3e36fab1661651470ce0b5b06977f387e4",
+  "source": "chambre_ptr",
+  "tickers": [
+   "WFC"
+  ],
+  "title": "Michael Rulli (Chambre, OH06) vend WFC"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-05T21:26:20+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OH06",
+   "elu": "Michael Rulli",
+   "lecture_complete": true,
+   "nom_sec": "MICROSOFT CORP",
+   "rapport": "20035558",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Microsoft Corporation - Common Stock (MSFT) [ST]",
+     "avis": "2026-09-28",
+     "date": "2026-09-28",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Michael Rulli",
+   "MICROSOFT CORP"
+  ],
+  "id": "chambre_ptr:20035558:MSFT:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-28",
+  "official_id": "20035558:MSFT:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035558.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-02",
+  "sha256": "778116b7d115d864b66f1e4085e51b3e36fab1661651470ce0b5b06977f387e4",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MSFT"
+  ],
+  "title": "Michael Rulli (Chambre, OH06) vend MSFT"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-05T21:26:20+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OH06",
+   "elu": "Michael Rulli",
+   "lecture_complete": true,
+   "nom_sec": "GOLDMAN SACHS GROUP INC",
+   "rapport": "20035558",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Goldman Sachs Group, Inc. (GS) [ST]",
+     "avis": "2026-09-04",
+     "date": "2026-09-03",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Michael Rulli",
+   "GOLDMAN SACHS GROUP INC"
+  ],
+  "id": "chambre_ptr:20035558:GS:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-09-03",
+  "official_id": "20035558:GS:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035558.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-02",
+  "sha256": "778116b7d115d864b66f1e4085e51b3e36fab1661651470ce0b5b06977f387e4",
+  "source": "chambre_ptr",
+  "tickers": [
+   "GS"
+  ],
+  "title": "Michael Rulli (Chambre, OH06) achète GS"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "champs_requis": true,

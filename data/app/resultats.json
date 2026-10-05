@@ -1,5 +1,5 @@
 {
- "genere_a": "2026-10-05T04:14:44+00:00",
+ "genere_a": "2026-10-05T21:26:00+00:00",
  "horizons": {
   "30": "1 mois",
   "7": "1 semaine"
@@ -225,7 +225,7 @@
    "note10": 7.3,
    "sens": "hausse",
    "symbole": "MNSO",
-   "vue": "2026-10-04"
+   "vue": "2026-10-05"
   },
   {
    "depart": {
@@ -317,7 +317,7 @@
    "note10": 7.3,
    "sens": "hausse",
    "symbole": "QTEX",
-   "vue": "2026-10-04"
+   "vue": "2026-10-05"
   },
   {
    "depart": {
@@ -691,6 +691,313 @@
    "symbole": "VENU",
    "taille": "petite",
    "vue": "2026-10-05"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-05T21:26:00+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Advanced Flower Capital Inc.",
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
+   "note10_sans_taille": 6.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "AFCG",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-05T21:26:00+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Clipper Realty Inc.",
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
+   "note10_sans_taille": 6.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "CLPR",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-05T21:26:00+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "FILANA THERAPEUTICS, INC.",
+   "note10": 8.4,
+   "note10_sans_bonus": 8.4,
+   "note10_sans_taille": 7.3,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "FLNA",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-05T21:26:00+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Heritage Global Inc.",
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
+   "note10_sans_taille": 6.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "HGBL",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-05T21:26:00+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Lipocine Inc.",
+   "note10": 7.3,
+   "note10_sans_bonus": 7.3,
+   "note10_sans_taille": 6.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "LPCN",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-05T21:26:00+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Presurance Holdings, Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.0,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "PRHI",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-05T21:26:00+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Venu Holding Corp",
+   "note10": 7.3,
+   "note10_sans_bonus": 7.3,
+   "note10_sans_taille": 6.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "VENU",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-05T21:26:00+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "KINGSWAY Corp",
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
+   "note10_sans_taille": 6.5,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "KWY",
+   "taille": "petite",
+   "vue": "2026-10-05"
   }
  ],
  "methode": [
@@ -700,7 +1007,8 @@
   "Marché : SPY, sinon IVV, sinon VOO (fonds qui suivent le S&P 500), aux mêmes dates. Hausse : battu si la compagnie a fait mieux que le marché ; baisse : si elle a fait moins bien.",
   "Pas de prix, nouveau code de titre (CUSIP) ou saut anormal (possible fractionnement ou prix erroné) : montré, mais hors du taux de réussite.",
   "Publication de la SEC : la 1re moitié d'un mois à la fin du mois, la 2e moitié vers le 15 du mois suivant.",
-  "Par signal : chaque entrée garde ses raisons depuis le 5 octobre 2026 (règle, facteurs, taille de la compagnie, bonus). Une entrée compte dans chacun de ses signaux. Peu d'entrées = résultat fragile."
+  "Par signal : chaque entrée garde ses raisons depuis le 5 octobre 2026 (règle, facteurs, taille de la compagnie, bonus). Une entrée compte dans chacun de ses signaux. Peu d'entrées = résultat fragile.",
+  "Écartées : les compagnies de moins de 100 M$ en bourse, hors de la liste « hausse » depuis la version 0.27, sont suivies de la même façon, à part. La règle a frappé juste quand la compagnie a fait moins bien que le marché."
  ],
  "par_signal": {
   "baisse": {},
@@ -716,7 +1024,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 8,
+    "entrees": 9,
     "libelle": "Entrée grâce au bonus de petite compagnie (×1,5)"
    },
    "regle:achat_dirigeant": {
@@ -730,7 +1038,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 8,
+    "entrees": 9,
     "libelle": "Achat d'actions par un dirigeant ou un administrateur"
    },
    "taille:petite": {
@@ -744,7 +1052,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 8,
+    "entrees": 9,
     "libelle": "Petite compagnie (sous le 30e centile du NYSE)"
    }
   },
@@ -765,16 +1073,28 @@
    "en_attente": 1,
    "mesurees": 0
   },
+  "ecartee_30": {
+   "battu": 0,
+   "ecart_moyen": null,
+   "en_attente": 7,
+   "mesurees": 0
+  },
+  "ecartee_7": {
+   "battu": 0,
+   "ecart_moyen": null,
+   "en_attente": 7,
+   "mesurees": 0
+  },
   "hausse_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 23,
+   "en_attente": 24,
    "mesurees": 0
   },
   "hausse_7": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 23,
+   "en_attente": 24,
    "mesurees": 0
   }
  }

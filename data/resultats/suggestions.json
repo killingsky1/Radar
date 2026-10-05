@@ -124,7 +124,7 @@
    "note10": 7.3,
    "sens": "hausse",
    "symbole": "MNSO",
-   "vue": "2026-10-04"
+   "vue": "2026-10-05"
   },
   {
    "entree": "2026-10-03T21:55:32+00:00",
@@ -133,7 +133,7 @@
    "note10": 7.3,
    "sens": "hausse",
    "symbole": "QTEX",
-   "vue": "2026-10-04"
+   "vue": "2026-10-05"
   },
   {
    "entree": "2026-10-03T21:55:32+00:00",
@@ -333,6 +333,201 @@
     }
    ],
    "symbole": "KBDC",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "entree": "2026-10-05T21:26:00+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "KINGSWAY Corp",
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
+   "note10_sans_taille": 6.5,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "KWY",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "entree": "2026-10-05T21:26:00+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Presurance Holdings, Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.0,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "PRHI",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "entree": "2026-10-05T21:26:00+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "FILANA THERAPEUTICS, INC.",
+   "note10": 8.4,
+   "note10_sans_bonus": 8.4,
+   "note10_sans_taille": 7.3,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "FLNA",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "entree": "2026-10-05T21:26:00+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Lipocine Inc.",
+   "note10": 7.3,
+   "note10_sans_bonus": 7.3,
+   "note10_sans_taille": 6.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "LPCN",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "entree": "2026-10-05T21:26:00+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Venu Holding Corp",
+   "note10": 7.3,
+   "note10_sans_bonus": 7.3,
+   "note10_sans_taille": 6.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "VENU",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "entree": "2026-10-05T21:26:00+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Advanced Flower Capital Inc.",
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
+   "note10_sans_taille": 6.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "AFCG",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "entree": "2026-10-05T21:26:00+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Clipper Realty Inc.",
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
+   "note10_sans_taille": 6.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "CLPR",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "entree": "2026-10-05T21:26:00+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Heritage Global Inc.",
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
+   "note10_sans_taille": 6.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "HGBL",
    "taille": "petite",
    "vue": "2026-10-05"
   }

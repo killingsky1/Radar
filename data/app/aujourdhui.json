@@ -57,7 +57,577 @@
    }
   }
  ],
- "compagnies_notees": 98,
+ "compagnies_notees": 99,
+ "ecartees": [
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depot_recent": "2026-10-01",
+   "depuis": "2026-10-05T21:26:00+00:00",
+   "derniere_info": "2026-10-01",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 4,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ],
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001193125-26-410894:P",
+       "points": 7.18,
+       "regle": "achat_dirigeant",
+       "temps": 0.912
+      },
+      {
+       "age": 4,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ],
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001193125-26-410889:P",
+       "points": 7.18,
+       "regle": "achat_dirigeant",
+       "temps": 0.912
+      },
+      {
+       "age": 4,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001193125-26-410914:P",
+       "points": 4.79,
+       "regle": "achat_dirigeant",
+       "temps": 0.912
+      },
+      {
+       "age": 4,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001193125-26-410913:P",
+       "points": 4.79,
+       "regle": "achat_dirigeant",
+       "temps": 0.912
+      },
+      {
+       "age": 4,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001193125-26-410905:P",
+       "points": 4.79,
+       "regle": "achat_dirigeant",
+       "temps": 0.912
+      }
+     ],
+     "points": 7.18,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "Presurance Holdings, Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.0,
+   "plus": 7.18,
+   "recent": true,
+   "score": 7.18,
+   "symbole": "PRHI",
+   "taille": {
+    "actions": [
+     3746092,
+     "2026-08-12"
+    ],
+    "prix": [
+     "20260914",
+     8.7
+    ],
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 32.6
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depot_recent": "2026-10-01",
+   "depuis": "2026-10-05T21:26:00+00:00",
+   "derniere_info": "2026-10-01",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 4,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001437749-26-031654:P",
+       "points": 4.1,
+       "regle": "achat_dirigeant",
+       "temps": 0.912
+      },
+      {
+       "age": 5,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001437749-26-031597:P",
+       "points": 4.01,
+       "regle": "achat_dirigeant",
+       "temps": 0.891
+      }
+     ],
+     "points": 4.1,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "FILANA THERAPEUTICS, INC.",
+   "note10": 8.4,
+   "note10_sans_bonus": 8.4,
+   "note10_sans_taille": 7.3,
+   "plus": 4.1,
+   "recent": true,
+   "score": 4.1,
+   "symbole": "FLNA",
+   "taille": {
+    "actions": [
+     48307896,
+     "2026-07-27"
+    ],
+    "prix": [
+     "20260914",
+     0.77
+    ],
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 37.2
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depot_recent": "2026-10-01",
+   "depuis": "2026-10-05T21:26:00+00:00",
+   "derniere_info": "2026-10-01",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 4,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001493152-26-045400:P",
+       "points": 2.74,
+       "regle": "achat_dirigeant",
+       "temps": 0.912
+      },
+      {
+       "age": 5,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001493152-26-045185:P",
+       "points": 2.67,
+       "regle": "achat_dirigeant",
+       "temps": 0.891
+      }
+     ],
+     "points": 2.74,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "Lipocine Inc.",
+   "note10": 7.3,
+   "note10_sans_bonus": 7.3,
+   "note10_sans_taille": 6.5,
+   "plus": 2.74,
+   "recent": true,
+   "score": 2.74,
+   "symbole": "LPCN",
+   "taille": {
+    "actions": [
+     8244253,
+     "2026-08-03"
+    ],
+    "prix": [
+     "20260824",
+     2.09
+    ],
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 17.2
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depot_recent": "2026-10-01",
+   "depuis": "2026-10-05T21:26:00+00:00",
+   "derniere_info": "2026-10-01",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 4,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001493152-26-045391:P",
+       "points": 2.74,
+       "regle": "achat_dirigeant",
+       "temps": 0.912
+      }
+     ],
+     "points": 2.74,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "Venu Holding Corp",
+   "note10": 7.3,
+   "note10_sans_bonus": 7.3,
+   "note10_sans_taille": 6.5,
+   "plus": 2.74,
+   "recent": true,
+   "score": 2.74,
+   "symbole": "VENU",
+   "taille": {
+    "actions": [
+     56210552,
+     "2026-08-13"
+    ],
+    "prix": [
+     "20260914",
+     1.74
+    ],
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 97.8
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [
+    {
+     "id": "sec_8k:0001628280-26-063811",
+     "pourquoi": "Autre point du 8-K (contrat, acquisition, avis de retrait de la bourse…) : effet incertain."
+    }
+   ],
+   "depot_recent": "2026-09-30",
+   "depuis": "2026-10-05T21:26:00+00:00",
+   "derniere_info": "2026-09-30",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 5,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001628280-26-064003:P",
+       "points": 2.67,
+       "regle": "achat_dirigeant",
+       "temps": 0.891
+      }
+     ],
+     "points": 2.67,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "Advanced Flower Capital Inc.",
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
+   "note10_sans_taille": 6.5,
+   "plus": 2.67,
+   "recent": false,
+   "score": 2.67,
+   "symbole": "AFCG",
+   "taille": {
+    "actions": [
+     22671919,
+     "2026-08-07"
+    ],
+    "prix": [
+     "20260904",
+     3.62
+    ],
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 82.1
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [
+    {
+     "id": "sec_13dg:0001539497-26-002632",
+     "pourquoi": "Mise à jour d'un 13D ou passage sous 5 % : seul le premier dépôt compte."
+    }
+   ],
+   "depot_recent": "2026-09-30",
+   "depuis": "2026-10-05T21:26:00+00:00",
+   "derniere_info": "2026-09-30",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 5,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001437749-26-031626:P",
+       "points": 2.67,
+       "regle": "achat_dirigeant",
+       "temps": 0.891
+      }
+     ],
+     "points": 2.67,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "Clipper Realty Inc.",
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
+   "note10_sans_taille": 6.5,
+   "plus": 2.67,
+   "recent": false,
+   "score": 2.67,
+   "symbole": "CLPR",
+   "taille": {
+    "actions": [
+     16157566,
+     "2026-08-06"
+    ],
+    "prix": [
+     "20260831",
+     3.32
+    ],
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 53.6
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [
+    {
+     "id": "sec_13dg:0001193125-26-408045",
+     "pourquoi": "Mise à jour d'un 13D ou passage sous 5 % : seul le premier dépôt compte."
+    }
+   ],
+   "depot_recent": "2026-09-29",
+   "depuis": "2026-10-05T21:26:00+00:00",
+   "derniere_info": "2026-09-29",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 6,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001193125-26-407271:P",
+       "points": 2.61,
+       "regle": "achat_dirigeant",
+       "temps": 0.871
+      }
+     ],
+     "points": 2.61,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "Heritage Global Inc.",
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
+   "note10_sans_taille": 6.5,
+   "plus": 2.61,
+   "recent": false,
+   "score": 2.61,
+   "symbole": "HGBL",
+   "taille": {
+    "actions": [
+     34639445,
+     "2026-08-01"
+    ],
+    "prix": [
+     "20260908",
+     1.36
+    ],
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 47.1
+   }
+  }
+ ],
  "evenements": {
   "sec_13dg:0000921895-26-002669": {
    "amount_max": null,
@@ -278,6 +848,58 @@
     "SAMG"
    ],
    "title": "Equinox Partners Investment Management LLC détient 7,1 % de Silvercrest Asset Management Group Inc. (13D, intentions actives)"
+  },
+  "sec_13dg:0001193125-26-408045": {
+   "amount_max": null,
+   "amount_min": null,
+   "badge": "officiel",
+   "category": "baleines",
+   "checks": {
+    "champs_requis": true,
+    "dates_coherentes": true,
+    "domaine_officiel": true,
+    "emetteur_coherent": true,
+    "empreinte": true,
+    "pourcentage_valide": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-02T20:03:38+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 2021917.0,
+    "amendement": "1",
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0000849145",
+    "cik_sujet_entete": "0000849145",
+    "date_evenement": "2026-09-25",
+    "declarant": "Ross Dove",
+    "nb_personnes": 1,
+    "nom_emetteur": "HERITAGE GLOBAL INC.",
+    "pourcentage": 5.8,
+    "type": "SCHEDULE 13D/A"
+   },
+   "direction": 0,
+   "entities": [
+    "Ross Dove",
+    "Heritage Global Inc."
+   ],
+   "id": "sec_13dg:0001193125-26-408045",
+   "kind": "plus_5_pourcent",
+   "notes": [],
+   "occurred_on": "2026-09-25",
+   "official_id": "0001193125-26-408045",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/849145/000119312526408045/0001193125-26-408045-index.htm",
+   "parser_version": "sec-2",
+   "published_on": "2026-09-29",
+   "sha256": "613579bee2d71c0528842d4e9f98027efe6499f668bf77a11d6b8e3a8ec9f057",
+   "source": "sec_13dg",
+   "tickers": [
+    "HGBL"
+   ],
+   "title": "Ross Dove détient 5,8 % de Heritage Global Inc. (13D, intentions actives, mise à jour n° 1)"
   },
   "sec_13dg:0001213900-26-105762": {
    "amount_max": null,
@@ -867,6 +1489,158 @@
    ],
    "title": "Cohen Ryan (President, CEO and Chairman) achète 700 000 actions de GameStop Corp."
   },
+  "sec_form4:0001104659-26-112076:P": {
+   "amount_max": 340099.98,
+   "amount_min": 340099.98,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-03T03:16:45+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 150600.0,
+    "bourse": "NYSE",
+    "cik_emetteur": "0001815846",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 2.2583,
+    "roles": [
+     "VP and Chief Financial Officer"
+    ],
+    "symbole_declare": "MNSO",
+    "symboles_sec": [
+     "MNSO",
+     "MSOGF"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 150600.0,
+      "apres": 394474.0,
+      "code": "P",
+      "date": "2026-09-29",
+      "hors_bourse": null,
+      "prix": 2.2583
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Zhang Jingjing Eason",
+    "MINISO Group Holding Ltd"
+   ],
+   "id": "sec_form4:0001104659-26-112076:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-09-29",
+   "official_id": "0001104659-26-112076:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1815846/000110465926112076/0001104659-26-112076-index.htm",
+   "parser_version": "sec-6",
+   "published_on": "2026-09-30",
+   "sha256": "38011e9a4c9135774774f22fb85a5f85113eafd0513f21f7e1cc110d1e209200",
+   "source": "sec_form4",
+   "tickers": [
+    "MNSO"
+   ],
+   "title": "Zhang Jingjing Eason (VP and Chief Financial Officer) achète 150 600 actions de MINISO Group Holding Ltd"
+  },
+  "sec_form4:0001104659-26-112426:P": {
+   "amount_max": 33121.42,
+   "amount_min": 33121.42,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-03T03:16:06+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 3575.0,
+    "bourse": "NYSE",
+    "cik_emetteur": "0001072627",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 9.2647,
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "KWY",
+    "symboles_sec": [
+     "KWY"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 2717.0,
+      "apres": 383820.0,
+      "code": "P",
+      "date": "2026-09-28",
+      "hors_bourse": null,
+      "prix": 9.2757
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 858.0,
+      "apres": 384678.0,
+      "code": "P",
+      "date": "2026-09-30",
+      "hors_bourse": null,
+      "prix": 9.23
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Horowitz Joshua",
+    "KINGSWAY Corp"
+   ],
+   "id": "sec_form4:0001104659-26-112426:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-09-28",
+   "official_id": "0001104659-26-112426:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1072627/000110465926112426/0001104659-26-112426-index.htm",
+   "parser_version": "sec-6",
+   "published_on": "2026-09-30",
+   "sha256": "958dfccc25b019477213d3d8ca0c613f219b8e52be36dd2d7363cf4a50333c50",
+   "source": "sec_form4",
+   "tickers": [
+    "KWY"
+   ],
+   "title": "Horowitz Joshua (administrateur) achète 3 575 actions de KINGSWAY Corp"
+  },
   "sec_form4:0001183254-26-000008:P": {
    "amount_max": 1912657.92,
    "amount_min": 1912657.92,
@@ -937,6 +1711,144 @@
     "KBDC"
    ],
    "title": "ROBO JAMES L (administrateur) achète 146 755 actions de Kayne Anderson BDC, Inc."
+  },
+  "sec_form4:0001185185-26-004397:P": {
+   "amount_max": 119543.17,
+   "amount_min": 119543.17,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-02T19:57:12+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 168894.0,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001837493",
+    "plan_10b5_1": false,
+    "prix_moyen": 0.7078,
+    "roles": [
+     "Chief Executive Officer"
+    ],
+    "symbole_declare": "QTEX",
+    "symboles_sec": [
+     "QTEX"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 168894.0,
+      "apres": 3646133.0,
+      "code": "P",
+      "date": "2026-09-28",
+      "prix": 0.7078
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Ben-Noon Dagi Shahar",
+    "QTREX Quantum Ltd."
+   ],
+   "id": "sec_form4:0001185185-26-004397:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-09-28",
+   "official_id": "0001185185-26-004397:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1837493/000118518526004397/0001185185-26-004397-index.htm",
+   "parser_version": "sec-2",
+   "published_on": "2026-09-29",
+   "sha256": "1d640d42646769b11d288a5644044720df6b28a09cfa9f7bc22a4221e5fbe611",
+   "source": "sec_form4",
+   "tickers": [
+    "QTEX"
+   ],
+   "title": "Ben-Noon Dagi Shahar (Chief Executive Officer) achète 168 894 actions de QTREX Quantum Ltd."
+  },
+  "sec_form4:0001193125-26-407271:P": {
+   "amount_max": 399000.0,
+   "amount_min": 399000.0,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-02T19:56:29+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 300000.0,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0000849145",
+    "plan_10b5_1": false,
+    "prix_moyen": 1.33,
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "HGBL",
+    "symboles_sec": [
+     "HGBL"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 300000.0,
+      "apres": 300000.0,
+      "code": "P",
+      "date": "2026-09-25",
+      "prix": 1.33
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Burnham William L",
+    "Heritage Global Inc."
+   ],
+   "id": "sec_form4:0001193125-26-407271:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-09-25",
+   "official_id": "0001193125-26-407271:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/849145/000119312526407271/0001193125-26-407271-index.htm",
+   "parser_version": "sec-2",
+   "published_on": "2026-09-29",
+   "sha256": "28a04a6c23356be5bdeb790b2aa5deaca61896623ded5053855aefa734791b3d",
+   "source": "sec_form4",
+   "tickers": [
+    "HGBL"
+   ],
+   "title": "Burnham William L (administrateur) achète 300 000 actions de Heritage Global Inc."
   },
   "sec_form4:0001193125-26-409999:P": {
    "amount_max": 1121400.0,
@@ -3179,157 +4091,8 @@
    "title": "Elsztain Alejandro Gustavo (CEO) achète 17 334 actions de CRESUD INC"
   }
  },
- "genere_a": "2026-10-05T04:14:44+00:00",
+ "genere_a": "2026-10-05T21:26:00+00:00",
  "hausse": [
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depot_recent": "2026-10-01",
-   "depuis": null,
-   "derniere_info": "2026-10-01",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 4,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "PDG, directeur financier ou président du conseil",
-         1.5
-        ],
-        [
-         "Groupe d'achats",
-         1.75
-        ],
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001193125-26-410894:P",
-       "points": 7.18,
-       "regle": "achat_dirigeant",
-       "temps": 0.912
-      },
-      {
-       "age": 4,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "PDG, directeur financier ou président du conseil",
-         1.5
-        ],
-        [
-         "Groupe d'achats",
-         1.75
-        ],
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001193125-26-410889:P",
-       "points": 7.18,
-       "regle": "achat_dirigeant",
-       "temps": 0.912
-      },
-      {
-       "age": 4,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Groupe d'achats",
-         1.75
-        ],
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001193125-26-410914:P",
-       "points": 4.79,
-       "regle": "achat_dirigeant",
-       "temps": 0.912
-      },
-      {
-       "age": 4,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Groupe d'achats",
-         1.75
-        ],
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001193125-26-410913:P",
-       "points": 4.79,
-       "regle": "achat_dirigeant",
-       "temps": 0.912
-      },
-      {
-       "age": 4,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Groupe d'achats",
-         1.75
-        ],
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001193125-26-410905:P",
-       "points": 4.79,
-       "regle": "achat_dirigeant",
-       "temps": 0.912
-      }
-     ],
-     "points": 7.18,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "Presurance Holdings, Inc.",
-   "note10": 10.0,
-   "note10_sans_bonus": 10.0,
-   "note10_sans_taille": 9.0,
-   "plus": 7.18,
-   "recent": true,
-   "score": 7.18,
-   "symbole": "PRHI",
-   "taille": {
-    "actions": [
-     3746092,
-     "2026-08-12"
-    ],
-    "prix": [
-     "20260914",
-     8.7
-    ],
-    "seuils": {
-     "mois": "202608",
-     "p30": 2236.27,
-     "p70": 13366.01
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 32.6
-   }
-  },
   {
    "bonus": {
     "moins": 1.0,
@@ -3624,90 +4387,6 @@
     },
     "source_actions": null,
     "taille": null
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depot_recent": "2026-10-01",
-   "depuis": null,
-   "derniere_info": "2026-10-01",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 4,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "PDG, directeur financier ou président du conseil",
-         1.5
-        ],
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001437749-26-031654:P",
-       "points": 4.1,
-       "regle": "achat_dirigeant",
-       "temps": 0.912
-      },
-      {
-       "age": 5,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "PDG, directeur financier ou président du conseil",
-         1.5
-        ],
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001437749-26-031597:P",
-       "points": 4.01,
-       "regle": "achat_dirigeant",
-       "temps": 0.891
-      }
-     ],
-     "points": 4.1,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "FILANA THERAPEUTICS, INC.",
-   "note10": 8.4,
-   "note10_sans_bonus": 8.4,
-   "note10_sans_taille": 7.3,
-   "plus": 4.1,
-   "recent": true,
-   "score": 4.1,
-   "symbole": "FLNA",
-   "taille": {
-    "actions": [
-     48307896,
-     "2026-07-27"
-    ],
-    "prix": [
-     "20260914",
-     0.77
-    ],
-    "seuils": {
-     "mois": "202608",
-     "p30": 2236.27,
-     "p70": 13366.01
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 37.2
    }
   },
   {
@@ -4249,7 +4928,7 @@
     }
    ],
    "moins": 0.0,
-   "nom": "CYBIN INC.",
+   "nom": "Helus Pharma Inc.",
    "note10": 7.3,
    "note10_sans_bonus": 7.3,
    "note10_sans_taille": 7.3,
@@ -4265,82 +4944,6 @@
      "p70": 13366.01
     },
     "taille": null
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depot_recent": "2026-10-01",
-   "depuis": "2026-10-05T02:12:12+00:00",
-   "derniere_info": "2026-10-01",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 4,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001493152-26-045400:P",
-       "points": 2.74,
-       "regle": "achat_dirigeant",
-       "temps": 0.912
-      },
-      {
-       "age": 5,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001493152-26-045185:P",
-       "points": 2.67,
-       "regle": "achat_dirigeant",
-       "temps": 0.891
-      }
-     ],
-     "points": 2.74,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "Lipocine Inc.",
-   "note10": 7.3,
-   "note10_sans_bonus": 7.3,
-   "note10_sans_taille": 6.5,
-   "plus": 2.74,
-   "recent": true,
-   "score": 2.74,
-   "symbole": "LPCN",
-   "taille": {
-    "actions": [
-     8244253,
-     "2026-08-03"
-    ],
-    "prix": [
-     "20260824",
-     2.09
-    ],
-    "seuils": {
-     "mois": "202608",
-     "p30": 2236.27,
-     "p70": 13366.01
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 17.2
    }
   },
   {
@@ -4406,199 +5009,6 @@
     "plus": 1.0
    },
    "contexte": [],
-   "depot_recent": "2026-10-01",
-   "depuis": "2026-10-05T02:12:12+00:00",
-   "derniere_info": "2026-10-01",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 4,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001493152-26-045391:P",
-       "points": 2.74,
-       "regle": "achat_dirigeant",
-       "temps": 0.912
-      }
-     ],
-     "points": 2.74,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "Venu Holding Corp",
-   "note10": 7.3,
-   "note10_sans_bonus": 7.3,
-   "note10_sans_taille": 6.5,
-   "plus": 2.74,
-   "recent": true,
-   "score": 2.74,
-   "symbole": "VENU",
-   "taille": {
-    "actions": [
-     56210552,
-     "2026-08-13"
-    ],
-    "prix": [
-     "20260914",
-     1.74
-    ],
-    "seuils": {
-     "mois": "202608",
-     "p30": 2236.27,
-     "p70": 13366.01
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 97.8
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [
-    {
-     "id": "sec_8k:0001628280-26-063811",
-     "pourquoi": "Autre point du 8-K (contrat, acquisition, avis de retrait de la bourse…) : effet incertain."
-    }
-   ],
-   "depot_recent": "2026-09-30",
-   "depuis": "2026-10-05T02:12:12+00:00",
-   "derniere_info": "2026-09-30",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 5,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001628280-26-064003:P",
-       "points": 2.67,
-       "regle": "achat_dirigeant",
-       "temps": 0.891
-      }
-     ],
-     "points": 2.67,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "Advanced Flower Capital Inc.",
-   "note10": 7.2,
-   "note10_sans_bonus": 7.2,
-   "note10_sans_taille": 6.5,
-   "plus": 2.67,
-   "recent": false,
-   "score": 2.67,
-   "symbole": "AFCG",
-   "taille": {
-    "actions": [
-     22671919,
-     "2026-08-07"
-    ],
-    "prix": [
-     "20260904",
-     3.62
-    ],
-    "seuils": {
-     "mois": "202608",
-     "p30": 2236.27,
-     "p70": 13366.01
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 82.1
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [
-    {
-     "id": "sec_13dg:0001539497-26-002632",
-     "pourquoi": "Mise à jour d'un 13D ou passage sous 5 % : seul le premier dépôt compte."
-    }
-   ],
-   "depot_recent": "2026-09-30",
-   "depuis": "2026-10-05T02:12:12+00:00",
-   "derniere_info": "2026-09-30",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 5,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001437749-26-031626:P",
-       "points": 2.67,
-       "regle": "achat_dirigeant",
-       "temps": 0.891
-      }
-     ],
-     "points": 2.67,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "Clipper Realty Inc.",
-   "note10": 7.2,
-   "note10_sans_bonus": 7.2,
-   "note10_sans_taille": 6.5,
-   "plus": 2.67,
-   "recent": false,
-   "score": 2.67,
-   "symbole": "CLPR",
-   "taille": {
-    "actions": [
-     16157566,
-     "2026-08-06"
-    ],
-    "prix": [
-     "20260831",
-     3.32
-    ],
-    "seuils": {
-     "mois": "202608",
-     "p30": 2236.27,
-     "p70": 13366.01
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 53.6
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
    "depot_recent": "2026-09-30",
    "depuis": "2026-10-05T02:12:12+00:00",
    "derniere_info": "2026-09-30",
@@ -4652,6 +5062,171 @@
     "source_actions": "frames",
     "taille": "petite",
     "valeur_m": 892.2
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depot_recent": "2026-09-30",
+   "depuis": "2026-10-05T21:26:00+00:00",
+   "derniere_info": "2026-09-30",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 5,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001104659-26-112426:P",
+       "points": 2.67,
+       "regle": "achat_dirigeant",
+       "temps": 0.891
+      }
+     ],
+     "points": 2.67,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "KINGSWAY Corp",
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
+   "note10_sans_taille": 6.5,
+   "plus": 2.67,
+   "recent": false,
+   "score": 2.67,
+   "symbole": "KWY",
+   "taille": {
+    "actions": [
+     28931000,
+     "2026-08-06"
+    ],
+    "prix": [
+     "20260911",
+     9.62
+    ],
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 278.3
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depot_recent": "2026-09-30",
+   "depuis": "2026-10-05T21:26:00+00:00",
+   "derniere_info": "2026-09-30",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 5,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001104659-26-112076:P",
+       "points": 2.67,
+       "regle": "achat_dirigeant",
+       "temps": 0.891
+      }
+     ],
+     "points": 2.67,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "MINISO Group Holding Ltd",
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
+   "note10_sans_taille": 7.2,
+   "plus": 2.67,
+   "recent": false,
+   "score": 2.67,
+   "symbole": "MNSO",
+   "taille": {
+    "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux États-Unis peuvent valoir plusieurs actions",
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "taille": null
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depot_recent": "2026-09-29",
+   "depuis": "2026-10-05T21:26:00+00:00",
+   "derniere_info": "2026-09-29",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 6,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001185185-26-004397:P",
+       "points": 2.61,
+       "regle": "achat_dirigeant",
+       "temps": 0.871
+      }
+     ],
+     "points": 2.61,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "QTREX Quantum Ltd.",
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
+   "note10_sans_taille": 7.2,
+   "plus": 2.61,
+   "recent": false,
+   "score": 2.61,
+   "symbole": "QTEX",
+   "taille": {
+    "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux États-Unis peuvent valoir plusieurs actions",
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "taille": null
    }
   }
  ],
@@ -4755,6 +5330,7 @@
    "rappels": "Rappels de véhicules (NHTSA)",
    "sec": "SEC (poursuites)"
   },
+  "lien_labo": "https://github.com/killingsky1/Radar/blob/labo/labo/rejeu3/facteurs.md",
   "note10": "Note sur 10 = 5 + points × 5/6, entre 0 et 10, arrondie au dixième. 5 = neutre. Les achats de dirigeants seuls plafonnent à 9,4 ; 10/10 demande plusieurs familles de sources d'accord. La note mesure la force des preuves officielles, pas une promesse de hausse.",
   "prix": "Les résultats de Radar sont mesurés avec les prix officiels de la SEC (page « Résultats de Radar »).",
   "recent": "« Récent » : une preuve qui compte dans la note a été déposée il y a moins de 3 jours de bourse. Depuis 2002, le cours réagit surtout dans les jours qui entourent le dépôt (Brochet, 2010).",
@@ -4956,8 +5532,9 @@
   "seuil": "Une compagnie entre dans la liste à partir de 7/10 (hausse) ou à 3/10 et moins (baisse).",
   "taille": "Taille en bourse = actions en circulation déclarées à la SEC × dernier prix de la SEC. Petite : sous le 30e centile des compagnies du NYSE ; grande : au 70e et plus (seuils publiés chaque mois par Kenneth French). Taille inconnue, donc pas de bonus : compagnie étrangère (20-F, 40-F, 6-K), actions déclarées il y a plus de 200 jours ou moins de 500 000 actions déclarées, pas de prix de la SEC depuis 60 jours.",
   "temps": "Moitié des points après 30 jours (60 pour les grands fonds, qui déclarent en retard). Après 90 jours, une info ne compte plus.",
-  "version": "score-8"
+  "trop_petites": "Moins de 100 M$ en bourse : la compagnie n'entre pas dans la liste « hausse ». Dans le rejeu de 3 ans du labo (juillet 2023 à juin 2026, prix de la SEC), ces compagnies ont fait pire que le S&P 500 chacune des 3 années : écart médian de −11,8, −6,6 et −1,3 % un mois après l'achat, contre −2,0, −3,1 et −0,2 % pour les autres. Elles restent visibles à part (« écartées ») et sont suivies dans les Résultats pour vérifier la règle. Taille inconnue : rien n'est écarté.",
+  "version": "score-9"
  },
  "note": "Une aide pour voir où va le gros argent, preuves à l'appui. Pas un conseil financier.",
- "version": "score-8"
+ "version": "score-9"
 }
