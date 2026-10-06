@@ -210,9 +210,15 @@ verifier("Calendrier : les fériés de la bourse qui sont des jours de règlemen
          "pas des jours de bourse", not {"2024-03-29", "2025-04-18", "2024-12-25"} & set(cal_dec)
          and 20240329 not in spy["d"] and "2024-03-28" in cal_dec and "2024-04-01" in cal_dec)
 spec = json.loads((R / "resume.json").read_text())["alignement_des_prix"]["jours_speciaux"]
-verifier("Jours spéciaux : fériés retirés listés (Vendredi saint 2024) ; aucun jour de bourse sans règlement dans le faux jeu",
-         "2024-03-29" in spec["feries_retires_du_calendrier"] and spec["jours_de_bourse_sans_reglement"] == []
-         and spec["le_prix_range_a_A_est_de"] == "inconnu", str({k: v for k, v in spec.items() if k != "feries_retires_du_calendrier"}))
+verifier("Jours spéciaux : règlements sans bourse listés (Vendredi saint 2024 du faux jeu) ; aucun jour de bourse sans "
+         "règlement dans le faux jeu", "2024-03-29" in spec["reglements_sans_bourse"]
+         and spec["jours_de_bourse_sans_reglement"] == [] and spec["le_prix_est_la_cloture_de"] == "inconnu"
+         and spec["bon_rangement"], str({k: v for k, v in spec.items() if k != "reglements_sans_bourse"}))
+cal_ess = d.calendrier_clotures(["20181203", "20181204", "20181205", "20181206", "20241010", "20241011", "20241015"])
+verifier("Clôtures : règlement → dernier jour de bourse d'avant (deuil du 5 déc. 2018 : le 1er règlement gardé ; Columbus "
+         "Day 2024 : le règlement du mardi 15 est la clôture du lundi 14)",
+         cal_ess == {"20181203": "20181130", "20181204": "20181203", "20181205": "20181204", "20241010": "20241009",
+                     "20241011": "20241010", "20241015": "20241014"}, str(cal_ess))
 
 
 class PrixFixes:
@@ -233,12 +239,17 @@ def achats_essai(jour, prix_paye, n=40):
 
 reg_essai = ["20241010", "20241011", "20241015", "20241016"]
 evs_essai = achats_essai("2024-10-11", 100.0) + achats_essai("2024-10-14", 110.0)
-v_b = d.verifier_jours_speciaux(evs_essai, PrixFixes({(f"S{i}", "2024-10-11"): 110.0 for i in range(40)}), reg_essai)
-v_a = d.verifier_jours_speciaux(evs_essai, PrixFixes({(f"S{i}", "2024-10-11"): 100.0 for i in range(40)}), reg_essai)
-verifier("Jours spéciaux : Columbus Day trouvé ; prix rangé au vendredi = clôture du lundi → décalé ; = clôture du "
-         "vendredi → bon", v_b["jours_de_bourse_sans_reglement"] == ["2024-10-14"]
-         and v_b["le_prix_range_a_A_est_de"].startswith("B") and v_a["le_prix_range_a_A_est_de"] == "A (bon)",
-         f"{v_b['le_prix_range_a_A_est_de']} / {v_a['le_prix_range_a_A_est_de']}")
+# Rangement d'avant (au jour de règlement d'avant, le vendredi 11) et rangement actuel (au lundi 14) ; prix = clôture du lundi
+ancien = {"20241011": "20241010", "20241015": "20241011", "20241016": "20241015"}
+actuel = d.calendrier_clotures(reg_essai)
+v_ancien = d.verifier_jours_speciaux(evs_essai, PrixFixes({(f"S{i}", "2024-10-11"): 110.0 for i in range(40)}), reg_essai, ancien)
+v_actuel = d.verifier_jours_speciaux(evs_essai, PrixFixes({(f"S{i}", "2024-10-14"): 110.0 for i in range(40)}), reg_essai, actuel)
+verifier("Jours spéciaux : Columbus Day trouvé ; le prix est la clôture du lundi ; rangé au vendredi → mauvais, rangé au "
+         "lundi → bon", v_actuel["jours_de_bourse_sans_reglement"] == ["2024-10-14"]
+         and v_ancien["le_prix_est_la_cloture_de"] == "B" and v_ancien["le_prix_est_range_au"] == "A"
+         and not v_ancien["bon_rangement"] and v_actuel["le_prix_est_la_cloture_de"] == "B"
+         and v_actuel["le_prix_est_range_au"] == "B" and v_actuel["bon_rangement"],
+         f"{v_ancien} / {v_actuel}")
 cal = json.loads((S / "calendrier.json").read_text())
 verifier("Calendrier des clôtures trié, sans fin de semaine", cal == sorted(cal) and all(
     date.fromisoformat(x).weekday() < 5 for x in cal))
