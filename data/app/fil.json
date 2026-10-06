@@ -9,6 +9,61 @@
    "dates_coherentes": true,
    "domaine_officiel": true,
    "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-06T19:06:47+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Commerce international de marchandises du Canada"
+    ],
+    [
+     "Période",
+     "août 2026"
+    ]
+   ],
+   "indicateur": "Commerce international de marchandises du Canada",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261006/dq261006a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-10-06T08:30:00-04:00",
+   "periode": "août 2026",
+   "resume": "En août, les exportations de marchandises du Canada ont augmenté de 2,5 %, tandis que les importations ont diminué de 2,0 %. Par conséquent, l'excédent commercial de marchandises du Canada avec le monde s'est élargi pour passer de 787 millions de dollars en juillet à 4,2 milliards de dollars en août. Il s'agit du sixième surplus commercial mensuel consécutif."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261006/dq261006a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-10-06",
+  "official_id": "261006/dq261006a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261006/dq261006a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-10-06",
+  "sha256": "800e81fd6796c547e882916003a0e393d6b44b916728bfd033f871396fb7f010",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Commerce international de marchandises du Canada, août 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
    "lien_identique_au_fil": true,
    "lien_ministere_coherent": true,
    "ministere_reconnu": true,
@@ -26984,6 +27039,70 @@
   "badge": "officiel",
   "category": "gouvernement",
   "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-06T19:06:29+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "anciennes_empreintes": [
+    "e7b0f5b2aae29a208e550cb10c3952ca3eb1cad1c23ee673d738b36eee0492f2"
+   ],
+   "application": "NDA220963",
+   "classe": "TYPE 1",
+   "compagnie": "RARE THYROID THERAPEUTICS INTERNATIONAL AB",
+   "date": "20260928",
+   "fabricant": null,
+   "ingredients": [
+    "TIRATRICOL"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220963Orig1s000ltr.pdf",
+   "marques": [
+    "EMCITATE"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "PRIORITY",
+   "sponsor": "RARE THYROID THERAPEUTICS INTERNATIONAL AB",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "RARE THYROID THERAPEUTICS INTERNATIONAL AB"
+  ],
+  "id": "fda:NDA220963-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
+   "Médicament orphelin : maladie rare.",
+   "Document modifié à la source depuis la 1re lecture."
+  ],
+  "occurred_on": "2026-09-28",
+  "official_id": "NDA220963-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220963",
+  "parser_version": "fda-1",
+  "published_on": "2026-09-28",
+  "sha256": "161ddc125bdbfcf64ac5e33b72310aad46577aab3e9879630d81aa9ea32069ae",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, EMCITATE (tiratricol), de RARE THYROID THERAPEUTICS INTERNATIONAL AB"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
    "champs_requis": true,
    "date_d_envoi_lue": true,
    "dates_coherentes": true,
@@ -27419,66 +27538,6 @@
    "CMI"
   ],
   "title": "Rappel de Cummins, Inc. : 39 052 équipements — « Fuel Filter Hoses May Disconnect and Leak Fuel »"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "approbation_originale": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lettre_officielle": true,
-   "nouvelle_molecule": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T01:27:21+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "application": "NDA220963",
-   "classe": "TYPE 1",
-   "compagnie": "RARE THYROID THERAPEUTICS INTERNATIONAL AB",
-   "date": "20260928",
-   "fabricant": null,
-   "ingredients": [
-    "TIRATRICO"
-   ],
-   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220963Orig1s000ltr.pdf",
-   "marques": [
-    "EMCITATE"
-   ],
-   "numero_soumission": "1",
-   "orphelin": true,
-   "priorite": "PRIORITY",
-   "sponsor": "RARE THYROID THERAPEUTICS INTERNATIONAL AB",
-   "statut": "AP",
-   "type_soumission": "ORIG"
-  },
-  "direction": 1,
-  "entities": [
-   "RARE THYROID THERAPEUTICS INTERNATIONAL AB"
-  ],
-  "id": "fda:NDA220963-ORIG-1",
-  "kind": "approbation_fda",
-  "notes": [
-   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
-   "Médicament orphelin : maladie rare."
-  ],
-  "occurred_on": "2026-09-28",
-  "official_id": "NDA220963-ORIG-1",
-  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220963",
-  "parser_version": "fda-1",
-  "published_on": "2026-09-28",
-  "sha256": "e7b0f5b2aae29a208e550cb10c3952ca3eb1cad1c23ee673d738b36eee0492f2",
-  "source": "fda",
-  "tickers": [],
-  "title": "FDA : nouveau médicament approuvé, EMCITATE (tiratrico), de RARE THYROID THERAPEUTICS INTERNATIONAL AB"
  },
  {
   "amount_max": null,
