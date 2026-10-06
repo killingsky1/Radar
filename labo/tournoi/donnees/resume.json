@@ -1,0 +1,42 @@
+{
+ "decouverte": {
+  "evenements": 201982,
+  "evenements_contexte": 50657,
+  "inities_avec_historique": 13884,
+  "achats": 37574,
+  "symboles_prix": 5853,
+  "compagnies_finances": 5202,
+  "compagnies_13": 6132
+ },
+ "coffre": {
+  "evenements": 473675,
+  "evenements_contexte": 60112,
+  "inities_avec_historique": 32421,
+  "achats": 126085,
+  "symboles_prix": 7146,
+  "compagnies_finances": 6463,
+  "compagnies_13": 8058
+ },
+ "couverture_decouverte": {
+  "achats": 37574,
+  "avec_symbole": 0.9435780060680258,
+  "avec_cloture_avant": 0.8365359024857615,
+  "avec_valeur_m": 0.6676425187629744,
+  "routiniers": 0.12508649598126365,
+  "avec_bilan_initie": 0.6839569915367009
+ },
+ "alignement_des_prix": {
+  "achats_compares": 22713,
+  "ecart_median_veille_jour_lendemain": {
+   "-1": 0.0221,
+   "0": 0.01404,
+   "1": 0.03024
+  },
+  "bon_alignement": true
+ },
+ "compte": {
+  "requêtes": 314,
+  "lignes de prix": 5870575,
+  "compagnies sans faits XBRL": 367
+ }
+}
