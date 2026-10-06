@@ -46,6 +46,7 @@ ROBOT = Path(os.environ.get("TOURNOI_ROBOT", "principal/robot"))
 sys.path.insert(0, str(ROBOT.resolve()))
 from radar.collecteurs import inities, prix_sec, sec  # noqa: E402
 from radar.http import ErreurSource  # noqa: E402
+from urllib.parse import urljoin
 
 csv.field_size_limit(sys.maxsize)
 CACHE = Path(os.environ.get("TOURNOI_CACHE", "cache"))
@@ -550,6 +551,22 @@ def verifier_jours_speciaux(evs, prix, dates_reglement, cloture_de):
             "bon_rangement": mesure == "inconnu" or mesure == range_au}
 
 
+LIEN_FTD = re.compile(r"""href=["']([^"']*cnsfails(\d{6})([ab])(?:_\d+)?\.zip)["']""", re.I)
+
+
+def fichiers_ftd(page):
+    """{« 202308b » : adresse} comme prix_sec.fichiers_de_la_page, mais aussi les fichiers dont le nom finit par « _0 »
+    (ex. cnsfails202308b_0.zip et cnsfails201910a_0.zip : jamais lus avant le 6 octobre 2026 ; trouvé par un sceptique
+    du débat). Si les deux noms existent pour la même moitié de mois, le nom simple."""
+    sortie = {}
+    for m in LIEN_FTD.finditer(page):
+        cle = m.group(2) + m.group(3).lower()
+        simple = not re.search(r"_\d+\.zip$", m.group(1), re.I)
+        if cle not in sortie or simple:
+            sortie[cle] = urljoin(prix_sec.PAGE, m.group(1))
+    return sortie
+
+
 def lignes_ftd(contenu, cle):
     with zipfile.ZipFile(io.BytesIO(contenu)) as z:
         lignes = z.read(z.namelist()[0]).decode("latin-1").splitlines()
@@ -659,6 +676,30 @@ def lire_13(texte, garder):
             if ciks:
                 sortie.append([d.depose, FORMES_13[d.forme], ciks])
     return sortie
+
+
+def attribuer_13(treize, evs):
+    """Un 13D est sur la compagnie VISÉE. L'index EDGAR liste un dépôt sous chaque compagnie nommée : la visée ET le
+    déposant (ex. Disney qui dépose un 13D sur Fubo). Une compagnie qui est aussi un initié (déclarant d'un formulaire 4)
+    d'une AUTRE compagnie est un déposant probable (on dépose un 13D sur une compagnie dont on a une grosse part) : elle
+    est retirée des 13D. Si personne ne reste, le dépôt est laissé de côté. Les 13G ne servent à aucune règle : inchangés.
+    → (13D et 13G attribués, compte)"""
+    cies = {e["cik"] for e in evs}
+    initie_ailleurs = {i["cik"] for e in evs for i in e["inities"] if i["cik"] in cies and i["cik"] != e["cik"]}
+    sortie, n = [], Counter()
+    for jour, forme, ciks in treize:
+        if forme not in ("13D", "13D/A"):
+            sortie.append([jour, forme, ciks])
+            continue
+        garde = [c for c in ciks if c not in initie_ailleurs]
+        n["13D"] += 1
+        if len(garde) < len(ciks):
+            n["13D : déposant retiré"] += 1
+        if garde:
+            sortie.append([jour, forme, garde])
+        else:
+            n["13D : aucune compagnie visée sûre, laissé de côté"] += 1
+    return sortie, dict(n)
 
 
 def ajouter_13(evs, treize):
@@ -813,7 +854,7 @@ def main():
     dire(f"infos gardées (dépôts dès 2015 : contexte du coffre-fort, bilan des initiés dès juillet) : {len(evs):,}")
 
     # --- Prix de la SEC ---
-    liens_ftd = prix_sec.fichiers_de_la_page(brut(prix_sec.PAGE, "tournoi/pages/ftd.html").decode("utf-8", "replace"))
+    liens_ftd = fichiers_ftd(brut(prix_sec.PAGE, "tournoi/pages/ftd.html").decode("utf-8", "replace"))
     cles = sorted(c for c in liens_ftd if c >= PRIX_DEBUT)
     reglements = set()
     for c in cles:  # 1er passage : le calendrier des dates de règlement (pour la date de clôture de chaque prix)
@@ -881,8 +922,10 @@ def main():
             raise SystemExit(f"index EDGAR illisible : {q}")
         treize += [[d, f, [c for c in ciks if c in garder]] for d, f, ciks in x]
     treize = [t for t in treize if t[2]]
+    treize, n13 = attribuer_13(treize, evs)
+    compte.update(n13)
     treize_par_cie = ajouter_13(evs, treize)
-    dire(f"13D et 13G sur des compagnies des formulaires 4 : {len(treize):,}")
+    dire(f"13D et 13G sur des compagnies des formulaires 4 : {len(treize):,} · 13D : {n13}")
 
     # --- Sorties : découverte (branche labo) et coffre-fort (cache seulement) ---
     resume = {

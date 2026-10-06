@@ -113,3 +113,16 @@ pour Radar (un lot normal : code, tests, labo, photos), jamais une garantie de g
   critique-3, sante_valeur-1 et sante_valeur-4 (actions en circulation), puis comparateurs des pistes critique et
   sante_valeur ; comparateurs des pistes meteo et gestion (relancés après une limite de session). Chaque décision est
   écrite dans la liste CHOIX des 2 programmes.
+- 6 octobre 2026, vers 14 h 45 UTC, APRÈS le 1er jugement de la découverte (aucune règle ne passait) : **2 défauts de
+  données trouvés par les sceptiques du débat, corrigés**, puis TOUTES les règles rejugées ; le débat repart sur les 3
+  meilleures du nouveau jugement. Les règles et leurs programmes ne changent pas.
+  1. **2 fichiers d'échecs de la SEC n'étaient jamais lus** (nom en « _0 » : cnsfails202308b_0.zip et
+     cnsfails201910a_0.zip) : 13 jours de bourse manquaient en août 2023 (découverte) et la 1re moitié d'octobre 2019
+     (coffre-fort). Les achats de ces jours étaient repoussés au 31 août 2023.
+  2. **13D attribués au déposant** : l'index EDGAR nomme la compagnie visée ET le déposant ; une compagnie qui dépose
+     un 13D sur une autre (ex. Disney sur Fubo) recevait un « 13D » sur elle-même. Le déposant probable (une compagnie
+     qui est aussi initié d'une AUTRE compagnie dans les formulaires 4) est retiré ; le compte est publié dans le résumé.
+     Seule groupes-4 utilise les 13D.
+  Limite connue, NON corrigée : la valeur en bourse ne tient pas compte d'un fractionnement d'actions fait après le
+  dernier rapport (ex. RLI, 2 pour 1 le 15 janvier 2025) ; la corriger demanderait de deviner les fractionnements avec
+  les prix, ce qui pourrait créer d'autres erreurs.

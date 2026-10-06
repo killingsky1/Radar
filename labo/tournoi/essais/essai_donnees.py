@@ -221,6 +221,25 @@ verifier("Clôtures : règlement → dernier jour de bourse d'avant (deuil du 5 
                      "20241011": "20241010", "20241015": "20241014"}, str(cal_ess))
 
 
+page_ftd = ('<a href="/files/data/fails-deliver-data/cnsfails202308a.zip">a</a>'
+            '<a href="/files/data/fails-deliver-data/cnsfails202308b_0.zip">b</a>'
+            '<a href="/files/data/fails-deliver-data/cnsfails201910a_0.zip">c</a>'
+            '<a href="/files/data/fails-deliver-data/cnsfails201910a.zip">d</a>')
+f_ftd = d.fichiers_ftd(page_ftd)
+verifier("Fichiers d'échecs : les noms en « _0 » sont lus (202308b) ; si les deux existent, le nom simple (201910a)",
+         sorted(f_ftd) == ["201910a", "202308a", "202308b"] and f_ftd["202308b"].endswith("cnsfails202308b_0.zip")
+         and f_ftd["201910a"].endswith("cnsfails201910a.zip"), str(f_ftd))
+# 13D : « 200 » est une compagnie ET un initié (actionnaire) de « 100 » : c'est un déposant probable
+evs_13 = [{"cik": "100", "inities": [{"cik": "200"}, {"cik": "7"}]}, {"cik": "200", "inities": [{"cik": "8"}]}]
+t13, n13 = d.attribuer_13([["2025-01-02", "13D", ["100", "200"]], ["2025-01-03", "13G", ["100", "200"]],
+                           ["2025-01-04", "13D/A", ["200"]], ["2025-01-05", "13D", ["100"]]], evs_13)
+verifier("13D : le déposant qui est initié d'une autre compagnie est retiré ; 13G inchangés ; dépôt sans visée sûre "
+         "laissé de côté", t13 == [["2025-01-02", "13D", ["100"]], ["2025-01-03", "13G", ["100", "200"]],
+                                    ["2025-01-05", "13D", ["100"]]]
+         and n13 == {"13D": 3, "13D : déposant retiré": 2, "13D : aucune compagnie visée sûre, laissé de côté": 1},
+         f"{t13} {n13}")
+
+
 class PrixFixes:
     """Un prix par (symbole, jour) donné à la main, pour essayer verifier_jours_speciaux."""
     def __init__(self, p):
