@@ -265,7 +265,10 @@ const lignes = [];
       const sans = (t) => t.replace(/\s+/g, "");
       const court = (n) => new Intl.NumberFormat("fr-CA", { style: "currency", currency: "USD", notation: "compact", minimumFractionDigits: 0, maximumFractionDigits: Math.abs(n) >= 1e9 ? 2 : 1 }).format(n);
       const attendu = rfAttendu && x.montant > 0 ? "Argent dépensé pour racheter ses actions" : "Aucun rachat d'actions pendant l'exercice";
-      const montantOk = rfAttendu && sans(await p.locator(".rachats-total").innerText()) === sans(court(x.montant));
+      // Même format que la fonction argent() de l'app (rachats : 2 décimales dès 1 M$), pas celui de la section Argent
+      const argentApp = (n) => new Intl.NumberFormat("fr-CA", { style: "currency", currency: "USD", minimumFractionDigits: 0,
+        maximumFractionDigits: Math.abs(n) >= 1e6 ? 2 : 0, ...(Math.abs(n) >= 1e6 ? { notation: "compact" } : {}) }).format(n);
+      const montantOk = rfAttendu && sans(await p.locator(".rachats-total").innerText()) === sans(argentApp(x.montant));
       const lienOk = rfAttendu && (await p.locator(".rachats-faits a.transaction").getAttribute("href")) === x.lien;
       rachatsFaitsOk = servi && texteRf.includes(attendu) && montantOk && lienOk;
       dire(`Rachats faits sur la fiche ${titre} : « ${texteRf.split("\n").slice(0, 2).join(" · ")} » · ${Object.keys(rfLocal.par_symbole).length} compagnies dans le fichier (${rfLocal.cadre}) · servi = fichier du robot : ${servi ? "OUI" : "NON"} · conforme : ${rachatsFaitsOk ? "OUI" : "NON"}`);
