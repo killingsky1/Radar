@@ -119,6 +119,10 @@ CR_ITEMS = {
                    "container-title": ["Journal of Financial Research"]}],
     "Vieux": [{"DOI": "10.1/z", "title": ["Something about clusters"], "author": [{"family": "Vieux"}],
                "issued": {"date-parts": [[2012]]}, "container-title": ["Journal of Financial Research"]}],
+    "Mauvaisauteur": [{"DOI": "10.1093/epolic/eiaa012", "title": ["Anticipating the financial crisis: evidence from insider trading in banks"],
+                       "author": [{"family": "Akin"}, {"family": "Marín"}, {"family": "Peydró"}], "issued": {"date-parts": [[2020]]}}],
+    "Akbas": [{"DOI": "10.1111/jofi.12878", "title": ["Insider Investment Horizon"], "author": [{"family": "Akbas"}],
+               "issued": {"date-parts": [[2020]]}, "container-title": ["The Journal of Finance"]}],
 }
 
 
@@ -157,6 +161,10 @@ REGLES = {"regles": [
     {"id": "r4", "etudes": [{"reference": REF_ZHAO, "lien": f"{a}/zhao"},
                             {"reference": "Alldredge et Blank (2019), Journal of Financial Research 42(2)", "lien": ""},
                             {"reference": "Vieux, Z. (2019), Journal of Financial Research 40(1)", "lien": f"{a}/accueil"}]},
+    {"id": "r5", "etudes": [{"reference": "Mauvaisauteur, Anticipating the Financial Crisis: Evidence from Insider Trading in "
+                                          "Banks (Economic Policy)", "lien": ""},
+                            {"reference": "Akbas, Jiang et Koch (2020), Insider Investment Horizon, Journal of Finance 75(3)",
+                             "lien": "https://doi.org/10.1111/jofi.12877"}]},
 ]}
 
 shutil.rmtree(TMP, ignore_errors=True)
@@ -228,13 +236,22 @@ agents = {u for *_, u in JOURNAL}
 verifier("Chaque requête : agent « Radar projet personnel », sans courriel", agents == {"Radar projet personnel"}, str(agents))
 verifier("Le fichier des règles n'est pas modifié", hashlib.sha256((TMP / "regles.json").read_bytes()).hexdigest() == empreinte)
 resume = (TMP / "liens" / "resume.md").read_text()
-verifier("Résumé : 8 études, 15 liens, 3 non confirmées, ligne VERDICT « À REGARDER »",
-         "- Études différentes : 8 (dans 4 règles), avec 15 liens" in resume and "- Non confirmée : 3" in resume
-         and resume.rstrip().endswith("VERDICT : À REGARDER — 3 étude(s) non confirmée(s) (ni Crossref ni un lien)")
-         and len(res) == 15, resume.splitlines()[-1])
+verifier("Résumé : 10 études, 17 liens, 4 non confirmées, 2 erreurs de citation, ligne VERDICT « À REGARDER »",
+         "- Études différentes : 10 (dans 5 règles), avec 17 liens" in resume and "- Non confirmée : 4" in resume
+         and resume.rstrip().endswith("VERDICT : À REGARDER — 4 étude(s) non confirmée(s) (ni Crossref ni un lien), "
+                                      "2 erreur(s) de citation") and len(res) == 17, resume.splitlines()[-1])
+mal = next(z for z in res if z["reference"].startswith("Mauvaisauteur"))
+verifier("Titre exact trouvé avec d'autres auteurs → alerte « auteur cité ≠ auteurs »",
+         mal["alertes"] and mal["alertes"][0].startswith("auteur cité ≠ auteurs de l'étude trouvée (Akin"), str(mal["alertes"]))
+ak = next(z for z in res if z["reference"].startswith("Akbas"))
+verifier("Lien vers un autre DOI que celui de l'étude → alerte (12877 au lieu de 12878)",
+         ak["crossref"]["etat"] == "trouvee" and any("10.1111/jofi.12877" in a and "10.1111/jofi.12878" in a for a in ak["alertes"]),
+         str(ak["alertes"]))
+verifier("Aucune alerte sur les bonnes études (Brochet, Lakonishok)",
+         not any(z["alertes"] for z in res if z["reference"] in (REF_BROCHET, REF_LAKO)))
 non = sorted((x["reference"][:8], x["adresse"].rsplit("/", 1)[-1]) for x in res if x["existe"] == "non confirmée")
-verifier("Non confirmées = l'étude inventée, celle au mauvais auteur, et la revue à la mauvaise année",
-         non == [("Fantôme,", "redir"), ("Inventé,", "mort"), ("Vieux, Z", "accueil")], str(non))
+verifier("Non confirmées = l'étude inventée, celle au mauvais auteur, la revue à la mauvaise année, l'auteur mal attribué",
+         non == [("Fantôme,", "redir"), ("Inventé,", "mort"), ("Mauvaisa", ""), ("Vieux, Z", "accueil")], str(non))
 x = r(REF_ZHAO, "zhao")
 verifier("Titre cité suivi d'autre texte (« … Equities. arXiv … ») : le titre exact de la page → bon, existe par le lien",
          x["lien"] == "bon" and x["existe"] == "oui (lien)", f"{x['lien']} {x.get('score_titre')}")
@@ -247,7 +264,7 @@ verifier("Même revue mais pas la même année : pas trouvée ; page « Home » 
 verifier("L'existence vaut pour la référence : Cohen confirmée par un lien, donc aussi sur ses liens non lus",
          {x["existe"] for x in res if x["reference"] == REF_COHEN} == {"oui (lien)"})
 cr_req = [p for s, p, _, _ in JOURNAL if s == cr.split("/")[2] and p != "/robots.txt"]
-verifier("Crossref : une seule recherche par référence (8 références)", len(cr_req) == 8, str(len(cr_req)))
+verifier("Crossref : une seule recherche par référence (10 références)", len(cr_req) == 10, str(len(cr_req)))
 for s in (A, B, C, D, E, CR):
     s.shutdown()
 shutil.rmtree(TMP, ignore_errors=True)

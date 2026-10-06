@@ -264,6 +264,19 @@ def crossref(reference: str, cite: str) -> dict:
     return {"etat": "trouvee" if ok else "pas_trouvee", "meilleur": meilleur}
 
 
+def alertes(x: dict) -> list:
+    """Erreurs de citation que Crossref révèle : le titre cité existe, mais avec d'autres auteurs (auteur mal attribué),
+    ou le DOI du lien n'est pas celui de l'étude (lien vers un autre article)."""
+    sortie = []
+    m = x["crossref"].get("meilleur") or {}
+    if m and not m.get("auteur") and part(m.get("titre", ""), x["reference"]) >= 0.9 and len(mots(m.get("titre", ""))) >= 4:
+        sortie.append(f"auteur cité ≠ auteurs de l'étude trouvée ({m.get('auteurs', '')}, {m.get('annee')})")
+    d = re.search(r"10\.\d{4,9}/[^\s?#]+", x.get("adresse") or "")
+    if d and x["crossref"].get("etat") == "trouvee" and m.get("doi") and d.group(0).lower().rstrip("/") != m["doi"].lower():
+        sortie.append(f"le lien mène au DOI {d.group(0)}, mais l'étude a le DOI {m['doi']}")
+    return sortie
+
+
 def cellule(t) -> str:
     return str(t).replace("|", "/").replace("\n", " ")[:160]
 
@@ -298,6 +311,7 @@ def main():
             existe.setdefault(x["reference"], "non confirmée")
     for x in resultats:
         x["existe"] = existe[x["reference"]]
+        x["alertes"] = alertes(x)
     (SORTIE / "verif_liens.json").write_text(json.dumps(resultats, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
     liens = {}
@@ -341,13 +355,18 @@ def main():
                       f"{x['lien']} : {cellule(x.get('titre_page') or x.get('raison', ''))} |")
     if not non:
         lignes.append("| — | aucune | | | |")
+    avec_alerte = [x for x in resultats if x["alertes"]]
+    lignes += ["", f"## Erreurs de citation trouvées ({len(avec_alerte)})", "", "| Règle(s) | Référence | Alerte |", "|---|---|---|"]
+    lignes += [f"| {', '.join(x['regles'])} | {cellule(x['reference'])} | {cellule(' ; '.join(x['alertes']))} |"
+               for x in avec_alerte] or ["| — | aucune | |"]
     lignes += ["", "## Toutes les études", "", "| # | Règle(s) | Existe | Lien | Titre de la page (ou raison) |",
                "|---|---|---|---|---|"]
     for i, x in enumerate(resultats, 1):
         lignes.append(f"| {i} | {', '.join(x['regles'])} | {x['existe']} | {x['lien']} | "
                       f"{cellule(x.get('titre_page') or x.get('raison', ''))} |")
-    lignes += ["", "VERDICT : OK" if not non else
-               f"VERDICT : À REGARDER — {len(non)} étude(s) non confirmée(s) (ni Crossref ni un lien)"]
+    lignes += ["", "VERDICT : OK" if not non and not avec_alerte else
+               f"VERDICT : À REGARDER — {len(non)} étude(s) non confirmée(s) (ni Crossref ni un lien), "
+               f"{len(avec_alerte)} erreur(s) de citation"]
     (SORTIE / "resume.md").write_text("\n".join(lignes) + "\n", encoding="utf-8")
     print(lignes[-1])
 
