@@ -92,6 +92,9 @@ def route_a(p):
         "/generique": (200, HTML, "<html><title>Just a moment...</title><body>Checking your browser</body></html>"),
         "/papier.pdf": (200, PDF, pdf("Are Insider Trades Informative? Josef Lakonishok and Inmoo Lee")),
         "/abime.pdf": (200, PDF, b"%PDF-1.4 abime"),
+        "/zhao": (200, HTML, '<html><head><meta name="citation_title" content="Insider Purchases Far Below the 52-Week High: '
+                             'Decomposing the Disclosure Reaction in Microcap Equities"></head></html>'),
+        "/accueil": (200, HTML, "<html><title>Home</title></html>"),
         "/texte": (200, HTML, "<html><title>Working papers</title><body><h1>Cohen Malloy Pomorski : Decoding Inside "
                               "Information</h1></body></html>"),
     }.get(p, (404, HTML, ""))
@@ -110,6 +113,12 @@ CR_ITEMS = {
     "Lakonishok": [{"DOI": "10.1093/rfs/14.1.79", "title": ["Are Insider Trades Informative?"],
                     "author": [{"family": "Lakonishok"}, {"family": "Lee"}], "issued": {"date-parts": [[2001]]}}],
     "Cohen": [],
+    "Zhao": [],  # comme arXiv : pas dans Crossref
+    "Alldredge": [{"DOI": "10.1111/jfir.12172", "title": ["Do insiders cluster trades with colleagues? Evidence from daily insider trading"],
+                   "author": [{"family": "Alldredge"}, {"family": "Blank"}], "issued": {"date-parts": [[2019]]},
+                   "container-title": ["Journal of Financial Research"]}],
+    "Vieux": [{"DOI": "10.1/z", "title": ["Something about clusters"], "author": [{"family": "Vieux"}],
+               "issued": {"date-parts": [[2012]]}, "container-title": ["Journal of Financial Research"]}],
 }
 
 
@@ -127,6 +136,8 @@ REF_BROCHET = ("Brochet, F. (2010). Information Content of Insider Trades before
                "The Accounting Review 85(2), 419-446.")
 REF_LAKO = "Lakonishok, J., & Lee, I. (2001). \"Are Insider Trades Informative?\" Review of Financial Studies 14(1), 79-111."
 REF_COHEN = "Cohen, L., Malloy, C., & Pomorski, L. (2012). Decoding Inside Information. Journal of Finance 67(3)."
+REF_ZHAO = ("Zhao, H. (2026). Insider Purchases Far Below the 52-Week High: Decomposing the Disclosure Reaction in Microcap "
+            "Equities. arXiv 2602.06198 (v2, sept. 2026)")
 REGLES = {"regles": [
     {"id": "r1", "etudes": [{"reference": REF_BROCHET, "lien": f"{a}/etude1"},
                             {"reference": REF_BROCHET, "lien": f"{a}/prive/etude2"}]},
@@ -143,6 +154,9 @@ REGLES = {"regles": [
                             {"reference": REF_COHEN, "lien": f"{a}/generique"},
                             {"reference": REF_LAKO, "lien": f"{a}/papier.pdf"},
                             {"reference": REF_BROCHET, "lien": f"{a}/abime.pdf"}]},
+    {"id": "r4", "etudes": [{"reference": REF_ZHAO, "lien": f"{a}/zhao"},
+                            {"reference": "Alldredge et Blank (2019), Journal of Financial Research 42(2)", "lien": ""},
+                            {"reference": "Vieux, Z. (2019), Journal of Financial Research 40(1)", "lien": f"{a}/accueil"}]},
 ]}
 
 shutil.rmtree(TMP, ignore_errors=True)
@@ -167,7 +181,7 @@ verifier("Titre HTML : citation_title avant <title>", v.titre_html(PAGE_BROCHET)
 
 v.main()
 res = json.loads((TMP / "liens" / "verif_liens.json").read_text())
-par = {(x["reference"][:8], x["adresse"].rsplit("/", 1)[-1], x["adresse"].split("/")[2]): x for x in res}
+par = {(x["reference"][:8], x["adresse"].rsplit("/", 1)[-1], x["adresse"].split("/")[2]): x for x in res if x["adresse"]}
 
 
 def r(ref, fin, site=a):
@@ -214,17 +228,26 @@ agents = {u for *_, u in JOURNAL}
 verifier("Chaque requête : agent « Radar projet personnel », sans courriel", agents == {"Radar projet personnel"}, str(agents))
 verifier("Le fichier des règles n'est pas modifié", hashlib.sha256((TMP / "regles.json").read_bytes()).hexdigest() == empreinte)
 resume = (TMP / "liens" / "resume.md").read_text()
-verifier("Résumé : 5 études, 12 liens, 2 non confirmées, ligne VERDICT « À REGARDER »",
-         "- Études différentes : 5 (dans 3 règles), avec 12 liens" in resume and "- Non confirmée : 2" in resume
-         and resume.rstrip().endswith("VERDICT : À REGARDER — 2 étude(s) non confirmée(s) (ni Crossref ni un lien)")
-         and len(res) == 12, resume.splitlines()[-1])
+verifier("Résumé : 8 études, 15 liens, 3 non confirmées, ligne VERDICT « À REGARDER »",
+         "- Études différentes : 8 (dans 4 règles), avec 15 liens" in resume and "- Non confirmée : 3" in resume
+         and resume.rstrip().endswith("VERDICT : À REGARDER — 3 étude(s) non confirmée(s) (ni Crossref ni un lien)")
+         and len(res) == 15, resume.splitlines()[-1])
 non = sorted((x["reference"][:8], x["adresse"].rsplit("/", 1)[-1]) for x in res if x["existe"] == "non confirmée")
-verifier("Non confirmées = l'étude inventée et celle au mauvais auteur, rien d'autre",
-         non == [("Fantôme,", "redir"), ("Inventé,", "mort")], str(non))
+verifier("Non confirmées = l'étude inventée, celle au mauvais auteur, et la revue à la mauvaise année",
+         non == [("Fantôme,", "redir"), ("Inventé,", "mort"), ("Vieux, Z", "accueil")], str(non))
+x = r(REF_ZHAO, "zhao")
+verifier("Titre cité suivi d'autre texte (« … Equities. arXiv … ») : le titre exact de la page → bon, existe par le lien",
+         x["lien"] == "bon" and x["existe"] == "oui (lien)", f"{x['lien']} {x.get('score_titre')}")
+y = next(z for z in res if z["reference"].startswith("Alldredge"))
+verifier("Référence sans titre (auteurs, année, revue) : Crossref trouvée par la revue et l'année",
+         y["crossref"]["etat"] == "trouvee" and y["existe"] == "oui (Crossref)", str(y["crossref"]))
+z = r("Vieux, Z", "accueil")
+verifier("Même revue mais pas la même année : pas trouvée ; page « Home » : autre_page",
+         z["crossref"]["etat"] == "pas_trouvee" and z["lien"] == "autre_page", f"{z['crossref']['etat']} {z['lien']}")
 verifier("L'existence vaut pour la référence : Cohen confirmée par un lien, donc aussi sur ses liens non lus",
          {x["existe"] for x in res if x["reference"] == REF_COHEN} == {"oui (lien)"})
 cr_req = [p for s, p, _, _ in JOURNAL if s == cr.split("/")[2] and p != "/robots.txt"]
-verifier("Crossref : une seule recherche par référence (5 références)", len(cr_req) == 5, str(len(cr_req)))
+verifier("Crossref : une seule recherche par référence (8 références)", len(cr_req) == 8, str(len(cr_req)))
 for s in (A, B, C, D, E, CR):
     s.shutdown()
 shutil.rmtree(TMP, ignore_errors=True)

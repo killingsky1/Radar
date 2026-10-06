@@ -154,6 +154,18 @@ def part(cite: str, trouve: str) -> float:
     return round(len(a & mots(trouve)) / len(a), 2) if a else 0.0
 
 
+def ressemblance(cite: str, reference: str, trouve: str, min_mots: int) -> float:
+    """Les 2 sens : mots du titre cité dans le titre trouvé, ou mots du titre trouvé (au moins `min_mots`) dans toute la
+    référence (le titre cité est parfois suivi d'autre texte : « … Equities. arXiv 2602… », « …, blogue … »)."""
+    inverse = part(trouve, reference) if len(mots(trouve)) >= min_mots else 0.0
+    return max(part(cite, trouve), inverse)
+
+
+def annee_de(reference: str):
+    m = re.search(r"\b(19[5-9]\d|20[0-4]\d)\b", reference)
+    return int(m.group(1)) if m else None
+
+
 def titre_cite(reference: str) -> str:
     m = re.search(r"\((?:\d{4}[a-z]?|n\.\s?d\.|s\.\s?d\.|forthcoming|à paraître)[^)]*\)[.,:]?\s*(.+)", reference, re.I)
     reste = (m.group(1) if m else reference).strip()
@@ -201,7 +213,7 @@ def titre_pdf(contenu: bytes):
         return "", f"pdf illisible ({type(exc).__name__})"
 
 
-def verifier_lien(lien: str, cite: str) -> dict:
+def verifier_lien(lien: str, cite: str, reference: str = "") -> dict:
     etat = lire(lien)
     if etat[0] == "non_verifiable":
         return {"lien": "non_verifiable", "raison": etat[2], "url_finale": etat[1]}
@@ -216,7 +228,7 @@ def verifier_lien(lien: str, cite: str) -> dict:
         page = contenu[:2_000_000].decode("utf-8", "replace")
         titre, source = titre_html(page)
         texte = html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"(?is)<(script|style)\b.*?</\1>", " ", page)))
-    s_titre, s_texte = part(cite, titre), part(cite, texte)
+    s_titre, s_texte = ressemblance(cite, reference or cite, titre, 3), part(cite, texte)
     verdict = "bon" if s_titre >= SEUIL else "probable" if s_texte >= 0.8 else "autre_page"
     return {"lien": verdict, "url_finale": finale, "titre_page": titre[:300], "source_titre": source,
             "score_titre": s_titre, "score_texte": s_texte}
@@ -233,18 +245,22 @@ def crossref(reference: str, cite: str) -> dict:
     except (ValueError, KeyError, TypeError):
         return {"etat": "erreur", "raison": "réponse illisible"}
     auteur = noms(premier_auteur(reference))
+    an_ref = annee_de(reference)
     meilleur = None
     for it in items:
         titre = " ".join(it.get("title") or [])
         familles = " ".join((a.get("family") or a.get("name") or "") for a in it.get("author") or [])
         annee = (((it.get("issued") or {}).get("date-parts") or [[None]])[0] or [None])[0]
-        c = {"doi": it.get("DOI"), "titre": titre[:300], "auteurs": familles[:200], "annee": annee,
-             "revue": " ".join(it.get("container-title") or [])[:120], "score": part(cite, titre),
-             "auteur": bool(auteur & noms(familles))}
-        if meilleur is None or (c["auteur"] and c["score"] >= SEUIL, c["score"], c["auteur"]) > \
-                (meilleur["auteur"] and meilleur["score"] >= SEUIL, meilleur["score"], meilleur["auteur"]):
-            meilleur = c
-    ok = bool(meilleur and meilleur["auteur"] and meilleur["score"] >= SEUIL)
+        revue = " ".join(it.get("container-title") or [])[:120]
+        c = {"doi": it.get("DOI"), "titre": titre[:300], "auteurs": familles[:200], "annee": annee, "revue": revue,
+             "score": ressemblance(cite, reference, titre, 2), "auteur": bool(auteur & noms(familles)),
+             # référence sans titre (ex. « Alldredge et Blank (2019), Journal of Financial Research ») : la revue et l'année
+             "revue_annee": bool(mots(revue)) and part(revue, reference) >= SEUIL and an_ref is not None
+             and annee is not None and abs(annee - an_ref) <= 1}
+        bon = c["auteur"] and (c["score"] >= SEUIL or c["revue_annee"])
+        if meilleur is None or (bon, c["score"], c["auteur"]) > (meilleur["_bon"], meilleur["score"], meilleur["auteur"]):
+            meilleur = dict(c, _bon=bon)
+    ok = bool(meilleur and meilleur.pop("_bon"))
     return {"etat": "trouvee" if ok else "pas_trouvee", "meilleur": meilleur}
 
 
@@ -268,7 +284,7 @@ def main():
         if e["reference"] not in par_crossref:  # une seule recherche par référence
             par_crossref[e["reference"]] = crossref(e["reference"], cite)
         x = dict(e, titre_cite=cite, crossref=par_crossref[e["reference"]])
-        x.update(verifier_lien(e["adresse"], cite) if e["adresse"] else {"lien": "absent"})
+        x.update(verifier_lien(e["adresse"], cite, e["reference"]) if e["adresse"] else {"lien": "absent"})
         resultats.append(x)
         print(f"{i}/{len(etudes)} Crossref {x['crossref']['etat']} · lien {x['lien']} · {e['reference'][:70]}", flush=True)
     # L'existence est celle de la référence : Crossref, sinon au moins un de ses liens qui mène à elle
@@ -304,9 +320,11 @@ def main():
         "- Liens : " + " · ".join(f"{k} {v}" for k, v in sorted(liens.items())),
         f"- Sites non lus (robots.txt, refus ou panne) : {', '.join(sites_nv) or 'aucun'}",
         "",
-        "Crossref « trouvée » = une des 5 meilleures réponses a le nom du 1er auteur cité et au moins 60 % des mots "
-        "importants du titre cité. Lien « bon » = le titre de la page a au moins 60 % de ces mots ; « probable » = la "
-        "page en contient au moins 80 % ; « autre_page » = ni l'un ni l'autre (page générique, autre étude…).",
+        "Crossref « trouvée » = une des 5 meilleures réponses a le nom du 1er auteur cité, et soit au moins 60 % des "
+        "mots importants du titre cité (ou tous ses mots dans la référence), soit, pour une référence sans titre, la "
+        "même revue et la même année (à 1 an près). Lien « bon » = même règle pour le titre de la page (3 mots au "
+        "moins dans l'autre sens) ; « probable » = la page contient au moins 80 % des mots du titre cité ; "
+        "« autre_page » = ni l'un ni l'autre (page générique, autre étude…).",
         "",
         "## Non confirmées (à regarder)",
         "",
