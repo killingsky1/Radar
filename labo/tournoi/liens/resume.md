@@ -1,6 +1,6 @@
 # Études citées par les chercheurs (étape 1) : vérification
 
-Fait le 2026-10-06 05:13 UTC par `labo/tournoi/verif_liens.py`, à partir de `regles_preenregistrees.json`. Robots.txt respectés (illisible = site non lu), agent « Radar projet personnel », aucun courriel, aucun compte.
+Fait le 2026-10-06 05:29 UTC par `labo/tournoi/verif_liens.py`, à partir de `regles_preenregistrees.json`. Robots.txt respectés (illisible = site non lu), agent « Radar projet personnel », aucun courriel, aucun compte.
 
 - Études différentes : 122 (dans 38 règles), avec 129 liens
 - Existence confirmée : 116 — par Crossref : 110 ; par un lien seulement : 6
@@ -21,19 +21,11 @@ Crossref « trouvée » = une des 5 meilleures réponses a le nom du 1er auteur 
 | meteo-3 | Forecasting the size premium over different time horizons, Journal of Banking & Finance | https://www.sciencedirect.com/science/article/abs/pii/S0378426612003536 | Forecasting the size premium over different time horizons (Zakamulin, 2013) score 1.0 | non_verifiable : www.sciencedirect.com : robots.txt : www.sciencedirect.com : le site refuse le robot (erreur 403) : on respecte |
 | meteo-4 | Bloomberg (2025), Is the Stock Market's 'January Effect' Real? (presse, chiffres non vérifiés dans une étude) | https://www.bloomberg.com/news/articles/2025-01-05/is-the-stock-market-s-january-effect-real | January Effect in EU Stock Market (Georgiou, 2015) score 1.0 | non_verifiable : www.bloomberg.com : le site refuse le robot (erreur 403) : on respecte |
 
-## Erreurs de citation trouvées (12)
+## Erreurs de citation trouvées (4)
 
 | Règle(s) | Référence | Alerte |
 |---|---|---|
-| initie-4-engagement | Fidrmuc, Goergen et Renneboog (2006), Insider Trading, News Releases, and Ownership Concentration, Journal of Finance 61(6) | le lien mène au DOI 10.1111/j.1540-6261.2006.01008.x, mais l'étude a le DOI 10.67929/ecgi-fin-093-2005 |
-| groupes-1 | Alldredge et Blank (2019), Do Insiders Cluster Trades with Colleagues? Evidence from Daily Insider Trading, Journal of Financial Research 42(2) | le lien mène au DOI 10.1111/jfir.12172, mais l'étude a le DOI 10.2139/ssrn.2781761 |
-| sante_valeur-3 | McLean, R. D. et Pontiff, J. (2016), Does Academic Research Destroy Stock Return Predictability?, Journal of Finance 71(1) | le lien mène au DOI 10.1111/jofi.12365, mais l'étude a le DOI 10.2139/ssrn.2080900 |
-| meteo-2 | Seyhun (1990), Overreaction or Fundamentals: Some Lessons from Insiders' Response to the Market Crash of 1987, Journal of Finance | le lien mène au DOI 10.1111/j.1540-6261.1990.tb03719.x, mais l'étude a le DOI 10.2307/2328741 |
 | meteo-2 | Cziraki, Anticipating the Financial Crisis: Evidence from Insider Trading in Banks (Economic Policy) | auteur cité ≠ auteurs de l'étude trouvée (Akin Marín Peydró, 2020) |
-| meteo-2 | Insider trading patterns during the COVID period, Pacific-Basin Finance Journal (2025) | auteur cité ≠ auteurs de l'étude trouvée (Jiang Ma Ma, 2025) |
-| meteo-3 | Ehsani et Linnainmaa (2022), Factor Momentum and the Momentum Factor, Journal of Finance (lien DOI ; page non ouverte dans cette session) | le lien mène au DOI 10.1111/jofi.13131, mais l'étude a le DOI 10.3386/w25551 |
-| meteo-3 | Forecasting the size premium over different time horizons, Journal of Banking & Finance | auteur cité ≠ auteurs de l'étude trouvée (Zakamulin, 2013) |
-| meteo-4 | Bloomberg (2025), Is the Stock Market's 'January Effect' Real? (presse, chiffres non vérifiés dans une étude) | auteur cité ≠ auteurs de l'étude trouvée (Georgiou, 2015) |
 | gestion-2 | Akbas, Jiang et Koch (2020), Insider Investment Horizon, Journal of Finance 75(3) | le lien mène au DOI 10.1111/jofi.12877, mais l'étude a le DOI 10.1111/jofi.12878 |
 | gestion-3 | Amenc, Malaise et Martellini (2004), Revisiting Core-Satellite Investing, Journal of Portfolio Management 31(1) | le lien mène au DOI 10.3905/jpm.2004.443325, mais l'étude a le DOI 10.3905/jpm.2004.443322 |
 | gestion-3 | Bettis, Vickrey et Vickrey (1997), Mimickers of Corporate Insiders Who Make Large-Volume Trades, Financial Analysts Journal 53(5) | le lien mène au DOI 10.2469/faj.v53.n5.2116, mais l'étude a le DOI 10.2469/faj.v53.n5.2118 |
@@ -172,4 +164,4 @@ Crossref « trouvée » = une des 5 meilleures réponses a le nom du 1er auteur 
 | 128 | critique-3 | oui (Crossref) | non_verifiable | onlinelibrary.wiley.com : le site refuse le robot (erreur 403) : on respecte |
 | 129 | critique-3 | oui (Crossref) | bon | Market Reactions to Tangible and Intangible Information |
 
-VERDICT : À REGARDER — 6 étude(s) non confirmée(s) (ni Crossref ni un lien), 12 erreur(s) de citation
+VERDICT : À REGARDER — 6 étude(s) non confirmée(s) (ni Crossref ni un lien), 4 erreur(s) de citation
