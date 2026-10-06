@@ -1,0 +1,112 @@
+{
+ "fichier": "liquidite_taille-3.py",
+ "id": "liquidite_taille-3",
+ "stats": {
+  "annees": {
+   "2023-2024": {
+    "transactions": 5,
+    "en_attente": 0,
+    "achats": 5,
+    "mesurable": true,
+    "ecart_moyen": 0.2586,
+    "ecart_median": 0.2509,
+    "bat_le_marche": 0.6,
+    "t": 1.33,
+    "portefeuille": 0.6861,
+    "spy_garde": 0.2263
+   },
+   "2024-2025": {
+    "transactions": 5,
+    "en_attente": 0,
+    "achats": 5,
+    "mesurable": true,
+    "ecart_moyen": -0.1119,
+    "ecart_median": -0.0445,
+    "bat_le_marche": 0.4,
+    "t": -0.63,
+    "portefeuille": -0.008,
+    "spy_garde": 0.133
+   },
+   "2025-2026": {
+    "transactions": 0,
+    "en_attente": 5,
+    "achats": 5,
+    "mesurable": false,
+    "ecart_moyen": null,
+    "ecart_median": null,
+    "bat_le_marche": null,
+    "t": null,
+    "portefeuille": 0.0815,
+    "spy_garde": 0.2091
+   }
+  },
+  "total": {
+   "portefeuille": 0.8143,
+   "spy_garde": 0.7222,
+   "pire_baisse": -0.3151,
+   "mois": 39,
+   "ecart_mensuel_moyen": 0.00526,
+   "t_mensuel": 0.38
+  }
+ },
+ "mois": 36,
+ "ecart_mensuel_moyen": 0.00629,
+ "t_periode": 0.42,
+ "achats": 15,
+ "periode_entiere": {
+  "portefeuille": 0.8102,
+  "spy": 0.6827,
+  "iwm": 0.6011,
+  "annees_gagnees": 1
+ },
+ "signaux": {
+  "signaux": 488,
+  "achats": 15,
+  "sans_prix": 158,
+  "meteo_fermee": 0,
+  "places_pleines": 308,
+  "deja_en_portefeuille": 7,
+  "pause_symbole": 0,
+  "montant_trop_petit": 0
+ },
+ "criteres": {
+  "1_bat_spy_chaque_annee": false,
+  "2_t_3_ou_plus": false,
+  "3_achats": false
+ },
+ "par_annee": {
+  "2023-2024": {
+   "achats": 5,
+   "portefeuille": 0.6861,
+   "spy_garde": 0.2263,
+   "ecart_moyen": 0.2586,
+   "t": 1.33
+  },
+  "2024-2025": {
+   "achats": 5,
+   "portefeuille": -0.008,
+   "spy_garde": 0.133,
+   "ecart_moyen": -0.1119,
+   "t": -0.63
+  },
+  "2025-2026": {
+   "achats": 5,
+   "portefeuille": 0.0815,
+   "spy_garde": 0.2091,
+   "ecart_moyen": null,
+   "t": null
+  }
+ },
+ "deux_programmations": "identiques",
+ "ecarts": {
+  "seulement_testeur": [],
+  "seulement_verificateur": [],
+  "nombres": [
+   10,
+   10,
+   10
+  ]
+ },
+ "temoin": false,
+ "passe": false
+}

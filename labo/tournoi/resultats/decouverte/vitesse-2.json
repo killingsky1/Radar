@@ -1,0 +1,112 @@
+{
+ "fichier": "vitesse-2.py",
+ "id": "vitesse-2",
+ "stats": {
+  "annees": {
+   "2023-2024": {
+    "transactions": 70,
+    "en_attente": 0,
+    "achats": 70,
+    "mesurable": true,
+    "ecart_moyen": 0.0031,
+    "ecart_median": 0.004,
+    "bat_le_marche": 0.5286,
+    "t": 0.26,
+    "portefeuille": -0.483,
+    "spy_garde": 0.2263
+   },
+   "2024-2025": {
+    "transactions": 64,
+    "en_attente": 0,
+    "achats": 64,
+    "mesurable": true,
+    "ecart_moyen": -0.0171,
+    "ecart_median": -0.0246,
+    "bat_le_marche": 0.3438,
+    "t": -1.44,
+    "portefeuille": -0.9774,
+    "spy_garde": 0.133
+   },
+   "2025-2026": {
+    "transactions": 1,
+    "en_attente": 0,
+    "achats": 1,
+    "mesurable": true,
+    "ecart_moyen": 0.1051,
+    "ecart_median": 0.1051,
+    "bat_le_marche": 1.0,
+    "t": null,
+    "portefeuille": -0.1505,
+    "spy_garde": 0.2091
+   }
+  },
+  "total": {
+   "portefeuille": -0.9902,
+   "spy_garde": 0.7222,
+   "pire_baisse": -0.9936,
+   "mois": 39,
+   "ecart_mensuel_moyen": -0.10202,
+   "t_mensuel": -3.74
+  }
+ },
+ "mois": 36,
+ "ecart_mensuel_moyen": -0.11052,
+ "t_periode": -3.79,
+ "achats": 135,
+ "periode_entiere": {
+  "portefeuille": -0.9904,
+  "spy": 0.6827,
+  "iwm": 0.6011,
+  "annees_gagnees": 0
+ },
+ "signaux": {
+  "signaux": 1355,
+  "achats": 135,
+  "sans_prix": 790,
+  "meteo_fermee": 0,
+  "places_pleines": 201,
+  "deja_en_portefeuille": 13,
+  "pause_symbole": 26,
+  "montant_trop_petit": 190
+ },
+ "criteres": {
+  "1_bat_spy_chaque_annee": false,
+  "2_t_3_ou_plus": false,
+  "3_achats": false
+ },
+ "par_annee": {
+  "2023-2024": {
+   "achats": 70,
+   "portefeuille": -0.483,
+   "spy_garde": 0.2263,
+   "ecart_moyen": 0.0031,
+   "t": 0.26
+  },
+  "2024-2025": {
+   "achats": 64,
+   "portefeuille": -0.9774,
+   "spy_garde": 0.133,
+   "ecart_moyen": -0.0171,
+   "t": -1.44
+  },
+  "2025-2026": {
+   "achats": 1,
+   "portefeuille": -0.1505,
+   "spy_garde": 0.2091,
+   "ecart_moyen": 0.1051,
+   "t": null
+  }
+ },
+ "deux_programmations": "identiques",
+ "ecarts": {
+  "seulement_testeur": [],
+  "seulement_verificateur": [],
+  "nombres": [
+   135,
+   135,
+   135
+  ]
+ },
+ "temoin": false,
+ "passe": false
+}

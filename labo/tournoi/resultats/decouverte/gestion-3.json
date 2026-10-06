@@ -1,0 +1,112 @@
+{
+ "fichier": "gestion-3.py",
+ "id": "gestion-3",
+ "stats": {
+  "annees": {
+   "2023-2024": {
+    "transactions": 3,
+    "en_attente": 0,
+    "achats": 3,
+    "mesurable": true,
+    "ecart_moyen": -0.1432,
+    "ecart_median": -0.2508,
+    "bat_le_marche": 0.3333,
+    "t": -1.15,
+    "portefeuille": 0.197,
+    "spy_garde": 0.2263
+   },
+   "2024-2025": {
+    "transactions": 3,
+    "en_attente": 0,
+    "achats": 3,
+    "mesurable": true,
+    "ecart_moyen": -0.3683,
+    "ecart_median": -0.4346,
+    "bat_le_marche": 0.0,
+    "t": -3.9,
+    "portefeuille": 0.0225,
+    "spy_garde": 0.133
+   },
+   "2025-2026": {
+    "transactions": 3,
+    "en_attente": 0,
+    "achats": 3,
+    "mesurable": true,
+    "ecart_moyen": 0.077,
+    "ecart_median": -0.0322,
+    "bat_le_marche": 0.3333,
+    "t": 0.3,
+    "portefeuille": 0.1868,
+    "spy_garde": 0.2091
+   }
+  },
+  "total": {
+   "portefeuille": 0.4852,
+   "spy_garde": 0.7222,
+   "pire_baisse": -0.1767,
+   "mois": 39,
+   "ecart_mensuel_moyen": -0.0037,
+   "t_mensuel": -1.25
+  }
+ },
+ "mois": 36,
+ "ecart_mensuel_moyen": -0.00412,
+ "t_periode": -1.3,
+ "achats": 9,
+ "periode_entiere": {
+  "portefeuille": 0.446,
+  "spy": 0.6827,
+  "iwm": 0.6011,
+  "annees_gagnees": 0
+ },
+ "signaux": {
+  "signaux": 2692,
+  "achats": 9,
+  "sans_prix": 473,
+  "meteo_fermee": 0,
+  "places_pleines": 2207,
+  "deja_en_portefeuille": 3,
+  "pause_symbole": 0,
+  "montant_trop_petit": 0
+ },
+ "criteres": {
+  "1_bat_spy_chaque_annee": false,
+  "2_t_3_ou_plus": false,
+  "3_achats": false
+ },
+ "par_annee": {
+  "2023-2024": {
+   "achats": 3,
+   "portefeuille": 0.197,
+   "spy_garde": 0.2263,
+   "ecart_moyen": -0.1432,
+   "t": -1.15
+  },
+  "2024-2025": {
+   "achats": 3,
+   "portefeuille": 0.0225,
+   "spy_garde": 0.133,
+   "ecart_moyen": -0.3683,
+   "t": -3.9
+  },
+  "2025-2026": {
+   "achats": 3,
+   "portefeuille": 0.1868,
+   "spy_garde": 0.2091,
+   "ecart_moyen": 0.077,
+   "t": 0.3
+  }
+ },
+ "deux_programmations": "identiques",
+ "ecarts": {
+  "seulement_testeur": [],
+  "seulement_verificateur": [],
+  "nombres": [
+   9,
+   9,
+   9
+  ]
+ },
+ "temoin": false,
+ "passe": false
+}

@@ -1,0 +1,112 @@
+{
+ "fichier": "meteo-2.py",
+ "id": "meteo-2",
+ "stats": {
+  "annees": {
+   "2023-2024": {
+    "transactions": 20,
+    "en_attente": 0,
+    "achats": 20,
+    "mesurable": true,
+    "ecart_moyen": -0.2123,
+    "ecart_median": -0.227,
+    "bat_le_marche": 0.2,
+    "t": -2.93,
+    "portefeuille": -0.3618,
+    "spy_garde": 0.2263
+   },
+   "2024-2025": {
+    "transactions": 10,
+    "en_attente": 0,
+    "achats": 10,
+    "mesurable": true,
+    "ecart_moyen": 0.014,
+    "ecart_median": -0.0084,
+    "bat_le_marche": 0.5,
+    "t": 0.09,
+    "portefeuille": 0.2504,
+    "spy_garde": 0.133
+   },
+   "2025-2026": {
+    "transactions": 10,
+    "en_attente": 0,
+    "achats": 10,
+    "mesurable": true,
+    "ecart_moyen": 0.0859,
+    "ecart_median": -0.0096,
+    "bat_le_marche": 0.5,
+    "t": 0.52,
+    "portefeuille": 0.1584,
+    "spy_garde": 0.2091
+   }
+  },
+  "total": {
+   "portefeuille": -0.0492,
+   "spy_garde": 0.7222,
+   "pire_baisse": -0.4322,
+   "mois": 39,
+   "ecart_mensuel_moyen": -0.0144,
+   "t_mensuel": -1.71
+  }
+ },
+ "mois": 36,
+ "ecart_mensuel_moyen": -0.0156,
+ "t_periode": -1.72,
+ "achats": 40,
+ "periode_entiere": {
+  "portefeuille": -0.071,
+  "spy": 0.6827,
+  "iwm": 0.6011,
+  "annees_gagnees": 1
+ },
+ "signaux": {
+  "signaux": 5370,
+  "achats": 40,
+  "sans_prix": 970,
+  "meteo_fermee": 2364,
+  "places_pleines": 1988,
+  "deja_en_portefeuille": 8,
+  "pause_symbole": 0,
+  "montant_trop_petit": 0
+ },
+ "criteres": {
+  "1_bat_spy_chaque_annee": false,
+  "2_t_3_ou_plus": false,
+  "3_achats": true
+ },
+ "par_annee": {
+  "2023-2024": {
+   "achats": 20,
+   "portefeuille": -0.3618,
+   "spy_garde": 0.2263,
+   "ecart_moyen": -0.2123,
+   "t": -2.93
+  },
+  "2024-2025": {
+   "achats": 10,
+   "portefeuille": 0.2504,
+   "spy_garde": 0.133,
+   "ecart_moyen": 0.014,
+   "t": 0.09
+  },
+  "2025-2026": {
+   "achats": 10,
+   "portefeuille": 0.1584,
+   "spy_garde": 0.2091,
+   "ecart_moyen": 0.0859,
+   "t": 0.52
+  }
+ },
+ "deux_programmations": "identiques",
+ "ecarts": {
+  "seulement_testeur": [],
+  "seulement_verificateur": [],
+  "nombres": [
+   40,
+   40,
+   40
+  ]
+ },
+ "temoin": false,
+ "passe": false
+}
