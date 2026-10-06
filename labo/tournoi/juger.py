@@ -2,8 +2,9 @@
 
 - labo/tournoi/regles/<id>.py         : la règle programmée par son testeur
 - labo/tournoi/regles_verif/<id>.py   : la même règle, reprogrammée sans voir la première (vérificateur)
-Les deux doivent donner les MÊMES achats et ventes (id, date d'achat, date de vente). Sinon : « différentes », avec les
-premiers écarts, et la règle ne peut pas passer tant que ce n'est pas expliqué et corrigé selon le texte de la règle.
+Les deux doivent donner les MÊMES achats et ventes (id, date d'achat, date de vente), y compris les positions encore
+ouvertes à la fin des prix (id, date d'achat). Sinon : « différentes », avec les premiers écarts, et la règle ne peut pas
+passer tant que ce n'est pas expliqué et corrigé selon le texte de la règle.
 
 Critères (découverte, juillet 2023 à juin 2026) :
 1. portefeuille après frais meilleur que le S&P 500 gardé, chacune des 3 années (juillet à juin) ;
@@ -96,11 +97,16 @@ def passer(regle, d, examen=False):
     return {"stats": s, "mois": mois, "ecart_mensuel_moyen": moy, "t_periode": t, "achats": achats,
             "periode_entiere": total, "signaux": journal, "criteres": criteres,
             "par_annee": {a: {k: x.get(k) for k in ("achats", "portefeuille", "spy_garde", "ecart_moyen", "t")}
-                          for a, x in par_an.items()}}, transactions
+                          for a, x in par_an.items()}}, transactions, ouvertes
 
 
 def cle(t):
     return (t["id"], t["achat"], t["vente"])
+
+
+def cle_ouverte(p):
+    """Une position encore ouverte à la fin des prix : son signal et son jour d'achat."""
+    return (p["id"], p["entree"][0], "encore ouverte")
 
 
 def main():
@@ -130,15 +136,16 @@ def main():
                 (sortie / f"{f.stem}.json").write_text(json.dumps(r, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
                 lignes.append(f"| {f.stem} | ÉCARTÉE : {r['ecartee'][:150]} | | | | | | | | | | non |")
                 continue
-            res, trans = passer(regle, d, x.examen)
+            res, trans, ouv = passer(regle, d, x.examen)
             r.update(res)
             verif = Path(x.verif) / f.name
             if verif.exists():
-                _, trans_v = passer(banc.charger_regle(verif), d, x.examen)
-                a_, b_ = {cle(t) for t in trans}, {cle(t) for t in trans_v}
+                _, trans_v, ouv_v = passer(banc.charger_regle(verif), d, x.examen)
+                a_ = {cle(t) for t in trans} | {cle_ouverte(p) for p in ouv}
+                b_ = {cle(t) for t in trans_v} | {cle_ouverte(p) for p in ouv_v}
                 r["deux_programmations"] = "identiques" if a_ == b_ else "différentes"
                 r["ecarts"] = {"seulement_testeur": sorted(a_ - b_)[:10], "seulement_verificateur": sorted(b_ - a_)[:10],
-                               "nombres": [len(a_), len(b_), len(a_ & b_)]}
+                               "nombres": [len(a_), len(b_), len(a_ & b_)], "encore_ouvertes": [len(ouv), len(ouv_v)]}
             else:
                 r["deux_programmations"] = "vérificateur absent"
             r["temoin"] = bool(getattr(regle, "TEMOIN", False))  # un témoin sert à comparer : il ne peut pas passer

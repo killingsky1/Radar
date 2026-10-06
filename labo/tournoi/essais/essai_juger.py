@@ -36,6 +36,15 @@ def garder(e, ctx):
 (TMP / "regles" / "e.py").write_text('ID = "e"\nIMPOSSIBLE = "décide avec des échecs pas encore publiés"\n'
                                      'def garder(e, ctx):\n    return False\n')
 (TMP / "regles" / "f.py").write_text(REGLE.format(id="f", seuil=300) + "TEMOIN = True\n")
+# g : le vérificateur refuse exactement les signaux des positions encore ouvertes du testeur : mêmes ventes, pas les
+# mêmes positions ouvertes (refuser un signal à la fin ne change pas ce qui a été vendu avant)
+(TMP / "regles" / "g.py").write_text(REGLE.format(id="g", seuil=300))
+sys.path.insert(0, str(ICI.parent))
+import banc  # noqa: E402
+_, _, ouvertes_g = banc.simuler(banc.charger_regle(TMP / "regles" / "g.py"), banc.Donnees(TMP / "donnees"))
+ids_ouvertes_g = sorted({p["id"] for p in ouvertes_g})
+(TMP / "verif" / "g.py").write_text(REGLE.format(id="g", seuil=300).replace(
+    ">= 300", f'>= 300 and e["id"] not in {ids_ouvertes_g!r}'))
 (TMP / "verif" / "f.py").write_text(REGLE.format(id="f", seuil=300) + "TEMOIN = True\n")
 r = subprocess.run([sys.executable, str(ICI.parent / "juger.py"), "--donnees", str(TMP / "donnees"), "--sortie",
                     str(TMP / "res"), "--regles", str(TMP / "regles"), "--verif", str(TMP / "verif")],
@@ -62,7 +71,12 @@ verifier("Signaux : achetés + perdus + écartés ≤ signaux", sum(v for k, v i
 trans = json.loads((TMP / "res" / "a.transactions.json").read_text())
 verifier("Aucun achat d'un dépôt du contexte (avant le 1er juillet 2023)", all(t["achat"] >= "2023-07-01" for t in trans))
 resume = (TMP / "res" / "resume.md").read_text()
-verifier("Résumé : une ligne par règle", all(f"| {k} |" in resume for k in "abcdef"))
+verifier("Résumé : une ligne par règle", all(f"| {k} |" in resume for k in "abcdefg"))
+g = tous["g"]
+verifier("Positions encore ouvertes comparées aussi : mêmes ventes, mais pas les mêmes positions ouvertes → différentes",
+         len(ids_ouvertes_g) >= 1 and g["deux_programmations"] == "différentes"
+         and all(x[2] == "encore ouverte" for x in g["ecarts"]["seulement_testeur"] + g["ecarts"]["seulement_verificateur"])
+         and g["ecarts"]["seulement_testeur"], f"{len(ids_ouvertes_g)} ouvertes · {g.get('ecarts')}")
 verifier("Règle écartée (IMPOSSIBLE) : notée avec sa raison, pas simulée, ne passe pas",
          tous["e"].get("ecartee", "").startswith("décide") and not tous["e"]["passe"] and "stats" not in tous["e"])
 verifier("Témoin : simulé et comparé, mais ne peut jamais passer", tous["f"]["temoin"] and not tous["f"]["passe"]
