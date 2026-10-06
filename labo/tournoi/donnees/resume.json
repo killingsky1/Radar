@@ -6,7 +6,7 @@
   "achats": 37574,
   "symboles_prix": 5853,
   "compagnies_finances": 5205,
-  "compagnies_13": 6132,
+  "compagnies_13": 6122,
   "compagnies_actions": {
    "CommonStockSharesOutstanding": 4193,
    "EntityCommonStockSharesOutstanding": 4586
@@ -19,7 +19,7 @@
   "achats": 126085,
   "symboles_prix": 7146,
   "compagnies_finances": 6469,
-  "compagnies_13": 8058,
+  "compagnies_13": 8045,
   "compagnies_actions": {
    "CommonStockSharesOutstanding": 5476,
    "EntityCommonStockSharesOutstanding": 5918
@@ -28,17 +28,17 @@
  "couverture_decouverte": {
   "achats": 37574,
   "avec_symbole": 0.9435780060680258,
-  "avec_cloture_avant": 0.8366955873742481,
-  "avec_valeur_m": 0.6678820460957045,
+  "avec_cloture_avant": 0.8389844041092245,
+  "avec_valeur_m": 0.6699579496460318,
   "routiniers": 0.12508649598126365,
-  "avec_bilan_initie": 0.6841166764251876
+  "avec_bilan_initie": 0.6862724224197584
  },
  "alignement_des_prix": {
-  "achats_compares": 22685,
+  "achats_compares": 22883,
   "ecart_median_veille_jour_lendemain": {
-   "-1": 0.0222,
-   "0": 0.01397,
-   "1": 0.03015
+   "-1": 0.02216,
+   "0": 0.01395,
+   "1": 0.03022
   },
   "bon_alignement": true,
   "jours_speciaux": {
@@ -62,24 +62,27 @@
     "2021-11-11",
     "2022-10-10",
     "2022-11-11",
-    "2023-08-31",
     "2023-10-09",
     "2024-10-14",
     "2024-11-11",
     "2025-10-13",
     "2025-11-11"
    ],
-   "achats_jour_A": 351,
-   "ecart_median_jour_A": 0.02137,
-   "achats_jour_B": 355,
-   "ecart_median_jour_B": 0.01262,
+   "achats_jour_A": 302,
+   "ecart_median_jour_A": 0.02051,
+   "achats_jour_B": 327,
+   "ecart_median_jour_B": 0.01342,
    "le_prix_est_la_cloture_de": "B",
    "le_prix_est_range_au": "B",
    "bon_rangement": true
   }
  },
  "compte": {
-  "lignes de prix": 5870543,
-  "compagnies sans faits XBRL": 367
+  "requêtes": 2,
+  "lignes de prix": 5919419,
+  "compagnies sans faits XBRL": 367,
+  "13D": 54123,
+  "13D : déposant retiré": 4982,
+  "13D : aucune compagnie visée sûre, laissé de côté": 2545
  }
 }
