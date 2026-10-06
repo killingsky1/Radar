@@ -264,16 +264,28 @@ def crossref(reference: str, cite: str) -> dict:
     return {"etat": "trouvee" if ok else "pas_trouvee", "meilleur": meilleur}
 
 
+def tige_doi(doi: str) -> str:
+    """Le DOI sans son dernier numéro : « 10.1111/jofi.12877 » → « 10.1111/jofi. » (même revue, autre article)."""
+    return re.sub(r"\d+[a-z]?$", "", doi.lower().rstrip("/"))
+
+
 def alertes(x: dict) -> list:
-    """Erreurs de citation que Crossref révèle : le titre cité existe, mais avec d'autres auteurs (auteur mal attribué),
-    ou le DOI du lien n'est pas celui de l'étude (lien vers un autre article)."""
+    """Erreurs de citation que Crossref révèle :
+    - le titre cité existe (6 mots importants au moins), mais avec d'autres auteurs (auteur mal attribué) ;
+    - le lien mène à un AUTRE article de la même revue (même début de DOI, autre numéro, ex. 12877 au lieu de 12878).
+    Pas d'alerte pour une référence sans auteur, ni pour la version « document de travail » (DOI SSRN, NBER…) d'une
+    étude publiée : c'est la même étude."""
     sortie = []
     m = x["crossref"].get("meilleur") or {}
-    if m and not m.get("auteur") and part(m.get("titre", ""), x["reference"]) >= 0.9 and len(mots(m.get("titre", ""))) >= 4:
+    auteur = premier_auteur(x["reference"])
+    if m and not m.get("auteur") and 1 <= len(auteur.split()) <= 3 and len(mots(m.get("titre", ""))) >= 6 \
+            and part(m.get("titre", ""), x["reference"]) >= 0.9:
         sortie.append(f"auteur cité ≠ auteurs de l'étude trouvée ({m.get('auteurs', '')}, {m.get('annee')})")
     d = re.search(r"10\.\d{4,9}/[^\s?#]+", x.get("adresse") or "")
-    if d and x["crossref"].get("etat") == "trouvee" and m.get("doi") and d.group(0).lower().rstrip("/") != m["doi"].lower():
-        sortie.append(f"le lien mène au DOI {d.group(0)}, mais l'étude a le DOI {m['doi']}")
+    if d and x["crossref"].get("etat") == "trouvee" and m.get("doi"):
+        lien, vrai = d.group(0).lower().rstrip("/"), m["doi"].lower()
+        if lien != vrai and tige_doi(lien) == tige_doi(vrai):
+            sortie.append(f"le lien mène au DOI {d.group(0)}, mais l'étude a le DOI {m['doi']}")
     return sortie
 
 

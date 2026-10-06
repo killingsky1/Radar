@@ -249,6 +249,24 @@ verifier("Lien vers un autre DOI que celui de l'étude → alerte (12877 au lieu
          str(ak["alertes"]))
 verifier("Aucune alerte sur les bonnes études (Brochet, Lakonishok)",
          not any(z["alertes"] for z in res if z["reference"] in (REF_BROCHET, REF_LAKO)))
+verifier("DOI : même revue, autre numéro → même « tige » ; revue et document de travail → tiges différentes",
+         v.tige_doi("10.1111/jofi.12877") == v.tige_doi("10.1111/jofi.12878")
+         and v.tige_doi("10.1111/jofi.12365") != v.tige_doi("10.2139/ssrn.2080900")
+         and v.tige_doi("10.2469/faj.v53.n5.2116") == v.tige_doi("10.2469/faj.v53.n5.2118"))
+sans_auteur = {"reference": "Insider trading patterns during the COVID period, Pacific-Basin Finance Journal (2025)", "adresse": "",
+               "crossref": {"etat": "pas_trouvee", "meilleur": {"titre": "Insider trading patterns during the COVID period",
+                                                                "auteurs": "Jiang Ma Ma", "annee": 2025, "auteur": False}}}
+presse = {"reference": "Bloomberg (2025), Is the Stock Market's 'January Effect' Real? (presse)", "adresse": "",
+          "crossref": {"etat": "pas_trouvee", "meilleur": {"titre": "January Effect in EU Stock Market", "auteurs": "Georgiou",
+                                                           "annee": 2015, "auteur": False}}}
+version_travail = {"reference": "McLean, R. D. et Pontiff, J. (2016), Does Academic Research Destroy Stock Return Predictability?",
+                   "adresse": "https://doi.org/10.1111/jofi.12365",
+                   "crossref": {"etat": "trouvee", "meilleur": {"titre": "Does Academic Research Destroy Stock Return Predictability?",
+                                                                "auteurs": "McLean Pontiff", "annee": 2016, "auteur": True,
+                                                                "doi": "10.2139/ssrn.2080900"}}}
+verifier("Pas de fausse alerte : référence sans auteur, article de presse au titre court, version document de travail",
+         v.alertes(sans_auteur) == [] and v.alertes(presse) == [] and v.alertes(version_travail) == [],
+         str([v.alertes(sans_auteur), v.alertes(presse), v.alertes(version_travail)]))
 non = sorted((x["reference"][:8], x["adresse"].rsplit("/", 1)[-1]) for x in res if x["existe"] == "non confirmée")
 verifier("Non confirmées = l'étude inventée, celle au mauvais auteur, la revue à la mauvaise année, l'auteur mal attribué",
          non == [("Fantôme,", "redir"), ("Inventé,", "mort"), ("Mauvaisa", ""), ("Vieux, Z", "accueil")], str(non))
