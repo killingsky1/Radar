@@ -260,6 +260,15 @@ verifier("Historique brut : un dépôt par sens et par déclarant (2 × 2), lign
                        ("501", "2024-05-02", "77", "ABC", "vente", "2024-04-30", "2024-04-30", 40.0, 12.0),
                        ("502", "2024-05-02", "77", "ABC", "achat", "2024-04-30", "2024-04-30", 100.0, 10.0),
                        ("502", "2024-05-02", "77", "ABC", "vente", "2024-04-30", "2024-04-30", 40.0, 12.0)]), str(lh))
+lignes_vides = [["2024-05-02", "77", None, "achat", None, None, 10.0, None],
+                ["2024-05-02", "77", "ABC", "achat", "2024-05-01", "2024-05-01", 5.0, 3.0],
+                ["2024-05-01", "77", "ABC", "vente", "2024-04-30", "2024-04-30", 5.0, 3.0]]
+try:
+    lignes_vides.sort(key=d.cle_historique)
+    tri_ok = [r[0] for r in lignes_vides] == ["2024-05-01", "2024-05-02", "2024-05-02"] and lignes_vides[1][2] is None
+except TypeError as exc:
+    tri_ok = f"TypeError : {exc}"
+verifier("Historique : des cases vides (symbole, dates) ne bloquent pas le tri (bug du 1er passage réel)", tri_ok is True, str(tri_ok))
 verifier("Trimestre d'une date", (d.trimestre_de("2014-10-01"), d.trimestre_de("2015-03-31")) == ("2014q4", "2015q1"))
 
 p = d.Prix()

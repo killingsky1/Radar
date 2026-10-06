@@ -284,6 +284,11 @@ def lignes_historique(depots):
                        round(sum(l[3] for l in ls), 4), prix_moyen)
 
 
+def cle_historique(r):
+    """Ordre de l'historique d'un initié : dépôt, compagnie, sens ; une case vide (symbole, date) passe avant le texte."""
+    return (r[0], r[1], r[3], r[2] or "", r[4] or "", r[5] or "")
+
+
 def trimestre_de(jour):
     return f"{jour[:4]}q{(int(jour[5:7]) - 1) // 3 + 1}"
 
@@ -688,7 +693,7 @@ def main():
         historiques[x[0]].append(list(x[1:]))
     del hist_initie
     for v in historiques.values():
-        v.sort()
+        v.sort(key=cle_historique)
     ajouter_contexte(evs_tous, historiques)
     evs = [e for e in evs_tous if e["depot"] >= "2015-01-01"]
     del evs_tous
@@ -782,4 +787,9 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    finally:  # même en cas d'arrêt : le journal du calcul est gardé, pour voir où et pourquoi
+        if journal:
+            SORTIE.mkdir(parents=True, exist_ok=True)
+            (SORTIE / "journal.md").write_text("\n".join(journal) + "\n", encoding="utf-8")

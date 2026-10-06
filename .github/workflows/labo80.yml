@@ -57,6 +57,7 @@ jobs:
         if: always()
         run: |
           test ! -e labo/tournoi/donnees/coffre
+          mkdir -p labo/tournoi/donnees
           ls -la labo/tournoi/donnees
           # GitHub refuse les fichiers de plus de 100 Mo : on s'arrête avant avec un message clair
           if find labo/tournoi/donnees -type f -size +95M | grep -q .; then echo "FICHIER TROP GROS (plus de 95 Mo)"; exit 1; fi
