@@ -14,38 +14,38 @@
      "famille": "compagnie",
      "infos": [
       {
-       "age": 0,
+       "age": 1,
        "base": -5.0,
        "compte": true,
        "facteurs": [],
        "id": "sec_8k:0001193125-26-414287",
-       "points": -5.0,
+       "points": -4.89,
        "regle": "faillite",
-       "temps": 1.0
+       "temps": 0.977
       },
       {
-       "age": 5,
+       "age": 6,
        "base": -5.0,
        "compte": false,
        "facteurs": [],
        "id": "sec_8k:0001193125-26-408874",
-       "points": -4.45,
+       "points": -4.35,
        "regle": "faillite",
-       "temps": 0.891
+       "temps": 0.871
       }
      ],
-     "points": -5.0,
+     "points": -4.89,
      "sens": -1
     }
    ],
-   "moins": -5.0,
+   "moins": -4.89,
    "nom": "Leslie's, Inc.",
-   "note10": 0.8,
-   "note10_sans_bonus": 0.8,
-   "note10_sans_taille": 0.8,
+   "note10": 0.9,
+   "note10_sans_bonus": 0.9,
+   "note10_sans_taille": 0.9,
    "plus": 0.0,
    "recent": true,
-   "score": -5.0,
+   "score": -4.89,
    "symbole": "LESL",
    "taille": {
     "actions": [
@@ -83,7 +83,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -101,12 +101,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-410894:P",
-       "points": 7.18,
+       "points": 7.02,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       },
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -124,12 +124,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-410889:P",
-       "points": 7.18,
+       "points": 7.02,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       },
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -143,12 +143,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-410914:P",
-       "points": 4.79,
+       "points": 4.68,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       },
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -162,12 +162,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-410913:P",
-       "points": 4.79,
+       "points": 4.68,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       },
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -181,12 +181,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-410905:P",
-       "points": 4.79,
+       "points": 4.68,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       }
      ],
-     "points": 7.18,
+     "points": 7.02,
      "sens": 1
     }
    ],
@@ -194,10 +194,10 @@
    "nom": "Presurance Holdings, Inc.",
    "note10": 10.0,
    "note10_sans_bonus": 10.0,
-   "note10_sans_taille": 9.0,
-   "plus": 7.18,
-   "recent": true,
-   "score": 7.18,
+   "note10_sans_taille": 8.9,
+   "plus": 7.02,
+   "recent": false,
+   "score": 7.02,
    "symbole": "PRHI",
    "taille": {
     "actions": [
@@ -232,7 +232,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -246,12 +246,12 @@
         ]
        ],
        "id": "sec_form4:0001437749-26-031654:P",
-       "points": 4.1,
+       "points": 4.01,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       },
       {
-       "age": 5,
+       "age": 6,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -265,23 +265,23 @@
         ]
        ],
        "id": "sec_form4:0001437749-26-031597:P",
-       "points": 4.01,
+       "points": 3.92,
        "regle": "achat_dirigeant",
-       "temps": 0.891
+       "temps": 0.871
       }
      ],
-     "points": 4.1,
+     "points": 4.01,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "FILANA THERAPEUTICS, INC.",
-   "note10": 8.4,
-   "note10_sans_bonus": 8.4,
-   "note10_sans_taille": 7.3,
-   "plus": 4.1,
-   "recent": true,
-   "score": 4.1,
+   "note10": 8.3,
+   "note10_sans_bonus": 8.3,
+   "note10_sans_taille": 7.2,
+   "plus": 4.01,
+   "recent": false,
+   "score": 4.01,
    "symbole": "FLNA",
    "taille": {
     "actions": [
@@ -316,7 +316,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -326,12 +326,12 @@
         ]
        ],
        "id": "sec_form4:0001493152-26-045400:P",
-       "points": 2.74,
+       "points": 2.67,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       },
       {
-       "age": 5,
+       "age": 6,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -341,23 +341,23 @@
         ]
        ],
        "id": "sec_form4:0001493152-26-045185:P",
-       "points": 2.67,
+       "points": 2.61,
        "regle": "achat_dirigeant",
-       "temps": 0.891
+       "temps": 0.871
       }
      ],
-     "points": 2.74,
+     "points": 2.67,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Lipocine Inc.",
-   "note10": 7.3,
-   "note10_sans_bonus": 7.3,
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
    "note10_sans_taille": 6.5,
-   "plus": 2.74,
-   "recent": true,
-   "score": 2.74,
+   "plus": 2.67,
+   "recent": false,
+   "score": 2.67,
    "symbole": "LPCN",
    "taille": {
     "actions": [
@@ -392,7 +392,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -402,23 +402,23 @@
         ]
        ],
        "id": "sec_form4:0001493152-26-045391:P",
-       "points": 2.74,
+       "points": 2.67,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       }
      ],
-     "points": 2.74,
+     "points": 2.67,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Venu Holding Corp",
-   "note10": 7.3,
-   "note10_sans_bonus": 7.3,
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
    "note10_sans_taille": 6.5,
-   "plus": 2.74,
-   "recent": true,
-   "score": 2.74,
+   "plus": 2.67,
+   "recent": false,
+   "score": 2.67,
    "symbole": "VENU",
    "taille": {
     "actions": [
@@ -458,7 +458,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 5,
+       "age": 6,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -468,12 +468,12 @@
         ]
        ],
        "id": "sec_form4:0001628280-26-064003:P",
-       "points": 2.67,
+       "points": 2.61,
        "regle": "achat_dirigeant",
-       "temps": 0.891
+       "temps": 0.871
       }
      ],
-     "points": 2.67,
+     "points": 2.61,
      "sens": 1
     }
    ],
@@ -482,9 +482,9 @@
    "note10": 7.2,
    "note10_sans_bonus": 7.2,
    "note10_sans_taille": 6.5,
-   "plus": 2.67,
+   "plus": 2.61,
    "recent": false,
-   "score": 2.67,
+   "score": 2.61,
    "symbole": "AFCG",
    "taille": {
     "actions": [
@@ -524,7 +524,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 5,
+       "age": 6,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -534,12 +534,12 @@
         ]
        ],
        "id": "sec_form4:0001437749-26-031626:P",
-       "points": 2.67,
+       "points": 2.61,
        "regle": "achat_dirigeant",
-       "temps": 0.891
+       "temps": 0.871
       }
      ],
-     "points": 2.67,
+     "points": 2.61,
      "sens": 1
     }
    ],
@@ -548,9 +548,9 @@
    "note10": 7.2,
    "note10_sans_bonus": 7.2,
    "note10_sans_taille": 6.5,
-   "plus": 2.67,
+   "plus": 2.61,
    "recent": false,
-   "score": 2.67,
+   "score": 2.61,
    "symbole": "CLPR",
    "taille": {
     "actions": [
@@ -590,7 +590,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 6,
+       "age": 7,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -600,23 +600,23 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-407271:P",
-       "points": 2.61,
+       "points": 2.55,
        "regle": "achat_dirigeant",
-       "temps": 0.871
+       "temps": 0.851
       }
      ],
-     "points": 2.61,
+     "points": 2.55,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Heritage Global Inc.",
-   "note10": 7.2,
-   "note10_sans_bonus": 7.2,
-   "note10_sans_taille": 6.5,
-   "plus": 2.61,
+   "note10": 7.1,
+   "note10_sans_bonus": 7.1,
+   "note10_sans_taille": 6.4,
+   "plus": 2.55,
    "recent": false,
-   "score": 2.61,
+   "score": 2.55,
    "symbole": "HGBL",
    "taille": {
     "actions": [
@@ -4409,7 +4409,7 @@
    "title": "Elsztain Alejandro Gustavo (CEO) achète 17 334 actions de CRESUD INC"
   }
  },
- "genere_a": "2026-10-06T02:20:16+00:00",
+ "genere_a": "2026-10-06T10:26:01+00:00",
  "hausse": [
   {
    "bonus": {
@@ -4425,28 +4425,28 @@
      "famille": "activistes",
      "infos": [
       {
-       "age": 0,
+       "age": 1,
        "base": 5.0,
        "compte": true,
        "facteurs": [],
        "id": "sec_13dg:0000902664-26-004065",
-       "points": 5.0,
+       "points": 4.89,
        "regle": "activiste_13d",
-       "temps": 1.0
+       "temps": 0.977
       }
      ],
-     "points": 5.0,
+     "points": 4.89,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Empire State Realty Trust, Inc.",
-   "note10": 9.2,
-   "note10_sans_bonus": 9.2,
-   "note10_sans_taille": 9.2,
-   "plus": 5.0,
+   "note10": 9.1,
+   "note10_sans_bonus": 9.1,
+   "note10_sans_taille": 9.1,
+   "plus": 4.89,
    "recent": true,
-   "score": 5.0,
+   "score": 4.89,
    "symbole": "ESRT",
    "taille": {
     "raison": "pas d'actions en circulation déclarées depuis 200 jours",
@@ -4486,7 +4486,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 3,
+       "age": 4,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -4500,12 +4500,12 @@
         ]
        ],
        "id": "sec_form4:0000921895-26-002719:P",
-       "points": 4.9,
+       "points": 4.79,
        "regle": "achat_dirigeant",
-       "temps": 0.933
+       "temps": 0.912
       },
       {
-       "age": 6,
+       "age": 7,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -4519,12 +4519,12 @@
         ]
        ],
        "id": "sec_form4:0000921895-26-002670:P",
-       "points": 4.57,
+       "points": 4.47,
        "regle": "achat_dirigeant",
-       "temps": 0.871
+       "temps": 0.851
       },
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -4534,23 +4534,23 @@
         ]
        ],
        "id": "sec_form4:0001822293-26-000002:P",
-       "points": 3.19,
+       "points": 3.12,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       }
      ],
-     "points": 4.9,
+     "points": 4.79,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "GameStop Corp.",
-   "note10": 9.1,
-   "note10_sans_bonus": 9.1,
-   "note10_sans_taille": 9.1,
-   "plus": 4.9,
+   "note10": 9.0,
+   "note10_sans_bonus": 9.0,
+   "note10_sans_taille": 9.0,
+   "plus": 4.79,
    "recent": true,
-   "score": 4.9,
+   "score": 4.79,
    "symbole": "GME",
    "taille": {
     "actions": [
@@ -4585,7 +4585,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -4599,12 +4599,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-410001:P",
-       "points": 4.79,
+       "points": 4.68,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       },
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -4618,23 +4618,23 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-409999:P",
-       "points": 4.79,
+       "points": 4.68,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       }
      ],
-     "points": 4.79,
+     "points": 4.68,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Xenon Pharmaceuticals Inc.",
-   "note10": 9.0,
-   "note10_sans_bonus": 9.0,
-   "note10_sans_taille": 9.0,
-   "plus": 4.79,
-   "recent": true,
-   "score": 4.79,
+   "note10": 8.9,
+   "note10_sans_bonus": 8.9,
+   "note10_sans_taille": 8.9,
+   "plus": 4.68,
+   "recent": false,
+   "score": 4.68,
    "symbole": "XENE",
    "taille": {
     "actions": [
@@ -4669,28 +4669,28 @@
      "famille": "activistes",
      "infos": [
       {
-       "age": 4,
+       "age": 5,
        "base": 5.0,
        "compte": true,
        "facteurs": [],
        "id": "sec_13dg:0001398344-26-017759",
-       "points": 4.56,
+       "points": 4.45,
        "regle": "activiste_13d",
-       "temps": 0.912
+       "temps": 0.891
       }
      ],
-     "points": 4.56,
+     "points": 4.45,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Canterbury Park Holding Corp",
-   "note10": 8.8,
-   "note10_sans_bonus": 8.8,
-   "note10_sans_taille": 8.8,
-   "plus": 4.56,
-   "recent": true,
-   "score": 4.56,
+   "note10": 8.7,
+   "note10_sans_bonus": 8.7,
+   "note10_sans_taille": 8.7,
+   "plus": 4.45,
+   "recent": false,
+   "score": 4.45,
    "symbole": "CPHC",
    "taille": {
     "actions": [
@@ -4721,28 +4721,28 @@
      "famille": "activistes",
      "infos": [
       {
-       "age": 5,
+       "age": 6,
        "base": 5.0,
        "compte": true,
        "facteurs": [],
        "id": "sec_13dg:0001013594-26-000998",
-       "points": 4.45,
+       "points": 4.35,
        "regle": "activiste_13d",
-       "temps": 0.891
+       "temps": 0.871
       }
      ],
-     "points": 4.45,
+     "points": 4.35,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Silvercrest Asset Management Group Inc.",
-   "note10": 8.7,
-   "note10_sans_bonus": 8.7,
-   "note10_sans_taille": 8.7,
-   "plus": 4.45,
+   "note10": 8.6,
+   "note10_sans_bonus": 8.6,
+   "note10_sans_taille": 8.6,
+   "plus": 4.35,
    "recent": false,
-   "score": 4.45,
+   "score": 4.35,
    "symbole": "SAMG",
    "taille": {
     "raison": "pas d'actions en circulation déclarées depuis 200 jours",
@@ -4769,7 +4769,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 3,
+       "age": 4,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -4779,12 +4779,12 @@
         ]
        ],
        "id": "sec_form4:0002028916-26-000011:P",
-       "points": 3.27,
+       "points": 3.19,
        "regle": "achat_dirigeant",
-       "temps": 0.933
+       "temps": 0.912
       },
       {
-       "age": 6,
+       "age": 7,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -4794,12 +4794,12 @@
         ]
        ],
        "id": "sec_form4:0002028917-26-000003:P",
-       "points": 3.05,
+       "points": 2.98,
        "regle": "achat_dirigeant",
-       "temps": 0.871
+       "temps": 0.851
       }
      ],
-     "points": 3.27,
+     "points": 3.19,
      "sens": 1
     }
    ],
@@ -4808,9 +4808,9 @@
    "note10": 7.7,
    "note10_sans_bonus": 7.7,
    "note10_sans_taille": 7.7,
-   "plus": 3.27,
+   "plus": 3.19,
    "recent": true,
-   "score": 3.27,
+   "score": 3.19,
    "symbole": "PAM",
    "taille": {
     "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux États-Unis peuvent valoir plusieurs actions",
@@ -4836,7 +4836,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -4846,12 +4846,12 @@
         ]
        ],
        "id": "sec_form4:0001225208-26-008046:P",
-       "points": 3.19,
+       "points": 3.12,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       },
       {
-       "age": 5,
+       "age": 6,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -4861,12 +4861,12 @@
         ]
        ],
        "id": "sec_form4:0001225208-26-008015:P",
-       "points": 3.12,
+       "points": 3.05,
        "regle": "achat_dirigeant",
-       "temps": 0.891
+       "temps": 0.871
       },
       {
-       "age": 5,
+       "age": 6,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -4876,12 +4876,12 @@
         ]
        ],
        "id": "sec_form4:0001225208-26-008014:P",
-       "points": 3.12,
+       "points": 3.05,
        "regle": "achat_dirigeant",
-       "temps": 0.891
+       "temps": 0.871
       },
       {
-       "age": 5,
+       "age": 6,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -4891,12 +4891,12 @@
         ]
        ],
        "id": "sec_form4:0001225208-26-008013:P",
-       "points": 3.12,
+       "points": 3.05,
        "regle": "achat_dirigeant",
-       "temps": 0.891
+       "temps": 0.871
       },
       {
-       "age": 5,
+       "age": 6,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -4906,12 +4906,12 @@
         ]
        ],
        "id": "sec_form4:0001225208-26-008012:P",
-       "points": 3.12,
+       "points": 3.05,
        "regle": "achat_dirigeant",
-       "temps": 0.891
+       "temps": 0.871
       },
       {
-       "age": 5,
+       "age": 6,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -4921,23 +4921,23 @@
         ]
        ],
        "id": "sec_form4:0001225208-26-008011:P",
-       "points": 3.12,
+       "points": 3.05,
        "regle": "achat_dirigeant",
-       "temps": 0.891
+       "temps": 0.871
       }
      ],
-     "points": 3.19,
+     "points": 3.12,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "FULLER H B CO",
-   "note10": 7.7,
-   "note10_sans_bonus": 7.7,
-   "note10_sans_taille": 7.7,
-   "plus": 3.19,
-   "recent": true,
-   "score": 3.19,
+   "note10": 7.6,
+   "note10_sans_bonus": 7.6,
+   "note10_sans_taille": 7.6,
+   "plus": 3.12,
+   "recent": false,
+   "score": 3.12,
    "symbole": "FUL",
    "taille": {
     "actions": [
@@ -4972,7 +4972,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 0,
+       "age": 1,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -4982,23 +4982,23 @@
         ]
        ],
        "id": "sec_form4:0001072613-26-000819:P",
-       "points": 3.0,
+       "points": 2.93,
        "regle": "achat_dirigeant",
-       "temps": 1.0
+       "temps": 0.977
       }
      ],
-     "points": 3.0,
+     "points": 2.93,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "EMPIRE PETROLEUM CORP",
-   "note10": 7.5,
-   "note10_sans_bonus": 7.5,
-   "note10_sans_taille": 6.7,
-   "plus": 3.0,
+   "note10": 7.4,
+   "note10_sans_bonus": 7.4,
+   "note10_sans_taille": 6.6,
+   "plus": 2.93,
    "recent": true,
-   "score": 3.0,
+   "score": 2.93,
    "symbole": "EP",
    "taille": {
     "actions": [
@@ -5033,7 +5033,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 0,
+       "age": 1,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -5043,23 +5043,23 @@
         ]
        ],
        "id": "sec_form4:0001437749-26-032065:P",
-       "points": 3.0,
+       "points": 2.93,
        "regle": "achat_dirigeant",
-       "temps": 1.0
+       "temps": 0.977
       }
      ],
-     "points": 3.0,
+     "points": 2.93,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "NexPoint Residential Trust, Inc.",
-   "note10": 7.5,
-   "note10_sans_bonus": 7.5,
-   "note10_sans_taille": 6.7,
-   "plus": 3.0,
+   "note10": 7.4,
+   "note10_sans_bonus": 7.4,
+   "note10_sans_taille": 6.6,
+   "plus": 2.93,
    "recent": true,
-   "score": 3.0,
+   "score": 2.93,
    "symbole": "NXRT",
    "taille": {
     "actions": [
@@ -5094,7 +5094,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 0,
+       "age": 1,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -5104,23 +5104,23 @@
         ]
        ],
        "id": "sec_form4:0001493152-26-045772:P",
-       "points": 3.0,
+       "points": 2.93,
        "regle": "achat_dirigeant",
-       "temps": 1.0
+       "temps": 0.977
       }
      ],
-     "points": 3.0,
+     "points": 2.93,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "PALISADE BIO, INC.",
-   "note10": 7.5,
-   "note10_sans_bonus": 7.5,
-   "note10_sans_taille": 6.7,
-   "plus": 3.0,
+   "note10": 7.4,
+   "note10_sans_bonus": 7.4,
+   "note10_sans_taille": 6.6,
+   "plus": 2.93,
    "recent": true,
-   "score": 3.0,
+   "score": 2.93,
    "symbole": "PALI",
    "taille": {
     "actions": [
@@ -5155,7 +5155,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 0,
+       "age": 1,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -5165,23 +5165,23 @@
         ]
        ],
        "id": "sec_form4:0001437749-26-031986:P",
-       "points": 3.0,
+       "points": 2.93,
        "regle": "achat_dirigeant",
-       "temps": 1.0
+       "temps": 0.977
       }
      ],
-     "points": 3.0,
+     "points": 2.93,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Sky Harbour Group Corp",
-   "note10": 7.5,
-   "note10_sans_bonus": 7.5,
-   "note10_sans_taille": 7.5,
-   "plus": 3.0,
+   "note10": 7.4,
+   "note10_sans_bonus": 7.4,
+   "note10_sans_taille": 7.4,
+   "plus": 2.93,
    "recent": true,
-   "score": 3.0,
+   "score": 2.93,
    "symbole": "SKYH",
    "taille": {
     "raison": "pas d'actions en circulation déclarées depuis 200 jours",
@@ -5208,7 +5208,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 0,
+       "age": 1,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -5218,23 +5218,23 @@
         ]
        ],
        "id": "sec_form4:0001213900-26-106613:P",
-       "points": 3.0,
+       "points": 2.93,
        "regle": "achat_dirigeant",
-       "temps": 1.0
+       "temps": 0.977
       }
      ],
-     "points": 3.0,
+     "points": 2.93,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "VCI Global Ltd",
-   "note10": 7.5,
-   "note10_sans_bonus": 7.5,
-   "note10_sans_taille": 7.5,
-   "plus": 3.0,
+   "note10": 7.4,
+   "note10_sans_bonus": 7.4,
+   "note10_sans_taille": 7.4,
+   "plus": 2.93,
    "recent": true,
-   "score": 3.0,
+   "score": 2.93,
    "symbole": "VCIG",
    "taille": {
     "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux États-Unis peuvent valoir plusieurs actions",
@@ -5260,7 +5260,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 3,
+       "age": 4,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -5270,12 +5270,12 @@
         ]
        ],
        "id": "sec_form4:0001437749-26-031876:P",
-       "points": 2.8,
+       "points": 2.74,
        "regle": "achat_dirigeant",
-       "temps": 0.933
+       "temps": 0.912
       }
      ],
-     "points": 2.8,
+     "points": 2.74,
      "sens": 1
     }
    ],
@@ -5283,10 +5283,10 @@
    "nom": "First Guaranty Bancshares, Inc.",
    "note10": 7.3,
    "note10_sans_bonus": 7.3,
-   "note10_sans_taille": 6.6,
-   "plus": 2.8,
+   "note10_sans_taille": 6.5,
+   "plus": 2.74,
    "recent": true,
-   "score": 2.8,
+   "score": 2.74,
    "symbole": "FGBI",
    "taille": {
     "actions": [
@@ -5321,7 +5321,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 3,
+       "age": 4,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -5331,12 +5331,12 @@
         ]
        ],
        "id": "sec_form4:0001976408-26-000880:P",
-       "points": 2.8,
+       "points": 2.74,
        "regle": "achat_dirigeant",
-       "temps": 0.933
+       "temps": 0.912
       },
       {
-       "age": 5,
+       "age": 6,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -5346,12 +5346,12 @@
         ]
        ],
        "id": "sec_form4:0001976408-26-000874:P",
-       "points": 2.67,
+       "points": 2.61,
        "regle": "achat_dirigeant",
-       "temps": 0.891
+       "temps": 0.871
       }
      ],
-     "points": 2.8,
+     "points": 2.74,
      "sens": 1
     }
    ],
@@ -5360,9 +5360,9 @@
    "note10": 7.3,
    "note10_sans_bonus": 7.3,
    "note10_sans_taille": 7.3,
-   "plus": 2.8,
+   "plus": 2.74,
    "recent": true,
-   "score": 2.8,
+   "score": 2.74,
    "symbole": "NYAX",
    "taille": {
     "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux États-Unis peuvent valoir plusieurs actions",
@@ -5388,7 +5388,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -5398,23 +5398,23 @@
         ]
        ],
        "id": "sec_form4:0001477932-26-005964:P",
-       "points": 2.74,
+       "points": 2.67,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       }
      ],
-     "points": 2.74,
+     "points": 2.67,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "ASP Isotopes Inc.",
-   "note10": 7.3,
-   "note10_sans_bonus": 7.3,
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
    "note10_sans_taille": 6.5,
-   "plus": 2.74,
-   "recent": true,
-   "score": 2.74,
+   "plus": 2.67,
+   "recent": false,
+   "score": 2.67,
    "symbole": "ASPI",
    "taille": {
     "actions": [
@@ -5449,7 +5449,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -5459,23 +5459,23 @@
         ]
        ],
        "id": "sec_form4:0002119764-26-000028:P",
-       "points": 2.74,
+       "points": 2.67,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       }
      ],
-     "points": 2.74,
+     "points": 2.67,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "CRESUD INC",
-   "note10": 7.3,
-   "note10_sans_bonus": 7.3,
-   "note10_sans_taille": 7.3,
-   "plus": 2.74,
-   "recent": true,
-   "score": 2.74,
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
+   "note10_sans_taille": 7.2,
+   "plus": 2.67,
+   "recent": false,
+   "score": 2.67,
    "symbole": "CRESY",
    "taille": {
     "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux États-Unis peuvent valoir plusieurs actions",
@@ -5501,7 +5501,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -5511,23 +5511,23 @@
         ]
        ],
        "id": "sec_form4:0000017313-26-000159:P",
-       "points": 2.74,
+       "points": 2.67,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       }
      ],
-     "points": 2.74,
+     "points": 2.67,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "CAPITAL SOUTHWEST CORP",
-   "note10": 7.3,
-   "note10_sans_bonus": 7.3,
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
    "note10_sans_taille": 6.5,
-   "plus": 2.74,
-   "recent": true,
-   "score": 2.74,
+   "plus": 2.67,
+   "recent": false,
+   "score": 2.67,
    "symbole": "CSWC",
    "taille": {
     "actions": [
@@ -5562,7 +5562,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -5572,23 +5572,23 @@
         ]
        ],
        "id": "sec_form4:0000912282-26-001334:P",
-       "points": 2.74,
+       "points": 2.67,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       }
      ],
-     "points": 2.74,
+     "points": 2.67,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Helus Pharma Inc.",
-   "note10": 7.3,
-   "note10_sans_bonus": 7.3,
-   "note10_sans_taille": 7.3,
-   "plus": 2.74,
-   "recent": true,
-   "score": 2.74,
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
+   "note10_sans_taille": 7.2,
+   "plus": 2.67,
+   "recent": false,
+   "score": 2.67,
    "symbole": "HELP",
    "taille": {
     "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux États-Unis peuvent valoir plusieurs actions",
@@ -5619,7 +5619,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -5629,23 +5629,23 @@
         ]
        ],
        "id": "sec_form4:0001213900-26-105765:P",
-       "points": 2.74,
+       "points": 2.67,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       }
      ],
-     "points": 2.74,
+     "points": 2.67,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Tokyo Lifestyle Co., Ltd.",
-   "note10": 7.3,
-   "note10_sans_bonus": 7.3,
-   "note10_sans_taille": 7.3,
-   "plus": 2.74,
-   "recent": true,
-   "score": 2.74,
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
+   "note10_sans_taille": 7.2,
+   "plus": 2.67,
+   "recent": false,
+   "score": 2.67,
    "symbole": "TKLF",
    "taille": {
     "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux États-Unis peuvent valoir plusieurs actions",
@@ -5671,7 +5671,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 5,
+       "age": 6,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -5681,12 +5681,12 @@
         ]
        ],
        "id": "sec_form4:0001183254-26-000008:P",
-       "points": 2.67,
+       "points": 2.61,
        "regle": "achat_dirigeant",
-       "temps": 0.891
+       "temps": 0.871
       }
      ],
-     "points": 2.67,
+     "points": 2.61,
      "sens": 1
     }
    ],
@@ -5695,9 +5695,9 @@
    "note10": 7.2,
    "note10_sans_bonus": 7.2,
    "note10_sans_taille": 6.5,
-   "plus": 2.67,
+   "plus": 2.61,
    "recent": false,
-   "score": 2.67,
+   "score": 2.61,
    "symbole": "KBDC",
    "taille": {
     "actions": [
@@ -5719,7 +5719,7 @@
    }
   }
  ],
- "jour": "2026-10-05",
+ "jour": "2026-10-06",
  "methode": {
   "avertissement": "Une aide pour voir où va le gros argent, preuves à l'appui. Pas un conseil financier.",
   "badges": "Seules les infos « Officiel » ou « Confirmé » comptent ; les « À vérifier » n'entrent jamais.",
