@@ -1,7 +1,12 @@
 name: "Labo (tournoi, étape 4 : EXAMEN FINAL au coffre-fort, une seule fois par règle)"
 
-# Lancé à la main seulement, après le débat : au plus 3 règles, chacune UNE seule fois (regles_du_jeu.md, partie 5).
+# Lancé après le débat : au plus 3 règles, chacune UNE seule fois (regles_du_jeu.md, partie 5). On ajoute à
+# labo/tournoi/declencheur-examen.txt une ligne « date UTC : id id id » (la dernière ligne compte), ou à la main une fois
+# qu'il a tourné (GitHub ne connaît pas un programme jamais lancé).
 on:
+  push:
+    branches: [labo]
+    paths: ["labo/tournoi/declencheur-examen.txt"]
   workflow_dispatch:
     inputs:
       regles:
@@ -24,9 +29,20 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Au plus 3 règles, jamais une règle déjà examinée
+      - name: Les règles à examiner (dernière ligne du fichier déclencheur, ou lancement à la main)
         env:
-          REGLES: ${{ github.event.inputs.regles }}
+          ENTREE: ${{ github.event.inputs.regles }}
+          EVENEMENT: ${{ github.event_name }}
+        run: |
+          set -f
+          if [ "$EVENEMENT" = "push" ]; then
+            REGLES=$(grep -v '^#' labo/tournoi/declencheur-examen.txt | grep -v '^[[:space:]]*$' | tail -n 1 | sed 's/^.*: *//')
+          else
+            REGLES="$ENTREE"
+          fi
+          echo "Règles à examiner : $REGLES"
+          echo "REGLES=$(echo $REGLES | tr -s ' ')" >> "$GITHUB_ENV"
+      - name: Au plus 3 règles, jamais une règle déjà examinée
         run: |
           set -f
           n=0
@@ -48,9 +64,9 @@ jobs:
           rm -rf cache/decouverte
           ls -la cache/coffre
       - name: Examen final (2 programmations comparées, 3 critères de l'examen)
-        env:
-          REGLES: ${{ github.event.inputs.regles }}
-        run: python labo/tournoi/juger.py $REGLES --examen --donnees cache/coffre --sortie labo/tournoi/resultats/examen-tmp
+        run: |
+          set -f
+          python labo/tournoi/juger.py $REGLES --examen --donnees cache/coffre --sortie labo/tournoi/resultats/examen-tmp
       - name: Sauvegarder les résultats (ajoutés à ceux des examens d'avant)
         if: always()
         run: |

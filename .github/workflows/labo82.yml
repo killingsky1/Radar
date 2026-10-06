@@ -1,8 +1,12 @@
 name: "Labo (tournoi, étape 2 : les règles sur la découverte, juillet 2023 à juin 2026)"
 
-# Lancé à la main seulement, quand le jeu de recherche existe (étape 0) et que les règles sont programmées 2 fois.
-# Ne lit aucun site : seulement le cache du labo (la découverte). Le coffre-fort n'est jamais lu ici.
+# Lancé quand on modifie labo/tournoi/declencheur-juge.txt (toutes les règles), ou à la main une fois qu'il a tourné
+# (GitHub ne connaît pas un programme jamais lancé), quand le jeu de recherche existe (étape 0) et que les règles sont
+# programmées 2 fois. Ne lit aucun site : seulement le cache du labo (la découverte). Le coffre-fort n'est jamais lu ici.
 on:
+  push:
+    branches: [labo]
+    paths: ["labo/tournoi/declencheur-juge.txt"]
   workflow_dispatch:
     inputs:
       regles:
@@ -42,7 +46,11 @@ jobs:
           python labo/tournoi/essais/essai_banc.py
           python labo/tournoi/essais/essai_juger.py
       - name: Juger les règles (2 programmations comparées, 3 critères)
-        run: python labo/tournoi/juger.py ${{ github.event.inputs.regles }} --donnees cache/decouverte --sortie labo/tournoi/resultats/decouverte
+        env:
+          REGLES: ${{ github.event.inputs.regles }}
+        run: |
+          set -f
+          python labo/tournoi/juger.py $REGLES --donnees cache/decouverte --sortie labo/tournoi/resultats/decouverte
       - name: Sauvegarder les résultats
         if: always()
         run: |
