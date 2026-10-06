@@ -530,6 +530,148 @@
    "symbole": "HGBL",
    "taille": "petite",
    "vue": "2026-10-05"
+  },
+  {
+   "entree": "2026-10-06T02:20:16+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Empire State Realty Trust, Inc.",
+   "note10": 9.2,
+   "note10_sans_bonus": 9.2,
+   "note10_sans_taille": 9.2,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "activistes",
+     "regle": "activiste_13d",
+     "sens": 1
+    }
+   ],
+   "symbole": "ESRT",
+   "taille": null,
+   "vue": "2026-10-05"
+  },
+  {
+   "entree": "2026-10-06T02:20:16+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "EMPIRE PETROLEUM CORP",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "EP",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "entree": "2026-10-06T02:20:16+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "NexPoint Residential Trust, Inc.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "NXRT",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "entree": "2026-10-06T02:20:16+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "PALISADE BIO, INC.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "PALI",
+   "taille": "petite",
+   "vue": "2026-10-05"
+  },
+  {
+   "entree": "2026-10-06T02:20:16+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Sky Harbour Group Corp",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 7.5,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "SKYH",
+   "taille": null,
+   "vue": "2026-10-05"
+  },
+  {
+   "entree": "2026-10-06T02:20:16+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "VCI Global Ltd",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 7.5,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "VCIG",
+   "taille": null,
+   "vue": "2026-10-05"
   }
  ]
 }

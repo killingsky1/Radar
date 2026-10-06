@@ -6,17 +6,27 @@
     "plus": 1.0
    },
    "contexte": [],
-   "depot_recent": "2026-09-30",
+   "depot_recent": "2026-10-05",
    "depuis": null,
-   "derniere_info": "2026-09-30",
+   "derniere_info": "2026-10-05",
    "groupes": [
     {
      "famille": "compagnie",
      "infos": [
       {
-       "age": 5,
+       "age": 0,
        "base": -5.0,
        "compte": true,
+       "facteurs": [],
+       "id": "sec_8k:0001193125-26-414287",
+       "points": -5.0,
+       "regle": "faillite",
+       "temps": 1.0
+      },
+      {
+       "age": 5,
+       "base": -5.0,
+       "compte": false,
        "facteurs": [],
        "id": "sec_8k:0001193125-26-408874",
        "points": -4.45,
@@ -24,18 +34,18 @@
        "temps": 0.891
       }
      ],
-     "points": -4.45,
+     "points": -5.0,
      "sens": -1
     }
    ],
-   "moins": -4.45,
+   "moins": -5.0,
    "nom": "Leslie's, Inc.",
-   "note10": 1.3,
-   "note10_sans_bonus": 1.3,
-   "note10_sans_taille": 1.3,
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
    "plus": 0.0,
-   "recent": false,
-   "score": -4.45,
+   "recent": true,
+   "score": -5.0,
    "symbole": "LESL",
    "taille": {
     "actions": [
@@ -57,7 +67,7 @@
    }
   }
  ],
- "compagnies_notees": 99,
+ "compagnies_notees": 122,
  "ecartees": [
   {
    "bonus": {
@@ -629,6 +639,67 @@
   }
  ],
  "evenements": {
+  "sec_13dg:0000902664-26-004065": {
+   "amount_max": null,
+   "amount_min": null,
+   "badge": "officiel",
+   "category": "baleines",
+   "checks": {
+    "champs_requis": true,
+    "dates_coherentes": true,
+    "domaine_officiel": true,
+    "emetteur_coherent": true,
+    "empreinte": true,
+    "pourcentage_valide": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-06T02:25:20+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 10000000.0,
+    "amendement": null,
+    "bourse": "NYSE",
+    "but_sous_evalue": true,
+    "cik_emetteur": "0001541401",
+    "cik_sujet_entete": "0001541401",
+    "date_evenement": "2026-10-01",
+    "declarant": "Erez Asset Management LLC",
+    "extrait_but": "The Reporting Persons believe that the securities of the Issuer are undervalued and represent an attractive investment opportunity.",
+    "nb_personnes": 3,
+    "nom_emetteur": "Empire State Realty Trust, Inc.",
+    "pourcentage": 5.8,
+    "type": "SCHEDULE 13D",
+    "types_declarants": [
+     "HC",
+     "IA",
+     "IN",
+     "OO",
+     "PN"
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Erez Asset Management LLC",
+    "Empire State Realty Trust, Inc."
+   ],
+   "id": "sec_13dg:0000902664-26-004065",
+   "kind": "plus_5_pourcent",
+   "notes": [],
+   "occurred_on": "2026-10-01",
+   "official_id": "0000902664-26-004065",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1541401/000090266426004065/0000902664-26-004065-index.htm",
+   "parser_version": "sec-7",
+   "published_on": "2026-10-05",
+   "sha256": "ae75044ec3b0d283ae117d41658b5804b8db30fe39ddaad5a4a4e144cfad1e79",
+   "source": "sec_13dg",
+   "tickers": [
+    "ESRT"
+   ],
+   "title": "Erez Asset Management LLC détient 5,8 % de Empire State Realty Trust, Inc. (13D, intentions actives)"
+  },
   "sec_13dg:0000921895-26-002669": {
    "amount_max": null,
    "amount_min": null,
@@ -1144,6 +1215,69 @@
    ],
    "title": "Leslie's, Inc. : contrat important signé + faillite ou mise sous séquestre + dépréciation importante d'actifs + avis de retrait de la bourse"
   },
+  "sec_8k:0001193125-26-414287": {
+   "amount_max": null,
+   "amount_min": null,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "dates_coherentes": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "items_officiels_reconnus": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symboles_valides": true,
+    "type_8k": true
+   },
+   "collected_at": "2026-10-06T02:24:59+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "bourse": "Nasdaq",
+    "cik": "0001821806",
+    "items": [
+     {
+      "direction": 0,
+      "item": "1.01",
+      "libelle": "contrat important signé",
+      "officiel": "Entry into a Material Definitive Agreement"
+     },
+     {
+      "direction": -1,
+      "item": "1.03",
+      "libelle": "faillite ou mise sous séquestre",
+      "officiel": "Bankruptcy or Receivership"
+     },
+     {
+      "direction": -1,
+      "item": "3.01",
+      "libelle": "avis de retrait de la bourse",
+      "officiel": "Notice of Delisting or Failure to Satisfy a Continued Listing Rule or Standard; Transfer of Listing"
+     }
+    ],
+    "type": "8-K"
+   },
+   "direction": -1,
+   "entities": [
+    "Leslie's, Inc."
+   ],
+   "id": "sec_8k:0001193125-26-414287",
+   "kind": "evenement_8k",
+   "notes": [],
+   "occurred_on": "2005-10-02",
+   "official_id": "0001193125-26-414287",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1821806/000119312526414287/0001193125-26-414287-index.htm",
+   "parser_version": "sec-7",
+   "published_on": "2026-10-05",
+   "sha256": "44c497a9218c7f9c7b720ef773a3d21e8f6b4ecc4f69f385fd9a6fd5e9b4f76b",
+   "source": "sec_8k",
+   "tickers": [
+    "LESL"
+   ],
+   "title": "Leslie's, Inc. : contrat important signé + faillite ou mise sous séquestre + avis de retrait de la bourse"
+  },
   "sec_8k:0001628280-26-063811": {
    "amount_max": null,
    "amount_min": null,
@@ -1489,9 +1623,9 @@
    ],
    "title": "Cohen Ryan (President, CEO and Chairman) achète 700 000 actions de GameStop Corp."
   },
-  "sec_form4:0001104659-26-112076:P": {
-   "amount_max": 340099.98,
-   "amount_min": 340099.98,
+  "sec_form4:0001072613-26-000819:P": {
+   "amount_max": 26825.43,
+   "amount_min": 26825.43,
    "badge": "officiel",
    "category": "compagnies",
    "checks": {
@@ -1511,135 +1645,61 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-03T03:16:45+00:00",
+   "collected_at": "2026-10-06T02:22:45+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
-    "actions": 150600.0,
+    "actions": 11915.0,
+    "automatique": null,
     "bourse": "NYSE",
-    "cik_emetteur": "0001815846",
+    "cik_emetteur": "0000887396",
     "hors_bourse": null,
     "plan_10b5_1": false,
-    "prix_moyen": 2.2583,
-    "roles": [
-     "VP and Chief Financial Officer"
+    "prix_moyen": 2.2514,
+    "proprietaires_cik": [
+     "1670677"
     ],
-    "symbole_declare": "MNSO",
-    "symboles_sec": [
-     "MNSO",
-     "MSOGF"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 150600.0,
-      "apres": 394474.0,
-      "code": "P",
-      "date": "2026-09-29",
-      "hors_bourse": null,
-      "prix": 2.2583
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Zhang Jingjing Eason",
-    "MINISO Group Holding Ltd"
-   ],
-   "id": "sec_form4:0001104659-26-112076:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-29",
-   "official_id": "0001104659-26-112076:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1815846/000110465926112076/0001104659-26-112076-index.htm",
-   "parser_version": "sec-6",
-   "published_on": "2026-09-30",
-   "sha256": "38011e9a4c9135774774f22fb85a5f85113eafd0513f21f7e1cc110d1e209200",
-   "source": "sec_form4",
-   "tickers": [
-    "MNSO"
-   ],
-   "title": "Zhang Jingjing Eason (VP and Chief Financial Officer) achète 150 600 actions de MINISO Group Holding Ltd"
-  },
-  "sec_form4:0001104659-26-112426:P": {
-   "amount_max": 33121.42,
-   "amount_min": 33121.42,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-03T03:16:06+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 3575.0,
-    "bourse": "NYSE",
-    "cik_emetteur": "0001072627",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 9.2647,
     "roles": [
      "administrateur"
     ],
-    "symbole_declare": "KWY",
+    "symbole_declare": "EP",
     "symboles_sec": [
-     "KWY"
+     "EP"
     ],
     "transactions": [
      {
       "acquis_cede": "A",
-      "actions": 2717.0,
-      "apres": 383820.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "hors_bourse": null,
-      "prix": 9.2757
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 858.0,
-      "apres": 384678.0,
+      "actions": 11915.0,
+      "apres": 931727.0,
+      "automatique": null,
       "code": "P",
       "date": "2026-09-30",
       "hors_bourse": null,
-      "prix": 9.23
+      "prix": 2.2514
      }
     ]
    },
    "direction": 1,
    "entities": [
-    "Horowitz Joshua",
-    "KINGSWAY Corp"
+    "Mulacek Phil E",
+    "EMPIRE PETROLEUM CORP"
    ],
-   "id": "sec_form4:0001104659-26-112426:P",
+   "id": "sec_form4:0001072613-26-000819:P",
    "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-28",
-   "official_id": "0001104659-26-112426:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1072627/000110465926112426/0001104659-26-112426-index.htm",
-   "parser_version": "sec-6",
-   "published_on": "2026-09-30",
-   "sha256": "958dfccc25b019477213d3d8ca0c613f219b8e52be36dd2d7363cf4a50333c50",
+   "notes": [
+    "Déclaré en retard : 3 jours ouvrables après la transaction (limite légale : 2)."
+   ],
+   "occurred_on": "2026-09-30",
+   "official_id": "0001072613-26-000819:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/887396/000107261326000819/0001072613-26-000819-index.htm",
+   "parser_version": "sec-7",
+   "published_on": "2026-10-05",
+   "sha256": "f9ba71ba68743378aa19f7ffa07f0a625b14c40f8dd133ac63c614bb85441e45",
    "source": "sec_form4",
    "tickers": [
-    "KWY"
+    "EP"
    ],
-   "title": "Horowitz Joshua (administrateur) achète 3 575 actions de KINGSWAY Corp"
+   "title": "Mulacek Phil E (administrateur) achète 11 915 actions de EMPIRE PETROLEUM CORP"
   },
   "sec_form4:0001183254-26-000008:P": {
    "amount_max": 1912657.92,
@@ -1711,75 +1771,6 @@
     "KBDC"
    ],
    "title": "ROBO JAMES L (administrateur) achète 146 755 actions de Kayne Anderson BDC, Inc."
-  },
-  "sec_form4:0001185185-26-004397:P": {
-   "amount_max": 119543.17,
-   "amount_min": 119543.17,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-02T19:57:12+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 168894.0,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001837493",
-    "plan_10b5_1": false,
-    "prix_moyen": 0.7078,
-    "roles": [
-     "Chief Executive Officer"
-    ],
-    "symbole_declare": "QTEX",
-    "symboles_sec": [
-     "QTEX"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 168894.0,
-      "apres": 3646133.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "prix": 0.7078
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Ben-Noon Dagi Shahar",
-    "QTREX Quantum Ltd."
-   ],
-   "id": "sec_form4:0001185185-26-004397:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-28",
-   "official_id": "0001185185-26-004397:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1837493/000118518526004397/0001185185-26-004397-index.htm",
-   "parser_version": "sec-2",
-   "published_on": "2026-09-29",
-   "sha256": "1d640d42646769b11d288a5644044720df6b28a09cfa9f7bc22a4221e5fbe611",
-   "source": "sec_form4",
-   "tickers": [
-    "QTEX"
-   ],
-   "title": "Ben-Noon Dagi Shahar (Chief Executive Officer) achète 168 894 actions de QTREX Quantum Ltd."
   },
   "sec_form4:0001193125-26-407271:P": {
    "amount_max": 399000.0,
@@ -2442,6 +2433,84 @@
     "TKLF"
    ],
    "title": "Kanayama Mei (Representative Director (PEO)) achète 1 396 755 actions de Tokyo Lifestyle Co., Ltd."
+  },
+  "sec_form4:0001213900-26-106613:P": {
+   "amount_max": 313225.38,
+   "amount_min": 313225.38,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-06T02:23:43+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 193349.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001930510",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 1.62,
+    "proprietaires_cik": [
+     "1912875"
+    ],
+    "roles": [
+     "CEO and Director"
+    ],
+    "symbole_declare": "VCIG",
+    "symboles_sec": [
+     "VCIG"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 193349.0,
+      "apres": 341715.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-09-30",
+      "hors_bourse": null,
+      "prix": 1.62
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "HOO VOON HIM",
+    "VCI Global Ltd"
+   ],
+   "id": "sec_form4:0001213900-26-106613:P",
+   "kind": "achat_initie",
+   "notes": [
+    "Déclaré en retard : 3 jours ouvrables après la transaction (limite légale : 2)."
+   ],
+   "occurred_on": "2026-09-30",
+   "official_id": "0001213900-26-106613:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1930510/000121390026106613/0001213900-26-106613-index.htm",
+   "parser_version": "sec-7",
+   "published_on": "2026-10-05",
+   "sha256": "b1151b72064a02d17bb68ea2e414ffe29020e5d7c59886694de4be2f1c64df45",
+   "source": "sec_form4",
+   "tickers": [
+    "VCIG"
+   ],
+   "title": "HOO VOON HIM (CEO and Director) achète 193 349 actions de VCI Global Ltd"
   },
   "sec_form4:0001225208-26-008011:P": {
    "amount_max": 100118.9,
@@ -3184,6 +3253,169 @@
    ],
    "title": "Smith Edgar R. III (administrateur) achète 99 277 actions de First Guaranty Bancshares, Inc."
   },
+  "sec_form4:0001437749-26-031986:P": {
+   "amount_max": 35612.5,
+   "amount_min": 35612.5,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-06T02:23:24+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 3850.0,
+    "automatique": null,
+    "bourse": "NYSE",
+    "cik_emetteur": "0001823587",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 9.25,
+    "proprietaires_cik": [
+     "1907671"
+    ],
+    "roles": [
+     "Chief Financial Officer"
+    ],
+    "symbole_declare": "SKYH",
+    "symboles_sec": [
+     "SKYH",
+     "SKYH-WT"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 3850.0,
+      "apres": 718538.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-10-02",
+      "hors_bourse": null,
+      "prix": 9.25
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Gonzalez Francisco",
+    "Sky Harbour Group Corp"
+   ],
+   "id": "sec_form4:0001437749-26-031986:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-10-02",
+   "official_id": "0001437749-26-031986:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1823587/000143774926031986/0001437749-26-031986-index.htm",
+   "parser_version": "sec-7",
+   "published_on": "2026-10-05",
+   "sha256": "aa68f906d75b7d925134419ff4438452c5158932b1034b551c93546c7273412d",
+   "source": "sec_form4",
+   "tickers": [
+    "SKYH"
+   ],
+   "title": "Gonzalez Francisco (Chief Financial Officer) achète 3 850 actions de Sky Harbour Group Corp"
+  },
+  "sec_form4:0001437749-26-032065:P": {
+   "amount_max": 201049.2,
+   "amount_min": 201049.2,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-06T02:22:29+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 10780.0,
+    "automatique": null,
+    "bourse": "NYSE",
+    "cik_emetteur": "0001620393",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 18.6502,
+    "proprietaires_cik": [
+     "1636187"
+    ],
+    "roles": [
+     "See Remarks"
+    ],
+    "symbole_declare": "NXRT",
+    "symboles_sec": [
+     "NXRT"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 5280.0,
+      "apres": 356104.6,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-10-01",
+      "hors_bourse": null,
+      "prix": 18.89
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 5500.0,
+      "apres": 361604.6,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-10-05",
+      "hors_bourse": null,
+      "prix": 18.42
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "McGraner Matt",
+    "NexPoint Residential Trust, Inc."
+   ],
+   "id": "sec_form4:0001437749-26-032065:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-10-01",
+   "official_id": "0001437749-26-032065:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1620393/000143774926032065/0001437749-26-032065-index.htm",
+   "parser_version": "sec-7",
+   "published_on": "2026-10-05",
+   "sha256": "25ac69a89e61507885f0f0133028a5afc1cd3b0209a23caae9bc23118eac2308",
+   "source": "sec_form4",
+   "tickers": [
+    "NXRT"
+   ],
+   "title": "McGraner Matt (See Remarks) achète 10 780 actions de NexPoint Residential Trust, Inc."
+  },
   "sec_form4:0001477932-26-005964:P": {
    "amount_max": 40200.0,
    "amount_min": 40200.0,
@@ -3483,6 +3715,92 @@
     "LPCN"
    ],
    "title": "Higuchi John W. (administrateur) achète 25 007 actions de Lipocine Inc."
+  },
+  "sec_form4:0001493152-26-045772:P": {
+   "amount_max": 28800.0,
+   "amount_min": 28800.0,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-06T02:21:32+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 20000.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001357459",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 1.44,
+    "proprietaires_cik": [
+     "1620013"
+    ],
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "PALI",
+    "symboles_sec": [
+     "PALI"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 10000.0,
+      "apres": 1580294.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-10-01",
+      "hors_bourse": null,
+      "prix": 1.42
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 10000.0,
+      "apres": 1590294.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-10-02",
+      "hors_bourse": null,
+      "prix": 1.46
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Williams Donald Allen",
+    "PALISADE BIO, INC."
+   ],
+   "id": "sec_form4:0001493152-26-045772:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-10-01",
+   "official_id": "0001493152-26-045772:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1357459/000149315226045772/0001493152-26-045772-index.htm",
+   "parser_version": "sec-7",
+   "published_on": "2026-10-05",
+   "sha256": "7fcf6caff363087230f2dd1efcee4ba020b234ef1bc8441e778705fd4074e134",
+   "source": "sec_form4",
+   "tickers": [
+    "PALI"
+   ],
+   "title": "Williams Donald Allen (administrateur) achète 20 000 actions de PALISADE BIO, INC."
   },
   "sec_form4:0001628280-26-064003:P": {
    "amount_max": 344047.49,
@@ -4091,8 +4409,56 @@
    "title": "Elsztain Alejandro Gustavo (CEO) achète 17 334 actions de CRESUD INC"
   }
  },
- "genere_a": "2026-10-05T22:54:17+00:00",
+ "genere_a": "2026-10-06T02:20:16+00:00",
  "hausse": [
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depot_recent": "2026-10-05",
+   "depuis": "2026-10-06T02:20:16+00:00",
+   "derniere_info": "2026-10-05",
+   "groupes": [
+    {
+     "famille": "activistes",
+     "infos": [
+      {
+       "age": 0,
+       "base": 5.0,
+       "compte": true,
+       "facteurs": [],
+       "id": "sec_13dg:0000902664-26-004065",
+       "points": 5.0,
+       "regle": "activiste_13d",
+       "temps": 1.0
+      }
+     ],
+     "points": 5.0,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "Empire State Realty Trust, Inc.",
+   "note10": 9.2,
+   "note10_sans_bonus": 9.2,
+   "note10_sans_taille": 9.2,
+   "plus": 5.0,
+   "recent": true,
+   "score": 5.0,
+   "symbole": "ESRT",
+   "taille": {
+    "raison": "pas d'actions en circulation déclarées depuis 200 jours",
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": null,
+    "taille": null
+   }
+  },
   {
    "bonus": {
     "moins": 1.0,
@@ -4598,6 +4964,294 @@
     "plus": 1.0
    },
    "contexte": [],
+   "depot_recent": "2026-10-05",
+   "depuis": "2026-10-06T02:20:16+00:00",
+   "derniere_info": "2026-10-05",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001072613-26-000819:P",
+       "points": 3.0,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
+      }
+     ],
+     "points": 3.0,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "EMPIRE PETROLEUM CORP",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "plus": 3.0,
+   "recent": true,
+   "score": 3.0,
+   "symbole": "EP",
+   "taille": {
+    "actions": [
+     41577341,
+     "2026-08-11"
+    ],
+    "prix": [
+     "20260911",
+     2.41
+    ],
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 100.2
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depot_recent": "2026-10-05",
+   "depuis": "2026-10-06T02:20:16+00:00",
+   "derniere_info": "2026-10-05",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001437749-26-032065:P",
+       "points": 3.0,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
+      }
+     ],
+     "points": 3.0,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "NexPoint Residential Trust, Inc.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "plus": 3.0,
+   "recent": true,
+   "score": 3.0,
+   "symbole": "NXRT",
+   "taille": {
+    "actions": [
+     25549813,
+     "2026-08-04"
+    ],
+    "prix": [
+     "20260914",
+     22.79
+    ],
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 582.3
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depot_recent": "2026-10-05",
+   "depuis": "2026-10-06T02:20:16+00:00",
+   "derniere_info": "2026-10-05",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001493152-26-045772:P",
+       "points": 3.0,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
+      }
+     ],
+     "points": 3.0,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "PALISADE BIO, INC.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "plus": 3.0,
+   "recent": true,
+   "score": 3.0,
+   "symbole": "PALI",
+   "taille": {
+    "actions": [
+     174270558,
+     "2026-08-06"
+    ],
+    "prix": [
+     "20260914",
+     2.06
+    ],
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 359.0
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depot_recent": "2026-10-05",
+   "depuis": "2026-10-06T02:20:16+00:00",
+   "derniere_info": "2026-10-05",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001437749-26-031986:P",
+       "points": 3.0,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
+      }
+     ],
+     "points": 3.0,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "Sky Harbour Group Corp",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 7.5,
+   "plus": 3.0,
+   "recent": true,
+   "score": 3.0,
+   "symbole": "SKYH",
+   "taille": {
+    "raison": "pas d'actions en circulation déclarées depuis 200 jours",
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": null,
+    "taille": null
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depot_recent": "2026-10-05",
+   "depuis": "2026-10-06T02:20:16+00:00",
+   "derniere_info": "2026-10-05",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001213900-26-106613:P",
+       "points": 3.0,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
+      }
+     ],
+     "points": 3.0,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "VCI Global Ltd",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 7.5,
+   "plus": 3.0,
+   "recent": true,
+   "score": 3.0,
+   "symbole": "VCIG",
+   "taille": {
+    "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux États-Unis peuvent valoir plusieurs actions",
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "taille": null
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
    "depot_recent": "2026-10-02",
    "depuis": "2026-10-05T02:12:12+00:00",
    "derniere_info": "2026-10-02",
@@ -5062,171 +5716,6 @@
     "source_actions": "frames",
     "taille": "petite",
     "valeur_m": 892.2
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depot_recent": "2026-09-30",
-   "depuis": "2026-10-05T21:26:00+00:00",
-   "derniere_info": "2026-09-30",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 5,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001104659-26-112426:P",
-       "points": 2.67,
-       "regle": "achat_dirigeant",
-       "temps": 0.891
-      }
-     ],
-     "points": 2.67,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "KINGSWAY Corp",
-   "note10": 7.2,
-   "note10_sans_bonus": 7.2,
-   "note10_sans_taille": 6.5,
-   "plus": 2.67,
-   "recent": false,
-   "score": 2.67,
-   "symbole": "KWY",
-   "taille": {
-    "actions": [
-     28931000,
-     "2026-08-06"
-    ],
-    "prix": [
-     "20260911",
-     9.62
-    ],
-    "seuils": {
-     "mois": "202608",
-     "p30": 2236.27,
-     "p70": 13366.01
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 278.3
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depot_recent": "2026-09-30",
-   "depuis": "2026-10-05T21:26:00+00:00",
-   "derniere_info": "2026-09-30",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 5,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "PDG, directeur financier ou président du conseil",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001104659-26-112076:P",
-       "points": 2.67,
-       "regle": "achat_dirigeant",
-       "temps": 0.891
-      }
-     ],
-     "points": 2.67,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "MINISO Group Holding Ltd",
-   "note10": 7.2,
-   "note10_sans_bonus": 7.2,
-   "note10_sans_taille": 7.2,
-   "plus": 2.67,
-   "recent": false,
-   "score": 2.67,
-   "symbole": "MNSO",
-   "taille": {
-    "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux États-Unis peuvent valoir plusieurs actions",
-    "seuils": {
-     "mois": "202608",
-     "p30": 2236.27,
-     "p70": 13366.01
-    },
-    "taille": null
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depot_recent": "2026-09-29",
-   "depuis": "2026-10-05T21:26:00+00:00",
-   "derniere_info": "2026-09-29",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 6,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "PDG, directeur financier ou président du conseil",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001185185-26-004397:P",
-       "points": 2.61,
-       "regle": "achat_dirigeant",
-       "temps": 0.871
-      }
-     ],
-     "points": 2.61,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "QTREX Quantum Ltd.",
-   "note10": 7.2,
-   "note10_sans_bonus": 7.2,
-   "note10_sans_taille": 7.2,
-   "plus": 2.61,
-   "recent": false,
-   "score": 2.61,
-   "symbole": "QTEX",
-   "taille": {
-    "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux États-Unis peuvent valoir plusieurs actions",
-    "seuils": {
-     "mois": "202608",
-     "p30": 2236.27,
-     "p70": 13366.01
-    },
-    "taille": null
    }
   }
  ],
