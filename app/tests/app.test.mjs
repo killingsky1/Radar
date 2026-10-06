@@ -658,7 +658,13 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       const listes = p.locator(".carte.liste");
       assert.deepEqual(await listes.nth(0).locator(".symbole").allTextContents(), ["AMD", "NVDA"]);
       assert.deepEqual(await listes.nth(1).locator(".symbole").allTextContents(), ["MIKR"]);
-      assert.equal((await listes.nth(1).locator(".score-pastille").innerText()).replace(/\s+/g, ""), "8,7/10");
+      // La note dépend du jour du test (les bonus « Récent » des autres compagnies d'essai changent le calcul) : on la lit
+      // dans les données servies à l'app, et on vérifie qu'elle est bien dans la zone « hausse » (7/10 et plus)
+      const s = await p.evaluate(async () => (await fetch("./data/app/aujourdhui.json", { cache: "no-store" })).json());
+      const mikr = s.ecartees.find((x) => x.symbole === "MIKR");
+      assert.ok(mikr.note10 >= 7, `note de MIKR : ${mikr.note10}`);
+      const attendu = mikr.note10.toLocaleString("fr-CA", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "/10";
+      assert.equal((await listes.nth(1).locator(".score-pastille").innerText()).replace(/\s+/g, ""), attendu.replace(/\s+/g, ""));
     } finally {
       await onglet("Radar");
     }
