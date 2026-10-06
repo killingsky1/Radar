@@ -205,6 +205,40 @@ n_reg = (date(2025, 4, 7) - date(2023, 1, 1)).days
 verifier("Prix : le prix du règlement du lundi est rangé à la clôture du vendredi",
          abs(spy["p"][i] - 400 * 1.0001 ** n_reg) < 0.01, f"{spy['p'][i]:.4f} contre {400 * 1.0001 ** n_reg:.4f}")
 verifier("Prix de la découverte : à partir de juillet 2015 (pour juger les achats passés des initiés)", min(spy["d"]) >= 20150701)
+cal_dec = json.loads((S / "calendrier.json").read_text())
+verifier("Calendrier : les fériés de la bourse qui sont des jours de règlement (Vendredi saint, Noël du faux jeu) ne sont "
+         "pas des jours de bourse", not {"2024-03-29", "2025-04-18", "2024-12-25"} & set(cal_dec)
+         and 20240329 not in spy["d"] and "2024-03-28" in cal_dec and "2024-04-01" in cal_dec)
+spec = json.loads((R / "resume.json").read_text())["alignement_des_prix"]["jours_speciaux"]
+verifier("Jours spéciaux : fériés retirés listés (Vendredi saint 2024) ; aucun jour de bourse sans règlement dans le faux jeu",
+         "2024-03-29" in spec["feries_retires_du_calendrier"] and spec["jours_de_bourse_sans_reglement"] == []
+         and spec["le_prix_range_a_A_est_de"] == "inconnu", str({k: v for k, v in spec.items() if k != "feries_retires_du_calendrier"}))
+
+
+class PrixFixes:
+    """Un prix par (symbole, jour) donné à la main, pour essayer verifier_jours_speciaux."""
+    def __init__(self, p):
+        self.p = p
+
+    def dernier(self, s, jour, tol):
+        return (jour, self.p[(s, jour)], "C") if (s, jour) in self.p else None
+
+
+# Columbus Day 2024 (lundi 14 octobre) : la bourse est ouverte, pas de règlement. Règlements le vendredi 11 et le mardi 15.
+# Le prix du règlement du 15 est rangé au 11 (A). S'il vaut la clôture du 14 (B), les achats du 14 en sont plus proches.
+def achats_essai(jour, prix_paye, n=40):
+    return [{"sens": "achat", "symbole": f"S{i}", "prix_moyen": prix_paye, "jour_premier": jour, "jour_dernier": jour}
+            for i in range(n)]
+
+
+reg_essai = ["20241010", "20241011", "20241015", "20241016"]
+evs_essai = achats_essai("2024-10-11", 100.0) + achats_essai("2024-10-14", 110.0)
+v_b = d.verifier_jours_speciaux(evs_essai, PrixFixes({(f"S{i}", "2024-10-11"): 110.0 for i in range(40)}), reg_essai)
+v_a = d.verifier_jours_speciaux(evs_essai, PrixFixes({(f"S{i}", "2024-10-11"): 100.0 for i in range(40)}), reg_essai)
+verifier("Jours spéciaux : Columbus Day trouvé ; prix rangé au vendredi = clôture du lundi → décalé ; = clôture du "
+         "vendredi → bon", v_b["jours_de_bourse_sans_reglement"] == ["2024-10-14"]
+         and v_b["le_prix_range_a_A_est_de"].startswith("B") and v_a["le_prix_range_a_A_est_de"] == "A (bon)",
+         f"{v_b['le_prix_range_a_A_est_de']} / {v_a['le_prix_range_a_A_est_de']}")
 cal = json.loads((S / "calendrier.json").read_text())
 verifier("Calendrier des clôtures trié, sans fin de semaine", cal == sorted(cal) and all(
     date.fromisoformat(x).weekday() < 5 for x in cal))

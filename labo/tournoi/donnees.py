@@ -440,10 +440,95 @@ class Prix:
                        "q": list(self.q[s][i:]), "c": self.c[s][i:]}
 
 
+FERMETURES_SPECIALES = {"2018-12-05", "2025-01-09"}  # Bourse de New York fermée : deuils nationaux (G. H. W. Bush, J. Carter)
+
+
+def paques(an):
+    """Dimanche de Pâques (calendrier grégorien, algorithme anonyme)."""
+    a, b, c = an % 19, an // 100, an % 100
+    d, e = b // 4, b % 4
+    g = (b - (b + 8) // 25 + 1) // 3
+    h = (19 * a + b - d - g + 15) % 30
+    l = (32 + 2 * e + 2 * (c // 4) - h - c % 4) % 7
+    m = (a + 11 * h + 22 * l) // 451
+    return date(an, (h + l - 7 * m + 114) // 31, (h + l - 7 * m + 114) % 31 + 1)
+
+
+def nieme_jour(an, mois, jour_semaine, n):
+    """Le n-ième lundi (0), mardi (1)... du mois ; n = -1 : le dernier."""
+    if n > 0:
+        j = date(an, mois, 1)
+        return j + timedelta(days=(jour_semaine - j.weekday()) % 7, weeks=n - 1)
+    j = (date(an, mois + 1, 1) if mois < 12 else date(an + 1, 1, 1)) - timedelta(days=1)
+    return j - timedelta(days=(j.weekday() - jour_semaine) % 7)
+
+
+def observe(j):
+    """Un congé tombé un samedi est pris le vendredi ; un dimanche, le lundi."""
+    return j - timedelta(days=1) if j.weekday() == 5 else j + timedelta(days=1) if j.weekday() == 6 else j
+
+
+def feries_nyse(an):
+    """Les jours de fermeture complète de la Bourse de New York d'une année (ses règles : jour de l'An, Martin Luther
+    King, Presidents' Day, Vendredi saint, Memorial Day, Juneteenth dès 2022, 4 juillet, fête du Travail, Thanksgiving,
+    Noël ; plus les fermetures spéciales)."""
+    j = {nieme_jour(an, 1, 0, 3), nieme_jour(an, 2, 0, 3), paques(an) - timedelta(days=2), nieme_jour(an, 5, 0, -1),
+         observe(date(an, 7, 4)), nieme_jour(an, 9, 0, 1), nieme_jour(an, 11, 3, 4), observe(date(an, 12, 25))}
+    if date(an, 1, 1).weekday() != 5:  # le 1er janvier un samedi : pas de congé (la bourse reste ouverte le 31 décembre)
+        j.add(observe(date(an, 1, 1)))
+    if an >= 2022:
+        j.add(observe(date(an, 6, 19)))
+    return {x.isoformat() for x in j} | {x for x in FERMETURES_SPECIALES if x.startswith(str(an))}
+
+
 def calendrier_clotures(dates_reglement):
-    """Dates de règlement de tous les fichiers → {date de règlement : date de clôture (la date de règlement d'avant)}."""
+    """Dates de règlement de tous les fichiers → {date de règlement : date de clôture (la date de règlement d'avant)}.
+    Une date de clôture qui tombe un jour férié de la bourse (ex. Vendredi saint : les règlements ont lieu, pas les
+    échanges) n'est pas un jour de bourse : ce règlement est laissé de côté (son prix est celui de la veille, déjà là)."""
     toutes = sorted(dates_reglement)
-    return {r: toutes[i - 1] for i, r in enumerate(toutes) if i > 0}
+    feries = set()
+    for an in sorted({int(r[:4]) for r in toutes}):
+        feries |= feries_nyse(an)
+    return {r: toutes[i - 1] for i, r in enumerate(toutes) if i > 0 and iso(toutes[i - 1]) not in feries}
+
+
+def verifier_jours_speciaux(evs, prix, dates_reglement):
+    """Les dates des prix là où la bourse et les règlements n'ont pas le même calendrier.
+    1. Fériés de la bourse qui sont des jours de règlement (ex. Vendredi saint) : retirés du calendrier des clôtures
+       (voir calendrier_clotures) ; on les liste.
+    2. Jours de bourse SANS règlement (ex. Columbus Day, Veterans Day) : le prix du règlement suivant est rangé au jour
+       de règlement d'avant (A). Est-ce la clôture de A, ou celle du jour de bourse sans règlement (B, après A) ? On
+       compare aux achats d'initiés faits en un seul jour, à A et à B : le plus proche, en médiane, dit de quel jour est
+       le prix. Si c'est B, les prix rangés à A viennent du lendemain (information du futur) : à corriger avant les tests."""
+    toutes = sorted(dates_reglement)
+    feries = set()
+    for an in sorted({int(r[:4]) for r in toutes}):
+        feries |= feries_nyse(an)
+    retires = sorted(iso(r) for r in toutes if iso(r) in feries)
+    paires = []  # (A, B) : A = date où le prix est rangé, B = jour de bourse sans règlement juste avant le règlement suivant
+    for i in range(1, len(toutes) - 1):
+        a, s = date.fromisoformat(iso(toutes[i])), date.fromisoformat(iso(toutes[i + 1]))
+        b = [a + timedelta(days=k) for k in range(1, (s - a).days)]
+        b = [x for x in b if x.weekday() < 5 and x.isoformat() not in feries]
+        if b and a.isoformat() not in feries:
+            paires.append((a.isoformat(), b[-1].isoformat()))
+    achats = {}
+    for e in evs:
+        if e["sens"] == "achat" and e["symbole"] and e.get("prix_moyen") and e["jour_premier"] == e["jour_dernier"]:
+            achats.setdefault(e["jour_premier"], []).append(e)
+    ecarts = {"A": [], "B": []}
+    for a, b in paires:
+        for cote, jour in (("A", a), ("B", b)):
+            for e in achats.get(jour, []):
+                c = prix.dernier(e["symbole"], a, 0)
+                if c and c[1] > 0:
+                    ecarts[cote].append(abs(math.log(e["prix_moyen"] / c[1])))
+    med = {k: round(sorted(v)[len(v) // 2], 5) if v else None for k, v in ecarts.items()}
+    verdict = ("inconnu" if med["A"] is None or med["B"] is None or min(len(ecarts["A"]), len(ecarts["B"])) < 30
+               else "A (bon)" if med["A"] < med["B"] else "B (décalé d'un jour : à corriger)")
+    return {"feries_retires_du_calendrier": retires, "jours_de_bourse_sans_reglement": [b for _, b in paires],
+            "achats_jour_A": len(ecarts["A"]), "ecart_median_jour_A": med["A"],
+            "achats_jour_B": len(ecarts["B"]), "ecart_median_jour_B": med["B"], "le_prix_range_a_A_est_de": verdict}
 
 
 def lignes_ftd(contenu, cle):
@@ -754,6 +839,10 @@ def main():
     ajouter_bilan_initie(evs, prix)
     alignement = verifier_dates_prix(evs, prix, calendrier)
     dire(f"dates des prix : {alignement}")
+    alignement["jours_speciaux"] = verifier_jours_speciaux(evs, prix, reglements)
+    dire(f"dates des prix aux jours spéciaux : {alignement['jours_speciaux']}")
+    if alignement["jours_speciaux"]["le_prix_range_a_A_est_de"].startswith("B"):
+        dire("ALERTE : avant un jour de bourse sans règlement, le prix rangé vient du lendemain : à corriger avant les tests")
     if not alignement["bon_alignement"]:
         dire("ALERTE : les achats sont plus proches de la clôture d'un AUTRE jour : dates des prix à revoir avant les tests")
     dire("valeur en bourse et bilan des initiés calculés")
