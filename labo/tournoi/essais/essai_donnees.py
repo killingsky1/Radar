@@ -8,6 +8,7 @@ import os
 import shutil
 import sys
 import zipfile
+from collections import Counter
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -212,7 +213,13 @@ verifier("Branche : seulement le résumé et le journal (les données restent da
          sorted(x.name for x in R.iterdir()) == ["journal.md", "resume.json"], str(sorted(x.name for x in R.iterdir())))
 verifier("Résumé : nombres seulement pour le coffre-fort (aucun rendement)", set(res["coffre"]) == {
     "evenements", "evenements_contexte", "inities_avec_historique", "achats", "symboles_prix", "compagnies_finances",
-    "compagnies_13"})
+    "compagnies_13", "compagnies_actions"})
+compte_actions = Counter(k for x in fin for k, fs in (x.get("actions") or {}).items() if fs)
+verifier("Résumé : compagnies avec des actions en circulation, comptées comme dans le fichier (au bilan : au moins GME)",
+         res["decouverte"]["compagnies_actions"] == {"CommonStockSharesOutstanding": compte_actions["CommonStockSharesOutstanding"],
+                                                     "EntityCommonStockSharesOutstanding": compte_actions["EntityCommonStockSharesOutstanding"]}
+         and compte_actions["CommonStockSharesOutstanding"] >= 1 and compte_actions["EntityCommonStockSharesOutstanding"] >= 1,
+         f"{res['decouverte']['compagnies_actions']} / {dict(compte_actions)}")
 his = {x["initie"]: x["depots"] for x in lire(S / "historiques.jsonl.gz")}
 acheteurs = {i["cik"] for e in dec_p if e["sens"] == "achat" for i in e["inities"]}
 verifier("Historiques : un par initié qui achète dans la découverte", set(his) == acheteurs, f"{len(his)} / {len(acheteurs)}")

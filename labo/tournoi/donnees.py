@@ -635,10 +635,12 @@ def ecrire_periode(dossier, evs, prix, finances, treize_par_cie, debut, fin, pri
     n_px = ecrire_jsonl(dossier / "prix.jsonl.gz", prix.lignes(achats | passes | set(MARCHE), prix_depuis))
     depuis_fi = (debut - timedelta(days=HISTOIRE_FINANCES)).isoformat()
     noms_actions = {c for _, c in CONCEPTS_ACTIONS}
-    n_fi = ecrire_jsonl(dossier / "finances.jsonl.gz", (
+    lignes_fi = [
         {"cik": c, "faits": {k: [f for f in fs if f[1] >= depuis_fi] for k, fs in v.items() if k not in noms_actions},
          "actions": {k: [f for f in fs if f[1] >= depuis_fi] for k, fs in v.items() if k in noms_actions}}
-        for c, v in sorted(finances.items()) if c in ciks))
+        for c, v in sorted(finances.items()) if c in ciks]
+    n_fi = ecrire_jsonl(dossier / "finances.jsonl.gz", lignes_fi)
+    avec_actions = Counter(k for x in lignes_fi for k, fs in x["actions"].items() if fs)
     n_13 = ecrire_jsonl(dossier / "13d13g.jsonl.gz",
                         ({"cik": c, "depots": [x for x in v if x[0] >= prix_depuis]} for c, v in sorted(treize_par_cie.items())
                          if c in ciks))
@@ -648,7 +650,8 @@ def ecrire_periode(dossier, evs, prix, finances, treize_par_cie, debut, fin, pri
                                                       "contexte_depuis": contexte}), encoding="utf-8")
     return {"evenements": n_ev, "evenements_contexte": n_ev - len(periode), "inities_avec_historique": n_hi,
             "achats": sum(e["sens"] == "achat" for e in periode), "symboles_prix": n_px,
-            "compagnies_finances": n_fi, "compagnies_13": n_13}
+            "compagnies_finances": n_fi, "compagnies_13": n_13,
+            "compagnies_actions": {k: avec_actions[k] for _, k in CONCEPTS_ACTIONS}}
 
 
 def couverture(evs):
