@@ -91,3 +91,25 @@ pour Radar (un lot normal : code, tests, labo, photos), jamais une garantie de g
   sans cette donnée (vérifié sur le faux jeu). Restent écartées : `liquidite_taille-2` (information du futur, voir
   plus haut) et `groupes-3` (achat au dépôt d'un 13D : le banc n'achète qu'après un formulaire 4 ; l'ajouter
   demanderait un 2e type de signal dans le banc, pas fait).
+- 6 octobre 2026, vers 12 h 55 UTC, AVANT tout résultat : **date des prix de la SEC**. Le prix d'un fichier d'échecs
+  est rangé au dernier jour de bourse (Bourse de New York, calendrier par ses règles) avant son règlement, au lieu du
+  jour de règlement d'avant. Raison : MESURÉ avec 706 achats d'initiés faits en un seul jour : avant un jour de bourse
+  sans règlement (Columbus Day, Veterans Day, environ 2 par an), le prix rangé au jour de règlement d'avant était la
+  clôture du lendemain (écart médian 1,26 % avec les achats du lendemain, 2,14 % avec ceux du jour même) : une petite
+  information du futur. Les 2 règlements faits un jour de deuil national (5 décembre 2018, 9 janvier 2025) ne sont pas
+  des jours de bourse. Le Vendredi saint n'est jamais un jour de règlement dans les fichiers (mesuré). La mesure est
+  refaite à chaque passage et publiée dans le résumé de l'étape 0 (`jours_speciaux`).
+- 6 octobre 2026, vers 12 h 30 UTC, AVANT tout résultat : **« d'actions ordinaires »** appliqué partout où le texte le dit.
+  Raison : les pistes vitesse et gestion le traitaient comme une condition (décision de leurs comparateurs), mais pas
+  initie-1 à 5, groupes-1, 2 et 4, ni critique-1 à 3, qui ont la même phrase. Même filtre partout (un des titres déclarés
+  contient « common » ou « ordinary ») ; seulement sur le formulaire qui donne le signal (les groupes et l'historique de
+  l'initié ne changent pas). Sur le faux jeu (que des « Common Stock »), aucun achat ne change.
+- 6 octobre 2026, vers 13 h 15 UTC, AVANT tout résultat : **« au minimum 1 000 $ »** lu partout comme un plancher (le
+  plus grand du pourcentage et de 1 000 $), qui ne se programme pas (une règle ne voit pas la valeur de son
+  portefeuille) : réglage du banc `MONTANT_MIN = 50`. Raison : gestion-1 à 5 et critique-3 le lisaient ainsi, critique-1
+  et 2 le lisaient « pas d'achat sous 1 000 $ » (`MONTANT_MIN = 1000`) ; même phrase, même lecture. Effet seulement
+  quand il reste moins de 1 000 $ pour une place.
+- 6 octobre 2026, AVANT tout résultat : **programmes reprogrammés et comparés** après les changements du jour :
+  critique-3, sante_valeur-1 et sante_valeur-4 (actions en circulation), puis comparateurs des pistes critique et
+  sante_valeur ; comparateurs des pistes meteo et gestion (relancés après une limite de session). Chaque décision est
+  écrite dans la liste CHOIX des 2 programmes.
