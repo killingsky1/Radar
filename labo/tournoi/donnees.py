@@ -65,6 +65,9 @@ FAITS_ZIP = "https://www.sec.gov/Archives/edgar/daily-index/xbrl/companyfacts.zi
 CONCEPTS = ["Assets", "Liabilities", "StockholdersEquity", "AssetsCurrent", "LiabilitiesCurrent", "LongTermDebtNoncurrent",
             "NetIncomeLoss", "NetCashProvidedByUsedInOperatingActivities", "Revenues",
             "RevenueFromContractWithCustomerExcludingAssessedTax", "SalesRevenueNet", "GrossProfit"]
+# Actions en circulation (nombre d'actions, pas des $) : au bilan, à la fin de la période (us-gaap), et sur la page
+# couverture du rapport, à une date proche du dépôt (dei). Demandées par critique-3, sante_valeur-1 et sante_valeur-4.
+CONCEPTS_ACTIONS = [("us-gaap", "CommonStockSharesOutstanding"), ("dei", "EntityCommonStockSharesOutstanding")]
 FORMES_FINANCES = {"10-K", "10-K/A", "10-Q", "10-Q/A", "10-KT", "10-KT/A"}
 HISTOIRE_FINANCES = 2 * 365 + 31  # finances gardées : périodes finies jusqu'à 2 ans (et 1 mois) avant le début
 VIDES = {"NONE", "NA", "N-A", "NULL", "N", "TBD", ""}
@@ -576,14 +579,15 @@ def extraire_faits(contenu):
     """companyfacts d'une compagnie → (actions [[fin, valeur, déposé]], finances {concept: [[début, fin, valeur, numéro,
     déposé, forme]]}). Pour chaque période d'un concept : la PREMIÈRE version déposée dans un 10-K ou un 10-Q (une
     correction déposée plus tard n'était pas connue avant). Durées gardées : un trimestre (80 à 100 jours) ou un
-    exercice (350 à 380 jours) ; les bilans (sans début) tous."""
+    exercice (350 à 380 jours) ; les bilans (sans début) tous. Les actions en circulation (CONCEPTS_ACTIONS) aussi, en
+    nombre d'actions."""
     faits = json.loads(contenu).get("facts", {})
     actions = [[f.get("end"), f.get("val"), f.get("filed")] for f in
                faits.get("dei", {}).get("EntityCommonStockSharesOutstanding", {}).get("units", {}).get("shares", [])]
     finances = {}
-    for concept in CONCEPTS:
+    for taxo, concept, unite in [("us-gaap", c, "USD") for c in CONCEPTS] + [(t, c, "shares") for t, c in CONCEPTS_ACTIONS]:
         premiers = {}
-        for f in faits.get("us-gaap", {}).get(concept, {}).get("units", {}).get("USD", []):
+        for f in faits.get(taxo, {}).get(concept, {}).get("units", {}).get(unite, []):
             if f.get("form") not in FORMES_FINANCES or not f.get("end") or not f.get("filed") or f.get("val") is None:
                 continue
             debut = f.get("start")
@@ -630,8 +634,10 @@ def ecrire_periode(dossier, evs, prix, finances, treize_par_cie, debut, fin, pri
     passes = {r[2] for v in hist_p.values() for r in v if r[3] == "achat" and r[2] and r[0] >= prix_depuis}
     n_px = ecrire_jsonl(dossier / "prix.jsonl.gz", prix.lignes(achats | passes | set(MARCHE), prix_depuis))
     depuis_fi = (debut - timedelta(days=HISTOIRE_FINANCES)).isoformat()
+    noms_actions = {c for _, c in CONCEPTS_ACTIONS}
     n_fi = ecrire_jsonl(dossier / "finances.jsonl.gz", (
-        {"cik": c, "faits": {k: [f for f in fs if f[1] >= depuis_fi] for k, fs in v.items()}}
+        {"cik": c, "faits": {k: [f for f in fs if f[1] >= depuis_fi] for k, fs in v.items() if k not in noms_actions},
+         "actions": {k: [f for f in fs if f[1] >= depuis_fi] for k, fs in v.items() if k in noms_actions}}
         for c, v in sorted(finances.items()) if c in ciks))
     n_13 = ecrire_jsonl(dossier / "13d13g.jsonl.gz",
                         ({"cik": c, "depots": [x for x in v if x[0] >= prix_depuis]} for c, v in sorted(treize_par_cie.items())

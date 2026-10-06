@@ -68,6 +68,14 @@ SalesRevenueNet, GrossProfit (durées : un trimestre de 80 à 100 jours, ou un e
 - Dans une règle : `ctx.finances(cik)` → `{concept: [[début, fin, valeur, forme], ...]}` (déposés au plus tard ce
   jour-là, la fin la plus récente en dernier).
 - Gardé : périodes finies au plus 2 ans (et 1 mois) avant le début de la période (assez pour comparer 2 exercices).
+- **Actions en circulation** (ajoutées le 6 octobre 2026, avant tout résultat), à part, dans la clé `actions` de la
+  même ligne : `{"cik": ..., "faits": {...}, "actions": {concept: [[null, fin, nombre d'actions, numéro, déposé_le,
+  forme], ...]}}`. `CommonStockSharesOutstanding` (us-gaap) = au bilan, à la date de FIN de la période (trimestre ou
+  exercice) ; `EntityCommonStockSharesOutstanding` (dei) = sur la page couverture du rapport, à une date proche du
+  DÉPÔT (quelques jours avant). Mêmes règles : 10-K et 10-Q (et /A), 1re version déposée, visible à sa date de dépôt.
+  Une compagnie peut n'avoir que l'un des deux, ou aucun. Dans une règle : `ctx.actions_par_periode(cik)` →
+  `{concept: [[None, fin, nombre, forme], ...]}` (déposés au plus tard ce jour-là, la fin la plus récente en dernier).
+  `ctx.finances(cik)` ne les contient pas (les finances en dollars ne changent pas).
 
 ## historiques.jsonl.gz (une ligne par initié qui achète dans la période)
 

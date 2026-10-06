@@ -191,6 +191,32 @@ def fabriquer(dossier, graine=7):
                                        (c["revenus"], rev), ("GrossProfit", rev * r.uniform(0.2, 0.6))):
                         faits[concept].append([deb, fin_q.isoformat(), round(v), accn, depose, forme])
         finances[c["cik"]] = {k: sorted(v, key=lambda x: (x[1], x[0] or "")) for k, v in faits.items()}
+    # --- Actions en circulation (tirage à part, graine + 1 : le reste du faux jeu reste identique) : au bilan à chaque
+    #     fin de trimestre (us-gaap) et sur la page couverture (dei), quelques jours avant le dépôt ; certaines
+    #     compagnies rachètent, d'autres émettent, parfois un fait manque
+    tirage2 = random.Random(graine + 1)
+    circulation_de = {}
+    for c in cies:
+        faits, n = defaultdict(list), c["actions"] * tirage2.uniform(0.9, 1.15)
+        tendance = tirage2.choice([0.97, 0.985, 1.0, 1.0, 1.01, 1.04])
+        for an in range(2020, 2027):
+            for q in (1, 2, 3, 4):
+                fin_q = date(an, *fins_trim[q])
+                if fin_q.isoformat() > FIN:
+                    break
+                n *= tendance * tirage2.uniform(0.995, 1.005)
+                forme = "10-K" if q == 4 else "10-Q"
+                depose = fin_q + timedelta(days=tirage2.randint(55, 88) if q == 4 else tirage2.randint(30, 44))
+                accn = f"0009{c['cik']}-{depose.isoformat()[2:4]}-{q:06d}"
+                if tirage2.random() < 0.9:
+                    faits["CommonStockSharesOutstanding"].append([None, fin_q.isoformat(), round(n), accn,
+                                                                  depose.isoformat(), forme])
+                if tirage2.random() < 0.95:
+                    couverture = depose - timedelta(days=tirage2.randint(3, 12))
+                    faits["EntityCommonStockSharesOutstanding"].append([None, couverture.isoformat(),
+                                                                        round(n * tirage2.uniform(0.99, 1.01)), accn,
+                                                                        depose.isoformat(), forme])
+        circulation_de[c["cik"]] = dict(faits)
     # --- Historique de chaque initié (comme donnees.py) : ses dépôts passés depuis 2016 (même compagnie surtout,
     #     parfois une autre), puis ceux du jeu ; un dépôt par sens
     cies_par_cik = {c["cik"]: c for c in cies}
@@ -223,7 +249,7 @@ def fabriquer(dossier, graine=7):
                                 "q": [x[3] for x in lignes], "c": [x[2] for x in lignes]}) + "\n")
     with gzip.open(d / "finances.jsonl.gz", "wt", encoding="utf-8") as f:
         for cik, faits in sorted(finances.items()):
-            f.write(json.dumps({"cik": cik, "faits": faits}) + "\n")
+            f.write(json.dumps({"cik": cik, "faits": faits, "actions": circulation_de.get(cik, {})}) + "\n")
     with gzip.open(d / "13d13g.jsonl.gz", "wt", encoding="utf-8") as f:
         for cik, v in sorted(treize.items()):
             f.write(json.dumps({"cik": cik, "depots": v}) + "\n")

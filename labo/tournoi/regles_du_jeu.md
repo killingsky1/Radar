@@ -81,3 +81,13 @@ pour Radar (un lot normal : code, tests, labo, photos), jamais une garantie de g
   8. **Dates des prix** : vérifiées à l'étape 0, sans autre site — un achat d'initié fait en un seul jour doit être
      plus proche de la clôture de CE jour que de celle de la veille ou du lendemain (médiane sur des milliers
      d'achats). Sinon : ALERTE, et aucun test avant d'avoir corrigé.
+- 6 octobre 2026, vers 12 h 15 UTC, AVANT tout résultat (aucune règle n'a encore été jugée sur les vraies données) :
+  **actions en circulation** ajoutées au jeu de recherche, à part des finances en dollars : `ctx.actions_par_periode(cik)`
+  (au bilan à chaque fin de période, `CommonStockSharesOutstanding`, et sur la page couverture des rapports,
+  `EntityCommonStockSharesOutstanding`), à partir de leur date de dépôt, 1re version seulement. Raison : trois règles
+  pré-enregistrées les demandaient dans leurs champs (critique-3, sante_valeur-1 et sante_valeur-4) et avaient été
+  écartées faute de cette donnée : un oubli du jeu de recherche, pas de la règle. Les règles ne changent pas ; elles
+  sont reprogrammées 2 fois sans se voir. Les autres programmes donnent exactement les mêmes achats et ventes avec ou
+  sans cette donnée (vérifié sur le faux jeu). Restent écartées : `liquidite_taille-2` (information du futur, voir
+  plus haut) et `groupes-3` (achat au dépôt d'un 13D : le banc n'achète qu'après un formulaire 4 ; l'ajouter
+  demanderait un 2e type de signal dans le banc, pas fait).

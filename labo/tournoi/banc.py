@@ -22,7 +22,8 @@ Une règle = un fichier Python (labo/tournoi/regles/<id>.py) qui définit :
 
 `ctx` ne montre QUE ce qui était connu au moment de la décision : toute demande d'une donnée plus récente lève une
 erreur (garde-fou contre le futur). Les quantités d'échecs de livraison ne sont visibles que 35 jours civils après
-(la SEC les publie par demi-mois, quelques semaines plus tard) ; les finances, à partir de leur date de dépôt. `ctx.evenements_marche(depuis)` donne tous les formulaires 4 (toutes compagnies)
+(la SEC les publie par demi-mois, quelques semaines plus tard) ; les finances et les actions en circulation
+(`ctx.actions_par_periode(cik)`), à partir de leur date de dépôt. `ctx.evenements_marche(depuis)` donne tous les formulaires 4 (toutes compagnies)
 déposés depuis une date jusqu'au jour de la décision : pour une « météo » des initiés, sans garder de mémoire.
 `ctx.historique_initie(cik)` donne tout l'historique d'un initié (achats et ventes en bourse, toutes compagnies, depuis
 2006 ou le plus tôt disponible), seulement les dépôts faits au plus tard le jour de la décision.
@@ -87,12 +88,13 @@ class Donnees:
             for l in f:
                 x = json.loads(l)
                 self.prix[x["s"]] = ([_iso(v) for v in x["d"]], x["p"], x["c"], x["q"])
-        self.finances = {}
+        self.finances, self.actions = {}, {}
         if (d / "finances.jsonl.gz").exists():
             with gzip.open(d / "finances.jsonl.gz", "rt", encoding="utf-8") as f:
                 for l in f:
                     x = json.loads(l)
                     self.finances[x["cik"]] = x["faits"]
+                    self.actions[x["cik"]] = x.get("actions") or {}
         self.treize = {}
         if (d / "13d13g.jsonl.gz").exists():
             with gzip.open(d / "13d13g.jsonl.gz", "rt", encoding="utf-8") as f:
@@ -171,6 +173,17 @@ class Contexte:
         380 jours). Forme : « 10-K » (rapport annuel) ou « 10-Q » (trimestriel), ou leurs modifications « /A »."""
         sortie = {}
         for concept, faits in (self._d.finances.get(cik) or {}).items():
+            ok = sorted((f for f in faits if f[4] <= self.jour), key=lambda f: (f[1], f[0] or ""))
+            if ok:
+                sortie[concept] = [[f[0], f[1], f[2], f[5] if len(f) > 5 else None] for f in ok]
+        return sortie
+
+    def actions_par_periode(self, cik):
+        """{concept: [[None, fin, nombre d'actions, forme], ...]} DÉPOSÉS au plus tard aujourd'hui (fin la plus récente en
+        dernier), comme finances(). CommonStockSharesOutstanding : au bilan, à la fin de la période ;
+        EntityCommonStockSharesOutstanding : sur la page couverture du rapport, à une date proche du dépôt."""
+        sortie = {}
+        for concept, faits in (self._d.actions.get(cik) or {}).items():
             ok = sorted((f for f in faits if f[4] <= self.jour), key=lambda f: (f[1], f[0] or ""))
             if ok:
                 sortie[concept] = [[f[0], f[1], f[2], f[5] if len(f) > 5 else None] for f in ok]

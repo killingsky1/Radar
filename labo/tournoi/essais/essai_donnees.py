@@ -96,6 +96,10 @@ def faits_zip():
                     "Assets": {"units": {"USD": [
                         {"end": "2024-12-31", "val": 123456, "accn": "A1", "filed": "2025-03-25", "form": "10-K"},
                         {"end": "2024-12-31", "val": 999999, "accn": "A2", "filed": "2026-03-02", "form": "10-K"}]}},
+                    "CommonStockSharesOutstanding": {"units": {"shares": [
+                        {"end": "2024-12-31", "val": 4_900_000, "accn": "A1", "filed": "2025-03-25", "form": "10-K"},
+                        {"end": "2024-12-31", "val": 4_800_000, "accn": "A2", "filed": "2026-03-02", "form": "10-K"},
+                        {"end": "2025-03-31", "val": 4_700_000, "accn": "S1", "filed": "2025-04-20", "form": "S-1"}]}},
                     "NetIncomeLoss": {"units": {"USD": [
                         {"start": "2024-01-01", "end": "2024-12-31", "val": 5000, "accn": "A1", "filed": "2025-03-25", "form": "10-K"},
                         {"start": "2025-01-01", "end": "2025-06-30", "val": 2000, "accn": "Q2", "filed": "2025-08-10", "form": "10-Q"},
@@ -184,6 +188,13 @@ verifier("Finances : l'actif de GME fin 2024 = la 1re version (pas la correction
 verifier("Finances : exercice et trimestre gardés ; cumul de 6 mois et fait d'un 8-K écartés",
          gfi.get("NetIncomeLoss") == [["2024-01-01", "2024-12-31", 5000, "A1", "2025-03-25", "10-K"],
                                       ["2025-04-01", "2025-06-30", 1200, "Q2", "2025-08-10", "10-Q"]], str(gfi.get("NetIncomeLoss")))
+gac = next((x.get("actions") for x in fin if x["cik"] == CIK_13D), None)
+verifier("Actions en circulation à part des finances en $ : 1re version au bilan (us-gaap, pas la correction ni le S-1) "
+         "et page couverture (dei)",
+         gac == {"CommonStockSharesOutstanding": [[None, "2024-12-31", 4_900_000, "A1", "2025-03-25", "10-K"]],
+                 "EntityCommonStockSharesOutstanding": [[None, "2024-12-31", 5_000_000, None, "2025-02-14", "10-K"],
+                                                        [None, "2025-06-30", 6_000_000, None, "2025-08-10", "10-Q"]]}
+         and not {"CommonStockSharesOutstanding", "EntityCommonStockSharesOutstanding"} & set(gfi), str(gac))
 verifier("companyfacts.zip : une seule requête pour toutes les compagnies", sum(u == d.FAITS_ZIP for u in APPELS) == 1)
 px = {x["s"]: x for x in lire(S / "prix.jsonl.gz")}
 verifier("Prix : SPY, IVV, VOO, IWM et les symboles avec un achat", {"SPY", "IVV", "VOO", "IWM", "GME"} <= set(px))

@@ -205,6 +205,16 @@ d.finances = {"a": {"Assets": [[None, "2023-06-30", 100, "n1", "2023-08-01", "10
                                [None, "2023-09-30", 120, "n2", "2023-11-05", "10-Q"]]}}
 verifier("Finances : le 1er octobre, seulement le bilan déposé avant (avec sa forme)",
          banc.Contexte(d, "2023-10-01").finances("a") == {"Assets": [[None, "2023-06-30", 100, "10-Q"]]})
+d.actions = {"a": {"CommonStockSharesOutstanding": [[None, "2023-06-30", 1000, "n1", "2023-08-01", "10-Q"],
+                                                    [None, "2023-09-30", 990, "n2", "2023-11-05", "10-Q"]],
+                   "EntityCommonStockSharesOutstanding": [[None, "2023-07-28", 1001, "n1", "2023-08-01", "10-Q"]]}}
+verifier("Actions en circulation (à part des finances) : le 1er octobre, seulement celles déposées avant",
+         banc.Contexte(d, "2023-10-01").actions_par_periode("a") == {
+             "CommonStockSharesOutstanding": [[None, "2023-06-30", 1000, "10-Q"]],
+             "EntityCommonStockSharesOutstanding": [[None, "2023-07-28", 1001, "10-Q"]]}
+         and banc.Contexte(d, "2023-07-31").actions_par_periode("a") == {}
+         and banc.Contexte(d, "2023-10-01").actions_par_periode("inconnu") == {}
+         and "CommonStockSharesOutstanding" not in banc.Contexte(d, "2023-12-01").finances("a"))
 
 # 13. Liquide gardé 10 jours (LIQUIDE_JOURS) : SPY plat à 100 $, AAA et BBB plats à 10 $ ; taille inconnue (1 %)
 BBB = [(j, 10.0, "B") for j in JOURS]
