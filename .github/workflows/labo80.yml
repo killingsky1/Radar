@@ -1,8 +1,12 @@
 name: "Labo (tournoi, étape 0 : le jeu de recherche, 2016 à juin 2026)"
 
-# Lancé à la main seulement (workflow_dispatch), juste après un passage du robot : un envoi dans la branche ne doit
-# jamais le lancer, car il entrerait dans la file du robot (groupe radar) et pourrait y remplacer un passage en attente.
+# Lancé seulement quand on modifie labo/tournoi/declencheur-donnees.txt (ou à la main), juste après un passage du robot :
+# un autre envoi dans la branche ne le lance jamais, car il entrerait dans la file du robot (groupe radar) et pourrait y
+# remplacer un passage en attente. (GitHub ne permet de le lancer « à la main » qu'une fois qu'il a tourné une 1re fois.)
 on:
+  push:
+    branches: [labo]
+    paths: ["labo/tournoi/declencheur-donnees.txt"]
   workflow_dispatch:
 
 permissions:
