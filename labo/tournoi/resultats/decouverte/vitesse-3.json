@@ -4,15 +4,15 @@
  "stats": {
   "annees": {
    "2023-2024": {
-    "transactions": 31,
+    "transactions": 33,
     "en_attente": 0,
-    "achats": 31,
+    "achats": 33,
     "mesurable": true,
-    "ecart_moyen": -0.0047,
-    "ecart_median": -0.0107,
-    "bat_le_marche": 0.4516,
-    "t": -0.33,
-    "portefeuille": -0.1918,
+    "ecart_moyen": -0.0012,
+    "ecart_median": -0.0086,
+    "bat_le_marche": 0.4545,
+    "t": -0.09,
+    "portefeuille": -0.1645,
     "spy_garde": 0.2263
    },
    "2024-2025": {
@@ -24,7 +24,7 @@
     "ecart_median": 0.0086,
     "bat_le_marche": 0.5517,
     "t": 1.64,
-    "portefeuille": 0.1275,
+    "portefeuille": 0.1328,
     "spy_garde": 0.133
    },
    "2025-2026": {
@@ -36,32 +36,32 @@
     "ecart_median": -0.0236,
     "bat_le_marche": 0.4483,
     "t": -0.39,
-    "portefeuille": -0.3092,
+    "portefeuille": -0.306,
     "spy_garde": 0.2091
    }
   },
   "total": {
-   "portefeuille": -0.3747,
+   "portefeuille": -0.3475,
    "spy_garde": 0.7222,
-   "pire_baisse": -0.5368,
+   "pire_baisse": -0.5348,
    "mois": 39,
-   "ecart_mensuel_moyen": -0.02251,
-   "t_mensuel": -1.56
+   "ecart_mensuel_moyen": -0.02155,
+   "t_mensuel": -1.49
   }
  },
  "mois": 36,
- "ecart_mensuel_moyen": -0.02384,
- "t_periode": -1.52,
- "achats": 89,
+ "ecart_mensuel_moyen": -0.0228,
+ "t_periode": -1.46,
+ "achats": 91,
  "periode_entiere": {
-  "portefeuille": -0.3767,
+  "portefeuille": -0.3497,
   "spy": 0.6827,
   "iwm": 0.6011,
   "annees_gagnees": 0
  },
  "signaux": {
-  "signaux": 691,
-  "achats": 89,
+  "signaux": 693,
+  "achats": 91,
   "sans_prix": 433,
   "meteo_fermee": 0,
   "places_pleines": 169,
@@ -76,22 +76,22 @@
  },
  "par_annee": {
   "2023-2024": {
-   "achats": 31,
-   "portefeuille": -0.1918,
+   "achats": 33,
+   "portefeuille": -0.1645,
    "spy_garde": 0.2263,
-   "ecart_moyen": -0.0047,
-   "t": -0.33
+   "ecart_moyen": -0.0012,
+   "t": -0.09
   },
   "2024-2025": {
    "achats": 29,
-   "portefeuille": 0.1275,
+   "portefeuille": 0.1328,
    "spy_garde": 0.133,
    "ecart_moyen": 0.0253,
    "t": 1.64
   },
   "2025-2026": {
    "achats": 29,
-   "portefeuille": -0.3092,
+   "portefeuille": -0.306,
    "spy_garde": 0.2091,
    "ecart_moyen": -0.0137,
    "t": -0.39
@@ -102,9 +102,9 @@
   "seulement_testeur": [],
   "seulement_verificateur": [],
   "nombres": [
-   89,
-   89,
-   89
+   91,
+   91,
+   91
   ],
   "encore_ouvertes": [
    0,

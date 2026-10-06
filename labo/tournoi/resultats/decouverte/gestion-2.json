@@ -8,10 +8,10 @@
     "en_attente": 0,
     "achats": 10,
     "mesurable": true,
-    "ecart_moyen": -0.3187,
-    "ecart_median": -0.3421,
-    "bat_le_marche": 0.3,
-    "t": -3.02,
+    "ecart_moyen": -0.3347,
+    "ecart_median": -0.2834,
+    "bat_le_marche": 0.2,
+    "t": -3.1,
     "portefeuille": -0.1082,
     "spy_garde": 0.2263
    },
@@ -20,54 +20,54 @@
     "en_attente": 0,
     "achats": 10,
     "mesurable": true,
-    "ecart_moyen": -0.0715,
-    "ecart_median": -0.102,
-    "bat_le_marche": 0.4,
-    "t": -0.84,
-    "portefeuille": 0.0081,
+    "ecart_moyen": -0.0251,
+    "ecart_median": 0.0019,
+    "bat_le_marche": 0.5,
+    "t": -0.16,
+    "portefeuille": 0.0107,
     "spy_garde": 0.133
    },
    "2025-2026": {
-    "transactions": 7,
-    "en_attente": 3,
+    "transactions": 9,
+    "en_attente": 1,
     "achats": 10,
     "mesurable": false,
-    "ecart_moyen": -0.0128,
-    "ecart_median": 0.1165,
-    "bat_le_marche": 0.5714,
-    "t": -0.07,
-    "portefeuille": 0.2593,
+    "ecart_moyen": -0.0601,
+    "ecart_median": 0.0051,
+    "bat_le_marche": 0.5556,
+    "t": -0.22,
+    "portefeuille": 0.0407,
     "spy_garde": 0.2091
    }
   },
   "total": {
-   "portefeuille": 0.2265,
+   "portefeuille": -0.0779,
    "spy_garde": 0.7222,
-   "pire_baisse": -0.2996,
+   "pire_baisse": -0.3784,
    "mois": 39,
-   "ecart_mensuel_moyen": -0.00787,
-   "t_mensuel": -1.12
+   "ecart_mensuel_moyen": -0.01451,
+   "t_mensuel": -1.57
   }
  },
  "mois": 36,
- "ecart_mensuel_moyen": -0.01047,
- "t_periode": -1.41,
+ "ecart_mensuel_moyen": -0.01546,
+ "t_periode": -1.55,
  "achats": 30,
  "periode_entiere": {
-  "portefeuille": 0.1204,
+  "portefeuille": -0.0908,
   "spy": 0.6827,
   "iwm": 0.6011,
-  "annees_gagnees": 1
+  "annees_gagnees": 0
  },
  "signaux": {
-  "signaux": 7195,
+  "signaux": 7211,
   "achats": 30,
-  "sans_prix": 1358,
+  "sans_prix": 1364,
   "meteo_fermee": 0,
-  "places_pleines": 5796,
-  "deja_en_portefeuille": 8,
+  "places_pleines": 5811,
+  "deja_en_portefeuille": 6,
   "pause_symbole": 0,
-  "montant_trop_petit": 3
+  "montant_trop_petit": 0
  },
  "criteres": {
   "1_bat_spy_chaque_annee": false,
@@ -79,22 +79,22 @@
    "achats": 10,
    "portefeuille": -0.1082,
    "spy_garde": 0.2263,
-   "ecart_moyen": -0.3187,
-   "t": -3.02
+   "ecart_moyen": -0.3347,
+   "t": -3.1
   },
   "2024-2025": {
    "achats": 10,
-   "portefeuille": 0.0081,
+   "portefeuille": 0.0107,
    "spy_garde": 0.133,
-   "ecart_moyen": -0.0715,
-   "t": -0.84
+   "ecart_moyen": -0.0251,
+   "t": -0.16
   },
   "2025-2026": {
    "achats": 10,
-   "portefeuille": 0.2593,
+   "portefeuille": 0.0407,
    "spy_garde": 0.2091,
-   "ecart_moyen": -0.0128,
-   "t": -0.07
+   "ecart_moyen": -0.0601,
+   "t": -0.22
   }
  },
  "deux_programmations": "identiques",
@@ -107,8 +107,8 @@
    30
   ],
   "encore_ouvertes": [
-   3,
-   3
+   1,
+   1
   ]
  },
  "temoin": false,

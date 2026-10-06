@@ -8,11 +8,11 @@
     "en_attente": 0,
     "achats": 10,
     "mesurable": true,
-    "ecart_moyen": -0.2013,
-    "ecart_median": -0.1007,
-    "bat_le_marche": 0.2,
-    "t": -2.42,
-    "portefeuille": -0.2861,
+    "ecart_moyen": -0.1377,
+    "ecart_median": -0.106,
+    "bat_le_marche": 0.3,
+    "t": -2.04,
+    "portefeuille": -0.0819,
     "spy_garde": 0.2263
    },
    "2024-2025": {
@@ -20,11 +20,11 @@
     "en_attente": 0,
     "achats": 10,
     "mesurable": true,
-    "ecart_moyen": -0.0669,
-    "ecart_median": 0.0155,
-    "bat_le_marche": 0.5,
-    "t": -0.89,
-    "portefeuille": -0.0057,
+    "ecart_moyen": -0.0927,
+    "ecart_median": -0.0372,
+    "bat_le_marche": 0.2,
+    "t": -1.55,
+    "portefeuille": -0.0976,
     "spy_garde": 0.133
    },
    "2025-2026": {
@@ -32,39 +32,39 @@
     "en_attente": 2,
     "achats": 10,
     "mesurable": false,
-    "ecart_moyen": 0.0452,
-    "ecart_median": 0.1009,
-    "bat_le_marche": 0.625,
-    "t": 0.47,
-    "portefeuille": 0.2319,
+    "ecart_moyen": -0.0584,
+    "ecart_median": -0.0445,
+    "bat_le_marche": 0.375,
+    "t": -0.82,
+    "portefeuille": 0.0255,
     "spy_garde": 0.2091
    }
   },
   "total": {
-   "portefeuille": -0.0949,
+   "portefeuille": -0.1965,
    "spy_garde": 0.7222,
-   "pire_baisse": -0.3827,
+   "pire_baisse": -0.2848,
    "mois": 39,
-   "ecart_mensuel_moyen": -0.0152,
-   "t_mensuel": -1.58
+   "ecart_mensuel_moyen": -0.01851,
+   "t_mensuel": -2.31
   }
  },
  "mois": 36,
- "ecart_mensuel_moyen": -0.01613,
- "t_periode": -1.55,
+ "ecart_mensuel_moyen": -0.01764,
+ "t_periode": -2.04,
  "achats": 30,
  "periode_entiere": {
-  "portefeuille": -0.1048,
+  "portefeuille": -0.1432,
   "spy": 0.6827,
   "iwm": 0.6011,
-  "annees_gagnees": 1
+  "annees_gagnees": 0
  },
  "signaux": {
   "signaux": 1349,
   "achats": 30,
-  "sans_prix": 332,
+  "sans_prix": 331,
   "meteo_fermee": 0,
-  "places_pleines": 986,
+  "places_pleines": 987,
   "deja_en_portefeuille": 1,
   "pause_symbole": 0,
   "montant_trop_petit": 0
@@ -77,24 +77,24 @@
  "par_annee": {
   "2023-2024": {
    "achats": 10,
-   "portefeuille": -0.2861,
+   "portefeuille": -0.0819,
    "spy_garde": 0.2263,
-   "ecart_moyen": -0.2013,
-   "t": -2.42
+   "ecart_moyen": -0.1377,
+   "t": -2.04
   },
   "2024-2025": {
    "achats": 10,
-   "portefeuille": -0.0057,
+   "portefeuille": -0.0976,
    "spy_garde": 0.133,
-   "ecart_moyen": -0.0669,
-   "t": -0.89
+   "ecart_moyen": -0.0927,
+   "t": -1.55
   },
   "2025-2026": {
    "achats": 10,
-   "portefeuille": 0.2319,
+   "portefeuille": 0.0255,
    "spy_garde": 0.2091,
-   "ecart_moyen": 0.0452,
-   "t": 0.47
+   "ecart_moyen": -0.0584,
+   "t": -0.82
   }
  },
  "deux_programmations": "identiques",
