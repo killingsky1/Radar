@@ -31,19 +31,53 @@
   "avec_cloture_avant": 0.8365359024857615,
   "avec_valeur_m": 0.6676425187629744,
   "routiniers": 0.12508649598126365,
-  "avec_bilan_initie": 0.6839569915367009
+  "avec_bilan_initie": 0.6838771490924576
  },
  "alignement_des_prix": {
-  "achats_compares": 22713,
+  "achats_compares": 22696,
   "ecart_median_veille_jour_lendemain": {
-   "-1": 0.0221,
-   "0": 0.01404,
-   "1": 0.03024
+   "-1": 0.02212,
+   "0": 0.01406,
+   "1": 0.03027
   },
-  "bon_alignement": true
+  "bon_alignement": true,
+  "jours_speciaux": {
+   "feries_retires_du_calendrier": [
+    "2018-12-05",
+    "2025-01-09"
+   ],
+   "jours_de_bourse_sans_reglement": [
+    "2015-10-12",
+    "2015-11-11",
+    "2016-10-10",
+    "2016-11-11",
+    "2017-10-09",
+    "2018-10-08",
+    "2018-11-12",
+    "2019-10-14",
+    "2019-11-11",
+    "2020-10-12",
+    "2020-11-11",
+    "2021-10-11",
+    "2021-11-11",
+    "2022-10-10",
+    "2022-11-11",
+    "2023-08-31",
+    "2023-10-09",
+    "2024-10-14",
+    "2024-11-11",
+    "2025-10-13",
+    "2025-11-11"
+   ],
+   "achats_jour_A": 351,
+   "ecart_median_jour_A": 0.02137,
+   "achats_jour_B": 355,
+   "ecart_median_jour_B": 0.01262,
+   "le_prix_range_a_A_est_de": "B (décalé d'un jour : à corriger)"
+  }
  },
  "compte": {
-  "lignes de prix": 5870575,
+  "lignes de prix": 5867300,
   "compagnies sans faits XBRL": 367
  }
 }
