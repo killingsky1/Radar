@@ -6,6 +6,85 @@
   "category": "canada",
   "checks": {
    "champs_requis": true,
+   "date_d_enregistrement_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "loi_liee_a_l_argent": true,
+   "meme_numero_que_l_index": true,
+   "numero_dors_ou_tr": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_officiel_lu": true
+  },
+  "collected_at": "2026-10-07T19:33:46+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "cp": "C.P. 2026-851 Le 22 septembre 2026",
+   "details": [
+    [
+     "Numéro",
+     "DORS/2026-195"
+    ],
+    [
+     "Loi",
+     "Mesures économiques spéciales (Loi sur les)"
+    ],
+    [
+     "Enregistré le",
+     "2026-09-22"
+    ],
+    [
+     "Décret",
+     "C.P. 2026-851 Le 22 septembre 2026"
+    ],
+    [
+     "Publié dans",
+     "La Gazette du Canada, Partie II, volume 160, numéro 20"
+    ]
+   ],
+   "enjeux": "La République islamique d’Iran (Iran) continue de se livrer à des violations flagrantes et systématiques des droits de la personne, notamment par la répression numérique, l’intimidation envers les dissidents, la violence et la détention arbitraire. La cyberinfrastructure mise au point et exploitée par des entités dirigées par l’État iranien facilite le contrôle de l’information et a entraîné la censure et la surveillance numérique des civils iraniens, ce qui restreint considérablement leur liberté d’expression et accentue la répression généralisée.",
+   "enregistre_le": "2026-09-22",
+   "enregistrement": "Enregistrement DORS/2026-195 Le 22 septembre 2026",
+   "gazette": "La Gazette du Canada, Partie II, volume 160, numéro 20",
+   "index": "https://gazette.gc.ca/rp-pr/p2/2026/2026-10-07/html/index-fra.html",
+   "jour": "2026-10-07",
+   "loi": "Mesures économiques spéciales (Loi sur les)",
+   "loi_page": "LOI SUR LES MESURES ÉCONOMIQUES SPÉCIALES",
+   "nouveau": false,
+   "numero": "DORS/2026-195",
+   "numero_index": "DORS/2026-195",
+   "resume": "La République islamique d’Iran (Iran) continue de se livrer à des violations flagrantes et systématiques des droits de la personne, notamment par la répression numérique, l’intimidation envers les dissidents, la violence et la détention arbitraire. La cyberinfrastructure mise au point et exploitée par des entités dirigées par l’État iranien facilite le contrôle de l’information et a entraîné la censure et la surveillance numérique des civils iraniens, ce qui restreint considérablement leur liberté d’expression et accentue la répression généralisée.",
+   "speciale": false,
+   "titre": "Règlement modifiant le Règlement sur les mesures économiques spéciales visant l’Iran",
+   "titre_index": "Mesures économiques spéciales visant l’Iran — Règlement modifiant le Règlement sur les"
+  },
+  "direction": 0,
+  "entities": [
+   "Mesures économiques spéciales (Loi sur les)"
+  ],
+  "id": "gazette_ca:DORS/2026-195",
+  "kind": "reglement",
+  "notes": [],
+  "occurred_on": "2026-09-22",
+  "official_id": "DORS/2026-195",
+  "official_url": "https://gazette.gc.ca/rp-pr/p2/2026/2026-10-07/html/sor-dors195-fra.html",
+  "parser_version": "gazette-1",
+  "published_on": "2026-10-07",
+  "sha256": "bc5bf05f0ad4298dd4446d0cbd21a64e87e3253dcf64c029128477b3a85b5cb2",
+  "source": "gazette_ca",
+  "tickers": [],
+  "title": "Gazette du Canada : Règlement modifiant le Règlement sur les mesures économiques spéciales visant l’Iran (DORS/2026-195)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
    "dates_coherentes": true,
    "domaine_officiel": true,
    "empreinte": true,
