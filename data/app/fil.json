@@ -1,5 +1,157 @@
 [
  {
+  "amount_max": 58000000000.0,
+  "amount_min": 58000000000.0,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "obligation_du_tresor": true,
+   "parts_qui_s_additionnent": true,
+   "resultat_officiel_du_jour": true,
+   "resultats_publies": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-07T01:35:26+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acceptees": {
+    "direct_bidder": 18047610000.0,
+    "indirect_bidder": 32826490000.0,
+    "primary_dealer": 6121437500.0
+   },
+   "adjudication": "2026-10-06",
+   "cusip": "91282CRQ6",
+   "demande_offre": 2.62,
+   "demande_offre_moyenne": 2.6483333333333334,
+   "details": [
+    [
+     "Montant offert",
+     "58 G$"
+    ],
+    [
+     "Taux retenu (le plus élevé accepté)",
+     "4,932 %"
+    ],
+    [
+     "Demande / offre",
+     "2,62 (moyenne des 6 précédentes : 2,65)"
+    ],
+    [
+     "Acheteurs indirects",
+     "57,6 % (moyenne des 6 précédentes : 65,9 %)"
+    ],
+    [
+     "Acheteurs directs",
+     "31,7 %"
+    ],
+    [
+     "Courtiers primaires",
+     "10,7 %"
+    ],
+    [
+     "Titre",
+     "Note 3-Year, CUSIP 91282CRQ6"
+    ],
+    [
+     "Date d'émission",
+     "2026-10-15"
+    ],
+    [
+     "Résultat officiel",
+     "R_20261006_2.pdf"
+    ]
+   ],
+   "document": "R_20261006_2.pdf",
+   "emission": "2026-10-15",
+   "heure_de_cloture": "01:00 PM",
+   "montant_offert": 58000000000.0,
+   "offres_competitives_acceptees": 56995537500.0,
+   "part_indirecte_moyenne": 65.89360841768992,
+   "parts": {
+    "direct_bidder": 31.66495271669295,
+    "indirect_bidder": 57.59484240323201,
+    "primary_dealer": 10.74020488007504
+   },
+   "precedentes": [
+    {
+     "adjudication": "2026-09-08",
+     "cusip": "91282CRL7",
+     "demande_offre": 2.72,
+     "document": "R_20260908_3.pdf",
+     "part_indirecte": 62.147726035114246
+    },
+    {
+     "adjudication": "2026-08-11",
+     "cusip": "91282CRG8",
+     "demande_offre": 2.71,
+     "document": "R_20260811_2.pdf",
+     "part_indirecte": 64.23774366872655
+    },
+    {
+     "adjudication": "2026-07-07",
+     "cusip": "91282CQZ7",
+     "demande_offre": 2.6,
+     "document": "R_20260707_3.pdf",
+     "part_indirecte": 67.50341399734499
+    },
+    {
+     "adjudication": "2026-06-09",
+     "cusip": "91282CQV6",
+     "demande_offre": 2.64,
+     "document": "R_20260609_3.pdf",
+     "part_indirecte": 63.709062734949015
+    },
+    {
+     "adjudication": "2026-05-11",
+     "cusip": "91282CQR5",
+     "demande_offre": 2.54,
+     "document": "R_20260511_3.pdf",
+     "part_indirecte": 62.95542517284185
+    },
+    {
+     "adjudication": "2026-04-07",
+     "cusip": "91282CQJ3",
+     "demande_offre": 2.68,
+     "document": "R_20260407_2.pdf",
+     "part_indirecte": 74.80827889716292
+    }
+   ],
+   "reference_ans": 3,
+   "reouverture": false,
+   "sorte": "nominale",
+   "taux": 4.932,
+   "terme": "3-Year",
+   "type": "Note"
+  },
+  "direction": 0,
+  "entities": [
+   "Trésor américain"
+  ],
+  "id": "tresor:91282CRQ6:2026-10-06",
+  "kind": "adjudication",
+  "notes": [
+   "Parts des acheteurs : en % des offres compétitives acceptées (catégories officielles du Trésor).",
+   "Bons du Trésor (moins d'un an) non montrés."
+  ],
+  "occurred_on": "2026-10-06",
+  "official_id": "91282CRQ6:2026-10-06",
+  "official_url": "https://fiscaldata.treasury.gov/static-data/published-reports/auctions-query/results/R_20261006_2.pdf",
+  "parser_version": "tresor-1",
+  "published_on": "2026-10-06",
+  "sha256": "4aa3f18337ef04caa7652436162488c894ac3ca3a5752c262bef8ac253048658",
+  "source": "tresor",
+  "tickers": [],
+  "title": "Trésor américain : adjudication de 58 G$ sur 3 ans à 4,932 % (demande : 2,62 fois l'offre)"
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
