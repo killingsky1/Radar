@@ -7,6 +7,786 @@
   "checks": {
    "champs_requis": true,
    "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-07T17:47:42+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/10/le-canada-emettra-sa-septieme-serie-dobligations-vertes.html",
+   "ministere": "Ministère des Finances Canada",
+   "mis_a_jour": "2026-10-07T10:23:38-04:00",
+   "resume": "Le gouvernement du Canada procédera cette semaine à sa septième émission d’obligations vertes en dollars canadiens, sous réserve des conditions du marché. Pour cette émission, le gouvernement prévoit une nouvelle obligation verte à 10 ans. Cette décision fait suite à l’émission, en février 2026, d’une obligation à 10 ans d’une valeur de 2 milliards de dollars.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Ministère des Finances Canada"
+  ],
+  "id": "nouvelles_eco_ca:ministere-finances/nouvelles/2026/10/le-canada-emettra-sa-septieme-serie-dobligations-vertes.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-07",
+  "official_id": "ministere-finances/nouvelles/2026/10/le-canada-emettra-sa-septieme-serie-dobligations-vertes.html",
+  "official_url": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/10/le-canada-emettra-sa-septieme-serie-dobligations-vertes.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-07",
+  "sha256": "ea9fe5e27b4cfaccd47e3f83f5c28deae8a8c41bba6bf189bc07427b912940ef",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le Canada émettra sa septième série d’obligations vertes"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-07T17:47:38+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Foreign Assets Control Office"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-20683",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-10-08",
+   "sorte": "sanctions",
+   "sous_type": null,
+   "titre_officiel": "Sanctions Action",
+   "type": "Notice"
+  },
+  "direction": 0,
+  "entities": [
+   "Foreign Assets Control Office"
+  ],
+  "id": "registre_federal:2026-20683",
+  "kind": "sanctions",
+  "notes": [],
+  "occurred_on": "2026-10-07",
+  "official_id": "2026-20683",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-20683/sanctions-action",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-07",
+  "sha256": "7eb86aa629e11372a46f7772f8ff7c21ae3370744d36b9aa99f7c3b12ee05f0b",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Sanctions (Trésor, OFAC) : Sanctions Action"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-07T17:47:37+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Trade Representative, Office of United States"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-20615",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-10-08",
+   "sorte": "commerce_exterieur",
+   "sous_type": null,
+   "titre_officiel": "Effect of the European Union's Carbon Border Adjustment Mechanism and the Proposals to Expand Coverage on U.S. Trade",
+   "type": "Notice"
+  },
+  "direction": 0,
+  "entities": [
+   "Trade Representative, Office of United States"
+  ],
+  "id": "registre_federal:2026-20615",
+  "kind": "commerce_exterieur",
+  "notes": [],
+  "occurred_on": "2026-10-07",
+  "official_id": "2026-20615",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-20615/effect-of-the-european-unions-carbon-border-adjustment-mechanism-and-the-proposals-to-expand",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-07",
+  "sha256": "9357b7ea02379523c67c256cc613a057a4d10c0cd2d66570f0b6fe4dfa51f9c5",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Commerce extérieur (USTR) : Effect of the European Union's Carbon Border Adjustment Mechanism and the Proposals to Expand Coverage on U.S. Trade"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-07T17:47:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Anderson Automotive Enterprises, LLC",
+   "entites_visees": [
+    "GPI FL-LX, LLC",
+    "GPI FL-HA, LLC"
+   ],
+   "numero": "20262359",
+   "partie_visee": "Group 1 Automotive, Inc.",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Anderson Automotive Enterprises, LLC",
+   "Group 1 Automotive, Inc."
+  ],
+  "id": "ftc_fusions:20262359",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "20262359",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262359",
+  "parser_version": "ftc-1",
+  "published_on": "2026-10-07",
+  "sha256": "5b328bf2b85fe00fdc5a8dc71b4ec70214325fdee188dd95c91831f75a59e818",
+  "source": "ftc_fusions",
+  "tickers": [
+   "GPI"
+  ],
+  "title": "FTC : feu vert antitrust anticipé, Anderson Automotive Enterprises, LLC (acquéreur) et Group 1 Automotive, Inc. (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-07T17:47:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Diversified Energy Company",
+   "entites_visees": [
+    "Birch Permian Holdings, Inc.",
+    "Milkwater, LLC",
+    "Birch II EOC, LLC",
+    "Birch Permian, LLC"
+   ],
+   "numero": "20262351",
+   "partie_visee": "Elliott International Limited",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Diversified Energy Company",
+   "Elliott International Limited"
+  ],
+  "id": "ftc_fusions:20262351",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "20262351",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262351",
+  "parser_version": "ftc-1",
+  "published_on": "2026-10-07",
+  "sha256": "8f48b7e0c3c77e0f69b43dcbbc4baf69e59ee637a5cf63f42be2563983174e48",
+  "source": "ftc_fusions",
+  "tickers": [
+   "DEC"
+  ],
+  "title": "FTC : feu vert antitrust anticipé, Diversified Energy Company (acquéreur) et Elliott International Limited (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-07T17:47:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "ABB Ltd",
+   "entites_visees": [
+    "Rotork plc"
+   ],
+   "numero": "20262337",
+   "partie_visee": "Rotork plc",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "ABB Ltd",
+   "Rotork plc"
+  ],
+  "id": "ftc_fusions:20262337",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "20262337",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262337",
+  "parser_version": "ftc-1",
+  "published_on": "2026-10-07",
+  "sha256": "ca547df931e91368fdc44d72bed181fcbd33f1d9bdb8800f0ad7ba0c8bf7cb7e",
+  "source": "ftc_fusions",
+  "tickers": [],
+  "title": "FTC : feu vert antitrust anticipé, ABB Ltd (acquéreur) et Rotork plc (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-07T17:47:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Bad Boy Mowers JV Investments, LP",
+   "entites_visees": [
+    "MTD Products Australia Pty Ltd.",
+    "Excel Industries, LLC"
+   ],
+   "numero": "20262336",
+   "partie_visee": "Stanley Black & Decker, Inc.",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Bad Boy Mowers JV Investments, LP",
+   "Stanley Black & Decker, Inc."
+  ],
+  "id": "ftc_fusions:20262336",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "20262336",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262336",
+  "parser_version": "ftc-1",
+  "published_on": "2026-10-07",
+  "sha256": "b28180de804349363a7ecb00154c31f22ae4e60a7e78f6405f3044e0eee35ac2",
+  "source": "ftc_fusions",
+  "tickers": [
+   "SWK"
+  ],
+  "title": "FTC : feu vert antitrust anticipé, Bad Boy Mowers JV Investments, LP (acquéreur) et Stanley Black & Decker, Inc. (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-07T17:47:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "GHK Fund II LP",
+   "entites_visees": [
+    "USA Hometown Experts, Inc."
+   ],
+   "numero": "20262335",
+   "partie_visee": "MSouth Equity Partners IV, L.P.",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "GHK Fund II LP",
+   "MSouth Equity Partners IV, L.P."
+  ],
+  "id": "ftc_fusions:20262335",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "20262335",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262335",
+  "parser_version": "ftc-1",
+  "published_on": "2026-10-07",
+  "sha256": "aaba07b86864aded23baa802aaf0f0ea91e7e860890a5162aadd42f7f9030ad8",
+  "source": "ftc_fusions",
+  "tickers": [],
+  "title": "FTC : feu vert antitrust anticipé, GHK Fund II LP (acquéreur) et MSouth Equity Partners IV, L.P. (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-07T17:47:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "KKR Core II Holding Company AIV LLC",
+   "entites_visees": [
+    "A1 Garage Acquisition, LLC"
+   ],
+   "numero": "20262333",
+   "partie_visee": "A1 Garage Equity, LLC",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "KKR Core II Holding Company AIV LLC",
+   "A1 Garage Equity, LLC"
+  ],
+  "id": "ftc_fusions:20262333",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "20262333",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262333",
+  "parser_version": "ftc-1",
+  "published_on": "2026-10-07",
+  "sha256": "ce54115749b08445b9eb748e961a40fa20f4336f50000fbe6f9f6e6f6ba7804d",
+  "source": "ftc_fusions",
+  "tickers": [],
+  "title": "FTC : feu vert antitrust anticipé, KKR Core II Holding Company AIV LLC (acquéreur) et A1 Garage Equity, LLC (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-07T17:47:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Crane Company",
+   "entites_visees": [
+    "FR Flow Control Pumps US Bidco, Inc."
+   ],
+   "numero": "20262332",
+   "partie_visee": "FR Industrials Opportunities Fund, L.P.",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Crane Company",
+   "FR Industrials Opportunities Fund, L.P."
+  ],
+  "id": "ftc_fusions:20262332",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "20262332",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262332",
+  "parser_version": "ftc-1",
+  "published_on": "2026-10-07",
+  "sha256": "304138772f7da3f5ca1730e5a820b4d3315f96715d505c177d653285e9848a23",
+  "source": "ftc_fusions",
+  "tickers": [
+   "CR"
+  ],
+  "title": "FTC : feu vert antitrust anticipé, Crane Company (acquéreur) et FR Industrials Opportunities Fund, L.P. (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-07T17:47:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Enbridge Inc.",
+   "entites_visees": [
+    "FS Crude Holdings, LLC"
+   ],
+   "numero": "20262324",
+   "partie_visee": "AF V Energy II AIV, L.P.",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Enbridge Inc.",
+   "AF V Energy II AIV, L.P."
+  ],
+  "id": "ftc_fusions:20262324",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "20262324",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262324",
+  "parser_version": "ftc-1",
+  "published_on": "2026-10-07",
+  "sha256": "e6222a0ca8cc28eea38c5e31ed55327aed0e9002d80ce2072c9744816f24d7c9",
+  "source": "ftc_fusions",
+  "tickers": [
+   "ENB"
+  ],
+  "title": "FTC : feu vert antitrust anticipé, Enbridge Inc. (acquéreur) et AF V Energy II AIV, L.P. (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-07T17:47:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Stichting Administratiekantoor Lauwerecht",
+   "entites_visees": [
+    "CSA Group Testing & Certification Inc."
+   ],
+   "numero": "20262305",
+   "partie_visee": "Canadian Standards Association",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Stichting Administratiekantoor Lauwerecht",
+   "Canadian Standards Association"
+  ],
+  "id": "ftc_fusions:20262305",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "20262305",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262305",
+  "parser_version": "ftc-1",
+  "published_on": "2026-10-07",
+  "sha256": "c026243aedf368abf925d122dd30f21e265ea0c1138b053f278a59197397f182",
+  "source": "ftc_fusions",
+  "tickers": [],
+  "title": "FTC : feu vert antitrust anticipé, Stichting Administratiekantoor Lauwerecht (acquéreur) et Canadian Standards Association (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-07T17:47:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Unilever PLC",
+   "entites_visees": [
+    "McCormick & Company, Inc."
+   ],
+   "numero": "20262304",
+   "partie_visee": "McCormick & Company, Inc.",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Unilever PLC",
+   "McCormick & Company, Inc."
+  ],
+  "id": "ftc_fusions:20262304",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "20262304",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262304",
+  "parser_version": "ftc-1",
+  "published_on": "2026-10-07",
+  "sha256": "3193c19a21c0b8d264a99332230bbd07d0e644030cf03c6f08f8dd7b87cdf724",
+  "source": "ftc_fusions",
+  "tickers": [
+   "UL",
+   "MKC"
+  ],
+  "title": "FTC : feu vert antitrust anticipé, Unilever PLC (acquéreur) et McCormick & Company, Inc. (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-07T17:47:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "RA Capital Healthcare Fund, L.P.",
+   "entites_visees": [
+    "Tyra Biosciences, Inc."
+   ],
+   "numero": "20262300",
+   "partie_visee": "Tyra Biosciences, Inc.",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "RA Capital Healthcare Fund, L.P.",
+   "Tyra Biosciences, Inc."
+  ],
+  "id": "ftc_fusions:20262300",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "20262300",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262300",
+  "parser_version": "ftc-1",
+  "published_on": "2026-10-07",
+  "sha256": "01e15650ba4d860ed92e3086425954a75ebda78f6639e4f09dc5a3cf8083c767",
+  "source": "ftc_fusions",
+  "tickers": [
+   "TYRA"
+  ],
+  "title": "FTC : feu vert antitrust anticipé, RA Capital Healthcare Fund, L.P. (acquéreur) et Tyra Biosciences, Inc. (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-07T17:47:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "AE EventsCo Holdings LLC",
+   "entites_visees": [
+    "IE Investments S.A R.L."
+   ],
+   "numero": "20262294",
+   "partie_visee": "ICG Strategic Equity Fund IV (Feeder) SCsP",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "AE EventsCo Holdings LLC",
+   "ICG Strategic Equity Fund IV (Feeder) SCsP"
+  ],
+  "id": "ftc_fusions:20262294",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "20262294",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262294",
+  "parser_version": "ftc-1",
+  "published_on": "2026-10-07",
+  "sha256": "33c3925e96c94110fd5c4b68dc9da50a1f358b1de7dd5718e6d48b0dfbc80f8a",
+  "source": "ftc_fusions",
+  "tickers": [],
+  "title": "FTC : feu vert antitrust anticipé, AE EventsCo Holdings LLC (acquéreur) et ICG Strategic Equity Fund IV (Feeder) SCsP (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "feu_vert_accorde": true,
+   "numero_de_transaction_officiel": true,
+   "parties_lues": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-07T17:47:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acquereur": "Susan Y. Kim",
+   "entites_visees": [
+    "Amkor Technology, Inc."
+   ],
+   "numero": "20262276",
+   "partie_visee": "Amkor Technology, Inc.",
+   "statut": "Granted"
+  },
+  "direction": 0,
+  "entities": [
+   "Susan Y. Kim",
+   "Amkor Technology, Inc."
+  ],
+  "id": "ftc_fusions:20262276",
+  "kind": "fusion_feu_vert",
+  "notes": [],
+  "occurred_on": "2026-10-05",
+  "official_id": "20262276",
+  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262276",
+  "parser_version": "ftc-1",
+  "published_on": "2026-10-07",
+  "sha256": "c95e7c329bdc8ce6a0cf257b45992660b8125a498633a6802b7a243edcb31fc7",
+  "source": "ftc_fusions",
+  "tickers": [
+   "AMKR"
+  ],
+  "title": "FTC : feu vert antitrust anticipé, Susan Y. Kim (acquéreur) et Amkor Technology, Inc. (partie visée)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
    "dates_dans_l_ordre": true,
    "domaine_officiel": true,
    "empreinte": true,

@@ -140,6 +140,41 @@
    "fin": "2025-10-04",
    "forme": "10-K",
    "lien": "https://www.sec.gov/Archives/edgar/data/1821806/000119312525323811/0001193125-25-323811-index.htm"
+  },
+  "NXH": {
+   "accn": "0001130713-26-000018",
+   "chiffres": {
+    "cfo": -0.141063,
+    "emission": 137312000,
+    "levier": 0.0,
+    "levier_avant": 0.0,
+    "liquidite": 1.249649,
+    "liquidite_avant": 1.011767,
+    "marge": 0.246523,
+    "marge_avant": 0.208008,
+    "roa": -0.210524,
+    "roa_avant": -0.407027,
+    "rotation": 2.598845,
+    "rotation_avant": 2.193967
+   },
+   "cik": 1130713,
+   "criteres": {
+    "ACCRUAL": 1,
+    "CFO": 0,
+    "EQ_OFFER": 0,
+    "ROA": 0,
+    "ΔLEVER": 0,
+    "ΔLIQUID": 1,
+    "ΔMARGIN": 1,
+    "ΔROA": 1,
+    "ΔTURN": 1
+   },
+   "debut": "2025-01-01",
+   "depose": "2026-02-24",
+   "f_score": 5,
+   "fin": "2025-12-31",
+   "forme": "10-K",
+   "lien": "https://www.sec.gov/Archives/edgar/data/1130713/000113071326000018/0001130713-26-000018-index.htm"
   }
  },
  "source": "https://data.sec.gov/api/xbrl/companyfacts/",
