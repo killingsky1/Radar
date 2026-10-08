@@ -26,6 +26,8 @@ const fs = require("fs");
   await p.goto(base); await p.waitForSelector("nav.onglets"); await p.waitForTimeout(800);
   await p.locator("nav.onglets button", { hasText: "Réglages" }).click(); await p.waitForTimeout(600);
   const reglages = ((await p.locator(".ecran").last().innerText()).match(/Radar \d+\.\d+\.\d+[^\n]*/) || [""])[0];
+  const ligneVersion = p.getByText(/Radar \d+\.\d+\.\d+ ·/).first();  // la ligne est en bas de Réglages : la montrer
+  if (await ligneVersion.count()) await ligneVersion.evaluate((el) => el.scrollIntoView({ block: "center" }));
   await photo("x1-reglages-version");
   ok = ok && reglages.startsWith("Radar 0.27.1");
   dire(`Réglages : « ${reglages} » · conforme : ${reglages.startsWith("Radar 0.27.1") ? "OUI" : "NON"}`);
