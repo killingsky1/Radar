@@ -1,5 +1,189 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-08T17:51:37+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-annonce-un-investissement-visant-a-renforcer-la-capacite-nationale-de-production-radiopharmaceutique.html",
+   "ministere": "Innovation, Sciences et Développement économique Canada",
+   "mis_a_jour": "2026-10-08T13:15:03-04:00",
+   "resume": "L’investissement soutiendra la modernisation et l’expansion des installations de Jubilant Radiopharma à Kirkland, consolidera le secteur des sciences de la vie et appuiera des emplois de haut calibre au Québec",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Innovation, Sciences et Développement économique Canada"
+  ],
+  "id": "nouvelles_eco_ca:innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-annonce-un-investissement-visant-a-renforcer-la-capacite-nationale-de-production-radiopharmaceutique.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-08",
+  "official_id": "innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-annonce-un-investissement-visant-a-renforcer-la-capacite-nationale-de-production-radiopharmaceutique.html",
+  "official_url": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-annonce-un-investissement-visant-a-renforcer-la-capacite-nationale-de-production-radiopharmaceutique.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-08",
+  "sha256": "b422bcf62e7831ba340b8a7791aa35169ce71965b23b0274ba2146dd7565479c",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le gouvernement du Canada annonce un investissement visant à renforcer la capacité nationale de production radiopharmaceutique"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-08T17:51:32+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Executive Office of the President"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-20855",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-10-09",
+   "sorte": "presidentiel",
+   "sous_type": null,
+   "titre_officiel": "Diesel Fuel; Emergency Tax Relief (EO 14435)",
+   "type": "Presidential Document"
+  },
+  "direction": 0,
+  "entities": [
+   "Executive Office of the President"
+  ],
+  "id": "registre_federal:2026-20855",
+  "kind": "presidentiel",
+  "notes": [],
+  "occurred_on": "2026-10-08",
+  "official_id": "2026-20855",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-20855/diesel-fuel-emergency-tax-relief-eo-14435",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-08",
+  "sha256": "b74514f28af5920e40d67a2550986b54db5e6c709b441654f34834cfc8b621cc",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Document présidentiel : Diesel Fuel; Emergency Tax Relief (EO 14435)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-10-08T17:51:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {
+    "entités": 27,
+    "navires": 22,
+    "personnes": 6
+   },
+   "communiques": [
+    "Operation Economic Outcast Neutralizes Iranian Regime's Remaining Shadow Fleet Network"
+   ],
+   "retraits": 2,
+   "titre_officiel": "Iran-related Designations; Issuance of Iran-related General License; Issuance of Amended Russia-related General License"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20261008",
+  "kind": "sanctions",
+  "notes": [
+   "Communiqué du Trésor : Operation Economic Outcast Neutralizes Iranian Regime's Remaining Shadow Fleet Network",
+   "Ajoutés à la liste des sanctions (SDN) : 6 personnes, 27 entités, 22 navires.",
+   "Retirés de la liste : 2 fiches."
+  ],
+  "occurred_on": "2026-10-08",
+  "official_id": "20261008",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20261008",
+  "parser_version": "ofac-1",
+  "published_on": "2026-10-08",
+  "sha256": "be850c1aae9dd7c290c848163b983450f8e7c1985597ddd014e19fafd095f72e",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Iran-related Designations; Issuance of Iran-related General License; Issuance of Amended Russia-related General License"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "communique_officiel": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T17:51:22+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "titre_officiel": "Statement of the Department of Justice Antitrust Division on the Closing of Its Investigation of Arrive AS’s Proposed Acquisition of Passport Labs Inc."
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "doj_antitrust:statement-department-justice-antitrust-division-closing-its-investigation-arrive-ass",
+  "kind": "antitrust",
+  "notes": [],
+  "occurred_on": "2026-10-08",
+  "official_id": "statement-department-justice-antitrust-division-closing-its-investigation-arrive-ass",
+  "official_url": "https://www.justice.gov/opa/pr/statement-department-justice-antitrust-division-closing-its-investigation-arrive-ass",
+  "parser_version": "doj-1",
+  "published_on": "2026-10-08",
+  "sha256": "dacb658f78f1d1af052f2bfd10da4ee5f71db51ef742d6dd5724cd694dc682bd",
+  "source": "doj_antitrust",
+  "tickers": [],
+  "title": "Antitrust (ministère de la Justice) : Statement of the Department of Justice Antitrust Division on the Closing of Its Investigation of Arrive AS’s Proposed Acquisition of Passport Labs Inc."
+ },
+ {
   "amount_max": 112529793.0,
   "amount_min": 112529793.0,
   "badge": "officiel",
@@ -48839,81 +49023,6 @@
   "source": "sante_canada",
   "tickers": [],
   "title": "Santé Canada : nouveau médicament autorisé, ETCAMAH (camizestrant), de ASTRAZENECA CANADA INC"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "date_d_envoi_lue": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_message": true,
-   "numero_csms": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "sujet_surtaxes": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T19:34:48+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "codes_9903": [
-    "9903.04.63"
-   ],
-   "details": [
-    [
-     "Message",
-     "CSMS # 69415934"
-    ],
-    [
-     "Envoyé",
-     "1er août 2026 à 21 h 09 (heure de New York)"
-    ],
-    [
-     "Proclamations citées",
-     "11020"
-    ],
-    [
-     "Numéros du tarif cités (chapitre 99)",
-     "9903.04.63"
-    ],
-    [
-     "Extrait",
-     "This message provides guidance regarding the reduction of tariffs on patented pharmaceuticals and associated pharmaceutical ingredients that are products of the United Kingdom amending Presidential Proclamation 11020, “Adjusting Imports of Pharmaceuticals and Pharmaceutical Ingredients Into the United States.” BACKGROUND On July 31, 2026, the Secretary of Commerce published “Notice of Reduction of Tariffs on Patented […]"
-    ]
-   ],
-   "envoye_le": "2026-08-01T21:09:28-04:00",
-   "extrait": "This message provides guidance regarding the reduction of tariffs on patented pharmaceuticals and associated pharmaceutical ingredients that are products of the United Kingdom amending Presidential Proclamation 11020, “Adjusting Imports of Pharmaceuticals and Pharmaceutical Ingredients Into the United States.” BACKGROUND On July 31, 2026, the Secretary of Commerce published “Notice of Reduction of Tariffs on Patented […]",
-   "guid": "69415934",
-   "numero": "69415934",
-   "proclamations": [
-    "11020"
-   ],
-   "titre_officiel": "GUIDANCE: Reduction of Tariffs on Patented Pharmaceuticals and Pharmaceutical Ingredients for Products of the United Kingdom Implemented by Presidential Proclamation 11020"
-  },
-  "direction": 0,
-  "entities": [
-   "U.S. Customs and Border Protection"
-  ],
-  "id": "tarifs:69415934",
-  "kind": "directive_douane",
-  "notes": [
-   "Directive de la douane : elle applique une décision officielle (proclamation, avis au Registre fédéral) sans la remplacer."
-  ],
-  "occurred_on": "2026-08-01",
-  "official_id": "69415934",
-  "official_url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/42333fe",
-  "parser_version": "douane-1",
-  "published_on": "2026-08-01",
-  "sha256": "a58ad655f10eafde4d7a7ea7f27ec72fc465ae158a4f34fcbe8070341cd8d3a2",
-  "source": "tarifs",
-  "tickers": [],
-  "title": "Douane américaine : GUIDANCE: Reduction of Tariffs on Patented Pharmaceuticals and Pharmaceutical Ingredients for Products of the United Kingdom Implemented by Presidential Proclamation 11020"
  },
  {
   "amount_max": null,
