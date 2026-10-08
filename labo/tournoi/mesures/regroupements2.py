@@ -176,6 +176,8 @@ def main():
         h_tout = fusion(resume[c].get(s, {}) for c in publies)
         r2t = ta.classer(f, t, s, X, {"debut": min(ps.periode(c)[0] for c in publies), "symboles": {s: h_tout}})
         ep = ta.epoque(h, prix[2], fin.replace("-", ""))
+        if r2.get("valeur_max"):
+            n["époque : maximum sûr (regroupement probable)"] += 1
         cas = ep["cas"] + (f" ({ep['pourquoi']})" if ep["cas"] == "inconnue" else "")
         if ep["cas"] in ("ancien", "deux"):
             cas += " : taille connue" if r2.get("taille") else " : taille inconnue"
@@ -220,10 +222,19 @@ def main():
             c[f"{cle_j} : écartée à tort (vraie valeur de 100 M$ ou plus)"] += ecartee and not vrai[0]
             c[f"{cle_j} : bonus petite à tort"] += bonus and not vrai[1]
             c[f"{cle_j} : bonus petite manqué"] += vrai[1] and not bonus
+            if nom == "epoque" and a_risque:
+                for err, oui in (("gardée à tort", vrai[0] and not ecartee), ("écartée à tort", ecartee and not vrai[0]),
+                                 ("bonus à tort", bonus and not vrai[1]), ("taille fausse", taille and taille != vrai[2])):
+                    if oui and len(ex[f"erreur époque : {err}"]) < 15:
+                        ex[f"erreur époque : {err}"].append({
+                            "symbole": s, "depot": e["depot"], "cas": cas, "actions": [val, fin], "prix": prix,
+                            "historique": h, "avant": r0.get("valeur_m"),
+                            "epoque": {k: r2.get(k) for k in ("taille", "valeur_m", "valeur_min_m", "valeur_max", "raison")},
+                            "vraie_valeur_m": round(vraie, 1), "vraie_taille": vrai[2]})
         if a_risque and len(ex[cas]) < 12:
             ex[cas].append({"symbole": s, "depot": e["depot"], "actions": [val, fin], "prix": prix,
                             "historique": h, "avant": {k: r0.get(k) for k in ("taille", "valeur_m")},
-                            "epoque": {k: r2.get(k) for k in ("taille", "valeur_m", "valeur_min_m", "raison", "note")},
+                            "epoque": {k: r2.get(k) for k in ("taille", "valeur_m", "valeur_min_m", "valeur_max", "raison", "note")},
                             "vraie_valeur_m": round(vraie, 1), "vraie_taille": vrai[2]})
         if a_risque and r2.get("valeur_m") and vraie:
             q = r2["valeur_m"] / vraie
