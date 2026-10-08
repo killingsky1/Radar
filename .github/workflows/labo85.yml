@@ -1,0 +1,36 @@
+name: "Labo (0.27.1 : photos du vrai site, version et taille en bourse (codes de titre))"
+
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/photos_0271.cjs", ".github/workflows/labo85.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: principal
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm i --no-save playwright@1.56.1
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
+      - run: rm -rf labo/photos-0271 && mkdir -p labo/photos-0271 && node labo/photos_0271.cjs principal/data/app/aujourdhui.json labo/photos-0271
+      - name: Sauvegarder
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/photos-0271
+          git commit -m "Labo : photos 0.27.1 du $(date -u +'%Y-%m-%d %H:%M') UTC" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
