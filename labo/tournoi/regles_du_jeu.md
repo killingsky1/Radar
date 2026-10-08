@@ -126,3 +126,6 @@ pour Radar (un lot normal : code, tests, labo, photos), jamais une garantie de g
   Limite connue, NON corrigée : la valeur en bourse ne tient pas compte d'un fractionnement d'actions fait après le
   dernier rapport (ex. RLI, 2 pour 1 le 15 janvier 2025) ; la corriger demanderait de deviner les fractionnements avec
   les prix, ce qui pourrait créer d'autres erreurs.
+- 8 octobre 2026 : **2e tour du débat sans agents indépendants** (limite hebdomadaire des agents) : analyses faites par
+  l'orchestrateur avec les mêmes questions ; le juge a appliqué la règle la moins discrétionnaire (toutes les règles sans
+  faille fatale prouvée, au plus 3, vont à l'examen). Détails : resultats/debat/tour2_et_decision.md.
