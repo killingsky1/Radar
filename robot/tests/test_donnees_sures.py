@@ -122,15 +122,54 @@ def test_ancien_prix_trop_vieux_regroupement_un_maximum_sur(mstu):
     assert not sc.trop_petite({"taille": gros})
 
 
-def test_ancien_prix_trop_vieux_sans_saut_de_prix_taille_inconnue():
-    """Changement de CUSIP sans saut de prix (nom, fusion…) ou 1er prix du nouveau CUSIP inconnu : pas de maximum sûr."""
-    for neuf in (["20260825", "20260914", "20260914", 3.1, "20260825", 2.9],  # 2,73 $ → 2,90 $ : pas un regroupement
-                 ["20260825", "20260914", "20260914", 3.1, None, None]):
-        h = {"O1": ["20260402", "20260824", "20260824", 2.73, "20260402", 4.1], "N1": neuf}
-        t = ta.classer(FICHE, {"seuils": SEUILS, "actions": {"1": [10_000_000, "2026-08-15"]},
-                               "prix": {"XYZ": ["20260914", 3.1, "N1"]}}, "XYZ", date(2026, 10, 24),
-                       {"debut": "20250901", "symboles": {"XYZ": h}})
+def classe_le_24_octobre(h, n=10_000_000, prix=("20260914", 3.1, "N1"), actions_le="2026-08-15"):
+    return ta.classer(FICHE, {"seuils": SEUILS, "actions": {"1": [n, actions_le]}, "prix": {"XYZ": list(prix)}}, "XYZ",
+                      date(2026, 10, 24), {"debut": "20250901", "symboles": {"XYZ": h}})
+
+
+def test_sans_saut_de_prix_pas_un_regroupement_le_calcul_habituel():
+    """Nouveau CUSIP sans saut de prix (changement de nom…) : le nombre d'actions ne change pas, le prix le plus récent est
+    le bon (ex. DPW au labo, devenue DPW Holdings le 2 janvier 2018 : la règle sans ce cas la rendait inconnue)."""
+    h = {"O1": ["20260402", "20260824", "20260824", 2.73, "20260402", 4.1],
+         "N1": ["20260825", "20260914", "20260914", 3.1, "20260825", 2.9]}  # 2,73 $ puis 2,90 $ : ×1,06
+    t = classe_le_24_octobre(h)
+    assert (t["taille"], t["valeur_m"], t["prix"]) == ("petite", 31.0, ["20260914", 3.1])
+    assert t["note"] == ("Nouveau code du titre (CUSIP) vu dès le 25 août 2026, sans saut de prix au changement (2,73 $ "
+                         "puis 2,90 $) : pas un regroupement d'actions, leur nombre ne change pas.")
+    assert sc.trop_petite({"taille": t})
+    # même chose quand l'ancien est encore vu après l'arrivée du nouveau (chevauchement)
+    h_chev = {**h, "O1": ["20260402", "20260830", "20260824", 2.73, "20260402", 4.1]}
+    assert classe_le_24_octobre(h_chev)["valeur_m"] == 31.0
+
+
+def test_saut_mesure_trop_loin_pas_de_maximum():
+    """BTU au labo (sortie de faillite) : 354 jours entre le dernier prix de l'ancien CUSIP et le 1er du nouveau, et de
+    nouvelles actions émises : le saut ne mesure plus un regroupement ; 1er prix du nouveau CUSIP inconnu : pareil."""
+    for neuf in (["20260825", "20260914", "20260914", 30.41, "20260825", 28.86],
+                 ["20260825", "20260914", "20260914", 30.41, None, None]):
+        h = {"O1": ["20250402", "20250605", "20250605", 0.74, "20250402", 4.1], "N1": neuf}  # 446 jours d'écart
+        t = classe_le_24_octobre(h, prix=("20260914", 30.41, "N1"))
         assert t["taille"] is None and t["raison"].endswith("pas de prix de l'ancien code depuis 60 jours"), t
+    assert ta.saut_au_changement({"O": [0, 0, "20260601", 2.0, 0, 0], "N": [0, 0, 0, 0, "20260731", 20.0]}, "O", "N") == 10
+    assert ta.saut_au_changement({"O": [0, 0, "20260601", 2.0, 0, 0], "N": [0, 0, 0, 0, "20260801", 20.0]}, "O", "N") is None
+
+
+def test_chevauchement_avec_regroupement_un_maximum_sur():
+    h = {"O1": ["20260402", "20260830", "20260824", 2.73, "20260402", 4.1],  # encore vu le 30 août
+         "N1": ["20260825", "20260914", "20260914", 30.41, "20260825", 28.86]}
+    t = classe_le_24_octobre(h, prix=("20260914", 30.41, "N1"))
+    assert (t["taille"], t["valeur_m"], t["valeur_max"]) == ("petite", 304.1, True)
+    assert classe_le_24_octobre(h, n=100_000_000, prix=("20260914", 30.41, "N1"))["raison"].endswith(
+        "un regroupement ou un fractionnement d'actions")
+
+
+def test_plusieurs_changements_toujours_inconnue():
+    """Deux changements depuis les actions : même si le dernier est sans saut, le 1er a pu être un regroupement."""
+    h = {"O1": ["20260301", "20260601", "20260601", 1.0, "20260301", 1.0],
+         "M1": ["20260815", "20260816", "20260816", 10.0, "20260815", 10.0],
+         "N1": ["20260818", "20260914", "20260914", 10.5, "20260818", 10.2]}
+    t = classe_le_24_octobre(h, prix=("20260914", 10.5, "N1"), actions_le="2026-08-10")
+    assert t["taille"] is None and t["raison"].startswith("plusieurs changements du code du titre")
 
 
 H_DEUX = {"O1": ["20260301", "20260803", "20260803", 2.0], "N1": ["20260818", "20260910", "20260910", 20.0]}
@@ -161,10 +200,10 @@ def test_deux_valeurs_possibles_tailles_differentes():
 @pytest.mark.parametrize("h, cusip, fin, attendu", [
     ({"N1": ["20260818", "20260910", "20260910", 20.0]}, "N1", "20260810", {"cas": "meme"}),  # aucun autre CUSIP
     ({"O1": ["20260301", "20260820", "20260820", 2.0], "N1": ["20260818", "20260910", "20260910", 20.0]}, "N1",
-     "20260810", {"cas": "inconnue", "pourquoi": "chevauchement", "premier": "20260818"}),
+     "20260810", {"cas": "inconnue", "pourquoi": "chevauchement", "ancien": "O1", "premier": "20260818"}),
     ({"O1": ["20260301", "20260601", "20260601", 1.0], "M1": ["20260815", "20260816", "20260816", 2.0],
       "N1": ["20260818", "20260910", "20260910", 20.0]}, "N1", "20260810",
-     {"cas": "inconnue", "pourquoi": "plusieurs", "premier": "20260818"}),
+     {"cas": "inconnue", "pourquoi": "plusieurs", "ancien": "M1", "premier": "20260818"}),
     ({"O1": ["20260301", "20260803", "20260803", 2.0]}, "N1", "20260810", {"cas": "inconnue", "pourquoi": "absent"}),
 ])
 def test_cas_ou_on_ne_sait_pas(h, cusip, fin, attendu):

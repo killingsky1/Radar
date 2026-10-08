@@ -34,12 +34,16 @@ centile et plus ; moyenne entre les deux (les 3, 4 et 3 déciles de Lakonishok e
   lieu d'environ 31 M$). Le robot garde l'historique des CUSIP de chaque symbole (fichiers d'échecs de livraison des 400
   derniers jours au départ, puis chaque nouveau fichier : data/prix/cusips.json) et voit, avec epoque() :
   - le CUSIP du prix était déjà vu au plus tard le jour des actions : même époque, le calcul habituel ;
+  - pas de saut de prix au changement (moins de 1,8 fois, dernier prix de l'ancien et 1er du nouveau à 60 jours ou moins
+    l'un de l'autre) : pas un regroupement (nom, fusion de forme…), le nombre d'actions ne change pas, le calcul habituel ;
   - l'ancien CUSIP encore vu après le jour des actions : le dernier prix de l'ancien CUSIP (s'il a 60 jours ou moins) ;
   - côté inconnu (ancien vu la dernière fois avant le jour des actions, nouveau la 1re fois après) : les deux valeurs,
     une taille seulement si elles donnent la même, et la règle des 100 M$ prend la plus grande ;
-  - ancien prix trop vieux, mais prix au moins 1,8 fois plus haut au changement (regroupement probable) : ancien nombre ×
-    nouveau prix est un MAXIMUM ; sous le 30e centile, la compagnie est petite dans tous les cas (« au plus … ») ;
-  - sinon (ancien et nouveau vus en même temps, plusieurs changements, aucun saut de prix) : taille inconnue.
+  - ancien prix trop vieux (ou ancien et nouveau vus en même temps), mais prix au moins 1,8 fois plus haut au changement
+    (regroupement probable ; les deux prix à 60 jours ou moins l'un de l'autre, sinon le saut mesure aussi la bourse :
+    ex. BTU, sortie de faillite) : ancien nombre × nouveau prix est un MAXIMUM ; sous le 30e centile, la compagnie est
+    petite dans tous les cas (« au plus … ») ;
+  - sinon (plusieurs changements, saut inconnu ou trop loin) : taille inconnue.
   Historique pas encore lu (juste après la mise en ligne : la taille est lue au passage du matin) : le calcul d'avant,
   avec une note ; des tailles inconnues remettraient les écartées (moins de 100 M$) dans la liste « hausse ».
   Mesuré au labo le 8 octobre 2026 (labo/tournoi/mesures/regroupements2.py : le vrai code du robot, avec ce qu'il aurait
@@ -176,11 +180,11 @@ def epoque(h: dict, cusip: str, fin: str) -> dict:
     anciens = {c: v for c, v in h.items() if c != cusip and v[0] < premier}
     if not anciens or premier <= fin:
         return {"cas": "meme"}
+    ancien = max(anciens, key=lambda c: (anciens[c][1], c))  # le plus récent des anciens CUSIP
     if any(v[1] >= premier for v in anciens.values()):
-        return {"cas": "inconnue", "pourquoi": "chevauchement", "premier": premier}
-    ancien = max(anciens, key=lambda c: (anciens[c][1], c))
+        return {"cas": "inconnue", "pourquoi": "chevauchement", "ancien": ancien, "premier": premier}
     if anciens[ancien][0] > fin:
-        return {"cas": "inconnue", "pourquoi": "plusieurs", "premier": premier}
+        return {"cas": "inconnue", "pourquoi": "plusieurs", "ancien": ancien, "premier": premier}
     cas = "ancien" if anciens[ancien][1] >= fin else "deux"
     return {"cas": cas, "ancien": ancien, "dernier_ancien": anciens[ancien][1], "premier": premier}
 
@@ -315,6 +319,21 @@ def _taille(valeur: float, s: dict) -> str:
     return "petite" if valeur < s["p30"] else "grande" if valeur >= s["p70"] else "moyenne"
 
 
+def saut_au_changement(h: dict, ancien: str, nouveau: str) -> float | None:
+    """1er prix du nouveau CUSIP ÷ dernier prix de l'ancien, s'ils existent et sont à 60 jours ou moins l'un de l'autre :
+    au-delà, le saut mesure aussi la bourse (ex. BTU au labo : sortie de faillite, 354 jours entre les deux CUSIP et de
+    nouvelles actions émises)."""
+    v, n = h[ancien], h[nouveau]
+    if v[2] is None or not v[3] or len(n) < 6 or n[4] is None:
+        return None
+    ecart = (datetime.strptime(n[4], "%Y%m%d") - datetime.strptime(v[2], "%Y%m%d")).days
+    return n[5] / v[3] if 0 <= ecart <= PRIX_MAX_JOURS else None
+
+
+def prix_fr(x: float) -> str:
+    return f"{x:.2f} $".replace(".", ",")
+
+
 def prix_de_l_epoque(h: dict, prix: list, actions: list, jour: date) -> dict:
     """Le prix à multiplier par le nombre d'actions (voir epoque) : {"prix": [jour, prix, CUSIP], "note": …} (même époque
     que les actions ; la note dit d'où vient le prix s'il n'est pas le plus récent, ou qu'on ne peut pas vérifier),
@@ -325,17 +344,24 @@ def prix_de_l_epoque(h: dict, prix: list, actions: list, jour: date) -> dict:
     if e["cas"] == "meme":
         return {"prix": prix}
     d = jour_fr(actions[1])
-    if e["cas"] == "inconnue":
-        if e["pourquoi"] == "absent":  # impossible de vérifier : le calcul d'avant, dit tel quel
-            return {"prix": prix, "note": NON_VERIFIE}
-        if e["pourquoi"] == "chevauchement":
-            return {"raison": f"nouveau code du titre (CUSIP) vu dès le {jour_fr(e['premier'])}, après les actions "
-                              f"déclarées au {d}, et l'ancien encore vu après : impossible de savoir si leur nombre est "
-                              f"d'avant ou d'après un regroupement ou un fractionnement d'actions"}
+    if e["cas"] == "inconnue" and e["pourquoi"] == "absent":  # impossible de vérifier : le calcul d'avant, dit tel quel
+        return {"prix": prix, "note": NON_VERIFIE}
+    if e["cas"] == "inconnue" and e["pourquoi"] == "plusieurs":
         return {"raison": f"plusieurs changements du code du titre (CUSIP) depuis les actions déclarées au {d}"}
-    vieux, neuf = h[e["ancien"]], h[prix[2]]
+    saut = saut_au_changement(h, e["ancien"], prix[2])
+    if saut is not None and 1 / SAUT_REGROUPEMENT < saut < SAUT_REGROUPEMENT:
+        # pas de saut de prix : pas un regroupement (nom, fusion de forme…), le nombre d'actions ne change pas (ex. DPW au
+        # labo, devenue DPW Holdings le 2 janvier 2018)
+        return {"prix": prix, "note": f"Nouveau code du titre (CUSIP) vu dès le {jour_fr(e['premier'])}, sans saut de "
+                                      f"prix au changement ({prix_fr(h[e['ancien']][3])} puis {prix_fr(h[prix[2]][5])}) "
+                                      f": pas un regroupement d'actions, leur nombre ne change pas."}
+    if e["cas"] == "inconnue":  # chevauchement
+        return {"raison": f"nouveau code du titre (CUSIP) vu dès le {jour_fr(e['premier'])}, après les actions "
+                          f"déclarées au {d}, et l'ancien encore vu après : impossible de savoir si leur nombre est "
+                          f"d'avant ou d'après un regroupement ou un fractionnement d'actions",
+                "saut": saut, "premier": e["premier"]}
+    vieux = h[e["ancien"]]
     if vieux[2] is None or datetime.strptime(vieux[2], "%Y%m%d").date() < jour - timedelta(days=PRIX_MAX_JOURS):
-        saut = neuf[5] / vieux[3] if len(neuf) > 5 and neuf[5] and vieux[3] else None
         return {"raison": f"nouveau code du titre (CUSIP) vu dès le {jour_fr(e['premier'])}, après les actions déclarées "
                           f"au {d} (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code "
                           f"depuis {PRIX_MAX_JOURS} jours", "saut": saut, "premier": e["premier"]}
