@@ -1,0 +1,204 @@
+{
+ "fichier": "liquidite_taille-3.py",
+ "id": "liquidite_taille-3",
+ "stats": {
+  "annees": {
+   "2015-2016": {
+    "transactions": 5,
+    "en_attente": 0,
+    "achats": 5,
+    "mesurable": true,
+    "ecart_moyen": 0.0194,
+    "ecart_median": -0.0151,
+    "bat_le_marche": 0.4,
+    "t": 0.08,
+    "portefeuille": -0.0362,
+    "spy_garde": 0.0424
+   },
+   "2016-2017": {
+    "transactions": 5,
+    "en_attente": 0,
+    "achats": 5,
+    "mesurable": true,
+    "ecart_moyen": 0.0559,
+    "ecart_median": 0.0972,
+    "bat_le_marche": 0.6,
+    "t": 0.82,
+    "portefeuille": 0.1028,
+    "spy_garde": 0.1526
+   },
+   "2017-2018": {
+    "transactions": 5,
+    "en_attente": 0,
+    "achats": 5,
+    "mesurable": true,
+    "ecart_moyen": -0.1467,
+    "ecart_median": -0.0716,
+    "bat_le_marche": 0.2,
+    "t": -1.09,
+    "portefeuille": 0.3378,
+    "spy_garde": 0.1184
+   },
+   "2018-2019": {
+    "transactions": 5,
+    "en_attente": 0,
+    "achats": 5,
+    "mesurable": true,
+    "ecart_moyen": -0.1491,
+    "ecart_median": -0.187,
+    "bat_le_marche": 0.4,
+    "t": -1.79,
+    "portefeuille": -0.2482,
+    "spy_garde": 0.0778
+   },
+   "2019-2020": {
+    "transactions": 5,
+    "en_attente": 0,
+    "achats": 5,
+    "mesurable": true,
+    "ecart_moyen": 0.9369,
+    "ecart_median": 0.323,
+    "bat_le_marche": 0.6,
+    "t": 1.28,
+    "portefeuille": -0.0887,
+    "spy_garde": 0.043
+   },
+   "2020-2021": {
+    "transactions": 5,
+    "en_attente": 0,
+    "achats": 5,
+    "mesurable": true,
+    "ecart_moyen": 0.2093,
+    "ecart_median": -0.021,
+    "bat_le_marche": 0.4,
+    "t": 0.78,
+    "portefeuille": 1.0898,
+    "spy_garde": 0.3785
+   },
+   "2021-2022": {
+    "transactions": 5,
+    "en_attente": 0,
+    "achats": 5,
+    "mesurable": true,
+    "ecart_moyen": 0.2072,
+    "ecart_median": 0.0478,
+    "bat_le_marche": 0.6,
+    "t": 0.77,
+    "portefeuille": 0.1798,
+    "spy_garde": -0.1236
+   },
+   "2022-2023": {
+    "transactions": 5,
+    "en_attente": 0,
+    "achats": 5,
+    "mesurable": true,
+    "ecart_moyen": 0.0159,
+    "ecart_median": -0.0427,
+    "bat_le_marche": 0.4,
+    "t": 0.04,
+    "portefeuille": 0.2015,
+    "spy_garde": 0.1627
+   }
+  },
+  "total": {
+   "portefeuille": 4.4696,
+   "spy_garde": 2.8022,
+   "pire_baisse": -0.4545,
+   "mois": 129,
+   "ecart_mensuel_moyen": 0.00341,
+   "t_mensuel": 0.75
+  }
+ },
+ "mois": 90,
+ "ecart_mensuel_moyen": 0.00401,
+ "t_periode": 0.63,
+ "achats": 35,
+ "periode_entiere": {
+  "portefeuille": 1.9583,
+  "spy": 1.2053,
+  "iwm": 0.7038,
+  "annees_gagnees": 4
+ },
+ "signaux": {
+  "signaux": 1972,
+  "achats": 40,
+  "sans_prix": 409,
+  "meteo_fermee": 0,
+  "places_pleines": 1516,
+  "deja_en_portefeuille": 7,
+  "pause_symbole": 0,
+  "montant_trop_petit": 0
+ },
+ "criteres": {
+  "1_bat_spy_sur_la_periode": true,
+  "2_au_moins_5_annees_sur_7": false,
+  "3_t_2_ou_plus": false
+ },
+ "par_annee": {
+  "2016-2017": {
+   "achats": 5,
+   "portefeuille": 0.1028,
+   "spy_garde": 0.1526,
+   "ecart_moyen": 0.0559,
+   "t": 0.82
+  },
+  "2017-2018": {
+   "achats": 5,
+   "portefeuille": 0.3378,
+   "spy_garde": 0.1184,
+   "ecart_moyen": -0.1467,
+   "t": -1.09
+  },
+  "2018-2019": {
+   "achats": 5,
+   "portefeuille": -0.2482,
+   "spy_garde": 0.0778,
+   "ecart_moyen": -0.1491,
+   "t": -1.79
+  },
+  "2019-2020": {
+   "achats": 5,
+   "portefeuille": -0.0887,
+   "spy_garde": 0.043,
+   "ecart_moyen": 0.9369,
+   "t": 1.28
+  },
+  "2020-2021": {
+   "achats": 5,
+   "portefeuille": 1.0898,
+   "spy_garde": 0.3785,
+   "ecart_moyen": 0.2093,
+   "t": 0.78
+  },
+  "2021-2022": {
+   "achats": 5,
+   "portefeuille": 0.1798,
+   "spy_garde": -0.1236,
+   "ecart_moyen": 0.2072,
+   "t": 0.77
+  },
+  "2022-2023": {
+   "achats": 5,
+   "portefeuille": 0.2015,
+   "spy_garde": 0.1627,
+   "ecart_moyen": 0.0159,
+   "t": 0.04
+  }
+ },
+ "deux_programmations": "identiques",
+ "ecarts": {
+  "seulement_testeur": [],
+  "seulement_verificateur": [],
+  "nombres": [
+   40,
+   40,
+   40
+  ],
+  "encore_ouvertes": [
+   0,
+   0
+  ]
+ },
+ "temoin": false,
+ "passe": false
+}
