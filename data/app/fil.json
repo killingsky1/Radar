@@ -1,5 +1,247 @@
 [
  {
+  "amount_max": 39000000000.0,
+  "amount_min": 39000000000.0,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "obligation_du_tresor": true,
+   "parts_qui_s_additionnent": true,
+   "resultat_officiel_du_jour": true,
+   "resultats_publies": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T01:58:58+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "acceptees": {
+    "direct_bidder": 6618200000.0,
+    "indirect_bidder": 31063238000.0,
+    "primary_dealer": 984000000.0
+   },
+   "adjudication": "2026-10-07",
+   "cusip": "91282CRF0",
+   "demande_offre": 2.77,
+   "demande_offre_moyenne": 2.5383333333333336,
+   "details": [
+    [
+     "Montant offert",
+     "39 G$"
+    ],
+    [
+     "Taux retenu (le plus élevé accepté)",
+     "5,300 %"
+    ],
+    [
+     "Demande / offre",
+     "2,77 (moyenne des 6 précédentes : 2,54)"
+    ],
+    [
+     "Acheteurs indirects",
+     "80,3 % (moyenne des 6 précédentes : 74,1 %)"
+    ],
+    [
+     "Acheteurs directs",
+     "17,1 %"
+    ],
+    [
+     "Courtiers primaires",
+     "2,5 %"
+    ],
+    [
+     "Titre",
+     "Note 9-Year 10-Month, CUSIP 91282CRF0"
+    ],
+    [
+     "Date d'émission",
+     "2026-10-15"
+    ],
+    [
+     "Résultat officiel",
+     "R_20261007_2.pdf"
+    ]
+   ],
+   "document": "R_20261007_2.pdf",
+   "emission": "2026-10-15",
+   "heure_de_cloture": "01:00 PM",
+   "montant_offert": 39000000000.0,
+   "offres_competitives_acceptees": 38665438000.0,
+   "part_indirecte_moyenne": 74.14811032335335,
+   "parts": {
+    "direct_bidder": 17.116578376792212,
+    "indirect_bidder": 80.3385131703409,
+    "primary_dealer": 2.5449084528668733
+   },
+   "precedentes": [
+    {
+     "adjudication": "2026-09-09",
+     "cusip": "91282CRF0",
+     "demande_offre": 2.71,
+     "document": "R_20260909_2.pdf",
+     "part_indirecte": 79.18404478548472
+    },
+    {
+     "adjudication": "2026-08-12",
+     "cusip": "91282CRF0",
+     "demande_offre": 2.53,
+     "document": "R_20260812_2.pdf",
+     "part_indirecte": 76.72572442302896
+    },
+    {
+     "adjudication": "2026-07-08",
+     "cusip": "91282CQQ7",
+     "demande_offre": 2.59,
+     "document": "R_20260708_2.pdf",
+     "part_indirecte": 81.49486850448241
+    },
+    {
+     "adjudication": "2026-06-10",
+     "cusip": "91282CQQ7",
+     "demande_offre": 2.57,
+     "document": "R_20260610_2.pdf",
+     "part_indirecte": 78.21085792599752
+    },
+    {
+     "adjudication": "2026-05-12",
+     "cusip": "91282CQQ7",
+     "demande_offre": 2.4,
+     "document": "R_20260512_3.pdf",
+     "part_indirecte": 63.95067111437866
+    },
+    {
+     "adjudication": "2026-04-08",
+     "cusip": "91282CPZ8",
+     "demande_offre": 2.43,
+     "document": "R_20260408_2.pdf",
+     "part_indirecte": 65.32249518674782
+    }
+   ],
+   "reference_ans": 10,
+   "reouverture": true,
+   "sorte": "nominale",
+   "taux": 5.3,
+   "terme": "9-Year 10-Month",
+   "type": "Note"
+  },
+  "direction": 0,
+  "entities": [
+   "Trésor américain"
+  ],
+  "id": "tresor:91282CRF0:2026-10-07",
+  "kind": "adjudication",
+  "notes": [
+   "Parts des acheteurs : en % des offres compétitives acceptées (catégories officielles du Trésor).",
+   "Bons du Trésor (moins d'un an) non montrés."
+  ],
+  "occurred_on": "2026-10-07",
+  "official_id": "91282CRF0:2026-10-07",
+  "official_url": "https://fiscaldata.treasury.gov/static-data/published-reports/auctions-query/results/R_20261007_2.pdf",
+  "parser_version": "tresor-1",
+  "published_on": "2026-10-07",
+  "sha256": "49057bc3109f67cac2a479633512267dc9c2338a74ec8da6108edfff29bb0192",
+  "source": "tresor",
+  "tickers": [],
+  "title": "Trésor américain : adjudication de 39 G$ sur 9 ans et 10 mois (réouverture) à 5,300 % (demande : 2,77 fois l'offre)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-08T01:58:57+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/les-investissements-de-prairiescan-dans-des-projets-lies-a-la-defense-renforceront-leconomie-de-lalberta-et-soutiendront-letat-de-preparation-milit.html",
+   "ministere": "Défense nationale",
+   "mis_a_jour": "2026-10-07T17:36:44-04:00",
+   "resume": "Développement économique Canada pour les Prairies (PrairiesCan) investit 8 439 279 $ dans sept projets liés à la défense en Alberta par l’entremise de l’Initiative régionale d’investissement dans la défense (IRID), du programme Écosystèmes d’innovation régionaux (EIR) et de l’Initiative régionale de réponse tarifaire (IRRT).",
+   "type": "documents d'information"
+  },
+  "direction": 0,
+  "entities": [
+   "Défense nationale"
+  ],
+  "id": "nouvelles_defense_ca:ministere-defense-nationale/nouvelles/2026/10/les-investissements-de-prairiescan-dans-des-projets-lies-a-la-defense-renforceront-leconomie-de-lalberta-et-soutiendront-letat-de-preparation-milit.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-07",
+  "official_id": "ministere-defense-nationale/nouvelles/2026/10/les-investissements-de-prairiescan-dans-des-projets-lies-a-la-defense-renforceront-leconomie-de-lalberta-et-soutiendront-letat-de-preparation-milit.html",
+  "official_url": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/les-investissements-de-prairiescan-dans-des-projets-lies-a-la-defense-renforceront-leconomie-de-lalberta-et-soutiendront-letat-de-preparation-milit.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-07",
+  "sha256": "08e9544d9027932e9622f6ced518123e84d691a5f165855226243e013f15a7a0",
+  "source": "nouvelles_defense_ca",
+  "tickers": [],
+  "title": "Les investissements de PrairiesCan dans des projets liés à la défense renforceront l’économie de l’Alberta et soutiendront l’état de préparation militaire du Canada"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-08T01:58:57+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/le-ministre-mcguinty-visite-la-bfc-edmonton-pour-souligner-les-investissements-du-canada-en-defense-en-alberta.html",
+   "ministere": "Défense nationale",
+   "mis_a_jour": "2026-10-07T17:40:37-04:00",
+   "resume": "Aujourd’hui, l’honorable David J. McGuinty, ministre de la Défense nationale, et l’honorable Danielle Smith, première ministre de l’Alberta, ont visité la Base des Forces canadiennes (BFC) Edmonton pour mettre en valeur les investissements dans le domaine de la défense réalisés dans toute l’Alberta.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Défense nationale"
+  ],
+  "id": "nouvelles_defense_ca:ministere-defense-nationale/nouvelles/2026/10/le-ministre-mcguinty-visite-la-bfc-edmonton-pour-souligner-les-investissements-du-canada-en-defense-en-alberta.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-07",
+  "official_id": "ministere-defense-nationale/nouvelles/2026/10/le-ministre-mcguinty-visite-la-bfc-edmonton-pour-souligner-les-investissements-du-canada-en-defense-en-alberta.html",
+  "official_url": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/le-ministre-mcguinty-visite-la-bfc-edmonton-pour-souligner-les-investissements-du-canada-en-defense-en-alberta.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-07",
+  "sha256": "7b47d7988323ef81d80c7b9c2e66a787e2f485610c24aad55b8703473bb50628",
+  "source": "nouvelles_defense_ca",
+  "tickers": [],
+  "title": "Le ministre McGuinty visite la BFC Edmonton pour souligner les investissements du Canada en défense en Alberta"
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
