@@ -679,6 +679,10 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       const sans = taille.replace(/\s/g, ""); // les espaces des montants varient d'un navigateur à l'autre (« 50 M $ US »)
       assert.ok(taille.includes("Petite compagnie") && sans.includes("50M$US") && sans.includes("20000000actions")
         && sans.includes("Moinsde100M$:horsdelaliste«hausse»."), taille.replace(/\n/g, " | "));
+      // Étape 1 (données sûres) : actions déclarées avant le regroupement d'actions → le prix de l'ancien CUSIP (2,50 $),
+      // pas le nouveau (25 $ : la 0.27.0 aurait calculé 500 M$)
+      assert.ok(sans.includes("×2,50$US") && !sans.includes("25,00$US") && taille.includes("Prix de l'ancien code du titre "
+        + "(CUSIP 000000AA1)") && taille.includes("regroupement ou fractionnement d'actions possible"), taille.replace(/\n/g, " | "));
       const calcul = (await p.locator(".ecran").innerText()).replace(/\u00a0/g, " ");
       assert.ok(calcul.includes("la directrice financière de Micro Exemple achète 40 000 actions"), calcul);
     } finally {
@@ -687,6 +691,7 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
   });
   await verifier("Fiche AMD (grande) : pas de phrase des 100 M$", () => fiche("AMD", async () => {
     assert.ok(!(await p.locator(".taille").innerText()).includes("100 M$"));
+    assert.ok(!(await p.locator(".taille").innerText()).includes("CUSIP"));  // même code depuis plus d'un an : aucune note
   }));
   await verifier("Résultats : écartées à part — la règle a-t-elle raison, verdicts en mots, pas dans le taux des listes", async () => {
     try {

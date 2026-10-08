@@ -32,12 +32,19 @@ PAGE = "https://www.sec.gov/data-research/sec-markets-data/fails-deliver-data"
 ENTETE = "SETTLEMENT DATE|CUSIP|SYMBOL|QUANTITY (FAILS)|DESCRIPTION|PRICE"
 MARCHE = ("SPY", "IVV", "VOO")
 PREMIER_FICHIER = "202610a"  # les listes de la méthode actuelle commencent le 3 octobre 2026
-LIEN = re.compile(r"""href=["']([^"']*cnsfails(\d{6})([ab])\.zip)["']""", re.I)
+LIEN = re.compile(r"""href=["']([^"']*cnsfails(\d{6})([ab])(_\d+)?\.zip)["']""", re.I)
 
 
 def fichiers_de_la_page(page: str) -> dict[str, str]:
-    """{« 202609a » : adresse du fichier} d'après les liens de la page officielle."""
-    return {m.group(2) + m.group(3).lower(): urljoin(PAGE, m.group(1)) for m in LIEN.finditer(page)}
+    """{« 202609a » : adresse du fichier} d'après les liens de la page officielle. Certains noms finissent par « _0 »
+    (lu sur la page le 8 octobre 2026 : cnsfails202308b_0.zip et cnsfails201910a_0.zip) : lus aussi ; si les deux noms
+    existent pour la même moitié de mois, le nom simple."""
+    sortie = {}
+    for m in LIEN.finditer(page):
+        cle = m.group(2) + m.group(3).lower()
+        if cle not in sortie or not m.group(4):
+            sortie[cle] = urljoin(PAGE, m.group(1))
+    return sortie
 
 
 def periode(cle: str) -> tuple[str, str]:

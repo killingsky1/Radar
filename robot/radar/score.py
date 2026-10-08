@@ -271,8 +271,14 @@ METHODE = {
                for c, r in REGLES.items()],
     "taille": "Taille en bourse = actions en circulation déclarées à la SEC × dernier prix de la SEC. Petite : sous le "
               "30e centile des compagnies du NYSE ; grande : au 70e et plus (seuils publiés chaque mois par Kenneth "
-              "French). Taille inconnue, donc pas de bonus : compagnie étrangère (20-F, 40-F, 6-K), actions déclarées il "
-              "y a plus de 200 jours ou moins de 500 000 actions déclarées, pas de prix de la SEC depuis 60 jours.",
+              "French). Le prix doit être de la même époque que le nombre d'actions : si le code du titre (CUSIP) a "
+              "changé après la date des actions (souvent un regroupement d'actions, qui divise leur nombre), c'est le "
+              "dernier prix de l'ancien code ; si on ne sait pas de quel côté du changement sont les actions, les deux "
+              "valeurs possibles, et une taille seulement si elles donnent la même ; après un regroupement probable "
+              "(prix au moins 1,8 fois plus haut au changement), ancien nombre × nouveau prix est un maximum. Taille "
+              "inconnue, donc pas de bonus : compagnie étrangère (20-F, 40-F, 6-K), actions déclarées il y a plus de 200 "
+              "jours ou moins de 500 000 actions déclarées, pas de prix de la SEC depuis 60 jours, changement de code du "
+              "titre dont on ne peut pas dire le côté.",
     "etudes_taille": ["lakonishok_lee", "cohen_malloy_pomorski"],
     "routiniers": "Un initié qui achète ou vend en bourse dans le même mois de l'année, chacune des 3 années précédentes "
                   "(« routinier ») : 0 point, ses transactions ne prédisent rien (Cohen, Malloy et Pomorski 2012). "

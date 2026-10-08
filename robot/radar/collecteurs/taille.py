@@ -26,9 +26,34 @@ centile et plus ; moyenne entre les deux (les 3, 4 et 3 déciles de Lakonishok e
   - actions déclarées il y a plus de 200 jours (une compagnie américaine les déclare à chaque rapport trimestriel) ;
   - moins de 500 000 actions déclarées : impossible pour une action cotée (le Nasdaq exige au moins 500 000 actions dans
     le public pour garder une compagnie inscrite) ; mesuré le 5 octobre 2026 : QVCG, 1 action déclarée au 30 juin 2026 ;
-  - pas de prix de la SEC depuis 60 jours (un titre a un prix seulement les jours où il a des échecs de livraison).
-Lu au passage du matin : les seuils (1 fichier), les actions (5 fichiers), et les prix seulement quand la SEC publie un
-nouveau fichier (2 fois par mois).
+  - pas de prix de la SEC depuis 60 jours (un titre a un prix seulement les jours où il a des échecs de livraison) ;
+  - changement du code du titre (CUSIP) dont on ne peut pas dire le côté (voir plus bas).
+- Étape 1, données sûres (0.27.1) : le prix doit être de la même époque que le nombre d'actions. Un regroupement d'actions
+  (ex. 1 pour 10) donne un nouveau CUSIP et divise le nombre d'actions, mais le nombre déclaré à la SEC reste l'ancien
+  jusqu'au rapport suivant : ancien nombre × nouveau prix = une valeur 10 fois trop haute (ex. EVLO : 395 M$ calculés au
+  lieu d'environ 31 M$). Le robot garde l'historique des CUSIP de chaque symbole (fichiers d'échecs de livraison des 400
+  derniers jours au départ, puis chaque nouveau fichier : data/prix/cusips.json) et voit, avec epoque() :
+  - le CUSIP du prix était déjà vu au plus tard le jour des actions : même époque, le calcul habituel ;
+  - pas de saut de prix au changement (moins de 1,8 fois, dernier prix de l'ancien et 1er du nouveau à 60 jours ou moins
+    l'un de l'autre) : pas un regroupement (nom, fusion de forme…), le nombre d'actions ne change pas, le calcul habituel ;
+  - l'ancien CUSIP encore vu après le jour des actions : le dernier prix de l'ancien CUSIP (s'il a 60 jours ou moins) ;
+  - côté inconnu (ancien vu la dernière fois avant le jour des actions, nouveau la 1re fois après) : les deux valeurs,
+    une taille seulement si elles donnent la même, et la règle des 100 M$ prend la plus grande ;
+  - ancien prix trop vieux (ou ancien et nouveau vus en même temps), mais prix au moins 1,8 fois plus haut au changement
+    (regroupement probable ; les deux prix à 60 jours ou moins l'un de l'autre, sinon le saut mesure aussi la bourse :
+    ex. BTU, sortie de faillite) : ancien nombre × nouveau prix est un MAXIMUM ; sous le 30e centile, la compagnie est
+    petite dans tous les cas (« au plus … ») ;
+  - sinon (plusieurs changements, saut inconnu ou trop loin) : taille inconnue.
+  Historique pas encore lu (juste après la mise en ligne : la taille est lue au passage du matin) : le calcul d'avant,
+  avec une note ; des tailles inconnues remettraient les écartées (moins de 100 M$) dans la liste « hausse ».
+  Mesuré au labo le 8 octobre 2026 (labo/tournoi/mesures/regroupements2.py : le vrai code du robot, avec ce qu'il aurait
+  su chaque jour, sur les achats de dirigeants de 2016 à 2026, comparé à la vraie valeur connue après coup ; achats avec
+  un changement de CUSIP après les actions, 2023-2026 / 2016-2023) : gardées à tort dans « hausse » sous 100 M$ 40 → 12 /
+  35 → 32 ; écartées à tort 1 → 3 / 0 → 0 (des hausses après le dernier prix de la SEC) ; tailles fausses 5 → 0 / 24 → 1 ;
+  bonus de petite compagnie à tort 0 → 0 / 13 → 0 ; bonus manqués (taille inconnue) 3 → 1 / 6 → 32 ; tous les autres
+  achats : identiques. La règle « taille inconnue » seule aurait été pire (66 / 121 gardées à tort).
+Lu au passage du matin : les seuils (1 fichier), les actions (5 fichiers), les prix seulement quand la SEC publie un
+nouveau fichier (2 fois par mois), et l'historique des CUSIP (chaque fichier une seule fois).
 """
 
 from __future__ import annotations
@@ -50,6 +75,7 @@ CONCEPT = "https://data.sec.gov/api/xbrl/companyconcept/CIK{:010d}/dei/EntityCom
 JOURS_ACHATS = 90  # comme l'âge maximal d'une info dans le score
 TRIMESTRES = 5
 FICHIERS_PRIX = 2
+HISTOIRE_JOURS = 400  # historique des CUSIP : au départ, les fichiers des 400 derniers jours (plus que les 200 des actions)
 ACTIONS_MAX_JOURS = 200
 ACTIONS_MIN = 500_000
 PRIX_MAX_JOURS = 60
@@ -63,6 +89,17 @@ def chemin(donnees) -> Path:
 
 def charger(donnees) -> dict:
     c = chemin(donnees)
+    return json.loads(c.read_text(encoding="utf-8")) if c.exists() else {}
+
+
+def chemin_cusips(donnees) -> Path:
+    return Path(donnees) / "prix" / "cusips.json"
+
+
+def charger_cusips(donnees) -> dict:
+    """{fichiers : [« 202609a »…], debut : AAAAMMJJ, symboles : {symbole : {CUSIP : [vu la 1re fois, vu la dernière fois,
+    jour du dernier prix, dernier prix]}}} (dates de règlement), ou {} si jamais lu."""
+    c = chemin_cusips(donnees)
     return json.loads(c.read_text(encoding="utf-8")) if c.exists() else {}
 
 
@@ -89,21 +126,70 @@ def periodes(jour: date) -> list[str]:
     return sortie
 
 
-def lire_prix(contenu: bytes) -> dict[str, list]:
-    """{symbole : [date de règlement AAAAMMJJ, prix]} : le plus récent prix de chaque symbole du fichier."""
+def lire_lignes(contenu: bytes) -> list[tuple]:
+    """Les lignes d'un fichier d'échecs de livraison : (date de règlement AAAAMMJJ, CUSIP, symbole, prix ou None).
+    Prix « . » (absent ou moins d'un cent) : None."""
     with zipfile.ZipFile(io.BytesIO(contenu)) as z:
         lignes = z.read(z.namelist()[0]).decode("latin-1").splitlines()
     if not lignes or lignes[0].strip() != prix_sec.ENTETE:
         raise ValueError(f"en-tête inattendu : {lignes[0][:80] if lignes else 'fichier vide'}")
-    prix = {}
+    sortie = []
     for l in lignes[1:]:
         p = l.split("|")
-        if len(p) != 6 or not re.fullmatch(r"\d{8}", p[0]) or not re.fullmatch(r"\d+(?:\.\d+)?", p[5].strip()):
-            continue
-        s = p[2].strip()
-        if s and (s not in prix or p[0] > prix[s][0]):
-            prix[s] = [p[0], float(p[5])]
+        if len(p) != 6 or not re.fullmatch(r"\d{8}", p[0]) or not p[2].strip():
+            continue  # ligne finale « Trailer total quantity of shares … »
+        prix = float(p[5]) if re.fullmatch(r"\d+(?:\.\d+)?", p[5].strip()) else None
+        sortie.append((p[0], p[1].strip(), p[2].strip(), prix))
+    return sortie
+
+
+def lire_prix(contenu: bytes) -> dict[str, list]:
+    """{symbole : [date de règlement AAAAMMJJ, prix, CUSIP]} : le plus récent prix de chaque symbole du fichier."""
+    prix = {}
+    for jour, cusip, s, p in lire_lignes(contenu):
+        if p is not None and (s not in prix or jour > prix[s][0]):
+            prix[s] = [jour, p, cusip]
     return prix
+
+
+def ajouter_lignes(symboles: dict, lignes: list[tuple]) -> None:
+    """Ajoute les lignes d'un fichier à l'historique : pour chaque symbole et chaque CUSIP, [1er jour vu, dernier jour
+    vu, jour du dernier prix, dernier prix, jour du 1er prix, 1er prix] (même jour : la 1re ligne, comme lire_prix)."""
+    for jour, cusip, s, prix in lignes:
+        if not cusip:
+            continue
+        h = symboles.setdefault(s, {}).setdefault(cusip, [jour, jour, None, None, None, None])
+        h[0], h[1] = min(h[0], jour), max(h[1], jour)
+        if prix is not None and (h[2] is None or jour > h[2]):
+            h[2], h[3] = jour, prix
+        if prix is not None and (h[4] is None or jour < h[4]):
+            h[4], h[5] = jour, prix
+
+
+def epoque(h: dict, cusip: str, fin: str) -> dict:
+    """Le nombre d'actions déclaré au `fin` (AAAAMMJJ) et le prix du `cusip` sont-ils de la même époque du titre ?
+    Un regroupement d'actions (ex. 1 pour 10) donne un nouveau CUSIP et divise le nombre d'actions, mais le nombre
+    déclaré à la SEC reste l'ancien jusqu'au rapport suivant. `h` : l'historique du symbole (voir charger_cusips).
+    - « meme » : le CUSIP du prix était déjà vu au plus tard le jour des actions, ou aucun autre CUSIP avant lui ;
+    - « ancien » : l'ancien CUSIP, vu avant et après le jour des actions, puis plus jamais après l'arrivée du nouveau :
+      le changement est venu après, le prix à prendre est le dernier de l'ancien CUSIP ;
+    - « deux » : l'ancien CUSIP vu la dernière fois avant le jour des actions, le nouveau la 1re fois après : les actions
+      peuvent être d'un côté ou de l'autre du changement (les deux valeurs sont possibles) ;
+    - « inconnue » : ancien CUSIP encore vu après l'arrivée du nouveau, ou plusieurs changements depuis le jour des
+      actions."""
+    if cusip not in h:
+        return {"cas": "inconnue", "pourquoi": "absent"}
+    premier = h[cusip][0]
+    anciens = {c: v for c, v in h.items() if c != cusip and v[0] < premier}
+    if not anciens or premier <= fin:
+        return {"cas": "meme"}
+    ancien = max(anciens, key=lambda c: (anciens[c][1], c))  # le plus récent des anciens CUSIP
+    if any(v[1] >= premier for v in anciens.values()):
+        return {"cas": "inconnue", "pourquoi": "chevauchement", "ancien": ancien, "premier": premier}
+    if anciens[ancien][0] > fin:
+        return {"cas": "inconnue", "pourquoi": "plusieurs", "ancien": ancien, "premier": premier}
+    cas = "ancien" if anciens[ancien][1] >= fin else "deux"
+    return {"cas": cas, "ancien": ancien, "dernier_ancien": anciens[ancien][1], "premier": premier}
 
 
 def ciks_a_relire(donnees, jour: date) -> list[int]:
@@ -175,14 +261,34 @@ def collecter(ctx) -> list[Evenement]:
     liens = prix_sec.fichiers_de_la_page(ctx.client.get(prix_sec.PAGE).contenu.decode("utf-8", "replace"))
     if not liens:
         raise RuntimeError("aucun fichier d'échecs de livraison sur la page officielle (la page a changé ?)")
+    lus = {}
+
+    def fichier(cle: str) -> bytes:  # chaque fichier lu une seule fois par passage
+        if cle not in lus:
+            lus[cle] = ctx.client.get(liens[cle]).contenu
+        return lus[cle]
+
     derniers = sorted(liens)[-FICHIERS_PRIX:]
-    if e.get("fichiers_prix") != derniers:
-        prix = {}
+    if e.get("fichiers_prix") != derniers or any(len(p) < 3 for p in (e.get("prix") or {}).values()):
+        prix = {}  # (prix d'avant le 8 octobre 2026 sans leur CUSIP : relus une fois)
         for cle in derniers:  # du plus vieux au plus récent : le prix le plus récent l'emporte
-            for s, p in lire_prix(ctx.client.get(liens[cle]).contenu).items():
+            for s, p in lire_prix(fichier(cle)).items():
                 if s not in prix or p[0] > prix[s][0]:
                     prix[s] = p
         e["prix"], e["fichiers_prix"], e["prix_lus"] = prix, derniers, lu
+    h = charger_cusips(ctx.donnees)
+    h_avant = json.dumps(h, sort_keys=True)
+    h.setdefault("fichiers", [])
+    h.setdefault("symboles", {})
+    limite = (ctx.maintenant.date() - timedelta(days=HISTOIRE_JOURS)).strftime("%Y%m%d")
+    for cle in sorted(c for c in liens if prix_sec.periode(c)[1] >= limite and c not in h["fichiers"]):
+        ajouter_lignes(h["symboles"], lire_lignes(fichier(cle)))
+        h["fichiers"] = sorted(h["fichiers"] + [cle])
+    h["debut"] = min((prix_sec.periode(c)[0] for c in h["fichiers"]), default=None)
+    if json.dumps(h, sort_keys=True) != h_avant:  # écrit seulement quand la SEC publie un nouveau fichier
+        c = chemin_cusips(ctx.donnees)
+        c.parent.mkdir(parents=True, exist_ok=True)
+        c.write_text(json.dumps(h, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n", encoding="utf-8")
     if _sans_heures(e) != _sans_heures(json.loads(avant)):  # le fichier change seulement si les chiffres changent
         c = chemin(ctx.donnees)
         c.parent.mkdir(parents=True, exist_ok=True)
@@ -190,8 +296,91 @@ def collecter(ctx) -> list[Evenement]:
     return []
 
 
-def classer(fiche: dict | None, t: dict, symbole: str, jour: date) -> dict:
-    """La taille d'une compagnie (voir les règles en haut), avec les chiffres qui la donnent, ou la raison si inconnue."""
+MOIS = ("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre",
+        "décembre")
+
+
+def jour_fr(j: str) -> str:
+    """« 20260905 » ou « 2026-09-05 » → « 5 septembre 2026 »."""
+    j = j.replace("-", "")
+    a, m, d = int(j[:4]), int(j[4:6]), int(j[6:8])
+    return f"{'1er' if d == 1 else d} {MOIS[m - 1]} {a}"
+
+
+def millions_fr(v: float) -> str:
+    """30.66 → « 30,7 M$ » ; 2236.3 → « 2,2 G$ »."""
+    return f"{v / 1000:.1f} G$".replace(".", ",") if v >= 1000 else f"{v:.1f} M$".replace(".", ",")
+
+
+SAUT_REGROUPEMENT = 1.8  # prix au moins 1,8 fois plus haut au changement de CUSIP : regroupement d'actions probable
+NON_VERIFIE = ("Changement du code du titre (CUSIP) pas encore vérifié : l'historique des fichiers de la SEC n'est pas "
+               "encore lu jusqu'à la date des actions.")
+TAILLES_FR = {"petite": "petite compagnie", "moyenne": "compagnie moyenne", "grande": "grande compagnie"}
+
+
+def _taille(valeur: float, s: dict) -> str:
+    return "petite" if valeur < s["p30"] else "grande" if valeur >= s["p70"] else "moyenne"
+
+
+def saut_au_changement(h: dict, ancien: str, nouveau: str) -> float | None:
+    """1er prix du nouveau CUSIP ÷ dernier prix de l'ancien, s'ils existent et sont à 60 jours ou moins l'un de l'autre :
+    au-delà, le saut mesure aussi la bourse (ex. BTU au labo : sortie de faillite, 354 jours entre les deux CUSIP et de
+    nouvelles actions émises)."""
+    v, n = h[ancien], h[nouveau]
+    if v[2] is None or not v[3] or len(n) < 6 or n[4] is None:
+        return None
+    ecart = (datetime.strptime(n[4], "%Y%m%d") - datetime.strptime(v[2], "%Y%m%d")).days
+    return n[5] / v[3] if 0 <= ecart <= PRIX_MAX_JOURS else None
+
+
+def prix_fr(x: float) -> str:
+    return f"{x:.2f} $".replace(".", ",")
+
+
+def prix_de_l_epoque(h: dict, prix: list, actions: list, jour: date) -> dict:
+    """Le prix à multiplier par le nombre d'actions (voir epoque) : {"prix": [jour, prix, CUSIP], "note": …} (même époque
+    que les actions ; la note dit d'où vient le prix s'il n'est pas le plus récent, ou qu'on ne peut pas vérifier),
+    {"deux": [prix ancien, prix nouveau], "entre": …} (les deux côtés possibles), ou {"raison": …, "saut": …} (saut :
+    1er prix du nouveau CUSIP ÷ dernier prix de l'ancien, s'ils sont connus)."""
+    fin = actions[1].replace("-", "")
+    e = epoque(h, prix[2], fin)
+    if e["cas"] == "meme":
+        return {"prix": prix}
+    d = jour_fr(actions[1])
+    if e["cas"] == "inconnue" and e["pourquoi"] == "absent":  # impossible de vérifier : le calcul d'avant, dit tel quel
+        return {"prix": prix, "note": NON_VERIFIE}
+    if e["cas"] == "inconnue" and e["pourquoi"] == "plusieurs":
+        return {"raison": f"plusieurs changements du code du titre (CUSIP) depuis les actions déclarées au {d}"}
+    saut = saut_au_changement(h, e["ancien"], prix[2])
+    if saut is not None and 1 / SAUT_REGROUPEMENT < saut < SAUT_REGROUPEMENT:
+        # pas de saut de prix : pas un regroupement (nom, fusion de forme…), le nombre d'actions ne change pas (ex. DPW au
+        # labo, devenue DPW Holdings le 2 janvier 2018)
+        return {"prix": prix, "note": f"Nouveau code du titre (CUSIP) vu dès le {jour_fr(e['premier'])}, sans saut de "
+                                      f"prix au changement ({prix_fr(h[e['ancien']][3])} puis {prix_fr(h[prix[2]][5])}) "
+                                      f": pas un regroupement d'actions, leur nombre ne change pas."}
+    if e["cas"] == "inconnue":  # chevauchement
+        return {"raison": f"nouveau code du titre (CUSIP) vu dès le {jour_fr(e['premier'])}, après les actions "
+                          f"déclarées au {d}, et l'ancien encore vu après : impossible de savoir si leur nombre est "
+                          f"d'avant ou d'après un regroupement ou un fractionnement d'actions",
+                "saut": saut, "premier": e["premier"]}
+    vieux = h[e["ancien"]]
+    if vieux[2] is None or datetime.strptime(vieux[2], "%Y%m%d").date() < jour - timedelta(days=PRIX_MAX_JOURS):
+        return {"raison": f"nouveau code du titre (CUSIP) vu dès le {jour_fr(e['premier'])}, après les actions déclarées "
+                          f"au {d} (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code "
+                          f"depuis {PRIX_MAX_JOURS} jours", "saut": saut, "premier": e["premier"]}
+    ancien = [vieux[2], vieux[3], e["ancien"]]
+    if e["cas"] == "ancien":
+        return {"prix": ancien, "note": f"Prix de l'ancien code du titre (CUSIP {e['ancien']}), vu jusqu'au "
+                                        f"{jour_fr(e['dernier_ancien'])} : le nouveau code, vu dès le "
+                                        f"{jour_fr(e['premier'])}, est arrivé après les actions déclarées au {d} "
+                                        f"(regroupement ou fractionnement d'actions possible)."}
+    return {"deux": [ancien, prix], "entre": [e["dernier_ancien"], e["premier"]]}
+
+
+def classer(fiche: dict | None, t: dict, symbole: str, jour: date, cusips: dict | None = None) -> dict:
+    """La taille d'une compagnie (voir les règles en haut), avec les chiffres qui la donnent, ou la raison si inconnue.
+    `cusips` (charger_cusips) : vérifie que le prix et le nombre d'actions sont de la même époque du titre ; None (anciens
+    rejeux du labo) : pas de vérification."""
     s = t.get("seuils")
     x = {"taille": None, "seuils": {k: s[k] for k in ("mois", "p30", "p70")} if s else None}
     rapports = set((fiche or {}).get("rapports") or [])
@@ -216,12 +405,42 @@ def classer(fiche: dict | None, t: dict, symbole: str, jour: date) -> dict:
     prix = (t.get("prix") or {}).get(symbole)
     if not prix or datetime.strptime(prix[0], "%Y%m%d").date() < jour - timedelta(days=PRIX_MAX_JOURS):
         return {**x, "actions": actions, "raison": f"pas de prix de la SEC depuis {PRIX_MAX_JOURS} jours"}
+    note = None
+    if cusips is not None and (not cusips.get("debut") or actions[1].replace("-", "") < cusips["debut"] or len(prix) < 3):
+        note = NON_VERIFIE  # historique pas encore lu (juste après la mise en ligne de l'étape 1) : le calcul d'avant
+    elif cusips is not None:
+        p = prix_de_l_epoque((cusips.get("symboles") or {}).get(symbole) or {}, prix, actions, jour)
+        if "raison" in p:
+            v_max = actions[0] * prix[1] / 1e6
+            if (p.get("saut") or 0) >= SAUT_REGROUPEMENT and _taille(v_max, s) == "petite":
+                # regroupement probable : ancien nombre d'actions × nouveau prix = un MAXIMUM (la vraie valeur est plus
+                # petite) ; sous le 30e centile, la compagnie est petite dans tous les cas (lab, 8 octobre 2026)
+                saut = f"{p['saut']:.1f}".replace(".", ",")
+                return {**x, "taille": "petite", "valeur_m": round(v_max, 1), "valeur_max": True, "actions": actions,
+                        "prix": prix[:2], "note": (
+                            f"Nouveau code du titre (CUSIP) vu dès le {jour_fr(p['premier'])}, après les actions "
+                            f"déclarées au {jour_fr(actions[1])}, avec un prix {saut} fois plus haut : regroupement "
+                            f"d'actions probable. Leur nombre est peut-être d'avant le regroupement : la valeur est au plus "
+                            f"{millions_fr(v_max)}, petite compagnie dans tous les cas.")}
+            return {**x, "actions": actions, "raison": p["raison"]}
+        if "deux" in p:
+            (v_bas, _), (v_haut, p_haut) = sorted((actions[0] * q[1] / 1e6, q) for q in p["deux"])
+            entre = (f"code du titre (CUSIP) changé entre le {jour_fr(p['entre'][0])} et le {jour_fr(p['entre'][1])}, "
+                     f"autour des actions déclarées au {jour_fr(actions[1])} (regroupement ou fractionnement d'actions "
+                     f"possible) : {millions_fr(v_bas)} ou {millions_fr(v_haut)} selon le côté du changement")
+            if _taille(v_bas, s) != _taille(v_haut, s):
+                return {**x, "actions": actions, "raison": entre}
+            r = {**x, "taille": _taille(v_haut, s), "valeur_m": round(v_haut, 1), "valeur_min_m": round(v_bas, 1),
+                 "actions": actions, "prix": p_haut[:2]}
+            return {**r, "note": f"{entre[0].upper()}{entre[1:]}, {TAILLES_FR[r['taille']]} dans les deux cas ; la "
+                                 f"règle des 100 M$ prend la plus grande valeur."}
+        prix, note = p["prix"], p.get("note")
     valeur = actions[0] * prix[1] / 1e6
-    taille = "petite" if valeur < s["p30"] else "grande" if valeur >= s["p70"] else "moyenne"
-    return {**x, "taille": taille, "valeur_m": round(valeur, 1), "actions": actions, "prix": prix}
+    r = {**x, "taille": _taille(valeur, s), "valeur_m": round(valeur, 1), "actions": actions, "prix": prix[:2]}
+    return {**r, "note": note} if note else r
 
 
 def pour_score(donnees, fiches: dict, jour: date) -> dict:
     """{symbole : taille} pour chaque compagnie dont le robot a la fiche SEC (emetteurs.json)."""
-    t = charger(donnees)
-    return {s: classer(f, t, s, jour) for s, f in fiches.items()}
+    t, cusips = charger(donnees), charger_cusips(donnees)
+    return {s: classer(f, t, s, jour, cusips) for s, f in fiches.items()}
