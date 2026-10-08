@@ -5,9 +5,9 @@
  },
  "compte": {
   "achats avec une taille calculée par le robot 0.27.0": 23583,
-  "cas « ancien : taille connue »": 65,
-  "cas « ancien : taille inconnue »": 1,
-  "cas « deux : taille connue »": 24,
+  "cas « ancien : taille connue »": 66,
+  "cas « deux : taille connue »": 22,
+  "cas « deux : taille inconnue »": 2,
   "cas « meme »": 23493,
   "pas de nombre d'actions (dei) déposé avant": 8370,
   "résultat différent avec tout l'historique (pas seulement 400 jours)": 1,
@@ -16,12 +16,12 @@
   "vraie valeur connue (à risque)": 78,
   "vraie valeur inconnue (sans changement de CUSIP)": 5386,
   "vraie valeur inconnue (à risque)": 12,
-  "époque : maximum sûr (regroupement probable)": 35
+  "époque : maximum sûr (regroupement probable)": 33
  },
  "ecarts_de_valeur": {
   "avant : valeur dans ±50 % de la vraie": 20,
   "avant : valeur hors de ±50 %": 58,
-  "époque : valeur dans ±50 % de la vraie": 49,
+  "époque : valeur dans ±50 % de la vraie": 48,
   "époque : valeur hors de ±50 %": 29
  },
  "exemples": {
@@ -1147,6 +1147,53 @@
     "vraie_valeur_m": 25.0
    }
   ],
+  "deux : taille inconnue": [
+   {
+    "actions": [
+     5408723,
+     "2026-03-16"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 20.8
+    },
+    "depot": "2026-04-27",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 17 mars 2026, après les actions déclarées au 16 mars 2026 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_max": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "185064102": [
+      "20250404",
+      "20260108",
+      "20260108",
+      0.77,
+      "20250404",
+      0.61
+     ],
+     "185064201": [
+      "20260317",
+      "20260331",
+      "20260331",
+      3.85,
+      "20260317",
+      4.34
+     ]
+    },
+    "prix": [
+     "20260331",
+     3.85,
+     "185064201"
+    ],
+    "symbole": "CLIR",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 30.3
+   }
+  ],
   "erreur époque : gardée à tort": [
    {
     "actions": [
@@ -1609,6 +1656,48 @@
     "symbole": "MIGI",
     "vraie_taille": "petite",
     "vraie_valeur_m": 24.1
+   },
+   {
+    "actions": [
+     5408723,
+     "2026-03-16"
+    ],
+    "avant": 20.8,
+    "cas": "deux : taille inconnue",
+    "depot": "2026-04-27",
+    "epoque": {
+     "raison": "nouveau code du titre (CUSIP) vu dès le 17 mars 2026, après les actions déclarées au 16 mars 2026 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_max": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "185064102": [
+      "20250404",
+      "20260108",
+      "20260108",
+      0.77,
+      "20250404",
+      0.61
+     ],
+     "185064201": [
+      "20260317",
+      "20260331",
+      "20260331",
+      3.85,
+      "20260317",
+      4.34
+     ]
+    },
+    "prix": [
+     "20260331",
+     3.85,
+     "185064201"
+    ],
+    "symbole": "CLIR",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 30.3
    }
   ],
   "erreur époque : écartée à tort": [
@@ -1787,12 +1876,12 @@
    "sans changement de CUSIP : taille juste": 17620,
    "sans changement de CUSIP : écartée à tort (vraie valeur de 100 M$ ou plus)": 309,
    "à risque : achats jugés": 78,
-   "à risque : bonus petite manqué": 0,
+   "à risque : bonus petite manqué": 1,
    "à risque : bonus petite à tort": 0,
-   "à risque : gardée à tort (vraie valeur sous 100 M$)": 11,
+   "à risque : gardée à tort (vraie valeur sous 100 M$)": 12,
    "à risque : taille fausse": 0,
-   "à risque : taille inconnue": 0,
-   "à risque : taille juste": 78,
+   "à risque : taille inconnue": 1,
+   "à risque : taille juste": 77,
    "à risque : écartée à tort (vraie valeur de 100 M$ ou plus)": 3
   },
   "epoque_tout": {
@@ -1805,12 +1894,12 @@
    "sans changement de CUSIP : taille juste": 17619,
    "sans changement de CUSIP : écartée à tort (vraie valeur de 100 M$ ou plus)": 309,
    "à risque : achats jugés": 78,
-   "à risque : bonus petite manqué": 0,
+   "à risque : bonus petite manqué": 1,
    "à risque : bonus petite à tort": 0,
-   "à risque : gardée à tort (vraie valeur sous 100 M$)": 11,
+   "à risque : gardée à tort (vraie valeur sous 100 M$)": 12,
    "à risque : taille fausse": 0,
-   "à risque : taille inconnue": 0,
-   "à risque : taille juste": 78,
+   "à risque : taille inconnue": 1,
+   "à risque : taille juste": 77,
    "à risque : écartée à tort (vraie valeur de 100 M$ ou plus)": 3
   },
   "inconnue": {
