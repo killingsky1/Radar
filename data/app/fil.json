@@ -3,6 +3,60 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-10-08T19:28:24+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {
+    "entités": 27,
+    "navires": 22,
+    "personnes": 6
+   },
+   "communiques": [
+    "Operation Economic Outcast Neutralizes Iranian Regime's Remaining Shadow Fleet Network",
+    "Operation Economic Outcast Sanctions on Iran's Shadow Fleet Network"
+   ],
+   "retraits": 2,
+   "titre_officiel": "Iran-related Designations; Issuance of Iran-related General License; Issuance of Amended Russia-related General License"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20261008",
+  "kind": "sanctions",
+  "notes": [
+   "Communiqué du Trésor : Operation Economic Outcast Neutralizes Iranian Regime's Remaining Shadow Fleet Network",
+   "Communiqué du Trésor : Operation Economic Outcast Sanctions on Iran's Shadow Fleet Network",
+   "Ajoutés à la liste des sanctions (SDN) : 6 personnes, 27 entités, 22 navires.",
+   "Retirés de la liste : 2 fiches."
+  ],
+  "occurred_on": "2026-10-08",
+  "official_id": "20261008",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20261008",
+  "parser_version": "ofac-1",
+  "published_on": "2026-10-08",
+  "sha256": "be850c1aae9dd7c290c848163b983450f8e7c1985597ddd014e19fafd095f72e",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Iran-related Designations; Issuance of Iran-related General License; Issuance of Amended Russia-related General License"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -94,58 +148,6 @@
   "source": "registre_federal",
   "tickers": [],
   "title": "Document présidentiel : Diesel Fuel; Emergency Tax Relief (EO 14435)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "action_officielle": true,
-   "champs_requis": true,
-   "date_de_l_adresse_concorde": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "liste_sdn_lue": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "titre_et_liste_concordent": true
-  },
-  "collected_at": "2026-10-08T17:51:23+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "ajouts": {
-    "entités": 27,
-    "navires": 22,
-    "personnes": 6
-   },
-   "communiques": [
-    "Operation Economic Outcast Neutralizes Iranian Regime's Remaining Shadow Fleet Network"
-   ],
-   "retraits": 2,
-   "titre_officiel": "Iran-related Designations; Issuance of Iran-related General License; Issuance of Amended Russia-related General License"
-  },
-  "direction": 0,
-  "entities": [],
-  "id": "sanctions_us:20261008",
-  "kind": "sanctions",
-  "notes": [
-   "Communiqué du Trésor : Operation Economic Outcast Neutralizes Iranian Regime's Remaining Shadow Fleet Network",
-   "Ajoutés à la liste des sanctions (SDN) : 6 personnes, 27 entités, 22 navires.",
-   "Retirés de la liste : 2 fiches."
-  ],
-  "occurred_on": "2026-10-08",
-  "official_id": "20261008",
-  "official_url": "https://ofac.treasury.gov/recent-actions/20261008",
-  "parser_version": "ofac-1",
-  "published_on": "2026-10-08",
-  "sha256": "be850c1aae9dd7c290c848163b983450f8e7c1985597ddd014e19fafd095f72e",
-  "source": "sanctions_us",
-  "tickers": [],
-  "title": "Sanctions américaines (OFAC) : Iran-related Designations; Issuance of Iran-related General License; Issuance of Amended Russia-related General License"
  },
  {
   "amount_max": null,
