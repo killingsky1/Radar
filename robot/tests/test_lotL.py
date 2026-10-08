@@ -9,7 +9,9 @@
 Les attendus viennent du labo, qui a classé chaque initié et calculé chaque taille sur les fichiers COMPLETS, avec son
 propre code."""
 import gzip
+import io
 import json
+import zipfile
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -40,6 +42,14 @@ def telechargement(c: bytes):
     return type("T", (), {"contenu": c, "sha256": empreinte(c)})()
 
 
+def ftd_vide(nom: str) -> bytes:
+    """Un fichier d'échecs de livraison avec l'en-tête seulement."""
+    tampon = io.BytesIO()
+    with zipfile.ZipFile(tampon, "w") as z:
+        z.writestr(nom.replace(".zip", ".txt"), prix_sec.ENTETE + "\n")
+    return tampon.getvalue()
+
+
 class FauxInternet:
     """Sert les vrais fichiers réduits, aux vraies adresses de la SEC et de Kenneth French ; le reste : 404."""
 
@@ -62,10 +72,12 @@ class FauxInternet:
         if url.startswith("https://data.sec.gov/api/xbrl/frames/dei/EntityCommonStockSharesOutstanding/shares/") and \
                 (F / f"frames_{nom}").exists():
             return telechargement((F / f"frames_{nom}").read_bytes())
-        if url == prix_sec.PAGE:
+        if url == prix_sec.PAGE:  # les moitiés de mois de janvier 2025 à septembre 2026 (la vraie page remonte à 2009)
             return telechargement((F / "page_echecs.html").read_bytes())
-        if url.startswith("https://www.sec.gov/files/data/fails-deliver-data/") and (F / nom).exists():
-            return telechargement((F / nom).read_bytes())
+        if url.startswith("https://www.sec.gov/files/data/fails-deliver-data/"):
+            # 202608b et 202609a : les vrais fichiers réduits ; les autres moitiés de mois : l'en-tête seulement (aucun
+            # échec de livraison pour ces compagnies), pour que l'historique des CUSIP (400 jours) couvre les actions
+            return telechargement((F / nom).read_bytes() if (F / nom).exists() else ftd_vide(nom))
         if url.startswith("https://data.sec.gov/api/xbrl/companyconcept/"):
             fichier = F / "concept" / f"concept_{url.split('/')[6]}.json"  # vrais dossiers lus le 5 octobre (recherche 29)
             if fichier.exists():
@@ -270,16 +282,31 @@ def test_raisons_des_tailles_inconnues(tmp_path):
 
 def test_prix_relus_seulement_quand_la_sec_publie_un_nouveau_fichier(tmp_path):
     internet = collecter_taille(tmp_path)
-    ftd = [u for u in internet.appels if "cnsfails" in u]
-    assert ftd == ["https://www.sec.gov/files/data/fails-deliver-data/cnsfails202608b.zip",
-                   "https://www.sec.gov/files/data/fails-deliver-data/cnsfails202609a.zip"]
+    ftd = [u.rsplit("/cnsfails", 1)[1] for u in internet.appels if "cnsfails" in u]
+    # 1er passage : les 2 derniers fichiers (prix), puis l'historique des CUSIP (étape 1, données sûres) : chaque fichier
+    # des 400 derniers jours (fin le 31 août 2025 ou après), lu une seule fois
+    historique = [f"{a}{m:02d}{x}" for a in (2025, 2026) for m in range(1, 13) for x in "ab"
+                  if "202508b" <= f"{a}{m:02d}{x}" <= "202609a"]
+    assert ftd[:2] == ["202608b.zip", "202609a.zip"] and sorted(ftd) == [f"{c}.zip" for c in historique]
+    h = ta.charger_cusips(tmp_path)
+    assert h["fichiers"] == historique and h["debut"] == "20250815" and len(historique) == 26
+    assert h["symboles"]["FLNA"] == {"14817C107": ["20260817", "20260914", "20260914", 0.77]}
     contenu = ta.chemin(tmp_path).read_text(encoding="utf-8")
+    contenu_h = ta.chemin_cusips(tmp_path).read_text(encoding="utf-8")
     internet2 = collecter_taille(tmp_path)
     assert not [u for u in internet2.appels if "cnsfails" in u]
     assert ta.chemin(tmp_path).read_text(encoding="utf-8") == contenu  # rien de changé : fichier pas réécrit
+    assert ta.chemin_cusips(tmp_path).read_text(encoding="utf-8") == contenu_h
     e = ta.charger(tmp_path)
     assert e["frames"]["CY2026Q4I"] == {"statut": 404}  # trimestre en cours : pas encore de fichier, normal
-    assert e["fichiers_prix"] == ["202608b", "202609a"] and e["prix"]["FLNA"] == ["20260914", 0.77]
+    assert e["fichiers_prix"] == ["202608b", "202609a"] and e["prix"]["FLNA"] == ["20260914", 0.77, "14817C107"]
+    # prix d'avant l'étape 1 (sans leur CUSIP) : les 2 derniers fichiers relus une fois, l'historique n'est pas relu
+    e["prix"] = {s: p[:2] for s, p in e["prix"].items()}
+    ta.chemin(tmp_path).write_text(json.dumps(e), encoding="utf-8")
+    internet3 = collecter_taille(tmp_path)
+    assert [u.rsplit("/cnsfails", 1)[1] for u in internet3.appels if "cnsfails" in u] == ["202608b.zip", "202609a.zip"]
+    assert ta.charger(tmp_path)["prix"]["FLNA"] == ["20260914", 0.77, "14817C107"]
+    assert ta.chemin_cusips(tmp_path).read_text(encoding="utf-8") == contenu_h
 
 
 def test_autre_erreur_que_404_est_une_panne(tmp_path):

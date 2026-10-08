@@ -73,8 +73,14 @@ def prepare(tmp_path, monkeypatch):
 
 def test_page_officielle_fichiers_et_moities_du_mois():
     liens = ps.fichiers_de_la_page(PAGE.decode("utf-8", "replace"))
-    assert len(liens) == 411 and max(liens) == "202609a"
+    assert len(liens) == 413 and min(liens) == "200907a" and max(liens) == "202609a"  # aucune moitié de mois manquante
     assert liens["202609a"] == "https://www.sec.gov/files/data/fails-deliver-data/cnsfails202609a.zip"
+    # étape 1 (données sûres) : 2 fichiers dont le nom finit par « _0 », jamais lus avant le 8 octobre 2026
+    assert liens["202308b"] == "https://www.sec.gov/files/data/other/fails-deliver-data/cnsfails202308b_0.zip"
+    assert liens["201910a"] == "https://www.sec.gov/files/data/fails-deliver-data/cnsfails201910a_0.zip"
+    deux_noms = '<a href="/x/cnsfails202308b_0.zip">a</a> <a href="/x/cnsfails202308b.zip">b</a>'
+    assert ps.fichiers_de_la_page(deux_noms) == {"202308b": "https://www.sec.gov/x/cnsfails202308b.zip"}  # le nom simple
+    assert ps.fichiers_de_la_page(deux_noms.replace("_0", "_1"))["202308b"].endswith("/cnsfails202308b.zip")
     assert ps.periode("202609a") == ("20260901", "20260914") and ps.periode("202607b") == ("20260715", "20260731")
     # La SEC : 1re moitié publiée à la fin du mois, 2e moitié vers le 15 du mois suivant
     assert str(ps.mise_en_ligne_prevue("20261006")) == "2026-10-31"
