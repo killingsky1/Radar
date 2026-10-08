@@ -21,26 +21,33 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
+      - name: Le code du robot à mesurer (branche travail, étape 1 : données sûres)
+        uses: actions/checkout@v4
+        with:
+          ref: travail
+          path: principal
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - run: pip install -r principal/robot/requirements.txt
       - name: Le jeu de recherche (cache de l'étape 0)
         uses: actions/cache/restore@v4
         with:
           path: cache
           key: tournoi-aucun
           restore-keys: tournoi-
-      - name: Regroupements d'actions (découverte et coffre-fort)
+      - name: Règle du robot rejouée (découverte et coffre-fort, mesure 2)
         run: |
-          test -f cache/decouverte/evenements.jsonl.gz
-          python labo/tournoi/mesures/regroupements.py --donnees cache/decouverte --sortie labo/tournoi/mesures/regroupements_decouverte.json
-          python labo/tournoi/mesures/regroupements.py --donnees cache/coffre --sortie labo/tournoi/mesures/regroupements_coffre.json
+          test -f cache/decouverte/evenements.jsonl.gz && test -f cache/ftd/202301a.zip && ls cache/ftd | wc -l
+          git -C principal log --oneline -1
+          python labo/tournoi/mesures/regroupements2.py --donnees cache/decouverte --ftd cache/ftd --robot principal/robot --sortie labo/tournoi/mesures/regroupements2_decouverte.json
+          python labo/tournoi/mesures/regroupements2.py --donnees cache/coffre --ftd cache/ftd --robot principal/robot --sortie labo/tournoi/mesures/regroupements2_coffre.json
       - name: Sauvegarder les mesures
         if: always()
         run: |
           git config user.name "radar-robot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add labo/tournoi/mesures
-          git commit -m "Labo : mesure des regroupements d'actions dans le jeu de recherche ($(date -u +'%Y-%m-%d %H:%M') UTC)" || exit 0
+          git commit -m "Labo : mesure 2 des regroupements d'actions (règle du robot rejouée) ($(date -u +'%Y-%m-%d %H:%M') UTC)" || exit 0
           git pull --rebase origin labo
           git push origin HEAD:labo
