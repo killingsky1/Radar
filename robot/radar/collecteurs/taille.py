@@ -47,8 +47,11 @@ centile et plus ; moyenne entre les deux (les 3, 4 et 3 déciles de Lakonishok e
   Historique pas encore lu (juste après la mise en ligne : la taille est lue au passage du matin) : le calcul d'avant,
   avec une note ; des tailles inconnues remettraient les écartées (moins de 100 M$) dans la liste « hausse ».
   Mesuré au labo le 8 octobre 2026 (labo/tournoi/mesures/regroupements2.py : le vrai code du robot, avec ce qu'il aurait
-  su chaque jour, sur les achats de dirigeants de 2016 à 2026, comparé à la vraie valeur connue après coup) : voir
-  regroupements2_decouverte.json et regroupements2_coffre.json sur la branche labo.
+  su chaque jour, sur les achats de dirigeants de 2016 à 2026, comparé à la vraie valeur connue après coup ; achats avec
+  un changement de CUSIP après les actions, 2023-2026 / 2016-2023) : gardées à tort dans « hausse » sous 100 M$ 40 → 12 /
+  35 → 32 ; écartées à tort 1 → 3 / 0 → 0 (des hausses après le dernier prix de la SEC) ; tailles fausses 5 → 0 / 24 → 1 ;
+  bonus de petite compagnie à tort 0 → 0 / 13 → 0 ; bonus manqués (taille inconnue) 3 → 1 / 6 → 32 ; tous les autres
+  achats : identiques. La règle « taille inconnue » seule aurait été pire (66 / 121 gardées à tort).
 Lu au passage du matin : les seuils (1 fichier), les actions (5 fichiers), les prix seulement quand la SEC publie un
 nouveau fichier (2 fois par mois), et l'historique des CUSIP (chaque fichier une seule fois).
 """
