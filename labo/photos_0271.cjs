@@ -9,7 +9,7 @@ const fs = require("fs");
   const lignes = [];
   const dire = (t) => { console.log(t); lignes.push(t); };
   const sans = (t) => (t || "").replace(/\s/g, "");
-  const base = "https://killingsky1.github.io/Radar/";
+  const base = process.argv[4] || "https://killingsky1.github.io/Radar/";  // 3e argument : essai local avant le vrai site
   const b = await chromium.launch(process.env.CI ? { channel: "chrome" } : {});
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "fr-CA", colorScheme: "dark" });
   const p = await ctx.newPage();
@@ -43,10 +43,14 @@ const fs = require("fs");
   for (const [segment, r] of aVoir) {
     n += 1;
     await p.goto(base); await p.waitForSelector("nav.onglets"); await p.waitForTimeout(600);
+    // l'app rouvre le dernier onglet (Réglages, vu plus haut) : revenir à l'onglet Radar d'abord
+    await p.locator("nav.onglets button", { hasText: "Radar" }).click(); await p.waitForTimeout(500);
     await p.getByRole("button", { name: "Tout voir" }).first().click(); await p.waitForTimeout(500);
     await p.locator(".segment", { hasText: segment }).click(); await p.waitForTimeout(300);
-    const motif = new RegExp(`(^|[^A-Z0-9-])${r.symbole.replace(/[.*+?^${}()|[\]\\-]/g, "\\$&")}([^A-Z0-9-]|$)`);
-    await p.locator(".ligne.suggestion", { hasText: motif }).first().click(); await p.waitForTimeout(700);
+    // le symbole est dans <span class="symbole"> : texte exact (le texte de la ligne colle tout : « 9,3GMEGameStop »)
+    const exact = new RegExp(`^${r.symbole.replace(/[.*+?^${}()|[\]\\-]/g, "\\$&")}$`);
+    await p.locator(".ligne.suggestion").filter({ has: p.locator(".symbole", { hasText: exact }) }).first().click();
+    await p.waitForTimeout(700);
     const carte = p.locator(".taille");
     await carte.evaluate((el) => { el.previousElementSibling.style.scrollMarginTop = "64px"; el.previousElementSibling.scrollIntoView({ block: "start" }); });
     await photo(`x${n}-fiche-${r.symbole}-taille`);
