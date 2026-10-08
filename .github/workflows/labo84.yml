@@ -21,7 +21,7 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
-      - name: Le code du robot à mesurer (branche travail, étape 1 : données sûres)
+      - name: "Le code du robot à mesurer (branche travail, étape 1 : données sûres)"
         uses: actions/checkout@v4
         with:
           ref: travail
