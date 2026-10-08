@@ -26,9 +26,27 @@ centile et plus ; moyenne entre les deux (les 3, 4 et 3 déciles de Lakonishok e
   - actions déclarées il y a plus de 200 jours (une compagnie américaine les déclare à chaque rapport trimestriel) ;
   - moins de 500 000 actions déclarées : impossible pour une action cotée (le Nasdaq exige au moins 500 000 actions dans
     le public pour garder une compagnie inscrite) ; mesuré le 5 octobre 2026 : QVCG, 1 action déclarée au 30 juin 2026 ;
-  - pas de prix de la SEC depuis 60 jours (un titre a un prix seulement les jours où il a des échecs de livraison).
-Lu au passage du matin : les seuils (1 fichier), les actions (5 fichiers), et les prix seulement quand la SEC publie un
-nouveau fichier (2 fois par mois).
+  - pas de prix de la SEC depuis 60 jours (un titre a un prix seulement les jours où il a des échecs de livraison) ;
+  - changement du code du titre (CUSIP) dont on ne peut pas dire le côté (voir plus bas).
+- Étape 1, données sûres (0.27.1) : le prix doit être de la même époque que le nombre d'actions. Un regroupement d'actions
+  (ex. 1 pour 10) donne un nouveau CUSIP et divise le nombre d'actions, mais le nombre déclaré à la SEC reste l'ancien
+  jusqu'au rapport suivant : ancien nombre × nouveau prix = une valeur 10 fois trop haute (ex. EVLO : 395 M$ calculés au
+  lieu d'environ 31 M$). Le robot garde l'historique des CUSIP de chaque symbole (fichiers d'échecs de livraison des 400
+  derniers jours au départ, puis chaque nouveau fichier : data/prix/cusips.json) et voit, avec epoque() :
+  - le CUSIP du prix était déjà vu au plus tard le jour des actions : même époque, le calcul habituel ;
+  - l'ancien CUSIP encore vu après le jour des actions : le dernier prix de l'ancien CUSIP (s'il a 60 jours ou moins) ;
+  - côté inconnu (ancien vu la dernière fois avant le jour des actions, nouveau la 1re fois après) : les deux valeurs,
+    une taille seulement si elles donnent la même, et la règle des 100 M$ prend la plus grande ;
+  - ancien prix trop vieux, mais prix au moins 1,8 fois plus haut au changement (regroupement probable) : ancien nombre ×
+    nouveau prix est un MAXIMUM ; sous le 30e centile, la compagnie est petite dans tous les cas (« au plus … ») ;
+  - sinon (ancien et nouveau vus en même temps, plusieurs changements, aucun saut de prix) : taille inconnue.
+  Historique pas encore lu (juste après la mise en ligne : la taille est lue au passage du matin) : le calcul d'avant,
+  avec une note ; des tailles inconnues remettraient les écartées (moins de 100 M$) dans la liste « hausse ».
+  Mesuré au labo le 8 octobre 2026 (labo/tournoi/mesures/regroupements2.py : le vrai code du robot, avec ce qu'il aurait
+  su chaque jour, sur les achats de dirigeants de 2016 à 2026, comparé à la vraie valeur connue après coup) : voir
+  regroupements2_decouverte.json et regroupements2_coffre.json sur la branche labo.
+Lu au passage du matin : les seuils (1 fichier), les actions (5 fichiers), les prix seulement quand la SEC publie un
+nouveau fichier (2 fois par mois), et l'historique des CUSIP (chaque fichier une seule fois).
 """
 
 from __future__ import annotations
