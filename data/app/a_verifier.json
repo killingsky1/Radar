@@ -1,5 +1,105 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "compagnie_cotee": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "extrait_officiel": true,
+   "gouvernement_nomme": true,
+   "point_8k_retenu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_de_propriete": false
+  },
+  "collected_at": "2026-10-08T10:53:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "cik": "0000895419",
+   "details": [
+    [
+     "Compagnie",
+     "WOLFSPEED, INC."
+    ],
+    [
+     "Ministère",
+     "ministère de la Guerre (Défense)"
+    ],
+    [
+     "Points du 8-K",
+     "8.01"
+    ],
+    [
+     "Extrait (8-K)",
+     "… As an additional condition to entry into Definitive Agreements for the Expected U.S. Government Transaction, the Company would be required to issue warrants to the DoW pro rata as and when each tranche is funded to purchase (a) 5% of the outstanding equity of the Company with an exercise price based on a mutually agreed volume-weighted average …"
+    ],
+    [
+     "Extrait (8-K)",
+     "… The issuance of warrants to the DoW in connection with the Expected U.S. Government Transaction could result in substantial dilution to the Company’s stockholders. Pursuant to the conditional Commitment Letter, as a condition to entry into Definitive Agreements for the Expected U.S. …"
+    ],
+    [
+     "Extrait (EX-99.1)",
+     "… financial flexibility, and further position Wolfspeed for long-term value creation.” In connection with the potential financing and subject to the negotiation and execution of definitive agreements, Wolfspeed would be required to issue to the DoW VWAP-based warrants to purchase, in the aggregate, up to 7.5% of Wolfspeed’s fully diluted equity, with the warrants issuable pro rata as and when financing tranches are funded. The execution of the definitive agreements and consummation of the …"
+    ],
+    [
+     "Extrait (EX-99.1)",
+     "… and the expected terms and conditions thereof, the anticipated use of proceeds, the potential impact of the anticipated financing on Wolfspeed’s business, financial condition and results of operations, the expected issuance of warrants to the U.S. Department of War and the terms thereof, and Wolfspeed’s program to advance silicon carbide and related semiconductor technologies. Actual results could differ materially due to a number of factors, including but not limited to, due diligence by OSC; Wolfspeed’s …"
+    ]
+   ],
+   "documents": [
+    {
+     "extraits": [
+      "… As an additional condition to entry into Definitive Agreements for the Expected U.S. Government Transaction, the Company would be required to issue warrants to the DoW pro rata as and when each tranche is funded to purchase (a) 5% of the outstanding equity of the Company with an exercise price based on a mutually agreed volume-weighted average …",
+      "… The issuance of warrants to the DoW in connection with the Expected U.S. Government Transaction could result in substantial dilution to the Company’s stockholders. Pursuant to the conditional Commitment Letter, as a condition to entry into Definitive Agreements for the Expected U.S. …",
+      "… The financial, tax and accounting treatment of the Expected U.S. Government Transaction contemplated by the Definitive Agreements remains uncertain and subject to change. Given both the novelty and complexity of the Expected U.S. Government Transaction, and the ongoing negotiation of Definitive Agreements, the Company’s …"
+     ],
+     "type": "8-K",
+     "url": "https://www.sec.gov/Archives/edgar/data/895419/000119312526416987/d122407d8k.htm"
+    },
+    {
+     "extraits": [
+      "… financial flexibility, and further position Wolfspeed for long-term value creation.” In connection with the potential financing and subject to the negotiation and execution of definitive agreements, Wolfspeed would be required to issue to the DoW VWAP-based warrants to purchase, in the aggregate, up to 7.5% of Wolfspeed’s fully diluted equity, with the warrants issuable pro rata as and when financing tranches are funded. The execution of the definitive agreements and consummation of the …",
+      "… and the expected terms and conditions thereof, the anticipated use of proceeds, the potential impact of the anticipated financing on Wolfspeed’s business, financial condition and results of operations, the expected issuance of warrants to the U.S. Department of War and the terms thereof, and Wolfspeed’s program to advance silicon carbide and related semiconductor technologies. Actual results could differ materially due to a number of factors, including but not limited to, due diligence by OSC; Wolfspeed’s …"
+     ],
+     "type": "EX-99.1",
+     "url": "https://www.sec.gov/Archives/edgar/data/895419/000119312526416987/d122407dex991.htm"
+    }
+   ],
+   "ministere": "War",
+   "points": [
+    "8.01"
+   ]
+  },
+  "direction": 0,
+  "entities": [
+   "WOLFSPEED, INC.",
+   "Gouvernement américain"
+  ],
+  "id": "participations_gouv:0001193125-26-416987",
+  "kind": "participation_gouv",
+  "notes": [
+   "Lisez l'extrait officiel : le titre résume seulement qu'il est question de titres de la compagnie et du gouvernement américain (achat, détention, bons de souscription ou revente)."
+  ],
+  "occurred_on": "2026-10-07",
+  "official_id": "0001193125-26-416987",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/895419/000119312526416987/0001193125-26-416987-index.htm",
+  "parser_version": "participations-2",
+  "published_on": "2026-10-07",
+  "sha256": "1d6223ddb5f34670399b36f7a2937c77ad23983677b7e119089bd60fe3b767c0",
+  "source": "participations_gouv",
+  "tickers": [
+   "WOLF"
+  ],
+  "title": "WOLFSPEED, INC. : un 8-K dit que le ministère américain de la Guerre (Défense) reçoit, détient ou revend des titres de la compagnie"
+ },
+ {
   "amount_max": 10329903316818.0,
   "amount_min": 10329903316818.0,
   "badge": "a_verifier",
