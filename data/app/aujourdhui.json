@@ -4854,7 +4854,7 @@
    "title": "Knotnerus Tim Jasper (Chief Executive Officer) achète 11 000 actions de AgomAb Therapeutics NV"
   }
  },
- "genere_a": "2026-10-08T19:28:20+00:00",
+ "genere_a": "2026-10-08T21:19:58+00:00",
  "hausse": [
   {
    "bonus": {
@@ -6187,7 +6187,7 @@
     }
    ],
    "moins": 0.0,
-   "nom": "Helus Pharma Inc.",
+   "nom": "CYBIN INC.",
    "note10": 7.1,
    "note10_sans_bonus": 7.1,
    "note10_sans_taille": 7.1,
@@ -6506,7 +6506,7 @@
    "Fed, Banque du Canada, décrets, sanctions, ventes d'armes, CFTC : contexte, sans points."
   ],
   "seuil": "Une compagnie entre dans la liste à partir de 7/10 (hausse) ou à 3/10 et moins (baisse).",
-  "taille": "Taille en bourse = actions en circulation déclarées à la SEC × dernier prix de la SEC. Petite : sous le 30e centile des compagnies du NYSE ; grande : au 70e et plus (seuils publiés chaque mois par Kenneth French). Taille inconnue, donc pas de bonus : compagnie étrangère (20-F, 40-F, 6-K), actions déclarées il y a plus de 200 jours ou moins de 500 000 actions déclarées, pas de prix de la SEC depuis 60 jours.",
+  "taille": "Taille en bourse = actions en circulation déclarées à la SEC × dernier prix de la SEC. Petite : sous le 30e centile des compagnies du NYSE ; grande : au 70e et plus (seuils publiés chaque mois par Kenneth French). Le prix doit être de la même époque que le nombre d'actions : si le code du titre (CUSIP) a changé après la date des actions (souvent un regroupement d'actions, qui divise leur nombre), c'est le dernier prix de l'ancien code ; si on ne sait pas de quel côté du changement sont les actions, les deux valeurs possibles, et une taille seulement si elles donnent la même ; après un regroupement probable (prix au moins 1,8 fois plus haut au changement), ancien nombre × nouveau prix est un maximum. Taille inconnue, donc pas de bonus : compagnie étrangère (20-F, 40-F, 6-K), actions déclarées il y a plus de 200 jours ou moins de 500 000 actions déclarées, pas de prix de la SEC depuis 60 jours, changement de code du titre dont on ne peut pas dire le côté.",
   "temps": "Moitié des points après 30 jours (60 pour les grands fonds, qui déclarent en retard). Après 90 jours, une info ne compte plus.",
   "trop_petites": "Moins de 100 M$ en bourse : la compagnie n'entre pas dans la liste « hausse ». Dans le rejeu de 3 ans du labo (juillet 2023 à juin 2026, prix de la SEC), ces compagnies ont fait pire que le S&P 500 chacune des 3 années : écart médian de −11,8, −6,6 et −1,3 % un mois après l'achat, contre −2,0, −3,1 et −0,2 % pour les autres. Elles restent visibles à part (« écartées ») et sont suivies dans les Résultats pour vérifier la règle. Taille inconnue : rien n'est écarté.",
   "version": "score-9"
