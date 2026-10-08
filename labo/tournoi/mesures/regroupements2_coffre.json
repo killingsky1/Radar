@@ -1,0 +1,2993 @@
+{
+ "chevauchements": {
+  "ancien encore vu après l'arrivée du nouveau": 44,
+  "changements de CUSIP (symboles des achats)": 2679
+ },
+ "compte": {
+  "achats avec une taille calculée par le robot 0.27.0": 82795,
+  "cas « ancien : taille connue »": 98,
+  "cas « ancien : taille inconnue »": 34,
+  "cas « deux : taille connue »": 13,
+  "cas « deux : taille inconnue »": 55,
+  "cas « inconnue (chevauchement) »": 21,
+  "cas « inconnue (plusieurs) »": 5,
+  "cas « meme »": 82569,
+  "inconnue pour une autre raison de l'historique": 4,
+  "pas de nombre d'actions (dei) déposé avant": 28395,
+  "résultat différent avec tout l'historique (pas seulement 400 jours)": 28,
+  "taille inconnue même avant (actions, prix…)": 10420,
+  "vraie valeur connue (sans changement de CUSIP)": 68523,
+  "vraie valeur connue (à risque)": 191,
+  "vraie valeur inconnue (sans changement de CUSIP)": 14046,
+  "vraie valeur inconnue (à risque)": 35
+ },
+ "ecarts_de_valeur": {
+  "avant : valeur dans ±50 % de la vraie": 82,
+  "avant : valeur hors de ±50 %": 109,
+  "époque : valeur dans ±50 % de la vraie": 78,
+  "époque : valeur hors de ±50 %": 16
+ },
+ "exemples": {
+  "400 jours contre tout l'historique": [
+   {
+    "depot": "2019-07-08",
+    "r400": {
+     "actions": [
+      125514093,
+      "2019-05-03"
+     ],
+     "prix": [
+      "20190611",
+      4.66
+     ],
+     "seuils": {
+      "mois": "201906",
+      "p30": 1221.32,
+      "p70": 7923.05
+     },
+     "source_actions": "frames",
+     "taille": "petite",
+     "valeur_m": 584.9
+    },
+    "rtout": {
+     "actions": [
+      125514093,
+      "2019-05-03"
+     ],
+     "raison": "nouveau code du titre (CUSIP) vu dès le 23 mai 2019, après les actions déclarées au 3 mai 2019 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "seuils": {
+      "mois": "201906",
+      "p30": 1221.32,
+      "p70": 7923.05
+     },
+     "source_actions": "frames",
+     "taille": null
+    },
+    "symbole": "CNR"
+   },
+   {
+    "depot": "2020-02-18",
+    "r400": {
+     "actions": [
+      26924381,
+      "2019-11-11"
+     ],
+     "prix": [
+      "20200131",
+      2.06
+     ],
+     "seuils": {
+      "mois": "202001",
+      "p30": 1171.4,
+      "p70": 7909.21
+     },
+     "source_actions": "frames",
+     "taille": "petite",
+     "valeur_m": 55.5
+    },
+    "rtout": {
+     "actions": [
+      26924381,
+      "2019-11-11"
+     ],
+     "raison": "nouveau code du titre (CUSIP) vu dès le 18 décembre 2019, après les actions déclarées au 11 novembre 2019 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "seuils": {
+      "mois": "202001",
+      "p30": 1171.4,
+      "p70": 7909.21
+     },
+     "source_actions": "frames",
+     "taille": null
+    },
+    "symbole": "ELA"
+   },
+   {
+    "depot": "2020-03-18",
+    "r400": {
+     "actions": [
+      26924381,
+      "2019-11-11"
+     ],
+     "prix": [
+      "20200225",
+      2.59
+     ],
+     "seuils": {
+      "mois": "202002",
+      "p30": 1027.2,
+      "p70": 7221.07
+     },
+     "source_actions": "frames",
+     "taille": "petite",
+     "valeur_m": 69.7
+    },
+    "rtout": {
+     "actions": [
+      26924381,
+      "2019-11-11"
+     ],
+     "raison": "nouveau code du titre (CUSIP) vu dès le 18 décembre 2019, après les actions déclarées au 11 novembre 2019 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "seuils": {
+      "mois": "202002",
+      "p30": 1027.2,
+      "p70": 7221.07
+     },
+     "source_actions": "frames",
+     "taille": null
+    },
+    "symbole": "ELA"
+   },
+   {
+    "depot": "2020-07-06",
+    "r400": {
+     "actions": [
+      97377890,
+      "2020-04-30"
+     ],
+     "prix": [
+      "20200612",
+      4.0
+     ],
+     "seuils": {
+      "mois": "202006",
+      "p30": 1015.32,
+      "p70": 7062.31
+     },
+     "source_actions": "frames",
+     "taille": "petite",
+     "valeur_m": 389.5
+    },
+    "rtout": {
+     "actions": [
+      97377890,
+      "2020-04-30"
+     ],
+     "raison": "nouveau code du titre (CUSIP) vu dès le 12 juin 2020, après les actions déclarées au 30 avril 2020 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "seuils": {
+      "mois": "202006",
+      "p30": 1015.32,
+      "p70": 7062.31
+     },
+     "source_actions": "frames",
+     "taille": null
+    },
+    "symbole": "AWH"
+   },
+   {
+    "depot": "2022-01-03",
+    "r400": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "prix": [
+      "20211214",
+      1.54
+     ],
+     "seuils": {
+      "mois": "202112",
+      "p30": 1767.45,
+      "p70": 10886.98
+     },
+     "source_actions": "frames",
+     "taille": "petite",
+     "valeur_m": 126.2
+    },
+    "rtout": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "raison": "nouveau code du titre (CUSIP) vu dès le 14 décembre 2021, après les actions déclarées au 18 novembre 2021 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "seuils": {
+      "mois": "202112",
+      "p30": 1767.45,
+      "p70": 10886.98
+     },
+     "source_actions": "frames",
+     "taille": null
+    },
+    "symbole": "NILE"
+   },
+   {
+    "depot": "2022-01-24",
+    "r400": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "prix": [
+      "20211229",
+      1.25
+     ],
+     "seuils": {
+      "mois": "202112",
+      "p30": 1767.45,
+      "p70": 10886.98
+     },
+     "source_actions": "frames",
+     "taille": "petite",
+     "valeur_m": 102.4
+    },
+    "rtout": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "raison": "nouveau code du titre (CUSIP) vu dès le 14 décembre 2021, après les actions déclarées au 18 novembre 2021 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "seuils": {
+      "mois": "202112",
+      "p30": 1767.45,
+      "p70": 10886.98
+     },
+     "source_actions": "frames",
+     "taille": null
+    },
+    "symbole": "NILE"
+   },
+   {
+    "depot": "2022-01-25",
+    "r400": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "prix": [
+      "20211229",
+      1.25
+     ],
+     "seuils": {
+      "mois": "202112",
+      "p30": 1767.45,
+      "p70": 10886.98
+     },
+     "source_actions": "frames",
+     "taille": "petite",
+     "valeur_m": 102.4
+    },
+    "rtout": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "raison": "nouveau code du titre (CUSIP) vu dès le 14 décembre 2021, après les actions déclarées au 18 novembre 2021 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "seuils": {
+      "mois": "202112",
+      "p30": 1767.45,
+      "p70": 10886.98
+     },
+     "source_actions": "frames",
+     "taille": null
+    },
+    "symbole": "NILE"
+   },
+   {
+    "depot": "2022-01-26",
+    "r400": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "prix": [
+      "20211229",
+      1.25
+     ],
+     "seuils": {
+      "mois": "202112",
+      "p30": 1767.45,
+      "p70": 10886.98
+     },
+     "source_actions": "frames",
+     "taille": "petite",
+     "valeur_m": 102.4
+    },
+    "rtout": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "raison": "nouveau code du titre (CUSIP) vu dès le 14 décembre 2021, après les actions déclarées au 18 novembre 2021 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "seuils": {
+      "mois": "202112",
+      "p30": 1767.45,
+      "p70": 10886.98
+     },
+     "source_actions": "frames",
+     "taille": null
+    },
+    "symbole": "NILE"
+   },
+   {
+    "depot": "2022-01-27",
+    "r400": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "prix": [
+      "20211229",
+      1.25
+     ],
+     "seuils": {
+      "mois": "202112",
+      "p30": 1767.45,
+      "p70": 10886.98
+     },
+     "source_actions": "frames",
+     "taille": "petite",
+     "valeur_m": 102.4
+    },
+    "rtout": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "raison": "nouveau code du titre (CUSIP) vu dès le 14 décembre 2021, après les actions déclarées au 18 novembre 2021 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "seuils": {
+      "mois": "202112",
+      "p30": 1767.45,
+      "p70": 10886.98
+     },
+     "source_actions": "frames",
+     "taille": null
+    },
+    "symbole": "NILE"
+   },
+   {
+    "depot": "2022-01-28",
+    "r400": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "prix": [
+      "20211229",
+      1.25
+     ],
+     "seuils": {
+      "mois": "202112",
+      "p30": 1767.45,
+      "p70": 10886.98
+     },
+     "source_actions": "frames",
+     "taille": "petite",
+     "valeur_m": 102.4
+    },
+    "rtout": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "raison": "nouveau code du titre (CUSIP) vu dès le 14 décembre 2021, après les actions déclarées au 18 novembre 2021 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "seuils": {
+      "mois": "202112",
+      "p30": 1767.45,
+      "p70": 10886.98
+     },
+     "source_actions": "frames",
+     "taille": null
+    },
+    "symbole": "NILE"
+   },
+   {
+    "depot": "2022-02-01",
+    "r400": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "prix": [
+      "20220114",
+      1.06
+     ],
+     "seuils": {
+      "mois": "202201",
+      "p30": 1632.2,
+      "p70": 9975.12
+     },
+     "source_actions": "frames",
+     "taille": "petite",
+     "valeur_m": 86.8
+    },
+    "rtout": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "raison": "nouveau code du titre (CUSIP) vu dès le 14 décembre 2021, après les actions déclarées au 18 novembre 2021 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "seuils": {
+      "mois": "202201",
+      "p30": 1632.2,
+      "p70": 9975.12
+     },
+     "source_actions": "frames",
+     "taille": null
+    },
+    "symbole": "NILE"
+   },
+   {
+    "depot": "2022-02-02",
+    "r400": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "prix": [
+      "20220114",
+      1.06
+     ],
+     "seuils": {
+      "mois": "202201",
+      "p30": 1632.2,
+      "p70": 9975.12
+     },
+     "source_actions": "frames",
+     "taille": "petite",
+     "valeur_m": 86.8
+    },
+    "rtout": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "raison": "nouveau code du titre (CUSIP) vu dès le 14 décembre 2021, après les actions déclarées au 18 novembre 2021 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "seuils": {
+      "mois": "202201",
+      "p30": 1632.2,
+      "p70": 9975.12
+     },
+     "source_actions": "frames",
+     "taille": null
+    },
+    "symbole": "NILE"
+   },
+   {
+    "depot": "2022-02-04",
+    "r400": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "prix": [
+      "20220114",
+      1.06
+     ],
+     "seuils": {
+      "mois": "202201",
+      "p30": 1632.2,
+      "p70": 9975.12
+     },
+     "source_actions": "frames",
+     "taille": "petite",
+     "valeur_m": 86.8
+    },
+    "rtout": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "raison": "nouveau code du titre (CUSIP) vu dès le 14 décembre 2021, après les actions déclarées au 18 novembre 2021 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "seuils": {
+      "mois": "202201",
+      "p30": 1632.2,
+      "p70": 9975.12
+     },
+     "source_actions": "frames",
+     "taille": null
+    },
+    "symbole": "NILE"
+   },
+   {
+    "depot": "2022-02-07",
+    "r400": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "prix": [
+      "20220114",
+      1.06
+     ],
+     "seuils": {
+      "mois": "202201",
+      "p30": 1632.2,
+      "p70": 9975.12
+     },
+     "source_actions": "frames",
+     "taille": "petite",
+     "valeur_m": 86.8
+    },
+    "rtout": {
+     "actions": [
+      81924987,
+      "2021-11-18"
+     ],
+     "raison": "nouveau code du titre (CUSIP) vu dès le 14 décembre 2021, après les actions déclarées au 18 novembre 2021 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "seuils": {
+      "mois": "202201",
+      "p30": 1632.2,
+      "p70": 9975.12
+     },
+     "source_actions": "frames",
+     "taille": null
+    },
+    "symbole": "NILE"
+   },
+   {
+    "depot": "2022-02-08",
+    "r400": {
+     "actions": [
+      9097689,
+      "2021-10-29"
+     ],
+     "prix": [
+      "20220114",
+      7.69
+     ],
+     "seuils": {
+      "mois": "202201",
+      "p30": 1632.2,
+      "p70": 9975.12
+     },
+     "source_actions": "frames",
+     "taille": "petite",
+     "valeur_m": 70.0
+    },
+    "rtout": {
+     "actions": [
+      9097689,
+      "2021-10-29"
+     ],
+     "raison": "nouveau code du titre (CUSIP) vu dès le 11 janvier 2022, après les actions déclarées au 29 octobre 2021 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "seuils": {
+      "mois": "202201",
+      "p30": 1632.2,
+      "p70": 9975.12
+     },
+     "source_actions": "frames",
+     "taille": null
+    },
+    "symbole": "REVB"
+   }
+  ],
+  "ancien : taille connue": [
+   {
+    "actions": [
+     685564820,
+     "2015-11-02"
+    ],
+    "avant": {
+     "taille": "grande",
+     "valeur_m": 9789.9
+    },
+    "depot": "2016-01-04",
+    "epoque": {
+     "note": "Prix de l'ancien code du titre (CUSIP 226344109), vu jusqu'au 24 novembre 2015 : le nouveau code, vu dès le 25 novembre 2015, est arrivé après les actions déclarées au 2 novembre 2015 (regroupement ou fractionnement d'actions possible).",
+     "raison": null,
+     "taille": "moyenne",
+     "valeur_m": 1323.1,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "226344109": [
+      "20150701",
+      "20151124",
+      "20151124",
+      1.93
+     ],
+     "226344208": [
+      "20151125",
+      "20151214",
+      "20151214",
+      14.28
+     ]
+    },
+    "prix": [
+     "20151214",
+     14.28,
+     "226344208"
+    ],
+    "symbole": "CEQP",
+    "vraie_taille": "moyenne",
+    "vraie_valeur_m": 1435.0
+   },
+   {
+    "actions": [
+     685564820,
+     "2015-11-02"
+    ],
+    "avant": {
+     "taille": "grande",
+     "valeur_m": 9789.9
+    },
+    "depot": "2016-01-06",
+    "epoque": {
+     "note": "Prix de l'ancien code du titre (CUSIP 226344109), vu jusqu'au 24 novembre 2015 : le nouveau code, vu dès le 25 novembre 2015, est arrivé après les actions déclarées au 2 novembre 2015 (regroupement ou fractionnement d'actions possible).",
+     "raison": null,
+     "taille": "moyenne",
+     "valeur_m": 1323.1,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "226344109": [
+      "20150701",
+      "20151124",
+      "20151124",
+      1.93
+     ],
+     "226344208": [
+      "20151125",
+      "20151214",
+      "20151214",
+      14.28
+     ]
+    },
+    "prix": [
+     "20151214",
+     14.28,
+     "226344208"
+    ],
+    "symbole": "CEQP",
+    "vraie_taille": "moyenne",
+    "vraie_valeur_m": 1435.0
+   },
+   {
+    "actions": [
+     685564820,
+     "2015-11-02"
+    ],
+    "avant": {
+     "taille": "grande",
+     "valeur_m": 9789.9
+    },
+    "depot": "2016-01-08",
+    "epoque": {
+     "note": "Prix de l'ancien code du titre (CUSIP 226344109), vu jusqu'au 24 novembre 2015 : le nouveau code, vu dès le 25 novembre 2015, est arrivé après les actions déclarées au 2 novembre 2015 (regroupement ou fractionnement d'actions possible).",
+     "raison": null,
+     "taille": "moyenne",
+     "valeur_m": 1323.1,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "226344109": [
+      "20150701",
+      "20151124",
+      "20151124",
+      1.93
+     ],
+     "226344208": [
+      "20151125",
+      "20151214",
+      "20151214",
+      14.28
+     ]
+    },
+    "prix": [
+     "20151214",
+     14.28,
+     "226344208"
+    ],
+    "symbole": "CEQP",
+    "vraie_taille": "moyenne",
+    "vraie_valeur_m": 1194.0
+   },
+   {
+    "actions": [
+     59629941,
+     "2015-10-31"
+    ],
+    "avant": {
+     "taille": "moyenne",
+     "valeur_m": 992.2
+    },
+    "depot": "2016-01-11",
+    "epoque": {
+     "note": "Prix de l'ancien code du titre (CUSIP 21870U205), vu jusqu'au 2 décembre 2015 : le nouveau code, vu dès le 3 décembre 2015, est arrivé après les actions déclarées au 31 octobre 2015 (regroupement ou fractionnement d'actions possible).",
+     "raison": null,
+     "taille": "petite",
+     "valeur_m": 297.6,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "21870U205": [
+      "20150701",
+      "20151202",
+      "20151202",
+      4.99
+     ],
+     "21870U502": [
+      "20151203",
+      "20151214",
+      "20151214",
+      16.64
+     ]
+    },
+    "prix": [
+     "20151214",
+     16.64,
+     "21870U502"
+    ],
+    "symbole": "CORR",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 200.1
+   },
+   {
+    "actions": [
+     685564820,
+     "2015-11-02"
+    ],
+    "avant": {
+     "taille": "grande",
+     "valeur_m": 9789.9
+    },
+    "depot": "2016-01-12",
+    "epoque": {
+     "note": "Prix de l'ancien code du titre (CUSIP 226344109), vu jusqu'au 24 novembre 2015 : le nouveau code, vu dès le 25 novembre 2015, est arrivé après les actions déclarées au 2 novembre 2015 (regroupement ou fractionnement d'actions possible).",
+     "raison": null,
+     "taille": "moyenne",
+     "valeur_m": 1323.1,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "226344109": [
+      "20150701",
+      "20151124",
+      "20151124",
+      1.93
+     ],
+     "226344208": [
+      "20151125",
+      "20151214",
+      "20151214",
+      14.28
+     ]
+    },
+    "prix": [
+     "20151214",
+     14.28,
+     "226344208"
+    ],
+    "symbole": "CEQP",
+    "vraie_taille": "moyenne",
+    "vraie_valeur_m": 1107.0
+   },
+   {
+    "actions": [
+     685564820,
+     "2015-11-02"
+    ],
+    "avant": {
+     "taille": "grande",
+     "valeur_m": 9789.9
+    },
+    "depot": "2016-01-14",
+    "epoque": {
+     "note": "Prix de l'ancien code du titre (CUSIP 226344109), vu jusqu'au 24 novembre 2015 : le nouveau code, vu dès le 25 novembre 2015, est arrivé après les actions déclarées au 2 novembre 2015 (regroupement ou fractionnement d'actions possible).",
+     "raison": null,
+     "taille": "moyenne",
+     "valeur_m": 1323.1,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "226344109": [
+      "20150701",
+      "20151124",
+      "20151124",
+      1.93
+     ],
+     "226344208": [
+      "20151125",
+      "20151214",
+      "20151214",
+      14.28
+     ]
+    },
+    "prix": [
+     "20151214",
+     14.28,
+     "226344208"
+    ],
+    "symbole": "CEQP",
+    "vraie_taille": "moyenne",
+    "vraie_valeur_m": 993.7
+   },
+   {
+    "actions": [
+     44553286,
+     "2015-12-22"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 4.5
+    },
+    "depot": "2016-02-17",
+    "epoque": {
+     "note": "Prix de l'ancien code du titre (CUSIP 52886N208), vu jusqu'au 31 décembre 2015 : le nouveau code, vu dès le 15 janvier 2016, est arrivé après les actions déclarées au 22 décembre 2015 (regroupement ou fractionnement d'actions possible).",
+     "raison": null,
+     "taille": "petite",
+     "valeur_m": 8.9,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "52886N208": [
+      "20150701",
+      "20151231",
+      "20151231",
+      0.2
+     ],
+     "52886N307": [
+      "20160115",
+      "20160128",
+      "20160128",
+      0.1
+     ]
+    },
+    "prix": [
+     "20160128",
+     0.1,
+     "52886N307"
+    ],
+    "symbole": "LXRP",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 3.6
+   },
+   {
+    "actions": [
+     53498649,
+     "2016-02-08"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 230.0
+    },
+    "depot": "2016-04-28",
+    "epoque": {
+     "note": "Prix de l'ancien code du titre (CUSIP 50544T203), vu jusqu'au 3 mars 2016 : le nouveau code, vu dès le 7 mars 2016, est arrivé après les actions déclarées au 8 février 2016 (regroupement ou fractionnement d'actions possible).",
+     "raison": null,
+     "taille": "petite",
+     "valeur_m": 16.6,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "50544T203": [
+      "20150702",
+      "20160303",
+      "20160303",
+      0.31
+     ],
+     "50544T302": [
+      "20160307",
+      "20160330",
+      "20160330",
+      4.3
+     ]
+    },
+    "prix": [
+     "20160330",
+     4.3,
+     "50544T302"
+    ],
+    "symbole": "DRIO",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 30.6
+   },
+   {
+    "actions": [
+     81367817,
+     "2016-03-21"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 20.3
+    },
+    "depot": "2016-05-03",
+    "epoque": {
+     "note": "Prix de l'ancien code du titre (CUSIP 404273104), vu jusqu'au 6 avril 2016 : le nouveau code, vu dès le 14 avril 2016, est arrivé après les actions déclarées au 21 mars 2016 (regroupement ou fractionnement d'actions possible).",
+     "raison": null,
+     "taille": "petite",
+     "valeur_m": 24.4,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "21639Y100": [
+      "20160414",
+      "20160414",
+      "20160414",
+      0.25
+     ],
+     "404273104": [
+      "20150708",
+      "20160406",
+      "20160406",
+      0.3
+     ]
+    },
+    "prix": [
+     "20160414",
+     0.25,
+     "21639Y100"
+    ],
+    "symbole": "WARM",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 16.4
+   },
+   {
+    "actions": [
+     81367817,
+     "2016-03-21"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 20.3
+    },
+    "depot": "2016-05-05",
+    "epoque": {
+     "note": "Prix de l'ancien code du titre (CUSIP 404273104), vu jusqu'au 6 avril 2016 : le nouveau code, vu dès le 14 avril 2016, est arrivé après les actions déclarées au 21 mars 2016 (regroupement ou fractionnement d'actions possible).",
+     "raison": null,
+     "taille": "petite",
+     "valeur_m": 24.4,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "21639Y100": [
+      "20160414",
+      "20160414",
+      "20160414",
+      0.25
+     ],
+     "404273104": [
+      "20150708",
+      "20160406",
+      "20160406",
+      0.3
+     ]
+    },
+    "prix": [
+     "20160414",
+     0.25,
+     "21639Y100"
+    ],
+    "symbole": "WARM",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 16.4
+   },
+   {
+    "actions": [
+     81367817,
+     "2016-03-21"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 20.3
+    },
+    "depot": "2016-05-06",
+    "epoque": {
+     "note": "Prix de l'ancien code du titre (CUSIP 404273104), vu jusqu'au 6 avril 2016 : le nouveau code, vu dès le 14 avril 2016, est arrivé après les actions déclarées au 21 mars 2016 (regroupement ou fractionnement d'actions possible).",
+     "raison": null,
+     "taille": "petite",
+     "valeur_m": 24.4,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "21639Y100": [
+      "20160414",
+      "20160414",
+      "20160414",
+      0.25
+     ],
+     "404273104": [
+      "20150708",
+      "20160406",
+      "20160406",
+      0.3
+     ]
+    },
+    "prix": [
+     "20160414",
+     0.25,
+     "21639Y100"
+    ],
+    "symbole": "WARM",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 16.4
+   },
+   {
+    "actions": [
+     81367817,
+     "2016-03-21"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 20.3
+    },
+    "depot": "2016-05-10",
+    "epoque": {
+     "note": "Prix de l'ancien code du titre (CUSIP 404273104), vu jusqu'au 6 avril 2016 : le nouveau code, vu dès le 14 avril 2016, est arrivé après les actions déclarées au 21 mars 2016 (regroupement ou fractionnement d'actions possible).",
+     "raison": null,
+     "taille": "petite",
+     "valeur_m": 24.4,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "21639Y100": [
+      "20160414",
+      "20160414",
+      "20160414",
+      0.25
+     ],
+     "404273104": [
+      "20150708",
+      "20160406",
+      "20160406",
+      0.3
+     ]
+    },
+    "prix": [
+     "20160414",
+     0.25,
+     "21639Y100"
+    ],
+    "symbole": "WARM",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 16.4
+   }
+  ],
+  "ancien : taille inconnue": [
+   {
+    "actions": [
+     181126366,
+     "2015-11-16"
+    ],
+    "avant": {
+     "taille": "moyenne",
+     "valeur_m": 979.9
+    },
+    "depot": "2016-02-24",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 8 janvier 2016, après les actions déclarées au 16 novembre 2015 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "98138J107": [
+      "20150701",
+      "20151216",
+      "20151216",
+      0.64
+     ],
+     "98138J206": [
+      "20160108",
+      "20160127",
+      "20160127",
+      5.41
+     ]
+    },
+    "prix": [
+     "20160127",
+     5.41,
+     "98138J206"
+    ],
+    "symbole": "WKHS",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 119.0
+   },
+   {
+    "actions": [
+     42220861,
+     "2015-11-09"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 76.8
+    },
+    "depot": "2016-03-23",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 9 décembre 2015, après les actions déclarées au 9 novembre 2015 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "46123X102": [
+      "20150701",
+      "20151207",
+      "20151207",
+      0.1
+     ],
+     "46123X409": [
+      "20151209",
+      "20160229",
+      "20160229",
+      1.82
+     ]
+    },
+    "prix": [
+     "20160229",
+     1.82,
+     "46123X409"
+    ],
+    "symbole": "INVT",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 8.9
+   },
+   {
+    "actions": [
+     10567558,
+     "2016-02-05"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 79.9
+    },
+    "depot": "2016-06-02",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 8 février 2016, après les actions déclarées au 5 février 2016 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "462044108": [
+      "20150701",
+      "20160205",
+      "20160205",
+      0.38
+     ],
+     "462044207": [
+      "20160208",
+      "20160513",
+      "20160513",
+      7.56
+     ]
+    },
+    "prix": [
+     "20160513",
+     7.56,
+     "462044207"
+    ],
+    "symbole": "IO",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 82.1
+   },
+   {
+    "actions": [
+     10567558,
+     "2016-02-05"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 73.2
+    },
+    "depot": "2016-06-30",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 8 février 2016, après les actions déclarées au 5 février 2016 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "462044108": [
+      "20150701",
+      "20160205",
+      "20160205",
+      0.38
+     ],
+     "462044207": [
+      "20160208",
+      "20160525",
+      "20160525",
+      6.93
+     ]
+    },
+    "prix": [
+     "20160525",
+     6.93,
+     "462044207"
+    ],
+    "symbole": "IO",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 76.1
+   },
+   {
+    "actions": [
+     24509435,
+     "2016-06-14"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 119.9
+    },
+    "depot": "2016-09-13",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 21 juin 2016, après les actions déclarées au 14 juin 2016 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "22765D209": [
+      "20150803",
+      "20160617",
+      "20160617",
+      0.28
+     ],
+     "22765D407": [
+      "20160621",
+      "20160811",
+      "20160811",
+      4.89
+     ]
+    },
+    "prix": [
+     "20160811",
+     4.89,
+     "22765D407"
+    ],
+    "symbole": "CRDS",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 4.8
+   },
+   {
+    "actions": [
+     135310441,
+     "2016-11-07"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 594.0
+    },
+    "depot": "2017-01-31",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 30 novembre 2016, après les actions déclarées au 7 novembre 2016 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "14740B101": [
+      "20160609",
+      "20161129",
+      "20161129",
+      0.97
+     ],
+     "14740B606": [
+      "20161130",
+      "20161230",
+      "20161230",
+      4.39
+     ]
+    },
+    "prix": [
+     "20161230",
+     4.39,
+     "14740B606"
+    ],
+    "symbole": "CASC",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 183.6
+   },
+   {
+    "actions": [
+     135310441,
+     "2016-11-07"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 617.0
+    },
+    "depot": "2017-02-01",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 30 novembre 2016, après les actions déclarées au 7 novembre 2016 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "14740B101": [
+      "20160609",
+      "20161129",
+      "20161129",
+      0.97
+     ],
+     "14740B606": [
+      "20161130",
+      "20170113",
+      "20170113",
+      4.56
+     ]
+    },
+    "prix": [
+     "20170113",
+     4.56,
+     "14740B606"
+    ],
+    "symbole": "CASC",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 183.6
+   },
+   {
+    "actions": [
+     135310441,
+     "2016-11-07"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 617.0
+    },
+    "depot": "2017-02-03",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 30 novembre 2016, après les actions déclarées au 7 novembre 2016 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "14740B101": [
+      "20160609",
+      "20161129",
+      "20161129",
+      0.97
+     ],
+     "14740B606": [
+      "20161130",
+      "20170113",
+      "20170113",
+      4.56
+     ]
+    },
+    "prix": [
+     "20170113",
+     4.56,
+     "14740B606"
+    ],
+    "symbole": "CASC",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 183.6
+   },
+   {
+    "actions": [
+     1167434453,
+     "2017-05-01"
+    ],
+    "avant": {
+     "taille": "grande",
+     "valeur_m": 24726.3
+    },
+    "depot": "2017-07-06",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 2 mai 2017, après les actions déclarées au 1er mai 2017 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "29273R109": [
+      "20160603",
+      "20170501",
+      "20170501",
+      35.93
+     ],
+     "29278N103": [
+      "20170502",
+      "20170608",
+      "20170608",
+      21.18
+     ]
+    },
+    "prix": [
+     "20170608",
+     21.18,
+     "29278N103"
+    ],
+    "symbole": "ETP",
+    "vraie_taille": "grande",
+    "vraie_valeur_m": 22872.2
+   },
+   {
+    "actions": [
+     75504242,
+     "2017-04-30"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 471.9
+    },
+    "depot": "2017-08-10",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 7 juillet 2017, après les actions déclarées au 30 avril 2017 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "17322U108": [
+      "20160714",
+      "20170606",
+      "20170606",
+      0.44
+     ],
+     "17322U207": [
+      "20170707",
+      "20170714",
+      "20170714",
+      6.25
+     ]
+    },
+    "prix": [
+     "20170714",
+     6.25,
+     "17322U207"
+    ],
+    "symbole": "CTXR",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 25.1
+   },
+   {
+    "actions": [
+     39787615,
+     "2017-12-13"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 128.5
+    },
+    "depot": "2018-03-02",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 29 janvier 2018, après les actions déclarées au 13 décembre 2017 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "09074M103": [
+      "20170119",
+      "20171226",
+      "20171226",
+      0.07
+     ],
+     "09074M202": [
+      "20180129",
+      "20180129",
+      "20180129",
+      3.23
+     ]
+    },
+    "prix": [
+     "20180129",
+     3.23,
+     "09074M202"
+    ],
+    "symbole": "BSTG",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 8.7
+   },
+   {
+    "actions": [
+     126608391,
+     "2018-01-16"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 64.6
+    },
+    "depot": "2018-05-02",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 15 mars 2018, après les actions déclarées au 16 janvier 2018 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "051526200": [
+      "20170609",
+      "20180216",
+      "20180216",
+      0.14
+     ],
+     "051526309": [
+      "20180315",
+      "20180406",
+      "20180406",
+      0.51
+     ]
+    },
+    "prix": [
+     "20180406",
+     0.51,
+     "051526309"
+    ],
+    "symbole": "AUSI",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 17.0
+   }
+  ],
+  "deux : taille connue": [
+   {
+    "actions": [
+     7497857,
+     "2016-05-12"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 53.6
+    },
+    "depot": "2016-06-20",
+    "epoque": {
+     "note": "Code du titre (CUSIP) changé entre le 27 avril 2016 et le 17 mai 2016, autour des actions déclarées au 12 mai 2016 : 6,6 M$ ou 53,6 M$ selon le côté du changement (regroupement ou fractionnement d'actions possible) : petite compagnie dans les deux cas ; la règle des 100 M$ prend la plus grande valeur.",
+     "raison": null,
+     "taille": "petite",
+     "valeur_m": 53.6,
+     "valeur_min_m": 6.6
+    },
+    "historique": {
+     "92852W105": [
+      "20150702",
+      "20160427",
+      "20160427",
+      0.88
+     ],
+     "92852W204": [
+      "20160517",
+      "20160531",
+      "20160531",
+      7.15
+     ]
+    },
+    "prix": [
+     "20160531",
+     7.15,
+     "92852W204"
+    ],
+    "symbole": "VIVMF",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 59.4
+   },
+   {
+    "actions": [
+     2832456,
+     "2016-08-12"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 16.7
+    },
+    "depot": "2016-09-16",
+    "epoque": {
+     "note": "Code du titre (CUSIP) changé entre le 2 août 2016 et le 24 août 2016, autour des actions déclarées au 12 août 2016 : 1,7 M$ ou 16,7 M$ selon le côté du changement (regroupement ou fractionnement d'actions possible) : petite compagnie dans les deux cas ; la règle des 100 M$ prend la plus grande valeur.",
+     "raison": null,
+     "taille": "petite",
+     "valeur_m": 16.7,
+     "valeur_min_m": 1.7
+    },
+    "historique": {
+     "12718M109": [
+      "20150803",
+      "20160802",
+      "20160802",
+      0.6
+     ],
+     "12718M208": [
+      "20160824",
+      "20160831",
+      "20160831",
+      5.9
+     ]
+    },
+    "prix": [
+     "20160831",
+     5.9,
+     "12718M208"
+    ],
+    "symbole": "CAFN",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 21.3
+   },
+   {
+    "actions": [
+     76583701,
+     "2018-05-07"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 428.1
+    },
+    "depot": "2018-06-01",
+    "epoque": {
+     "note": "Code du titre (CUSIP) changé entre le 4 mai 2018 et le 9 mai 2018, autour des actions déclarées au 7 mai 2018 : 234,3 M$ ou 428,1 M$ selon le côté du changement (regroupement ou fractionnement d'actions possible) : petite compagnie dans les deux cas ; la règle des 100 M$ prend la plus grande valeur.",
+     "raison": null,
+     "taille": "petite",
+     "valeur_m": 428.1,
+     "valeur_min_m": 234.3
+    },
+    "historique": {
+     "36113B400": [
+      "20170616",
+      "20180504",
+      "20180504",
+      3.06
+     ],
+     "36116X102": [
+      "20180509",
+      "20180514",
+      "20180514",
+      5.59
+     ]
+    },
+    "prix": [
+     "20180514",
+     5.59,
+     "36116X102"
+    ],
+    "symbole": "FSNN",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 306.8
+   },
+   {
+    "actions": [
+     76583701,
+     "2018-05-07"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 428.1
+    },
+    "depot": "2018-06-01",
+    "epoque": {
+     "note": "Code du titre (CUSIP) changé entre le 4 mai 2018 et le 9 mai 2018, autour des actions déclarées au 7 mai 2018 : 234,3 M$ ou 428,1 M$ selon le côté du changement (regroupement ou fractionnement d'actions possible) : petite compagnie dans les deux cas ; la règle des 100 M$ prend la plus grande valeur.",
+     "raison": null,
+     "taille": "petite",
+     "valeur_m": 428.1,
+     "valeur_min_m": 234.3
+    },
+    "historique": {
+     "36113B400": [
+      "20170616",
+      "20180504",
+      "20180504",
+      3.06
+     ],
+     "36116X102": [
+      "20180509",
+      "20180514",
+      "20180514",
+      5.59
+     ]
+    },
+    "prix": [
+     "20180514",
+     5.59,
+     "36116X102"
+    ],
+    "symbole": "FSNN",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 306.8
+   },
+   {
+    "actions": [
+     76583701,
+     "2018-05-07"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 428.1
+    },
+    "depot": "2018-06-04",
+    "epoque": {
+     "note": "Code du titre (CUSIP) changé entre le 4 mai 2018 et le 9 mai 2018, autour des actions déclarées au 7 mai 2018 : 234,3 M$ ou 428,1 M$ selon le côté du changement (regroupement ou fractionnement d'actions possible) : petite compagnie dans les deux cas ; la règle des 100 M$ prend la plus grande valeur.",
+     "raison": null,
+     "taille": "petite",
+     "valeur_m": 428.1,
+     "valeur_min_m": 234.3
+    },
+    "historique": {
+     "36113B400": [
+      "20170616",
+      "20180504",
+      "20180504",
+      3.06
+     ],
+     "36116X102": [
+      "20180509",
+      "20180514",
+      "20180514",
+      5.59
+     ]
+    },
+    "prix": [
+     "20180514",
+     5.59,
+     "36116X102"
+    ],
+    "symbole": "FSNN",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 307.6
+   },
+   {
+    "actions": [
+     2962361,
+     "2018-11-12"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 9.3
+    },
+    "depot": "2019-01-03",
+    "epoque": {
+     "note": "Code du titre (CUSIP) changé entre le 5 novembre 2018 et le 19 novembre 2018, autour des actions déclarées au 12 novembre 2018 : 0,7 M$ ou 9,3 M$ selon le côté du changement (regroupement ou fractionnement d'actions possible) : petite compagnie dans les deux cas ; la règle des 100 M$ prend la plus grande valeur.",
+     "raison": null,
+     "taille": "petite",
+     "valeur_m": 9.3,
+     "valeur_min_m": 0.7
+    },
+    "historique": {
+     "22530J101": [
+      "20171121",
+      "20181105",
+      "20181105",
+      0.22
+     ],
+     "22530J200": [
+      "20181119",
+      "20181213",
+      "20181213",
+      3.13
+     ]
+    },
+    "prix": [
+     "20181213",
+     3.13,
+     "22530J200"
+    ],
+    "symbole": "CREX",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 22.2
+   },
+   {
+    "actions": [
+     17075836,
+     "2019-08-02"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 711.0
+    },
+    "depot": "2019-09-30",
+    "epoque": {
+     "note": "Code du titre (CUSIP) changé entre le 1er août 2019 et le 7 août 2019, autour des actions déclarées au 2 août 2019 : 711,0 M$ ou 759,7 M$ selon le côté du changement (regroupement ou fractionnement d'actions possible) : petite compagnie dans les deux cas ; la règle des 100 M$ prend la plus grande valeur.",
+     "raison": null,
+     "taille": "petite",
+     "valeur_m": 759.7,
+     "valeur_min_m": 711.0
+    },
+    "historique": {
+     "03676C100": [
+      "20190807",
+      "20190829",
+      "20190829",
+      41.64
+     ],
+     "69290R104": [
+      "20190618",
+      "20190801",
+      "20190801",
+      44.49
+     ]
+    },
+    "prix": [
+     "20190829",
+     41.64,
+     "03676C100"
+    ],
+    "symbole": "ATEX",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 638.1
+   },
+   {
+    "actions": [
+     16998187,
+     "2023-04-23"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 226.8
+    },
+    "depot": "2023-06-14",
+    "epoque": {
+     "note": "Code du titre (CUSIP) changé entre le 21 avril 2023 et le 26 avril 2023, autour des actions déclarées au 23 avril 2023 : 44,4 M$ ou 226,8 M$ selon le côté du changement (regroupement ou fractionnement d'actions possible) : petite compagnie dans les deux cas ; la règle des 100 M$ prend la plus grande valeur.",
+     "raison": null,
+     "taille": "petite",
+     "valeur_m": 226.8,
+     "valeur_min_m": 44.4
+    },
+    "historique": {
+     "05587G104": [
+      "20220505",
+      "20230421",
+      "20230421",
+      2.61
+     ],
+     "05587G203": [
+      "20230426",
+      "20230512",
+      "20230512",
+      13.34
+     ]
+    },
+    "prix": [
+     "20230512",
+     13.34,
+     "05587G203"
+    ],
+    "symbole": "BKTI",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 55.0
+   },
+   {
+    "actions": [
+     1385822,
+     "2023-05-19"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 16.0
+    },
+    "depot": "2023-06-23",
+    "epoque": {
+     "note": "Code du titre (CUSIP) changé entre le 15 mai 2023 et le 22 mai 2023, autour des actions déclarées au 19 mai 2023 : 0,1 M$ ou 16,0 M$ selon le côté du changement (regroupement ou fractionnement d'actions possible) : petite compagnie dans les deux cas ; la règle des 100 M$ prend la plus grande valeur.",
+     "raison": null,
+     "taille": "petite",
+     "valeur_m": 16.0,
+     "valeur_min_m": 0.1
+    },
+    "historique": {
+     "09175M101": [
+      "20230104",
+      "20230515",
+      "20230515",
+      0.08
+     ],
+     "09175M408": [
+      "20230522",
+      "20230531",
+      "20230531",
+      11.57
+     ]
+    },
+    "prix": [
+     "20230531",
+     11.57,
+     "09175M408"
+    ],
+    "symbole": "AULT",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 48.7
+   },
+   {
+    "actions": [
+     1385822,
+     "2023-05-19"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 16.0
+    },
+    "depot": "2023-06-30",
+    "epoque": {
+     "note": "Code du titre (CUSIP) changé entre le 15 mai 2023 et le 22 mai 2023, autour des actions déclarées au 19 mai 2023 : 0,1 M$ ou 16,0 M$ selon le côté du changement (regroupement ou fractionnement d'actions possible) : petite compagnie dans les deux cas ; la règle des 100 M$ prend la plus grande valeur.",
+     "raison": null,
+     "taille": "petite",
+     "valeur_m": 16.0,
+     "valeur_min_m": 0.1
+    },
+    "historique": {
+     "09175M101": [
+      "20230104",
+      "20230515",
+      "20230515",
+      0.08
+     ],
+     "09175M408": [
+      "20230522",
+      "20230531",
+      "20230531",
+      11.57
+     ]
+    },
+    "prix": [
+     "20230531",
+     11.57,
+     "09175M408"
+    ],
+    "symbole": "AULT",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 29.3
+   }
+  ],
+  "deux : taille inconnue": [
+   {
+    "actions": [
+     858013,
+     "2016-03-07"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 4.2
+    },
+    "depot": "2016-04-21",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 8 mars 2016, après les actions déclarées au 7 mars 2016 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "15117F203": [
+      "20150701",
+      "20160219",
+      "20160219",
+      0.52
+     ],
+     "15117F302": [
+      "20160308",
+      "20160316",
+      "20160316",
+      4.92
+     ]
+    },
+    "prix": [
+     "20160316",
+     4.92,
+     "15117F302"
+    ],
+    "symbole": "CLRB",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 7.9
+   },
+   {
+    "actions": [
+     858013,
+     "2016-03-07"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 4.2
+    },
+    "depot": "2016-04-21",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 8 mars 2016, après les actions déclarées au 7 mars 2016 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "15117F203": [
+      "20150701",
+      "20160219",
+      "20160219",
+      0.52
+     ],
+     "15117F302": [
+      "20160308",
+      "20160316",
+      "20160316",
+      4.92
+     ]
+    },
+    "prix": [
+     "20160316",
+     4.92,
+     "15117F302"
+    ],
+    "symbole": "CLRB",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 7.9
+   },
+   {
+    "actions": [
+     858013,
+     "2016-03-07"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 4.2
+    },
+    "depot": "2016-04-21",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 8 mars 2016, après les actions déclarées au 7 mars 2016 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "15117F203": [
+      "20150701",
+      "20160219",
+      "20160219",
+      0.52
+     ],
+     "15117F302": [
+      "20160308",
+      "20160316",
+      "20160316",
+      4.92
+     ]
+    },
+    "prix": [
+     "20160316",
+     4.92,
+     "15117F302"
+    ],
+    "symbole": "CLRB",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 7.9
+   },
+   {
+    "actions": [
+     858013,
+     "2016-03-07"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 4.2
+    },
+    "depot": "2016-04-21",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 8 mars 2016, après les actions déclarées au 7 mars 2016 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "15117F203": [
+      "20150701",
+      "20160219",
+      "20160219",
+      0.52
+     ],
+     "15117F302": [
+      "20160308",
+      "20160316",
+      "20160316",
+      4.92
+     ]
+    },
+    "prix": [
+     "20160316",
+     4.92,
+     "15117F302"
+    ],
+    "symbole": "CLRB",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 7.9
+   },
+   {
+    "actions": [
+     886180,
+     "2016-08-03"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 0.3
+    },
+    "depot": "2016-10-25",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 27 septembre 2016, après les actions déclarées au 3 août 2016 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "39303M301": [
+      "20150915",
+      "20160725",
+      null,
+      null
+     ],
+     "39303M400": [
+      "20160927",
+      "20160927",
+      "20160927",
+      0.29
+     ]
+    },
+    "prix": [
+     "20160927",
+     0.29,
+     "39303M400"
+    ],
+    "symbole": "GRNE",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 2.4
+   },
+   {
+    "actions": [
+     41716909,
+     "2016-11-30"
+    ],
+    "avant": {
+     "taille": "moyenne",
+     "valeur_m": 3323.2
+    },
+    "depot": "2017-01-19",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 8 décembre 2016, après les actions déclarées au 30 novembre 2016 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "138098108": [
+      "20161208",
+      "20161227",
+      "20161227",
+      79.66
+     ],
+     "74347W676": [
+      "20151215",
+      "20160811",
+      "20160811",
+      39.34
+     ]
+    },
+    "prix": [
+     "20161227",
+     79.66,
+     "138098108"
+    ],
+    "symbole": "CMD",
+    "vraie_taille": "moyenne",
+    "vraie_valeur_m": 3190.6
+   },
+   {
+    "actions": [
+     18491188,
+     "2017-03-15"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 517.4
+    },
+    "depot": "2017-05-02",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 7 avril 2017, après les actions déclarées au 15 mars 2017 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "704549203": [
+      "20160315",
+      "20160418",
+      "20160418",
+      0.74
+     ],
+     "704551100": [
+      "20170407",
+      "20170411",
+      "20170411",
+      27.98
+     ]
+    },
+    "prix": [
+     "20170411",
+     27.98,
+     "704551100"
+    ],
+    "symbole": "BTU",
+    "vraie_taille": "moyenne",
+    "vraie_valeur_m": 2548.6
+   },
+   {
+    "actions": [
+     18491188,
+     "2017-03-15"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 517.4
+    },
+    "depot": "2017-05-02",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 7 avril 2017, après les actions déclarées au 15 mars 2017 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "704549203": [
+      "20160315",
+      "20160418",
+      "20160418",
+      0.74
+     ],
+     "704551100": [
+      "20170407",
+      "20170411",
+      "20170411",
+      27.98
+     ]
+    },
+    "prix": [
+     "20170411",
+     27.98,
+     "704551100"
+    ],
+    "symbole": "BTU",
+    "vraie_taille": "moyenne",
+    "vraie_valeur_m": 2548.6
+   },
+   {
+    "actions": [
+     18491188,
+     "2017-03-15"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 517.4
+    },
+    "depot": "2017-05-05",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 7 avril 2017, après les actions déclarées au 15 mars 2017 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "704549203": [
+      "20160315",
+      "20160418",
+      "20160418",
+      0.74
+     ],
+     "704551100": [
+      "20170407",
+      "20170411",
+      "20170411",
+      27.98
+     ]
+    },
+    "prix": [
+     "20170411",
+     27.98,
+     "704551100"
+    ],
+    "symbole": "BTU",
+    "vraie_taille": "moyenne",
+    "vraie_valeur_m": 2548.6
+   },
+   {
+    "actions": [
+     18491188,
+     "2017-03-15"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 517.4
+    },
+    "depot": "2017-05-05",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 7 avril 2017, après les actions déclarées au 15 mars 2017 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "704549203": [
+      "20160315",
+      "20160418",
+      "20160418",
+      0.74
+     ],
+     "704551100": [
+      "20170407",
+      "20170411",
+      "20170411",
+      27.98
+     ]
+    },
+    "prix": [
+     "20170411",
+     27.98,
+     "704551100"
+    ],
+    "symbole": "BTU",
+    "vraie_taille": "moyenne",
+    "vraie_valeur_m": 2548.6
+   },
+   {
+    "actions": [
+     18491188,
+     "2017-03-15"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 517.4
+    },
+    "depot": "2017-05-10",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 7 avril 2017, après les actions déclarées au 15 mars 2017 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "704549203": [
+      "20160401",
+      "20160418",
+      "20160418",
+      0.74
+     ],
+     "704551100": [
+      "20170407",
+      "20170411",
+      "20170411",
+      27.98
+     ]
+    },
+    "prix": [
+     "20170411",
+     27.98,
+     "704551100"
+    ],
+    "symbole": "BTU",
+    "vraie_taille": "moyenne",
+    "vraie_valeur_m": 2427.3
+   },
+   {
+    "actions": [
+     18491188,
+     "2017-03-15"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 517.4
+    },
+    "depot": "2017-05-10",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 7 avril 2017, après les actions déclarées au 15 mars 2017 (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code depuis 60 jours",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "704549203": [
+      "20160401",
+      "20160418",
+      "20160418",
+      0.74
+     ],
+     "704551100": [
+      "20170407",
+      "20170411",
+      "20170411",
+      27.98
+     ]
+    },
+    "prix": [
+     "20170411",
+     27.98,
+     "704551100"
+    ],
+    "symbole": "BTU",
+    "vraie_taille": "moyenne",
+    "vraie_valeur_m": 2427.3
+   }
+  ],
+  "inconnue (chevauchement)": [
+   {
+    "actions": [
+     15817393,
+     "2017-11-17"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 44.4
+    },
+    "depot": "2018-02-01",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 2 janvier 2018, après les actions déclarées au 17 novembre 2017, et l'ancien encore vu après : impossible de savoir si leur nombre est d'avant ou d'après un regroupement ou un fractionnement d'actions",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "253862106": [
+      "20161216",
+      "20180102",
+      "20180102",
+      3.21
+     ],
+     "26140E105": [
+      "20180102",
+      "20180112",
+      "20180112",
+      2.81
+     ]
+    },
+    "prix": [
+     "20180112",
+     2.81,
+     "26140E105"
+    ],
+    "symbole": "DPW",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 98.5
+   },
+   {
+    "actions": [
+     15817393,
+     "2017-11-17"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 44.4
+    },
+    "depot": "2018-02-02",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 2 janvier 2018, après les actions déclarées au 17 novembre 2017, et l'ancien encore vu après : impossible de savoir si leur nombre est d'avant ou d'après un regroupement ou un fractionnement d'actions",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "253862106": [
+      "20161216",
+      "20180102",
+      "20180102",
+      3.21
+     ],
+     "26140E105": [
+      "20180102",
+      "20180112",
+      "20180112",
+      2.81
+     ]
+    },
+    "prix": [
+     "20180112",
+     2.81,
+     "26140E105"
+    ],
+    "symbole": "DPW",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 84.9
+   },
+   {
+    "actions": [
+     15817393,
+     "2017-11-17"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 44.4
+    },
+    "depot": "2018-02-05",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 2 janvier 2018, après les actions déclarées au 17 novembre 2017, et l'ancien encore vu après : impossible de savoir si leur nombre est d'avant ou d'après un regroupement ou un fractionnement d'actions",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "253862106": [
+      "20170103",
+      "20180102",
+      "20180102",
+      3.21
+     ],
+     "26140E105": [
+      "20180102",
+      "20180112",
+      "20180112",
+      2.81
+     ]
+    },
+    "prix": [
+     "20180112",
+     2.81,
+     "26140E105"
+    ],
+    "symbole": "DPW",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 70.1
+   },
+   {
+    "actions": [
+     15817393,
+     "2017-11-17"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 44.4
+    },
+    "depot": "2018-02-08",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 2 janvier 2018, après les actions déclarées au 17 novembre 2017, et l'ancien encore vu après : impossible de savoir si leur nombre est d'avant ou d'après un regroupement ou un fractionnement d'actions",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "253862106": [
+      "20170103",
+      "20180102",
+      "20180102",
+      3.21
+     ],
+     "26140E105": [
+      "20180102",
+      "20180112",
+      "20180112",
+      2.81
+     ]
+    },
+    "prix": [
+     "20180112",
+     2.81,
+     "26140E105"
+    ],
+    "symbole": "DPW",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 71.4
+   },
+   {
+    "actions": [
+     15817393,
+     "2017-11-17"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 33.5
+    },
+    "depot": "2018-02-27",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 2 janvier 2018, après les actions déclarées au 17 novembre 2017, et l'ancien encore vu après : impossible de savoir si leur nombre est d'avant ou d'après un regroupement ou un fractionnement d'actions",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "253862106": [
+      "20170119",
+      "20180102",
+      "20180102",
+      3.21
+     ],
+     "26140E105": [
+      "20180102",
+      "20180131",
+      "20180131",
+      2.12
+     ]
+    },
+    "prix": [
+     "20180131",
+     2.12,
+     "26140E105"
+    ],
+    "symbole": "DPW",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 73.6
+   },
+   {
+    "actions": [
+     15817393,
+     "2017-11-17"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 24.0
+    },
+    "depot": "2018-03-01",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 2 janvier 2018, après les actions déclarées au 17 novembre 2017, et l'ancien encore vu après : impossible de savoir si leur nombre est d'avant ou d'après un regroupement ou un fractionnement d'actions",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "253862106": [
+      "20170119",
+      "20180102",
+      "20180102",
+      3.21
+     ],
+     "26140E105": [
+      "20180102",
+      "20180214",
+      "20180214",
+      1.52
+     ]
+    },
+    "prix": [
+     "20180214",
+     1.52,
+     "26140E105"
+    ],
+    "symbole": "DPW",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 65.3
+   },
+   {
+    "actions": [
+     15817393,
+     "2017-11-17"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 24.0
+    },
+    "depot": "2018-03-02",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 2 janvier 2018, après les actions déclarées au 17 novembre 2017, et l'ancien encore vu après : impossible de savoir si leur nombre est d'avant ou d'après un regroupement ou un fractionnement d'actions",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "253862106": [
+      "20170119",
+      "20180102",
+      "20180102",
+      3.21
+     ],
+     "26140E105": [
+      "20180102",
+      "20180214",
+      "20180214",
+      1.52
+     ]
+    },
+    "prix": [
+     "20180214",
+     1.52,
+     "26140E105"
+    ],
+    "symbole": "DPW",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 63.2
+   },
+   {
+    "actions": [
+     15817393,
+     "2017-11-17"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 24.0
+    },
+    "depot": "2018-03-07",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 2 janvier 2018, après les actions déclarées au 17 novembre 2017, et l'ancien encore vu après : impossible de savoir si leur nombre est d'avant ou d'après un regroupement ou un fractionnement d'actions",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "253862106": [
+      "20170119",
+      "20180102",
+      "20180102",
+      3.21
+     ],
+     "26140E105": [
+      "20180102",
+      "20180214",
+      "20180214",
+      1.52
+     ]
+    },
+    "prix": [
+     "20180214",
+     1.52,
+     "26140E105"
+    ],
+    "symbole": "DPW",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 60.1
+   },
+   {
+    "actions": [
+     15817393,
+     "2017-11-17"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 24.0
+    },
+    "depot": "2018-03-15",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 2 janvier 2018, après les actions déclarées au 17 novembre 2017, et l'ancien encore vu après : impossible de savoir si leur nombre est d'avant ou d'après un regroupement ou un fractionnement d'actions",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "253862106": [
+      "20170201",
+      "20180102",
+      "20180102",
+      3.21
+     ],
+     "26140E105": [
+      "20180102",
+      "20180214",
+      "20180214",
+      1.52
+     ]
+    },
+    "prix": [
+     "20180214",
+     1.52,
+     "26140E105"
+    ],
+    "symbole": "DPW",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 57.5
+   },
+   {
+    "actions": [
+     15817393,
+     "2017-11-17"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 25.5
+    },
+    "depot": "2018-03-19",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 2 janvier 2018, après les actions déclarées au 17 novembre 2017, et l'ancien encore vu après : impossible de savoir si leur nombre est d'avant ou d'après un regroupement ou un fractionnement d'actions",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "253862106": [
+      "20170201",
+      "20180102",
+      "20180102",
+      3.21
+     ],
+     "26140E105": [
+      "20180102",
+      "20180228",
+      "20180228",
+      1.61
+     ]
+    },
+    "prix": [
+     "20180228",
+     1.61,
+     "26140E105"
+    ],
+    "symbole": "DPW",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 53.6
+   },
+   {
+    "actions": [
+     15817393,
+     "2017-11-17"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 25.5
+    },
+    "depot": "2018-03-27",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 2 janvier 2018, après les actions déclarées au 17 novembre 2017, et l'ancien encore vu après : impossible de savoir si leur nombre est d'avant ou d'après un regroupement ou un fractionnement d'actions",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "253862106": [
+      "20170223",
+      "20180102",
+      "20180102",
+      3.21
+     ],
+     "26140E105": [
+      "20180102",
+      "20180228",
+      "20180228",
+      1.61
+     ]
+    },
+    "prix": [
+     "20180228",
+     1.61,
+     "26140E105"
+    ],
+    "symbole": "DPW",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 44.9
+   },
+   {
+    "actions": [
+     15817393,
+     "2017-11-17"
+    ],
+    "avant": {
+     "taille": "petite",
+     "valeur_m": 25.5
+    },
+    "depot": "2018-03-28",
+    "epoque": {
+     "note": null,
+     "raison": "nouveau code du titre (CUSIP) vu dès le 2 janvier 2018, après les actions déclarées au 17 novembre 2017, et l'ancien encore vu après : impossible de savoir si leur nombre est d'avant ou d'après un regroupement ou un fractionnement d'actions",
+     "taille": null,
+     "valeur_m": null,
+     "valeur_min_m": null
+    },
+    "historique": {
+     "253862106": [
+      "20170223",
+      "20180102",
+      "20180102",
+      3.21
+     ],
+     "26140E105": [
+      "20180102",
+      "20180228",
+      "20180228",
+      1.61
+     ]
+    },
+    "prix": [
+     "20180228",
+     1.61,
+     "26140E105"
+    ],
+    "symbole": "DPW",
+    "vraie_taille": "petite",
+    "vraie_valeur_m": 38.8
+   }
+  ]
+ },
+ "fichiers_lus": [
+  "201507a",
+  "202609a",
+  269
+ ],
+ "jours_entre_dernier_ancien_et_premier_nouveau": {
+  "mediane": 6,
+  "p10": 1,
+  "p90": 1052
+ },
+ "juge": {
+  "avant": {
+   "sans changement de CUSIP : achats jugés": 68523,
+   "sans changement de CUSIP : bonus petite manqué": 1057,
+   "sans changement de CUSIP : bonus petite à tort": 419,
+   "sans changement de CUSIP : gardée à tort (vraie valeur sous 100 M$)": 1144,
+   "sans changement de CUSIP : taille fausse": 1953,
+   "sans changement de CUSIP : taille inconnue": 0,
+   "sans changement de CUSIP : taille juste": 66570,
+   "sans changement de CUSIP : écartée à tort (vraie valeur de 100 M$ ou plus)": 1084,
+   "à risque : achats jugés": 191,
+   "à risque : bonus petite manqué": 6,
+   "à risque : bonus petite à tort": 13,
+   "à risque : gardée à tort (vraie valeur sous 100 M$)": 35,
+   "à risque : taille fausse": 24,
+   "à risque : taille inconnue": 0,
+   "à risque : taille juste": 167,
+   "à risque : écartée à tort (vraie valeur de 100 M$ ou plus)": 0
+  },
+  "epoque": {
+   "sans changement de CUSIP : achats jugés": 68523,
+   "sans changement de CUSIP : bonus petite manqué": 1060,
+   "sans changement de CUSIP : bonus petite à tort": 419,
+   "sans changement de CUSIP : gardée à tort (vraie valeur sous 100 M$)": 1144,
+   "sans changement de CUSIP : taille fausse": 1953,
+   "sans changement de CUSIP : taille inconnue": 3,
+   "sans changement de CUSIP : taille juste": 66567,
+   "sans changement de CUSIP : écartée à tort (vraie valeur de 100 M$ ou plus)": 1084,
+   "à risque : achats jugés": 191,
+   "à risque : bonus petite manqué": 78,
+   "à risque : bonus petite à tort": 0,
+   "à risque : gardée à tort (vraie valeur sous 100 M$)": 53,
+   "à risque : taille fausse": 1,
+   "à risque : taille inconnue": 97,
+   "à risque : taille juste": 93,
+   "à risque : écartée à tort (vraie valeur de 100 M$ ou plus)": 0
+  },
+  "epoque_tout": {
+   "sans changement de CUSIP : achats jugés": 68523,
+   "sans changement de CUSIP : bonus petite manqué": 1086,
+   "sans changement de CUSIP : bonus petite à tort": 419,
+   "sans changement de CUSIP : gardée à tort (vraie valeur sous 100 M$)": 1149,
+   "sans changement de CUSIP : taille fausse": 1951,
+   "sans changement de CUSIP : taille inconnue": 31,
+   "sans changement de CUSIP : taille juste": 66541,
+   "sans changement de CUSIP : écartée à tort (vraie valeur de 100 M$ ou plus)": 1072,
+   "à risque : achats jugés": 191,
+   "à risque : bonus petite manqué": 78,
+   "à risque : bonus petite à tort": 0,
+   "à risque : gardée à tort (vraie valeur sous 100 M$)": 53,
+   "à risque : taille fausse": 1,
+   "à risque : taille inconnue": 97,
+   "à risque : taille juste": 93,
+   "à risque : écartée à tort (vraie valeur de 100 M$ ou plus)": 0
+  },
+  "inconnue": {
+   "sans changement de CUSIP : achats jugés": 68523,
+   "sans changement de CUSIP : bonus petite manqué": 1057,
+   "sans changement de CUSIP : bonus petite à tort": 419,
+   "sans changement de CUSIP : gardée à tort (vraie valeur sous 100 M$)": 1144,
+   "sans changement de CUSIP : taille fausse": 1953,
+   "sans changement de CUSIP : taille inconnue": 0,
+   "sans changement de CUSIP : taille juste": 66570,
+   "sans changement de CUSIP : écartée à tort (vraie valeur de 100 M$ ou plus)": 1084,
+   "à risque : achats jugés": 191,
+   "à risque : bonus petite manqué": 152,
+   "à risque : bonus petite à tort": 0,
+   "à risque : gardée à tort (vraie valeur sous 100 M$)": 121,
+   "à risque : taille fausse": 0,
+   "à risque : taille inconnue": 191,
+   "à risque : taille juste": 0,
+   "à risque : écartée à tort (vraie valeur de 100 M$ ou plus)": 0
+  }
+ },
+ "periode": {
+  "contexte_depuis": "2015-01-01",
+  "debut": "2016-01-01",
+  "fin": "2023-06-30"
+ }
+}
