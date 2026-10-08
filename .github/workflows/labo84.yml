@@ -1,0 +1,46 @@
+name: "Labo (mesures sur le jeu de recherche : regroupements d'actions)"
+
+# Lancé quand on modifie labo/tournoi/declencheur-mesures.txt. Lecture seulement du cache du labo (aucun site lu) :
+# n'entre pas dans la file du robot (groupe radar).
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/tournoi/declencheur-mesures.txt"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: labo84
+  cancel-in-progress: false
+
+jobs:
+  mesurer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Le jeu de recherche (cache de l'étape 0)
+        uses: actions/cache/restore@v4
+        with:
+          path: cache
+          key: tournoi-aucun
+          restore-keys: tournoi-
+      - name: Regroupements d'actions (découverte et coffre-fort)
+        run: |
+          test -f cache/decouverte/evenements.jsonl.gz
+          python labo/tournoi/mesures/regroupements.py --donnees cache/decouverte --sortie labo/tournoi/mesures/regroupements_decouverte.json
+          python labo/tournoi/mesures/regroupements.py --donnees cache/coffre --sortie labo/tournoi/mesures/regroupements_coffre.json
+      - name: Sauvegarder les mesures
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/tournoi/mesures
+          git commit -m "Labo : mesure des regroupements d'actions dans le jeu de recherche ($(date -u +'%Y-%m-%d %H:%M') UTC)" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
