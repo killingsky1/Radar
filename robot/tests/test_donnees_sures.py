@@ -180,9 +180,9 @@ def test_deux_valeurs_possibles_meme_taille():
     t = taille([3_000_000, "2026-08-10"], ["20260910", 20.0, "N1"], H_DEUX)
     assert (t["taille"], t["valeur_m"], t["valeur_min_m"], t["prix"]) == ("petite", 60.0, 6.0, ["20260910", 20.0])
     assert t["note"] == ("Code du titre (CUSIP) changé entre le 3 août 2026 et le 18 août 2026, autour des actions "
-                         "déclarées au 10 août 2026 : 6,0 M$ ou 60,0 M$ selon le côté du changement (regroupement ou "
-                         "fractionnement d'actions possible) : petite compagnie dans les deux cas ; la règle des 100 M$ "
-                         "prend la plus grande valeur.")
+                         "déclarées au 10 août 2026 (regroupement ou fractionnement d'actions possible) : 6,0 M$ ou 60,0 "
+                         "M$ selon le côté du changement, petite compagnie dans les deux cas ; la règle des 100 M$ prend "
+                         "la plus grande valeur.")
     assert sc.trop_petite({"taille": t})  # sous 100 M$ des deux côtés : écartée
     t2 = taille([30_000_000, "2026-08-10"], ["20260910", 20.0, "N1"], H_DEUX)  # 60 M$ ou 600 M$ : petite les deux
     assert (t2["taille"], t2["valeur_m"], t2["valeur_min_m"]) == ("petite", 600.0, 60.0)
@@ -193,8 +193,8 @@ def test_deux_valeurs_possibles_tailles_differentes():
     t = taille([300_000_000, "2026-08-10"], ["20260910", 20.0, "N1"], H_DEUX)  # 600 M$ ou 6 G$
     assert t["taille"] is None and "valeur_m" not in t
     assert t["raison"] == ("code du titre (CUSIP) changé entre le 3 août 2026 et le 18 août 2026, autour des actions "
-                           "déclarées au 10 août 2026 : 600,0 M$ ou 6,0 G$ selon le côté du changement (regroupement ou "
-                           "fractionnement d'actions possible)")
+                           "déclarées au 10 août 2026 (regroupement ou fractionnement d'actions possible) : 600,0 M$ ou "
+                           "6,0 G$ selon le côté du changement")
 
 
 @pytest.mark.parametrize("h, cusip, fin, attendu", [

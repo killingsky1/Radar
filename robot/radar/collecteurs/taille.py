@@ -426,14 +426,13 @@ def classer(fiche: dict | None, t: dict, symbole: str, jour: date, cusips: dict 
         if "deux" in p:
             (v_bas, _), (v_haut, p_haut) = sorted((actions[0] * q[1] / 1e6, q) for q in p["deux"])
             entre = (f"code du titre (CUSIP) changé entre le {jour_fr(p['entre'][0])} et le {jour_fr(p['entre'][1])}, "
-                     f"autour des actions déclarées au {jour_fr(actions[1])} : {millions_fr(v_bas)} ou "
-                     f"{millions_fr(v_haut)} selon le côté du changement (regroupement ou fractionnement d'actions "
-                     f"possible)")
+                     f"autour des actions déclarées au {jour_fr(actions[1])} (regroupement ou fractionnement d'actions "
+                     f"possible) : {millions_fr(v_bas)} ou {millions_fr(v_haut)} selon le côté du changement")
             if _taille(v_bas, s) != _taille(v_haut, s):
                 return {**x, "actions": actions, "raison": entre}
             r = {**x, "taille": _taille(v_haut, s), "valeur_m": round(v_haut, 1), "valeur_min_m": round(v_bas, 1),
                  "actions": actions, "prix": p_haut[:2]}
-            return {**r, "note": f"{entre[0].upper()}{entre[1:]} : {TAILLES_FR[r['taille']]} dans les deux cas ; la "
+            return {**r, "note": f"{entre[0].upper()}{entre[1:]}, {TAILLES_FR[r['taille']]} dans les deux cas ; la "
                                  f"règle des 100 M$ prend la plus grande valeur."}
         prix, note = p["prix"], p.get("note")
     valeur = actions[0] * prix[1] / 1e6
