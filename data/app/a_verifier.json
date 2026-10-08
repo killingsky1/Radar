@@ -1,5 +1,74 @@
 [
  {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": false,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "GENERAL ELECTRIC CO",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "GE Aerospace Common Stock (GE) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "GENERAL ELECTRIC CO"
+  ],
+  "id": "chambre_ptr:20035562:GE:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:GE:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "GE"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend GE"
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "a_verifier",

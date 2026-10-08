@@ -3,6 +3,51 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-08T21:29:17+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/10/le-gouvernement-lance-des-consultations-sur-la-modernisation-du-cadre-federal-regissant-le-secteur-de-la-bienfaisance.html",
+   "ministere": "Ministère des Finances Canada",
+   "mis_a_jour": "2026-10-08T16:34:23-04:00",
+   "resume": "Les organismes de bienfaisance et les organismes à but non lucratif jouent un rôle essentiel dans la société canadienne. Plus de 86 000 organismes de bienfaisance enregistrés offrent des programmes et des services essentiels au Canada et à l’étranger. Ils contribuent à réduire la pauvreté, viennent en aide aux populations vulnérables, font progresser l’éducation et la religion et mènent un large éventail d’activités qui renforcent les communautés.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Ministère des Finances Canada"
+  ],
+  "id": "nouvelles_eco_ca:ministere-finances/nouvelles/2026/10/le-gouvernement-lance-des-consultations-sur-la-modernisation-du-cadre-federal-regissant-le-secteur-de-la-bienfaisance.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-08",
+  "official_id": "ministere-finances/nouvelles/2026/10/le-gouvernement-lance-des-consultations-sur-la-modernisation-du-cadre-federal-regissant-le-secteur-de-la-bienfaisance.html",
+  "official_url": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/10/le-gouvernement-lance-des-consultations-sur-la-modernisation-du-cadre-federal-regissant-le-secteur-de-la-bienfaisance.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-08",
+  "sha256": "4d6534516919c457c40c6fbb5e72be729a3641574d6817b4976215af10e5f50f",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le gouvernement lance des consultations sur la modernisation du cadre fédéral régissant le secteur de la bienfaisance"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "action_officielle": true,
@@ -707,6 +752,2442 @@
   "source": "oge_278t",
   "tickers": [],
   "title": "Donald J Trump (président des États-Unis) : rapport de transactions (278-T)"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:17+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "NJ05",
+   "elu": "Josh Gottheimer",
+   "lecture_complete": true,
+   "nom_sec": "MCDONALDS CORP",
+   "rapport": "20035590",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "McDonald's Corporation Common Stock (MCD) [ST]",
+     "avis": "2026-10-06",
+     "date": "2026-09-25",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Josh Gottheimer",
+   "MCDONALDS CORP"
+  ],
+  "id": "chambre_ptr:20035590:MCD:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-25",
+  "official_id": "20035590:MCD:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035590.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "ba243f7c2b8b2ac7cb2ed86ea0665fd58cb3fa5305813292b8d8fe3349c1d141",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MCD"
+  ],
+  "title": "Josh Gottheimer (Chambre, NJ05) vend MCD — compte conjoint"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:17+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "NJ05",
+   "elu": "Josh Gottheimer",
+   "lecture_complete": true,
+   "nom_sec": "APPLIED MATERIALS INC /DE",
+   "rapport": "20035590",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Applied Materials, Inc. - Common Stock (AMAT) [ST]",
+     "avis": "2026-10-06",
+     "date": "2026-09-15",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "JT",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Josh Gottheimer",
+   "APPLIED MATERIALS INC /DE"
+  ],
+  "id": "chambre_ptr:20035590:AMAT:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-15",
+  "official_id": "20035590:AMAT:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035590.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "ba243f7c2b8b2ac7cb2ed86ea0665fd58cb3fa5305813292b8d8fe3349c1d141",
+  "source": "chambre_ptr",
+  "tickers": [
+   "AMAT"
+  ],
+  "title": "Josh Gottheimer (Chambre, NJ05) vend AMAT — compte conjoint"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "UNITED RENTALS, INC.",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "United Rentals, Inc. Common Stock (URI) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "UNITED RENTALS, INC."
+  ],
+  "id": "chambre_ptr:20035562:URI:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:URI:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "URI"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend URI"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "UNITEDHEALTH GROUP INC",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "UnitedHealth Group Incorporated Common Stock (UNH) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "UNITEDHEALTH GROUP INC"
+  ],
+  "id": "chambre_ptr:20035562:UNH:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:UNH:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "UNH"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend UNH"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "SPACE EXPLORATION TECHNOLOGIES CORP",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Space Exploration Technologies Corp. - Class A Common Stock (SPCX) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "SPACE EXPLORATION TECHNOLOGIES CORP"
+  ],
+  "id": "chambre_ptr:20035562:SPCX:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:SPCX:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "SPCX"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend SPCX"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "Snowflake Inc.",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Snowflake Inc. Common Stock (SNOW) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "Snowflake Inc."
+  ],
+  "id": "chambre_ptr:20035562:SNOW:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:SNOW:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "SNOW"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend SNOW"
+ },
+ {
+  "amount_max": 65000.0,
+  "amount_min": 16002.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "Snowflake Inc.",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Snowflake Inc. Common Stock (SNOW) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-04",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    },
+    {
+     "actif": "Snowflake Inc. Common Stock (SNOW) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-04",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "Snowflake Inc."
+  ],
+  "id": "chambre_ptr:20035562:SNOW:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-09-04",
+  "official_id": "20035562:SNOW:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "SNOW"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) achète SNOW (2 transactions)"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "RH",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "RH Common Stock (RH) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "RH"
+  ],
+  "id": "chambre_ptr:20035562:RH:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:RH:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "RH"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend RH"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "PELOTON INTERACTIVE, INC.",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Peloton Interactive, Inc. - Common Stock (PTON) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "PELOTON INTERACTIVE, INC."
+  ],
+  "id": "chambre_ptr:20035562:PTON:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:PTON:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "PTON"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend PTON"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "Okta, Inc.",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Okta, Inc. - Class A Common Stock (OKTA) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "Okta, Inc."
+  ],
+  "id": "chambre_ptr:20035562:OKTA:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:OKTA:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "OKTA"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend OKTA"
+ },
+ {
+  "amount_max": 30000.0,
+  "amount_min": 2002.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "Okta, Inc.",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Okta, Inc. - Class A Common Stock (OKTA) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-04",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    },
+    {
+     "actif": "Okta, Inc. - Class A Common Stock (OKTA) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-04",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "Okta, Inc."
+  ],
+  "id": "chambre_ptr:20035562:OKTA:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-09-04",
+  "official_id": "20035562:OKTA:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "OKTA"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) achète OKTA (2 transactions)"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "MICROSOFT CORP",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Microsoft Corporation - Common Stock (MSFT) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "MICROSOFT CORP"
+  ],
+  "id": "chambre_ptr:20035562:MSFT:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:MSFT:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MSFT"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend MSFT"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "Marvell Technology, Inc.",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Marvell Technology, Inc. - Common Stock (MRVL) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "Marvell Technology, Inc."
+  ],
+  "id": "chambre_ptr:20035562:MRVL:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:MRVL:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MRVL"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend MRVL"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "Moderna, Inc.",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Moderna, Inc. - Common Stock (MRNA) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "Moderna, Inc."
+  ],
+  "id": "chambre_ptr:20035562:MRNA:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:MRNA:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MRNA"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend MRNA"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "Merck & Co., Inc.",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Merck & Company, Inc. Common Stock (MRK) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "Merck & Co., Inc."
+  ],
+  "id": "chambre_ptr:20035562:MRK:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:MRK:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MRK"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend MRK"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "Meta Platforms, Inc.",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Meta Platforms, Inc. - Class A Common Stock (META) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "Meta Platforms, Inc."
+  ],
+  "id": "chambre_ptr:20035562:META:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:META:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "META"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend META"
+ },
+ {
+  "amount_max": 30000.0,
+  "amount_min": 2002.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "Meta Platforms, Inc.",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Meta Platforms, Inc. - Class A Common Stock (META) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-22",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    },
+    {
+     "actif": "Meta Platforms, Inc. - Class A Common Stock (META) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-22",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "Meta Platforms, Inc."
+  ],
+  "id": "chambre_ptr:20035562:META:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-09-22",
+  "official_id": "20035562:META:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "META"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) achète META (2 transactions)"
+ },
+ {
+  "amount_max": 30000.0,
+  "amount_min": 2002.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "INTERNATIONAL BUSINESS MACHINES CORP",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "International Business Machines Corporation Common Stock (IBM) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-04",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    },
+    {
+     "actif": "International Business Machines Corporation Common Stock (IBM) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-04",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "INTERNATIONAL BUSINESS MACHINES CORP"
+  ],
+  "id": "chambre_ptr:20035562:IBM:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-04",
+  "official_id": "20035562:IBM:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "IBM"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend IBM (2 transactions)"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "Honeywell Aerospace Inc.",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Honeywell Aerospace Inc. - Common Stock (HONA) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "Honeywell Aerospace Inc."
+  ],
+  "id": "chambre_ptr:20035562:HONA:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:HONA:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "HONA"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend HONA"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "HONEYWELL INTERNATIONAL INC",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Honeywell International Inc. (HON) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "HONEYWELL INTERNATIONAL INC"
+  ],
+  "id": "chambre_ptr:20035562:HON:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:HON:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "HON"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend HON"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "GOLDMAN SACHS GROUP INC",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Goldman Sachs Group, Inc. (GS) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "GOLDMAN SACHS GROUP INC"
+  ],
+  "id": "chambre_ptr:20035562:GS:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:GS:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "GS"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend GS"
+ },
+ {
+  "amount_max": 45000.0,
+  "amount_min": 3003.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "CORNING INC /NY",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Corning Incorporated Common Stock (GLW) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-04",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    },
+    {
+     "actif": "Corning Incorporated Common Stock (GLW) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    },
+    {
+     "actif": "Corning Incorporated Common Stock (GLW) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-04",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "CORNING INC /NY"
+  ],
+  "id": "chambre_ptr:20035562:GLW:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-04",
+  "official_id": "20035562:GLW:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "GLW"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend GLW (3 transactions)"
+ },
+ {
+  "amount_max": 30000.0,
+  "amount_min": 2002.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "CORNING INC /NY",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Corning Incorporated Common Stock (GLW) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-08",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    },
+    {
+     "actif": "Corning Incorporated Common Stock (GLW) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-08",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "CORNING INC /NY"
+  ],
+  "id": "chambre_ptr:20035562:GLW:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-09-08",
+  "official_id": "20035562:GLW:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "GLW"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) achète GLW (2 transactions)"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "FEDEX CORP",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "FedEx Corporation Common Stock (FDX) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "FEDEX CORP"
+  ],
+  "id": "chambre_ptr:20035562:FDX:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:FDX:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "FDX"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend FDX"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "Datadog, Inc.",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Datadog, Inc. - Class A Common Stock (DDOG) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "Datadog, Inc."
+  ],
+  "id": "chambre_ptr:20035562:DDOG:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:DDOG:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "DDOG"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend DDOG"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "CHEVRON CORP",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Chevron Corporation Common Stock (CVX) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-02",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "CHEVRON CORP"
+  ],
+  "id": "chambre_ptr:20035562:CVX:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-09-02",
+  "official_id": "20035562:CVX:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "CVX"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) achète CVX"
+ },
+ {
+  "amount_max": 80000.0,
+  "amount_min": 17003.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "CISCO SYSTEMS, INC.",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Cisco Systems, Inc. - Common Stock (CSCO) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-08",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    },
+    {
+     "actif": "Cisco Systems, Inc. - Common Stock (CSCO) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    },
+    {
+     "actif": "Cisco Systems, Inc. - Common Stock (CSCO) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "CISCO SYSTEMS, INC."
+  ],
+  "id": "chambre_ptr:20035562:CSCO:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-08",
+  "official_id": "20035562:CSCO:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "CSCO"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend CSCO (3 transactions)"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "Salesforce, Inc.",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Salesforce, Inc. Common Stock (CRM) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "Salesforce, Inc."
+  ],
+  "id": "chambre_ptr:20035562:CRM:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:CRM:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "CRM"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend CRM"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "Chubb Ltd",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Chubb Limited Common Stock (CB) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "Chubb Ltd"
+  ],
+  "id": "chambre_ptr:20035562:CB:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:CB:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "CB"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend CB"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "CITIGROUP INC",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Citigroup, Inc. Common Stock (C) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "CITIGROUP INC"
+  ],
+  "id": "chambre_ptr:20035562:C:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:C:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "C"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend C"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "BERKSHIRE HATHAWAY INC",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Berkshire Hathaway Inc. New Common Stock (BRK.B) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "BERKSHIRE HATHAWAY INC"
+  ],
+  "id": "chambre_ptr:20035562:BRK-B:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:BRK-B:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "BRK-B"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend BRK-B"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "BIOGEN INC.",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Biogen Inc. - Common Stock (BIIB) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "BIOGEN INC."
+  ],
+  "id": "chambre_ptr:20035562:BIIB:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:BIIB:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "BIIB"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend BIIB"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "Brookfield Renewable Partners L.P.",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Brookfield Renewable Partners L.P. Limited Partnership Units (BEP) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "Brookfield Renewable Partners L.P."
+  ],
+  "id": "chambre_ptr:20035562:BEP:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:BEP:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "BEP"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend BEP"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-08T21:29:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "BOEING CO",
+   "rapport": "20035562",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Boeing Company (BA) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "BOEING CO"
+  ],
+  "id": "chambre_ptr:20035562:BA:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035562:BA:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-07",
+  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
+  "source": "chambre_ptr",
+  "tickers": [
+   "BA"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend BA"
  },
  {
   "amount_max": null,
@@ -48519,360 +51000,6 @@
   "source": "oge_278t",
   "tickers": [],
   "title": "Sean Duffy (Secretary, Department of Transportation, niveau I) : rapport de transactions (278-T), 1 transaction"
- },
- {
-  "amount_max": 1100000.0,
-  "amount_min": 550002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "declarant_concorde": true,
-   "document_pdf": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "poste_publie_sans_201": true,
-   "sans_formulaire_201": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true,
-   "type_reconnu": true
-  },
-  "collected_at": "2026-10-04T17:40:24+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agence": "Social Security Administration",
-   "ajoute_le": "2026-08-08",
-   "declarant_concorde": true,
-   "lecture_complete": true,
-   "niveau": "Level I",
-   "nom": "Bisignano, Frank J",
-   "nom_sec": "SPDR S&P 500 ETF TRUST",
-   "pdf_valide": true,
-   "rapport": "2DC3DD386173222E85258E4D002D8CD0",
-   "signe_le": "2026-07-07",
-   "taille": 5242,
-   "titre": "Commissioner",
-   "transactions": [
-    {
-     "avis": "No",
-     "date": "2026-06-16",
-     "description": "SPDR S&P 500 ETF Trust (SPY)",
-     "montant": "$500,001 - $1,000,000",
-     "n": "1",
-     "note": null,
-     "symbole": "SPY",
-     "type": "Purchase"
-    },
-    {
-     "avis": "No",
-     "date": "2026-06-16",
-     "description": "SPDR S&P 500 ETF Trust (SPY)",
-     "montant": "$50,001 - $100,000",
-     "n": "2",
-     "note": null,
-     "symbole": "SPY",
-     "type": "Purchase"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Frank J Bisignano",
-   "SPDR S&P 500 ETF TRUST"
-  ],
-  "id": "oge_278t:2DC3DD386173222E85258E4D002D8CD0:SPY:P",
-  "kind": "achat_cabinet",
-  "notes": [],
-  "occurred_on": "2026-06-16",
-  "official_id": "2DC3DD386173222E85258E4D002D8CD0:SPY:P",
-  "official_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/2DC3DD386173222E85258E4D002D8CD0/$FILE/Frank-J-Bisignano-07.07.2026-278T.pdf",
-  "parser_version": "oge-3",
-  "published_on": "2026-08-08",
-  "sha256": "b93a6a5162780c0e0c2d1ef382d1decc1bbd38302fae5c19a022c6fb7442b8ee",
-  "source": "oge_278t",
-  "tickers": [
-   "SPY"
-  ],
-  "title": "Frank J Bisignano (Commissioner, Social Security Administration, niveau I) achète SPY (2 transactions)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "declarant_concorde": true,
-   "document_pdf": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montants_officiels": true,
-   "poste_publie_sans_201": true,
-   "sans_formulaire_201": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_reconnu": true
-  },
-  "collected_at": "2026-10-04T17:40:24+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agence": "Social Security Administration",
-   "ajoute_le": "2026-08-08",
-   "declarant_concorde": true,
-   "lecture_complete": true,
-   "modifie_le": null,
-   "niveau": "Level I",
-   "nom": "Bisignano, Frank J",
-   "pdf_valide": true,
-   "signe_le": "2026-07-07",
-   "taille": 5242,
-   "titre": "Commissioner",
-   "transactions": [
-    {
-     "avis": "No",
-     "date": "2026-06-16",
-     "description": "SPDR S&P 500 ETF Trust (SPY)",
-     "montant": "$500,001 - $1,000,000",
-     "n": "1",
-     "note": null,
-     "symbole": "SPY",
-     "type": "Purchase"
-    },
-    {
-     "avis": "No",
-     "date": "2026-06-16",
-     "description": "SPDR S&P 500 ETF Trust (SPY)",
-     "montant": "$50,001 - $100,000",
-     "n": "2",
-     "note": null,
-     "symbole": "SPY",
-     "type": "Purchase"
-    }
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Frank J Bisignano",
-   "Social Security Administration"
-  ],
-  "id": "oge_278t:2DC3DD386173222E85258E4D002D8CD0",
-  "kind": "rapport_278t",
-  "notes": [
-   "2 lignes lues : toutes reliées à une action cotée à la SEC."
-  ],
-  "occurred_on": "2026-08-08",
-  "official_id": "2DC3DD386173222E85258E4D002D8CD0",
-  "official_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/2DC3DD386173222E85258E4D002D8CD0/$FILE/Frank-J-Bisignano-07.07.2026-278T.pdf",
-  "parser_version": "oge-3",
-  "published_on": "2026-08-08",
-  "sha256": "b93a6a5162780c0e0c2d1ef382d1decc1bbd38302fae5c19a022c6fb7442b8ee",
-  "source": "oge_278t",
-  "tickers": [],
-  "title": "Frank J Bisignano (Commissioner, Social Security Administration, niveau I) : rapport de transactions (278-T), 2 transactions"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "declarant_concorde": true,
-   "document_pdf": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montants_officiels": true,
-   "poste_publie_sans_201": true,
-   "sans_formulaire_201": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_reconnu": true
-  },
-  "collected_at": "2026-10-04T17:40:24+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agence": "Office of Science and Technology Policy",
-   "ajoute_le": "2026-08-08",
-   "declarant_concorde": true,
-   "lecture_complete": true,
-   "modifie_le": null,
-   "niveau": "Level II",
-   "nom": "Kratsios, Michael J",
-   "pdf_valide": true,
-   "signe_le": "2026-07-09",
-   "taille": 5056,
-   "titre": "Director",
-   "transactions": [
-    {
-     "avis": "No",
-     "date": "2026-07-01",
-     "description": "Vanguard Tax-Exempt Bond Index Fund ETF Shares (VTEB)",
-     "montant": "$1,001 - $15,000",
-     "n": "1",
-     "note": null,
-     "symbole": null,
-     "type": "Purchase"
-    }
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Michael J Kratsios",
-   "Office of Science and Technology Policy"
-  ],
-  "id": "oge_278t:24F079312783534385258E4D002DAB10",
-  "kind": "rapport_278t",
-  "notes": [
-   "1 ligne lue : aucune action cotée à la SEC (des fonds, des obligations, des placements privés ou un symbole introuvable à la SEC : voir les lignes)."
-  ],
-  "occurred_on": "2026-08-08",
-  "official_id": "24F079312783534385258E4D002DAB10",
-  "official_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/24F079312783534385258E4D002DAB10/$FILE/Michael-J-Kratsios-07.09.2026-278T.pdf",
-  "parser_version": "oge-3",
-  "published_on": "2026-08-08",
-  "sha256": "a93f851b3b64673ff1377d6ac2f13b4e1df819f1be53bf10a1ba149bcc57bf8d",
-  "source": "oge_278t",
-  "tickers": [],
-  "title": "Michael J Kratsios (Director, Office of Science and Technology Policy, niveau II) : rapport de transactions (278-T), 1 transaction"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "declarant_concorde": true,
-   "document_pdf": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montants_officiels": true,
-   "poste_publie_sans_201": true,
-   "sans_formulaire_201": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_reconnu": true
-  },
-  "collected_at": "2026-10-04T17:40:24+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agence": "Department of The Interior",
-   "ajoute_le": "2026-08-05",
-   "declarant_concorde": true,
-   "lecture_complete": true,
-   "modifie_le": null,
-   "niveau": "Level I",
-   "nom": "Burgum, Douglas J",
-   "pdf_valide": true,
-   "signe_le": "2026-05-12",
-   "taille": 5922,
-   "titre": "Secretary",
-   "transactions": [
-    {
-     "avis": "No",
-     "date": "2026-04-08",
-     "description": "Arthur Ventures V, LP - Hudu Technologies, Inc",
-     "montant": "$1,001 - $15,000",
-     "n": "1",
-     "note": "On 04/08/2026, the filer received notification from the fund manager that Arthur Ventures V, LP invested into Hudu",
-     "symbole": null,
-     "type": "Purchase"
-    },
-    {
-     "avis": "No",
-     "date": "2026-04-08",
-     "description": "Arthur Ventures V, LP - zizzl Health",
-     "montant": "$1,001 - $15,000",
-     "n": "2",
-     "note": "On 04/08/2026, the filer received notification from the fund manager that Arthur Ventures V, LP invested into Zizzl Health",
-     "symbole": null,
-     "type": "Purchase"
-    },
-    {
-     "avis": "No",
-     "date": "2026-04-08",
-     "description": "Arthur Ventures Growth IV, LP - Nucleus Security, Inc.",
-     "montant": "$100,001 - $250,000",
-     "n": "3",
-     "note": "On 04/08/2026, the filer received notification from the fund manager that Arthur Ventures Growth IV, LP completed an additional investment into Nucleus Security.",
-     "symbole": null,
-     "type": "Purchase"
-    },
-    {
-     "avis": "No",
-     "date": "2026-04-08",
-     "description": "Arthur Ventures Growth IV, LP - Nucleus Security, Inc.",
-     "montant": "$1,001 - $15,000",
-     "n": "4",
-     "note": "On 04/08/2026, the filer's spouse received notification from the fund manager that Arthur Ventures Growth IV, LP completed an additional investment into Nucleus Security.",
-     "symbole": null,
-     "type": "Purchase"
-    },
-    {
-     "avis": "No",
-     "date": "2026-04-08",
-     "description": "Arthur Ventures IV, LP - Decimal Technologies, Inc.",
-     "montant": "$1,001 - $15,000",
-     "n": "5",
-     "note": "On 04/08/2026, the filer received notification from the fund manager that it's interest in Decimal Technologies was sold. No distributions to investors were planned.",
-     "symbole": null,
-     "type": "Sale"
-    },
-    {
-     "avis": "No",
-     "date": "2026-04-08",
-     "description": "Arthur Ventures IV, LP - Decimal Technologies, Inc.",
-     "montant": "$1,001 - $15,000",
-     "n": "6",
-     "note": "On 04/08/2026, the filer's IRA received notification from the fund manager that it's interest in Decimal Technologies was sold. No distributions to investors were planned.",
-     "symbole": null,
-     "type": "Sale"
-    }
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Douglas J Burgum",
-   "Department of The Interior"
-  ],
-  "id": "oge_278t:B215A2D9D7B0CC0E85258E4A002D8CC2",
-  "kind": "rapport_278t",
-  "notes": [
-   "6 lignes lues : aucune action cotée à la SEC (des fonds, des obligations, des placements privés ou un symbole introuvable à la SEC : voir les lignes)."
-  ],
-  "occurred_on": "2026-08-05",
-  "official_id": "B215A2D9D7B0CC0E85258E4A002D8CC2",
-  "official_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/B215A2D9D7B0CC0E85258E4A002D8CC2/$FILE/Douglas-J-Burgum-05.12.2026-278T.pdf",
-  "parser_version": "oge-3",
-  "published_on": "2026-08-05",
-  "sha256": "1a5ae8936c686cf5cddf3c7bb3c12d4107c16b613e15538358fa67536b8331ca",
-  "source": "oge_278t",
-  "tickers": [],
-  "title": "Douglas J Burgum (Secretary, Department of The Interior, niveau I) : rapport de transactions (278-T), 6 transactions"
  },
  {
   "amount_max": null,
