@@ -128,15 +128,17 @@ def lire_prix(contenu: bytes) -> dict[str, list]:
 
 
 def ajouter_lignes(symboles: dict, lignes: list[tuple]) -> None:
-    """Ajoute les lignes d'un fichier à l'historique : pour chaque symbole et chaque CUSIP, le 1er et le dernier jour
-    vus, et le dernier prix (le jour et le prix)."""
+    """Ajoute les lignes d'un fichier à l'historique : pour chaque symbole et chaque CUSIP, [1er jour vu, dernier jour
+    vu, jour du dernier prix, dernier prix, jour du 1er prix, 1er prix] (même jour : la 1re ligne, comme lire_prix)."""
     for jour, cusip, s, prix in lignes:
         if not cusip:
             continue
-        h = symboles.setdefault(s, {}).setdefault(cusip, [jour, jour, None, None])
+        h = symboles.setdefault(s, {}).setdefault(cusip, [jour, jour, None, None, None, None])
         h[0], h[1] = min(h[0], jour), max(h[1], jour)
         if prix is not None and (h[2] is None or jour > h[2]):
             h[2], h[3] = jour, prix
+        if prix is not None and (h[4] is None or jour < h[4]):
+            h[4], h[5] = jour, prix
 
 
 def epoque(h: dict, cusip: str, fin: str) -> dict:
@@ -285,6 +287,9 @@ def millions_fr(v: float) -> str:
     return f"{v / 1000:.1f} G$".replace(".", ",") if v >= 1000 else f"{v:.1f} M$".replace(".", ",")
 
 
+SAUT_REGROUPEMENT = 1.8  # prix au moins 1,8 fois plus haut au changement de CUSIP : regroupement d'actions probable
+NON_VERIFIE = ("Changement du code du titre (CUSIP) pas encore vérifié : l'historique des fichiers de la SEC n'est pas "
+               "encore lu jusqu'à la date des actions.")
 TAILLES_FR = {"petite": "petite compagnie", "moyenne": "compagnie moyenne", "grande": "grande compagnie"}
 
 
@@ -293,26 +298,29 @@ def _taille(valeur: float, s: dict) -> str:
 
 
 def prix_de_l_epoque(h: dict, prix: list, actions: list, jour: date) -> dict:
-    """Le prix à multiplier par le nombre d'actions (voir epoque) : {"prix": [jour, prix, CUSIP]} (même époque que les
-    actions), {"deux": [prix ancien, prix nouveau], "note": …} (les deux côtés possibles), ou {"raison": …}."""
+    """Le prix à multiplier par le nombre d'actions (voir epoque) : {"prix": [jour, prix, CUSIP], "note": …} (même époque
+    que les actions ; la note dit d'où vient le prix s'il n'est pas le plus récent, ou qu'on ne peut pas vérifier),
+    {"deux": [prix ancien, prix nouveau], "entre": …} (les deux côtés possibles), ou {"raison": …, "saut": …} (saut :
+    1er prix du nouveau CUSIP ÷ dernier prix de l'ancien, s'ils sont connus)."""
     fin = actions[1].replace("-", "")
     e = epoque(h, prix[2], fin)
     if e["cas"] == "meme":
         return {"prix": prix}
     d = jour_fr(actions[1])
     if e["cas"] == "inconnue":
-        if e["pourquoi"] == "absent":
-            return {"raison": "code du titre (CUSIP) du prix absent de l'historique de la SEC"}
+        if e["pourquoi"] == "absent":  # impossible de vérifier : le calcul d'avant, dit tel quel
+            return {"prix": prix, "note": NON_VERIFIE}
         if e["pourquoi"] == "chevauchement":
             return {"raison": f"nouveau code du titre (CUSIP) vu dès le {jour_fr(e['premier'])}, après les actions "
                               f"déclarées au {d}, et l'ancien encore vu après : impossible de savoir si leur nombre est "
                               f"d'avant ou d'après un regroupement ou un fractionnement d'actions"}
         return {"raison": f"plusieurs changements du code du titre (CUSIP) depuis les actions déclarées au {d}"}
-    vieux = h[e["ancien"]]
+    vieux, neuf = h[e["ancien"]], h[prix[2]]
     if vieux[2] is None or datetime.strptime(vieux[2], "%Y%m%d").date() < jour - timedelta(days=PRIX_MAX_JOURS):
+        saut = neuf[5] / vieux[3] if len(neuf) > 5 and neuf[5] and vieux[3] else None
         return {"raison": f"nouveau code du titre (CUSIP) vu dès le {jour_fr(e['premier'])}, après les actions déclarées "
                           f"au {d} (regroupement ou fractionnement d'actions possible), et pas de prix de l'ancien code "
-                          f"depuis {PRIX_MAX_JOURS} jours"}
+                          f"depuis {PRIX_MAX_JOURS} jours", "saut": saut, "premier": e["premier"]}
     ancien = [vieux[2], vieux[3], e["ancien"]]
     if e["cas"] == "ancien":
         return {"prix": ancien, "note": f"Prix de l'ancien code du titre (CUSIP {e['ancien']}), vu jusqu'au "
@@ -351,14 +359,22 @@ def classer(fiche: dict | None, t: dict, symbole: str, jour: date, cusips: dict 
     if not prix or datetime.strptime(prix[0], "%Y%m%d").date() < jour - timedelta(days=PRIX_MAX_JOURS):
         return {**x, "actions": actions, "raison": f"pas de prix de la SEC depuis {PRIX_MAX_JOURS} jours"}
     note = None
-    if cusips is not None:
-        if not cusips.get("debut") or actions[1].replace("-", "") < cusips["debut"]:
-            return {**x, "actions": actions, "raison": "historique des codes du titre (CUSIP) pas encore lu jusqu'à la "
-                                                       "date des actions déclarées"}
-        if len(prix) < 3:
-            return {**x, "actions": actions, "raison": "prix de la SEC sans code du titre (CUSIP)"}
+    if cusips is not None and (not cusips.get("debut") or actions[1].replace("-", "") < cusips["debut"] or len(prix) < 3):
+        note = NON_VERIFIE  # historique pas encore lu (juste après la mise en ligne de l'étape 1) : le calcul d'avant
+    elif cusips is not None:
         p = prix_de_l_epoque((cusips.get("symboles") or {}).get(symbole) or {}, prix, actions, jour)
         if "raison" in p:
+            v_max = actions[0] * prix[1] / 1e6
+            if (p.get("saut") or 0) >= SAUT_REGROUPEMENT and _taille(v_max, s) == "petite":
+                # regroupement probable : ancien nombre d'actions × nouveau prix = un MAXIMUM (la vraie valeur est plus
+                # petite) ; sous le 30e centile, la compagnie est petite dans tous les cas (lab, 8 octobre 2026)
+                saut = f"{p['saut']:.1f}".replace(".", ",")
+                return {**x, "taille": "petite", "valeur_m": round(v_max, 1), "valeur_max": True, "actions": actions,
+                        "prix": prix[:2], "note": (
+                            f"Nouveau code du titre (CUSIP) vu dès le {jour_fr(p['premier'])}, après les actions "
+                            f"déclarées au {jour_fr(actions[1])}, avec un prix {saut} fois plus haut : regroupement "
+                            f"d'actions probable. Leur nombre est peut-être d'avant le regroupement : la valeur est au plus "
+                            f"{millions_fr(v_max)}, petite compagnie dans tous les cas.")}
             return {**x, "actions": actions, "raison": p["raison"]}
         if "deux" in p:
             (v_bas, _), (v_haut, p_haut) = sorted((actions[0] * q[1] / 1e6, q) for q in p["deux"])

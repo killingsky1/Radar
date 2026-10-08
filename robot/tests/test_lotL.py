@@ -290,7 +290,7 @@ def test_prix_relus_seulement_quand_la_sec_publie_un_nouveau_fichier(tmp_path):
     assert ftd[:2] == ["202608b.zip", "202609a.zip"] and sorted(ftd) == [f"{c}.zip" for c in historique]
     h = ta.charger_cusips(tmp_path)
     assert h["fichiers"] == historique and h["debut"] == "20250815" and len(historique) == 26
-    assert h["symboles"]["FLNA"] == {"14817C107": ["20260817", "20260914", "20260914", 0.77]}
+    assert h["symboles"]["FLNA"] == {"14817C107": ["20260817", "20260914", "20260914", 0.77, "20260817", 0.91]}
     contenu = ta.chemin(tmp_path).read_text(encoding="utf-8")
     contenu_h = ta.chemin_cusips(tmp_path).read_text(encoding="utf-8")
     internet2 = collecter_taille(tmp_path)

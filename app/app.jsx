@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.27.0";
+const VERSION = "0.27.1";
 
 // ---------- Constantes ----------
 
@@ -1616,14 +1616,19 @@ function TailleBourse({ t, regle100 }) {
     ? `Petite : moins de ${argentCourt(s.p30 * 1e6)} (30e centile des compagnies du NYSE, ${moisAnnee(s.mois)}) ; grande : ${argentCourt(s.p70 * 1e6)} et plus (70e centile).`
     : "";
   const texte = t.taille
-    ? `${nombre(t.actions[0])} actions déclarées au ${dateLongue(t.actions[1])} × ${prixAction(t.prix[1])} (prix de la SEC du ${jourSec(t.prix[0])}). ${seuils}${t.taille === "petite" ? " Les achats de dirigeants comptent ×1,5." : ""}${regle100 && t.valeur_m < 100 ? " Moins de 100 M$ : hors de la liste « hausse »." : ""}`
+    ? `${nombre(t.actions[0])} actions déclarées au ${dateLongue(t.actions[1])} × ${prixAction(t.prix[1])} (prix de la SEC du ${jourSec(t.prix[0])}). ${seuils}${t.taille === "petite" ? " Les achats de dirigeants comptent ×1,5." : ""}${regle100 && t.valeur_m < 100 ? " Moins de 100 M$ : hors de la liste « hausse »." : ""}${t.note ? ` ${t.note}` : ""}`
     : `Pas calculée : ${t.raison}. Pas de bonus de petite compagnie.`;
+  // Étape 1 (données sûres), autour d'un changement de CUSIP : deux valeurs possibles (même taille des deux côtés), ou
+  // un maximum sûr après un regroupement d'actions probable
+  const valeur = t.taille && (t.valeur_min_m != null
+    ? `${argentCourt(t.valeur_min_m * 1e6)} à ${argentCourt(t.valeur_m * 1e6)}`
+    : `${t.valeur_max ? "au plus " : ""}${argentCourt(t.valeur_m * 1e6)}`);
   return (
     <>
       <h2 className="section">Taille en bourse</h2>
       <div className="carte liste taille">
         <Rangee label={t.taille ? TAILLES[t.taille] : "Taille inconnue"}>
-          {t.taille && <span className="rangee-valeur">{argentCourt(t.valeur_m * 1e6)}</span>}
+          {t.taille && <span className="rangee-valeur">{valeur}</span>}
         </Rangee>
         <div className="rangee bloc">
           <span className="rangee-texte">{fr(texte)}</span>

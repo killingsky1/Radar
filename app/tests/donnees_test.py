@@ -268,8 +268,17 @@ ta_l.chemin(sys.argv[1]).parent.mkdir(parents=True, exist_ok=True)
 ta_l.chemin(sys.argv[1]).write_text(json.dumps({
     "seuils": {**ta_l.lire_seuils((FL / "ME_Breakpoints_CSV.zip").read_bytes()), "adresse": ta_l.SEUILS, "lu": jour(1)},
     "actions": {"2488": [1_620_000_000, jour(30)], "1045810": [24_300_000_000, jour(40)]},
-    "prix": {"AMD": [jour(20).replace("-", ""), 160.0], "NVDA": [jour(75).replace("-", ""), 180.0]},  # NVDA : trop vieux
+    "prix": {"AMD": [jour(20).replace("-", ""), 160.0, "007903107"],
+             "NVDA": [jour(75).replace("-", ""), 180.0, "67066G104"]},  # NVDA : trop vieux
     "fichiers_prix": ["exemple"]}), encoding="utf-8")
+# Étape 1 (données sûres) : l'historique des CUSIP, un seul code par compagnie depuis plus d'un an (EXEMPLES) :
+# [1er jour vu, dernier jour vu, jour du dernier prix, dernier prix, jour du 1er prix, 1er prix]
+CUSIPS_TEST = {"fichiers": ["exemple"], "debut": jour(400).replace("-", ""), "symboles": {
+    "AMD": {"007903107": [jour(380).replace("-", ""), jour(20).replace("-", ""), jour(20).replace("-", ""), 160.0,
+                          jour(380).replace("-", ""), 150.0]},
+    "NVDA": {"67066G104": [jour(380).replace("-", ""), jour(75).replace("-", ""), jour(75).replace("-", ""), 180.0,
+                           jour(380).replace("-", ""), 120.0]}}}
+ta_l.chemin_cusips(sys.argv[1]).write_text(json.dumps(CUSIPS_TEST), encoding="utf-8")
 ini_l.chemin(sys.argv[1]).write_text(json.dumps({"version": ini_l.VERSION, "annees": {str(J.year): {
     "depuis": [J.year - 3, J.year - 2, J.year - 1], "cik": {"9999999": {"7777777": [3, 9]}}, "noms": {}, "compte": {}}}}),
     encoding="utf-8")
@@ -297,8 +306,18 @@ EMETTEURS_TEST["MIKR"] = {"cik": 9999990, "nom": "Micro Exemple Inc.", "type": "
 (Path(sys.argv[1]) / "sec" / "emetteurs.json").write_text(json.dumps(EMETTEURS_TEST), encoding="utf-8")
 t_m = json.loads(ta_m.chemin(sys.argv[1]).read_text(encoding="utf-8"))
 t_m["actions"]["9999990"] = [20_000_000, jour(30)]
-t_m["prix"]["MIKR"] = [jour(3).replace("-", ""), 2.5]
+# Étape 1 (données sûres) : MIKR a fait un regroupement d'actions 1 pour 10 il y a 9 jours (EXEMPLE) : nouveau CUSIP vu dès
+# il y a 8 jours (25 $), ancien vu jusqu'à il y a 10 jours (2,50 $). Ses 20 000 000 actions sont déclarées d'il y a 30 jours,
+# AVANT le regroupement : la 0.27.0 aurait calculé 20 000 000 × 25 $ = 500 M$ (gardée dans « hausse ») ; le robot prend
+# le prix de l'ancien CUSIP : 50 M$, écartée.
+t_m["prix"]["MIKR"] = [jour(3).replace("-", ""), 25.0, "000000AB9"]
 ta_m.chemin(sys.argv[1]).write_text(json.dumps(t_m), encoding="utf-8")
+CUSIPS_TEST["symboles"]["MIKR"] = {
+    "000000AA1": [jour(300).replace("-", ""), jour(10).replace("-", ""), jour(10).replace("-", ""), 2.5,
+                  jour(300).replace("-", ""), 4.0],
+    "000000AB9": [jour(8).replace("-", ""), jour(3).replace("-", ""), jour(3).replace("-", ""), 25.0,
+                  jour(8).replace("-", ""), 25.2]}
+ta_m.chemin_cusips(sys.argv[1]).write_text(json.dumps(CUSIPS_TEST), encoding="utf-8")
 achat_mikr = valider(ev(40, "sec_form4", "compagnies", "achat_initie",
     "la directrice financière de Micro Exemple achète 40 000 actions", jour(1), "https://www.sec.gov/test/mikr-form4.xml",
     tickers=["MIKR"], amount_min=1.0e5, amount_max=1.0e5, entities=["Directrice financière (exemple)", "MICRO EXEMPLE INC"],
