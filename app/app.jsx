@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.27.2";
+const VERSION = "0.27.3";
 
 // ---------- Constantes ----------
 
@@ -2113,6 +2113,14 @@ function EcranCalendrier({ retour }) {
 
 const SENS_RESULTATS = { hausse: "À la hausse", baisse: "À la baisse", ecartee: "Écartée (moins de 100 M$)" };
 
+// Étape 3 : ce que le labo a mesuré (labo/rejeu3-lotM/comparaison_lotM.md et labo/tournoi/RAPPORT.md, octobre 2026),
+// dit dans l'Aide et en tête des Résultats
+const LABO_MARCHE = {
+  rejeu: "Le labo a rejoué la liste « hausse » jour par jour sur 3 ans (juillet 2023 à juin 2026, prix officiels de la SEC, règles de la version 0.27) : en gardant chaque compagnie 1 mois, l'écart médian avec le S&P 500 est de −1,1 %, −3,5 % et +0,7 % selon l'année, et 39 à 50 % des compagnies ont fait mieux que lui.",
+  regles: "Le labo a aussi testé 38 règles écrites d'avance à partir d'études (qui achète, combien, taille de la compagnie, durée…) sur 2016-2023 et 2023-2026 : aucune n'a battu le S&P 500 de façon fiable après les frais.",
+  info: "Les listes sont donc de l'information à creuser, preuves à l'appui, pas un signal d'achat. La page Résultats mesure Radar en vrai, entrée par entrée. Pas un conseil financier.",
+};
+
 function variationSignee(v) {
   return `${v > 0 ? "+" : ""}${(v * 100).toLocaleString("fr-CA", { minimumFractionDigits: 1, maximumFractionDigits: 1 })} %`;
 }
@@ -2282,6 +2290,16 @@ function EcranResultats({ retour }) {
       <p className="explication">
         {fr("Chaque compagnie qui entre dans une liste est suivie avec les prix officiels de la SEC, 1 semaine et 1 mois plus tard, et comparée au marché (fonds qui suivent le S&P 500).")}
       </p>
+      <Groupe titre="Avant de lire : ce que le labo a mesuré">
+        {[LABO_MARCHE.rejeu, LABO_MARCHE.regles].map((t) => (
+          <div key={t} className="rangee bloc">
+            <span className="rangee-texte">{fr(t)}</span>
+          </div>
+        ))}
+        <div className="rangee bloc">
+          <span className="rangee-texte">{fr("Les mesures en vrai ci-dessous diront si Radar fait mieux. D'ici là, les listes sont de l'information à creuser, pas un signal d'achat.")}</span>
+        </div>
+      </Groupe>
       <Groupe titre="Taux de réussite" pied={r.prix_jusqu_au ? fr(`Prix de la SEC publiés jusqu'au ${dateLongue(r.prix_jusqu_au)}.`) : undefined}>
         {Object.entries(r.horizons).flatMap(([k, nom]) =>
           ["hausse", "baisse"].map((sens) => {
@@ -2816,6 +2834,14 @@ function EcranAide({ retour }) {
           </li>
         ))}
       </ol>
+
+      <Groupe titre="Radar bat-il le marché ?">
+        {[`Pas à coup sûr. ${LABO_MARCHE.rejeu}`, LABO_MARCHE.regles, LABO_MARCHE.info].map((t) => (
+          <div key={t} className="rangee bloc">
+            <span className="rangee-texte">{fr(t)}</span>
+          </div>
+        ))}
+      </Groupe>
 
       <Groupe titre="Les robots" pied="Heure de l'Est en été ; une heure plus tôt en hiver. Le passage de nuit lit les dépôts de la SEC de la journée.">
         <div className="rangee bloc">
