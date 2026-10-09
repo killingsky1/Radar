@@ -1,5 +1,68 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_de_la_gazette": true,
+   "loi_visant_a_batir_le_canada": true,
+   "projet_nomme": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_officiel_de_l_avis": false
+  },
+  "collected_at": "2026-10-09T21:35:19+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "description": "",
+   "details": [
+    [
+     "Projet",
+     "Décret modifiant l’annexe 1 de la Loi visant à bâtir le Canada"
+    ],
+    [
+     "Loi",
+     "Loi visant à bâtir le Canada"
+    ],
+    [
+     "Publié dans",
+     "Gazette du Canada, Partie I, 2026-10-10"
+    ]
+   ],
+   "jour": "2026-10-10",
+   "loi": "Loi visant à bâtir le Canada",
+   "projet": "Décret modifiant l’annexe 1 de la Loi visant à bâtir le Canada",
+   "resume": "C.P. 2026-925 Le 1 er octobre 2026",
+   "texte": "C.P. 2026-925 Le 1 er octobre 2026",
+   "titre": "Décret modifiant l’annexe 1 de la Loi visant à bâtir le Canada"
+  },
+  "direction": 0,
+  "entities": [
+   "Bureau des grands projets"
+  ],
+  "id": "grands_projets_ca:avis:2026-10-10:da1",
+  "kind": "avis_projet",
+  "notes": [
+   "Étape officielle : l'avis paraît au moins 30 jours avant que le projet puisse être inscrit."
+  ],
+  "occurred_on": "2026-10-10",
+  "official_id": "avis:2026-10-10:da1",
+  "official_url": "https://gazette.gc.ca/rp-pr/p1/2026/2026-10-10/html/order-decret-fra.html#da1",
+  "parser_version": "gazette-1",
+  "published_on": "2026-10-10",
+  "sha256": "11243e7314fbdaaeadef92fb9f8d3fb0c946b9872a4243e7a15e5a9ba5055746",
+  "source": "grands_projets_ca",
+  "tickers": [],
+  "title": "Projet d'intérêt national : avis d'inscription possible, Décret modifiant l’annexe 1 de la Loi visant à bâtir le Canada"
+ },
+ {
   "amount_max": 15000.0,
   "amount_min": 1001.0,
   "badge": "a_verifier",
