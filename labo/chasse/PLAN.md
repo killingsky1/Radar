@@ -57,10 +57,15 @@ demande du futur lève une erreur ; les finances, les actions et les quantités 
 Sur les 9 ans (juillet 2017 à juin 2026), pour au moins une durée :
 - battre le S&P 500 (10 000 $ gardés dans SPY) au total, après les frais ;
 - gagner au moins 6 années sur 9 ;
-- t ≥ 2,4 (écart moyen des transactions contre SPY ; 2,4 au lieu de 2 parce que 3 durées sont essayées).
+- t ≥ 2,4 sur l'écart MENSUEL du portefeuille contre SPY (le même t que l'examen du tournoi, juger.py ; 2,4 au
+  lieu de 2 parce que 3 durées sont essayées).
 Si une durée réussit : examen final sur des années jamais utilisées (2009-2015, données de la SEC à bâtir) AVANT toute
 entrée dans Radar. Si aucune ne réussit : on le dit, chiffres à l'appui, et Radar ne change pas.
 
 ## Aussi mesuré (pour comprendre, pas pour juger)
 Par année testée : rendement net moyen des 10 % les mieux notés contre tous les achats, corrélation de rang entre le
 score et le résultat.
+
+## Correction du plan (9 octobre 2026, AVANT tout calcul sur les vraies données)
+Le t du critère est celui de l'examen du tournoi : l'écart mensuel du portefeuille contre SPY (fin de mois à fin de
+mois), pas l'écart moyen des transactions (montré aussi, pour comprendre). Seul changement ; aucun résultat vu.
