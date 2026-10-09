@@ -1,0 +1,55 @@
+name: "Labo (tournoi : contre-vérification avec les prix nettoyés, sans toucher aux résultats officiels)"
+
+# Lancé quand on modifie labo/tournoi/declencheur-reverif.txt. Mêmes règles, mêmes données, même juge ; seule différence :
+# le banc retire les prix bidons de la SEC (0,01 $ ; écarts qui reviennent), trouvés par la chasse 2 le 9 octobre 2026.
+# Ce n'est PAS un 2e examen : les résultats officiels (resultats/decouverte, resultats/examen) restent tels quels.
+# Lecture seulement du cache du labo (aucun site lu) : n'entre pas dans la file du robot (groupe radar).
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/tournoi/declencheur-reverif.txt"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: labo96
+  cancel-in-progress: false
+
+jobs:
+  reverif:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Le jeu de recherche (cache de l'étape 0)
+        uses: actions/cache/restore@v4
+        with:
+          path: cache
+          key: tournoi-aucun
+          restore-keys: tournoi-
+      - name: Essais du banc et du juge
+        run: |
+          python labo/tournoi/essais/essai_banc.py
+          python labo/tournoi/essais/essai_juger.py
+      - name: Les règles sur la découverte (prix nettoyés)
+        run: python labo/tournoi/juger.py --donnees cache/decouverte --sortie labo/tournoi/resultats/reverif_nettoyage/decouverte
+      - name: Les 3 finalistes au coffre-fort (prix nettoyés ; contre-vérification, pas un 2e examen)
+        run: |
+          set -f
+          REGLES=$(grep -v '^#' labo/tournoi/declencheur-examen.txt | grep -v '^[[:space:]]*$' | tail -n 1 | sed 's/^.*: *//')
+          echo "Finalistes : $REGLES"
+          python labo/tournoi/juger.py $REGLES --examen --donnees cache/coffre --sortie labo/tournoi/resultats/reverif_nettoyage/examen
+      - name: Sauvegarder
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/tournoi/resultats/reverif_nettoyage || exit 0
+          git commit -m "Labo : tournoi, contre-vérification avec les prix nettoyés ($(date -u +'%Y-%m-%d %H:%M') UTC)" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
