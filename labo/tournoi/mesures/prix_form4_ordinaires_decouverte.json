@@ -4,25 +4,25 @@
   "fin": "2026-06-30",
   "contexte_depuis": "2022-07-01"
  },
- "actions_ordinaires_seulement": false,
+ "actions_ordinaires_seulement": true,
  "fiabilite": {
-  "transactions comparées": 49650,
-  "à 2 % ou moins": 0.6871,
-  "à 5 % ou moins": 0.8778,
-  "à 10 % ou moins": 0.9449,
-  "à 25 % ou moins": 0.9778,
-  "écart médian": 0.0103,
-  "écart au 95e centile": 0.1095,
+  "transactions comparées": 48685,
+  "à 2 % ou moins": 0.6905,
+  "à 5 % ou moins": 0.8825,
+  "à 10 % ou moins": 0.9494,
+  "à 25 % ou moins": 0.9817,
+  "écart médian": 0.0102,
+  "écart au 95e centile": 0.1013,
   "par sens": {
    "achat": {
-    "n": 14206,
-    "à 5 % ou moins": 0.7978,
-    "à 25 % ou moins": 0.9478
+    "n": 13633,
+    "à 5 % ou moins": 0.8066,
+    "à 25 % ou moins": 0.9559
    },
    "vente": {
-    "n": 35444,
-    "à 5 % ou moins": 0.9099,
-    "à 25 % ou moins": 0.9898
+    "n": 35052,
+    "à 5 % ou moins": 0.912,
+    "à 25 % ou moins": 0.9917
    }
   },
   "exemples d'écarts de plus de 25 %": [
@@ -69,17 +69,6 @@
      "Common Stock"
     ],
     "id": "0001683168-22-004841:vente"
-   },
-   {
-    "symbole": "PCG",
-    "sens": "vente",
-    "jour": "2022-07-11",
-    "prix_f4": 19.5,
-    "cloture_sec": 10.12,
-    "titres": [
-     "First pref stock, par value $25, 4.80% redeemable"
-    ],
-    "id": "0001493152-22-019176:vente"
    },
    {
     "symbole": "SONM",
@@ -148,28 +137,6 @@
     "id": "0001728117-22-000065:achat"
    },
    {
-    "symbole": "STRR",
-    "sens": "vente",
-    "jour": "2022-07-18",
-    "prix_f4": 9.89,
-    "cloture_sec": 0.93,
-    "titres": [
-     "10% Series A Cumulative Perpetual Preferred Stock"
-    ],
-    "id": "0000921895-22-002260:vente"
-   },
-   {
-    "symbole": "ADTX",
-    "sens": "achat",
-    "jour": "2022-07-19",
-    "prix_f4": 20000.0,
-    "cloture_sec": 0.18,
-    "titres": [
-     "Series B Preferred Stock"
-    ],
-    "id": "0001213900-22-040717:achat"
-   },
-   {
     "symbole": "CYT",
     "sens": "vente",
     "jour": "2022-07-20",
@@ -190,17 +157,6 @@
      "Common Stock"
     ],
     "id": "0000899243-22-026646:achat"
-   },
-   {
-    "symbole": "STRR",
-    "sens": "vente",
-    "jour": "2022-07-22",
-    "prix_f4": 9.89,
-    "cloture_sec": 1.02,
-    "titres": [
-     "10% Series A Cumulative Perpetual Preferred Stock"
-    ],
-    "id": "0000921895-22-002283:vente"
    },
    {
     "symbole": "PLAG",
@@ -300,6 +256,50 @@
      "Common Stock"
     ],
     "id": "0000899243-22-027461:achat"
+   },
+   {
+    "symbole": "MAIA",
+    "sens": "achat",
+    "jour": "2022-08-01",
+    "prix_f4": 5.0,
+    "cloture_sec": 7.8,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0000899243-22-027462:achat"
+   },
+   {
+    "symbole": "VRNA",
+    "sens": "vente",
+    "jour": "2022-08-01",
+    "prix_f4": 0.7,
+    "cloture_sec": 5.63,
+    "titres": [
+     "Ordinary Shares"
+    ],
+    "id": "0001104659-22-085627:vente"
+   },
+   {
+    "symbole": "VRNA",
+    "sens": "vente",
+    "jour": "2022-08-01",
+    "prix_f4": 0.7,
+    "cloture_sec": 5.63,
+    "titres": [
+     "Ordinary Shares"
+    ],
+    "id": "0001104659-22-085630:vente"
+   },
+   {
+    "symbole": "PLAG",
+    "sens": "achat",
+    "jour": "2022-07-27",
+    "prix_f4": 1.61,
+    "cloture_sec": 0.89,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001213900-22-044901:achat"
    }
   ]
  },
@@ -308,23 +308,23 @@
   "prix de la SEC de 60 jours ou moins (taille connue aujourd'hui)": 23583,
   "hors calcul : étrangère ou sans 10-K/10-Q": 7393,
   "SANS prix de la SEC de 60 jours ou moins (taille inconnue aujourd'hui)": 3068,
-  "  … et aucun prix de formulaire 4 de 60 jours ou moins": 222,
-  "  … avec un prix de formulaire 4 de 60 jours ou moins": 2846,
-  "  … dont le prix le plus récent vient d'un(e) achat": 2787,
-  "  … âge du prix ≤ 7 jours": 2700,
-  "  … pas de clôture de la SEC dans les 30 jours après (pas de vérité)": 1227,
+  "  … et aucun prix de formulaire 4 de 60 jours ou moins": 339,
+  "  … avec un prix de formulaire 4 de 60 jours ou moins": 2729,
+  "  … dont le prix le plus récent vient d'un(e) achat": 2673,
+  "  … âge du prix ≤ 7 jours": 2587,
+  "  … pas de clôture de la SEC dans les 30 jours après (pas de vérité)": 1171,
   "hors calcul : pas de nombre d'actions": 977,
-  "  … âge du prix 8 à 30 jours": 110,
-  "  … âge du prix 31 à 60 jours": 36,
+  "  … âge du prix 8 à 30 jours": 111,
+  "  … âge du prix 31 à 60 jours": 31,
   "hors calcul : actions trop vieilles ou moins de 500 000": 433,
-  "  … dont le prix le plus récent vient d'un(e) vente": 59,
+  "  … dont le prix le plus récent vient d'un(e) vente": 56,
   "  … CUSIP changé autour (prix ou actions peut-être d'une autre époque)": 24
  },
  "accord": {
-  "comparés": 1619,
-  "même taille": 1611,
-  "même côté de 100 M$": 1590,
-  "prix à 25 % ou moins de la clôture d'après": 1483
+  "comparés": 1558,
+  "même taille": 1551,
+  "même côté de 100 M$": 1533,
+  "prix à 25 % ou moins de la clôture d'après": 1441
  },
  "exemples": {
   "accords": [
@@ -434,60 +434,22 @@
     "taille": "petite"
    },
    {
-    "symbole": "CMTV",
-    "depot": "2023-07-11",
+    "symbole": "BFYW",
+    "depot": "2023-07-12",
     "prix_f4": [
-     "2023-07-10",
-     18.5,
+     "2023-07-11",
+     0.01,
      "achat"
     ],
     "cloture_apres": [
-     20230731,
-     18.49
+     20230713,
+     0.01
     ],
-    "valeur_f4_m": 100.9,
+    "valeur_f4_m": 4.0,
     "taille": "petite"
    }
   ],
   "désaccords": [
-   {
-    "symbole": "CMTV",
-    "depot": "2023-07-10",
-    "actions": [
-     5455805,
-     "2023-05-02"
-    ],
-    "prix_f4": [
-     "2023-06-29",
-     18.0,
-     "achat"
-    ],
-    "cloture_apres": [
-     20230731,
-     18.49
-    ],
-    "valeur_f4_m": 98.2,
-    "valeur_apres_m": 100.9
-   },
-   {
-    "symbole": "ACR",
-    "depot": "2023-08-30",
-    "actions": [
-     8491979,
-     "2023-08-04"
-    ],
-    "prix_f4": [
-     "2023-08-30",
-     19.5,
-     "achat"
-    ],
-    "cloture_apres": [
-     20230831,
-     8.48
-    ],
-    "valeur_f4_m": 165.6,
-    "valeur_apres_m": 72.0
-   },
    {
     "symbole": "DBD",
     "depot": "2023-09-01",
@@ -544,25 +506,6 @@
     ],
     "valeur_f4_m": 495608.6,
     "valeur_apres_m": 31.2
-   },
-   {
-    "symbole": "ACR",
-    "depot": "2023-12-05",
-    "actions": [
-     8455131,
-     "2023-11-06"
-    ],
-    "prix_f4": [
-     "2023-12-01",
-     22.25,
-     "achat"
-    ],
-    "cloture_apres": [
-     20231207,
-     8.4
-    ],
-    "valeur_f4_m": 188.1,
-    "valeur_apres_m": 71.0
    },
    {
     "symbole": "SBFG",
@@ -793,25 +736,6 @@
     "valeur_apres_m": 96.7
    },
    {
-    "symbole": "CMTV",
-    "depot": "2025-02-25",
-    "actions": [
-     5577794,
-     "2024-11-04"
-    ],
-    "prix_f4": [
-     "2025-02-25",
-     18.2321,
-     "achat"
-    ],
-    "cloture_apres": [
-     20250319,
-     17.5
-    ],
-    "valeur_f4_m": 101.7,
-    "valeur_apres_m": 97.6
-   },
-   {
     "symbole": "BUKS",
     "depot": "2025-03-21",
     "actions": [
@@ -829,6 +753,82 @@
     ],
     "valeur_f4_m": 118.2,
     "valeur_apres_m": 98.0
+   },
+   {
+    "symbole": "ZNTL",
+    "depot": "2025-04-30",
+    "actions": [
+     71811508,
+     "2025-03-21"
+    ],
+    "prix_f4": [
+     "2025-04-30",
+     1.4,
+     "achat"
+    ],
+    "cloture_apres": [
+     20250505,
+     1.36
+    ],
+    "valeur_f4_m": 100.5,
+    "valeur_apres_m": 97.7
+   },
+   {
+    "symbole": "NAUT",
+    "depot": "2025-05-12",
+    "actions": [
+     126148469,
+     "2025-04-24"
+    ],
+    "prix_f4": [
+     "2025-05-12",
+     0.73,
+     "achat"
+    ],
+    "cloture_apres": [
+     20250514,
+     0.88
+    ],
+    "valeur_f4_m": 92.1,
+    "valeur_apres_m": 111.0
+   },
+   {
+    "symbole": "ULBI",
+    "depot": "2025-05-14",
+    "actions": [
+     16632965,
+     "2025-05-08"
+    ],
+    "prix_f4": [
+     "2025-05-14",
+     5.49,
+     "achat"
+    ],
+    "cloture_apres": [
+     20250527,
+     6.12
+    ],
+    "valeur_f4_m": 91.3,
+    "valeur_apres_m": 101.8
+   },
+   {
+    "symbole": "ULBI",
+    "depot": "2025-05-14",
+    "actions": [
+     16632965,
+     "2025-05-08"
+    ],
+    "prix_f4": [
+     "2025-05-14",
+     5.49,
+     "achat"
+    ],
+    "cloture_apres": [
+     20250527,
+     6.12
+    ],
+    "valeur_f4_m": 91.3,
+    "valeur_apres_m": 101.8
    }
   ]
  }
