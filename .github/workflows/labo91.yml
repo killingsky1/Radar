@@ -1,0 +1,51 @@
+name: "Labo (chasse 2, étape 0 : reconnaissance de ce que la SEC offre)"
+
+# Lancé seulement quand on modifie labo/chasse2/declencheur-reconnaissance.txt (ou à la main), loin d'un passage du
+# robot. Même groupe que le robot (radar.yml) : jamais les deux en même temps, donc la SEC voit un seul client à la fois
+# (5 requêtes par seconde au plus, courriel dans l'en-tête comme la SEC le demande).
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/chasse2/declencheur-reconnaissance.txt"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar
+  cancel-in-progress: false
+
+jobs:
+  reconnaissance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: principal
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests -r principal/robot/requirements.txt
+      - name: "L'essai d'abord, avec une fausse SEC (aucune requête réelle)"
+        run: python labo/chasse2/essai_reconnaissance.py
+      - name: Reconnaissance (robots.txt, prix, 13F, rapports 10-K et 10-Q)
+        run: python labo/chasse2/reconnaissance.py
+      - name: Garder les fichiers lus (cache de la chasse 2)
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: cache2
+          key: chasse2-${{ github.run_id }}
+      - name: Sauvegarder la reconnaissance
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/chasse2/reconnaissance.json labo/chasse2/reconnaissance_journal.md || exit 0
+          git commit -m "Labo : chasse 2, reconnaissance de la SEC ($(date -u +'%Y-%m-%d %H:%M') UTC)" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
