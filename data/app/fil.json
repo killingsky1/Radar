@@ -1,5 +1,99 @@
 [
  {
+  "amount_max": 900485186.84,
+  "amount_min": 900485186.84,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "contrat_federal": true,
+   "date_de_signature_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "fournisseur_lu": true,
+   "lien_de_la_fiche_du_contrat": true,
+   "montant_coherent": true,
+   "seuil_de_100_millions": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-09T10:51:02+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agence": "Department of Veterans Affairs",
+   "debut": "2026-09-01",
+   "description": "EXPRESS REPORT: FY26 SEPTEMBER",
+   "details": [
+    [
+     "Fournisseur",
+     "TRIWEST HEALTHCARE ALLIANCE CORP"
+    ],
+    [
+     "Ministère ou agence",
+     "Department of Veterans Affairs"
+    ],
+    [
+     "Sous-agence",
+     "Department of Veterans Affairs"
+    ],
+    [
+     "Sommes engagées",
+     "900,5 M$"
+    ],
+    [
+     "Signé le",
+     "2026-10-07"
+    ],
+    [
+     "Type",
+     "commande dans un contrat-cadre"
+    ],
+    [
+     "Description",
+     "EXPRESS REPORT: FY26 SEPTEMBER"
+    ],
+    [
+     "Numéro",
+     "36C10G27K0004"
+    ]
+   ],
+   "fournisseur": "TRIWEST HEALTHCARE ALLIANCE CORP",
+   "id": "CONT_AWD_36C10G27K0004_3600_36C10G19D0038_3600",
+   "modifie_le": "2026-10-07 13:22:37",
+   "montant": 900485186.84,
+   "numero": "36C10G27K0004",
+   "plafond": 900485186.84,
+   "signe_le": "2026-10-07",
+   "societe_mere": "TRIWEST HEALTHCARE ALLIANCE CORP",
+   "sous_agence": "Department of Veterans Affairs",
+   "type": "DELIVERY ORDER",
+   "uei": "J7M9HPTGJ1S9"
+  },
+  "direction": 0,
+  "entities": [
+   "TRIWEST HEALTHCARE ALLIANCE CORP",
+   "Department of Veterans Affairs"
+  ],
+  "id": "usaspending:CONT_AWD_36C10G27K0004_3600_36C10G19D0038_3600",
+  "kind": "contrat_federal_us",
+  "notes": [
+   "Date de publication : le jour où Radar a vu le contrat pour la 1re fois (USAspending ne date pas la mise en ligne).",
+   "Montant : les sommes engagées (« obligations ») à la lecture ; le plafond, si toutes les options sont levées, est dans les détails."
+  ],
+  "occurred_on": "2026-10-07",
+  "official_id": "CONT_AWD_36C10G27K0004_3600_36C10G19D0038_3600",
+  "official_url": "https://www.usaspending.gov/award/CONT_AWD_36C10G27K0004_3600_36C10G19D0038_3600",
+  "parser_version": "usaspending-1",
+  "published_on": "2026-10-09",
+  "sha256": "a026f42d509e19ba90a058d3bd11f23dabd67620926696e719405e6f8b58b745",
+  "source": "usaspending",
+  "tickers": [],
+  "title": "Contrat fédéral américain de 900,5 M$ : TRIWEST HEALTHCARE ALLIANCE CORP (Anciens combattants)"
+ },
+ {
   "amount_max": 750000000.0,
   "amount_min": 750000000.0,
   "badge": "officiel",
@@ -27714,6 +27808,54 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-09T10:41:01+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "910-RPR",
+   "composant": null,
+   "consequence": "A separated tow bar can result in the tow vehicle detaching, increases the risk of a crash.",
+   "constructeur": "Roadmaster Inc.",
+   "defaut": "Roadmaster Inc. (Roadmaster) is recalling certain Blackhawk All Terrain, Falcon 2, Falcon All Terrain, Falcon 3HD, Liberty, Sterling, and Nighthawk tow bars. The roll pin that secures the T-bolt to the stinger may loosen, causing the tow bar t0 separate from the hitch receiver.",
+   "numero": "26E069000",
+   "sorte": "Equipment",
+   "sujet": "Tow Bar May Separate from Hitch Receiver",
+   "unites": 24656
+  },
+  "direction": -1,
+  "entities": [
+   "Roadmaster Inc."
+  ],
+  "id": "nhtsa:26E069000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "26E069000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26E069000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-10-02",
+  "sha256": "cc4d4b075a19a2204ca8848cb960a827335ba882c181e911b6c4fa4e1728dd63",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Roadmaster Inc. : 24 656 équipements — « Tow Bar May Separate from Hitch Receiver »"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "canada",
   "checks": {
    "avis_actif": true,
@@ -29358,6 +29500,54 @@
   "title": "Sheldon Whitehouse (Sénat) vend ADI — conjoint·e"
  },
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-09T10:41:01+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "93EX",
+   "composant": "ELECTRICAL SYSTEM",
+   "consequence": "A vehicle fire increases the risk of injury.",
+   "constructeur": "Volkswagen Group of America, Inc.",
+   "defaut": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2023-2026 ID.4 vehicles. The high voltage battery may fail and lead to a vehicle fire.",
+   "numero": "26V630000",
+   "sorte": "Vehicle",
+   "sujet": "High Voltage Battery May Catch Fire",
+   "unites": 22524
+  },
+  "direction": -1,
+  "entities": [
+   "Volkswagen Group of America, Inc."
+  ],
+  "id": "nhtsa:26V630000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-09-30",
+  "official_id": "26V630000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V630000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-09-30",
+  "sha256": "4fac3cf5b839c897ae8167f127d9c9d3132e2bbf3fb150cfbc3d2b4bc68da573",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Volkswagen Group of America, Inc. : 22 524 véhicules — « High Voltage Battery May Catch Fire »"
+ },
+ {
   "amount_max": 15000.0,
   "amount_min": 1001.0,
   "badge": "officiel",
@@ -30474,6 +30664,102 @@
   "source": "registre_federal",
   "tickers": [],
   "title": "Sanctions (Trésor, OFAC) : Cuban Assets Control Regulations"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-09T10:41:01+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "51D",
+   "composant": "TIRES",
+   "consequence": "A TPMS warning light that fails to notify the driver of low tire pressure increases the risk of a crash.",
+   "constructeur": "Chrysler (FCA US, LLC)",
+   "defaut": "Chrysler (FCA US LLC) is recalling certain 2026 Ram 1500 vehicles. The tire pressure monitoring system sensors may fail to detect low tire pressure and/or fail to illuminate the tire pressure monitoring system (TPMS) warning light as intended. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 138, \"Tire Pressure Monitoring System.\"",
+   "numero": "26V623000",
+   "sorte": "Vehicle",
+   "sujet": "Tire Pressure Monitor System May Fail/FMVSS 138",
+   "unites": 16385
+  },
+  "direction": -1,
+  "entities": [
+   "Chrysler (FCA US, LLC)"
+  ],
+  "id": "nhtsa:26V623000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "26V623000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V623000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-09-29",
+  "sha256": "41a71142fccba5a550e06a6a5ed7dbe4c69488ac4abf487e58380c870990de18",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Chrysler (FCA US, LLC) : 16 385 véhicules — « Tire Pressure Monitor System May Fail/FMVSS 138 »"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-09T10:41:01+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "92D",
+   "composant": "STEERING",
+   "consequence": "A loss of power steering assist can increase the risk of a crash.",
+   "constructeur": "Chrysler (FCA US, LLC)",
+   "defaut": "Chrysler (FCA US, LLC) is recalling certain 2022-2026 Ram 1500 Promaster, Ram 2500 Promaster, Ram 3500 Promaster, and 2024-2026 Ram 3500 Electric (EV) vehicles. Water may enter the electric power steering wiring harness, which can disable power steering assist.",
+   "numero": "26V621000",
+   "sorte": "Vehicle",
+   "sujet": "Loss of Power Steering Assist",
+   "unites": 265512
+  },
+  "direction": -1,
+  "entities": [
+   "Chrysler (FCA US, LLC)"
+  ],
+  "id": "nhtsa:26V621000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "26V621000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V621000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-09-29",
+  "sha256": "f0bd54fcd3aa2173f023de0cbd9a50b7049b78304f24bb9e0d722a492dfcad4c",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Chrysler (FCA US, LLC) : 265 512 véhicules — « Loss of Power Steering Assist »"
  },
  {
   "amount_max": null,
@@ -46237,6 +46523,59 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-09T10:41:01+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "anciennes_empreintes": [
+    "776f48b0ba7784611311a2c6ee41d7cda89f15b17c84bd00616c231ccf473358"
+   ],
+   "campagne": "57KL",
+   "composant": "ELECTRICAL SYSTEM",
+   "consequence": "An unexpected engine stall, loss of exterior lighting or warning lights, or failure of the rearview camera system can increase the risk of a crash.",
+   "constructeur": "Volkswagen Group of America, Inc.",
+   "defaut": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2025 Tiguan vehicles. A software error may cause the body control module (BCM) system to reset. This may result in the ignition switching off, resulting in an engine stall.  It can also lead to a loss of certain controls, warning lights, exterior lighting, or failure of the rearview camera system. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) numbers 101, \"Controls ",
+   "numero": "26V587000",
+   "sorte": "Vehicle",
+   "sujet": "Body Control Module (BCM) May Reset Unexpectedly/FMVSS 101, 102",
+   "unites": 49958
+  },
+  "direction": -1,
+  "entities": [
+   "Volkswagen Group of America, Inc."
+  ],
+  "id": "nhtsa:26V587000",
+  "kind": "rappel",
+  "notes": [
+   "Document modifié à la source depuis la 1re lecture."
+  ],
+  "occurred_on": "2026-09-10",
+  "official_id": "26V587000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V587000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-09-10",
+  "sha256": "4e57eb1c0740b04e2796dc86bf3c15a1ade758fc6e9ab1d1359f6cdafccebfc8",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Volkswagen Group of America, Inc. : 49 958 véhicules — « Body Control Module (BCM) May Reset Unexpectedly/FMVSS 101, 102 »"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "politiciens",
   "checks": {
    "champs_requis": true,
@@ -46827,54 +47166,6 @@
   "source": "statcan",
   "tickers": [],
   "title": "Statistique Canada : Bilan des investissements internationaux du Canada, deuxième trimestre de 2026"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_rappel": true,
-   "nombre_plausible": true,
-   "numero_de_rappel_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T02:03:23+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "campagne": "57KL",
-   "composant": "ELECTRICAL SYSTEM",
-   "consequence": "An unexpected engine stall, loss of exterior lighting or warning lights, or failure of the rearview camera system can increase the risk of a crash.",
-   "constructeur": "Volkswagen Group of America, Inc.",
-   "defaut": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2025 Tiguan vehicles. A software error may cause the body control module (BCM) system to reset. This may result in the ignition switching off, resulting in an engine stall.  It can also lead to a loss of certain controls, warning lights, exterior lighting, or failure of the rearview camera system. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) numbers 101, \"Controls ",
-   "numero": "26V587000",
-   "sorte": "Vehicle",
-   "sujet": "Body Control Module (BCM) May Reset Unexpectedly/FMVSS 101, 102",
-   "unites": 49958
-  },
-  "direction": -1,
-  "entities": [
-   "Volkswagen Group of America, Inc."
-  ],
-  "id": "nhtsa:26V587000",
-  "kind": "rappel",
-  "notes": [],
-  "occurred_on": "2026-09-10",
-  "official_id": "26V587000",
-  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V587000",
-  "parser_version": "nhtsa-1",
-  "published_on": "2026-09-10",
-  "sha256": "776f48b0ba7784611311a2c6ee41d7cda89f15b17c84bd00616c231ccf473358",
-  "source": "nhtsa",
-  "tickers": [],
-  "title": "Rappel de Volkswagen Group of America, Inc. : 49 958 véhicules — « Body Control Module (BCM) May Reset Unexpectedly/FMVSS 101, 102 »"
  },
  {
   "amount_max": null,
@@ -50072,53 +50363,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "categorie_officielle_reconnue": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_d_une_action_presidentielle": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_officiel_lu": true
-  },
-  "collected_at": "2026-10-03T00:05:57+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "categories": [
-    "Presidential Actions",
-    "Proclamations"
-   ],
-   "guid": "",
-   "resume": "A PROCLAMATION 1. In Proclamation 11010 of February 6, 2026 (Ensuring Affordable Beef for the American Consumer), I found that cattle ranchers in the United States have played, and continue to play, an integral role in food production for the United States; that the United States is the world’s largest consumer of beef and is a large importer of beef; that, because of recent circumstances, beef prices have increased unreasonably for United States consumers; that imports into the United States of certain beef products, including lean beef trimmings, are currently subject to the United States ta",
-   "sorte": "proclamation",
-   "titre_officiel": "Further Ensuring Affordable Beef for the American Consumer"
-  },
-  "direction": 0,
-  "entities": [
-   "The White House"
-  ],
-  "id": "maison_blanche:2026/08/further-ensuring-affordable-beef-for-the-american-consumer",
-  "kind": "proclamation",
-  "notes": [],
-  "occurred_on": "2026-08-26",
-  "official_id": "2026/08/further-ensuring-affordable-beef-for-the-american-consumer",
-  "official_url": "https://www.whitehouse.gov/presidential-actions/2026/08/further-ensuring-affordable-beef-for-the-american-consumer/",
-  "parser_version": "maison-blanche-1",
-  "published_on": "2026-08-26",
-  "sha256": "83b30ac9c53be71dc22d40c0cc22258eb2921be3c26f8e5fb5daaa855473dfcd",
-  "source": "maison_blanche",
-  "tickers": [],
-  "title": "Proclamation présidentielle : Further Ensuring Affordable Beef for the American Consumer"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "politiciens",
   "checks": {
    "champs_requis": true,
@@ -50571,153 +50815,6 @@
   "source": "oge_278t",
   "tickers": [],
   "title": "Scott A Kupor (Director, Office of Personnel Management, niveau II) : rapport de transactions (278-T), 3 transactions"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "date_d_envoi_lue": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_message": true,
-   "numero_csms": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "sujet_surtaxes": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T19:34:48+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "codes_9903": [
-    "9903.03.12",
-    "9903.03.13",
-    "9903.03.14",
-    "9903.03.15",
-    "9903.03.16",
-    "9903.04.12",
-    "9903.04.14"
-   ],
-   "details": [
-    [
-     "Message",
-     "CSMS # 69606660"
-    ],
-    [
-     "Envoyé",
-     "21 août 2026 à 23 h 16 (heure de New York)"
-    ],
-    [
-     "Proclamations citées",
-     "11056, 11046, 11047, 11048"
-    ],
-    [
-     "Numéros du tarif cités (chapitre 99)",
-     "9903.03.12, 9903.03.13, 9903.03.14, 9903.03.15, 9903.03.16, 9903.04.12, 9903.04.14"
-    ],
-    [
-     "Extrait",
-     "The purpose of this message is to provide guidance on the implementation of the July 20, 2026, Presidential Proclamations on Imposing Additional Duties to Offset Canadian Discrimination Against the Commerce of the United States with Respect to Alcoholic Beverages, Dairy, and Motor Vehicles. […]"
-    ]
-   ],
-   "envoye_le": "2026-08-21T23:16:57-04:00",
-   "extrait": "The purpose of this message is to provide guidance on the implementation of the July 20, 2026, Presidential Proclamations on Imposing Additional Duties to Offset Canadian Discrimination Against the Commerce of the United States with Respect to Alcoholic Beverages, Dairy, and Motor Vehicles. […]",
-   "guid": "69606660",
-   "numero": "69606660",
-   "proclamations": [
-    "11056",
-    "11046",
-    "11047",
-    "11048"
-   ],
-   "titre_officiel": "GUIDANCE: Section 338 Additional Duties on Certain Goods of Canada"
-  },
-  "direction": 0,
-  "entities": [
-   "U.S. Customs and Border Protection"
-  ],
-  "id": "tarifs:69606660",
-  "kind": "directive_douane",
-  "notes": [
-   "Directive de la douane : elle applique une décision officielle (proclamation, avis au Registre fédéral) sans la remplacer."
-  ],
-  "occurred_on": "2026-08-21",
-  "official_id": "69606660",
-  "official_url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/4261d04",
-  "parser_version": "douane-1",
-  "published_on": "2026-08-21",
-  "sha256": "a047447b8eb89b902403007fbec46a6a56adaf0f83cf4b4db1ecc4367c240f3f",
-  "source": "tarifs",
-  "tickers": [],
-  "title": "Douane américaine : GUIDANCE: Section 338 Additional Duties on Certain Goods of Canada"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "approbation_originale": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lettre_officielle": true,
-   "nouvelle_molecule": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T01:27:21+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "application": "BLA761508",
-   "classe": "TYPE 1",
-   "compagnie": "Regeneron Pharmaceuticals, Inc.",
-   "date": "20260819",
-   "fabricant": "Regeneron Pharmaceuticals, Inc.",
-   "ingredients": [
-    "GARETOSMAB-GRTS"
-   ],
-   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/761508Orig1s000ltr.pdf",
-   "marques": [
-    "PASATRU"
-   ],
-   "numero_soumission": "1",
-   "orphelin": true,
-   "priorite": "PRIORITY",
-   "sponsor": "REGENERON PHARMACEUTICALS, INC",
-   "statut": "AP",
-   "type_soumission": "ORIG"
-  },
-  "direction": 1,
-  "entities": [
-   "Regeneron Pharmaceuticals, Inc."
-  ],
-  "id": "fda:BLA761508-ORIG-1",
-  "kind": "approbation_fda",
-  "notes": [
-   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
-   "Médicament orphelin : maladie rare.",
-   "Produit biologique."
-  ],
-  "occurred_on": "2026-08-19",
-  "official_id": "BLA761508-ORIG-1",
-  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761508",
-  "parser_version": "fda-1",
-  "published_on": "2026-08-19",
-  "sha256": "17f92054b6d75ebcd0d84239717be06b3f30c860e23c3d7eb2ff0eb1b45ffbe5",
-  "source": "fda",
-  "tickers": [
-   "REGN"
-  ],
-  "title": "FDA : nouveau médicament approuvé, PASATRU (garetosmab-grts), de Regeneron Pharmaceuticals, Inc."
  },
  {
   "amount_max": null,
@@ -51378,125 +51475,6 @@
   "source": "oge_278t",
   "tickers": [],
   "title": "Kevin Warsh (Governor & Chairman, Federal Reserve System Board of Governors, niveau I) : rapport de transactions (278-T), 60 transactions"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "approbation_originale": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lettre_officielle": true,
-   "nouvelle_molecule": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T01:27:21+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "application": "NDA221075",
-   "classe": "TYPE 1",
-   "compagnie": "E.R. Squibb & Sons, L.L.C.",
-   "date": "20260813",
-   "fabricant": "E.R. Squibb & Sons, L.L.C.",
-   "ingredients": [
-    "IBERDOMIDE HYDROCHLORIDE"
-   ],
-   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/221075Orig1s000ltr.pdf",
-   "marques": [
-    "ZENBEXUS"
-   ],
-   "numero_soumission": "1",
-   "orphelin": true,
-   "priorite": "PRIORITY",
-   "sponsor": "BRISTOL MYERS SQUIBB",
-   "statut": "AP",
-   "type_soumission": "ORIG"
-  },
-  "direction": 1,
-  "entities": [
-   "E.R. Squibb & Sons, L.L.C."
-  ],
-  "id": "fda:NDA221075-ORIG-1",
-  "kind": "approbation_fda",
-  "notes": [
-   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
-   "Médicament orphelin : maladie rare."
-  ],
-  "occurred_on": "2026-08-13",
-  "official_id": "NDA221075-ORIG-1",
-  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221075",
-  "parser_version": "fda-1",
-  "published_on": "2026-08-13",
-  "sha256": "309e1fd15529f0bdebdf1417063e311bdbd1eb3a40096b70b4435d4a3f155b2a",
-  "source": "fda",
-  "tickers": [
-   "BMY"
-  ],
-  "title": "FDA : nouveau médicament approuvé, ZENBEXUS (iberdomide hydrochloride), de E.R. Squibb & Sons, L.L.C."
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "approbation_originale": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lettre_officielle": true,
-   "nouvelle_molecule": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T01:27:21+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "application": "NDA220496",
-   "classe": "TYPE 1",
-   "compagnie": "CERVEAU LANTHEUS",
-   "date": "20260813",
-   "fabricant": null,
-   "ingredients": [
-    "FLORQUINITAU F-18"
-   ],
-   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220496Orig1s000ltr.pdf",
-   "marques": [
-    "TAUKLARIFY"
-   ],
-   "numero_soumission": "1",
-   "orphelin": false,
-   "priorite": "STANDARD",
-   "sponsor": "CERVEAU LANTHEUS",
-   "statut": "AP",
-   "type_soumission": "ORIG"
-  },
-  "direction": 1,
-  "entities": [
-   "CERVEAU LANTHEUS"
-  ],
-  "id": "fda:NDA220496-ORIG-1",
-  "kind": "approbation_fda",
-  "notes": [],
-  "occurred_on": "2026-08-13",
-  "official_id": "NDA220496-ORIG-1",
-  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
-  "parser_version": "fda-1",
-  "published_on": "2026-08-13",
-  "sha256": "5421429075ef25939669412b909fa3da262a74bf79f85c12e17cbb51034609fa",
-  "source": "fda",
-  "tickers": [],
-  "title": "FDA : nouveau médicament approuvé, TAUKLARIFY (florquinitau f-18), de CERVEAU LANTHEUS"
  },
  {
   "amount_max": null,
