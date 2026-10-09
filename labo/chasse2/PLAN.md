@@ -91,6 +91,11 @@ SANS ce nettoyage (labo93, 9 octobre, 16 h 07 UTC : aucune ne réussit) ; elles 
 d'autre ; les deux jugements sont montrés. Le banc du tournoi et la 1re chasse n'avaient pas ce nettoyage non plus : à
 revérifier après la chasse 2.
 
+## Aussi mesuré pour la chasse A (pour comprendre, pas pour juger ; ajouté avant tout résultat de la chasse A)
+Le rendement sur 252 jours moins SPY des 10-K qui changent le PLUS (similarité dans les 20 % les plus basses des 12 mois
+d'avant) contre les autres : dans l'étude, ce sont eux qui font le moins bien. Si c'est vrai ici, ce serait une alerte
+utile sur la fiche d'une action détenue (jamais une promesse) ; à juger plus tard par un plan à part.
+
 ## Contrôles avant la vraie course
 Pour B (et A, C) : un faux jeu avec un signal caché (il doit être trouvé et réussir) et le même sans signal (rien ne
 doit réussir, aucune fuite du futur), comme labo/chasse/essai_chasse.py.

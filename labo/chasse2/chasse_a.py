@@ -65,6 +65,9 @@ def signaux(similarites, univers, fins):
         avant = [y["similarite"] for y in candidats[bisect_left(jours, debut):bisect_left(jours, x["jour"])]]
         x["seuil"] = float(np.quantile(avant, 1 - PART)) if len(avant) >= MIN_HISTOIRE else None
         x["signal"] = x["seuil"] is not None and x["similarite"] >= x["seuil"]
+        # pour comprendre seulement (pas jugé) : les 20 % qui changent le plus (similarité la plus basse)
+        bas = float(np.quantile(avant, PART)) if len(avant) >= MIN_HISTOIRE else None
+        x["change_beaucoup"] = bas is not None and x["similarite"] <= bas
     return candidats
 
 
@@ -142,7 +145,7 @@ def simuler(px, cands, frais):
 
 def comprendre(px, cands):
     """Pour comprendre (pas pour juger) : rendement sur 252 jours moins SPY, signaux contre les autres, par année."""
-    par = defaultdict(lambda: {"signal": [], "autres": []})
+    par = defaultdict(lambda: {"signal": [], "autres": [], "change_beaucoup": []})
     for x in cands:
         if x["seuil"] is None:
             continue
@@ -155,6 +158,8 @@ def comprendre(px, cands):
             continue
         ecart = px.rendement(x["symbole"], a[0], z[0]) - px.rendement("SPY", sa[0], sz[0])
         par[c.annee(x["jour"])]["signal" if x["signal"] else "autres"].append(ecart)
+        if x["change_beaucoup"]:
+            par[c.annee(x["jour"])]["change_beaucoup"].append(ecart)
     return {a: {k: {"n": len(v), "moyenne": round(float(np.mean(v)), 4) if v else None,
                     "mediane": round(float(np.median(v)), 4) if v else None} for k, v in d.items()}
             for a, d in sorted(par.items())}

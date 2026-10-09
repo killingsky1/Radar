@@ -77,3 +77,9 @@ Essai sur un faux jeu fabriqué (labo/chasse/essai_chasse.py, 17 contrôles, ref
 course) : un signal caché (+30 % en 6 mois quand « part » > 1) est trouvé chaque année aux 3 durées ; le critère du
 plan est atteignable quand un vrai signal existe (durée 126 : 9 années sur 9, t 8,19) ; sur le même jeu SANS signal,
 aucune durée ne réussit et la corrélation moyenne reste près de 0 (aucune fuite du futur).
+
+## Correction des données (9 octobre 2026, APRÈS le 1er calcul ; rien d'autre ne change)
+La chasse 2 a trouvé des prix bidons dans les fichiers de la SEC (0,01 $, parfois 1,00 $, souvent au 1er jour d'un
+nouveau code du titre ; labo/chasse2/sonde_prix.json). Le banc les retire maintenant (labo/tournoi/banc.py,
+nettoyer_prix). La chasse est relancée telle quelle avec les prix nettoyés ; le 1er calcul est gardé
+(resultats_sans_nettoyage) et les deux sont montrés.

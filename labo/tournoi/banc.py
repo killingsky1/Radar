@@ -78,16 +78,49 @@ class Futur(Exception):
     """Une règle a demandé une donnée qui n'était pas encore connue."""
 
 
+def nettoyer_prix(p, compte):
+    """Clôtures gardées (vrai/faux), ajouté le 9 octobre 2026 (labo/chasse2/PLAN.md, correction 2) : un prix de 0,01 $ ou
+    moins est un prix bidon des fichiers de la SEC (souvent le 1er jour d'un nouveau code du titre) ; un écart ×3 ou ÷3
+    d'une à trois clôtures qui revient au prix d'avant (à 1,5 près) est une erreur (un vrai fractionnement ne revient
+    pas). Donnees(..., nettoyer=False) : les prix tels quels, comme avant."""
+    garde = [v > 0.0101 for v in p]
+    compte["prix de 0,01 $"] += garde.count(False)
+    idx = [i for i, g in enumerate(garde) if g]
+    k, dernier = 0, None
+    while k < len(idx):
+        i = idx[k]
+        if dernier is not None:
+            r = p[i] / p[dernier]
+            if r > 3 or r < 1 / 3:
+                for n in range(1, 4):
+                    if k + n < len(idx) and 1 / 1.5 <= p[idx[k + n]] / p[dernier] <= 1.5:
+                        for j in idx[k:k + n]:
+                            garde[j] = False
+                        compte["écarts qui reviennent"] += n
+                        k += n
+                        break
+                else:
+                    dernier = i
+                    k += 1
+                continue
+        dernier = i
+        k += 1
+    return garde
+
+
 class Donnees:
-    def __init__(self, dossier):
+    def __init__(self, dossier, nettoyer=True):
         d = Path(dossier)
         with gzip.open(d / "evenements.jsonl.gz", "rt", encoding="utf-8") as f:
             self.evenements = [json.loads(l) for l in f]
         self.prix = {}
+        self.prix_retires = {"prix de 0,01 $": 0, "écarts qui reviennent": 0}
         with gzip.open(d / "prix.jsonl.gz", "rt", encoding="utf-8") as f:
             for l in f:
                 x = json.loads(l)
-                self.prix[x["s"]] = ([_iso(v) for v in x["d"]], x["p"], x["c"], x["q"])
+                g = nettoyer_prix(x["p"], self.prix_retires) if nettoyer else [True] * len(x["p"])
+                self.prix[x["s"]] = ([_iso(v) for v, k in zip(x["d"], g) if k], [v for v, k in zip(x["p"], g) if k],
+                                     [v for v, k in zip(x["c"], g) if k], [v for v, k in zip(x["q"], g) if k])
         self.finances, self.actions = {}, {}
         if (d / "finances.jsonl.gz").exists():
             with gzip.open(d / "finances.jsonl.gz", "rt", encoding="utf-8") as f:
