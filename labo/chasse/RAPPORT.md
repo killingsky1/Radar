@@ -4,16 +4,24 @@ Plan gelé AVANT tout calcul : labo/chasse/PLAN.md. Course : workflow labo90, ru
 (https://github.com/killingsky1/Radar/actions/runs/37943145319). Chiffres bruts : resultats/resultats.json et
 resultats/journal.txt.
 
-## Verdict : NON, aucune durée ne réussit
+## Verdict : NON, aucune durée ne réussit (prix nettoyés, 2e calcul)
 
-| Durée | Portefeuille sur 9 ans | S&P 500 (SPY) | Années gagnées | t mensuel | Réussi |
-|---|---|---|---|---|---|
-| 63 jours de bourse (3 mois) | −27,3 % | +207,9 % | 3 sur 9 | −1,31 | NON |
-| 126 jours (6 mois) | +121,7 % | +207,9 % | 4 sur 9 | 0,16 | NON |
-| 252 jours (12 mois) | +50,4 % | +207,9 % | 4 sur 9 | −0,92 | NON |
+Correction du 9 octobre 2026 (APRÈS le 1er calcul) : la chasse 2 a trouvé des prix bidons dans les fichiers de la SEC
+(0,01 $, parfois 1,00 $, souvent au 1er jour d'un nouveau code du titre ; labo/chasse2/sonde_prix.json). Le banc les
+retire maintenant (labo/tournoi/banc.py, nettoyer_prix) et la chasse a été relancée telle quelle (labo90, 17 h 01 UTC).
+Le 1er calcul, gonflé par ces prix, est gardé dans resultats_sans_nettoyage.
+
+| Durée | Prix nettoyés (verdict) | 1er calcul (prix bidons) | S&P 500 (SPY) | Années gagnées | t mensuel | Réussi |
+|---|---|---|---|---|---|---|
+| 63 jours de bourse (3 mois) | −21,9 % | −27,3 % | +207,9 % | 2 sur 9 | −1,40 | NON |
+| 126 jours (6 mois) | +2,0 % | +121,7 % | +207,9 % | 3 sur 9 | −0,78 | NON |
+| 252 jours (12 mois) | +2,1 % | +50,4 % | +207,9 % | 3 sur 9 | −1,55 | NON |
 
 Critère gelé : battre SPY sur 9 ans après les frais, au moins 6 années sur 9, t ≥ 2,4. Comme prévu au plan : on le
-dit, chiffres à l'appui, et Radar ne change pas.
+dit, chiffres à l'appui, et Radar ne change pas. Les sections plus bas décrivent le 1er calcul ; avec les prix nettoyés,
+les faits sont les mêmes : corrélation de rang positive 25 fois sur 27, médiane de tous les achats négative 27 fois sur
+27, médiane des achats gardés négative 24 fois sur 27 ; le portefeuille achète 1 à 7 % des achats gardés (18 à 44 %
+sans prix de la SEC) : 70 à 309 transactions en 9 ans.
 
 ## Vrai résultat, pas une erreur du moteur
 - Essai sur un faux jeu (essai_chasse.py), refait dans le workflow juste avant la course : 17 sur 17. Un signal caché
