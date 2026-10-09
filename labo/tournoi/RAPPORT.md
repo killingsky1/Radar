@@ -61,3 +61,12 @@ un PDF de Kang, Kim et Wang sur un site non universitaire.
 ## Fichiers
 Règles : regles_preenregistrees.json · règles du jeu et changements datés : regles_du_jeu.md · programmes : regles/
 et regles_verif/ · résultats : resultats/decouverte/ et resultats/examen/ · débat : resultats/debat/.
+
+## Contre-vérification avec les prix nettoyés (9 octobre 2026)
+La chasse 2 a trouvé des prix bidons dans les fichiers de la SEC (0,01 $, parfois 1,00 $, souvent au 1er jour d'un
+nouveau code du titre ; labo/chasse2/sonde_prix.json). Le banc les retire maintenant (banc.nettoyer_prix). Les 39 règles
+(découverte) et les 3 finalistes (coffre-fort) ont été rejugés avec les prix nettoyés, sans rien changer d'autre
+(labo96 ; resultats/reverif_nettoyage ; ce n'est pas un 2e examen). Résultat : identique au chiffre près (aucune règle
+ne réussit ; liquidite_taille-4 : t 1,89 à l'examen). Les transactions et les fins de mois du tournoi n'ont jamais
+touché un prix bidon ; le verdict et les chiffres du tournoi tiennent. (La 1re chasse, elle, en avait touché : voir
+labo/chasse/RAPPORT.md.)
