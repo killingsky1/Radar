@@ -69,3 +69,11 @@ score et le résultat.
 ## Correction du plan (9 octobre 2026, AVANT tout calcul sur les vraies données)
 Le t du critère est celui de l'examen du tournoi : l'écart mensuel du portefeuille contre SPY (fin de mois à fin de
 mois), pas l'écart moyen des transactions (montré aussi, pour comprendre). Seul changement ; aucun résultat vu.
+
+## Note technique (9 octobre 2026, AVANT tout calcul sur les vraies données)
+Une colonne d'indice sans AUCUNE valeur dans l'entraînement d'une année est retirée pour cette année-là (elle ne peut
+rien apprendre, et scikit-learn 1.9.1 plante dessus) ; la liste est notée dans les résultats (« indices_vides »).
+Essai sur un faux jeu fabriqué (labo/chasse/essai_chasse.py, 17 contrôles, refait dans le workflow avant la vraie
+course) : un signal caché (+30 % en 6 mois quand « part » > 1) est trouvé chaque année aux 3 durées ; le critère du
+plan est atteignable quand un vrai signal existe (durée 126 : 9 années sur 9, t 8,19) ; sur le même jeu SANS signal,
+aucune durée ne réussit et la corrélation moyenne reste près de 0 (aucune fuite du futur).

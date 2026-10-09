@@ -1,0 +1,50 @@
+name: "Labo (la grande chasse : modèle appris sur les achats des initiés, jugé sur le banc du tournoi)"
+
+# Lancé quand on modifie labo/chasse/declencheur.txt. Lecture seulement du cache du labo (aucun site lu) :
+# n'entre pas dans la file du robot (groupe radar). Le plan et ses critères sont gelés dans labo/chasse/PLAN.md.
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/chasse/declencheur.txt"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: labo90
+  cancel-in-progress: false
+
+jobs:
+  chasser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install scikit-learn==1.9.1 numpy==2.4.6
+      - name: "L'essai d'abord : signal caché trouvé, critère atteignable, aucune fuite du futur (17 contrôles)"
+        run: python labo/chasse/essai_chasse.py
+      - name: Le jeu de recherche (cache de l'étape 0)
+        uses: actions/cache/restore@v4
+        with:
+          path: cache
+          key: tournoi-aucun
+          restore-keys: tournoi-
+      - name: La chasse (2017-2018 à 2025-2026, durées 63, 126 et 252 jours de bourse)
+        run: |
+          test -f cache/coffre/evenements.jsonl.gz && test -f cache/decouverte/evenements.jsonl.gz
+          mkdir -p labo/chasse/resultats
+          python -u labo/chasse/chasse.py --coffre cache/coffre --decouverte cache/decouverte --sortie labo/chasse/resultats 2>&1 | tee labo/chasse/resultats/journal.txt
+          test "${PIPESTATUS[0]}" = 0
+      - name: Sauvegarder les résultats
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/chasse/resultats
+          git commit -m "Labo : la grande chasse, résultats ($(date -u +'%Y-%m-%d %H:%M') UTC)" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
