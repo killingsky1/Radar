@@ -104,7 +104,8 @@ def test_ventes_de_samsara_prix_moyen_pondere(index, syms):
     # récent seulement (21 129 actions pour 820 041,42 $), pas la moyenne des 3 jours (38,03 $) datée du 1er octobre
     assert ta.prix_formulaires_4([ev], date(2026, 10, 2)) == {"IOT": ["20261001", 38.8112]}
     assert round(820041.42 / 21129, 4) == 38.8112
-    assert ta.prix_formulaires_4([ev], date(2026, 9, 30)) == {}  # déposé le 1er octobre : pas encore connu le 30
+    # le 30 septembre : les transactions du 1er octobre sont dans le futur, le jour le plus récent est le 30
+    assert ta.prix_formulaires_4([ev], date(2026, 9, 30)) == {"IOT": ["20260930", round(3239591.12 / 84369, 4)]}
 
 
 def test_ce_qui_ne_donne_pas_de_prix(index, syms):
@@ -124,7 +125,6 @@ def test_ce_qui_ne_donne_pas_de_prix(index, syms):
     assert sans(lambda e: e.update(badge="a_verifier")) == {}  # ex. prix de plus de 2 000 $
     assert sans(lambda e: e["data"].update(hors_bourse="initial public offering")) == {}
     assert sans(lambda e: e["data"].update(automatique="dividend reinvestment")) == {}
-    assert sans(lambda e: e.update(published_on="2026-10-03")) == {}  # déposé après le jour du calcul
     assert sans(ligne(date="2026-08-02")) == {}  # 61 jours avant
     assert sans(ligne(date="2026-08-03")) == {"GME": ["20260803", 24.33]}  # 60 jours : encore bon
     assert sans(ligne(prix=0.0)) == {}
@@ -199,7 +199,27 @@ def test_historique_pas_lu_le_calcul_avec_une_note():
 
 def test_aucun_prix_la_raison_le_dit():
     assert classer([20_000_000, "2026-09-01"], None, {})["raison"] == (
-        "pas de prix de la SEC ni de formulaire 4 depuis 60 jours")
+        "pas de prix de la SEC ni de prix de formulaire 4 utilisable depuis 60 jours")
     t = {"seuils": SEUILS, "actions": {"1": [20_000_000, "2026-09-01"]}, "prix": {}}
     assert ta.classer(FICHE, t, "XYZ", date(2026, 11, 20), {"debut": "20250901", "symboles": {}})["raison"] == (
         "pas de prix de la SEC depuis 60 jours")  # sans prix de secours (anciens rejeux du labo) : comme avant
+
+
+def test_garde_fou_10_fois_le_dernier_prix_de_la_sec(mstu):
+    # dernier prix de la SEC de MSTU : 30,41 $ le 14 septembre ; limite : 3,041 $ à 304,10 $
+    assert ta.SAUT_F4_MAX == 10  # choisi au labo (mesure 4)
+    for prix, connue in ((3.05, True), (3.0, False), (304.0, True), (305.0, False)):
+        r = classer([20_000_000, "2026-09-01"], None, {"XYZ": ["20261110", prix]}, mstu)
+        assert (r["taille"] is not None) is connue, (prix, r)
+    r = classer([20_000_000, "2026-09-01"], None, {"XYZ": ["20261110", 3.0]}, mstu)
+    assert r["raison"] == ("pas de prix de la SEC depuis 60 jours, et le prix du formulaire 4 (3,00 $ le 10 novembre 2026) "
+                           "est 10,1 fois plus bas que le dernier prix de la SEC (30,41 $ le 14 septembre 2026) : erreur "
+                           "dans le formulaire ou regroupement d'actions possible")
+
+
+def test_titre_absent_de_l_historique_la_taille_avec_une_note():
+    # jamais vu dans les fichiers d'échecs depuis 400 jours (souvent une nouvelle inscription) : rien à vérifier, une note
+    r = classer([20_000_000, "2026-09-01"], None, {"XYZ": ["20261110", 25.0]})
+    assert r["taille"] == "petite" and r["valeur_m"] == 500.0 and r["source_prix"] == "formulaire 4"
+    assert r["note"] == ta.ABSENT_F4
+    assert ta.ABSENT_F4.startswith("Titre absent des fichiers d'échecs de livraison de la SEC depuis 400 jours")

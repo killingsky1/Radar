@@ -243,10 +243,31 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     assert.ok((await p.locator(".taille-source").innerText()).includes("Kenneth French"));
     assert.ok(!(await p.locator(".calcul").innerText()).includes("Petite compagnie"));
   }));
-  await verifier("Fiche NVDA : taille inconnue (prix de la SEC trop vieux), avec la raison", () => fiche("NVDA", async () => {
+  await verifier("Fiche NVDA : prix de la SEC trop vieux → prix du formulaire 4 (achat du PDG à 124 $ il y a 2 jours), dit sur la fiche", () => fiche("NVDA", async () => {
     const t = (await p.locator(".taille").innerText()).replace(/\u00a0|\u202f/g, " ");
-    assert.ok(t.includes("Taille inconnue") && t.includes("Pas calculée : pas de prix de la SEC depuis 60 jours. Pas de bonus de petite compagnie."), t);
+    const sans = t.replace(/\s/g, "");
+    assert.ok(t.includes("Grande compagnie") && sans.includes("24300000000actions") && sans.includes("×124,00$US")
+      && t.includes("(prix moyen des dirigeants en bourse le ") && t.includes(", formulaire 4 : la SEC n'a pas de prix depuis 60 jours)")
+      && !t.includes("prix de la SEC du") && !t.includes("Pas calculée"), t.replace(/\n/g, " | "));
+    assert.ok((await p.locator(".taille-source").innerText()).includes("prix des dirigeants en bourse (formulaire 4 déposé à la SEC, actions ordinaires seulement)"));
   }));
+  await verifier("Fiche NVDA sans prix utilisable (vrai calcul du robot, fichier du score modifié pour l'essai) : taille inconnue, avec la raison", async () => {
+    const inconnue = await (await p.request.get(`${ADRESSE}data/app/taille_inconnue_test.json`)).json();
+    assert.equal(inconnue.raison, "pas de prix de la SEC ni de prix de formulaire 4 utilisable depuis 60 jours");
+    const r = await (await p.request.get(`${ADRESSE}data/app/aujourdhui.json`)).json();
+    const nvda = r.hausse.find((x) => x.symbole === "NVDA");
+    assert.ok(nvda && nvda.taille && nvda.taille.source_prix === "formulaire 4", JSON.stringify(nvda && nvda.taille));
+    nvda.taille = inconnue;
+    await p.route("**/data/app/aujourdhui.json", (route) => route.fulfill({ json: r }));
+    try {
+      await p.reload(); await p.waitForSelector(".tuiles");
+      await fiche("NVDA", async () => {
+        const t = (await p.locator(".taille").innerText()).replace(/\u00a0|\u202f/g, " ");
+        assert.ok(t.includes("Taille inconnue") && t.includes("Pas calculée : pas de prix de la SEC ni de prix de formulaire 4 utilisable depuis 60 jours. Pas de bonus de petite compagnie."), t);
+        assert.ok((await p.locator(".taille-source").innerText()).includes("prix officiel de la SEC"));
+      });
+    } finally { await p.unroute("**/data/app/aujourdhui.json"); await p.reload(); await p.waitForSelector(".tuiles"); }
+  });
   await verifier("Fiche XMPL : sans fiche SEC → pas de section taille ; vente d'un initié routinier (exemple) : 0 point, raison et mois", () => fiche("XMPL", async () => {
     assert.equal(await p.locator(".taille").count(), 0);
     const t = (await p.locator(".ecran").last().innerText()).replace(/\u00a0|\u202f/g, " ");

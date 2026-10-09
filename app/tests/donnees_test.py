@@ -39,7 +39,7 @@ def faux(ctx):
            entities=["Jensen Huang", "NVIDIA CORP"], direction=1,
            data={"symbole_declare": "NVDA", "symboles_sec": ["NVDA"], "actions": 50000, "roles": ["CEO"], "prix_moyen": 124.0,
                  "transactions": [{"code": "P", "acquis_cede": "A", "actions": 50000, "prix": 124.0, "date": jour(2),
-                                   "apres": 1050000}]}),
+                                   "apres": 1050000, "titre_valeur": "Common Stock"}]}),
         ev(3, "registre_federal", "gouvernement", "presidentiel", "nouveaux tarifs sur l'acier (publication demain)", jour(0),
            "https://www.federalregister.gov/public-inspection/2026-99999/test", numero="2026-99999",
            entities=["Executive Office of the President"],
@@ -327,15 +327,25 @@ achat_mikr = valider(ev(40, "sec_form4", "compagnies", "achat_initie",
                                          "apres": 140000}]}), J).to_dict()
 assert achat_mikr["badge"] == "officiel", achat_mikr
 chemin_m = Path(sys.argv[1]) / "app" / "aujourdhui.json"
+evs_m = sorted((e for e in Depot(sys.argv[1]).lire("evenements") + [achat_mikr] if not e.get("data", {}).get("meme_acte_que")),
+               key=lambda d: (d["published_on"], d["collected_at"], d["id"]), reverse=True)
+jour_m = sc_m.jour_de_calcul(maintenant)
+# Étape 2 : comme publish.py, le prix des dirigeants en bourse (formulaire 4) quand la SEC n'a pas de prix depuis 60 jours
+# (NVDA : prix de la SEC d'il y a 75 jours, achat du PDG à 124 $ il y a 2 jours, « Common Stock »)
+prix_f4_m = ta_m.prix_formulaires_4(evs_m, jour_m, sc_m.achats_d_emission(evs_m))
+assert prix_f4_m == {"NVDA": [jour(2).replace("-", ""), 124.0]}, prix_f4_m
 _ecrire_m(chemin_m, sc_m.calculer(
-    sorted((e for e in Depot(sys.argv[1]).lire("evenements") + [achat_mikr] if not e.get("data", {}).get("meme_acte_que")),
-           key=lambda d: (d["published_on"], d["collected_at"], d["id"]), reverse=True),
-    maintenant, json.loads(chemin_m.read_text(encoding="utf-8")), None, fonds=em_m.fonds(sys.argv[1]),
+    evs_m, maintenant, json.loads(chemin_m.read_text(encoding="utf-8")), None, fonds=em_m.fonds(sys.argv[1]),
     chefs={nom for nom, x in json.loads((Path(sys.argv[1]) / "app" / "elus.json").read_text(encoding="utf-8"))[
         "par_elu"].items() if x["chef"]},
     routiniers=ini_m.charger(sys.argv[1]),
-    tailles=ta_m.pour_score(sys.argv[1], em_m.charger(sys.argv[1]), sc_m.jour_de_calcul(maintenant))))
+    tailles=ta_m.pour_score(sys.argv[1], em_m.charger(sys.argv[1]), jour_m, prix_f4_m)))
 assert [x["symbole"] for x in json.loads(chemin_m.read_text(encoding="utf-8"))["ecartees"]] == ["MIKR"]
+# La taille de NVDA SANS prix utilisable (ex. son formulaire 4 lu avant le lecteur sec-8, sans nom de titre), du vrai calcul
+# du robot : pour l'essai de la fiche « taille inconnue » (l'app ne lit jamais ce fichier)
+(Path(sys.argv[1]) / "app" / "taille_inconnue_test.json").write_text(json.dumps(ta_m.classer(
+    EMETTEURS_TEST["NVDA"], json.loads(ta_m.chemin(sys.argv[1]).read_text(encoding="utf-8")), "NVDA", jour_m,
+    ta_m.charger_cusips(sys.argv[1]), {})), encoding="utf-8")
 Depot(sys.argv[1]).enregistrer([valider(e, J) for e in BLOCAGES])
 _ecrire_compact(Path(sys.argv[1]) / "app" / "calendrier.json", calendrier.preparer(Depot(sys.argv[1]), J))
 # Résultats de Radar (lot G) : entrées TEST de juillet à septembre 2026, mesurées par le vrai calcul du robot sur de VRAIS

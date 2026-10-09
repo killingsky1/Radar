@@ -26,7 +26,8 @@ centile et plus ; moyenne entre les deux (les 3, 4 et 3 déciles de Lakonishok e
   - actions déclarées il y a plus de 200 jours (une compagnie américaine les déclare à chaque rapport trimestriel) ;
   - moins de 500 000 actions déclarées : impossible pour une action cotée (le Nasdaq exige au moins 500 000 actions dans
     le public pour garder une compagnie inscrite) ; mesuré le 5 octobre 2026 : QVCG, 1 action déclarée au 30 juin 2026 ;
-  - pas de prix de la SEC depuis 60 jours (un titre a un prix seulement les jours où il a des échecs de livraison) ;
+  - pas de prix de la SEC depuis 60 jours (un titre a un prix seulement les jours où il a des échecs de livraison), ni de
+    prix de formulaire 4 utilisable (étape 2, plus bas) ;
   - changement du code du titre (CUSIP) dont on ne peut pas dire le côté (voir plus bas).
 - Étape 1, données sûres (0.27.1) : le prix doit être de la même époque que le nombre d'actions. Un regroupement d'actions
   (ex. 1 pour 10) donne un nouveau CUSIP et divise le nombre d'actions, mais le nombre déclaré à la SEC reste l'ancien
@@ -52,6 +53,16 @@ centile et plus ; moyenne entre les deux (les 3, 4 et 3 déciles de Lakonishok e
   35 → 32 ; écartées à tort 1 → 3 / 0 → 0 (des hausses après le dernier prix de la SEC) ; tailles fausses 5 → 0 / 24 → 1 ;
   bonus de petite compagnie à tort 0 → 0 / 13 → 0 ; bonus manqués (taille inconnue) 3 → 1 / 6 → 32 ; tous les autres
   achats : identiques. La règle « taille inconnue » seule aurait été pire (66 / 121 gardées à tort).
+- Étape 2 (0.27.2) : pas de prix de la SEC depuis 60 jours (11,5 % des achats de dirigeants de 2023-2026, taille
+  inconnue jusqu'ici) : le prix moyen des achats et ventes de dirigeants EN BOURSE du jour le plus récent (formulaire 4,
+  60 jours ou moins, voir prix_formulaires_4 : actions ordinaires seulement, jamais lors d'une émission, hors bourse ou
+  automatique). Taille inconnue si un CUSIP change après le plus ancien des deux jours (actions ou formulaire 4), ou si
+  ce prix est plus de 10 fois loin du dernier prix de la SEC (SAUT_F4_MAX). Titre absent de l'historique : une note.
+  Mesuré au labo le 9 octobre 2026 (labo/tournoi/mesures/prix_form4_robot.py : le vrai code du robot, avec ce qu'il
+  aurait su chaque jour, achats de dirigeants sans prix de la SEC de 60 jours ou moins, jugés avec la vraie valeur
+  connue après coup : 915 en 2023-2026, 2 492 en 2016-2023) : gardées à tort dans « hausse » sous 100 M$ 376 → 7 /
+  1 188 → 83 ; bonus de petite compagnie manqués 868 → 4 / 2 282 → 36 ; écartées à tort 0 → 10 / 0 → 73 ; bonus à tort
+  0 → 4 / 0 → 28 (surtout des valeurs près des seuils, ou un nombre d'actions d'avant une entrée en bourse ou une fusion).
 Lu au passage du matin : les seuils (1 fichier), les actions (5 fichiers), les prix seulement quand la SEC publie un
 nouveau fichier (2 fois par mois), et l'historique des CUSIP (chaque fichier une seule fois).
 """
@@ -385,9 +396,20 @@ def prix_de_l_epoque(h: dict, prix: list, actions: list, jour: date) -> dict:
 COMMUNE = re.compile(r"common|ordinary", re.I)
 PAS_COMMUNE = re.compile(r"pref|warrant|unit|right|note|debenture|option|depositary|\bADS\b|\bADR\b", re.I)
 SOURCE_F4 = "formulaire 4"
-# Garde-fou à mesurer au labo : prix du formulaire 4 plus de N fois plus haut ou plus bas que le dernier prix de la SEC
-# (même vieux) : taille inconnue. None : pas de garde-fou.
-SAUT_F4_MAX: float | None = None
+# Garde-fou : prix du formulaire 4 plus de 10 fois plus haut ou plus bas que le dernier prix de la SEC du titre (même
+# vieux, historique de 400 jours) : autre époque (sortie de faillite, regroupement d'actions pas encore vu dans les fichiers
+# de la SEC, qui ont 2 à 6 semaines de retard) ou erreur, taille inconnue. Choisi au labo (mesure 4, 9 octobre 2026 :
+# aucun, ×2, ×3, ×5, ×10 essayés ; 2 492 achats jugés de 2016-2023) : ×10 enlève 11 erreurs nouvelles (bonus de petite
+# compagnie ou écartée à tort ; ex. BTU, sortie de faillite en avril 2017 : 514 M$ calculés au lieu de 2,8 G$) et 27
+# tailles fausses, et laisse 16 décisions comme avant (taille inconnue) ; ×3 : 20 de moins pour 77 ; ×2 : 25 pour 223.
+# En 2023-2026 (915 jugés), aucun garde-fou n'enlève d'erreur nouvelle.
+SAUT_F4_MAX: float | None = 10
+# Titre jamais vu dans les fichiers d'échecs de livraison depuis 400 jours : souvent une nouvelle inscription ou un
+# nouveau symbole après une fusion (labo, mesure 4 : TONX, FTH, NKLA… nombre d'actions d'avant l'entrée en bourse ou la
+# fusion). Mesuré : bien plus de décisions corrigées que d'erreurs ajoutées, donc la taille est calculée, avec cette note.
+ABSENT_F4 = ("Titre absent des fichiers d'échecs de livraison de la SEC depuis 400 jours : un changement de code du titre "
+             "(CUSIP) ne peut pas être vérifié, et le nombre d'actions est peut-être d'avant une entrée en bourse ou une "
+             "fusion récente.")
 
 
 def commune(titre: str | None) -> bool:
@@ -396,7 +418,8 @@ def commune(titre: str | None) -> bool:
 
 def prix_formulaires_4(evenements: list[dict], jour: date, emissions: frozenset = frozenset()) -> dict[str, list]:
     """{symbole : [AAAAMMJJ, prix]} : le prix moyen (pondéré par les actions) des achats et ventes de dirigeants en bourse
-    du jour le plus récent, transactions de 60 jours ou moins, formulaires déposés au plus tard le `jour`.
+    du jour le plus récent, transactions de 60 jours ou moins avant le `jour`. `evenements` : les infos déjà lues (le
+    robot : son dépôt ; un rejeu du labo : seulement les formulaires déposés au plus tard ce jour-là).
 
     Un formulaire compte seulement si toutes ses transactions (achats P ou ventes S) sont des actions ordinaires (le nom
     du titre est lu depuis le lecteur sec-8 : les formulaires lus avant n'en ont pas et ne comptent pas), avec un prix et
@@ -409,7 +432,7 @@ def prix_formulaires_4(evenements: list[dict], jour: date, emissions: frozenset 
         d = ev.get("data") or {}
         if (ev.get("source") != "sec_form4" or ev.get("kind") not in ("achat_initie", "vente_initie")
                 or not ev.get("tickers") or ev.get("badge") not in ("officiel", "confirme")
-                or (ev.get("published_on") or "9") > fin or d.get("hors_bourse") or d.get("automatique")):
+                or d.get("hors_bourse") or d.get("automatique")):
             continue
         s = ev["tickers"][0]
         code, sens = ("P", "A") if ev["kind"] == "achat_initie" else ("S", "D")
@@ -441,16 +464,19 @@ def changement_apres(h: dict, depuis: str) -> str | None:
     return None
 
 
-def classer_formulaire_4(x: dict, s: dict, actions: list, f4: list, h: dict | None) -> dict:
+def classer_formulaire_4(x: dict, s: dict, actions: list, f4: list, cusips: dict | None, symbole: str) -> dict:
     """La taille avec le prix du formulaire 4 `f4` ([AAAAMMJJ, prix]). Le prix n'a pas de CUSIP : s'il y a un changement
     de code du titre vu après le plus ancien des deux jours (actions ou formulaire 4), ils sont peut-être d'époques
-    différentes (regroupement d'actions), taille inconnue. `h` : l'historique du symbole ; None : pas de vérification
-    (historique pas lu)."""
+    différentes (regroupement d'actions), taille inconnue ; de même si le prix est plus de SAUT_F4_MAX fois loin du dernier
+    prix de la SEC. `cusips` : comme dans classer (None : pas de vérification ; historique pas lu : une note)."""
     fin = actions[1].replace("-", "")
     note = None
-    if h is None:
-        note = NON_VERIFIE
-    else:
+    h = ((cusips.get("symboles") or {}).get(symbole) or {}) if cusips is not None else {}
+    if cusips is not None and (not cusips.get("debut") or fin < cusips["debut"]):
+        note = NON_VERIFIE  # historique pas encore lu
+    elif cusips is not None and not h:
+        note = ABSENT_F4
+    elif h:
         c = changement_apres(h, min(fin, f4[0]))
         if c:
             return {**x, "actions": actions, "raison": (
@@ -505,10 +531,8 @@ def classer(fiche: dict | None, t: dict, symbole: str, jour: date, cusips: dict 
     if not prix or datetime.strptime(prix[0], "%Y%m%d").date() < jour - timedelta(days=PRIX_MAX_JOURS):
         f4 = (prix_f4 or {}).get(symbole)
         if f4:
-            lu = cusips is not None and cusips.get("debut") and actions[1].replace("-", "") >= cusips["debut"]
-            h = ((cusips.get("symboles") or {}).get(symbole) or {}) if lu else None
-            return classer_formulaire_4(x, s, actions, f4, h if cusips is not None else {})
-        ni = "" if prix_f4 is None else " ni de formulaire 4"
+            return classer_formulaire_4(x, s, actions, f4, cusips, symbole)
+        ni = "" if prix_f4 is None else " ni de prix de formulaire 4 utilisable"
         return {**x, "actions": actions, "raison": f"pas de prix de la SEC{ni} depuis {PRIX_MAX_JOURS} jours"}
     note = None
     if cusips is not None and (not cusips.get("debut") or actions[1].replace("-", "") < cusips["debut"] or len(prix) < 3):
