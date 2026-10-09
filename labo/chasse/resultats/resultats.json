@@ -1,0 +1,952 @@
+{
+ "plan": "labo/chasse/PLAN.md",
+ "achats": 157064,
+ "indices": [
+  "pdg",
+  "chef_finances",
+  "president_conseil",
+  "president",
+  "chef_exploitation",
+  "administrateur",
+  "dirigeant",
+  "dix_pourcent",
+  "declarants",
+  "montant_log",
+  "part",
+  "nouvelle_position",
+  "direct",
+  "plan_10b5_1",
+  "routinier",
+  "delai_depot",
+  "etalement",
+  "prime_prix",
+  "achats_avant_initie",
+  "jours_depuis_achat_meme_cie",
+  "bilan_mesures",
+  "bilan_ecart",
+  "bilan_gagnant",
+  "groupe_30j",
+  "achats_90j",
+  "ventes_90j",
+  "ventes_365j",
+  "13d_90j",
+  "13g_90j",
+  "valeur_log",
+  "r1m",
+  "r3m",
+  "r6m",
+  "r12m",
+  "haut12",
+  "bas12",
+  "volatilite",
+  "presence3m",
+  "echecs",
+  "prix_log",
+  "roa",
+  "dette_actif",
+  "liquidite",
+  "cfo_actif",
+  "perte",
+  "valeur_comptable",
+  "age_finances",
+  "croissance_ventes",
+  "emission_actions",
+  "spy_1m",
+  "spy_3m",
+  "petites_moins_grandes_3m",
+  "meteo_initiés"
+ ],
+ "couverture": {
+  "pdg": 1.0,
+  "chef_finances": 1.0,
+  "president_conseil": 1.0,
+  "president": 1.0,
+  "chef_exploitation": 1.0,
+  "administrateur": 1.0,
+  "dirigeant": 1.0,
+  "dix_pourcent": 1.0,
+  "declarants": 1.0,
+  "montant_log": 0.982,
+  "part": 0.896,
+  "nouvelle_position": 1.0,
+  "direct": 1.0,
+  "plan_10b5_1": 0.258,
+  "routinier": 1.0,
+  "delai_depot": 1.0,
+  "etalement": 1.0,
+  "prime_prix": 0.891,
+  "achats_avant_initie": 1.0,
+  "jours_depuis_achat_meme_cie": 0.78,
+  "bilan_mesures": 1.0,
+  "bilan_ecart": 0.674,
+  "bilan_gagnant": 0.674,
+  "groupe_30j": 1.0,
+  "achats_90j": 1.0,
+  "ventes_90j": 1.0,
+  "ventes_365j": 1.0,
+  "13d_90j": 1.0,
+  "13g_90j": 1.0,
+  "valeur_log": 0.71,
+  "r1m": 0.686,
+  "r3m": 0.673,
+  "r6m": 0.648,
+  "r12m": 0.565,
+  "haut12": 0.767,
+  "bas12": 0.767,
+  "volatilite": 0.762,
+  "presence3m": 1.0,
+  "echecs": 0.617,
+  "prix_log": 0.797,
+  "roa": 0.804,
+  "dette_actif": 0.771,
+  "liquidite": 0.581,
+  "cfo_actif": 0.771,
+  "perte": 0.805,
+  "valeur_comptable": 0.679,
+  "age_finances": 0.867,
+  "croissance_ventes": 0.563,
+  "emission_actions": 0.737,
+  "spy_1m": 1.0,
+  "spy_3m": 1.0,
+  "petites_moins_grandes_3m": 1.0,
+  "meteo_initiés": 1.0
+ },
+ "cibles_connues": {
+  "63": 106228,
+  "126": 104091,
+  "252": 101015
+ },
+ "durees": {
+  "63": {
+   "neuf_ans": {
+    "portefeuille": -0.2727,
+    "spy_garde": 2.0795,
+    "annees_gagnees": 3,
+    "annees": 9,
+    "mois": 108,
+    "ecart_mensuel_moyen": -0.00997,
+    "t_mensuel": -1.31,
+    "reussi": false
+   },
+   "par_annee": {
+    "2017-2018": {
+     "transactions": 37,
+     "portefeuille": -0.0054,
+     "spy_garde": 0.1184,
+     "ecart_moyen": 0.0242,
+     "ecart_median": -0.0003,
+     "bat_le_marche": 0.4865,
+     "t": 0.91
+    },
+    "2018-2019": {
+     "transactions": 33,
+     "portefeuille": -0.1548,
+     "spy_garde": 0.0778,
+     "ecart_moyen": -0.0354,
+     "ecart_median": -0.059,
+     "bat_le_marche": 0.3939,
+     "t": -1.07
+    },
+    "2019-2020": {
+     "transactions": 36,
+     "portefeuille": 0.2274,
+     "spy_garde": 0.043,
+     "ecart_moyen": 0.1108,
+     "ecart_median": 0.0179,
+     "bat_le_marche": 0.5,
+     "t": 1.33
+    },
+    "2020-2021": {
+     "transactions": 37,
+     "portefeuille": 0.521,
+     "spy_garde": 0.3785,
+     "ecart_moyen": 0.1003,
+     "ecart_median": 0.0007,
+     "bat_le_marche": 0.5135,
+     "t": 1.47
+    },
+    "2021-2022": {
+     "transactions": 37,
+     "portefeuille": -0.6043,
+     "spy_garde": -0.1236,
+     "ecart_moyen": -0.0702,
+     "ecart_median": -0.0387,
+     "bat_le_marche": 0.4054,
+     "t": -1.34
+    },
+    "2022-2023": {
+     "transactions": 27,
+     "portefeuille": -0.2662,
+     "spy_garde": 0.1627,
+     "ecart_moyen": -0.1003,
+     "ecart_median": -0.1098,
+     "bat_le_marche": 0.3704,
+     "t": -1.53
+    },
+    "2023-2024": {
+     "transactions": 40,
+     "portefeuille": 0.0355,
+     "spy_garde": 0.2263,
+     "ecart_moyen": 0.0791,
+     "ecart_median": -0.0032,
+     "bat_le_marche": 0.475,
+     "t": 1.03
+    },
+    "2024-2025": {
+     "transactions": 36,
+     "portefeuille": 0.3739,
+     "spy_garde": 0.133,
+     "ecart_moyen": 0.0628,
+     "ecart_median": 0.0224,
+     "bat_le_marche": 0.6389,
+     "t": 1.62
+    },
+    "2025-2026": {
+     "transactions": 25,
+     "portefeuille": 0.1069,
+     "spy_garde": 0.2091,
+     "ecart_moyen": -0.0175,
+     "ecart_median": -0.0428,
+     "bat_le_marche": 0.4,
+     "t": -0.45
+    }
+   },
+   "coffre": {
+    "portefeuille": -0.5299,
+    "spy_garde": 0.8301,
+    "pire_baisse": -0.7288,
+    "mois": 72,
+    "ecart_mensuel_moyen": -0.01504,
+    "t_mensuel": -1.65
+   },
+   "decouverte": {
+    "portefeuille": 0.5472,
+    "spy_garde": 0.6827,
+    "pire_baisse": -0.2499,
+    "mois": 36,
+    "ecart_mensuel_moyen": 0.00018,
+    "t_mensuel": 0.01
+   },
+   "signaux": {
+    "coffre": {
+     "signaux": 2820,
+     "achats": 217,
+     "sans_prix": 446,
+     "meteo_fermee": 0,
+     "places_pleines": 1899,
+     "deja_en_portefeuille": 252,
+     "pause_symbole": 0,
+     "montant_trop_petit": 0
+    },
+    "decouverte": {
+     "signaux": 2160,
+     "achats": 110,
+     "sans_prix": 761,
+     "meteo_fermee": 0,
+     "places_pleines": 1131,
+     "deja_en_portefeuille": 153,
+     "pause_symbole": 0,
+     "montant_trop_petit": 0
+    }
+   },
+   "transactions": {
+    "coffre": 207,
+    "decouverte": 101
+   },
+   "mesures": {
+    "2017-2018": {
+     "appris": 14692,
+     "testes": 14224,
+     "seuil": 0.7227,
+     "gardes": 362,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 10233,
+     "net_moyen_tous": 0.002,
+     "net_median_tous": -0.024,
+     "net_moyen_gardes": -0.028,
+     "net_median_gardes": -0.0343,
+     "part_gagnante_gardes": 0.3538,
+     "correlation_rang": 0.0119
+    },
+    "2018-2019": {
+     "appris": 25004,
+     "testes": 20070,
+     "seuil": 0.6731,
+     "gardes": 254,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 12318,
+     "net_moyen_tous": -0.0415,
+     "net_median_tous": -0.0395,
+     "net_moyen_gardes": -0.0957,
+     "net_median_gardes": -0.0812,
+     "part_gagnante_gardes": 0.3085,
+     "correlation_rang": 0.0822
+    },
+    "2019-2020": {
+     "appris": 36866,
+     "testes": 18527,
+     "seuil": 0.6506,
+     "gardes": 653,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 12246,
+     "net_moyen_tous": 0.0403,
+     "net_median_tous": -0.0545,
+     "net_moyen_gardes": 0.1631,
+     "net_median_gardes": 0.0623,
+     "part_gagnante_gardes": 0.6075,
+     "correlation_rang": 0.1158
+    },
+    "2020-2021": {
+     "appris": 49353,
+     "testes": 12792,
+     "seuil": 0.6381,
+     "gardes": 423,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 8959,
+     "net_moyen_tous": 0.5166,
+     "net_median_tous": -0.0267,
+     "net_moyen_gardes": -0.0322,
+     "net_median_gardes": -0.0864,
+     "part_gagnante_gardes": 0.3582,
+     "correlation_rang": -0.0508
+    },
+    "2021-2022": {
+     "appris": 58759,
+     "testes": 16564,
+     "seuil": 0.6233,
+     "gardes": 554,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 12453,
+     "net_moyen_tous": -0.0608,
+     "net_median_tous": -0.0571,
+     "net_moyen_gardes": -0.0498,
+     "net_median_gardes": -0.1001,
+     "part_gagnante_gardes": 0.3837,
+     "correlation_rang": 0.0065
+    },
+    "2022-2023": {
+     "appris": 69815,
+     "testes": 15298,
+     "seuil": 0.6116,
+     "gardes": 576,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 11087,
+     "net_moyen_tous": -0.0515,
+     "net_median_tous": -0.0657,
+     "net_moyen_gardes": -0.0653,
+     "net_median_gardes": -0.0898,
+     "part_gagnante_gardes": 0.2621,
+     "correlation_rang": 0.1294
+    },
+    "2023-2024": {
+     "appris": 81395,
+     "testes": 12681,
+     "seuil": 0.6038,
+     "gardes": 1204,
+     "indices_vides": [],
+     "connus": 8486,
+     "net_moyen_tous": -0.0414,
+     "net_median_tous": -0.0664,
+     "net_moyen_gardes": -0.0537,
+     "net_median_gardes": -0.0572,
+     "part_gagnante_gardes": 0.3369,
+     "correlation_rang": 0.1605
+    },
+    "2024-2025": {
+     "appris": 91249,
+     "testes": 11489,
+     "seuil": 0.5997,
+     "gardes": 345,
+     "indices_vides": [],
+     "connus": 6981,
+     "net_moyen_tous": -0.0172,
+     "net_median_tous": -0.0574,
+     "net_moyen_gardes": -0.002,
+     "net_median_gardes": -0.0581,
+     "part_gagnante_gardes": 0.3951,
+     "correlation_rang": 0.129
+    },
+    "2025-2026": {
+     "appris": 98157,
+     "testes": 11284,
+     "seuil": 0.5975,
+     "gardes": 612,
+     "indices_vides": [],
+     "connus": 6048,
+     "net_moyen_tous": -0.0153,
+     "net_median_tous": -0.0631,
+     "net_moyen_gardes": -0.0776,
+     "net_median_gardes": -0.0767,
+     "part_gagnante_gardes": 0.3049,
+     "correlation_rang": 0.1262
+    }
+   }
+  },
+  "126": {
+   "neuf_ans": {
+    "portefeuille": 1.2172,
+    "spy_garde": 2.0795,
+    "annees_gagnees": 4,
+    "annees": 9,
+    "mois": 108,
+    "ecart_mensuel_moyen": 0.00127,
+    "t_mensuel": 0.16,
+    "reussi": false
+   },
+   "par_annee": {
+    "2017-2018": {
+     "transactions": 20,
+     "portefeuille": 0.1518,
+     "spy_garde": 0.1184,
+     "ecart_moyen": 0.0529,
+     "ecart_median": 0.052,
+     "bat_le_marche": 0.65,
+     "t": 1.2
+    },
+    "2018-2019": {
+     "transactions": 20,
+     "portefeuille": -0.241,
+     "spy_garde": 0.0778,
+     "ecart_moyen": -0.1567,
+     "ecart_median": -0.1257,
+     "bat_le_marche": 0.3,
+     "t": -1.97
+    },
+    "2019-2020": {
+     "transactions": 20,
+     "portefeuille": -0.0946,
+     "spy_garde": 0.043,
+     "ecart_moyen": 0.2468,
+     "ecart_median": -0.0107,
+     "bat_le_marche": 0.45,
+     "t": 1.19
+    },
+    "2020-2021": {
+     "transactions": 20,
+     "portefeuille": 1.4573,
+     "spy_garde": 0.3785,
+     "ecart_moyen": 0.2652,
+     "ecart_median": -0.0693,
+     "bat_le_marche": 0.45,
+     "t": 1.25
+    },
+    "2021-2022": {
+     "transactions": 20,
+     "portefeuille": -0.4068,
+     "spy_garde": -0.1236,
+     "ecart_moyen": -0.1886,
+     "ecart_median": -0.1928,
+     "bat_le_marche": 0.3,
+     "t": -2.5
+    },
+    "2022-2023": {
+     "transactions": 8,
+     "portefeuille": -0.078,
+     "spy_garde": 0.1627,
+     "ecart_moyen": 0.1857,
+     "ecart_median": -0.0285,
+     "bat_le_marche": 0.25,
+     "t": 0.66
+    },
+    "2023-2024": {
+     "transactions": 20,
+     "portefeuille": 0.4773,
+     "spy_garde": 0.2263,
+     "ecart_moyen": 0.1763,
+     "ecart_median": -0.0023,
+     "bat_le_marche": 0.5,
+     "t": 0.68
+    },
+    "2024-2025": {
+     "transactions": 20,
+     "portefeuille": 0.2486,
+     "spy_garde": 0.133,
+     "ecart_moyen": 0.1096,
+     "ecart_median": 0.0308,
+     "bat_le_marche": 0.55,
+     "t": 1.03
+    },
+    "2025-2026": {
+     "transactions": 10,
+     "portefeuille": 0.0952,
+     "spy_garde": 0.2091,
+     "ecart_moyen": -0.0798,
+     "ecart_median": -0.0994,
+     "bat_le_marche": 0.4,
+     "t": -1.16
+    }
+   },
+   "coffre": {
+    "portefeuille": 0.0895,
+    "spy_garde": 0.8301,
+    "pire_baisse": -0.6739,
+    "mois": 72,
+    "ecart_mensuel_moyen": -0.00201,
+    "t_mensuel": -0.19
+   },
+   "decouverte": {
+    "portefeuille": 1.0351,
+    "spy_garde": 0.6827,
+    "pire_baisse": -0.2153,
+    "mois": 36,
+    "ecart_mensuel_moyen": 0.00783,
+    "t_mensuel": 0.67
+   },
+   "signaux": {
+    "coffre": {
+     "signaux": 2251,
+     "achats": 118,
+     "sans_prix": 472,
+     "meteo_fermee": 0,
+     "places_pleines": 1574,
+     "deja_en_portefeuille": 72,
+     "pause_symbole": 0,
+     "montant_trop_petit": 10
+    },
+    "decouverte": {
+     "signaux": 1508,
+     "achats": 60,
+     "sans_prix": 532,
+     "meteo_fermee": 0,
+     "places_pleines": 835,
+     "deja_en_portefeuille": 76,
+     "pause_symbole": 0,
+     "montant_trop_petit": 0
+    }
+   },
+   "transactions": {
+    "coffre": 108,
+    "decouverte": 50
+   },
+   "mesures": {
+    "2017-2018": {
+     "appris": 12549,
+     "testes": 14224,
+     "seuil": 0.7555,
+     "gardes": 196,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 10233,
+     "net_moyen_tous": -0.0256,
+     "net_median_tous": -0.0563,
+     "net_moyen_gardes": -0.0153,
+     "net_median_gardes": -0.023,
+     "part_gagnante_gardes": 0.3741,
+     "correlation_rang": 0.0711
+    },
+    "2018-2019": {
+     "appris": 22443,
+     "testes": 20070,
+     "seuil": 0.6988,
+     "gardes": 277,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 12318,
+     "net_moyen_tous": -0.0941,
+     "net_median_tous": -0.1021,
+     "net_moyen_gardes": -0.1011,
+     "net_median_gardes": -0.0876,
+     "part_gagnante_gardes": 0.3527,
+     "correlation_rang": 0.0657
+    },
+    "2019-2020": {
+     "appris": 34580,
+     "testes": 18527,
+     "seuil": 0.6638,
+     "gardes": 748,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 12246,
+     "net_moyen_tous": 0.0505,
+     "net_median_tous": -0.0947,
+     "net_moyen_gardes": 0.1087,
+     "net_median_gardes": -0.0996,
+     "part_gagnante_gardes": 0.3878,
+     "correlation_rang": 0.0041
+    },
+    "2020-2021": {
+     "appris": 44804,
+     "testes": 12792,
+     "seuil": 0.6427,
+     "gardes": 260,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 8959,
+     "net_moyen_tous": 0.8226,
+     "net_median_tous": -0.0539,
+     "net_moyen_gardes": -0.0352,
+     "net_median_gardes": -0.0881,
+     "part_gagnante_gardes": 0.2959,
+     "correlation_rang": 0.0295
+    },
+    "2021-2022": {
+     "appris": 56761,
+     "testes": 16564,
+     "seuil": 0.6329,
+     "gardes": 442,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 12453,
+     "net_moyen_tous": -0.1011,
+     "net_median_tous": -0.0888,
+     "net_moyen_gardes": -0.2393,
+     "net_median_gardes": -0.2501,
+     "part_gagnante_gardes": 0.2073,
+     "correlation_rang": 0.0389
+    },
+    "2022-2023": {
+     "appris": 66860,
+     "testes": 15298,
+     "seuil": 0.6343,
+     "gardes": 330,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 11087,
+     "net_moyen_tous": -0.108,
+     "net_median_tous": -0.1327,
+     "net_moyen_gardes": -0.0868,
+     "net_median_gardes": -0.102,
+     "part_gagnante_gardes": 0.3496,
+     "correlation_rang": 0.1526
+    },
+    "2023-2024": {
+     "appris": 79000,
+     "testes": 12681,
+     "seuil": 0.6182,
+     "gardes": 381,
+     "indices_vides": [],
+     "connus": 8486,
+     "net_moyen_tous": -0.0591,
+     "net_median_tous": -0.111,
+     "net_moyen_gardes": -0.0133,
+     "net_median_gardes": -0.0367,
+     "part_gagnante_gardes": 0.4382,
+     "correlation_rang": 0.1599
+    },
+    "2024-2025": {
+     "appris": 89594,
+     "testes": 11489,
+     "seuil": 0.6146,
+     "gardes": 365,
+     "indices_vides": [],
+     "connus": 6981,
+     "net_moyen_tous": -0.0258,
+     "net_median_tous": -0.1116,
+     "net_moyen_gardes": -0.0533,
+     "net_median_gardes": -0.0832,
+     "part_gagnante_gardes": 0.3128,
+     "correlation_rang": 0.1242
+    },
+    "2025-2026": {
+     "appris": 96389,
+     "testes": 11284,
+     "seuil": 0.609,
+     "gardes": 763,
+     "indices_vides": [],
+     "connus": 3911,
+     "net_moyen_tous": 0.0568,
+     "net_median_tous": -0.0813,
+     "net_moyen_gardes": -0.1164,
+     "net_median_gardes": -0.079,
+     "part_gagnante_gardes": 0.342,
+     "correlation_rang": 0.1342
+    }
+   }
+  },
+  "252": {
+   "neuf_ans": {
+    "portefeuille": 0.5039,
+    "spy_garde": 2.0795,
+    "annees_gagnees": 4,
+    "annees": 9,
+    "mois": 108,
+    "ecart_mensuel_moyen": -0.00509,
+    "t_mensuel": -0.92,
+    "reussi": false
+   },
+   "par_annee": {
+    "2017-2018": {
+     "transactions": 10,
+     "portefeuille": 0.0349,
+     "spy_garde": 0.1184,
+     "ecart_moyen": -0.1556,
+     "ecart_median": -0.0674,
+     "bat_le_marche": 0.3,
+     "t": -1.3
+    },
+    "2018-2019": {
+     "transactions": 10,
+     "portefeuille": -0.1511,
+     "spy_garde": 0.0778,
+     "ecart_moyen": -0.0644,
+     "ecart_median": -0.0664,
+     "bat_le_marche": 0.4,
+     "t": -0.55
+    },
+    "2019-2020": {
+     "transactions": 10,
+     "portefeuille": 0.2358,
+     "spy_garde": 0.043,
+     "ecart_moyen": 0.6287,
+     "ecart_median": 0.358,
+     "bat_le_marche": 0.6,
+     "t": 1.95
+    },
+    "2020-2021": {
+     "transactions": 10,
+     "portefeuille": 1.0625,
+     "spy_garde": 0.3785,
+     "ecart_moyen": -0.0383,
+     "ecart_median": 0.004,
+     "bat_le_marche": 0.5,
+     "t": -0.29
+    },
+    "2021-2022": {
+     "transactions": 10,
+     "portefeuille": -0.5929,
+     "spy_garde": -0.1236,
+     "ecart_moyen": -0.2478,
+     "ecart_median": -0.3624,
+     "bat_le_marche": 0.2,
+     "t": -2.01
+    },
+    "2022-2023": {
+     "transactions": 0,
+     "portefeuille": -0.0082,
+     "spy_garde": 0.1627,
+     "ecart_moyen": null,
+     "ecart_median": null,
+     "bat_le_marche": null,
+     "t": null
+    },
+    "2023-2024": {
+     "transactions": 10,
+     "portefeuille": -0.041,
+     "spy_garde": 0.2263,
+     "ecart_moyen": -0.068,
+     "ecart_median": 0.0456,
+     "bat_le_marche": 0.6,
+     "t": -0.67
+    },
+    "2024-2025": {
+     "transactions": 10,
+     "portefeuille": 0.271,
+     "spy_garde": 0.133,
+     "ecart_moyen": 0.0301,
+     "ecart_median": -0.0591,
+     "bat_le_marche": 0.5,
+     "t": 0.28
+    },
+    "2025-2026": {
+     "transactions": 0,
+     "portefeuille": 0.324,
+     "spy_garde": 0.2091,
+     "ecart_moyen": null,
+     "ecart_median": null,
+     "bat_le_marche": null,
+     "t": null
+    }
+   },
+   "coffre": {
+    "portefeuille": -0.0839,
+    "spy_garde": 0.8301,
+    "pire_baisse": -0.6255,
+    "mois": 72,
+    "ecart_mensuel_moyen": -0.00753,
+    "t_mensuel": -1.02
+   },
+   "decouverte": {
+    "portefeuille": 0.6416,
+    "spy_garde": 0.6827,
+    "pire_baisse": -0.1533,
+    "mois": 36,
+    "ecart_mensuel_moyen": -0.00021,
+    "t_mensuel": -0.03
+   },
+   "signaux": {
+    "coffre": {
+     "signaux": 2428,
+     "achats": 60,
+     "sans_prix": 671,
+     "meteo_fermee": 0,
+     "places_pleines": 1645,
+     "deja_en_portefeuille": 49,
+     "pause_symbole": 0,
+     "montant_trop_petit": 0
+    },
+    "decouverte": {
+     "signaux": 2115,
+     "achats": 30,
+     "sans_prix": 955,
+     "meteo_fermee": 0,
+     "places_pleines": 1111,
+     "deja_en_portefeuille": 13,
+     "pause_symbole": 0,
+     "montant_trop_petit": 0
+    }
+   },
+   "transactions": {
+    "coffre": 50,
+    "decouverte": 20
+   },
+   "mesures": {
+    "2017-2018": {
+     "appris": 7518,
+     "testes": 14224,
+     "seuil": 0.7966,
+     "gardes": 105,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 10233,
+     "net_moyen_tous": -0.082,
+     "net_median_tous": -0.1325,
+     "net_moyen_gardes": -0.1194,
+     "net_median_gardes": -0.0573,
+     "part_gagnante_gardes": 0.1408,
+     "correlation_rang": 0.1102
+    },
+    "2018-2019": {
+     "appris": 17620,
+     "testes": 20070,
+     "seuil": 0.7486,
+     "gardes": 240,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 12318,
+     "net_moyen_tous": -0.1681,
+     "net_median_tous": -0.2185,
+     "net_moyen_gardes": -0.2714,
+     "net_median_gardes": -0.1865,
+     "part_gagnante_gardes": 0.2214,
+     "correlation_rang": 0.0592
+    },
+    "2019-2020": {
+     "appris": 27619,
+     "testes": 18527,
+     "seuil": 0.6971,
+     "gardes": 672,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 12246,
+     "net_moyen_tous": 0.4191,
+     "net_median_tous": -0.0283,
+     "net_moyen_gardes": 0.6028,
+     "net_median_gardes": 0.4424,
+     "part_gagnante_gardes": 0.7416,
+     "correlation_rang": 0.051
+    },
+    "2020-2021": {
+     "appris": 40216,
+     "testes": 12792,
+     "seuil": 0.6709,
+     "gardes": 363,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 8959,
+     "net_moyen_tous": 1.1079,
+     "net_median_tous": -0.1121,
+     "net_moyen_gardes": -0.1226,
+     "net_median_gardes": -0.1305,
+     "part_gagnante_gardes": 0.3953,
+     "correlation_rang": 0.1518
+    },
+    "2021-2022": {
+     "appris": 52338,
+     "testes": 16564,
+     "seuil": 0.6557,
+     "gardes": 651,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 12453,
+     "net_moyen_tous": -0.138,
+     "net_median_tous": -0.1543,
+     "net_moyen_gardes": -0.1947,
+     "net_median_gardes": -0.2586,
+     "part_gagnante_gardes": 0.2658,
+     "correlation_rang": 0.0228
+    },
+    "2022-2023": {
+     "appris": 61438,
+     "testes": 15298,
+     "seuil": 0.649,
+     "gardes": 398,
+     "indices_vides": [
+      "plan_10b5_1"
+     ],
+     "connus": 11087,
+     "net_moyen_tous": -0.2156,
+     "net_median_tous": -0.2775,
+     "net_moyen_gardes": -0.2263,
+     "net_median_gardes": -0.3219,
+     "part_gagnante_gardes": 0.2695,
+     "correlation_rang": 0.0907
+    },
+    "2023-2024": {
+     "appris": 73717,
+     "testes": 12681,
+     "seuil": 0.638,
+     "gardes": 780,
+     "indices_vides": [],
+     "connus": 8486,
+     "net_moyen_tous": -0.0738,
+     "net_median_tous": -0.1922,
+     "net_moyen_gardes": 0.0333,
+     "net_median_gardes": -0.1061,
+     "part_gagnante_gardes": 0.4289,
+     "correlation_rang": 0.2269
+    },
+    "2024-2025": {
+     "appris": 84846,
+     "testes": 11489,
+     "seuil": 0.6303,
+     "gardes": 521,
+     "indices_vides": [],
+     "connus": 6981,
+     "net_moyen_tous": -0.0371,
+     "net_median_tous": -0.1688,
+     "net_moyen_gardes": -0.0156,
+     "net_median_gardes": -0.0221,
+     "part_gagnante_gardes": 0.4583,
+     "correlation_rang": 0.1678
+    },
+    "2025-2026": {
+     "appris": 93266,
+     "testes": 11284,
+     "seuil": 0.6254,
+     "gardes": 815,
+     "indices_vides": [],
+     "connus": 835,
+     "net_moyen_tous": 0.5841,
+     "net_median_tous": -0.1736,
+     "net_moyen_gardes": 0.1384,
+     "net_median_gardes": 0.1799,
+     "part_gagnante_gardes": 0.7808,
+     "correlation_rang": 0.2611
+    }
+   }
+  }
+ }
+}
