@@ -1,81 +1,81 @@
-[14:19:31] coffre-fort : chargement
-[14:19:55] coffre-fort : 473675 formulaires, prix de SPY 2015-07-01 → 2026-09-11
-[14:19:59]   20000 achats
-[14:20:02]   40000 achats
-[14:20:04]   60000 achats
-[14:20:06]   80000 achats
-[14:20:08]   100000 achats
-[14:20:10]   120000 achats
-[14:20:10] coffre-fort : 121610 achats
-[14:20:12] découverte : chargement
-[14:20:25] découverte : 201982 formulaires, prix de SPY 2015-07-01 → 2026-09-11
-[14:20:26] coffre-fort : 36897 achats sans toutes leurs cibles, encore sans après la découverte : 36897
-[14:20:29]   20000 achats
-[14:20:30] découverte : 35454 achats ; en tout 157064 achats, 53 indices
-[14:20:32] durée 63 : modèles année par année
-[14:20:33]   durée 63, 2017-2018 : {'appris': 14692, 'testes': 14224, 'seuil': 0.7227, 'gardes': 362, 'indices_vides': ['plan_10b5_1'], 'connus': 10233, 'net_moyen_tous': 0.002, 'net_median_tous': -0.024, 'net_moyen_gardes': -0.028, 'net_median_gardes': -0.0343, 'part_gagnante_gardes': 0.3538, 'correlation_rang': 0.0119}
-[14:20:35]   durée 63, 2018-2019 : {'appris': 25004, 'testes': 20070, 'seuil': 0.6731, 'gardes': 254, 'indices_vides': ['plan_10b5_1'], 'connus': 12318, 'net_moyen_tous': -0.0415, 'net_median_tous': -0.0395, 'net_moyen_gardes': -0.0957, 'net_median_gardes': -0.0812, 'part_gagnante_gardes': 0.3085, 'correlation_rang': 0.0822}
-[14:20:37]   durée 63, 2019-2020 : {'appris': 36866, 'testes': 18527, 'seuil': 0.6506, 'gardes': 653, 'indices_vides': ['plan_10b5_1'], 'connus': 12246, 'net_moyen_tous': 0.0403, 'net_median_tous': -0.0545, 'net_moyen_gardes': 0.1631, 'net_median_gardes': 0.0623, 'part_gagnante_gardes': 0.6075, 'correlation_rang': 0.1158}
-[14:20:40]   durée 63, 2020-2021 : {'appris': 49353, 'testes': 12792, 'seuil': 0.6381, 'gardes': 423, 'indices_vides': ['plan_10b5_1'], 'connus': 8959, 'net_moyen_tous': 0.5166, 'net_median_tous': -0.0267, 'net_moyen_gardes': -0.0322, 'net_median_gardes': -0.0864, 'part_gagnante_gardes': 0.3582, 'correlation_rang': -0.0508}
-[14:20:42]   durée 63, 2021-2022 : {'appris': 58759, 'testes': 16564, 'seuil': 0.6233, 'gardes': 554, 'indices_vides': ['plan_10b5_1'], 'connus': 12453, 'net_moyen_tous': -0.0608, 'net_median_tous': -0.0571, 'net_moyen_gardes': -0.0498, 'net_median_gardes': -0.1001, 'part_gagnante_gardes': 0.3837, 'correlation_rang': 0.0065}
-[14:20:45]   durée 63, 2022-2023 : {'appris': 69815, 'testes': 15298, 'seuil': 0.6116, 'gardes': 576, 'indices_vides': ['plan_10b5_1'], 'connus': 11087, 'net_moyen_tous': -0.0515, 'net_median_tous': -0.0657, 'net_moyen_gardes': -0.0653, 'net_median_gardes': -0.0898, 'part_gagnante_gardes': 0.2621, 'correlation_rang': 0.1294}
-[14:20:49]   durée 63, 2023-2024 : {'appris': 81395, 'testes': 12681, 'seuil': 0.6038, 'gardes': 1204, 'indices_vides': [], 'connus': 8486, 'net_moyen_tous': -0.0414, 'net_median_tous': -0.0664, 'net_moyen_gardes': -0.0537, 'net_median_gardes': -0.0572, 'part_gagnante_gardes': 0.3369, 'correlation_rang': 0.1605}
-[14:20:53]   durée 63, 2024-2025 : {'appris': 91249, 'testes': 11489, 'seuil': 0.5997, 'gardes': 345, 'indices_vides': [], 'connus': 6981, 'net_moyen_tous': -0.0172, 'net_median_tous': -0.0574, 'net_moyen_gardes': -0.002, 'net_median_gardes': -0.0581, 'part_gagnante_gardes': 0.3951, 'correlation_rang': 0.129}
-[14:20:57]   durée 63, 2025-2026 : {'appris': 98157, 'testes': 11284, 'seuil': 0.5975, 'gardes': 612, 'indices_vides': [], 'connus': 6048, 'net_moyen_tous': -0.0153, 'net_median_tous': -0.0631, 'net_moyen_gardes': -0.0776, 'net_median_gardes': -0.0767, 'part_gagnante_gardes': 0.3049, 'correlation_rang': 0.1262}
-[14:20:57] durée 126 : modèles année par année
-[14:20:58]   durée 126, 2017-2018 : {'appris': 12549, 'testes': 14224, 'seuil': 0.7555, 'gardes': 196, 'indices_vides': ['plan_10b5_1'], 'connus': 10233, 'net_moyen_tous': -0.0256, 'net_median_tous': -0.0563, 'net_moyen_gardes': -0.0153, 'net_median_gardes': -0.023, 'part_gagnante_gardes': 0.3741, 'correlation_rang': 0.0711}
-[14:21:00]   durée 126, 2018-2019 : {'appris': 22443, 'testes': 20070, 'seuil': 0.6988, 'gardes': 277, 'indices_vides': ['plan_10b5_1'], 'connus': 12318, 'net_moyen_tous': -0.0941, 'net_median_tous': -0.1021, 'net_moyen_gardes': -0.1011, 'net_median_gardes': -0.0876, 'part_gagnante_gardes': 0.3527, 'correlation_rang': 0.0657}
-[14:21:02]   durée 126, 2019-2020 : {'appris': 34580, 'testes': 18527, 'seuil': 0.6638, 'gardes': 748, 'indices_vides': ['plan_10b5_1'], 'connus': 12246, 'net_moyen_tous': 0.0505, 'net_median_tous': -0.0947, 'net_moyen_gardes': 0.1087, 'net_median_gardes': -0.0996, 'part_gagnante_gardes': 0.3878, 'correlation_rang': 0.0041}
-[14:21:04]   durée 126, 2020-2021 : {'appris': 44804, 'testes': 12792, 'seuil': 0.6427, 'gardes': 260, 'indices_vides': ['plan_10b5_1'], 'connus': 8959, 'net_moyen_tous': 0.8226, 'net_median_tous': -0.0539, 'net_moyen_gardes': -0.0352, 'net_median_gardes': -0.0881, 'part_gagnante_gardes': 0.2959, 'correlation_rang': 0.0295}
-[14:21:07]   durée 126, 2021-2022 : {'appris': 56761, 'testes': 16564, 'seuil': 0.6329, 'gardes': 442, 'indices_vides': ['plan_10b5_1'], 'connus': 12453, 'net_moyen_tous': -0.1011, 'net_median_tous': -0.0888, 'net_moyen_gardes': -0.2393, 'net_median_gardes': -0.2501, 'part_gagnante_gardes': 0.2073, 'correlation_rang': 0.0389}
-[14:21:10]   durée 126, 2022-2023 : {'appris': 66860, 'testes': 15298, 'seuil': 0.6343, 'gardes': 330, 'indices_vides': ['plan_10b5_1'], 'connus': 11087, 'net_moyen_tous': -0.108, 'net_median_tous': -0.1327, 'net_moyen_gardes': -0.0868, 'net_median_gardes': -0.102, 'part_gagnante_gardes': 0.3496, 'correlation_rang': 0.1526}
-[14:21:13]   durée 126, 2023-2024 : {'appris': 79000, 'testes': 12681, 'seuil': 0.6182, 'gardes': 381, 'indices_vides': [], 'connus': 8486, 'net_moyen_tous': -0.0591, 'net_median_tous': -0.111, 'net_moyen_gardes': -0.0133, 'net_median_gardes': -0.0367, 'part_gagnante_gardes': 0.4382, 'correlation_rang': 0.1599}
-[14:21:17]   durée 126, 2024-2025 : {'appris': 89594, 'testes': 11489, 'seuil': 0.6146, 'gardes': 365, 'indices_vides': [], 'connus': 6981, 'net_moyen_tous': -0.0258, 'net_median_tous': -0.1116, 'net_moyen_gardes': -0.0533, 'net_median_gardes': -0.0832, 'part_gagnante_gardes': 0.3128, 'correlation_rang': 0.1242}
-[14:21:21]   durée 126, 2025-2026 : {'appris': 96389, 'testes': 11284, 'seuil': 0.609, 'gardes': 763, 'indices_vides': [], 'connus': 3911, 'net_moyen_tous': 0.0568, 'net_median_tous': -0.0813, 'net_moyen_gardes': -0.1164, 'net_median_gardes': -0.079, 'part_gagnante_gardes': 0.342, 'correlation_rang': 0.1342}
-[14:21:21] durée 252 : modèles année par année
-[14:21:22]   durée 252, 2017-2018 : {'appris': 7518, 'testes': 14224, 'seuil': 0.7966, 'gardes': 105, 'indices_vides': ['plan_10b5_1'], 'connus': 10233, 'net_moyen_tous': -0.082, 'net_median_tous': -0.1325, 'net_moyen_gardes': -0.1194, 'net_median_gardes': -0.0573, 'part_gagnante_gardes': 0.1408, 'correlation_rang': 0.1102}
-[14:21:23]   durée 252, 2018-2019 : {'appris': 17620, 'testes': 20070, 'seuil': 0.7486, 'gardes': 240, 'indices_vides': ['plan_10b5_1'], 'connus': 12318, 'net_moyen_tous': -0.1681, 'net_median_tous': -0.2185, 'net_moyen_gardes': -0.2714, 'net_median_gardes': -0.1865, 'part_gagnante_gardes': 0.2214, 'correlation_rang': 0.0592}
-[14:21:25]   durée 252, 2019-2020 : {'appris': 27619, 'testes': 18527, 'seuil': 0.6971, 'gardes': 672, 'indices_vides': ['plan_10b5_1'], 'connus': 12246, 'net_moyen_tous': 0.4191, 'net_median_tous': -0.0283, 'net_moyen_gardes': 0.6028, 'net_median_gardes': 0.4424, 'part_gagnante_gardes': 0.7416, 'correlation_rang': 0.051}
-[14:21:27]   durée 252, 2020-2021 : {'appris': 40216, 'testes': 12792, 'seuil': 0.6709, 'gardes': 363, 'indices_vides': ['plan_10b5_1'], 'connus': 8959, 'net_moyen_tous': 1.1079, 'net_median_tous': -0.1121, 'net_moyen_gardes': -0.1226, 'net_median_gardes': -0.1305, 'part_gagnante_gardes': 0.3953, 'correlation_rang': 0.1518}
-[14:21:30]   durée 252, 2021-2022 : {'appris': 52338, 'testes': 16564, 'seuil': 0.6557, 'gardes': 651, 'indices_vides': ['plan_10b5_1'], 'connus': 12453, 'net_moyen_tous': -0.138, 'net_median_tous': -0.1543, 'net_moyen_gardes': -0.1947, 'net_median_gardes': -0.2586, 'part_gagnante_gardes': 0.2658, 'correlation_rang': 0.0228}
-[14:21:33]   durée 252, 2022-2023 : {'appris': 61438, 'testes': 15298, 'seuil': 0.649, 'gardes': 398, 'indices_vides': ['plan_10b5_1'], 'connus': 11087, 'net_moyen_tous': -0.2156, 'net_median_tous': -0.2775, 'net_moyen_gardes': -0.2263, 'net_median_gardes': -0.3219, 'part_gagnante_gardes': 0.2695, 'correlation_rang': 0.0907}
-[14:21:36]   durée 252, 2023-2024 : {'appris': 73717, 'testes': 12681, 'seuil': 0.638, 'gardes': 780, 'indices_vides': [], 'connus': 8486, 'net_moyen_tous': -0.0738, 'net_median_tous': -0.1922, 'net_moyen_gardes': 0.0333, 'net_median_gardes': -0.1061, 'part_gagnante_gardes': 0.4289, 'correlation_rang': 0.2269}
-[14:21:40]   durée 252, 2024-2025 : {'appris': 84846, 'testes': 11489, 'seuil': 0.6303, 'gardes': 521, 'indices_vides': [], 'connus': 6981, 'net_moyen_tous': -0.0371, 'net_median_tous': -0.1688, 'net_moyen_gardes': -0.0156, 'net_median_gardes': -0.0221, 'part_gagnante_gardes': 0.4583, 'correlation_rang': 0.1678}
-[14:21:44]   durée 252, 2025-2026 : {'appris': 93266, 'testes': 11284, 'seuil': 0.6254, 'gardes': 815, 'indices_vides': [], 'connus': 835, 'net_moyen_tous': 0.5841, 'net_median_tous': -0.1736, 'net_moyen_gardes': 0.1384, 'net_median_gardes': 0.1799, 'part_gagnante_gardes': 0.7808, 'correlation_rang': 0.2611}
-[14:21:44] découverte : le banc
-[14:21:46] coffre-fort : le banc
-[14:22:18] durée 63 : {'portefeuille': -0.2727, 'spy_garde': 2.0795, 'annees_gagnees': 3, 'annees': 9, 'mois': 108, 'ecart_mensuel_moyen': -0.00997, 't_mensuel': -1.31, 'reussi': False}
-[14:22:18] durée 126 : {'portefeuille': 1.2172, 'spy_garde': 2.0795, 'annees_gagnees': 4, 'annees': 9, 'mois': 108, 'ecart_mensuel_moyen': 0.00127, 't_mensuel': 0.16, 'reussi': False}
-[14:22:18] durée 252 : {'portefeuille': 0.5039, 'spy_garde': 2.0795, 'annees_gagnees': 4, 'annees': 9, 'mois': 108, 'ecart_mensuel_moyen': -0.00509, 't_mensuel': -0.92, 'reussi': False}
+[16:57:28] coffre-fort : chargement
+[16:57:56] coffre-fort : 473675 formulaires, prix de SPY 2015-07-01 → 2026-09-11
+[16:58:02]   20000 achats
+[16:58:08]   40000 achats
+[16:58:11]   60000 achats
+[16:58:15]   80000 achats
+[16:58:19]   100000 achats
+[16:58:23]   120000 achats
+[16:58:23] coffre-fort : 121610 achats
+[16:58:25] découverte : chargement
+[16:58:41] découverte : 201982 formulaires, prix de SPY 2015-07-01 → 2026-09-11
+[16:58:42] coffre-fort : 36963 achats sans toutes leurs cibles, encore sans après la découverte : 36963
+[16:58:46]   20000 achats
+[16:58:49] découverte : 35454 achats ; en tout 157064 achats, 53 indices
+[16:58:51] durée 63 : modèles année par année
+[16:58:53]   durée 63, 2017-2018 : {'appris': 14677, 'testes': 14224, 'seuil': 0.7216, 'gardes': 298, 'indices_vides': ['plan_10b5_1'], 'connus': 10229, 'net_moyen_tous': 0.002, 'net_median_tous': -0.024, 'net_moyen_gardes': -0.0162, 'net_median_gardes': -0.0355, 'part_gagnante_gardes': 0.3589, 'correlation_rang': 0.0207}
+[16:58:56]   durée 63, 2018-2019 : {'appris': 24985, 'testes': 20070, 'seuil': 0.6713, 'gardes': 344, 'indices_vides': ['plan_10b5_1'], 'connus': 12300, 'net_moyen_tous': -0.0406, 'net_median_tous': -0.0395, 'net_moyen_gardes': -0.0056, 'net_median_gardes': -0.0362, 'part_gagnante_gardes': 0.4366, 'correlation_rang': 0.0631}
+[16:58:59]   durée 63, 2019-2020 : {'appris': 36843, 'testes': 18527, 'seuil': 0.6493, 'gardes': 722, 'indices_vides': ['plan_10b5_1'], 'connus': 12233, 'net_moyen_tous': 0.0409, 'net_median_tous': -0.0544, 'net_moyen_gardes': 0.1669, 'net_median_gardes': 0.0753, 'part_gagnante_gardes': 0.6275, 'correlation_rang': 0.1058}
+[16:59:02]   durée 63, 2020-2021 : {'appris': 49303, 'testes': 12792, 'seuil': 0.635, 'gardes': 425, 'indices_vides': ['plan_10b5_1'], 'connus': 8956, 'net_moyen_tous': 0.0533, 'net_median_tous': -0.0267, 'net_moyen_gardes': -0.0165, 'net_median_gardes': -0.0699, 'part_gagnante_gardes': 0.3696, 'correlation_rang': -0.0165}
+[16:59:06]   durée 63, 2021-2022 : {'appris': 58708, 'testes': 16564, 'seuil': 0.6261, 'gardes': 686, 'indices_vides': ['plan_10b5_1'], 'connus': 12447, 'net_moyen_tous': -0.0608, 'net_median_tous': -0.0572, 'net_moyen_gardes': -0.0352, 'net_median_gardes': -0.08, 'part_gagnante_gardes': 0.4087, 'correlation_rang': -0.0085}
+[16:59:11]   durée 63, 2022-2023 : {'appris': 69756, 'testes': 15298, 'seuil': 0.6131, 'gardes': 582, 'indices_vides': ['plan_10b5_1'], 'connus': 11080, 'net_moyen_tous': -0.0517, 'net_median_tous': -0.066, 'net_moyen_gardes': -0.0596, 'net_median_gardes': -0.0899, 'part_gagnante_gardes': 0.265, 'correlation_rang': 0.1355}
+[16:59:16]   durée 63, 2023-2024 : {'appris': 81334, 'testes': 12681, 'seuil': 0.6042, 'gardes': 1091, 'indices_vides': [], 'connus': 8483, 'net_moyen_tous': -0.0416, 'net_median_tous': -0.0665, 'net_moyen_gardes': -0.0668, 'net_median_gardes': -0.0639, 'part_gagnante_gardes': 0.336, 'correlation_rang': 0.1554}
+[16:59:21]   durée 63, 2024-2025 : {'appris': 91181, 'testes': 11489, 'seuil': 0.5998, 'gardes': 426, 'indices_vides': [], 'connus': 6979, 'net_moyen_tous': -0.0172, 'net_median_tous': -0.0574, 'net_moyen_gardes': 0.018, 'net_median_gardes': -0.0055, 'part_gagnante_gardes': 0.4618, 'correlation_rang': 0.1377}
+[16:59:27]   durée 63, 2025-2026 : {'appris': 98086, 'testes': 11284, 'seuil': 0.5964, 'gardes': 596, 'indices_vides': [], 'connus': 6046, 'net_moyen_tous': -0.0352, 'net_median_tous': -0.0631, 'net_moyen_gardes': -0.0589, 'net_median_gardes': -0.0624, 'part_gagnante_gardes': 0.3497, 'correlation_rang': 0.1211}
+[16:59:27] durée 126 : modèles année par année
+[16:59:29]   durée 126, 2017-2018 : {'appris': 12535, 'testes': 14224, 'seuil': 0.7574, 'gardes': 239, 'indices_vides': ['plan_10b5_1'], 'connus': 10229, 'net_moyen_tous': -0.0252, 'net_median_tous': -0.0563, 'net_moyen_gardes': 0.0109, 'net_median_gardes': -0.023, 'part_gagnante_gardes': 0.3851, 'correlation_rang': 0.0802}
+[16:59:32]   durée 126, 2018-2019 : {'appris': 22430, 'testes': 20070, 'seuil': 0.6992, 'gardes': 236, 'indices_vides': ['plan_10b5_1'], 'connus': 12300, 'net_moyen_tous': -0.0925, 'net_median_tous': -0.1015, 'net_moyen_gardes': -0.1251, 'net_median_gardes': -0.0876, 'part_gagnante_gardes': 0.3631, 'correlation_rang': 0.0747}
+[16:59:35]   durée 126, 2019-2020 : {'appris': 34557, 'testes': 18527, 'seuil': 0.664, 'gardes': 606, 'indices_vides': ['plan_10b5_1'], 'connus': 12233, 'net_moyen_tous': 0.0511, 'net_median_tous': -0.0944, 'net_moyen_gardes': 0.071, 'net_median_gardes': -0.0297, 'part_gagnante_gardes': 0.4225, 'correlation_rang': 0.0238}
+[16:59:38]   durée 126, 2020-2021 : {'appris': 44755, 'testes': 12792, 'seuil': 0.6455, 'gardes': 347, 'indices_vides': ['plan_10b5_1'], 'connus': 8956, 'net_moyen_tous': 0.0783, 'net_median_tous': -0.0535, 'net_moyen_gardes': -0.0079, 'net_median_gardes': -0.0775, 'part_gagnante_gardes': 0.321, 'correlation_rang': 0.0334}
+[16:59:42]   durée 126, 2021-2022 : {'appris': 56710, 'testes': 16564, 'seuil': 0.632, 'gardes': 409, 'indices_vides': ['plan_10b5_1'], 'connus': 12447, 'net_moyen_tous': -0.1011, 'net_median_tous': -0.0888, 'net_moyen_gardes': -0.2608, 'net_median_gardes': -0.2794, 'part_gagnante_gardes': 0.2101, 'correlation_rang': 0.0656}
+[16:59:46]   durée 126, 2022-2023 : {'appris': 66801, 'testes': 15298, 'seuil': 0.6316, 'gardes': 326, 'indices_vides': ['plan_10b5_1'], 'connus': 11080, 'net_moyen_tous': -0.1083, 'net_median_tous': -0.133, 'net_moyen_gardes': -0.14, 'net_median_gardes': -0.1229, 'part_gagnante_gardes': 0.249, 'correlation_rang': 0.1437}
+[16:59:51]   durée 126, 2023-2024 : {'appris': 78939, 'testes': 12681, 'seuil': 0.6196, 'gardes': 428, 'indices_vides': [], 'connus': 8483, 'net_moyen_tous': -0.0593, 'net_median_tous': -0.111, 'net_moyen_gardes': -0.0522, 'net_median_gardes': -0.0307, 'part_gagnante_gardes': 0.4377, 'correlation_rang': 0.1602}
+[16:59:56]   durée 126, 2024-2025 : {'appris': 89526, 'testes': 11489, 'seuil': 0.6165, 'gardes': 346, 'indices_vides': [], 'connus': 6979, 'net_moyen_tous': -0.0258, 'net_median_tous': -0.1116, 'net_moyen_gardes': -0.0553, 'net_median_gardes': -0.0463, 'part_gagnante_gardes': 0.35, 'correlation_rang': 0.1348}
+[17:00:02]   durée 126, 2025-2026 : {'appris': 96319, 'testes': 11284, 'seuil': 0.6113, 'gardes': 789, 'indices_vides': [], 'connus': 3910, 'net_moyen_tous': -0.0412, 'net_median_tous': -0.0814, 'net_moyen_gardes': -0.1239, 'net_median_gardes': -0.0848, 'part_gagnante_gardes': 0.3442, 'correlation_rang': 0.1491}
+[17:00:02] durée 252 : modèles année par année
+[17:00:04]   durée 252, 2017-2018 : {'appris': 7512, 'testes': 14224, 'seuil': 0.7949, 'gardes': 108, 'indices_vides': ['plan_10b5_1'], 'connus': 10229, 'net_moyen_tous': -0.0808, 'net_median_tous': -0.1322, 'net_moyen_gardes': -0.0905, 'net_median_gardes': -0.0573, 'part_gagnante_gardes': 0.1096, 'correlation_rang': 0.1115}
+[17:00:06]   durée 252, 2018-2019 : {'appris': 17613, 'testes': 20070, 'seuil': 0.7523, 'gardes': 194, 'indices_vides': ['plan_10b5_1'], 'connus': 12300, 'net_moyen_tous': -0.1649, 'net_median_tous': -0.2171, 'net_moyen_gardes': -0.1891, 'net_median_gardes': -0.1694, 'part_gagnante_gardes': 0.3091, 'correlation_rang': 0.0583}
+[17:00:09]   durée 252, 2019-2020 : {'appris': 27596, 'testes': 18527, 'seuil': 0.6967, 'gardes': 856, 'indices_vides': ['plan_10b5_1'], 'connus': 12233, 'net_moyen_tous': 0.4208, 'net_median_tous': -0.027, 'net_moyen_gardes': 0.4694, 'net_median_gardes': 0.201, 'part_gagnante_gardes': 0.6397, 'correlation_rang': 0.0601}
+[17:00:12]   durée 252, 2020-2021 : {'appris': 40175, 'testes': 12792, 'seuil': 0.6722, 'gardes': 309, 'indices_vides': ['plan_10b5_1'], 'connus': 8956, 'net_moyen_tous': -0.0306, 'net_median_tous': -0.1122, 'net_moyen_gardes': -0.1386, 'net_median_gardes': -0.1267, 'part_gagnante_gardes': 0.2857, 'correlation_rang': 0.1379}
+[17:00:15]   durée 252, 2021-2022 : {'appris': 52287, 'testes': 16564, 'seuil': 0.6559, 'gardes': 529, 'indices_vides': ['plan_10b5_1'], 'connus': 12447, 'net_moyen_tous': -0.138, 'net_median_tous': -0.1544, 'net_moyen_gardes': -0.1717, 'net_median_gardes': -0.2383, 'part_gagnante_gardes': 0.2788, 'correlation_rang': 0.0311}
+[17:00:20]   durée 252, 2022-2023 : {'appris': 61381, 'testes': 15298, 'seuil': 0.6505, 'gardes': 421, 'indices_vides': ['plan_10b5_1'], 'connus': 11080, 'net_moyen_tous': -0.2156, 'net_median_tous': -0.2776, 'net_moyen_gardes': -0.2748, 'net_median_gardes': -0.339, 'part_gagnante_gardes': 0.2181, 'correlation_rang': 0.0796}
+[17:00:24]   durée 252, 2023-2024 : {'appris': 73658, 'testes': 12681, 'seuil': 0.6406, 'gardes': 773, 'indices_vides': [], 'connus': 8483, 'net_moyen_tous': -0.0739, 'net_median_tous': -0.1923, 'net_moyen_gardes': 0.0371, 'net_median_gardes': -0.0493, 'part_gagnante_gardes': 0.4758, 'correlation_rang': 0.2373}
+[17:00:29]   durée 252, 2024-2025 : {'appris': 84778, 'testes': 11489, 'seuil': 0.629, 'gardes': 488, 'indices_vides': [], 'connus': 6979, 'net_moyen_tous': -0.0371, 'net_median_tous': -0.1688, 'net_moyen_gardes': -0.0287, 'net_median_gardes': -0.0221, 'part_gagnante_gardes': 0.4566, 'correlation_rang': 0.1652}
+[17:00:35]   durée 252, 2025-2026 : {'appris': 93200, 'testes': 11284, 'seuil': 0.6265, 'gardes': 760, 'indices_vides': [], 'connus': 834, 'net_moyen_tous': -0.1337, 'net_median_tous': -0.1736, 'net_moyen_gardes': 0.1211, 'net_median_gardes': 0.1476, 'part_gagnante_gardes': 0.7424, 'correlation_rang': 0.2778}
+[17:00:35] découverte : le banc
+[17:00:38] coffre-fort : le banc
+[17:01:11] durée 63 : {'portefeuille': -0.2193, 'spy_garde': 2.0795, 'annees_gagnees': 2, 'annees': 9, 'mois': 108, 'ecart_mensuel_moyen': -0.00979, 't_mensuel': -1.4, 'reussi': False}
+[17:01:11] durée 126 : {'portefeuille': 0.0199, 'spy_garde': 2.0795, 'annees_gagnees': 3, 'annees': 9, 'mois': 108, 'ecart_mensuel_moyen': -0.00636, 't_mensuel': -0.78, 'reussi': False}
+[17:01:11] durée 252 : {'portefeuille': 0.0205, 'spy_garde': 2.0795, 'annees_gagnees': 3, 'annees': 9, 'mois': 108, 'ecart_mensuel_moyen': -0.00861, 't_mensuel': -1.55, 'reussi': False}
 {
  "63": {
-  "portefeuille": -0.2727,
+  "portefeuille": -0.2193,
+  "spy_garde": 2.0795,
+  "annees_gagnees": 2,
+  "annees": 9,
+  "mois": 108,
+  "ecart_mensuel_moyen": -0.00979,
+  "t_mensuel": -1.4,
+  "reussi": false
+ },
+ "126": {
+  "portefeuille": 0.0199,
   "spy_garde": 2.0795,
   "annees_gagnees": 3,
   "annees": 9,
   "mois": 108,
-  "ecart_mensuel_moyen": -0.00997,
-  "t_mensuel": -1.31,
-  "reussi": false
- },
- "126": {
-  "portefeuille": 1.2172,
-  "spy_garde": 2.0795,
-  "annees_gagnees": 4,
-  "annees": 9,
-  "mois": 108,
-  "ecart_mensuel_moyen": 0.00127,
-  "t_mensuel": 0.16,
+  "ecart_mensuel_moyen": -0.00636,
+  "t_mensuel": -0.78,
   "reussi": false
  },
  "252": {
-  "portefeuille": 0.5039,
+  "portefeuille": 0.0205,
   "spy_garde": 2.0795,
-  "annees_gagnees": 4,
+  "annees_gagnees": 3,
   "annees": 9,
   "mois": 108,
-  "ecart_mensuel_moyen": -0.00509,
-  "t_mensuel": -0.92,
+  "ecart_mensuel_moyen": -0.00861,
+  "t_mensuel": -1.55,
   "reussi": false
  }
 }
