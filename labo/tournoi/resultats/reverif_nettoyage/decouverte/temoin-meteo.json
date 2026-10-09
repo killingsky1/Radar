@@ -1,0 +1,116 @@
+{
+ "fichier": "temoin-meteo.py",
+ "id": "temoin-meteo",
+ "stats": {
+  "annees": {
+   "2023-2024": {
+    "transactions": 20,
+    "en_attente": 0,
+    "achats": 20,
+    "mesurable": true,
+    "ecart_moyen": -0.1294,
+    "ecart_median": -0.1944,
+    "bat_le_marche": 0.25,
+    "t": -1.32,
+    "portefeuille": -0.2239,
+    "spy_garde": 0.2263
+   },
+   "2024-2025": {
+    "transactions": 20,
+    "en_attente": 0,
+    "achats": 20,
+    "mesurable": true,
+    "ecart_moyen": -0.079,
+    "ecart_median": -0.1335,
+    "bat_le_marche": 0.35,
+    "t": -1.04,
+    "portefeuille": -0.009,
+    "spy_garde": 0.133
+   },
+   "2025-2026": {
+    "transactions": 18,
+    "en_attente": 2,
+    "achats": 20,
+    "mesurable": false,
+    "ecart_moyen": -0.1246,
+    "ecart_median": -0.1128,
+    "bat_le_marche": 0.2778,
+    "t": -1.5,
+    "portefeuille": -0.1446,
+    "spy_garde": 0.2091
+   }
+  },
+  "total": {
+   "portefeuille": -0.3663,
+   "spy_garde": 0.7222,
+   "pire_baisse": -0.4528,
+   "mois": 39,
+   "ecart_mensuel_moyen": -0.02418,
+   "t_mensuel": -2.68
+  }
+ },
+ "mois": 36,
+ "ecart_mensuel_moyen": -0.02484,
+ "t_periode": -2.54,
+ "achats": 60,
+ "periode_entiere": {
+  "portefeuille": -0.3501,
+  "spy": 0.6827,
+  "iwm": 0.6011,
+  "annees_gagnees": 0
+ },
+ "signaux": {
+  "signaux": 5380,
+  "achats": 60,
+  "sans_prix": 974,
+  "meteo_fermee": 0,
+  "places_pleines": 4338,
+  "deja_en_portefeuille": 8,
+  "pause_symbole": 0,
+  "montant_trop_petit": 0
+ },
+ "criteres": {
+  "1_bat_spy_chaque_annee": false,
+  "2_t_3_ou_plus": false,
+  "3_achats": true
+ },
+ "par_annee": {
+  "2023-2024": {
+   "achats": 20,
+   "portefeuille": -0.2239,
+   "spy_garde": 0.2263,
+   "ecart_moyen": -0.1294,
+   "t": -1.32
+  },
+  "2024-2025": {
+   "achats": 20,
+   "portefeuille": -0.009,
+   "spy_garde": 0.133,
+   "ecart_moyen": -0.079,
+   "t": -1.04
+  },
+  "2025-2026": {
+   "achats": 20,
+   "portefeuille": -0.1446,
+   "spy_garde": 0.2091,
+   "ecart_moyen": -0.1246,
+   "t": -1.5
+  }
+ },
+ "deux_programmations": "identiques",
+ "ecarts": {
+  "seulement_testeur": [],
+  "seulement_verificateur": [],
+  "nombres": [
+   60,
+   60,
+   60
+  ],
+  "encore_ouvertes": [
+   2,
+   2
+  ]
+ },
+ "temoin": true,
+ "passe": false
+}

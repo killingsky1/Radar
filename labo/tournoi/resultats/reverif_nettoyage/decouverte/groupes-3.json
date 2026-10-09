@@ -1,0 +1,6 @@
+{
+ "fichier": "groupes-3.py",
+ "id": "groupes-3",
+ "ecartee": "Le banc n'achète qu'au lendemain d'un formulaire 4 : garder() ne reçoit que les lignes d'evenements.jsonl.gz (formulaires 4) et l'achat se fait au 1er jour de bourse après LEUR dépôt. L'événement de cette règle est un dépôt 13D initial, qui n'est pas une de ces lignes : les dates des 13D sont dans les données (ctx.depots_13), mais l'entrée « clôture du 1er jour de bourse après le 13D » est impossible, sauf si un formulaire 4 de la même compagnie est déposé par hasard le jour même. Garder seulement ces coïncidences, ou acheter au lendemain du formulaire 4 suivant, testerait une autre règle. Écartée telle qu'écrite, pas modifiée ; testable seulement si le banc lisait aussi les 13D comme événements.",
+ "passe": false
+}

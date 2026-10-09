@@ -1,0 +1,104 @@
+{
+ "fichier": "meteo-3.py",
+ "id": "meteo-3",
+ "stats": {
+  "annees": {
+   "2024-2025": {
+    "transactions": 10,
+    "en_attente": 0,
+    "achats": 10,
+    "mesurable": true,
+    "ecart_moyen": -0.0663,
+    "ecart_median": -0.1119,
+    "bat_le_marche": 0.3,
+    "t": -0.98,
+    "portefeuille": 0.0219,
+    "spy_garde": 0.133
+   },
+   "2025-2026": {
+    "transactions": 13,
+    "en_attente": 7,
+    "achats": 20,
+    "mesurable": false,
+    "ecart_moyen": -0.2004,
+    "ecart_median": -0.2081,
+    "bat_le_marche": 0.0769,
+    "t": -3.82,
+    "portefeuille": -0.0461,
+    "spy_garde": 0.2091
+   }
+  },
+  "total": {
+   "portefeuille": 0.0559,
+   "spy_garde": 0.7222,
+   "pire_baisse": -0.2579,
+   "mois": 39,
+   "ecart_mensuel_moyen": -0.01202,
+   "t_mensuel": -2.44
+  }
+ },
+ "mois": 36,
+ "ecart_mensuel_moyen": -0.00897,
+ "t_periode": -1.8,
+ "achats": 30,
+ "periode_entiere": {
+  "portefeuille": 0.1975,
+  "spy": 0.6827,
+  "iwm": 0.6011,
+  "annees_gagnees": 0
+ },
+ "signaux": {
+  "signaux": 5380,
+  "achats": 30,
+  "sans_prix": 974,
+  "meteo_fermee": 2702,
+  "places_pleines": 1658,
+  "deja_en_portefeuille": 16,
+  "pause_symbole": 0,
+  "montant_trop_petit": 0
+ },
+ "criteres": {
+  "1_bat_spy_chaque_annee": false,
+  "2_t_3_ou_plus": false,
+  "3_achats": false
+ },
+ "par_annee": {
+  "2023-2024": {
+   "achats": null,
+   "portefeuille": null,
+   "spy_garde": null,
+   "ecart_moyen": null,
+   "t": null
+  },
+  "2024-2025": {
+   "achats": 10,
+   "portefeuille": 0.0219,
+   "spy_garde": 0.133,
+   "ecart_moyen": -0.0663,
+   "t": -0.98
+  },
+  "2025-2026": {
+   "achats": 20,
+   "portefeuille": -0.0461,
+   "spy_garde": 0.2091,
+   "ecart_moyen": -0.2004,
+   "t": -3.82
+  }
+ },
+ "deux_programmations": "identiques",
+ "ecarts": {
+  "seulement_testeur": [],
+  "seulement_verificateur": [],
+  "nombres": [
+   30,
+   30,
+   30
+  ],
+  "encore_ouvertes": [
+   7,
+   7
+  ]
+ },
+ "temoin": false,
+ "passe": false
+}
