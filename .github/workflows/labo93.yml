@@ -27,6 +27,7 @@ jobs:
       - run: pip install scikit-learn==1.9.1 numpy==2.4.6
       - name: "Les essais d'abord : signaux cachés trouvés, critère atteignable, rien sans signal, fractionnements"
         run: |
+          python labo/chasse2/essai_nettoyage.py
           python labo/chasse2/essai_chasse_c.py
           python labo/chasse2/essai_chasse_b.py
       - name: La base de la chasse 2 (cache)

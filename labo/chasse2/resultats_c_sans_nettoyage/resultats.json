@@ -1,0 +1,263 @@
+{
+ "plan": "labo/chasse2/PLAN.md (chasse C)",
+ "meteo_du": "2011-01-05",
+ "meteo_au": "2026-07-01",
+ "fractionnements_sso": [
+  [
+   "SSO",
+   20150522,
+   2.0
+  ],
+  [
+   "SSO",
+   20200819,
+   2.0
+  ],
+  [
+   "SSO",
+   20220114,
+   2.0
+  ],
+  [
+   "SSO",
+   20251120,
+   2.0
+  ]
+ ],
+ "10 $": {
+  "total": {
+   "portefeuille": 6.285,
+   "spy": 4.4724
+  },
+  "examen_2012_2017": {
+   "portefeuille": 0.7702,
+   "spy": 0.7719
+  },
+  "annees_gagnees": "6 sur 8 années avec un pari ; autres années : +1.3192 contre SPY +1.3192",
+  "mois": 168,
+  "ecart_mensuel_moyen": 0.00288,
+  "t_mensuel": 1.31,
+  "criteres": {
+   "bat_spy_au_total": true,
+   "annees": true,
+   "t_mensuel": false,
+   "examen_2012_2017": false
+  },
+  "reussi": false,
+  "par_annee": {
+   "2012-2013": {
+    "portefeuille": 0.1726,
+    "spy": 0.1726
+   },
+   "2013-2014": {
+    "portefeuille": 0.2232,
+    "spy": 0.2232
+   },
+   "2014-2015": {
+    "portefeuille": 0.0518,
+    "spy": 0.0518
+   },
+   "2015-2016": {
+    "portefeuille": -0.0203,
+    "spy": 0.0179
+   },
+   "2016-2017": {
+    "portefeuille": 0.1978,
+    "spy": 0.154
+   },
+   "2017-2018": {
+    "portefeuille": 0.1203,
+    "spy": 0.1203
+   },
+   "2018-2019": {
+    "portefeuille": 0.1347,
+    "spy": 0.0816
+   },
+   "2019-2020": {
+    "portefeuille": 0.2317,
+    "spy": 0.0524
+   },
+   "2020-2021": {
+    "portefeuille": 0.4898,
+    "spy": 0.3882
+   },
+   "2021-2022": {
+    "portefeuille": -0.1804,
+    "spy": -0.1187
+   },
+   "2022-2023": {
+    "portefeuille": 0.259,
+    "spy": 0.175
+   },
+   "2023-2024": {
+    "portefeuille": 0.246,
+    "spy": 0.2277
+   },
+   "2024-2025": {
+    "portefeuille": 0.1353,
+    "spy": 0.1353
+   },
+   "2025-2026": {
+    "portefeuille": 0.2087,
+    "spy": 0.2087
+   }
+  },
+  "episodes": [
+   {
+    "debut": "2015-08-14",
+    "rang": 0.9003,
+    "renouvele": [
+     "2016-02-18"
+    ],
+    "fin": "2016-08-17"
+   },
+   {
+    "debut": "2018-10-31",
+    "rang": 0.9057,
+    "fin": "2019-05-07"
+   },
+   {
+    "debut": "2019-08-30",
+    "rang": 0.9026,
+    "fin": "2020-03-05"
+   },
+   {
+    "debut": "2020-03-12",
+    "rang": 0.9317,
+    "fin": "2020-09-10"
+   },
+   {
+    "debut": "2022-05-16",
+    "rang": 0.9034,
+    "fin": "2022-11-16"
+   },
+   {
+    "debut": "2023-05-26",
+    "rang": 0.9003,
+    "fin": "2023-11-28"
+   }
+  ],
+  "sso": {
+   "source": "SSO calculé (2 × SPY par jour − 0,89 %/an)",
+   "couverture": 0.7497
+  }
+ },
+ "0 $": {
+  "total": {
+   "portefeuille": 6.3578,
+   "spy": 4.4724
+  },
+  "examen_2012_2017": {
+   "portefeuille": 0.7747,
+   "spy": 0.7719
+  },
+  "annees_gagnees": "6 sur 8 années avec un pari ; autres années : +1.3192 contre SPY +1.3192",
+  "mois": 168,
+  "ecart_mensuel_moyen": 0.00293,
+  "t_mensuel": 1.34,
+  "criteres": {
+   "bat_spy_au_total": true,
+   "annees": true,
+   "t_mensuel": false,
+   "examen_2012_2017": true
+  },
+  "reussi": false,
+  "par_annee": {
+   "2012-2013": {
+    "portefeuille": 0.1726,
+    "spy": 0.1726
+   },
+   "2013-2014": {
+    "portefeuille": 0.2232,
+    "spy": 0.2232
+   },
+   "2014-2015": {
+    "portefeuille": 0.0518,
+    "spy": 0.0518
+   },
+   "2015-2016": {
+    "portefeuille": -0.0191,
+    "spy": 0.0179
+   },
+   "2016-2017": {
+    "portefeuille": 0.1993,
+    "spy": 0.154
+   },
+   "2017-2018": {
+    "portefeuille": 0.1203,
+    "spy": 0.1203
+   },
+   "2018-2019": {
+    "portefeuille": 0.1369,
+    "spy": 0.0816
+   },
+   "2019-2020": {
+    "portefeuille": 0.2352,
+    "spy": 0.0524
+   },
+   "2020-2021": {
+    "portefeuille": 0.4907,
+    "spy": 0.3882
+   },
+   "2021-2022": {
+    "portefeuille": -0.18,
+    "spy": -0.1187
+   },
+   "2022-2023": {
+    "portefeuille": 0.2603,
+    "spy": 0.175
+   },
+   "2023-2024": {
+    "portefeuille": 0.2466,
+    "spy": 0.2277
+   },
+   "2024-2025": {
+    "portefeuille": 0.1353,
+    "spy": 0.1353
+   },
+   "2025-2026": {
+    "portefeuille": 0.2087,
+    "spy": 0.2087
+   }
+  },
+  "episodes": [
+   {
+    "debut": "2015-08-14",
+    "rang": 0.9003,
+    "renouvele": [
+     "2016-02-18"
+    ],
+    "fin": "2016-08-17"
+   },
+   {
+    "debut": "2018-10-31",
+    "rang": 0.9057,
+    "fin": "2019-05-07"
+   },
+   {
+    "debut": "2019-08-30",
+    "rang": 0.9026,
+    "fin": "2020-03-05"
+   },
+   {
+    "debut": "2020-03-12",
+    "rang": 0.9317,
+    "fin": "2020-09-10"
+   },
+   {
+    "debut": "2022-05-16",
+    "rang": 0.9034,
+    "fin": "2022-11-16"
+   },
+   {
+    "debut": "2023-05-26",
+    "rang": 0.9003,
+    "fin": "2023-11-28"
+   }
+  ],
+  "sso": {
+   "source": "SSO calculé (2 × SPY par jour − 0,89 %/an)",
+   "couverture": 0.7497
+  }
+ }
+}

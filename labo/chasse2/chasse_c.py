@@ -147,7 +147,7 @@ def main():
     serie = meteo(x.base)
     rang = rangs(serie)
     resultats = {"plan": "labo/chasse2/PLAN.md (chasse C)", "meteo_du": min(rang), "meteo_au": max(rang),
-                 "fractionnements_sso": fractionnements}
+                 "fractionnements_sso": fractionnements, "prix_retires": px.retires}
     for nom, frais in c.FRAIS.items():
         valeurs, spy, episodes, paris, info_sso = simuler(px, rang, frais)
         j = c.juger(valeurs, spy, paris)

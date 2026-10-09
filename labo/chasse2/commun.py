@@ -51,14 +51,17 @@ class Prix:
         self.cal_np = np.array(self.cal, dtype=np.int64)
         self.pos = {j: i for i, j in enumerate(self.cal)}
         self.d, self.p, self.q, self.c, self.f, self.aj = {}, {}, {}, {}, {}, {}
+        self.retires = {"prix de 0,01 $": 0, "écarts qui reviennent": 0}
         for x in lire_jsonl(base / "prix.jsonl.gz"):
             if symboles is not None and x["s"] not in symboles:
                 continue
             s = x["s"]
-            self.d[s] = np.array(x["d"], dtype=np.int64)
-            self.p[s] = np.array(x["p"], dtype=np.float64)
-            self.q[s] = np.array(x["q"], dtype=np.int64)
-            self.c[s] = [sys.intern(v) for v in x["c"]]
+            p = np.array(x["p"], dtype=np.float64)
+            garde = nettoyer(p, self.retires)
+            self.d[s] = np.array(x["d"], dtype=np.int64)[garde]
+            self.p[s] = p[garde]
+            self.q[s] = np.array(x["q"], dtype=np.int64)[garde]
+            self.c[s] = [sys.intern(v) for v, g in zip(x["c"], garde) if g]
 
     def rang(self, j):
         """Position du dernier jour de bourse ≤ j dans le calendrier."""
@@ -133,6 +136,34 @@ class Prix:
             if debut <= j <= fin:
                 sortie[j // 100] = j
         return [sortie[m] for m in sorted(sortie)]
+
+
+def nettoyer(p, compte):
+    """Masque des clôtures gardées (labo/chasse2/PLAN.md, correction 2) : un prix de 0,01 $ ou moins est un prix bidon des
+    fichiers de la SEC (souvent le 1er jour d'un nouveau code du titre) ; un écart ×3 ou ÷3 d'une à trois clôtures qui
+    revient au prix d'avant (à 1,5 près) est une erreur (un vrai fractionnement ne revient pas)."""
+    garde = p > 0.0101
+    compte["prix de 0,01 $"] += int((~garde).sum())
+    idx = np.nonzero(garde)[0]
+    k, dernier = 0, None
+    while k < len(idx):
+        i = idx[k]
+        if dernier is not None:
+            r = p[i] / p[dernier]
+            if r > 3 or r < 1 / 3:
+                for n in range(1, 4):
+                    if k + n < len(idx) and 1 / 1.5 <= p[idx[k + n]] / p[dernier] <= 1.5:
+                        garde[idx[k:k + n]] = False
+                        compte["écarts qui reviennent"] += n
+                        k += n
+                        break
+                else:
+                    dernier = i
+                    k += 1
+                continue
+        dernier = i
+        k += 1
+    return garde
 
 
 def facteur(r):

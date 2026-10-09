@@ -81,6 +81,16 @@ premières après, déposées dans les 400 jours) changent du même facteur à 2
 bougé de moins de 5 % ce jour-là. Le rendement est alors corrigé du facteur N. Les fractionnements trouvés sont listés
 dans les résultats.
 
+## Correction 2 (9 octobre 2026, AVANT tout calcul de la chasse A ; B et C rejugées)
+La sonde des prix (labo/chasse2/sonde_prix.json) a trouvé des prix bidons dans les fichiers de la SEC : 0,01 $ (souvent
+le 1er jour d'un nouveau code du titre : AON le 1er avril 2020, GMCR en mars 2014) et parfois 1,00 $ (AVGO en janvier
+2016), entre de vrais prix. Un seul suffit à fausser un rendement (GMCR : « +1 000 000 % » en un mois). Règle, pour toutes
+les chasses : un prix de 0,01 $ ou moins est retiré ; un écart ×3 ou ÷3 d'une à trois clôtures qui revient au prix
+d'avant (à 1,5 près) est retiré (un vrai fractionnement ne revient pas). Les chasses B et C ont été jugées une 1re fois
+SANS ce nettoyage (labo93, 9 octobre, 16 h 07 UTC : aucune ne réussit) ; elles sont rejugées avec, sans rien changer
+d'autre ; les deux jugements sont montrés. Le banc du tournoi et la 1re chasse n'avaient pas ce nettoyage non plus : à
+revérifier après la chasse 2.
+
 ## Contrôles avant la vraie course
 Pour B (et A, C) : un faux jeu avec un signal caché (il doit être trouvé et réussir) et le même sans signal (rien ne
 doit réussir, aucune fuite du futur), comme labo/chasse/essai_chasse.py.

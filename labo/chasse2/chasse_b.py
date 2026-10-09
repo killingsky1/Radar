@@ -451,7 +451,7 @@ def main():
     scores, mesures = predire(lignes, fins)
     resultats = {"plan": "labo/chasse2/PLAN.md (chasse B)", "indices": noms, "lignes": len(lignes),
                  "univers_min_max": [min(retenus.values()), max(retenus.values())], "fractionnements": len(fract),
-                 "exemples_fractionnements": fract[:40], "mesures": mesures}
+                 "exemples_fractionnements": fract[:40], "mesures": mesures, "prix_retires": px.retires}
     for nom, frais in c.FRAIS.items():
         valeurs, spy, ordres = simuler(px, lignes, scores, fins, frais)
         j = c.juger(valeurs, spy)
