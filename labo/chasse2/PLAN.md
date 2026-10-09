@@ -72,6 +72,15 @@ Pour une chasse : sur les 14 ans (juillet 2012 à juin 2026), après les frais,
 Si une chasse réussit : elle est suivie dans l'app comme une information (jamais une promesse), avec ses vrais chiffres.
 Si aucune ne réussit : on le dit, chiffres à l'appui, et Radar ne change pas.
 
+## Correction du plan (9 octobre 2026, AVANT tout calcul sur les rendements)
+Les clôtures de la SEC ne sont pas corrigées des fractionnements d'actions, et un fractionnement garde en général le
+même code de titre (CUSIP) : un 10 pour 1 aurait l'air d'une chute de 90 %. Règle, pour toutes les chasses : entre deux
+clôtures du même code de titre, un rapport de prix à 5 % près de 1/N ou de N (N entier de 2 à 50) est un fractionnement
+(ou un regroupement) si c'est confirmé : pour une compagnie, ses actions en circulation (les dernières avant, les
+premières après, déposées dans les 400 jours) changent du même facteur à 20 % près ; pour un fonds coté (SPY, SSO…), SPY a
+bougé de moins de 5 % ce jour-là. Le rendement est alors corrigé du facteur N. Les fractionnements trouvés sont listés
+dans les résultats.
+
 ## Contrôles avant la vraie course
 Pour B (et A, C) : un faux jeu avec un signal caché (il doit être trouvé et réussir) et le même sans signal (rien ne
 doit réussir, aucune fuite du futur), comme labo/chasse/essai_chasse.py.

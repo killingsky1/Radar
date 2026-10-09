@@ -1,0 +1,56 @@
+name: "Labo (chasse 2 : chasses C et B jugées selon le plan figé)"
+
+# Lancé quand on modifie labo/chasse2/declencheur-chasses.txt (ou à la main). Lecture seulement du cache de la chasse 2
+# (aucun site lu) : n'entre pas dans la file du robot (groupe radar). Le plan : labo/chasse2/PLAN.md.
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/chasse2/declencheur-chasses.txt"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: labo93
+  cancel-in-progress: false
+
+jobs:
+  chasser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install scikit-learn==1.9.1 numpy==2.4.6
+      - name: "Les essais d'abord : signaux cachés trouvés, critère atteignable, rien sans signal, fractionnements"
+        run: |
+          python labo/chasse2/essai_chasse_c.py
+          python labo/chasse2/essai_chasse_b.py
+      - name: La base de la chasse 2 (cache)
+        uses: actions/cache/restore@v4
+        with:
+          path: cache2
+          key: chasse2-aucun
+          restore-keys: chasse2-
+      - name: Chasse C (météo des initiés)
+        run: |
+          test -f cache2/base/prix.jsonl.gz && test -f cache2/base/inities.jsonl.gz
+          mkdir -p labo/chasse2/resultats_c labo/chasse2/resultats_b
+          python -u labo/chasse2/chasse_c.py --base cache2/base --sortie labo/chasse2/resultats_c 2>&1 | tee labo/chasse2/resultats_c/journal.txt
+          test "${PIPESTATUS[0]}" = 0
+      - name: Chasse B (tout le marché)
+        run: |
+          python -u labo/chasse2/chasse_b.py --base cache2/base --sortie labo/chasse2/resultats_b 2>&1 | tee labo/chasse2/resultats_b/journal.txt
+          test "${PIPESTATUS[0]}" = 0
+      - name: Sauvegarder les résultats
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/chasse2/resultats_c labo/chasse2/resultats_b || exit 0
+          git commit -m "Labo : chasse 2, résultats des chasses C et B ($(date -u +'%Y-%m-%d %H:%M') UTC)" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
