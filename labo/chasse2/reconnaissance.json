@@ -1,0 +1,363 @@
+{
+ "robots_txt": {
+  "lignes": 98,
+  "texte": "#\n# robots.txt\n#\n# This file is to prevent the crawling and indexing of certain parts\n# of your site by web crawlers and spiders run by sites like Yahoo!\n# and Google. By telling these \"robots\" where not to go on your site,\n# you save bandwidth and server resources.\n#\n# This file will be ignored unless it is at the root of your host:\n# Used:    http://example.com/robots.txt\n# Ignored: http://example.com/site/robots.txt\n#\n# For more information about the robots.txt standard, see:\n# http://www.robotstxt.org/robotstxt.html\n\nUser-agent: *\n# CSS, JS, Images\nAllow: /core/*.css$\nAllow: /core/*.css?\nAllow: /core/*.js$\nAllow: /core/*.js?\nAllow: /core/*.avif\nAllow: /core/*.gif\nAllow: /core/*.jpg\nAllow: /core/*.jpeg\nAllow: /core/*.png\nAllow: /core/*.svg\nAllow: /core/*.webp\nAllow: /profiles/*.css$\nAllow: /profiles/*.css?\nAllow: /profiles/*.js$\nAllow: /profiles/*.js?\nAllow: /profiles/*.avif\nAllow: /profiles/*.gif\nAllow: /profiles/*.jpg\nAllow: /profiles/*.jpeg\nAllow: /profiles/*.png\nAllow: /profiles/*.svg\nAllow: /profiles/*.webp\n# Directories\nDisallow: /core/\nDisallow: /profiles/\n# Files\nDisallow: /README.md\nDisallow: /composer/Metapackage/README.txt\nDisallow: /composer/Plugin/ProjectMessage/README.md\nDisallow: /composer/Plugin/Scaffold/README.md\nDisallow: /composer/Plugin/VendorHardening/README.txt\nDisallow: /composer/Template/README.txt\nDisallow: /modules/README.txt\nDisallow: /sites/README.txt\nDisallow: /themes/README.txt\n# Paths (clean URLs)\nDisallow: /admin/\nDisallow: /comment/reply/\nDisallow: /filter/tips\nDisallow: /node/add/\nDisallow: /search/\nDisallow: /search?\nDisallow: /user/register\nDisallow: /user/password\nDisallow: /user/login\nDisallow: /user/logout\nDisallow: /media/oembed\nDisallow: /*/media/oembed\n# Paths (no clean URLs)\nDisallow: /index.php/admin/\nDisallow: /index.php/comment/reply/\nDisallow: /index.php/filter/tips\nDisallow: /index.php/node/add/\nDisallow: /index.php/search/\nDisallow: /index.php/search?\nDisallow: /index.php/user/password\nDisallow: /index.php/user/register\nDisallow: /index.php/user/login\nDisallow: /index.php/user/logout\nDisallow: /index.php/media/oembed\nDisallow: /index.php/*/media/oembed\n\n#SEC\nAllow: /Archives/edgar/data\nDisallow: /Archives/bin\nDisallow: /Archives/etc\nDisallow: /Archives/usr\nDisallow: /cgi-bin\nDisallow: /bin\nDisallow: /Archives/edgar/vprr/XXXX\nDisallow: /Archives/edgar/vprr/vprr_removal\nDisallow: /Archives/edgar/vprr/bin\nDisallow: /nb\nDisallow: /video/live\nDisallow: /Archives/edgar/data/1473971/000109181814000042/ex101002.gif\nDisallow: /node\nDisallow: /spotlight/equity-market-structure-advisory-committee.shtml\n\nSitemap: https://www.sec.gov/sec-sitemap.xml\nSitemap: https://www.sec.gov/sitemap/sitemap-index.xml\nSitemap: https://www.investor.gov/sitemap.xml\n",
+  "delai_demande": null
+ },
+ "prix": {
+  "fichiers": 413,
+  "premier": "200907a",
+  "dernier": "202609a",
+  "par_annee": {
+   "2009": 12,
+   "2010": 24,
+   "2011": 24,
+   "2012": 24,
+   "2013": 24,
+   "2014": 24,
+   "2015": 24,
+   "2016": 24,
+   "2017": 24,
+   "2018": 24,
+   "2019": 24,
+   "2020": 24,
+   "2021": 24,
+   "2022": 24,
+   "2023": 24,
+   "2024": 24,
+   "2025": 24,
+   "2026": 17
+  },
+  "annees_incompletes": {},
+  "temoins": {
+   "200907a": {
+    "entete": "SETTLEMENT DATE|CUSIP|SYMBOL|QUANTITY (FAILS)|DESCRIPTION|PRICE",
+    "entete_comme_aujourdhui": true,
+    "lignes": 57539,
+    "symboles": 10563,
+    "jours": [
+     "20090701",
+     "20090714"
+    ],
+    "SPY": true,
+    "exemple": [
+     "20090701|D1668R123|DAI|1918|DAIMLER AG|36.27",
+     "20090701|D18190898|DB|8831|DEUTSCHE BANK AG NAMEN AKT|61.00"
+    ]
+   },
+   "200901a": "absent de la page",
+   "201201a": {
+    "entete": "SETTLEMENT DATE|CUSIP|SYMBOL|QUANTITY (FAILS)|DESCRIPTION|PRICE",
+    "entete_comme_aujourdhui": true,
+    "lignes": 53711,
+    "symboles": 10106,
+    "jours": [
+     "20120103",
+     "20120113"
+    ],
+    "SPY": true,
+    "exemple": [
+     "20120103|D1668R123|DDAIF|141|DAIMLER AG|43.86",
+     "20120103|D18190898|DB|6810|DEUTSCHE BANK AG NAMEN AKT (DE|37.86"
+    ]
+   }
+  }
+ },
+ "fonds_13f": {
+  "page": "https://www.sec.gov/data-research/sec-markets-data/form-13f-data-sets",
+  "liens_zip": 54,
+  "premiers_liens": [
+   "/files/datastandardsinnovation/data/form-13f-data-sets/01jun2026-31aug2026_form13f.zip",
+   "/files/structureddata/data/form-13f-data-sets/01dec2024-28feb2025_form13f.zip",
+   "/files/structureddata/data/form-13f-data-sets/01dec2025-28feb2026_form13f.zip",
+   "/files/structureddata/data/form-13f-data-sets/01jan2024-29feb2024_form13f.zip",
+   "/files/structureddata/data/form-13f-data-sets/01jun2024-31aug2024_form13f.zip"
+  ],
+  "derniers_liens": [
+   "/files/structureddata/data/form-13f-data-sets/2022q4_form13f.zip",
+   "/files/structureddata/data/form-13f-data-sets/2023q1_form13f.zip",
+   "/files/structureddata/data/form-13f-data-sets/2023q2_form13f.zip",
+   "/files/structureddata/data/form-13f-data-sets/2023q3_form13f.zip",
+   "/files/structureddata/data/form-13f-data-sets/2023q4_form13f.zip"
+  ],
+  "trimestres_lus": [
+   "2013q2",
+   "2013q3",
+   "2013q4"
+  ]
+ },
+ "rapports": {
+  "par_annee": {
+   "1980": {
+    "10-K": 0,
+    "10-Q": 1,
+    "compagnies": 1,
+    "taille_declaree_go": 0.0
+   },
+   "1993": {
+    "10-K": 4,
+    "10-Q": 7,
+    "compagnies": 9,
+    "taille_declaree_go": 0.0
+   },
+   "1994": {
+    "10-K": 1912,
+    "10-Q": 6628,
+    "compagnies": 2347,
+    "taille_declaree_go": 1.35
+   },
+   "1995": {
+    "10-K": 2218,
+    "10-Q": 14120,
+    "compagnies": 5505,
+    "taille_declaree_go": 1.8
+   },
+   "1996": {
+    "10-K": 4315,
+    "10-Q": 25749,
+    "compagnies": 10088,
+    "taille_declaree_go": 3.26
+   },
+   "1997": {
+    "10-K": 6698,
+    "10-Q": 28996,
+    "compagnies": 10789,
+    "taille_declaree_go": 4.52
+   },
+   "1998": {
+    "10-K": 6930,
+    "10-Q": 29239,
+    "compagnies": 11040,
+    "taille_declaree_go": 5.03
+   },
+   "1999": {
+    "10-K": 6761,
+    "10-Q": 28687,
+    "compagnies": 10973,
+    "taille_declaree_go": 5.24
+   },
+   "2000": {
+    "10-K": 6652,
+    "10-Q": 28282,
+    "compagnies": 10634,
+    "taille_declaree_go": 5.59
+   },
+   "2001": {
+    "10-K": 6248,
+    "10-Q": 25997,
+    "compagnies": 9826,
+    "taille_declaree_go": 6.53
+   },
+   "2002": {
+    "10-K": 6759,
+    "10-Q": 24084,
+    "compagnies": 9272,
+    "taille_declaree_go": 10.43
+   },
+   "2003": {
+    "10-K": 8468,
+    "10-Q": 21866,
+    "compagnies": 8821,
+    "taille_declaree_go": 17.19
+   },
+   "2004": {
+    "10-K": 8567,
+    "10-Q": 20872,
+    "compagnies": 9016,
+    "taille_declaree_go": 19.55
+   },
+   "2005": {
+    "10-K": 9017,
+    "10-Q": 20670,
+    "compagnies": 9501,
+    "taille_declaree_go": 25.31
+   },
+   "2006": {
+    "10-K": 8852,
+    "10-Q": 20037,
+    "compagnies": 9343,
+    "taille_declaree_go": 29.43
+   },
+   "2007": {
+    "10-K": 8574,
+    "10-Q": 20047,
+    "compagnies": 8996,
+    "taille_declaree_go": 33.12
+   },
+   "2008": {
+    "10-K": 8745,
+    "10-Q": 27040,
+    "compagnies": 11454,
+    "taille_declaree_go": 37.1
+   },
+   "2009": {
+    "10-K": 9839,
+    "10-Q": 27817,
+    "compagnies": 10242,
+    "taille_declaree_go": 47.07
+   },
+   "2010": {
+    "10-K": 9165,
+    "10-Q": 26550,
+    "compagnies": 9572,
+    "taille_declaree_go": 68.88
+   },
+   "2011": {
+    "10-K": 8840,
+    "10-Q": 25676,
+    "compagnies": 9272,
+    "taille_declaree_go": 130.79
+   },
+   "2012": {
+    "10-K": 8393,
+    "10-Q": 24186,
+    "compagnies": 8804,
+    "taille_declaree_go": 227.21
+   },
+   "2013": {
+    "10-K": 8105,
+    "10-Q": 23250,
+    "compagnies": 8528,
+    "taille_declaree_go": 324.74
+   },
+   "2014": {
+    "10-K": 8084,
+    "10-Q": 22876,
+    "compagnies": 8455,
+    "taille_declaree_go": 313.89
+   },
+   "2015": {
+    "10-K": 7985,
+    "10-Q": 22166,
+    "compagnies": 8327,
+    "taille_declaree_go": 294.62
+   },
+   "2016": {
+    "10-K": 7589,
+    "10-Q": 20609,
+    "compagnies": 7862,
+    "taille_declaree_go": 242.33
+   },
+   "2017": {
+    "10-K": 7248,
+    "10-Q": 19810,
+    "compagnies": 7560,
+    "taille_declaree_go": 241.81
+   },
+   "2018": {
+    "10-K": 7092,
+    "10-Q": 19216,
+    "compagnies": 7329,
+    "taille_declaree_go": 251.95
+   },
+   "2019": {
+    "10-K": 6923,
+    "10-Q": 18485,
+    "compagnies": 7148,
+    "taille_declaree_go": 274.06
+   },
+   "2020": {
+    "10-K": 6769,
+    "10-Q": 17979,
+    "compagnies": 7101,
+    "taille_declaree_go": 278.98
+   },
+   "2021": {
+    "10-K": 7181,
+    "10-Q": 20393,
+    "compagnies": 7924,
+    "taille_declaree_go": 283.53
+   },
+   "2022": {
+    "10-K": 7792,
+    "10-Q": 20758,
+    "compagnies": 7965,
+    "taille_declaree_go": 312.08
+   },
+   "2023": {
+    "10-K": 7366,
+    "10-Q": 19103,
+    "compagnies": 7536,
+    "taille_declaree_go": 319.34
+   },
+   "2024": {
+    "10-K": 6878,
+    "10-Q": 17770,
+    "compagnies": 7060,
+    "taille_declaree_go": 293.51
+   },
+   "2025": {
+    "10-K": 6690,
+    "10-Q": 17289,
+    "compagnies": 6925,
+    "taille_declaree_go": 308.42
+   },
+   "2026": {
+    "10-K": 6369,
+    "10-Q": 11920,
+    "compagnies": 6896,
+    "taille_declaree_go": 243.62
+   }
+  },
+  "documents_principaux": {
+   "htm": 666081,
+   "(aucun)": 176966,
+   "txt": 112912,
+   "html": 1062,
+   "paper": 139,
+   "xfd": 31,
+   "gif": 10,
+   "jpg": 1
+  },
+  "temoins": [
+   {
+    "forme": "10-K",
+    "depot": "2009-04-15",
+    "url": "https://www.sec.gov/Archives/edgar/data/1961/000144624709000017/form10-k.htm",
+    "octets": 1090923,
+    "mots": 17723,
+    "mentions_gestion": 3
+   },
+   {
+    "forme": "10-K",
+    "depot": "2009-07-17",
+    "url": "https://www.sec.gov/Archives/edgar/data/15847/000001584709000010/fy0910k.htm",
+    "octets": 562590,
+    "mots": 30316,
+    "mentions_gestion": 2
+   },
+   {
+    "forme": "10-Q",
+    "depot": "2009-08-13",
+    "url": "https://www.sec.gov/Archives/edgar/data/4611/000117152009000543/eps3497.htm",
+    "octets": 1569060,
+    "mots": 27475,
+    "mentions_gestion": 5
+   },
+   {
+    "forme": "10-K",
+    "depot": "2024-02-27",
+    "url": "https://www.sec.gov/Archives/edgar/data/7286/000076462224000016/pnw-20231231.htm",
+    "octets": 5606930,
+    "mots": 105638,
+    "mentions_gestion": 7
+   },
+   {
+    "forme": "10-K",
+    "depot": "2024-02-14",
+    "url": "https://www.sec.gov/Archives/edgar/data/23426/000007274124000005/es-20231231.htm",
+    "octets": 7523383,
+    "mots": 122722,
+    "mentions_gestion": 18
+   },
+   {
+    "forme": "10-Q",
+    "depot": "2024-05-13",
+    "url": "https://www.sec.gov/Archives/edgar/data/6176/000095017024058689/ap-20240331.htm",
+    "octets": 1904307,
+    "mots": 16103,
+    "mentions_gestion": 2
+   }
+  ]
+ }
+}
