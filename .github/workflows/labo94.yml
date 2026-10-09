@@ -1,0 +1,84 @@
+name: "Labo (chasse 2, chasse A : lire les 10-K, puis juger)"
+
+# Lancé quand on modifie labo/chasse2/declencheur-rapports.txt (ou à la main), JUSTE APRÈS un passage du robot, avec
+# une heure limite (ligne « jusqu_a=AAAA-MM-JJTHH:MM », UTC) avant le passage suivant : arrêt propre, la suite reprend
+# au lancement d'après (cache). Même groupe que le robot (radar.yml) : jamais les deux en même temps, donc la SEC voit un
+# seul client à la fois (5 requêtes par seconde au plus, courriel dans l'en-tête comme la SEC le demande).
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/chasse2/declencheur-rapports.txt"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar
+  cancel-in-progress: false
+
+jobs:
+  rapports:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: principal
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests scikit-learn==1.9.1 numpy==2.4.6 -r principal/robot/requirements.txt
+      - name: "Les essais d'abord (fausse SEC et faux jeux : aucune requête réelle)"
+        run: |
+          python labo/chasse2/essai_nettoyage.py
+          python labo/chasse2/essai_rapports_a.py
+          python labo/chasse2/essai_chasse_a.py
+      - name: La base de la chasse 2 (cache)
+        uses: actions/cache/restore@v4
+        with:
+          path: cache2
+          key: chasse2-aucun
+          restore-keys: chasse2-
+      - name: Ce qui est déjà lu (cache de la chasse A)
+        uses: actions/cache/restore@v4
+        with:
+          path: cache2a
+          key: chasse2a-aucun
+          restore-keys: chasse2a-
+      - name: Lire les 10-K (jusqu'à l'heure limite)
+        run: |
+          test -f cache2/base/cies.jsonl.gz
+          JUSQU_A=$(grep -o 'jusqu_a=[0-9T:-]*' labo/chasse2/declencheur-rapports.txt | cut -d= -f2)
+          echo "heure limite : $JUSQU_A UTC"
+          python -u labo/chasse2/rapports_a.py --base cache2/base --dossier cache2a --jusqu_a "$JUSQU_A"
+      - name: Garder ce qui est lu (cache de la chasse A)
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: cache2a
+          key: chasse2a-${{ github.run_id }}
+      - name: Juger la chasse A (seulement quand toutes les compagnies sont lues)
+        run: |
+          mkdir -p labo/chasse2/resultats_a
+          cp cache2a/resume.json labo/chasse2/resultats_a/lecture.json
+          python - <<'EOF'
+          import json, sys
+          r = json.load(open("cache2a/resume.json"))
+          print(r)
+          sys.exit(0 if r["faites"] >= r["compagnies"] else 78)
+          EOF
+          python -u labo/chasse2/chasse_a.py --base cache2/base --similarites cache2a/similarites.jsonl --sortie labo/chasse2/resultats_a 2>&1 | tee labo/chasse2/resultats_a/journal.txt
+          test "${PIPESTATUS[0]}" = 0
+        continue-on-error: true
+      - name: Sauvegarder (avancement de la lecture, et résultats s'ils sont là)
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/chasse2/resultats_a || exit 0
+          git commit -m "Labo : chasse 2, chasse A ($(date -u +'%Y-%m-%d %H:%M') UTC)" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
