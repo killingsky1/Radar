@@ -1,0 +1,44 @@
+name: "Labo (chasse 2 : sonde des prix de la base, avant la chasse A)"
+
+# Lancé quand on modifie labo/chasse2/declencheur-sonde.txt (ou à la main). Lecture seulement du cache de la chasse 2
+# (aucun site lu) : n'entre pas dans la file du robot (groupe radar).
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/chasse2/declencheur-sonde.txt"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: labo95
+  cancel-in-progress: false
+
+jobs:
+  sonder:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install scikit-learn==1.9.1 numpy==2.4.6
+      - name: La base de la chasse 2 (cache)
+        uses: actions/cache/restore@v4
+        with:
+          path: cache2
+          key: chasse2-aucun
+          restore-keys: chasse2-
+      - name: Sonde des prix
+        run: python -u labo/chasse2/sonde_prix.py --base cache2/base --sortie labo/chasse2/sonde_prix.json
+      - name: Sauvegarder la sonde
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/chasse2/sonde_prix.json || exit 0
+          git commit -m "Labo : chasse 2, sonde des prix ($(date -u +'%Y-%m-%d %H:%M') UTC)" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
