@@ -39,7 +39,7 @@
   115,
   1000
  ],
- "fractionnements": 375,
+ "fractionnements": 297,
  "exemples_fractionnements": [
   [
    "AAPL",
@@ -65,16 +65,6 @@
    "ACGL",
    20180622,
    3.0
-  ],
-  [
-   "ADGO",
-   20190905,
-   2.0
-  ],
-  [
-   "ADGO",
-   20190913,
-   2.0
   ],
   [
    "ADMP",
@@ -139,11 +129,6 @@
   [
    "ASNA",
    20120409,
-   2.0
-  ],
-  [
-   "ASTI",
-   20160921,
    2.0
   ],
   [
@@ -227,11 +212,6 @@
    2.0
   ],
   [
-   "BRTX",
-   20201204,
-   2.0
-  ],
-  [
    "BTH",
    20120620,
    2.0
@@ -240,6 +220,26 @@
    "BWA",
    20131219,
    2.0
+  ],
+  [
+   "BXRX",
+   20200324,
+   2.0
+  ],
+  [
+   "BZIC",
+   20140723,
+   2.0
+  ],
+  [
+   "CALM",
+   20141105,
+   2.0
+  ],
+  [
+   "CATV",
+   20150701,
+   2.0
   ]
  ],
  "mesures": {
@@ -247,72 +247,72 @@
    "appris": 27322,
    "testes": 12000,
    "indices_vides": 0,
-   "correlation_rang": -0.0546,
-   "ecart_moyen_10_meilleurs": -0.01504,
+   "correlation_rang": -0.0476,
+   "ecart_moyen_10_meilleurs": -0.01175,
    "ecart_moyen_univers": 0.00442
   },
   "2013-2014": {
    "appris": 39300,
    "testes": 12000,
    "indices_vides": 0,
-   "correlation_rang": 0.0173,
-   "ecart_moyen_10_meilleurs": 0.01469,
-   "ecart_moyen_univers": 0.85175
+   "correlation_rang": 0.0299,
+   "ecart_moyen_10_meilleurs": 0.01932,
+   "ecart_moyen_univers": 0.00101
   },
   "2014-2015": {
    "appris": 51283,
    "testes": 12000,
    "indices_vides": 0,
-   "correlation_rang": -0.0477,
-   "ecart_moyen_10_meilleurs": -0.01873,
+   "correlation_rang": -0.0539,
+   "ecart_moyen_10_meilleurs": -0.01099,
    "ecart_moyen_univers": -0.00154
   },
   "2015-2016": {
    "appris": 63268,
    "testes": 12000,
    "indices_vides": 0,
-   "correlation_rang": -0.0244,
-   "ecart_moyen_10_meilleurs": -0.01785,
-   "ecart_moyen_univers": 0.00455
+   "correlation_rang": -0.0276,
+   "ecart_moyen_10_meilleurs": -0.0198,
+   "ecart_moyen_univers": -0.00655
   },
   "2016-2017": {
    "appris": 75245,
    "testes": 12000,
    "indices_vides": 0,
-   "correlation_rang": -0.0135,
-   "ecart_moyen_10_meilleurs": 0.01494,
+   "correlation_rang": -0.0319,
+   "ecart_moyen_10_meilleurs": 0.01356,
    "ecart_moyen_univers": 0.00054
   },
   "2017-2018": {
    "appris": 87223,
    "testes": 12000,
    "indices_vides": 0,
-   "correlation_rang": 0.012,
-   "ecart_moyen_10_meilleurs": 0.00713,
+   "correlation_rang": 0.0013,
+   "ecart_moyen_10_meilleurs": 0.00256,
    "ecart_moyen_univers": 6e-05
   },
   "2018-2019": {
    "appris": 99201,
    "testes": 12000,
    "indices_vides": 0,
-   "correlation_rang": 0.0691,
-   "ecart_moyen_10_meilleurs": -0.00575,
+   "correlation_rang": 0.0657,
+   "ecart_moyen_10_meilleurs": -0.01505,
    "ecart_moyen_univers": -0.00419
   },
   "2019-2020": {
    "appris": 111173,
    "testes": 12000,
    "indices_vides": 0,
-   "correlation_rang": 0.0657,
-   "ecart_moyen_10_meilleurs": 0.01025,
+   "correlation_rang": 0.0457,
+   "ecart_moyen_10_meilleurs": 0.02602,
    "ecart_moyen_univers": -0.00645
   },
   "2020-2021": {
    "appris": 123077,
    "testes": 12000,
    "indices_vides": 0,
-   "correlation_rang": 0.0565,
-   "ecart_moyen_10_meilleurs": 0.01519,
+   "correlation_rang": 0.0615,
+   "ecart_moyen_10_meilleurs": 0.03637,
    "ecart_moyen_univers": 0.00747
   },
   "2021-2022": {
@@ -320,55 +320,59 @@
    "testes": 12000,
    "indices_vides": 0,
    "correlation_rang": 0.0075,
-   "ecart_moyen_10_meilleurs": -0.01681,
+   "ecart_moyen_10_meilleurs": -0.02565,
    "ecart_moyen_univers": -0.00717
   },
   "2022-2023": {
    "appris": 146992,
    "testes": 12000,
    "indices_vides": 0,
-   "correlation_rang": -0.0266,
-   "ecart_moyen_10_meilleurs": -0.02107,
+   "correlation_rang": -0.0494,
+   "ecart_moyen_10_meilleurs": -0.01037,
    "ecart_moyen_univers": -0.00477
   },
   "2023-2024": {
    "appris": 158963,
    "testes": 12000,
    "indices_vides": 0,
-   "correlation_rang": 0.0411,
-   "ecart_moyen_10_meilleurs": -0.00616,
+   "correlation_rang": 0.0362,
+   "ecart_moyen_10_meilleurs": -0.01676,
    "ecart_moyen_univers": -0.00943
   },
   "2024-2025": {
    "appris": 170878,
    "testes": 12000,
    "indices_vides": 0,
-   "correlation_rang": 0.0238,
-   "ecart_moyen_10_meilleurs": 0.00895,
+   "correlation_rang": 0.0252,
+   "ecart_moyen_10_meilleurs": 0.00094,
    "ecart_moyen_univers": -0.00452
   },
   "2025-2026": {
    "appris": 182794,
    "testes": 12000,
    "indices_vides": 0,
-   "correlation_rang": -0.034,
-   "ecart_moyen_10_meilleurs": -0.0192,
+   "correlation_rang": -0.0287,
+   "ecart_moyen_10_meilleurs": -0.00456,
    "ecart_moyen_univers": 0.00234
   }
  },
+ "prix_retires": {
+  "prix de 0,01 $": 99581,
+  "écarts qui reviennent": 8593
+ },
  "10 $": {
   "total": {
-   "portefeuille": -0.9991,
+   "portefeuille": -1.001,
    "spy": 4.4724
   },
   "examen_2012_2017": {
-   "portefeuille": -0.9991,
+   "portefeuille": -0.9999,
    "spy": 0.7719
   },
   "annees_gagnees": "1 sur 14",
   "mois": 168,
-  "ecart_mensuel_moyen": -0.03999,
-  "t_mensuel": -4.81,
+  "ecart_mensuel_moyen": -0.15533,
+  "t_mensuel": -1.31,
   "criteres": {
    "bat_spy_au_total": false,
    "annees": false,
@@ -378,27 +382,27 @@
   "reussi": false,
   "par_annee": {
    "2012-2013": {
-    "portefeuille": -0.2665,
+    "portefeuille": -0.2127,
     "spy": 0.1726
    },
    "2013-2014": {
-    "portefeuille": 0.0225,
+    "portefeuille": 0.0342,
     "spy": 0.2232
    },
    "2014-2015": {
-    "portefeuille": -0.4885,
+    "portefeuille": -0.3806,
     "spy": 0.0518
    },
    "2015-2016": {
-    "portefeuille": -0.767,
+    "portefeuille": -0.6684,
     "spy": 0.0179
    },
    "2016-2017": {
-    "portefeuille": -0.9902,
+    "portefeuille": -0.9997,
     "spy": 0.154
    },
    "2017-2018": {
-    "portefeuille": 0.0,
+    "portefeuille": -19.8527,
     "spy": 0.1203
    },
    "2018-2019": {
@@ -435,24 +439,24 @@
    }
   },
   "ordres": {
-   "achats": 462,
-   "ventes": 462,
-   "sans prix ou sans argent": 1168
+   "achats": 512,
+   "ventes": 512,
+   "sans prix ou sans argent": 1117
   }
  },
  "0 $": {
   "total": {
-   "portefeuille": 0.6305,
+   "portefeuille": 0.5772,
    "spy": 4.4724
   },
   "examen_2012_2017": {
-   "portefeuille": -0.17,
+   "portefeuille": -0.0381,
    "spy": 0.7719
   },
-  "annees_gagnees": "6 sur 14",
+  "annees_gagnees": "5 sur 14",
   "mois": 168,
-  "ecart_mensuel_moyen": -0.00602,
-  "t_mensuel": -1.69,
+  "ecart_mensuel_moyen": -0.00623,
+  "t_mensuel": -1.77,
   "criteres": {
    "bat_spy_au_total": false,
    "annees": false,
@@ -462,66 +466,66 @@
   "reussi": false,
   "par_annee": {
    "2012-2013": {
-    "portefeuille": -0.081,
+    "portefeuille": -0.0115,
     "spy": 0.1726
    },
    "2013-2014": {
-    "portefeuille": 0.3616,
+    "portefeuille": 0.3697,
     "spy": 0.2232
    },
    "2014-2015": {
-    "portefeuille": -0.2204,
+    "portefeuille": -0.1108,
     "spy": 0.0518
    },
    "2015-2016": {
-    "portefeuille": -0.3043,
+    "portefeuille": -0.3223,
     "spy": 0.0179
    },
    "2016-2017": {
-    "portefeuille": 0.2231,
+    "portefeuille": 0.1788,
     "spy": 0.154
    },
    "2017-2018": {
-    "portefeuille": 0.2698,
+    "portefeuille": 0.1752,
     "spy": 0.1203
    },
    "2018-2019": {
-    "portefeuille": -0.17,
+    "portefeuille": -0.1974,
     "spy": 0.0816
    },
    "2019-2020": {
-    "portefeuille": 0.1923,
+    "portefeuille": 0.26,
     "spy": 0.0524
    },
    "2020-2021": {
-    "portefeuille": 0.4367,
+    "portefeuille": 0.545,
     "spy": 0.3882
    },
    "2021-2022": {
-    "portefeuille": -0.2136,
+    "portefeuille": -0.2699,
     "spy": -0.1187
    },
    "2022-2023": {
-    "portefeuille": -0.0762,
+    "portefeuille": -0.0987,
     "spy": 0.175
    },
    "2023-2024": {
-    "portefeuille": 0.1727,
+    "portefeuille": 0.0575,
     "spy": 0.2277
    },
    "2024-2025": {
-    "portefeuille": 0.2072,
+    "portefeuille": 0.1089,
     "spy": 0.1353
    },
    "2025-2026": {
-    "portefeuille": 0.058,
+    "portefeuille": 0.1574,
     "spy": 0.2087
    }
   },
   "ordres": {
-   "achats": 1345,
-   "ventes": 1340,
-   "sans prix ou sans argent": 186
+   "achats": 1348,
+   "ventes": 1343,
+   "sans prix ou sans argent": 194
   }
  }
 }
