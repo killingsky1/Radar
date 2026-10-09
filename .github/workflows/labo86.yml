@@ -42,6 +42,8 @@ jobs:
           git -C principal log --oneline -1
           python labo/tournoi/mesures/prix_form4.py --donnees cache/decouverte --ftd cache/ftd --robot principal/robot --sortie labo/tournoi/mesures/prix_form4_decouverte.json
           python labo/tournoi/mesures/prix_form4.py --donnees cache/coffre --ftd cache/ftd --robot principal/robot --sortie labo/tournoi/mesures/prix_form4_coffre.json
+          python labo/tournoi/mesures/prix_form4.py --actions-ordinaires --donnees cache/decouverte --ftd cache/ftd --robot principal/robot --sortie labo/tournoi/mesures/prix_form4_ordinaires_decouverte.json
+          python labo/tournoi/mesures/prix_form4.py --actions-ordinaires --donnees cache/coffre --ftd cache/ftd --robot principal/robot --sortie labo/tournoi/mesures/prix_form4_ordinaires_coffre.json
       - name: Sauvegarder les mesures
         if: always()
         run: |

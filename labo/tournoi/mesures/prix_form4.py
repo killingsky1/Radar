@@ -25,8 +25,21 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from regroupements2 import lire, seuils_par_mois, symbole  # noqa: E402
 
+# Actions ordinaires seulement : « Common Stock », « Class A Common Stock », « Common Shares »… ; jamais les privilégiées,
+# les bons de souscription, les unités, les billets (mesure 3, 1er essai : ADTX « Series B Preferred Stock » à 20 000 $)
+COMMUNE = re.compile(r"common|ordinary", re.I)
+PAS_COMMUNE = re.compile(r"pref|warrant|unit|right|note|debenture|option|depositary|\bADS\b|\bADR\b", re.I)
+
+
+def commune(titres):
+    return bool(titres) and all(COMMUNE.search(t) and not PAS_COMMUNE.search(t) for t in titres)
+
+
 AMERICAINS = {"10-K", "10-Q", "10-KT", "10-QT", "10-K/A", "10-Q/A"}
 ETRANGERS = {"20-F", "40-F", "6-K", "20-F/A", "40-F/A"}
+
+
+FILTRE = False
 
 
 def quantile(xs, q):
@@ -44,7 +57,10 @@ def main():
     a.add_argument("--ftd", required=True)
     a.add_argument("--robot", required=True)
     a.add_argument("--sortie", required=True)
+    a.add_argument("--actions-ordinaires", action="store_true", help="seulement les transactions d'actions ordinaires")
     x = a.parse_args()
+    global FILTRE
+    FILTRE = x.actions_ordinaires
     sys.path.insert(0, str(Path(x.robot).resolve()))
     from radar.collecteurs import prix_sec as ps
     from radar.collecteurs import taille as ta
@@ -60,6 +76,8 @@ def main():
     f4 = defaultdict(list)
     for e in evs:
         if e.get("prix_moyen") and e["prix_moyen"] > 0 and e.get("jour_dernier"):
+            if FILTRE and not commune(e.get("titres")):
+                continue
             f4[e["cik"]].append((e["jour_dernier"], e["depot"], e["prix_moyen"], e["sens"], tuple(e.get("titres") or ()),
                                  e.get("jour_premier") == e["jour_dernier"]))
     for v in f4.values():
@@ -75,6 +93,8 @@ def main():
     for e in evs:
         s = e.get("symbole")
         if not s or s not in serie or not e.get("prix_moyen") or e.get("jour_premier") != e.get("jour_dernier") or not e.get("jour_dernier"):
+            continue
+        if FILTRE and not commune(e.get("titres")):
             continue
         jours, prix, cus = serie[s]
         j = int(e["jour_dernier"].replace("-", ""))
@@ -190,7 +210,7 @@ def main():
         elif len(ex["accords"]) < 8:
             ex["accords"].append({"symbole": s, "depot": e["depot"], "prix_f4": [jt, p4, sens], "cloture_apres": vraie[:2],
                                   "valeur_f4_m": round(v4, 1), "taille": cat(v4)})
-    sortie = {"periode": periode, "fiabilite": fiabilite, "compte": dict(n), "accord": dict(accord), "exemples": ex}
+    sortie = {"periode": periode, "actions_ordinaires_seulement": FILTRE, "fiabilite": fiabilite, "compte": dict(n), "accord": dict(accord), "exemples": ex}
     Path(x.sortie).write_text(json.dumps(sortie, ensure_ascii=False, indent=1) + "\n")
     print(json.dumps({k: sortie[k] for k in ("compte", "accord")}, ensure_ascii=False, indent=1))
     print(json.dumps({k: v for k, v in fiabilite.items() if k != "exemples d'écarts de plus de 25 %"}, ensure_ascii=False, indent=1))
