@@ -27711,6 +27711,102 @@
   "title": "Sanctions américaines (OFAC) : Designations Removals; Designations Updates; Publication of Iran-related OFAC Alert; Publication of Amended Iran-related Frequently Asked Question"
  },
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "avis_actif": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "fiches_du_meme_avis": true,
+   "marque_et_ingredient_lus": true,
+   "nouvelle_substance_active": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-09T02:33:58+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "actif": "1",
+   "avec_conditions": false,
+   "classe": "Nouvelle substance active (NSA)",
+   "classe_therapeutique": "",
+   "date": "2026-10-02",
+   "details": [
+    [
+     "Médicament",
+     "FREHEMGO"
+    ],
+    [
+     "Ingrédient(s)",
+     "dénécimig 2 MG / ML"
+    ],
+    [
+     "Fabricant",
+     "NOVO NORDISK CANADA INC"
+    ],
+    [
+     "Type",
+     "Biologique"
+    ],
+    [
+     "Présentation",
+     "Présentation de drogue nouvelle (PDN)"
+    ],
+    [
+     "Classe",
+     "Nouvelle substance active (NSA)"
+    ],
+    [
+     "Avis de conformité",
+     "n° 38420 du 2026-10-02"
+    ]
+   ],
+   "din": [
+    "02572095",
+    "02572109",
+    "02572117",
+    "02572125",
+    "02572133"
+   ],
+   "fabricant": "NOVO NORDISK CANADA INC",
+   "fiches_meme_avis": true,
+   "ingredients": [
+    {
+     "dose": "2 MG / ML",
+     "nom": "dénécimig"
+    }
+   ],
+   "marques": [
+    "FREHEMGO"
+   ],
+   "numero": 38420,
+   "presentation": "Présentation de drogue nouvelle (PDN)",
+   "type_produit": "Biologique"
+  },
+  "direction": 0,
+  "entities": [
+   "NOVO NORDISK CANADA INC"
+  ],
+  "id": "sante_canada:38420",
+  "kind": "approbation_sante_canada",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "38420",
+  "official_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=fre&no=38420",
+  "parser_version": "sante-canada-1",
+  "published_on": "2026-10-02",
+  "sha256": "8783611c74d5a10ded6000abe3379ce0f853196ea31cb0f01b065dfde9b5f9fd",
+  "source": "sante_canada",
+  "tickers": [],
+  "title": "Santé Canada : nouveau médicament autorisé, FREHEMGO (dénécimig), de NOVO NORDISK CANADA INC"
+ },
+ {
   "amount_max": 15000.0,
   "amount_min": 1001.0,
   "badge": "officiel",
