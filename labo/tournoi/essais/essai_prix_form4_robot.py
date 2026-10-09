@@ -158,6 +158,11 @@ def main():
     ex = r["exemples"]["erreur 0.27.2 : écartée à tort"]
     verifier("exemple DDD", [(e["symbole"], e["prix_f4"], e["garde_fous"]) for e in ex],
              [("DDD", ["20240604", 1.0], {"2": False, "3": False, "5": False, "10": True})])
+    g = r["garde_fou_du_robot"]
+    verifier("réglage du robot = sa variante (mêmes décisions)",
+             j[f"0.27.2 réglage du robot (garde-fou {g}) | tous"], j[f"0.27.2 garde-fou ×{g} | tous"])
+    verifier("aucune erreur de réglage", c.get("ERREUR : le réglage du robot ne donne pas la même décision que sa variante"),
+             None)
     print(f"{sum(essais)}/{len(essais)} réussis")
     sys.exit(0 if all(essais) else 1)
 

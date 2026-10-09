@@ -78,6 +78,7 @@ def main():
     from radar.collecteurs import prix_sec as ps
     from radar.collecteurs import sec
     from radar.collecteurs import taille as ta
+    defaut = getattr(ta, "SAUT_F4_MAX", None)
 
     d = Path(x.donnees)
     periode = json.loads((d / "periode.json").read_text())
@@ -165,17 +166,20 @@ def main():
         j0 = bisect_left(depots_f4.get(s, []), (X - timedelta(days=ta.PRIX_MAX_JOURS + 5)).isoformat())
         candidats = f4.get(s, [])[j0:i]  # déposés au plus tard ce jour-là (le robot filtre lui-même les dates)
         pf4 = ta.prix_formulaires_4(candidats, X)
+        r_defaut = ta.classer(fiche, t, s, X, cus, pf4)  # le réglage du robot tel quel (SAUT_F4_MAX du code)
         resultats = {}
         for g in GARDE_FOUS:
             ta.SAUT_F4_MAX = g
             resultats[g] = ta.classer(fiche, t, s, X, cus, pf4)
-        ta.SAUT_F4_MAX = None
+        ta.SAUT_F4_MAX = defaut
+        if defaut in resultats and decision(r_defaut) != decision(resultats[defaut]):
+            n["ERREUR : le réglage du robot ne donne pas la même décision que sa variante"] += 1
         sans_prix_sec = (r0.get("raison") or "").startswith("pas de prix de la SEC")
         if not sans_prix_sec:
             n["achats avec un prix de la SEC de 60 jours ou moins, ou inconnus pour une autre raison"] += 1
             # le prix de secours ne doit RIEN changer ici (sauf le texte de la raison « ni de formulaire 4 »)
             if any({k: v for k, v in r.items() if k != "raison"} != {k: v for k, v in r0.items() if k != "raison"}
-                   for r in resultats.values()):
+                   for r in [r_defaut, *resultats.values()]):
                 n["ERREUR : résultat changé alors qu'il y avait un prix de la SEC"] += 1
             continue
         n["achats SANS prix de la SEC de 60 jours ou moins (taille inconnue en 0.27.1)"] += 1
@@ -218,7 +222,7 @@ def main():
         n["  … vraie valeur connue (jugés)"] += 1
         vrai = (vraie < TROP_PETITE, vraie < p30, "petite" if vraie < p30 else "grande" if vraie >= p70 else "moyenne")
         cle_h = "présent" if present else "absent"
-        regles = {"0.27.1 (aujourd'hui)": r0}
+        regles = {"0.27.1 (aujourd'hui)": r0, f"0.27.2 réglage du robot (garde-fou {defaut})": r_defaut}
         for g in GARDE_FOUS:
             nom = f"0.27.2 garde-fou {'aucun' if g is None else '×' + str(g)}"
             regles[nom] = resultats[g]
@@ -248,7 +252,8 @@ def main():
             ex["exemples 0.27.2 justes"].append({"symbole": s, "depot": e["depot"], "prix_f4": f, "valeur_m": r1["valeur_m"],
                                                  "vraie_valeur_m": round(vraie, 1), "taille": vrai[2]})
     n["formulaires du jeu sans nom de titre (aucun prix de secours)"] = titres_vides[0]
-    sortie = {"periode": periode, "fichiers_lus": [cles[0], cles[-1], len(cles)] if cles else [], "compte": dict(n),
+    sortie = {"periode": periode, "garde_fou_du_robot": defaut,
+              "fichiers_lus": [cles[0], cles[-1], len(cles)] if cles else [], "compte": dict(n),
               "ecarts_de_prix": dict(ecarts), "juge": {k: dict(v) for k, v in sorted(juge.items())}, "exemples": ex}
     Path(x.sortie).write_text(json.dumps(sortie, ensure_ascii=False, indent=1, sort_keys=True) + "\n")
     print(json.dumps({"compte": dict(n), "ecarts_de_prix": dict(ecarts),
