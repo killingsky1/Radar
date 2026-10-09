@@ -768,6 +768,77 @@
    "symbole": "VRA",
    "taille": "petite",
    "vue": "2026-10-08"
+  },
+  {
+   "entree": "2026-10-09T02:12:55+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "IMMERSION CORP",
+   "note10": 8.8,
+   "note10_sans_bonus": 8.8,
+   "note10_sans_taille": 7.5,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "IMMR",
+   "taille": "petite",
+   "vue": "2026-10-08"
+  },
+  {
+   "entree": "2026-10-09T02:12:55+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "51Talk Online Education Group",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 7.5,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "COE",
+   "taille": null,
+   "vue": "2026-10-08"
+  },
+  {
+   "entree": "2026-10-09T02:12:55+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Sports Entertainment Gaming Global Corp",
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "compagnie",
+     "regle": "etats_financiers",
+     "sens": -1
+    }
+   ],
+   "symbole": "SEGG",
+   "taille": "petite",
+   "vue": "2026-10-08"
   }
  ]
 }

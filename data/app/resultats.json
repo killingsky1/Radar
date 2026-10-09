@@ -1,5 +1,5 @@
 {
- "genere_a": "2026-10-08T21:29:00+00:00",
+ "genere_a": "2026-10-09T02:12:55+00:00",
  "horizons": {
   "30": "1 mois",
   "7": "1 semaine"
@@ -1376,6 +1376,119 @@
    "symbole": "AGMB",
    "taille": null,
    "vue": "2026-10-08"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-09T02:12:55+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Sports Entertainment Gaming Global Corp",
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "compagnie",
+     "regle": "etats_financiers",
+     "sens": -1
+    }
+   ],
+   "symbole": "SEGG",
+   "taille": "petite",
+   "vue": "2026-10-08"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-09T02:12:55+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "51Talk Online Education Group",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 7.5,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "COE",
+   "taille": null,
+   "vue": "2026-10-08"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-10-31",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-09T02:12:55+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-10-31",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "IMMERSION CORP",
+   "note10": 8.8,
+   "note10_sans_bonus": 8.8,
+   "note10_sans_taille": 7.5,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "IMMR",
+   "taille": "petite",
+   "vue": "2026-10-08"
   }
  ],
  "methode": [
@@ -1390,6 +1503,20 @@
  ],
  "par_signal": {
   "baisse": {
+   "regle:etats_financiers": {
+    "30": {
+     "battu": 0,
+     "ecart_moyen": null,
+     "mesurees": 0
+    },
+    "7": {
+     "battu": 0,
+     "ecart_moyen": null,
+     "mesurees": 0
+    },
+    "entrees": 1,
+    "libelle": "États financiers passés à ne plus croire (8-K, point 4.02)"
+   },
    "regle:faillite": {
     "30": {
      "battu": 0,
@@ -1415,7 +1542,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 1,
+    "entrees": 2,
     "libelle": "Petite compagnie (sous le 30e centile du NYSE)"
    }
   },
@@ -1445,7 +1572,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 4,
+    "entrees": 6,
     "libelle": "PDG, directeur financier ou président du conseil"
    },
    "grace_a_la_taille": {
@@ -1473,7 +1600,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 16,
+    "entrees": 18,
     "libelle": "Achat d'actions par un dirigeant ou un administrateur"
    },
    "regle:activiste_13d": {
@@ -1501,7 +1628,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 4,
+    "entrees": 5,
     "libelle": "Taille inconnue (compagnie étrangère, ou actions ou prix trop vieux)"
    },
    "taille:petite": {
@@ -1515,7 +1642,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 13,
+    "entrees": 14,
     "libelle": "Petite compagnie (sous le 30e centile du NYSE)"
    }
   },
@@ -1527,13 +1654,13 @@
   "baisse_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 2,
+   "en_attente": 3,
    "mesurees": 0
   },
   "baisse_7": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 2,
+   "en_attente": 3,
    "mesurees": 0
   },
   "ecartee_30": {
@@ -1551,13 +1678,13 @@
   "hausse_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 32,
+   "en_attente": 34,
    "mesurees": 0
   },
   "hausse_7": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 32,
+   "en_attente": 34,
    "mesurees": 0
   }
  }
