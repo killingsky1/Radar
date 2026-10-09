@@ -611,6 +611,12 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
     try {
       await p.locator(".res-carte").click(); await p.waitForTimeout(300);
       assert.equal(await p.locator(".grand-titre h1").innerText(), "Résultats");
+      // Étape 3 : en tête, ce que le labo a mesuré avant (avant le taux de réussite)
+      const titres = await p.locator(".ecran").last().locator("h2.section").allInnerTexts();
+      assert.equal(titres[0].toLowerCase(), "avant de lire : ce que le labo a mesuré", titres.join(" | "));
+      const avant = (await p.locator(".ecran").last().innerText()).replace(/\u00a0|\u202f/g, " ");
+      assert.ok(avant.includes("−1,1 %, −3,5 % et +0,7 %") && avant.includes("aucune n'a battu le S&P 500 de façon fiable après les frais")
+        && avant.includes("Les mesures en vrai ci-dessous diront si Radar fait mieux."), avant.slice(0, 400));
       const t = (await p.locator(".ecran").textContent()).replace(/\u00a0/g, " ");
       for (const attendu of [
         "1 sur 1 · écart moyen +6,1 points", // 1 semaine, hausse : AAPL
@@ -741,6 +747,21 @@ const ADRESSE = process.env.ADRESSE || "http://localhost:8766/";
       await p.locator(".retour").click(); await p.waitForTimeout(200);
       await p.getByRole("button", { name: /Comment marche Radar/ }).click(); await p.waitForTimeout(250);
       assert.ok((await p.locator(".ecran").last().innerText()).replace(/\u00a0/g, " ").includes("Moins de 100 M$ en bourse : la compagnie n'entre pas dans la liste « hausse »."));
+    } finally {
+      await onglet("Radar");
+    }
+  });
+  await verifier("Aide : « Radar bat-il le marché ? » en haut, avec les vrais chiffres du labo (rejeu de 3 ans, 38 règles)", async () => {
+    try {
+      await p.getByRole("button", { name: "Aide" }).click(); await p.waitForSelector(".flux-etape");
+      const titres = await p.locator(".ecran").last().locator("h2.section").allInnerTexts();
+      assert.equal(titres[0].toLowerCase(), "radar bat-il le marché ?", titres.join(" | ")); // le 1er groupe, sous le chemin
+      const t = (await p.locator(".ecran").last().innerText()).replace(/\u00a0|\u202f/g, " ");
+      for (const attendu of ["Pas à coup sûr. Le labo a rejoué la liste « hausse » jour par jour sur 3 ans (juillet 2023 à juin 2026",
+        "l'écart médian avec le S&P 500 est de −1,1 %, −3,5 % et +0,7 % selon l'année, et 39 à 50 % des compagnies ont fait mieux que lui.",
+        "38 règles écrites d'avance à partir d'études", "aucune n'a battu le S&P 500 de façon fiable après les frais.",
+        "Les listes sont donc de l'information à creuser, preuves à l'appui, pas un signal d'achat."])
+        assert.ok(t.includes(attendu), attendu);
     } finally {
       await onglet("Radar");
     }
