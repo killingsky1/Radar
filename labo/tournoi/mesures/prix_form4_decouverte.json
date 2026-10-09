@@ -1,0 +1,834 @@
+{
+ "periode": {
+  "debut": "2023-07-01",
+  "fin": "2026-06-30",
+  "contexte_depuis": "2022-07-01"
+ },
+ "fiabilite": {
+  "transactions comparées": 49650,
+  "à 2 % ou moins": 0.6871,
+  "à 5 % ou moins": 0.8778,
+  "à 10 % ou moins": 0.9449,
+  "à 25 % ou moins": 0.9778,
+  "écart médian": 0.0103,
+  "écart au 95e centile": 0.1095,
+  "par sens": {
+   "achat": {
+    "n": 14206,
+    "à 5 % ou moins": 0.7978,
+    "à 25 % ou moins": 0.9478
+   },
+   "vente": {
+    "n": 35444,
+    "à 5 % ou moins": 0.9099,
+    "à 25 % ou moins": 0.9898
+   }
+  },
+  "exemples d'écarts de plus de 25 %": [
+   {
+    "symbole": "IE",
+    "sens": "achat",
+    "jour": "2022-06-30",
+    "prix_f4": 11.75,
+    "cloture_sec": 8.7,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001104659-22-076837:achat"
+   },
+   {
+    "symbole": "IE",
+    "sens": "achat",
+    "jour": "2022-06-30",
+    "prix_f4": 11.1996,
+    "cloture_sec": 8.7,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001104659-22-077002:achat"
+   },
+   {
+    "symbole": "BSFC",
+    "sens": "vente",
+    "jour": "2022-01-21",
+    "prix_f4": 5.3151,
+    "cloture_sec": 3.8,
+    "titres": [
+     "Common stock"
+    ],
+    "id": "0001493152-22-018463:vente"
+   },
+   {
+    "symbole": "FCUV",
+    "sens": "vente",
+    "jour": "2022-06-23",
+    "prix_f4": 6.0,
+    "cloture_sec": 13.7,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001683168-22-004841:vente"
+   },
+   {
+    "symbole": "PCG",
+    "sens": "vente",
+    "jour": "2022-07-11",
+    "prix_f4": 19.5,
+    "cloture_sec": 10.12,
+    "titres": [
+     "First pref stock, par value $25, 4.80% redeemable"
+    ],
+    "id": "0001493152-22-019176:vente"
+   },
+   {
+    "symbole": "SONM",
+    "sens": "achat",
+    "jour": "2022-07-13",
+    "prix_f4": 0.84,
+    "cloture_sec": 0.64,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001493152-22-019364:achat"
+   },
+   {
+    "symbole": "SONM",
+    "sens": "achat",
+    "jour": "2022-07-13",
+    "prix_f4": 0.84,
+    "cloture_sec": 0.64,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001493152-22-019366:achat"
+   },
+   {
+    "symbole": "GOSS",
+    "sens": "achat",
+    "jour": "2022-07-15",
+    "prix_f4": 7.21,
+    "cloture_sec": 11.08,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001728117-22-000059:achat"
+   },
+   {
+    "symbole": "GOSS",
+    "sens": "achat",
+    "jour": "2022-07-15",
+    "prix_f4": 7.21,
+    "cloture_sec": 11.08,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001728117-22-000061:achat"
+   },
+   {
+    "symbole": "GOSS",
+    "sens": "achat",
+    "jour": "2022-07-15",
+    "prix_f4": 7.21,
+    "cloture_sec": 11.08,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001728117-22-000063:achat"
+   },
+   {
+    "symbole": "GOSS",
+    "sens": "achat",
+    "jour": "2022-07-15",
+    "prix_f4": 7.21,
+    "cloture_sec": 11.08,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001728117-22-000065:achat"
+   },
+   {
+    "symbole": "STRR",
+    "sens": "vente",
+    "jour": "2022-07-18",
+    "prix_f4": 9.89,
+    "cloture_sec": 0.93,
+    "titres": [
+     "10% Series A Cumulative Perpetual Preferred Stock"
+    ],
+    "id": "0000921895-22-002260:vente"
+   },
+   {
+    "symbole": "ADTX",
+    "sens": "achat",
+    "jour": "2022-07-19",
+    "prix_f4": 20000.0,
+    "cloture_sec": 0.18,
+    "titres": [
+     "Series B Preferred Stock"
+    ],
+    "id": "0001213900-22-040717:achat"
+   },
+   {
+    "symbole": "CYT",
+    "sens": "vente",
+    "jour": "2022-07-20",
+    "prix_f4": 3.0,
+    "cloture_sec": 4.01,
+    "titres": [
+     "COMMON STOCK"
+    ],
+    "id": "0001209191-22-043049:vente"
+   },
+   {
+    "symbole": "WHLM",
+    "sens": "achat",
+    "jour": "2022-07-15",
+    "prix_f4": 10.0,
+    "cloture_sec": 4.51,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0000899243-22-026646:achat"
+   },
+   {
+    "symbole": "STRR",
+    "sens": "vente",
+    "jour": "2022-07-22",
+    "prix_f4": 9.89,
+    "cloture_sec": 1.02,
+    "titres": [
+     "10% Series A Cumulative Perpetual Preferred Stock"
+    ],
+    "id": "0000921895-22-002283:vente"
+   },
+   {
+    "symbole": "PLAG",
+    "sens": "achat",
+    "jour": "2022-07-22",
+    "prix_f4": 1.5,
+    "cloture_sec": 0.8,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001213900-22-041870:achat"
+   },
+   {
+    "symbole": "MAIA",
+    "sens": "achat",
+    "jour": "2022-08-01",
+    "prix_f4": 5.0,
+    "cloture_sec": 7.8,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0000899243-22-027451:achat"
+   },
+   {
+    "symbole": "MAIA",
+    "sens": "achat",
+    "jour": "2022-08-01",
+    "prix_f4": 5.0,
+    "cloture_sec": 7.8,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0000899243-22-027452:achat"
+   },
+   {
+    "symbole": "MAIA",
+    "sens": "achat",
+    "jour": "2022-08-01",
+    "prix_f4": 5.0,
+    "cloture_sec": 7.8,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0000899243-22-027453:achat"
+   },
+   {
+    "symbole": "MAIA",
+    "sens": "achat",
+    "jour": "2022-08-01",
+    "prix_f4": 5.0,
+    "cloture_sec": 7.8,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0000899243-22-027454:achat"
+   },
+   {
+    "symbole": "MAIA",
+    "sens": "achat",
+    "jour": "2022-08-01",
+    "prix_f4": 5.0,
+    "cloture_sec": 7.8,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0000899243-22-027455:achat"
+   },
+   {
+    "symbole": "MAIA",
+    "sens": "achat",
+    "jour": "2022-08-01",
+    "prix_f4": 5.0,
+    "cloture_sec": 7.8,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0000899243-22-027456:achat"
+   },
+   {
+    "symbole": "MAIA",
+    "sens": "achat",
+    "jour": "2022-08-01",
+    "prix_f4": 5.0,
+    "cloture_sec": 7.8,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0000899243-22-027459:achat"
+   },
+   {
+    "symbole": "MAIA",
+    "sens": "achat",
+    "jour": "2022-08-01",
+    "prix_f4": 5.0,
+    "cloture_sec": 7.8,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0000899243-22-027461:achat"
+   }
+  ]
+ },
+ "compte": {
+  "achats calculables sauf peut-être le prix": 26651,
+  "prix de la SEC de 60 jours ou moins (taille connue aujourd'hui)": 23583,
+  "hors calcul : étrangère ou sans 10-K/10-Q": 7393,
+  "SANS prix de la SEC de 60 jours ou moins (taille inconnue aujourd'hui)": 3068,
+  "  … et aucun prix de formulaire 4 de 60 jours ou moins": 222,
+  "  … avec un prix de formulaire 4 de 60 jours ou moins": 2846,
+  "  … dont le prix le plus récent vient d'un(e) achat": 2787,
+  "  … âge du prix ≤ 7 jours": 2700,
+  "  … pas de clôture de la SEC dans les 30 jours après (pas de vérité)": 1227,
+  "hors calcul : pas de nombre d'actions": 977,
+  "  … âge du prix 8 à 30 jours": 110,
+  "  … âge du prix 31 à 60 jours": 36,
+  "hors calcul : actions trop vieilles ou moins de 500 000": 433,
+  "  … dont le prix le plus récent vient d'un(e) vente": 59,
+  "  … CUSIP changé autour (prix ou actions peut-être d'une autre époque)": 24
+ },
+ "accord": {
+  "comparés": 1619,
+  "même taille": 1611,
+  "même côté de 100 M$": 1590,
+  "prix à 25 % ou moins de la clôture d'après": 1483
+ },
+ "exemples": {
+  "accords": [
+   {
+    "symbole": "NHC",
+    "depot": "2023-07-03",
+    "prix_f4": [
+     "2023-06-29",
+     61.4,
+     "achat"
+    ],
+    "cloture_apres": [
+     20230711,
+     57.39
+    ],
+    "valeur_f4_m": 940.7,
+    "taille": "petite"
+   },
+   {
+    "symbole": "TMRC",
+    "depot": "2023-07-03",
+    "prix_f4": [
+     "2023-06-29",
+     0.8065,
+     "achat"
+    ],
+    "cloture_apres": [
+     20230713,
+     1.06
+    ],
+    "valeur_f4_m": 58.8,
+    "taille": "petite"
+   },
+   {
+    "symbole": "AENT",
+    "depot": "2023-07-05",
+    "prix_f4": [
+     "2023-06-30",
+     3.0,
+     "achat"
+    ],
+    "cloture_apres": [
+     20230706,
+     2.41
+    ],
+    "valeur_f4_m": 147.5,
+    "taille": "petite"
+   },
+   {
+    "symbole": "AENT",
+    "depot": "2023-07-05",
+    "prix_f4": [
+     "2023-06-30",
+     3.0,
+     "achat"
+    ],
+    "cloture_apres": [
+     20230706,
+     2.41
+    ],
+    "valeur_f4_m": 147.5,
+    "taille": "petite"
+   },
+   {
+    "symbole": "AENT",
+    "depot": "2023-07-05",
+    "prix_f4": [
+     "2023-06-30",
+     3.0,
+     "achat"
+    ],
+    "cloture_apres": [
+     20230706,
+     2.41
+    ],
+    "valeur_f4_m": 147.5,
+    "taille": "petite"
+   },
+   {
+    "symbole": "AENT",
+    "depot": "2023-07-05",
+    "prix_f4": [
+     "2023-06-30",
+     3.0,
+     "achat"
+    ],
+    "cloture_apres": [
+     20230706,
+     2.41
+    ],
+    "valeur_f4_m": 147.5,
+    "taille": "petite"
+   },
+   {
+    "symbole": "SFBC",
+    "depot": "2023-07-10",
+    "prix_f4": [
+     "2023-07-06",
+     34.75,
+     "achat"
+    ],
+    "cloture_apres": [
+     20230724,
+     36.03
+    ],
+    "valeur_f4_m": 90.4,
+    "taille": "petite"
+   },
+   {
+    "symbole": "CMTV",
+    "depot": "2023-07-11",
+    "prix_f4": [
+     "2023-07-10",
+     18.5,
+     "achat"
+    ],
+    "cloture_apres": [
+     20230731,
+     18.49
+    ],
+    "valeur_f4_m": 100.9,
+    "taille": "petite"
+   }
+  ],
+  "désaccords": [
+   {
+    "symbole": "CMTV",
+    "depot": "2023-07-10",
+    "actions": [
+     5455805,
+     "2023-05-02"
+    ],
+    "prix_f4": [
+     "2023-06-29",
+     18.0,
+     "achat"
+    ],
+    "cloture_apres": [
+     20230731,
+     18.49
+    ],
+    "valeur_f4_m": 98.2,
+    "valeur_apres_m": 100.9
+   },
+   {
+    "symbole": "ACR",
+    "depot": "2023-08-30",
+    "actions": [
+     8491979,
+     "2023-08-04"
+    ],
+    "prix_f4": [
+     "2023-08-30",
+     19.5,
+     "achat"
+    ],
+    "cloture_apres": [
+     20230831,
+     8.48
+    ],
+    "valeur_f4_m": 165.6,
+    "valeur_apres_m": 72.0
+   },
+   {
+    "symbole": "DBD",
+    "depot": "2023-09-01",
+    "actions": [
+     80036836,
+     "2023-08-06"
+    ],
+    "prix_f4": [
+     "2023-08-30",
+     18.69,
+     "achat"
+    ],
+    "cloture_apres": [
+     20230905,
+     17.39
+    ],
+    "valeur_f4_m": 1495.9,
+    "valeur_apres_m": 1391.8
+   },
+   {
+    "symbole": "APHP",
+    "depot": "2023-11-21",
+    "actions": [
+     107740991,
+     "2023-11-05"
+    ],
+    "prix_f4": [
+     "2023-11-20",
+     137760.0,
+     "vente"
+    ],
+    "cloture_apres": [
+     20231127,
+     0.3
+    ],
+    "valeur_f4_m": 14842398.9,
+    "valeur_apres_m": 32.3
+   },
+   {
+    "symbole": "APHP",
+    "depot": "2023-11-28",
+    "actions": [
+     107740991,
+     "2023-11-05"
+    ],
+    "prix_f4": [
+     "2023-11-27",
+     4600.0,
+     "achat"
+    ],
+    "cloture_apres": [
+     20231228,
+     0.29
+    ],
+    "valeur_f4_m": 495608.6,
+    "valeur_apres_m": 31.2
+   },
+   {
+    "symbole": "ACR",
+    "depot": "2023-12-05",
+    "actions": [
+     8455131,
+     "2023-11-06"
+    ],
+    "prix_f4": [
+     "2023-12-01",
+     22.25,
+     "achat"
+    ],
+    "cloture_apres": [
+     20231207,
+     8.4
+    ],
+    "valeur_f4_m": 188.1,
+    "valeur_apres_m": 71.0
+   },
+   {
+    "symbole": "SBFG",
+    "depot": "2024-02-21",
+    "actions": [
+     6801921,
+     "2023-11-09"
+    ],
+    "prix_f4": [
+     "2024-02-21",
+     14.75,
+     "achat"
+    ],
+    "cloture_apres": [
+     20240222,
+     13.97
+    ],
+    "valeur_f4_m": 100.3,
+    "valeur_apres_m": 95.0
+   },
+   {
+    "symbole": "TLIS",
+    "depot": "2024-09-04",
+    "actions": [
+     31686494,
+     "2024-08-14"
+    ],
+    "prix_f4": [
+     "2024-08-30",
+     4.25,
+     "achat"
+    ],
+    "cloture_apres": [
+     20240906,
+     1.55
+    ],
+    "valeur_f4_m": 134.7,
+    "valeur_apres_m": 49.1
+   },
+   {
+    "symbole": "TLIS",
+    "depot": "2024-09-05",
+    "actions": [
+     31686494,
+     "2024-08-14"
+    ],
+    "prix_f4": [
+     "2024-09-03",
+     4.0,
+     "achat"
+    ],
+    "cloture_apres": [
+     20240906,
+     1.55
+    ],
+    "valeur_f4_m": 126.7,
+    "valeur_apres_m": 49.1
+   },
+   {
+    "symbole": "MEDE",
+    "depot": "2024-09-30",
+    "actions": [
+     6666500,
+     "2024-05-31"
+    ],
+    "prix_f4": [
+     "2024-09-01",
+     0.1,
+     "achat"
+    ],
+    "cloture_apres": [
+     20241008,
+     23.03
+    ],
+    "valeur_f4_m": 0.7,
+    "valeur_apres_m": 153.5
+   },
+   {
+    "symbole": "ASMB",
+    "depot": "2024-10-09",
+    "actions": [
+     6345561,
+     "2024-08-02"
+    ],
+    "prix_f4": [
+     "2024-10-08",
+     14.58,
+     "achat"
+    ],
+    "cloture_apres": [
+     20241010,
+     16.05
+    ],
+    "valeur_f4_m": 92.5,
+    "valeur_apres_m": 101.8
+   },
+   {
+    "symbole": "SNWV",
+    "depot": "2024-10-23",
+    "actions": [
+     1181272961,
+     "2024-08-08"
+    ],
+    "prix_f4": [
+     "2024-10-18",
+     8.25,
+     "achat"
+    ],
+    "cloture_apres": [
+     20241115,
+     20.95
+    ],
+    "valeur_f4_m": 9745.5,
+    "valeur_apres_m": 24747.7
+   },
+   {
+    "symbole": "FKYS",
+    "depot": "2024-11-15",
+    "actions": [
+     6218781,
+     "2024-11-06"
+    ],
+    "prix_f4": [
+     "2024-11-15",
+     16.0,
+     "achat"
+    ],
+    "cloture_apres": [
+     20241129,
+     16.52
+    ],
+    "valeur_f4_m": 99.5,
+    "valeur_apres_m": 102.7
+   },
+   {
+    "symbole": "UCTT",
+    "depot": "2024-11-15",
+    "actions": [
+     45060067,
+     "2024-10-24"
+    ],
+    "prix_f4": [
+     "2024-11-13",
+     34.8333,
+     "achat"
+    ],
+    "cloture_apres": [
+     20241206,
+     38.08
+    ],
+    "valeur_f4_m": 1569.6,
+    "valeur_apres_m": 1715.9
+   },
+   {
+    "symbole": "FKYS",
+    "depot": "2024-11-25",
+    "actions": [
+     6218781,
+     "2024-11-06"
+    ],
+    "prix_f4": [
+     "2024-11-25",
+     15.56,
+     "achat"
+    ],
+    "cloture_apres": [
+     20241129,
+     16.52
+    ],
+    "valeur_f4_m": 96.8,
+    "valeur_apres_m": 102.7
+   },
+   {
+    "symbole": "FNWB",
+    "depot": "2024-12-16",
+    "actions": [
+     9442187,
+     "2025-05-06"
+    ],
+    "prix_f4": [
+     "2024-12-13",
+     10.7,
+     "achat"
+    ],
+    "cloture_apres": [
+     20241218,
+     10.3
+    ],
+    "valeur_f4_m": 101.0,
+    "valeur_apres_m": 97.3
+   },
+   {
+    "symbole": "PFX",
+    "depot": "2024-12-20",
+    "actions": [
+     2019778,
+     "2024-12-16"
+    ],
+    "prix_f4": [
+     "2024-12-18",
+     48.0492,
+     "achat"
+    ],
+    "cloture_apres": [
+     20241223,
+     50.8
+    ],
+    "valeur_f4_m": 97.0,
+    "valeur_apres_m": 102.6
+   },
+   {
+    "symbole": "UFI",
+    "depot": "2025-02-12",
+    "actions": [
+     18351295,
+     "2025-02-03"
+    ],
+    "prix_f4": [
+     "2025-02-11",
+     5.4867,
+     "achat"
+    ],
+    "cloture_apres": [
+     20250310,
+     5.27
+    ],
+    "valeur_f4_m": 100.7,
+    "valeur_apres_m": 96.7
+   },
+   {
+    "symbole": "CMTV",
+    "depot": "2025-02-25",
+    "actions": [
+     5577794,
+     "2024-11-04"
+    ],
+    "prix_f4": [
+     "2025-02-25",
+     18.2321,
+     "achat"
+    ],
+    "cloture_apres": [
+     20250319,
+     17.5
+    ],
+    "valeur_f4_m": 101.7,
+    "valeur_apres_m": 97.6
+   },
+   {
+    "symbole": "BUKS",
+    "depot": "2025-03-21",
+    "actions": [
+     67602396,
+     "2025-03-10"
+    ],
+    "prix_f4": [
+     "2025-03-21",
+     1.7487,
+     "achat"
+    ],
+    "cloture_apres": [
+     20250408,
+     1.45
+    ],
+    "valeur_f4_m": 118.2,
+    "valeur_apres_m": 98.0
+   }
+  ]
+ }
+}

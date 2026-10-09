@@ -1,0 +1,834 @@
+{
+ "periode": {
+  "debut": "2016-01-01",
+  "fin": "2023-06-30",
+  "contexte_depuis": "2015-01-01"
+ },
+ "fiabilite": {
+  "transactions comparées": 141494,
+  "à 2 % ou moins": 0.7335,
+  "à 5 % ou moins": 0.9005,
+  "à 10 % ou moins": 0.953,
+  "à 25 % ou moins": 0.9809,
+  "écart médian": 0.0086,
+  "écart au 95e centile": 0.094,
+  "par sens": {
+   "vente": {
+    "n": 99321,
+    "à 5 % ou moins": 0.9358,
+    "à 25 % ou moins": 0.992
+   },
+   "achat": {
+    "n": 42173,
+    "à 5 % ou moins": 0.8173,
+    "à 25 % ou moins": 0.9548
+   }
+  },
+  "exemples d'écarts de plus de 25 %": [
+   {
+    "symbole": "AON",
+    "sens": "vente",
+    "jour": "2019-03-18",
+    "prix_f4": 97.94,
+    "cloture_sec": 169.2,
+    "titres": [
+     "Class A Ordinary Shares"
+    ],
+    "id": "0001179110-15-005311:vente"
+   },
+   {
+    "symbole": "ICPT",
+    "sens": "vente",
+    "jour": "2015-07-06",
+    "prix_f4": 579.9342,
+    "cloture_sec": 239.52,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001144204-15-041689:vente"
+   },
+   {
+    "symbole": "CNBKA",
+    "sens": "achat",
+    "jour": "2015-07-07",
+    "prix_f4": 66.77,
+    "cloture_sec": 40.0,
+    "titres": [
+     "401(k) Company Stock Fund"
+    ],
+    "id": "0001127602-15-022627:achat"
+   },
+   {
+    "symbole": "CNBKA",
+    "sens": "achat",
+    "jour": "2015-07-07",
+    "prix_f4": 66.77,
+    "cloture_sec": 40.0,
+    "titres": [
+     "401(k) Company Stock Fund"
+    ],
+    "id": "0001127602-15-022629:achat"
+   },
+   {
+    "symbole": "RGSE",
+    "sens": "achat",
+    "jour": "2015-07-15",
+    "prix_f4": 3.29,
+    "cloture_sec": 1.48,
+    "titres": [
+     "Class A Common Stock"
+    ],
+    "id": "0000899243-15-001344:achat"
+   },
+   {
+    "symbole": "RGSE",
+    "sens": "achat",
+    "jour": "2015-07-15",
+    "prix_f4": 3.29,
+    "cloture_sec": 1.48,
+    "titres": [
+     "Class A Common Stock"
+    ],
+    "id": "0001179110-15-011254:achat"
+   },
+   {
+    "symbole": "EVV",
+    "sens": "achat",
+    "jour": "2015-07-16",
+    "prix_f4": 25000.0,
+    "cloture_sec": 13.74,
+    "titres": [
+     "Auction Preferred Stock"
+    ],
+    "id": "0000950103-15-005715:achat"
+   },
+   {
+    "symbole": "NFLX",
+    "sens": "vente",
+    "jour": "2015-07-16",
+    "prix_f4": 111.6816,
+    "cloture_sec": 810.67,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001190725-15-000159:vente"
+   },
+   {
+    "symbole": "NFLX",
+    "sens": "vente",
+    "jour": "2015-07-16",
+    "prix_f4": 114.82,
+    "cloture_sec": 810.67,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001190725-15-000160:vente"
+   },
+   {
+    "symbole": "NFLX",
+    "sens": "vente",
+    "jour": "2015-07-16",
+    "prix_f4": 110.87,
+    "cloture_sec": 810.67,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001190725-15-000161:vente"
+   },
+   {
+    "symbole": "PGOL",
+    "sens": "achat",
+    "jour": "2015-07-17",
+    "prix_f4": 0.05,
+    "cloture_sec": 0.07,
+    "titres": [
+     "COMMON SHARES"
+    ],
+    "id": "0001620690-15-000001:achat"
+   },
+   {
+    "symbole": "DNAI",
+    "sens": "achat",
+    "jour": "2015-07-21",
+    "prix_f4": 17.0,
+    "cloture_sec": 29.8,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001209191-15-061933:achat"
+   },
+   {
+    "symbole": "DNAI",
+    "sens": "achat",
+    "jour": "2015-07-21",
+    "prix_f4": 17.0,
+    "cloture_sec": 29.8,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001209191-15-061934:achat"
+   },
+   {
+    "symbole": "DNAI",
+    "sens": "achat",
+    "jour": "2015-07-21",
+    "prix_f4": 17.0,
+    "cloture_sec": 29.8,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001209191-15-061937:achat"
+   },
+   {
+    "symbole": "DNAI",
+    "sens": "achat",
+    "jour": "2015-07-21",
+    "prix_f4": 17.0,
+    "cloture_sec": 29.8,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001209191-15-061938:achat"
+   },
+   {
+    "symbole": "DNAI",
+    "sens": "achat",
+    "jour": "2015-07-21",
+    "prix_f4": 17.0,
+    "cloture_sec": 29.8,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001209191-15-061940:achat"
+   },
+   {
+    "symbole": "CHMA",
+    "sens": "achat",
+    "jour": "2015-07-21",
+    "prix_f4": 16.0,
+    "cloture_sec": 22.66,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0000899243-15-001566:achat"
+   },
+   {
+    "symbole": "IDI",
+    "sens": "achat",
+    "jour": "2015-07-22",
+    "prix_f4": 5.17,
+    "cloture_sec": 7.75,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001209191-15-062100:achat"
+   },
+   {
+    "symbole": "RPD",
+    "sens": "achat",
+    "jour": "2015-07-22",
+    "prix_f4": 16.0,
+    "cloture_sec": 23.95,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001082906-15-000030:achat"
+   },
+   {
+    "symbole": "RPD",
+    "sens": "achat",
+    "jour": "2015-07-22",
+    "prix_f4": 16.0,
+    "cloture_sec": 23.95,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001498115-15-000006:achat"
+   },
+   {
+    "symbole": "MINI",
+    "sens": "achat",
+    "jour": "2015-07-28",
+    "prix_f4": 19.76,
+    "cloture_sec": 34.71,
+    "titres": [
+     "Common Stock $0.01 Par Value"
+    ],
+    "id": "0001209191-15-062847:achat"
+   },
+   {
+    "symbole": "SCOR",
+    "sens": "vente",
+    "jour": "2015-07-29",
+    "prix_f4": 556.77,
+    "cloture_sec": 56.8,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001562691-15-000040:vente"
+   },
+   {
+    "symbole": "EVV",
+    "sens": "achat",
+    "jour": "2015-07-28",
+    "prix_f4": 25000.0,
+    "cloture_sec": 13.4,
+    "titres": [
+     "Auction Preferred Stock"
+    ],
+    "id": "0000950103-15-005986:achat"
+   },
+   {
+    "symbole": "AMRS",
+    "sens": "achat",
+    "jour": "2015-07-29",
+    "prix_f4": 2.2701,
+    "cloture_sec": 1.55,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001209191-15-063117:achat"
+   },
+   {
+    "symbole": "AMRS",
+    "sens": "achat",
+    "jour": "2015-07-29",
+    "prix_f4": 2.2701,
+    "cloture_sec": 1.55,
+    "titres": [
+     "Common Stock"
+    ],
+    "id": "0001209191-15-063119:achat"
+   }
+  ]
+ },
+ "compte": {
+  "achats calculables sauf peut-être le prix": 91261,
+  "prix de la SEC de 60 jours ou moins (taille connue aujourd'hui)": 82795,
+  "hors calcul : étrangère ou sans 10-K/10-Q": 20131,
+  "SANS prix de la SEC de 60 jours ou moins (taille inconnue aujourd'hui)": 8466,
+  "  … et aucun prix de formulaire 4 de 60 jours ou moins": 474,
+  "hors calcul : pas de nombre d'actions": 8264,
+  "  … avec un prix de formulaire 4 de 60 jours ou moins": 7992,
+  "  … dont le prix le plus récent vient d'un(e) achat": 7821,
+  "  … âge du prix 8 à 30 jours": 331,
+  "  … pas de clôture de la SEC dans les 30 jours après (pas de vérité)": 3470,
+  "  … âge du prix ≤ 7 jours": 7578,
+  "hors calcul : actions trop vieilles ou moins de 500 000": 1954,
+  "  … dont le prix le plus récent vient d'un(e) vente": 171,
+  "  … âge du prix 31 à 60 jours": 83,
+  "  … CUSIP changé autour (prix ou actions peut-être d'une autre époque)": 52
+ },
+ "accord": {
+  "comparés": 4522,
+  "même taille": 4483,
+  "même côté de 100 M$": 4344,
+  "prix à 25 % ou moins de la clôture d'après": 3968
+ },
+ "exemples": {
+  "accords": [
+   {
+    "symbole": "QNBC",
+    "depot": "2016-01-05",
+    "prix_f4": [
+     "2016-01-04",
+     29.92,
+     "vente"
+    ],
+    "cloture_apres": [
+     20160127,
+     30.25
+    ],
+    "valeur_f4_m": 100.2,
+    "taille": "petite"
+   },
+   {
+    "symbole": "QNBC",
+    "depot": "2016-01-05",
+    "prix_f4": [
+     "2016-01-04",
+     29.92,
+     "vente"
+    ],
+    "cloture_apres": [
+     20160127,
+     30.25
+    ],
+    "valeur_f4_m": 100.2,
+    "taille": "petite"
+   },
+   {
+    "symbole": "IEGH",
+    "depot": "2016-01-05",
+    "prix_f4": [
+     "2015-12-31",
+     5.0,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160106,
+     8.0
+    ],
+    "valeur_f4_m": 137.4,
+    "taille": "petite"
+   },
+   {
+    "symbole": "CUBN",
+    "depot": "2016-01-06",
+    "prix_f4": [
+     "2016-01-05",
+     13.9677,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160202,
+     13.79
+    ],
+    "valeur_f4_m": 99.1,
+    "taille": "petite"
+   },
+   {
+    "symbole": "NNUTU",
+    "depot": "2016-01-07",
+    "prix_f4": [
+     "2016-01-05",
+     3.1363,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160122,
+     2.75
+    ],
+    "valeur_f4_m": 34.8,
+    "taille": "petite"
+   },
+   {
+    "symbole": "FDBC",
+    "depot": "2016-01-07",
+    "prix_f4": [
+     "2016-01-06",
+     30.06,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160113,
+     33.5
+    ],
+    "valeur_f4_m": 73.3,
+    "taille": "petite"
+   },
+   {
+    "symbole": "FDBC",
+    "depot": "2016-01-07",
+    "prix_f4": [
+     "2016-01-06",
+     30.06,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160113,
+     33.5
+    ],
+    "valeur_f4_m": 73.3,
+    "taille": "petite"
+   },
+   {
+    "symbole": "FDBC",
+    "depot": "2016-01-07",
+    "prix_f4": [
+     "2016-01-06",
+     30.06,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160113,
+     33.5
+    ],
+    "valeur_f4_m": 73.3,
+    "taille": "petite"
+   }
+  ],
+  "désaccords": [
+   {
+    "symbole": "ARL",
+    "depot": "2016-01-06",
+    "actions": [
+     15514360,
+     "2015-11-06"
+    ],
+    "prix_f4": [
+     "2016-01-05",
+     6.65,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160128,
+     3.98
+    ],
+    "valeur_f4_m": 103.2,
+    "valeur_apres_m": 61.7
+   },
+   {
+    "symbole": "FNTC",
+    "depot": "2016-02-12",
+    "actions": [
+     13733333,
+     "2016-01-20"
+    ],
+    "prix_f4": [
+     "2016-02-11",
+     0.01,
+     "vente"
+    ],
+    "cloture_apres": [
+     20160216,
+     9.7
+    ],
+    "valeur_f4_m": 0.1,
+    "valeur_apres_m": 133.2
+   },
+   {
+    "symbole": "BRT",
+    "depot": "2016-03-16",
+    "actions": [
+     14242106,
+     "2016-02-05"
+    ],
+    "prix_f4": [
+     "2016-03-09",
+     6.6404,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160412,
+     7.14
+    ],
+    "valeur_f4_m": 94.6,
+    "valeur_apres_m": 101.7
+   },
+   {
+    "symbole": "BRT",
+    "depot": "2016-03-16",
+    "actions": [
+     14242106,
+     "2016-02-05"
+    ],
+    "prix_f4": [
+     "2016-03-09",
+     6.6404,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160412,
+     7.14
+    ],
+    "valeur_f4_m": 94.6,
+    "valeur_apres_m": 101.7
+   },
+   {
+    "symbole": "BRT",
+    "depot": "2016-03-16",
+    "actions": [
+     14242106,
+     "2016-02-05"
+    ],
+    "prix_f4": [
+     "2016-03-09",
+     6.6404,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160412,
+     7.14
+    ],
+    "valeur_f4_m": 94.6,
+    "valeur_apres_m": 101.7
+   },
+   {
+    "symbole": "BRT",
+    "depot": "2016-03-16",
+    "actions": [
+     14242106,
+     "2016-02-05"
+    ],
+    "prix_f4": [
+     "2016-03-09",
+     6.6404,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160412,
+     7.14
+    ],
+    "valeur_f4_m": 94.6,
+    "valeur_apres_m": 101.7
+   },
+   {
+    "symbole": "BRT",
+    "depot": "2016-03-17",
+    "actions": [
+     14242106,
+     "2016-02-05"
+    ],
+    "prix_f4": [
+     "2016-03-15",
+     6.6217,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160412,
+     7.14
+    ],
+    "valeur_f4_m": 94.3,
+    "valeur_apres_m": 101.7
+   },
+   {
+    "symbole": "BRT",
+    "depot": "2016-03-17",
+    "actions": [
+     14242106,
+     "2016-02-05"
+    ],
+    "prix_f4": [
+     "2016-03-15",
+     6.6217,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160412,
+     7.14
+    ],
+    "valeur_f4_m": 94.3,
+    "valeur_apres_m": 101.7
+   },
+   {
+    "symbole": "BRT",
+    "depot": "2016-03-17",
+    "actions": [
+     14242106,
+     "2016-02-05"
+    ],
+    "prix_f4": [
+     "2016-03-15",
+     6.6217,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160412,
+     7.14
+    ],
+    "valeur_f4_m": 94.3,
+    "valeur_apres_m": 101.7
+   },
+   {
+    "symbole": "BRT",
+    "depot": "2016-03-17",
+    "actions": [
+     14242106,
+     "2016-02-05"
+    ],
+    "prix_f4": [
+     "2016-03-15",
+     6.6217,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160412,
+     7.14
+    ],
+    "valeur_f4_m": 94.3,
+    "valeur_apres_m": 101.7
+   },
+   {
+    "symbole": "BRT",
+    "depot": "2016-03-21",
+    "actions": [
+     14242106,
+     "2016-02-05"
+    ],
+    "prix_f4": [
+     "2016-03-18",
+     6.7267,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160412,
+     7.14
+    ],
+    "valeur_f4_m": 95.8,
+    "valeur_apres_m": 101.7
+   },
+   {
+    "symbole": "BRT",
+    "depot": "2016-03-21",
+    "actions": [
+     14242106,
+     "2016-02-05"
+    ],
+    "prix_f4": [
+     "2016-03-18",
+     6.7267,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160412,
+     7.14
+    ],
+    "valeur_f4_m": 95.8,
+    "valeur_apres_m": 101.7
+   },
+   {
+    "symbole": "BRT",
+    "depot": "2016-03-21",
+    "actions": [
+     14242106,
+     "2016-02-05"
+    ],
+    "prix_f4": [
+     "2016-03-18",
+     6.7267,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160412,
+     7.14
+    ],
+    "valeur_f4_m": 95.8,
+    "valeur_apres_m": 101.7
+   },
+   {
+    "symbole": "BRT",
+    "depot": "2016-03-21",
+    "actions": [
+     14242106,
+     "2016-02-05"
+    ],
+    "prix_f4": [
+     "2016-03-18",
+     6.7267,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160412,
+     7.14
+    ],
+    "valeur_f4_m": 95.8,
+    "valeur_apres_m": 101.7
+   },
+   {
+    "symbole": "MMAC",
+    "depot": "2016-03-22",
+    "actions": [
+     6411436,
+     "2016-03-03"
+    ],
+    "prix_f4": [
+     "2016-03-15",
+     14.31,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160323,
+     15.8
+    ],
+    "valeur_f4_m": 91.7,
+    "valeur_apres_m": 101.3
+   },
+   {
+    "symbole": "PANL",
+    "depot": "2016-05-04",
+    "actions": [
+     36503837,
+     "2016-03-23"
+    ],
+    "prix_f4": [
+     "2016-05-02",
+     2.98,
+     "achat"
+    ],
+    "cloture_apres": [
+     20160523,
+     2.5
+    ],
+    "valeur_f4_m": 108.8,
+    "valeur_apres_m": 91.3
+   },
+   {
+    "symbole": "GRNE",
+    "depot": "2016-10-11",
+    "actions": [
+     886180,
+     "2016-08-03"
+    ],
+    "prix_f4": [
+     "2016-09-30",
+     1095450.1887,
+     "achat"
+    ],
+    "cloture_apres": [
+     20161018,
+     0.35
+    ],
+    "valeur_f4_m": 970766.0,
+    "valeur_apres_m": 0.3
+   },
+   {
+    "symbole": "FCCO",
+    "depot": "2016-10-27",
+    "actions": [
+     6699030,
+     "2016-08-11"
+    ],
+    "prix_f4": [
+     "2016-10-26",
+     14.9,
+     "achat"
+    ],
+    "cloture_apres": [
+     20161107,
+     15.15
+    ],
+    "valeur_f4_m": 99.8,
+    "valeur_apres_m": 101.5
+   },
+   {
+    "symbole": "FNBG",
+    "depot": "2016-11-08",
+    "actions": [
+     4616901,
+     "2016-10-20"
+    ],
+    "prix_f4": [
+     "2016-11-07",
+     15.51,
+     "achat"
+    ],
+    "cloture_apres": [
+     20161115,
+     32.5
+    ],
+    "valeur_f4_m": 71.6,
+    "valeur_apres_m": 150.0
+   },
+   {
+    "symbole": "ARL",
+    "depot": "2016-12-06",
+    "actions": [
+     15514360,
+     "2016-11-07"
+    ],
+    "prix_f4": [
+     "2016-12-05",
+     6.65,
+     "achat"
+    ],
+    "cloture_apres": [
+     20161207,
+     5.87
+    ],
+    "valeur_f4_m": 103.2,
+    "valeur_apres_m": 91.1
+   }
+  ]
+ }
+}
