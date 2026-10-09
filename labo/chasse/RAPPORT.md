@@ -30,8 +30,8 @@ dit, chiffres à l'appui, et Radar ne change pas.
    durées), de −2,4 % à −27,8 %. Le S&P 500 a fait +208 % en 9 ans ; les compagnies où les dirigeants achètent (surtout
    des petites) n'ont pas suivi.
 2. Le modèle classe mieux que le hasard : corrélation de rang positive 26 fois sur 27, de 0,12 à 0,26 sur les 3
-   dernières années. Il repère surtout les mauvais achats : ses achats gardés ont encore une médiane négative contre
-   le S&P 500 dans 24 cas sur 27.
+   dernières années. Mais le haut du classement ne suffit pas : ses achats gardés ont encore une médiane négative
+   contre le S&P 500 dans 24 cas sur 27 (le bas du classement n'a pas été mesuré à part).
 3. Le portefeuille (10 places, 10 $ par transaction, comme le banc du tournoi) n'achète qu'une petite partie des choix
    du modèle. Les places sont pleines la plupart du temps, et 16 à 45 % des choix n'ont aucun prix de la SEC autour du
    dépôt. Il a acheté 1 à 8 % des achats gardés : 70 à 308 transactions en 9 ans selon la durée.
