@@ -22,7 +22,7 @@ from ..models import Evenement, empreinte
 from ..store import Depot
 from ..validate import controle_source, jours_ouvrables
 
-VERSION = "sec-7"  # à augmenter quand un lecteur change : les infos sont relues et mises à jour
+VERSION = "sec-8"  # à augmenter quand un lecteur change : les infos sont relues et mises à jour
 ARCHIVES = "https://www.sec.gov/Archives"
 BOURSES_GARDEES = {"Nasdaq", "NYSE", "CBOE"}
 SEUIL_ACHAT = 25_000  # $ US : sous ce montant, un achat est du bruit
@@ -322,6 +322,8 @@ def lire_form4(texte: str) -> dict:
             "apres": nombre(tr.findtext("postTransactionAmounts/sharesOwnedFollowingTransaction/value")),
             "hors_bourse": hors_bourse,
             "automatique": automatique,
+            # Étape 2 : seules les actions ordinaires donnent un prix de secours pour la taille (pas les privilégiées)
+            "titre_valeur": " ".join((tr.findtext("securityTitle/value") or "").split()),
         })
     return {
         "type": racine.findtext("documentType"),
