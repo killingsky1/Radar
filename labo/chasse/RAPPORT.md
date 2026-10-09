@@ -27,8 +27,8 @@ dit, chiffres à l'appui, et Radar ne change pas.
 
 ## Pourquoi ça perd (mesuré)
 1. L'achat médian d'un dirigeant perd contre le S&P 500, après l'écart achat-vente : 27 cas sur 27 (9 années × 3
-   durées), de −2,4 % à −27,8 %. Le S&P 500 a fait +208 % en 9 ans ; les compagnies où les dirigeants achètent (surtout
-   des petites) n'ont pas suivi.
+   durées), de −2,4 % à −27,8 %. Le S&P 500 a fait +208 % en 9 ans ; en médiane, les compagnies où les dirigeants
+   achètent n'ont pas suivi.
 2. Le modèle classe mieux que le hasard : corrélation de rang positive 26 fois sur 27, de 0,12 à 0,26 sur les 3
    dernières années. Mais le haut du classement ne suffit pas : ses achats gardés ont encore une médiane négative
    contre le S&P 500 dans 24 cas sur 27 (le bas du classement n'a pas été mesuré à part).
