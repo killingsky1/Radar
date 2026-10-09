@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 
-const VERSION = "0.27.1";
+const VERSION = "0.27.2";
 
 // ---------- Constantes ----------
 
@@ -1615,8 +1615,14 @@ function TailleBourse({ t, regle100 }) {
   const seuils = s
     ? `Petite : moins de ${argentCourt(s.p30 * 1e6)} (30e centile des compagnies du NYSE, ${moisAnnee(s.mois)}) ; grande : ${argentCourt(s.p70 * 1e6)} et plus (70e centile).`
     : "";
+  // Étape 2 : quand la SEC n'a pas de prix depuis 60 jours, le prix des dirigeants en bourse (formulaire 4)
+  const f4 = t.source_prix === "formulaire 4";
+  // seulement si la taille est connue : sinon il n'y a pas de prix (t.prix absent)
+  const d_ou = t.taille && (f4
+    ? `prix moyen des dirigeants en bourse le ${jourSec(t.prix[0])}, formulaire 4 : la SEC n'a pas de prix depuis 60 jours`
+    : `prix de la SEC du ${jourSec(t.prix[0])}`);
   const texte = t.taille
-    ? `${nombre(t.actions[0])} actions déclarées au ${dateLongue(t.actions[1])} × ${prixAction(t.prix[1])} (prix de la SEC du ${jourSec(t.prix[0])}). ${seuils}${t.taille === "petite" ? " Les achats de dirigeants comptent ×1,5." : ""}${regle100 && t.valeur_m < 100 ? " Moins de 100 M$ : hors de la liste « hausse »." : ""}${t.note ? ` ${t.note}` : ""}`
+    ? `${nombre(t.actions[0])} actions déclarées au ${dateLongue(t.actions[1])} × ${prixAction(t.prix[1])} (${d_ou}). ${seuils}${t.taille === "petite" ? " Les achats de dirigeants comptent ×1,5." : ""}${regle100 && t.valeur_m < 100 ? " Moins de 100 M$ : hors de la liste « hausse »." : ""}${t.note ? ` ${t.note}` : ""}`
     : `Pas calculée : ${t.raison}. Pas de bonus de petite compagnie.`;
   // Étape 1 (données sûres), autour d'un changement de CUSIP : deux valeurs possibles (même taille des deux côtés), ou
   // un maximum sûr après un regroupement d'actions probable
@@ -1634,7 +1640,7 @@ function TailleBourse({ t, regle100 }) {
           <span className="rangee-texte">{fr(texte)}</span>
         </div>
       </div>
-      <p className="taille-source">{fr("Actions en circulation déclarées à la SEC × prix officiel de la SEC ; seuils publiés chaque mois par Kenneth French (données CRSP). Lakonishok et Lee (2001) : les achats des dirigeants prédisent plus dans les petites compagnies.")}</p>
+      <p className="taille-source">{fr(`Actions en circulation déclarées à la SEC × ${f4 ? "prix des dirigeants en bourse (formulaire 4 déposé à la SEC, actions ordinaires seulement)" : "prix officiel de la SEC"} ; seuils publiés chaque mois par Kenneth French (données CRSP). Lakonishok et Lee (2001) : les achats des dirigeants prédisent plus dans les petites compagnies.`)}</p>
     </>
   );
 }

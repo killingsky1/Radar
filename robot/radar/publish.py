@@ -11,7 +11,7 @@ from . import __version__, argent, calendrier, emetteurs, resultats
 from .collecteurs import congres, inities, lobbying, rachats, sante, taille
 from .health import LIBELLES, statut
 from .registry import SOURCES
-from .score import calculer, jour_de_calcul
+from .score import achats_d_emission, calculer, jour_de_calcul
 from .store import Depot
 
 MAX_PAR_CATEGORIE = 150  # chaque catégorie garde ses infos les plus récentes (les élus ne cachent pas le reste)
@@ -122,7 +122,10 @@ def publier(donnees: Path, etat: dict, branchees: set[str], maintenant: datetime
     routiniers, tailles = None, None
     try:
         routiniers = inities.charger(donnees)
-        tailles = taille.pour_score(donnees, emetteurs.charger(donnees), jour_de_calcul(maintenant))
+        # Étape 2 : quand la SEC n'a pas de prix depuis 60 jours, le prix des dirigeants en bourse (formulaire 4)
+        jour = jour_de_calcul(maintenant)
+        prix_f4 = taille.prix_formulaires_4(pour_score, jour, achats_d_emission(pour_score))
+        tailles = taille.pour_score(donnees, emetteurs.charger(donnees), jour, prix_f4)
     except Exception as exc:  # noqa: BLE001
         print(f"Score : routiniers ou tailles illisibles, calcul sans eux ({type(exc).__name__}: {exc})")
     try:

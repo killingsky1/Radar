@@ -275,10 +275,14 @@ METHODE = {
               "changé après la date des actions (souvent un regroupement d'actions, qui divise leur nombre), c'est le "
               "dernier prix de l'ancien code ; si on ne sait pas de quel côté du changement sont les actions, les deux "
               "valeurs possibles, et une taille seulement si elles donnent la même ; après un regroupement probable "
-              "(prix au moins 1,8 fois plus haut au changement), ancien nombre × nouveau prix est un maximum. Taille "
-              "inconnue, donc pas de bonus : compagnie étrangère (20-F, 40-F, 6-K), actions déclarées il y a plus de 200 "
-              "jours ou moins de 500 000 actions déclarées, pas de prix de la SEC depuis 60 jours, changement de code du "
-              "titre dont on ne peut pas dire le côté.",
+              "(prix au moins 1,8 fois plus haut au changement), ancien nombre × nouveau prix est un maximum. Quand la "
+              "SEC n'a pas de prix depuis 60 jours (un titre a un prix seulement les jours où il a des échecs de "
+              "livraison), le prix moyen des achats et ventes de dirigeants en bourse du jour le plus récent (formulaire "
+              "4 de 60 jours ou moins, actions ordinaires seulement, jamais lors d'une émission, hors bourse ou "
+              "automatique) ; pas s'il est plus de 10 fois loin du dernier prix de la SEC ou si le code du titre a "
+              "changé entre-temps. Taille inconnue, donc pas de bonus : compagnie étrangère (20-F, 40-F, 6-K), actions "
+              "déclarées il y a plus de 200 jours ou moins de 500 000 actions déclarées, pas de prix de la SEC ni de prix "
+              "de formulaire 4 utilisable depuis 60 jours, changement de code du titre dont on ne peut pas dire le côté.",
     "etudes_taille": ["lakonishok_lee", "cohen_malloy_pomorski"],
     "routiniers": "Un initié qui achète ou vend en bourse dans le même mois de l'année, chacune des 3 années précédentes "
                   "(« routinier ») : 0 point, ses transactions ne prédisent rien (Cohen, Malloy et Pomorski 2012). "
