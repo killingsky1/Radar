@@ -1,0 +1,69 @@
+name: "Labo (chasse 2, étape 0 : la base des chasses B et C, juillet 2009 à septembre 2026)"
+
+# Lancé seulement quand on modifie labo/chasse2/declencheur-donnees.txt (ou à la main), loin d'un passage du robot.
+# Même groupe que le robot (radar.yml) : jamais les deux en même temps, donc la SEC voit un seul client à la fois
+# (5 requêtes par seconde au plus, courriel dans l'en-tête comme la SEC le demande). Le cache du tournoi est lu
+# seulement (jamais réenregistré ici) ; la base va dans le cache de la chasse 2.
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/chasse2/declencheur-donnees.txt"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar
+  cancel-in-progress: false
+
+jobs:
+  donnees:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: principal
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests -r principal/robot/requirements.txt
+      - name: "L'essai d'abord, avec de faux caches et une fausse SEC (aucune requête réelle)"
+        run: python labo/chasse2/essai_donnees2.py
+      - name: Le cache du tournoi (lu seulement)
+        uses: actions/cache/restore@v4
+        with:
+          path: cache
+          key: tournoi-aucun
+          restore-keys: tournoi-
+      - name: Le cache de la chasse 2 (reconnaissance)
+        uses: actions/cache/restore@v4
+        with:
+          path: cache2
+          key: chasse2-aucun
+          restore-keys: chasse2-
+      - name: La base (initiés, compagnies, finances, 13D et 13G, prix)
+        run: |
+          test -f cache/tournoi/companyfacts.zip && test -f cache2/submissions.zip
+          python labo/chasse2/donnees2.py
+      - name: "Alléger avant de garder : submissions.zip est lu (sa liste des 10-K est dans la base)"
+        if: success()
+        run: rm -f cache2/submissions.zip && du -sh cache2/* || true
+      - name: Garder la base (cache de la chasse 2)
+        if: success()
+        uses: actions/cache/save@v4
+        with:
+          path: cache2
+          key: chasse2-${{ github.run_id }}
+      - name: Sauvegarder le résumé et le journal (nombres seulement, aucun rendement)
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/chasse2/donnees || exit 0
+          git commit -m "Labo : chasse 2, la base des chasses B et C ($(date -u +'%Y-%m-%d %H:%M') UTC)" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
