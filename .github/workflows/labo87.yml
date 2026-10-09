@@ -1,0 +1,55 @@
+name: "Labo (étape 2 : le prix du formulaire 4 du vrai code du robot)"
+
+# Lancé quand on modifie labo/tournoi/declencheur-prix-form4-robot.txt. Lecture seulement du cache du labo (aucun site
+# lu) : n'entre pas dans la file du robot (groupe radar).
+on:
+  push:
+    branches: [labo]
+    paths: ["labo/tournoi/declencheur-prix-form4-robot.txt"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: labo87
+  cancel-in-progress: false
+
+jobs:
+  mesurer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: "Le code du robot (branche travail, étape 2 en cours)"
+        uses: actions/checkout@v4
+        with:
+          ref: 7309f8474f4dd9b0991125048d44e223c51b7a37
+          path: travail
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r travail/robot/requirements.txt
+      - name: "Essai hors ligne (mini-jeu fabriqué, 23 réponses connues d'avance)"
+        run: python labo/tournoi/essais/essai_prix_form4_robot.py --robot travail/robot
+      - name: Le jeu de recherche (cache de l'étape 0)
+        uses: actions/cache/restore@v4
+        with:
+          path: cache
+          key: tournoi-aucun
+          restore-keys: tournoi-
+      - name: "Mesure 4 (découverte 2023-2026 et coffre-fort 2016-2023)"
+        run: |
+          test -f cache/decouverte/evenements.jsonl.gz && test -f cache/ftd/202301a.zip
+          git -C travail log --oneline -1
+          python labo/tournoi/mesures/prix_form4_robot.py --donnees cache/decouverte --ftd cache/ftd --robot travail/robot --sortie labo/tournoi/mesures/prix_form4_robot_decouverte.json
+          python labo/tournoi/mesures/prix_form4_robot.py --donnees cache/coffre --ftd cache/ftd --robot travail/robot --sortie labo/tournoi/mesures/prix_form4_robot_coffre.json
+      - name: Sauvegarder les mesures
+        if: always()
+        run: |
+          git config user.name "radar-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add labo/tournoi/mesures
+          git commit -m "Labo : mesure 4, prix du formulaire 4 du vrai code du robot ($(date -u +'%Y-%m-%d %H:%M') UTC)" || exit 0
+          git pull --rebase origin labo
+          git push origin HEAD:labo
