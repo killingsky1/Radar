@@ -63,6 +63,85 @@
   "title": "Projet d'intérêt national : avis d'inscription possible, Décret modifiant l’annexe 1 de la Loi visant à bâtir le Canada"
  },
  {
+  "amount_max": 2173259998.8,
+  "amount_min": 2173259998.8,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": false,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-10T09:56:45+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 43111.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000082473",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 50410.8,
+   "proprietaires_cik": [
+    "1055365"
+   ],
+   "roles": [
+    "President & CEO"
+   ],
+   "symbole_declare": "IHT",
+   "symboles_sec": [
+    "IHT"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 43111.0,
+     "apres": 7940275.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-10-07",
+     "hors_bourse": null,
+     "prix": 50410.8,
+     "titre_valeur": "INNSUITES HOSPITALITY REIT"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "WIRTH JAMES F",
+   "INNSUITES HOSPITALITY TRUST"
+  ],
+  "id": "sec_form4:0001493152-26-046636:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-10-07",
+  "official_id": "0001493152-26-046636:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/82473/000149315226046636/0001493152-26-046636-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-10-09",
+  "sha256": "c10b9da548834ba2992a2eee6d16e438ee4f61c0721e214f1a7107910f9b1a6c",
+  "source": "sec_form4",
+  "tickers": [
+   "IHT"
+  ],
+  "title": "WIRTH JAMES F (President & CEO) vend 43 111 actions de INNSUITES HOSPITALITY TRUST"
+ },
+ {
   "amount_max": 15000.0,
   "amount_min": 1001.0,
   "badge": "a_verifier",
