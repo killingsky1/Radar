@@ -152,7 +152,12 @@ def main():
                     compte["sans document principal"] += 1
                     continue
                 url = f"https://www.sec.gov/Archives/edgar/data/{int(cik)}/{acc.replace('-', '')}/{doc}"
+                t_doc = time.time()
                 contenu = lire(url)
+                duree = time.time() - t_doc
+                compte["secondes de lecture"] += round(duree, 1)
+                if duree > 10:  # lecture lente (la SEC qui ralentit ou fait attendre) : comptée, pour mesurer au lieu de deviner
+                    compte["lectures de plus de 10 s"] += 1
                 if contenu is None or contenu == "ERREUR":
                     compte["illisibles" if contenu == "ERREUR" else "introuvables"] += 1
                     continue
