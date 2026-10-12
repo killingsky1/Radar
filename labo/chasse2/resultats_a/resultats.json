@@ -1,0 +1,474 @@
+{
+ "plan": "labo/chasse2/PLAN.md (chasse A)",
+ "dix_k_avec_similarite": 34633,
+ "dix_k_de_l_univers": 15824,
+ "signaux": 3425,
+ "fractionnements": 297,
+ "pour_comprendre": {
+  "2009-2010": {
+   "signal": {
+    "n": 71,
+    "moyenne": 0.0141,
+    "mediane": 0.0076
+   },
+   "autres": {
+    "n": 273,
+    "moyenne": 0.0362,
+    "mediane": -0.0009
+   },
+   "change_beaucoup": {
+    "n": 76,
+    "moyenne": 0.0145,
+    "mediane": -0.0124
+   }
+  },
+  "2010-2011": {
+   "signal": {
+    "n": 242,
+    "moyenne": -0.0201,
+    "mediane": -0.0381
+   },
+   "autres": {
+    "n": 679,
+    "moyenne": -0.0303,
+    "mediane": -0.0347
+   },
+   "change_beaucoup": {
+    "n": 150,
+    "moyenne": -0.0207,
+    "mediane": -0.0343
+   }
+  },
+  "2011-2012": {
+   "signal": {
+    "n": 214,
+    "moyenne": -0.0129,
+    "mediane": -0.0154
+   },
+   "autres": {
+    "n": 735,
+    "moyenne": -0.0136,
+    "mediane": -0.0145
+   },
+   "change_beaucoup": {
+    "n": 187,
+    "moyenne": 0.0022,
+    "mediane": -0.0304
+   }
+  },
+  "2012-2013": {
+   "signal": {
+    "n": 216,
+    "moyenne": 0.0418,
+    "mediane": -0.0133
+   },
+   "autres": {
+    "n": 689,
+    "moyenne": 0.017,
+    "mediane": -0.0284
+   },
+   "change_beaucoup": {
+    "n": 180,
+    "moyenne": 0.0088,
+    "mediane": -0.0623
+   }
+  },
+  "2013-2014": {
+   "signal": {
+    "n": 208,
+    "moyenne": -0.071,
+    "mediane": -0.0484
+   },
+   "autres": {
+    "n": 751,
+    "moyenne": -0.033,
+    "mediane": -0.0267
+   },
+   "change_beaucoup": {
+    "n": 179,
+    "moyenne": -0.0438,
+    "mediane": -0.0217
+   }
+  },
+  "2014-2015": {
+   "signal": {
+    "n": 198,
+    "moyenne": -0.029,
+    "mediane": -0.027
+   },
+   "autres": {
+    "n": 764,
+    "moyenne": -0.0649,
+    "mediane": -0.048
+   },
+   "change_beaucoup": {
+    "n": 207,
+    "moyenne": -0.0526,
+    "mediane": -0.0165
+   }
+  },
+  "2015-2016": {
+   "signal": {
+    "n": 201,
+    "moyenne": 0.0634,
+    "mediane": 0.0313
+   },
+   "autres": {
+    "n": 744,
+    "moyenne": 0.0242,
+    "mediane": -0.012
+   },
+   "change_beaucoup": {
+    "n": 175,
+    "moyenne": 0.0201,
+    "mediane": -0.0222
+   }
+  },
+  "2016-2017": {
+   "signal": {
+    "n": 177,
+    "moyenne": -0.0517,
+    "mediane": -0.0824
+   },
+   "autres": {
+    "n": 689,
+    "moyenne": -0.0591,
+    "mediane": -0.0997
+   },
+   "change_beaucoup": {
+    "n": 160,
+    "moyenne": -0.0623,
+    "mediane": -0.1017
+   }
+  },
+  "2017-2018": {
+   "signal": {
+    "n": 164,
+    "moyenne": -0.0135,
+    "mediane": -0.0208
+   },
+   "autres": {
+    "n": 728,
+    "moyenne": -0.0035,
+    "mediane": -0.0098
+   },
+   "change_beaucoup": {
+    "n": 192,
+    "moyenne": -0.0142,
+    "mediane": -0.0264
+   }
+  },
+  "2018-2019": {
+   "signal": {
+    "n": 163,
+    "moyenne": -0.1068,
+    "mediane": -0.0997
+   },
+   "autres": {
+    "n": 651,
+    "moyenne": -0.062,
+    "mediane": -0.067
+   },
+   "change_beaucoup": {
+    "n": 145,
+    "moyenne": -0.0925,
+    "mediane": -0.0903
+   }
+  },
+  "2019-2020": {
+   "signal": {
+    "n": 113,
+    "moyenne": 0.0538,
+    "mediane": -0.0889
+   },
+   "autres": {
+    "n": 641,
+    "moyenne": 0.073,
+    "mediane": -0.037
+   },
+   "change_beaucoup": {
+    "n": 182,
+    "moyenne": 0.0992,
+    "mediane": -0.0137
+   }
+  },
+  "2020-2021": {
+   "signal": {
+    "n": 116,
+    "moyenne": -0.0572,
+    "mediane": -0.0536
+   },
+   "autres": {
+    "n": 722,
+    "moyenne": -0.0627,
+    "mediane": -0.0477
+   },
+   "change_beaucoup": {
+    "n": 198,
+    "moyenne": -0.1118,
+    "mediane": -0.0727
+   }
+  },
+  "2021-2022": {
+   "signal": {
+    "n": 264,
+    "moyenne": 0.0403,
+    "mediane": 0.0339
+   },
+   "autres": {
+    "n": 575,
+    "moyenne": 0.0401,
+    "mediane": 0.0449
+   },
+   "change_beaucoup": {
+    "n": 121,
+    "moyenne": -0.0169,
+    "mediane": -0.0186
+   }
+  },
+  "2022-2023": {
+   "signal": {
+    "n": 213,
+    "moyenne": -0.1714,
+    "mediane": -0.2154
+   },
+   "autres": {
+    "n": 631,
+    "moyenne": -0.158,
+    "mediane": -0.2191
+   },
+   "change_beaucoup": {
+    "n": 130,
+    "moyenne": -0.1528,
+    "mediane": -0.2208
+   }
+  },
+  "2023-2024": {
+   "signal": {
+    "n": 145,
+    "moyenne": -0.0427,
+    "mediane": -0.0743
+   },
+   "autres": {
+    "n": 626,
+    "moyenne": -0.1117,
+    "mediane": -0.1231
+   },
+   "change_beaucoup": {
+    "n": 155,
+    "moyenne": -0.1228,
+    "mediane": -0.1281
+   }
+  },
+  "2024-2025": {
+   "signal": {
+    "n": 171,
+    "moyenne": 0.017,
+    "mediane": -0.0486
+   },
+   "autres": {
+    "n": 512,
+    "moyenne": 0.017,
+    "mediane": -0.066
+   },
+   "change_beaucoup": {
+    "n": 116,
+    "moyenne": 0.0696,
+    "mediane": -0.0714
+   }
+  },
+  "2025-2026": {
+   "signal": {
+    "n": 7,
+    "moyenne": -0.2766,
+    "mediane": -0.2668
+   },
+   "autres": {
+    "n": 28,
+    "moyenne": 0.6156,
+    "mediane": 0.13
+   },
+   "change_beaucoup": {
+    "n": 8,
+    "moyenne": 0.9383,
+    "mediane": 0.208
+   }
+  }
+ },
+ "prix_retires": {
+  "prix de 0,01 $": 99581,
+  "écarts qui reviennent": 8593
+ },
+ "10 $": {
+  "total": {
+   "portefeuille": 4.3047,
+   "spy": 4.4724
+  },
+  "examen_2012_2017": {
+   "portefeuille": 0.6935,
+   "spy": 0.7719
+  },
+  "annees_gagnees": "4 sur 14",
+  "mois": 168,
+  "ecart_mensuel_moyen": 0.00024,
+  "t_mensuel": 0.1,
+  "criteres": {
+   "bat_spy_au_total": false,
+   "annees": false,
+   "t_mensuel": false,
+   "examen_2012_2017": false
+  },
+  "reussi": false,
+  "par_annee": {
+   "2012-2013": {
+    "portefeuille": 0.135,
+    "spy": 0.1726
+   },
+   "2013-2014": {
+    "portefeuille": 0.2206,
+    "spy": 0.2232
+   },
+   "2014-2015": {
+    "portefeuille": 0.0479,
+    "spy": 0.0518
+   },
+   "2015-2016": {
+    "portefeuille": 0.0345,
+    "spy": 0.0179
+   },
+   "2016-2017": {
+    "portefeuille": 0.1275,
+    "spy": 0.154
+   },
+   "2017-2018": {
+    "portefeuille": 0.0486,
+    "spy": 0.1203
+   },
+   "2018-2019": {
+    "portefeuille": 0.0605,
+    "spy": 0.0816
+   },
+   "2019-2020": {
+    "portefeuille": 0.0083,
+    "spy": 0.0524
+   },
+   "2020-2021": {
+    "portefeuille": 0.3005,
+    "spy": 0.3882
+   },
+   "2021-2022": {
+    "portefeuille": -0.1425,
+    "spy": -0.1187
+   },
+   "2022-2023": {
+    "portefeuille": 0.1056,
+    "spy": 0.175
+   },
+   "2023-2024": {
+    "portefeuille": 0.3622,
+    "spy": 0.2277
+   },
+   "2024-2025": {
+    "portefeuille": 0.191,
+    "spy": 0.1353
+   },
+   "2025-2026": {
+    "portefeuille": 0.3965,
+    "spy": 0.2087
+   }
+  },
+  "ordres": {
+   "signaux vus": 2881,
+   "achats": 139,
+   "places pleines": 2693,
+   "ventes": 130,
+   "déjà en portefeuille": 35
+  }
+ },
+ "0 $": {
+  "total": {
+   "portefeuille": 5.8066,
+   "spy": 4.4724
+  },
+  "examen_2012_2017": {
+   "portefeuille": 0.9293,
+   "spy": 0.7719
+  },
+  "annees_gagnees": "7 sur 14",
+  "mois": 168,
+  "ecart_mensuel_moyen": 0.00173,
+  "t_mensuel": 0.75,
+  "criteres": {
+   "bat_spy_au_total": true,
+   "annees": false,
+   "t_mensuel": false,
+   "examen_2012_2017": true
+  },
+  "reussi": false,
+  "par_annee": {
+   "2012-2013": {
+    "portefeuille": 0.1572,
+    "spy": 0.1726
+   },
+   "2013-2014": {
+    "portefeuille": 0.2617,
+    "spy": 0.2232
+   },
+   "2014-2015": {
+    "portefeuille": 0.0774,
+    "spy": 0.0518
+   },
+   "2015-2016": {
+    "portefeuille": 0.0617,
+    "spy": 0.0179
+   },
+   "2016-2017": {
+    "portefeuille": 0.1553,
+    "spy": 0.154
+   },
+   "2017-2018": {
+    "portefeuille": 0.0726,
+    "spy": 0.1203
+   },
+   "2018-2019": {
+    "portefeuille": 0.0805,
+    "spy": 0.0816
+   },
+   "2019-2020": {
+    "portefeuille": 0.0247,
+    "spy": 0.0524
+   },
+   "2020-2021": {
+    "portefeuille": 0.3186,
+    "spy": 0.3882
+   },
+   "2021-2022": {
+    "portefeuille": -0.1326,
+    "spy": -0.1187
+   },
+   "2022-2023": {
+    "portefeuille": 0.1177,
+    "spy": 0.175
+   },
+   "2023-2024": {
+    "portefeuille": 0.3747,
+    "spy": 0.2277
+   },
+   "2024-2025": {
+    "portefeuille": 0.2019,
+    "spy": 0.1353
+   },
+   "2025-2026": {
+    "portefeuille": 0.4065,
+    "spy": 0.2087
+   }
+  },
+  "ordres": {
+   "signaux vus": 2881,
+   "achats": 139,
+   "places pleines": 2693,
+   "ventes": 130,
+   "déjà en portefeuille": 35
+  }
+ }
+}
