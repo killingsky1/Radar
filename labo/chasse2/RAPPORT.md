@@ -47,15 +47,17 @@ verdict ne change pas.
 
 ### A — pourquoi non
 Données : les 3 068 compagnies qui ont été au moins une fois parmi les 1 000 plus grosses ; 37 903 rapports annuels lus
-sur EDGAR (environ 166 Go ; 3,3 à 4,0 par seconde, sous la limite de la SEC), en 3 passages : arrêts pour laisser passer
-le robot et à ta demande ; vendredi entre 15 h et 17 h 30 (heure de l'Est, l'heure de pointe des dépôts) la lecture a
-ralenti à 0,5 par seconde ; la nuit, aucune lecture de plus de 10 secondes. 34 633 rapports ont une similarité avec le
+sur EDGAR (3,3 à 4,0 par seconde, sous la limite de la SEC), en 3 passages : arrêts pour laisser passer le robot et à ta
+demande ; vendredi entre 15 h et 17 h 30 (heure de l'Est) la lecture a ralenti de 3,8 à 0,5 par seconde (cause non
+prouvée) ; le 3e passage, la nuit : 10 805 rapports, 40,5 Go, aucune lecture de plus de 10 secondes. 34 633 rapports ont une similarité avec le
 rapport de l'année d'avant ; 15 824 viennent de l'univers ; 3 425 signaux (« ne change pas »).
 Résultat : à 0 $, le portefeuille bat SPY au total et sur 2012-2017, mais seulement 7 années sur 14 et t = 0,75 : ça
 peut être la chance (il n'a pu acheter que 139 des 2 881 signaux vus : 10 places de 12 mois). Pour comprendre (sur
-252 jours, tous les signaux) : les rapports qui changent peu ne font pas mieux que les autres de façon régulière (mieux
-8 années sur 16, pire 6, égal 2). Les rapports qui changent le plus ont une médiane plus basse que les autres 12 années
-sur 16, mais de peu (1 à 3 points le plus souvent) : trop faible pour en faire une alerte.
+252 jours, tous les signaux, médianes, 2009-2010 à 2024-2025 ; 2025-2026 mis à part : 7 signaux seulement) : les rapports
+qui changent peu ne font pas mieux que les autres de façon régulière (mieux 8 années sur 16, pire 8). Les rapports qui
+changent le plus ont une médiane plus basse que les autres 12 années sur 16, de 0,2 à 6,4 points (moins de 3 points
+10 fois sur 12) : ça va dans le sens de l'étude, mais l'écart est petit et ce n'était pas jugé ; selon le plan, il
+faudrait un plan à part, jugé sur des années jamais vues (donc à venir : 2009-2026 est maintenant vu).
 
 ## Bilan de la chasse 2
 Aucune des trois chasses ne réussit. Les trois endroits où une machine a un vrai avantage (tout lire, tout le marché à
