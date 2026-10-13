@@ -1,5 +1,297 @@
 [
  {
+  "amount_max": 109427004.0,
+  "amount_min": 109427004.0,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "champs_requis": true,
+   "contrat_federal": true,
+   "date_de_signature_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "fournisseur_lu": true,
+   "lien_de_la_fiche_du_contrat": true,
+   "montant_coherent": true,
+   "seuil_de_100_millions": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-13T10:49:01+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agence": "Department of Defense",
+   "debut": "2026-07-21",
+   "description": "8512158146!COCO FUEL STORAGE SERVICES",
+   "details": [
+    [
+     "Fournisseur",
+     "CROWLEY ENERGY ANCHORAGE, LLC"
+    ],
+    [
+     "Ministère ou agence",
+     "Department of Defense"
+    ],
+    [
+     "Sous-agence",
+     "Defense Logistics Agency"
+    ],
+    [
+     "Sommes engagées",
+     "109,4 M$"
+    ],
+    [
+     "Plafond (toutes options)",
+     "259,9 M$"
+    ],
+    [
+     "Signé le",
+     "2026-07-13"
+    ],
+    [
+     "Type",
+     "contrat définitif"
+    ],
+    [
+     "Description",
+     "8512158146!COCO FUEL STORAGE SERVICES"
+    ],
+    [
+     "Numéro",
+     "SPE60326C5015"
+    ]
+   ],
+   "fournisseur": "CROWLEY ENERGY ANCHORAGE, LLC",
+   "id": "CONT_AWD_SPE60326C5015_9700_-NONE-_-NONE-",
+   "modifie_le": "2026-07-14 08:16:44",
+   "montant": 109427004.0,
+   "numero": "SPE60326C5015",
+   "plafond": 259889134.5,
+   "signe_le": "2026-07-13",
+   "societe_mere": "CROWLEY ENERGY ANCHORAGE, LLC",
+   "sous_agence": "Defense Logistics Agency",
+   "type": "DEFINITIVE CONTRACT",
+   "uei": "W68SMTQ7E7L1"
+  },
+  "direction": 0,
+  "entities": [
+   "CROWLEY ENERGY ANCHORAGE, LLC",
+   "Department of Defense"
+  ],
+  "id": "usaspending:CONT_AWD_SPE60326C5015_9700_-NONE-_-NONE-",
+  "kind": "contrat_federal_us",
+  "notes": [
+   "Date de publication : le jour où Radar a vu le contrat pour la 1re fois (USAspending ne date pas la mise en ligne).",
+   "Montant : les sommes engagées (« obligations ») à la lecture ; le plafond, si toutes les options sont levées, est dans les détails.",
+   "Défense : contrats publiés avec 90 jours de délai (règle officielle)."
+  ],
+  "occurred_on": "2026-07-13",
+  "official_id": "CONT_AWD_SPE60326C5015_9700_-NONE-_-NONE-",
+  "official_url": "https://www.usaspending.gov/award/CONT_AWD_SPE60326C5015_9700_-NONE-_-NONE-",
+  "parser_version": "usaspending-1",
+  "published_on": "2026-10-13",
+  "sha256": "40ffd3f2e11cb4e74f1a3289aef5d2a208f785bd41963703912c713dd0a79db2",
+  "source": "usaspending",
+  "tickers": [],
+  "title": "Contrat fédéral américain de 109,4 M$ : CROWLEY ENERGY ANCHORAGE, LLC (Défense)"
+ },
+ {
+  "amount_max": 144000000.0,
+  "amount_min": 144000000.0,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "contrat_federal": true,
+   "date_de_signature_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "fournisseur_lu": true,
+   "lien_de_la_fiche_du_contrat": true,
+   "montant_coherent": true,
+   "seuil_de_100_millions": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-13T10:49:01+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agence": "Department of Homeland Security",
+   "debut": "2026-09-29",
+   "description": "CONSTRUCTION OF U.S. CUSTOMS AND BORDER PROTECTION FACILITY IN JACKSONVILLE,FL",
+   "details": [
+    [
+     "Fournisseur",
+     "SOUTHWEST VALLEY CONSTRUCTORS CO"
+    ],
+    [
+     "Ministère ou agence",
+     "Department of Homeland Security"
+    ],
+    [
+     "Sous-agence",
+     "U.S. Customs and Border Protection"
+    ],
+    [
+     "Sommes engagées",
+     "144 M$"
+    ],
+    [
+     "Signé le",
+     "2026-09-30"
+    ],
+    [
+     "Type",
+     "commande dans un contrat-cadre"
+    ],
+    [
+     "Description",
+     "CONSTRUCTION OF U.S. CUSTOMS AND BORDER PROTECTION FACILITY IN JACKSONVILLE,FL"
+    ],
+    [
+     "Numéro",
+     "70B01C26F00001093"
+    ]
+   ],
+   "fournisseur": "SOUTHWEST VALLEY CONSTRUCTORS CO",
+   "id": "CONT_AWD_70B01C26F00001093_7014_70B01C26D00000025_7014",
+   "modifie_le": "2026-10-09 16:04:59",
+   "montant": 144000000.0,
+   "numero": "70B01C26F00001093",
+   "plafond": 144000000.0,
+   "signe_le": "2026-09-30",
+   "societe_mere": "SOUTHWEST VALLEY CONSTRUCTORS CO",
+   "sous_agence": "U.S. Customs and Border Protection",
+   "type": "DELIVERY ORDER",
+   "uei": "W31DQKBPJCD3"
+  },
+  "direction": 0,
+  "entities": [
+   "SOUTHWEST VALLEY CONSTRUCTORS CO",
+   "Department of Homeland Security"
+  ],
+  "id": "usaspending:CONT_AWD_70B01C26F00001093_7014_70B01C26D00000025_7014",
+  "kind": "contrat_federal_us",
+  "notes": [
+   "Date de publication : le jour où Radar a vu le contrat pour la 1re fois (USAspending ne date pas la mise en ligne).",
+   "Montant : les sommes engagées (« obligations ») à la lecture ; le plafond, si toutes les options sont levées, est dans les détails."
+  ],
+  "occurred_on": "2026-09-30",
+  "official_id": "CONT_AWD_70B01C26F00001093_7014_70B01C26D00000025_7014",
+  "official_url": "https://www.usaspending.gov/award/CONT_AWD_70B01C26F00001093_7014_70B01C26D00000025_7014",
+  "parser_version": "usaspending-1",
+  "published_on": "2026-10-13",
+  "sha256": "71b854ad10917d92383f6cb0b93182d6b561dc141e63bc77c1e089343b7675e3",
+  "source": "usaspending",
+  "tickers": [],
+  "title": "Contrat fédéral américain de 144 M$ : SOUTHWEST VALLEY CONSTRUCTORS CO (Sécurité intérieure)"
+ },
+ {
+  "amount_max": 2206000000.0,
+  "amount_min": 2206000000.0,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "champs_requis": true,
+   "contrat_federal": true,
+   "date_de_signature_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "fournisseur_lu": true,
+   "lien_de_la_fiche_du_contrat": true,
+   "montant_coherent": true,
+   "seuil_de_100_millions": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-13T10:49:00+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agence": "Department of Defense",
+   "debut": "2026-07-13",
+   "description": "SEE THE STATEMENT OF WORK",
+   "details": [
+    [
+     "Fournisseur",
+     "TOTE SERVICES, LLC"
+    ],
+    [
+     "Ministère ou agence",
+     "Department of Defense"
+    ],
+    [
+     "Sous-agence",
+     "Department of the Navy"
+    ],
+    [
+     "Sommes engagées",
+     "2,21 G$"
+    ],
+    [
+     "Plafond (toutes options)",
+     "2,25 G$"
+    ],
+    [
+     "Signé le",
+     "2026-07-13"
+    ],
+    [
+     "Type",
+     "contrat définitif"
+    ],
+    [
+     "Description",
+     "SEE THE STATEMENT OF WORK"
+    ],
+    [
+     "Numéro",
+     "N0002426C2421"
+    ]
+   ],
+   "fournisseur": "TOTE SERVICES, LLC",
+   "id": "CONT_AWD_N0002426C2421_9700_-NONE-_-NONE-",
+   "modifie_le": "2026-07-13 13:10:36",
+   "montant": 2206000000.0,
+   "numero": "N0002426C2421",
+   "plafond": 2254585774.0,
+   "signe_le": "2026-07-13",
+   "societe_mere": "TOTE SERVICES, LLC",
+   "sous_agence": "Department of the Navy",
+   "type": "DEFINITIVE CONTRACT",
+   "uei": "UFQGBQM3JDY5"
+  },
+  "direction": 0,
+  "entities": [
+   "TOTE SERVICES, LLC",
+   "Department of Defense"
+  ],
+  "id": "usaspending:CONT_AWD_N0002426C2421_9700_-NONE-_-NONE-",
+  "kind": "contrat_federal_us",
+  "notes": [
+   "Date de publication : le jour où Radar a vu le contrat pour la 1re fois (USAspending ne date pas la mise en ligne).",
+   "Montant : les sommes engagées (« obligations ») à la lecture ; le plafond, si toutes les options sont levées, est dans les détails.",
+   "Défense : contrats publiés avec 90 jours de délai (règle officielle)."
+  ],
+  "occurred_on": "2026-07-13",
+  "official_id": "CONT_AWD_N0002426C2421_9700_-NONE-_-NONE-",
+  "official_url": "https://www.usaspending.gov/award/CONT_AWD_N0002426C2421_9700_-NONE-_-NONE-",
+  "parser_version": "usaspending-1",
+  "published_on": "2026-10-13",
+  "sha256": "7b0209daa5e91ef18c481bf9a30c5c07fb7a78b936971945a24231864e5c5324",
+  "source": "usaspending",
+  "tickers": [],
+  "title": "Contrat fédéral américain de 2,21 G$ : TOTE SERVICES, LLC (Défense)"
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -47655,53 +47947,6 @@
   "source": "maison_blanche",
   "tickers": [],
   "title": "Décret présidentiel : Supporting America’s Ranchers"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "categorie_officielle_reconnue": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_d_une_action_presidentielle": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_officiel_lu": true
-  },
-  "collected_at": "2026-10-03T00:05:57+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "categories": [
-    "Presidential Actions",
-    "Executive Orders"
-   ],
-   "guid": "",
-   "resume": "Section 1 . Purpose . American ranchers want to be able to butcher, process, package, and sell their meat to consumers across State lines while maintaining the highest standards of food safety and avoid being overcharged by monopolistic practices by meat processors. It is the policy of the United States to support these goals and reduce barriers to ranchers processing their own product for sale to consumers by promoting fair competition in livestock and meat markets; protecting producers and small processors from unfair, deceptive, or monopolistic practices; and expanding legitimate market opp",
-   "sorte": "decret",
-   "titre_officiel": "Promoting Fair Competition In Livestock Markets And Expanding Market Access for American Meat Producers"
-  },
-  "direction": 0,
-  "entities": [
-   "The White House"
-  ],
-  "id": "maison_blanche:2026/09/promoting-fair-competition-in-livestock-markets-and-expanding-market-access-for-american-meat-producers",
-  "kind": "decret",
-  "notes": [],
-  "occurred_on": "2026-09-04",
-  "official_id": "2026/09/promoting-fair-competition-in-livestock-markets-and-expanding-market-access-for-american-meat-producers",
-  "official_url": "https://www.whitehouse.gov/presidential-actions/2026/09/promoting-fair-competition-in-livestock-markets-and-expanding-market-access-for-american-meat-producers/",
-  "parser_version": "maison-blanche-1",
-  "published_on": "2026-09-04",
-  "sha256": "29a230a7fb6422002c99fd6ee8bf3f81169a2e51efd6b47c138662572a6ef299",
-  "source": "maison_blanche",
-  "tickers": [],
-  "title": "Décret présidentiel : Promoting Fair Competition In Livestock Markets And Expanding Market Access for American Meat Producers"
  },
  {
   "amount_max": null,
