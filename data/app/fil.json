@@ -9,6 +9,61 @@
    "dates_coherentes": true,
    "domaine_officiel": true,
    "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-14T20:20:25+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Permis de bâtir"
+    ],
+    [
+     "Période",
+     "août 2026"
+    ]
+   ],
+   "indicateur": "Permis de bâtir",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261014/dq261014a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-10-14T08:30:00-04:00",
+   "periode": "août 2026",
+   "resume": "En août, la valeur totale des permis de bâtir délivrés au Canada a augmenté de 1,1 milliard de dollars (+8,8 %) pour atteindre 13,6 milliards de dollars."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261014/dq261014a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-10-14",
+  "official_id": "261014/dq261014a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261014/dq261014a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-10-14",
+  "sha256": "d33e60f672354022a01a4da1dfca1583f67834f16b074e0dcc8741f47aca9384",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Permis de bâtir, août 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
    "lien_identique_au_fil": true,
    "lien_ministere_coherent": true,
    "ministere_reconnu": true,
