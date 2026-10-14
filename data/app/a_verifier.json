@@ -1,5 +1,84 @@
 [
  {
+  "amount_max": 200000.0,
+  "amount_min": 100002.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": false,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-14T15:49:29+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "MARSH & MCLENNAN COMPANIES, INC.",
+   "rapport": "20035588",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Marsh Common Stock (MRSH) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-17",
+     "description": null,
+     "montant": "$50,001 - $100,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    },
+    {
+     "actif": "Marsh Common Stock (MRSH) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-23",
+     "description": null,
+     "montant": "$50,001 - $100,000",
+     "partielle": false,
+     "proprietaire": "JT",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "MARSH & MCLENNAN COMPANIES, INC."
+  ],
+  "id": "chambre_ptr:20035588:MRSH:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-17",
+  "official_id": "20035588:MRSH:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-13",
+  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MRSH"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend MRSH (2 transactions) — compte conjoint"
+ },
+ {
   "amount_max": 4532964.66,
   "amount_min": 4532964.66,
   "badge": "a_verifier",

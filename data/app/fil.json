@@ -1,5 +1,1151 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-14T15:49:30+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ressources-naturelles-canada/nouvelles/2026/10/le-canada-investira-dans-une-technologie-de-pointe-pour-moderniser-son-secteur-forestier.html",
+   "ministere": "Ressources naturelles Canada",
+   "mis_a_jour": "2026-10-14T08:30:00-04:00",
+   "resume": "Le monde évolue rapidement, ce qui rend les industries, les collectivités et les travailleurs canadiens vulnérables.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Ressources naturelles Canada"
+  ],
+  "id": "nouvelles_eco_ca:ressources-naturelles-canada/nouvelles/2026/10/le-canada-investira-dans-une-technologie-de-pointe-pour-moderniser-son-secteur-forestier.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-14",
+  "official_id": "ressources-naturelles-canada/nouvelles/2026/10/le-canada-investira-dans-une-technologie-de-pointe-pour-moderniser-son-secteur-forestier.html",
+  "official_url": "https://www.canada.ca/fr/ressources-naturelles-canada/nouvelles/2026/10/le-canada-investira-dans-une-technologie-de-pointe-pour-moderniser-son-secteur-forestier.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-14",
+  "sha256": "5daf290fe06e93f8129aa54e575e9e75808265ccf8037d02c3d4889260c15829",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le Canada investira dans une technologie de pointe pour moderniser son secteur forestier"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-14T15:49:29+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "PA09",
+   "elu": "Daniel Meuser",
+   "lecture_complete": true,
+   "nom_sec": "NVIDIA CORP",
+   "rapport": "20035487",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "NVIDIA Corporation - Common Stock (NVDA) [ST]",
+     "avis": "2026-09-14",
+     "date": "2026-08-31",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "SP",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Daniel Meuser",
+   "NVIDIA CORP"
+  ],
+  "id": "chambre_ptr:20035487:NVDA:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-08-31",
+  "official_id": "20035487:NVDA:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035487.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-14",
+  "sha256": "2c9b7ceaecfd00893cff3537a4ae64bda340b9493c5bbbc4e3e4960cc5ae1e6c",
+  "source": "chambre_ptr",
+  "tickers": [
+   "NVDA"
+  ],
+  "title": "Daniel Meuser (Chambre, PA09) vend NVDA — conjoint·e"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-14T15:49:26+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Foreign Assets Control Office"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-21085",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-10-15",
+   "sorte": "sanctions",
+   "sous_type": null,
+   "titre_officiel": "Sanctions Action",
+   "type": "Notice"
+  },
+  "direction": 0,
+  "entities": [
+   "Foreign Assets Control Office"
+  ],
+  "id": "registre_federal:2026-21085",
+  "kind": "sanctions",
+  "notes": [],
+  "occurred_on": "2026-10-14",
+  "official_id": "2026-21085",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-21085/sanctions-action",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-14",
+  "sha256": "1d305a4fc725b91bf265fba2882d59f18c1f5b9b0f0ffe1be398503258c0bb3c",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Sanctions (Trésor, OFAC) : Sanctions Action"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-10-14T15:49:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {},
+   "communiques": [],
+   "retraits": 5,
+   "titre_officiel": "Venezuela-related Designation Removal"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20261014",
+  "kind": "sanctions",
+  "notes": [
+   "Retirés de la liste : 5 fiches."
+  ],
+  "occurred_on": "2026-10-14",
+  "official_id": "20261014",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20261014",
+  "parser_version": "ofac-1",
+  "published_on": "2026-10-14",
+  "sha256": "4291a340d4a8090581c56d201e97f28ac100b42ae9fff89e835489877fd03074",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Venezuela-related Designation Removal"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-14T15:49:29+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "UNITEDHEALTH GROUP INC",
+   "rapport": "20035588",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "UnitedHealth Group Incorporated Common Stock (UNH) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-23",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "JT",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "UNITEDHEALTH GROUP INC"
+  ],
+  "id": "chambre_ptr:20035588:UNH:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-23",
+  "official_id": "20035588:UNH:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-13",
+  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
+  "source": "chambre_ptr",
+  "tickers": [
+   "UNH"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend UNH — compte conjoint"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-14T15:49:29+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "STARBUCKS CORP",
+   "rapport": "20035588",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Starbucks Corporation - Common Stock (SBUX) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-23",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "JT",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "STARBUCKS CORP"
+  ],
+  "id": "chambre_ptr:20035588:SBUX:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-23",
+  "official_id": "20035588:SBUX:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-13",
+  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
+  "source": "chambre_ptr",
+  "tickers": [
+   "SBUX"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend SBUX — compte conjoint"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-14T15:49:29+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "ROCKWELL AUTOMATION, INC",
+   "rapport": "20035588",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Rockwell Automation, Inc. Common Stock (ROK) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-17",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "ROCKWELL AUTOMATION, INC"
+  ],
+  "id": "chambre_ptr:20035588:ROK:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-17",
+  "official_id": "20035588:ROK:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-13",
+  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
+  "source": "chambre_ptr",
+  "tickers": [
+   "ROK"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend ROK — compte conjoint"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-14T15:49:29+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "NEXTERA ENERGY INC",
+   "rapport": "20035588",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "NextEra Energy, Inc. Common Stock (NEE) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "JT",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "NEXTERA ENERGY INC"
+  ],
+  "id": "chambre_ptr:20035588:NEE:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "20035588:NEE:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-13",
+  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
+  "source": "chambre_ptr",
+  "tickers": [
+   "NEE"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend NEE — compte conjoint"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-14T15:49:29+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "LOWES COMPANIES INC",
+   "rapport": "20035588",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Lowe's Companies, Inc. Common Stock (LOW) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-17",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "LOWES COMPANIES INC"
+  ],
+  "id": "chambre_ptr:20035588:LOW:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-17",
+  "official_id": "20035588:LOW:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-13",
+  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
+  "source": "chambre_ptr",
+  "tickers": [
+   "LOW"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend LOW — compte conjoint"
+ },
+ {
+  "amount_max": 200000.0,
+  "amount_min": 60004.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-14T15:49:29+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "LOCKHEED MARTIN CORP",
+   "rapport": "20035588",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Lockheed Martin Corporation Common Stock (LMT) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-17",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    },
+    {
+     "actif": "Lockheed Martin Corporation Common Stock (LMT) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-17",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    },
+    {
+     "actif": "Lockheed Martin Corporation Common Stock (LMT) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-23",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    },
+    {
+     "actif": "Lockheed Martin Corporation Common Stock (LMT) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-23",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "JT",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "LOCKHEED MARTIN CORP"
+  ],
+  "id": "chambre_ptr:20035588:LMT:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-17",
+  "official_id": "20035588:LMT:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-13",
+  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
+  "source": "chambre_ptr",
+  "tickers": [
+   "LMT"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend LMT (4 transactions) — compte conjoint"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-14T15:49:29+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "LINDE PLC",
+   "rapport": "20035588",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Linde plc - Ordinary Shares (LIN) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-17",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "LINDE PLC"
+  ],
+  "id": "chambre_ptr:20035588:LIN:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-17",
+  "official_id": "20035588:LIN:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-13",
+  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
+  "source": "chambre_ptr",
+  "tickers": [
+   "LIN"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend LIN — compte conjoint"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-14T15:49:29+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "HOME DEPOT, INC.",
+   "rapport": "20035588",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Home Depot, Inc. (HD) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-23",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "JT",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "HOME DEPOT, INC."
+  ],
+  "id": "chambre_ptr:20035588:HD:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-23",
+  "official_id": "20035588:HD:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-13",
+  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
+  "source": "chambre_ptr",
+  "tickers": [
+   "HD"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend HD — compte conjoint"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-14T15:49:29+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "EMERSON ELECTRIC CO",
+   "rapport": "20035588",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Emerson Electric Company Common Stock (EMR) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-17",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "EMERSON ELECTRIC CO"
+  ],
+  "id": "chambre_ptr:20035588:EMR:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-17",
+  "official_id": "20035588:EMR:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-13",
+  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
+  "source": "chambre_ptr",
+  "tickers": [
+   "EMR"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend EMR — compte conjoint"
+ },
+ {
+  "amount_max": 150000.0,
+  "amount_min": 65002.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-14T15:49:29+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "DEVON ENERGY CORP/DE",
+   "rapport": "20035588",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Devon Energy Corporation Common Stock (DVN) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-23",
+     "description": null,
+     "montant": "$50,001 - $100,000",
+     "partielle": false,
+     "proprietaire": "JT",
+     "type_officiel": "S"
+    },
+    {
+     "actif": "Devon Energy Corporation Common Stock (DVN) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-23",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "DEVON ENERGY CORP/DE"
+  ],
+  "id": "chambre_ptr:20035588:DVN:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-23",
+  "official_id": "20035588:DVN:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-13",
+  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
+  "source": "chambre_ptr",
+  "tickers": [
+   "DVN"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend DVN (2 transactions) — compte conjoint"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-14T15:49:29+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "CHEVRON CORP",
+   "rapport": "20035588",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Chevron Corporation Common Stock (CVX) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-23",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "CHEVRON CORP"
+  ],
+  "id": "chambre_ptr:20035588:CVX:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-23",
+  "official_id": "20035588:CVX:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-13",
+  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
+  "source": "chambre_ptr",
+  "tickers": [
+   "CVX"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend CVX — compte conjoint"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-14T15:49:29+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "Chubb Ltd",
+   "rapport": "20035588",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Chubb Limited Common Stock (CB) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-23",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "JT",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "Chubb Ltd"
+  ],
+  "id": "chambre_ptr:20035588:CB:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-23",
+  "official_id": "20035588:CB:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-13",
+  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
+  "source": "chambre_ptr",
+  "tickers": [
+   "CB"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend CB — compte conjoint"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-14T15:49:29+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "Virtus Artificial Intelligence & Technology Opportunities Fund",
+   "rapport": "20035588",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Virtus Artificial Intelligence & Technology Opportunities Fund Common Shares of Beneficial Interest (AIO) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-23",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "JT",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "Virtus Artificial Intelligence & Technology Opportunities Fund"
+  ],
+  "id": "chambre_ptr:20035588:AIO:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-23",
+  "official_id": "20035588:AIO:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-13",
+  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
+  "source": "chambre_ptr",
+  "tickers": [
+   "AIO"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend AIO — compte conjoint"
+ },
+ {
   "amount_max": 20000000.0,
   "amount_min": 20000000.0,
   "badge": "officiel",
@@ -25374,6 +26520,54 @@
   "badge": "officiel",
   "category": "gouvernement",
   "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-14T15:49:15+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "26TA22",
+   "composant": "ENGINE AND ENGINE COOLING",
+   "consequence": "An unexpected powertrain shutdown can cause a loss of drive power, increasing the risk of a crash.",
+   "constructeur": "Toyota Motor Engineering & Manufacturing",
+   "defaut": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2026 RAV4 Plug-In Hybrid vehicles. The motor generator ECU may encounter an error, causing the plug-in-hybrid system to reduce power or shutdown when driven at higher speeds.",
+   "numero": "26V659000",
+   "sorte": "Vehicle",
+   "sujet": "Motor Generator ECU Error May Cause Loss of Drive Power",
+   "unites": 30978
+  },
+  "direction": -1,
+  "entities": [
+   "Toyota Motor Engineering & Manufacturing"
+  ],
+  "id": "nhtsa:26V659000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-10-07",
+  "official_id": "26V659000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V659000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-10-07",
+  "sha256": "9fafa7cce2c9f9f074904bb25f2e6950058976eddb95f513a16dbbda5757f53c",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Toyota Motor Engineering & Manufacturing : 30 978 véhicules — « Motor Generator ECU Error May Cause Loss of Drive Power »"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
    "categorie_officielle_reconnue": true,
    "champs_requis": true,
    "dates_coherentes": true,
@@ -40754,1142 +41948,6 @@
   "title": "Kevin Hern (Chambre, OK01) achète KO — compte conjoint"
  },
  {
-  "amount_max": 250000.0,
-  "amount_min": 95004.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "ILLINOIS TOOL WORKS INC",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Illinois Tool Works Inc. Common Stock (ITW) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-08-31",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "S"
-    },
-    {
-     "actif": "Illinois Tool Works Inc. Common Stock (ITW) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-02",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "Illinois Tool Works Inc. Common Stock (ITW) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-04",
-     "description": null,
-     "montant": "$50,001 - $100,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "Illinois Tool Works Inc. Common Stock (ITW) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-09",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "ILLINOIS TOOL WORKS INC"
-  ],
-  "id": "chambre_ptr:20035491:ITW:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-08-31",
-  "official_id": "20035491:ITW:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "ITW"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend ITW (4 transactions) — compte conjoint"
- },
- {
-  "amount_max": 80000.0,
-  "amount_min": 17003.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "IQVIA HOLDINGS INC.",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "IQVIA Holdings, Inc. Common Stock (IQV) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-08",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "DC",
-     "type_officiel": "S"
-    },
-    {
-     "actif": "IQVIA Holdings, Inc. Common Stock (IQV) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-14",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "S"
-    },
-    {
-     "actif": "IQVIA Holdings, Inc. Common Stock (IQV) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-03",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "DC",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "IQVIA HOLDINGS INC."
-  ],
-  "id": "chambre_ptr:20035491:IQV:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-03",
-  "official_id": "20035491:IQV:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "IQV"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend IQV (3 transactions) — compte conjoint, enfant à charge"
- },
- {
-  "amount_max": 50000.0,
-  "amount_min": 15001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "HONEYWELL INTERNATIONAL INC",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Honeywell International Inc. (HON) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-08-31",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "HONEYWELL INTERNATIONAL INC"
-  ],
-  "id": "chambre_ptr:20035491:HON:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-08-31",
-  "official_id": "20035491:HON:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "HON"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend HON — compte conjoint"
- },
- {
-  "amount_max": 230000.0,
-  "amount_min": 62006.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "HOME DEPOT, INC.",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Home Depot, Inc. (HD) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-14",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "Home Depot, Inc. (HD) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-10",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "Home Depot, Inc. (HD) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-14",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "S"
-    },
-    {
-     "actif": "Home Depot, Inc. (HD) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-02",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "Home Depot, Inc. (HD) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-08-31",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "Home Depot, Inc. (HD) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-08-27",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "HOME DEPOT, INC."
-  ],
-  "id": "chambre_ptr:20035491:HD:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-08-27",
-  "official_id": "20035491:HD:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "HD"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend HD (6 transactions) — compte conjoint, l'élu·e"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "FORD MOTOR CO",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Ford Motor Company Common Stock (F) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-08-31",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "FORD MOTOR CO"
-  ],
-  "id": "chambre_ptr:20035491:F:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-08-31",
-  "official_id": "20035491:F:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "F"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend F"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "Eaton Vance Tax-Managed Buy-Write Opportunities Fund",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Eaton Vance Corporation Eaton Vance Tax-Managed Buy-Write Opportunities Fund Common Shares of Beneficial Interest (ETV) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-08",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "DC",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "Eaton Vance Tax-Managed Buy-Write Opportunities Fund"
-  ],
-  "id": "chambre_ptr:20035491:ETV:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-08",
-  "official_id": "20035491:ETV:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "ETV"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend ETV — enfant à charge"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "Eaton Corp plc",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Eaton Corporation, PLC Ordinary Shares (ETN) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-10",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "Eaton Corp plc"
-  ],
-  "id": "chambre_ptr:20035491:ETN:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-10",
-  "official_id": "20035491:ETN:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "ETN"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend ETN"
- },
- {
-  "amount_max": 65000.0,
-  "amount_min": 16002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "EMERSON ELECTRIC CO",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Emerson Electric Company Common Stock (EMR) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-14",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "Emerson Electric Company Common Stock (EMR) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-14",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "EMERSON ELECTRIC CO"
-  ],
-  "id": "chambre_ptr:20035491:EMR:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-14",
-  "official_id": "20035491:EMR:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "EMR"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend EMR (2 transactions) — compte conjoint"
- },
- {
-  "amount_max": 850000.0,
-  "amount_min": 330005.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "DEVON ENERGY CORP/DE",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Devon Energy Corporation Common Stock (DVN) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-02",
-     "description": null,
-     "montant": "$100,001 - $250,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "Devon Energy Corporation Common Stock (DVN) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-04",
-     "description": null,
-     "montant": "$100,001 - $250,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "Devon Energy Corporation Common Stock (DVN) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-14",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "Devon Energy Corporation Common Stock (DVN) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-08-31",
-     "description": null,
-     "montant": "$100,001 - $250,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "Devon Energy Corporation Common Stock (DVN) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-08-31",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "DEVON ENERGY CORP/DE"
-  ],
-  "id": "chambre_ptr:20035491:DVN:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-08-31",
-  "official_id": "20035491:DVN:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "DVN"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend DVN (5 transactions) — compte conjoint, l'élu·e"
- },
- {
-  "amount_max": 65000.0,
-  "amount_min": 16002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "DANAHER CORP /DE/",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Danaher Corporation Common Stock (DHR) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-08-31",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "S"
-    },
-    {
-     "actif": "Danaher Corporation Common Stock (DHR) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-02",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "DANAHER CORP /DE/"
-  ],
-  "id": "chambre_ptr:20035491:DHR:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-08-31",
-  "official_id": "20035491:DHR:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "DHR"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend DHR (2 transactions) — compte conjoint"
- },
- {
-  "amount_max": 50000.0,
-  "amount_min": 15001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "Crane NXT, Co.",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Crane NXT, Co. Common Stock (CXT) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-08-31",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "Crane NXT, Co."
-  ],
-  "id": "chambre_ptr:20035491:CXT:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-08-31",
-  "official_id": "20035491:CXT:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "CXT"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend CXT — compte conjoint"
- },
- {
-  "amount_max": 30000.0,
-  "amount_min": 2002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "CSX CORP",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "CSX Corporation (CSX) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-08-31",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "CSX Corporation (CSX) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-08-27",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "CSX CORP"
-  ],
-  "id": "chambre_ptr:20035491:CSX:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-08-27",
-  "official_id": "20035491:CSX:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "CSX"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend CSX (2 transactions)"
- },
- {
-  "amount_max": 100000.0,
-  "amount_min": 50001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "Crane Co",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Crane Company Common Stock (CR) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-08-31",
-     "description": null,
-     "montant": "$50,001 - $100,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "Crane Co"
-  ],
-  "id": "chambre_ptr:20035491:CR:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-08-31",
-  "official_id": "20035491:CR:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "CR"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend CR — compte conjoint"
- },
- {
-  "amount_max": 50000.0,
-  "amount_min": 15001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "CENTERPOINT ENERGY INC",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "CenterPoint Energy, Inc (CNP) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-15",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "CENTERPOINT ENERGY INC"
-  ],
-  "id": "chambre_ptr:20035491:CNP:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-15",
-  "official_id": "20035491:CNP:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "CNP"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend CNP"
- },
- {
   "amount_max": 44000000000.0,
   "amount_min": 44000000000.0,
   "badge": "officiel",
@@ -47714,148 +47772,6 @@
   "source": "maison_blanche",
   "tickers": [],
   "title": "Proclamation présidentielle : Excluding Certain Canadian Alcoholic Beverages from Importation into the United States in Response to Continued Discrimination Against the Commerce of the United States with Respect to Alcoholic Beverages"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "categorie_officielle_reconnue": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_d_une_action_presidentielle": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_officiel_lu": true
-  },
-  "collected_at": "2026-10-03T00:05:57+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "categories": [
-    "Presidential Actions",
-    "Executive Orders"
-   ],
-   "guid": "",
-   "resume": "Section 1 . Purpose . This order amends Executive Order 13603 of March 16, 2012 (National Defense Resources Preparedness), as amended by Executive Order 14391 of March 13, 2026 (Adjusting Certain Delegations Under the Defense Production Act). Executive Order 13603 delegates certain authorities of the President under the Defense Production Act (50 U.S.C. 4501 et seq. ), to specified executive department and agency (agency) heads. Sec . 2 . Amendment to Executive Order 13603 . (a) Section 201(a)(2) of Executive Order 13603 is hereby amended by striking “the Secretary of Energy with respect to al",
-   "sorte": "decret",
-   "titre_officiel": "Adjusting Certain Delegations Under the Defense Production Act"
-  },
-  "direction": 0,
-  "entities": [
-   "The White House"
-  ],
-  "id": "maison_blanche:2026/09/adjusting-certain-delegations-under-the-defense-production-act-e2de",
-  "kind": "decret",
-  "notes": [],
-  "occurred_on": "2026-09-08",
-  "official_id": "2026/09/adjusting-certain-delegations-under-the-defense-production-act-e2de",
-  "official_url": "https://www.whitehouse.gov/presidential-actions/2026/09/adjusting-certain-delegations-under-the-defense-production-act-e2de/",
-  "parser_version": "maison-blanche-1",
-  "published_on": "2026-09-08",
-  "sha256": "15f614a89bef74f04af73a99241f351b6062dd4b46c15c7fc973d6e27aa5776b",
-  "source": "maison_blanche",
-  "tickers": [],
-  "title": "Décret présidentiel : Adjusting Certain Delegations Under the Defense Production Act"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "categorie_officielle_reconnue": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_d_une_action_presidentielle": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_officiel_lu": true
-  },
-  "collected_at": "2026-10-03T00:05:57+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "categories": [
-    "Presidential Actions",
-    "Executive Orders"
-   ],
-   "guid": "",
-   "resume": "Section 1 . Purpose and Policy . Millions of brave men and women have served in our Armed Forces with courage, commitment, and sacrifice, guaranteeing our security, prosperity, and freedom. These veterans deserve the best available services in return. However, outdated and unwieldy records management and data systems and procedures hinder military personnel file and medical record sharing between the Department of War and the Department of Veterans Affairs, which complicates the effective transition of military personnel from active-duty service to civilian life. Such complications result in d",
-   "sorte": "decret",
-   "titre_officiel": "Accelerating Access To Veterans’ Benefits And Employment Opportunities"
-  },
-  "direction": 0,
-  "entities": [
-   "The White House"
-  ],
-  "id": "maison_blanche:2026/09/accelerating-access-to-veterans-benefits-and-employment-opportunities",
-  "kind": "decret",
-  "notes": [],
-  "occurred_on": "2026-09-08",
-  "official_id": "2026/09/accelerating-access-to-veterans-benefits-and-employment-opportunities",
-  "official_url": "https://www.whitehouse.gov/presidential-actions/2026/09/accelerating-access-to-veterans-benefits-and-employment-opportunities/",
-  "parser_version": "maison-blanche-1",
-  "published_on": "2026-09-08",
-  "sha256": "71693e654719476fd6574177b98750c33def90364c7bf71bd9a3806f07182dbb",
-  "source": "maison_blanche",
-  "tickers": [],
-  "title": "Décret présidentiel : Accelerating Access To Veterans’ Benefits And Employment Opportunities"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_rappel": true,
-   "nombre_plausible": true,
-   "numero_de_rappel_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T02:03:23+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "campagne": "2027-2 & 2026-3",
-   "composant": "ELECTRICAL SYSTEM",
-   "consequence": "An inoperative instrument cluster will fail to display critical safety information, such as vehicle speed and warning lights, increasing the risk of a crash.",
-   "constructeur": "Bombardier Recreational Products, Inc.",
-   "defaut": "Bombardier Recreational Products, Inc. (BRP) is recalling certain 2025-2026 Can-Am Origin, Can-Am Pulse, 2025-2027 Can-Am Canyon, 2024-2027 Can-Am Spyder RT, and Can-Am Spyder F3 motorcycles equipped with a touchscreen instrument cluster. The instrument cluster may reset, freeze, or go blank. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 123, \"Motorcycle Control and Displays,\" and FMVSS number 122, \"Motorcycle Brake Systems.\"",
-   "numero": "26V575000",
-   "sorte": "Vehicle",
-   "sujet": "Instrument Cluster May Fail/FMVSS 122, 123",
-   "unites": 14014
-  },
-  "direction": -1,
-  "entities": [
-   "Bombardier Recreational Products, Inc."
-  ],
-  "id": "nhtsa:26V575000",
-  "kind": "rappel",
-  "notes": [],
-  "occurred_on": "2026-09-07",
-  "official_id": "26V575000",
-  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V575000",
-  "parser_version": "nhtsa-1",
-  "published_on": "2026-09-07",
-  "sha256": "eaa8af707d0885bc30c2da6f710d40cf3e9665f49e35cc1439b207eaca7acc05",
-  "source": "nhtsa",
-  "tickers": [],
-  "title": "Rappel de Bombardier Recreational Products, Inc. : 14 014 véhicules — « Instrument Cluster May Fail/FMVSS 122, 123 »"
  },
  {
   "amount_max": null,
