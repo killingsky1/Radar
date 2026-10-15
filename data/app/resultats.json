@@ -1,5 +1,5 @@
 {
- "genere_a": "2026-10-15T08:23:44+00:00",
+ "genere_a": "2026-10-15T15:35:32+00:00",
  "horizons": {
   "30": "1 mois",
   "7": "1 semaine"
@@ -1985,6 +1985,42 @@
    "symbole": "INBX",
    "taille": "petite",
    "vue": "2026-10-15"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-11-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-10-15T15:35:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-11-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-11-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "TJGC GROUP Ltd",
+   "note10": 0.9,
+   "note10_sans_bonus": 0.9,
+   "note10_sans_taille": 0.9,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "sec",
+     "regle": "sec_suspension",
+     "sens": -1
+    }
+   ],
+   "symbole": "TJGC",
+   "taille": null,
+   "vue": "2026-10-15"
   }
  ],
  "methode": [
@@ -2026,6 +2062,34 @@
     },
     "entrees": 1,
     "libelle": "Faillite ou mise sous séquestre (8-K, point 1.03)"
+   },
+   "regle:sec_suspension": {
+    "30": {
+     "battu": 0,
+     "ecart_moyen": null,
+     "mesurees": 0
+    },
+    "7": {
+     "battu": 0,
+     "ecart_moyen": null,
+     "mesurees": 0
+    },
+    "entrees": 1,
+    "libelle": "La SEC suspend la cotation de la compagnie"
+   },
+   "taille:inconnue": {
+    "30": {
+     "battu": 0,
+     "ecart_moyen": null,
+     "mesurees": 0
+    },
+    "7": {
+     "battu": 0,
+     "ecart_moyen": null,
+     "mesurees": 0
+    },
+    "entrees": 1,
+    "libelle": "Taille inconnue (compagnie étrangère, ou actions ou prix trop vieux)"
    },
    "taille:petite": {
     "30": {
@@ -2150,13 +2214,13 @@
   "baisse_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 4,
+   "en_attente": 5,
    "mesurees": 0
   },
   "baisse_7": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 4,
+   "en_attente": 5,
    "mesurees": 0
   },
   "ecartee_30": {

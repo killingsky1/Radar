@@ -1153,6 +1153,28 @@
    "symbole": "FSP",
    "taille": "petite",
    "vue": "2026-10-15"
+  },
+  {
+   "entree": "2026-10-15T15:35:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "TJGC GROUP Ltd",
+   "note10": 0.9,
+   "note10_sans_bonus": 0.9,
+   "note10_sans_taille": 0.9,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "sec",
+     "regle": "sec_suspension",
+     "sens": -1
+    }
+   ],
+   "symbole": "TJGC",
+   "taille": null,
+   "vue": "2026-10-15"
   }
  ]
 }

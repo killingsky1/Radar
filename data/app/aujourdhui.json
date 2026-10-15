@@ -6,6 +6,53 @@
     "plus": 1.0
    },
    "contexte": [],
+   "depot_recent": "2026-10-14",
+   "depuis": "2026-10-15T15:35:32+00:00",
+   "derniere_info": "2026-10-14",
+   "groupes": [
+    {
+     "famille": "sec",
+     "infos": [
+      {
+       "age": 1,
+       "base": -5.0,
+       "compte": true,
+       "facteurs": [],
+       "id": "sec_poursuites:34-106668",
+       "points": -4.89,
+       "regle": "sec_suspension",
+       "temps": 0.977
+      }
+     ],
+     "points": -4.89,
+     "sens": -1
+    }
+   ],
+   "moins": -4.89,
+   "nom": "TJGC GROUP Ltd",
+   "note10": 0.9,
+   "note10_sans_bonus": 0.9,
+   "note10_sans_taille": 0.9,
+   "plus": 0.0,
+   "recent": true,
+   "score": -4.89,
+   "symbole": "TJGC",
+   "taille": {
+    "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux États-Unis peuvent valoir plusieurs actions",
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "taille": null
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
    "depot_recent": "2026-10-13",
    "depuis": "2026-10-14T08:48:44+00:00",
    "derniere_info": "2026-10-13",
@@ -235,7 +282,7 @@
    }
   }
  ],
- "compagnies_notees": 212,
+ "compagnies_notees": 213,
  "ecartees": [
   {
    "bonus": {
@@ -6091,9 +6138,50 @@
     "AGMB"
    ],
    "title": "Knotnerus Tim Jasper (Chief Executive Officer) achète 11 000 actions de AgomAb Therapeutics NV"
+  },
+  "sec_poursuites:34-106668": {
+   "amount_max": null,
+   "amount_min": null,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "dates_coherentes": true,
+    "document_officiel_sec": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-15T15:35:33+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "nom_officiel": "TJGC Group Limited",
+    "sorte": "suspension"
+   },
+   "direction": -1,
+   "entities": [
+    "TJGC Group Limited"
+   ],
+   "id": "sec_poursuites:34-106668",
+   "kind": "suspension_cotation",
+   "notes": [],
+   "occurred_on": "2026-10-14",
+   "official_id": "34-106668",
+   "official_url": "https://www.sec.gov/files/litigation/suspensions/2026/34-106668.pdf",
+   "parser_version": "sec-poursuites-1",
+   "published_on": "2026-10-14",
+   "sha256": "51cf65b6ebd004f5c645d70d2af90c0a4d1a83c42a40f774e7e3c00411390200",
+   "source": "sec_poursuites",
+   "tickers": [
+    "TJGC"
+   ],
+   "title": "SEC : cotation suspendue, TJGC Group Limited"
   }
  },
- "genere_a": "2026-10-15T08:23:44+00:00",
+ "genere_a": "2026-10-15T15:35:32+00:00",
  "hausse": [
   {
    "bonus": {
