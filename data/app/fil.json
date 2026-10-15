@@ -9,6 +9,161 @@
    "dates_coherentes": true,
    "domaine_officiel": true,
    "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-15T20:02:03+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Commerce de gros"
+    ],
+    [
+     "Période",
+     "août 2026"
+    ]
+   ],
+   "indicateur": "Commerce de gros",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261015/dq261015b-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-10-15T08:30:00-04:00",
+   "periode": "août 2026",
+   "resume": "En août, les ventes du commerce de gros (excluant le pétrole, les produits pétroliers, et autres hydrocarbures, ainsi que les graines oléagineuses et les grains céréaliers) ont reculé de 1,6 % pour s'établir à 91,6 milliards de dollars."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261015/dq261015b",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-10-15",
+  "official_id": "261015/dq261015b",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261015/dq261015b-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-10-15",
+  "sha256": "74320bf24aac95d698b4ddbf469e2463a6d93fe1a50c7cd821f04c153bd29ec9",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Commerce de gros, août 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-15T20:02:03+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Enquête mensuelle sur les industries manufacturières"
+    ],
+    [
+     "Période",
+     "août 2026"
+    ]
+   ],
+   "indicateur": "Enquête mensuelle sur les industries manufacturières",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261015/dq261015a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-10-15T08:30:00-04:00",
+   "periode": "août 2026",
+   "resume": "Les ventes du secteur de la fabrication se sont accrues de 1,5 % en août, principalement sous l'effet des hausses des ventes du sous-secteur de la première transformation des métaux et du sous-secteur de la fabrication de produits chimiques. Parallèlement, le sous-secteur de la fabrication de matériel de transport a affiché le plus important recul."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261015/dq261015a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-10-15",
+  "official_id": "261015/dq261015a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261015/dq261015a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-10-15",
+  "sha256": "d108d076b6e3a159a8ca25547d7acfb0d886cdf325f4a867b4235196185ebe81",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Enquête mensuelle sur les industries manufacturières, août 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-15T20:01:55+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-ministre-solomon-conclut-une-visite-productive-au-royaume-uni-et-en-irlande-pour-favoriser-le-leadership-mondial-du-canada-en-intelligence-artif.html",
+   "ministere": "Innovation, Sciences et Développement économique Canada",
+   "mis_a_jour": "2026-10-15T13:09:47-04:00",
+   "resume": "Le ministre Solomon conclut une visite productive au Royaume-Uni et en Irlande pour favoriser le leadership mondial du Canada en intelligence artificielle",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Innovation, Sciences et Développement économique Canada"
+  ],
+  "id": "nouvelles_eco_ca:innovation-sciences-developpement-economique/nouvelles/2026/10/le-ministre-solomon-conclut-une-visite-productive-au-royaume-uni-et-en-irlande-pour-favoriser-le-leadership-mondial-du-canada-en-intelligence-artif.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-15",
+  "official_id": "innovation-sciences-developpement-economique/nouvelles/2026/10/le-ministre-solomon-conclut-une-visite-productive-au-royaume-uni-et-en-irlande-pour-favoriser-le-leadership-mondial-du-canada-en-intelligence-artif.html",
+  "official_url": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-ministre-solomon-conclut-une-visite-productive-au-royaume-uni-et-en-irlande-pour-favoriser-le-leadership-mondial-du-canada-en-intelligence-artif.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-15",
+  "sha256": "f18c15a761f6459b36dd391bcd4321514d744c4a9e1c2b7ae905ba39538b9c5d",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le ministre Solomon conclut une visite productive au Royaume-Uni et en Irlande pour favoriser le leadership mondial du Canada en intelligence artificielle"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
    "lien_identique_au_fil": true,
    "lien_ministere_coherent": true,
    "ministere_reconnu": true,
