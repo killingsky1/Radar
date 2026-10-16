@@ -9,6 +9,445 @@
    "dates_coherentes": true,
    "domaine_officiel": true,
    "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-16T19:42:02+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Opérations internationales du Canada en valeurs mobilières"
+    ],
+    [
+     "Période",
+     "août 2026"
+    ]
+   ],
+   "indicateur": "Opérations internationales du Canada en valeurs mobilières",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261016/dq261016a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-10-16T08:30:00-04:00",
+   "periode": "août 2026",
+   "resume": "Les investisseurs canadiens ont acquis pour 23,9 milliards de dollars de titres étrangers en août, principalement sous la forme d'achats d'actions américaines. Parallèlement, les investisseurs étrangers ont réduit leurs avoirs en titres canadiens de 17,3 milliards de dollars, surtout en raison d'un désinvestissement sans précédent dans les instruments d'emprunt de l'administration publique fédérale."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261016/dq261016a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-10-16",
+  "official_id": "261016/dq261016a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261016/dq261016a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-10-16",
+  "sha256": "e826a16a5df88615e0e2b3d6f13d2461ee014d3715a6090eef8d88b5f71dbc72",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Opérations internationales du Canada en valeurs mobilières, août 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-16T19:41:46+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "209742",
+   "date_rapport": "2026-10-13",
+   "long": 83525,
+   "marche": "Nasdaq-100 (E-mini)",
+   "net": 48523,
+   "nom_officiel": "NASDAQ MINI - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 279515,
+   "short": 35002,
+   "variation": -9600
+  },
+  "direction": -1,
+  "entities": [
+   "NASDAQ MINI - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261013209742F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-13",
+  "official_id": "261013209742F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261013209742F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-16",
+  "sha256": "206fcc760f0f46ba8ee07d891484b82f22b9728f0772262c4270792e8a02f261",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Nasdaq-100 (E-mini) : les gros spéculateurs sont acheteurs nets de 48 523 contrats (−9 600 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-16T19:41:46+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "13874A",
+   "date_rapport": "2026-10-13",
+   "long": 224804,
+   "marche": "S&P 500 (E-mini)",
+   "net": -140995,
+   "nom_officiel": "E-MINI S&P 500 - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 1931607,
+   "short": 365799,
+   "variation": 13075
+  },
+  "direction": 1,
+  "entities": [
+   "E-MINI S&P 500 - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:26101313874AF",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-13",
+  "official_id": "26101313874AF",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=26101313874AF",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-16",
+  "sha256": "7bbaa4c0c187dbcda06fe1d1b1448dbbd70ceface20698ec9c8a0659f653d193",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "S&P 500 (E-mini) : les gros spéculateurs sont vendeurs nets de 140 995 contrats (+13 075 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-16T19:41:46+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "133741",
+   "date_rapport": "2026-10-13",
+   "long": 17320,
+   "marche": "Bitcoin (CME)",
+   "net": 2534,
+   "nom_officiel": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 20752,
+   "short": 14786,
+   "variation": -6
+  },
+  "direction": -1,
+  "entities": [
+   "BITCOIN - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261013133741F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-13",
+  "official_id": "261013133741F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261013133741F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-16",
+  "sha256": "635b69321371fc32cfa161c5de18fa0db618e2a745d226c2c6294a0d14a7b28a",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Bitcoin (CME) : les gros spéculateurs sont acheteurs nets de 2 534 contrats (−6 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-16T19:41:46+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "090741",
+   "date_rapport": "2026-10-13",
+   "long": 89986,
+   "marche": "Dollar canadien",
+   "net": -94765,
+   "nom_officiel": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 378204,
+   "short": 184751,
+   "variation": -4602
+  },
+  "direction": -1,
+  "entities": [
+   "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261013090741F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-13",
+  "official_id": "261013090741F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261013090741F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-16",
+  "sha256": "5a1e7e615470a254fdfc4cc8de6f1022da2785b83f631dedf5277bd5d4fa954e",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Dollar canadien : les gros spéculateurs sont vendeurs nets de 94 765 contrats (−4 602 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-16T19:41:46+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "088691",
+   "date_rapport": "2026-10-13",
+   "long": 245300,
+   "marche": "Or",
+   "net": 207879,
+   "nom_officiel": "GOLD - COMMODITY EXCHANGE INC.",
+   "open_interest": 396345,
+   "short": 37421,
+   "variation": -2456
+  },
+  "direction": -1,
+  "entities": [
+   "GOLD - COMMODITY EXCHANGE INC."
+  ],
+  "id": "cftc_cot:261013088691F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-13",
+  "official_id": "261013088691F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261013088691F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-16",
+  "sha256": "5d0f69aae3a446306bf51900a7f6a624130e951129cad0f8b4a428eb6fa74b21",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Or : les gros spéculateurs sont acheteurs nets de 207 879 contrats (−2 456 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-16T19:41:46+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "085692",
+   "date_rapport": "2026-10-13",
+   "long": 107559,
+   "marche": "Cuivre",
+   "net": 68520,
+   "nom_officiel": "COPPER- #1 - COMMODITY EXCHANGE INC.",
+   "open_interest": 313832,
+   "short": 39039,
+   "variation": -914
+  },
+  "direction": -1,
+  "entities": [
+   "COPPER- #1 - COMMODITY EXCHANGE INC."
+  ],
+  "id": "cftc_cot:261013085692F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-13",
+  "official_id": "261013085692F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261013085692F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-16",
+  "sha256": "f80fc20f8bf5f1995993b333cebcae2110f9b0c8a7c74e9d2b1c81fcad8a9254",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Cuivre : les gros spéculateurs sont acheteurs nets de 68 520 contrats (−914 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-16T19:41:46+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "067651",
+   "date_rapport": "2026-10-13",
+   "long": 344653,
+   "marche": "Pétrole WTI",
+   "net": 100343,
+   "nom_officiel": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+   "open_interest": 1900179,
+   "short": 244310,
+   "variation": 1283
+  },
+  "direction": 1,
+  "entities": [
+   "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261013067651F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-13",
+  "official_id": "261013067651F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261013067651F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-16",
+  "sha256": "04627f9045373f680602b713d96386a2e3dc2e902d7145b043f309eda3261d1d",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Pétrole WTI : les gros spéculateurs sont acheteurs nets de 100 343 contrats (+1 283 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-16T19:41:46+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "043602",
+   "date_rapport": "2026-10-13",
+   "long": 649216,
+   "marche": "Obligations américaines 10 ans",
+   "net": -988102,
+   "nom_officiel": "UST 10Y NOTE - CHICAGO BOARD OF TRADE",
+   "open_interest": 5819512,
+   "short": 1637318,
+   "variation": -91621
+  },
+  "direction": -1,
+  "entities": [
+   "UST 10Y NOTE - CHICAGO BOARD OF TRADE"
+  ],
+  "id": "cftc_cot:261013043602F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-13",
+  "official_id": "261013043602F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261013043602F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-16",
+  "sha256": "3a1ff91349c5b77daddec65d7316f7280b95d6b068897e9abdd5ee0a53e2fb29",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Obligations américaines 10 ans : les gros spéculateurs sont vendeurs nets de 988 102 contrats (−91 621 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
    "lien_identique_au_fil": true,
    "lien_ministere_coherent": true,
    "ministere_reconnu": true,
@@ -25981,6 +26420,65 @@
   "badge": "officiel",
   "category": "gouvernement",
   "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-16T19:41:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA221154",
+   "classe": "TYPE 1",
+   "compagnie": "AICURIS ANTI-INFECTIVE CURES AG",
+   "date": "20261009",
+   "fabricant": null,
+   "ingredients": [
+    "PRITELIVIR"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/221154Orig1s000ltr.pdf",
+   "marques": [
+    "HOVILPR"
+   ],
+   "numero_soumission": "1",
+   "orphelin": false,
+   "priorite": "PRIORITY",
+   "sponsor": "AICURIS ANTI-INFECTIVE CURES AG",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "AICURIS ANTI-INFECTIVE CURES AG"
+  ],
+  "id": "fda:NDA221154-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important."
+  ],
+  "occurred_on": "2026-10-09",
+  "official_id": "NDA221154-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221154",
+  "parser_version": "fda-1",
+  "published_on": "2026-10-09",
+  "sha256": "cf3849a9d39a94c946a89890482809c0da37be1396efcaaa225ce507acafa6df",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, HOVILPR (pritelivir), de AICURIS ANTI-INFECTIVE CURES AG"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
    "champs_requis": true,
    "dates_coherentes": true,
    "domaine_officiel": true,
@@ -29427,462 +29925,6 @@
    "SCL"
   ],
   "title": "Dimensional Fund Advisors LP détient 5,2 % de STEPAN CO (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-09T02:14:49+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 369858.0,
-   "amendement": null,
-   "bourse": "NYSE",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0000883237",
-   "cik_sujet_entete": "0000883237",
-   "date_evenement": "2026-09-30",
-   "declarant": "Dimensional Fund Advisors LP",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "Virtus Investment Partners Inc",
-   "pourcentage": 5.6,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Dimensional Fund Advisors LP",
-   "VIRTUS INVESTMENT PARTNERS, INC."
-  ],
-  "id": "sec_13dg:0000354204-26-001068",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0000354204-26-001068",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/883237/000035420426001068/0000354204-26-001068-index.htm",
-  "parser_version": "sec-7",
-  "published_on": "2026-10-08",
-  "sha256": "4348436c8478e959b03abba9d5ffe067dffa8f6c9db95cbf461cd550d9c49dbf",
-  "source": "sec_13dg",
-  "tickers": [
-   "VRTS"
-  ],
-  "title": "Dimensional Fund Advisors LP détient 5,6 % de VIRTUS INVESTMENT PARTNERS, INC. (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-09T02:14:48+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 5312842.0,
-   "amendement": null,
-   "bourse": "NYSE",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0000091767",
-   "cik_sujet_entete": "0000091767",
-   "date_evenement": "2026-09-30",
-   "declarant": "Dimensional Fund Advisors LP",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "Sonoco Products Co",
-   "pourcentage": 5.4,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Dimensional Fund Advisors LP",
-   "SONOCO PRODUCTS CO"
-  ],
-  "id": "sec_13dg:0000354204-26-001065",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0000354204-26-001065",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/91767/000035420426001065/0000354204-26-001065-index.htm",
-  "parser_version": "sec-7",
-  "published_on": "2026-10-08",
-  "sha256": "5713ff1b309ba15ab00ebf9a2ef151d9d464c08114e6d166987c91b429b36f4a",
-  "source": "sec_13dg",
-  "tickers": [
-   "SON"
-  ],
-  "title": "Dimensional Fund Advisors LP détient 5,4 % de SONOCO PRODUCTS CO (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-09T02:14:48+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 1096031.0,
-   "amendement": null,
-   "bourse": "Nasdaq",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0000944745",
-   "cik_sujet_entete": "0000944745",
-   "date_evenement": "2026-09-30",
-   "declarant": "Dimensional Fund Advisors LP",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "Civista Bancshares Inc",
-   "pourcentage": 5.3,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Dimensional Fund Advisors LP",
-   "CIVISTA BANCSHARES, INC."
-  ],
-  "id": "sec_13dg:0000354204-26-001064",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0000354204-26-001064",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/944745/000035420426001064/0000354204-26-001064-index.htm",
-  "parser_version": "sec-7",
-  "published_on": "2026-10-08",
-  "sha256": "f3e0b67d7cce163ab30009e5b78f32b2032669f6c4cc3d8259bd5af738f13374",
-  "source": "sec_13dg",
-  "tickers": [
-   "CIVB"
-  ],
-  "title": "Dimensional Fund Advisors LP détient 5,3 % de CIVISTA BANCSHARES, INC. (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-09T02:14:48+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 1648160.0,
-   "amendement": null,
-   "bourse": "Nasdaq",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0000076605",
-   "cik_sujet_entete": "0000076605",
-   "date_evenement": "2026-09-30",
-   "declarant": "Dimensional Fund Advisors LP",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "Patrick Industries Inc",
-   "pourcentage": 5.1,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Dimensional Fund Advisors LP",
-   "PATRICK INDUSTRIES INC"
-  ],
-  "id": "sec_13dg:0000354204-26-001062",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0000354204-26-001062",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/76605/000035420426001062/0000354204-26-001062-index.htm",
-  "parser_version": "sec-7",
-  "published_on": "2026-10-08",
-  "sha256": "acb0502a7bd009c68f26939730ac678a370a2547f47bfb613f3e6dc06325ef36",
-  "source": "sec_13dg",
-  "tickers": [
-   "PATK"
-  ],
-  "title": "Dimensional Fund Advisors LP détient 5,1 % de PATRICK INDUSTRIES INC (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-09T02:14:48+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 2868476.0,
-   "amendement": null,
-   "bourse": "Nasdaq",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0000354963",
-   "cik_sujet_entete": "0000354963",
-   "date_evenement": "2026-09-30",
-   "declarant": "Dimensional Fund Advisors LP",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "Shenandoah Telecommunications Co",
-   "pourcentage": 5.2,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Dimensional Fund Advisors LP",
-   "SHENANDOAH TELECOMMUNICATIONS CO/VA/"
-  ],
-  "id": "sec_13dg:0000354204-26-001061",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0000354204-26-001061",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/354963/000035420426001061/0000354204-26-001061-index.htm",
-  "parser_version": "sec-7",
-  "published_on": "2026-10-08",
-  "sha256": "299219873acc826f7f9b72d3d056803c65f6ebb58cda04c011cc88f00f5f908d",
-  "source": "sec_13dg",
-  "tickers": [
-   "SHEN"
-  ],
-  "title": "Dimensional Fund Advisors LP détient 5,2 % de SHENANDOAH TELECOMMUNICATIONS CO/VA/ (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-09T02:14:48+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 1011471.0,
-   "amendement": null,
-   "bourse": "Nasdaq",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0000826154",
-   "cik_sujet_entete": "0000826154",
-   "date_evenement": "2026-09-30",
-   "declarant": "Dimensional Fund Advisors LP",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "Orrstown Financial Services Inc",
-   "pourcentage": 5.1,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Dimensional Fund Advisors LP",
-   "ORRSTOWN FINANCIAL SERVICES INC"
-  ],
-  "id": "sec_13dg:0000354204-26-001056",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0000354204-26-001056",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/826154/000035420426001056/0000354204-26-001056-index.htm",
-  "parser_version": "sec-7",
-  "published_on": "2026-10-08",
-  "sha256": "a5cff2d1f5bbf259ebad8ddf0104b61582279636c7a194c3cb28756dce81f9f2",
-  "source": "sec_13dg",
-  "tickers": [
-   "ORRF"
-  ],
-  "title": "Dimensional Fund Advisors LP détient 5,1 % de ORRSTOWN FINANCIAL SERVICES INC (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-09T02:14:47+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 338541.0,
-   "amendement": null,
-   "bourse": "Nasdaq",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0002064764",
-   "cik_sujet_entete": "0002064764",
-   "date_evenement": "2026-03-31",
-   "declarant": "Aquamarine Financial (Cayman) Ltd",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "PULSENMORE LTD.",
-   "pourcentage": 5.02,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Aquamarine Financial (Cayman) Ltd",
-   "Pulsenmore Ltd."
-  ],
-  "id": "sec_13dg:0001493152-26-046362",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-03-31",
-  "official_id": "0001493152-26-046362",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/2064764/000149315226046362/0001493152-26-046362-index.htm",
-  "parser_version": "sec-7",
-  "published_on": "2026-10-08",
-  "sha256": "f0a706cd49a102f5a8186aa75b94aabf05b5b85190105fc996d82ea03275d420",
-  "source": "sec_13dg",
-  "tickers": [
-   "PLSM"
-  ],
-  "title": "Aquamarine Financial (Cayman) Ltd détient 5,02 % de Pulsenmore Ltd. (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-09T02:14:47+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 5100000.0,
-   "amendement": null,
-   "bourse": "NYSE",
-   "but_sous_evalue": false,
-   "cik_emetteur": "0000866706",
-   "cik_sujet_entete": "0000866706",
-   "date_evenement": "2026-10-01",
-   "declarant": "TBG AG",
-   "extrait_but": "On the Completion Date, in connection with the consummation of the Transaction pursuant to the Purchase Agreement, the Reporting Person entered into that certain Shareholder Agreement, dated as of October 1, 2026, by and between the Reporting Person and the Issuer (the \"Shareholder Agreement\"), whic",
-   "nb_personnes": 1,
-   "nom_emetteur": "ESCO Technologies Inc.",
-   "pourcentage": 16.4,
-   "type": "SCHEDULE 13D",
-   "types_declarants": [
-    "CO"
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "TBG AG",
-   "ESCO TECHNOLOGIES INC"
-  ],
-  "id": "sec_13dg:0001193125-26-418042",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-10-01",
-  "official_id": "0001193125-26-418042",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/866706/000119312526418042/0001193125-26-418042-index.htm",
-  "parser_version": "sec-7",
-  "published_on": "2026-10-08",
-  "sha256": "2a2c79e1e763dd106d44ada8443d9eacb939a734601e7db497c26b232602480e",
-  "source": "sec_13dg",
-  "tickers": [
-   "ESE"
-  ],
-  "title": "TBG AG détient 16,4 % de ESCO TECHNOLOGIES INC (13D, intentions actives)"
  },
  {
   "amount_max": null,
@@ -50588,54 +50630,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_rappel": true,
-   "nombre_plausible": true,
-   "numero_de_rappel_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T02:03:23+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "campagne": "81D",
-   "composant": "STRUCTURE",
-   "consequence": "Detached roof rack crossbars can create a road hazard, increasing the risk of a crash.",
-   "constructeur": "Chrysler (FCA US, LLC)",
-   "defaut": "Chrysler (FCA US, LLC) is recalling certain 2022-2025 Jeep Wagoneer, 2022-2026 Jeep Grand Wagoneer, 2023-2025 Jeep Wagoneer L, and 2023-2026 Jeep Grand Wagoneer L vehicles. The pivot bolts for the roof rack crossbars may not have been tightened properly, allowing them to detach.",
-   "numero": "26V584000",
-   "sorte": "Vehicle",
-   "sujet": "Roof Rack Crossbars May Detach",
-   "unites": 97349
-  },
-  "direction": -1,
-  "entities": [
-   "Chrysler (FCA US, LLC)"
-  ],
-  "id": "nhtsa:26V584000",
-  "kind": "rappel",
-  "notes": [],
-  "occurred_on": "2026-09-10",
-  "official_id": "26V584000",
-  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V584000",
-  "parser_version": "nhtsa-1",
-  "published_on": "2026-09-10",
-  "sha256": "5a7fbc05d984ebe3c3ba48c3ffee2725a62ff0ae8bd921bcb4636f0e47239cd8",
-  "source": "nhtsa",
-  "tickers": [],
-  "title": "Rappel de Chrysler (FCA US, LLC) : 97 349 véhicules — « Roof Rack Crossbars May Detach »"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -52484,84 +52478,5 @@
   "source": "gazette_ca",
   "tickers": [],
   "title": "Gazette du Canada : Règlement modifiant le Règlement sur les mesures économiques spéciales visant la Russie (DORS/2026-178)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "date_d_enregistrement_lue": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "loi_liee_a_l_argent": true,
-   "meme_numero_que_l_index": true,
-   "numero_dors_ou_tr": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "titre_officiel_lu": true
-  },
-  "collected_at": "2026-10-03T16:24:46+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "cp": "C.P. 2026-757 Le 13 août 2026",
-   "details": [
-    [
-     "Numéro",
-     "DORS/2026-179"
-    ],
-    [
-     "Loi",
-     "Mesures économiques spéciales (Loi sur les)"
-    ],
-    [
-     "Enregistré le",
-     "2026-08-13"
-    ],
-    [
-     "Décret",
-     "C.P. 2026-757 Le 13 août 2026"
-    ],
-    [
-     "Publié dans",
-     "La Gazette du Canada, Partie II, volume 160, numéro 17"
-    ]
-   ],
-   "enjeux": "La République islamique d’Iran (l’Iran) continue de menacer la paix et la sécurité internationales par ses activités déstabilisatrices dans la région du Moyen-Orient et au-delà, notamment à partir d’attaques armées contre les États voisins et d’actions malveillantes visant à perturber la navigation à l’intérieur et autour du détroit d’Ormuz. De tels agissements sont contraires au droit international. Les actions de l’Iran menacent la stabilité des marchés mondiaux de l’énergie, l’économie mondiale et les chaînes d’approvisionnement essentielles, notamment liées aux denrées alimentaires, au carburant et aux biens humanitaires.",
-   "enregistre_le": "2026-08-13",
-   "enregistrement": "Enregistrement DORS/2026-179 Le 13 août 2026",
-   "gazette": "La Gazette du Canada, Partie II, volume 160, numéro 17",
-   "index": "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-26/html/index-fra.html",
-   "jour": "2026-08-26",
-   "loi": "Mesures économiques spéciales (Loi sur les)",
-   "loi_page": "LOI SUR LES MESURES ÉCONOMIQUES SPÉCIALES",
-   "nouveau": false,
-   "numero": "DORS/2026-179",
-   "numero_index": "DORS/2026-179",
-   "resume": "La République islamique d’Iran (l’Iran) continue de menacer la paix et la sécurité internationales par ses activités déstabilisatrices dans la région du Moyen-Orient et au-delà, notamment à partir d’attaques armées contre les États voisins et d’actions malveillantes visant à perturber la navigation à l’intérieur et autour du détroit d’Ormuz. De tels agissements sont contraires au droit international. Les actions de l’Iran menacent la stabilité des marchés mondiaux de l’énergie, l’économie mondiale et les chaînes d’approvisionnement essentielles, notamment liées aux denrées alimentaires, au carburant et aux biens humanitaires.",
-   "speciale": false,
-   "titre": "Règlement modifiant le Règlement sur les mesures économiques spéciales visant l’Iran",
-   "titre_index": "Mesures économiques spéciales visant l’Iran — Règlement modifiant le Règlement sur les"
-  },
-  "direction": 0,
-  "entities": [
-   "Mesures économiques spéciales (Loi sur les)"
-  ],
-  "id": "gazette_ca:DORS/2026-179",
-  "kind": "reglement",
-  "notes": [],
-  "occurred_on": "2026-08-13",
-  "official_id": "DORS/2026-179",
-  "official_url": "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-26/html/sor-dors179-fra.html",
-  "parser_version": "gazette-1",
-  "published_on": "2026-08-26",
-  "sha256": "94d58ce1acb10cd91e42cdcc7befe79810f7cba6fc90ff62633451456b96cae8",
-  "source": "gazette_ca",
-  "tickers": [],
-  "title": "Gazette du Canada : Règlement modifiant le Règlement sur les mesures économiques spéciales visant l’Iran (DORS/2026-179)"
  }
 ]
