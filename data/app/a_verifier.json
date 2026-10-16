@@ -1,5 +1,82 @@
 [
  {
+  "amount_max": 254285.08,
+  "amount_min": 254285.08,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": false,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-16T08:16:59+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 12791.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000863900",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 19.88,
+   "proprietaires_cik": [
+    "1510281"
+   ],
+   "roles": [
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "MXF",
+   "symboles_sec": [
+    "MXE"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 12791.0,
+     "apres": 2406625.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-10-14",
+     "hors_bourse": null,
+     "prix": 19.88,
+     "titre_valeur": "Common Stock"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Saba Capital Management, L.P.",
+   "MEXICO EQUITY & INCOME FUND INC"
+  ],
+  "id": "sec_form4:0001510281-26-000351:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-10-14",
+  "official_id": "0001510281-26-000351:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/863900/000151028126000351/0001510281-26-000351-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-10-15",
+  "sha256": "2b653f37972554b0144bd176dd5b7bb0dcc176147e7e7ca6f7e7baeedd6f9436",
+  "source": "sec_form4",
+  "tickers": [
+   "MXE"
+  ],
+  "title": "Saba Capital Management, L.P. (actionnaire de 10 %) achète 12 791 actions de MEXICO EQUITY & INCOME FUND INC"
+ },
+ {
   "amount_max": 200000.0,
   "amount_min": 100002.0,
   "badge": "a_verifier",

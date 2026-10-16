@@ -5,9 +5,9 @@
    "recus": 2
   },
   "dernier_contenu": "2026-09-02",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "ccc": {
   "compte": {
@@ -15,9 +15,9 @@
    "recus": 0
   },
   "dernier_contenu": "2026-08-31",
-  "dernier_succes": "2026-10-15T08:23:44+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-15T08:23:44+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "cftc_cot": {
   "compte": {
@@ -25,9 +25,9 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-09",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "chambre_ptr": {
   "compte": {
@@ -35,9 +35,9 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-14",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "comites": {
   "compte": {
@@ -45,27 +45,34 @@
    "recus": 0
   },
   "dernier_succes": "2026-10-15T08:23:44+00:00",
-  "derniere_erreur": null,
-  "derniere_tentative": "2026-10-15T08:23:44+00:00"
+  "derniere_erreur": "ErreurSource: https://www.senate.gov/committees/index.htm : HTTP 403",
+  "derniere_tentative": "2026-10-16T08:16:35+00:00",
+  "refus": {
+   "code": 403,
+   "confirme": false,
+   "depuis": "2026-10-16T08:16:35+00:00",
+   "dernier_refus": "2026-10-16T08:16:35+00:00",
+   "essais": 1
+  }
  },
  "concurrence_ca": {
   "compte": {
    "a_verifier": 0,
-   "recus": 12
+   "recus": 0
   },
   "dernier_contenu": "2026-10-14",
-  "dernier_succes": "2026-10-15T08:23:44+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-15T08:23:44+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "contrats_ca_10k": {
   "compte": {
    "a_verifier": 0,
    "recus": 0
   },
-  "dernier_succes": "2026-10-15T08:23:44+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-15T08:23:44+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "doj_antitrust": {
   "compte": {
@@ -73,9 +80,9 @@
    "recus": 4
   },
   "dernier_contenu": "2026-10-08",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "fda": {
   "compte": {
@@ -83,9 +90,9 @@
    "recus": 13
   },
   "dernier_contenu": "2026-09-28",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "fed": {
   "compte": {
@@ -93,9 +100,9 @@
    "recus": 3
   },
   "dernier_contenu": "2026-09-16",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "ftc_fusions": {
   "compte": {
@@ -105,7 +112,7 @@
   "dernier_contenu": "2026-10-07",
   "dernier_succes": "2026-10-08T17:51:19+00:00",
   "derniere_erreur": "ErreurSource: https://www.ftc.gov/feeds/hsr-early-termination-notices.xml : HTTP 404",
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "gazette_ca": {
   "compte": {
@@ -114,8 +121,8 @@
   },
   "dernier_contenu": "2026-10-07",
   "dernier_succes": "2026-10-15T20:01:29+00:00",
-  "derniere_erreur": null,
-  "derniere_tentative": "2026-10-15T20:01:29+00:00"
+  "derniere_erreur": "ErreurSource: https://www.canada.ca/fr/conseil-prive/bureau-grands-projets/projets/national.html : ReadTimeout",
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "grands_projets_ca": {
   "compte": {
@@ -124,8 +131,8 @@
   },
   "dernier_contenu": "2026-10-10",
   "dernier_succes": "2026-10-15T20:01:29+00:00",
-  "derniere_erreur": null,
-  "derniere_tentative": "2026-10-15T20:01:29+00:00"
+  "derniere_erreur": "ErreurSource: https://www.canada.ca/fr/conseil-prive/bureau-grands-projets/projets/national.html : ReadTimeout",
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "hr7008": {
   "compte": {
@@ -133,9 +140,9 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-30",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "legisinfo": {
   "compte": {
@@ -143,9 +150,9 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-09",
-  "dernier_succes": "2026-10-15T20:01:29+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-15T20:01:29+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "lobbying": {
   "compte": {
@@ -153,8 +160,15 @@
    "recus": 0
   },
   "dernier_succes": "2026-10-15T08:23:44+00:00",
-  "derniere_erreur": null,
-  "derniere_tentative": "2026-10-15T08:23:44+00:00"
+  "derniere_erreur": "ErreurSource: https://lda.gov/api/v1/filings/?filing_year=2026&filing_period=second_quarter&page_size=25&client_name=INHIBRX : HTTP 403",
+  "derniere_tentative": "2026-10-16T08:16:35+00:00",
+  "refus": {
+   "code": 403,
+   "confirme": false,
+   "depuis": "2026-10-16T08:16:35+00:00",
+   "dernier_refus": "2026-10-16T08:16:35+00:00",
+   "essais": 1
+  }
  },
  "maison_blanche": {
   "compte": {
@@ -162,9 +176,9 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-07",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "nhtsa": {
   "compte": {
@@ -172,9 +186,9 @@
    "recus": 13
   },
   "dernier_contenu": "2026-10-09",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "nouvelles_defense_ca": {
   "compte": {
@@ -182,19 +196,19 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-09",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "nouvelles_eco_ca": {
   "compte": {
    "a_verifier": 0,
-   "recus": 1
+   "recus": 0
   },
   "dernier_contenu": "2026-10-15",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "oge_278t": {
   "compte": {
@@ -202,9 +216,9 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-08",
-  "dernier_succes": "2026-10-15T08:23:44+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-15T08:23:44+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "participations_gouv": {
   "compte": {
@@ -212,9 +226,9 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-07",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "registre_federal": {
   "compte": {
@@ -222,9 +236,9 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-15",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "sanctions_ca": {
   "compte": {
@@ -232,9 +246,9 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-22",
-  "dernier_succes": "2026-10-15T20:01:29+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-15T20:01:29+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "sanctions_us": {
   "compte": {
@@ -242,78 +256,78 @@
    "recus": 8
   },
   "dernier_contenu": "2026-10-15",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "sante_canada": {
   "compte": {
    "a_verifier": 0,
-   "recus": 0
+   "recus": 1
   },
-  "dernier_contenu": "2026-10-08",
-  "dernier_succes": "2026-10-15T08:23:44+00:00",
+  "dernier_contenu": "2026-10-14",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-15T08:23:44+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "sec_13dg": {
   "compte": {
    "a_verifier": 0,
-   "recus": 0
+   "recus": 30
   },
-  "dernier_contenu": "2026-10-14",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_contenu": "2026-10-15",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "sec_13f": {
   "compte": {
    "a_verifier": 0,
    "recus": 0
   },
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "sec_8k": {
   "compte": {
    "a_verifier": 0,
-   "recus": 0
+   "recus": 48
   },
-  "dernier_contenu": "2026-10-14",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_contenu": "2026-10-15",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "sec_blocage": {
   "compte": {
    "a_verifier": 0,
-   "recus": 0
+   "recus": 1
   },
-  "dernier_contenu": "2026-10-01",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_contenu": "2026-10-15",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "sec_form144": {
   "compte": {
    "a_verifier": 0,
-   "recus": 0
+   "recus": 4
   },
-  "dernier_contenu": "2026-10-14",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_contenu": "2026-10-15",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "sec_form4": {
   "compte": {
-   "a_verifier": 0,
-   "recus": 0
+   "a_verifier": 1,
+   "recus": 35
   },
-  "dernier_contenu": "2026-10-14",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_contenu": "2026-10-15",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "sec_ftd": {
   "compte": {
@@ -329,19 +343,19 @@
    "a_verifier": 0,
    "recus": 0
   },
-  "dernier_succes": "2026-10-15T08:23:44+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-15T08:23:44+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "sec_offres": {
   "compte": {
    "a_verifier": 0,
-   "recus": 0
+   "recus": 1
   },
-  "dernier_contenu": "2026-10-08",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_contenu": "2026-10-15",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "sec_poursuites": {
   "compte": {
@@ -349,9 +363,9 @@
    "recus": 2
   },
   "dernier_contenu": "2026-10-14",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "sec_rachats": {
   "compte": {
@@ -359,27 +373,27 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-13",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "sec_rachats_xbrl": {
   "compte": {
    "a_verifier": 0,
    "recus": 0
   },
-  "dernier_succes": "2026-10-15T08:23:44+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-15T08:23:44+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "sec_sante": {
   "compte": {
    "a_verifier": 0,
    "recus": 0
   },
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "senat_ptr": {
   "compte": {
@@ -388,8 +402,15 @@
   },
   "dernier_contenu": "2026-10-01",
   "dernier_succes": "2026-10-16T00:27:08+00:00",
-  "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_erreur": "ErreurSource: https://efdsearch.senate.gov/search/home/ : HTTP 403",
+  "derniere_tentative": "2026-10-16T08:16:35+00:00",
+  "refus": {
+   "code": 403,
+   "confirme": false,
+   "depuis": "2026-10-16T08:16:35+00:00",
+   "dernier_refus": "2026-10-16T08:16:35+00:00",
+   "essais": 1
+  }
  },
  "statcan": {
   "compte": {
@@ -406,9 +427,9 @@
    "a_verifier": 0,
    "recus": 0
   },
-  "dernier_succes": "2026-10-15T08:23:44+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-15T08:23:44+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "tarifs": {
   "compte": {
@@ -416,9 +437,9 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-28",
-  "dernier_succes": "2026-10-15T20:01:29+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-15T20:01:29+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "tresor": {
   "compte": {
@@ -426,9 +447,9 @@
    "recus": 0
   },
   "dernier_contenu": "2026-10-08",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "usaspending": {
   "compte": {
@@ -437,8 +458,8 @@
   },
   "dernier_contenu": "2026-10-15",
   "dernier_succes": "2026-10-15T08:23:44+00:00",
-  "derniere_erreur": null,
-  "derniere_tentative": "2026-10-15T08:23:44+00:00"
+  "derniere_erreur": "ErreurSource: https://api.usaspending.gov/api/v2/awards/CONT_AWD_W9128F26CA044_9700_-NONE-_-NONE-/ : HTTP 404",
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "ventes_armes": {
   "compte": {
@@ -446,9 +467,9 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-22",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  },
  "votes": {
   "compte": {
@@ -456,8 +477,8 @@
    "recus": 0
   },
   "dernier_contenu": "2026-09-30",
-  "dernier_succes": "2026-10-16T00:27:08+00:00",
+  "dernier_succes": "2026-10-16T08:16:35+00:00",
   "derniere_erreur": null,
-  "derniere_tentative": "2026-10-16T00:27:08+00:00"
+  "derniere_tentative": "2026-10-16T08:16:35+00:00"
  }
 }
