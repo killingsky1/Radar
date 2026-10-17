@@ -1,5 +1,181 @@
 [
  {
+  "amount_max": 26900347102.02,
+  "amount_min": 26900347102.02,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "cumul_de_l_exercice_lu": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "mois_publie": true,
+   "montant_coherent": true,
+   "solde_egal_depenses_moins_recettes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-17T00:31:57+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "cumul_exercice": {
+    "depenses": 7395799983313.23,
+    "recettes": 5403326758960.81,
+    "solde": 1992473224352.42
+   },
+   "details": [
+    [
+     "Mois",
+     "septembre 2026"
+    ],
+    [
+     "Recettes",
+     "557,9 G$"
+    ],
+    [
+     "Dépenses",
+     "584,8 G$"
+    ],
+    [
+     "Solde",
+     "Déficit de 26,9 G$"
+    ],
+    [
+     "Cumul de l'exercice 2026",
+     "Déficit de 1 992,5 G$"
+    ],
+    [
+     "Même mois, exercice 2025",
+     "Excédent de 197,9 G$"
+    ]
+   ],
+   "exercice": 2026,
+   "fin_du_mois": "2026-09-30",
+   "meme_mois_an_dernier": {
+    "depenses": 345725351899.02,
+    "recettes": 543663073176.7,
+    "solde": -197937721277.68
+   },
+   "mois": {
+    "depenses": 584774866340.26,
+    "recettes": 557874519238.24,
+    "solde": 26900347102.02
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Trésor américain"
+  ],
+  "id": "tresor:mts:2026-09",
+  "kind": "solde_mensuel",
+  "notes": [
+   "Un montant positif est un déficit (dépenses plus grandes que les recettes), selon la définition officielle.",
+   "Date de publication : celle du calendrier officiel du Trésor."
+  ],
+  "occurred_on": "2026-09-30",
+  "official_id": "mts:2026-09",
+  "official_url": "https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/",
+  "parser_version": "tresor-1",
+  "published_on": "2026-10-16",
+  "sha256": "038f2ebc5ac647dda0e008e8d515e1c0ab7c3e74d908c5a49d3bea0e7ee4ba98",
+  "source": "tresor",
+  "tickers": [],
+  "title": "Trésor américain : déficit de 26,9 G$ en septembre 2026 (recettes 557,9 G$, dépenses 584,8 G$)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-17T00:31:56+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/tribunal-commerce-exterieur/nouvelles/2026/10/le-tribunal-rend-une-decision-dindication-raisonnable-de-dommage--gobelets-et-contenants-en-carton-provenant-de-la-chine.html",
+   "ministere": "Tribunal canadien du commerce extérieur",
+   "mis_a_jour": "2026-10-16T16:10:00-04:00",
+   "resume": "À la suite de l’enquête préliminaire de dommage (PI-2026-004) du Tribunal canadien du commerce extérieur, le Tribunal a décidé aujourd’hui que les éléments de preuve indiquent, de façon raisonnable, que le dumping et le subventionnement de gobelets et contenants en carton provenant de la République populaire de Chine ont causé un dommage à la branche de production nationale.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Tribunal canadien du commerce extérieur"
+  ],
+  "id": "nouvelles_eco_ca:tribunal-commerce-exterieur/nouvelles/2026/10/le-tribunal-rend-une-decision-dindication-raisonnable-de-dommage--gobelets-et-contenants-en-carton-provenant-de-la-chine.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-16",
+  "official_id": "tribunal-commerce-exterieur/nouvelles/2026/10/le-tribunal-rend-une-decision-dindication-raisonnable-de-dommage--gobelets-et-contenants-en-carton-provenant-de-la-chine.html",
+  "official_url": "https://www.canada.ca/fr/tribunal-commerce-exterieur/nouvelles/2026/10/le-tribunal-rend-une-decision-dindication-raisonnable-de-dommage--gobelets-et-contenants-en-carton-provenant-de-la-chine.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-16",
+  "sha256": "259d63ce0b2b17d0b18052e9963d58d30c1386d963aa8eac074eb3cb019b9d22",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le Tribunal rend une décision d’indication raisonnable de dommage — Gobelets et contenants en carton provenant de la Chine"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-17T00:31:56+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/10/le-secretaire-parlementaire-turnbull-participera-a-la-reunion-des-ministres-des-finances-de-lapec-a-hong-kong-pour-faire-progresser-le-programme-mu.html",
+   "ministere": "Ministère des Finances Canada",
+   "mis_a_jour": "2026-10-16T17:41:54-04:00",
+   "resume": "Face au climat mondial marqué par la volatilité persistante et à l’incertitude sur le plan commercial, le Canada collabore de manière stratégique avec ses partenaires internationaux pour faire progresser les échanges commerciaux, favoriser la certitude économique dans un monde instable, et réaliser des avancées sur des intérêts communs, tout en soutenant les secteurs et les ressources du pays et en mettant en œuvre le plan économique ambitieux du gouvernement ici même, au Canada.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Ministère des Finances Canada"
+  ],
+  "id": "nouvelles_eco_ca:ministere-finances/nouvelles/2026/10/le-secretaire-parlementaire-turnbull-participera-a-la-reunion-des-ministres-des-finances-de-lapec-a-hong-kong-pour-faire-progresser-le-programme-mu.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-16",
+  "official_id": "ministere-finances/nouvelles/2026/10/le-secretaire-parlementaire-turnbull-participera-a-la-reunion-des-ministres-des-finances-de-lapec-a-hong-kong-pour-faire-progresser-le-programme-mu.html",
+  "official_url": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/10/le-secretaire-parlementaire-turnbull-participera-a-la-reunion-des-ministres-des-finances-de-lapec-a-hong-kong-pour-faire-progresser-le-programme-mu.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-16",
+  "sha256": "1c67df5b33551405b02de28481d2343df6c5d8b4e8cd0b20e581575543709987",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le secrétaire parlementaire Turnbull participera à la réunion des ministres des Finances de l’APEC à Hong Kong pour faire progresser le programme multilatéral et de diversification du Canada"
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -50522,59 +50698,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_rappel": true,
-   "nombre_plausible": true,
-   "numero_de_rappel_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-09T10:41:01+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "anciennes_empreintes": [
-    "776f48b0ba7784611311a2c6ee41d7cda89f15b17c84bd00616c231ccf473358"
-   ],
-   "campagne": "57KL",
-   "composant": "ELECTRICAL SYSTEM",
-   "consequence": "An unexpected engine stall, loss of exterior lighting or warning lights, or failure of the rearview camera system can increase the risk of a crash.",
-   "constructeur": "Volkswagen Group of America, Inc.",
-   "defaut": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2025 Tiguan vehicles. A software error may cause the body control module (BCM) system to reset. This may result in the ignition switching off, resulting in an engine stall.  It can also lead to a loss of certain controls, warning lights, exterior lighting, or failure of the rearview camera system. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) numbers 101, \"Controls ",
-   "numero": "26V587000",
-   "sorte": "Vehicle",
-   "sujet": "Body Control Module (BCM) May Reset Unexpectedly/FMVSS 101, 102",
-   "unites": 49958
-  },
-  "direction": -1,
-  "entities": [
-   "Volkswagen Group of America, Inc."
-  ],
-  "id": "nhtsa:26V587000",
-  "kind": "rappel",
-  "notes": [
-   "Document modifié à la source depuis la 1re lecture."
-  ],
-  "occurred_on": "2026-09-10",
-  "official_id": "26V587000",
-  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V587000",
-  "parser_version": "nhtsa-1",
-  "published_on": "2026-09-10",
-  "sha256": "4e57eb1c0740b04e2796dc86bf3c15a1ade758fc6e9ab1d1359f6cdafccebfc8",
-  "source": "nhtsa",
-  "tickers": [],
-  "title": "Rappel de Volkswagen Group of America, Inc. : 49 958 véhicules — « Body Control Module (BCM) May Reset Unexpectedly/FMVSS 101, 102 »"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -52320,163 +52443,5 @@
   "source": "ventes_armes",
   "tickers": [],
   "title": "Vente d'armes à l'étranger : Géorgie (pays)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "date_d_enregistrement_lue": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "loi_liee_a_l_argent": true,
-   "meme_numero_que_l_index": true,
-   "numero_dors_ou_tr": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "titre_officiel_lu": true
-  },
-  "collected_at": "2026-10-03T16:24:48+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "cp": "C.P. 2026-732 Le 6 août 2026",
-   "details": [
-    [
-     "Numéro",
-     "DORS/2026-173"
-    ],
-    [
-     "Loi",
-     "Tarif des douanes"
-    ],
-    [
-     "Enregistré le",
-     "2026-08-07"
-    ],
-    [
-     "Décret",
-     "C.P. 2026-732 Le 6 août 2026"
-    ],
-    [
-     "Publié dans",
-     "La Gazette du Canada, Partie II, volume 160, numéro 17"
-    ]
-   ],
-   "enjeux": "Le présent décret vise à éliminer les droits de douane applicables aux batteries au lithium-ion utilisées comme intrants dans la fabrication de vélos électriques au Canada. Auparavant, les batteries au lithium-ion importées pour être utilisées dans la fabrication de vélos électriques au Canada étaient assujetties à un droit de douane de 7 %.",
-   "enregistre_le": "2026-08-07",
-   "enregistrement": "Enregistrement DORS/2026-173 Le 7 août 2026",
-   "gazette": "La Gazette du Canada, Partie II, volume 160, numéro 17",
-   "index": "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-26/html/index-fra.html",
-   "jour": "2026-08-26",
-   "loi": "Tarif des douanes",
-   "loi_page": "TARIF DES DOUANES",
-   "nouveau": false,
-   "numero": "DORS/2026-173",
-   "numero_index": "DORS/2026-173",
-   "resume": "Le présent décret vise à éliminer les droits de douane applicables aux batteries au lithium-ion utilisées comme intrants dans la fabrication de vélos électriques au Canada. Auparavant, les batteries au lithium-ion importées pour être utilisées dans la fabrication de vélos électriques au Canada étaient assujetties à un droit de douane de 7 %.",
-   "speciale": false,
-   "titre": "Décret modifiant l’annexe du Tarif des douanes",
-   "titre_index": "Tarif des douanes — Décret modifiant l’annexe du"
-  },
-  "direction": 0,
-  "entities": [
-   "Tarif des douanes"
-  ],
-  "id": "gazette_ca:DORS/2026-173",
-  "kind": "reglement",
-  "notes": [],
-  "occurred_on": "2026-08-07",
-  "official_id": "DORS/2026-173",
-  "official_url": "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-26/html/sor-dors173-fra.html",
-  "parser_version": "gazette-1",
-  "published_on": "2026-08-26",
-  "sha256": "cdbf35c62f087acf63daff63a532e8e1e10ccc79d21ff01b9f551a0158f909ab",
-  "source": "gazette_ca",
-  "tickers": [],
-  "title": "Gazette du Canada : Décret modifiant l’annexe du Tarif des douanes (DORS/2026-173)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "date_d_enregistrement_lue": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "loi_liee_a_l_argent": true,
-   "meme_numero_que_l_index": true,
-   "numero_dors_ou_tr": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "titre_officiel_lu": true
-  },
-  "collected_at": "2026-10-03T16:24:47+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "cp": "C.P. 2026-756 Le 13 août 2026",
-   "details": [
-    [
-     "Numéro",
-     "DORS/2026-178"
-    ],
-    [
-     "Loi",
-     "Mesures économiques spéciales (Loi sur les)"
-    ],
-    [
-     "Enregistré le",
-     "2026-08-13"
-    ],
-    [
-     "Décret",
-     "C.P. 2026-756 Le 13 août 2026"
-    ],
-    [
-     "Publié dans",
-     "La Gazette du Canada, Partie II, volume 160, numéro 17"
-    ]
-   ],
-   "enjeux": "La ministre des Affaires étrangères (la ministre) a reçu une demande de radiation de la part d’Anatoly Borisovich Chubais, laquelle établit l’existence de motifs raisonnables de recommander sa radiation de l’annexe 1 du Règlement modifiant le Règlement sur les mesures économiques spéciales visant la Russie (le Règlement visant la Russie). Le maintien de l’intégrité et de l’exactitude du régime de sanctions du Canada exige que le Règlement visant la Russie soit modifié afin de radier des personnes lorsqu’il existe des motifs raisonnables de le faire.",
-   "enregistre_le": "2026-08-13",
-   "enregistrement": "Enregistrement DORS/2026-178 Le 13 août 2026",
-   "gazette": "La Gazette du Canada, Partie II, volume 160, numéro 17",
-   "index": "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-26/html/index-fra.html",
-   "jour": "2026-08-26",
-   "loi": "Mesures économiques spéciales (Loi sur les)",
-   "loi_page": "LOI SUR LES MESURES ÉCONOMIQUES SPÉCIALES",
-   "nouveau": false,
-   "numero": "DORS/2026-178",
-   "numero_index": "DORS/2026-178",
-   "resume": "La ministre des Affaires étrangères (la ministre) a reçu une demande de radiation de la part d’Anatoly Borisovich Chubais, laquelle établit l’existence de motifs raisonnables de recommander sa radiation de l’annexe 1 du Règlement modifiant le Règlement sur les mesures économiques spéciales visant la Russie (le Règlement visant la Russie). Le maintien de l’intégrité et de l’exactitude du régime de sanctions du Canada exige que le Règlement visant la Russie soit modifié afin de radier des personnes lorsqu’il existe des motifs raisonnables de le faire.",
-   "speciale": false,
-   "titre": "Règlement modifiant le Règlement sur les mesures économiques spéciales visant la Russie",
-   "titre_index": "Mesures économiques spéciales visant la Russie — Règlement modifiant le Règlement sur les"
-  },
-  "direction": 0,
-  "entities": [
-   "Mesures économiques spéciales (Loi sur les)"
-  ],
-  "id": "gazette_ca:DORS/2026-178",
-  "kind": "reglement",
-  "notes": [],
-  "occurred_on": "2026-08-13",
-  "official_id": "DORS/2026-178",
-  "official_url": "https://gazette.gc.ca/rp-pr/p2/2026/2026-08-26/html/sor-dors178-fra.html",
-  "parser_version": "gazette-1",
-  "published_on": "2026-08-26",
-  "sha256": "989a1f8baba1670a92542bf7d42c3071d3c2a874262307b23a64914b15f56cda",
-  "source": "gazette_ca",
-  "tickers": [],
-  "title": "Gazette du Canada : Règlement modifiant le Règlement sur les mesures économiques spéciales visant la Russie (DORS/2026-178)"
  }
 ]
