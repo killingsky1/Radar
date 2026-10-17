@@ -1,5 +1,679 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": false,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-17T07:56:15+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-21344",
+   "numero_dans_le_texte": true,
+   "parution": "2026-10-19",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Government of Spain",
+    "ajout_a_une_vente": true,
+    "date_congres": "September 16, 2026",
+    "fournisseurs": [],
+    "fournisseurs_texte": null,
+    "total": null,
+    "transmission": "26-1L"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Government of Spain"
+  ],
+  "id": "ventes_armes:2026-21344",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 16 septembre 2026 ; publié au Registre plus tard.",
+   "Ajout ou mise à niveau d'une vente déjà annoncée."
+  ],
+  "occurred_on": "2026-09-16",
+  "official_id": "2026-21344",
+  "official_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21344/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-19",
+  "sha256": "0fd8119c399f36f21834d64e1183f3eee5e4ba04efd0a09d9d62908375c673ab",
+  "source": "ventes_armes",
+  "tickers": [],
+  "title": "Vente d'armes à l'étranger : Espagne"
+ },
+ {
+  "amount_max": 75000000.0,
+  "amount_min": 75000000.0,
+  "badge": "a_verifier",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": false,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-17T07:56:15+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-21343",
+   "numero_dans_le_texte": true,
+   "parution": "2026-10-19",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Government of Spain",
+    "ajout_a_une_vente": false,
+    "date_congres": "September 16, 2026",
+    "fournisseurs": [],
+    "fournisseurs_texte": null,
+    "total": 75000000.0,
+    "transmission": "26-93"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Government of Spain"
+  ],
+  "id": "ventes_armes:2026-21343",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 16 septembre 2026 ; publié au Registre plus tard."
+  ],
+  "occurred_on": "2026-09-16",
+  "official_id": "2026-21343",
+  "official_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21343/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-19",
+  "sha256": "d89a69455a274e7e6ce10cd8c1fdb2848e07a7e9e31356bb07e37a39704046ee",
+  "source": "ventes_armes",
+  "tickers": [],
+  "title": "Vente d'armes à l'étranger : Espagne"
+ },
+ {
+  "amount_max": 188000000.0,
+  "amount_min": 188000000.0,
+  "badge": "a_verifier",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": false,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-17T07:56:13+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-21342",
+   "numero_dans_le_texte": true,
+   "parution": "2026-10-19",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Government of Oman",
+    "ajout_a_une_vente": false,
+    "date_congres": "September 1, 2026",
+    "fournisseurs": [],
+    "fournisseurs_texte": null,
+    "total": 188000000.0,
+    "transmission": "26-71"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Government of Oman"
+  ],
+  "id": "ventes_armes:2026-21342",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 1er septembre 2026 ; publié au Registre plus tard."
+  ],
+  "occurred_on": "2026-09-01",
+  "official_id": "2026-21342",
+  "official_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21342/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-19",
+  "sha256": "c2fd42fe768e4d43fb2a711f22dbc00a5cda2b28c101439d0da8b2b9b61d4ab6",
+  "source": "ventes_armes",
+  "tickers": [],
+  "title": "Vente d'armes à l'étranger : Oman"
+ },
+ {
+  "amount_max": 750000000.0,
+  "amount_min": 750000000.0,
+  "badge": "a_verifier",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": false,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-17T07:56:12+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-21341",
+   "numero_dans_le_texte": true,
+   "parution": "2026-10-19",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Kingdom of Saudi Arabia",
+    "ajout_a_une_vente": false,
+    "date_congres": "September 1, 2026",
+    "fournisseurs": [
+     "Honeywell"
+    ],
+    "fournisseurs_texte": "Honeywell, located in Anniston Army Depot, AL",
+    "total": 750000000.0,
+    "transmission": "26-68"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Kingdom of Saudi Arabia",
+   "Honeywell"
+  ],
+  "id": "ventes_armes:2026-21341",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 1er septembre 2026 ; publié au Registre plus tard."
+  ],
+  "occurred_on": "2026-09-01",
+  "official_id": "2026-21341",
+  "official_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21341/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-19",
+  "sha256": "7a95b4f04e1cd69368a51a1508f09997deadffc4e2c6d61501373ed56ceea822",
+  "source": "ventes_armes",
+  "tickers": [],
+  "title": "Vente d'armes à l'étranger : Arabie saoudite — fournisseur : Honeywell"
+ },
+ {
+  "amount_max": 5000000000.0,
+  "amount_min": 5000000000.0,
+  "badge": "a_verifier",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": false,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-17T07:56:11+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-21340",
+   "numero_dans_le_texte": true,
+   "parution": "2026-10-19",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "symboles_trouves_par": "nom exact dans la liste officielle de la SEC",
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Kingdom of Saudi Arabia",
+    "ajout_a_une_vente": false,
+    "date_congres": "September 1, 2026",
+    "fournisseurs": [
+     "The Boeing Corporation"
+    ],
+    "fournisseurs_texte": "The Boeing Corporation, located in Arlington, VA",
+    "total": 5000000000.0,
+    "transmission": "26-35"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Kingdom of Saudi Arabia",
+   "The Boeing Corporation"
+  ],
+  "id": "ventes_armes:2026-21340",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 1er septembre 2026 ; publié au Registre plus tard."
+  ],
+  "occurred_on": "2026-09-01",
+  "official_id": "2026-21340",
+  "official_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21340/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-19",
+  "sha256": "7e6c7f97754576ceca002814543e731bc8a168a2ac0b5559de221c1c797cd97c",
+  "source": "ventes_armes",
+  "tickers": [
+   "BA"
+  ],
+  "title": "Vente d'armes à l'étranger : Arabie saoudite — fournisseur : The Boeing Corporation"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": false,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-17T07:56:10+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-21339",
+   "numero_dans_le_texte": true,
+   "parution": "2026-10-19",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Government of the Netherlands",
+    "ajout_a_une_vente": false,
+    "date_congres": "September 16, 2026",
+    "fournisseurs": [],
+    "fournisseurs_texte": null,
+    "total": null,
+    "transmission": "26-1I"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Government of the Netherlands"
+  ],
+  "id": "ventes_armes:2026-21339",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 16 septembre 2026 ; publié au Registre plus tard."
+  ],
+  "occurred_on": "2026-09-16",
+  "official_id": "2026-21339",
+  "official_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21339/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-19",
+  "sha256": "3cfdfeaf3d513e992c60014abc9ee905ef69792ac8deca622cc2a0b6de06da1e",
+  "source": "ventes_armes",
+  "tickers": [],
+  "title": "Vente d'armes à l'étranger : Pays-Bas"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": false,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-17T07:56:10+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-21338",
+   "numero_dans_le_texte": true,
+   "parution": "2026-10-19",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Kingdom of Saudi Arabia",
+    "ajout_a_une_vente": true,
+    "date_congres": "September 1, 2026",
+    "fournisseurs": [],
+    "fournisseurs_texte": null,
+    "total": null,
+    "transmission": "26-1E"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Kingdom of Saudi Arabia"
+  ],
+  "id": "ventes_armes:2026-21338",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 1er septembre 2026 ; publié au Registre plus tard.",
+   "Ajout ou mise à niveau d'une vente déjà annoncée."
+  ],
+  "occurred_on": "2026-09-01",
+  "official_id": "2026-21338",
+  "official_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21338/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-19",
+  "sha256": "0d0ee52cce7ec16235639920d3296d59e17705d28cdaca8d7947795718e74aa3",
+  "source": "ventes_armes",
+  "tickers": [],
+  "title": "Vente d'armes à l'étranger : Arabie saoudite"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": false,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-17T07:56:08+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-21337",
+   "numero_dans_le_texte": true,
+   "parution": "2026-10-19",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Government of Jordan",
+    "ajout_a_une_vente": true,
+    "date_congres": "August 18, 2026",
+    "fournisseurs": [],
+    "fournisseurs_texte": null,
+    "total": null,
+    "transmission": "26-1D"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Government of Jordan"
+  ],
+  "id": "ventes_armes:2026-21337",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 18 août 2026 ; publié au Registre plus tard.",
+   "Ajout ou mise à niveau d'une vente déjà annoncée."
+  ],
+  "occurred_on": "2026-08-18",
+  "official_id": "2026-21337",
+  "official_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21337/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-19",
+  "sha256": "98170c23664ca27cb166cfe2bede0ba3607d240addf25e9de7c229c603e57121",
+  "source": "ventes_armes",
+  "tickers": [],
+  "title": "Vente d'armes à l'étranger : Jordanie"
+ },
+ {
+  "amount_max": 150000000.0,
+  "amount_min": 150000000.0,
+  "badge": "a_verifier",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": false,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-17T07:56:07+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-21336",
+   "numero_dans_le_texte": true,
+   "parution": "2026-10-19",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Government of Iraq",
+    "ajout_a_une_vente": false,
+    "date_congres": "September 1, 2026",
+    "fournisseurs": [
+     "Bell-Textron"
+    ],
+    "fournisseurs_texte": "Bell-Textron, located in Fort Worth, TX",
+    "total": 150000000.0,
+    "transmission": "25-83"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Government of Iraq",
+   "Bell-Textron"
+  ],
+  "id": "ventes_armes:2026-21336",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 1er septembre 2026 ; publié au Registre plus tard."
+  ],
+  "occurred_on": "2026-09-01",
+  "official_id": "2026-21336",
+  "official_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21336/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-19",
+  "sha256": "10790451dbb6f2752e16cbf187a5b11c361663e8f986b7dd7ae54a090a1593c6",
+  "source": "ventes_armes",
+  "tickers": [],
+  "title": "Vente d'armes à l'étranger : Irak — fournisseur : Bell-Textron"
+ },
+ {
+  "amount_max": 800000000.0,
+  "amount_min": 800000000.0,
+  "badge": "a_verifier",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": false,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-17T07:56:06+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-21335",
+   "numero_dans_le_texte": true,
+   "parution": "2026-10-19",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Government of Iraq",
+    "ajout_a_une_vente": false,
+    "date_congres": "August 31, 2026",
+    "fournisseurs": [
+     "Bell-Textron"
+    ],
+    "fournisseurs_texte": "Bell-Textron, located in Fort Worth, TX",
+    "total": 800000000.0,
+    "transmission": "25-82"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Government of Iraq",
+   "Bell-Textron"
+  ],
+  "id": "ventes_armes:2026-21335",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 31 août 2026 ; publié au Registre plus tard."
+  ],
+  "occurred_on": "2026-08-31",
+  "official_id": "2026-21335",
+  "official_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21335/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-19",
+  "sha256": "44a2566cf0b1ce3ed40d5a77e53624650e9c6336f4dcf0d1b242fb0c420afaac",
+  "source": "ventes_armes",
+  "tickers": [],
+  "title": "Vente d'armes à l'étranger : Irak — fournisseur : Bell-Textron"
+ },
+ {
   "amount_max": 254285.08,
   "amount_min": 254285.08,
   "badge": "a_verifier",
