@@ -3,6 +3,61 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-19T19:31:01+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Indice des prix à la consommation"
+    ],
+    [
+     "Période",
+     "septembre 2026"
+    ]
+   ],
+   "indicateur": "Indice des prix à la consommation",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261019/dq261019a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-10-19T08:30:00-04:00",
+   "periode": "septembre 2026",
+   "resume": "L'Indice des prix à la consommation (IPC) a augmenté de 3,1 % d'une année à l'autre en septembre, après avoir progressé de 3,0 % en août. Sur une base mensuelle désaisonnalisée, l'IPC s'est accru de 0,4 % en septembre."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261019/dq261019a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-10-19",
+  "official_id": "261019/dq261019a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261019/dq261019a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-10-19",
+  "sha256": "fe2f44112b3661cd1e21cd124944acedbe6990cce8252a6ddf888751f8a46f5e",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Indice des prix à la consommation, septembre 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "champs_requis": true,
@@ -1061,6 +1116,77 @@
   "source": "usaspending",
   "tickers": [],
   "title": "Contrat fédéral américain de 120,2 M$ : HENSEL PHELPS CONSTRUCTION CO (Défense)"
+ },
+ {
+  "amount_max": 100000.0,
+  "amount_min": 50001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-19T19:30:55+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL15",
+   "elu": "Laurel Lee",
+   "lecture_complete": true,
+   "nom_sec": "BANK OF AMERICA CORP /DE/",
+   "rapport": "20035490",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Bank of America Corporation Common Stock (BAC) [ST]",
+     "avis": "2026-09-21",
+     "date": "2026-08-24",
+     "description": null,
+     "montant": "$50,001 - $100,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Laurel Lee",
+   "BANK OF AMERICA CORP /DE/"
+  ],
+  "id": "chambre_ptr:20035490:BAC:S",
+  "kind": "vente_elu",
+  "notes": [
+   "Déclaré en retard : plus de 45 jours après la transaction (limite de la loi STOCK Act)."
+  ],
+  "occurred_on": "2026-08-24",
+  "official_id": "20035490:BAC:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035490.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-16",
+  "sha256": "1e28c70dc96e3fdd1e02b4eafc349ee53998f1158f547ce43f7e7790df37c5a9",
+  "source": "chambre_ptr",
+  "tickers": [
+   "BAC"
+  ],
+  "title": "Laurel Lee (Chambre, FL15) vend BAC — conjoint·e"
  },
  {
   "amount_max": null,
@@ -46196,85 +46322,6 @@
   "title": "Kevin Hern (Chambre, OK01) vend ORLY (2 transactions) — compte conjoint"
  },
  {
-  "amount_max": 150000.0,
-  "amount_min": 65002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "ONEOK INC /NEW/",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "ONEOK, Inc. Common Stock (OKE) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-04",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "ONEOK, Inc. Common Stock (OKE) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-08-31",
-     "description": null,
-     "montant": "$50,001 - $100,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "ONEOK INC /NEW/"
-  ],
-  "id": "chambre_ptr:20035491:OKE:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-08-31",
-  "official_id": "20035491:OKE:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "OKE"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend OKE (2 transactions) — compte conjoint"
- },
- {
   "amount_max": 44000000000.0,
   "amount_min": 44000000000.0,
   "badge": "officiel",
@@ -52261,73 +52308,6 @@
   "source": "grands_projets_ca",
   "tickers": [],
   "title": "Projet d'intérêt national : avis d'inscription possible, Terminal 2 à Roberts Bank"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_gazette": true,
-   "loi_visant_a_batir_le_canada": true,
-   "projet_nomme": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_officiel_de_l_avis": true
-  },
-  "collected_at": "2026-10-03T16:24:39+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "description": "La route de la vallée du Mackenzie (RVM) proposée est une route quatre saisons d’environ 800 km qui se situerait dans les Territoires du Nord-Ouest. La route s’étendrait sur toute la longueur de la vallée du fleuve Mackenzie au nord de Wrigley et passerait près des collectivités de Tulita, Norman Wells et Fort Good Hope avant de rejoindre la route de Dempster, au sud d’Inuvik. Le projet prévoit également la construction de nouveaux ponts, notamment sur la rivière Great Bear, près de Tulita, ainsi que sur la rivière Liard et le fleuve Mackenzie, près de Fort Simpson.",
-   "details": [
-    [
-     "Projet",
-     "Route de la vallée du Mackenzie"
-    ],
-    [
-     "Loi",
-     "Loi visant à bâtir le Canada"
-    ],
-    [
-     "Publié dans",
-     "Gazette du Canada, Partie I, 2026-08-29"
-    ],
-    [
-     "Description",
-     "La route de la vallée du Mackenzie (RVM) proposée est une route quatre saisons d’environ 800 km qui se situerait dans les Territoires du Nord-Ouest. La route s’étendrait sur toute la longueur de la vallée du fleuve Mackenzie au nord de Wrigley et passerait près des collectivités de Tulita, Norman Wells et Fort Good Hope avant de rejoindre la route de Dempster, au sud d’Inuvik. Le projet prévoit également la construction de nouveaux ponts, notamment sur la rivière Great Bear, près de Tulita, ainsi que sur la rivière Liard et le fleuve Mackenzie, près de Fort Simpson."
-    ]
-   ],
-   "jour": "2026-08-29",
-   "loi": "Loi visant à bâtir le Canada",
-   "projet": "Route de la vallée du Mackenzie",
-   "resume": "Conformément au paragraphe 5(1.1) de la Loi visant à bâtir le Canada (la Loi), avis est par les présentes donné que le gouverneur en conseil peut modifier l’annexe 1 de la Loi afin d’inscrire la route de la vallée du Mackenzie sur la liste des projets d’intérêt national. Parallèlement, au nom du gouverneur en conseil et à titre de ministre responsable en vertu de la Loi, le président du Conseil privé du Roi pour le Canada, l’honorable Dominic LeBlanc, consultera le gouvernement des Territoires du Nord-Ouest, soit le territoire dans lequel le projet serait situé.",
-   "texte": "Conformément au paragraphe 5(1.1) de la Loi visant à bâtir le Canada (la Loi), avis est par les présentes donné que le gouverneur en conseil peut modifier l’annexe 1 de la Loi afin d’inscrire la route de la vallée du Mackenzie sur la liste des projets d’intérêt national. Parallèlement, au nom du gouverneur en conseil et à titre de ministre responsable en vertu de la Loi, le président du Conseil privé du Roi pour le Canada, l’honorable Dominic LeBlanc, consultera le gouvernement des Territoires du Nord-Ouest, soit le territoire dans lequel le projet serait situé.",
-   "titre": "Avis — Route de la vallée du Mackenzie"
-  },
-  "direction": 0,
-  "entities": [
-   "Bureau des grands projets"
-  ],
-  "id": "grands_projets_ca:avis:2026-08-29:nb2",
-  "kind": "avis_projet",
-  "notes": [
-   "Étape officielle : l'avis paraît au moins 30 jours avant que le projet puisse être inscrit."
-  ],
-  "occurred_on": "2026-08-29",
-  "official_id": "avis:2026-08-29:nb2",
-  "official_url": "https://gazette.gc.ca/rp-pr/p1/2026/2026-08-29/html/notice-avis-fra.html#nb2",
-  "parser_version": "gazette-1",
-  "published_on": "2026-08-29",
-  "sha256": "c885e7e68f687f659149a9fa6f25a5bf7cd46ddf5c26eb7cdcbda81076a64067",
-  "source": "grands_projets_ca",
-  "tickers": [],
-  "title": "Projet d'intérêt national : avis d'inscription possible, Route de la vallée du Mackenzie"
  },
  {
   "amount_max": null,
