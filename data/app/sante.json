@@ -71,6 +71,41 @@
    "forme": "10-K",
    "lien": "https://www.sec.gov/Archives/edgar/data/1743745/000149315226014263/0001493152-26-014263-index.htm"
   },
+  "GPRO": {
+   "accn": "0001500435-26-000068",
+   "chiffres": {
+    "cfo": -0.038017,
+    "emission": 2706000,
+    "levier": 0.075425,
+    "levier_avant": 0.0,
+    "liquidite": 0.911239,
+    "liquidite_avant": 0.952221,
+    "marge": 0.33638,
+    "marge_avant": 0.338495,
+    "roa": -0.170404,
+    "roa_avant": -0.446625,
+    "rotation": 1.198397,
+    "rotation_avant": 0.82801
+   },
+   "cik": 1500435,
+   "criteres": {
+    "ACCRUAL": 1,
+    "CFO": 0,
+    "EQ_OFFER": 0,
+    "ROA": 0,
+    "ΔLEVER": 0,
+    "ΔLIQUID": 0,
+    "ΔMARGIN": 0,
+    "ΔROA": 1,
+    "ΔTURN": 1
+   },
+   "debut": "2025-01-01",
+   "depose": "2026-10-19",
+   "f_score": 3,
+   "fin": "2025-12-31",
+   "forme": "10-K/A",
+   "lien": "https://www.sec.gov/Archives/edgar/data/1500435/000150043526000068/0001500435-26-000068-index.htm"
+  },
   "LESL": {
    "accn": "0001193125-25-323811",
    "chiffres": {
@@ -175,6 +210,41 @@
    "fin": "2025-12-31",
    "forme": "10-K",
    "lien": "https://www.sec.gov/Archives/edgar/data/1130713/000113071326000018/0001130713-26-000018-index.htm"
+  },
+  "PEP": {
+   "accn": "0000077476-26-000007",
+   "chiffres": {
+    "cfo": 0.121518,
+    "emission": 0,
+    "levier": 0.409163,
+    "levier_avant": 0.372311,
+    "liquidite": 0.85304,
+    "liquidite_avant": 0.818937,
+    "marge": 0.541485,
+    "marge_avant": 0.54554,
+    "roa": 0.082842,
+    "roa_avant": 0.095308,
+    "rotation": 0.944283,
+    "rotation_avant": 0.914016
+   },
+   "cik": 77476,
+   "criteres": {
+    "ACCRUAL": 1,
+    "CFO": 1,
+    "EQ_OFFER": 1,
+    "ROA": 1,
+    "ΔLEVER": 0,
+    "ΔLIQUID": 1,
+    "ΔMARGIN": 0,
+    "ΔROA": 0,
+    "ΔTURN": 1
+   },
+   "debut": "2024-12-29",
+   "depose": "2026-02-03",
+   "f_score": 6,
+   "fin": "2025-12-27",
+   "forme": "10-K",
+   "lien": "https://www.sec.gov/Archives/edgar/data/77476/000007747626000007/0000077476-26-000007-index.htm"
   },
   "SEGG": {
    "accn": "0001493152-26-032786",
