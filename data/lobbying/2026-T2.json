@@ -55,6 +55,34 @@
   "sujets": [],
   "total": null
  },
+ "BORR": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-10-20T08:38:24+00:00",
+  "moins_de_5000": 0,
+  "nom": "Borr Drilling Ltd",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "DRILLING",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
+ "BZUN": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-10-20T08:38:24+00:00",
+  "moins_de_5000": 0,
+  "nom": "Baozun Inc.",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "BAOZUN",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
  "CBZ": {
   "base": null,
   "complet": true,
@@ -121,6 +149,20 @@
   "pages": 2,
   "rapports": [],
   "recherche": "SOUTHWEST",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
+ "DGXX": {
+  "base": null,
+  "complet": false,
+  "firmes": 0,
+  "lu": "2026-10-20T08:38:24+00:00",
+  "moins_de_5000": 0,
+  "nom": "Digi Power X Inc.",
+  "pages": 4,
+  "rapports": [],
+  "recherche": "POWER",
   "revenus_firmes": null,
   "sujets": [],
   "total": null
@@ -223,6 +265,20 @@
   "sujets": [],
   "total": null
  },
+ "FLSC": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-10-20T08:38:24+00:00",
+  "moins_de_5000": 0,
+  "nom": "Frazier Life Sciences Acquisition Corp. II",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "ACQUISITION",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
  "FUL": {
   "base": null,
   "complet": true,
@@ -264,6 +320,45 @@
   "revenus_firmes": null,
   "sujets": [],
   "total": null
+ },
+ "GPRO": {
+  "base": "firmes",
+  "complet": true,
+  "firmes": 1,
+  "lu": "2026-10-20T08:38:24+00:00",
+  "moins_de_5000": 0,
+  "nom": "GoPro, Inc.",
+  "pages": 1,
+  "rapports": [
+   {
+    "client": "GOPRO INC.",
+    "montant": 60000.0,
+    "poste": "2026-07-20",
+    "registrant": "FRANKLIN SQUARE GROUP, LLC",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "CPI",
+     "CPT"
+    ],
+    "type": "Q2",
+    "url": "https://lda.gov/filings/public/filing/51cefcb3-032a-43df-9656-1f06a70bdb1b/print/",
+    "uuid": "51cefcb3-032a-43df-9656-1f06a70bdb1b"
+   }
+  ],
+  "recherche": "GOPRO",
+  "revenus_firmes": 60000.0,
+  "sujets": [
+   {
+    "code": "CPI",
+    "nom": "Industrie informatique"
+   },
+   {
+    "code": "CPT",
+    "nom": "Droits d'auteur, brevets et marques"
+   }
+  ],
+  "total": 60000.0
  },
  "GPUS": {
   "base": null,
@@ -341,6 +436,20 @@
   ],
   "total": 75000.0
  },
+ "INBX": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-10-20T08:38:24+00:00",
+  "moins_de_5000": 0,
+  "nom": "Inhibrx Biosciences, Inc.",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "INHIBRX",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
  "KBDC": {
   "base": null,
   "complet": true,
@@ -397,11 +506,50 @@
   "sujets": [],
   "total": null
  },
+ "NEOV": {
+  "base": "firmes",
+  "complet": true,
+  "firmes": 1,
+  "lu": "2026-10-20T08:38:24+00:00",
+  "moins_de_5000": 0,
+  "nom": "NeoVolta Inc.",
+  "pages": 1,
+  "rapports": [
+   {
+    "client": "NEOVOLTA INC.",
+    "montant": 60000.0,
+    "poste": "2026-07-16",
+    "registrant": "FGS GLOBAL (US) LLC (FKA FGH HOLDINGS LLC)",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "ENG",
+     "TAX"
+    ],
+    "type": "Q2",
+    "url": "https://lda.gov/filings/public/filing/94596b09-d856-452d-b297-f5701576d5d6/print/",
+    "uuid": "94596b09-d856-452d-b297-f5701576d5d6"
+   }
+  ],
+  "recherche": "NEOVOLTA",
+  "revenus_firmes": 60000.0,
+  "sujets": [
+   {
+    "code": "ENG",
+    "nom": "Énergie et nucléaire"
+   },
+   {
+    "code": "TAX",
+    "nom": "Fiscalité (impôts)"
+   }
+  ],
+  "total": 60000.0
+ },
  "NXH": {
   "base": null,
   "complet": true,
   "firmes": 0,
-  "lu": "2026-10-08T10:41:25+00:00",
+  "lu": "2026-10-20T08:38:24+00:00",
   "moins_de_5000": 0,
   "nom": "NEIGHBORHOOD INTELLIGENCE, INC.",
   "pages": 1,
@@ -481,6 +629,142 @@
   "sujets": [],
   "total": null
  },
+ "PEP": {
+  "base": "compagnie",
+  "complet": true,
+  "firmes": 4,
+  "lu": "2026-10-20T08:38:24+00:00",
+  "moins_de_5000": 0,
+  "nom": "PEPSICO INC",
+  "pages": 1,
+  "rapports": [
+   {
+    "client": "PEPSICO INC",
+    "montant": 1020000.0,
+    "poste": "2026-07-20",
+    "registrant": "PEPSICO, INC",
+    "sans_activite": false,
+    "soi_meme": true,
+    "sujets": [
+     "AGR",
+     "ENV",
+     "FIN",
+     "FOO",
+     "TRD",
+     "TRU"
+    ],
+    "type": "Q2",
+    "url": "https://lda.gov/filings/public/filing/83cf0a38-64b4-45c9-8829-a20df2d517e3/print/",
+    "uuid": "83cf0a38-64b4-45c9-8829-a20df2d517e3"
+   },
+   {
+    "client": "PEPSICO, INC.",
+    "montant": 90000.0,
+    "poste": "2026-07-20",
+    "registrant": "INVARIANT LLC",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "AGR",
+     "ENV",
+     "FOO",
+     "IMM",
+     "TRA"
+    ],
+    "type": "Q2",
+    "url": "https://lda.gov/filings/public/filing/138110b0-a4e0-4e3c-9461-02d20c2d980b/print/",
+    "uuid": "138110b0-a4e0-4e3c-9461-02d20c2d980b"
+   },
+   {
+    "client": "PEPSICO, INC.",
+    "montant": 60000.0,
+    "poste": "2026-07-20",
+    "registrant": "BGR GOVERNMENT AFFAIRS",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "FOO"
+    ],
+    "type": "Q2",
+    "url": "https://lda.gov/filings/public/filing/f66758ee-7f5b-4dbb-a541-5995ddb9fece/print/",
+    "uuid": "f66758ee-7f5b-4dbb-a541-5995ddb9fece"
+   },
+   {
+    "client": "PEPSICO, INC.",
+    "montant": 60000.0,
+    "poste": "2026-07-20",
+    "registrant": "FIERCE GOVERNMENT RELATIONS",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "AGR",
+     "BEV"
+    ],
+    "type": "Q2",
+    "url": "https://lda.gov/filings/public/filing/45dafd76-76cf-4fee-8e06-03cd50040daf/print/",
+    "uuid": "45dafd76-76cf-4fee-8e06-03cd50040daf"
+   },
+   {
+    "client": "PEPSICO, INC.",
+    "montant": 50000.0,
+    "poste": "2026-07-20",
+    "registrant": "MONUMENT ADVOCACY",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "SCI"
+    ],
+    "type": "Q2",
+    "url": "https://lda.gov/filings/public/filing/ea06f667-ecf6-44b8-b9f5-0acb6eafe66b/print/",
+    "uuid": "ea06f667-ecf6-44b8-b9f5-0acb6eafe66b"
+   }
+  ],
+  "recherche": "PEPSICO",
+  "revenus_firmes": 260000.0,
+  "sujets": [
+   {
+    "code": "AGR",
+    "nom": "Agriculture"
+   },
+   {
+    "code": "FOO",
+    "nom": "Industrie alimentaire (salubrité, étiquetage…)"
+   },
+   {
+    "code": "ENV",
+    "nom": "Environnement (dont Superfund)"
+   },
+   {
+    "code": "BEV",
+    "nom": "Industrie des boissons"
+   },
+   {
+    "code": "FIN",
+    "nom": "Institutions financières, placements et valeurs mobilières"
+   },
+   {
+    "code": "IMM",
+    "nom": "Immigration"
+   },
+   {
+    "code": "SCI",
+    "nom": "Science et technologie"
+   },
+   {
+    "code": "TRA",
+    "nom": "Transports"
+   },
+   {
+    "code": "TRD",
+    "nom": "Commerce (intérieur et extérieur)"
+   },
+   {
+    "code": "TRU",
+    "nom": "Camionnage et expédition"
+   }
+  ],
+  "total": 1020000.0
+ },
  "PRHI": {
   "base": null,
   "complet": true,
@@ -505,6 +789,20 @@
   "pages": 2,
   "rapports": [],
   "recherche": "QUANTUM",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
+ "ROLR": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-10-20T08:38:24+00:00",
+  "moins_de_5000": 0,
+  "nom": "High Roller Technologies, Inc.",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "ROLLER",
   "revenus_firmes": null,
   "sujets": [],
   "total": null
@@ -575,6 +873,20 @@
   "pages": 1,
   "rapports": [],
   "recherche": "HARBOUR",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
+ "TJGC": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-10-20T08:38:24+00:00",
+  "moins_de_5000": 0,
+  "nom": "TJGC GROUP Ltd",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "TJGC",
   "revenus_firmes": null,
   "sujets": [],
   "total": null
