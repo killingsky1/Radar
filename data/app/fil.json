@@ -3,6 +3,51 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-20T20:08:15+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-investit-15-millions-de-dollars-dans-xona-space-systems-canada.html",
+   "ministere": "Innovation, Sciences et Développement économique Canada",
+   "mis_a_jour": "2026-10-20T15:56:40-04:00",
+   "resume": "Ce projet renforcera les capacités de navigation par satellite de prochaine génération du Canada et contribuera à l’atteinte des objectifs en matière de technologies à double usage énoncés dans la Stratégie industrielle de défense du Canada",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Innovation, Sciences et Développement économique Canada"
+  ],
+  "id": "nouvelles_eco_ca:innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-investit-15-millions-de-dollars-dans-xona-space-systems-canada.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-20",
+  "official_id": "innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-investit-15-millions-de-dollars-dans-xona-space-systems-canada.html",
+  "official_url": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-investit-15-millions-de-dollars-dans-xona-space-systems-canada.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-20",
+  "sha256": "364b191541811151bcf6a48271418dce34017906dcb4c98c48273ca6288ab600",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le gouvernement du Canada investit 15 millions de dollars dans Xona Space Systems Canada"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "champs_requis": true,
@@ -53104,73 +53149,6 @@
   "source": "ccc",
   "tickers": [],
   "title": "Corporation commerciale canadienne : 37 transactions signées (1er avril 2026 au 30 juin 2026), la plus grosse de 250 M$ à 500 M$"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_gazette": true,
-   "loi_visant_a_batir_le_canada": true,
-   "projet_nomme": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_officiel_de_l_avis": true
-  },
-  "collected_at": "2026-10-03T16:24:39+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "description": "Le projet Terminal 2 à Roberts Bank est un terminal à conteneurs proposé qui augmenterait la capacité de conteneurs du port de Vancouver de près de 50 %. Il s’agit d’un projet clé dans le cadre de la Stratégie sur la porte d’entrée du port de Vancouver, qui contribuerait à l’atteinte des objectifs du Canada en matière de croissance économique et de diversification des échanges commerciaux, notamment en doublant les exportations vers les marchés autres que celui des États-Unis d’ici 2035.",
-   "details": [
-    [
-     "Projet",
-     "Terminal 2 à Roberts Bank"
-    ],
-    [
-     "Loi",
-     "Loi visant à bâtir le Canada"
-    ],
-    [
-     "Publié dans",
-     "Gazette du Canada, Partie I, 2026-08-29"
-    ],
-    [
-     "Description",
-     "Le projet Terminal 2 à Roberts Bank est un terminal à conteneurs proposé qui augmenterait la capacité de conteneurs du port de Vancouver de près de 50 %. Il s’agit d’un projet clé dans le cadre de la Stratégie sur la porte d’entrée du port de Vancouver, qui contribuerait à l’atteinte des objectifs du Canada en matière de croissance économique et de diversification des échanges commerciaux, notamment en doublant les exportations vers les marchés autres que celui des États-Unis d’ici 2035."
-    ]
-   ],
-   "jour": "2026-08-29",
-   "loi": "Loi visant à bâtir le Canada",
-   "projet": "Terminal 2 à Roberts Bank",
-   "resume": "Conformément au paragraphe 5(1.1) de la Loi visant à bâtir le Canada (la Loi), avis est par les présentes donné que la gouverneure en conseil peut modifier l’annexe 1 de la Loi afin d’y inscrire le terminal 2 à Roberts Bank à titre de projet d’intérêt national. Parallèlement, au nom de la gouverneure en conseil et à titre de ministre responsable en vertu de la Loi, le président du Conseil privé du Roi pour le Canada, l’honorable Dominic LeBlanc, consultera le gouvernement de la Colombie-Britannique, province où le projet sera réalisé.",
-   "texte": "Conformément au paragraphe 5(1.1) de la Loi visant à bâtir le Canada (la Loi), avis est par les présentes donné que la gouverneure en conseil peut modifier l’annexe 1 de la Loi afin d’y inscrire le terminal 2 à Roberts Bank à titre de projet d’intérêt national. Parallèlement, au nom de la gouverneure en conseil et à titre de ministre responsable en vertu de la Loi, le président du Conseil privé du Roi pour le Canada, l’honorable Dominic LeBlanc, consultera le gouvernement de la Colombie-Britannique, province où le projet sera réalisé.",
-   "titre": "Avis — Terminal 2 à Roberts Bank"
-  },
-  "direction": 0,
-  "entities": [
-   "Bureau des grands projets"
-  ],
-  "id": "grands_projets_ca:avis:2026-08-29:nb3",
-  "kind": "avis_projet",
-  "notes": [
-   "Étape officielle : l'avis paraît au moins 30 jours avant que le projet puisse être inscrit."
-  ],
-  "occurred_on": "2026-08-29",
-  "official_id": "avis:2026-08-29:nb3",
-  "official_url": "https://gazette.gc.ca/rp-pr/p1/2026/2026-08-29/html/notice-avis-fra.html#nb3",
-  "parser_version": "gazette-1",
-  "published_on": "2026-08-29",
-  "sha256": "0dfd274d365cdbd709651585083c58332e9b022b35c94c6917f208d65140d2eb",
-  "source": "grands_projets_ca",
-  "tickers": [],
-  "title": "Projet d'intérêt national : avis d'inscription possible, Terminal 2 à Roberts Bank"
  },
  {
   "amount_max": null,
