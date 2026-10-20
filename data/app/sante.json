@@ -1,6 +1,41 @@
 {
  "etude": "https://www.ivey.uwo.ca/media/3775523/value_investing_the_use_of_historical_financial_statement_information.pdf",
  "par_symbole": {
+  "APLD": {
+   "accn": "0001144879-26-000048",
+   "chiffres": {
+    "cfo": 0.047958,
+    "emission": 196366000,
+    "levier": 0.0,
+    "levier_avant": 0.0,
+    "liquidite": 4.009832,
+    "liquidite_avant": 0.265746,
+    "marge": 0.350808,
+    "marge_avant": 0.051669,
+    "roa": -0.098572,
+    "roa_avant": -0.30289,
+    "rotation": 0.326889,
+    "rotation_avant": 0.299618
+   },
+   "cik": 1144879,
+   "criteres": {
+    "ACCRUAL": 1,
+    "CFO": 1,
+    "EQ_OFFER": 0,
+    "ROA": 0,
+    "ΔLEVER": 0,
+    "ΔLIQUID": 1,
+    "ΔMARGIN": 1,
+    "ΔROA": 1,
+    "ΔTURN": 1
+   },
+   "debut": "2025-06-01",
+   "depose": "2026-07-29",
+   "f_score": 6,
+   "fin": "2026-05-31",
+   "forme": "10-K",
+   "lien": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/0001144879-26-000048-index.htm"
+  },
   "GME": {
    "accn": "0001326380-26-000013",
    "chiffres": {

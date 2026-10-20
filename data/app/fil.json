@@ -1,5 +1,56 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-20T15:39:03+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Executive Office of the President"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-21599",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-10-21",
+   "sorte": "presidentiel",
+   "sous_type": null,
+   "titre_officiel": "Lindsey O. Graham Sanctioning Russia and Iran Act of 2026; Implementation (EO 14436)",
+   "type": "Presidential Document"
+  },
+  "direction": 0,
+  "entities": [
+   "Executive Office of the President"
+  ],
+  "id": "registre_federal:2026-21599",
+  "kind": "presidentiel",
+  "notes": [],
+  "occurred_on": "2026-10-20",
+  "official_id": "2026-21599",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-21599/lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026-implementation-eo-14436",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-20",
+  "sha256": "8186826a2ecdde07d35465d752c623ea19222e691177be1ff963eb592aa1ec57",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Document présidentiel : Lindsey O. Graham Sanctioning Russia and Iran Act of 2026; Implementation (EO 14436)"
+ },
+ {
   "amount_max": 270074234.2,
   "amount_min": 270074234.2,
   "badge": "officiel",
@@ -36402,6 +36453,56 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-20T15:38:54+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "26C46",
+   "composant": "ELECTRICAL SYSTEM",
+   "consequence": "A speedometer that fails to display accurate vehicle speed can increase the risk of a crash.",
+   "constructeur": "Ford Motor Company",
+   "defaut": "Ford Motor Company (Ford) is recalling certain 2025-2026 F-250 SD, F-350 SD, F-450 SD, F-550 SD, F-600, 2026 F-150, and F-750 SD vehicles. The analog cluster’s tachometer and speedometer may become stuck or move erratically, providing inaccurate readings to the driver. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) Number 101, \"Controls and Displays.\"",
+   "numero": "26V653000",
+   "sorte": "Vehicle",
+   "sujet": "Inaccurate Speedometer and Tachometer Display/FMVSS 101",
+   "unites": 102159
+  },
+  "direction": -1,
+  "entities": [
+   "Ford Motor Company"
+  ],
+  "id": "nhtsa:26V653000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-10-06",
+  "official_id": "26V653000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V653000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-10-06",
+  "sha256": "407dcc1fdde9b0a4eb51962f523ae2b562bcbeb67f1f85e32e2ed135b729c897",
+  "source": "nhtsa",
+  "tickers": [
+   "F"
+  ],
+  "title": "Rappel de Ford Motor Company : 102 159 véhicules — « Inaccurate Speedometer and Tachometer Display/FMVSS 101 »"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -47201,6 +47302,59 @@
   "title": "Kevin Hern (Chambre, OK01) vend ORLY (2 transactions) — compte conjoint"
  },
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-20T15:38:54+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "anciennes_empreintes": [
+    "9a4061e1c1d7494200a86a9def2731093450e5ba4787f6ad65f37d61f739638a"
+   ],
+   "campagne": "910068",
+   "composant": "ELECTRICAL SYSTEM",
+   "consequence": "While damage to the power center increases the risk of a fire, damage to the electrical system may cause the trailer brakes or exterior lightings to fail, increasing the risk of a crash.",
+   "constructeur": "Grand Design RV, LLC",
+   "defaut": "Grand Design RV, LLC (Grand Design) is recalling certain 2024-2027 Reflection fifth wheel recreational trailers. The auto detect solar controller may select a 24 volt output when the electrical system is designed for 12 volts. The incorrect voltage may damage the 7-way bulkhead power center and other circuits.",
+   "numero": "26V616000",
+   "sorte": "Vehicle",
+   "sujet": "Solar Controller May Select Incorrect Voltage Output",
+   "unites": 16075
+  },
+  "direction": -1,
+  "entities": [
+   "Grand Design RV, LLC"
+  ],
+  "id": "nhtsa:26V616000",
+  "kind": "rappel",
+  "notes": [
+   "Document modifié à la source depuis la 1re lecture."
+  ],
+  "occurred_on": "2026-09-24",
+  "official_id": "26V616000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V616000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-09-24",
+  "sha256": "0b283d17d896285d91c67ce3b08d1f390e35b6821cb8a17e6c94dfe431d068fb",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Grand Design RV, LLC : 16 075 véhicules — « Solar Controller May Select Incorrect Voltage Output »"
+ },
+ {
   "amount_max": 44000000000.0,
   "amount_min": 44000000000.0,
   "badge": "officiel",
@@ -47647,54 +47801,6 @@
   "source": "statcan",
   "tickers": [],
   "title": "Statistique Canada : Commerce de détail, juillet 2026"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_rappel": true,
-   "nombre_plausible": true,
-   "numero_de_rappel_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T02:03:23+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "campagne": "910068",
-   "composant": "ELECTRICAL SYSTEM",
-   "consequence": "While damage to the power center increases the risk of a fire, damage to the electrical system may cause the trailer brakes or exterior lightings to fail, increasing the risk of a crash.",
-   "constructeur": "Grand Design RV, LLC",
-   "defaut": "Grand Design RV, LLC (Grand Design) is recalling certain 2024-2027 Reflection fifth wheel recreational trailers. The auto detect solar controller may select a 24 volt output when the electrical system is designed for 12 volts. The incorrect voltage may damage the 7-way bulkhead power center and other circuits.",
-   "numero": "26V616000",
-   "sorte": "Vehicle",
-   "sujet": "Solar Controller May Select Incorrect Voltage Output",
-   "unites": 16128
-  },
-  "direction": -1,
-  "entities": [
-   "Grand Design RV, LLC"
-  ],
-  "id": "nhtsa:26V616000",
-  "kind": "rappel",
-  "notes": [],
-  "occurred_on": "2026-09-24",
-  "official_id": "26V616000",
-  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V616000",
-  "parser_version": "nhtsa-1",
-  "published_on": "2026-09-24",
-  "sha256": "9a4061e1c1d7494200a86a9def2731093450e5ba4787f6ad65f37d61f739638a",
-  "source": "nhtsa",
-  "tickers": [],
-  "title": "Rappel de Grand Design RV, LLC : 16 128 véhicules — « Solar Controller May Select Incorrect Voltage Output »"
  },
  {
   "amount_max": null,
@@ -51880,88 +51986,6 @@
    "RIVN"
   ],
   "title": "Rappel de Rivian Automotive, LLC : 98 828 véhicules — « Obstructed Rearview Camera Image/FMVSS 111 »"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "communique_officiel": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T02:03:23+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "titre_officiel": "Department of Justice Again Wins Substantial Relief Against Google"
-  },
-  "direction": 0,
-  "entities": [],
-  "id": "doj_antitrust:department-justice-again-wins-substantial-relief-against-google",
-  "kind": "antitrust",
-  "notes": [],
-  "occurred_on": "2026-09-16",
-  "official_id": "department-justice-again-wins-substantial-relief-against-google",
-  "official_url": "https://www.justice.gov/opa/pr/department-justice-again-wins-substantial-relief-against-google",
-  "parser_version": "doj-1",
-  "published_on": "2026-09-16",
-  "sha256": "de5116a3cd19409498e8bb47c064edb03d4d919efe93be68019690084f002b61",
-  "source": "doj_antitrust",
-  "tickers": [],
-  "title": "Antitrust (ministère de la Justice) : Department of Justice Again Wins Substantial Relief Against Google"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "decision_lue": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "fourchette_plausible": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "vote_lu": true
-  },
-  "collected_at": "2026-10-03T00:12:28+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bas": 3.75,
-   "decision": "releve",
-   "haut": 4.0,
-   "pas": 0.25,
-   "resume": "The Federal Open Market Committee approved the following statement for release by a 12 - 0 vote: The Committee decided to raise the target range for the federal funds rate by 1/4 percentage point to 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system. Economic activity is expanding at a solid pace. While uncertainty remains elevated owing, in part, to geopolitical developments, domestic spending has been resilient. Productivity growth is strong, and capital investment is robust. Job gains have kept pace with the workforce, and the unemployment rate has changed little. Inflation remain",
-   "titre_officiel": "Federal Reserve issues FOMC statement",
-   "vote": "12-0"
-  },
-  "direction": -1,
-  "entities": [
-   "Federal Reserve (FOMC)"
-  ],
-  "id": "fed:monetary20260916a",
-  "kind": "decision_taux",
-  "notes": [],
-  "occurred_on": "2026-09-16",
-  "official_id": "monetary20260916a",
-  "official_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
-  "parser_version": "banques-3",
-  "published_on": "2026-09-16",
-  "sha256": "afb372daf61f6cbab1a035fe89adeb3673300c66606d8da1fe3350fb7939aebd",
-  "source": "fed",
-  "tickers": [],
-  "title": "Fed : taux directeur relevé de 0,25 point, entre 3,75 % et 4 % (vote : 12 pour, 0 contre)"
  },
  {
   "amount_max": null,
