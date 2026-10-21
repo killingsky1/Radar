@@ -3,6 +3,148 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-21T18:17:05+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ressources-naturelles-canada/nouvelles/2026/10/le-ministre-hodgson-promeut-lenergie-et-lexploitation-miniere-canadiennes-a-londres.html",
+   "ministere": "Ressources naturelles Canada",
+   "mis_a_jour": "2026-10-21T12:00:09-04:00",
+   "resume": "Aujourd’hui, le ministre de l’Énergie et des Ressources naturelles, l’honorable Tim Hodgson, a conclu une visite fructueuse à Londres (Royaume-Uni) dans le cadre de la Semaine du London Metal Exchange (LME).",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Ressources naturelles Canada"
+  ],
+  "id": "nouvelles_eco_ca:ressources-naturelles-canada/nouvelles/2026/10/le-ministre-hodgson-promeut-lenergie-et-lexploitation-miniere-canadiennes-a-londres.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-21",
+  "official_id": "ressources-naturelles-canada/nouvelles/2026/10/le-ministre-hodgson-promeut-lenergie-et-lexploitation-miniere-canadiennes-a-londres.html",
+  "official_url": "https://www.canada.ca/fr/ressources-naturelles-canada/nouvelles/2026/10/le-ministre-hodgson-promeut-lenergie-et-lexploitation-miniere-canadiennes-a-londres.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-21",
+  "sha256": "b234eec2a4a317beb9b40468618d8da8b6b2571e66606010612f293dfb482346",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le ministre Hodgson promeut l’énergie et l’exploitation minière canadiennes à Londres"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-21T18:17:05+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/le-ministre-mcguinty-annonce-des-avancees-strategiques-pour-la-souverainete-des-capacites-spatiales-du-canada.html",
+   "ministere": "Défense nationale",
+   "mis_a_jour": "2026-10-21T14:09:32-04:00",
+   "resume": "Le Canada prend des mesures audacieuses pour renforcer ses capacités spatiales souveraines et investir dans le développement d’un secteur spatial canadien solide et compétitif.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Défense nationale"
+  ],
+  "id": "nouvelles_defense_ca:ministere-defense-nationale/nouvelles/2026/10/le-ministre-mcguinty-annonce-des-avancees-strategiques-pour-la-souverainete-des-capacites-spatiales-du-canada.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-21",
+  "official_id": "ministere-defense-nationale/nouvelles/2026/10/le-ministre-mcguinty-annonce-des-avancees-strategiques-pour-la-souverainete-des-capacites-spatiales-du-canada.html",
+  "official_url": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/le-ministre-mcguinty-annonce-des-avancees-strategiques-pour-la-souverainete-des-capacites-spatiales-du-canada.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-21",
+  "sha256": "a5808e43726af4b993d04dda6698f8a224de3bc9e4835ed144f56338e39728d7",
+  "source": "nouvelles_defense_ca",
+  "tickers": [],
+  "title": "Le ministre McGuinty annonce des avancées stratégiques pour la souveraineté des capacités spatiales du Canada"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-10-21T18:16:53+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {
+    "entités": 4,
+    "navires": 9,
+    "personnes": 5
+   },
+   "communiques": [
+    "Operation Economic Outcast Targets Iran's Shadow Fleet Networks"
+   ],
+   "retraits": 8,
+   "titre_officiel": "Iran-related Designations; Belarus and North Korea Designations Removals; Issuance of Iran-related and Russia-related General Licenses and Amended Frequently Asked Questions"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20261021",
+  "kind": "sanctions",
+  "notes": [
+   "Communiqué du Trésor : Operation Economic Outcast Targets Iran's Shadow Fleet Networks",
+   "Ajoutés à la liste des sanctions (SDN) : 5 personnes, 4 entités, 9 navires.",
+   "Retirés de la liste : 8 fiches."
+  ],
+  "occurred_on": "2026-10-21",
+  "official_id": "20261021",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20261021",
+  "parser_version": "ofac-1",
+  "published_on": "2026-10-21",
+  "sha256": "4c9eded2dfe6e90b8ac8f833f9ff4397c47212b7dc5d049ff14437af988d41e0",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Iran-related Designations; Belarus and North Korea Designations Removals; Issuance of Iran-related and Russia-related General Licenses and Amended Frequently Asked Questions"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "champs_requis": true,
@@ -51787,53 +51929,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "categorie_officielle_reconnue": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_d_une_action_presidentielle": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_officiel_lu": true
-  },
-  "collected_at": "2026-10-03T00:05:57+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "categories": [
-    "Presidential Actions",
-    "Executive Orders"
-   ],
-   "guid": "",
-   "resume": "Section 1 . Purpose and Policy . (a) America’s outdoor recreation sector generates over $1.2 trillion annually and supports over 5 million jobs. To ensure America’s recreational fishing remains strong, Federal fisheries management must appropriately prioritize both recreational and commercial fishing. From saltwater anglers and offshore boaters to charter operators, the recreational fishing industry is a strong driver of our Nation’s outdoor economy. Aligning both with the Make America Beautiful Again (MABA) Commission, established under Executive Order 14313 of July 3, 2025 (Establishing the ",
-   "sorte": "decret",
-   "titre_officiel": "RESTORING AMERICAN SALTWATER ANGLING AND RECREATION"
-  },
-  "direction": 0,
-  "entities": [
-   "The White House"
-  ],
-  "id": "maison_blanche:2026/09/restoring-american-saltwater-angling-and-recreation",
-  "kind": "decret",
-  "notes": [],
-  "occurred_on": "2026-09-17",
-  "official_id": "2026/09/restoring-american-saltwater-angling-and-recreation",
-  "official_url": "https://www.whitehouse.gov/presidential-actions/2026/09/restoring-american-saltwater-angling-and-recreation/",
-  "parser_version": "maison-blanche-1",
-  "published_on": "2026-09-17",
-  "sha256": "09bca468fa7e80f8ddce8d84bbcc21163f0315580954aad90447f6d9995d6614",
-  "source": "maison_blanche",
-  "tickers": [],
-  "title": "Décret présidentiel : RESTORING AMERICAN SALTWATER ANGLING AND RECREATION"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "canada",
   "checks": {
    "avis_actif": true,
@@ -52257,61 +52352,6 @@
   "source": "statcan",
   "tickers": [],
   "title": "Statistique Canada : Comptes du bilan national et des flux financiers, deuxième trimestre de 2026"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "indicateur_de_la_liste_officielle": true,
-   "lien_du_quotidien": true,
-   "resume_lu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T16:24:33+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "details": [
-    [
-     "Indicateur",
-     "Bilan des investissements internationaux du Canada"
-    ],
-    [
-     "Période",
-     "deuxième trimestre de 2026"
-    ]
-   ],
-   "indicateur": "Bilan des investissements internationaux du Canada",
-   "lien": "https://www.statcan.gc.ca/daily-quotidien/260910/dq260910a-fra.htm",
-   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
-   "mis_a_jour": "2026-09-10T08:30:00-04:00",
-   "periode": "deuxième trimestre de 2026",
-   "resume": "La position d'actif net étranger du Canada, soit la différence entre son actif financier international et son passif international, a progressé de 619,2 milliards de dollars pour atteindre 1 945,5 milliards de dollars à la fin du deuxième trimestre."
-  },
-  "direction": 0,
-  "entities": [
-   "Statistique Canada"
-  ],
-  "id": "statcan:260910/dq260910a",
-  "kind": "indicateur_principal",
-  "notes": [],
-  "occurred_on": "2026-09-10",
-  "official_id": "260910/dq260910a",
-  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260910/dq260910a-fra.htm",
-  "parser_version": "statcan-1",
-  "published_on": "2026-09-10",
-  "sha256": "a2dd96214d3d24efb93a6e8e3b1131992276bb4ad2a164aaa602562c35be7da0",
-  "source": "statcan",
-  "tickers": [],
-  "title": "Statistique Canada : Bilan des investissements internationaux du Canada, deuxième trimestre de 2026"
  },
  {
   "amount_max": 484000000.0,
