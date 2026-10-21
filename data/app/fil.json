@@ -1,5 +1,56 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-21T15:56:32+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Executive Office of the President"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-21666",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-10-22",
+   "sorte": "presidentiel",
+   "sous_type": null,
+   "titre_officiel": "Women's Health; Advancement Efforts To Improve Outcomes in All Phases of Life (EO 14437)",
+   "type": "Presidential Document"
+  },
+  "direction": 0,
+  "entities": [
+   "Executive Office of the President"
+  ],
+  "id": "registre_federal:2026-21666",
+  "kind": "presidentiel",
+  "notes": [],
+  "occurred_on": "2026-10-21",
+  "official_id": "2026-21666",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-21666/womens-health-advancement-efforts-to-improve-outcomes-in-all-phases-of-life-eo-14437",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-21",
+  "sha256": "55268938d76c36f991984022c19586036c4540607cf190c372600938a2655adf",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Document présidentiel : Women's Health; Advancement Efforts To Improve Outcomes in All Phases of Life (EO 14437)"
+ },
+ {
   "amount_max": 112000000.0,
   "amount_min": 112000000.0,
   "badge": "officiel",
@@ -23803,6 +23854,54 @@
    "LMT"
   ],
   "title": "Contrat fédéral américain de 1,6 G$ : LOCKHEED MARTIN CORPORATION (Défense)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-21T15:56:22+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "26TB23 / 26TA23",
+   "composant": "FUEL SYSTEM, GASOLINE",
+   "consequence": "A fuel leak in the presence of an ignition source can increase the risk of a fire.",
+   "constructeur": "Toyota Motor Engineering & Manufacturing",
+   "defaut": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2024-2027 Toyota Land Cruiser Hybrid vehicles. The fuel tube connection near the fuel tank may disconnect and leak fuel.",
+   "numero": "26V673000",
+   "sorte": "Vehicle",
+   "sujet": "Fuel Tubes May Disconnect and Leak",
+   "unites": 105794
+  },
+  "direction": -1,
+  "entities": [
+   "Toyota Motor Engineering & Manufacturing"
+  ],
+  "id": "nhtsa:26V673000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-10-14",
+  "official_id": "26V673000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V673000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-10-14",
+  "sha256": "e9dfad6bbd73c9cc7ea9aff08bb3ead2a6b1ae5e771162d1c94d90bdc54cfab9",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Toyota Motor Engineering & Manufacturing : 105 794 véhicules — « Fuel Tubes May Disconnect and Leak »"
  },
  {
   "amount_max": null,
@@ -51735,53 +51834,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "categorie_officielle_reconnue": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_d_une_action_presidentielle": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_officiel_lu": true
-  },
-  "collected_at": "2026-10-03T00:05:57+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "categories": [
-    "Presidential Actions",
-    "Executive Orders"
-   ],
-   "guid": "",
-   "resume": "Section 1 . Purpose and Policy . American hunters, anglers, and landowners are the greatest conservationists the world has ever known. Hunting promotes healthy and robust animal populations, conserves our beautiful wildlife for future generations, and ensures that every American can enjoy our rugged, diverse, and untamed frontier areas. Our forefathers looked with awe on our vast prairies, towering mountains, serene deserts, coastal paradises, and rushing rivers. That same awe motivates millions of Americans to invest billions of dollars and countless hours into stewarding our land and conserv",
-   "sorte": "decret",
-   "titre_officiel": "Reinvigorating America’s Hunting Heritage"
-  },
-  "direction": 0,
-  "entities": [
-   "The White House"
-  ],
-  "id": "maison_blanche:2026/09/reinvigorating-americas-hunting-heritage",
-  "kind": "decret",
-  "notes": [],
-  "occurred_on": "2026-09-17",
-  "official_id": "2026/09/reinvigorating-americas-hunting-heritage",
-  "official_url": "https://www.whitehouse.gov/presidential-actions/2026/09/reinvigorating-americas-hunting-heritage/",
-  "parser_version": "maison-blanche-1",
-  "published_on": "2026-09-17",
-  "sha256": "74699399ec7ae0f44935764557a9690037ba467c323a0862d296a50035134d93",
-  "source": "maison_blanche",
-  "tickers": [],
-  "title": "Décret présidentiel : Reinvigorating America’s Hunting Heritage"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "canada",
   "checks": {
    "avis_actif": true,
@@ -51985,56 +52037,6 @@
   "source": "statcan",
   "tickers": [],
   "title": "Statistique Canada : Permis de bâtir, juillet 2026"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_rappel": true,
-   "nombre_plausible": true,
-   "numero_de_rappel_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T02:03:23+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "campagne": "FSAM-1866",
-   "composant": "BACK OVER PREVENTION",
-   "consequence": "An obstructed rearview camera image can reduce the driver's view behind the vehicle, increasing the risk of a crash.",
-   "constructeur": "Rivian Automotive, LLC",
-   "defaut": "Rivian Automotive, LLC (Rivian) is recalling certain 2022-2027 R1S, 2022-2026 R1T, and 2027 R2 vehicles. The rearview camera image may be obstructed by a notification when in reverse.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rear Visibility.\"",
-   "numero": "26V597000",
-   "sorte": "Vehicle",
-   "sujet": "Obstructed Rearview Camera Image/FMVSS 111",
-   "unites": 98828
-  },
-  "direction": -1,
-  "entities": [
-   "Rivian Automotive, LLC"
-  ],
-  "id": "nhtsa:26V597000",
-  "kind": "rappel",
-  "notes": [],
-  "occurred_on": "2026-09-16",
-  "official_id": "26V597000",
-  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V597000",
-  "parser_version": "nhtsa-1",
-  "published_on": "2026-09-16",
-  "sha256": "0bf9331470d632c2ffb21a5b24dd09bd7b77388792e6355bc2471706010766f0",
-  "source": "nhtsa",
-  "tickers": [
-   "RIVN"
-  ],
-  "title": "Rappel de Rivian Automotive, LLC : 98 828 véhicules — « Obstructed Rearview Camera Image/FMVSS 111 »"
  },
  {
   "amount_max": null,
