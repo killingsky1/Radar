@@ -17,6 +17,107 @@
    "symboles_valides": true,
    "type_communique": true
   },
+  "collected_at": "2026-10-21T20:21:25+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-premier-ministres-carney-et-le-premier-ministre-ford-annoncent-un-nouveau-plan-daction-pour-proteger-les-travailleurs-contre-les-droits-de-douan.html",
+   "ministere": "Innovation, Sciences et Développement économique Canada",
+   "mis_a_jour": "2026-10-21T15:00:31-04:00",
+   "resume": "Le premier ministre Carney et le premier ministre Ford annoncent un nouveau plan d’action pour protéger les travailleurs contre les droits de douane et renforcer les industries ontariennes",
+   "type": "documents d'information"
+  },
+  "direction": 0,
+  "entities": [
+   "Innovation, Sciences et Développement économique Canada"
+  ],
+  "id": "nouvelles_eco_ca:innovation-sciences-developpement-economique/nouvelles/2026/10/le-premier-ministres-carney-et-le-premier-ministre-ford-annoncent-un-nouveau-plan-daction-pour-proteger-les-travailleurs-contre-les-droits-de-douan.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-21",
+  "official_id": "innovation-sciences-developpement-economique/nouvelles/2026/10/le-premier-ministres-carney-et-le-premier-ministre-ford-annoncent-un-nouveau-plan-daction-pour-proteger-les-travailleurs-contre-les-droits-de-douan.html",
+  "official_url": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-premier-ministres-carney-et-le-premier-ministre-ford-annoncent-un-nouveau-plan-daction-pour-proteger-les-travailleurs-contre-les-droits-de-douan.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-21",
+  "sha256": "02313e0f0484e39e748d4fe89dee0c1117b78aeceadcda285a6c73d43624f98d",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Document d'information: Le premier ministre Carney et le premier ministre Ford annoncent un nouveau plan d’action pour protéger les travailleurs contre les droits de douane et renforcer les industries ontariennes"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-10-21T20:21:13+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {
+    "entités": 4,
+    "navires": 9,
+    "personnes": 5
+   },
+   "anciennes_empreintes": [
+    "4c9eded2dfe6e90b8ac8f833f9ff4397c47212b7dc5d049ff14437af988d41e0"
+   ],
+   "communiques": [
+    "Operation Economic Outcast Targets Iran's Shadow Fleet Networks"
+   ],
+   "retraits": 8,
+   "titre_officiel": "Iran-related Designations; Belarus and North Korea Designations Removals; Issuance of Iran-related and Russia-related General Licenses and Amended Frequently Asked Questions"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20261021",
+  "kind": "sanctions",
+  "notes": [
+   "Communiqué du Trésor : Operation Economic Outcast Targets Iran's Shadow Fleet Networks",
+   "Ajoutés à la liste des sanctions (SDN) : 5 personnes, 4 entités, 9 navires.",
+   "Retirés de la liste : 8 fiches.",
+   "Document modifié à la source depuis la 1re lecture."
+  ],
+  "occurred_on": "2026-10-21",
+  "official_id": "20261021",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20261021",
+  "parser_version": "ofac-1",
+  "published_on": "2026-10-21",
+  "sha256": "a8eb6c3dc9298751d769db796a5bb7ffae5922538747457e74278e4d530ba1fd",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Iran-related Designations; Belarus and North Korea Designations Removals; Issuance of Iran-related and Russia-related General Licenses and Amended Frequently Asked Questions"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
   "collected_at": "2026-10-21T18:17:05+00:00",
   "confirmations": [],
   "currency": "CAD",
@@ -88,58 +189,6 @@
   "source": "nouvelles_defense_ca",
   "tickers": [],
   "title": "Le ministre McGuinty annonce des avancées stratégiques pour la souveraineté des capacités spatiales du Canada"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "action_officielle": true,
-   "champs_requis": true,
-   "date_de_l_adresse_concorde": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "liste_sdn_lue": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "titre_et_liste_concordent": true
-  },
-  "collected_at": "2026-10-21T18:16:53+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "ajouts": {
-    "entités": 4,
-    "navires": 9,
-    "personnes": 5
-   },
-   "communiques": [
-    "Operation Economic Outcast Targets Iran's Shadow Fleet Networks"
-   ],
-   "retraits": 8,
-   "titre_officiel": "Iran-related Designations; Belarus and North Korea Designations Removals; Issuance of Iran-related and Russia-related General Licenses and Amended Frequently Asked Questions"
-  },
-  "direction": 0,
-  "entities": [],
-  "id": "sanctions_us:20261021",
-  "kind": "sanctions",
-  "notes": [
-   "Communiqué du Trésor : Operation Economic Outcast Targets Iran's Shadow Fleet Networks",
-   "Ajoutés à la liste des sanctions (SDN) : 5 personnes, 4 entités, 9 navires.",
-   "Retirés de la liste : 8 fiches."
-  ],
-  "occurred_on": "2026-10-21",
-  "official_id": "20261021",
-  "official_url": "https://ofac.treasury.gov/recent-actions/20261021",
-  "parser_version": "ofac-1",
-  "published_on": "2026-10-21",
-  "sha256": "4c9eded2dfe6e90b8ac8f833f9ff4397c47212b7dc5d049ff14437af988d41e0",
-  "source": "sanctions_us",
-  "tickers": [],
-  "title": "Sanctions américaines (OFAC) : Iran-related Designations; Belarus and North Korea Designations Removals; Issuance of Iran-related and Russia-related General Licenses and Amended Frequently Asked Questions"
  },
  {
   "amount_max": null,
@@ -52297,61 +52346,6 @@
   "source": "statcan",
   "tickers": [],
   "title": "Statistique Canada : Indice des prix à la consommation, août 2026"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "indicateur_de_la_liste_officielle": true,
-   "lien_du_quotidien": true,
-   "resume_lu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T16:24:33+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "details": [
-    [
-     "Indicateur",
-     "Comptes du bilan national et des flux financiers"
-    ],
-    [
-     "Période",
-     "deuxième trimestre de 2026"
-    ]
-   ],
-   "indicateur": "Comptes du bilan national et des flux financiers",
-   "lien": "https://www.statcan.gc.ca/daily-quotidien/260911/dq260911a-fra.htm",
-   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
-   "mis_a_jour": "2026-09-11T08:30:00-04:00",
-   "periode": "deuxième trimestre de 2026",
-   "resume": "La valeur nette des ménages canadiens, c'est-à-dire la valeur de tous les actifs moins tous les passifs, a augmenté de 2,9 % au deuxième trimestre de 2026 pour s'établir à plus de 19 billions de dollars, la vigueur des marchés boursiers ayant entraîné une croissance de la valeur nette des ménages grâce à la hausse des valeurs des actifs."
-  },
-  "direction": 0,
-  "entities": [
-   "Statistique Canada"
-  ],
-  "id": "statcan:260911/dq260911a",
-  "kind": "indicateur_principal",
-  "notes": [],
-  "occurred_on": "2026-09-11",
-  "official_id": "260911/dq260911a",
-  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260911/dq260911a-fra.htm",
-  "parser_version": "statcan-1",
-  "published_on": "2026-09-11",
-  "sha256": "46e9b2b8324218ffd325113473a3fba53c165c949e1a40c01c964dc9f8a768bf",
-  "source": "statcan",
-  "tickers": [],
-  "title": "Statistique Canada : Comptes du bilan national et des flux financiers, deuxième trimestre de 2026"
  },
  {
   "amount_max": 484000000.0,
