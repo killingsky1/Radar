@@ -1,5 +1,366 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "date_d_envoi_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_message": true,
+   "numero_csms": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "sujet_surtaxes": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-22T20:18:04+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "codes_9903": [
+    "9903.88.69"
+   ],
+   "details": [
+    [
+     "Message",
+     "CSMS # 70261629"
+    ],
+    [
+     "Envoyé",
+     "22 octobre 2026 à 12 h 16 (heure de New York)"
+    ],
+    [
+     "Numéros du tarif cités (chapitre 99)",
+     "9903.88.69"
+    ],
+    [
+     "Extrait",
+     "This message updates CSMS #69990649 to provide guidance regarding an additional conforming amendment to Section 301 China product exclusions. The Automated Commercial Environment (ACE) functionality for the acceptance of the conforming amendment will be effective as of 6 pm on October 23, 2026. BACKGROUND On September 2, 2026 and October 7, 2026, the Office of the U.S. […]"
+    ]
+   ],
+   "envoye_le": "2026-10-22T12:16:05-04:00",
+   "extrait": "This message updates CSMS #69990649 to provide guidance regarding an additional conforming amendment to Section 301 China product exclusions. The Automated Commercial Environment (ACE) functionality for the acceptance of the conforming amendment will be effective as of 6 pm on October 23, 2026. BACKGROUND On September 2, 2026 and October 7, 2026, the Office of the U.S. […]",
+   "guid": "70261629",
+   "numero": "70261629",
+   "proclamations": [],
+   "titre_officiel": "UPDATED GUIDANCE: Section 301 China Conforming Amendment"
+  },
+  "direction": 0,
+  "entities": [
+   "U.S. Customs and Border Protection"
+  ],
+  "id": "tarifs:70261629",
+  "kind": "directive_douane",
+  "notes": [
+   "Directive de la douane : elle applique une décision officielle (proclamation, avis au Registre fédéral) sans la remplacer."
+  ],
+  "occurred_on": "2026-10-22",
+  "official_id": "70261629",
+  "official_url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/4301b7d",
+  "parser_version": "douane-1",
+  "published_on": "2026-10-22",
+  "sha256": "7af4c1f0385264478dfa6ee11f8d067bf9a9a2e4b853026e9e12c8daec24625f",
+  "source": "tarifs",
+  "tickers": [],
+  "title": "Douane américaine : UPDATED GUIDANCE: Section 301 China Conforming Amendment"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-22T20:17:54+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Voyages entre le Canada et les autres pays"
+    ],
+    [
+     "Période",
+     "août 2026"
+    ]
+   ],
+   "indicateur": "Voyages entre le Canada et les autres pays",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261022/dq261022b-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-10-22T08:30:00-04:00",
+   "periode": "août 2026",
+   "resume": "En août, le nombre de voyages de retour des États-Unis effectués par des résidents canadiens a augmenté de 9,3 % d'une année à l'autre, et le nombre de voyages au Canada effectués par des résidents des États-Unis a progressé de 4,3 %."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261022/dq261022b",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-10-22",
+  "official_id": "261022/dq261022b",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261022/dq261022b-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-10-22",
+  "sha256": "24e192ed1acfb2af1dba2ad463b8dc075a004c2351553edc23a7f26f2dbbfb48",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Voyages entre le Canada et les autres pays, août 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-22T20:17:54+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Indices des prix des produits industriels et des matières brutes"
+    ],
+    [
+     "Période",
+     "septembre 2026"
+    ]
+   ],
+   "indicateur": "Indices des prix des produits industriels et des matières brutes",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261022/dq261022a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-10-22T08:30:00-04:00",
+   "periode": "septembre 2026",
+   "resume": "En septembre, l'Indice des prix des produits industriels a augmenté de 2,0 % d'un mois à l'autre et de 14,5 % d'une année à l'autre. L'Indice des prix des matières brutes a progressé de 4,8 % d'un mois à l'autre en septembre et de 27,0 % d'une année à l'autre."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261022/dq261022a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-10-22",
+  "official_id": "261022/dq261022a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261022/dq261022a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-10-22",
+  "sha256": "c934aaf10f54333f067facdde0340dd72e049b128309f07bfaa8dcc73ad49d2c",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Indices des prix des produits industriels et des matières brutes, septembre 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-22T20:17:50+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-lance-une-consultation-entourant-une-future-loi-sur-lespace-et-annonce-des-mesures-pour-renforcer-la-resilience-dinfrastr.html",
+   "ministere": "Innovation, Sciences et Développement économique Canada",
+   "mis_a_jour": "2026-10-22T14:42:57-04:00",
+   "resume": "Les nouveaux investissements et politiques renforceront la résilience nationale en matière de positionnement, de navigation et de synchronisation; les Canadiens auront l’occasion d’orienter la première loi nationale approfondie sur l’espace",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Innovation, Sciences et Développement économique Canada"
+  ],
+  "id": "nouvelles_eco_ca:innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-lance-une-consultation-entourant-une-future-loi-sur-lespace-et-annonce-des-mesures-pour-renforcer-la-resilience-dinfrastr.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-22",
+  "official_id": "innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-lance-une-consultation-entourant-une-future-loi-sur-lespace-et-annonce-des-mesures-pour-renforcer-la-resilience-dinfrastr.html",
+  "official_url": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-lance-une-consultation-entourant-une-future-loi-sur-lespace-et-annonce-des-mesures-pour-renforcer-la-resilience-dinfrastr.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-22",
+  "sha256": "e0195ac089f983d19b1754463bebcdef9372773daec79c807efa0839ae5973d6",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le gouvernement du Canada lance une consultation entourant une future loi sur l’espace et annonce des mesures pour renforcer la résilience d’infrastructures spatiales essentielles pour la sécurité nationale"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-22T20:17:50+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/la-ministre-joly-devoile-le-nouveau-plan-en-matiere-de-capital-de-risque-et-de-croissance-qui-permettra-de-renforcer-les-investissements-en-capital.html",
+   "ministere": "Innovation, Sciences et Développement économique Canada",
+   "mis_a_jour": "2026-10-22T15:53:29-04:00",
+   "resume": "L’économie mondiale connaît de profondes transformations, marquées par l’évolution de la dynamique commerciale et la montée des droits de douane.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Innovation, Sciences et Développement économique Canada"
+  ],
+  "id": "nouvelles_eco_ca:innovation-sciences-developpement-economique/nouvelles/2026/10/la-ministre-joly-devoile-le-nouveau-plan-en-matiere-de-capital-de-risque-et-de-croissance-qui-permettra-de-renforcer-les-investissements-en-capital.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-22",
+  "official_id": "innovation-sciences-developpement-economique/nouvelles/2026/10/la-ministre-joly-devoile-le-nouveau-plan-en-matiere-de-capital-de-risque-et-de-croissance-qui-permettra-de-renforcer-les-investissements-en-capital.html",
+  "official_url": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/la-ministre-joly-devoile-le-nouveau-plan-en-matiere-de-capital-de-risque-et-de-croissance-qui-permettra-de-renforcer-les-investissements-en-capital.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-22",
+  "sha256": "6af732a8942a6a14046778116199c8ab3875082ea16fd2af017a3db5d9155b70",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "La ministre Joly dévoile le nouveau plan en matière de capital de risque et de croissance, qui permettra de renforcer les investissements en capital de risque au Canada grâce à un financement de 1,75 milliard de dollars"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-22T20:17:50+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/document-dinformation--le-gouvernement-du-canada-annonce-le-plan-du-capital-de-risque-et-de-croissance-du-canada.html",
+   "ministere": "Innovation, Sciences et Développement économique Canada",
+   "mis_a_jour": "2026-10-22T15:53:18-04:00",
+   "resume": "Document d'information : Le gouvernement du Canada annonce le Plan du capital de risque et de croissance du Canada",
+   "type": "documents d'information"
+  },
+  "direction": 0,
+  "entities": [
+   "Innovation, Sciences et Développement économique Canada"
+  ],
+  "id": "nouvelles_eco_ca:innovation-sciences-developpement-economique/nouvelles/2026/10/document-dinformation--le-gouvernement-du-canada-annonce-le-plan-du-capital-de-risque-et-de-croissance-du-canada.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-22",
+  "official_id": "innovation-sciences-developpement-economique/nouvelles/2026/10/document-dinformation--le-gouvernement-du-canada-annonce-le-plan-du-capital-de-risque-et-de-croissance-du-canada.html",
+  "official_url": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/document-dinformation--le-gouvernement-du-canada-annonce-le-plan-du-capital-de-risque-et-de-croissance-du-canada.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-22",
+  "sha256": "75461864a3c8a5dbc2f2250d7f6501ea1a50d36a4a5d787eadc4118e71a3c71d",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Document d'information : Le gouvernement du Canada annonce le Plan du capital de risque et de croissance du Canada"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "categorie_officielle_reconnue": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_d_une_action_presidentielle": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_officiel_lu": true
+  },
+  "collected_at": "2026-10-22T20:17:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "categories": [
+    "Presidential Actions",
+    "Executive Orders"
+   ],
+   "guid": "",
+   "resume": "2. Among other things, the Secretary found that wind energy is an unreliable and intermittent energy source and that the use of wind energy diverts the United States electrical grid from more reliable energy sources. The Secretary also found that products used to generate and use wind energy pose serious national security concerns, including by relying on foreign parts that contain cybersecurity vulnerabilities that could lead to remote control access to wind turbines and cause power disruption; undermining the United States’ electrical grid, and potentially causing disruptions to critical inf",
+   "sorte": "decret",
+   "titre_officiel": "Adjusting Imports of Wind Turbines and Their Parts and Components into the United States"
+  },
+  "direction": 0,
+  "entities": [
+   "The White House"
+  ],
+  "id": "maison_blanche:2026/10/adjusting-imports-of-wind-turbines-and-their-parts-and-components-into-the-united-states",
+  "kind": "decret",
+  "notes": [],
+  "occurred_on": "2026-10-22",
+  "official_id": "2026/10/adjusting-imports-of-wind-turbines-and-their-parts-and-components-into-the-united-states",
+  "official_url": "https://www.whitehouse.gov/presidential-actions/2026/10/adjusting-imports-of-wind-turbines-and-their-parts-and-components-into-the-united-states/",
+  "parser_version": "maison-blanche-1",
+  "published_on": "2026-10-22",
+  "sha256": "7dff5fd312f4daa905a6d9b3784a45bd8fc0f81eceae6a34e6cbe1b276f0601f",
+  "source": "maison_blanche",
+  "tickers": [],
+  "title": "Décret présidentiel : Adjusting Imports of Wind Turbines and Their Parts and Components into the United States"
+ },
+ {
   "amount_max": 583394000.0,
   "amount_min": 583394000.0,
   "badge": "officiel",
@@ -103,6 +464,61 @@
    "NOC"
   ],
   "title": "Contrat fédéral américain de 583,4 M$ : NORTHROP GRUMMAN SYSTEMS CORPORATION (Défense)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-22T20:17:54+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Investissement en construction de bâtiments"
+    ],
+    [
+     "Période",
+     "août 2026"
+    ]
+   ],
+   "indicateur": "Investissement en construction de bâtiments",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261021/dq261021a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-10-21T08:30:00-04:00",
+   "periode": "août 2026",
+   "resume": "La valeur totale de l'investissement en construction de bâtiments a affiché une légère hausse de 25,1 millions de dollars (+0,1 %) pour atteindre 23,5 milliards de dollars en août."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261021/dq261021a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-10-21",
+  "official_id": "261021/dq261021a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261021/dq261021a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-10-21",
+  "sha256": "9a59095a3c952e0f6a3429d91490ad20cc8ad5df337f31574b8eb8c900d65a24",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Investissement en construction de bâtiments, août 2026"
  },
  {
   "amount_max": 800000000.0,
@@ -51824,480 +52240,6 @@
   "source": "statcan",
   "tickers": [],
   "title": "Statistique Canada : Opérations internationales du Canada en valeurs mobilières, juillet 2026"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "action_officielle": true,
-   "champs_requis": true,
-   "date_de_l_adresse_concorde": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "liste_sdn_lue": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "titre_et_liste_concordent": true
-  },
-  "collected_at": "2026-10-03T02:03:27+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "ajouts": {
-    "entités": 10,
-    "personnes": 6
-   },
-   "communiques": [
-    "Operation Economic Outcast Disrupts Digital Asset Exchange Enabling the Iranian Regime",
-    "Further Sanctions on Cuba's Mineral Wealth and Military Modernization Apparatus"
-   ],
-   "retraits": 5,
-   "titre_officiel": "Iran-related Designations; Cuba Designations; Belarus-related Designations Removals"
-  },
-  "direction": 0,
-  "entities": [],
-  "id": "sanctions_us:20260917",
-  "kind": "sanctions",
-  "notes": [
-   "Communiqué du Trésor : Operation Economic Outcast Disrupts Digital Asset Exchange Enabling the Iranian Regime",
-   "Communiqué du Trésor : Further Sanctions on Cuba's Mineral Wealth and Military Modernization Apparatus",
-   "Ajoutés à la liste des sanctions (SDN) : 6 personnes, 10 entités.",
-   "Retirés de la liste : 5 fiches."
-  ],
-  "occurred_on": "2026-09-17",
-  "official_id": "20260917",
-  "official_url": "https://ofac.treasury.gov/recent-actions/20260917",
-  "parser_version": "ofac-1",
-  "published_on": "2026-09-17",
-  "sha256": "0769d82a80f69c76d176ab4f51a7f3a9905e83b75423e178d59a8a3ab6218e26",
-  "source": "sanctions_us",
-  "tickers": [],
-  "title": "Sanctions américaines (OFAC) : Iran-related Designations; Cuba Designations; Belarus-related Designations Removals"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_rappel": true,
-   "nombre_plausible": true,
-   "numero_de_rappel_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T02:03:23+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "campagne": "E008",
-   "composant": "ELECTRICAL SYSTEM",
-   "consequence": "A loss of drive power increases the risk of a crash.",
-   "constructeur": "Jaguar Land Rover North America, LLC",
-   "defaut": "Jaguar Land Rover North America, LLC (Land Rover) is recalling certain 2019-2024 Land Rover Range Rover Sport, 2020-2024 Land Rover Range Rover Evoque, Land Rover Range Rover, Land Rover Discovery Sport, Land Rover Defender, 2021-2024 Land Rover Range Rover Velar, Jaguar E-Pace, F-Pace, and Land Rover Discovery vehicles. The DC-DC converter may malfunction due to an electrical overload that can occur during high power demand. Additionally, a software error can cause the DC-DC converter to stop f",
-   "numero": "26V599000",
-   "sorte": "Vehicle",
-   "sujet": "Loss of Drive Power from DC-DC Converter Failure",
-   "unites": 23677
-  },
-  "direction": -1,
-  "entities": [
-   "Jaguar Land Rover North America, LLC"
-  ],
-  "id": "nhtsa:26V599000",
-  "kind": "rappel",
-  "notes": [],
-  "occurred_on": "2026-09-17",
-  "official_id": "26V599000",
-  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V599000",
-  "parser_version": "nhtsa-1",
-  "published_on": "2026-09-17",
-  "sha256": "584edfe7795ed90eba26a5d32e93917640077f59f24253b531e1d8e429113b8d",
-  "source": "nhtsa",
-  "tickers": [],
-  "title": "Rappel de Jaguar Land Rover North America, LLC : 23 677 véhicules — « Loss of Drive Power from DC-DC Converter Failure »"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "avis_actif": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "fiches_du_meme_avis": true,
-   "marque_et_ingredient_lus": true,
-   "nouvelle_substance_active": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T17:20:52+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "actif": "1",
-   "avec_conditions": false,
-   "classe": "Priorité-NSA",
-   "classe_therapeutique": "",
-   "date": "2026-09-16",
-   "details": [
-    [
-     "Médicament",
-     "AMMIVO"
-    ],
-    [
-     "Ingrédient(s)",
-     "benzoate de sodium 100 MG / ML; phénylacétate sodique 100 MG / ML"
-    ],
-    [
-     "Fabricant",
-     "STERIMAX INC"
-    ],
-    [
-     "Type",
-     "Disponible avec ordonnance"
-    ],
-    [
-     "Présentation",
-     "Présentation de drogue nouvelle (PDN)"
-    ],
-    [
-     "Classe",
-     "Priorité-NSA"
-    ],
-    [
-     "Avis de conformité",
-     "n° 38296 du 2026-09-16"
-    ]
-   ],
-   "din": [
-    "02571595"
-   ],
-   "fabricant": "STERIMAX INC",
-   "fiches_meme_avis": true,
-   "ingredients": [
-    {
-     "dose": "100 MG / ML",
-     "nom": "benzoate de sodium"
-    },
-    {
-     "dose": "100 MG / ML",
-     "nom": "phénylacétate sodique"
-    }
-   ],
-   "marques": [
-    "AMMIVO"
-   ],
-   "numero": 38296,
-   "presentation": "Présentation de drogue nouvelle (PDN)",
-   "type_produit": "Disponible avec ordonnance"
-  },
-  "direction": 0,
-  "entities": [
-   "STERIMAX INC"
-  ],
-  "id": "sante_canada:38296",
-  "kind": "approbation_sante_canada",
-  "notes": [
-   "Examen prioritaire (classe « Priorité-NSA ») : Santé Canada a examiné la demande en accéléré."
-  ],
-  "occurred_on": "2026-09-16",
-  "official_id": "38296",
-  "official_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=fre&no=38296",
-  "parser_version": "sante-canada-1",
-  "published_on": "2026-09-16",
-  "sha256": "f735153d1cd64b9e064e7aa17d82296b81844ff8d471efbaf134c55fff03a00a",
-  "source": "sante_canada",
-  "tickers": [],
-  "title": "Santé Canada : nouveau médicament autorisé, AMMIVO (benzoate de sodium, phénylacétate sodique), de STERIMAX INC"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "indicateur_de_la_liste_officielle": true,
-   "lien_du_quotidien": true,
-   "resume_lu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T16:24:33+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "details": [
-    [
-     "Indicateur",
-     "Estimations des principales grandes cultures basées sur des modèles"
-    ],
-    [
-     "Période",
-     "août 2026"
-    ]
-   ],
-   "indicateur": "Estimations des principales grandes cultures basées sur des modèles",
-   "lien": "https://www.statcan.gc.ca/daily-quotidien/260916/dq260916b-fra.htm",
-   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
-   "mis_a_jour": "2026-09-16T08:30:00-04:00",
-   "periode": "août 2026",
-   "resume": "Selon les récents modèles de rendement fondés sur l'imagerie satellitaire et des données agroclimatiques, en 2026, les agriculteurs canadiens devraient produire plus de maïs-grain et de soya, comparativement à 2025, mais moins de blé, de canola, d'orge et d'avoine."
-  },
-  "direction": 0,
-  "entities": [
-   "Statistique Canada"
-  ],
-  "id": "statcan:260916/dq260916b",
-  "kind": "indicateur_principal",
-  "notes": [],
-  "occurred_on": "2026-09-16",
-  "official_id": "260916/dq260916b",
-  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260916/dq260916b-fra.htm",
-  "parser_version": "statcan-1",
-  "published_on": "2026-09-16",
-  "sha256": "fbc16bf2a1bfd7f251db17c05741febf2a5c6b149d7c7d6fcbf1671da5b4952f",
-  "source": "statcan",
-  "tickers": [],
-  "title": "Statistique Canada : Estimations des principales grandes cultures basées sur des modèles, août 2026"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "indicateur_de_la_liste_officielle": true,
-   "lien_du_quotidien": true,
-   "resume_lu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T16:24:33+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "details": [
-    [
-     "Indicateur",
-     "Permis de bâtir"
-    ],
-    [
-     "Période",
-     "juillet 2026"
-    ]
-   ],
-   "indicateur": "Permis de bâtir",
-   "lien": "https://www.statcan.gc.ca/daily-quotidien/260916/dq260916a-fra.htm",
-   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
-   "mis_a_jour": "2026-09-16T08:30:00-04:00",
-   "periode": "juillet 2026",
-   "resume": "En juillet, la valeur totale des permis de bâtir délivrés au Canada a diminué de 2,6 milliards de dollars (-17,3 %) pour s'établir à 12,2 milliards de dollars."
-  },
-  "direction": 0,
-  "entities": [
-   "Statistique Canada"
-  ],
-  "id": "statcan:260916/dq260916a",
-  "kind": "indicateur_principal",
-  "notes": [],
-  "occurred_on": "2026-09-16",
-  "official_id": "260916/dq260916a",
-  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260916/dq260916a-fra.htm",
-  "parser_version": "statcan-1",
-  "published_on": "2026-09-16",
-  "sha256": "8494e58d5859684b955f00e88255f72397eb81b703e9d9576e1fdf3fb8d08b36",
-  "source": "statcan",
-  "tickers": [],
-  "title": "Statistique Canada : Permis de bâtir, juillet 2026"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "indicateur_de_la_liste_officielle": true,
-   "lien_du_quotidien": true,
-   "resume_lu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T16:24:33+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "details": [
-    [
-     "Indicateur",
-     "Commerce de gros"
-    ],
-    [
-     "Période",
-     "juillet 2026"
-    ]
-   ],
-   "indicateur": "Commerce de gros",
-   "lien": "https://www.statcan.gc.ca/daily-quotidien/260915/dq260915b-fra.htm",
-   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
-   "mis_a_jour": "2026-09-15T08:30:00-04:00",
-   "periode": "juillet 2026",
-   "resume": "En juillet, les ventes du commerce de gros (excluant le pétrole, les produits pétroliers, et autres hydrocarbures, ainsi que les graines oléagineuses et les grains céréaliers) ont augmenté de 0,3 %."
-  },
-  "direction": 0,
-  "entities": [
-   "Statistique Canada"
-  ],
-  "id": "statcan:260915/dq260915b",
-  "kind": "indicateur_principal",
-  "notes": [],
-  "occurred_on": "2026-09-15",
-  "official_id": "260915/dq260915b",
-  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260915/dq260915b-fra.htm",
-  "parser_version": "statcan-1",
-  "published_on": "2026-09-15",
-  "sha256": "46d3409bc18bd88089c3d20e814aa2c50621bed020051fcc3cc9f4e4efd72e4c",
-  "source": "statcan",
-  "tickers": [],
-  "title": "Statistique Canada : Commerce de gros, juillet 2026"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "indicateur_de_la_liste_officielle": true,
-   "lien_du_quotidien": true,
-   "resume_lu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T16:24:33+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "details": [
-    [
-     "Indicateur",
-     "Enquête mensuelle sur les industries manufacturières"
-    ],
-    [
-     "Période",
-     "juillet 2026"
-    ]
-   ],
-   "indicateur": "Enquête mensuelle sur les industries manufacturières",
-   "lien": "https://www.statcan.gc.ca/daily-quotidien/260914/dq260914b-fra.htm",
-   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
-   "mis_a_jour": "2026-09-14T08:30:00-04:00",
-   "periode": "juillet 2026",
-   "resume": "Les ventes du secteur de la fabrication ont reculé de 0,4 % en juillet, principalement sous l'effet de la baisse des ventes de la fabrication de produits chimiques et de la fabrication d'aliments. Parallèlement, ce sont les ventes du sous-secteur de la fabrication de produits du pétrole et du charbon qui ont affiché la plus importante croissance."
-  },
-  "direction": 0,
-  "entities": [
-   "Statistique Canada"
-  ],
-  "id": "statcan:260914/dq260914b",
-  "kind": "indicateur_principal",
-  "notes": [],
-  "occurred_on": "2026-09-14",
-  "official_id": "260914/dq260914b",
-  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260914/dq260914b-fra.htm",
-  "parser_version": "statcan-1",
-  "published_on": "2026-09-14",
-  "sha256": "380fd13026c89abf4335ea0a3a10717fdd523f75da5e22b76afbeaa38a86933a",
-  "source": "statcan",
-  "tickers": [],
-  "title": "Statistique Canada : Enquête mensuelle sur les industries manufacturières, juillet 2026"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "indicateur_de_la_liste_officielle": true,
-   "lien_du_quotidien": true,
-   "resume_lu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T16:24:33+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "details": [
-    [
-     "Indicateur",
-     "Indice des prix à la consommation"
-    ],
-    [
-     "Période",
-     "août 2026"
-    ]
-   ],
-   "indicateur": "Indice des prix à la consommation",
-   "lien": "https://www.statcan.gc.ca/daily-quotidien/260914/dq260914a-fra.htm",
-   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
-   "mis_a_jour": "2026-09-14T08:30:00-04:00",
-   "periode": "août 2026",
-   "resume": "L'Indice des prix à la consommation (IPC) a augmenté de 3,0 % d'une année à l'autre en août, ce qui est une hausse identique à celle observée en juillet (+3,0 %). Sur une base mensuelle désaisonnalisée, l'IPC a progressé de 0,2 % en août."
-  },
-  "direction": 0,
-  "entities": [
-   "Statistique Canada"
-  ],
-  "id": "statcan:260914/dq260914a",
-  "kind": "indicateur_principal",
-  "notes": [],
-  "occurred_on": "2026-09-14",
-  "official_id": "260914/dq260914a",
-  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260914/dq260914a-fra.htm",
-  "parser_version": "statcan-1",
-  "published_on": "2026-09-14",
-  "sha256": "3be1a4da8748bd9da4600421ddb5c78a91354ea803014db543161ee7cecfff80",
-  "source": "statcan",
-  "tickers": [],
-  "title": "Statistique Canada : Indice des prix à la consommation, août 2026"
  },
  {
   "amount_max": 484000000.0,
