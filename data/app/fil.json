@@ -1,5 +1,282 @@
 [
  {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-22T00:43:43+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "senat",
+   "circonscription": null,
+   "elu": "John Boozman",
+   "lecture_complete": true,
+   "nom_sec": "REALTY INCOME CORP",
+   "rapport": "94c5f7b9-cdbc-40b4-aeba-de920da58588",
+   "recoupements": {
+    "date_de_depot": true,
+    "nom_lu": true
+   },
+   "transactions": [
+    {
+     "actif": "Realty Income Corporation Common Stock",
+     "commentaire": null,
+     "date": "2026-09-24",
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "Joint",
+     "type_officiel": "Purchase"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "John Boozman",
+   "REALTY INCOME CORP"
+  ],
+  "id": "senat_ptr:94c5f7b9-cdbc-40b4-aeba-de920da58588:O:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "94c5f7b9-cdbc-40b4-aeba-de920da58588:O:P",
+  "official_url": "https://efdsearch.senate.gov/search/view/ptr/94c5f7b9-cdbc-40b4-aeba-de920da58588/",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-21",
+  "sha256": "0c366450c56d1622a682734937bf7e0b40afa6ec65ec50475fb7202a9e60e4eb",
+  "source": "senat_ptr",
+  "tickers": [
+   "O"
+  ],
+  "title": "John Boozman (Sénat) achète O — compte conjoint"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-22T00:43:43+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "senat",
+   "circonscription": null,
+   "elu": "John Boozman",
+   "lecture_complete": true,
+   "nom_sec": "CISCO SYSTEMS, INC.",
+   "rapport": "94c5f7b9-cdbc-40b4-aeba-de920da58588",
+   "recoupements": {
+    "date_de_depot": true,
+    "nom_lu": true
+   },
+   "transactions": [
+    {
+     "actif": "Cisco Systems, Inc. - Common Stock",
+     "commentaire": null,
+     "date": "2026-09-24",
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "Joint",
+     "type_officiel": "Purchase"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "John Boozman",
+   "CISCO SYSTEMS, INC."
+  ],
+  "id": "senat_ptr:94c5f7b9-cdbc-40b4-aeba-de920da58588:CSCO:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "94c5f7b9-cdbc-40b4-aeba-de920da58588:CSCO:P",
+  "official_url": "https://efdsearch.senate.gov/search/view/ptr/94c5f7b9-cdbc-40b4-aeba-de920da58588/",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-21",
+  "sha256": "0c366450c56d1622a682734937bf7e0b40afa6ec65ec50475fb7202a9e60e4eb",
+  "source": "senat_ptr",
+  "tickers": [
+   "CSCO"
+  ],
+  "title": "John Boozman (Sénat) achète CSCO — compte conjoint"
+ },
+ {
+  "amount_max": 30000.0,
+  "amount_min": 2002.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-22T00:43:42+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "senat",
+   "circonscription": null,
+   "elu": "John Boozman",
+   "lecture_complete": true,
+   "nom_sec": "MICRON TECHNOLOGY INC",
+   "rapport": "7dfdae57-9401-4bf1-9059-85d1e5ee4a84",
+   "recoupements": {
+    "date_de_depot": true,
+    "nom_lu": true
+   },
+   "transactions": [
+    {
+     "actif": "Micron Technology, Inc. - Common Stock",
+     "commentaire": null,
+     "date": "2026-09-24",
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "Joint",
+     "type_officiel": "Sale (Partial)"
+    },
+    {
+     "actif": "Micron Technology, Inc. - Common Stock",
+     "commentaire": null,
+     "date": "2026-09-09",
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "Joint",
+     "type_officiel": "Sale (Partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "John Boozman",
+   "MICRON TECHNOLOGY INC"
+  ],
+  "id": "senat_ptr:7dfdae57-9401-4bf1-9059-85d1e5ee4a84:MU:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-09",
+  "official_id": "7dfdae57-9401-4bf1-9059-85d1e5ee4a84:MU:S",
+  "official_url": "https://efdsearch.senate.gov/search/view/ptr/7dfdae57-9401-4bf1-9059-85d1e5ee4a84/",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-21",
+  "sha256": "18fd7b228cf791436ee6cfb34d28efeaa7d7e63b856e09c7a39deddaa6361368",
+  "source": "senat_ptr",
+  "tickers": [
+   "MU"
+  ],
+  "title": "John Boozman (Sénat) vend MU (2 transactions) — compte conjoint"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-22T00:43:42+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "senat",
+   "circonscription": null,
+   "elu": "John Boozman",
+   "lecture_complete": true,
+   "nom_sec": "Aptiv PLC",
+   "rapport": "7dfdae57-9401-4bf1-9059-85d1e5ee4a84",
+   "recoupements": {
+    "date_de_depot": true,
+    "nom_lu": true
+   },
+   "transactions": [
+    {
+     "actif": "Aptiv PLC Ordinary Shares",
+     "commentaire": null,
+     "date": "2026-09-25",
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "Joint",
+     "type_officiel": "Sale (Partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "John Boozman",
+   "Aptiv PLC"
+  ],
+  "id": "senat_ptr:7dfdae57-9401-4bf1-9059-85d1e5ee4a84:APTV:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-25",
+  "official_id": "7dfdae57-9401-4bf1-9059-85d1e5ee4a84:APTV:S",
+  "official_url": "https://efdsearch.senate.gov/search/view/ptr/7dfdae57-9401-4bf1-9059-85d1e5ee4a84/",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-21",
+  "sha256": "18fd7b228cf791436ee6cfb34d28efeaa7d7e63b856e09c7a39deddaa6361368",
+  "source": "senat_ptr",
+  "tickers": [
+   "APTV"
+  ],
+  "title": "John Boozman (Sénat) vend APTV — compte conjoint"
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -47323,322 +47600,6 @@
    "WMT"
   ],
   "title": "Kevin Hern (Chambre, OK01) vend WMT"
- },
- {
-  "amount_max": 30000.0,
-  "amount_min": 2002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "Vuzix Corp",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Vuzix Corporation (VUZI) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-03",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "DC",
-     "type_officiel": "S"
-    },
-    {
-     "actif": "Vuzix Corporation (VUZI) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-03",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "DC",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "Vuzix Corp"
-  ],
-  "id": "chambre_ptr:20035491:VUZI:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-03",
-  "official_id": "20035491:VUZI:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "VUZI"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend VUZI (2 transactions) — enfant à charge"
- },
- {
-  "amount_max": 50000.0,
-  "amount_min": 15001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "UNITEDHEALTH GROUP INC",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "UnitedHealth Group Incorporated Common Stock (UNH) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-10",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "UNITEDHEALTH GROUP INC"
-  ],
-  "id": "chambre_ptr:20035491:UNH:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-10",
-  "official_id": "20035491:UNH:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "UNH"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend UNH — compte conjoint"
- },
- {
-  "amount_max": 130000.0,
-  "amount_min": 32004.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "TJX COMPANIES INC /DE/",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "TJX Companies, Inc. (TJX) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-15",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    },
-    {
-     "actif": "TJX Companies, Inc. (TJX) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-02",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "TJX Companies, Inc. (TJX) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-08-31",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "TJX Companies, Inc. (TJX) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-08-27",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "TJX COMPANIES INC /DE/"
-  ],
-  "id": "chambre_ptr:20035491:TJX:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-08-27",
-  "official_id": "20035491:TJX:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "TJX"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend TJX (4 transactions) — compte conjoint, l'élu·e"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "Seagate Technology Holdings plc",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Seagate Technology Holdings PLC - Ordinary Shares (STX) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-15",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "Seagate Technology Holdings plc"
-  ],
-  "id": "chambre_ptr:20035491:STX:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-15",
-  "official_id": "20035491:STX:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "STX"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend STX"
  },
  {
   "amount_max": null,
