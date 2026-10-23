@@ -3,6 +3,145 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-23T00:42:51+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/les-forces-armees-canadiennes-font-le-point-sur-laccident-survenu-a-la-base-des-forces-canadiennes-wainwright.html",
+   "ministere": "Défense nationale",
+   "mis_a_jour": "2026-10-22T19:06:50-04:00",
+   "resume": "À la suite du tragique incendie survenu à la Base des Forces canadiennes Wainwright le 17 octobre 2026, les Forces armées canadiennes (FAC) continuent de soutenir activement les militaires blessés, leurs familles et toutes les personnes touchées par cet événement dévastateur.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Défense nationale"
+  ],
+  "id": "nouvelles_defense_ca:ministere-defense-nationale/nouvelles/2026/10/les-forces-armees-canadiennes-font-le-point-sur-laccident-survenu-a-la-base-des-forces-canadiennes-wainwright.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-22",
+  "official_id": "ministere-defense-nationale/nouvelles/2026/10/les-forces-armees-canadiennes-font-le-point-sur-laccident-survenu-a-la-base-des-forces-canadiennes-wainwright.html",
+  "official_url": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/les-forces-armees-canadiennes-font-le-point-sur-laccident-survenu-a-la-base-des-forces-canadiennes-wainwright.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-22",
+  "sha256": "b314b436354531de40a0e410a87e0bcc33dffa2063c4c6ead650904cca135149",
+  "source": "nouvelles_defense_ca",
+  "tickers": [],
+  "title": "Les Forces armées canadiennes font le point sur l’accident survenu à la Base des Forces canadiennes Wainwright"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "categorie_officielle_reconnue": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_d_une_action_presidentielle": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_officiel_lu": true
+  },
+  "collected_at": "2026-10-23T00:42:38+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "categories": [
+    "Presidential Actions",
+    "Presidential Memoranda"
+   ],
+   "guid": "",
+   "resume": "SUBJECT: Presidential Determination Pursuant to Section 303 of the Defense Production Act of 1950, as Amended, on Domestic Petroleum Production, Refining, and Logistics Capacity On January 20, 2025, I issued Executive Order 14156 (Declaring a National Energy Emergency), under the National Emergencies Act. That order found that America’s inadequate energy production, transportation, refining, and generation capacity constitute an unusual and extraordinary threat to the Nation’s economy, national security, and foreign policy. It emphasized that our Nation’s current inadequate and intermittent en",
+   "sorte": "memorandum",
+   "titre_officiel": "Presidential Determination Pursuant to Section 303 of the Defense Production Act of 1950, as Amended, on Domestic Petroleum Production, Refining, and Logistics Capacity"
+  },
+  "direction": 0,
+  "entities": [
+   "The White House"
+  ],
+  "id": "maison_blanche:2026/10/presidential-determination-pursuant-to-section-303-of-the-defense-production-act-of-1950-as-amended-on-domestic-petroleum-production-refining-and-logistics-capacity-c139",
+  "kind": "memorandum",
+  "notes": [],
+  "occurred_on": "2026-10-22",
+  "official_id": "2026/10/presidential-determination-pursuant-to-section-303-of-the-defense-production-act-of-1950-as-amended-on-domestic-petroleum-production-refining-and-logistics-capacity-c139",
+  "official_url": "https://www.whitehouse.gov/presidential-actions/2026/10/presidential-determination-pursuant-to-section-303-of-the-defense-production-act-of-1950-as-amended-on-domestic-petroleum-production-refining-and-logistics-capacity-c139/",
+  "parser_version": "maison-blanche-1",
+  "published_on": "2026-10-22",
+  "sha256": "91fc84a1d276f5b91b4662f625a92b084ae5ccdf0f3807719befe307d087389a",
+  "source": "maison_blanche",
+  "tickers": [],
+  "title": "Mémorandum présidentiel : Presidential Determination Pursuant to Section 303 of the Defense Production Act of 1950, as Amended, on Domestic Petroleum Production, Refining, and Logistics Capacity"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "categorie_officielle_reconnue": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_d_une_action_presidentielle": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_officiel_lu": true
+  },
+  "collected_at": "2026-10-23T00:42:38+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "categories": [
+    "Presidential Actions",
+    "Executive Orders"
+   ],
+   "guid": "",
+   "resume": "Section 1 . Purpose . The American Dream of homeownership is a vital pillar of our great country. It is the policy of my Administration to reduce regulatory barriers to mortgage origination and costs impeding homeownership; embrace innovative risk and value assessment technologies that incorporate Super Intelligence to drive down mortgage and homeownership costs; and promote competition and innovation throughout the housing and mortgage market. Sec . 2 . Proactive Cancellation of Excessive Mortgage Insurance . (a) The Director of the Federal Housing Finance Agency (Director) shall, if he deter",
+   "sorte": "decret",
+   "titre_officiel": "DECREASING HOUSING COSTS FOR THE AMERICAN PEOPLE"
+  },
+  "direction": 0,
+  "entities": [
+   "The White House"
+  ],
+  "id": "maison_blanche:2026/10/decreasing-housing-costs-for-the-american-people",
+  "kind": "decret",
+  "notes": [],
+  "occurred_on": "2026-10-22",
+  "official_id": "2026/10/decreasing-housing-costs-for-the-american-people",
+  "official_url": "https://www.whitehouse.gov/presidential-actions/2026/10/decreasing-housing-costs-for-the-american-people/",
+  "parser_version": "maison-blanche-1",
+  "published_on": "2026-10-22",
+  "sha256": "cc4dd281f5ade3d68a25a520a2019aeb6ebd708101a5899a359380c7462afee6",
+  "source": "maison_blanche",
+  "tickers": [],
+  "title": "Décret présidentiel : DECREASING HOUSING COSTS FOR THE AMERICAN PEOPLE"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "champs_requis": true,
@@ -52036,100 +52175,6 @@
   "source": "sanctions_us",
   "tickers": [],
   "title": "Sanctions américaines (OFAC) : Expiration of Emergency With Respect to the Situation in Ethiopia; Ethiopia-related Designations Removals; Issuance of Amended Russia-related General License and Associated Frequently Asked Questions"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "categorie_officielle_reconnue": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_d_une_action_presidentielle": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_officiel_lu": true
-  },
-  "collected_at": "2026-10-03T00:05:57+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "categories": [
-    "Presidential Actions",
-    "Proclamations"
-   ],
-   "guid": "",
-   "resume": "A PROCLAMATION On September 19, 2025, Proclamation 10973 (Restriction on Entry of Certain Nonimmigrant Workers) (2025 Proclamation), was issued to address significant abuses of the H-1B nonimmigrant visa program. The restrictions enacted by the 2025 Proclamation have proven to be highly effective but the underlying conditions necessitating the restrictions persist. It is therefore in the interests of the United States to extend the 2025 Proclamation for an additional 12 months, until 12:00 a.m. eastern daylight time on September 21, 2027. As explained in the 2025 Proclamation, the H-1B nonimmi",
-   "sorte": "proclamation",
-   "titre_officiel": "Restriction on Entry of Certain Nonimmigrant Workers"
-  },
-  "direction": 0,
-  "entities": [
-   "The White House"
-  ],
-  "id": "maison_blanche:2026/09/restriction-on-entry-of-certain-nonimmigrant-workers-faad",
-  "kind": "proclamation",
-  "notes": [],
-  "occurred_on": "2026-09-18",
-  "official_id": "2026/09/restriction-on-entry-of-certain-nonimmigrant-workers-faad",
-  "official_url": "https://www.whitehouse.gov/presidential-actions/2026/09/restriction-on-entry-of-certain-nonimmigrant-workers-faad/",
-  "parser_version": "maison-blanche-1",
-  "published_on": "2026-09-18",
-  "sha256": "7a7734e37eafc9c03cdc7c1e880b7e69d39b48b4010930462210e9756df9b290",
-  "source": "maison_blanche",
-  "tickers": [],
-  "title": "Proclamation présidentielle : Restriction on Entry of Certain Nonimmigrant Workers"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "categorie_officielle_reconnue": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_d_une_action_presidentielle": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_officiel_lu": true
-  },
-  "collected_at": "2026-10-03T00:05:57+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "categories": [
-    "Presidential Actions",
-    "Executive Orders"
-   ],
-   "guid": "",
-   "resume": "Section 1 . Purpose . The H-1B nonimmigrant visa program was created to identify uniquely skilled and highly specialized foreign temporary workers to strategically supplement the United States economy. Instead, the program has been widely abused by certain employers, third-party placement groups, and outsourcing firms to undercut and displace the supply of skilled United States labor. The large-scale, systematic abuse of the H-1B program to obtain non-qualifying foreign labor has undermined the additive purpose of the program and harmed the wages, working conditions, and job opportunities of s",
-   "sorte": "decret",
-   "titre_officiel": "Enhancing Program Integrity and Integrity and Interagency Coordination in the Administration of the H-1B Nonimmigrant Visa Program"
-  },
-  "direction": 0,
-  "entities": [
-   "The White House"
-  ],
-  "id": "maison_blanche:2026/09/enhancing-program-integrity-and-integrity-and-interagency-coordination-in-the-administration-of-the-h-1b-nonimmigrant-visa-program",
-  "kind": "decret",
-  "notes": [],
-  "occurred_on": "2026-09-18",
-  "official_id": "2026/09/enhancing-program-integrity-and-integrity-and-interagency-coordination-in-the-administration-of-the-h-1b-nonimmigrant-visa-program",
-  "official_url": "https://www.whitehouse.gov/presidential-actions/2026/09/enhancing-program-integrity-and-integrity-and-interagency-coordination-in-the-administration-of-the-h-1b-nonimmigrant-visa-program/",
-  "parser_version": "maison-blanche-1",
-  "published_on": "2026-09-18",
-  "sha256": "a08205d750a65087f911cbd775920ea0e7dc8c0e88d77c51070a1c0bc5d091ef",
-  "source": "maison_blanche",
-  "tickers": [],
-  "title": "Décret présidentiel : Enhancing Program Integrity and Integrity and Interagency Coordination in the Administration of the H-1B Nonimmigrant Visa Program"
  },
  {
   "amount_max": null,
