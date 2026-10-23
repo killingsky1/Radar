@@ -1,5 +1,197 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-23T15:44:03+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-secretaire-detat-belanger-souligne-linstauration-de-mesures-visant-a-reduire-les-couts-energetiques-domiciliaires-et-a-ameliorer-lefficacite-ene.html",
+   "ministere": "Innovation, Sciences et Développement économique Canada",
+   "mis_a_jour": "2026-10-23T11:30:03-04:00",
+   "resume": "Le gouvernement du Canada investit 2 milliards de dollars sur huit ans pour réaliser des travaux de rénovation dans un million de logements partout au Canada",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Innovation, Sciences et Développement économique Canada"
+  ],
+  "id": "nouvelles_eco_ca:innovation-sciences-developpement-economique/nouvelles/2026/10/le-secretaire-detat-belanger-souligne-linstauration-de-mesures-visant-a-reduire-les-couts-energetiques-domiciliaires-et-a-ameliorer-lefficacite-ene.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-23",
+  "official_id": "innovation-sciences-developpement-economique/nouvelles/2026/10/le-secretaire-detat-belanger-souligne-linstauration-de-mesures-visant-a-reduire-les-couts-energetiques-domiciliaires-et-a-ameliorer-lefficacite-ene.html",
+  "official_url": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-secretaire-detat-belanger-souligne-linstauration-de-mesures-visant-a-reduire-les-couts-energetiques-domiciliaires-et-a-ameliorer-lefficacite-ene.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-23",
+  "sha256": "0506d99d779f89163b5d3f2aa1c6684106cbf59bfdc6ba3d09e41f1e89c6d63a",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le secrétaire d’État Belanger souligne l’instauration de mesures visant à réduire les coûts énergétiques domiciliaires et à améliorer l’efficacité énergétique"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-23T15:44:03+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-investit-plus-de-190-millions-de-dollars-pour-faire-progresser-le-secteur-canadien-des-mineraux-critiques-et-renforcer-la.html",
+   "ministere": "Innovation, Sciences et Développement économique Canada",
+   "mis_a_jour": "2026-10-23T11:00:05-04:00",
+   "resume": "Les investissements dans les installations industrielles de Rio Tinto et dans les activités de fusion d’Aluminerie Alouette renforceront la compétitivité du secteur canadien de l’aluminium",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Innovation, Sciences et Développement économique Canada"
+  ],
+  "id": "nouvelles_eco_ca:innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-investit-plus-de-190-millions-de-dollars-pour-faire-progresser-le-secteur-canadien-des-mineraux-critiques-et-renforcer-la.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-23",
+  "official_id": "innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-investit-plus-de-190-millions-de-dollars-pour-faire-progresser-le-secteur-canadien-des-mineraux-critiques-et-renforcer-la.html",
+  "official_url": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-investit-plus-de-190-millions-de-dollars-pour-faire-progresser-le-secteur-canadien-des-mineraux-critiques-et-renforcer-la.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-23",
+  "sha256": "628a94c9081d296c3510ae0c604e40ae3ba75343a1076cf71bf0140d3114f50c",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le gouvernement du Canada investit plus de 190 millions de dollars pour faire progresser le secteur canadien des minéraux critiques et renforcer la transformation de l’aluminium"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-23T15:44:00+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Trade Representative, Office of United States"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-21755",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-10-26",
+   "sorte": "commerce_exterieur",
+   "sous_type": null,
+   "titre_officiel": "Suspension of Section 301 Action: China's Targeting of the Maritime, Logistics, and Shipbuilding Sectors for Dominance",
+   "type": "Notice"
+  },
+  "direction": 0,
+  "entities": [
+   "Trade Representative, Office of United States"
+  ],
+  "id": "registre_federal:2026-21755",
+  "kind": "commerce_exterieur",
+  "notes": [],
+  "occurred_on": "2026-10-23",
+  "official_id": "2026-21755",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-21755/suspension-of-section-301-action-chinas-targeting-of-the-maritime-logistics-and-shipbuilding-sectors",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-23",
+  "sha256": "053e3275412192a7b3ce104bcbf659825909d6a7f3822d34fd5f0304f2c0ec6f",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Commerce extérieur (USTR) : Suspension of Section 301 Action: China's Targeting of the Maritime, Logistics, and Shipbuilding Sectors for Dominance"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-23T15:43:59+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Foreign Assets Control Office"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-21733",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-10-26",
+   "sorte": "sanctions",
+   "sous_type": null,
+   "titre_officiel": "Sanctions Action",
+   "type": "Notice"
+  },
+  "direction": 0,
+  "entities": [
+   "Foreign Assets Control Office"
+  ],
+  "id": "registre_federal:2026-21733",
+  "kind": "sanctions",
+  "notes": [],
+  "occurred_on": "2026-10-23",
+  "official_id": "2026-21733",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-21733/sanctions-action",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-23",
+  "sha256": "ad7bb6525cf32281966e4edb1e0c5f1848c9d8d9927880ede41882e90b3be1e8",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Sanctions (Trésor, OFAC) : Sanctions Action"
+ },
+ {
   "amount_max": 1200000000.0,
   "amount_min": 1200000000.0,
   "badge": "officiel",
@@ -24966,6 +25158,54 @@
   "source": "registre_federal",
   "tickers": [],
   "title": "Document présidentiel : Colombia; Continuation of National Emergency With Respect to Significant Narcotics Traffickers (Notice of October 15, 2026)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-23T15:43:49+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "D171",
+   "composant": "BACK OVER PREVENTION",
+   "consequence": "A rearview camera image that does not display can reduce the driver's view behind the vehicle, increasing the risk of a crash.",
+   "constructeur": "Jaguar Land Rover North America, LLC",
+   "defaut": "Jaguar Land Rover North America, LLC (Land Rover) is recalling certain 2022-2026 Land Rover Range Rover vehicles. Water may not be able to drain away from the rearview camera due to insufficient drain holes, which may result in damage to the rearview camera.",
+   "numero": "26V678000",
+   "sorte": "Vehicle",
+   "sujet": "Water May Damage Rearview Camera",
+   "unites": 93997
+  },
+  "direction": -1,
+  "entities": [
+   "Jaguar Land Rover North America, LLC"
+  ],
+  "id": "nhtsa:26V678000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-10-15",
+  "official_id": "26V678000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V678000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-10-15",
+  "sha256": "3949a4f9cde6271b404d5c736864bbe0008d26b866cfd2dfbaa5ba256fe6e819",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Jaguar Land Rover North America, LLC : 93 997 véhicules — « Water May Damage Rearview Camera »"
  },
  {
   "amount_max": 15000.0,
@@ -51615,105 +51855,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "feu_vert_accorde": true,
-   "numero_de_transaction_officiel": true,
-   "parties_lues": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T02:03:27+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acquereur": "Prive Aggregator, LP",
-   "entites_visees": [
-    "Bowman Consulting Group Ltd."
-   ],
-   "numero": "20262177",
-   "partie_visee": "Bowman Consulting Group Ltd.",
-   "statut": "Granted"
-  },
-  "direction": 0,
-  "entities": [
-   "Prive Aggregator, LP",
-   "Bowman Consulting Group Ltd."
-  ],
-  "id": "ftc_fusions:20262177",
-  "kind": "fusion_feu_vert",
-  "notes": [],
-  "occurred_on": "2026-09-21",
-  "official_id": "20262177",
-  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262177",
-  "parser_version": "ftc-1",
-  "published_on": "2026-09-22",
-  "sha256": "b285b43d0f45fe817fabf8966da3d5d3f61fdd3a382f22a43e2190b2f62b1915",
-  "source": "ftc_fusions",
-  "tickers": [
-   "BWMN"
-  ],
-  "title": "FTC : feu vert antitrust anticipé, Prive Aggregator, LP (acquéreur) et Bowman Consulting Group Ltd. (partie visée)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_rappel": true,
-   "nombre_plausible": true,
-   "numero_de_rappel_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T02:03:23+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "campagne": "26C43",
-   "composant": "EXTERIOR LIGHTING",
-   "consequence": "A loss of exterior lighting can reduce visibility, increasing the risk of a crash.",
-   "constructeur": "Ford Motor Company",
-   "defaut": "Ford Motor Company (Ford) is recalling certain 2025-2027 Expedition, 2026 F-250 SD, F-350 SD, F-450 SD, and F-550 SD vehicles. The headlight assemblies may contain a contaminated LED chip, which can result in a loss of daytime running lights, parking lights, high beams or low beams. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 108, \"Lamps, Reflective Devices, and Associated Equipment.\"",
-   "numero": "26V606000",
-   "sorte": "Vehicle",
-   "sujet": "Exterior Lighting May Fail/FMVSS 108",
-   "unites": 41748
-  },
-  "direction": -1,
-  "entities": [
-   "Ford Motor Company"
-  ],
-  "id": "nhtsa:26V606000",
-  "kind": "rappel",
-  "notes": [],
-  "occurred_on": "2026-09-22",
-  "official_id": "26V606000",
-  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V606000",
-  "parser_version": "nhtsa-1",
-  "published_on": "2026-09-22",
-  "sha256": "4443f5fcad61da71f3dc8400eb3b4b4a6b5d1b30764f6eb75fdf8d54bedda891",
-  "source": "nhtsa",
-  "tickers": [
-   "F"
-  ],
-  "title": "Rappel de Ford Motor Company : 41 748 véhicules — « Exterior Lighting May Fail/FMVSS 108 »"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "militaire",
   "checks": {
    "acheteur_lu": true,
@@ -52729,160 +52870,6 @@
   "source": "grands_projets_ca",
   "tickers": [],
   "title": "Projet d'intérêt national : avis d'inscription possible, Projet de dépôt géologique en profondeur (DGP) pour le combustible nucléaire irradié du Canada"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "action_officielle": true,
-   "champs_requis": true,
-   "date_de_l_adresse_concorde": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "liste_sdn_lue": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "titre_et_liste_concordent": true
-  },
-  "collected_at": "2026-10-03T02:03:26+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "ajouts": {},
-   "communiques": [],
-   "retraits": 11,
-   "titre_officiel": "Expiration of Emergency With Respect to the Situation in Ethiopia; Ethiopia-related Designations Removals; Issuance of Amended Russia-related General License and Associated Frequently Asked Questions"
-  },
-  "direction": 0,
-  "entities": [],
-  "id": "sanctions_us:20260918",
-  "kind": "sanctions",
-  "notes": [
-   "Retirés de la liste : 11 fiches."
-  ],
-  "occurred_on": "2026-09-18",
-  "official_id": "20260918",
-  "official_url": "https://ofac.treasury.gov/recent-actions/20260918",
-  "parser_version": "ofac-1",
-  "published_on": "2026-09-18",
-  "sha256": "39725bcd6c770c7920d090a18588b493f04ebea8fd6881371c22928d5ec26db6",
-  "source": "sanctions_us",
-  "tickers": [],
-  "title": "Sanctions américaines (OFAC) : Expiration of Emergency With Respect to the Situation in Ethiopia; Ethiopia-related Designations Removals; Issuance of Amended Russia-related General License and Associated Frequently Asked Questions"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "indicateur_de_la_liste_officielle": true,
-   "lien_du_quotidien": true,
-   "resume_lu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T16:24:33+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "details": [
-    [
-     "Indicateur",
-     "Indices des prix des produits industriels et des matières brutes"
-    ],
-    [
-     "Période",
-     "août 2026"
-    ]
-   ],
-   "indicateur": "Indices des prix des produits industriels et des matières brutes",
-   "lien": "https://www.statcan.gc.ca/daily-quotidien/260917/dq260917b-fra.htm",
-   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
-   "mis_a_jour": "2026-09-17T08:30:00-04:00",
-   "periode": "août 2026",
-   "resume": "En août, l'Indice des prix des produits industriels a augmenté de 1,3 % d'un mois à l'autre et de 13,5 % d'une année à l'autre. Parallèlement, l'Indice des prix des matières brutes a progressé de 3,1 % d'un mois à l'autre et de 22,8 % d'une année à l'autre."
-  },
-  "direction": 0,
-  "entities": [
-   "Statistique Canada"
-  ],
-  "id": "statcan:260917/dq260917b",
-  "kind": "indicateur_principal",
-  "notes": [],
-  "occurred_on": "2026-09-17",
-  "official_id": "260917/dq260917b",
-  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260917/dq260917b-fra.htm",
-  "parser_version": "statcan-1",
-  "published_on": "2026-09-17",
-  "sha256": "ad4968b6a3021f1b501fe7efc8a1bd3fe56ac2b48e7bcd808120917e5403a505",
-  "source": "statcan",
-  "tickers": [],
-  "title": "Statistique Canada : Indices des prix des produits industriels et des matières brutes, août 2026"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "indicateur_de_la_liste_officielle": true,
-   "lien_du_quotidien": true,
-   "resume_lu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T16:24:33+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "details": [
-    [
-     "Indicateur",
-     "Opérations internationales du Canada en valeurs mobilières"
-    ],
-    [
-     "Période",
-     "juillet 2026"
-    ]
-   ],
-   "indicateur": "Opérations internationales du Canada en valeurs mobilières",
-   "lien": "https://www.statcan.gc.ca/daily-quotidien/260917/dq260917a-fra.htm",
-   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
-   "mis_a_jour": "2026-09-17T08:30:00-04:00",
-   "periode": "juillet 2026",
-   "resume": "Les investisseurs canadiens ont réduit leur exposition aux titres étrangers de 30,6 milliards de dollars en juillet, principalement par la vente d'actions américaines. Parallèlement, les investisseurs étrangers ont augmenté leurs avoirs en titres canadiens de 20,7 milliards de dollars, et cette activité a surtout pris la forme d'un investissement important en obligations de l'administration publique fédérale."
-  },
-  "direction": 0,
-  "entities": [
-   "Statistique Canada"
-  ],
-  "id": "statcan:260917/dq260917a",
-  "kind": "indicateur_principal",
-  "notes": [],
-  "occurred_on": "2026-09-17",
-  "official_id": "260917/dq260917a",
-  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260917/dq260917a-fra.htm",
-  "parser_version": "statcan-1",
-  "published_on": "2026-09-17",
-  "sha256": "11846656ab145c1e840a97390b2027b1915db7cf64460d75eb47e7c2e0ccb7b8",
-  "source": "statcan",
-  "tickers": [],
-  "title": "Statistique Canada : Opérations internationales du Canada en valeurs mobilières, juillet 2026"
  },
  {
   "amount_max": 484000000.0,
