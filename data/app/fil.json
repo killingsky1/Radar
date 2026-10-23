@@ -9,6 +9,492 @@
    "dates_coherentes": true,
    "domaine_officiel": true,
    "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-23T20:05:03+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Commerce de détail"
+    ],
+    [
+     "Période",
+     "août 2026"
+    ]
+   ],
+   "indicateur": "Commerce de détail",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261023/dq261023a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-10-23T08:30:00-04:00",
+   "periode": "août 2026",
+   "resume": "Les ventes au détail ont augmenté de 1,2 % pour atteindre 74,6 milliards de dollars en août. Les ventes ont progressé dans les neuf sous-secteurs, et ce sont les concessionnaires de véhicules et de pièces automobiles qui ont affiché la hausse la plus marquée."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261023/dq261023a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-10-23",
+  "official_id": "261023/dq261023a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261023/dq261023a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-10-23",
+  "sha256": "9a626ec3bf99497bf4a7588f2c739afe54cb821746b43105b5473dd17a436404",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Commerce de détail, août 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "categorie_officielle_reconnue": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_d_une_action_presidentielle": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_officiel_lu": true
+  },
+  "collected_at": "2026-10-23T20:04:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "categories": [
+    "Presidential Actions",
+    "Proclamations"
+   ],
+   "guid": "",
+   "resume": "A PROCLAMATION 1. In Proclamation 11048 of July 20, 2026 (Imposing Additional Duties To Offset Canadian Discrimination Against the Commerce of the United States With Respect to Motor Vehicles), I found as a fact that Canada is discriminating in fact against the commerce of the United States through Canada’s motor vehicle tariff scheme; that this discrimination places the commerce of the United States at a disadvantage compared to the commerce of other countries; and that Canada’s imposition is unreasonable, is not equally enforced upon the like articles of every foreign country, and places a b",
+   "sorte": "proclamation",
+   "titre_officiel": "FURTHER MODIFYING THE SCOPE OF PRODUCTS OF CANADA SUBJECT TO THE ADDITIONAL DUTIES IMPOSED TO OFFSET CANADIAN DISCRIMINATION AGAINST THE COMMERCE OF THE UNITED STATES WITH RESPECT TO MOTOR VEHICLES"
+  },
+  "direction": 0,
+  "entities": [
+   "The White House"
+  ],
+  "id": "maison_blanche:2026/10/further-modifying-the-scope-of-products-of-canada-subject-to-the-additional-duties-imposed-to-offset-canadian-discrimination-against-the-commerce-of-the-united-states-with-respect-to-motor-vehicles",
+  "kind": "proclamation",
+  "notes": [],
+  "occurred_on": "2026-10-23",
+  "official_id": "2026/10/further-modifying-the-scope-of-products-of-canada-subject-to-the-additional-duties-imposed-to-offset-canadian-discrimination-against-the-commerce-of-the-united-states-with-respect-to-motor-vehicles",
+  "official_url": "https://www.whitehouse.gov/presidential-actions/2026/10/further-modifying-the-scope-of-products-of-canada-subject-to-the-additional-duties-imposed-to-offset-canadian-discrimination-against-the-commerce-of-the-united-states-with-respect-to-motor-vehicles/",
+  "parser_version": "maison-blanche-1",
+  "published_on": "2026-10-23",
+  "sha256": "e82e63a9443b22afed92c5e16075a6801df2fbf7e0b86257a27188dbcb62cbb3",
+  "source": "maison_blanche",
+  "tickers": [],
+  "title": "Proclamation présidentielle : FURTHER MODIFYING THE SCOPE OF PRODUCTS OF CANADA SUBJECT TO THE ADDITIONAL DUTIES IMPOSED TO OFFSET CANADIAN DISCRIMINATION AGAINST THE COMMERCE OF THE UNITED STATES WITH RESPECT TO MOTOR VEHICLES"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-23T20:04:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "209742",
+   "date_rapport": "2026-10-20",
+   "long": 86099,
+   "marche": "Nasdaq-100 (E-mini)",
+   "net": 50726,
+   "nom_officiel": "NASDAQ MINI - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 272462,
+   "short": 35373,
+   "variation": 2203
+  },
+  "direction": 1,
+  "entities": [
+   "NASDAQ MINI - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261020209742F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-20",
+  "official_id": "261020209742F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261020209742F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-23",
+  "sha256": "66e54680d657cd6822298124c2b68a6cbb903a116868aec91f719c21b2dae2dd",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Nasdaq-100 (E-mini) : les gros spéculateurs sont acheteurs nets de 50 726 contrats (+2 203 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-23T20:04:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "13874A",
+   "date_rapport": "2026-10-20",
+   "long": 215885,
+   "marche": "S&P 500 (E-mini)",
+   "net": -142671,
+   "nom_officiel": "E-MINI S&P 500 - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 1935470,
+   "short": 358556,
+   "variation": -1676
+  },
+  "direction": -1,
+  "entities": [
+   "E-MINI S&P 500 - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:26102013874AF",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-20",
+  "official_id": "26102013874AF",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=26102013874AF",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-23",
+  "sha256": "bb90036d6342cf9bac4b2f6907e1728ccdbd9c93d0a00435b33455d45c70fbc6",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "S&P 500 (E-mini) : les gros spéculateurs sont vendeurs nets de 142 671 contrats (−1 676 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-23T20:04:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "133741",
+   "date_rapport": "2026-10-20",
+   "long": 16962,
+   "marche": "Bitcoin (CME)",
+   "net": 2418,
+   "nom_officiel": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 21040,
+   "short": 14544,
+   "variation": -116
+  },
+  "direction": -1,
+  "entities": [
+   "BITCOIN - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261020133741F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-20",
+  "official_id": "261020133741F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261020133741F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-23",
+  "sha256": "ce784c912d01d7ef45247a9336ada398e3d04b19cbad3afe6f6d9ca8a3a1da0f",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Bitcoin (CME) : les gros spéculateurs sont acheteurs nets de 2 418 contrats (−116 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-23T20:04:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "090741",
+   "date_rapport": "2026-10-20",
+   "long": 101653,
+   "marche": "Dollar canadien",
+   "net": -74709,
+   "nom_officiel": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 383635,
+   "short": 176362,
+   "variation": 20056
+  },
+  "direction": 1,
+  "entities": [
+   "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261020090741F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-20",
+  "official_id": "261020090741F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261020090741F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-23",
+  "sha256": "aaf473b46f580338dfee7ab3da9cd388cfaf0ac578b5365da4b53a9163e2e5a1",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Dollar canadien : les gros spéculateurs sont vendeurs nets de 74 709 contrats (+20 056 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-23T20:04:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "088691",
+   "date_rapport": "2026-10-20",
+   "long": 237142,
+   "marche": "Or",
+   "net": 199865,
+   "nom_officiel": "GOLD - COMMODITY EXCHANGE INC.",
+   "open_interest": 402279,
+   "short": 37277,
+   "variation": -8014
+  },
+  "direction": -1,
+  "entities": [
+   "GOLD - COMMODITY EXCHANGE INC."
+  ],
+  "id": "cftc_cot:261020088691F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-20",
+  "official_id": "261020088691F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261020088691F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-23",
+  "sha256": "6c3131a1ef28d89bbbc6ba2f57f3c9f822785cf78a370bc75a8da9385a984015",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Or : les gros spéculateurs sont acheteurs nets de 199 865 contrats (−8 014 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-23T20:04:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "085692",
+   "date_rapport": "2026-10-20",
+   "long": 98535,
+   "marche": "Cuivre",
+   "net": 57397,
+   "nom_officiel": "COPPER- #1 - COMMODITY EXCHANGE INC.",
+   "open_interest": 327119,
+   "short": 41138,
+   "variation": -11123
+  },
+  "direction": -1,
+  "entities": [
+   "COPPER- #1 - COMMODITY EXCHANGE INC."
+  ],
+  "id": "cftc_cot:261020085692F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-20",
+  "official_id": "261020085692F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261020085692F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-23",
+  "sha256": "638b29efa5d5cb836d20b9b7db06670f426f7e7ab78024d3e873339ebea554a5",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Cuivre : les gros spéculateurs sont acheteurs nets de 57 397 contrats (−11 123 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-23T20:04:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "067651",
+   "date_rapport": "2026-10-20",
+   "long": 335112,
+   "marche": "Pétrole WTI",
+   "net": 89325,
+   "nom_officiel": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+   "open_interest": 1835144,
+   "short": 245787,
+   "variation": -11018
+  },
+  "direction": -1,
+  "entities": [
+   "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261020067651F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-20",
+  "official_id": "261020067651F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261020067651F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-23",
+  "sha256": "ced458f69e77bca860657d5eb5678368e1b31311e4de5e2065de7e6b617e24c1",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Pétrole WTI : les gros spéculateurs sont acheteurs nets de 89 325 contrats (−11 018 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-23T20:04:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "043602",
+   "date_rapport": "2026-10-20",
+   "long": 721537,
+   "marche": "Obligations américaines 10 ans",
+   "net": -964293,
+   "nom_officiel": "UST 10Y NOTE - CHICAGO BOARD OF TRADE",
+   "open_interest": 5868295,
+   "short": 1685830,
+   "variation": 23809
+  },
+  "direction": 1,
+  "entities": [
+   "UST 10Y NOTE - CHICAGO BOARD OF TRADE"
+  ],
+  "id": "cftc_cot:261020043602F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-20",
+  "official_id": "261020043602F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261020043602F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-23",
+  "sha256": "269caf60706cab299f11701c5b6ce1f1269dee25d12e7750c86abd5992758a79",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Obligations américaines 10 ans : les gros spéculateurs sont vendeurs nets de 964 293 contrats (+23 809 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
    "lien_identique_au_fil": true,
    "lien_ministere_coherent": true,
    "ministere_reconnu": true,
@@ -16036,6 +16522,65 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-23T20:04:49+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA221276",
+   "classe": "TYPE 1",
+   "compagnie": "GLAXOSMITHKLINE LLC",
+   "date": "20261020",
+   "fabricant": null,
+   "ingredients": [
+    "BEPIROVIRSEN"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/221276Orig1s000Ltr.pdf",
+   "marques": [
+    "HIBSAGO"
+   ],
+   "numero_soumission": "1",
+   "orphelin": false,
+   "priorite": "PRIORITY",
+   "sponsor": "GLAXOSMITHKLINE LLC",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "GLAXOSMITHKLINE LLC"
+  ],
+  "id": "fda:NDA221276-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important."
+  ],
+  "occurred_on": "2026-10-20",
+  "official_id": "NDA221276-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221276",
+  "parser_version": "fda-1",
+  "published_on": "2026-10-20",
+  "sha256": "7b8b6a4f332644bf4ad48f0858070e6df3005e25f2de793f9ad7ffa139a81434",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, HIBSAGO (bepirovirsen), de GLAXOSMITHKLINE LLC"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -24213,242 +24758,6 @@
   "title": "D. E. Shaw & Co., L.P. détient 5,1 % de Sweetgreen, Inc. (13G, placement passif)"
  },
  {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-17T07:55:18+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 4850069.0,
-   "amendement": null,
-   "bourse": "NYSE",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0001609151",
-   "cik_sujet_entete": "0001609151",
-   "date_evenement": "2026-10-09",
-   "declarant": "Glazer Capital, LLC",
-   "extrait_but": null,
-   "nb_personnes": 2,
-   "nom_emetteur": "Weave Communications Inc",
-   "pourcentage": 6.1,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA",
-    "IN",
-    "OO"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Glazer Capital, LLC",
-   "Weave Communications, Inc."
-  ],
-  "id": "sec_13dg:0001076809-26-000122",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-10-09",
-  "official_id": "0001076809-26-000122",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1609151/000107680926000122/0001076809-26-000122-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-16",
-  "sha256": "e7ee2bc9f696f70996c2ff7eba6f57eecca7867061683f2414b0644a285ef5aa",
-  "source": "sec_13dg",
-  "tickers": [
-   "WEAV"
-  ],
-  "title": "Glazer Capital, LLC détient 6,1 % de Weave Communications, Inc. (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-17T07:55:18+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 3959115.0,
-   "amendement": "2",
-   "bourse": "NYSE",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0001120970",
-   "cik_sujet_entete": "0001120970",
-   "date_evenement": "2026-10-14",
-   "declarant": "MAK Capital Fund LP",
-   "extrait_but": null,
-   "nb_personnes": 3,
-   "nom_emetteur": "Comstock Inc.",
-   "pourcentage": 5.2,
-   "type": "SCHEDULE 13D/A",
-   "types_declarants": [
-    "IA",
-    "IN",
-    "PN"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "MAK Capital Fund LP",
-   "Comstock Inc."
-  ],
-  "id": "sec_13dg:0000921895-26-002812",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-10-14",
-  "official_id": "0000921895-26-002812",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1120970/000092189526002812/0000921895-26-002812-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-16",
-  "sha256": "51ba175b7604d0f0154181454759404e302d5b221191e81565c1c36bfd7c8da7",
-  "source": "sec_13dg",
-  "tickers": [
-   "LODE"
-  ],
-  "title": "MAK Capital Fund LP détient 5,2 % de Comstock Inc. (13D, intentions actives, mise à jour n° 2)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-17T07:55:17+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 10656964.0,
-   "amendement": null,
-   "bourse": "Nasdaq",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0001000694",
-   "cik_sujet_entete": "0001000694",
-   "date_evenement": "2026-10-16",
-   "declarant": "Himanshu H. Shah",
-   "extrait_but": null,
-   "nb_personnes": 3,
-   "nom_emetteur": "NOVAVAX, INC.",
-   "pourcentage": 6.46,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA",
-    "IN",
-    "PN"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Himanshu H. Shah",
-   "NOVAVAX INC"
-  ],
-  "id": "sec_13dg:0001398344-26-018328",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-10-16",
-  "official_id": "0001398344-26-018328",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1000694/000139834426018328/0001398344-26-018328-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-16",
-  "sha256": "715de52b5f627720632cc96959b9a57245a114629c9c6063afda2bbe0bb96bd9",
-  "source": "sec_13dg",
-  "tickers": [
-   "NVAX"
-  ],
-  "title": "Himanshu H. Shah détient 6,46 % de NOVAVAX INC (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-17T07:55:17+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 10656964.0,
-   "amendement": "8",
-   "bourse": "Nasdaq",
-   "but_sous_evalue": false,
-   "cik_emetteur": "0001000694",
-   "cik_sujet_entete": "0001000694",
-   "date_evenement": "2026-10-16",
-   "declarant": "Himanshu H. Shah",
-   "extrait_but": "Effective as of October 16, 2026, Shah Capital filed a Form ADV-W to voluntarily withdraw its registration as an investment adviser with the U.S. Securities and Exchange Commission. Consequently, Shah Capital no longer operates as a registered investment adviser, and the Reporting Persons have updat",
-   "nb_personnes": 3,
-   "nom_emetteur": "NOVAVAX, INC.",
-   "pourcentage": 6.46,
-   "type": "SCHEDULE 13D/A",
-   "types_declarants": [
-    "IA",
-    "IN",
-    "PN"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Himanshu H. Shah",
-   "NOVAVAX INC"
-  ],
-  "id": "sec_13dg:0001398344-26-018323",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-10-16",
-  "official_id": "0001398344-26-018323",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1000694/000139834426018323/0001398344-26-018323-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-16",
-  "sha256": "7b65d2e5435ce6465026a6f4f6f6ac358fb3ec9dcdaef1d50667ed28eb1663e3",
-  "source": "sec_13dg",
-  "tickers": [
-   "NVAX"
-  ],
-  "title": "Himanshu H. Shah détient 6,46 % de NOVAVAX INC (13D, intentions actives, mise à jour n° 8)"
- },
- {
   "amount_max": 26900347102.02,
   "amount_min": 26900347102.02,
   "badge": "officiel",
@@ -24678,198 +24987,6 @@
   "source": "statcan",
   "tickers": [],
   "title": "Statistique Canada : Opérations internationales du Canada en valeurs mobilières, août 2026"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "marche_attendu": true,
-   "positions_coherentes": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "variation_coherente": true
-  },
-  "collected_at": "2026-10-16T19:41:46+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "code": "209742",
-   "date_rapport": "2026-10-13",
-   "long": 83525,
-   "marche": "Nasdaq-100 (E-mini)",
-   "net": 48523,
-   "nom_officiel": "NASDAQ MINI - CHICAGO MERCANTILE EXCHANGE",
-   "open_interest": 279515,
-   "short": 35002,
-   "variation": -9600
-  },
-  "direction": -1,
-  "entities": [
-   "NASDAQ MINI - CHICAGO MERCANTILE EXCHANGE"
-  ],
-  "id": "cftc_cot:261013209742F",
-  "kind": "positions_speculateurs",
-  "notes": [],
-  "occurred_on": "2026-10-13",
-  "official_id": "261013209742F",
-  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261013209742F",
-  "parser_version": "cftc-1",
-  "published_on": "2026-10-16",
-  "sha256": "206fcc760f0f46ba8ee07d891484b82f22b9728f0772262c4270792e8a02f261",
-  "source": "cftc_cot",
-  "tickers": [],
-  "title": "Nasdaq-100 (E-mini) : les gros spéculateurs sont acheteurs nets de 48 523 contrats (−9 600 en une semaine)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "marche_attendu": true,
-   "positions_coherentes": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "variation_coherente": true
-  },
-  "collected_at": "2026-10-16T19:41:46+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "code": "13874A",
-   "date_rapport": "2026-10-13",
-   "long": 224804,
-   "marche": "S&P 500 (E-mini)",
-   "net": -140995,
-   "nom_officiel": "E-MINI S&P 500 - CHICAGO MERCANTILE EXCHANGE",
-   "open_interest": 1931607,
-   "short": 365799,
-   "variation": 13075
-  },
-  "direction": 1,
-  "entities": [
-   "E-MINI S&P 500 - CHICAGO MERCANTILE EXCHANGE"
-  ],
-  "id": "cftc_cot:26101313874AF",
-  "kind": "positions_speculateurs",
-  "notes": [],
-  "occurred_on": "2026-10-13",
-  "official_id": "26101313874AF",
-  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=26101313874AF",
-  "parser_version": "cftc-1",
-  "published_on": "2026-10-16",
-  "sha256": "7bbaa4c0c187dbcda06fe1d1b1448dbbd70ceface20698ec9c8a0659f653d193",
-  "source": "cftc_cot",
-  "tickers": [],
-  "title": "S&P 500 (E-mini) : les gros spéculateurs sont vendeurs nets de 140 995 contrats (+13 075 en une semaine)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "marche_attendu": true,
-   "positions_coherentes": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "variation_coherente": true
-  },
-  "collected_at": "2026-10-16T19:41:46+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "code": "133741",
-   "date_rapport": "2026-10-13",
-   "long": 17320,
-   "marche": "Bitcoin (CME)",
-   "net": 2534,
-   "nom_officiel": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
-   "open_interest": 20752,
-   "short": 14786,
-   "variation": -6
-  },
-  "direction": -1,
-  "entities": [
-   "BITCOIN - CHICAGO MERCANTILE EXCHANGE"
-  ],
-  "id": "cftc_cot:261013133741F",
-  "kind": "positions_speculateurs",
-  "notes": [],
-  "occurred_on": "2026-10-13",
-  "official_id": "261013133741F",
-  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261013133741F",
-  "parser_version": "cftc-1",
-  "published_on": "2026-10-16",
-  "sha256": "635b69321371fc32cfa161c5de18fa0db618e2a745d226c2c6294a0d14a7b28a",
-  "source": "cftc_cot",
-  "tickers": [],
-  "title": "Bitcoin (CME) : les gros spéculateurs sont acheteurs nets de 2 534 contrats (−6 en une semaine)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "marche_attendu": true,
-   "positions_coherentes": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "variation_coherente": true
-  },
-  "collected_at": "2026-10-16T19:41:46+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "code": "090741",
-   "date_rapport": "2026-10-13",
-   "long": 89986,
-   "marche": "Dollar canadien",
-   "net": -94765,
-   "nom_officiel": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
-   "open_interest": 378204,
-   "short": 184751,
-   "variation": -4602
-  },
-  "direction": -1,
-  "entities": [
-   "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE"
-  ],
-  "id": "cftc_cot:261013090741F",
-  "kind": "positions_speculateurs",
-  "notes": [],
-  "occurred_on": "2026-10-13",
-  "official_id": "261013090741F",
-  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261013090741F",
-  "parser_version": "cftc-1",
-  "published_on": "2026-10-16",
-  "sha256": "5a1e7e615470a254fdfc4cc8de6f1022da2785b83f631dedf5277bd5d4fa954e",
-  "source": "cftc_cot",
-  "tickers": [],
-  "title": "Dollar canadien : les gros spéculateurs sont vendeurs nets de 94 765 contrats (−4 602 en une semaine)"
  },
  {
   "amount_max": null,
@@ -51757,104 +51874,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "feu_vert_accorde": true,
-   "numero_de_transaction_officiel": true,
-   "parties_lues": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T02:03:27+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acquereur": "GA Continuity II (AM), L.P.",
-   "entites_visees": [
-    "Fleet Topco Limited"
-   ],
-   "numero": "20262215",
-   "partie_visee": "Mr. Mark Adrian Binks",
-   "statut": "Granted"
-  },
-  "direction": 0,
-  "entities": [
-   "GA Continuity II (AM), L.P.",
-   "Mr. Mark Adrian Binks"
-  ],
-  "id": "ftc_fusions:20262215",
-  "kind": "fusion_feu_vert",
-  "notes": [],
-  "occurred_on": "2026-09-21",
-  "official_id": "20262215",
-  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262215",
-  "parser_version": "ftc-1",
-  "published_on": "2026-09-22",
-  "sha256": "eb60a6251f91db64ea220ab3d1017129d333ef0585d16a6539519e3ebc1f144a",
-  "source": "ftc_fusions",
-  "tickers": [],
-  "title": "FTC : feu vert antitrust anticipé, GA Continuity II (AM), L.P. (acquéreur) et Mr. Mark Adrian Binks (partie visée)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "feu_vert_accorde": true,
-   "numero_de_transaction_officiel": true,
-   "parties_lues": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T02:03:27+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acquereur": "The Hartford Insurance Group, Inc.",
-   "entites_visees": [
-    "Equitable Financial Life Insurance Company",
-    "Equitable Financial Life Insurance Company of America"
-   ],
-   "numero": "20262189",
-   "partie_visee": "Equitable Holdings, Inc.",
-   "statut": "Granted"
-  },
-  "direction": 0,
-  "entities": [
-   "The Hartford Insurance Group, Inc.",
-   "Equitable Holdings, Inc."
-  ],
-  "id": "ftc_fusions:20262189",
-  "kind": "fusion_feu_vert",
-  "notes": [],
-  "occurred_on": "2026-09-21",
-  "official_id": "20262189",
-  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262189",
-  "parser_version": "ftc-1",
-  "published_on": "2026-09-22",
-  "sha256": "5bb7b1df8179f4a22463a424094a358e780e6dc6d2e180c5127cf68342a8bc11",
-  "source": "ftc_fusions",
-  "tickers": [
-   "HIG",
-   "EQH"
-  ],
-  "title": "FTC : feu vert antitrust anticipé, The Hartford Insurance Group, Inc. (acquéreur) et Equitable Holdings, Inc. (partie visée)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "militaire",
   "checks": {
    "acheteur_lu": true,
@@ -52807,69 +52826,6 @@
   "source": "statcan",
   "tickers": [],
   "title": "Statistique Canada : Investissement en construction de bâtiments, juillet 2026"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_gazette": true,
-   "loi_visant_a_batir_le_canada": true,
-   "projet_nomme": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_officiel_de_l_avis": true
-  },
-  "collected_at": "2026-10-03T16:24:41+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "description": "",
-   "details": [
-    [
-     "Projet",
-     "Projet de dépôt géologique en profondeur (DGP) pour le combustible nucléaire irradié du Canada"
-    ],
-    [
-     "Loi",
-     "Loi visant à bâtir le Canada"
-    ],
-    [
-     "Publié dans",
-     "Gazette du Canada, Partie I, 2026-09-19"
-    ]
-   ],
-   "jour": "2026-09-19",
-   "loi": "Loi visant à bâtir le Canada",
-   "projet": "Projet de dépôt géologique en profondeur (DGP) pour le combustible nucléaire irradié du Canada",
-   "resume": "Conformément au paragraphe 5(1.1) de la Loi visant à bâtir le Canada (la Loi), avis est par les présentes donné que la gouverneure en conseil peut modifier l’annexe 1 de la Loi afin d’inscrire le projet de dépôt géologique en profondeur pour le combustible nucléaire irradié du Canada présenté par la Société de gestion des déchets nucléaires sur la liste des projets d’intérêt national. Parallèlement, au nom de la gouverneure en conseil et à titre de ministre responsable en vertu de la Loi, le président du Conseil privé du Roi pour le Canada, l’honorable Dominic LeBlanc, consultera le gouvernement de l’Ontario, la province où le projet serait réalisé.",
-   "texte": "Conformément au paragraphe 5(1.1) de la Loi visant à bâtir le Canada (la Loi), avis est par les présentes donné que la gouverneure en conseil peut modifier l’annexe 1 de la Loi afin d’inscrire le projet de dépôt géologique en profondeur pour le combustible nucléaire irradié du Canada présenté par la Société de gestion des déchets nucléaires sur la liste des projets d’intérêt national. Parallèlement, au nom de la gouverneure en conseil et à titre de ministre responsable en vertu de la Loi, le président du Conseil privé du Roi pour le Canada, l’honorable Dominic LeBlanc, consultera le gouvernement de l’Ontario, la province où le projet serait réalisé.",
-   "titre": "Avis — Projet de dépôt géologique en profondeur pour le combustible nucléaire irradié du Canada"
-  },
-  "direction": 0,
-  "entities": [
-   "Bureau des grands projets"
-  ],
-  "id": "grands_projets_ca:avis:2026-09-19:ne2",
-  "kind": "avis_projet",
-  "notes": [
-   "Étape officielle : l'avis paraît au moins 30 jours avant que le projet puisse être inscrit."
-  ],
-  "occurred_on": "2026-09-19",
-  "official_id": "avis:2026-09-19:ne2",
-  "official_url": "https://gazette.gc.ca/rp-pr/p1/2026/2026-09-19/html/notice-avis-fra.html#ne2",
-  "parser_version": "gazette-1",
-  "published_on": "2026-09-19",
-  "sha256": "f1112c9dd89aa35f8313bfe626b6a6f6d444399f94ed644ba32dce99e56e7ead",
-  "source": "grands_projets_ca",
-  "tickers": [],
-  "title": "Projet d'intérêt national : avis d'inscription possible, Projet de dépôt géologique en profondeur (DGP) pour le combustible nucléaire irradié du Canada"
  },
  {
   "amount_max": 484000000.0,
