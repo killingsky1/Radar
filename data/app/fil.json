@@ -1,5 +1,100 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "compagnie_cotee": true,
+   "date_du_prospectus_prouvee": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "entree_en_bourse": true,
+   "fin_calculee": true,
+   "sans_levee_anticipee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "une_seule_duree": true
+  },
+  "collected_at": "2026-10-26T19:35:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "bourse": "Nasdaq",
+   "cik": "1806540",
+   "date_prospectus": "2026-10-22",
+   "details": [
+    [
+     "Compagnie",
+     "Lycia Therapeutics, Inc."
+    ],
+    [
+     "Date du prospectus",
+     "22 octobre 2026"
+    ],
+    [
+     "Durée du blocage",
+     "180 jours"
+    ],
+    [
+     "Fin prévue du blocage",
+     "mardi 20 avril 2027 (inclus)"
+    ],
+    [
+     "Phrase du prospectus",
+     "In addition, substantially all of our security holders have, or will have, entered into market standoff agreements with us or lock-up agreements with the underwriters under which they have agreed, subject to specific exceptions, not to sell any of our stock for at least 180 days following the date of this prospectus, as described below."
+    ],
+    [
+     "Date du prospectus prouvée par",
+     "« Prospectus dated October 22, 2026 » ; « Through and including November 16, 2026 (the 25th day after the date of this prospectus) »"
+    ]
+   ],
+   "duree_jours": 180,
+   "ecart_ouvrables": 1,
+   "entree_en_bourse": true,
+   "fin_blocage": "2027-04-20",
+   "levee_anticipee": false,
+   "phrase_blocage": "In addition, substantially all of our security holders have, or will have, entered into market standoff agreements with us or lock-up agreements with the underwriters under which they have agreed, subject to specific exceptions, not to sell any of our stock for at least 180 days following the date of this prospectus, as described below.",
+   "preuves_date": [
+    {
+     "date": "2026-10-22",
+     "directe": true,
+     "phrase": "Prospectus dated October 22, 2026",
+     "sorte": "couverture"
+    },
+    {
+     "date": "2026-10-22",
+     "directe": true,
+     "phrase": "Through and including November 16, 2026 (the 25th day after the date of this prospectus)",
+     "sorte": "25 jours"
+    }
+   ]
+  },
+  "direction": 0,
+  "entities": [
+   "Lycia Therapeutics, Inc."
+  ],
+  "id": "sec_blocage:0001628280-26-067048",
+  "kind": "fin_blocage",
+  "notes": [
+   "Date prévue par le prospectus : les banques qui ont mené l'entrée en bourse peuvent lever le blocage plus tôt, en tout ou en partie. Information seulement : 0 point dans la note."
+  ],
+  "occurred_on": "2026-10-22",
+  "official_id": "0001628280-26-067048",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1806540/000162828026067048/0001628280-26-067048-index.htm",
+  "parser_version": "blocage-1",
+  "published_on": "2026-10-23",
+  "sha256": "5f15cbbf3c75b772f69819eaf7dbc757f63bd75d732eb04f350200587af1eac3",
+  "source": "sec_blocage",
+  "tickers": [
+   "LYCA"
+  ],
+  "title": "Lycia Therapeutics, Inc. : fin prévue du blocage de 180 jours le 20 avril 2027 (entrée en bourse, prospectus du 22 octobre 2026)"
+ },
+ {
   "amount_max": 1200000000.0,
   "amount_min": 1200000000.0,
   "badge": "officiel",
@@ -14343,96 +14438,6 @@
    "BROS"
   ],
   "title": "DM Trust Aggregator, LLC (actionnaire de 10 %) vend 94 978 actions de Dutch Bros Inc."
- },
- {
-  "amount_max": 6411393.5,
-  "amount_min": 6411393.5,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "code_achat_ou_vente_reel": true,
-   "dates_coherentes": true,
-   "dates_transaction_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "montant_coherent": true,
-   "montant_plausible": true,
-   "montant_recalcule": true,
-   "prix_et_actions_positifs": true,
-   "prix_plausible": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_conforme_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-23T08:38:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 145687.0,
-   "automatique": null,
-   "bourse": "NYSE",
-   "cik_emetteur": "0001866581",
-   "hors_bourse": null,
-   "plan_10b5_1": true,
-   "prix_moyen": 44.008,
-   "proprietaires_cik": [
-    "1883154"
-   ],
-   "roles": [
-    "Executive Chairman of Board"
-   ],
-   "symbole_declare": "BROS",
-   "symboles_sec": [
-    "BROS"
-   ],
-   "transactions": [
-    {
-     "acquis_cede": "D",
-     "actions": 94978.0,
-     "apres": 4419652.0,
-     "automatique": null,
-     "code": "S",
-     "date": "2026-10-20",
-     "hors_bourse": null,
-     "prix": 44.008,
-     "titre_valeur": "Class A Common Stock"
-    },
-    {
-     "acquis_cede": "D",
-     "actions": 50709.0,
-     "apres": 2360091.0,
-     "automatique": null,
-     "code": "S",
-     "date": "2026-10-20",
-     "hors_bourse": null,
-     "prix": 44.008,
-     "titre_valeur": "Class A Common Stock"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Boersma Travis",
-   "Dutch Bros Inc."
-  ],
-  "id": "sec_form4:0001866581-26-000158:S",
-  "kind": "vente_initie",
-  "notes": [
-   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
-  ],
-  "occurred_on": "2026-10-20",
-  "official_id": "0001866581-26-000158:S",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1866581/000186658126000158/0001866581-26-000158-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-22",
-  "sha256": "ea47dcdf6c2071fbb161c83870524c31afd622528fd5c57a2279061c6e4bbb12",
-  "source": "sec_form4",
-  "tickers": [
-   "BROS"
-  ],
-  "title": "Boersma Travis (Executive Chairman of Board) vend 145 687 actions de Dutch Bros Inc."
  },
  {
   "amount_max": null,
