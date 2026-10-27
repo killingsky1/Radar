@@ -3,6 +3,87 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-27T20:56:25+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/loperation-nanook-tatigiit-renforce-la-capacite-dintervention-en-cas-de-crise-du-canada-dans-larctique.html",
+   "ministere": "Défense nationale",
+   "mis_a_jour": "2026-10-27T14:43:11-04:00",
+   "resume": "Du 19 au 23 octobre 2026, les Forces armées canadiennes (FAC) ont mené l’opération NANOOK-TATIGIIT (Op NA-TA) à Whitehorse, au Yukon, en collaboration avec des partenaires fédéraux, territoriaux, municipaux et autochtones. L’opération avait pour objectif de renforcer l’état de préparation et la capacité d’intervention en cas de crise pangouvernementales à l’appui de la sûreté et de la sécurité dans le Nord.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Défense nationale"
+  ],
+  "id": "nouvelles_defense_ca:ministere-defense-nationale/nouvelles/2026/10/loperation-nanook-tatigiit-renforce-la-capacite-dintervention-en-cas-de-crise-du-canada-dans-larctique.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-27",
+  "official_id": "ministere-defense-nationale/nouvelles/2026/10/loperation-nanook-tatigiit-renforce-la-capacite-dintervention-en-cas-de-crise-du-canada-dans-larctique.html",
+  "official_url": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/loperation-nanook-tatigiit-renforce-la-capacite-dintervention-en-cas-de-crise-du-canada-dans-larctique.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-27",
+  "sha256": "8e1e9c1b176ef72ad21ed1bb88f555e6bd1f77aa79a7ee1ddee60a6b8b3a428b",
+  "source": "nouvelles_defense_ca",
+  "tickers": [],
+  "title": "L’opération NANOOK-TATIGIIT renforce la capacité d’intervention en cas de crise du Canada dans l’Arctique"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "communique_officiel": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-27T20:56:15+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "titre_officiel": "Contractor Pleads Guilty to Paying Kickbacks Related to U.S. Postal Service Facilities Repair Contracts"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "doj_antitrust:contractor-pleads-guilty-paying-kickbacks-related-us-postal-service-facilities-repair",
+  "kind": "antitrust",
+  "notes": [],
+  "occurred_on": "2026-10-27",
+  "official_id": "contractor-pleads-guilty-paying-kickbacks-related-us-postal-service-facilities-repair",
+  "official_url": "https://www.justice.gov/opa/pr/contractor-pleads-guilty-paying-kickbacks-related-us-postal-service-facilities-repair",
+  "parser_version": "doj-1",
+  "published_on": "2026-10-27",
+  "sha256": "5a274b969c99297fd802bc306624a4414bc222921dba3b4feafd85264eb53668",
+  "source": "doj_antitrust",
+  "tickers": [],
+  "title": "Antitrust (ministère de la Justice) : Contractor Pleads Guilty to Paying Kickbacks Related to U.S. Postal Service Facilities Repair Contracts"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "champs_requis": true,
@@ -50525,55 +50606,6 @@
    "MAIR"
   ],
   "title": "FTC : feu vert antitrust anticipé, Larry Gies (acquéreur) et Madison Industries Holdings LLC (partie visée)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "feu_vert_accorde": true,
-   "numero_de_transaction_officiel": true,
-   "parties_lues": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T03:04:45+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acquereur": "Francisco Partners VII-A, L.P.",
-   "entites_visees": [
-    "Weave Communications, Inc."
-   ],
-   "numero": "20262225",
-   "partie_visee": "Weave Communications, Inc.",
-   "statut": "Granted"
-  },
-  "direction": 0,
-  "entities": [
-   "Francisco Partners VII-A, L.P.",
-   "Weave Communications, Inc."
-  ],
-  "id": "ftc_fusions:20262225",
-  "kind": "fusion_feu_vert",
-  "notes": [],
-  "occurred_on": "2026-09-21",
-  "official_id": "20262225",
-  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262225",
-  "parser_version": "ftc-1",
-  "published_on": "2026-09-22",
-  "sha256": "5137bbb00837d77eed7b989df9279bd20d5cca77e5b6a6e1758a066fe3d0dbe1",
-  "source": "ftc_fusions",
-  "tickers": [
-   "WEAV"
-  ],
-  "title": "FTC : feu vert antitrust anticipé, Francisco Partners VII-A, L.P. (acquéreur) et Weave Communications, Inc. (partie visée)"
  },
  {
   "amount_max": null,
