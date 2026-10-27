@@ -36,6 +36,41 @@
    "forme": "10-K",
    "lien": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/0001144879-26-000048-index.htm"
   },
+  "DVLT": {
+   "accn": "0001104659-26-031280",
+   "chiffres": {
+    "cfo": -0.234634,
+    "emission": 4763000,
+    "levier": 0.0,
+    "levier_avant": 0.0,
+    "liquidite": 5.315018,
+    "liquidite_avant": 1.565524,
+    "marge": 0.777712,
+    "marge_avant": 0.140613,
+    "roa": -0.785034,
+    "roa_avant": -10.659133,
+    "rotation": 0.388462,
+    "rotation_avant": 0.554427
+   },
+   "cik": 1682149,
+   "criteres": {
+    "ACCRUAL": 1,
+    "CFO": 0,
+    "EQ_OFFER": 0,
+    "ROA": 0,
+    "ΔLEVER": 0,
+    "ΔLIQUID": 1,
+    "ΔMARGIN": 1,
+    "ΔROA": 1,
+    "ΔTURN": 0
+   },
+   "debut": "2025-01-01",
+   "depose": "2026-03-18",
+   "f_score": 4,
+   "fin": "2025-12-31",
+   "forme": "10-K",
+   "lien": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/0001104659-26-031280-index.htm"
+  },
   "GME": {
    "accn": "0001326380-26-000013",
    "chiffres": {
@@ -245,6 +280,41 @@
    "fin": "2025-12-31",
    "forme": "10-K",
    "lien": "https://www.sec.gov/Archives/edgar/data/1673481/000149315226032786/0001493152-26-032786-index.htm"
+  },
+  "THRM": {
+   "accn": "0001193125-26-059602",
+   "chiffres": {
+    "cfo": 0.093616,
+    "emission": 0,
+    "levier": 0.142966,
+    "levier_avant": 0.177333,
+    "liquidite": 1.921669,
+    "liquidite_avant": 2.010077,
+    "marge": 0.241676,
+    "marge_avant": 0.251648,
+    "roa": 0.014657,
+    "roa_avant": 0.052615,
+    "rotation": 1.20123,
+    "rotation_avant": 1.179649
+   },
+   "cik": 903129,
+   "criteres": {
+    "ACCRUAL": 1,
+    "CFO": 1,
+    "EQ_OFFER": 1,
+    "ROA": 1,
+    "ΔLEVER": 1,
+    "ΔLIQUID": 0,
+    "ΔMARGIN": 0,
+    "ΔROA": 0,
+    "ΔTURN": 1
+   },
+   "debut": "2025-01-01",
+   "depose": "2026-02-19",
+   "f_score": 6,
+   "fin": "2025-12-31",
+   "forme": "10-K",
+   "lien": "https://www.sec.gov/Archives/edgar/data/903129/000119312526059602/0001193125-26-059602-index.htm"
   }
  },
  "source": "https://data.sec.gov/api/xbrl/companyfacts/",
