@@ -5,6 +5,67 @@
     "moins": 1.0,
     "plus": 1.0
    },
+   "contexte": [
+    {
+     "id": "sec_8k:0001104659-26-116228",
+     "pourquoi": "Autre point du 8-K (contrat, acquisition, avis de retrait de la bourse…) : effet incertain."
+    }
+   ],
+   "depot_recent": "2026-10-26",
+   "depuis": "2026-10-27T09:06:41+00:00",
+   "derniere_info": "2026-10-26",
+   "groupes": [
+    {
+     "famille": "compagnie",
+     "infos": [
+      {
+       "age": 1,
+       "base": -5.0,
+       "compte": true,
+       "facteurs": [],
+       "id": "sec_8k:0001104659-26-118772",
+       "points": -4.89,
+       "regle": "etats_financiers",
+       "temps": 0.977
+      }
+     ],
+     "points": -4.89,
+     "sens": -1
+    }
+   ],
+   "moins": -4.89,
+   "nom": "Datavault AI Inc.",
+   "note10": 0.9,
+   "note10_sans_bonus": 0.9,
+   "note10_sans_taille": 0.9,
+   "plus": 0.0,
+   "recent": true,
+   "score": -4.89,
+   "symbole": "DVLT",
+   "taille": {
+    "actions": [
+     949728605,
+     "2026-08-19"
+    ],
+    "prix": [
+     "20260930",
+     0.15
+    ],
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 142.5
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
    "contexte": [],
    "depot_recent": "2026-10-19",
    "depuis": "2026-10-20T08:38:24+00:00",
@@ -14,28 +75,28 @@
      "famille": "compagnie",
      "infos": [
       {
-       "age": 7,
+       "age": 8,
        "base": -5.0,
        "compte": true,
        "facteurs": [],
        "id": "sec_8k:0001213900-26-110392",
-       "points": -4.25,
+       "points": -4.16,
        "regle": "etats_financiers",
-       "temps": 0.851
+       "temps": 0.831
       }
      ],
-     "points": -4.25,
+     "points": -4.16,
      "sens": -1
     }
    ],
-   "moins": -4.25,
+   "moins": -4.16,
    "nom": "Apogee Acquisition Corp",
    "note10": 1.5,
    "note10_sans_bonus": 1.5,
    "note10_sans_taille": 1.5,
    "plus": 0.0,
    "recent": false,
-   "score": -4.25,
+   "score": -4.16,
    "symbole": "AACP",
    "taille": {
     "raison": "pas d'actions en circulation déclarées depuis 200 jours",
@@ -62,28 +123,28 @@
      "famille": "compagnie",
      "infos": [
       {
-       "age": 10,
+       "age": 11,
        "base": -5.0,
        "compte": true,
        "facteurs": [],
        "id": "sec_8k:0001500435-26-000064",
-       "points": -3.97,
+       "points": -3.88,
        "regle": "etats_financiers",
-       "temps": 0.794
+       "temps": 0.776
       }
      ],
-     "points": -3.97,
+     "points": -3.88,
      "sens": -1
     }
    ],
-   "moins": -3.97,
+   "moins": -3.88,
    "nom": "GoPro, Inc.",
-   "note10": 1.7,
-   "note10_sans_bonus": 1.7,
-   "note10_sans_taille": 1.7,
+   "note10": 1.8,
+   "note10_sans_bonus": 1.8,
+   "note10_sans_taille": 1.8,
    "plus": 0.0,
    "recent": false,
-   "score": -3.97,
+   "score": -3.88,
    "symbole": "GPRO",
    "taille": {
     "raison": "pas d'actions en circulation déclarées depuis 200 jours",
@@ -110,28 +171,28 @@
      "famille": "compagnie",
      "infos": [
       {
-       "age": 10,
+       "age": 11,
        "base": -5.0,
        "compte": true,
        "facteurs": [],
        "id": "sec_8k:0001753926-26-001958",
-       "points": -3.97,
+       "points": -3.88,
        "regle": "etats_financiers",
-       "temps": 0.794
+       "temps": 0.776
       }
      ],
-     "points": -3.97,
+     "points": -3.88,
      "sens": -1
     }
    ],
-   "moins": -3.97,
+   "moins": -3.88,
    "nom": "High Roller Technologies, Inc.",
-   "note10": 1.7,
-   "note10_sans_bonus": 1.7,
-   "note10_sans_taille": 1.7,
+   "note10": 1.8,
+   "note10_sans_bonus": 1.8,
+   "note10_sans_taille": 1.8,
    "plus": 0.0,
    "recent": false,
-   "score": -3.97,
+   "score": -3.88,
    "symbole": "ROLR",
    "taille": {
     "actions": [
@@ -166,38 +227,38 @@
      "famille": "compagnie",
      "infos": [
       {
-       "age": 11,
+       "age": 12,
        "base": -5.0,
        "compte": true,
        "facteurs": [],
        "id": "sec_8k:0001493152-26-047256",
-       "points": -3.88,
+       "points": -3.79,
        "regle": "faillite",
-       "temps": 0.776
+       "temps": 0.758
       },
       {
-       "age": 19,
+       "age": 20,
        "base": -5.0,
        "compte": false,
        "facteurs": [],
        "id": "sec_8k:0001493152-26-046030",
-       "points": -3.22,
+       "points": -3.15,
        "regle": "faillite",
-       "temps": 0.645
+       "temps": 0.63
       }
      ],
-     "points": -3.88,
+     "points": -3.79,
      "sens": -1
     }
    ],
-   "moins": -3.88,
+   "moins": -3.79,
    "nom": "Greenlane Holdings, Inc.",
    "note10": 1.8,
    "note10_sans_bonus": 1.8,
    "note10_sans_taille": 1.8,
    "plus": 0.0,
    "recent": false,
-   "score": -3.88,
+   "score": -3.79,
    "symbole": "GNLN",
    "taille": {
     "actions": [
@@ -232,28 +293,28 @@
      "famille": "sec",
      "infos": [
       {
-       "age": 12,
+       "age": 13,
        "base": -5.0,
        "compte": true,
        "facteurs": [],
        "id": "sec_poursuites:34-106668",
-       "points": -3.79,
+       "points": -3.7,
        "regle": "sec_suspension",
-       "temps": 0.758
+       "temps": 0.741
       }
      ],
-     "points": -3.79,
+     "points": -3.7,
      "sens": -1
     }
    ],
-   "moins": -3.79,
+   "moins": -3.7,
    "nom": "TJGC GROUP Ltd",
-   "note10": 1.8,
-   "note10_sans_bonus": 1.8,
-   "note10_sans_taille": 1.8,
+   "note10": 1.9,
+   "note10_sans_bonus": 1.9,
+   "note10_sans_taille": 1.9,
    "plus": 0.0,
    "recent": false,
-   "score": -3.79,
+   "score": -3.7,
    "symbole": "TJGC",
    "taille": {
     "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux États-Unis peuvent valoir plusieurs actions",
@@ -279,28 +340,28 @@
      "famille": "compagnie",
      "infos": [
       {
-       "age": 13,
+       "age": 14,
        "base": -5.0,
        "compte": true,
        "facteurs": [],
        "id": "sec_8k:0001213900-26-108614",
-       "points": -3.7,
+       "points": -3.62,
        "regle": "etats_financiers",
-       "temps": 0.741
+       "temps": 0.724
       }
      ],
-     "points": -3.7,
+     "points": -3.62,
      "sens": -1
     }
    ],
-   "moins": -3.7,
+   "moins": -3.62,
    "nom": "EON Resources Inc.",
-   "note10": 1.9,
-   "note10_sans_bonus": 1.9,
-   "note10_sans_taille": 1.9,
+   "note10": 2.0,
+   "note10_sans_bonus": 2.0,
+   "note10_sans_taille": 2.0,
    "plus": 0.0,
    "recent": false,
-   "score": -3.7,
+   "score": -3.62,
    "symbole": "EONR",
    "taille": {
     "actions": [
@@ -340,28 +401,28 @@
      "famille": "compagnie",
      "infos": [
       {
-       "age": 18,
+       "age": 19,
        "base": -5.0,
        "compte": true,
        "facteurs": [],
        "id": "sec_8k:0001493152-26-046278",
-       "points": -3.3,
+       "points": -3.22,
        "regle": "etats_financiers",
-       "temps": 0.66
+       "temps": 0.645
       }
      ],
-     "points": -3.3,
+     "points": -3.22,
      "sens": -1
     }
    ],
-   "moins": -3.3,
+   "moins": -3.22,
    "nom": "Sports Entertainment Gaming Global Corp",
    "note10": 2.3,
    "note10_sans_bonus": 2.3,
    "note10_sans_taille": 2.3,
    "plus": 0.0,
    "recent": false,
-   "score": -3.3,
+   "score": -3.22,
    "symbole": "SEGG",
    "taille": {
     "actions": [
@@ -396,38 +457,38 @@
      "famille": "compagnie",
      "infos": [
       {
-       "age": 21,
+       "age": 22,
        "base": -5.0,
        "compte": true,
        "facteurs": [],
        "id": "sec_8k:0001193125-26-414287",
-       "points": -3.08,
+       "points": -3.01,
        "regle": "faillite",
-       "temps": 0.616
+       "temps": 0.602
       },
       {
-       "age": 26,
+       "age": 27,
        "base": -5.0,
        "compte": false,
        "facteurs": [],
        "id": "sec_8k:0001193125-26-408874",
-       "points": -2.74,
+       "points": -2.68,
        "regle": "faillite",
-       "temps": 0.548
+       "temps": 0.536
       }
      ],
-     "points": -3.08,
+     "points": -3.01,
      "sens": -1
     }
    ],
-   "moins": -3.08,
+   "moins": -3.01,
    "nom": "Leslie's, Inc.",
-   "note10": 2.4,
-   "note10_sans_bonus": 2.4,
-   "note10_sans_taille": 2.4,
+   "note10": 2.5,
+   "note10_sans_bonus": 2.5,
+   "note10_sans_taille": 2.5,
    "plus": 0.0,
    "recent": false,
-   "score": -3.08,
+   "score": -3.01,
    "symbole": "LESL",
    "taille": {
     "actions": [
@@ -449,7 +510,7 @@
    }
   }
  ],
- "compagnies_notees": 261,
+ "compagnies_notees": 272,
  "ecartees": [
   {
    "bonus": {
@@ -482,7 +543,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 3,
+       "age": 4,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -496,12 +557,12 @@
         ]
        ],
        "id": "sec_form4:0001012975-26-000982:P",
-       "points": 4.9,
+       "points": 4.79,
        "regle": "achat_dirigeant",
-       "temps": 0.933
+       "temps": 0.912
       },
       {
-       "age": 3,
+       "age": 4,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -515,12 +576,12 @@
         ]
        ],
        "id": "sec_form4:0001012975-26-000981:P",
-       "points": 4.9,
+       "points": 4.79,
        "regle": "achat_dirigeant",
-       "temps": 0.933
+       "temps": 0.912
       },
       {
-       "age": 3,
+       "age": 4,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -538,23 +599,23 @@
         ]
        ],
        "id": "sec_form4:0001012975-26-000980:P",
-       "points": 2.45,
+       "points": 2.39,
        "regle": "achat_dirigeant",
-       "temps": 0.933
+       "temps": 0.912
       }
      ],
-     "points": 4.9,
+     "points": 4.79,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Rent the Runway, Inc.",
-   "note10": 9.1,
-   "note10_sans_bonus": 9.1,
+   "note10": 9.0,
+   "note10_sans_bonus": 9.0,
    "note10_sans_taille": 7.7,
-   "plus": 4.9,
+   "plus": 4.79,
    "recent": true,
-   "score": 4.9,
+   "score": 4.79,
    "symbole": "RENT",
    "taille": {
     "actions": [
@@ -589,7 +650,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 25,
+       "age": 26,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -607,12 +668,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-410894:P",
-       "points": 4.42,
+       "points": 4.32,
        "regle": "achat_dirigeant",
-       "temps": 0.561
+       "temps": 0.548
       },
       {
-       "age": 25,
+       "age": 26,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -630,12 +691,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-410889:P",
-       "points": 4.42,
+       "points": 4.32,
        "regle": "achat_dirigeant",
-       "temps": 0.561
+       "temps": 0.548
       },
       {
-       "age": 25,
+       "age": 26,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -649,12 +710,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-410914:P",
-       "points": 2.95,
+       "points": 2.88,
        "regle": "achat_dirigeant",
-       "temps": 0.561
+       "temps": 0.548
       },
       {
-       "age": 25,
+       "age": 26,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -668,12 +729,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-410913:P",
-       "points": 2.95,
+       "points": 2.88,
        "regle": "achat_dirigeant",
-       "temps": 0.561
+       "temps": 0.548
       },
       {
-       "age": 25,
+       "age": 26,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -687,23 +748,23 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-410905:P",
-       "points": 2.95,
+       "points": 2.88,
        "regle": "achat_dirigeant",
-       "temps": 0.561
+       "temps": 0.548
       }
      ],
-     "points": 4.42,
+     "points": 4.32,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Presurance Holdings, Inc.",
-   "note10": 8.7,
-   "note10_sans_bonus": 8.7,
-   "note10_sans_taille": 7.5,
-   "plus": 4.42,
+   "note10": 8.6,
+   "note10_sans_bonus": 8.6,
+   "note10_sans_taille": 7.4,
+   "plus": 4.32,
    "recent": false,
-   "score": 4.42,
+   "score": 4.32,
    "symbole": "PRHI",
    "taille": {
     "actions": [
@@ -738,7 +799,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -752,23 +813,23 @@
         ]
        ],
        "id": "sec_form4:0001493152-26-048080:P",
-       "points": 4.1,
+       "points": 4.01,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       }
      ],
-     "points": 4.1,
+     "points": 4.01,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "MANHATTAN BRIDGE CAPITAL, INC",
-   "note10": 8.4,
-   "note10_sans_bonus": 8.4,
-   "note10_sans_taille": 7.3,
-   "plus": 4.1,
-   "recent": true,
-   "score": 4.1,
+   "note10": 8.3,
+   "note10_sans_bonus": 8.3,
+   "note10_sans_taille": 7.2,
+   "plus": 4.01,
+   "recent": false,
+   "score": 4.01,
    "symbole": "LOAN",
    "taille": {
     "actions": [
@@ -804,7 +865,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 13,
+       "age": 14,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -818,12 +879,12 @@
         ]
        ],
        "id": "sec_form4:0001493152-26-046909:P",
-       "points": 3.89,
+       "points": 3.8,
        "regle": "achat_dirigeant",
-       "temps": 0.741
+       "temps": 0.724
       },
       {
-       "age": 13,
+       "age": 14,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -837,12 +898,12 @@
         ]
        ],
        "id": "sec_form4:0001493152-26-046908:P",
-       "points": 3.89,
+       "points": 3.8,
        "regle": "achat_dirigeant",
-       "temps": 0.741
+       "temps": 0.724
       }
      ],
-     "points": 3.89,
+     "points": 3.8,
      "sens": 1
     }
    ],
@@ -850,10 +911,10 @@
    "nom": "OneMedNet Corp",
    "note10": 8.2,
    "note10_sans_bonus": 8.2,
-   "note10_sans_taille": 7.2,
-   "plus": 3.89,
+   "note10_sans_taille": 7.1,
+   "plus": 3.8,
    "recent": false,
-   "score": 3.89,
+   "score": 3.8,
    "symbole": "ONMD",
    "taille": {
     "actions": [
@@ -889,28 +950,28 @@
      "famille": "activistes",
      "infos": [
       {
-       "age": 12,
+       "age": 13,
        "base": 5.0,
        "compte": true,
        "facteurs": [],
        "id": "sec_13dg:0001214659-26-012926",
-       "points": 3.79,
+       "points": 3.7,
        "regle": "activiste_13d",
-       "temps": 0.758
+       "temps": 0.741
       }
      ],
-     "points": 3.79,
+     "points": 3.7,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "FRANKLIN STREET PROPERTIES CORP",
-   "note10": 8.2,
-   "note10_sans_bonus": 8.2,
-   "note10_sans_taille": 8.2,
-   "plus": 3.79,
+   "note10": 8.1,
+   "note10_sans_bonus": 8.1,
+   "note10_sans_taille": 8.1,
+   "plus": 3.7,
    "recent": false,
-   "score": 3.79,
+   "score": 3.7,
    "symbole": "FSP",
    "taille": {
     "actions": [
@@ -954,7 +1015,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 10,
+       "age": 11,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -968,28 +1029,9 @@
         ]
        ],
        "id": "sec_form4:0001213900-26-110401:P",
-       "points": 3.57,
+       "points": 3.49,
        "regle": "achat_dirigeant",
-       "temps": 0.794
-      },
-      {
-       "age": 12,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "PDG, directeur financier ou président du conseil",
-         1.5
-        ],
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001213900-26-109523:P",
-       "points": 3.41,
-       "regle": "achat_dirigeant",
-       "temps": 0.758
+       "temps": 0.776
       },
       {
        "age": 13,
@@ -1005,24 +1047,43 @@
          1.5
         ]
        ],
-       "id": "sec_form4:0001213900-26-109187:P",
+       "id": "sec_form4:0001213900-26-109523:P",
        "points": 3.33,
        "regle": "achat_dirigeant",
        "temps": 0.741
+      },
+      {
+       "age": 14,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001213900-26-109187:P",
+       "points": 3.26,
+       "regle": "achat_dirigeant",
+       "temps": 0.724
       }
      ],
-     "points": 3.57,
+     "points": 3.49,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Zone Frontier Inc.",
-   "note10": 8.0,
-   "note10_sans_bonus": 8.0,
-   "note10_sans_taille": 7.0,
-   "plus": 3.57,
+   "note10": 7.9,
+   "note10_sans_bonus": 7.9,
+   "note10_sans_taille": 6.9,
+   "plus": 3.49,
    "recent": false,
-   "score": 3.57,
+   "score": 3.49,
    "symbole": "ZONE",
    "taille": {
     "actions": [
@@ -1057,7 +1118,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -1067,23 +1128,23 @@
         ]
        ],
        "id": "sec_form4:0001437749-26-033305:P",
-       "points": 2.74,
+       "points": 2.67,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       }
      ],
-     "points": 2.74,
+     "points": 2.67,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "LIQTECH INTERNATIONAL INC",
-   "note10": 7.3,
-   "note10_sans_bonus": 7.3,
+   "note10": 7.2,
+   "note10_sans_bonus": 7.2,
    "note10_sans_taille": 6.5,
-   "plus": 2.74,
-   "recent": true,
-   "score": 2.74,
+   "plus": 2.67,
+   "recent": false,
+   "score": 2.67,
    "symbole": "LIQT",
    "taille": {
     "actions": [
@@ -1118,7 +1179,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 7,
+       "age": 8,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -1128,12 +1189,12 @@
         ]
        ],
        "id": "sec_form4:0001072613-26-000827:P",
-       "points": 2.55,
+       "points": 2.49,
        "regle": "achat_dirigeant",
-       "temps": 0.851
+       "temps": 0.831
       },
       {
-       "age": 13,
+       "age": 14,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -1143,12 +1204,12 @@
         ]
        ],
        "id": "sec_form4:0001072613-26-000825:P",
-       "points": 2.22,
+       "points": 2.17,
        "regle": "achat_dirigeant",
-       "temps": 0.741
+       "temps": 0.724
       },
       {
-       "age": 21,
+       "age": 22,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -1158,12 +1219,12 @@
         ]
        ],
        "id": "sec_form4:0001072613-26-000819:P",
-       "points": 1.85,
+       "points": 1.8,
        "regle": "achat_dirigeant",
-       "temps": 0.616
+       "temps": 0.602
       }
      ],
-     "points": 2.55,
+     "points": 2.49,
      "sens": 1
     }
    ],
@@ -1172,9 +1233,9 @@
    "note10": 7.1,
    "note10_sans_bonus": 7.1,
    "note10_sans_taille": 6.4,
-   "plus": 2.55,
+   "plus": 2.49,
    "recent": false,
-   "score": 2.55,
+   "score": 2.49,
    "symbole": "EP",
    "taille": {
     "actions": [
@@ -1209,7 +1270,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 25,
+       "age": 26,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -1223,12 +1284,12 @@
         ]
        ],
        "id": "sec_form4:0001437749-26-031654:P",
-       "points": 2.53,
+       "points": 2.47,
        "regle": "achat_dirigeant",
-       "temps": 0.561
+       "temps": 0.548
       },
       {
-       "age": 26,
+       "age": 27,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -1242,12 +1303,12 @@
         ]
        ],
        "id": "sec_form4:0001437749-26-031597:P",
-       "points": 2.47,
+       "points": 2.41,
        "regle": "achat_dirigeant",
-       "temps": 0.548
+       "temps": 0.536
       }
      ],
-     "points": 2.53,
+     "points": 2.47,
      "sens": 1
     }
    ],
@@ -1256,9 +1317,9 @@
    "note10": 7.1,
    "note10_sans_bonus": 7.1,
    "note10_sans_taille": 6.4,
-   "plus": 2.53,
+   "plus": 2.47,
    "recent": false,
-   "score": 2.53,
+   "score": 2.47,
    "symbole": "FLNA",
    "taille": {
     "actions": [
@@ -1277,67 +1338,6 @@
     "source_actions": "frames",
     "taille": "petite",
     "valeur_m": 49.8
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depot_recent": "2026-10-16",
-   "depuis": "2026-10-17T07:52:45+00:00",
-   "derniere_info": "2026-10-16",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 10,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001437749-26-032801:P",
-       "points": 2.38,
-       "regle": "achat_dirigeant",
-       "temps": 0.794
-      }
-     ],
-     "points": 2.38,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "Byrna Technologies Inc.",
-   "note10": 7.0,
-   "note10_sans_bonus": 7.0,
-   "note10_sans_taille": 6.3,
-   "plus": 2.38,
-   "recent": false,
-   "score": 2.38,
-   "symbole": "BYRN",
-   "taille": {
-    "actions": [
-     23404754,
-     "2026-10-08"
-    ],
-    "prix": [
-     "20260930",
-     3.33
-    ],
-    "seuils": {
-     "mois": "202608",
-     "p30": 2236.27,
-     "p70": 13366.01
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 77.9
    }
   }
  ],
@@ -1854,63 +1854,6 @@
     "SAMG"
    ],
    "title": "Equinox Partners Investment Management LLC détient 10,3 % de Silvercrest Asset Management Group Inc. (13D, intentions actives, mise à jour n° 2)"
-  },
-  "sec_13dg:0001140361-26-038586": {
-   "amount_max": null,
-   "amount_min": null,
-   "badge": "officiel",
-   "category": "baleines",
-   "checks": {
-    "champs_requis": true,
-    "dates_coherentes": true,
-    "domaine_officiel": true,
-    "emetteur_coherent": true,
-    "empreinte": true,
-    "pourcentage_valide": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-06T02:25:23+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 15308819.0,
-    "amendement": null,
-    "bourse": "Nasdaq",
-    "but_sous_evalue": null,
-    "cik_emetteur": "0002025416",
-    "cik_sujet_entete": "0002025416",
-    "date_evenement": "2025-10-16",
-    "declarant": "SBI Digital Asset Holdings Co., Ltd.",
-    "extrait_but": null,
-    "nb_personnes": 1,
-    "nom_emetteur": "OBOOK HOLDINGS, INC.",
-    "pourcentage": 40.5,
-    "type": "SCHEDULE 13G",
-    "types_declarants": [
-     "CO"
-    ]
-   },
-   "direction": 0,
-   "entities": [
-    "SBI Digital Asset Holdings Co., Ltd.",
-    "OBOOK HOLDINGS INC."
-   ],
-   "id": "sec_13dg:0001140361-26-038586",
-   "kind": "plus_5_pourcent",
-   "notes": [],
-   "occurred_on": "2025-10-16",
-   "official_id": "0001140361-26-038586",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/2025416/000114036126038586/0001140361-26-038586-index.htm",
-   "parser_version": "sec-7",
-   "published_on": "2026-10-05",
-   "sha256": "f4d1964e79463d3bd68e460feed0a85a5fd37c98e3f79adc533bc5f96b4cefe2",
-   "source": "sec_13dg",
-   "tickers": [
-    "OWLS"
-   ],
-   "title": "SBI Digital Asset Holdings Co., Ltd. détient 40,5 % de OBOOK HOLDINGS INC. (13G, placement passif)"
   },
   "sec_13dg:0001140361-26-039469": {
    "amount_max": null,
@@ -2502,6 +2445,108 @@
    ],
    "title": "KUKES SIMON G détient 34,2 % de PEDEVCO CORP (13D, intentions actives, mise à jour n° 15)"
   },
+  "sec_8k:0001104659-26-116228": {
+   "amount_max": null,
+   "amount_min": null,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "dates_coherentes": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "items_officiels_reconnus": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symboles_valides": true,
+    "type_8k": true
+   },
+   "collected_at": "2026-10-16T08:18:17+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "bourse": "Nasdaq",
+    "cik": "0001682149",
+    "items": [
+     {
+      "direction": 0,
+      "item": "1.01",
+      "libelle": "contrat important signé",
+      "officiel": "Entry into a Material Definitive Agreement"
+     }
+    ],
+    "type": "8-K"
+   },
+   "direction": 0,
+   "entities": [
+    "Datavault AI Inc."
+   ],
+   "id": "sec_8k:0001104659-26-116228",
+   "kind": "evenement_8k",
+   "notes": [],
+   "occurred_on": "2026-10-15",
+   "official_id": "0001104659-26-116228",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926116228/0001104659-26-116228-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-10-15",
+   "sha256": "5b2e38e5339a88cc75dbda16848cb96a8fef3bb3ee6ce3c8a17f02ecbb07c532",
+   "source": "sec_8k",
+   "tickers": [
+    "DVLT"
+   ],
+   "title": "Datavault AI Inc. : contrat important signé"
+  },
+  "sec_8k:0001104659-26-118772": {
+   "amount_max": null,
+   "amount_min": null,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "dates_coherentes": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "items_officiels_reconnus": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symboles_valides": true,
+    "type_8k": true
+   },
+   "collected_at": "2026-10-27T09:08:13+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "bourse": "Nasdaq",
+    "cik": "0001682149",
+    "items": [
+     {
+      "direction": -1,
+      "item": "4.02",
+      "libelle": "états financiers passés à ne plus croire",
+      "officiel": "Non-Reliance on Previously Issued Financial Statements or a Related Audit Report or Completed Interim Review"
+     }
+    ],
+    "type": "8-K"
+   },
+   "direction": -1,
+   "entities": [
+    "Datavault AI Inc."
+   ],
+   "id": "sec_8k:0001104659-26-118772",
+   "kind": "evenement_8k",
+   "notes": [],
+   "occurred_on": "2026-10-20",
+   "official_id": "0001104659-26-118772",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926118772/0001104659-26-118772-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-10-26",
+   "sha256": "d9bcdef551bce77be7001588932cc8e7f781d8ea426dbd2da53ef8eeff36395b",
+   "source": "sec_8k",
+   "tickers": [
+    "DVLT"
+   ],
+   "title": "Datavault AI Inc. : états financiers passés à ne plus croire"
+  },
   "sec_8k:0001140361-26-038532": {
    "amount_max": null,
    "amount_min": null,
@@ -2621,6 +2666,63 @@
     "LESL"
    ],
    "title": "Leslie's, Inc. : contrat important signé + faillite ou mise sous séquestre + dépréciation importante d'actifs + avis de retrait de la bourse"
+  },
+  "sec_8k:0001193125-26-410776": {
+   "amount_max": null,
+   "amount_min": null,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "dates_coherentes": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "items_officiels_reconnus": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symboles_valides": true,
+    "type_8k": true
+   },
+   "collected_at": "2026-10-03T00:32:09+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "bourse": "Nasdaq",
+    "cik": "0000903129",
+    "items": [
+     {
+      "direction": 0,
+      "item": "1.01",
+      "libelle": "contrat important signé",
+      "officiel": "Entry into a Material Definitive Agreement"
+     },
+     {
+      "direction": 0,
+      "item": "2.01",
+      "libelle": "acquisition ou vente d'actifs complétée",
+      "officiel": "Completion of Acquisition or Disposition of Assets"
+     }
+    ],
+    "type": "8-K"
+   },
+   "direction": 0,
+   "entities": [
+    "Gentherm Inc"
+   ],
+   "id": "sec_8k:0001193125-26-410776",
+   "kind": "evenement_8k",
+   "notes": [],
+   "occurred_on": "2026-09-29",
+   "official_id": "0001193125-26-410776",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/903129/000119312526410776/0001193125-26-410776-index.htm",
+   "parser_version": "sec-4",
+   "published_on": "2026-10-01",
+   "sha256": "088e973264756c7e6e7209ec0653b2846a750c57c66704afbe0beea66ff1d720",
+   "source": "sec_8k",
+   "tickers": [
+    "THRM"
+   ],
+   "title": "Gentherm Inc : contrat important signé + acquisition ou vente d'actifs complétée"
   },
   "sec_8k:0001193125-26-414287": {
    "amount_max": null,
@@ -3331,83 +3433,6 @@
    ],
    "title": "RICHARD N NOTTENBURG (administrateur) prévoit vendre 62 500 actions de Applied Digital Corp."
   },
-  "sec_form4:0000108985-26-000091:P": {
-   "amount_max": 40000.05,
-   "amount_min": 40000.05,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-22T08:42:52+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 1287.529,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0000108985",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 31.0673,
-    "proprietaires_cik": [
-     "1367846"
-    ],
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "YORW",
-    "symboles_sec": [
-     "YORW"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 1287.529,
-      "apres": 1287.529,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-10-20",
-      "hors_bourse": null,
-      "prix": 31.0673,
-      "titre_valeur": "Common Stock"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Velazquez David M",
-    "YORK WATER CO"
-   ],
-   "id": "sec_form4:0000108985-26-000091:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-10-20",
-   "official_id": "0000108985-26-000091:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/108985/000010898526000091/0000108985-26-000091-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-10-21",
-   "sha256": "7b6aac36420817bf65db0ac8b1b506115aaa81751a2088996d81e4193f9bd3a2",
-   "source": "sec_form4",
-   "tickers": [
-    "YORW"
-   ],
-   "title": "Velazquez David M (administrateur) achète 1 288 actions de YORK WATER CO"
-  },
   "sec_form4:0000826675-26-000121:P": {
    "amount_max": 156560.0,
    "amount_min": 156560.0,
@@ -3813,6 +3838,83 @@
     "GME"
    ],
    "title": "Cohen Ryan (President, CEO and Chairman) achète 844 130 actions de GameStop Corp."
+  },
+  "sec_form4:0000950103-26-016189:P": {
+   "amount_max": 26625.0,
+   "amount_min": 26625.0,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-27T09:07:37+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 1500.0,
+    "automatique": null,
+    "bourse": "NYSE",
+    "cik_emetteur": "0002131040",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 17.75,
+    "proprietaires_cik": [
+     "2108587"
+    ],
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "RVII",
+    "symboles_sec": [
+     "RVII"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 1500.0,
+      "apres": 1500.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-10-23",
+      "hors_bourse": null,
+      "prix": 17.75,
+      "titre_valeur": "Common Shares of Beneficial Interest"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Whitney Meredith",
+    "Robinhood Ventures Fund II"
+   ],
+   "id": "sec_form4:0000950103-26-016189:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-10-23",
+   "official_id": "0000950103-26-016189:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/2131040/000095010326016189/0000950103-26-016189-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-10-26",
+   "sha256": "c42c3d1887509ee7ac5a2ee9938816f1f4795de5e2e4e4319408df54441cd534",
+   "source": "sec_form4",
+   "tickers": [
+    "RVII"
+   ],
+   "title": "Whitney Meredith (administrateur) achète 1 500 actions de Robinhood Ventures Fund II"
   },
   "sec_form4:0001012975-26-000980:P": {
    "amount_max": 1626769.75,
@@ -4496,182 +4598,6 @@
     "EP"
    ],
    "title": "Mulacek Phil E (administrateur) achète 97 981 actions de EMPIRE PETROLEUM CORP"
-  },
-  "sec_form4:0001104659-26-115702:P": {
-   "amount_max": 40166.0,
-   "amount_min": 40166.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-15T08:24:18+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 11800.0,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001625414",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 3.4039,
-    "proprietaires_cik": [
-     "1975717"
-    ],
-    "roles": [
-     "Chief Executive Officer"
-    ],
-    "symbole_declare": "BZUN",
-    "symboles_sec": [
-     "BZUN"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 6000.0,
-      "apres": 1672772.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-10-12",
-      "hors_bourse": null,
-      "prix": 3.34,
-      "titre_valeur": "American Depositary Shares"
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 5800.0,
-      "apres": 1678572.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-10-13",
-      "hors_bourse": null,
-      "prix": 3.47,
-      "titre_valeur": "American Depositary Shares"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Qiu Wenbin",
-    "Baozun Inc."
-   ],
-   "id": "sec_form4:0001104659-26-115702:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-10-12",
-   "official_id": "0001104659-26-115702:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1625414/000110465926115702/0001104659-26-115702-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-10-14",
-   "sha256": "4e9071023f7f9f58e93d0060e46eea20364fdf211b28cb5aa79433133c89d430",
-   "source": "sec_form4",
-   "tickers": [
-    "BZUN"
-   ],
-   "title": "Qiu Wenbin (Chief Executive Officer) achète 11 800 actions de Baozun Inc."
-  },
-  "sec_form4:0001104659-26-118281:P": {
-   "amount_max": 39900.0,
-   "amount_min": 39900.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-24T08:13:48+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 11400.0,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001625414",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 3.5,
-    "proprietaires_cik": [
-     "1975717"
-    ],
-    "roles": [
-     "Chief Executive Officer"
-    ],
-    "symbole_declare": "BZUN",
-    "symboles_sec": [
-     "BZUN"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 5700.0,
-      "apres": 1690072.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-10-21",
-      "hors_bourse": null,
-      "prix": 3.5,
-      "titre_valeur": "American Depositary Shares"
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 5700.0,
-      "apres": 1695772.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-10-22",
-      "hors_bourse": null,
-      "prix": 3.5,
-      "titre_valeur": "American Depositary Shares"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Qiu Wenbin",
-    "Baozun Inc."
-   ],
-   "id": "sec_form4:0001104659-26-118281:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-10-21",
-   "official_id": "0001104659-26-118281:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1625414/000110465926118281/0001104659-26-118281-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-10-23",
-   "sha256": "4902d8c5937bd950a8482d8f53ce03b8725f170080e714245efa2787992973da",
-   "source": "sec_form4",
-   "tickers": [
-    "BZUN"
-   ],
-   "title": "Qiu Wenbin (Chief Executive Officer) achète 11 400 actions de Baozun Inc."
   },
   "sec_form4:0001136478-26-000010:P": {
    "amount_max": 1000000.44,
@@ -6005,6 +5931,160 @@
    ],
    "title": "Sanchez Ramiro (administrateur) achète 3 600 actions de Rapport Therapeutics, Inc."
   },
+  "sec_form4:0001193125-26-432207:P": {
+   "amount_max": 130000.0,
+   "amount_min": 130000.0,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-27T09:07:22+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 5000.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0000903129",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 26.0,
+    "proprietaires_cik": [
+     "1824971"
+    ],
+    "roles": [
+     "President & CEO"
+    ],
+    "symbole_declare": "THRM",
+    "symboles_sec": [
+     "THRM"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 5000.0,
+      "apres": 183314.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-10-23",
+      "hors_bourse": null,
+      "prix": 26.0,
+      "titre_valeur": "Common Stock"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Presley William T.",
+    "Gentherm Inc"
+   ],
+   "id": "sec_form4:0001193125-26-432207:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-10-23",
+   "official_id": "0001193125-26-432207:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/903129/000119312526432207/0001193125-26-432207-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-10-26",
+   "sha256": "bd934d64349e32849f500b7aa7335f2bf4f91d9e8ca0b6515763bd19be7c1dc4",
+   "source": "sec_form4",
+   "tickers": [
+    "THRM"
+   ],
+   "title": "Presley William T. (President & CEO) achète 5 000 actions de Gentherm Inc"
+  },
+  "sec_form4:0001193125-26-432218:P": {
+   "amount_max": 532600.0,
+   "amount_min": 532600.0,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-27T09:07:13+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 20000.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0000903129",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 26.63,
+    "proprietaires_cik": [
+     "1625756"
+    ],
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "THRM",
+    "symboles_sec": [
+     "THRM"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 20000.0,
+      "apres": 22677.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-10-23",
+      "hors_bourse": null,
+      "prix": 26.63,
+      "titre_valeur": "Common Stock"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "MASCARENAS PAUL ANTHONY",
+    "Gentherm Inc"
+   ],
+   "id": "sec_form4:0001193125-26-432218:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-10-23",
+   "official_id": "0001193125-26-432218:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/903129/000119312526432218/0001193125-26-432218-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-10-26",
+   "sha256": "1c29f0411b3bc9f241074cf2ac302305dabba144d822907d4d9622ce55ac93a5",
+   "source": "sec_form4",
+   "tickers": [
+    "THRM"
+   ],
+   "title": "MASCARENAS PAUL ANTHONY (administrateur) achète 20 000 actions de Gentherm Inc"
+  },
   "sec_form4:0001213900-26-108753:P": {
    "amount_max": 445800.0,
    "amount_min": 445800.0,
@@ -6859,105 +6939,6 @@
    ],
    "title": "Barry Richard (President & CEO) achète 306 813 actions de FILANA THERAPEUTICS, INC."
   },
-  "sec_form4:0001437749-26-032801:P": {
-   "amount_max": 70375.0,
-   "amount_min": 70375.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-17T07:53:18+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 15000.0,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001354866",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 4.6917,
-    "proprietaires_cik": [
-     "2086723"
-    ],
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "BYRN",
-    "symboles_sec": [
-     "BYRN"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 5000.0,
-      "apres": 9379.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-10-14",
-      "hors_bourse": null,
-      "prix": 4.53,
-      "titre_valeur": "Common Stock"
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 7500.0,
-      "apres": 16879.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-10-15",
-      "hors_bourse": null,
-      "prix": 4.78,
-      "titre_valeur": "Common Stock"
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 2500.0,
-      "apres": 19379.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-10-15",
-      "hors_bourse": null,
-      "prix": 4.75,
-      "titre_valeur": "Common Stock"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Roth Adam L.",
-    "Byrna Technologies Inc."
-   ],
-   "id": "sec_form4:0001437749-26-032801:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-10-14",
-   "official_id": "0001437749-26-032801:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1354866/000143774926032801/0001437749-26-032801-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-10-16",
-   "sha256": "bb397eaa2eac5f14f700db10b8c7b443b1044f71652f3512db56e812582e8c81",
-   "source": "sec_form4",
-   "tickers": [
-    "BYRN"
-   ],
-   "title": "Roth Adam L. (administrateur) achète 15 000 actions de Byrna Technologies Inc."
-  },
   "sec_form4:0001437749-26-033305:P": {
    "amount_max": 50000.0,
    "amount_min": 50000.0,
@@ -7578,6 +7559,248 @@
    ],
    "title": "RAN ASSAF (President and CEO) achète 10 000 actions de MANHATTAN BRIDGE CAPITAL, INC"
   },
+  "sec_form4:0001628280-26-067360:P": {
+   "amount_max": 94600.0,
+   "amount_min": 94600.0,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-27T09:07:02+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 2000.0,
+    "automatique": null,
+    "bourse": "NYSE",
+    "cik_emetteur": "0000094344",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 47.3,
+    "proprietaires_cik": [
+     "1341775"
+    ],
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "STC",
+    "symboles_sec": [
+     "STC"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 2000.0,
+      "apres": 27034.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-10-23",
+      "hors_bourse": null,
+      "prix": 47.3,
+      "titre_valeur": "Common Stock"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "BRADLEY C ALLEN JR",
+    "STEWART INFORMATION SERVICES CORP"
+   ],
+   "id": "sec_form4:0001628280-26-067360:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-10-23",
+   "official_id": "0001628280-26-067360:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/94344/000162828026067360/0001628280-26-067360-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-10-26",
+   "sha256": "92c87e1293e651a8574aafd234941ce73ee70fd23a33f68eeb6e7212f1fa329e",
+   "source": "sec_form4",
+   "tickers": [
+    "STC"
+   ],
+   "title": "BRADLEY C ALLEN JR (administrateur) achète 2 000 actions de STEWART INFORMATION SERVICES CORP"
+  },
+  "sec_form4:0001628280-26-067362:P": {
+   "amount_max": 93640.0,
+   "amount_min": 93640.0,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-27T09:07:21+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 2000.0,
+    "automatique": null,
+    "bourse": "NYSE",
+    "cik_emetteur": "0000094344",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 46.82,
+    "proprietaires_cik": [
+     "1815639"
+    ],
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "STC",
+    "symboles_sec": [
+     "STC"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 2000.0,
+      "apres": 13433.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-10-23",
+      "hors_bourse": null,
+      "prix": 46.82,
+      "titre_valeur": "Common Stock"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Corey William S. Jr.",
+    "STEWART INFORMATION SERVICES CORP"
+   ],
+   "id": "sec_form4:0001628280-26-067362:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-10-23",
+   "official_id": "0001628280-26-067362:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/94344/000162828026067362/0001628280-26-067362-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-10-26",
+   "sha256": "cf985f25e53f863f23e2def8cd4c95d84ad998b7ff0a4dc35b36ef4095f0db92",
+   "source": "sec_form4",
+   "tickers": [
+    "STC"
+   ],
+   "title": "Corey William S. Jr. (administrateur) achète 2 000 actions de STEWART INFORMATION SERVICES CORP"
+  },
+  "sec_form4:0001628280-26-067363:P": {
+   "amount_max": 95470.0,
+   "amount_min": 95470.0,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-27T09:07:03+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 2000.0,
+    "automatique": null,
+    "bourse": "NYSE",
+    "cik_emetteur": "0000094344",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 47.735,
+    "proprietaires_cik": [
+     "1356389"
+    ],
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "STC",
+    "symboles_sec": [
+     "STC"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 1000.0,
+      "apres": 45182.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-10-23",
+      "hors_bourse": null,
+      "prix": 48.0,
+      "titre_valeur": "Common Stock"
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 1000.0,
+      "apres": 46182.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-10-23",
+      "hors_bourse": null,
+      "prix": 47.47,
+      "titre_valeur": "Common Stock"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Apel Thomas G",
+    "STEWART INFORMATION SERVICES CORP"
+   ],
+   "id": "sec_form4:0001628280-26-067363:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-10-23",
+   "official_id": "0001628280-26-067363:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/94344/000162828026067363/0001628280-26-067363-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-10-26",
+   "sha256": "1328f8e48c41293efca107f8607ddd00cb8289acf59b7dfcf2038b8dde35b74c",
+   "source": "sec_form4",
+   "tickers": [
+    "STC"
+   ],
+   "title": "Apel Thomas G (administrateur) achète 2 000 actions de STEWART INFORMATION SERVICES CORP"
+  },
   "sec_form4:0001654954-26-008905:P": {
    "amount_max": 1911910.0,
    "amount_min": 1911910.0,
@@ -7811,9 +8034,9 @@
    ],
    "title": "Zhang Jason Gechen (President) achète 300 000 actions de Applied Digital Corp."
   },
-  "sec_form4:0002109337-26-000012:P": {
-   "amount_max": 52036.68,
-   "amount_min": 52036.68,
+  "sec_form4:0001978033-26-000002:P": {
+   "amount_max": 44785.05,
+   "amount_min": 44785.05,
    "badge": "officiel",
    "category": "compagnies",
    "checks": {
@@ -7833,60 +8056,60 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-22T08:43:26+00:00",
+   "collected_at": "2026-10-27T09:07:15+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
-    "actions": 12192.0,
+    "actions": 1160.0,
     "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0002025416",
+    "bourse": "NYSE",
+    "cik_emetteur": "0001702750",
     "hors_bourse": null,
     "plan_10b5_1": false,
-    "prix_moyen": 4.2681,
+    "prix_moyen": 38.6078,
     "proprietaires_cik": [
-     "2109337"
+     "1978033"
     ],
     "roles": [
-     "Chief Executive Officer"
+     "administrateur"
     ],
-    "symbole_declare": "OWLS",
+    "symbole_declare": "BY",
     "symboles_sec": [
-     "OWLS"
+     "BY"
     ],
     "transactions": [
      {
       "acquis_cede": "A",
-      "actions": 12192.0,
-      "apres": 3137000.0,
+      "actions": 1160.0,
+      "apres": 7496.0,
       "automatique": null,
       "code": "P",
-      "date": "2026-10-19",
+      "date": "2026-10-26",
       "hors_bourse": null,
-      "prix": 4.2681,
-      "titre_valeur": "Class A Common Shares"
+      "prix": 38.6078,
+      "titre_valeur": "Common stock"
      }
     ]
    },
    "direction": 1,
    "entities": [
-    "WANG CHUN KAI",
-    "OBOOK HOLDINGS INC."
+    "Stewart Pamela C",
+    "BYLINE BANCORP, INC."
    ],
-   "id": "sec_form4:0002109337-26-000012:P",
+   "id": "sec_form4:0001978033-26-000002:P",
    "kind": "achat_initie",
    "notes": [],
-   "occurred_on": "2026-10-19",
-   "official_id": "0002109337-26-000012:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/2025416/000210933726000012/0002109337-26-000012-index.htm",
+   "occurred_on": "2026-10-26",
+   "official_id": "0001978033-26-000002:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1702750/000197803326000002/0001978033-26-000002-index.htm",
    "parser_version": "sec-8",
-   "published_on": "2026-10-21",
-   "sha256": "666c0a503cf0bec7cecb2239dadc6f0c110c58ff3d63b973bcf294b9c9476c7b",
+   "published_on": "2026-10-26",
+   "sha256": "8e96eab7f0d6b4cad6d1bc50f35304c018a1e74036cc475ad2954286304ff632",
    "source": "sec_form4",
    "tickers": [
-    "OWLS"
+    "BY"
    ],
-   "title": "WANG CHUN KAI (Chief Executive Officer) achète 12 192 actions de OBOOK HOLDINGS INC."
+   "title": "Stewart Pamela C (administrateur) achète 1 160 actions de BYLINE BANCORP, INC."
   },
   "sec_form4:0002119332-26-000001:P": {
    "amount_max": 85940.0,
@@ -8070,83 +8293,6 @@
    ],
    "title": "Knotnerus Tim Jasper (Chief Executive Officer) achète 11 000 actions de AgomAb Therapeutics NV"
   },
-  "sec_form4:0002128469-26-000009:P": {
-   "amount_max": 499998.0,
-   "amount_min": 499998.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-20T08:39:57+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 166666.0,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0002066836",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 3.0,
-    "proprietaires_cik": [
-     "2128469"
-    ],
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "CNXU",
-    "symboles_sec": [
-     "CNXU"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 166666.0,
-      "apres": 3118514.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-10-15",
-      "hors_bourse": null,
-      "prix": 3.0,
-      "titre_valeur": "Common Stock"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Purcell Lynn Sebastian",
-    "Conexeu Sciences Inc."
-   ],
-   "id": "sec_form4:0002128469-26-000009:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-10-15",
-   "official_id": "0002128469-26-000009:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/2066836/000212846926000009/0002128469-26-000009-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-10-19",
-   "sha256": "f04f5bfa2ce87ca2c4892fdf211693a1bdd60c9342e13c90de5da281ae3da35d",
-   "source": "sec_form4",
-   "tickers": [
-    "CNXU"
-   ],
-   "title": "Purcell Lynn Sebastian (administrateur) achète 166 666 actions de Conexeu Sciences Inc."
-  },
   "sec_poursuites:34-106668": {
    "amount_max": null,
    "amount_min": null,
@@ -8189,8 +8335,101 @@
    "title": "SEC : cotation suspendue, TJGC Group Limited"
   }
  },
- "genere_a": "2026-10-27T01:30:58+00:00",
+ "genere_a": "2026-10-27T09:06:41+00:00",
  "hausse": [
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [
+    {
+     "id": "sec_8k:0001193125-26-410776",
+     "pourquoi": "Autre point du 8-K (contrat, acquisition, avis de retrait de la bourse…) : effet incertain."
+    }
+   ],
+   "depot_recent": "2026-10-26",
+   "depuis": "2026-10-27T09:06:41+00:00",
+   "derniere_info": "2026-10-26",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 1,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ],
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001193125-26-432207:P",
+       "points": 7.7,
+       "regle": "achat_dirigeant",
+       "temps": 0.977
+      },
+      {
+       "age": 1,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001193125-26-432218:P",
+       "points": 5.13,
+       "regle": "achat_dirigeant",
+       "temps": 0.977
+      }
+     ],
+     "points": 7.7,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "Gentherm Inc",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.3,
+   "plus": 7.7,
+   "recent": true,
+   "score": 7.7,
+   "symbole": "THRM",
+   "taille": {
+    "actions": [
+     52504512,
+     "2026-10-16"
+    ],
+    "prix": [
+     "20260929",
+     33.61
+    ],
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 1764.7
+   }
+  },
   {
    "bonus": {
     "moins": 1.0,
@@ -8205,7 +8444,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 5,
+       "age": 6,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -8223,12 +8462,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-428018:P",
-       "points": 7.02,
+       "points": 6.86,
        "regle": "achat_dirigeant",
-       "temps": 0.891
+       "temps": 0.871
       },
       {
-       "age": 3,
+       "age": 4,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -8242,12 +8481,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-430397:P",
-       "points": 4.9,
+       "points": 4.79,
        "regle": "achat_dirigeant",
-       "temps": 0.933
+       "temps": 0.912
       },
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -8261,12 +8500,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-429075:P",
-       "points": 4.79,
+       "points": 4.68,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       },
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -8280,12 +8519,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-429074:P",
-       "points": 4.79,
+       "points": 4.68,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       },
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -8299,12 +8538,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-429073:P",
-       "points": 4.79,
+       "points": 4.68,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       },
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -8318,12 +8557,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-429071:P",
-       "points": 4.79,
+       "points": 4.68,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       }
      ],
-     "points": 7.02,
+     "points": 6.86,
      "sens": 1
     }
    ],
@@ -8331,10 +8570,10 @@
    "nom": "Rapport Therapeutics, Inc.",
    "note10": 10.0,
    "note10_sans_bonus": 10.0,
-   "note10_sans_taille": 8.9,
-   "plus": 7.02,
+   "note10_sans_taille": 8.8,
+   "plus": 6.86,
    "recent": false,
-   "score": 7.02,
+   "score": 6.86,
    "symbole": "RAPP",
    "taille": {
     "actions": [
@@ -8369,7 +8608,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 12,
+       "age": 13,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -8387,12 +8626,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-421089:P",
-       "points": 5.97,
+       "points": 5.83,
        "regle": "achat_dirigeant",
-       "temps": 0.758
+       "temps": 0.741
       },
       {
-       "age": 13,
+       "age": 14,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -8406,23 +8645,23 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-420002:P",
-       "points": 3.89,
+       "points": 3.8,
        "regle": "achat_dirigeant",
-       "temps": 0.741
+       "temps": 0.724
       }
      ],
-     "points": 5.97,
+     "points": 5.83,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Terrestrial Energy Inc.",
-   "note10": 10.0,
-   "note10_sans_bonus": 10.0,
-   "note10_sans_taille": 8.3,
-   "plus": 5.97,
+   "note10": 9.9,
+   "note10_sans_bonus": 9.9,
+   "note10_sans_taille": 8.2,
+   "plus": 5.83,
    "recent": false,
-   "score": 5.97,
+   "score": 5.83,
    "symbole": "IMSR",
    "taille": {
     "actions": [
@@ -8449,6 +8688,109 @@
     "plus": 1.0
    },
    "contexte": [],
+   "depot_recent": "2026-10-26",
+   "depuis": "2026-10-27T09:06:41+00:00",
+   "derniere_info": "2026-10-26",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 1,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001628280-26-067363:P",
+       "points": 5.13,
+       "regle": "achat_dirigeant",
+       "temps": 0.977
+      },
+      {
+       "age": 1,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001628280-26-067362:P",
+       "points": 5.13,
+       "regle": "achat_dirigeant",
+       "temps": 0.977
+      },
+      {
+       "age": 1,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001628280-26-067360:P",
+       "points": 5.13,
+       "regle": "achat_dirigeant",
+       "temps": 0.977
+      }
+     ],
+     "points": 5.13,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "STEWART INFORMATION SERVICES CORP",
+   "note10": 9.3,
+   "note10_sans_bonus": 9.3,
+   "note10_sans_taille": 7.9,
+   "plus": 5.13,
+   "recent": true,
+   "score": 5.13,
+   "symbole": "STC",
+   "taille": {
+    "actions": [
+     30522199,
+     "2026-07-28"
+    ],
+    "prix": [
+     "20260923",
+     62.89
+    ],
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 1919.5
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
    "depot_recent": "2026-10-21",
    "depuis": "2026-10-21T08:40:35+00:00",
    "derniere_info": "2026-10-21",
@@ -8457,7 +8799,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 5,
+       "age": 6,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -8471,12 +8813,12 @@
         ]
        ],
        "id": "sec_form4:0000826675-26-000124:P",
-       "points": 4.68,
+       "points": 4.57,
        "regle": "achat_dirigeant",
-       "temps": 0.891
+       "temps": 0.871
       },
       {
-       "age": 6,
+       "age": 7,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -8490,23 +8832,23 @@
         ]
        ],
        "id": "sec_form4:0000826675-26-000121:P",
-       "points": 4.57,
+       "points": 4.47,
        "regle": "achat_dirigeant",
-       "temps": 0.871
+       "temps": 0.851
       }
      ],
-     "points": 4.68,
+     "points": 4.57,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "DYNEX CAPITAL INC",
-   "note10": 8.9,
-   "note10_sans_bonus": 8.9,
-   "note10_sans_taille": 8.9,
-   "plus": 4.68,
+   "note10": 8.8,
+   "note10_sans_bonus": 8.8,
+   "note10_sans_taille": 8.8,
+   "plus": 4.57,
    "recent": false,
-   "score": 4.68,
+   "score": 4.57,
    "symbole": "DX",
    "taille": {
     "actions": [
@@ -8550,24 +8892,24 @@
      "famille": "activistes",
      "infos": [
       {
-       "age": 26,
+       "age": 27,
        "base": 5.0,
        "compte": true,
        "facteurs": [],
        "id": "sec_13dg:0001013594-26-000998",
-       "points": 2.74,
+       "points": 2.68,
        "regle": "activiste_13d",
-       "temps": 0.548
+       "temps": 0.536
       }
      ],
-     "points": 2.74,
+     "points": 2.68,
      "sens": 1
     },
     {
      "famille": "inities",
      "infos": [
       {
-       "age": 3,
+       "age": 4,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -8577,23 +8919,23 @@
         ]
        ],
        "id": "sec_form4:0001013594-26-001082:P",
-       "points": 0.93,
+       "points": 0.91,
        "regle": "achat_dirigeant",
-       "temps": 0.933
+       "temps": 0.912
       }
      ],
-     "points": 0.93,
+     "points": 0.91,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Silvercrest Asset Management Group Inc.",
-   "note10": 8.8,
-   "note10_sans_bonus": 8.1,
-   "note10_sans_taille": 8.8,
-   "plus": 4.59,
+   "note10": 8.7,
+   "note10_sans_bonus": 8.0,
+   "note10_sans_taille": 8.7,
+   "plus": 4.49,
    "recent": true,
-   "score": 4.59,
+   "score": 4.49,
    "symbole": "SAMG",
    "taille": {
     "raison": "pas d'actions en circulation déclarées depuis 200 jours",
@@ -8625,7 +8967,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 7,
+       "age": 8,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -8639,12 +8981,12 @@
         ]
        ],
        "id": "sec_form4:0001391935-26-000009:P",
-       "points": 4.47,
+       "points": 4.36,
        "regle": "achat_dirigeant",
-       "temps": 0.851
+       "temps": 0.831
       },
       {
-       "age": 7,
+       "age": 8,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -8654,23 +8996,23 @@
         ]
        ],
        "id": "sec_form4:0001900445-26-000006:P",
-       "points": 2.98,
+       "points": 2.91,
        "regle": "achat_dirigeant",
-       "temps": 0.851
+       "temps": 0.831
       }
      ],
-     "points": 4.47,
+     "points": 4.36,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Applied Digital Corp.",
-   "note10": 8.7,
-   "note10_sans_bonus": 8.7,
-   "note10_sans_taille": 8.7,
-   "plus": 4.47,
+   "note10": 8.6,
+   "note10_sans_bonus": 8.6,
+   "note10_sans_taille": 8.6,
+   "plus": 4.36,
    "recent": false,
-   "score": 4.47,
+   "score": 4.36,
    "symbole": "APLD",
    "taille": {
     "actions": [
@@ -8722,7 +9064,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 13,
+       "age": 14,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -8736,12 +9078,12 @@
         ]
        ],
        "id": "sec_form4:0001213900-26-109160:P",
-       "points": 3.89,
+       "points": 3.8,
        "regle": "achat_dirigeant",
-       "temps": 0.741
+       "temps": 0.724
       },
       {
-       "age": 13,
+       "age": 14,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -8751,12 +9093,12 @@
         ]
        ],
        "id": "sec_form4:0001213900-26-109155:P",
-       "points": 2.59,
+       "points": 2.53,
        "regle": "achat_dirigeant",
-       "temps": 0.741
+       "temps": 0.724
       }
      ],
-     "points": 3.89,
+     "points": 3.8,
      "sens": 1
     }
    ],
@@ -8765,9 +9107,9 @@
    "note10": 8.2,
    "note10_sans_bonus": 8.2,
    "note10_sans_taille": 8.2,
-   "plus": 3.89,
+   "plus": 3.8,
    "recent": false,
-   "score": 3.89,
+   "score": 3.8,
    "symbole": "RTSN",
    "taille": {
     "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux États-Unis peuvent valoir plusieurs actions",
@@ -8793,7 +9135,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 12,
+       "age": 13,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -8807,12 +9149,12 @@
         ]
        ],
        "id": "sec_form4:0001366074-26-000006:P",
-       "points": 3.41,
+       "points": 3.33,
        "regle": "achat_dirigeant",
-       "temps": 0.758
+       "temps": 0.741
       }
      ],
-     "points": 3.41,
+     "points": 3.33,
      "sens": 1
     }
    ],
@@ -8821,9 +9163,9 @@
    "note10": 7.8,
    "note10_sans_bonus": 7.8,
    "note10_sans_taille": 6.9,
-   "plus": 3.41,
+   "plus": 3.33,
    "recent": false,
-   "score": 3.41,
+   "score": 3.33,
    "symbole": "INBX",
    "taille": {
     "actions": [
@@ -8858,7 +9200,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 19,
+       "age": 20,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -8872,12 +9214,12 @@
         ]
        ],
        "id": "sec_form4:0002120886-26-000001:P",
-       "points": 3.38,
+       "points": 3.31,
        "regle": "achat_dirigeant",
-       "temps": 0.645
+       "temps": 0.63
       },
       {
-       "age": 19,
+       "age": 20,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -8891,12 +9233,12 @@
         ]
        ],
        "id": "sec_form4:0002119332-26-000001:P",
-       "points": 3.38,
+       "points": 3.31,
        "regle": "achat_dirigeant",
-       "temps": 0.645
+       "temps": 0.63
       },
       {
-       "age": 17,
+       "age": 18,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -8906,12 +9248,12 @@
         ]
        ],
        "id": "sec_form4:0001445826-26-000014:P",
-       "points": 2.36,
+       "points": 2.31,
        "regle": "achat_dirigeant",
-       "temps": 0.675
+       "temps": 0.66
       },
       {
-       "age": 19,
+       "age": 20,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -8921,22 +9263,22 @@
         ]
        ],
        "id": "sec_form4:0001445826-26-000013:P",
-       "points": 2.26,
+       "points": 2.2,
        "regle": "achat_dirigeant",
-       "temps": 0.645
+       "temps": 0.63
       },
       {
-       "age": 4,
+       "age": 5,
        "base": 2.0,
        "compte": false,
        "facteurs": [],
        "id": "sec_form4:0001445826-26-000015:P",
-       "points": 1.82,
+       "points": 1.78,
        "regle": "achat_dirigeant",
-       "temps": 0.912
+       "temps": 0.891
       }
      ],
-     "points": 3.38,
+     "points": 3.31,
      "sens": 1
     }
    ],
@@ -8945,9 +9287,9 @@
    "note10": 7.8,
    "note10_sans_bonus": 7.8,
    "note10_sans_taille": 7.8,
-   "plus": 3.38,
+   "plus": 3.31,
    "recent": false,
-   "score": 3.38,
+   "score": 3.31,
    "symbole": "AGMB",
    "taille": {
     "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux États-Unis peuvent valoir plusieurs actions",
@@ -8978,7 +9320,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 13,
+       "age": 14,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -8992,23 +9334,23 @@
         ]
        ],
        "id": "sec_form4:0001654954-26-008905:P",
-       "points": 3.33,
+       "points": 3.26,
        "regle": "achat_dirigeant",
-       "temps": 0.741
+       "temps": 0.724
       }
      ],
-     "points": 3.33,
+     "points": 3.26,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "PEDEVCO CORP",
-   "note10": 7.8,
-   "note10_sans_bonus": 7.8,
-   "note10_sans_taille": 6.9,
-   "plus": 3.33,
+   "note10": 7.7,
+   "note10_sans_bonus": 7.7,
+   "note10_sans_taille": 6.8,
+   "plus": 3.26,
    "recent": false,
-   "score": 3.33,
+   "score": 3.26,
    "symbole": "PED",
    "taille": {
     "actions": [
@@ -9048,7 +9390,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 13,
+       "age": 14,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -9062,23 +9404,23 @@
         ]
        ],
        "id": "sec_form4:0001213900-26-108753:P",
-       "points": 3.33,
+       "points": 3.26,
        "regle": "achat_dirigeant",
-       "temps": 0.741
+       "temps": 0.724
       }
      ],
-     "points": 3.33,
+     "points": 3.26,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "SARATOGA INVESTMENT CORP.",
-   "note10": 7.8,
-   "note10_sans_bonus": 7.8,
-   "note10_sans_taille": 6.9,
-   "plus": 3.33,
+   "note10": 7.7,
+   "note10_sans_bonus": 7.7,
+   "note10_sans_taille": 6.8,
+   "plus": 3.26,
    "recent": false,
-   "score": 3.33,
+   "score": 3.26,
    "symbole": "SAR",
    "taille": {
     "actions": [
@@ -9113,28 +9455,28 @@
      "famille": "activistes",
      "infos": [
       {
-       "age": 21,
+       "age": 22,
        "base": 5.0,
        "compte": true,
        "facteurs": [],
        "id": "sec_13dg:0000902664-26-004065",
-       "points": 3.08,
+       "points": 3.01,
        "regle": "activiste_13d",
-       "temps": 0.616
+       "temps": 0.602
       }
      ],
-     "points": 3.08,
+     "points": 3.01,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Empire State Realty Trust, Inc.",
-   "note10": 7.6,
-   "note10_sans_bonus": 7.6,
-   "note10_sans_taille": 7.6,
-   "plus": 3.08,
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 7.5,
+   "plus": 3.01,
    "recent": false,
-   "score": 3.08,
+   "score": 3.01,
    "symbole": "ESRT",
    "taille": {
     "raison": "pas d'actions en circulation déclarées depuis 200 jours",
@@ -9178,7 +9520,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 24,
+       "age": 25,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -9192,12 +9534,12 @@
         ]
        ],
        "id": "sec_form4:0000921895-26-002719:P",
-       "points": 3.02,
+       "points": 2.95,
        "regle": "achat_dirigeant",
-       "temps": 0.574
+       "temps": 0.561
       },
       {
-       "age": 27,
+       "age": 28,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -9211,12 +9553,12 @@
         ]
        ],
        "id": "sec_form4:0000921895-26-002670:P",
-       "points": 2.81,
+       "points": 2.75,
        "regle": "achat_dirigeant",
-       "temps": 0.536
+       "temps": 0.524
       },
       {
-       "age": 13,
+       "age": 14,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -9226,12 +9568,12 @@
         ]
        ],
        "id": "sec_form4:0000921895-26-002784:P",
-       "points": 2.22,
+       "points": 2.17,
        "regle": "achat_dirigeant",
-       "temps": 0.741
+       "temps": 0.724
       },
       {
-       "age": 25,
+       "age": 26,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -9241,12 +9583,12 @@
         ]
        ],
        "id": "sec_form4:0001822293-26-000002:P",
-       "points": 1.96,
+       "points": 1.92,
        "regle": "achat_dirigeant",
-       "temps": 0.561
+       "temps": 0.548
       }
      ],
-     "points": 3.02,
+     "points": 2.95,
      "sens": 1
     }
    ],
@@ -9255,9 +9597,9 @@
    "note10": 7.5,
    "note10_sans_bonus": 7.5,
    "note10_sans_taille": 7.5,
-   "plus": 3.02,
+   "plus": 2.95,
    "recent": false,
-   "score": 3.02,
+   "score": 2.95,
    "symbole": "GME",
    "taille": {
     "actions": [
@@ -9284,6 +9626,128 @@
     "plus": 1.0
    },
    "contexte": [],
+   "depot_recent": "2026-10-26",
+   "depuis": "2026-10-27T09:06:41+00:00",
+   "derniere_info": "2026-10-26",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 1,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001978033-26-000002:P",
+       "points": 2.93,
+       "regle": "achat_dirigeant",
+       "temps": 0.977
+      }
+     ],
+     "points": 2.93,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "BYLINE BANCORP, INC.",
+   "note10": 7.4,
+   "note10_sans_bonus": 7.4,
+   "note10_sans_taille": 6.6,
+   "plus": 2.93,
+   "recent": true,
+   "score": 2.93,
+   "symbole": "BY",
+   "taille": {
+    "actions": [
+     45186420,
+     "2026-08-03"
+    ],
+    "prix": [
+     "20260910",
+     37.94
+    ],
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 1714.4
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depot_recent": "2026-10-26",
+   "depuis": "2026-10-27T09:06:41+00:00",
+   "derniere_info": "2026-10-26",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 1,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0000950103-26-016189:P",
+       "points": 2.93,
+       "regle": "achat_dirigeant",
+       "temps": 0.977
+      }
+     ],
+     "points": 2.93,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "Robinhood Ventures Fund II",
+   "note10": 7.4,
+   "note10_sans_bonus": 7.4,
+   "note10_sans_taille": 6.6,
+   "plus": 2.93,
+   "recent": true,
+   "score": 2.93,
+   "symbole": "RVII",
+   "taille": {
+    "actions": [
+     9066384,
+     "2026-09-25"
+    ],
+    "prix": [
+     "20260930",
+     22.1
+    ],
+    "seuils": {
+     "mois": "202608",
+     "p30": 2236.27,
+     "p70": 13366.01
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 200.4
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
    "depot_recent": "2026-10-08",
    "depuis": "2026-10-09T02:12:55+00:00",
    "derniere_info": "2026-10-08",
@@ -9292,7 +9756,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 18,
+       "age": 19,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -9306,23 +9770,23 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-418131:P",
-       "points": 2.97,
+       "points": 2.9,
        "regle": "achat_dirigeant",
-       "temps": 0.66
+       "temps": 0.645
       }
      ],
-     "points": 2.97,
+     "points": 2.9,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "IMMERSION CORP",
-   "note10": 7.5,
-   "note10_sans_bonus": 7.5,
-   "note10_sans_taille": 6.7,
-   "plus": 2.97,
+   "note10": 7.4,
+   "note10_sans_bonus": 7.4,
+   "note10_sans_taille": 6.6,
+   "plus": 2.9,
    "recent": false,
-   "score": 2.97,
+   "score": 2.9,
    "symbole": "IMMR",
    "taille": {
     "actions": [
@@ -9357,7 +9821,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 25,
+       "age": 26,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -9371,12 +9835,12 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-410001:P",
-       "points": 2.95,
+       "points": 2.88,
        "regle": "achat_dirigeant",
-       "temps": 0.561
+       "temps": 0.548
       },
       {
-       "age": 25,
+       "age": 26,
        "base": 2.0,
        "compte": false,
        "facteurs": [
@@ -9390,23 +9854,23 @@
         ]
        ],
        "id": "sec_form4:0001193125-26-409999:P",
-       "points": 2.95,
+       "points": 2.88,
        "regle": "achat_dirigeant",
-       "temps": 0.561
+       "temps": 0.548
       }
      ],
-     "points": 2.95,
+     "points": 2.88,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "Xenon Pharmaceuticals Inc.",
-   "note10": 7.5,
-   "note10_sans_bonus": 7.5,
-   "note10_sans_taille": 7.5,
-   "plus": 2.95,
+   "note10": 7.4,
+   "note10_sans_bonus": 7.4,
+   "note10_sans_taille": 7.4,
+   "plus": 2.88,
    "recent": false,
-   "score": 2.95,
+   "score": 2.88,
    "symbole": "XENE",
    "taille": {
     "actions": [
@@ -9446,7 +9910,7 @@
      "famille": "inities",
      "infos": [
       {
-       "age": 20,
+       "age": 21,
        "base": 2.0,
        "compte": true,
        "facteurs": [
@@ -9460,23 +9924,23 @@
         ]
        ],
        "id": "sec_form4:0001136478-26-000010:P",
-       "points": 2.83,
+       "points": 2.77,
        "regle": "achat_dirigeant",
-       "temps": 0.63
+       "temps": 0.616
       }
      ],
-     "points": 2.83,
+     "points": 2.77,
      "sens": 1
     }
    ],
    "moins": 0.0,
    "nom": "NEIGHBORHOOD INTELLIGENCE, INC.",
-   "note10": 7.4,
-   "note10_sans_bonus": 7.4,
-   "note10_sans_taille": 6.6,
-   "plus": 2.83,
+   "note10": 7.3,
+   "note10_sans_bonus": 7.3,
+   "note10_sans_taille": 6.5,
+   "plus": 2.77,
    "recent": false,
-   "score": 2.83,
+   "score": 2.77,
    "symbole": "NXH",
    "taille": {
     "actions": [
@@ -9511,17 +9975,17 @@
      "famille": "activistes",
      "infos": [
       {
-       "age": 25,
+       "age": 26,
        "base": 5.0,
        "compte": true,
        "facteurs": [],
        "id": "sec_13dg:0001398344-26-017759",
-       "points": 2.81,
+       "points": 2.74,
        "regle": "activiste_13d",
-       "temps": 0.561
+       "temps": 0.548
       }
      ],
-     "points": 2.81,
+     "points": 2.74,
      "sens": 1
     }
    ],
@@ -9530,9 +9994,9 @@
    "note10": 7.3,
    "note10_sans_bonus": 7.3,
    "note10_sans_taille": 7.3,
-   "plus": 2.81,
+   "plus": 2.74,
    "recent": false,
-   "score": 2.81,
+   "score": 2.74,
    "symbole": "CPHC",
    "taille": {
     "actions": [
@@ -9548,255 +10012,9 @@
     "source_actions": "frames",
     "taille": null
    }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depot_recent": "2026-10-23",
-   "depuis": "2026-10-24T08:13:21+00:00",
-   "derniere_info": "2026-10-23",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 3,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "PDG, directeur financier ou président du conseil",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001104659-26-118281:P",
-       "points": 2.8,
-       "regle": "achat_dirigeant",
-       "temps": 0.933
-      },
-      {
-       "age": 12,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "PDG, directeur financier ou président du conseil",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001104659-26-115702:P",
-       "points": 2.27,
-       "regle": "achat_dirigeant",
-       "temps": 0.758
-      }
-     ],
-     "points": 2.8,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "Baozun Inc.",
-   "note10": 7.3,
-   "note10_sans_bonus": 7.3,
-   "note10_sans_taille": 7.3,
-   "plus": 2.8,
-   "recent": true,
-   "score": 2.8,
-   "symbole": "BZUN",
-   "taille": {
-    "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux États-Unis peuvent valoir plusieurs actions",
-    "seuils": {
-     "mois": "202608",
-     "p30": 2236.27,
-     "p70": 13366.01
-    },
-    "taille": null
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [
-    {
-     "id": "sec_13dg:0001140361-26-038586",
-     "pourquoi": "13G : placement passif (souvent un fonds indiciel qui grossit)."
-    }
-   ],
-   "depot_recent": "2026-10-21",
-   "depuis": "2026-10-22T08:42:49+00:00",
-   "derniere_info": "2026-10-21",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 5,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "PDG, directeur financier ou président du conseil",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0002109337-26-000012:P",
-       "points": 2.67,
-       "regle": "achat_dirigeant",
-       "temps": 0.891
-      }
-     ],
-     "points": 2.67,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "OBOOK HOLDINGS INC.",
-   "note10": 7.2,
-   "note10_sans_bonus": 7.2,
-   "note10_sans_taille": 7.2,
-   "plus": 2.67,
-   "recent": false,
-   "score": 2.67,
-   "symbole": "OWLS",
-   "taille": {
-    "raison": "compagnie étrangère ou sans rapports américains (10-K, 10-Q) : ses titres cotés aux États-Unis peuvent valoir plusieurs actions",
-    "seuils": {
-     "mois": "202608",
-     "p30": 2236.27,
-     "p70": 13366.01
-    },
-    "taille": null
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depot_recent": "2026-10-21",
-   "depuis": "2026-10-22T08:42:49+00:00",
-   "derniere_info": "2026-10-21",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 5,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0000108985-26-000091:P",
-       "points": 2.67,
-       "regle": "achat_dirigeant",
-       "temps": 0.891
-      }
-     ],
-     "points": 2.67,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "YORK WATER CO",
-   "note10": 7.2,
-   "note10_sans_bonus": 7.2,
-   "note10_sans_taille": 6.5,
-   "plus": 2.67,
-   "recent": false,
-   "score": 2.67,
-   "symbole": "YORW",
-   "taille": {
-    "actions": [
-     16228581,
-     "2026-08-06"
-    ],
-    "prix": [
-     "20260924",
-     30.93
-    ],
-    "seuils": {
-     "mois": "202608",
-     "p30": 2236.27,
-     "p70": 13366.01
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 502.0
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depot_recent": "2026-10-19",
-   "depuis": "2026-10-20T08:38:24+00:00",
-   "derniere_info": "2026-10-19",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 7,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0002128469-26-000009:P",
-       "points": 2.55,
-       "regle": "achat_dirigeant",
-       "temps": 0.851
-      }
-     ],
-     "points": 2.55,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "Conexeu Sciences Inc.",
-   "note10": 7.1,
-   "note10_sans_bonus": 7.1,
-   "note10_sans_taille": 6.4,
-   "plus": 2.55,
-   "recent": false,
-   "score": 2.55,
-   "symbole": "CNXU",
-   "taille": {
-    "actions": [
-     28206698,
-     "2026-09-10"
-    ],
-    "prix": [
-     "20260930",
-     3.71
-    ],
-    "seuils": {
-     "mois": "202608",
-     "p30": 2236.27,
-     "p70": 13366.01
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 104.6
-   }
   }
  ],
- "jour": "2026-10-26",
+ "jour": "2026-10-27",
  "methode": {
   "avertissement": "Une aide pour voir où va le gros argent, preuves à l'appui. Pas un conseil financier.",
   "badges": "Seules les infos « Officiel » ou « Confirmé » comptent ; les « À vérifier » n'entrent jamais.",
