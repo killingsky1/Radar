@@ -8,6 +8,9 @@
   "AGMB": {
    "cik": 2020932
   },
+  "AIOK": {
+   "cik": 2095591
+  },
   "APLD": {
    "accn": "0001144879-26-000048",
    "cik": 1144879,
@@ -23,9 +26,6 @@
    "fin": "2025-12-31",
    "lien": "https://www.sec.gov/Archives/edgar/data/1702750/000119312526083194/0001193125-26-083194-index.htm",
    "montant": 23729000
-  },
-  "CPHC": {
-   "cik": 1672909
   },
   "DVLT": {
    "cik": 1682149
@@ -75,8 +75,21 @@
   "LESL": {
    "cik": 1821806
   },
-  "NXH": {
-   "cik": 1130713
+  "MSM": {
+   "accn": "0001003078-26-000110",
+   "cik": 1003078,
+   "debut": "2024-09-01",
+   "fin": "2025-08-30",
+   "lien": "https://www.sec.gov/Archives/edgar/data/1003078/000100307826000110/0001003078-26-000110-index.htm",
+   "montant": 39317000
+  },
+  "NPB": {
+   "accn": "0001336706-26-000020",
+   "cik": 1336706,
+   "debut": "2025-01-01",
+   "fin": "2025-12-31",
+   "lien": "https://www.sec.gov/Archives/edgar/data/1336706/000133670626000020/0001336706-26-000020-index.htm",
+   "montant": 0
   },
   "PED": {
    "cik": 1141197
@@ -130,9 +143,6 @@
   },
   "TJGC": {
    "cik": 1969928
-  },
-  "XENE": {
-   "cik": 1582313
   }
  },
  "source": "https://data.sec.gov/api/xbrl/frames/us-gaap/PaymentsForRepurchaseOfCommonStock/USD/CY2025.json"
