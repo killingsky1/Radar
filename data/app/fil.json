@@ -3,6 +3,52 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "decision_lue": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "fourchette_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "vote_lu": true
+  },
+  "collected_at": "2026-10-28T19:08:43+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "bas": 3.75,
+   "decision": "maintenu",
+   "haut": 4.0,
+   "pas": null,
+   "resume": "The Federal Open Market Committee approved the following statement for release by a 10 - 2 vote: The Committee decided to maintain the target range for the federal funds rate at 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system. Economic activity is expanding at a strong pace. While uncertainty remains elevated owing, in part, to geopolitical developments, domestic spending has been resilient. Productivity growth is strong, and capital investment is robust. Job gains have kept pace with the workforce, and the unemployment rate has changed little. Inflation remains elevated. The accu",
+   "titre_officiel": "Federal Reserve issues FOMC statement",
+   "vote": "10-2"
+  },
+  "direction": 0,
+  "entities": [
+   "Federal Reserve (FOMC)"
+  ],
+  "id": "fed:monetary20261028a",
+  "kind": "decision_taux",
+  "notes": [],
+  "occurred_on": "2026-10-28",
+  "official_id": "monetary20261028a",
+  "official_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+  "parser_version": "banques-3",
+  "published_on": "2026-10-28",
+  "sha256": "454fea05b25c0f01e1cffebb1f5756e4c3487d1f433e15ac2a5677256b3800e1",
+  "source": "fed",
+  "tickers": [],
+  "title": "Fed : taux directeur maintenu entre 3,75 % et 4 % (vote : 10 pour, 2 contre)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -51807,55 +51853,6 @@
   "source": "ftc_fusions",
   "tickers": [],
   "title": "FTC : feu vert antitrust anticipé, ECP VI-D, LP (acquéreur) et DCC Energy plc (partie visée)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "feu_vert_accorde": true,
-   "numero_de_transaction_officiel": true,
-   "parties_lues": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T03:04:45+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acquereur": "BP UFT Aggregator, L.P.",
-   "entites_visees": [
-    "ClearWater, LLC",
-    "ClearElectric, LLC",
-    "Custom Control Technologies, LLC"
-   ],
-   "numero": "20262263",
-   "partie_visee": "Shad Stringfellow",
-   "statut": "Granted"
-  },
-  "direction": 0,
-  "entities": [
-   "BP UFT Aggregator, L.P.",
-   "Shad Stringfellow"
-  ],
-  "id": "ftc_fusions:20262263",
-  "kind": "fusion_feu_vert",
-  "notes": [],
-  "occurred_on": "2026-09-21",
-  "official_id": "20262263",
-  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262263",
-  "parser_version": "ftc-1",
-  "published_on": "2026-09-22",
-  "sha256": "20073ee53737d1cd61647076792953a6eef20048905762be750d933130bacae7",
-  "source": "ftc_fusions",
-  "tickers": [],
-  "title": "FTC : feu vert antitrust anticipé, BP UFT Aggregator, L.P. (acquéreur) et Shad Stringfellow (partie visée)"
  },
  {
   "amount_max": null,
