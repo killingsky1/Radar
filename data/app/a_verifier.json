@@ -1,5 +1,1976 @@
 [
  {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "ExxonMobil Holdings Corp",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "ExxonMobil Holdings Corporation Common Stock (XOM) [ST]",
+     "avis": "2026-10-14",
+     "date": "2026-10-14",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "ExxonMobil Holdings Corp"
+  ],
+  "id": "chambre_ptr:20035563:XOM:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-14",
+  "official_id": "20035563:XOM:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "XOM"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend XOM"
+ },
+ {
+  "amount_max": 100000.0,
+  "amount_min": 50001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "Walmart Inc.",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Walmart Inc. - Common Stock (WMT) [ST]",
+     "avis": "2026-10-05",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$50,001 - $100,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "Walmart Inc."
+  ],
+  "id": "chambre_ptr:20035563:WMT:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "20035563:WMT:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "WMT"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend WMT — conjoint·e"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "VERIZON COMMUNICATIONS INC",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Verizon Communications Inc. Common Stock (VZ) [ST]",
+     "avis": "2026-10-05",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "VERIZON COMMUNICATIONS INC"
+  ],
+  "id": "chambre_ptr:20035563:VZ:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "20035563:VZ:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "VZ"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend VZ — conjoint·e"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "VISA INC.",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Visa Inc. (V) [ST]",
+     "avis": "2026-10-05",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "VISA INC."
+  ],
+  "id": "chambre_ptr:20035563:V:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "20035563:V:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "V"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend V — conjoint·e"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "Tesla, Inc.",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Tesla, Inc. - Common Stock (TSLA) [ST]",
+     "avis": "2026-10-05",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "Tesla, Inc."
+  ],
+  "id": "chambre_ptr:20035563:TSLA:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "20035563:TSLA:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "TSLA"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend TSLA — conjoint·e"
+ },
+ {
+  "amount_max": 100000.0,
+  "amount_min": 30002.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "TJX COMPANIES INC /DE/",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "TJX Companies, Inc. (TJX) [ST]",
+     "avis": "2026-10-05",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    },
+    {
+     "actif": "TJX Companies, Inc. (TJX) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "TJX COMPANIES INC /DE/"
+  ],
+  "id": "chambre_ptr:20035563:TJX:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "20035563:TJX:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "TJX"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend TJX (2 transactions) — conjoint·e"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "Solstice Advanced Materials Inc.",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Solstice Advanced Materials Inc. - Common Stock (SOLS) [ST]",
+     "avis": "2026-10-21",
+     "date": "2026-10-21",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "Solstice Advanced Materials Inc."
+  ],
+  "id": "chambre_ptr:20035563:SOLS:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-21",
+  "official_id": "20035563:SOLS:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "SOLS"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend SOLS"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "STARBUCKS CORP",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Starbucks Corporation - Common Stock (SBUX) [ST]",
+     "avis": "2026-10-05",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "STARBUCKS CORP"
+  ],
+  "id": "chambre_ptr:20035563:SBUX:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "20035563:SBUX:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "SBUX"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend SBUX — conjoint·e"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montants_officiels": false,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "RESIDEO TECHNOLOGIES, INC.",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Resideo Technologies, Inc. Common Stock (REZI) [ST]",
+     "avis": "2026-10-21",
+     "date": "2026-10-21",
+     "description": null,
+     "montant": "$344.99",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "RESIDEO TECHNOLOGIES, INC."
+  ],
+  "id": "chambre_ptr:20035563:REZI:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-21",
+  "official_id": "20035563:REZI:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "REZI"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend REZI"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "PROCTER & GAMBLE Co",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Procter & Gamble Company (PG) [ST]",
+     "avis": "2026-10-13",
+     "date": "2026-10-08",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "PROCTER & GAMBLE Co"
+  ],
+  "id": "chambre_ptr:20035563:PG:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-08",
+  "official_id": "20035563:PG:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "PG"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend PG"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "PEPSICO INC",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Pepsico, Inc. (PEP) [ST]",
+     "avis": "2026-10-21",
+     "date": "2026-10-21",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "PEPSICO INC"
+  ],
+  "id": "chambre_ptr:20035563:PEP:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-21",
+  "official_id": "20035563:PEP:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "PEP"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend PEP"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "NVIDIA CORP",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "NVIDIA Corporation - Common Stock (NVDA) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "NVIDIA CORP"
+  ],
+  "id": "chambre_ptr:20035563:NVDA:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "20035563:NVDA:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "NVDA"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend NVDA — conjoint·e"
+ },
+ {
+  "amount_max": 500000.0,
+  "amount_min": 250001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "MICROSOFT CORP",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Microsoft Corporation - Common Stock (MSFT) [ST]",
+     "avis": "2026-10-05",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$250,001 - $500,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "MICROSOFT CORP"
+  ],
+  "id": "chambre_ptr:20035563:MSFT:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "20035563:MSFT:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MSFT"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend MSFT — conjoint·e"
+ },
+ {
+  "amount_max": 65000.0,
+  "amount_min": 16002.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "MCDONALDS CORP",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "McDonald's Corporation Common Stock (MCD) [ST]",
+     "avis": "2026-10-05",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    },
+    {
+     "actif": "McDonald's Corporation Common Stock (MCD) [ST]",
+     "avis": "2026-10-27",
+     "date": "2026-10-27",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "MCDONALDS CORP"
+  ],
+  "id": "chambre_ptr:20035563:MCD:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "20035563:MCD:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MCD"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend MCD (2 transactions) — conjoint·e"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "Mastercard Inc",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Mastercard Incorporated Common Stock (MA) [ST]",
+     "avis": "2026-10-05",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "Mastercard Inc"
+  ],
+  "id": "chambre_ptr:20035563:MA:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "20035563:MA:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MA"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend MA — conjoint·e"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "LOWES COMPANIES INC",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Lowe's Companies, Inc. Common Stock (LOW) [ST]",
+     "avis": "2026-10-22",
+     "date": "2026-10-22",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "LOWES COMPANIES INC"
+  ],
+  "id": "chambre_ptr:20035563:LOW:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-22",
+  "official_id": "20035563:LOW:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "LOW"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend LOW"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "INTERNATIONAL BUSINESS MACHINES CORP",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "International Business Machines Corporation Common Stock (IBM) [ST]",
+     "avis": "2026-10-21",
+     "date": "2026-10-20",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "INTERNATIONAL BUSINESS MACHINES CORP"
+  ],
+  "id": "chambre_ptr:20035563:IBM:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-20",
+  "official_id": "20035563:IBM:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "IBM"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend IBM"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "HONEYWELL INTERNATIONAL INC",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Honeywell International Inc. (HON) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-10-01",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "HONEYWELL INTERNATIONAL INC"
+  ],
+  "id": "chambre_ptr:20035563:HON:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-01",
+  "official_id": "20035563:HON:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "HON"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend HON"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "HOME DEPOT, INC.",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Home Depot, Inc. (HD) [ST]",
+     "avis": "2026-10-22",
+     "date": "2026-10-22",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "HOME DEPOT, INC."
+  ],
+  "id": "chambre_ptr:20035563:HD:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-22",
+  "official_id": "20035563:HD:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "HD"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend HD"
+ },
+ {
+  "amount_max": 250000.0,
+  "amount_min": 100001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "Alphabet Inc.",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Alphabet Inc. - Class C Capital Stock (GOOG) [ST]",
+     "avis": "2026-10-05",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$100,001 - $250,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "Alphabet Inc."
+  ],
+  "id": "chambre_ptr:20035563:GOOG:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "20035563:GOOG:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "GOOG"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend GOOG — conjoint·e"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": false,
+   "dates_transactions_valides": false,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "Walt Disney Co",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Walt Disney Company (DIS) [ST]",
+     "avis": "2026-10-28",
+     "date": "2026-10-28",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "Walt Disney Co"
+  ],
+  "id": "chambre_ptr:20035563:DIS:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-28",
+  "official_id": "20035563:DIS:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "DIS"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend DIS"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "CHEVRON CORP",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Chevron Corporation Common Stock (CVX) [ST]",
+     "avis": "2026-10-14",
+     "date": "2026-10-14",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "CHEVRON CORP"
+  ],
+  "id": "chambre_ptr:20035563:CVX:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-14",
+  "official_id": "20035563:CVX:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "CVX"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend CVX"
+ },
+ {
+  "amount_max": 750000.0,
+  "amount_min": 350002.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "COSTCO WHOLESALE CORP /NEW",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Costco Wholesale Corporation - Common Stock (COST) [ST]",
+     "avis": "2026-10-05",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$250,001 - $500,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    },
+    {
+     "actif": "Costco Wholesale Corporation - Common Stock (COST) [ST]",
+     "avis": "2026-10-13",
+     "date": "2026-10-13",
+     "description": null,
+     "montant": "$100,001 - $250,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "COSTCO WHOLESALE CORP /NEW"
+  ],
+  "id": "chambre_ptr:20035563:COST:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "20035563:COST:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "COST"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend COST (2 transactions) — conjoint·e, l'élu·e"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "CHIPOTLE MEXICAN GRILL INC",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Chipotle Mexican Grill, Inc. Common Stock (CMG) [ST]",
+     "avis": "2026-10-05",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "CHIPOTLE MEXICAN GRILL INC"
+  ],
+  "id": "chambre_ptr:20035563:CMG:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "20035563:CMG:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "CMG"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend CMG — conjoint·e"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "BERKSHIRE HATHAWAY INC",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Berkshire Hathaway Inc. New Common Stock (BRK.B) [ST]",
+     "avis": "2026-10-15",
+     "date": "2026-10-15",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "BERKSHIRE HATHAWAY INC"
+  ],
+  "id": "chambre_ptr:20035563:BRK-B:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-15",
+  "official_id": "20035563:BRK-B:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "BRK-B"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend BRK-B"
+ },
+ {
+  "amount_max": 300000.0,
+  "amount_min": 115002.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "AMAZON COM INC",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Amazon.com, Inc. - Common Stock (AMZN) [ST]",
+     "avis": "2026-10-05",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$100,001 - $250,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    },
+    {
+     "actif": "Amazon.com, Inc. - Common Stock (AMZN) [ST]",
+     "avis": "2026-10-27",
+     "date": "2026-10-27",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "AMAZON COM INC"
+  ],
+  "id": "chambre_ptr:20035563:AMZN:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "20035563:AMZN:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "AMZN"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend AMZN (2 transactions) — conjoint·e, l'élu·e"
+ },
+ {
+  "amount_max": 100000.0,
+  "amount_min": 50001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "ABBOTT LABORATORIES",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Abbott Laboratories Common Stock (ABT) [ST]",
+     "avis": "2026-10-05",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$50,001 - $100,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "ABBOTT LABORATORIES"
+  ],
+  "id": "chambre_ptr:20035563:ABT:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "20035563:ABT:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "ABT"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend ABT — conjoint·e"
+ },
+ {
+  "amount_max": 500000.0,
+  "amount_min": 250001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-28T21:18:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "TX17",
+   "elu": "Pete Sessions",
+   "lecture_complete": false,
+   "nom_sec": "Apple Inc.",
+   "rapport": "20035563",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Apple Inc. - Common Stock (AAPL) [ST]",
+     "avis": "2026-10-05",
+     "date": "2026-10-02",
+     "description": null,
+     "montant": "$250,001 - $500,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pete Sessions",
+   "Apple Inc."
+  ],
+  "id": "chambre_ptr:20035563:AAPL:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-02",
+  "official_id": "20035563:AAPL:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035563.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-27",
+  "sha256": "0108442fd08e35ac04cfbaf84f9ed004d6831c0bc830b197f809951ac31131a5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "AAPL"
+  ],
+  "title": "Pete Sessions (Chambre, TX17) vend AAPL — conjoint·e"
+ },
+ {
   "amount_max": 40280.0,
   "amount_min": 40280.0,
   "badge": "a_verifier",
