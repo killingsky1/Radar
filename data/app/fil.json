@@ -17,6 +17,51 @@
    "symboles_valides": true,
    "type_communique": true
   },
+  "collected_at": "2026-10-29T01:50:48+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/bureau-concurrence/nouvelles/2026/10/declaration-de-la-commissaire-de-la-concurrence-par-interim-a-la-suite-de-la-decision-du-tribunal-de-la-concurrence-dans-laffaire-de-publicite-trom.html",
+   "ministere": "Bureau de la concurrence Canada",
+   "mis_a_jour": "2026-10-28T20:21:36-04:00",
+   "resume": "Le 28 octobre 2026, Jeanne Pratt, commissaire de la concurrence par intérim, a fait la déclaration suivante concernant la décision rendue par le Tribunal de la concurrence en faveur du Bureau de la concurrence : « Aujourd’hui, le Tribunal de la concurrence a rendu sa décision dans l’affaire du Bureau contre Rogers et a ordonné à l’entreprise de payer une sanction de 15 millions de dollars relativement à la commercialisation de ses forfaits de téléphonie sans fil.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Bureau de la concurrence Canada"
+  ],
+  "id": "nouvelles_eco_ca:bureau-concurrence/nouvelles/2026/10/declaration-de-la-commissaire-de-la-concurrence-par-interim-a-la-suite-de-la-decision-du-tribunal-de-la-concurrence-dans-laffaire-de-publicite-trom.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-28",
+  "official_id": "bureau-concurrence/nouvelles/2026/10/declaration-de-la-commissaire-de-la-concurrence-par-interim-a-la-suite-de-la-decision-du-tribunal-de-la-concurrence-dans-laffaire-de-publicite-trom.html",
+  "official_url": "https://www.canada.ca/fr/bureau-concurrence/nouvelles/2026/10/declaration-de-la-commissaire-de-la-concurrence-par-interim-a-la-suite-de-la-decision-du-tribunal-de-la-concurrence-dans-laffaire-de-publicite-trom.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-28",
+  "sha256": "d31310f0fbfcfa88f19e28497fd0ed5f09375452dbc34ef4084f76afbaefc017",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Déclaration de la commissaire de la concurrence par intérim à la suite de la décision du Tribunal de la concurrence dans l’affaire de publicité trompeuse visant Rogers"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
   "collected_at": "2026-10-28T21:18:37+00:00",
   "confirmations": [],
   "currency": "CAD",
@@ -50595,61 +50640,6 @@
    "ABBV"
   ],
   "title": "FDA : nouveau médicament approuvé, JUVMO / JUVMO (COPACKAGED) (tavapadon), de ABBVIE"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "indicateur_de_la_liste_officielle": true,
-   "lien_du_quotidien": true,
-   "resume_lu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T16:24:33+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "details": [
-    [
-     "Indicateur",
-     "Indicateurs nationaux du tourisme"
-    ],
-    [
-     "Période",
-     "deuxième trimestre de 2026"
-    ]
-   ],
-   "indicateur": "Indicateurs nationaux du tourisme",
-   "lien": "https://www.statcan.gc.ca/daily-quotidien/260925/dq260925a-fra.htm",
-   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
-   "mis_a_jour": "2026-09-25T08:30:00-04:00",
-   "periode": "deuxième trimestre de 2026",
-   "resume": "Le produit intérieur brut (PIB) réel du tourisme a augmenté de 0,4 % au deuxième trimestre de 2026, après avoir progressé de 0,5 % au premier trimestre. Le PIB du tourisme a représenté 1,77 % du PIB nominal au deuxième trimestre."
-  },
-  "direction": 0,
-  "entities": [
-   "Statistique Canada"
-  ],
-  "id": "statcan:260925/dq260925a",
-  "kind": "indicateur_principal",
-  "notes": [],
-  "occurred_on": "2026-09-25",
-  "official_id": "260925/dq260925a",
-  "official_url": "https://www.statcan.gc.ca/daily-quotidien/260925/dq260925a-fra.htm",
-  "parser_version": "statcan-1",
-  "published_on": "2026-09-25",
-  "sha256": "19db924fd7ec82ca5a1c8d82c9fee95afd36e63de9c4399b63ca008de1ea8cac",
-  "source": "statcan",
-  "tickers": [],
-  "title": "Statistique Canada : Indicateurs nationaux du tourisme, deuxième trimestre de 2026"
  },
  {
   "amount_max": null,
