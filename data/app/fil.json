@@ -1,5 +1,173 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-29T17:25:06+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/bureau-concurrence/nouvelles/2026/10/le-bureau-de-la-concurrence-invite-les-provinces-et-les-territoires-a-limiter-le-recours-generalise-aux-clauses-de-non-concurrence.html",
+   "ministere": "Bureau de la concurrence Canada",
+   "mis_a_jour": "2026-10-29T09:56:58-04:00",
+   "resume": "La mobilité de la main-d’œuvre est un moteur important de la concurrence et de la croissance économique. La liberté permettant à un travailleur de changer d’emploi ou de démarrer une entreprise favorise de meilleurs salaires et de meilleures conditions de travail, élargit le bassin de talents et soutient l’entrepreneuriat.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Bureau de la concurrence Canada"
+  ],
+  "id": "nouvelles_eco_ca:bureau-concurrence/nouvelles/2026/10/le-bureau-de-la-concurrence-invite-les-provinces-et-les-territoires-a-limiter-le-recours-generalise-aux-clauses-de-non-concurrence.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-29",
+  "official_id": "bureau-concurrence/nouvelles/2026/10/le-bureau-de-la-concurrence-invite-les-provinces-et-les-territoires-a-limiter-le-recours-generalise-aux-clauses-de-non-concurrence.html",
+  "official_url": "https://www.canada.ca/fr/bureau-concurrence/nouvelles/2026/10/le-bureau-de-la-concurrence-invite-les-provinces-et-les-territoires-a-limiter-le-recours-generalise-aux-clauses-de-non-concurrence.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-29",
+  "sha256": "f41df9a4778a493925f248ea2b00f3efb7607b71f795a3427b80959300aba575",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le Bureau de la concurrence invite les provinces et les territoires à limiter le recours généralisé aux clauses de non-concurrence"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-29T17:25:01+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Executive Office of the President"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-22292",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-10-30",
+   "sorte": "presidentiel",
+   "sous_type": null,
+   "titre_officiel": "Motor Vehicles; Further Modification of Scope of Canadian Products Subject to Additional Duties Imposed To Offset Canadian Discrimination Against U.S. Commerce (Proc. 11076)",
+   "type": "Presidential Document"
+  },
+  "direction": 0,
+  "entities": [
+   "Executive Office of the President"
+  ],
+  "id": "registre_federal:2026-22292",
+  "kind": "presidentiel",
+  "notes": [],
+  "occurred_on": "2026-10-29",
+  "official_id": "2026-22292",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-22292/motor-vehicles-further-modification-of-scope-of-canadian-products-subject-to-additional-duties",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-29",
+  "sha256": "c92d0f308467488149605d11adce6f9e11606e2206228b2ae46e6eb1ba0edd44",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Document présidentiel : Motor Vehicles; Further Modification of Scope of Canadian Products Subject to Additional Duties Imposed To Offset Canadian Discrimination Against U.S. Commerce (Proc. 11076)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "communique_officiel": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-29T17:24:52+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "titre_officiel": "Justice Department Provides Update on Collaboration with State Attorneys General on Review of Local Mergers"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "doj_antitrust:justice-department-provides-update-collaboration-state-attorneys-general-review-local",
+  "kind": "antitrust",
+  "notes": [],
+  "occurred_on": "2026-10-29",
+  "official_id": "justice-department-provides-update-collaboration-state-attorneys-general-review-local",
+  "official_url": "https://www.justice.gov/opa/pr/justice-department-provides-update-collaboration-state-attorneys-general-review-local",
+  "parser_version": "doj-1",
+  "published_on": "2026-10-29",
+  "sha256": "f1b34daa1b4cd5dea3bfd842adb94c24e2eacf68c2062c3b7546bfd397343c25",
+  "source": "doj_antitrust",
+  "tickers": [],
+  "title": "Antitrust (ministère de la Justice) : Justice Department Provides Update on Collaboration with State Attorneys General on Review of Local Mergers"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "communique_officiel": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-29T17:24:52+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "titre_officiel": "Antitrust Division Announces Successful Referrals in Two Local Asphalt Merger Investigations to State Attorneys General"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "doj_antitrust:antitrust-division-announces-successful-referrals-two-local-asphalt-merger-investigations",
+  "kind": "antitrust",
+  "notes": [],
+  "occurred_on": "2026-10-29",
+  "official_id": "antitrust-division-announces-successful-referrals-two-local-asphalt-merger-investigations",
+  "official_url": "https://www.justice.gov/opa/pr/antitrust-division-announces-successful-referrals-two-local-asphalt-merger-investigations",
+  "parser_version": "doj-1",
+  "published_on": "2026-10-29",
+  "sha256": "d198959f8a7e237e21b5d3e61ac3003eb72306620c0277ca232cc2f414dff10e",
+  "source": "doj_antitrust",
+  "tickers": [],
+  "title": "Antitrust (ministère de la Justice) : Antitrust Division Announces Successful Referrals in Two Local Asphalt Merger Investigations to State Attorneys General"
+ },
+ {
   "amount_max": 55496379.0,
   "amount_min": 55496379.0,
   "badge": "officiel",
@@ -1784,6 +1952,213 @@
   "source": "contrats_ca_10k",
   "tickers": [],
   "title": "Contrat fédéral de 18,8 M$ : Garda Canada Security Corporation (Agence des services frontaliers du Canada)"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-29T17:25:04+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "TEXAS INSTRUMENTS INC",
+   "rapport": "20035710",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Texas Instruments Incorporated - Common Stock (TXN) [ST]",
+     "avis": "2026-10-27",
+     "date": "2026-10-14",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "TEXAS INSTRUMENTS INC"
+  ],
+  "id": "chambre_ptr:20035710:TXN:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-14",
+  "official_id": "20035710:TXN:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035710.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-28",
+  "sha256": "c799c258e4efcec3f65fa6cb48e601a1b3a833901591a5408b7b51c5721346cc",
+  "source": "chambre_ptr",
+  "tickers": [
+   "TXN"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend TXN — compte conjoint"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-29T17:25:04+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "Seagate Technology Holdings plc",
+   "rapport": "20035710",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Seagate Technology Holdings PLC - Ordinary Shares (STX) [ST]",
+     "avis": "2026-10-27",
+     "date": "2026-10-23",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "Seagate Technology Holdings plc"
+  ],
+  "id": "chambre_ptr:20035710:STX:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-23",
+  "official_id": "20035710:STX:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035710.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-28",
+  "sha256": "c799c258e4efcec3f65fa6cb48e601a1b3a833901591a5408b7b51c5721346cc",
+  "source": "chambre_ptr",
+  "tickers": [
+   "STX"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend STX"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-29T17:25:04+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "ASML HOLDING NV",
+   "rapport": "20035710",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "ASML Holding N.V. - New York Registry Shares (ASML) [ST]",
+     "avis": "2026-10-27",
+     "date": "2026-10-23",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "ASML HOLDING NV"
+  ],
+  "id": "chambre_ptr:20035710:ASML:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-23",
+  "official_id": "20035710:ASML:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035710.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-28",
+  "sha256": "c799c258e4efcec3f65fa6cb48e601a1b3a833901591a5408b7b51c5721346cc",
+  "source": "chambre_ptr",
+  "tickers": [
+   "ASML"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend ASML — compte conjoint"
  },
  {
   "amount_max": 50000000.0,
@@ -47353,223 +47728,6 @@
   "title": "David J. Taylor (Chambre, OH02) achète HD (2 transactions)"
  },
  {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:38+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH02",
-   "elu": "David J. Taylor",
-   "lecture_complete": true,
-   "nom_sec": "AMGEN INC",
-   "rapport": "20035549",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Amgen Inc. - Common Stock (AMGN) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-22",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "David J. Taylor",
-   "AMGEN INC"
-  ],
-  "id": "chambre_ptr:20035549:AMGN:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-09-22",
-  "official_id": "20035549:AMGN:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035549.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-01",
-  "sha256": "ae5a1612dbb2f4aab3eda871ff09021f467b2df25addb00e903a2c3f9af2f297",
-  "source": "chambre_ptr",
-  "tickers": [
-   "AMGN"
-  ],
-  "title": "David J. Taylor (Chambre, OH02) achète AMGN"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:38+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "LA06",
-   "elu": "Cleo Fields",
-   "lecture_complete": true,
-   "nom_sec": "NETFLIX INC",
-   "rapport": "20035464",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Netflix, Inc. - Common Stock (NFLX) [ST]",
-     "avis": "2026-09-14",
-     "date": "2026-09-14",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Cleo Fields",
-   "NETFLIX INC"
-  ],
-  "id": "chambre_ptr:20035464:NFLX:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-09-14",
-  "official_id": "20035464:NFLX:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035464.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-01",
-  "sha256": "c759d2b7bc46eb9e9c1697d4de1e8afeb5ae132f58d21061ff779c1e734fa06b",
-  "source": "chambre_ptr",
-  "tickers": [
-   "NFLX"
-  ],
-  "title": "Cleo Fields (Chambre, LA06) achète NFLX"
- },
- {
-  "amount_max": 30000.0,
-  "amount_min": 2002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:38+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "LA06",
-   "elu": "Cleo Fields",
-   "lecture_complete": true,
-   "nom_sec": "MICROSOFT CORP",
-   "rapport": "20035464",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Microsoft Corporation - Common Stock (MSFT) [ST]",
-     "avis": "2026-09-10",
-     "date": "2026-09-10",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    },
-    {
-     "actif": "Microsoft Corporation - Common Stock (MSFT) [ST]",
-     "avis": "2026-09-10",
-     "date": "2026-09-10",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Cleo Fields",
-   "MICROSOFT CORP"
-  ],
-  "id": "chambre_ptr:20035464:MSFT:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-09-10",
-  "official_id": "20035464:MSFT:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035464.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-01",
-  "sha256": "c759d2b7bc46eb9e9c1697d4de1e8afeb5ae132f58d21061ff779c1e734fa06b",
-  "source": "chambre_ptr",
-  "tickers": [
-   "MSFT"
-  ],
-  "title": "Cleo Fields (Chambre, LA06) achète MSFT (2 transactions)"
- },
- {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -49952,84 +50110,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_dans_l_ordre": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "industrie_scian": true,
-   "parties_lues": true,
-   "resultat_officiel_connu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T16:24:31+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "acquereur": "Groupe Filgo-Sonic et MacEwen Petroleum Inc",
-   "cibles": [
-    "Norcan Petroleum Group Inc",
-    "Norcan Petroleum Products LP"
-   ],
-   "code": "en cours",
-   "conclusion": "en cours",
-   "debut": "2026-09-03",
-   "details": [
-    [
-     "Acquéreur",
-     "Groupe Filgo-Sonic et MacEwen Petroleum Inc"
-    ],
-    [
-     "Visé(s)",
-     "Norcan Petroleum Group Inc, Norcan Petroleum Products LP"
-    ],
-    [
-     "Examen ouvert le",
-     "2026-09-03"
-    ],
-    [
-     "Résultat",
-     "en cours"
-    ],
-    [
-     "Industrie (SCIAN)",
-     "4121"
-    ]
-   ],
-   "page_modifiee_le": "2026-09-29",
-   "parties": "Groupe Filgo-Sonic et MacEwen Petroleum Inc / Norcan Petroleum Group Inc et Norcan Petroleum Products LP",
-   "resultat": "",
-   "scian": "4121"
-  },
-  "direction": 0,
-  "entities": [
-   "Groupe Filgo-Sonic et MacEwen Petroleum Inc",
-   "Norcan Petroleum Group Inc",
-   "Norcan Petroleum Products LP"
-  ],
-  "id": "concurrence_ca:2026-09-03:groupe-filgo-sonic-et-macewen-petroleum-inc-norcan-petroleum-group-inc-et-norcan:ouvert",
-  "kind": "fusion_examen_ouvert",
-  "notes": [
-   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
-  ],
-  "occurred_on": "2026-09-03",
-  "official_id": "2026-09-03:groupe-filgo-sonic-et-macewen-petroleum-inc-norcan-petroleum-group-inc-et-norcan:ouvert",
-  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
-  "parser_version": "concurrence-1",
-  "published_on": "2026-09-29",
-  "sha256": "cb31353f50057f66811e909a9202fa4419a2e414b6cd57e83c5b5c7b2bd00a45",
-  "source": "concurrence_ca",
-  "tickers": [],
-  "title": "Bureau de la concurrence : examen de fusion ouvert, Groupe Filgo-Sonic et MacEwen Petroleum Inc / Norcan Petroleum Group Inc et Norcan Petroleum Products LP"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "action_officielle": true,
@@ -51741,151 +51821,6 @@
   "source": "ftc_fusions",
   "tickers": [],
   "title": "FTC : feu vert antitrust anticipé, Bain Capital Insurance Fund, L.P. (acquéreur) et Spitfire Topco Ltd. (partie visée)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "feu_vert_accorde": true,
-   "numero_de_transaction_officiel": true,
-   "parties_lues": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T03:17:25+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acquereur": "CDW Corporation",
-   "entites_visees": [
-    "Lovelytics Data LLC"
-   ],
-   "numero": "20262256",
-   "partie_visee": "Analytics and Insights Holdings, LLC",
-   "statut": "Granted"
-  },
-  "direction": 0,
-  "entities": [
-   "CDW Corporation",
-   "Analytics and Insights Holdings, LLC"
-  ],
-  "id": "ftc_fusions:20262256",
-  "kind": "fusion_feu_vert",
-  "notes": [],
-  "occurred_on": "2026-09-21",
-  "official_id": "20262256",
-  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262256",
-  "parser_version": "ftc-1",
-  "published_on": "2026-09-22",
-  "sha256": "d00ab2fddde528b4caa7d6225783a48ae2cb338c5d3bed134be983a72396c1e7",
-  "source": "ftc_fusions",
-  "tickers": [
-   "CDW"
-  ],
-  "title": "FTC : feu vert antitrust anticipé, CDW Corporation (acquéreur) et Analytics and Insights Holdings, LLC (partie visée)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "feu_vert_accorde": true,
-   "numero_de_transaction_officiel": true,
-   "parties_lues": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T03:17:25+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acquereur": "Madison Solutions LLC",
-   "entites_visees": [
-    "Madison Air Solutions Corporation"
-   ],
-   "numero": "20262246",
-   "partie_visee": "Madison Industries Holdings LLC",
-   "statut": "Granted"
-  },
-  "direction": 0,
-  "entities": [
-   "Madison Solutions LLC",
-   "Madison Industries Holdings LLC"
-  ],
-  "id": "ftc_fusions:20262246",
-  "kind": "fusion_feu_vert",
-  "notes": [],
-  "occurred_on": "2026-09-21",
-  "official_id": "20262246",
-  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262246",
-  "parser_version": "ftc-1",
-  "published_on": "2026-09-22",
-  "sha256": "315312a2cd8afd9540f0d1bcff6b4f31b56e03425732fcd9d52600d22658ab9b",
-  "source": "ftc_fusions",
-  "tickers": [
-   "MAIR"
-  ],
-  "title": "FTC : feu vert antitrust anticipé, Madison Solutions LLC (acquéreur) et Madison Industries Holdings LLC (partie visée)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "feu_vert_accorde": true,
-   "numero_de_transaction_officiel": true,
-   "parties_lues": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T03:17:25+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acquereur": "GC Hermes Holdings Inc.",
-   "entites_visees": [
-    "Mercury Parent Holdings, Inc."
-   ],
-   "numero": "20262227",
-   "partie_visee": "Mercury Parent Holdings, Inc.",
-   "statut": "Granted"
-  },
-  "direction": 0,
-  "entities": [
-   "GC Hermes Holdings Inc.",
-   "Mercury Parent Holdings, Inc."
-  ],
-  "id": "ftc_fusions:20262227",
-  "kind": "fusion_feu_vert",
-  "notes": [],
-  "occurred_on": "2026-09-21",
-  "official_id": "20262227",
-  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262227",
-  "parser_version": "ftc-1",
-  "published_on": "2026-09-22",
-  "sha256": "d6ac36ada012b1ad6432fcf4f51850151838e11f059fbdd7b0267d3a6175e859",
-  "source": "ftc_fusions",
-  "tickers": [],
-  "title": "FTC : feu vert antitrust anticipé, GC Hermes Holdings Inc. (acquéreur) et Mercury Parent Holdings, Inc. (partie visée)"
  },
  {
   "amount_max": null,

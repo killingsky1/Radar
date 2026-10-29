@@ -280,6 +280,76 @@
    "fin": "2025-12-31",
    "forme": "10-K",
    "lien": "https://www.sec.gov/Archives/edgar/data/903129/000119312526059602/0001193125-26-059602-index.htm"
+  },
+  "TTMI": {
+   "accn": "0001193125-26-051976",
+   "chiffres": {
+    "cfo": 0.084055,
+    "emission": 0,
+    "levier": 0.249517,
+    "levier_avant": 0.269081,
+    "liquidite": 1.928302,
+    "liquidite_avant": 1.985954,
+    "marge": 0.207025,
+    "marge_avant": 0.195425,
+    "roa": 0.051101,
+    "roa_avant": 0.016939,
+    "rotation": 0.836962,
+    "rotation_avant": 0.734958
+   },
+   "cik": 1116942,
+   "criteres": {
+    "ACCRUAL": 1,
+    "CFO": 1,
+    "EQ_OFFER": 1,
+    "ROA": 1,
+    "ΔLEVER": 1,
+    "ΔLIQUID": 0,
+    "ΔMARGIN": 1,
+    "ΔROA": 1,
+    "ΔTURN": 1
+   },
+   "debut": "2024-12-31",
+   "depose": "2026-02-17",
+   "f_score": 8,
+   "fin": "2025-12-29",
+   "forme": "10-K",
+   "lien": "https://www.sec.gov/Archives/edgar/data/1116942/000119312526051976/0001193125-26-051976-index.htm"
+  },
+  "WS": {
+   "accn": "0001968487-26-000026",
+   "chiffres": {
+    "cfo": 0.102559,
+    "emission": -5900000,
+    "levier": 0.021072,
+    "levier_avant": 0.001202,
+    "liquidite": 1.456432,
+    "liquidite_avant": 1.660333,
+    "marge": 0.117109,
+    "marge_avant": 0.125626,
+    "roa": 0.004333,
+    "roa_avant": 0.059312,
+    "rotation": 1.755429,
+    "rotation_avant": 1.657362
+   },
+   "cik": 1968487,
+   "criteres": {
+    "ACCRUAL": 1,
+    "CFO": 1,
+    "EQ_OFFER": 1,
+    "ROA": 1,
+    "ΔLEVER": 0,
+    "ΔLIQUID": 0,
+    "ΔMARGIN": 0,
+    "ΔROA": 0,
+    "ΔTURN": 1
+   },
+   "debut": "2025-06-01",
+   "depose": "2026-07-30",
+   "f_score": 5,
+   "fin": "2026-05-31",
+   "forme": "10-K",
+   "lien": "https://www.sec.gov/Archives/edgar/data/1968487/000196848726000026/0001968487-26-000026-index.htm"
   }
  },
  "source": "https://data.sec.gov/api/xbrl/companyfacts/",
