@@ -3,6 +3,145 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "date_d_envoi_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_message": true,
+   "numero_csms": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "sujet_surtaxes": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-29T19:14:59+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "codes_9903": [
+    "9903.03.12",
+    "9903.03.13",
+    "9903.03.14",
+    "9903.03.15",
+    "9903.03.16"
+   ],
+   "details": [
+    [
+     "Message",
+     "CSMS # 70314289"
+    ],
+    [
+     "Envoyé",
+     "29 octobre 2026 à 10 h 03 (heure de New York)"
+    ],
+    [
+     "Proclamations citées",
+     "11056, 11046, 11047, 11048, 11064, 11065"
+    ],
+    [
+     "Numéros du tarif cités (chapitre 99)",
+     "9903.03.12, 9903.03.13, 9903.03.14, 9903.03.15, 9903.03.16"
+    ],
+    [
+     "Extrait",
+     "The purpose of this message is to provide guidance on the modifications to the Section 338 Canada duties pursuant to the October 23, 2026, Presidential Proclamation entitled “Further Modifying the Scope of Products of Canada Subject to the Additional Duties Imposed to Offset Canadian Discrimination Against the Commerce of the United States with Respect to Motor Vehicles.” BACKGROUND On August 18, 2026, the President  […]"
+    ]
+   ],
+   "envoye_le": "2026-10-29T10:03:25-04:00",
+   "extrait": "The purpose of this message is to provide guidance on the modifications to the Section 338 Canada duties pursuant to the October 23, 2026, Presidential Proclamation entitled “Further Modifying the Scope of Products of Canada Subject to the Additional Duties Imposed to Offset Canadian Discrimination Against the Commerce of the United States with Respect to Motor Vehicles.” BACKGROUND On August 18, 2026, the President  […]",
+   "guid": "70314289",
+   "numero": "70314289",
+   "proclamations": [
+    "11056",
+    "11046",
+    "11047",
+    "11048",
+    "11064",
+    "11065"
+   ],
+   "titre_officiel": "Further Modifying Section 338 Additional Duties on Certain Goods of Canada"
+  },
+  "direction": 0,
+  "entities": [
+   "U.S. Customs and Border Protection"
+  ],
+  "id": "tarifs:70314289",
+  "kind": "directive_douane",
+  "notes": [
+   "Directive de la douane : elle applique une décision officielle (proclamation, avis au Registre fédéral) sans la remplacer."
+  ],
+  "occurred_on": "2026-10-29",
+  "official_id": "70314289",
+  "official_url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/430e931",
+  "parser_version": "douane-1",
+  "published_on": "2026-10-29",
+  "sha256": "49eaffde9c76924d68ad60063f5bf826b751cafccea197b121da68cda13dabdc",
+  "source": "tarifs",
+  "tickers": [],
+  "title": "Douane américaine : Further Modifying Section 338 Additional Duties on Certain Goods of Canada"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-29T19:14:52+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Emploi, rémunération et heures de travail, et postes vacants"
+    ],
+    [
+     "Période",
+     "août 2026"
+    ]
+   ],
+   "indicateur": "Emploi, rémunération et heures de travail, et postes vacants",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261029/dq261029a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-10-29T08:30:00-04:00",
+   "periode": "août 2026",
+   "resume": "Le nombre d'employés recevant une rémunération et des avantages sociaux de leur employeur, mesurés en tant qu'« emploi salarié » dans le cadre de l'Enquête sur l'emploi, la rémunération et les heures de travail, a diminué de 49 600 (-0,3 %) en août, après avoir légèrement reculé de 15 700 (-0,1 %) en juillet. Par rapport à un an plus tôt, l'emploi salarié était en hausse de 57 200 (+0,3 %) en août."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261029/dq261029a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-10-29",
+  "official_id": "261029/dq261029a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261029/dq261029a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-10-29",
+  "sha256": "70135ed0653a96b92bc4f5143ef049beb0cde353011b167c382b6294d0d06652",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Emploi, rémunération et heures de travail, et postes vacants, août 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -50034,82 +50173,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_dans_l_ordre": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "industrie_scian": true,
-   "parties_lues": true,
-   "resultat_officiel_connu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T16:24:31+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "acquereur": "CVC DIF",
-   "cibles": [
-    "ATC Canada ULC"
-   ],
-   "code": "en cours",
-   "conclusion": "en cours",
-   "debut": "2026-09-04",
-   "details": [
-    [
-     "Acquéreur",
-     "CVC DIF"
-    ],
-    [
-     "Visé(s)",
-     "ATC Canada ULC"
-    ],
-    [
-     "Examen ouvert le",
-     "2026-09-04"
-    ],
-    [
-     "Résultat",
-     "en cours"
-    ],
-    [
-     "Industrie (SCIAN)",
-     "5179"
-    ]
-   ],
-   "page_modifiee_le": "2026-09-29",
-   "parties": "CVC DIF / ATC Canada ULC",
-   "resultat": "",
-   "scian": "5179"
-  },
-  "direction": 0,
-  "entities": [
-   "CVC DIF",
-   "ATC Canada ULC"
-  ],
-  "id": "concurrence_ca:2026-09-04:cvc-dif-atc-canada-ulc:ouvert",
-  "kind": "fusion_examen_ouvert",
-  "notes": [
-   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
-  ],
-  "occurred_on": "2026-09-04",
-  "official_id": "2026-09-04:cvc-dif-atc-canada-ulc:ouvert",
-  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
-  "parser_version": "concurrence-1",
-  "published_on": "2026-09-29",
-  "sha256": "7b78382d32b3adf87d191fc2d932c2af3fdf32b1779c1437ec6582e19ba17ad4",
-  "source": "concurrence_ca",
-  "tickers": [],
-  "title": "Bureau de la concurrence : examen de fusion ouvert, CVC DIF / ATC Canada ULC"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "action_officielle": true,
@@ -51774,53 +51837,6 @@
   "source": "ftc_fusions",
   "tickers": [],
   "title": "FTC : feu vert antitrust anticipé, New Mountain Partners VII, L.P. (acquéreur) et Gryphon Partners IV, L.P. (partie visée)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "feu_vert_accorde": true,
-   "numero_de_transaction_officiel": true,
-   "parties_lues": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T03:17:25+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acquereur": "Bain Capital Insurance Fund, L.P.",
-   "entites_visees": [
-    "Blackwood Bidco LLC"
-   ],
-   "numero": "20262264",
-   "partie_visee": "Spitfire Topco Ltd.",
-   "statut": "Granted"
-  },
-  "direction": 0,
-  "entities": [
-   "Bain Capital Insurance Fund, L.P.",
-   "Spitfire Topco Ltd."
-  ],
-  "id": "ftc_fusions:20262264",
-  "kind": "fusion_feu_vert",
-  "notes": [],
-  "occurred_on": "2026-09-21",
-  "official_id": "20262264",
-  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262264",
-  "parser_version": "ftc-1",
-  "published_on": "2026-09-22",
-  "sha256": "13957240a9513f7f0213ae2b967419161444b2d743a9d98cd08606696ef797d1",
-  "source": "ftc_fusions",
-  "tickers": [],
-  "title": "FTC : feu vert antitrust anticipé, Bain Capital Insurance Fund, L.P. (acquéreur) et Spitfire Topco Ltd. (partie visée)"
  },
  {
   "amount_max": null,
