@@ -296,6 +296,440 @@
   "title": "Contrat fédéral américain de 226,1 M$ : SIGNATURE CHOICE III, LLC (Anciens combattants)"
  },
  {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-30T18:54:00+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OH02",
+   "elu": "David J. Taylor",
+   "lecture_complete": true,
+   "nom_sec": "VISA INC.",
+   "rapport": "20035727",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Visa Inc. (V) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-15",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "David J. Taylor",
+   "VISA INC."
+  ],
+  "id": "chambre_ptr:20035727:V:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-15",
+  "official_id": "20035727:V:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035727.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-29",
+  "sha256": "0d7865d4d8b7c9b6800368afeb40e196796a6d65b1fdfed4f802bef2017efa30",
+  "source": "chambre_ptr",
+  "tickers": [
+   "V"
+  ],
+  "title": "David J. Taylor (Chambre, OH02) vend V"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-30T18:54:00+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OH02",
+   "elu": "David J. Taylor",
+   "lecture_complete": true,
+   "nom_sec": "AT&T INC.",
+   "rapport": "20035727",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "AT&T Inc. (T) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-15",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "David J. Taylor",
+   "AT&T INC."
+  ],
+  "id": "chambre_ptr:20035727:T:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-10-15",
+  "official_id": "20035727:T:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035727.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-29",
+  "sha256": "0d7865d4d8b7c9b6800368afeb40e196796a6d65b1fdfed4f802bef2017efa30",
+  "source": "chambre_ptr",
+  "tickers": [
+   "T"
+  ],
+  "title": "David J. Taylor (Chambre, OH02) achète T"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-30T18:54:00+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OH02",
+   "elu": "David J. Taylor",
+   "lecture_complete": true,
+   "nom_sec": "RPM INTERNATIONAL INC/DE/",
+   "rapport": "20035727",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "RPM International Inc. Common Stock (RPM) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-15",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "David J. Taylor",
+   "RPM INTERNATIONAL INC/DE/"
+  ],
+  "id": "chambre_ptr:20035727:RPM:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-10-15",
+  "official_id": "20035727:RPM:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035727.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-29",
+  "sha256": "0d7865d4d8b7c9b6800368afeb40e196796a6d65b1fdfed4f802bef2017efa30",
+  "source": "chambre_ptr",
+  "tickers": [
+   "RPM"
+  ],
+  "title": "David J. Taylor (Chambre, OH02) achète RPM"
+ },
+ {
+  "amount_max": 30000.0,
+  "amount_min": 2002.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-30T18:54:00+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OH02",
+   "elu": "David J. Taylor",
+   "lecture_complete": true,
+   "nom_sec": "Prologis, Inc.",
+   "rapport": "20035727",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Prologis, Inc. Common Stock (PLD) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-15",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    },
+    {
+     "actif": "Prologis, Inc. Common Stock (PLD) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-15",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "David J. Taylor",
+   "Prologis, Inc."
+  ],
+  "id": "chambre_ptr:20035727:PLD:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-10-15",
+  "official_id": "20035727:PLD:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035727.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-29",
+  "sha256": "0d7865d4d8b7c9b6800368afeb40e196796a6d65b1fdfed4f802bef2017efa30",
+  "source": "chambre_ptr",
+  "tickers": [
+   "PLD"
+  ],
+  "title": "David J. Taylor (Chambre, OH02) achète PLD (2 transactions)"
+ },
+ {
+  "amount_max": 30000.0,
+  "amount_min": 2002.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-30T18:54:00+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OH02",
+   "elu": "David J. Taylor",
+   "lecture_complete": true,
+   "nom_sec": "Marathon Petroleum Corp",
+   "rapport": "20035727",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Marathon Petroleum Corporation Common Stock (MPC) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-15",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    },
+    {
+     "actif": "Marathon Petroleum Corporation Common Stock (MPC) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-15",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "David J. Taylor",
+   "Marathon Petroleum Corp"
+  ],
+  "id": "chambre_ptr:20035727:MPC:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-15",
+  "official_id": "20035727:MPC:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035727.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-29",
+  "sha256": "0d7865d4d8b7c9b6800368afeb40e196796a6d65b1fdfed4f802bef2017efa30",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MPC"
+  ],
+  "title": "David J. Taylor (Chambre, OH02) vend MPC (2 transactions)"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-30T18:54:00+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OH02",
+   "elu": "David J. Taylor",
+   "lecture_complete": true,
+   "nom_sec": "LAM RESEARCH CORP",
+   "rapport": "20035727",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Lam Research Corporation - Common Stock (LRCX) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-15",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "David J. Taylor",
+   "LAM RESEARCH CORP"
+  ],
+  "id": "chambre_ptr:20035727:LRCX:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-10-15",
+  "official_id": "20035727:LRCX:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035727.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-29",
+  "sha256": "0d7865d4d8b7c9b6800368afeb40e196796a6d65b1fdfed4f802bef2017efa30",
+  "source": "chambre_ptr",
+  "tickers": [
+   "LRCX"
+  ],
+  "title": "David J. Taylor (Chambre, OH02) achète LRCX"
+ },
+ {
   "amount_max": 150000000.0,
   "amount_min": 150000000.0,
   "badge": "officiel",
@@ -48565,75 +48999,6 @@
   "title": "Lloyd Doggett (Chambre, TX37) achète IBM"
  },
  {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-06T17:10:30+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "TX37",
-   "elu": "Lloyd Doggett",
-   "lecture_complete": true,
-   "nom_sec": "HOME DEPOT, INC.",
-   "rapport": "20035580",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Home Depot, Inc. (HD) [ST]",
-     "avis": "2026-10-05",
-     "date": "2026-09-17",
-     "description": "Automatic reinvestment of",
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Lloyd Doggett",
-   "HOME DEPOT, INC."
-  ],
-  "id": "chambre_ptr:20035580:HD:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-09-17",
-  "official_id": "20035580:HD:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035580.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-05",
-  "sha256": "b9fe2ab518ab7dbd5719e89a7262789745c740f10e28be7f8ccc2239864cb718",
-  "source": "chambre_ptr",
-  "tickers": [
-   "HD"
-  ],
-  "title": "Lloyd Doggett (Chambre, TX37) achète HD"
- },
- {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -49161,213 +49526,6 @@
   "source": "sante_canada",
   "tickers": [],
   "title": "Santé Canada : nouveau médicament autorisé, FREHEMGO (dénécimig), de NOVO NORDISK CANADA INC"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-05T21:26:20+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH06",
-   "elu": "Michael Rulli",
-   "lecture_complete": true,
-   "nom_sec": "WELLS FARGO & COMPANY/MN",
-   "rapport": "20035558",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Wells Fargo & Company Common Stock (WFC) [ST]",
-     "avis": "2026-09-04",
-     "date": "2026-09-03",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Michael Rulli",
-   "WELLS FARGO & COMPANY/MN"
-  ],
-  "id": "chambre_ptr:20035558:WFC:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-03",
-  "official_id": "20035558:WFC:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035558.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-02",
-  "sha256": "778116b7d115d864b66f1e4085e51b3e36fab1661651470ce0b5b06977f387e4",
-  "source": "chambre_ptr",
-  "tickers": [
-   "WFC"
-  ],
-  "title": "Michael Rulli (Chambre, OH06) vend WFC"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-05T21:26:20+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH06",
-   "elu": "Michael Rulli",
-   "lecture_complete": true,
-   "nom_sec": "MICROSOFT CORP",
-   "rapport": "20035558",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Microsoft Corporation - Common Stock (MSFT) [ST]",
-     "avis": "2026-09-28",
-     "date": "2026-09-28",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Michael Rulli",
-   "MICROSOFT CORP"
-  ],
-  "id": "chambre_ptr:20035558:MSFT:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-28",
-  "official_id": "20035558:MSFT:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035558.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-02",
-  "sha256": "778116b7d115d864b66f1e4085e51b3e36fab1661651470ce0b5b06977f387e4",
-  "source": "chambre_ptr",
-  "tickers": [
-   "MSFT"
-  ],
-  "title": "Michael Rulli (Chambre, OH06) vend MSFT"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-05T21:26:20+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH06",
-   "elu": "Michael Rulli",
-   "lecture_complete": true,
-   "nom_sec": "GOLDMAN SACHS GROUP INC",
-   "rapport": "20035558",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Goldman Sachs Group, Inc. (GS) [ST]",
-     "avis": "2026-09-04",
-     "date": "2026-09-03",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Michael Rulli",
-   "GOLDMAN SACHS GROUP INC"
-  ],
-  "id": "chambre_ptr:20035558:GS:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-09-03",
-  "official_id": "20035558:GS:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035558.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-02",
-  "sha256": "778116b7d115d864b66f1e4085e51b3e36fab1661651470ce0b5b06977f387e4",
-  "source": "chambre_ptr",
-  "tickers": [
-   "GS"
-  ],
-  "title": "Michael Rulli (Chambre, OH06) achète GS"
  },
  {
   "amount_max": null,
@@ -49980,164 +50138,6 @@
   "source": "nouvelles_eco_ca",
   "tickers": [],
   "title": "Le gouvernement du Canada présente la nouvelle Mégadéduction à la productivité pour aider les entreprises à investir, à croître et à créer des emplois au Canada"
- },
- {
-  "amount_max": 30000.0,
-  "amount_min": 2002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:38+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH02",
-   "elu": "David J. Taylor",
-   "lecture_complete": true,
-   "nom_sec": "Marathon Petroleum Corp",
-   "rapport": "20035549",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Marathon Petroleum Corporation Common Stock (MPC) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-22",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    },
-    {
-     "actif": "Marathon Petroleum Corporation Common Stock (MPC) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-22",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "David J. Taylor",
-   "Marathon Petroleum Corp"
-  ],
-  "id": "chambre_ptr:20035549:MPC:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-22",
-  "official_id": "20035549:MPC:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035549.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-01",
-  "sha256": "ae5a1612dbb2f4aab3eda871ff09021f467b2df25addb00e903a2c3f9af2f297",
-  "source": "chambre_ptr",
-  "tickers": [
-   "MPC"
-  ],
-  "title": "David J. Taylor (Chambre, OH02) vend MPC (2 transactions)"
- },
- {
-  "amount_max": 30000.0,
-  "amount_min": 2002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:38+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH02",
-   "elu": "David J. Taylor",
-   "lecture_complete": true,
-   "nom_sec": "HOME DEPOT, INC.",
-   "rapport": "20035549",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Home Depot, Inc. (HD) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-22",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    },
-    {
-     "actif": "Home Depot, Inc. (HD) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-22",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "David J. Taylor",
-   "HOME DEPOT, INC."
-  ],
-  "id": "chambre_ptr:20035549:HD:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-09-22",
-  "official_id": "20035549:HD:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035549.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-01",
-  "sha256": "ae5a1612dbb2f4aab3eda871ff09021f467b2df25addb00e903a2c3f9af2f297",
-  "source": "chambre_ptr",
-  "tickers": [
-   "HD"
-  ],
-  "title": "David J. Taylor (Chambre, OH02) achète HD (2 transactions)"
  },
  {
   "amount_max": null,
