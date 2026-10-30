@@ -1,5 +1,203 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-30T17:00:56+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/services-publics-approvisionnement/nouvelles/2026/10/le-gouvernement-du-canada-fait-progresser-un-grand-projet-dinfrastructure-visant-a-renforcer-la-science-et-la-securite-des-transports.html",
+   "ministere": "Services publics et Approvisionnement Canada",
+   "mis_a_jour": "2026-10-30T09:06:29-04:00",
+   "resume": "Par l’entremise de Laboratoires Canada, le gouvernement du Canada investit dans des infrastructures scientifiques modernes qui contribuent à protéger la population canadienne, à soutenir l’innovation et à renforcer les capacités du Canada en matière de sécurité des transports.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Services publics et Approvisionnement Canada"
+  ],
+  "id": "nouvelles_eco_ca:services-publics-approvisionnement/nouvelles/2026/10/le-gouvernement-du-canada-fait-progresser-un-grand-projet-dinfrastructure-visant-a-renforcer-la-science-et-la-securite-des-transports.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-30",
+  "official_id": "services-publics-approvisionnement/nouvelles/2026/10/le-gouvernement-du-canada-fait-progresser-un-grand-projet-dinfrastructure-visant-a-renforcer-la-science-et-la-securite-des-transports.html",
+  "official_url": "https://www.canada.ca/fr/services-publics-approvisionnement/nouvelles/2026/10/le-gouvernement-du-canada-fait-progresser-un-grand-projet-dinfrastructure-visant-a-renforcer-la-science-et-la-securite-des-transports.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-30",
+  "sha256": "4fcc3b7163a2d616ea029155c0fd9bd8df25b0f96e69893b17ac4d116cdb0652",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le gouvernement du Canada fait progresser un grand projet d’infrastructure visant à renforcer la science et la sécurité des transports"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-30T17:00:53+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Executive Office of the President"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-22386",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-11-02",
+   "sorte": "presidentiel",
+   "sous_type": null,
+   "titre_officiel": "National Defense Authorization Act for Fiscal Year 2026; Delegation of Authority Under Section 8335 (Memorandum of October 28, 2026)",
+   "type": "Presidential Document"
+  },
+  "direction": 0,
+  "entities": [
+   "Executive Office of the President"
+  ],
+  "id": "registre_federal:2026-22386",
+  "kind": "presidentiel",
+  "notes": [],
+  "occurred_on": "2026-10-30",
+  "official_id": "2026-22386",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-22386/national-defense-authorization-act-for-fiscal-year-2026-delegation-of-authority-under-section-8335",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-30",
+  "sha256": "73ad75bd7f9bd6d2b2c73591334435feacfd3823427cf03b6022a00d9915a4a5",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Mémorandum présidentiel : National Defense Authorization Act for Fiscal Year 2026; Delegation of Authority Under Section 8335 (Memorandum of October 28, 2026)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-30T17:00:52+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Executive Office of the President"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-22385",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-11-02",
+   "sorte": "presidentiel",
+   "sous_type": null,
+   "titre_officiel": "Robotics, Industrial Machinery, and Their Parts and Components, Imports Into U.S.; Adjustment (Proc. 11077)",
+   "type": "Presidential Document"
+  },
+  "direction": 0,
+  "entities": [
+   "Executive Office of the President"
+  ],
+  "id": "registre_federal:2026-22385",
+  "kind": "presidentiel",
+  "notes": [],
+  "occurred_on": "2026-10-30",
+  "official_id": "2026-22385",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-22385/robotics-industrial-machinery-and-their-parts-and-components-imports-into-us-adjustment-proc-11077",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-30",
+  "sha256": "d26813faca45458d56efe0851e7f6e77791a8b5cbd9c6238549159b3c822de9a",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Document présidentiel : Robotics, Industrial Machinery, and Their Parts and Components, Imports Into U.S.; Adjustment (Proc. 11077)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-10-30T17:00:51+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Trade Representative, Office of United States"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-22251",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-11-02",
+   "sorte": "commerce_exterieur",
+   "sous_type": null,
+   "titre_officiel": "Performance Review Board Members",
+   "type": "Notice"
+  },
+  "direction": 0,
+  "entities": [
+   "Trade Representative, Office of United States"
+  ],
+  "id": "registre_federal:2026-22251",
+  "kind": "commerce_exterieur",
+  "notes": [],
+  "occurred_on": "2026-10-30",
+  "official_id": "2026-22251",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-22251/performance-review-board-members",
+  "parser_version": "registre-4",
+  "published_on": "2026-10-30",
+  "sha256": "50891b6efa6937588e80983987df95bb7e73e2ae24157212726934d31465b920",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Commerce extérieur (USTR) : Performance Review Board Members"
+ },
+ {
   "amount_max": 226106338.16,
   "amount_min": 226106338.16,
   "badge": "officiel",
@@ -51944,82 +52142,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_dans_l_ordre": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "industrie_scian": true,
-   "parties_lues": true,
-   "resultat_officiel_connu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T16:24:31+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "acquereur": "VVG Holdings LLC",
-   "cibles": [
-    "New West Truck Centres Ltd"
-   ],
-   "code": "en cours",
-   "conclusion": "en cours",
-   "debut": "2026-09-08",
-   "details": [
-    [
-     "Acquéreur",
-     "VVG Holdings LLC"
-    ],
-    [
-     "Visé(s)",
-     "New West Truck Centres Ltd"
-    ],
-    [
-     "Examen ouvert le",
-     "2026-09-08"
-    ],
-    [
-     "Résultat",
-     "en cours"
-    ],
-    [
-     "Industrie (SCIAN)",
-     "4411"
-    ]
-   ],
-   "page_modifiee_le": "2026-09-29",
-   "parties": "VVG Holdings LLC / New West Truck Centres Ltd",
-   "resultat": "",
-   "scian": "4411"
-  },
-  "direction": 0,
-  "entities": [
-   "VVG Holdings LLC",
-   "New West Truck Centres Ltd"
-  ],
-  "id": "concurrence_ca:2026-09-08:vvg-holdings-llc-new-west-truck-centres-ltd:ouvert",
-  "kind": "fusion_examen_ouvert",
-  "notes": [
-   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
-  ],
-  "occurred_on": "2026-09-08",
-  "official_id": "2026-09-08:vvg-holdings-llc-new-west-truck-centres-ltd:ouvert",
-  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
-  "parser_version": "concurrence-1",
-  "published_on": "2026-09-29",
-  "sha256": "3563db76473f815b5d0cf88003cb36087220501aa809a6ffd4f6f4570a6a0659",
-  "source": "concurrence_ca",
-  "tickers": [],
-  "title": "Bureau de la concurrence : examen de fusion ouvert, VVG Holdings LLC / New West Truck Centres Ltd"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "action_officielle": true,
@@ -53383,191 +53505,6 @@
   "source": "doj_antitrust",
   "tickers": [],
   "title": "Antitrust (ministère de la Justice) : Justice Department Issues Statements on the U.S. District Court for the Western District of Michigan’s Decision in People of the State of Michigan vs. BP, P.L.C., et al."
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "approbation_originale": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lettre_officielle": true,
-   "nouvelle_molecule": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T01:27:21+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "application": "BLA761408",
-   "classe": "TYPE 1",
-   "compagnie": "ELI LILLY AND CO",
-   "date": "20260923",
-   "fabricant": null,
-   "ingredients": [
-    "INSULIN EFSITORA ALFA-GOBE"
-   ],
-   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/761408Orig1s000ltr.pdf",
-   "marques": [
-    "ONSWIK"
-   ],
-   "numero_soumission": "1",
-   "orphelin": false,
-   "priorite": "STANDARD",
-   "sponsor": "ELI LILLY AND CO",
-   "statut": "AP",
-   "type_soumission": "ORIG"
-  },
-  "direction": 1,
-  "entities": [
-   "ELI LILLY AND CO"
-  ],
-  "id": "fda:BLA761408-ORIG-1",
-  "kind": "approbation_fda",
-  "notes": [
-   "Produit biologique."
-  ],
-  "occurred_on": "2026-09-23",
-  "official_id": "BLA761408-ORIG-1",
-  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761408",
-  "parser_version": "fda-1",
-  "published_on": "2026-09-23",
-  "sha256": "6cd26761a4927c7fc0e1675e7db442f6727ce5f504bceefe1135357e955467c3",
-  "source": "fda",
-  "tickers": [
-   "LLY"
-  ],
-  "title": "FDA : nouveau médicament approuvé, ONSWIK (insulin efsitora alfa-gobe), de ELI LILLY AND CO"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_rappel": true,
-   "nombre_plausible": true,
-   "numero_de_rappel_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-10T09:58:47+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "anciennes_empreintes": [
-    "53944e3cff7c2dfcf9f4859eea7e4a39514bd9f8290b5690b35b845bdf71d01f"
-   ],
-   "campagne": "26C42",
-   "composant": "BACK OVER PREVENTION",
-   "consequence": "A rearview camera image that does not display reduces the driver's view behind the vehicle, increasing the risk of a crash.",
-   "constructeur": "Ford Motor Company",
-   "defaut": "Ford Motor Company (Ford) is recalling certain 2026 Ranger vehicles equipped with a 10.1-inch center stack screen. The screen may lose power and fail to display the rearview camera image. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\"",
-   "numero": "26V605000",
-   "sorte": "Vehicle",
-   "sujet": "Rearview Camera Image May Not Display/FMVSS 111",
-   "unites": 11405
-  },
-  "direction": -1,
-  "entities": [
-   "Ford Motor Company"
-  ],
-  "id": "nhtsa:26V605000",
-  "kind": "rappel",
-  "notes": [
-   "Document modifié à la source depuis la 1re lecture."
-  ],
-  "occurred_on": "2026-09-22",
-  "official_id": "26V605000",
-  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V605000",
-  "parser_version": "nhtsa-1",
-  "published_on": "2026-09-22",
-  "sha256": "c67feafaf40962aa65de16df891b54b382f9a4f9999f3fcba79d29b4626a384e",
-  "source": "nhtsa",
-  "tickers": [
-   "F"
-  ],
-  "title": "Rappel de Ford Motor Company : 11 405 véhicules — « Rearview Camera Image May Not Display/FMVSS 111 »"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "date_d_envoi_lue": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_message": true,
-   "numero_csms": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "sujet_surtaxes": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T19:34:48+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "codes_9903": [],
-   "details": [
-    [
-     "Message",
-     "CSMS # 69994928"
-    ],
-    [
-     "Envoyé",
-     "22 septembre 2026 à 16 h 27 (heure de New York)"
-    ],
-    [
-     "Proclamations citées",
-     "11052"
-    ],
-    [
-     "Extrait",
-     "The purpose of this message is to provide guidance regarding the U.S. Department of Commerce’s (Commerce’s) Temporary Final Rule (TFR) on Measures to Restrict Stockpiling of Polysilicon and Polysilicon Derivatives Under Proclamation 11052. BACKGROUND On September 24, 2026, Commerce will publish a TFR providing for procedures for an import ban on certain imports of polysilicon products. […]"
-    ]
-   ],
-   "envoye_le": "2026-09-22T16:27:48-04:00",
-   "extrait": "The purpose of this message is to provide guidance regarding the U.S. Department of Commerce’s (Commerce’s) Temporary Final Rule (TFR) on Measures to Restrict Stockpiling of Polysilicon and Polysilicon Derivatives Under Proclamation 11052. BACKGROUND On September 24, 2026, Commerce will publish a TFR providing for procedures for an import ban on certain imports of polysilicon products. […]",
-   "guid": "69994928",
-   "numero": "69994928",
-   "proclamations": [
-    "11052"
-   ],
-   "titre_officiel": "GUIDANCE: Import Ban of Certain Polysilicon Products Under Proclamation 11052"
-  },
-  "direction": 0,
-  "entities": [
-   "U.S. Customs and Border Protection"
-  ],
-  "id": "tarifs:69994928",
-  "kind": "directive_douane",
-  "notes": [
-   "Directive de la douane : elle applique une décision officielle (proclamation, avis au Registre fédéral) sans la remplacer."
-  ],
-  "occurred_on": "2026-09-22",
-  "official_id": "69994928",
-  "official_url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/42c09b0",
-  "parser_version": "douane-1",
-  "published_on": "2026-09-22",
-  "sha256": "eca68aac51b265fe3db501fd71321d4ab38a6cbcd44b4919590ca7e23476839b",
-  "source": "tarifs",
-  "tickers": [],
-  "title": "Douane américaine : GUIDANCE: Import Ban of Certain Polysilicon Products Under Proclamation 11052"
  },
  {
   "amount_max": null,
