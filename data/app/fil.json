@@ -9,6 +9,580 @@
    "dates_coherentes": true,
    "domaine_officiel": true,
    "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-30T21:01:13+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Produit intérieur brut par industrie"
+    ],
+    [
+     "Période",
+     "août 2026"
+    ]
+   ],
+   "indicateur": "Produit intérieur brut par industrie",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261030/dq261030a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-10-30T08:30:00-04:00",
+   "periode": "août 2026",
+   "resume": "Pour un deuxième mois consécutif, le produit intérieur brut réel était essentiellement inchangé en août."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261030/dq261030a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-10-30",
+  "official_id": "261030/dq261030a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261030/dq261030a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-10-30",
+  "sha256": "f0ef4ec6a06a38bce91e9d1c09e85a602dc5e7def476f4e677d4c2f36487dd13",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Produit intérieur brut par industrie, août 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-30T21:01:10+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/tribunal-commerce-exterieur/nouvelles/2026/10/le-tribunal-rend-une-decision-dindication-raisonnable-de-dommage--pneus-de-camions-et-dautobus-provenant-de-la-chine.html",
+   "ministere": "Tribunal canadien du commerce extérieur",
+   "mis_a_jour": "2026-10-30T16:10:15-04:00",
+   "resume": "À la suite de l’enquête préliminaire de dommage (PI-2026-005) du Tribunal canadien du commerce extérieur, le Tribunal a décidé aujourd’hui que les éléments de preuve indiquent, de façon raisonnable, que le dumping et le subventionnement de certains pneus de camions et d’autobus provenant de la Chine ont causé un dommage à la branche de production nationale.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Tribunal canadien du commerce extérieur"
+  ],
+  "id": "nouvelles_eco_ca:tribunal-commerce-exterieur/nouvelles/2026/10/le-tribunal-rend-une-decision-dindication-raisonnable-de-dommage--pneus-de-camions-et-dautobus-provenant-de-la-chine.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-30",
+  "official_id": "tribunal-commerce-exterieur/nouvelles/2026/10/le-tribunal-rend-une-decision-dindication-raisonnable-de-dommage--pneus-de-camions-et-dautobus-provenant-de-la-chine.html",
+  "official_url": "https://www.canada.ca/fr/tribunal-commerce-exterieur/nouvelles/2026/10/le-tribunal-rend-une-decision-dindication-raisonnable-de-dommage--pneus-de-camions-et-dautobus-provenant-de-la-chine.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-30",
+  "sha256": "6e1c4f74452910ed2ba48ab266ebfb800086f780beada2cb9b891ba1cd7adeb7",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le Tribunal rend une décision d’indication raisonnable de dommage — Pneus de camions et d’autobus provenant de la Chine"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-30T21:01:09+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/le-ministre-mcguinty-renforce-la-cooperation-entre-le-canada-et-lue-en-matiere-de-defense-et-dindustrie-lors-du-sommet.html",
+   "ministere": "Défense nationale",
+   "mis_a_jour": "2026-10-30T15:07:12-04:00",
+   "resume": "L’honorable David J. McGuinty, ministre de la Défense nationale, a participé au sommet Canada-Union européenne (UE) en compagnie du premier ministre Mark Carney à Montréal les 29 et 30 octobre.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Défense nationale"
+  ],
+  "id": "nouvelles_defense_ca:ministere-defense-nationale/nouvelles/2026/10/le-ministre-mcguinty-renforce-la-cooperation-entre-le-canada-et-lue-en-matiere-de-defense-et-dindustrie-lors-du-sommet.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-30",
+  "official_id": "ministere-defense-nationale/nouvelles/2026/10/le-ministre-mcguinty-renforce-la-cooperation-entre-le-canada-et-lue-en-matiere-de-defense-et-dindustrie-lors-du-sommet.html",
+  "official_url": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/le-ministre-mcguinty-renforce-la-cooperation-entre-le-canada-et-lue-en-matiere-de-defense-et-dindustrie-lors-du-sommet.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-30",
+  "sha256": "d9716c14e6843f1f5df64c01576239bcd944970f66c05613b22213828e65f5f8",
+  "source": "nouvelles_defense_ca",
+  "tickers": [],
+  "title": "Le ministre McGuinty renforce la coopération entre le Canada et l’UE en matière de défense et d’industrie lors du sommet"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-10-30T21:01:09+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/fin-de-loperation-boxtop-la-mission-de-ravitaillement-de-la-station-des-forces-canadiennes-alert.html",
+   "ministere": "Défense nationale",
+   "mis_a_jour": "2026-10-30T14:46:10-04:00",
+   "resume": "L’Aviation royale canadienne (ARC) a terminé la plus récente édition de l’opération BOXTOP, sa mission semestrielle de ravitaillement qui consiste à livrer des fournitures essentielles à la station des Forces canadiennes (SFC) Alert, au Nunavut, qui s’est déroulée du 8 au 30 octobre 2026.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Défense nationale"
+  ],
+  "id": "nouvelles_defense_ca:ministere-defense-nationale/nouvelles/2026/10/fin-de-loperation-boxtop-la-mission-de-ravitaillement-de-la-station-des-forces-canadiennes-alert.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-10-30",
+  "official_id": "ministere-defense-nationale/nouvelles/2026/10/fin-de-loperation-boxtop-la-mission-de-ravitaillement-de-la-station-des-forces-canadiennes-alert.html",
+  "official_url": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/10/fin-de-loperation-boxtop-la-mission-de-ravitaillement-de-la-station-des-forces-canadiennes-alert.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-10-30",
+  "sha256": "ddabb98d8fa0fd3466703bd6dd9ce50eefa3fd7361e16a112fb1999c55a4c482",
+  "source": "nouvelles_defense_ca",
+  "tickers": [],
+  "title": "Fin de l’opération BOXTOP, la mission de ravitaillement de la Station des Forces canadiennes Alert"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-30T21:00:58+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "209742",
+   "date_rapport": "2026-10-27",
+   "long": 84567,
+   "marche": "Nasdaq-100 (E-mini)",
+   "net": 48839,
+   "nom_officiel": "NASDAQ MINI - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 268508,
+   "short": 35728,
+   "variation": -1887
+  },
+  "direction": -1,
+  "entities": [
+   "NASDAQ MINI - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261027209742F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-27",
+  "official_id": "261027209742F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261027209742F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-30",
+  "sha256": "37ac43987f38caf3862c6bf85cdb0b63b4b79900851023e1c95c5bf19d4a5916",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Nasdaq-100 (E-mini) : les gros spéculateurs sont acheteurs nets de 48 839 contrats (−1 887 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-30T21:00:58+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "13874A",
+   "date_rapport": "2026-10-27",
+   "long": 215924,
+   "marche": "S&P 500 (E-mini)",
+   "net": -134368,
+   "nom_officiel": "E-MINI S&P 500 - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 1955711,
+   "short": 350292,
+   "variation": 8303
+  },
+  "direction": 1,
+  "entities": [
+   "E-MINI S&P 500 - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:26102713874AF",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-27",
+  "official_id": "26102713874AF",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=26102713874AF",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-30",
+  "sha256": "417df2c49f64cba88046c21be296ace44c1cd8b45c82dbcc8e76372e7c6ba5d4",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "S&P 500 (E-mini) : les gros spéculateurs sont vendeurs nets de 134 368 contrats (+8 303 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-30T21:00:58+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "133741",
+   "date_rapport": "2026-10-27",
+   "long": 16980,
+   "marche": "Bitcoin (CME)",
+   "net": 2720,
+   "nom_officiel": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 20791,
+   "short": 14260,
+   "variation": 302
+  },
+  "direction": 1,
+  "entities": [
+   "BITCOIN - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261027133741F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-27",
+  "official_id": "261027133741F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261027133741F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-30",
+  "sha256": "13dc6134c3882572c473b1c43b4f518e345cc509497a3e53d6eb989daaeef9fa",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Bitcoin (CME) : les gros spéculateurs sont acheteurs nets de 2 720 contrats (+302 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-30T21:00:58+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "090741",
+   "date_rapport": "2026-10-27",
+   "long": 89942,
+   "marche": "Dollar canadien",
+   "net": -66424,
+   "nom_officiel": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 360941,
+   "short": 156366,
+   "variation": 8285
+  },
+  "direction": 1,
+  "entities": [
+   "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261027090741F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-27",
+  "official_id": "261027090741F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261027090741F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-30",
+  "sha256": "08d8f2b9ca603fff663c653d1ed72f9c9101a0db6ecfb0b50b891d7da06e56e8",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Dollar canadien : les gros spéculateurs sont vendeurs nets de 66 424 contrats (+8 285 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-30T21:00:58+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "088691",
+   "date_rapport": "2026-10-27",
+   "long": 223724,
+   "marche": "Or",
+   "net": 186451,
+   "nom_officiel": "GOLD - COMMODITY EXCHANGE INC.",
+   "open_interest": 396810,
+   "short": 37273,
+   "variation": -13414
+  },
+  "direction": -1,
+  "entities": [
+   "GOLD - COMMODITY EXCHANGE INC."
+  ],
+  "id": "cftc_cot:261027088691F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-27",
+  "official_id": "261027088691F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261027088691F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-30",
+  "sha256": "ecfc4304fe903bcd8256b9352c9b094868d89063bf3d366e43864c91f02bf478",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Or : les gros spéculateurs sont acheteurs nets de 186 451 contrats (−13 414 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-30T21:00:58+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "085692",
+   "date_rapport": "2026-10-27",
+   "long": 91643,
+   "marche": "Cuivre",
+   "net": 48317,
+   "nom_officiel": "COPPER- #1 - COMMODITY EXCHANGE INC.",
+   "open_interest": 337019,
+   "short": 43326,
+   "variation": -9080
+  },
+  "direction": -1,
+  "entities": [
+   "COPPER- #1 - COMMODITY EXCHANGE INC."
+  ],
+  "id": "cftc_cot:261027085692F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-27",
+  "official_id": "261027085692F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261027085692F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-30",
+  "sha256": "b07220754b4e4972f6d72435b525f05c458a8a1e615033027cfd3c410127a0c0",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Cuivre : les gros spéculateurs sont acheteurs nets de 48 317 contrats (−9 080 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-30T21:00:58+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "067651",
+   "date_rapport": "2026-10-27",
+   "long": 330168,
+   "marche": "Pétrole WTI",
+   "net": 74343,
+   "nom_officiel": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+   "open_interest": 1886280,
+   "short": 255825,
+   "variation": -14982
+  },
+  "direction": -1,
+  "entities": [
+   "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261027067651F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-27",
+  "official_id": "261027067651F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261027067651F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-30",
+  "sha256": "8470c4a90e9a9750f3f43286455111b510f45efb0e2d61b2163ebff1ef35a8a2",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Pétrole WTI : les gros spéculateurs sont acheteurs nets de 74 343 contrats (−14 982 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-10-30T21:00:58+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "043602",
+   "date_rapport": "2026-10-27",
+   "long": 668230,
+   "marche": "Obligations américaines 10 ans",
+   "net": -981538,
+   "nom_officiel": "UST 10Y NOTE - CHICAGO BOARD OF TRADE",
+   "open_interest": 5881588,
+   "short": 1649768,
+   "variation": -17245
+  },
+  "direction": -1,
+  "entities": [
+   "UST 10Y NOTE - CHICAGO BOARD OF TRADE"
+  ],
+  "id": "cftc_cot:261027043602F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-10-27",
+  "official_id": "261027043602F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261027043602F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-10-30",
+  "sha256": "85a14703d9fe159298a3007087c8af2cf8765e99e4e91159eb66d171e5c36b26",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Obligations américaines 10 ans : les gros spéculateurs sont vendeurs nets de 981 538 contrats (−17 245 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
    "lien_identique_au_fil": true,
    "lien_ministere_coherent": true,
    "ministere_reconnu": true,
@@ -25735,468 +26309,6 @@
    "AVEX"
   ],
   "title": "First Trust Portfolios L.P. détient 5,13 % de AEVEX Corp. (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-28T09:49:22+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 1516290.0,
-   "amendement": null,
-   "bourse": "Nasdaq",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0001122904",
-   "cik_sujet_entete": "0001122904",
-   "date_evenement": "2026-09-30",
-   "declarant": "BlackRock Portfolio Management LLC",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "NETGEAR INC",
-   "pourcentage": 5.6,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "HC"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "BlackRock Portfolio Management LLC",
-   "NETGEAR, INC."
-  ],
-  "id": "sec_13dg:0002052113-26-001100",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0002052113-26-001100",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1122904/000205211326001100/0002052113-26-001100-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-27",
-  "sha256": "3537ca6413ea5f0779c57f8b2111086ea1972e867e0fbbb4e3050419fe9d7231",
-  "source": "sec_13dg",
-  "tickers": [
-   "NTGR"
-  ],
-  "title": "BlackRock Portfolio Management LLC détient 5,6 % de NETGEAR, INC. (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-28T09:49:22+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 4561616.0,
-   "amendement": "6",
-   "bourse": "Nasdaq",
-   "but_sous_evalue": false,
-   "cik_emetteur": "0001158780",
-   "cik_sujet_entete": "0001158780",
-   "date_evenement": "2026-10-23",
-   "declarant": "Alexandre Weinstein",
-   "extrait_but": "Item 4 of the Schedule 13D is hereby amended and restated as follows: The information contained on the cover pages of this Schedule 13D relating to CHL, CHLP, Plantae and Mr. Weinstein is incorporated by reference. On October 20, 2026, CHLP and the Issuer entered into the October 2026 SPA, pursuant",
-   "nb_personnes": 4,
-   "nom_emetteur": "PLURI INC.",
-   "pourcentage": 38.85,
-   "type": "SCHEDULE 13D/A",
-   "types_declarants": [
-    "CO",
-    "IN",
-    "OO"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Alexandre Weinstein",
-   "Pluri Inc."
-  ],
-  "id": "sec_13dg:0001213900-26-112643",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-10-23",
-  "official_id": "0001213900-26-112643",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1158780/000121390026112643/0001213900-26-112643-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-27",
-  "sha256": "64e2bdefa0935d8735caec9dc1925b5304561dbe99ecf3aa7ae45216b5aba3ec",
-  "source": "sec_13dg",
-  "tickers": [
-   "PLUR"
-  ],
-  "title": "Alexandre Weinstein détient 38,85 % de Pluri Inc. (13D, intentions actives, mise à jour n° 6)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-28T09:49:22+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 1944276.0,
-   "amendement": "4",
-   "bourse": "Nasdaq",
-   "but_sous_evalue": false,
-   "cik_emetteur": "0001171759",
-   "cik_sujet_entete": "0001171759",
-   "date_evenement": "2026-10-23",
-   "declarant": "Pappas James C",
-   "extrait_but": "Item 4 is hereby amended to add the following: On October 23, 2026, each of Messrs. Pappas and Martin notified the Issuer of his resignation from the Board and all committees of the Board, effective as of October 23, 2026. Also on October 23, 2026, JCP Management and Jumana Capital each executed a w",
-   "nb_personnes": 7,
-   "nom_emetteur": "RED ROBIN GOURMET BURGERS INC",
-   "pourcentage": 10.3,
-   "type": "SCHEDULE 13D/A",
-   "types_declarants": [
-    "IA",
-    "IN",
-    "OO",
-    "PN"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Pappas James C",
-   "RED ROBIN GOURMET BURGERS INC"
-  ],
-  "id": "sec_13dg:0000921895-26-002859",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-10-23",
-  "official_id": "0000921895-26-002859",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1171759/000092189526002859/0000921895-26-002859-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-27",
-  "sha256": "919d5b48a1c6499ca03a93620c5cb97c5b99b3ec967cbc2a4108d563b9a3a9a2",
-  "source": "sec_13dg",
-  "tickers": [
-   "RRGB"
-  ],
-  "title": "Pappas James C détient 10,3 % de RED ROBIN GOURMET BURGERS INC (13D, intentions actives, mise à jour n° 4)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-28T09:49:21+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 9687328.0,
-   "amendement": null,
-   "bourse": "NYSE",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0001061894",
-   "cik_sujet_entete": "0001061894",
-   "date_evenement": "2026-09-30",
-   "declarant": "BlackRock, Inc.",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "GILDAN ACTIVEWEAR INC",
-   "pourcentage": 5.2,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "HC"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "BlackRock, Inc.",
-   "Gildan Activewear Inc."
-  ],
-  "id": "sec_13dg:0002012383-26-003723",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0002012383-26-003723",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1061894/000201238326003723/0002012383-26-003723-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-27",
-  "sha256": "f95653365cbaa7dcad2ca6d578d334dffdd7f3d11a6d0d167ce9abe9919c099d",
-  "source": "sec_13dg",
-  "tickers": [
-   "GIL"
-  ],
-  "title": "BlackRock, Inc. détient 5,2 % de Gildan Activewear Inc. (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-28T09:49:21+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 1327917083.0,
-   "amendement": null,
-   "bourse": "NYSE",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0001046179",
-   "cik_sujet_entete": "0001046179",
-   "date_evenement": "2026-09-30",
-   "declarant": "BlackRock, Inc.",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD",
-   "pourcentage": 5.1,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "HC"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "BlackRock, Inc.",
-   "TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD"
-  ],
-  "id": "sec_13dg:0002012383-26-003352",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0002012383-26-003352",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1046179/000201238326003352/0002012383-26-003352-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-27",
-  "sha256": "f50c27d69c267879367315044b77b5cba47a6773c2f11b0d76a4a759d781588a",
-  "source": "sec_13dg",
-  "tickers": [
-   "TSM"
-  ],
-  "title": "BlackRock, Inc. détient 5,1 % de TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-28T09:49:21+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 2012290.0,
-   "amendement": "4",
-   "bourse": "NYSE",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0001031203",
-   "cik_sujet_entete": "0001031203",
-   "date_evenement": "2026-10-23",
-   "declarant": "Conifer Management, L.L.C.",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "Group 1 Automotive, Inc.",
-   "pourcentage": 16.9,
-   "type": "SCHEDULE 13D/A",
-   "types_declarants": [
-    "CO",
-    "IA"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Conifer Management, L.L.C.",
-   "GROUP 1 AUTOMOTIVE INC"
-  ],
-  "id": "sec_13dg:0000905148-26-004578",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-10-23",
-  "official_id": "0000905148-26-004578",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1031203/000090514826004578/0000905148-26-004578-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-27",
-  "sha256": "6346f1904f871343c5040924e8608e1b9d0cf77815ef469ffaba8d27d4a239a2",
-  "source": "sec_13dg",
-  "tickers": [
-   "GPI"
-  ],
-  "title": "Conifer Management, L.L.C. détient 16,9 % de GROUP 1 AUTOMOTIVE INC (13D, intentions actives, mise à jour n° 4)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-28T09:49:20+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 1116292.0,
-   "amendement": null,
-   "bourse": "Nasdaq",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0001018979",
-   "cik_sujet_entete": "0001018979",
-   "date_evenement": "2026-09-30",
-   "declarant": "BlackRock Portfolio Management LLC",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "AMERISAFE INC",
-   "pourcentage": 6.0,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "HC"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "BlackRock Portfolio Management LLC",
-   "AMERISAFE INC"
-  ],
-  "id": "sec_13dg:0002052113-26-001064",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0002052113-26-001064",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1018979/000205211326001064/0002052113-26-001064-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-27",
-  "sha256": "020d040f795f7d70a627e7338a2e84329b618e5a861dacfc1fd71b4113a999f9",
-  "source": "sec_13dg",
-  "tickers": [
-   "AMSF"
-  ],
-  "title": "BlackRock Portfolio Management LLC détient 6 % de AMERISAFE INC (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-28T09:49:20+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 1824882.0,
-   "amendement": null,
-   "bourse": "Nasdaq",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0001012019",
-   "cik_sujet_entete": "0001012019",
-   "date_evenement": "2026-09-30",
-   "declarant": "BlackRock, Inc.",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "RUSH ENTERPRISES INC",
-   "pourcentage": 7.3,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "HC"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "BlackRock, Inc.",
-   "RUSH ENTERPRISES INC \\TX\\"
-  ],
-  "id": "sec_13dg:0002012383-26-003936",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0002012383-26-003936",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1012019/000201238326003936/0002012383-26-003936-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-27",
-  "sha256": "8d0221817494cd465010e81eab1188c1335b7c41aa834ae05666971b4bb54555",
-  "source": "sec_13dg",
-  "tickers": [
-   "RUSHA"
-  ],
-  "title": "BlackRock, Inc. détient 7,3 % de RUSH ENTERPRISES INC \\TX\\ (13G, placement passif)"
  },
  {
   "amount_max": null,
@@ -51985,158 +52097,6 @@
   "source": "concurrence_ca",
   "tickers": [],
   "title": "Bureau de la concurrence : examen de fusion ouvert, JM&A Design & Development Inc et Marquee Brands LLC / Roots Corporation"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_dans_l_ordre": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "industrie_scian": true,
-   "parties_lues": true,
-   "resultat_officiel_connu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T16:24:31+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "acquereur": "Kiwa Holding Canada Inc",
-   "cibles": [
-    "CSA Group Testing & Certification Inc"
-   ],
-   "code": "en cours",
-   "conclusion": "en cours",
-   "debut": "2026-09-10",
-   "details": [
-    [
-     "Acquéreur",
-     "Kiwa Holding Canada Inc"
-    ],
-    [
-     "Visé(s)",
-     "CSA Group Testing & Certification Inc"
-    ],
-    [
-     "Examen ouvert le",
-     "2026-09-10"
-    ],
-    [
-     "Résultat",
-     "en cours"
-    ],
-    [
-     "Industrie (SCIAN)",
-     "5413"
-    ]
-   ],
-   "page_modifiee_le": "2026-09-29",
-   "parties": "Kiwa Holding Canada Inc / CSA Group Testing & Certification Inc",
-   "resultat": "",
-   "scian": "5413"
-  },
-  "direction": 0,
-  "entities": [
-   "Kiwa Holding Canada Inc",
-   "CSA Group Testing & Certification Inc"
-  ],
-  "id": "concurrence_ca:2026-09-10:kiwa-holding-canada-inc-csa-group-testing-certification-inc:ouvert",
-  "kind": "fusion_examen_ouvert",
-  "notes": [
-   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
-  ],
-  "occurred_on": "2026-09-10",
-  "official_id": "2026-09-10:kiwa-holding-canada-inc-csa-group-testing-certification-inc:ouvert",
-  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
-  "parser_version": "concurrence-1",
-  "published_on": "2026-09-29",
-  "sha256": "95d934427eddec6d695954dff04f6010c324b092f39a163c9700f0e61a8f738b",
-  "source": "concurrence_ca",
-  "tickers": [],
-  "title": "Bureau de la concurrence : examen de fusion ouvert, Kiwa Holding Canada Inc / CSA Group Testing & Certification Inc"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_dans_l_ordre": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "industrie_scian": true,
-   "parties_lues": true,
-   "resultat_officiel_connu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T16:24:31+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "acquereur": "Deutsche Lufthansa Aktiengesellschaft",
-   "cibles": [
-    "Italia Trasporto Aereo SpA"
-   ],
-   "code": "en cours",
-   "conclusion": "en cours",
-   "debut": "2026-09-10",
-   "details": [
-    [
-     "Acquéreur",
-     "Deutsche Lufthansa Aktiengesellschaft"
-    ],
-    [
-     "Visé(s)",
-     "Italia Trasporto Aereo SpA"
-    ],
-    [
-     "Examen ouvert le",
-     "2026-09-10"
-    ],
-    [
-     "Résultat",
-     "en cours"
-    ],
-    [
-     "Industrie (SCIAN)",
-     "4811"
-    ]
-   ],
-   "page_modifiee_le": "2026-09-29",
-   "parties": "Deutsche Lufthansa Aktiengesellschaft / Italia Trasporto Aereo SpA",
-   "resultat": "",
-   "scian": "4811"
-  },
-  "direction": 0,
-  "entities": [
-   "Deutsche Lufthansa Aktiengesellschaft",
-   "Italia Trasporto Aereo SpA"
-  ],
-  "id": "concurrence_ca:2026-09-10:deutsche-lufthansa-aktiengesellschaft-italia-trasporto-aereo-spa:ouvert",
-  "kind": "fusion_examen_ouvert",
-  "notes": [
-   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
-  ],
-  "occurred_on": "2026-09-10",
-  "official_id": "2026-09-10:deutsche-lufthansa-aktiengesellschaft-italia-trasporto-aereo-spa:ouvert",
-  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
-  "parser_version": "concurrence-1",
-  "published_on": "2026-09-29",
-  "sha256": "cb0e49f13192880a9c1542e9ea4f900d94aa9efeec90378c041c6939bc1cf692",
-  "source": "concurrence_ca",
-  "tickers": [],
-  "title": "Bureau de la concurrence : examen de fusion ouvert, Deutsche Lufthansa Aktiengesellschaft / Italia Trasporto Aereo SpA"
  },
  {
   "amount_max": null,

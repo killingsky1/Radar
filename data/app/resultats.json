@@ -1,5 +1,5 @@
 {
- "genere_a": "2026-10-30T18:53:46+00:00",
+ "genere_a": "2026-10-30T21:00:54+00:00",
  "horizons": {
   "30": "1 mois",
   "7": "1 semaine"
@@ -22,17 +22,19 @@
  "lignes": [
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "527064208",
+    "date": "20261006",
+    "prix": 0.1,
+    "statut": "ok"
    },
    "entree": "2026-10-03T21:55:32+00:00",
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -45,18 +47,15 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-03T21:55:32+00:00",
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-7",
@@ -68,18 +67,15 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-03T21:55:32+00:00",
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-7",
@@ -91,17 +87,19 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "14817C107",
+    "date": "20261006",
+    "prix": 0.87,
+    "statut": "ok"
    },
    "entree": "2026-10-03T21:55:32+00:00",
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -114,18 +112,15 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-03T21:55:32+00:00",
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-7",
@@ -137,18 +132,28 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "36467W109",
+    "date": "20261006",
+    "prix": 25.24,
+    "statut": "ok"
    },
    "entree": "2026-10-03T21:55:32+00:00",
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "battu": true,
+     "date": "20261013",
+     "ecart": 0.0746,
+     "marche": {
+      "fonds": "SPY",
+      "variation": 0.0042
+     },
+     "prix": 27.23,
+     "statut": "mesure",
+     "variation": 0.0788
     }
    },
    "methode": "score-7",
@@ -160,18 +165,28 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "09175M879",
+    "date": "20261006",
+    "prix": 0.16,
+    "statut": "ok"
    },
    "entree": "2026-10-03T21:55:32+00:00",
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "battu": false,
+     "date": "20261013",
+     "ecart": -0.0042,
+     "marche": {
+      "fonds": "SPY",
+      "variation": 0.0042
+     },
+     "prix": 0.16,
+     "statut": "mesure",
+     "variation": 0.0
     }
    },
    "methode": "score-7",
@@ -183,18 +198,28 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "423492107",
+    "date": "20261007",
+    "prix": 10.76,
+    "statut": "ok"
    },
    "entree": "2026-10-03T21:55:32+00:00",
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "battu": false,
+     "date": "20261014",
+     "ecart": -0.0228,
+     "marche": {
+      "fonds": "SPY",
+      "variation": -0.0014
+     },
+     "prix": 10.5,
+     "statut": "mesure",
+     "variation": -0.0242
     }
    },
    "methode": "score-7",
@@ -206,18 +231,15 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-03T21:55:32+00:00",
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-7",
@@ -229,17 +251,19 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "M7S750159",
+    "date": "20261008",
+    "prix": 46.61,
+    "statut": "ok"
    },
    "entree": "2026-10-03T21:55:32+00:00",
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -252,17 +276,19 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "697660207",
+    "date": "20261008",
+    "prix": 80.12,
+    "statut": "ok"
    },
    "entree": "2026-10-03T21:55:32+00:00",
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -275,18 +301,15 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-03T21:55:32+00:00",
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-7",
@@ -298,18 +321,28 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "M53637100",
+    "date": "20261006",
+    "prix": 1.54,
+    "statut": "ok"
    },
    "entree": "2026-10-03T21:55:32+00:00",
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "battu": true,
+     "date": "20261013",
+     "ecart": 0.0218,
+     "marche": {
+      "fonds": "SPY",
+      "variation": 0.0042
+     },
+     "prix": 1.58,
+     "statut": "mesure",
+     "variation": 0.026
     }
    },
    "methode": "score-7",
@@ -321,18 +354,15 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-03T21:55:32+00:00",
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-7",
@@ -344,18 +374,15 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-03T21:55:32+00:00",
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-7",
@@ -367,17 +394,19 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "98420N105",
+    "date": "20261007",
+    "prix": 36.57,
+    "statut": "ok"
    },
    "entree": "2026-10-03T21:55:32+00:00",
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -390,19 +419,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "00109K105",
+    "date": "20261006",
+    "prix": 3.32,
+    "statut": "ok"
    },
    "entree": "2026-10-05T02:12:12+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -428,20 +459,30 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "00218A105",
+    "date": "20261006",
+    "prix": 2.93,
+    "statut": "ok"
    },
    "entree": "2026-10-05T02:12:12+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "battu": false,
+     "date": "20261013",
+     "ecart": -0.1714,
+     "marche": {
+      "fonds": "SPY",
+      "variation": 0.0042
+     },
+     "prix": 2.44,
+     "statut": "mesure",
+     "variation": -0.1672
     }
    },
    "methode": "score-8",
@@ -466,20 +507,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-05T02:12:12+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-8",
@@ -504,20 +542,30 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "140501107",
+    "date": "20261006",
+    "prix": 23.57,
+    "statut": "ok"
    },
    "entree": "2026-10-05T02:12:12+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "battu": false,
+     "date": "20261013",
+     "ecart": -0.0063,
+     "marche": {
+      "fonds": "SPY",
+      "variation": 0.0042
+     },
+     "prix": 23.52,
+     "statut": "mesure",
+     "variation": -0.0021
     }
    },
    "methode": "score-8",
@@ -542,20 +590,30 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "32043P106",
+    "date": "20261006",
+    "prix": 8.7,
+    "statut": "ok"
    },
    "entree": "2026-10-05T02:12:12+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "battu": false,
+     "date": "20261014",
+     "ecart": -0.0742,
+     "marche": {
+      "fonds": "SPY",
+      "variation": 0.0041
+     },
+     "prix": 8.09,
+     "statut": "mesure",
+     "variation": -0.0701
     }
    },
    "methode": "score-8",
@@ -580,19 +638,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "48662X105",
+    "date": "20261006",
+    "prix": 12.7,
+    "statut": "ok"
    },
    "entree": "2026-10-05T02:12:12+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -618,19 +678,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "53630X203",
+    "date": "20261008",
+    "prix": 2.2,
+    "statut": "ok"
    },
    "entree": "2026-10-05T02:12:12+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -656,19 +718,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "92333E104",
+    "date": "20261007",
+    "prix": 1.43,
+    "statut": "ok"
    },
    "entree": "2026-10-05T02:12:12+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -694,19 +758,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "00109K105",
+    "date": "20261007",
+    "prix": 3.28,
+    "statut": "ok"
    },
    "entree": "2026-10-05T21:26:00+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -732,20 +798,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-05T21:26:00+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -770,19 +833,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "14817C107",
+    "date": "20261009",
+    "prix": 0.81,
+    "statut": "ok"
    },
    "entree": "2026-10-05T21:26:00+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -809,20 +874,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-05T21:26:00+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -847,19 +909,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "53630X203",
+    "date": "20261008",
+    "prix": 2.2,
+    "statut": "ok"
    },
    "entree": "2026-10-05T21:26:00+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -885,20 +949,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-05T21:26:00+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -925,19 +986,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "92333E104",
+    "date": "20261007",
+    "prix": 1.43,
+    "statut": "ok"
    },
    "entree": "2026-10-05T21:26:00+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -963,20 +1026,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-05T21:26:00+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -1001,20 +1061,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-06T02:20:16+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -1039,19 +1096,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "292104106",
+    "date": "20261009",
+    "prix": 4.58,
+    "statut": "ok"
    },
    "entree": "2026-10-06T02:20:16+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -1075,19 +1134,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "65341D102",
+    "date": "20261007",
+    "prix": 20.18,
+    "statut": "ok"
    },
    "entree": "2026-10-06T02:20:16+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -1113,20 +1174,30 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "696389402",
+    "date": "20261007",
+    "prix": 1.49,
+    "statut": "ok"
    },
    "entree": "2026-10-06T02:20:16+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "battu": false,
+     "date": "20261014",
+     "ecart": -0.012,
+     "marche": {
+      "fonds": "SPY",
+      "variation": -0.0014
+     },
+     "prix": 1.47,
+     "statut": "mesure",
+     "variation": -0.0134
     }
    },
    "methode": "score-9",
@@ -1151,19 +1222,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "83085C107",
+    "date": "20261008",
+    "prix": 9.52,
+    "statut": "ok"
    },
    "entree": "2026-10-06T02:20:16+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -1189,20 +1262,25 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "G98218129",
+    "date": "20261007",
+    "prix": 1.4,
+    "statut": "ok"
    },
    "entree": "2026-10-06T02:20:16+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "date": "20261014",
+     "pourquoi": "saut de prix anormal : possible fractionnement d'actions ou prix erroné (la SEC ne garantit pas ses prix)",
+     "prix": 0.33,
+     "statut": "a_verifier",
+     "variation": -0.7643
     }
    },
    "methode": "score-9",
@@ -1227,20 +1305,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-07T10:21:56+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -1266,7 +1341,7 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
+    "attendu_vers": "2026-11-15",
     "statut": "en_attente"
    },
    "entree": "2026-10-08T10:41:25+00:00",
@@ -1274,11 +1349,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -1302,7 +1377,7 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
+    "attendu_vers": "2026-11-15",
     "statut": "en_attente"
    },
    "entree": "2026-10-08T10:41:25+00:00",
@@ -1310,11 +1385,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -1340,19 +1415,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "00860C102",
+    "date": "20261013",
+    "prix": 9.09,
+    "statut": "ok"
    },
    "entree": "2026-10-08T10:41:25+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -1379,19 +1456,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "54570M405",
+    "date": "20261013",
+    "prix": 1.61,
+    "statut": "ok"
    },
    "entree": "2026-10-09T02:12:55+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -1415,7 +1494,7 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
+    "attendu_vers": "2026-11-15",
     "statut": "en_attente"
    },
    "entree": "2026-10-09T02:12:55+00:00",
@@ -1423,11 +1502,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -1453,7 +1532,7 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
+    "attendu_vers": "2026-11-15",
     "statut": "en_attente"
    },
    "entree": "2026-10-09T02:12:55+00:00",
@@ -1461,11 +1540,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -1492,19 +1571,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-10-31",
-    "statut": "en_attente"
+    "cusip": "059460303",
+    "date": "20261014",
+    "prix": 4.19,
+    "statut": "ok"
    },
    "entree": "2026-10-10T09:56:40+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-10-31",
+     "attendu_vers": "2026-11-15",
      "statut": "en_attente"
     }
    },
@@ -3599,8 +3680,8 @@
     },
     "7": {
      "battu": 0,
-     "ecart_moyen": null,
-     "mesurees": 0
+     "ecart_moyen": -0.066,
+     "mesurees": 4
     },
     "entrees": 21,
     "libelle": "Entrée grâce au bonus de petite compagnie (×1,5)"
@@ -3627,8 +3708,8 @@
     },
     "7": {
      "battu": 0,
-     "ecart_moyen": null,
-     "mesurees": 0
+     "ecart_moyen": -0.066,
+     "mesurees": 4
     },
     "entrees": 51,
     "libelle": "Achat d'actions par un dirigeant ou un administrateur"
@@ -3711,8 +3792,8 @@
     },
     "7": {
      "battu": 0,
-     "ecart_moyen": null,
-     "mesurees": 0
+     "ecart_moyen": -0.066,
+     "mesurees": 4
     },
     "entrees": 32,
     "libelle": "Petite compagnie (sous le 30e centile du NYSE)"
@@ -3720,8 +3801,8 @@
   },
   "sans_raisons": 16
  },
- "prix_jusqu_au": null,
- "prochains_prix_vers": "2026-10-31",
+ "prix_jusqu_au": "2026-10-14",
+ "prochains_prix_vers": "2026-11-15",
  "resume": {
   "baisse_30": {
    "battu": 0,
@@ -3738,26 +3819,26 @@
   "ecartee_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 20,
+   "en_attente": 17,
    "mesurees": 0
   },
   "ecartee_7": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 20,
+   "en_attente": 17,
    "mesurees": 0
   },
   "hausse_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 68,
+   "en_attente": 57,
    "mesurees": 0
   },
   "hausse_7": {
-   "battu": 0,
-   "ecart_moyen": null,
-   "en_attente": 68,
-   "mesurees": 0
+   "battu": 2,
+   "ecart_moyen": -0.0243,
+   "en_attente": 48,
+   "mesurees": 8
   }
  }
 }
