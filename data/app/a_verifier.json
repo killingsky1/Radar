@@ -1,5 +1,107 @@
 [
  {
+  "amount_max": 2257144.54,
+  "amount_min": 2257144.54,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": false,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-31T09:44:59+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 46000.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000004457",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 49.0684,
+   "proprietaires_cik": [
+    "1134431"
+   ],
+   "roles": [
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "UHALB",
+   "symboles_sec": [
+    "UHAL",
+    "UHAL-B"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 23000.0,
+     "apres": 356196.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-10-28",
+     "hors_bourse": null,
+     "prix": 48.4202,
+     "titre_valeur": "Series N Common Stock"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 11486.0,
+     "apres": 344710.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-10-29",
+     "hors_bourse": null,
+     "prix": 49.5363,
+     "titre_valeur": "Series N Common Stock"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 11514.0,
+     "apres": 333196.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-10-29",
+     "hors_bourse": null,
+     "prix": 49.8963,
+     "titre_valeur": "Series N Common Stock"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "SHOEN MARK V",
+   "U-Haul Holding Co /NV/"
+  ],
+  "id": "sec_form4:0001193125-26-442142:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-10-28",
+  "official_id": "0001193125-26-442142:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/4457/000119312526442142/0001193125-26-442142-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-10-30",
+  "sha256": "6c3a687c2846eab3adb898de702677de389feccd725fa8f06ce23e2634d11308",
+  "source": "sec_form4",
+  "tickers": [
+   "UHAL"
+  ],
+  "title": "SHOEN MARK V (actionnaire de 10 %) vend 46 000 actions de U-Haul Holding Co /NV/"
+ },
+ {
   "amount_max": 101400.0,
   "amount_min": 101400.0,
   "badge": "a_verifier",

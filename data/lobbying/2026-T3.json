@@ -363,6 +363,78 @@
   ],
   "total": 60000.0
  },
+ "HBAN": {
+  "base": "compagnie",
+  "complet": true,
+  "firmes": 2,
+  "lu": "2026-10-31T09:44:50+00:00",
+  "moins_de_5000": 0,
+  "nom": "HUNTINGTON BANCSHARES INC",
+  "pages": 1,
+  "rapports": [
+   {
+    "client": "HUNTINGTON BANCSHARES INCORPORATED",
+    "montant": 250000.0,
+    "poste": "2026-10-20",
+    "registrant": "HUNTINGTON BANCSHARES INCORPORATED",
+    "sans_activite": false,
+    "soi_meme": true,
+    "sujets": [
+     "BAN"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/dda56eaf-def2-4d45-987b-b1997d5e0f63/print/",
+    "uuid": "dda56eaf-def2-4d45-987b-b1997d5e0f63"
+   },
+   {
+    "client": "HUNTINGTON BANCSHARES INCORPORATED",
+    "montant": 40000.0,
+    "poste": "2026-10-14",
+    "registrant": "CAPITOL COUNSEL LLC",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "BAN",
+     "FIN"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/fee3110a-83df-492a-ad42-53a98682b41c/print/",
+    "uuid": "fee3110a-83df-492a-ad42-53a98682b41c"
+   },
+   {
+    "client": "HUNTINGTON BANCSHARES",
+    "montant": 20000.0,
+    "poste": "2026-10-20",
+    "registrant": "ALIGNMENT GOVERNMENT STRATEGIES",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "BAN",
+     "TAX"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/261428d3-51dd-40bc-9110-7d39d0ec827a/print/",
+    "uuid": "261428d3-51dd-40bc-9110-7d39d0ec827a"
+   }
+  ],
+  "recherche": "HUNTINGTON",
+  "revenus_firmes": 60000.0,
+  "sujets": [
+   {
+    "code": "BAN",
+    "nom": "Banques"
+   },
+   {
+    "code": "FIN",
+    "nom": "Institutions financières, placements et valeurs mobilières"
+   },
+   {
+    "code": "TAX",
+    "nom": "Fiscalité (impôts)"
+   }
+  ],
+  "total": 250000.0
+ },
  "HYMC": {
   "base": null,
   "complet": true,
@@ -793,6 +865,20 @@
   "pages": 4,
   "rapports": [],
   "recherche": "TECHNOLOGIES",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
+ "UTMD": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-10-31T09:44:50+00:00",
+  "moins_de_5000": 0,
+  "nom": "UTAH MEDICAL PRODUCTS INC",
+  "pages": 4,
+  "rapports": [],
+  "recherche": "PRODUCTS",
   "revenus_firmes": null,
   "sujets": [],
   "total": null
