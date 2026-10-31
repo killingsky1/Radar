@@ -3,6 +3,42 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "communique_officiel": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-31T01:37:34+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "titre_officiel": "Justice Department’s Statement on Its Investigation of Vistra’s Acquisition of Cogentrix"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "doj_antitrust:justice-departments-statement-its-investigation-vistras-acquisition-cogentrix",
+  "kind": "antitrust",
+  "notes": [],
+  "occurred_on": "2026-10-30",
+  "official_id": "justice-departments-statement-its-investigation-vistras-acquisition-cogentrix",
+  "official_url": "https://www.justice.gov/opa/pr/justice-departments-statement-its-investigation-vistras-acquisition-cogentrix",
+  "parser_version": "doj-1",
+  "published_on": "2026-10-30",
+  "sha256": "de2c90ecf0a1a4b95eda09f49d67746347a2d6556a26ff10b4c1606ce837f65b",
+  "source": "doj_antitrust",
+  "tickers": [],
+  "title": "Antitrust (ministère de la Justice) : Justice Department’s Statement on Its Investigation of Vistra’s Acquisition of Cogentrix"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -53429,42 +53465,6 @@
   "source": "sanctions_us",
   "tickers": [],
   "title": "Sanctions américaines (OFAC) : Democratic Republic of the Congo-related Designations Removals"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "communique_officiel": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T02:03:23+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "titre_officiel": "Justice Department Issues Statements on the U.S. District Court for the Western District of Michigan’s Decision in People of the State of Michigan vs. BP, P.L.C., et al."
-  },
-  "direction": 0,
-  "entities": [],
-  "id": "doj_antitrust:justice-department-issues-statements-us-district-court-western-district-michigans-decision",
-  "kind": "antitrust",
-  "notes": [],
-  "occurred_on": "2026-09-23",
-  "official_id": "justice-department-issues-statements-us-district-court-western-district-michigans-decision",
-  "official_url": "https://www.justice.gov/opa/pr/justice-department-issues-statements-us-district-court-western-district-michigans-decision",
-  "parser_version": "doj-1",
-  "published_on": "2026-09-23",
-  "sha256": "dab55af82325ab4afad419e0de3ef23d31839bf1da1ea5f4c4fd861538a0616f",
-  "source": "doj_antitrust",
-  "tickers": [],
-  "title": "Antitrust (ministère de la Justice) : Justice Department Issues Statements on the U.S. District Court for the Western District of Michigan’s Decision in People of the State of Michigan vs. BP, P.L.C., et al."
  },
  {
   "amount_max": null,
