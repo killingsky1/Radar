@@ -1,5 +1,73 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": false,
+   "montants_officiels": false,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-02T20:45:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "WV01",
+   "elu": "Carol Devine Miller",
+   "lecture_complete": false,
+   "nom_sec": "Honeywell Aerospace Inc.",
+   "rapport": "20035734",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Honeywell Aerospace Inc. - Common Stock (HONA) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-09-29",
+     "description": null,
+     "montant": "$710.52",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Carol Devine Miller",
+   "Honeywell Aerospace Inc."
+  ],
+  "id": "chambre_ptr:20035734:HONA:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "20035734:HONA:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035734.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-30",
+  "sha256": "626f49376c41099ed76f6c39c4365b6f892a4b78c37a7e5f7a2a16691e52b506",
+  "source": "chambre_ptr",
+  "tickers": [
+   "HONA"
+  ],
+  "title": "Carol Devine Miller (Chambre, WV01) vend HONA — conjoint·e"
+ },
+ {
   "amount_max": 2257144.54,
   "amount_min": 2257144.54,
   "badge": "a_verifier",

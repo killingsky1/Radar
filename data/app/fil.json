@@ -1,5 +1,208 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-02T20:45:24+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-fera-la-promotion-du-commerce-et-de-linvestissement-aupres-de-la-suede-et-des-pays-du-nord-de-leurope.html",
+   "ministere": "Innovation, Sciences et Développement économique Canada",
+   "mis_a_jour": "2026-11-01T10:00:00-05:00",
+   "resume": "La visite servira à mettre en lumière les industries et l’innovation de calibre mondial du Canada auprès de dirigeants d’affaires",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Innovation, Sciences et Développement économique Canada"
+  ],
+  "id": "nouvelles_eco_ca:innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-fera-la-promotion-du-commerce-et-de-linvestissement-aupres-de-la-suede-et-des-pays-du-nord-de-leurope.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-01",
+  "official_id": "innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-fera-la-promotion-du-commerce-et-de-linvestissement-aupres-de-la-suede-et-des-pays-du-nord-de-leurope.html",
+  "official_url": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/10/le-gouvernement-du-canada-fera-la-promotion-du-commerce-et-de-linvestissement-aupres-de-la-suede-et-des-pays-du-nord-de-leurope.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-01",
+  "sha256": "37443ba52b0531955721ba1b96b7f1c4d68f0acd390336d1037a06efbdfcfaa9",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le gouvernement du Canada fera la promotion du commerce et de l’investissement auprès de la Suède et des pays du Nord de l’Europe"
+ },
+ {
+  "amount_max": 45000.0,
+  "amount_min": 3003.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-02T20:45:22+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "VA05",
+   "elu": "John J Mr McGuire",
+   "lecture_complete": true,
+   "nom_sec": "MICRON TECHNOLOGY INC",
+   "rapport": "20035484",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Micron Technology, Inc. - Common Stock (MU) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "P"
+    },
+    {
+     "actif": "Micron Technology, Inc. - Common Stock (MU) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-25",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "P"
+    },
+    {
+     "actif": "Micron Technology, Inc. - Common Stock (MU) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-10-01",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "John J Mr McGuire",
+   "MICRON TECHNOLOGY INC"
+  ],
+  "id": "chambre_ptr:20035484:MU:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035484:MU:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035484.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-01",
+  "sha256": "3db59e1643f56c76ec60e0336a8911f35913eda396cfa203677fb6eb144dca8b",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MU"
+  ],
+  "title": "John J Mr McGuire (Chambre, VA05) achète MU (3 transactions) — conjoint·e"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-02T20:45:22+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "VA05",
+   "elu": "John J Mr McGuire",
+   "lecture_complete": true,
+   "nom_sec": "Broadcom Inc.",
+   "rapport": "20035484",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Broadcom Inc. - Common Stock (AVGO) [ST]",
+     "avis": "2026-10-02",
+     "date": "2026-09-24",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "SP",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "John J Mr McGuire",
+   "Broadcom Inc."
+  ],
+  "id": "chambre_ptr:20035484:AVGO:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-24",
+  "official_id": "20035484:AVGO:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035484.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-01",
+  "sha256": "3db59e1643f56c76ec60e0336a8911f35913eda396cfa203677fb6eb144dca8b",
+  "source": "chambre_ptr",
+  "tickers": [
+   "AVGO"
+  ],
+  "title": "John J Mr McGuire (Chambre, VA05) vend AVGO — conjoint·e"
+ },
+ {
   "amount_max": 113748477.0,
   "amount_min": 113748477.0,
   "badge": "officiel",
@@ -567,6 +770,616 @@
   "source": "contrats_ca_10k",
   "tickers": [],
   "title": "Contrat fédéral de 12,4 M$ : WILDSTONE CONSTRUCTION & ENGINEERIN (Gendarmerie royale du Canada)"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-02T20:45:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "NJ07",
+   "elu": "Thomas H. Kean",
+   "lecture_complete": true,
+   "nom_sec": "TEXAS INSTRUMENTS INC",
+   "rapport": "20035591",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Texas Instruments Incorporated - Common Stock (TXN) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-17",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Thomas H. Kean",
+   "TEXAS INSTRUMENTS INC"
+  ],
+  "id": "chambre_ptr:20035591:TXN:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-09-17",
+  "official_id": "20035591:TXN:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035591.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-30",
+  "sha256": "1ef797ddcb492904023967cdb1109633e924704a27e70c563dc279c2064152be",
+  "source": "chambre_ptr",
+  "tickers": [
+   "TXN"
+  ],
+  "title": "Thomas H. Kean (Chambre, NJ07) achète TXN"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-02T20:45:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "NJ07",
+   "elu": "Thomas H. Kean",
+   "lecture_complete": true,
+   "nom_sec": "STRYKER CORP",
+   "rapport": "20035591",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Stryker Corporation Common Stock (SYK) [ST]",
+     "avis": "2026-10-07",
+     "date": "2026-09-30",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Thomas H. Kean",
+   "STRYKER CORP"
+  ],
+  "id": "chambre_ptr:20035591:SYK:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-30",
+  "official_id": "20035591:SYK:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035591.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-30",
+  "sha256": "1ef797ddcb492904023967cdb1109633e924704a27e70c563dc279c2064152be",
+  "source": "chambre_ptr",
+  "tickers": [
+   "SYK"
+  ],
+  "title": "Thomas H. Kean (Chambre, NJ07) vend SYK"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-02T20:45:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "NJ07",
+   "elu": "Thomas H. Kean",
+   "lecture_complete": true,
+   "nom_sec": "Mondelez International, Inc.",
+   "rapport": "20035591",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Mondelez International, Inc. - Class A Common Stock (MDLZ) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-23",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Thomas H. Kean",
+   "Mondelez International, Inc."
+  ],
+  "id": "chambre_ptr:20035591:MDLZ:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-23",
+  "official_id": "20035591:MDLZ:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035591.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-30",
+  "sha256": "1ef797ddcb492904023967cdb1109633e924704a27e70c563dc279c2064152be",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MDLZ"
+  ],
+  "title": "Thomas H. Kean (Chambre, NJ07) vend MDLZ"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-02T20:45:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "NJ07",
+   "elu": "Thomas H. Kean",
+   "lecture_complete": true,
+   "nom_sec": "JOHNSON & JOHNSON",
+   "rapport": "20035591",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Johnson & Johnson Common Stock (JNJ) [ST]",
+     "avis": "2026-10-07",
+     "date": "2026-09-30",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Thomas H. Kean",
+   "JOHNSON & JOHNSON"
+  ],
+  "id": "chambre_ptr:20035591:JNJ:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-30",
+  "official_id": "20035591:JNJ:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035591.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-30",
+  "sha256": "1ef797ddcb492904023967cdb1109633e924704a27e70c563dc279c2064152be",
+  "source": "chambre_ptr",
+  "tickers": [
+   "JNJ"
+  ],
+  "title": "Thomas H. Kean (Chambre, NJ07) vend JNJ"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-02T20:45:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "NJ07",
+   "elu": "Thomas H. Kean",
+   "lecture_complete": true,
+   "nom_sec": "ESAB Corp",
+   "rapport": "20035591",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "ESAB Corporation Common Stock (ESAB) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-29",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Thomas H. Kean",
+   "ESAB Corp"
+  ],
+  "id": "chambre_ptr:20035591:ESAB:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "20035591:ESAB:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035591.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-30",
+  "sha256": "1ef797ddcb492904023967cdb1109633e924704a27e70c563dc279c2064152be",
+  "source": "chambre_ptr",
+  "tickers": [
+   "ESAB"
+  ],
+  "title": "Thomas H. Kean (Chambre, NJ07) achète ESAB"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-02T20:45:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "NJ07",
+   "elu": "Thomas H. Kean",
+   "lecture_complete": true,
+   "nom_sec": "ABBOTT LABORATORIES",
+   "rapport": "20035591",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Abbott Laboratories Common Stock (ABT) [ST]",
+     "avis": "2026-10-01",
+     "date": "2026-09-17",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Thomas H. Kean",
+   "ABBOTT LABORATORIES"
+  ],
+  "id": "chambre_ptr:20035591:ABT:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-17",
+  "official_id": "20035591:ABT:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035591.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-30",
+  "sha256": "1ef797ddcb492904023967cdb1109633e924704a27e70c563dc279c2064152be",
+  "source": "chambre_ptr",
+  "tickers": [
+   "ABT"
+  ],
+  "title": "Thomas H. Kean (Chambre, NJ07) vend ABT"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "compagnie_cotee": true,
+   "date_du_prospectus_prouvee": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "entree_en_bourse": true,
+   "fin_calculee": true,
+   "sans_levee_anticipee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "une_seule_duree": true
+  },
+  "collected_at": "2026-11-02T20:44:56+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "bourse": "Nasdaq",
+   "cik": "2044950",
+   "date_prospectus": "2026-10-29",
+   "details": [
+    [
+     "Compagnie",
+     "Bambusa Therapeutics, Inc."
+    ],
+    [
+     "Date du prospectus",
+     "29 octobre 2026"
+    ],
+    [
+     "Durée du blocage",
+     "180 jours"
+    ],
+    [
+     "Fin prévue du blocage",
+     "mardi 27 avril 2027 (inclus)"
+    ],
+    [
+     "Phrase du prospectus",
+     "Our directors, executive officers, and holders of substantially all of our capital stock and securities convertible into or exchangeable for our common stock have entered into lock-up agreements with the underwriters and/or are subject to market standoff agreements or other agreements with us pursuant to which they may not, with certain exceptions, for a period of 180 days from the date of this prospectus, offer, sell, or otherwise transfer or dispose of any of our securities, without the prior written consent of BofA Securities, Inc."
+    ],
+    [
+     "Date du prospectus prouvée par",
+     "« The date of this prospectus is October 29, 2026 » ; « Through and including November 23, 2026 (the 25th day after the date of this prospectus) »"
+    ]
+   ],
+   "duree_jours": 180,
+   "ecart_ouvrables": 1,
+   "entree_en_bourse": true,
+   "fin_blocage": "2027-04-27",
+   "levee_anticipee": false,
+   "phrase_blocage": "Our directors, executive officers, and holders of substantially all of our capital stock and securities convertible into or exchangeable for our common stock have entered into lock-up agreements with the underwriters and/or are subject to market standoff agreements or other agreements with us pursuant to which they may not, with certain exceptions, for a period of 180 days from the date of this prospectus, offer, sell, or otherwise transfer or dispose of any of our securities, without the prior written consent of BofA Securities, Inc.",
+   "preuves_date": [
+    {
+     "date": "2026-10-29",
+     "directe": true,
+     "phrase": "The date of this prospectus is October 29, 2026",
+     "sorte": "couverture"
+    },
+    {
+     "date": "2026-10-29",
+     "directe": true,
+     "phrase": "Through and including November 23, 2026 (the 25th day after the date of this prospectus)",
+     "sorte": "25 jours"
+    }
+   ]
+  },
+  "direction": 0,
+  "entities": [
+   "Bambusa Therapeutics, Inc."
+  ],
+  "id": "sec_blocage:0001628280-26-068563",
+  "kind": "fin_blocage",
+  "notes": [
+   "Date prévue par le prospectus : les banques qui ont mené l'entrée en bourse peuvent lever le blocage plus tôt, en tout ou en partie. Information seulement : 0 point dans la note."
+  ],
+  "occurred_on": "2026-10-29",
+  "official_id": "0001628280-26-068563",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/2044950/000162828026068563/0001628280-26-068563-index.htm",
+  "parser_version": "blocage-1",
+  "published_on": "2026-10-30",
+  "sha256": "3a5cef39d44066bdbc2b416cfdd533353b9fe4b511c835b041db6be784809278",
+  "source": "sec_blocage",
+  "tickers": [
+   "BBTX"
+  ],
+  "title": "Bambusa Therapeutics, Inc. : fin prévue du blocage de 180 jours le 27 avril 2027 (entrée en bourse, prospectus du 29 octobre 2026)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "compagnie_cotee": true,
+   "date_du_prospectus_prouvee": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "entree_en_bourse": true,
+   "fin_calculee": true,
+   "sans_levee_anticipee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "une_seule_duree": true
+  },
+  "collected_at": "2026-11-02T20:44:54+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "bourse": "Nasdaq",
+   "cik": "2124080",
+   "date_prospectus": "2026-10-29",
+   "details": [
+    [
+     "Compagnie",
+     "Aspen Neuroscience, Inc."
+    ],
+    [
+     "Date du prospectus",
+     "29 octobre 2026"
+    ],
+    [
+     "Durée du blocage",
+     "180 jours"
+    ],
+    [
+     "Fin prévue du blocage",
+     "mardi 27 avril 2027 (inclus)"
+    ],
+    [
+     "Phrase du prospectus",
+     "Our directors and executive officers and substantially all of our securityholders have entered into lock-up agreements with the representatives pursuant to which they may not, with limited exceptions and among other things, for a period of 180 days from the date of this prospectus, offer, sell or otherwise transfer or dispose of any of our securities, without the prior written consent of Leerink Partners LLC, Piper Sandler & Co., Stifel, Nicolaus & Company, Incorporated and UBS Securities LLC."
+    ],
+    [
+     "Date du prospectus prouvée par",
+     "« Prospectus dated October 29, 2026 » ; « October 29, 2026 » ; « Through and including November 23, 2026 (the 25th day after the date of this prospectus) »"
+    ]
+   ],
+   "duree_jours": 180,
+   "ecart_ouvrables": 1,
+   "entree_en_bourse": true,
+   "fin_blocage": "2027-04-27",
+   "levee_anticipee": false,
+   "phrase_blocage": "Our directors and executive officers and substantially all of our securityholders have entered into lock-up agreements with the representatives pursuant to which they may not, with limited exceptions and among other things, for a period of 180 days from the date of this prospectus, offer, sell or otherwise transfer or dispose of any of our securities, without the prior written consent of Leerink Partners LLC, Piper Sandler & Co., Stifel, Nicolaus & Company, Incorporated and UBS Securities LLC.",
+   "preuves_date": [
+    {
+     "date": "2026-10-29",
+     "directe": true,
+     "phrase": "Prospectus dated October 29, 2026",
+     "sorte": "couverture"
+    },
+    {
+     "date": "2026-10-29",
+     "directe": true,
+     "phrase": "October 29, 2026",
+     "sorte": "bas de la couverture"
+    },
+    {
+     "date": "2026-10-29",
+     "directe": true,
+     "phrase": "Through and including November 23, 2026 (the 25th day after the date of this prospectus)",
+     "sorte": "25 jours"
+    }
+   ]
+  },
+  "direction": 0,
+  "entities": [
+   "Aspen Neuroscience, Inc."
+  ],
+  "id": "sec_blocage:0001193125-26-441782",
+  "kind": "fin_blocage",
+  "notes": [
+   "Date prévue par le prospectus : les banques qui ont mené l'entrée en bourse peuvent lever le blocage plus tôt, en tout ou en partie. Information seulement : 0 point dans la note."
+  ],
+  "occurred_on": "2026-10-29",
+  "official_id": "0001193125-26-441782",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/2124080/000119312526441782/0001193125-26-441782-index.htm",
+  "parser_version": "blocage-1",
+  "published_on": "2026-10-30",
+  "sha256": "293487d9a4564d94da4ed8159eb9a3437e5fcf4a9cfd2f3f00abdc20bf045d5b",
+  "source": "sec_blocage",
+  "tickers": [
+   "ASPE"
+  ],
+  "title": "Aspen Neuroscience, Inc. : fin prévue du blocage de 180 jours le 27 avril 2027 (entrée en bourse, prospectus du 29 octobre 2026)"
  },
  {
   "amount_max": 1000000000.0,
@@ -21079,108 +21892,6 @@
    "OFAL"
   ],
   "title": "OFA Group : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-30T10:10:49+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0002033593",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "Stellar V Capital Corp. (Cayman Islands)"
-  ],
-  "id": "sec_8k:0001213900-26-113852",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-10-29",
-  "official_id": "0001213900-26-113852",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/2033593/000121390026113852/0001213900-26-113852-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-29",
-  "sha256": "8c2255b71d749c3d663db9a552fa3e899835d582902f48904ea9c940dd8ee0c5",
-  "source": "sec_8k",
-  "tickers": [
-   "SVCC"
-  ],
-  "title": "Stellar V Capital Corp. (Cayman Islands) : contrat important signé"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "items_officiels_reconnus": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_8k": true
-  },
-  "collected_at": "2026-10-30T10:10:48+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "bourse": "Nasdaq",
-   "cik": "0002028336",
-   "items": [
-    {
-     "direction": 0,
-     "item": "1.01",
-     "libelle": "contrat important signé",
-     "officiel": "Entry into a Material Definitive Agreement"
-    }
-   ],
-   "type": "8-K"
-  },
-  "direction": 0,
-  "entities": [
-   "New ERA Energy & Digital, Inc."
-  ],
-  "id": "sec_8k:0001213900-26-113530",
-  "kind": "evenement_8k",
-  "notes": [],
-  "occurred_on": "2026-10-28",
-  "official_id": "0001213900-26-113530",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/2028336/000121390026113530/0001213900-26-113530-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-29",
-  "sha256": "10067f342d28788eb4e2dbe41e8ec8225116184cc3307abc6d3bd420fa894a7f",
-  "source": "sec_8k",
-  "tickers": [
-   "NUAI"
-  ],
-  "title": "New ERA Energy & Digital, Inc. : contrat important signé"
  },
  {
   "amount_max": null,
@@ -44402,351 +45113,6 @@
   "title": "Maria Elvira Salazar (Chambre, FL27) vend CB"
  },
  {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-08T21:29:16+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "FL27",
-   "elu": "Maria Elvira Salazar",
-   "lecture_complete": true,
-   "nom_sec": "CITIGROUP INC",
-   "rapport": "20035562",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Citigroup, Inc. Common Stock (C) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-24",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Maria Elvira Salazar",
-   "CITIGROUP INC"
-  ],
-  "id": "chambre_ptr:20035562:C:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-24",
-  "official_id": "20035562:C:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-07",
-  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
-  "source": "chambre_ptr",
-  "tickers": [
-   "C"
-  ],
-  "title": "Maria Elvira Salazar (Chambre, FL27) vend C"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-08T21:29:16+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "FL27",
-   "elu": "Maria Elvira Salazar",
-   "lecture_complete": true,
-   "nom_sec": "BERKSHIRE HATHAWAY INC",
-   "rapport": "20035562",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Berkshire Hathaway Inc. New Common Stock (BRK.B) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-24",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Maria Elvira Salazar",
-   "BERKSHIRE HATHAWAY INC"
-  ],
-  "id": "chambre_ptr:20035562:BRK-B:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-24",
-  "official_id": "20035562:BRK-B:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-07",
-  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
-  "source": "chambre_ptr",
-  "tickers": [
-   "BRK-B"
-  ],
-  "title": "Maria Elvira Salazar (Chambre, FL27) vend BRK-B"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-08T21:29:16+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "FL27",
-   "elu": "Maria Elvira Salazar",
-   "lecture_complete": true,
-   "nom_sec": "BIOGEN INC.",
-   "rapport": "20035562",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Biogen Inc. - Common Stock (BIIB) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-24",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Maria Elvira Salazar",
-   "BIOGEN INC."
-  ],
-  "id": "chambre_ptr:20035562:BIIB:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-24",
-  "official_id": "20035562:BIIB:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-07",
-  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
-  "source": "chambre_ptr",
-  "tickers": [
-   "BIIB"
-  ],
-  "title": "Maria Elvira Salazar (Chambre, FL27) vend BIIB"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-08T21:29:16+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "FL27",
-   "elu": "Maria Elvira Salazar",
-   "lecture_complete": true,
-   "nom_sec": "Brookfield Renewable Partners L.P.",
-   "rapport": "20035562",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Brookfield Renewable Partners L.P. Limited Partnership Units (BEP) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-24",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Maria Elvira Salazar",
-   "Brookfield Renewable Partners L.P."
-  ],
-  "id": "chambre_ptr:20035562:BEP:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-24",
-  "official_id": "20035562:BEP:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-07",
-  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
-  "source": "chambre_ptr",
-  "tickers": [
-   "BEP"
-  ],
-  "title": "Maria Elvira Salazar (Chambre, FL27) vend BEP"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-08T21:29:16+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "FL27",
-   "elu": "Maria Elvira Salazar",
-   "lecture_complete": true,
-   "nom_sec": "BOEING CO",
-   "rapport": "20035562",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Boeing Company (BA) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-24",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Maria Elvira Salazar",
-   "BOEING CO"
-  ],
-  "id": "chambre_ptr:20035562:BA:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-24",
-  "official_id": "20035562:BA:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-07",
-  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
-  "source": "chambre_ptr",
-  "tickers": [
-   "BA"
-  ],
-  "title": "Maria Elvira Salazar (Chambre, FL27) vend BA"
- },
- {
   "amount_max": 39000000000.0,
   "amount_min": 39000000000.0,
   "badge": "officiel",
@@ -47814,213 +48180,6 @@
   "title": "Rappel de Kalmar Solutions, LLC : 16 127 véhicules — « Park Outside: Printed Circuit Board May Short Circuit and Cause Fire »"
  },
  {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-06T17:10:30+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "TX37",
-   "elu": "Lloyd Doggett",
-   "lecture_complete": true,
-   "nom_sec": "PPG INDUSTRIES INC",
-   "rapport": "20035580",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "PPG Industries, Inc. Common Stock (PPG) [ST]",
-     "avis": "2026-10-05",
-     "date": "2026-09-11",
-     "description": "Automatic reinvestment of",
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Lloyd Doggett",
-   "PPG INDUSTRIES INC"
-  ],
-  "id": "chambre_ptr:20035580:PPG:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-09-11",
-  "official_id": "20035580:PPG:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035580.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-05",
-  "sha256": "b9fe2ab518ab7dbd5719e89a7262789745c740f10e28be7f8ccc2239864cb718",
-  "source": "chambre_ptr",
-  "tickers": [
-   "PPG"
-  ],
-  "title": "Lloyd Doggett (Chambre, TX37) achète PPG"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-06T17:10:30+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "TX37",
-   "elu": "Lloyd Doggett",
-   "lecture_complete": true,
-   "nom_sec": "JOHNSON & JOHNSON",
-   "rapport": "20035580",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Johnson & Johnson Common Stock (JNJ) [ST]",
-     "avis": "2026-10-05",
-     "date": "2026-09-08",
-     "description": "Automatic reinvestment of",
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Lloyd Doggett",
-   "JOHNSON & JOHNSON"
-  ],
-  "id": "chambre_ptr:20035580:JNJ:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-09-08",
-  "official_id": "20035580:JNJ:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035580.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-05",
-  "sha256": "b9fe2ab518ab7dbd5719e89a7262789745c740f10e28be7f8ccc2239864cb718",
-  "source": "chambre_ptr",
-  "tickers": [
-   "JNJ"
-  ],
-  "title": "Lloyd Doggett (Chambre, TX37) achète JNJ"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-06T17:10:30+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "TX37",
-   "elu": "Lloyd Doggett",
-   "lecture_complete": true,
-   "nom_sec": "INTERNATIONAL BUSINESS MACHINES CORP",
-   "rapport": "20035580",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "International Business Machines Corporation Common Stock (IBM) [ST]",
-     "avis": "2026-10-05",
-     "date": "2026-09-10",
-     "description": "Automatic reinvestment of",
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Lloyd Doggett",
-   "INTERNATIONAL BUSINESS MACHINES CORP"
-  ],
-  "id": "chambre_ptr:20035580:IBM:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-09-10",
-  "official_id": "20035580:IBM:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035580.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-05",
-  "sha256": "b9fe2ab518ab7dbd5719e89a7262789745c740f10e28be7f8ccc2239864cb718",
-  "source": "chambre_ptr",
-  "tickers": [
-   "IBM"
-  ],
-  "title": "Lloyd Doggett (Chambre, TX37) achète IBM"
- },
- {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -50550,82 +50709,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_dans_l_ordre": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "industrie_scian": true,
-   "parties_lues": true,
-   "resultat_officiel_connu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T16:24:31+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "acquereur": "Sienna Senior Living Inc",
-   "cibles": [
-    "Stonemont Retirement Living Corporation"
-   ],
-   "code": "en cours",
-   "conclusion": "en cours",
-   "debut": "2026-09-17",
-   "details": [
-    [
-     "Acquéreur",
-     "Sienna Senior Living Inc"
-    ],
-    [
-     "Visé(s)",
-     "Stonemont Retirement Living Corporation"
-    ],
-    [
-     "Examen ouvert le",
-     "2026-09-17"
-    ],
-    [
-     "Résultat",
-     "en cours"
-    ],
-    [
-     "Industrie (SCIAN)",
-     "6233"
-    ]
-   ],
-   "page_modifiee_le": "2026-09-29",
-   "parties": "Sienna Senior Living Inc / Stonemont Retirement Living Corporation",
-   "resultat": "",
-   "scian": "6233"
-  },
-  "direction": 0,
-  "entities": [
-   "Sienna Senior Living Inc",
-   "Stonemont Retirement Living Corporation"
-  ],
-  "id": "concurrence_ca:2026-09-17:sienna-senior-living-inc-stonemont-retirement-living-corporation:ouvert",
-  "kind": "fusion_examen_ouvert",
-  "notes": [
-   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
-  ],
-  "occurred_on": "2026-09-17",
-  "official_id": "2026-09-17:sienna-senior-living-inc-stonemont-retirement-living-corporation:ouvert",
-  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
-  "parser_version": "concurrence-1",
-  "published_on": "2026-09-29",
-  "sha256": "b3082074311e1c3f057ff144a7baeaf7e84db85bb8424f962e658859b8b74673",
-  "source": "concurrence_ca",
-  "tickers": [],
-  "title": "Bureau de la concurrence : examen de fusion ouvert, Sienna Senior Living Inc / Stonemont Retirement Living Corporation"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "action_officielle": true,
@@ -52739,683 +52822,5 @@
   "source": "ventes_armes",
   "tickers": [],
   "title": "Vente d'armes à l'étranger : Canada"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "militaire",
-  "checks": {
-   "acheteur_lu": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "montant_plausible": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-03T00:06:13+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Defense Department",
-    "Office of the Secretary"
-   ],
-   "etape": "parution",
-   "numero": "2026-17568",
-   "numero_dans_le_texte": true,
-   "parution": "2026-08-28",
-   "sorte": "vente_armes",
-   "sous_type": null,
-   "titre_officiel": "Arms Sales Notification",
-   "type": "Notice",
-   "vente": {
-    "acheteur": "Government of Poland",
-    "ajout_a_une_vente": true,
-    "date_congres": "July 22, 2026",
-    "fournisseurs": [],
-    "fournisseurs_texte": null,
-    "total": null,
-    "transmission": "0F-26"
-   }
-  },
-  "direction": 0,
-  "entities": [
-   "Government of Poland"
-  ],
-  "id": "ventes_armes:2026-17568",
-  "kind": "vente_armes",
-  "notes": [
-   "Avis envoyé au Congrès le 22 juillet 2026 ; publié au Registre plus tard.",
-   "Ajout ou mise à niveau d'une vente déjà annoncée."
-  ],
-  "occurred_on": "2026-07-22",
-  "official_id": "2026-17568",
-  "official_url": "https://www.federalregister.gov/documents/2026/08/28/2026-17568/arms-sales-notification",
-  "parser_version": "registre-4",
-  "published_on": "2026-08-28",
-  "sha256": "154c80bf291fc45c6e28dca85bc384b9f75006f7e689fce526972a7a0262bef4",
-  "source": "ventes_armes",
-  "tickers": [],
-  "title": "Vente d'armes à l'étranger : Pologne"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "militaire",
-  "checks": {
-   "acheteur_lu": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "montant_plausible": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-03T00:06:12+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Defense Department",
-    "Office of the Secretary"
-   ],
-   "etape": "parution",
-   "numero": "2026-17567",
-   "numero_dans_le_texte": true,
-   "parution": "2026-08-28",
-   "sorte": "vente_armes",
-   "sous_type": null,
-   "titre_officiel": "Arms Sales Notification",
-   "type": "Notice",
-   "vente": {
-    "acheteur": "Government of Sweden",
-    "ajout_a_une_vente": true,
-    "date_congres": "July 22, 2026",
-    "fournisseurs": [],
-    "fournisseurs_texte": null,
-    "total": null,
-    "transmission": "0E-26"
-   }
-  },
-  "direction": 0,
-  "entities": [
-   "Government of Sweden"
-  ],
-  "id": "ventes_armes:2026-17567",
-  "kind": "vente_armes",
-  "notes": [
-   "Avis envoyé au Congrès le 22 juillet 2026 ; publié au Registre plus tard.",
-   "Ajout ou mise à niveau d'une vente déjà annoncée."
-  ],
-  "occurred_on": "2026-07-22",
-  "official_id": "2026-17567",
-  "official_url": "https://www.federalregister.gov/documents/2026/08/28/2026-17567/arms-sales-notification",
-  "parser_version": "registre-4",
-  "published_on": "2026-08-28",
-  "sha256": "b3ed346b7f61d433d949fcabc7e9c1640ae1b34c197856138163759c276a120a",
-  "source": "ventes_armes",
-  "tickers": [],
-  "title": "Vente d'armes à l'étranger : Suède"
- },
- {
-  "amount_max": 1960000000.0,
-  "amount_min": 1960000000.0,
-  "badge": "officiel",
-  "category": "militaire",
-  "checks": {
-   "acheteur_lu": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "montant_coherent": true,
-   "montant_plausible": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-03T00:06:12+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Defense Department",
-    "Office of the Secretary"
-   ],
-   "etape": "parution",
-   "numero": "2026-17566",
-   "numero_dans_le_texte": true,
-   "parution": "2026-08-28",
-   "sorte": "vente_armes",
-   "sous_type": null,
-   "titre_officiel": "Arms Sales Notification",
-   "type": "Notice",
-   "vente": {
-    "acheteur": "Kingdom of Saudi Arabia",
-    "ajout_a_une_vente": false,
-    "date_congres": "June 15, 2026",
-    "fournisseurs": [
-     "BAE Systems"
-    ],
-    "fournisseurs_texte": "BAE Systems, located in Nashua, NH",
-    "total": 1960000000.0,
-    "transmission": "26-85"
-   }
-  },
-  "direction": 0,
-  "entities": [
-   "Kingdom of Saudi Arabia",
-   "BAE Systems"
-  ],
-  "id": "ventes_armes:2026-17566",
-  "kind": "vente_armes",
-  "notes": [
-   "Avis envoyé au Congrès le 15 juin 2026 ; publié au Registre plus tard."
-  ],
-  "occurred_on": "2026-06-15",
-  "official_id": "2026-17566",
-  "official_url": "https://www.federalregister.gov/documents/2026/08/28/2026-17566/arms-sales-notification",
-  "parser_version": "registre-4",
-  "published_on": "2026-08-28",
-  "sha256": "5947ef7df798b84d57ce493c50fe2a08dad42ef931140e798c18e1f1f9bbdfd6",
-  "source": "ventes_armes",
-  "tickers": [],
-  "title": "Vente d'armes à l'étranger : Arabie saoudite — fournisseur : BAE Systems"
- },
- {
-  "amount_max": 270000000.0,
-  "amount_min": 270000000.0,
-  "badge": "officiel",
-  "category": "militaire",
-  "checks": {
-   "acheteur_lu": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "montant_coherent": true,
-   "montant_plausible": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-03T00:06:11+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Defense Department",
-    "Office of the Secretary"
-   ],
-   "etape": "parution",
-   "numero": "2026-17565",
-   "numero_dans_le_texte": true,
-   "parution": "2026-08-28",
-   "sorte": "vente_armes",
-   "sous_type": null,
-   "titre_officiel": "Arms Sales Notification",
-   "type": "Notice",
-   "vente": {
-    "acheteur": "Government of Norway",
-    "ajout_a_une_vente": false,
-    "date_congres": "August 5, 2026",
-    "fournisseurs": [],
-    "fournisseurs_texte": null,
-    "total": 270000000.0,
-    "transmission": "26-82"
-   }
-  },
-  "direction": 0,
-  "entities": [
-   "Government of Norway"
-  ],
-  "id": "ventes_armes:2026-17565",
-  "kind": "vente_armes",
-  "notes": [
-   "Avis envoyé au Congrès le 5 août 2026 ; publié au Registre plus tard."
-  ],
-  "occurred_on": "2026-08-05",
-  "official_id": "2026-17565",
-  "official_url": "https://www.federalregister.gov/documents/2026/08/28/2026-17565/arms-sales-notification",
-  "parser_version": "registre-4",
-  "published_on": "2026-08-28",
-  "sha256": "05a46987ed8917b50bdd8b48da696fdfd8e64d65aebca3842f7f884dea446e94",
-  "source": "ventes_armes",
-  "tickers": [],
-  "title": "Vente d'armes à l'étranger : Norvège"
- },
- {
-  "amount_max": 80100000.0,
-  "amount_min": 80100000.0,
-  "badge": "officiel",
-  "category": "militaire",
-  "checks": {
-   "acheteur_lu": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "montant_coherent": true,
-   "montant_plausible": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-03T00:06:11+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Defense Department",
-    "Office of the Secretary"
-   ],
-   "etape": "parution",
-   "numero": "2026-17564",
-   "numero_dans_le_texte": true,
-   "parution": "2026-08-28",
-   "sorte": "vente_armes",
-   "sous_type": null,
-   "titre_officiel": "Arms Sales Notification",
-   "type": "Notice",
-   "vente": {
-    "acheteur": "Government of Greece",
-    "ajout_a_une_vente": false,
-    "date_congres": "July 16, 2026",
-    "fournisseurs": [
-     "Aero Vironment Inc."
-    ],
-    "fournisseurs_texte": "Aero Vironment Inc., located in Simi Valley, CA",
-    "total": 80100000.0,
-    "transmission": "26-76"
-   }
-  },
-  "direction": 0,
-  "entities": [
-   "Government of Greece",
-   "Aero Vironment Inc."
-  ],
-  "id": "ventes_armes:2026-17564",
-  "kind": "vente_armes",
-  "notes": [
-   "Avis envoyé au Congrès le 16 juillet 2026 ; publié au Registre plus tard."
-  ],
-  "occurred_on": "2026-07-16",
-  "official_id": "2026-17564",
-  "official_url": "https://www.federalregister.gov/documents/2026/08/28/2026-17564/arms-sales-notification",
-  "parser_version": "registre-4",
-  "published_on": "2026-08-28",
-  "sha256": "2f99dadcccd277a683d77aa1e368652895dc69564fd3bc046d6e9535b2a5bfd8",
-  "source": "ventes_armes",
-  "tickers": [],
-  "title": "Vente d'armes à l'étranger : Grèce — fournisseur : Aero Vironment Inc."
- },
- {
-  "amount_max": 484000000.0,
-  "amount_min": 484000000.0,
-  "badge": "officiel",
-  "category": "militaire",
-  "checks": {
-   "acheteur_lu": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "montant_coherent": true,
-   "montant_plausible": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-03T00:06:10+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Defense Department",
-    "Office of the Secretary"
-   ],
-   "etape": "parution",
-   "numero": "2026-17563",
-   "numero_dans_le_texte": true,
-   "parution": "2026-08-28",
-   "sorte": "vente_armes",
-   "sous_type": null,
-   "symboles_trouves_par": "nom exact dans la liste officielle de la SEC",
-   "titre_officiel": "Arms Sales Notification",
-   "type": "Notice",
-   "vente": {
-    "acheteur": "Government of Kuwait",
-    "ajout_a_une_vente": false,
-    "date_congres": "July 15, 2026",
-    "fournisseurs": [
-     "The Boeing Company"
-    ],
-    "fournisseurs_texte": "The Boeing Company, located in Arlington, VA",
-    "total": 484000000.0,
-    "transmission": "26-61"
-   }
-  },
-  "direction": 0,
-  "entities": [
-   "Government of Kuwait",
-   "The Boeing Company"
-  ],
-  "id": "ventes_armes:2026-17563",
-  "kind": "vente_armes",
-  "notes": [
-   "Avis envoyé au Congrès le 15 juillet 2026 ; publié au Registre plus tard."
-  ],
-  "occurred_on": "2026-07-15",
-  "official_id": "2026-17563",
-  "official_url": "https://www.federalregister.gov/documents/2026/08/28/2026-17563/arms-sales-notification",
-  "parser_version": "registre-4",
-  "published_on": "2026-08-28",
-  "sha256": "b31c506b92885ecef91809f1632579c5ed46f0e74e70ac42d7d1a27d7cbcea26",
-  "source": "ventes_armes",
-  "tickers": [
-   "BA"
-  ],
-  "title": "Vente d'armes à l'étranger : Koweït — fournisseur : The Boeing Company"
- },
- {
-  "amount_max": 22300000.0,
-  "amount_min": 22300000.0,
-  "badge": "officiel",
-  "category": "militaire",
-  "checks": {
-   "acheteur_lu": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "montant_coherent": true,
-   "montant_plausible": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-03T00:06:10+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Defense Department",
-    "Office of the Secretary"
-   ],
-   "etape": "parution",
-   "numero": "2026-17562",
-   "numero_dans_le_texte": true,
-   "parution": "2026-08-28",
-   "sorte": "vente_armes",
-   "sous_type": null,
-   "symboles_trouves_par": "nom exact dans la liste officielle de la SEC",
-   "titre_officiel": "Arms Sales Notification",
-   "type": "Notice",
-   "vente": {
-    "acheteur": "Government of Singapore",
-    "ajout_a_une_vente": false,
-    "date_congres": "June 30, 2026",
-    "fournisseurs": [
-     "Lockheed Martin Corporation"
-    ],
-    "fournisseurs_texte": "Lockheed Martin Corporation, located in Orlando, FL",
-    "total": 22300000.0,
-    "transmission": "26-54"
-   }
-  },
-  "direction": 0,
-  "entities": [
-   "Government of Singapore",
-   "Lockheed Martin Corporation"
-  ],
-  "id": "ventes_armes:2026-17562",
-  "kind": "vente_armes",
-  "notes": [
-   "Avis envoyé au Congrès le 30 juin 2026 ; publié au Registre plus tard."
-  ],
-  "occurred_on": "2026-06-30",
-  "official_id": "2026-17562",
-  "official_url": "https://www.federalregister.gov/documents/2026/08/28/2026-17562/arms-sales-notification",
-  "parser_version": "registre-4",
-  "published_on": "2026-08-28",
-  "sha256": "3184c44119f5d31ca05c3747e0983b5c2300ef22deff6e711c612bd9dced4ab5",
-  "source": "ventes_armes",
-  "tickers": [
-   "LMT"
-  ],
-  "title": "Vente d'armes à l'étranger : Singapour — fournisseur : Lockheed Martin Corporation"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "militaire",
-  "checks": {
-   "acheteur_lu": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "montant_plausible": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-03T00:06:09+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Defense Department",
-    "Office of the Secretary"
-   ],
-   "etape": "parution",
-   "numero": "2026-17561",
-   "numero_dans_le_texte": true,
-   "parution": "2026-08-28",
-   "sorte": "vente_armes",
-   "sous_type": null,
-   "titre_officiel": "Arms Sales Notification",
-   "type": "Notice",
-   "vente": {
-    "acheteur": "Government of Qatar",
-    "ajout_a_une_vente": true,
-    "date_congres": "July 6, 2026",
-    "fournisseurs": [],
-    "fournisseurs_texte": null,
-    "total": null,
-    "transmission": "26-1B"
-   }
-  },
-  "direction": 0,
-  "entities": [
-   "Government of Qatar"
-  ],
-  "id": "ventes_armes:2026-17561",
-  "kind": "vente_armes",
-  "notes": [
-   "Avis envoyé au Congrès le 6 juillet 2026 ; publié au Registre plus tard.",
-   "Ajout ou mise à niveau d'une vente déjà annoncée."
-  ],
-  "occurred_on": "2026-07-06",
-  "official_id": "2026-17561",
-  "official_url": "https://www.federalregister.gov/documents/2026/08/28/2026-17561/arms-sales-notification",
-  "parser_version": "registre-4",
-  "published_on": "2026-08-28",
-  "sha256": "04e7da09f245adb109074236b386f224204dd96ae3ac325da213266d580ba076",
-  "source": "ventes_armes",
-  "tickers": [],
-  "title": "Vente d'armes à l'étranger : Qatar"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "militaire",
-  "checks": {
-   "acheteur_lu": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "montant_plausible": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-03T00:06:09+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Defense Department",
-    "Office of the Secretary"
-   ],
-   "etape": "parution",
-   "numero": "2026-17560",
-   "numero_dans_le_texte": true,
-   "parution": "2026-08-28",
-   "sorte": "vente_armes",
-   "sous_type": null,
-   "titre_officiel": "Arms Sales Notification",
-   "type": "Notice",
-   "vente": {
-    "acheteur": "Government of Georgia",
-    "ajout_a_une_vente": true,
-    "date_congres": "July 28, 2026",
-    "fournisseurs": [],
-    "fournisseurs_texte": null,
-    "total": null,
-    "transmission": "0C-23"
-   }
-  },
-  "direction": 0,
-  "entities": [
-   "Government of Georgia"
-  ],
-  "id": "ventes_armes:2026-17560",
-  "kind": "vente_armes",
-  "notes": [
-   "Avis envoyé au Congrès le 28 juillet 2026 ; publié au Registre plus tard.",
-   "Ajout ou mise à niveau d'une vente déjà annoncée."
-  ],
-  "occurred_on": "2026-07-28",
-  "official_id": "2026-17560",
-  "official_url": "https://www.federalregister.gov/documents/2026/08/28/2026-17560/arms-sales-notification",
-  "parser_version": "registre-4",
-  "published_on": "2026-08-28",
-  "sha256": "f03416a4322629d52aee2ac5d1ae68562be0b770c16d5ad834b3fd4a110dc474",
-  "source": "ventes_armes",
-  "tickers": [],
-  "title": "Vente d'armes à l'étranger : Géorgie (pays)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "militaire",
-  "checks": {
-   "acheteur_lu": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "montant_plausible": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-03T00:06:08+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Defense Department",
-    "Office of the Secretary"
-   ],
-   "etape": "parution",
-   "numero": "2026-17559",
-   "numero_dans_le_texte": true,
-   "parution": "2026-08-28",
-   "sorte": "vente_armes",
-   "sous_type": null,
-   "titre_officiel": "Arms Sales Notification",
-   "type": "Notice",
-   "vente": {
-    "acheteur": "Government of Georgia",
-    "ajout_a_une_vente": true,
-    "date_congres": "July 28, 2026",
-    "fournisseurs": [],
-    "fournisseurs_texte": null,
-    "total": null,
-    "transmission": "0C-23"
-   }
-  },
-  "direction": 0,
-  "entities": [
-   "Government of Georgia"
-  ],
-  "id": "ventes_armes:2026-17559",
-  "kind": "vente_armes",
-  "notes": [
-   "Avis envoyé au Congrès le 28 juillet 2026 ; publié au Registre plus tard.",
-   "Ajout ou mise à niveau d'une vente déjà annoncée."
-  ],
-  "occurred_on": "2026-07-28",
-  "official_id": "2026-17559",
-  "official_url": "https://www.federalregister.gov/documents/2026/08/28/2026-17559/arms-sales-notification",
-  "parser_version": "registre-4",
-  "published_on": "2026-08-28",
-  "sha256": "475c83a39e794dd962303951222c9dd9a23b4efb452bcb3f26c353cbfa6f9c29",
-  "source": "ventes_armes",
-  "tickers": [],
-  "title": "Vente d'armes à l'étranger : Géorgie (pays)"
  }
 ]
