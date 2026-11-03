@@ -74,6 +74,20 @@
    ],
    "total": 50000.0
   },
+  "BANC": {
+   "base": null,
+   "complet": false,
+   "firmes": 0,
+   "lu": "2026-11-03T10:58:35+00:00",
+   "moins_de_5000": 0,
+   "nom": "BANC OF CALIFORNIA, INC.",
+   "pages": 4,
+   "rapports": [],
+   "recherche": "CALIFORNIA",
+   "revenus_firmes": null,
+   "sujets": [],
+   "total": null
+  },
   "BBT": {
    "base": null,
    "complet": true,
@@ -101,6 +115,40 @@
    "revenus_firmes": null,
    "sujets": [],
    "total": null
+  },
+  "DIN": {
+   "base": "firmes",
+   "complet": true,
+   "firmes": 1,
+   "lu": "2026-11-03T10:58:35+00:00",
+   "moins_de_5000": 0,
+   "nom": "Dine Brands Global, Inc.",
+   "pages": 2,
+   "rapports": [
+    {
+     "client": "DINE BRANDS GLOBAL INC.",
+     "montant": 60000.0,
+     "poste": "2026-10-16",
+     "registrant": "COVINGTON & BURLING LLP",
+     "sans_activite": false,
+     "soi_meme": false,
+     "sujets": [
+      "FOO"
+     ],
+     "type": "Q3",
+     "url": "https://lda.gov/filings/public/filing/a10adb83-d136-4fac-9a77-0951e0f59bfb/print/",
+     "uuid": "a10adb83-d136-4fac-9a77-0951e0f59bfb"
+    }
+   ],
+   "recherche": "BRANDS",
+   "revenus_firmes": 60000.0,
+   "sujets": [
+    {
+     "code": "FOO",
+     "nom": "Industrie alimentaire (salubrité, étiquetage…)"
+    }
+   ],
+   "total": 60000.0
   },
   "DVLT": {
    "base": null,
@@ -140,6 +188,20 @@
    "pages": 4,
    "rapports": [],
    "recherche": "RESOURCES",
+   "revenus_firmes": null,
+   "sujets": [],
+   "total": null
+  },
+  "GDRX": {
+   "base": null,
+   "complet": true,
+   "firmes": 0,
+   "lu": "2026-11-03T10:58:35+00:00",
+   "moins_de_5000": 0,
+   "nom": "GoodRx Holdings, Inc.",
+   "pages": 1,
+   "rapports": [],
+   "recherche": "GOODRX",
    "revenus_firmes": null,
    "sujets": [],
    "total": null
@@ -325,6 +387,20 @@
    "sujets": [],
    "total": null
   },
+  "OCFC": {
+   "base": null,
+   "complet": true,
+   "firmes": 0,
+   "lu": "2026-11-03T10:58:35+00:00",
+   "moins_de_5000": 0,
+   "nom": "OCEANFIRST FINANCIAL CORP",
+   "pages": 1,
+   "rapports": [],
+   "recherche": "OCEANFIRST",
+   "revenus_firmes": null,
+   "sujets": [],
+   "total": null
+  },
   "RAPP": {
    "base": null,
    "complet": true,
@@ -335,6 +411,20 @@
    "pages": 1,
    "rapports": [],
    "recherche": "RAPPORT",
+   "revenus_firmes": null,
+   "sujets": [],
+   "total": null
+  },
+  "RBBN": {
+   "base": null,
+   "complet": true,
+   "firmes": 0,
+   "lu": "2026-11-03T10:58:35+00:00",
+   "moins_de_5000": 0,
+   "nom": "Ribbon Communications Inc.",
+   "pages": 4,
+   "rapports": [],
+   "recherche": "COMMUNICATIONS",
    "revenus_firmes": null,
    "sujets": [],
    "total": null
