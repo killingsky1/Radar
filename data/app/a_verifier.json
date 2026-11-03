@@ -1,5 +1,171 @@
 [
  {
+  "amount_max": 1369577.75,
+  "amount_min": 1369577.75,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "actions_et_valeur_positives": true,
+   "actions_sous_le_total_en_circulation": false,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "prix_implicite_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-03T03:32:45+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 22500.0,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0000721994",
+   "date_avis": "2026-11-02",
+   "lignes": [
+    {
+     "actions": 22500.0,
+     "bourse": "NASDAQ",
+     "classe": "Common",
+     "date_prevue": "2026-10-29",
+     "en_circulation": 0.0,
+     "valeur": 1369577.75
+    }
+   ],
+   "nom_emetteur": "Lakeland Financial Corp",
+   "plan_10b5_1": [],
+   "relations": [
+    "Director"
+   ],
+   "vendeur": "Melinda J Truex"
+  },
+  "direction": -1,
+  "entities": [
+   "Melinda J Truex",
+   "LAKELAND FINANCIAL CORP"
+  ],
+  "id": "sec_form144:0002070264-26-000011",
+  "kind": "intention_vente",
+  "notes": [
+   "Vente décidée librement (pas dans un plan automatique).",
+   "Date de vente prévue : 29 octobre 2026."
+  ],
+  "occurred_on": "2026-11-02",
+  "official_id": "0002070264-26-000011",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/721994/000207026426000011/0002070264-26-000011-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-02",
+  "sha256": "e2e65a4bbcc15d829e15c7fcb1980cd5178a615f1bb929f108f846122e1bfafa",
+  "source": "sec_form144",
+  "tickers": [
+   "LKFN"
+  ],
+  "title": "Melinda J Truex (administrateur) prévoit vendre 22 500 actions de LAKELAND FINANCIAL CORP"
+ },
+ {
+  "amount_max": 787182.63,
+  "amount_min": 787182.63,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": false,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-03T03:30:41+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 39044.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000863900",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 20.1614,
+   "proprietaires_cik": [
+    "1510281"
+   ],
+   "roles": [
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "MXF",
+   "symboles_sec": [
+    "MXE"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 19675.0,
+     "apres": 2445456.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-10-29",
+     "hors_bourse": null,
+     "prix": 20.1,
+     "titre_valeur": "Common Stock"
+    },
+    {
+     "acquis_cede": "A",
+     "actions": 4226.0,
+     "apres": 2449682.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-10-29",
+     "hors_bourse": null,
+     "prix": 20.13,
+     "titre_valeur": "Common Stock"
+    },
+    {
+     "acquis_cede": "A",
+     "actions": 15143.0,
+     "apres": 2464825.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-10-30",
+     "hors_bourse": null,
+     "prix": 20.25,
+     "titre_valeur": "Common Stock"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Saba Capital Management, L.P.",
+   "MEXICO EQUITY & INCOME FUND INC"
+  ],
+  "id": "sec_form4:0001510281-26-000400:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-10-29",
+  "official_id": "0001510281-26-000400:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/863900/000151028126000400/0001510281-26-000400-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-02",
+  "sha256": "ea605fa05e61a6fc30cdacd68dab0a5f97e1dad51256af2580502d9c752e326d",
+  "source": "sec_form4",
+  "tickers": [
+   "MXE"
+  ],
+  "title": "Saba Capital Management, L.P. (actionnaire de 10 %) achète 39 044 actions de MEXICO EQUITY & INCOME FUND INC"
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "a_verifier",
@@ -4214,79 +4380,5 @@
    "MRSH"
   ],
   "title": "Kevin Hern (Chambre, OK01) vend MRSH (3 transactions) — compte conjoint"
- },
- {
-  "amount_max": 1000000.0,
-  "amount_min": 500001.0,
-  "badge": "a_verifier",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "declarant_concorde": true,
-   "document_pdf": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": false,
-   "poste_publie_sans_201": true,
-   "sans_formulaire_201": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true,
-   "type_reconnu": true
-  },
-  "collected_at": "2026-10-04T17:40:27+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agence": "Office of Personnel Management",
-   "ajoute_le": "2026-08-21",
-   "declarant_concorde": true,
-   "lecture_complete": true,
-   "niveau": "Level II",
-   "nom": "Kupor, Scott A",
-   "nom_sec": "Omada Health, Inc.",
-   "pdf_valide": true,
-   "rapport": "C98F5D124FF9D62785258E5A002DB8E2",
-   "signe_le": "2026-07-15",
-   "taille": 5118,
-   "titre": "Director",
-   "transactions": [
-    {
-     "avis": "No",
-     "date": "2026-07-14",
-     "description": "Omada Common Stock (OMDA)",
-     "montant": "$500,001 - $1,000,000",
-     "n": "1",
-     "note": null,
-     "symbole": "OMDA",
-     "type": "Sale"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Scott A Kupor",
-   "Omada Health, Inc."
-  ],
-  "id": "oge_278t:C98F5D124FF9D62785258E5A002DB8E2:OMDA:S",
-  "kind": "vente_cabinet",
-  "notes": [],
-  "occurred_on": "2026-07-14",
-  "official_id": "C98F5D124FF9D62785258E5A002DB8E2:OMDA:S",
-  "official_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/C98F5D124FF9D62785258E5A002DB8E2/$FILE/Scott-A-Kupor-07.15.2026-278T.pdf",
-  "parser_version": "oge-3",
-  "published_on": "2026-08-21",
-  "sha256": "f3f83220ed894d22838c74571323035b3c8604cbfabba075ee6cb667c2b48d9b",
-  "source": "oge_278t",
-  "tickers": [
-   "OMDA"
-  ],
-  "title": "Scott A Kupor (Director, Office of Personnel Management, niveau II) vend OMDA"
  }
 ]

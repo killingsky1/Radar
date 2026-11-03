@@ -1,5 +1,5 @@
 {
- "genere_a": "2026-11-02T23:40:30+00:00",
+ "genere_a": "2026-11-03T03:30:01+00:00",
  "horizons": {
   "30": "1 mois",
   "7": "1 semaine"
@@ -3597,6 +3597,155 @@
    "symbole": "OCFC",
    "taille": "petite",
    "vue": "2026-11-02"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-11-30",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-03T03:30:01+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "GoodRx Holdings, Inc.",
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "compagnie",
+     "regle": "etats_financiers",
+     "sens": -1
+    }
+   ],
+   "symbole": "GDRX",
+   "taille": null,
+   "vue": "2026-11-02"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-11-30",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-03T03:30:01+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "BANC OF CALIFORNIA, INC.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 7.5,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "BANC",
+   "taille": "moyenne",
+   "vue": "2026-11-02"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-11-30",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-03T03:30:01+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Dine Brands Global, Inc.",
+   "note10": 9.2,
+   "note10_sans_bonus": 9.2,
+   "note10_sans_taille": 9.2,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "activistes",
+     "regle": "activiste_13d",
+     "sens": 1
+    }
+   ],
+   "symbole": "DIN",
+   "taille": "petite",
+   "vue": "2026-11-02"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-11-30",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-03T03:30:01+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Ribbon Communications Inc.",
+   "note10": 8.8,
+   "note10_sans_bonus": 8.8,
+   "note10_sans_taille": 7.5,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "RBBN",
+   "taille": "petite",
+   "vue": "2026-11-02"
   }
  ],
  "methode": [
@@ -3622,7 +3771,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 6,
+    "entrees": 7,
     "libelle": "États financiers passés à ne plus croire (8-K, point 4.02)"
    },
    "regle:faillite": {
@@ -3664,7 +3813,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 3,
+    "entrees": 4,
     "libelle": "Taille inconnue (compagnie étrangère, ou actions ou prix trop vieux)"
    },
    "taille:petite": {
@@ -3708,7 +3857,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 24,
+    "entrees": 26,
     "libelle": "PDG, directeur financier ou président du conseil"
    },
    "grace_a_la_taille": {
@@ -3750,7 +3899,7 @@
      "ecart_moyen": -0.066,
      "mesurees": 4
     },
-    "entrees": 52,
+    "entrees": 54,
     "libelle": "Achat d'actions par un dirigeant ou un administrateur"
    },
    "regle:achat_elu": {
@@ -3778,7 +3927,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 2,
+    "entrees": 3,
     "libelle": "Un gestionnaire de fonds dépasse 5 % avec des intentions actives (13D)"
    },
    "taille:grande": {
@@ -3820,7 +3969,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 5,
+    "entrees": 6,
     "libelle": "Compagnie moyenne"
    },
    "taille:petite": {
@@ -3834,7 +3983,7 @@
      "ecart_moyen": -0.066,
      "mesurees": 4
     },
-    "entrees": 33,
+    "entrees": 35,
     "libelle": "Petite compagnie (sous le 30e centile du NYSE)"
    }
   },
@@ -3846,13 +3995,13 @@
   "baisse_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 9,
+   "en_attente": 10,
    "mesurees": 0
   },
   "baisse_7": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 9,
+   "en_attente": 10,
    "mesurees": 0
   },
   "ecartee_30": {
@@ -3870,13 +4019,13 @@
   "hausse_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 58,
+   "en_attente": 61,
    "mesurees": 0
   },
   "hausse_7": {
    "battu": 2,
    "ecart_moyen": -0.0243,
-   "en_attente": 49,
+   "en_attente": 52,
    "mesurees": 8
   }
  }
