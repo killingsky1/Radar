@@ -7070,6 +7070,76 @@
   "title": "Contrat fédéral de 12,0 M$ : EXPERIS CANADA INC (Agriculture et Agroalimentaire Canada)"
  },
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "etape_datee": true,
+   "lien_legisinfo": true,
+   "projet_du_gouvernement": true,
+   "sanction_confirmee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-03T20:18:40+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "champ": "PassedSenateFirstReadingDateTime",
+   "cle": "senat-1",
+   "date_officielle": "2026-11-02T19:00:00-05:00",
+   "details": [
+    [
+     "Projet de loi",
+     "S-8"
+    ],
+    [
+     "Titre",
+     "Loi concernant certaines mesures liées au recyclage des produits de la criminalité, au financement des activités terroristes, au contournement de sanctions et à la détection d’objets inadmissibles dans les transmissions postales"
+    ],
+    [
+     "Étape",
+     "première lecture au Sénat"
+    ],
+    [
+     "Où il en est",
+     "À la deuxième lecture au Sénat"
+    ]
+   ],
+   "etape": "première lecture au Sénat",
+   "numero": "S-8",
+   "sanction": false,
+   "session": "45-1",
+   "statut": "À la deuxième lecture au Sénat",
+   "titre": "Loi visant à lutter contre les crimes financiers et le trafic de drogues",
+   "titre_long": "Loi concernant certaines mesures liées au recyclage des produits de la criminalité, au financement des activités terroristes, au contournement de sanctions et à la détection d’objets inadmissibles dans les transmissions postales",
+   "type": "Projet de loi émanant du gouvernement (Sénat)",
+   "type_en": "Senate Government Bill"
+  },
+  "direction": 0,
+  "entities": [
+   "Parlement du Canada"
+  ],
+  "id": "legisinfo:45-1:S-8:senat-1",
+  "kind": "etape_projet_de_loi",
+  "notes": [],
+  "occurred_on": "2026-11-02",
+  "official_id": "45-1:S-8:senat-1",
+  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/s-8",
+  "parser_version": "legisinfo-1",
+  "published_on": "2026-11-02",
+  "sha256": "7b47effd957dcf05fb1b9d646c4d0911a72ef89ffbd954d3aba337365a36c92e",
+  "source": "legisinfo",
+  "tickers": [],
+  "title": "Projet de loi S-8 (Loi visant à lutter contre les crimes financiers et le trafic de drogues) : première lecture au Sénat"
+ },
+ {
   "amount_max": 150000000.0,
   "amount_min": 150000000.0,
   "badge": "officiel",
@@ -39020,51 +39090,6 @@
   "source": "statcan",
   "tickers": [],
   "title": "Statistique Canada : Opérations internationales du Canada en valeurs mobilières, août 2026"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_identique_au_fil": true,
-   "lien_ministere_coherent": true,
-   "ministere_reconnu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_communique": true
-  },
-  "collected_at": "2026-10-16T15:22:28+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "id_fil": "https://www.canada.ca/fr/ressources-naturelles-canada/nouvelles/2026/10/la-conclusion-de-la-transaction-visant-le-complexe-minier-de-thompson-ouvre-un-avenir-plus-radieux-au-nickel-canadien.html",
-   "ministere": "Ressources naturelles Canada",
-   "mis_a_jour": "2026-10-16T08:30:00-04:00",
-   "resume": "Aujourd’hui, le premier ministre du Manitoba, l'honorable Wab Kinew, la ministre des Affaires du Nord et de l’Arctique et ministre responsable de l’Agence canadienne de développement économique du Nord, l’honorable Rebecca Chartrand, ainsi que des porte-parole d’Exiro Minerals Corp., d’Orion Resource Partners et de Vale Base Metals (VBM) ont célébré l’acquisition par Exiro Nickel du complexe minier de Thompson, au Manitoba, une transaction qui ouvre un nouveau chapitre pour l’une des mines de nickel les plus importantes au Canada.",
-   "type": "communiqués de presse"
-  },
-  "direction": 0,
-  "entities": [
-   "Ressources naturelles Canada"
-  ],
-  "id": "nouvelles_eco_ca:ressources-naturelles-canada/nouvelles/2026/10/la-conclusion-de-la-transaction-visant-le-complexe-minier-de-thompson-ouvre-un-avenir-plus-radieux-au-nickel-canadien.html",
-  "kind": "nouvelle_officielle",
-  "notes": [],
-  "occurred_on": "2026-10-16",
-  "official_id": "ressources-naturelles-canada/nouvelles/2026/10/la-conclusion-de-la-transaction-visant-le-complexe-minier-de-thompson-ouvre-un-avenir-plus-radieux-au-nickel-canadien.html",
-  "official_url": "https://www.canada.ca/fr/ressources-naturelles-canada/nouvelles/2026/10/la-conclusion-de-la-transaction-visant-le-complexe-minier-de-thompson-ouvre-un-avenir-plus-radieux-au-nickel-canadien.html",
-  "parser_version": "canada-1",
-  "published_on": "2026-10-16",
-  "sha256": "cd48e7aea0dc9c7d036a346b319875b0ad5b18a67482da2c602a454debf81a0b",
-  "source": "nouvelles_eco_ca",
-  "tickers": [],
-  "title": "La conclusion de la transaction visant le complexe minier de Thompson ouvre un avenir plus radieux au nickel canadien"
  },
  {
   "amount_max": null,
