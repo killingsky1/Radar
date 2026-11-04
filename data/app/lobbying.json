@@ -5,7 +5,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-10-28T09:46:53+00:00",
+   "lu": "2026-11-04T11:02:07+00:00",
    "moins_de_5000": 0,
    "nom": "Apogee Acquisition Corp",
    "pages": 1,
@@ -19,7 +19,7 @@
    "base": "firmes",
    "complet": true,
    "firmes": 1,
-   "lu": "2026-10-28T09:46:53+00:00",
+   "lu": "2026-11-04T11:02:07+00:00",
    "moins_de_5000": 0,
    "nom": "Applied Digital Corp.",
    "pages": 2,
@@ -74,34 +74,6 @@
    ],
    "total": 50000.0
   },
-  "BANC": {
-   "base": null,
-   "complet": false,
-   "firmes": 0,
-   "lu": "2026-11-03T10:58:35+00:00",
-   "moins_de_5000": 0,
-   "nom": "BANC OF CALIFORNIA, INC.",
-   "pages": 4,
-   "rapports": [],
-   "recherche": "CALIFORNIA",
-   "revenus_firmes": null,
-   "sujets": [],
-   "total": null
-  },
-  "BBT": {
-   "base": null,
-   "complet": true,
-   "firmes": 0,
-   "lu": "2026-10-30T10:08:29+00:00",
-   "moins_de_5000": 0,
-   "nom": "Beacon Financial Corp",
-   "pages": 1,
-   "rapports": [],
-   "recherche": "BEACON",
-   "revenus_firmes": null,
-   "sujets": [],
-   "total": null
-  },
   "BKU": {
    "base": null,
    "complet": true,
@@ -154,7 +126,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-10-28T09:46:53+00:00",
+   "lu": "2026-11-04T11:02:07+00:00",
    "moins_de_5000": 0,
    "nom": "Datavault AI Inc.",
    "pages": 1,
@@ -182,7 +154,7 @@
    "base": null,
    "complet": false,
    "firmes": 0,
-   "lu": "2026-10-28T09:46:53+00:00",
+   "lu": "2026-11-04T11:02:07+00:00",
    "moins_de_5000": 0,
    "nom": "EON Resources Inc.",
    "pages": 4,
@@ -210,7 +182,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-10-28T09:46:53+00:00",
+   "lu": "2026-11-04T11:02:07+00:00",
    "moins_de_5000": 0,
    "nom": "Greenlane Holdings, Inc.",
    "pages": 1,
@@ -224,7 +196,7 @@
    "base": "firmes",
    "complet": true,
    "firmes": 1,
-   "lu": "2026-10-28T09:46:53+00:00",
+   "lu": "2026-11-04T11:02:07+00:00",
    "moins_de_5000": 0,
    "nom": "GoPro, Inc.",
    "pages": 1,
@@ -259,83 +231,11 @@
    ],
    "total": 60000.0
   },
-  "HBAN": {
-   "base": "compagnie",
-   "complet": true,
-   "firmes": 2,
-   "lu": "2026-10-31T09:44:50+00:00",
-   "moins_de_5000": 0,
-   "nom": "HUNTINGTON BANCSHARES INC",
-   "pages": 1,
-   "rapports": [
-    {
-     "client": "HUNTINGTON BANCSHARES INCORPORATED",
-     "montant": 250000.0,
-     "poste": "2026-10-20",
-     "registrant": "HUNTINGTON BANCSHARES INCORPORATED",
-     "sans_activite": false,
-     "soi_meme": true,
-     "sujets": [
-      "BAN"
-     ],
-     "type": "Q3",
-     "url": "https://lda.gov/filings/public/filing/dda56eaf-def2-4d45-987b-b1997d5e0f63/print/",
-     "uuid": "dda56eaf-def2-4d45-987b-b1997d5e0f63"
-    },
-    {
-     "client": "HUNTINGTON BANCSHARES INCORPORATED",
-     "montant": 40000.0,
-     "poste": "2026-10-14",
-     "registrant": "CAPITOL COUNSEL LLC",
-     "sans_activite": false,
-     "soi_meme": false,
-     "sujets": [
-      "BAN",
-      "FIN"
-     ],
-     "type": "Q3",
-     "url": "https://lda.gov/filings/public/filing/fee3110a-83df-492a-ad42-53a98682b41c/print/",
-     "uuid": "fee3110a-83df-492a-ad42-53a98682b41c"
-    },
-    {
-     "client": "HUNTINGTON BANCSHARES",
-     "montant": 20000.0,
-     "poste": "2026-10-20",
-     "registrant": "ALIGNMENT GOVERNMENT STRATEGIES",
-     "sans_activite": false,
-     "soi_meme": false,
-     "sujets": [
-      "BAN",
-      "TAX"
-     ],
-     "type": "Q3",
-     "url": "https://lda.gov/filings/public/filing/261428d3-51dd-40bc-9110-7d39d0ec827a/print/",
-     "uuid": "261428d3-51dd-40bc-9110-7d39d0ec827a"
-    }
-   ],
-   "recherche": "HUNTINGTON",
-   "revenus_firmes": 60000.0,
-   "sujets": [
-    {
-     "code": "BAN",
-     "nom": "Banques"
-    },
-    {
-     "code": "FIN",
-     "nom": "Institutions financières, placements et valeurs mobilières"
-    },
-    {
-     "code": "TAX",
-     "nom": "Fiscalité (impôts)"
-    }
-   ],
-   "total": 250000.0
-  },
   "IMSR": {
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-10-28T09:46:53+00:00",
+   "lu": "2026-11-04T11:02:07+00:00",
    "moins_de_5000": 0,
    "nom": "Terrestrial Energy Inc.",
    "pages": 1,
@@ -349,26 +249,12 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-10-28T09:46:53+00:00",
+   "lu": "2026-11-04T11:02:07+00:00",
    "moins_de_5000": 0,
    "nom": "Leslie's, Inc.",
    "pages": 1,
    "rapports": [],
    "recherche": "LESLIES",
-   "revenus_firmes": null,
-   "sujets": [],
-   "total": null
-  },
-  "MSM": {
-   "base": null,
-   "complet": true,
-   "firmes": 0,
-   "lu": "2026-10-29T10:04:32+00:00",
-   "moins_de_5000": 0,
-   "nom": "MSC INDUSTRIAL DIRECT CO INC",
-   "pages": 2,
-   "rapports": [],
-   "recherche": "INDUSTRIAL",
    "revenus_firmes": null,
    "sujets": [],
    "total": null
@@ -433,7 +319,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-10-28T09:46:53+00:00",
+   "lu": "2026-11-04T11:02:07+00:00",
    "moins_de_5000": 0,
    "nom": "High Roller Technologies, Inc.",
    "pages": 1,
@@ -443,25 +329,11 @@
    "sujets": [],
    "total": null
   },
-  "RTSN": {
-   "base": null,
-   "complet": true,
-   "firmes": 0,
-   "lu": "2026-10-28T09:46:53+00:00",
-   "moins_de_5000": 0,
-   "nom": "Retension Pharmaceuticals, Inc.",
-   "pages": 1,
-   "rapports": [],
-   "recherche": "RETENSION",
-   "revenus_firmes": null,
-   "sujets": [],
-   "total": null
-  },
   "SAMG": {
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-10-28T09:46:53+00:00",
+   "lu": "2026-11-04T11:02:07+00:00",
    "moins_de_5000": 0,
    "nom": "Silvercrest Asset Management Group Inc.",
    "pages": 1,
@@ -475,7 +347,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-10-28T09:46:53+00:00",
+   "lu": "2026-11-04T11:02:07+00:00",
    "moins_de_5000": 0,
    "nom": "Sports Entertainment Gaming Global Corp",
    "pages": 2,
@@ -489,7 +361,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-10-28T09:46:53+00:00",
+   "lu": "2026-11-04T11:02:07+00:00",
    "moins_de_5000": 0,
    "nom": "STEWART INFORMATION SERVICES CORP",
    "pages": 2,
@@ -503,7 +375,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-10-28T09:46:53+00:00",
+   "lu": "2026-11-04T11:02:07+00:00",
    "moins_de_5000": 0,
    "nom": "Gentherm Inc",
    "pages": 1,
@@ -517,7 +389,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-10-28T09:46:53+00:00",
+   "lu": "2026-11-04T11:02:07+00:00",
    "moins_de_5000": 0,
    "nom": "TJGC GROUP Ltd",
    "pages": 1,
