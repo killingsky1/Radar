@@ -1,5 +1,304 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-04T18:36:08+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/commission-surete-nucleaire/nouvelles/2026/11/la-commission-autorise-lexploitation-des-tranches-7-et-8-de-la-centrale-nucleaire-de-bruce-b-jusqua-310000-heures-equivalentes-pleine-puissance.html",
+   "ministere": "Commission canadienne de sûreté nucléaire",
+   "mis_a_jour": "2026-11-04T13:00:00-05:00",
+   "resume": "Aujourd’hui, la Commission canadienne de sûreté nucléaire a annoncé la décision de la Commission de modifier le fondement d’autorisation des centrales nucléaires de Bruce.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Commission canadienne de sûreté nucléaire"
+  ],
+  "id": "nouvelles_eco_ca:commission-surete-nucleaire/nouvelles/2026/11/la-commission-autorise-lexploitation-des-tranches-7-et-8-de-la-centrale-nucleaire-de-bruce-b-jusqua-310000-heures-equivalentes-pleine-puissance.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-04",
+  "official_id": "commission-surete-nucleaire/nouvelles/2026/11/la-commission-autorise-lexploitation-des-tranches-7-et-8-de-la-centrale-nucleaire-de-bruce-b-jusqua-310000-heures-equivalentes-pleine-puissance.html",
+  "official_url": "https://www.canada.ca/fr/commission-surete-nucleaire/nouvelles/2026/11/la-commission-autorise-lexploitation-des-tranches-7-et-8-de-la-centrale-nucleaire-de-bruce-b-jusqua-310000-heures-equivalentes-pleine-puissance.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-04",
+  "sha256": "640f1c0413df7b78bc3123903a648a48109ddde36356e14b5fdaa68ffae4d2b4",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "La Commission autorise l’exploitation des tranches 7 et 8 de la centrale nucléaire de Bruce-B jusqu’à 310 000 heures équivalentes pleine puissance"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-04T18:36:05+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Executive Office of the President"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-22688",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-11-05",
+   "sorte": "presidentiel",
+   "sous_type": null,
+   "titre_officiel": "China, Continuation of National Emergency With Respect to Threat From Securities Investments That Finance Certain Companies (Notice of November 3, 2026)",
+   "type": "Presidential Document"
+  },
+  "direction": 0,
+  "entities": [
+   "Executive Office of the President"
+  ],
+  "id": "registre_federal:2026-22688",
+  "kind": "presidentiel",
+  "notes": [],
+  "occurred_on": "2026-11-04",
+  "official_id": "2026-22688",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-22688/china-continuation-of-national-emergency-with-respect-to-threat-from-securities-investments-that",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-04",
+  "sha256": "e87d8a8a4931ecb784ae89a0a5e08c7058dd2e3d032b9914b96b4348408d58d6",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Document présidentiel : China, Continuation of National Emergency With Respect to Threat From Securities Investments That Finance Certain Companies (Notice of November 3, 2026)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-04T18:36:04+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Executive Office of the President"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-22687",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-11-05",
+   "sorte": "presidentiel",
+   "sous_type": null,
+   "titre_officiel": "Nicaragua; Continuation of National Emergency (Notice of November 3, 2026)",
+   "type": "Presidential Document"
+  },
+  "direction": 0,
+  "entities": [
+   "Executive Office of the President"
+  ],
+  "id": "registre_federal:2026-22687",
+  "kind": "presidentiel",
+  "notes": [],
+  "occurred_on": "2026-11-04",
+  "official_id": "2026-22687",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-22687/nicaragua-continuation-of-national-emergency-notice-of-november-3-2026",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-04",
+  "sha256": "c72ae09b770a0984be1a9d41355ffb0b0bd21e569cc6929404accd5300aab075",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Document présidentiel : Nicaragua; Continuation of National Emergency (Notice of November 3, 2026)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-04T18:36:03+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Executive Office of the President"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-22686",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-11-05",
+   "sorte": "presidentiel",
+   "sous_type": null,
+   "titre_officiel": "Weapons of Mass Destruction; Continuation of National Emergency With Respect to Proliferation (Notice of November 3, 2026)",
+   "type": "Presidential Document"
+  },
+  "direction": 0,
+  "entities": [
+   "Executive Office of the President"
+  ],
+  "id": "registre_federal:2026-22686",
+  "kind": "presidentiel",
+  "notes": [],
+  "occurred_on": "2026-11-04",
+  "official_id": "2026-22686",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-22686/weapons-of-mass-destruction-continuation-of-national-emergency-with-respect-to-proliferation-notice",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-04",
+  "sha256": "2d6a89822b388494d207badbb4e9ddc6c7347acb5e5982111d9a89e92f37cd31",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Document présidentiel : Weapons of Mass Destruction; Continuation of National Emergency With Respect to Proliferation (Notice of November 3, 2026)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-04T18:36:02+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Executive Office of the President"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-22685",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-11-05",
+   "sorte": "presidentiel",
+   "sous_type": null,
+   "titre_officiel": "Iran; Continuation of National Emergency (Notice of November 3, 2026)",
+   "type": "Presidential Document"
+  },
+  "direction": 0,
+  "entities": [
+   "Executive Office of the President"
+  ],
+  "id": "registre_federal:2026-22685",
+  "kind": "presidentiel",
+  "notes": [],
+  "occurred_on": "2026-11-04",
+  "official_id": "2026-22685",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-22685/iran-continuation-of-national-emergency-notice-of-november-3-2026",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-04",
+  "sha256": "b86b06efe106d4cce0f4d6019d1d591a7e9b6fe5282573ae756b3929a67ca76e",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Document présidentiel : Iran; Continuation of National Emergency (Notice of November 3, 2026)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-11-04T18:35:54+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {
+    "entités": 10,
+    "personnes": 5
+   },
+   "communiques": [
+    "Operation Economic Outcast Targets Global Maritime Fraud Network Supporting Iranian Regime"
+   ],
+   "retraits": 0,
+   "titre_officiel": "Iran-related Designations; Updates to Certain Iran-related Listings; Publication of Iran-related OFAC Alert; Issuance of Amended Venezuela-related General License and Frequently Asked Question"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20261104",
+  "kind": "sanctions",
+  "notes": [
+   "Communiqué du Trésor : Operation Economic Outcast Targets Global Maritime Fraud Network Supporting Iranian Regime",
+   "Ajoutés à la liste des sanctions (SDN) : 5 personnes, 10 entités."
+  ],
+  "occurred_on": "2026-11-04",
+  "official_id": "20261104",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20261104",
+  "parser_version": "ofac-1",
+  "published_on": "2026-11-04",
+  "sha256": "789418db68d164d59e9ce8632a5ae7aacee5936bb1e2ba3604dd88dc0e0a1606",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Iran-related Designations; Updates to Certain Iran-related Listings; Publication of Iran-related OFAC Alert; Issuance of Amended Venezuela-related General License and Frequently Asked Question"
+ },
+ {
   "amount_max": 109623316.0,
   "amount_min": 109623316.0,
   "badge": "officiel",
@@ -695,6 +994,75 @@
   "source": "usaspending",
   "tickers": [],
   "title": "Contrat fédéral américain de 203,7 M$ : AM GENERAL LLC (Défense)"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-04T18:36:07+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OH05",
+   "elu": "Robert E. Latta",
+   "lecture_complete": true,
+   "nom_sec": "FARMERS & MERCHANTS BANCORP INC",
+   "rapport": "20035763",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Farmers & Merchants Bancorp, Inc. (FMAO) [ST]",
+     "avis": "2026-10-20",
+     "date": "2026-10-20",
+     "description": "Dividend reinvestment",
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Robert E. Latta",
+   "FARMERS & MERCHANTS BANCORP INC"
+  ],
+  "id": "chambre_ptr:20035763:FMAO:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-10-20",
+  "official_id": "20035763:FMAO:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035763.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-03",
+  "sha256": "5b9d92eca165bc2ae8943024429a18a4d02ec3b22106bceadfeb65cb35b81fe3",
+  "source": "chambre_ptr",
+  "tickers": [
+   "FMAO"
+  ],
+  "title": "Robert E. Latta (Chambre, OH05) achète FMAO — conjoint·e"
  },
  {
   "amount_max": 50000000.0,
@@ -40605,61 +40973,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "indicateur_de_la_liste_officielle": true,
-   "lien_du_quotidien": true,
-   "resume_lu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-19T19:31:01+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "details": [
-    [
-     "Indicateur",
-     "Indice des prix à la consommation"
-    ],
-    [
-     "Période",
-     "septembre 2026"
-    ]
-   ],
-   "indicateur": "Indice des prix à la consommation",
-   "lien": "https://www.statcan.gc.ca/daily-quotidien/261019/dq261019a-fra.htm",
-   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
-   "mis_a_jour": "2026-10-19T08:30:00-04:00",
-   "periode": "septembre 2026",
-   "resume": "L'Indice des prix à la consommation (IPC) a augmenté de 3,1 % d'une année à l'autre en septembre, après avoir progressé de 3,0 % en août. Sur une base mensuelle désaisonnalisée, l'IPC s'est accru de 0,4 % en septembre."
-  },
-  "direction": 0,
-  "entities": [
-   "Statistique Canada"
-  ],
-  "id": "statcan:261019/dq261019a",
-  "kind": "indicateur_principal",
-  "notes": [],
-  "occurred_on": "2026-10-19",
-  "official_id": "261019/dq261019a",
-  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261019/dq261019a-fra.htm",
-  "parser_version": "statcan-1",
-  "published_on": "2026-10-19",
-  "sha256": "fe2f44112b3661cd1e21cd124944acedbe6990cce8252a6ddf888751f8a46f5e",
-  "source": "statcan",
-  "tickers": [],
-  "title": "Statistique Canada : Indice des prix à la consommation, septembre 2026"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "champs_requis": true,
@@ -52143,75 +52456,6 @@
   "title": "Maria Elvira Salazar (Chambre, FL27) vend CRM"
  },
  {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-08T21:29:16+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "FL27",
-   "elu": "Maria Elvira Salazar",
-   "lecture_complete": true,
-   "nom_sec": "Chubb Ltd",
-   "rapport": "20035562",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Chubb Limited Common Stock (CB) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-24",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Maria Elvira Salazar",
-   "Chubb Ltd"
-  ],
-  "id": "chambre_ptr:20035562:CB:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-24",
-  "official_id": "20035562:CB:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-07",
-  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
-  "source": "chambre_ptr",
-  "tickers": [
-   "CB"
-  ],
-  "title": "Maria Elvira Salazar (Chambre, FL27) vend CB"
- },
- {
   "amount_max": 39000000000.0,
   "amount_min": 39000000000.0,
   "badge": "officiel",
@@ -56002,259 +56246,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "date_d_envoi_lue": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_message": true,
-   "numero_csms": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "sujet_surtaxes": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T19:34:48+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "codes_9903": [],
-   "details": [
-    [
-     "Message",
-     "CSMS # 70050970"
-    ],
-    [
-     "Envoyé",
-     "28 septembre 2026 à 13 h 34 (heure de New York)"
-    ],
-    [
-     "Proclamations citées",
-     "11061, 11062, 11063, 11046, 11047, 11048"
-    ],
-    [
-     "Extrait",
-     "The purpose of this message is to provide guidance on the Presidential Proclamations 11061, 11062, and 11063: “Excluding Certain Canadian Alcoholic Beverages from Importation into the United States in Response to Continued Discrimination Against the Commerce of the United States with Respect to Alcoholic Beverages, “Excluding Certain Canadian Products from Importation into the United States in Response to Continued D […]"
-    ]
-   ],
-   "envoye_le": "2026-09-28T13:34:10-04:00",
-   "extrait": "The purpose of this message is to provide guidance on the Presidential Proclamations 11061, 11062, and 11063: “Excluding Certain Canadian Alcoholic Beverages from Importation into the United States in Response to Continued Discrimination Against the Commerce of the United States with Respect to Alcoholic Beverages, “Excluding Certain Canadian Products from Importation into the United States in Response to Continued D […]",
-   "guid": "70050970",
-   "numero": "70050970",
-   "proclamations": [
-    "11061",
-    "11062",
-    "11063",
-    "11046",
-    "11047",
-    "11048"
-   ],
-   "titre_officiel": "Certain Canadian Products Excluded from Importation into the United States; Presidential Proclamations 11061, 11062, and 11063"
-  },
-  "direction": 0,
-  "entities": [
-   "U.S. Customs and Border Protection"
-  ],
-  "id": "tarifs:70050970",
-  "kind": "directive_douane",
-  "notes": [
-   "Directive de la douane : elle applique une décision officielle (proclamation, avis au Registre fédéral) sans la remplacer."
-  ],
-  "occurred_on": "2026-09-28",
-  "official_id": "70050970",
-  "official_url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/42ce49a",
-  "parser_version": "douane-1",
-  "published_on": "2026-09-28",
-  "sha256": "470af390d55ff14d3feb19a083562f8f1692b62dc86381e3b94405e59870b26b",
-  "source": "tarifs",
-  "tickers": [],
-  "title": "Douane américaine : Certain Canadian Products Excluded from Importation into the United States; Presidential Proclamations 11061, 11062, and 11063"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_rappel": true,
-   "nombre_plausible": true,
-   "numero_de_rappel_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T02:03:23+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "campagne": "C7311",
-   "composant": "FUEL SYSTEM, DIESEL",
-   "consequence": "A fuel leak in the presence of an ignition source increases the risk of a fire. An engine stall increases the risk of a crash.",
-   "constructeur": "Cummins, Inc.",
-   "defaut": "Cummins, Inc. (Cummins) is recalling certain L9 diesel engines, part number D563027BX03. The remote fuel filter hoses may separate from the fitting, causing a fuel leak and an engine stall.",
-   "numero": "26E066000",
-   "sorte": "Equipment",
-   "sujet": "Fuel Filter Hoses May Disconnect and Leak Fuel",
-   "unites": 39052
-  },
-  "direction": -1,
-  "entities": [
-   "Cummins, Inc."
-  ],
-  "id": "nhtsa:26E066000",
-  "kind": "rappel",
-  "notes": [],
-  "occurred_on": "2026-09-28",
-  "official_id": "26E066000",
-  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26E066000",
-  "parser_version": "nhtsa-1",
-  "published_on": "2026-09-28",
-  "sha256": "18a4ce09e4002695c9792b381ffc6fd67a78f1a24de5928712bb1fb6055dddaf",
-  "source": "nhtsa",
-  "tickers": [
-   "CMI"
-  ],
-  "title": "Rappel de Cummins, Inc. : 39 052 équipements — « Fuel Filter Hoses May Disconnect and Leak Fuel »"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "approbation_originale": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lettre_officielle": true,
-   "nouvelle_molecule": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-13T19:59:09+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "anciennes_empreintes": [
-    "59daf822fed709a1c70c4d73c1efafd99a2b3f888d9a52e6ef2c893e300af0a1"
-   ],
-   "application": "NDA221198",
-   "classe": "TYPE 1",
-   "compagnie": "MIRUM",
-   "date": "20260925",
-   "fabricant": null,
-   "ingredients": [
-    "ZILURGISERTIB FUMARATE"
-   ],
-   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/221198Orig1s000ltr.pdf",
-   "marques": [
-    "ATEBRIOZ"
-   ],
-   "numero_soumission": "1",
-   "orphelin": true,
-   "priorite": "PRIORITY",
-   "sponsor": "MIRUM",
-   "statut": "AP",
-   "type_soumission": "ORIG"
-  },
-  "direction": 1,
-  "entities": [
-   "MIRUM"
-  ],
-  "id": "fda:NDA221198-ORIG-1",
-  "kind": "approbation_fda",
-  "notes": [
-   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
-   "Médicament orphelin : maladie rare.",
-   "Document modifié à la source depuis la 1re lecture."
-  ],
-  "occurred_on": "2026-09-25",
-  "official_id": "NDA221198-ORIG-1",
-  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221198",
-  "parser_version": "fda-1",
-  "published_on": "2026-09-25",
-  "sha256": "c9314fe778532efc30db77afeffc510792046697efcc88d834b30bd97e991832",
-  "source": "fda",
-  "tickers": [],
-  "title": "FDA : nouveau médicament approuvé, ATEBRIOZ (zilurgisertib fumarate), de MIRUM"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "approbation_originale": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lettre_officielle": true,
-   "nouvelle_molecule": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-13T19:59:09+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "anciennes_empreintes": [
-    "09719276ed1dd9a6e5acf12edc51e572e1c0abc1f85a3a9abb48e2b43bb2d58d"
-   ],
-   "application": "NDA220415",
-   "classe": "TYPE 1",
-   "compagnie": "ABBVIE",
-   "date": "20260925",
-   "fabricant": null,
-   "ingredients": [
-    "TAVAPADON"
-   ],
-   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220415Orig1s000ltr.pdf",
-   "marques": [
-    "JUVMO",
-    "JUVMO (COPACKAGED)"
-   ],
-   "numero_soumission": "1",
-   "orphelin": false,
-   "priorite": "STANDARD",
-   "sponsor": "ABBVIE",
-   "statut": "AP",
-   "type_soumission": "ORIG"
-  },
-  "direction": 1,
-  "entities": [
-   "ABBVIE"
-  ],
-  "id": "fda:NDA220415-ORIG-1",
-  "kind": "approbation_fda",
-  "notes": [
-   "Document modifié à la source depuis la 1re lecture."
-  ],
-  "occurred_on": "2026-09-25",
-  "official_id": "NDA220415-ORIG-1",
-  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220415",
-  "parser_version": "fda-1",
-  "published_on": "2026-09-25",
-  "sha256": "d332920b938385ef8e5409773ae248a3dd0fce276c3e3b275e4fad425075837b",
-  "source": "fda",
-  "tickers": [
-   "ABBV"
-  ],
-  "title": "FDA : nouveau médicament approuvé, JUVMO / JUVMO (COPACKAGED) (tavapadon), de ABBVIE"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "militaire",
   "checks": {
    "champs_requis": true,
@@ -56295,59 +56286,6 @@
   "source": "nouvelles_defense_ca",
   "tickers": [],
   "title": "Le gouvernement du Canada franchit une nouvelle étape en vue de doter l’Aviation royale canadienne d’une capacité essentielle aux missions"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_rappel": true,
-   "nombre_plausible": true,
-   "numero_de_rappel_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-20T15:38:54+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "anciennes_empreintes": [
-    "9a4061e1c1d7494200a86a9def2731093450e5ba4787f6ad65f37d61f739638a"
-   ],
-   "campagne": "910068",
-   "composant": "ELECTRICAL SYSTEM",
-   "consequence": "While damage to the power center increases the risk of a fire, damage to the electrical system may cause the trailer brakes or exterior lightings to fail, increasing the risk of a crash.",
-   "constructeur": "Grand Design RV, LLC",
-   "defaut": "Grand Design RV, LLC (Grand Design) is recalling certain 2024-2027 Reflection fifth wheel recreational trailers. The auto detect solar controller may select a 24 volt output when the electrical system is designed for 12 volts. The incorrect voltage may damage the 7-way bulkhead power center and other circuits.",
-   "numero": "26V616000",
-   "sorte": "Vehicle",
-   "sujet": "Solar Controller May Select Incorrect Voltage Output",
-   "unites": 16075
-  },
-  "direction": -1,
-  "entities": [
-   "Grand Design RV, LLC"
-  ],
-  "id": "nhtsa:26V616000",
-  "kind": "rappel",
-  "notes": [
-   "Document modifié à la source depuis la 1re lecture."
-  ],
-  "occurred_on": "2026-09-24",
-  "official_id": "26V616000",
-  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V616000",
-  "parser_version": "nhtsa-1",
-  "published_on": "2026-09-24",
-  "sha256": "0b283d17d896285d91c67ce3b08d1f390e35b6821cb8a17e6c94dfe431d068fb",
-  "source": "nhtsa",
-  "tickers": [],
-  "title": "Rappel de Grand Design RV, LLC : 16 075 véhicules — « Solar Controller May Select Incorrect Voltage Output »"
  },
  {
   "amount_max": null,
