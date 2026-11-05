@@ -1,5 +1,301 @@
 [
  {
+  "amount_max": 30000.0,
+  "amount_min": 2002.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-05T20:51:07+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "PROCTER & GAMBLE Co",
+   "rapport": "20035778",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Procter & Gamble Company (PG) [ST]",
+     "avis": "2026-11-01",
+     "date": "2026-10-23",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    },
+    {
+     "actif": "Procter & Gamble Company (PG) [ST]",
+     "avis": "2026-11-01",
+     "date": "2026-10-23",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "PROCTER & GAMBLE Co"
+  ],
+  "id": "chambre_ptr:20035778:PG:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-10-23",
+  "official_id": "20035778:PG:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035778.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-05",
+  "sha256": "ea47a32f2e3943e7593df9be9ff3a7e70fb540a677c3aad2fdc6de7b3d0fb7b3",
+  "source": "chambre_ptr",
+  "tickers": [
+   "PG"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) achète PG (2 transactions)"
+ },
+ {
+  "amount_max": 30000.0,
+  "amount_min": 2002.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-05T20:51:07+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "NVIDIA CORP",
+   "rapport": "20035778",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "NVIDIA Corporation - Common Stock (NVDA) [ST]",
+     "avis": "2026-11-01",
+     "date": "2026-10-23",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    },
+    {
+     "actif": "NVIDIA Corporation - Common Stock (NVDA) [ST]",
+     "avis": "2026-11-01",
+     "date": "2026-10-23",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "NVIDIA CORP"
+  ],
+  "id": "chambre_ptr:20035778:NVDA:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-10-23",
+  "official_id": "20035778:NVDA:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035778.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-05",
+  "sha256": "ea47a32f2e3943e7593df9be9ff3a7e70fb540a677c3aad2fdc6de7b3d0fb7b3",
+  "source": "chambre_ptr",
+  "tickers": [
+   "NVDA"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) achète NVDA (2 transactions)"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-05T20:51:07+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "FL27",
+   "elu": "Maria Elvira Salazar",
+   "lecture_complete": true,
+   "nom_sec": "CISCO SYSTEMS, INC.",
+   "rapport": "20035778",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Cisco Systems, Inc. - Common Stock (CSCO) [ST]",
+     "avis": "2026-11-01",
+     "date": "2026-10-23",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Maria Elvira Salazar",
+   "CISCO SYSTEMS, INC."
+  ],
+  "id": "chambre_ptr:20035778:CSCO:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-23",
+  "official_id": "20035778:CSCO:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035778.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-05",
+  "sha256": "ea47a32f2e3943e7593df9be9ff3a7e70fb540a677c3aad2fdc6de7b3d0fb7b3",
+  "source": "chambre_ptr",
+  "tickers": [
+   "CSCO"
+  ],
+  "title": "Maria Elvira Salazar (Chambre, FL27) vend CSCO"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-05T20:51:07+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "PA09",
+   "elu": "Daniel Meuser",
+   "lecture_complete": true,
+   "nom_sec": "NVIDIA CORP",
+   "rapport": "20035662",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "NVIDIA Corporation - Common Stock (NVDA) [ST]",
+     "avis": "2026-10-14",
+     "date": "2026-09-25",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "SP",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Daniel Meuser",
+   "NVIDIA CORP"
+  ],
+  "id": "chambre_ptr:20035662:NVDA:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-25",
+  "official_id": "20035662:NVDA:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035662.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-05",
+  "sha256": "8f3473155b6c2dfc2e40b1e8393bf2e161d4cddc4aa37c3e6153531121fed1ab",
+  "source": "chambre_ptr",
+  "tickers": [
+   "NVDA"
+  ],
+  "title": "Daniel Meuser (Chambre, PA09) vend NVDA — conjoint·e"
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -52809,302 +53105,6 @@
    "FDX"
   ],
   "title": "Maria Elvira Salazar (Chambre, FL27) vend FDX"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-08T21:29:16+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "FL27",
-   "elu": "Maria Elvira Salazar",
-   "lecture_complete": true,
-   "nom_sec": "Datadog, Inc.",
-   "rapport": "20035562",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Datadog, Inc. - Class A Common Stock (DDOG) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-24",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Maria Elvira Salazar",
-   "Datadog, Inc."
-  ],
-  "id": "chambre_ptr:20035562:DDOG:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-24",
-  "official_id": "20035562:DDOG:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-07",
-  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
-  "source": "chambre_ptr",
-  "tickers": [
-   "DDOG"
-  ],
-  "title": "Maria Elvira Salazar (Chambre, FL27) vend DDOG"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-08T21:29:16+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "FL27",
-   "elu": "Maria Elvira Salazar",
-   "lecture_complete": true,
-   "nom_sec": "CHEVRON CORP",
-   "rapport": "20035562",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Chevron Corporation Common Stock (CVX) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-02",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Maria Elvira Salazar",
-   "CHEVRON CORP"
-  ],
-  "id": "chambre_ptr:20035562:CVX:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-09-02",
-  "official_id": "20035562:CVX:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-07",
-  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
-  "source": "chambre_ptr",
-  "tickers": [
-   "CVX"
-  ],
-  "title": "Maria Elvira Salazar (Chambre, FL27) achète CVX"
- },
- {
-  "amount_max": 80000.0,
-  "amount_min": 17003.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-08T21:29:16+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "FL27",
-   "elu": "Maria Elvira Salazar",
-   "lecture_complete": true,
-   "nom_sec": "CISCO SYSTEMS, INC.",
-   "rapport": "20035562",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Cisco Systems, Inc. - Common Stock (CSCO) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-08",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "Cisco Systems, Inc. - Common Stock (CSCO) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-24",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    },
-    {
-     "actif": "Cisco Systems, Inc. - Common Stock (CSCO) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-24",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Maria Elvira Salazar",
-   "CISCO SYSTEMS, INC."
-  ],
-  "id": "chambre_ptr:20035562:CSCO:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-08",
-  "official_id": "20035562:CSCO:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-07",
-  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
-  "source": "chambre_ptr",
-  "tickers": [
-   "CSCO"
-  ],
-  "title": "Maria Elvira Salazar (Chambre, FL27) vend CSCO (3 transactions)"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-08T21:29:16+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "FL27",
-   "elu": "Maria Elvira Salazar",
-   "lecture_complete": true,
-   "nom_sec": "Salesforce, Inc.",
-   "rapport": "20035562",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Salesforce, Inc. Common Stock (CRM) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-24",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Maria Elvira Salazar",
-   "Salesforce, Inc."
-  ],
-  "id": "chambre_ptr:20035562:CRM:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-24",
-  "official_id": "20035562:CRM:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035562.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-07",
-  "sha256": "4a91f7f92ee000d092ca0a8298b4ee2d17f8b3579a2248875db32900eb1c9665",
-  "source": "chambre_ptr",
-  "tickers": [
-   "CRM"
-  ],
-  "title": "Maria Elvira Salazar (Chambre, FL27) vend CRM"
  },
  {
   "amount_max": 39000000000.0,
