@@ -198,6 +198,130 @@
   "sujets": [],
   "total": null
  },
+ "CAT": {
+  "base": "compagnie",
+  "complet": true,
+  "firmes": 2,
+  "lu": "2026-11-05T11:03:06+00:00",
+  "moins_de_5000": 0,
+  "nom": "CATERPILLAR INC",
+  "pages": 1,
+  "rapports": [
+   {
+    "client": "CATERPILLAR INC",
+    "montant": 1040000.0,
+    "poste": "2026-10-20",
+    "registrant": "CATERPILLAR INC.",
+    "sans_activite": false,
+    "soi_meme": true,
+    "sujets": [
+     "CAW",
+     "CPT",
+     "EDU",
+     "ENG",
+     "FIN",
+     "LAW",
+     "RRR",
+     "TAX",
+     "TRA",
+     "TRD",
+     "TRU"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/b45f43b4-bd94-442f-b29c-568963e36a04/print/",
+    "uuid": "b45f43b4-bd94-442f-b29c-568963e36a04"
+   },
+   {
+    "client": "CATERPILLAR INC",
+    "montant": 100000.0,
+    "poste": "2026-10-20",
+    "registrant": "THE DUBERSTEIN GROUP INC.",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "CPT"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/eb202ef2-33de-4a1f-9088-8d2707bd0a5a/print/",
+    "uuid": "eb202ef2-33de-4a1f-9088-8d2707bd0a5a"
+   },
+   {
+    "client": "CATERPILLAR INC",
+    "montant": 50000.0,
+    "poste": "2026-10-20",
+    "registrant": "THE WASHINGTON TAX & PUBLIC POLICY GROUP",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "TAX"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/bf07d257-c28b-458b-98ec-6265646eb3be/print/",
+    "uuid": "bf07d257-c28b-458b-98ec-6265646eb3be"
+   },
+   {
+    "client": "CATERPILLAR INC",
+    "montant": null,
+    "poste": "2026-10-19",
+    "registrant": "AUSTIN LEGAL AND PUBLIC AFFAIRS PLLC",
+    "sans_activite": true,
+    "soi_meme": false,
+    "sujets": [],
+    "type": "Q3Y",
+    "url": "https://lda.gov/filings/public/filing/f1ee252c-dc02-4892-9817-b7c6be87d73a/print/",
+    "uuid": "f1ee252c-dc02-4892-9817-b7c6be87d73a"
+   }
+  ],
+  "recherche": "CATERPILLAR",
+  "revenus_firmes": 150000.0,
+  "sujets": [
+   {
+    "code": "CPT",
+    "nom": "Droits d'auteur, brevets et marques"
+   },
+   {
+    "code": "TAX",
+    "nom": "Fiscalité (impôts)"
+   },
+   {
+    "code": "CAW",
+    "nom": "Qualité de l'air et de l'eau"
+   },
+   {
+    "code": "EDU",
+    "nom": "Éducation"
+   },
+   {
+    "code": "ENG",
+    "nom": "Énergie et nucléaire"
+   },
+   {
+    "code": "FIN",
+    "nom": "Institutions financières, placements et valeurs mobilières"
+   },
+   {
+    "code": "LAW",
+    "nom": "Police, criminalité et justice pénale"
+   },
+   {
+    "code": "RRR",
+    "nom": "Chemins de fer"
+   },
+   {
+    "code": "TRA",
+    "nom": "Transports"
+   },
+   {
+    "code": "TRD",
+    "nom": "Commerce (intérieur et extérieur)"
+   },
+   {
+    "code": "TRU",
+    "nom": "Camionnage et expédition"
+   }
+  ],
+  "total": 1040000.0
+ },
  "CNXU": {
   "base": null,
   "complet": true,
@@ -274,6 +398,20 @@
   ],
   "total": 60000.0
  },
+ "DRVN": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-05T11:03:06+00:00",
+  "moins_de_5000": 0,
+  "nom": "Driven Brands Holdings Inc.",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "DRIVEN",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
  "DVLT": {
   "base": null,
   "complet": true,
@@ -292,7 +430,7 @@
   "base": null,
   "complet": true,
   "firmes": 0,
-  "lu": "2026-10-29T10:04:32+00:00",
+  "lu": "2026-11-05T11:03:06+00:00",
   "moins_de_5000": 0,
   "nom": "DYNEX CAPITAL INC",
   "pages": 1,
@@ -326,6 +464,20 @@
   "pages": 1,
   "rapports": [],
   "recherche": "EMPIRE",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
+ "FINW": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-05T11:03:06+00:00",
+  "moins_de_5000": 0,
+  "nom": "Finwise Bancorp",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "FINWISE",
   "revenus_firmes": null,
   "sujets": [],
   "total": null
@@ -553,6 +705,33 @@
   "sujets": [],
   "total": null
  },
+ "KPTI": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-05T11:03:06+00:00",
+  "moins_de_5000": 0,
+  "nom": "Karyopharm Therapeutics Inc.",
+  "pages": 1,
+  "rapports": [
+   {
+    "client": "KARYOPHARM THERAPEUTICS",
+    "montant": null,
+    "poste": "2026-10-19",
+    "registrant": "SIDLEY AUSTIN LLP",
+    "sans_activite": true,
+    "soi_meme": false,
+    "sujets": [],
+    "type": "Q3Y",
+    "url": "https://lda.gov/filings/public/filing/be1577ee-1230-4565-a63a-113092b341af/print/",
+    "uuid": "be1577ee-1230-4565-a63a-113092b341af"
+   }
+  ],
+  "recherche": "KARYOPHARM",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
  "LESL": {
   "base": null,
   "complet": true,
@@ -585,7 +764,7 @@
   "base": null,
   "complet": true,
   "firmes": 0,
-  "lu": "2026-10-29T10:04:32+00:00",
+  "lu": "2026-11-05T11:03:06+00:00",
   "moins_de_5000": 0,
   "nom": "NORTHPOINTE BANCSHARES INC",
   "pages": 1,
@@ -917,6 +1096,96 @@
   "sujets": [],
   "total": null
  },
+ "STRZ": {
+  "base": "firmes",
+  "complet": true,
+  "firmes": 3,
+  "lu": "2026-11-05T11:03:06+00:00",
+  "moins_de_5000": 0,
+  "nom": "STARZ ENTERTAINMENT CORP",
+  "pages": 2,
+  "rapports": [
+   {
+    "client": "STARZ ENTERTAINMENT, LLC",
+    "montant": 60000.0,
+    "poste": "2026-10-20",
+    "registrant": "FGS GLOBAL (US) LLC (FKA FGH HOLDINGS LLC)",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "COM",
+     "TEC"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/74efd6d0-b4dc-4595-92fb-3f29d015e99e/print/",
+    "uuid": "74efd6d0-b4dc-4595-92fb-3f29d015e99e"
+   },
+   {
+    "client": "STARZ ENTERTAINMENT, LLC",
+    "montant": 50000.0,
+    "poste": "2026-10-20",
+    "registrant": "CARMEN GROUP INCORPORATED",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "MIA"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/73a3cbb1-9e3a-432a-8eb5-64a045f3d492/print/",
+    "uuid": "73a3cbb1-9e3a-432a-8eb5-64a045f3d492"
+   },
+   {
+    "client": "STARZ ENTERTAINMENT LLC",
+    "montant": 30000.0,
+    "poste": "2026-10-16",
+    "registrant": "ALPINE GROUP PARTNERS, LLC.",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "ART",
+     "COM"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/9304ae01-3a11-44c2-a9d1-1a1be84ad3d0/print/",
+    "uuid": "9304ae01-3a11-44c2-a9d1-1a1be84ad3d0"
+   }
+  ],
+  "recherche": "ENTERTAINMENT",
+  "revenus_firmes": 140000.0,
+  "sujets": [
+   {
+    "code": "COM",
+    "nom": "Communications, radio et télévision"
+   },
+   {
+    "code": "ART",
+    "nom": "Arts et divertissement"
+   },
+   {
+    "code": "MIA",
+    "nom": "Médias et édition"
+   },
+   {
+    "code": "TEC",
+    "nom": "Télécommunications"
+   }
+  ],
+  "total": 140000.0
+ },
+ "SYNX": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-05T11:03:06+00:00",
+  "moins_de_5000": 0,
+  "nom": "Silynxcom Ltd.",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "SILYNXCOM",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
  "THRM": {
   "base": null,
   "complet": true,
@@ -941,6 +1210,20 @@
   "pages": 1,
   "rapports": [],
   "recherche": "TJGC",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
+ "TRTX": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-05T11:03:06+00:00",
+  "moins_de_5000": 0,
+  "nom": "TPG RE Finance Trust, Inc.",
+  "pages": 3,
+  "rapports": [],
+  "recherche": "FINANCE",
   "revenus_firmes": null,
   "sujets": [],
   "total": null
