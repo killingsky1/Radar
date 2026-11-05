@@ -9,6 +9,51 @@
    "dates_coherentes": true,
    "domaine_officiel": true,
    "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-05T02:31:01+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/11/le-gouvernement-du-canada-annonce-la-nomination-dun-nouveau-president-de-lagence-spatiale-canadienne.html",
+   "ministere": "Innovation, Sciences et Développement économique Canada",
+   "mis_a_jour": "2026-11-04T20:00:55-05:00",
+   "resume": "Aujourd’hui, la ministre de l’Industrie et ministre responsable de Développement économique Canada pour les régions du Québec, l’honorable Mélanie Joly, a annoncé la nomination par le gouvernement du Canada d’Alexander MacDonald à titre de président de l’Agence spatiale canadienne.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Innovation, Sciences et Développement économique Canada"
+  ],
+  "id": "nouvelles_eco_ca:innovation-sciences-developpement-economique/nouvelles/2026/11/le-gouvernement-du-canada-annonce-la-nomination-dun-nouveau-president-de-lagence-spatiale-canadienne.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-04",
+  "official_id": "innovation-sciences-developpement-economique/nouvelles/2026/11/le-gouvernement-du-canada-annonce-la-nomination-dun-nouveau-president-de-lagence-spatiale-canadienne.html",
+  "official_url": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/11/le-gouvernement-du-canada-annonce-la-nomination-dun-nouveau-president-de-lagence-spatiale-canadienne.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-04",
+  "sha256": "694cdcd8c007493846725769d6f5fd7bc7224b7152b4f943070e479f01ec9757",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le gouvernement du Canada annonce la nomination d’un nouveau président de l’Agence spatiale canadienne"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
    "indicateur_de_la_liste_officielle": true,
    "lien_du_quotidien": true,
    "resume_lu": true,
@@ -40192,86 +40237,6 @@
   "source": "concurrence_ca",
   "tickers": [],
   "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), VVG Holdings LLC / New West Truck Centres Ltd"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_dans_l_ordre": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "industrie_scian": true,
-   "parties_lues": true,
-   "resultat_officiel_connu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-21T08:46:13+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "acquereur": "Nortera Foods Inc",
-   "cibles": [
-    "B&G Foods Canada ULC"
-   ],
-   "code": "TA",
-   "conclusion": "2026-10-05",
-   "debut": "2025-11-07",
-   "details": [
-    [
-     "Acquéreur",
-     "Nortera Foods Inc"
-    ],
-    [
-     "Visé(s)",
-     "B&G Foods Canada ULC"
-    ],
-    [
-     "Examen ouvert le",
-     "2025-11-07"
-    ],
-    [
-     "Examen conclu le",
-     "2026-10-05"
-    ],
-    [
-     "Résultat",
-     "transaction abandonnée par les parties"
-    ],
-    [
-     "Industrie (SCIAN)",
-     "3114"
-    ]
-   ],
-   "page_modifiee_le": "2026-10-20",
-   "parties": "Nortera Foods Inc / B&G Foods Canada ULC",
-   "resultat": "transaction abandonnée par les parties",
-   "scian": "3114"
-  },
-  "direction": 0,
-  "entities": [
-   "Nortera Foods Inc",
-   "B&G Foods Canada ULC"
-  ],
-  "id": "concurrence_ca:2025-11-07:nortera-foods-inc-b-g-foods-canada-ulc:conclu",
-  "kind": "fusion_examen_conclu",
-  "notes": [
-   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
-  ],
-  "occurred_on": "2026-10-05",
-  "official_id": "2025-11-07:nortera-foods-inc-b-g-foods-canada-ulc:conclu",
-  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
-  "parser_version": "concurrence-1",
-  "published_on": "2026-10-20",
-  "sha256": "cf8f859f1dc4df30310eb99044ec530aa2aa4d9ec5abc86a5d65fc0b421c61ae",
-  "source": "concurrence_ca",
-  "tickers": [],
-  "title": "Bureau de la concurrence : examen de fusion conclu (transaction abandonnée par les parties), Nortera Foods Inc / B&G Foods Canada ULC"
  },
  {
   "amount_max": null,
