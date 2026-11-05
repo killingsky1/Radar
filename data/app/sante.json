@@ -1,6 +1,41 @@
 {
  "etude": "https://www.ivey.uwo.ca/media/3775523/value_investing_the_use_of_historical_financial_statement_information.pdf",
  "par_symbole": {
+  "AN": {
+   "accn": "0001628280-26-007800",
+   "chiffres": {
+    "cfo": 0.008607,
+    "emission": 0,
+    "levier": 0.270484,
+    "levier_avant": 0.209241,
+    "liquidite": 0.838844,
+    "liquidite_avant": 0.744273,
+    "marge": 0.17909,
+    "marge_avant": 0.178791,
+    "roa": 0.049924,
+    "roa_avant": 0.05778,
+    "rotation": 2.125214,
+    "rotation_avant": 2.234174
+   },
+   "cik": 350698,
+   "criteres": {
+    "ACCRUAL": 0,
+    "CFO": 1,
+    "EQ_OFFER": 1,
+    "ROA": 1,
+    "ΔLEVER": 0,
+    "ΔLIQUID": 1,
+    "ΔMARGIN": 1,
+    "ΔROA": 0,
+    "ΔTURN": 0
+   },
+   "debut": "2025-01-01",
+   "depose": "2026-02-12",
+   "f_score": 5,
+   "fin": "2025-12-31",
+   "forme": "10-K",
+   "lien": "https://www.sec.gov/Archives/edgar/data/350698/000162828026007800/0001628280-26-007800-index.htm"
+  },
   "CAT": {
    "accn": "0000018230-26-000008",
    "chiffres": {
@@ -210,6 +245,41 @@
    "fin": "2025-10-04",
    "forme": "10-K",
    "lien": "https://www.sec.gov/Archives/edgar/data/1821806/000119312525323811/0001193125-25-323811-index.htm"
+  },
+  "PRLB": {
+   "accn": "0001443669-26-000010",
+   "chiffres": {
+    "cfo": 0.100206,
+    "emission": 0,
+    "levier": 0.0,
+    "levier_avant": 0.0,
+    "liquidite": 3.485583,
+    "liquidite_avant": 3.657788,
+    "marge": 0.444804,
+    "marge_avant": 0.445607,
+    "roa": 0.028568,
+    "roa_avant": 0.021484,
+    "rotation": 0.717039,
+    "rotation_avant": 0.648525
+   },
+   "cik": 1443669,
+   "criteres": {
+    "ACCRUAL": 1,
+    "CFO": 1,
+    "EQ_OFFER": 1,
+    "ROA": 1,
+    "ΔLEVER": 0,
+    "ΔLIQUID": 0,
+    "ΔMARGIN": 0,
+    "ΔROA": 1,
+    "ΔTURN": 1
+   },
+   "debut": "2025-01-01",
+   "depose": "2026-02-20",
+   "f_score": 6,
+   "fin": "2025-12-31",
+   "forme": "10-K",
+   "lien": "https://www.sec.gov/Archives/edgar/data/1443669/000144366926000010/0001443669-26-000010-index.htm"
   },
   "RBBN": {
    "accn": "0001708055-26-000012",
