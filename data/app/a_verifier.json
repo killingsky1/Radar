@@ -1,5 +1,58 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": false,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": false
+  },
+  "collected_at": "2026-11-06T17:55:04+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Foreign Assets Control Office"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-22802",
+   "numero_dans_le_texte": false,
+   "retire": true,
+   "sorte": "sanctions",
+   "sous_type": null,
+   "titre_officiel": "Sanctions Action",
+   "type": "Notice"
+  },
+  "direction": 0,
+  "entities": [
+   "Foreign Assets Control Office"
+  ],
+  "id": "registre_federal:2026-22802",
+  "kind": "sanctions",
+  "notes": [
+   "Retiré par l'agence avant sa parution (avis officiel du Registre)."
+  ],
+  "occurred_on": "2026-11-06",
+  "official_id": "2026-22802",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-22802/sanctions-action",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-06",
+  "sha256": "f2185fbeb88d7590bcb77b9b0e4fd4c4e04d6c9c0415c4f4789b95eb5f516f71",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Sanctions (Trésor, OFAC) : Sanctions Action"
+ },
+ {
   "amount_max": 37414702.0,
   "amount_min": 37414702.0,
   "badge": "a_verifier",
