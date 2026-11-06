@@ -3,6 +3,475 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-11-06T21:44:50+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {
+    "entités": 8
+   },
+   "communiques": [
+    "Operation Economic Outcast Sanctions Eight Canadian Money Services Businesses Enabling Iranian Regime"
+   ],
+   "retraits": 0,
+   "titre_officiel": "Iran-related Designations"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20261106",
+  "kind": "sanctions",
+  "notes": [
+   "Communiqué du Trésor : Operation Economic Outcast Sanctions Eight Canadian Money Services Businesses Enabling Iranian Regime",
+   "Ajoutés à la liste des sanctions (SDN) : 8 entités."
+  ],
+  "occurred_on": "2026-11-06",
+  "official_id": "20261106",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20261106",
+  "parser_version": "ofac-1",
+  "published_on": "2026-11-06",
+  "sha256": "523d938178467e46c144071bdd24b4a33d375d9a99be026eb35e6f0832e4ec9a",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Iran-related Designations"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "communique_officiel": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-06T21:44:49+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "titre_officiel": "Statement of the Department of Justice Antitrust Division on the Closing of Its Investigation of the Merger of FOX and Roku"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "doj_antitrust:statement-department-justice-antitrust-division-closing-its-investigation-merger-fox-and",
+  "kind": "antitrust",
+  "notes": [],
+  "occurred_on": "2026-11-06",
+  "official_id": "statement-department-justice-antitrust-division-closing-its-investigation-merger-fox-and",
+  "official_url": "https://www.justice.gov/opa/pr/statement-department-justice-antitrust-division-closing-its-investigation-merger-fox-and",
+  "parser_version": "doj-1",
+  "published_on": "2026-11-06",
+  "sha256": "cebcd928cd5c78be28001f14afd88f15e3dcbb63a6872735645b769794f1171c",
+  "source": "doj_antitrust",
+  "tickers": [],
+  "title": "Antitrust (ministère de la Justice) : Statement of the Department of Justice Antitrust Division on the Closing of Its Investigation of the Merger of FOX and Roku"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-06T21:44:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "209742",
+   "date_rapport": "2026-11-03",
+   "long": 88899,
+   "marche": "Nasdaq-100 (E-mini)",
+   "net": 42873,
+   "nom_officiel": "NASDAQ MINI - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 292587,
+   "short": 46026,
+   "variation": -5966
+  },
+  "direction": -1,
+  "entities": [
+   "NASDAQ MINI - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261103209742F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-03",
+  "official_id": "261103209742F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261103209742F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-06",
+  "sha256": "d75555e7712b762612b3a1c392b2160fbc100374fa33181cc6011d80837f0c47",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Nasdaq-100 (E-mini) : les gros spéculateurs sont acheteurs nets de 42 873 contrats (−5 966 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-06T21:44:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "13874A",
+   "date_rapport": "2026-11-03",
+   "long": 229322,
+   "marche": "S&P 500 (E-mini)",
+   "net": -129414,
+   "nom_officiel": "E-MINI S&P 500 - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 1986532,
+   "short": 358736,
+   "variation": 4954
+  },
+  "direction": 1,
+  "entities": [
+   "E-MINI S&P 500 - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:26110313874AF",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-03",
+  "official_id": "26110313874AF",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=26110313874AF",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-06",
+  "sha256": "742e8c220034c1305163ccb639123b1e85fdd5f0e2a65ed0b437ba8d0ef8f167",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "S&P 500 (E-mini) : les gros spéculateurs sont vendeurs nets de 129 414 contrats (+4 954 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-06T21:44:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "133741",
+   "date_rapport": "2026-11-03",
+   "long": 15644,
+   "marche": "Bitcoin (CME)",
+   "net": 2230,
+   "nom_officiel": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 17527,
+   "short": 13414,
+   "variation": -490
+  },
+  "direction": -1,
+  "entities": [
+   "BITCOIN - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261103133741F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-03",
+  "official_id": "261103133741F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261103133741F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-06",
+  "sha256": "917b10d0aa4a21b20435fc0e30e26e562969a3f7b9776dc83de471de8a11c9fd",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Bitcoin (CME) : les gros spéculateurs sont acheteurs nets de 2 230 contrats (−490 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-06T21:44:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "090741",
+   "date_rapport": "2026-11-03",
+   "long": 99234,
+   "marche": "Dollar canadien",
+   "net": -41775,
+   "nom_officiel": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 348660,
+   "short": 141009,
+   "variation": 24649
+  },
+  "direction": 1,
+  "entities": [
+   "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261103090741F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-03",
+  "official_id": "261103090741F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261103090741F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-06",
+  "sha256": "9d728e152747e3632752b6752907dea4e8ce1d10289f5625d0b1a7f6275f4984",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Dollar canadien : les gros spéculateurs sont vendeurs nets de 41 775 contrats (+24 649 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-06T21:44:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "088691",
+   "date_rapport": "2026-11-03",
+   "long": 220530,
+   "marche": "Or",
+   "net": 179548,
+   "nom_officiel": "GOLD - COMMODITY EXCHANGE INC.",
+   "open_interest": 399169,
+   "short": 40982,
+   "variation": -6903
+  },
+  "direction": -1,
+  "entities": [
+   "GOLD - COMMODITY EXCHANGE INC."
+  ],
+  "id": "cftc_cot:261103088691F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-03",
+  "official_id": "261103088691F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261103088691F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-06",
+  "sha256": "fa7655d7cbf871b58c56b33f1eb1e8f197e92105047c05a7f977bc62d226ccf6",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Or : les gros spéculateurs sont acheteurs nets de 179 548 contrats (−6 903 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-06T21:44:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "085692",
+   "date_rapport": "2026-11-03",
+   "long": 85660,
+   "marche": "Cuivre",
+   "net": 37710,
+   "nom_officiel": "COPPER- #1 - COMMODITY EXCHANGE INC.",
+   "open_interest": 327850,
+   "short": 47950,
+   "variation": -10607
+  },
+  "direction": -1,
+  "entities": [
+   "COPPER- #1 - COMMODITY EXCHANGE INC."
+  ],
+  "id": "cftc_cot:261103085692F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-03",
+  "official_id": "261103085692F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261103085692F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-06",
+  "sha256": "361a525620adc761f9fee0494e5b23ef6d0ba66d56bc871d8641de3de021e13e",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Cuivre : les gros spéculateurs sont acheteurs nets de 37 710 contrats (−10 607 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-06T21:44:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "067651",
+   "date_rapport": "2026-11-03",
+   "long": 324523,
+   "marche": "Pétrole WTI",
+   "net": 80289,
+   "nom_officiel": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+   "open_interest": 1908732,
+   "short": 244234,
+   "variation": 5946
+  },
+  "direction": 1,
+  "entities": [
+   "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261103067651F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-03",
+  "official_id": "261103067651F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261103067651F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-06",
+  "sha256": "d10f34e848ecaf99909c35c3feb945b50eb2ede8906ec952ac6e5f3baf67f308",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Pétrole WTI : les gros spéculateurs sont acheteurs nets de 80 289 contrats (+5 946 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-06T21:44:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "043602",
+   "date_rapport": "2026-11-03",
+   "long": 713247,
+   "marche": "Obligations américaines 10 ans",
+   "net": -962359,
+   "nom_officiel": "UST 10Y NOTE - CHICAGO BOARD OF TRADE",
+   "open_interest": 5947433,
+   "short": 1675606,
+   "variation": 19179
+  },
+  "direction": 1,
+  "entities": [
+   "UST 10Y NOTE - CHICAGO BOARD OF TRADE"
+  ],
+  "id": "cftc_cot:261103043602F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-03",
+  "official_id": "261103043602F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261103043602F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-06",
+  "sha256": "4193df94beec0fc0163821f5e2892e29ef00e661240b2a81cff8bdae1151a060",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Obligations américaines 10 ans : les gros spéculateurs sont vendeurs nets de 962 359 contrats (+19 179 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -98,52 +567,6 @@
   "source": "nouvelles_defense_ca",
   "tickers": [],
   "title": "Le NCSM Robert Hampton Gray prend part à plusieurs opérations arctiques pendant un transfert côtier historique"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "action_officielle": true,
-   "champs_requis": true,
-   "date_de_l_adresse_concorde": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "liste_sdn_lue": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "titre_et_liste_concordent": true
-  },
-  "collected_at": "2026-11-06T20:07:21+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "ajouts": {
-    "entités": 8
-   },
-   "communiques": [],
-   "retraits": 0,
-   "titre_officiel": "Iran-related Designations"
-  },
-  "direction": 0,
-  "entities": [],
-  "id": "sanctions_us:20261106",
-  "kind": "sanctions",
-  "notes": [
-   "Ajoutés à la liste des sanctions (SDN) : 8 entités."
-  ],
-  "occurred_on": "2026-11-06",
-  "official_id": "20261106",
-  "official_url": "https://ofac.treasury.gov/recent-actions/20261106",
-  "parser_version": "ofac-1",
-  "published_on": "2026-11-06",
-  "sha256": "523d938178467e46c144071bdd24b4a33d375d9a99be026eb35e6f0832e4ec9a",
-  "source": "sanctions_us",
-  "tickers": [],
-  "title": "Sanctions américaines (OFAC) : Iran-related Designations"
  },
  {
   "amount_max": null,
@@ -30087,235 +30510,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-03T03:34:39+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 56434141.0,
-   "amendement": null,
-   "bourse": "NYSE",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0001411579",
-   "cik_sujet_entete": "0001411579",
-   "date_evenement": "2026-09-30",
-   "declarant": "PECONIC PARTNERS LLC",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "AMC ENTERTAINMENT HOLDINGS, INC.",
-   "pourcentage": 6.3,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "PECONIC PARTNERS LLC",
-   "AMC ENTERTAINMENT HOLDINGS, INC."
-  ],
-  "id": "sec_13dg:0001050464-26-000009",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001050464-26-000009",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1411579/000105046426000009/0001050464-26-000009-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-11-02",
-  "sha256": "66ba2dcccc29d4a8a9e3d401860f20d7bec62a2eebb38bb60e57434651155049",
-  "source": "sec_13dg",
-  "tickers": [
-   "AMC"
-  ],
-  "title": "PECONIC PARTNERS LLC détient 6,3 % de AMC ENTERTAINMENT HOLDINGS, INC. (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-03T03:34:39+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 434689.0,
-   "amendement": "1",
-   "bourse": "NYSE",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0000104889",
-   "cik_sujet_entete": "0000104889",
-   "date_evenement": "2026-10-29",
-   "declarant": "Laura G. O'Shaughnessy",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "Graham Holdings Company",
-   "pourcentage": 12.0,
-   "type": "SCHEDULE 13D/A",
-   "types_declarants": [
-    "IN"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Laura G. O'Shaughnessy",
-   "Graham Holdings Co"
-  ],
-  "id": "sec_13dg:0000950157-26-001154",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-10-29",
-  "official_id": "0000950157-26-001154",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/104889/000095015726001154/0000950157-26-001154-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-11-02",
-  "sha256": "4dc62f4d17d8171e42a26d7d5d03eb57ad2b1d9dd5263d2c78a98cfa8bee150f",
-  "source": "sec_13dg",
-  "tickers": [
-   "GHC"
-  ],
-  "title": "Laura G. O'Shaughnessy détient 12 % de Graham Holdings Co (13D, intentions actives, mise à jour n° 1)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-03T03:34:39+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 6028320.0,
-   "amendement": "4",
-   "bourse": "Nasdaq",
-   "but_sous_evalue": false,
-   "cik_emetteur": "0001385613",
-   "cik_sujet_entete": "0001385613",
-   "date_evenement": "2026-10-30",
-   "declarant": "EINHORN DAVID",
-   "extrait_but": "Item 4 of the Schedule 13D filed by the Reporting Persons with respect to the Ordinary Shares, as amended, is supplemented as follows: In order to reduce the likelihood of any adverse tax consequences to holders of Ordinary Shares due to the repurchase of Ordinary Shares made by the Company in the o",
-   "nb_personnes": 3,
-   "nom_emetteur": "GREENLIGHT CAPITAL RE, LTD.",
-   "pourcentage": 18.7,
-   "type": "SCHEDULE 13D/A",
-   "types_declarants": [
-    "IN",
-    "OO"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "EINHORN DAVID",
-   "GREENLIGHT CAPITAL RE, LTD."
-  ],
-  "id": "sec_13dg:0000929638-26-004184",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-10-30",
-  "official_id": "0000929638-26-004184",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1385613/000092963826004184/0000929638-26-004184-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-11-02",
-  "sha256": "1cf39d50402dbe8fd3b36806361203abb2103a6c7045cf35afcdd9111fe876e7",
-  "source": "sec_13dg",
-  "tickers": [
-   "GLRE"
-  ],
-  "title": "EINHORN DAVID détient 18,7 % de GREENLIGHT CAPITAL RE, LTD. (13D, intentions actives, mise à jour n° 4)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-03T03:34:38+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 0.0,
-   "amendement": "2",
-   "bourse": "Nasdaq",
-   "but_sous_evalue": false,
-   "cik_emetteur": "0001616533",
-   "cik_sujet_entete": "0001616533",
-   "date_evenement": "2026-10-29",
-   "declarant": "SK Telecom Co., Ltd.",
-   "extrait_but": "Item 4 of the Schedule 13D is hereby amended and supplemented as follows: On October 29, 2026 (the \"Closing Date\"), pursuant to the Stock Transfer Agreement dated as of July 27, 2026 (the \"Stock Transfer Agreement\") between Astra, a special purpose vehicle established by SK Telecom Co., Ltd. (\"SKT\")",
-   "nb_personnes": 2,
-   "nom_emetteur": "Penguin Solutions, Inc.",
-   "pourcentage": 0.0,
-   "type": "SCHEDULE 13D/A",
-   "types_declarants": [
-    "OO"
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "SK Telecom Co., Ltd.",
-   "Penguin Solutions, Inc."
-  ],
-  "id": "sec_13dg:0001193125-26-442534",
-  "kind": "sous_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-10-29",
-  "official_id": "0001193125-26-442534",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1616533/000119312526442534/0001193125-26-442534-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-11-02",
-  "sha256": "731ea456f4add22ea88a1e510e5be28be1794ddb3e884261bb4fe1c80f425a9b",
-  "source": "sec_13dg",
-  "tickers": [
-   "PENG"
-  ],
-  "title": "SK Telecom Co., Ltd. passe sous 5 % de Penguin Solutions, Inc. : il en détient maintenant 0 % (13D, intentions actives, mise à jour n° 2)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -31542,234 +31736,6 @@
    "ABT"
   ],
   "title": "Thomas H. Kean (Chambre, NJ07) vend ABT"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-31T09:47:31+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 9601771.0,
-   "amendement": null,
-   "bourse": "Nasdaq",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0000946581",
-   "cik_sujet_entete": "0000946581",
-   "date_evenement": "2026-09-30",
-   "declarant": "Vanguard Portfolio Management",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "Take-Two Interactive Software Inc",
-   "pourcentage": 5.13,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Vanguard Portfolio Management",
-   "TAKE TWO INTERACTIVE SOFTWARE INC"
-  ],
-  "id": "sec_13dg:0002100121-26-001132",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0002100121-26-001132",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/946581/000210012126001132/0002100121-26-001132-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-30",
-  "sha256": "d92f3e4f95ea97aa10d952c84b10419ad3bba52743c7db8e8ed42a5063b0ddfc",
-  "source": "sec_13dg",
-  "tickers": [
-   "TTWO"
-  ],
-  "title": "Vanguard Portfolio Management détient 5,13 % de TAKE TWO INTERACTIVE SOFTWARE INC (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-31T09:47:31+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 3523069.0,
-   "amendement": null,
-   "bourse": "NYSE",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0000098362",
-   "cik_sujet_entete": "0000098362",
-   "date_evenement": "2026-09-30",
-   "declarant": "Vanguard Portfolio Management",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "Timken Co/The",
-   "pourcentage": 5.08,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Vanguard Portfolio Management",
-   "TIMKEN CO"
-  ],
-  "id": "sec_13dg:0002100121-26-001127",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0002100121-26-001127",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/98362/000210012126001127/0002100121-26-001127-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-30",
-  "sha256": "8b2742ea83cc9d97078076870f51884c181791d5a69c4e1f83da5890cdb1ec71",
-  "source": "sec_13dg",
-  "tickers": [
-   "TKR"
-  ],
-  "title": "Vanguard Portfolio Management détient 5,08 % de TIMKEN CO (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-31T09:47:31+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 2738301.0,
-   "amendement": null,
-   "bourse": "NYSE",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0000894315",
-   "cik_sujet_entete": "0000894315",
-   "date_evenement": "2026-09-30",
-   "declarant": "Vanguard Portfolio Management",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "SITE Centers Corp",
-   "pourcentage": 5.21,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Vanguard Portfolio Management",
-   "SITE Centers Corp."
-  ],
-  "id": "sec_13dg:0002100121-26-001122",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0002100121-26-001122",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/894315/000210012126001122/0002100121-26-001122-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-30",
-  "sha256": "be1b79b99f9f5a969b9067edfed41ba0a49de08cbc58d55f271603bf49d73cc2",
-  "source": "sec_13dg",
-  "tickers": [
-   "SITC"
-  ],
-  "title": "Vanguard Portfolio Management détient 5,21 % de SITE Centers Corp. (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-31T09:47:31+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 5217972.0,
-   "amendement": null,
-   "bourse": "NYSE",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0000094845",
-   "cik_sujet_entete": "0000094845",
-   "date_evenement": "2026-09-30",
-   "declarant": "Vanguard Portfolio Management",
-   "extrait_but": null,
-   "nb_personnes": 1,
-   "nom_emetteur": "Levi Strauss & Co",
-   "pourcentage": 5.19,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Vanguard Portfolio Management",
-   "LEVI STRAUSS & CO"
-  ],
-  "id": "sec_13dg:0002100121-26-001108",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0002100121-26-001108",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/94845/000210012126001108/0002100121-26-001108-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-10-30",
-  "sha256": "e186816228c7a4f812972f2fe37d7a247766c45b4be004a6f6ba2249dbbf1b8f",
-  "source": "sec_13dg",
-  "tickers": [
-   "LEVI"
-  ],
-  "title": "Vanguard Portfolio Management détient 5,19 % de LEVI STRAUSS & CO (13G, placement passif)"
  },
  {
   "amount_max": null,
@@ -55080,59 +55046,6 @@
   "source": "registre_federal",
   "tickers": [],
   "title": "Sanctions (Trésor, OFAC) : Iranian Transactions and Sanctions Regulations"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-03T00:06:03+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Treasury Department",
-    "Foreign Assets Control Office"
-   ],
-   "etape": "parution",
-   "numero": "2026-19977",
-   "numero_dans_le_texte": true,
-   "parution": "2026-09-30",
-   "sorte": "sanctions",
-   "sous_type": null,
-   "titre_officiel": "Cuba Sanctions Regulations",
-   "type": "Rule"
-  },
-  "direction": 0,
-  "entities": [
-   "Treasury Department",
-   "Foreign Assets Control Office"
-  ],
-  "id": "registre_federal:2026-19977",
-  "kind": "sanctions",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "2026-19977",
-  "official_url": "https://www.federalregister.gov/documents/2026/09/30/2026-19977/cuba-sanctions-regulations",
-  "parser_version": "registre-4",
-  "published_on": "2026-09-30",
-  "sha256": "073396b06deb4292c04b868bdbb9d034354a6a0043b33ee061c0272dd9ad1313",
-  "source": "registre_federal",
-  "tickers": [],
-  "title": "Sanctions (Trésor, OFAC) : Cuba Sanctions Regulations"
  },
  {
   "amount_max": null,
