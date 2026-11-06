@@ -1,5 +1,653 @@
 [
  {
+  "amount_max": 37414702.0,
+  "amount_min": 37414702.0,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "actions_et_valeur_positives": true,
+   "actions_sous_le_total_en_circulation": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "prix_implicite_plausible": false,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-06T11:02:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 12499.0,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001736297",
+   "date_avis": "2026-11-05",
+   "lignes": [
+    {
+     "actions": 12499.0,
+     "bourse": "NASDAQ",
+     "classe": "Common",
+     "date_prevue": "2026-11-05",
+     "en_circulation": 173490000.0,
+     "valeur": 37414702.0
+    }
+   ],
+   "nom_emetteur": "Astera Labs, Inc.",
+   "plan_10b5_1": [
+    "12/01/2025"
+   ],
+   "relations": [
+    "Director"
+   ],
+   "vendeur": "Dyckerhoff Stefan A"
+  },
+  "direction": -1,
+  "entities": [
+   "Dyckerhoff Stefan A",
+   "Astera Labs, Inc."
+  ],
+  "id": "sec_form144:0001973251-26-000041",
+  "kind": "intention_vente",
+  "notes": [
+   "Vente prévue d'avance dans un plan automatique (règle 10b5-1).",
+   "Date de vente prévue : 5 novembre 2026."
+  ],
+  "occurred_on": "2026-11-05",
+  "official_id": "0001973251-26-000041",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1736297/000197325126000041/0001973251-26-000041-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-05",
+  "sha256": "66061fb555295f97dabe6fe72a421b2e77d043d97d004971540a39b71fbcccb1",
+  "source": "sec_form144",
+  "tickers": [
+   "ALAB"
+  ],
+  "title": "Dyckerhoff Stefan A (administrateur) prévoit vendre 12 499 actions de Astera Labs, Inc."
+ },
+ {
+  "amount_max": 5739039431.47,
+  "amount_min": 5739039431.47,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": false,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": false,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-06T11:01:50+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 47171.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001948697",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 121664.57,
+   "proprietaires_cik": [
+    "2126024"
+   ],
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "symbole_declare": "SPPL",
+   "symboles_sec": [
+    "SPPL"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 47171.0,
+     "apres": 0.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-04",
+     "hors_bourse": null,
+     "prix": 121664.57,
+     "titre_valeur": "Ordinary Shares"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Soo QiKai",
+   "SIMPPLE LTD."
+  ],
+  "id": "sec_form4:0001493152-26-050231:S",
+  "kind": "vente_initie",
+  "notes": [],
+  "occurred_on": "2026-11-04",
+  "official_id": "0001493152-26-050231:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1948697/000149315226050231/0001493152-26-050231-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-05",
+  "sha256": "76c741f7fcb56219af0ed81107a985946ad7ec64d85a0fe997879a9d4e72d3f0",
+  "source": "sec_form4",
+  "tickers": [
+   "SPPL"
+  ],
+  "title": "Soo QiKai (Chief Technology Officer) vend 47 171 actions de SIMPPLE LTD."
+ },
+ {
+  "amount_max": 51248193398.83,
+  "amount_min": 51248193398.83,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": false,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": false,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-06T11:01:49+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 189310.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001948697",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 270710.44,
+   "proprietaires_cik": [
+    "2120165"
+   ],
+   "roles": [
+    "administrateur"
+   ],
+   "symbole_declare": "SPPL",
+   "symboles_sec": [
+    "SPPL"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 1.0,
+     "apres": 0.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-04",
+     "hors_bourse": null,
+     "prix": 1.0,
+     "titre_valeur": "Ordinary Shares"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 189309.0,
+     "apres": 0.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-04",
+     "hors_bourse": null,
+     "prix": 270711.87,
+     "titre_valeur": "Ordinary Shares"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Lee Kelvin Soon Sze",
+   "SIMPPLE LTD."
+  ],
+  "id": "sec_form4:0001493152-26-050230:S",
+  "kind": "vente_initie",
+  "notes": [],
+  "occurred_on": "2026-11-04",
+  "official_id": "0001493152-26-050230:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1948697/000149315226050230/0001493152-26-050230-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-05",
+  "sha256": "2537f675e4f6c200a42bf3b2979c9ca234ae1fe1d5250ef62196843b8f25b53b",
+  "source": "sec_form4",
+  "tickers": [
+   "SPPL"
+  ],
+  "title": "Lee Kelvin Soon Sze (administrateur) vend 189 310 actions de SIMPPLE LTD."
+ },
+ {
+  "amount_max": 10202628830.42,
+  "amount_min": 10202628830.42,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": false,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": false,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-06T11:01:49+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 62894.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001948697",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 162219.43,
+   "proprietaires_cik": [
+    "2126254"
+   ],
+   "roles": [
+    "Acting Chief Executive Officer"
+   ],
+   "symbole_declare": "SPPL",
+   "symboles_sec": [
+    "SPPL"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 62894.0,
+     "apres": 0.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-04",
+     "hors_bourse": null,
+     "prix": 162219.43,
+     "titre_valeur": "Ordinary Shares"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Pat Daryl Kah Kit",
+   "SIMPPLE LTD."
+  ],
+  "id": "sec_form4:0001493152-26-050229:S",
+  "kind": "vente_initie",
+  "notes": [],
+  "occurred_on": "2026-11-04",
+  "official_id": "0001493152-26-050229:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1948697/000149315226050229/0001493152-26-050229-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-05",
+  "sha256": "f942e93b5203608de9a62cdcb2df108730bb9b80bd6a1655549fa142bbafd1a6",
+  "source": "sec_form4",
+  "tickers": [
+   "SPPL"
+  ],
+  "title": "Pat Daryl Kah Kit (Acting Chief Executive Officer) vend 62 894 actions de SIMPPLE LTD."
+ },
+ {
+  "amount_max": 1995978.07,
+  "amount_min": 1995978.07,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": false,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-06T11:01:26+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 211313.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001570585",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 9.4456,
+   "proprietaires_cik": [
+    "1565787"
+   ],
+   "roles": [
+    "EVP, Chief Technology Officer"
+   ],
+   "symbole_declare": "LBTY",
+   "symboles_sec": [
+    "LBTYA",
+    "LBTYB",
+    "LBTYK"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 211313.0,
+     "apres": 602378.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-11-04",
+     "hors_bourse": null,
+     "prix": 9.4456,
+     "titre_valeur": "Class A Common Shares"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Rodriguez Enrique",
+   "Liberty Global Ltd."
+  ],
+  "id": "sec_form4:0001570585-26-000156:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-11-04",
+  "official_id": "0001570585-26-000156:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1570585/000157058526000156/0001570585-26-000156-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-05",
+  "sha256": "ca254725e0faf220b5e30edd9b5f161918a9c2077381bd0e5037cb9274dfcb32",
+  "source": "sec_form4",
+  "tickers": [
+   "LBTYA"
+  ],
+  "title": "Rodriguez Enrique (EVP, Chief Technology Officer) achète 211 313 actions de Liberty Global Ltd."
+ },
+ {
+  "amount_max": 314480.45,
+  "amount_min": 314480.45,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": false,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-06T11:01:21+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 15011.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000863900",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 20.95,
+   "proprietaires_cik": [
+    "1510281"
+   ],
+   "roles": [
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "MXF",
+   "symboles_sec": [
+    "MXE"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 15011.0,
+     "apres": 2493840.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-11-04",
+     "hors_bourse": null,
+     "prix": 20.95,
+     "titre_valeur": "Common Stock"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Saba Capital Management, L.P.",
+   "MEXICO EQUITY & INCOME FUND INC"
+  ],
+  "id": "sec_form4:0001510281-26-000414:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-11-04",
+  "official_id": "0001510281-26-000414:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/863900/000151028126000414/0001510281-26-000414-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-05",
+  "sha256": "4d0666cf3e4688c327971c1426d6dd33207d810db25a68fb7dcf00bacbce3a78",
+  "source": "sec_form4",
+  "tickers": [
+   "MXE"
+  ],
+  "title": "Saba Capital Management, L.P. (actionnaire de 10 %) achète 15 011 actions de MEXICO EQUITY & INCOME FUND INC"
+ },
+ {
+  "amount_max": 2424567.04,
+  "amount_min": 2424567.04,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": false,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-06T11:00:52+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 46000.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000004457",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 52.708,
+   "proprietaires_cik": [
+    "1134431"
+   ],
+   "roles": [
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "UHALB",
+   "symboles_sec": [
+    "UHAL",
+    "UHAL-B"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 23000.0,
+     "apres": 264196.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-03",
+     "hors_bourse": null,
+     "prix": 52.1722,
+     "titre_valeur": "Series N Common Stock"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 4565.0,
+     "apres": 259631.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-04",
+     "hors_bourse": null,
+     "prix": 52.5599,
+     "titre_valeur": "Series N Common Stock"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 18435.0,
+     "apres": 241196.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-04",
+     "hors_bourse": null,
+     "prix": 53.4131,
+     "titre_valeur": "Series N Common Stock"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "SHOEN MARK V",
+   "U-Haul Holding Co /NV/"
+  ],
+  "id": "sec_form4:0001193125-26-450256:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-11-03",
+  "official_id": "0001193125-26-450256:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/4457/000119312526450256/0001193125-26-450256-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-05",
+  "sha256": "82af3a4e053b4f3d08c3455b51eec600124f67804adcacdfd69b226aecbb5211",
+  "source": "sec_form4",
+  "tickers": [
+   "UHAL"
+  ],
+  "title": "SHOEN MARK V (actionnaire de 10 %) vend 46 000 actions de U-Haul Holding Co /NV/"
+ },
+ {
+  "amount_max": 1030172.0,
+  "amount_min": 1030172.0,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": false,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-06T11:00:46+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 110000.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001570585",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 9.3652,
+   "proprietaires_cik": [
+    "1058725"
+   ],
+   "roles": [
+    "President & CEO"
+   ],
+   "symbole_declare": "LBTY",
+   "symboles_sec": [
+    "LBTYA",
+    "LBTYB",
+    "LBTYK"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 110000.0,
+     "apres": 1238525.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-11-04",
+     "hors_bourse": null,
+     "prix": 9.3652,
+     "titre_valeur": "Class A Common Shares"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "FRIES MICHAEL T",
+   "Liberty Global Ltd."
+  ],
+  "id": "sec_form4:0001058725-26-000011:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-11-04",
+  "official_id": "0001058725-26-000011:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1570585/000105872526000011/0001058725-26-000011-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-05",
+  "sha256": "faeb8a8b6c8cab1f0d80f8593abfedffdf7220c4950a064dc1a6f50d03274d8e",
+  "source": "sec_form4",
+  "tickers": [
+   "LBTYA"
+  ],
+  "title": "FRIES MICHAEL T (President & CEO) achète 110 000 actions de Liberty Global Ltd."
+ },
+ {
   "amount_max": 283534.16,
   "amount_min": 283534.16,
   "badge": "a_verifier",

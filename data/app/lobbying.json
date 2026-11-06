@@ -15,143 +15,19 @@
    "sujets": [],
    "total": null
   },
-  "BKU": {
+  "AN": {
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-10-30T10:08:29+00:00",
+   "lu": "2026-11-06T11:00:36+00:00",
    "moins_de_5000": 0,
-   "nom": "BankUnited, Inc.",
+   "nom": "AUTONATION, INC.",
    "pages": 1,
    "rapports": [],
-   "recherche": "BANKUNITED",
+   "recherche": "AUTONATION",
    "revenus_firmes": null,
    "sujets": [],
    "total": null
-  },
-  "CAT": {
-   "base": "compagnie",
-   "complet": true,
-   "firmes": 2,
-   "lu": "2026-11-05T11:03:06+00:00",
-   "moins_de_5000": 0,
-   "nom": "CATERPILLAR INC",
-   "pages": 1,
-   "rapports": [
-    {
-     "client": "CATERPILLAR INC",
-     "montant": 1040000.0,
-     "poste": "2026-10-20",
-     "registrant": "CATERPILLAR INC.",
-     "sans_activite": false,
-     "soi_meme": true,
-     "sujets": [
-      "CAW",
-      "CPT",
-      "EDU",
-      "ENG",
-      "FIN",
-      "LAW",
-      "RRR",
-      "TAX",
-      "TRA",
-      "TRD",
-      "TRU"
-     ],
-     "type": "Q3",
-     "url": "https://lda.gov/filings/public/filing/b45f43b4-bd94-442f-b29c-568963e36a04/print/",
-     "uuid": "b45f43b4-bd94-442f-b29c-568963e36a04"
-    },
-    {
-     "client": "CATERPILLAR INC",
-     "montant": 100000.0,
-     "poste": "2026-10-20",
-     "registrant": "THE DUBERSTEIN GROUP INC.",
-     "sans_activite": false,
-     "soi_meme": false,
-     "sujets": [
-      "CPT"
-     ],
-     "type": "Q3",
-     "url": "https://lda.gov/filings/public/filing/eb202ef2-33de-4a1f-9088-8d2707bd0a5a/print/",
-     "uuid": "eb202ef2-33de-4a1f-9088-8d2707bd0a5a"
-    },
-    {
-     "client": "CATERPILLAR INC",
-     "montant": 50000.0,
-     "poste": "2026-10-20",
-     "registrant": "THE WASHINGTON TAX & PUBLIC POLICY GROUP",
-     "sans_activite": false,
-     "soi_meme": false,
-     "sujets": [
-      "TAX"
-     ],
-     "type": "Q3",
-     "url": "https://lda.gov/filings/public/filing/bf07d257-c28b-458b-98ec-6265646eb3be/print/",
-     "uuid": "bf07d257-c28b-458b-98ec-6265646eb3be"
-    },
-    {
-     "client": "CATERPILLAR INC",
-     "montant": null,
-     "poste": "2026-10-19",
-     "registrant": "AUSTIN LEGAL AND PUBLIC AFFAIRS PLLC",
-     "sans_activite": true,
-     "soi_meme": false,
-     "sujets": [],
-     "type": "Q3Y",
-     "url": "https://lda.gov/filings/public/filing/f1ee252c-dc02-4892-9817-b7c6be87d73a/print/",
-     "uuid": "f1ee252c-dc02-4892-9817-b7c6be87d73a"
-    }
-   ],
-   "recherche": "CATERPILLAR",
-   "revenus_firmes": 150000.0,
-   "sujets": [
-    {
-     "code": "CPT",
-     "nom": "Droits d'auteur, brevets et marques"
-    },
-    {
-     "code": "TAX",
-     "nom": "Fiscalité (impôts)"
-    },
-    {
-     "code": "CAW",
-     "nom": "Qualité de l'air et de l'eau"
-    },
-    {
-     "code": "EDU",
-     "nom": "Éducation"
-    },
-    {
-     "code": "ENG",
-     "nom": "Énergie et nucléaire"
-    },
-    {
-     "code": "FIN",
-     "nom": "Institutions financières, placements et valeurs mobilières"
-    },
-    {
-     "code": "LAW",
-     "nom": "Police, criminalité et justice pénale"
-    },
-    {
-     "code": "RRR",
-     "nom": "Chemins de fer"
-    },
-    {
-     "code": "TRA",
-     "nom": "Transports"
-    },
-    {
-     "code": "TRD",
-     "nom": "Commerce (intérieur et extérieur)"
-    },
-    {
-     "code": "TRU",
-     "nom": "Camionnage et expédition"
-    }
-   ],
-   "total": 1040000.0
   },
   "DIN": {
    "base": "firmes",
@@ -393,6 +269,20 @@
    "sujets": [],
    "total": null
   },
+  "PRLB": {
+   "base": null,
+   "complet": true,
+   "firmes": 0,
+   "lu": "2026-11-06T11:00:36+00:00",
+   "moins_de_5000": 0,
+   "nom": "Proto Labs Inc",
+   "pages": 1,
+   "rapports": [],
+   "recherche": "PROTO",
+   "revenus_firmes": null,
+   "sujets": [],
+   "total": null
+  },
   "RBBN": {
    "base": null,
    "complet": true,
@@ -417,20 +307,6 @@
    "pages": 1,
    "rapports": [],
    "recherche": "ROLLER",
-   "revenus_firmes": null,
-   "sujets": [],
-   "total": null
-  },
-  "SAMG": {
-   "base": null,
-   "complet": true,
-   "firmes": 0,
-   "lu": "2026-11-04T11:02:07+00:00",
-   "moins_de_5000": 0,
-   "nom": "Silvercrest Asset Management Group Inc.",
-   "pages": 1,
-   "rapports": [],
-   "recherche": "SILVERCREST",
    "revenus_firmes": null,
    "sujets": [],
    "total": null
@@ -599,7 +475,7 @@
    "base": null,
    "complet": false,
    "firmes": 0,
-   "lu": "2026-10-30T10:08:29+00:00",
+   "lu": "2026-11-06T11:00:36+00:00",
    "moins_de_5000": 0,
    "nom": "TTM TECHNOLOGIES INC",
    "pages": 4,
@@ -609,30 +485,16 @@
    "sujets": [],
    "total": null
   },
-  "UTMD": {
+  "UPBD": {
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-10-31T09:44:50+00:00",
+   "lu": "2026-11-06T11:00:36+00:00",
    "moins_de_5000": 0,
-   "nom": "UTAH MEDICAL PRODUCTS INC",
-   "pages": 4,
-   "rapports": [],
-   "recherche": "PRODUCTS",
-   "revenus_firmes": null,
-   "sujets": [],
-   "total": null
-  },
-  "WS": {
-   "base": null,
-   "complet": true,
-   "firmes": 0,
-   "lu": "2026-10-30T10:08:29+00:00",
-   "moins_de_5000": 0,
-   "nom": "Worthington Steel, Inc.",
+   "nom": "UPBOUND GROUP, INC.",
    "pages": 1,
    "rapports": [],
-   "recherche": "WORTHINGTON",
+   "recherche": "UPBOUND",
    "revenus_firmes": null,
    "sujets": [],
    "total": null

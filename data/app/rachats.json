@@ -13,21 +13,13 @@
    "lien": "https://www.sec.gov/Archives/edgar/data/350698/000162828026007800/0001628280-26-007800-index.htm",
    "montant": 791600000
   },
-  "BKU": {
-   "accn": "0001504008-26-000011",
-   "cik": 1504008,
+  "BXMT": {
+   "accn": "0001061630-26-000009",
+   "cik": 1061630,
    "debut": "2025-01-01",
    "fin": "2025-12-31",
-   "lien": "https://www.sec.gov/Archives/edgar/data/1504008/000150400826000011/0001504008-26-000011-index.htm",
-   "montant": 44805000
-  },
-  "CAT": {
-   "accn": "0000018230-26-000008",
-   "cik": 18230,
-   "debut": "2025-01-01",
-   "fin": "2025-12-31",
-   "lien": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/0000018230-26-000008-index.htm",
-   "montant": 5190000000
+   "lien": "https://www.sec.gov/Archives/edgar/data/1061630/000106163026000009/0001061630-26-000009-index.htm",
+   "montant": 109507000
   },
   "DIN": {
    "accn": "0001628280-26-011393",
@@ -50,6 +42,14 @@
   },
   "EONR": {
    "cik": 1842556
+  },
+  "FBRT": {
+   "accn": "0001562528-26-000008",
+   "cik": 1562528,
+   "debut": "2025-01-01",
+   "fin": "2025-12-31",
+   "lien": "https://www.sec.gov/Archives/edgar/data/1562528/000156252826000008/0001562528-26-000008-index.htm",
+   "montant": 14367000
   },
   "FINW": {
    "accn": "0001856365-26-000006",
@@ -84,8 +84,24 @@
   "KPTI": {
    "cik": 1503802
   },
+  "LBRT": {
+   "accn": "0001694028-26-000006",
+   "cik": 1694028,
+   "debut": "2025-01-01",
+   "fin": "2025-12-31",
+   "lien": "https://www.sec.gov/Archives/edgar/data/1694028/000169402826000006/0001694028-26-000006-index.htm",
+   "montant": 24882000
+  },
   "LESL": {
    "cik": 1821806
+  },
+  "MTDR": {
+   "accn": "0001520006-26-000002",
+   "cik": 1520006,
+   "debut": "2025-01-01",
+   "fin": "2025-12-31",
+   "lien": "https://www.sec.gov/Archives/edgar/data/1520006/000152000626000002/0001520006-26-000002-index.htm",
+   "montant": 55849000
   },
   "NPB": {
    "accn": "0001336706-26-000020",
@@ -102,6 +118,9 @@
    "fin": "2025-12-31",
    "lien": "https://www.sec.gov/Archives/edgar/data/1004702/000100470226000015/0001004702-26-000015-index.htm",
    "montant": 24908000
+  },
+  "PAM": {
+   "cik": 1469395
   },
   "PRLB": {
    "accn": "0001443669-26-000010",
@@ -121,14 +140,6 @@
   },
   "ROLR": {
    "cik": 1947210
-  },
-  "SAMG": {
-   "accn": "0001193125-26-108402",
-   "cik": 1549966,
-   "debut": "2025-01-01",
-   "fin": "2025-12-31",
-   "lien": "https://www.sec.gov/Archives/edgar/data/1549966/000119312526108402/0001193125-26-108402-index.htm",
-   "montant": 30500000
   },
   "SEGG": {
    "cik": 1673481
@@ -181,17 +192,6 @@
    "fin": "2025-12-31",
    "lien": "https://www.sec.gov/Archives/edgar/data/933036/000093303626000008/0000933036-26-000008-index.htm",
    "montant": 0
-  },
-  "UTMD": {
-   "accn": "0001096906-26-000395",
-   "cik": 706698,
-   "debut": "2025-01-01",
-   "fin": "2025-12-31",
-   "lien": "https://www.sec.gov/Archives/edgar/data/706698/000109690626000395/0001096906-26-000395-index.htm",
-   "montant": 8355000
-  },
-  "WS": {
-   "cik": 1968487
   }
  },
  "source": "https://data.sec.gov/api/xbrl/frames/us-gaap/PaymentsForRepurchaseOfCommonStock/USD/CY2025.json"
