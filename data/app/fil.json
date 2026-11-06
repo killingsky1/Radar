@@ -3,6 +3,53 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "categorie_officielle_reconnue": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_d_une_action_presidentielle": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_officiel_lu": true
+  },
+  "collected_at": "2026-11-06T02:29:58+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "categories": [
+    "Presidential Actions",
+    "Proclamations"
+   ],
+   "guid": "",
+   "resume": "A PROCLAMATION The Oval Office stands as one of the most recognizable and historically significant spaces in the United States. Since its establishment in its present location and form during the administration of President Franklin D. Roosevelt, it has served as the principal working office of the President of the United States. Decisions of profound national and international consequence have been made within its walls. It has hosted heads of state, shaped the daily conduct of the executive branch, and become a symbol of the American Presidency itself. The room’s distinctive oval design, fir",
+   "sorte": "proclamation",
+   "titre_officiel": "ESTABLISHMENT OF THE OVAL OFFICE NATIONAL MONUMENT"
+  },
+  "direction": 0,
+  "entities": [
+   "The White House"
+  ],
+  "id": "maison_blanche:2026/11/establishment-of-the-oval-office-national-monument",
+  "kind": "proclamation",
+  "notes": [],
+  "occurred_on": "2026-11-05",
+  "official_id": "2026/11/establishment-of-the-oval-office-national-monument",
+  "official_url": "https://www.whitehouse.gov/presidential-actions/2026/11/establishment-of-the-oval-office-national-monument/",
+  "parser_version": "maison-blanche-1",
+  "published_on": "2026-11-05",
+  "sha256": "6cfdd376fdc967e9b7f93224784c14cf1489fda9eb661c402c6a4895f8f9cb7d",
+  "source": "maison_blanche",
+  "tickers": [],
+  "title": "Proclamation présidentielle : ESTABLISHMENT OF THE OVAL OFFICE NATIONAL MONUMENT"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -56576,60 +56623,6 @@
   "source": "nhtsa",
   "tickers": [],
   "title": "Rappel de Chrysler (FCA US, LLC) : 265 512 véhicules — « Loss of Power Steering Assist »"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "action_officielle": true,
-   "champs_requis": true,
-   "date_de_l_adresse_concorde": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "liste_sdn_lue": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "titre_et_liste_concordent": true
-  },
-  "collected_at": "2026-10-03T02:03:25+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "ajouts": {
-    "entités": 30,
-    "personnes": 23
-   },
-   "communiques": [
-    "CHART - The Sinaloa Cartel's Los Mayos Faction - September 2026",
-    "CHART - Los Mayos Narco-Corruption in Baja California - September 2026",
-    "Operation Economic Outcast Takes Down Iranian Military Procurement Networks",
-    "Treasury Sanctions Sinaloa Cartel Leadership and Corruption Networks"
-   ],
-   "retraits": 0,
-   "titre_officiel": "Counter Narcotics, Counter Terrorism, Iran-related, and Non-Proliferation Designations"
-  },
-  "direction": 0,
-  "entities": [],
-  "id": "sanctions_us:20260929",
-  "kind": "sanctions",
-  "notes": [
-   "Communiqué du Trésor : CHART - The Sinaloa Cartel's Los Mayos Faction - September 2026",
-   "Communiqué du Trésor : CHART - Los Mayos Narco-Corruption in Baja California - September 2026",
-   "Ajoutés à la liste des sanctions (SDN) : 23 personnes, 30 entités."
-  ],
-  "occurred_on": "2026-09-29",
-  "official_id": "20260929",
-  "official_url": "https://ofac.treasury.gov/recent-actions/20260929",
-  "parser_version": "ofac-1",
-  "published_on": "2026-09-29",
-  "sha256": "02614b268b847b39864916861885892d8a9ad10f8ca34ee7a743b7ea341a6a4a",
-  "source": "sanctions_us",
-  "tickers": [],
-  "title": "Sanctions américaines (OFAC) : Counter Narcotics, Counter Terrorism, Iran-related, and Non-Proliferation Designations"
  },
  {
   "amount_max": null,
