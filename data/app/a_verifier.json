@@ -6,6 +6,157 @@
   "category": "gouvernement",
   "checks": {
    "champs_requis": true,
+   "compagnie_cotee": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "extrait_officiel": true,
+   "gouvernement_nomme": true,
+   "point_8k_retenu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_de_propriete": false
+  },
+  "collected_at": "2026-11-07T10:34:27+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "cik": "0001332551",
+   "details": [
+    [
+     "Compagnie",
+     "ACRES Commercial Realty Corp."
+    ],
+    [
+     "Points du 8-K",
+     "1.01"
+    ],
+    [
+     "Extrait (EX-99.1)",
+     "… “Cash Equivalents” shall mean, as of any date of determination, (a) marketable securities (i) issued or directly and unconditionally guaranteed as to interest and principal by the United States Government or (ii) issued by any agency of the United States the obligations of which are backed by the full faith and credit of the United States and (b) time deposits, certificates of deposit, money market accounts or banker’s acceptances of any investment …"
+    ]
+   ],
+   "documents": [
+    {
+     "extraits": [
+      "… “Cash Equivalents” shall mean, as of any date of determination, (a) marketable securities (i) issued or directly and unconditionally guaranteed as to interest and principal by the United States Government or (ii) issued by any agency of the United States the obligations of which are backed by the full faith and credit of the United States and (b) time deposits, certificates of deposit, money market accounts or banker’s acceptances of any investment …"
+     ],
+     "type": "EX-99.1",
+     "url": "https://www.sec.gov/Archives/edgar/data/1332551/000119312526451872/acr-ex99_1.htm"
+    }
+   ],
+   "ministere": null,
+   "points": [
+    "1.01"
+   ]
+  },
+  "direction": 0,
+  "entities": [
+   "ACRES Commercial Realty Corp.",
+   "Gouvernement américain"
+  ],
+  "id": "participations_gouv:0001193125-26-451872",
+  "kind": "participation_gouv",
+  "notes": [
+   "Lisez l'extrait officiel : le titre résume seulement qu'il est question de titres de la compagnie et du gouvernement américain (achat, détention, bons de souscription ou revente)."
+  ],
+  "occurred_on": "2026-11-06",
+  "official_id": "0001193125-26-451872",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1332551/000119312526451872/0001193125-26-451872-index.htm",
+  "parser_version": "participations-2",
+  "published_on": "2026-11-06",
+  "sha256": "00d7e863c98afa5ade48c1482ba96bb1446b4728473425381e8c8a3a523285e3",
+  "source": "participations_gouv",
+  "tickers": [
+   "ACR"
+  ],
+  "title": "ACRES Commercial Realty Corp. : un 8-K dit que le gouvernement américain reçoit, détient ou revend des titres de la compagnie"
+ },
+ {
+  "amount_max": 499662.8,
+  "amount_min": 499662.8,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": false,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-07T10:21:13+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 24115.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000863900",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 20.72,
+   "proprietaires_cik": [
+    "1510281"
+   ],
+   "roles": [
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "MXF",
+   "symboles_sec": [
+    "MXE"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 24115.0,
+     "apres": 2517955.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-11-05",
+     "hors_bourse": null,
+     "prix": 20.72,
+     "titre_valeur": "Common Stock"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Saba Capital Management, L.P.",
+   "MEXICO EQUITY & INCOME FUND INC"
+  ],
+  "id": "sec_form4:0001510281-26-000419:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-11-05",
+  "official_id": "0001510281-26-000419:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/863900/000151028126000419/0001510281-26-000419-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-06",
+  "sha256": "9093069905d01fbcddf9c097aa2b5886d703026ed72fe42338360d07dfcdfdf6",
+  "source": "sec_form4",
+  "tickers": [
+   "MXE"
+  ],
+  "title": "Saba Capital Management, L.P. (actionnaire de 10 %) achète 24 115 actions de MEXICO EQUITY & INCOME FUND INC"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
    "dates_coherentes": true,
    "domaine_officiel": true,
    "empreinte": true,
