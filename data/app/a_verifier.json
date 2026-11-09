@@ -6,6 +6,101 @@
   "category": "gouvernement",
   "checks": {
    "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": false,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": false
+  },
+  "collected_at": "2026-11-09T21:24:39+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Foreign Assets Control Office"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-22802",
+   "numero_dans_le_texte": false,
+   "retire": true,
+   "sorte": "sanctions",
+   "sous_type": null,
+   "titre_officiel": "Sanctions Action",
+   "type": "Notice"
+  },
+  "direction": 0,
+  "entities": [
+   "Foreign Assets Control Office"
+  ],
+  "id": "registre_federal:2026-22802",
+  "kind": "sanctions",
+  "notes": [
+   "Retiré par l'agence avant sa parution (avis officiel du Registre)."
+  ],
+  "occurred_on": "2026-11-09",
+  "official_id": "2026-22802",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-22802/sanctions-action",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-09",
+  "sha256": "f2185fbeb88d7590bcb77b9b0e4fd4c4e04d6c9c0415c4f4789b95eb5f516f71",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Sanctions (Trésor, OFAC) : Sanctions Action"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": false,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-11-09T21:24:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {},
+   "communiques": [],
+   "retraits": 0,
+   "titre_officiel": "Iran Designation Update"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20261109",
+  "kind": "sanctions",
+  "notes": [],
+  "occurred_on": "2026-11-09",
+  "official_id": "20261109",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20261109",
+  "parser_version": "ofac-1",
+  "published_on": "2026-11-09",
+  "sha256": "8edb4c71039f6744a7fd019c2cefc477d76ceb04b78351be514d620c4bcc1245",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Iran Designation Update"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
    "compagnie_cotee": true,
    "dates_coherentes": true,
    "domaine_officiel": true,
@@ -149,59 +244,6 @@
    "MXE"
   ],
   "title": "Saba Capital Management, L.P. (actionnaire de 10 %) achète 24 115 actions de MEXICO EQUITY & INCOME FUND INC"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "a_verifier",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "non_retire": false,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": false
-  },
-  "collected_at": "2026-11-06T17:55:04+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Foreign Assets Control Office"
-   ],
-   "etape": "inspection_publique",
-   "numero": "2026-22802",
-   "numero_dans_le_texte": false,
-   "retire": true,
-   "sorte": "sanctions",
-   "sous_type": null,
-   "titre_officiel": "Sanctions Action",
-   "type": "Notice"
-  },
-  "direction": 0,
-  "entities": [
-   "Foreign Assets Control Office"
-  ],
-  "id": "registre_federal:2026-22802",
-  "kind": "sanctions",
-  "notes": [
-   "Retiré par l'agence avant sa parution (avis officiel du Registre)."
-  ],
-  "occurred_on": "2026-11-06",
-  "official_id": "2026-22802",
-  "official_url": "https://www.federalregister.gov/public-inspection/2026-22802/sanctions-action",
-  "parser_version": "registre-4",
-  "published_on": "2026-11-06",
-  "sha256": "f2185fbeb88d7590bcb77b9b0e4fd4c4e04d6c9c0415c4f4789b95eb5f516f71",
-  "source": "registre_federal",
-  "tickers": [],
-  "title": "Sanctions (Trésor, OFAC) : Sanctions Action"
  },
  {
   "amount_max": 15000.0,
