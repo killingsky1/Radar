@@ -36,41 +36,6 @@
    "forme": "10-K",
    "lien": "https://www.sec.gov/Archives/edgar/data/350698/000162828026007800/0001628280-26-007800-index.htm"
   },
-  "DIN": {
-   "accn": "0001628280-26-011393",
-   "chiffres": {
-    "cfo": 0.049704,
-    "emission": 0,
-    "levier": 0.673525,
-    "levier_avant": 0.615483,
-    "liquidite": 0.962254,
-    "liquidite_avant": 0.866831,
-    "marge": 0.40862,
-    "marge_avant": 0.462021,
-    "roa": 0.00955,
-    "roa_avant": 0.037293,
-    "rotation": 0.491064,
-    "rotation_avant": 0.466762
-   },
-   "cik": 49754,
-   "criteres": {
-    "ACCRUAL": 1,
-    "CFO": 1,
-    "EQ_OFFER": 1,
-    "ROA": 1,
-    "ΔLEVER": 0,
-    "ΔLIQUID": 1,
-    "ΔMARGIN": 0,
-    "ΔROA": 0,
-    "ΔTURN": 1
-   },
-   "debut": "2024-12-30",
-   "depose": "2026-02-25",
-   "f_score": 6,
-   "fin": "2025-12-28",
-   "forme": "10-K",
-   "lien": "https://www.sec.gov/Archives/edgar/data/49754/000162828026011393/0001628280-26-011393-index.htm"
-  },
   "DVLT": {
    "accn": "0001104659-26-031280",
    "chiffres": {
@@ -385,76 +350,6 @@
    "fin": "2025-12-31",
    "forme": "10-K",
    "lien": "https://www.sec.gov/Archives/edgar/data/903129/000119312526059602/0001193125-26-059602-index.htm"
-  },
-  "TRNS": {
-   "accn": "0001437749-26-018588",
-   "chiffres": {
-    "cfo": 0.090463,
-    "emission": 842000,
-    "levier": 0.230754,
-    "levier_avant": 0.091832,
-    "liquidite": 2.333249,
-    "liquidite_avant": 2.291888,
-    "marge": 0.326338,
-    "marge_avant": 0.321287,
-    "roa": 0.013955,
-    "roa_avant": 0.050478,
-    "rotation": 0.861477,
-    "rotation_avant": 0.968246
-   },
-   "cik": 99302,
-   "criteres": {
-    "ACCRUAL": 1,
-    "CFO": 1,
-    "EQ_OFFER": 0,
-    "ROA": 1,
-    "ΔLEVER": 0,
-    "ΔLIQUID": 1,
-    "ΔMARGIN": 1,
-    "ΔROA": 0,
-    "ΔTURN": 0
-   },
-   "debut": "2025-03-30",
-   "depose": "2026-05-27",
-   "f_score": 5,
-   "fin": "2026-03-28",
-   "forme": "10-K",
-   "lien": "https://www.sec.gov/Archives/edgar/data/99302/000143774926018588/0001437749-26-018588-index.htm"
-  },
-  "TTMI": {
-   "accn": "0001193125-26-051976",
-   "chiffres": {
-    "cfo": 0.084055,
-    "emission": 0,
-    "levier": 0.249517,
-    "levier_avant": 0.269081,
-    "liquidite": 1.928302,
-    "liquidite_avant": 1.985954,
-    "marge": 0.207025,
-    "marge_avant": 0.195425,
-    "roa": 0.051101,
-    "roa_avant": 0.016939,
-    "rotation": 0.836962,
-    "rotation_avant": 0.734958
-   },
-   "cik": 1116942,
-   "criteres": {
-    "ACCRUAL": 1,
-    "CFO": 1,
-    "EQ_OFFER": 1,
-    "ROA": 1,
-    "ΔLEVER": 1,
-    "ΔLIQUID": 0,
-    "ΔMARGIN": 1,
-    "ΔROA": 1,
-    "ΔTURN": 1
-   },
-   "debut": "2024-12-31",
-   "depose": "2026-02-17",
-   "f_score": 8,
-   "fin": "2025-12-29",
-   "forme": "10-K",
-   "lien": "https://www.sec.gov/Archives/edgar/data/1116942/000119312526051976/0001193125-26-051976-index.htm"
   }
  },
  "source": "https://data.sec.gov/api/xbrl/companyfacts/",

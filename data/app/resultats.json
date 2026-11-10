@@ -1,5 +1,5 @@
 {
- "genere_a": "2026-11-10T00:24:38+00:00",
+ "genere_a": "2026-11-10T04:09:32+00:00",
  "horizons": {
   "30": "1 mois",
   "7": "1 semaine"
@@ -794,7 +794,7 @@
    ],
    "symbole": "AFCG",
    "taille": "petite",
-   "vue": "2026-10-10"
+   "vue": "2026-11-09"
   },
   {
    "depart": {
@@ -1170,7 +1170,7 @@
    ],
    "symbole": "NXRT",
    "taille": "petite",
-   "vue": "2026-10-14"
+   "vue": "2026-11-09"
   },
   {
    "depart": {
@@ -4567,6 +4567,424 @@
    "symbole": "TRNS",
    "taille": "petite",
    "vue": "2026-11-09"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-11-30",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "AAON, INC.",
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "compagnie",
+     "regle": "etats_financiers",
+     "sens": -1
+    }
+   ],
+   "symbole": "AAON",
+   "taille": "moyenne",
+   "vue": "2026-11-09"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-11-30",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Goosehead Insurance, Inc.",
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "compagnie",
+     "regle": "etats_financiers",
+     "sens": -1
+    }
+   ],
+   "symbole": "GSHD",
+   "taille": null,
+   "vue": "2026-11-09"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-11-30",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Gores Holdings X, Inc. / CI",
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "compagnie",
+     "regle": "etats_financiers",
+     "sens": -1
+    }
+   ],
+   "symbole": "GTEN",
+   "taille": null,
+   "vue": "2026-11-09"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-11-30",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Childrens Place, Inc.",
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "compagnie",
+     "regle": "faillite",
+     "sens": -1
+    }
+   ],
+   "symbole": "PLCE",
+   "taille": "petite",
+   "vue": "2026-11-09"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-11-30",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "NEONC TECHNOLOGIES HOLDINGS, INC.",
+   "note10": 8.8,
+   "note10_sans_bonus": 8.8,
+   "note10_sans_taille": 7.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "NTHI",
+   "taille": "petite",
+   "vue": "2026-11-09"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-11-30",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "ADTRAN Holdings, Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "ADTN",
+   "taille": "petite",
+   "vue": "2026-11-09"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-11-30",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Flowco Holdings Inc.",
+   "note10": 9.4,
+   "note10_sans_bonus": 9.4,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "FLOC",
+   "taille": null,
+   "vue": "2026-11-09"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-11-30",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "KENNAMETAL INC",
+   "note10": 9.4,
+   "note10_sans_bonus": 9.4,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "KMT",
+   "taille": "moyenne",
+   "vue": "2026-11-09"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-11-30",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Lumen Technologies, Inc.",
+   "note10": 9.4,
+   "note10_sans_bonus": 9.4,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "LUMN",
+   "taille": "moyenne",
+   "vue": "2026-11-09"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-11-30",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "SOPHiA GENETICS SA",
+   "note10": 9.4,
+   "note10_sans_bonus": 9.4,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "SOPH",
+   "taille": null,
+   "vue": "2026-11-09"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-11-30",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-11-30",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "WESCO INTERNATIONAL INC",
+   "note10": 9.4,
+   "note10_sans_bonus": 9.4,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "WCC",
+   "taille": "grande",
+   "vue": "2026-11-09"
   }
  ],
  "methode": [
@@ -4592,7 +5010,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 9,
+    "entrees": 12,
     "libelle": "États financiers passés à ne plus croire (8-K, point 4.02)"
    },
    "regle:faillite": {
@@ -4606,7 +5024,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 2,
+    "entrees": 3,
     "libelle": "Faillite ou mise sous séquestre (8-K, point 1.03)"
    },
    "regle:sec_suspension": {
@@ -4634,8 +5052,22 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 5,
+    "entrees": 7,
     "libelle": "Taille inconnue (compagnie étrangère, ou actions ou prix trop vieux)"
+   },
+   "taille:moyenne": {
+    "30": {
+     "battu": 0,
+     "ecart_moyen": null,
+     "mesurees": 0
+    },
+    "7": {
+     "battu": 0,
+     "ecart_moyen": null,
+     "mesurees": 0
+    },
+    "entrees": 1,
+    "libelle": "Compagnie moyenne"
    },
    "taille:petite": {
     "30": {
@@ -4648,7 +5080,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 7,
+    "entrees": 8,
     "libelle": "Petite compagnie (sous le 30e centile du NYSE)"
    }
   },
@@ -4664,7 +5096,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 23,
+    "entrees": 29,
     "libelle": "Groupe d'achats"
    },
    "facteur:PDG, directeur financier ou président du conseil": {
@@ -4678,7 +5110,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 37,
+    "entrees": 43,
     "libelle": "PDG, directeur financier ou président du conseil"
    },
    "grace_a_la_taille": {
@@ -4734,7 +5166,7 @@
      "ecart_moyen": -0.066,
      "mesurees": 4
     },
-    "entrees": 68,
+    "entrees": 74,
     "libelle": "Achat d'actions par un dirigeant ou un administrateur"
    },
    "regle:achat_elu": {
@@ -4776,7 +5208,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 4,
+    "entrees": 5,
     "libelle": "Grande compagnie (70e centile du NYSE et plus)"
    },
    "taille:inconnue": {
@@ -4790,7 +5222,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 15,
+    "entrees": 17,
     "libelle": "Taille inconnue (compagnie étrangère, ou actions ou prix trop vieux)"
    },
    "taille:moyenne": {
@@ -4804,7 +5236,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 8,
+    "entrees": 10,
     "libelle": "Compagnie moyenne"
    },
    "taille:petite": {
@@ -4818,7 +5250,7 @@
      "ecart_moyen": -0.066,
      "mesurees": 4
     },
-    "entrees": 44,
+    "entrees": 45,
     "libelle": "Petite compagnie (sous le 30e centile du NYSE)"
    }
   },
@@ -4830,37 +5262,37 @@
   "baisse_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 13,
+   "en_attente": 17,
    "mesurees": 0
   },
   "baisse_7": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 13,
+   "en_attente": 17,
    "mesurees": 0
   },
   "ecartee_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 21,
+   "en_attente": 22,
    "mesurees": 0
   },
   "ecartee_7": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 21,
+   "en_attente": 22,
    "mesurees": 0
   },
   "hausse_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 75,
+   "en_attente": 81,
    "mesurees": 0
   },
   "hausse_7": {
    "battu": 2,
    "ecart_moyen": -0.0243,
-   "en_attente": 66,
+   "en_attente": 72,
    "mesurees": 8
   }
  }

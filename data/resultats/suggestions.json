@@ -481,7 +481,7 @@
    ],
    "symbole": "AFCG",
    "taille": "petite",
-   "vue": "2026-10-10"
+   "vue": "2026-11-09"
   },
   {
    "entree": "2026-10-05T21:26:00+00:00",
@@ -599,7 +599,7 @@
    ],
    "symbole": "NXRT",
    "taille": "petite",
-   "vue": "2026-10-14"
+   "vue": "2026-11-09"
   },
   {
    "entree": "2026-10-06T02:20:16+00:00",
@@ -2742,6 +2742,270 @@
     }
    ],
    "symbole": "CLST",
+   "taille": "petite",
+   "vue": "2026-11-09"
+  },
+  {
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "ADTRAN Holdings, Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "ADTN",
+   "taille": "petite",
+   "vue": "2026-11-09"
+  },
+  {
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Flowco Holdings Inc.",
+   "note10": 9.4,
+   "note10_sans_bonus": 9.4,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "FLOC",
+   "taille": null,
+   "vue": "2026-11-09"
+  },
+  {
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "KENNAMETAL INC",
+   "note10": 9.4,
+   "note10_sans_bonus": 9.4,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "KMT",
+   "taille": "moyenne",
+   "vue": "2026-11-09"
+  },
+  {
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Lumen Technologies, Inc.",
+   "note10": 9.4,
+   "note10_sans_bonus": 9.4,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "LUMN",
+   "taille": "moyenne",
+   "vue": "2026-11-09"
+  },
+  {
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "SOPHiA GENETICS SA",
+   "note10": 9.4,
+   "note10_sans_bonus": 9.4,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "SOPH",
+   "taille": null,
+   "vue": "2026-11-09"
+  },
+  {
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "WESCO INTERNATIONAL INC",
+   "note10": 9.4,
+   "note10_sans_bonus": 9.4,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "WCC",
+   "taille": "grande",
+   "vue": "2026-11-09"
+  },
+  {
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "AAON, INC.",
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "compagnie",
+     "regle": "etats_financiers",
+     "sens": -1
+    }
+   ],
+   "symbole": "AAON",
+   "taille": "moyenne",
+   "vue": "2026-11-09"
+  },
+  {
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Goosehead Insurance, Inc.",
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "compagnie",
+     "regle": "etats_financiers",
+     "sens": -1
+    }
+   ],
+   "symbole": "GSHD",
+   "taille": null,
+   "vue": "2026-11-09"
+  },
+  {
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Gores Holdings X, Inc. / CI",
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "compagnie",
+     "regle": "etats_financiers",
+     "sens": -1
+    }
+   ],
+   "symbole": "GTEN",
+   "taille": null,
+   "vue": "2026-11-09"
+  },
+  {
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Childrens Place, Inc.",
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "compagnie",
+     "regle": "faillite",
+     "sens": -1
+    }
+   ],
+   "symbole": "PLCE",
+   "taille": "petite",
+   "vue": "2026-11-09"
+  },
+  {
+   "entree": "2026-11-10T04:09:32+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "NEONC TECHNOLOGIES HOLDINGS, INC.",
+   "note10": 8.8,
+   "note10_sans_bonus": 8.8,
+   "note10_sans_taille": 7.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "NTHI",
    "taille": "petite",
    "vue": "2026-11-09"
   }
