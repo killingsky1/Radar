@@ -1,6 +1,76 @@
 {
  "etude": "https://www.ivey.uwo.ca/media/3775523/value_investing_the_use_of_historical_financial_statement_information.pdf",
  "par_symbole": {
+  "AAON": {
+   "accn": "0000824142-26-000005",
+   "chiffres": {
+    "cfo": 0.000454,
+    "emission": 0,
+    "levier": 0.0,
+    "levier_avant": 0.0,
+    "liquidite": 2.627072,
+    "liquidite_avant": 2.791298,
+    "marge": 0.267478,
+    "marge_avant": 0.330749,
+    "roa": 0.09155,
+    "roa_avant": 0.179045,
+    "rotation": 1.227054,
+    "rotation_avant": 1.275323
+   },
+   "cik": 824142,
+   "criteres": {
+    "ACCRUAL": 0,
+    "CFO": 1,
+    "EQ_OFFER": 1,
+    "ROA": 1,
+    "ΔLEVER": 0,
+    "ΔLIQUID": 0,
+    "ΔMARGIN": 0,
+    "ΔROA": 0,
+    "ΔTURN": 0
+   },
+   "debut": "2025-01-01",
+   "depose": "2026-03-02",
+   "f_score": 3,
+   "fin": "2025-12-31",
+   "forme": "10-K",
+   "lien": "https://www.sec.gov/Archives/edgar/data/824142/000082414226000005/0000824142-26-000005-index.htm"
+  },
+  "ADTN": {
+   "accn": "0001193125-26-073878",
+   "chiffres": {
+    "cfo": 0.110778,
+    "emission": 0,
+    "levier": 0.0,
+    "levier_avant": 0.0,
+    "liquidite": 1.755441,
+    "liquidite_avant": 2.041551,
+    "marge": 0.382868,
+    "marge_avant": 0.351314,
+    "roa": -0.038975,
+    "roa_avant": -0.274162,
+    "rotation": 0.925209,
+    "rotation_avant": 0.550076
+   },
+   "cik": 926282,
+   "criteres": {
+    "ACCRUAL": 1,
+    "CFO": 1,
+    "EQ_OFFER": 1,
+    "ROA": 0,
+    "ΔLEVER": 0,
+    "ΔLIQUID": 0,
+    "ΔMARGIN": 1,
+    "ΔROA": 1,
+    "ΔTURN": 1
+   },
+   "debut": "2025-01-01",
+   "depose": "2026-02-26",
+   "f_score": 6,
+   "fin": "2025-12-31",
+   "forme": "10-K",
+   "lien": "https://www.sec.gov/Archives/edgar/data/926282/000119312526073878/0001193125-26-073878-index.htm"
+  },
   "AN": {
    "accn": "0001628280-26-007800",
    "chiffres": {
@@ -141,6 +211,41 @@
    "forme": "10-K/A",
    "lien": "https://www.sec.gov/Archives/edgar/data/1500435/000150043526000068/0001500435-26-000068-index.htm"
   },
+  "KMT": {
+   "accn": "0001628280-26-056143",
+   "chiffres": {
+    "cfo": -0.001575,
+    "emission": 0,
+    "levier": 0.239937,
+    "levier_avant": 0.236391,
+    "liquidite": 2.618221,
+    "liquidite_avant": 2.460807,
+    "marge": 0.411574,
+    "marge_avant": 0.304076,
+    "roa": 0.134512,
+    "roa_avant": 0.037194,
+    "rotation": 0.925861,
+    "rotation_avant": 0.785557
+   },
+   "cik": 55242,
+   "criteres": {
+    "ACCRUAL": 0,
+    "CFO": 0,
+    "EQ_OFFER": 1,
+    "ROA": 1,
+    "ΔLEVER": 0,
+    "ΔLIQUID": 1,
+    "ΔMARGIN": 1,
+    "ΔROA": 1,
+    "ΔTURN": 1
+   },
+   "debut": "2025-07-01",
+   "depose": "2026-08-12",
+   "f_score": 6,
+   "fin": "2026-06-30",
+   "forme": "10-K",
+   "lien": "https://www.sec.gov/Archives/edgar/data/55242/000162828026056143/0001628280-26-056143-index.htm"
+  },
   "LBRT": {
    "accn": "0001694028-26-000006",
    "chiffres": {
@@ -175,6 +280,41 @@
    "fin": "2025-12-31",
    "forme": "10-K",
    "lien": "https://www.sec.gov/Archives/edgar/data/1694028/000169402826000006/0001694028-26-000006-index.htm"
+  },
+  "LUMN": {
+   "accn": "0000018926-26-000014",
+   "chiffres": {
+    "cfo": 0.14145,
+    "emission": 0,
+    "levier": 0.511601,
+    "levier_avant": 0.518233,
+    "liquidite": 1.801595,
+    "liquidite_avant": 1.207475,
+    "marge": 0.464764,
+    "marge_avant": 0.488633,
+    "roa": -0.051917,
+    "roa_avant": -0.001617,
+    "rotation": 0.370253,
+    "rotation_avant": 0.385325
+   },
+   "cik": 18926,
+   "criteres": {
+    "ACCRUAL": 1,
+    "CFO": 1,
+    "EQ_OFFER": 1,
+    "ROA": 0,
+    "ΔLEVER": 1,
+    "ΔLIQUID": 1,
+    "ΔMARGIN": 0,
+    "ΔROA": 0,
+    "ΔTURN": 0
+   },
+   "debut": "2025-01-01",
+   "depose": "2026-02-20",
+   "f_score": 5,
+   "fin": "2025-12-31",
+   "forme": "10-K",
+   "lien": "https://www.sec.gov/Archives/edgar/data/18926/000001892626000014/0000018926-26-000014-index.htm"
   },
   "MTDR": {
    "accn": "0001520006-26-000002",
@@ -211,6 +351,41 @@
    "forme": "10-K",
    "lien": "https://www.sec.gov/Archives/edgar/data/1520006/000152000626000002/0001520006-26-000002-index.htm"
   },
+  "PLCE": {
+   "accn": "0001628280-26-024672",
+   "chiffres": {
+    "cfo": 0.010859,
+    "emission": 90000000,
+    "levier": 0.0,
+    "levier_avant": 0.0,
+    "liquidite": 1.026059,
+    "liquidite_avant": 0.903277,
+    "marge": 0.299097,
+    "marge_avant": 0.331437,
+    "roa": -0.118069,
+    "roa_avant": -0.072246,
+    "rotation": 1.617051,
+    "rotation_avant": 1.732169
+   },
+   "cik": 1041859,
+   "criteres": {
+    "ACCRUAL": 1,
+    "CFO": 1,
+    "EQ_OFFER": 0,
+    "ROA": 0,
+    "ΔLEVER": 0,
+    "ΔLIQUID": 1,
+    "ΔMARGIN": 0,
+    "ΔROA": 0,
+    "ΔTURN": 0
+   },
+   "debut": "2025-02-02",
+   "depose": "2026-04-10",
+   "f_score": 3,
+   "fin": "2026-01-31",
+   "forme": "10-K",
+   "lien": "https://www.sec.gov/Archives/edgar/data/1041859/000162828026024672/0001628280-26-024672-index.htm"
+  },
   "PRLB": {
    "accn": "0001443669-26-000010",
    "chiffres": {
@@ -245,41 +420,6 @@
    "fin": "2025-12-31",
    "forme": "10-K",
    "lien": "https://www.sec.gov/Archives/edgar/data/1443669/000144366926000010/0001443669-26-000010-index.htm"
-  },
-  "SEGG": {
-   "accn": "0001493152-26-032786",
-   "chiffres": {
-    "cfo": -0.064796,
-    "emission": 0,
-    "levier": 0.0,
-    "levier_avant": 0.0,
-    "liquidite": 0.403779,
-    "liquidite_avant": 0.522822,
-    "marge": -0.384626,
-    "marge_avant": 0.665289,
-    "roa": -0.383505,
-    "roa_avant": -0.438165,
-    "rotation": 0.01057,
-    "rotation_avant": 0.014884
-   },
-   "cik": 1673481,
-   "criteres": {
-    "ACCRUAL": 1,
-    "CFO": 0,
-    "EQ_OFFER": 1,
-    "ROA": 0,
-    "ΔLEVER": 0,
-    "ΔLIQUID": 0,
-    "ΔMARGIN": 0,
-    "ΔROA": 1,
-    "ΔTURN": 0
-   },
-   "debut": "2025-01-01",
-   "depose": "2026-07-10",
-   "f_score": 3,
-   "fin": "2025-12-31",
-   "forme": "10-K",
-   "lien": "https://www.sec.gov/Archives/edgar/data/1673481/000149315226032786/0001493152-26-032786-index.htm"
   },
   "SIDU": {
    "accn": "0001493152-26-014547",
@@ -350,6 +490,41 @@
    "fin": "2025-12-31",
    "forme": "10-K",
    "lien": "https://www.sec.gov/Archives/edgar/data/903129/000119312526059602/0001193125-26-059602-index.htm"
+  },
+  "WCC": {
+   "accn": "0000929008-26-000008",
+   "chiffres": {
+    "cfo": 0.008299,
+    "emission": 0,
+    "levier": 0.364834,
+    "levier_avant": 0.335001,
+    "liquidite": 2.200754,
+    "liquidite_avant": 2.195426,
+    "marge": 0.211476,
+    "marge_avant": 0.215988,
+    "roa": 0.042506,
+    "roa_avant": 0.047647,
+    "rotation": 1.561004,
+    "rotation_avant": 1.448705
+   },
+   "cik": 929008,
+   "criteres": {
+    "ACCRUAL": 0,
+    "CFO": 1,
+    "EQ_OFFER": 1,
+    "ROA": 1,
+    "ΔLEVER": 0,
+    "ΔLIQUID": 1,
+    "ΔMARGIN": 0,
+    "ΔROA": 0,
+    "ΔTURN": 1
+   },
+   "debut": "2025-01-01",
+   "depose": "2026-02-13",
+   "f_score": 5,
+   "fin": "2025-12-31",
+   "forme": "10-K",
+   "lien": "https://www.sec.gov/Archives/edgar/data/929008/000092900826000008/0000929008-26-000008-index.htm"
   }
  },
  "source": "https://data.sec.gov/api/xbrl/companyfacts/",

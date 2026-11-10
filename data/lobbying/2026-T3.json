@@ -13,6 +13,34 @@
   "sujets": [],
   "total": null
  },
+ "AAON": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-10T11:19:17+00:00",
+  "moins_de_5000": 0,
+  "nom": "AAON, INC.",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "AAON",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
+ "ADTN": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-10T11:19:17+00:00",
+  "moins_de_5000": 0,
+  "nom": "ADTRAN Holdings, Inc.",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "ADTRAN",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
  "AGMB": {
   "base": null,
   "complet": true,
@@ -524,6 +552,20 @@
   "sujets": [],
   "total": null
  },
+ "FLOC": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-10T11:19:17+00:00",
+  "moins_de_5000": 0,
+  "nom": "Flowco Holdings Inc.",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "FLOWCO",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
  "FLSC": {
   "base": null,
   "complet": true,
@@ -542,7 +584,7 @@
   "base": null,
   "complet": true,
   "firmes": 0,
-  "lu": "2026-11-03T10:58:35+00:00",
+  "lu": "2026-11-10T11:19:17+00:00",
   "moins_de_5000": 0,
   "nom": "GoodRx Holdings, Inc.",
   "pages": 1,
@@ -618,6 +660,34 @@
    }
   ],
   "total": 60000.0
+ },
+ "GSHD": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-10T11:19:17+00:00",
+  "moins_de_5000": 0,
+  "nom": "Goosehead Insurance, Inc.",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "GOOSEHEAD",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
+ "GTEN": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-10T11:19:17+00:00",
+  "moins_de_5000": 0,
+  "nom": "Gores Holdings X, Inc. / CI",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "GORES",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
  },
  "HBAN": {
   "base": "compagnie",
@@ -747,6 +817,45 @@
   "sujets": [],
   "total": null
  },
+ "KMT": {
+  "base": "firmes",
+  "complet": true,
+  "firmes": 1,
+  "lu": "2026-11-10T11:19:17+00:00",
+  "moins_de_5000": 0,
+  "nom": "KENNAMETAL INC",
+  "pages": 1,
+  "rapports": [
+   {
+    "client": "KENNAMETAL INC.",
+    "montant": 40000.0,
+    "poste": "2026-10-08",
+    "registrant": "CASSIDY & ASSOCIATES, INC.",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "BUD",
+     "DEF"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/4ad659a0-1b47-4683-8fea-694299b7f7d0/print/",
+    "uuid": "4ad659a0-1b47-4683-8fea-694299b7f7d0"
+   }
+  ],
+  "recherche": "KENNAMETAL",
+  "revenus_firmes": 40000.0,
+  "sujets": [
+   {
+    "code": "BUD",
+    "nom": "Budget et crédits"
+   },
+   {
+    "code": "DEF",
+    "nom": "Défense"
+   }
+  ],
+  "total": 40000.0
+ },
  "KPTI": {
   "base": null,
   "complet": true,
@@ -801,6 +910,97 @@
   "revenus_firmes": null,
   "sujets": [],
   "total": null
+ },
+ "LUMN": {
+  "base": "compagnie",
+  "complet": true,
+  "firmes": 3,
+  "lu": "2026-11-10T11:19:17+00:00",
+  "moins_de_5000": 0,
+  "nom": "Lumen Technologies, Inc.",
+  "pages": 1,
+  "rapports": [
+   {
+    "client": "LUMEN TECHNOLOGIES, INC.",
+    "montant": 700000.0,
+    "poste": "2026-10-12",
+    "registrant": "LUMEN TECHNOLOGIES, INC.",
+    "sans_activite": false,
+    "soi_meme": true,
+    "sujets": [
+     "TEC"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/2e64d633-2f44-482e-8081-b4850902918f/print/",
+    "uuid": "2e64d633-2f44-482e-8081-b4850902918f"
+   },
+   {
+    "client": "LUMEN TECHNOLOGIES",
+    "montant": 60000.0,
+    "poste": "2026-10-12",
+    "registrant": "CORNERSTONE GOVERNMENT AFFAIRS, INC.",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "TAX",
+     "TEC"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/62536657-0b22-4d87-9b96-8e4b25587b39/print/",
+    "uuid": "62536657-0b22-4d87-9b96-8e4b25587b39"
+   },
+   {
+    "client": "LUMEN TECHNOLOGIES INC.",
+    "montant": 60000.0,
+    "poste": "2026-10-20",
+    "registrant": "ONMESSAGE PUBLIC STRATEGIES",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "HOM",
+     "TEC"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/3ffa3b70-0748-44dd-9791-6c55aa754d18/print/",
+    "uuid": "3ffa3b70-0748-44dd-9791-6c55aa754d18"
+   },
+   {
+    "client": "LUMEN TECHNOLOGIES, INC.",
+    "montant": 30000.0,
+    "poste": "2026-10-20",
+    "registrant": "RIDGE PATH STRATEGIES",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "DEF",
+     "TEC"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/4faeb3ed-24d4-4f57-a5e1-64151b499a98/print/",
+    "uuid": "4faeb3ed-24d4-4f57-a5e1-64151b499a98"
+   }
+  ],
+  "recherche": "LUMEN",
+  "revenus_firmes": 150000.0,
+  "sujets": [
+   {
+    "code": "TEC",
+    "nom": "Télécommunications"
+   },
+   {
+    "code": "DEF",
+    "nom": "Défense"
+   },
+   {
+    "code": "HOM",
+    "nom": "Sécurité intérieure"
+   },
+   {
+    "code": "TAX",
+    "nom": "Fiscalité (impôts)"
+   }
+  ],
+  "total": 700000.0
  },
  "MSM": {
   "base": null,
@@ -858,11 +1058,25 @@
   "sujets": [],
   "total": null
  },
+ "NXRT": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-10T11:19:17+00:00",
+  "moins_de_5000": 0,
+  "nom": "NexPoint Residential Trust, Inc.",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "RESIDENTIAL",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
  "OCFC": {
   "base": null,
   "complet": true,
   "firmes": 0,
-  "lu": "2026-11-03T10:58:35+00:00",
+  "lu": "2026-11-10T11:19:17+00:00",
   "moins_de_5000": 0,
   "nom": "OCEANFIRST FINANCIAL CORP",
   "pages": 1,
@@ -1054,6 +1268,20 @@
   ],
   "total": 1100000.0
  },
+ "PLCE": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-10T11:19:17+00:00",
+  "moins_de_5000": 0,
+  "nom": "Childrens Place, Inc.",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "CHILDRENS",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
  "PRLB": {
   "base": null,
   "complet": true,
@@ -1180,6 +1408,34 @@
   "sujets": [],
   "total": null
  },
+ "SIDU": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-10T11:19:17+00:00",
+  "moins_de_5000": 0,
+  "nom": "Sidus Space Inc.",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "SIDUS",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
+ "SOPH": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-10T11:19:17+00:00",
+  "moins_de_5000": 0,
+  "nom": "SOPHiA GENETICS SA",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "GENETICS",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
  "STC": {
   "base": null,
   "complet": true,
@@ -1284,6 +1540,20 @@
   "sujets": [],
   "total": null
  },
+ "TBBK": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-10T11:19:17+00:00",
+  "moins_de_5000": 0,
+  "nom": "Bancorp, Inc.",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "BANCORP",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
  "THRM": {
   "base": null,
   "complet": true,
@@ -1364,6 +1634,20 @@
   "pages": 4,
   "rapports": [],
   "recherche": "PRODUCTS",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
+ "WCC": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-10T11:19:17+00:00",
+  "moins_de_5000": 0,
+  "nom": "WESCO INTERNATIONAL INC",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "WESCO",
   "revenus_firmes": null,
   "sujets": [],
   "total": null
