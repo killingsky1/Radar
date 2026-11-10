@@ -17,6 +17,51 @@
    "symboles_valides": true,
    "type_communique": true
   },
+  "collected_at": "2026-11-10T20:38:06+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ressources-naturelles-canada/nouvelles/2026/11/le-secretaire-parlementaire-hogan-presente-les-investissements-annonces-par-le-gouvernement-du-canada-dans-le-budget-de-2026--maitres-chez-nous-pou.html",
+   "ministere": "Ressources naturelles Canada",
+   "mis_a_jour": "2026-11-10T14:45:09-05:00",
+   "resume": "Aujourd’hui, le secrétaire parlementaire du ministre de l’Énergie et des Ressources naturelles et député de Calgary Confederation, Corey Hogan, s’est rendu à la bibliothèque Louise-Riley dans le nord-ouest de Calgary afin d’y présenter les principaux investissements annoncés dans le Budget de 2026 : Maîtres chez nous pour soutenir notre culture, renforcer les industries créatives et améliorer l’accès à l’art et au patrimoine d’un bout à l’autre du pays.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Ressources naturelles Canada"
+  ],
+  "id": "nouvelles_eco_ca:ressources-naturelles-canada/nouvelles/2026/11/le-secretaire-parlementaire-hogan-presente-les-investissements-annonces-par-le-gouvernement-du-canada-dans-le-budget-de-2026--maitres-chez-nous-pou.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-10",
+  "official_id": "ressources-naturelles-canada/nouvelles/2026/11/le-secretaire-parlementaire-hogan-presente-les-investissements-annonces-par-le-gouvernement-du-canada-dans-le-budget-de-2026--maitres-chez-nous-pou.html",
+  "official_url": "https://www.canada.ca/fr/ressources-naturelles-canada/nouvelles/2026/11/le-secretaire-parlementaire-hogan-presente-les-investissements-annonces-par-le-gouvernement-du-canada-dans-le-budget-de-2026--maitres-chez-nous-pou.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-10",
+  "sha256": "d51abfb3518a4eeb524f7c5c9922ca79f6fbef071ffe5016c9f34c126cdfd54e",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le secrétaire parlementaire Hogan présente les investissements annoncés par le gouvernement du Canada dans le Budget de 2026 : Maîtres chez nous pour soutenir notre culture, renforcer les industries créatives et améliorer l’accès à l’art et au patrimoine d’un bout à l’autre du pays"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
   "collected_at": "2026-11-10T18:37:30+00:00",
   "confirmations": [],
   "currency": "CAD",
@@ -38052,84 +38097,6 @@
    "EMA"
   ],
   "title": "Bureau de la concurrence : examen de fusion ouvert, Emera Incorporated / Canadian Utilities Limited et ATCO Ltd"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_dans_l_ordre": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "industrie_scian": true,
-   "parties_lues": true,
-   "resultat_officiel_connu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-28T09:53:15+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "acquereur": "TD SYNNEX Corporation",
-   "cibles": [
-    "United Radio Incorporated Inc"
-   ],
-   "code": "en cours",
-   "conclusion": "en cours",
-   "debut": "2026-10-20",
-   "details": [
-    [
-     "Acquéreur",
-     "TD SYNNEX Corporation"
-    ],
-    [
-     "Visé(s)",
-     "United Radio Incorporated Inc"
-    ],
-    [
-     "Examen ouvert le",
-     "2026-10-20"
-    ],
-    [
-     "Résultat",
-     "en cours"
-    ],
-    [
-     "Industrie (SCIAN)",
-     "4173"
-    ]
-   ],
-   "page_modifiee_le": "2026-10-27",
-   "parties": "TD SYNNEX Corporation / United Radio Incorporated Inc",
-   "resultat": "",
-   "scian": "4173"
-  },
-  "direction": 0,
-  "entities": [
-   "TD SYNNEX Corporation",
-   "United Radio Incorporated Inc"
-  ],
-  "id": "concurrence_ca:2026-10-20:td-synnex-corporation-united-radio-incorporated-inc:ouvert",
-  "kind": "fusion_examen_ouvert",
-  "notes": [
-   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
-  ],
-  "occurred_on": "2026-10-20",
-  "official_id": "2026-10-20:td-synnex-corporation-united-radio-incorporated-inc:ouvert",
-  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
-  "parser_version": "concurrence-1",
-  "published_on": "2026-10-27",
-  "sha256": "8c6e23726636386ead1f274bd8aaa3171b3d6046898c2d089d4a5407dcbc0b59",
-  "source": "concurrence_ca",
-  "tickers": [
-   "SNX"
-  ],
-  "title": "Bureau de la concurrence : examen de fusion ouvert, TD SYNNEX Corporation / United Radio Incorporated Inc"
  },
  {
   "amount_max": null,
