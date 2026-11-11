@@ -1,5 +1,216 @@
 [
  {
+  "amount_max": 1460150.08,
+  "amount_min": 1460150.08,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": false,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-11T11:07:10+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 150000.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001570585",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 9.7343,
+   "proprietaires_cik": [
+    "937797"
+   ],
+   "roles": [
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "LBTY",
+   "symboles_sec": [
+    "LBTYA",
+    "LBTYB",
+    "LBTYK"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 51296.0,
+     "apres": 9119039.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-11-06",
+     "hors_bourse": null,
+     "prix": 9.6836,
+     "titre_valeur": "Class C Common Shares"
+    },
+    {
+     "acquis_cede": "A",
+     "actions": 98704.0,
+     "apres": 9217743.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-11-09",
+     "hors_bourse": null,
+     "prix": 9.7607,
+     "titre_valeur": "Class C Common Shares"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "MALONE JOHN C",
+   "Liberty Global Ltd."
+  ],
+  "id": "sec_form4:0000937797-26-000037:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-11-06",
+  "official_id": "0000937797-26-000037:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1570585/000093779726000037/0000937797-26-000037-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-10",
+  "sha256": "d8f78ba1bb93905bc816d39029cae145d8386c5e9d8d085d7eee3b728121e7cd",
+  "source": "sec_form4",
+  "tickers": [
+   "LBTYA"
+  ],
+  "title": "MALONE JOHN C (actionnaire de 10 %) achète 150 000 actions de Liberty Global Ltd."
+ },
+ {
+  "amount_max": 2727899.66,
+  "amount_min": 2727899.66,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": false,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-11T11:06:26+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 200000.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001971213",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 13.6395,
+   "proprietaires_cik": [
+    "1251155"
+   ],
+   "roles": [
+    "administrateur"
+   ],
+   "symbole_declare": "SBGI",
+   "symboles_sec": [
+    "SBGI"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 50000.0,
+     "apres": 150000.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-06",
+     "hors_bourse": null,
+     "prix": 13.6575,
+     "titre_valeur": "Class A Common Stock"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 50000.0,
+     "apres": 100000.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-06",
+     "hors_bourse": null,
+     "prix": 13.6517,
+     "titre_valeur": "Class A Common Stock"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 14808.0,
+     "apres": 85192.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-06",
+     "hors_bourse": null,
+     "prix": 13.5919,
+     "titre_valeur": "Class A Common Stock"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 35192.0,
+     "apres": 50000.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-06",
+     "hors_bourse": null,
+     "prix": 13.624,
+     "titre_valeur": "Class A Common Stock"
+    },
+    {
+     "acquis_cede": "A",
+     "actions": 50000.0,
+     "apres": 0.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-06",
+     "hors_bourse": null,
+     "prix": 13.6343,
+     "titre_valeur": "Class A Common Stock"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "SMITH ROBERT E",
+   "Sinclair, Inc."
+  ],
+  "id": "sec_form4:0001251155-26-000003:S",
+  "kind": "vente_initie",
+  "notes": [],
+  "occurred_on": "2026-11-06",
+  "official_id": "0001251155-26-000003:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1971213/000125115526000003/0001251155-26-000003-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-10",
+  "sha256": "a6712a440e5896720240a1b65996d1feb7f2e9151d1d7f776cea2ffa8bbc4c86",
+  "source": "sec_form4",
+  "tickers": [
+   "SBGI"
+  ],
+  "title": "SMITH ROBERT E (administrateur) vend 200 000 actions de Sinclair, Inc."
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "a_verifier",
