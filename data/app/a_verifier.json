@@ -1,5 +1,74 @@
 [
  {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": false,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-12T03:03:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "CA31",
+   "elu": "Gilbert Cisneros",
+   "lecture_complete": true,
+   "nom_sec": "BANK OF NOVA SCOTIA",
+   "rapport": "20035788",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Bank Nova Scotia Halifax Pfd 3 Ordinary Shares (BNS) [ST]",
+     "avis": "2026-11-09",
+     "date": "2026-10-09",
+     "description": "Ticker BNS CN",
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Gilbert Cisneros",
+   "BANK OF NOVA SCOTIA"
+  ],
+  "id": "chambre_ptr:20035788:BNS:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-10-09",
+  "official_id": "20035788:BNS:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035788.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-10",
+  "sha256": "cc53280386b1c0fac7ba1173748439d8e465e2c105c635aa065dce234781490e",
+  "source": "chambre_ptr",
+  "tickers": [
+   "BNS"
+  ],
+  "title": "Gilbert Cisneros (Chambre, CA31) achète BNS"
+ },
+ {
   "amount_max": 1460150.08,
   "amount_min": 1460150.08,
   "badge": "a_verifier",
