@@ -458,7 +458,7 @@
   "base": null,
   "complet": true,
   "firmes": 0,
-  "lu": "2026-11-05T11:03:06+00:00",
+  "lu": "2026-11-12T11:24:16+00:00",
   "moins_de_5000": 0,
   "nom": "Driven Brands Holdings Inc.",
   "pages": 1,
@@ -580,6 +580,20 @@
   "sujets": [],
   "total": null
  },
+ "FUN": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-12T11:24:16+00:00",
+  "moins_de_5000": 0,
+  "nom": "Six Flags Entertainment Corporation",
+  "pages": 2,
+  "rapports": [],
+  "recherche": "ENTERTAINMENT",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
  "GDRX": {
   "base": null,
   "complet": true,
@@ -618,6 +632,20 @@
   "pages": 1,
   "rapports": [],
   "recherche": "GREENLANE",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
+ "GOOD": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-12T11:24:16+00:00",
+  "moins_de_5000": 0,
+  "nom": "GLADSTONE COMMERCIAL CORP",
+  "pages": 2,
+  "rapports": [],
+  "recherche": "COMMERCIAL",
   "revenus_firmes": null,
   "sujets": [],
   "total": null
@@ -860,7 +888,7 @@
   "base": null,
   "complet": true,
   "firmes": 0,
-  "lu": "2026-11-05T11:03:06+00:00",
+  "lu": "2026-11-12T11:24:16+00:00",
   "moins_de_5000": 0,
   "nom": "Karyopharm Therapeutics Inc.",
   "pages": 1,
@@ -910,6 +938,72 @@
   "revenus_firmes": null,
   "sujets": [],
   "total": null
+ },
+ "LRN": {
+  "base": "firmes",
+  "complet": true,
+  "firmes": 3,
+  "lu": "2026-11-12T11:24:16+00:00",
+  "moins_de_5000": 0,
+  "nom": "Stride, Inc.",
+  "pages": 1,
+  "rapports": [
+   {
+    "client": "STRIDE, INC",
+    "montant": 80000.0,
+    "poste": "2026-10-19",
+    "registrant": "DB3, LLC (FKA THE DASCHLE GROUP)",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "EDU"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/07d3d0be-7c0a-4c9a-a082-3664b9569b34/print/",
+    "uuid": "07d3d0be-7c0a-4c9a-a082-3664b9569b34"
+   },
+   {
+    "client": "STRIDE, INC.",
+    "montant": 80000.0,
+    "poste": "2026-10-20",
+    "registrant": "GREENBERG TRAURIG, LLP",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "DEF"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/c27d26e5-40b1-4f04-90e8-01ef93cd5d0b/print/",
+    "uuid": "c27d26e5-40b1-4f04-90e8-01ef93cd5d0b"
+   },
+   {
+    "client": "STRIDE INC",
+    "montant": 80000.0,
+    "poste": "2026-10-20",
+    "registrant": "THEGROUP DC, LLC",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "EDU"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/16661035-6df6-4be5-80ee-62008f0bb3e9/print/",
+    "uuid": "16661035-6df6-4be5-80ee-62008f0bb3e9"
+   }
+  ],
+  "recherche": "STRIDE",
+  "revenus_firmes": 240000.0,
+  "sujets": [
+   {
+    "code": "EDU",
+    "nom": "Éducation"
+   },
+   {
+    "code": "DEF",
+    "nom": "Défense"
+   }
+  ],
+  "total": 240000.0
  },
  "LUMN": {
   "base": "compagnie",
@@ -1002,6 +1096,20 @@
   ],
   "total": 700000.0
  },
+ "MERC": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-12T11:24:16+00:00",
+  "moins_de_5000": 0,
+  "nom": "MERCER INTERNATIONAL INC.",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "MERCER",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
  "MSM": {
   "base": null,
   "complet": true,
@@ -1030,11 +1138,25 @@
   "sujets": [],
   "total": null
  },
+ "MX": {
+  "base": null,
+  "complet": true,
+  "firmes": 0,
+  "lu": "2026-11-12T11:24:16+00:00",
+  "moins_de_5000": 0,
+  "nom": "MAGNACHIP SEMICONDUCTOR Corp",
+  "pages": 1,
+  "rapports": [],
+  "recherche": "SEMICONDUCTOR",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
  "NPB": {
   "base": null,
   "complet": true,
   "firmes": 0,
-  "lu": "2026-11-05T11:03:06+00:00",
+  "lu": "2026-11-12T11:24:16+00:00",
   "moins_de_5000": 0,
   "nom": "NORTHPOINTE BANCSHARES INC",
   "pages": 1,
@@ -1450,11 +1572,45 @@
   "sujets": [],
   "total": null
  },
+ "STRA": {
+  "base": "firmes",
+  "complet": true,
+  "firmes": 1,
+  "lu": "2026-11-12T11:24:16+00:00",
+  "moins_de_5000": 0,
+  "nom": "Strategic Education, Inc.",
+  "pages": 2,
+  "rapports": [
+   {
+    "client": "STRATEGIC EDUCATION, INC.",
+    "montant": 60000.0,
+    "poste": "2026-10-19",
+    "registrant": "THE DUBERSTEIN GROUP INC.",
+    "sans_activite": false,
+    "soi_meme": false,
+    "sujets": [
+     "EDU"
+    ],
+    "type": "Q3",
+    "url": "https://lda.gov/filings/public/filing/ae082788-731e-42c8-9073-68bdc5fd0e28/print/",
+    "uuid": "ae082788-731e-42c8-9073-68bdc5fd0e28"
+   }
+  ],
+  "recherche": "STRATEGIC",
+  "revenus_firmes": 60000.0,
+  "sujets": [
+   {
+    "code": "EDU",
+    "nom": "Éducation"
+   }
+  ],
+  "total": 60000.0
+ },
  "STRZ": {
   "base": "firmes",
   "complet": true,
   "firmes": 3,
-  "lu": "2026-11-05T11:03:06+00:00",
+  "lu": "2026-11-12T11:24:16+00:00",
   "moins_de_5000": 0,
   "nom": "STARZ ENTERTAINMENT CORP",
   "pages": 2,
@@ -1662,6 +1818,20 @@
   "pages": 1,
   "rapports": [],
   "recherche": "WORTHINGTON",
+  "revenus_firmes": null,
+  "sujets": [],
+  "total": null
+ },
+ "WW": {
+  "base": null,
+  "complet": false,
+  "firmes": 0,
+  "lu": "2026-11-12T11:24:16+00:00",
+  "moins_de_5000": 0,
+  "nom": "WW INTERNATIONAL, INC.",
+  "pages": 4,
+  "rapports": [],
+  "recherche": "INTERNATIONAL",
   "revenus_firmes": null,
   "sujets": [],
   "total": null
