@@ -3,6 +3,140 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "date_d_envoi_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_message": true,
+   "numero_csms": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "sujet_surtaxes": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-12T21:08:03+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "codes_9903": [
+    "9903.45.43",
+    "9903.45.45",
+    "9903.45.47",
+    "9903.45.49"
+   ],
+   "details": [
+    [
+     "Message",
+     "CSMS # 70422566"
+    ],
+    [
+     "Envoyé",
+     "12 novembre 2026 à 11 h 38 (heure de New York)"
+    ],
+    [
+     "Proclamations citées",
+     "11052, 11050"
+    ],
+    [
+     "Numéros du tarif cités (chapitre 99)",
+     "9903.45.43, 9903.45.45, 9903.45.47, 9903.45.49"
+    ],
+    [
+     "Extrait",
+     "The purpose of this message is to provide information on the availability of the minimum price floor pursuant to Presidential Proclamation 11052, “Adjusting Imports of Polysilicon and Its Derivatives Into the United States” in the certification (CERT) environment for testing purposes in the Automated Commercial Environment (ACE). […]"
+    ]
+   ],
+   "envoye_le": "2026-11-12T11:38:38-05:00",
+   "extrait": "The purpose of this message is to provide information on the availability of the minimum price floor pursuant to Presidential Proclamation 11052, “Adjusting Imports of Polysilicon and Its Derivatives Into the United States” in the certification (CERT) environment for testing purposes in the Automated Commercial Environment (ACE). […]",
+   "guid": "70422566",
+   "numero": "70422566",
+   "proclamations": [
+    "11052",
+    "11050"
+   ],
+   "titre_officiel": "Section 232 Duties on Imports of Polysilicon and Polysilicon Derivatives in the Certification (CERT) Testing Environment"
+  },
+  "direction": 0,
+  "entities": [
+   "U.S. Customs and Border Protection"
+  ],
+  "id": "tarifs:70422566",
+  "kind": "directive_douane",
+  "notes": [
+   "Directive de la douane : elle applique une décision officielle (proclamation, avis au Registre fédéral) sans la remplacer."
+  ],
+  "occurred_on": "2026-11-12",
+  "official_id": "70422566",
+  "official_url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/4329026",
+  "parser_version": "douane-1",
+  "published_on": "2026-11-12",
+  "sha256": "36959da6ef7c75f799295deed032a070cee7e305bcb744a7a39ace0687c3051d",
+  "source": "tarifs",
+  "tickers": [],
+  "title": "Douane américaine : Section 232 Duties on Imports of Polysilicon and Polysilicon Derivatives in the Certification (CERT) Testing Environment"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-12T21:07:55+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Permis de bâtir"
+    ],
+    [
+     "Période",
+     "septembre 2026"
+    ]
+   ],
+   "indicateur": "Permis de bâtir",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261112/dq261112a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-11-12T08:30:00-05:00",
+   "periode": "septembre 2026",
+   "resume": "En septembre, la valeur totale des permis de bâtir délivrés au Canada a diminué de 552,8 millions de dollars (-4,1 %) pour se situer à 12,9 milliards de dollars."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261112/dq261112a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-11-12",
+  "official_id": "261112/dq261112a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261112/dq261112a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-11-12",
+  "sha256": "00fc69b824b654f8cb94919e3dca94ae591adce3442b4d2b21adf766681de1df",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Permis de bâtir, septembre 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -42102,101 +42236,6 @@
   "title": "Contrat fédéral de 12,8 M$ : LES ENTREPRISES P E C INC (Services publics et Approvisionnement Canada)"
  },
  {
-  "amount_max": 10189490.38,
-  "amount_min": 10189490.38,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-10-29T10:10:00+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 27473971,
-   "amendment_value": "0.0",
-   "contract_date": "2026-06-01",
-   "contract_value": "10189490.38",
-   "description_fr": "Services d'architecture",
-   "details": [
-    [
-     "Fournisseur",
-     "ARCHITECTURE49 INC"
-    ],
-    [
-     "Ministère ou organisme",
-     "Services publics et Approvisionnement Canada"
-    ],
-    [
-     "Valeur du contrat",
-     "10,2 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-06-01"
-    ],
-    [
-     "Description",
-     "Services d'architecture"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-02121"
-    ]
-   ],
-   "fournisseur": "ARCHITECTURE49 INC",
-   "instrument_type": "C",
-   "ministere": "Services publics et Approvisionnement Canada",
-   "montant": 10189490.38,
-   "original_value": "10189490.38",
-   "owner_org": "pwgsc-tpsgc",
-   "owner_org_title": "Public Services and Procurement Canada | Services publics et Approvisionnement Canada",
-   "reference_number": "C-2026-2027-Q2-02121",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "ARCHITECTURE49 INC"
-  },
-  "direction": 0,
-  "entities": [
-   "ARCHITECTURE49 INC",
-   "Services publics et Approvisionnement Canada"
-  ],
-  "id": "contrats_ca_10k:pwgsc-tpsgc:C-2026-2027-Q2-02121",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2026-06-01",
-  "official_id": "pwgsc-tpsgc:C-2026-2027-Q2-02121",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/pwgsc-tpsgc,C-2026-2027-Q2-02121",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-10-29",
-  "sha256": "9e0773eb10650f1a8ea98fb4ece5345d6d4690c464fb2ae5afe4f19cab8728da",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 10,2 M$ : ARCHITECTURE49 INC (Services publics et Approvisionnement Canada)"
- },
- {
   "amount_max": 50000.0,
   "amount_min": 15001.0,
   "badge": "officiel",
@@ -55021,54 +55060,6 @@
   "source": "sanctions_us",
   "tickers": [],
   "title": "Sanctions américaines (OFAC) : Iran-related Designations and Designations Updates; Transnational Criminal Organizations Designation; Publication of Iran-related Determination; Publication of Amended Iran-related Frequently Asked Question"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_rappel": true,
-   "nombre_plausible": true,
-   "numero_de_rappel_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-09T10:41:01+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "campagne": "93EX",
-   "composant": "ELECTRICAL SYSTEM",
-   "consequence": "A vehicle fire increases the risk of injury.",
-   "constructeur": "Volkswagen Group of America, Inc.",
-   "defaut": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2023-2026 ID.4 vehicles. The high voltage battery may fail and lead to a vehicle fire.",
-   "numero": "26V630000",
-   "sorte": "Vehicle",
-   "sujet": "High Voltage Battery May Catch Fire",
-   "unites": 22524
-  },
-  "direction": -1,
-  "entities": [
-   "Volkswagen Group of America, Inc."
-  ],
-  "id": "nhtsa:26V630000",
-  "kind": "rappel",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "26V630000",
-  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V630000",
-  "parser_version": "nhtsa-1",
-  "published_on": "2026-09-30",
-  "sha256": "4fac3cf5b839c897ae8167f127d9c9d3132e2bbf3fb150cfbc3d2b4bc68da573",
-  "source": "nhtsa",
-  "tickers": [],
-  "title": "Rappel de Volkswagen Group of America, Inc. : 22 524 véhicules — « High Voltage Battery May Catch Fire »"
  },
  {
   "amount_max": null,
