@@ -9,6 +9,251 @@
    "dates_coherentes": true,
    "domaine_officiel": true,
    "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-13T20:40:47+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Commerce de gros"
+    ],
+    [
+     "Période",
+     "septembre 2026"
+    ]
+   ],
+   "indicateur": "Commerce de gros",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261113/dq261113b-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-11-13T08:30:00-05:00",
+   "periode": "septembre 2026",
+   "resume": "En septembre, les ventes du commerce de gros (excluant le pétrole, les produits pétroliers et autres hydrocarbures, ainsi que les graines oléagineuses et les grains céréaliers) ont progressé de 0,7 % pour atteindre 92,5 milliards de dollars."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261113/dq261113b",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-11-13",
+  "official_id": "261113/dq261113b",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261113/dq261113b-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-11-13",
+  "sha256": "919e01f403a440d4865150982486ead640e3319dcba5f01de0022210ff204d96",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Commerce de gros, septembre 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-13T20:40:47+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Enquête mensuelle sur les industries manufacturières"
+    ],
+    [
+     "Période",
+     "septembre 2026"
+    ]
+   ],
+   "indicateur": "Enquête mensuelle sur les industries manufacturières",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261113/dq261113a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-11-13T08:30:00-05:00",
+   "periode": "septembre 2026",
+   "resume": "Les ventes du secteur de la fabrication étaient essentiellement inchangées en septembre. Les ventes du sous-secteur de la première transformation des métaux ont affiché la plus forte baisse et celles du sous-secteur de la fabrication de produits du pétrole et du charbon, la plus forte hausse. Sur une base trimestrielle, les ventes totales ont progressé de 1,7 % au troisième trimestre de 2026."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261113/dq261113a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-11-13",
+  "official_id": "261113/dq261113a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261113/dq261113a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-11-13",
+  "sha256": "2e4f96e5c694968185c2c7fd36bb6b5f7bc5f77b47e1b400a87805ccb46a506e",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Enquête mensuelle sur les industries manufacturières, septembre 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-13T20:40:44+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/11/le-secretaire-parlementaire-turnbull-souligne-des-investissements-prevus-dans-le-budget-de-2026-du-gouvernement-du-canada-qui-visent-a-soutenir-les.html",
+   "ministere": "Ministère des Finances Canada",
+   "mis_a_jour": "2026-11-13T14:08:38-05:00",
+   "resume": "Dans un contexte mondial en mutation, marqué par les rivalités géopolitiques, le protectionnisme et l’évolution rapide des technologies, le Canada se démarque par ses atouts. Ses ressources naturelles abondantes, son énergie propre provenant de sources fiables, ses talents de calibre mondial, ses finances publiques en bonne santé et son accès aux marchés mondiaux lui procurent un net avantage concurrentiel.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Ministère des Finances Canada"
+  ],
+  "id": "nouvelles_eco_ca:ministere-finances/nouvelles/2026/11/le-secretaire-parlementaire-turnbull-souligne-des-investissements-prevus-dans-le-budget-de-2026-du-gouvernement-du-canada-qui-visent-a-soutenir-les.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-13",
+  "official_id": "ministere-finances/nouvelles/2026/11/le-secretaire-parlementaire-turnbull-souligne-des-investissements-prevus-dans-le-budget-de-2026-du-gouvernement-du-canada-qui-visent-a-soutenir-les.html",
+  "official_url": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/11/le-secretaire-parlementaire-turnbull-souligne-des-investissements-prevus-dans-le-budget-de-2026-du-gouvernement-du-canada-qui-visent-a-soutenir-les.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-13",
+  "sha256": "d5bc3b73ad69ca2a3844607eb86cb8feb167ebddf88b565faee576b1ce554541",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le secrétaire parlementaire Turnbull souligne des investissements prévus dans le Budget de 2026 du gouvernement du Canada qui visent à soutenir les industries de l’Ontario"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-13T20:40:44+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/11/le-secretaire-detat-belanger-presente-les-investissements-du-gouvernement-du-canada-dans-le-budget-de-2026--maitres-chez-nous.html",
+   "ministere": "Innovation, Sciences et Développement économique Canada",
+   "mis_a_jour": "2026-11-13T14:28:40-05:00",
+   "resume": "Dans un monde transformé par la concurrence géopolitique, le protectionnisme et l’évolution rapide des technologies, le Canada se distingue.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Innovation, Sciences et Développement économique Canada"
+  ],
+  "id": "nouvelles_eco_ca:innovation-sciences-developpement-economique/nouvelles/2026/11/le-secretaire-detat-belanger-presente-les-investissements-du-gouvernement-du-canada-dans-le-budget-de-2026--maitres-chez-nous.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-13",
+  "official_id": "innovation-sciences-developpement-economique/nouvelles/2026/11/le-secretaire-detat-belanger-presente-les-investissements-du-gouvernement-du-canada-dans-le-budget-de-2026--maitres-chez-nous.html",
+  "official_url": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/11/le-secretaire-detat-belanger-presente-les-investissements-du-gouvernement-du-canada-dans-le-budget-de-2026--maitres-chez-nous.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-13",
+  "sha256": "1d7f7ed38c228b713e830ec751aaaf4944c44c8d417cf23550c6a69eee3997ed",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le secrétaire d’État Bélanger présente les investissements du gouvernement du Canada prévus dans le Budget de 2026 pour les installations récréatives et les infrastructures communautaires à Beauval, en Saskatchewan"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-13T20:40:44+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/agence-investissement-defense/nouvelles/2026/11/le-secretaire-detat-fuhr-presente-les-investissements-du-gouvernement-du-canada-dans-le-secteur-du-vin-dans-le-cadre-du-budget2026.html",
+   "ministere": "Agence de l’investissement pour la défense",
+   "mis_a_jour": "2026-11-13T13:40:05-05:00",
+   "resume": "Dans un contexte mondial en mutation, marqué par les rivalités géopolitiques, le protectionnisme et l’évolution rapide des technologies, le Canada se démarque par ses atouts. Ses ressources naturelles abondantes, son énergie propre provenant de sources fiables, ses talents de calibre mondial, ses finances publiques en bonne santé et son accès aux marchés mondiaux lui procurent un net avantage concurrentiel.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Agence de l’investissement pour la défense"
+  ],
+  "id": "nouvelles_defense_ca:agence-investissement-defense/nouvelles/2026/11/le-secretaire-detat-fuhr-presente-les-investissements-du-gouvernement-du-canada-dans-le-secteur-du-vin-dans-le-cadre-du-budget2026.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-13",
+  "official_id": "agence-investissement-defense/nouvelles/2026/11/le-secretaire-detat-fuhr-presente-les-investissements-du-gouvernement-du-canada-dans-le-secteur-du-vin-dans-le-cadre-du-budget2026.html",
+  "official_url": "https://www.canada.ca/fr/agence-investissement-defense/nouvelles/2026/11/le-secretaire-detat-fuhr-presente-les-investissements-du-gouvernement-du-canada-dans-le-secteur-du-vin-dans-le-cadre-du-budget2026.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-13",
+  "sha256": "8771342caff555aabad8e3ba7d7ec7962d85ad15be1b94758294e2f94c28ea3d",
+  "source": "nouvelles_defense_ca",
+  "tickers": [],
+  "title": "Le secrétaire d’État Fuhr présente les investissements du gouvernement du Canada dans le secteur du vin dans le cadre du Budget 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
    "lien_identique_au_fil": true,
    "lien_ministere_coherent": true,
    "ministere_reconnu": true,
@@ -29526,6 +29771,274 @@
   "title": "Sanctions américaines (OFAC) : Cyber-related and Transnational Criminal Organizations Designations; Cuba Designations; Publication of Cuba-related Determination"
  },
  {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-13T20:40:41+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "senat",
+   "circonscription": null,
+   "elu": "Shelley M Capito",
+   "lecture_complete": true,
+   "nom_sec": "Zoetis Inc.",
+   "rapport": "a89c0c6b-4c12-4955-98f9-3a54ca52d8a3",
+   "recoupements": {
+    "date_de_depot": true,
+    "nom_lu": true
+   },
+   "transactions": [
+    {
+     "actif": "Zoetis Inc. Class A Common Stock",
+     "commentaire": null,
+     "date": "2026-10-21",
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Full)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Shelley M Capito",
+   "Zoetis Inc."
+  ],
+  "id": "senat_ptr:a89c0c6b-4c12-4955-98f9-3a54ca52d8a3:ZTS:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-21",
+  "official_id": "a89c0c6b-4c12-4955-98f9-3a54ca52d8a3:ZTS:S",
+  "official_url": "https://efdsearch.senate.gov/search/view/ptr/a89c0c6b-4c12-4955-98f9-3a54ca52d8a3/",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-04",
+  "sha256": "9cf8f2878306d8002eb05cc05b39fec90acd6439a4275aab6a910555d3c14473",
+  "source": "senat_ptr",
+  "tickers": [
+   "ZTS"
+  ],
+  "title": "Shelley M Capito (Sénat) vend ZTS — conjoint·e"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-13T20:40:41+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "senat",
+   "circonscription": null,
+   "elu": "Shelley M Capito",
+   "lecture_complete": true,
+   "nom_sec": "MICROSOFT CORP",
+   "rapport": "a89c0c6b-4c12-4955-98f9-3a54ca52d8a3",
+   "recoupements": {
+    "date_de_depot": true,
+    "nom_lu": true
+   },
+   "transactions": [
+    {
+     "actif": "Microsoft Corporation - Common Stock",
+     "commentaire": null,
+     "date": "2026-10-21",
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Shelley M Capito",
+   "MICROSOFT CORP"
+  ],
+  "id": "senat_ptr:a89c0c6b-4c12-4955-98f9-3a54ca52d8a3:MSFT:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-21",
+  "official_id": "a89c0c6b-4c12-4955-98f9-3a54ca52d8a3:MSFT:S",
+  "official_url": "https://efdsearch.senate.gov/search/view/ptr/a89c0c6b-4c12-4955-98f9-3a54ca52d8a3/",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-04",
+  "sha256": "9cf8f2878306d8002eb05cc05b39fec90acd6439a4275aab6a910555d3c14473",
+  "source": "senat_ptr",
+  "tickers": [
+   "MSFT"
+  ],
+  "title": "Shelley M Capito (Sénat) vend MSFT — conjoint·e"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-13T20:40:41+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "senat",
+   "circonscription": null,
+   "elu": "Shelley M Capito",
+   "lecture_complete": true,
+   "nom_sec": "Meta Platforms, Inc.",
+   "rapport": "a89c0c6b-4c12-4955-98f9-3a54ca52d8a3",
+   "recoupements": {
+    "date_de_depot": true,
+    "nom_lu": true
+   },
+   "transactions": [
+    {
+     "actif": "Meta Platforms, Inc. - Class A Common Stock",
+     "commentaire": null,
+     "date": "2026-10-21",
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Shelley M Capito",
+   "Meta Platforms, Inc."
+  ],
+  "id": "senat_ptr:a89c0c6b-4c12-4955-98f9-3a54ca52d8a3:META:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-21",
+  "official_id": "a89c0c6b-4c12-4955-98f9-3a54ca52d8a3:META:S",
+  "official_url": "https://efdsearch.senate.gov/search/view/ptr/a89c0c6b-4c12-4955-98f9-3a54ca52d8a3/",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-04",
+  "sha256": "9cf8f2878306d8002eb05cc05b39fec90acd6439a4275aab6a910555d3c14473",
+  "source": "senat_ptr",
+  "tickers": [
+   "META"
+  ],
+  "title": "Shelley M Capito (Sénat) vend META — conjoint·e"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-13T20:40:41+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "senat",
+   "circonscription": null,
+   "elu": "Shelley M Capito",
+   "lecture_complete": true,
+   "nom_sec": "Apple Inc.",
+   "rapport": "a89c0c6b-4c12-4955-98f9-3a54ca52d8a3",
+   "recoupements": {
+    "date_de_depot": true,
+    "nom_lu": true
+   },
+   "transactions": [
+    {
+     "actif": "Apple Inc. - Common Stock",
+     "commentaire": null,
+     "date": "2026-10-21",
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Shelley M Capito",
+   "Apple Inc."
+  ],
+  "id": "senat_ptr:a89c0c6b-4c12-4955-98f9-3a54ca52d8a3:AAPL:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-21",
+  "official_id": "a89c0c6b-4c12-4955-98f9-3a54ca52d8a3:AAPL:S",
+  "official_url": "https://efdsearch.senate.gov/search/view/ptr/a89c0c6b-4c12-4955-98f9-3a54ca52d8a3/",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-04",
+  "sha256": "9cf8f2878306d8002eb05cc05b39fec90acd6439a4275aab6a910555d3c14473",
+  "source": "senat_ptr",
+  "tickers": [
+   "AAPL"
+  ],
+  "title": "Shelley M Capito (Sénat) vend AAPL — conjoint·e"
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -38955,6 +39468,140 @@
   "title": "Contrat fédéral de 12,0 M$ : EXPERIS CANADA INC (Agriculture et Agroalimentaire Canada)"
  },
  {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-13T20:40:41+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "senat",
+   "circonscription": null,
+   "elu": "Sheldon Whitehouse",
+   "lecture_complete": true,
+   "nom_sec": "MICROSOFT CORP",
+   "rapport": "02b5fe88-e8e1-4ef3-b6b5-6a46b420fb3c",
+   "recoupements": {
+    "date_de_depot": true,
+    "nom_lu": true
+   },
+   "transactions": [
+    {
+     "actif": "Microsoft Corporation - Common Stock",
+     "commentaire": null,
+     "date": "2026-10-15",
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Sheldon Whitehouse",
+   "MICROSOFT CORP"
+  ],
+  "id": "senat_ptr:02b5fe88-e8e1-4ef3-b6b5-6a46b420fb3c:MSFT:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-15",
+  "official_id": "02b5fe88-e8e1-4ef3-b6b5-6a46b420fb3c:MSFT:S",
+  "official_url": "https://efdsearch.senate.gov/search/view/ptr/02b5fe88-e8e1-4ef3-b6b5-6a46b420fb3c/",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-02",
+  "sha256": "fd092ff5d4bc18287b956cbc489f0d60158d9062da6cf80c9948d81612fbff46",
+  "source": "senat_ptr",
+  "tickers": [
+   "MSFT"
+  ],
+  "title": "Sheldon Whitehouse (Sénat) vend MSFT — conjoint·e"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-13T20:40:41+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "senat",
+   "circonscription": null,
+   "elu": "Sheldon Whitehouse",
+   "lecture_complete": true,
+   "nom_sec": "AMGEN INC",
+   "rapport": "02b5fe88-e8e1-4ef3-b6b5-6a46b420fb3c",
+   "recoupements": {
+    "date_de_depot": true,
+    "nom_lu": true
+   },
+   "transactions": [
+    {
+     "actif": "Amgen Inc. - Common Stock",
+     "commentaire": null,
+     "date": "2026-10-15",
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Full)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Sheldon Whitehouse",
+   "AMGEN INC"
+  ],
+  "id": "senat_ptr:02b5fe88-e8e1-4ef3-b6b5-6a46b420fb3c:AMGN:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-15",
+  "official_id": "02b5fe88-e8e1-4ef3-b6b5-6a46b420fb3c:AMGN:S",
+  "official_url": "https://efdsearch.senate.gov/search/view/ptr/02b5fe88-e8e1-4ef3-b6b5-6a46b420fb3c/",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-02",
+  "sha256": "fd092ff5d4bc18287b956cbc489f0d60158d9062da6cf80c9948d81612fbff46",
+  "source": "senat_ptr",
+  "tickers": [
+   "AMGN"
+  ],
+  "title": "Sheldon Whitehouse (Sénat) vend AMGN — conjoint·e"
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -42105,417 +42752,6 @@
   "title": "Contrat fédéral modifié : +55,5 M$ pour MEDAVIE INC. (Anciens Combattants Canada), valeur totale 462,7 M$"
  },
  {
-  "amount_max": 25797026.18,
-  "amount_min": 25797026.18,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-10-29T10:10:00+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 27474584,
-   "amendment_value": "25797026.18",
-   "contract_date": "2017-12-14",
-   "contract_value": "2086648267.05",
-   "description_fr": "Autres services professionnels non précisés ailleurs",
-   "details": [
-    [
-     "Fournisseur",
-     "PARSONS INC"
-    ],
-    [
-     "Ministère ou organisme",
-     "Services publics et Approvisionnement Canada"
-    ],
-    [
-     "Hausse",
-     "25,8 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "2,09 G$"
-    ],
-    [
-     "Valeur d'origine",
-     "49,8 M$"
-    ],
-    [
-     "Date du contrat",
-     "2017-12-14"
-    ],
-    [
-     "Description",
-     "Autres services professionnels non précisés ailleurs"
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-02750"
-    ]
-   ],
-   "fournisseur": "PARSONS INC",
-   "instrument_type": "A",
-   "ministere": "Services publics et Approvisionnement Canada",
-   "montant": 25797026.18,
-   "original_value": "49810077.55",
-   "owner_org": "pwgsc-tpsgc",
-   "owner_org_title": "Public Services and Procurement Canada | Services publics et Approvisionnement Canada",
-   "reference_number": "C-2026-2027-Q2-02750",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "PARSONS INC"
-  },
-  "direction": 0,
-  "entities": [
-   "PARSONS INC",
-   "Services publics et Approvisionnement Canada"
-  ],
-  "id": "contrats_ca_10k:pwgsc-tpsgc:C-2026-2027-Q2-02750",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "pwgsc-tpsgc:C-2026-2027-Q2-02750",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/pwgsc-tpsgc,C-2026-2027-Q2-02750",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-10-29",
-  "sha256": "7bc6fdee56a356a6e4706baeb47eb9d4588d42523f5fecffa2c7e405ff07c588",
-  "source": "contrats_ca_10k",
-  "tickers": [
-   "PSN"
-  ],
-  "title": "Contrat fédéral modifié : +25,8 M$ pour PARSONS INC (Services publics et Approvisionnement Canada), valeur totale 2,09 G$"
- },
- {
-  "amount_max": 25198361.99,
-  "amount_min": 25198361.99,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-10-29T10:10:00+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 27474583,
-   "amendment_value": "25198361.99",
-   "contract_date": "2017-12-14",
-   "contract_value": "2060851240.87",
-   "description_fr": "Autres services professionnels non précisés ailleurs",
-   "details": [
-    [
-     "Fournisseur",
-     "PARSONS INC"
-    ],
-    [
-     "Ministère ou organisme",
-     "Services publics et Approvisionnement Canada"
-    ],
-    [
-     "Hausse",
-     "25,2 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "2,06 G$"
-    ],
-    [
-     "Valeur d'origine",
-     "49,8 M$"
-    ],
-    [
-     "Date du contrat",
-     "2017-12-14"
-    ],
-    [
-     "Description",
-     "Autres services professionnels non précisés ailleurs"
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-02749"
-    ]
-   ],
-   "fournisseur": "PARSONS INC",
-   "instrument_type": "A",
-   "ministere": "Services publics et Approvisionnement Canada",
-   "montant": 25198361.99,
-   "original_value": "49810077.55",
-   "owner_org": "pwgsc-tpsgc",
-   "owner_org_title": "Public Services and Procurement Canada | Services publics et Approvisionnement Canada",
-   "reference_number": "C-2026-2027-Q2-02749",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "PARSONS INC"
-  },
-  "direction": 0,
-  "entities": [
-   "PARSONS INC",
-   "Services publics et Approvisionnement Canada"
-  ],
-  "id": "contrats_ca_10k:pwgsc-tpsgc:C-2026-2027-Q2-02749",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "pwgsc-tpsgc:C-2026-2027-Q2-02749",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/pwgsc-tpsgc,C-2026-2027-Q2-02749",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-10-29",
-  "sha256": "06c2a97a3a62abeffd8c064f1d0caeda3ff9a4820c2f1ef098544d271a991cc3",
-  "source": "contrats_ca_10k",
-  "tickers": [
-   "PSN"
-  ],
-  "title": "Contrat fédéral modifié : +25,2 M$ pour PARSONS INC (Services publics et Approvisionnement Canada), valeur totale 2,06 G$"
- },
- {
-  "amount_max": 14817863.03,
-  "amount_min": 14817863.03,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-10-29T10:10:00+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 27474453,
-   "amendment_value": "0.0",
-   "contract_date": "2026-08-11",
-   "contract_value": "14817863.03",
-   "description_fr": "Services reliés à  la construction",
-   "details": [
-    [
-     "Fournisseur",
-     "BOLESS INC."
-    ],
-    [
-     "Ministère ou organisme",
-     "Services publics et Approvisionnement Canada"
-    ],
-    [
-     "Valeur du contrat",
-     "14,8 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-08-11"
-    ],
-    [
-     "Description",
-     "Services reliés à  la construction"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-02619"
-    ]
-   ],
-   "fournisseur": "BOLESS INC.",
-   "instrument_type": "C",
-   "ministere": "Services publics et Approvisionnement Canada",
-   "montant": 14817863.03,
-   "original_value": "14817863.03",
-   "owner_org": "pwgsc-tpsgc",
-   "owner_org_title": "Public Services and Procurement Canada | Services publics et Approvisionnement Canada",
-   "reference_number": "C-2026-2027-Q2-02619",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "BOLESS INC."
-  },
-  "direction": 0,
-  "entities": [
-   "BOLESS INC.",
-   "Services publics et Approvisionnement Canada"
-  ],
-  "id": "contrats_ca_10k:pwgsc-tpsgc:C-2026-2027-Q2-02619",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2026-08-11",
-  "official_id": "pwgsc-tpsgc:C-2026-2027-Q2-02619",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/pwgsc-tpsgc,C-2026-2027-Q2-02619",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-10-29",
-  "sha256": "73b711cad9ded97d1f5a60d87796dfe24d354ecb748107aa876d7a381898a21d",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 14,8 M$ : BOLESS INC. (Services publics et Approvisionnement Canada)"
- },
- {
-  "amount_max": 11300000.0,
-  "amount_min": 11300000.0,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-10-29T10:10:00+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 27474430,
-   "amendment_value": "11300000.0",
-   "contract_date": "2025-01-02",
-   "contract_value": "64297000.0",
-   "description_fr": "Services reliés à  la construction",
-   "details": [
-    [
-     "Fournisseur",
-     "POMERLEAU INC."
-    ],
-    [
-     "Ministère ou organisme",
-     "Services publics et Approvisionnement Canada"
-    ],
-    [
-     "Hausse",
-     "11,3 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "64,3 M$"
-    ],
-    [
-     "Valeur d'origine",
-     "29,8 M$"
-    ],
-    [
-     "Date du contrat",
-     "2025-01-02"
-    ],
-    [
-     "Description",
-     "Services reliés à  la construction"
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-02596"
-    ]
-   ],
-   "fournisseur": "POMERLEAU INC.",
-   "instrument_type": "A",
-   "ministere": "Services publics et Approvisionnement Canada",
-   "montant": 11300000.0,
-   "original_value": "29759390.67",
-   "owner_org": "pwgsc-tpsgc",
-   "owner_org_title": "Public Services and Procurement Canada | Services publics et Approvisionnement Canada",
-   "reference_number": "C-2026-2027-Q2-02596",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "POMERLEAU INC."
-  },
-  "direction": 0,
-  "entities": [
-   "POMERLEAU INC.",
-   "Services publics et Approvisionnement Canada"
-  ],
-  "id": "contrats_ca_10k:pwgsc-tpsgc:C-2026-2027-Q2-02596",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "pwgsc-tpsgc:C-2026-2027-Q2-02596",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/pwgsc-tpsgc,C-2026-2027-Q2-02596",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-10-29",
-  "sha256": "ccbed2391420a89bc317d19535ac655701e6bb51133d57c1f7a1c513831035f9",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral modifié : +11,3 M$ pour POMERLEAU INC. (Services publics et Approvisionnement Canada), valeur totale 64,3 M$"
- },
- {
   "amount_max": 50000.0,
   "amount_min": 15001.0,
   "badge": "officiel",
@@ -43336,6 +43572,172 @@
   "source": "registre_federal",
   "tickers": [],
   "title": "Exportations (Commerce, BIS) : Order Renewing Order Temporarily Denying Export Privileges"
+ },
+ {
+  "amount_max": 390000.0,
+  "amount_min": 96012.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-13T20:40:42+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "senat",
+   "circonscription": null,
+   "elu": "Richard Blumenthal",
+   "lecture_complete": true,
+   "nom_sec": "Starling Oncology, Inc.",
+   "rapport": "e67780bf-56e4-46f0-a81e-574a701dd539",
+   "recoupements": {
+    "date_de_depot": true,
+    "nom_lu": true
+   },
+   "transactions": [
+    {
+     "actif": "Starling Oncology, Inc. - Common Stock",
+     "commentaire": "Underlying Asset of Magnifique LLC. Name change – previously reported as Oncology Institute, Inc. (TOI).",
+     "date": "2026-09-22",
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Partial)"
+    },
+    {
+     "actif": "Starling Oncology, Inc. - Common Stock",
+     "commentaire": "Underlying Asset of Magnifique LLC. Name change – previously reported as Oncology Institute, Inc. (TOI).",
+     "date": "2026-09-18",
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Partial)"
+    },
+    {
+     "actif": "Starling Oncology, Inc. - Common Stock",
+     "commentaire": "Underlying Asset of LarryMae Partners LLC. Name change – previously reported as Oncology Institute, Inc. (TOI).",
+     "date": "2026-09-22",
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Partial)"
+    },
+    {
+     "actif": "Starling Oncology, Inc. - Common Stock",
+     "commentaire": "Underlying Asset of LarryMae Partners LLC. Name change – previously reported as Oncology Institute, Inc. (TOI).",
+     "date": "2026-09-18",
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Partial)"
+    },
+    {
+     "actif": "Starling Oncology, Inc. - Common Stock",
+     "commentaire": "Underlying Asset of Hedge Holdings LLC. Name change – previously reported as Oncology Institute, Inc. (TOI).",
+     "date": "2026-09-23",
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Partial)"
+    },
+    {
+     "actif": "Starling Oncology, Inc. - Common Stock",
+     "commentaire": "Underlying Asset of Hedge Holdings LLC. Name change – previously reported as Oncology Institute, Inc. (TOI).",
+     "date": "2026-09-22",
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Partial)"
+    },
+    {
+     "actif": "Starling Oncology, Inc. - Common Stock",
+     "commentaire": "Underlying Asset of Hedge Holdings LLC. Name change – previously reported as Oncology Institute, Inc. (TOI).",
+     "date": "2026-09-18",
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Partial)"
+    },
+    {
+     "actif": "Starling Oncology, Inc. - Common Stock",
+     "commentaire": "Underlying Asset of Peter L. Malkin Family 9 LLC. Name change – previously reported as Oncology Institute, Inc. (TOI).",
+     "date": "2026-09-22",
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Partial)"
+    },
+    {
+     "actif": "Starling Oncology, Inc. - Common Stock",
+     "commentaire": "Underlying Asset of Peter L. Malkin Family 9 LLC. Name change – previously reported as Oncology Institute, Inc. (TOI).",
+     "date": "2026-09-18",
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Partial)"
+    },
+    {
+     "actif": "Starling Oncology, Inc. - Common Stock",
+     "commentaire": "Underlying Asset of Peter L. Malkin Family 2000 LLC. Name change – previously reported as Oncology Institute, Inc. (TOI).",
+     "date": "2026-09-23",
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Partial)"
+    },
+    {
+     "actif": "Starling Oncology, Inc. - Common Stock",
+     "commentaire": "Underlying Asset of Peter L. Malkin Family 2000 LLC. Name change – previously reported as Oncology Institute, Inc. (TOI).",
+     "date": "2026-09-22",
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Partial)"
+    },
+    {
+     "actif": "Starling Oncology, Inc. - Common Stock",
+     "commentaire": "Underlying Asset of Peter L. Malkin Family 2000 LLC. Name change – previously reported as Oncology Institute, Inc. (TOI).",
+     "date": "2026-09-18",
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Richard Blumenthal",
+   "Starling Oncology, Inc."
+  ],
+  "id": "senat_ptr:e67780bf-56e4-46f0-a81e-574a701dd539:STLN:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-09-18",
+  "official_id": "e67780bf-56e4-46f0-a81e-574a701dd539:STLN:S",
+  "official_url": "https://efdsearch.senate.gov/search/view/ptr/e67780bf-56e4-46f0-a81e-574a701dd539/",
+  "parser_version": "elus-1",
+  "published_on": "2026-10-26",
+  "sha256": "b4bf2f33a3f36d4f3e7c3fa7d52bfdd01b3951a924fc33ceb67855d4b16563d5",
+  "source": "senat_ptr",
+  "tickers": [
+   "STLN"
+  ],
+  "title": "Richard Blumenthal (Sénat) vend STLN (12 transactions) — conjoint·e"
  },
  {
   "amount_max": 250000.0,
@@ -49725,430 +50127,6 @@
   "title": "Kevin Hern (Chambre, OK01) vend LIN — compte conjoint"
  },
  {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-14T15:49:29+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "HOME DEPOT, INC.",
-   "rapport": "20035588",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Home Depot, Inc. (HD) [ST]",
-     "avis": "2026-10-02",
-     "date": "2026-09-23",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "HOME DEPOT, INC."
-  ],
-  "id": "chambre_ptr:20035588:HD:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-23",
-  "official_id": "20035588:HD:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-13",
-  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
-  "source": "chambre_ptr",
-  "tickers": [
-   "HD"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend HD — compte conjoint"
- },
- {
-  "amount_max": 50000.0,
-  "amount_min": 15001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-14T15:49:29+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "EMERSON ELECTRIC CO",
-   "rapport": "20035588",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Emerson Electric Company Common Stock (EMR) [ST]",
-     "avis": "2026-10-02",
-     "date": "2026-09-17",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "EMERSON ELECTRIC CO"
-  ],
-  "id": "chambre_ptr:20035588:EMR:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-17",
-  "official_id": "20035588:EMR:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-13",
-  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
-  "source": "chambre_ptr",
-  "tickers": [
-   "EMR"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend EMR — compte conjoint"
- },
- {
-  "amount_max": 150000.0,
-  "amount_min": 65002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-14T15:49:29+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "DEVON ENERGY CORP/DE",
-   "rapport": "20035588",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Devon Energy Corporation Common Stock (DVN) [ST]",
-     "avis": "2026-10-02",
-     "date": "2026-09-23",
-     "description": null,
-     "montant": "$50,001 - $100,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "S"
-    },
-    {
-     "actif": "Devon Energy Corporation Common Stock (DVN) [ST]",
-     "avis": "2026-10-02",
-     "date": "2026-09-23",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "DEVON ENERGY CORP/DE"
-  ],
-  "id": "chambre_ptr:20035588:DVN:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-23",
-  "official_id": "20035588:DVN:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-13",
-  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
-  "source": "chambre_ptr",
-  "tickers": [
-   "DVN"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend DVN (2 transactions) — compte conjoint"
- },
- {
-  "amount_max": 50000.0,
-  "amount_min": 15001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-14T15:49:29+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "CHEVRON CORP",
-   "rapport": "20035588",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Chevron Corporation Common Stock (CVX) [ST]",
-     "avis": "2026-10-02",
-     "date": "2026-09-23",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "CHEVRON CORP"
-  ],
-  "id": "chambre_ptr:20035588:CVX:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-23",
-  "official_id": "20035588:CVX:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-13",
-  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
-  "source": "chambre_ptr",
-  "tickers": [
-   "CVX"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend CVX — compte conjoint"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-14T15:49:29+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "Chubb Ltd",
-   "rapport": "20035588",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Chubb Limited Common Stock (CB) [ST]",
-     "avis": "2026-10-02",
-     "date": "2026-09-23",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "Chubb Ltd"
-  ],
-  "id": "chambre_ptr:20035588:CB:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-23",
-  "official_id": "20035588:CB:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-13",
-  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
-  "source": "chambre_ptr",
-  "tickers": [
-   "CB"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend CB — compte conjoint"
- },
- {
-  "amount_max": 50000.0,
-  "amount_min": 15001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-14T15:49:29+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "Virtus Artificial Intelligence & Technology Opportunities Fund",
-   "rapport": "20035588",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Virtus Artificial Intelligence & Technology Opportunities Fund Common Shares of Beneficial Interest (AIO) [ST]",
-     "avis": "2026-10-02",
-     "date": "2026-09-23",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "Virtus Artificial Intelligence & Technology Opportunities Fund"
-  ],
-  "id": "chambre_ptr:20035588:AIO:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-23",
-  "official_id": "20035588:AIO:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-13",
-  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
-  "source": "chambre_ptr",
-  "tickers": [
-   "AIO"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend AIO — compte conjoint"
- },
- {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -50593,75 +50571,6 @@
   "source": "usaspending",
   "tickers": [],
   "title": "Contrat fédéral américain de 2,21 G$ : TOTE SERVICES, LLC (Défense)"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-13T19:59:26+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "WA02",
-   "elu": "Rick Larsen",
-   "lecture_complete": true,
-   "nom_sec": "WILLIAMS SONOMA INC",
-   "rapport": "20035635",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Williams-Sonoma, Inc. Common Stock (WSM) [ST]",
-     "avis": "2026-10-12",
-     "date": "2026-10-08",
-     "description": "Quarterly rebalance",
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Rick Larsen",
-   "WILLIAMS SONOMA INC"
-  ],
-  "id": "chambre_ptr:20035635:WSM:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-10-08",
-  "official_id": "20035635:WSM:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035635.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-12",
-  "sha256": "6dd8c4de35e8120e879a54c39cfbe353fe2fdc12aabd31a11d9c9a6c1bff6b97",
-  "source": "chambre_ptr",
-  "tickers": [
-   "WSM"
-  ],
-  "title": "Rick Larsen (Chambre, WA02) achète WSM"
  },
  {
   "amount_max": null,
