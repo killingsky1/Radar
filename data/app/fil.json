@@ -9,6 +9,51 @@
    "dates_coherentes": true,
    "domaine_officiel": true,
    "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-13T22:08:05+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/11/lancement-du-processus-de-selection-de-la-ville-hote-de-la-banque-de-la-defense-de-la-securite-et-de-la-resilience.html",
+   "ministere": "Ministère des Finances Canada",
+   "mis_a_jour": "2026-11-13T15:44:21-05:00",
+   "resume": "Aujourd’hui, l’honorable François-Philippe Champagne, ministre des Finances et du Revenu national, a lancé le processus visant à sélectionner la ville canadienne qui accueillera le futur siège social mondial de la BDSR.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Ministère des Finances Canada"
+  ],
+  "id": "nouvelles_eco_ca:ministere-finances/nouvelles/2026/11/lancement-du-processus-de-selection-de-la-ville-hote-de-la-banque-de-la-defense-de-la-securite-et-de-la-resilience.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-13",
+  "official_id": "ministere-finances/nouvelles/2026/11/lancement-du-processus-de-selection-de-la-ville-hote-de-la-banque-de-la-defense-de-la-securite-et-de-la-resilience.html",
+  "official_url": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/11/lancement-du-processus-de-selection-de-la-ville-hote-de-la-banque-de-la-defense-de-la-securite-et-de-la-resilience.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-13",
+  "sha256": "393034ceec6912ecba638f52d5418d0e5c11badbcd64079a86f420740af543c4",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Lancement du processus de sélection de la ville hôte de la Banque de la défense, de la sécurité et de la résilience"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
    "indicateur_de_la_liste_officielle": true,
    "lien_du_quotidien": true,
    "resume_lu": true,
@@ -42646,110 +42691,6 @@
   "source": "doj_antitrust",
   "tickers": [],
   "title": "Antitrust (ministère de la Justice) : Antitrust Division Announces Successful Referrals in Two Local Asphalt Merger Investigations to State Attorneys General"
- },
- {
-  "amount_max": 55496379.0,
-  "amount_min": 55496379.0,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-10-29T10:10:00+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 27583079,
-   "amendment_value": "55496379.0",
-   "contract_date": "2014-01-06",
-   "contract_value": "462693531.0",
-   "description_fr": "Autres services commerciaux qui ne sont pas précisés ailleurs",
-   "details": [
-    [
-     "Fournisseur",
-     "MEDAVIE INC."
-    ],
-    [
-     "Ministère ou organisme",
-     "Anciens Combattants Canada"
-    ],
-    [
-     "Hausse",
-     "55,5 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "462,7 M$"
-    ],
-    [
-     "Valeur d'origine",
-     "163,8 M$"
-    ],
-    [
-     "Date du contrat",
-     "2014-01-06"
-    ],
-    [
-     "Description",
-     "Autres services commerciaux qui ne sont pas précisés ailleurs"
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-00005"
-    ]
-   ],
-   "fournisseur": "MEDAVIE INC.",
-   "instrument_type": "A",
-   "ministere": "Anciens Combattants Canada",
-   "montant": 55496379.0,
-   "original_value": "163828975.0",
-   "owner_org": "vac-acc",
-   "owner_org_title": "Veterans Affairs Canada | Anciens Combattants Canada",
-   "reference_number": "C-2026-2027-Q2-00005",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "MEDAVIE INC."
-  },
-  "direction": 0,
-  "entities": [
-   "MEDAVIE INC.",
-   "Anciens Combattants Canada"
-  ],
-  "id": "contrats_ca_10k:vac-acc:C-2026-2027-Q2-00005",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "vac-acc:C-2026-2027-Q2-00005",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/vac-acc,C-2026-2027-Q2-00005",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-10-29",
-  "sha256": "f001f9838ed9b3d6852e5a278507ef45e478cfd4de1b27d0af96b3b24b3a4a5a",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral modifié : +55,5 M$ pour MEDAVIE INC. (Anciens Combattants Canada), valeur totale 462,7 M$"
  },
  {
   "amount_max": 50000.0,
