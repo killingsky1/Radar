@@ -3,6 +3,51 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-13T02:40:11+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/11/le-gouvernement-du-canada-rajuste-le-seuil-de-la-valeur-imposable-pour-les-vehicules-zero-emission.html",
+   "ministere": "Ministère des Finances Canada",
+   "mis_a_jour": "2026-11-12T19:41:15-05:00",
+   "resume": "Le Canada part d’une position de force, puisqu’il dispose déjà d’un réseau électrique propre à près de 80 % et qu’il affiche les coûts d’électricité parmi les plus bas du G7. Ce virage vers l’énergie propre et abordable s’étend au domaine des transports, où le Budget de 2026 élargit l’infrastructure de recharge pour accélérer l’adoption des véhicules électriques.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Ministère des Finances Canada"
+  ],
+  "id": "nouvelles_eco_ca:ministere-finances/nouvelles/2026/11/le-gouvernement-du-canada-rajuste-le-seuil-de-la-valeur-imposable-pour-les-vehicules-zero-emission.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-12",
+  "official_id": "ministere-finances/nouvelles/2026/11/le-gouvernement-du-canada-rajuste-le-seuil-de-la-valeur-imposable-pour-les-vehicules-zero-emission.html",
+  "official_url": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/11/le-gouvernement-du-canada-rajuste-le-seuil-de-la-valeur-imposable-pour-les-vehicules-zero-emission.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-12",
+  "sha256": "81293b246ff59158ef174bc586241bef8f90dff9bc707d63165beb3cae96e296",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le gouvernement du Canada rajuste le seuil de la valeur imposable pour les véhicules zéro émission"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "champs_requis": true,
@@ -42139,101 +42184,6 @@
   "source": "contrats_ca_10k",
   "tickers": [],
   "title": "Contrat fédéral de 37,4 M$ : ARCTIC FRESH PROJECTS INC. (Services publics et Approvisionnement Canada)"
- },
- {
-  "amount_max": 12843857.25,
-  "amount_min": 12843857.25,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-10-29T10:10:00+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 27473998,
-   "amendment_value": "0.0",
-   "contract_date": "2026-02-18",
-   "contract_value": "12843857.25",
-   "description_fr": "Autres travaux de génie",
-   "details": [
-    [
-     "Fournisseur",
-     "LES ENTREPRISES P E C INC"
-    ],
-    [
-     "Ministère ou organisme",
-     "Services publics et Approvisionnement Canada"
-    ],
-    [
-     "Valeur du contrat",
-     "12,8 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-02-18"
-    ],
-    [
-     "Description",
-     "Autres travaux de génie"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-02148"
-    ]
-   ],
-   "fournisseur": "LES ENTREPRISES P E C INC",
-   "instrument_type": "C",
-   "ministere": "Services publics et Approvisionnement Canada",
-   "montant": 12843857.25,
-   "original_value": "12843857.25",
-   "owner_org": "pwgsc-tpsgc",
-   "owner_org_title": "Public Services and Procurement Canada | Services publics et Approvisionnement Canada",
-   "reference_number": "C-2026-2027-Q2-02148",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "LES ENTREPRISES P E C INC"
-  },
-  "direction": 0,
-  "entities": [
-   "LES ENTREPRISES P E C INC",
-   "Services publics et Approvisionnement Canada"
-  ],
-  "id": "contrats_ca_10k:pwgsc-tpsgc:C-2026-2027-Q2-02148",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2026-02-18",
-  "official_id": "pwgsc-tpsgc:C-2026-2027-Q2-02148",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/pwgsc-tpsgc,C-2026-2027-Q2-02148",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-10-29",
-  "sha256": "bf806f682a740a606a4fd634f5ad987289cd5939a070375c163c5dd24f97cc5f",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 12,8 M$ : LES ENTREPRISES P E C INC (Services publics et Approvisionnement Canada)"
  },
  {
   "amount_max": 50000.0,
