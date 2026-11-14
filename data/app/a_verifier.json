@@ -1,5 +1,333 @@
 [
  {
+  "amount_max": 4100000000.0,
+  "amount_min": 4100000000.0,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "actions_et_valeur_positives": true,
+   "actions_sous_le_total_en_circulation": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "prix_implicite_plausible": false,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-14T10:39:57+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 12000.0,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001660280",
+   "date_avis": "2026-11-13",
+   "lignes": [
+    {
+     "actions": 12000.0,
+     "bourse": "NYSE",
+     "classe": "Common",
+     "date_prevue": "2026-11-13",
+     "en_circulation": 104507623.0,
+     "valeur": 4100000000.0
+    }
+   ],
+   "nom_emetteur": "Tenable Holdings, Inc.",
+   "plan_10b5_1": [
+    "08/05/2026"
+   ],
+   "relations": [
+    "Director"
+   ],
+   "vendeur": "COVIELLO ARTHUR W JR"
+  },
+  "direction": -1,
+  "entities": [
+   "COVIELLO ARTHUR W JR",
+   "Tenable Holdings, Inc."
+  ],
+  "id": "sec_form144:0001974078-26-000416",
+  "kind": "intention_vente",
+  "notes": [
+   "Vente prévue d'avance dans un plan automatique (règle 10b5-1).",
+   "Date de vente prévue : 13 novembre 2026."
+  ],
+  "occurred_on": "2026-11-13",
+  "official_id": "0001974078-26-000416",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1660280/000197407826000416/0001974078-26-000416-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-13",
+  "sha256": "8fbffd57a52acdd60cacd996effe3cf372304d5d2a338d8436c6966b4116f664",
+  "source": "sec_form144",
+  "tickers": [
+   "TENB"
+  ],
+  "title": "COVIELLO ARTHUR W JR (administrateur) prévoit vendre 12 000 actions de Tenable Holdings, Inc."
+ },
+ {
+  "amount_max": 1038134.46,
+  "amount_min": 1038134.46,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": false,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-14T10:37:00+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 3000.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000067887",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 346.0448,
+   "proprietaires_cik": [
+    "1349688"
+   ],
+   "roles": [
+    "administrateur"
+   ],
+   "symbole_declare": "MOGA/MOGB",
+   "symboles_sec": [
+    "MOG-A",
+    "MOG-B"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 36.0,
+     "apres": 30504.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-11",
+     "hors_bourse": null,
+     "prix": 339.78,
+     "titre_valeur": "Class A Common"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 40.0,
+     "apres": 30464.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-11",
+     "hors_bourse": null,
+     "prix": 341.45,
+     "titre_valeur": "Class A Common"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 76.0,
+     "apres": 30388.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-11",
+     "hors_bourse": null,
+     "prix": 342.08,
+     "titre_valeur": "Class A Common"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 261.0,
+     "apres": 30127.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-11",
+     "hors_bourse": null,
+     "prix": 343.39,
+     "titre_valeur": "Class A Common"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 122.0,
+     "apres": 30005.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-11",
+     "hors_bourse": null,
+     "prix": 344.29,
+     "titre_valeur": "Class A Common"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 678.0,
+     "apres": 29327.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-11",
+     "hors_bourse": null,
+     "prix": 345.6,
+     "titre_valeur": "Class A Common"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 926.0,
+     "apres": 28401.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-11",
+     "hors_bourse": null,
+     "prix": 346.43,
+     "titre_valeur": "Class A Common"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 625.0,
+     "apres": 27776.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-11",
+     "hors_bourse": null,
+     "prix": 347.75,
+     "titre_valeur": "Class A Common"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 236.0,
+     "apres": 27540.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-11",
+     "hors_bourse": null,
+     "prix": 348.15,
+     "titre_valeur": "Class A Common"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Scannell John",
+   "MOOG INC."
+  ],
+  "id": "sec_form4:0001349688-26-000006:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-11-11",
+  "official_id": "0001349688-26-000006:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/67887/000134968826000006/0001349688-26-000006-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-13",
+  "sha256": "7a39ee6774d6253831e6659adad8689276c15d75a5abad35f8b5bb5775db29b9",
+  "source": "sec_form4",
+  "tickers": [
+   "MOG-A"
+  ],
+  "title": "Scannell John (administrateur) vend 3 000 actions de MOOG INC."
+ },
+ {
+  "amount_max": 2277457.7,
+  "amount_min": 2277457.7,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": false,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-14T10:34:54+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 46000.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000004457",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 49.51,
+   "proprietaires_cik": [
+    "1134431"
+   ],
+   "roles": [
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "UHALB",
+   "symboles_sec": [
+    "UHAL",
+    "UHAL-B"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 23000.0,
+     "apres": 126196.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-11",
+     "hors_bourse": null,
+     "prix": 49.671,
+     "titre_valeur": "Series N Common Stock"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 23000.0,
+     "apres": 103196.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-12",
+     "hors_bourse": null,
+     "prix": 49.3489,
+     "titre_valeur": "Series N Common Stock"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "SHOEN MARK V",
+   "U-Haul Holding Co /NV/"
+  ],
+  "id": "sec_form4:0001193125-26-461032:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-11-11",
+  "official_id": "0001193125-26-461032:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/4457/000119312526461032/0001193125-26-461032-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-13",
+  "sha256": "f51f94c0b09e5418ebd04b1a1eda46631620d7fc95efbfac12486b8e4c472c79",
+  "source": "sec_form4",
+  "tickers": [
+   "UHAL"
+  ],
+  "title": "SHOEN MARK V (actionnaire de 10 %) vend 46 000 actions de U-Haul Holding Co /NV/"
+ },
+ {
   "amount_max": 37595000.0,
   "amount_min": 37595000.0,
   "badge": "a_verifier",
