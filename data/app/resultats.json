@@ -1,5 +1,5 @@
 {
- "genere_a": "2026-11-14T10:34:07+00:00",
+ "genere_a": "2026-11-16T20:55:29+00:00",
  "horizons": {
   "30": "1 mois",
   "7": "1 semaine"
@@ -34,8 +34,7 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-7",
@@ -99,8 +98,16 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "battu": false,
+     "date": "20261016",
+     "ecart": -0.1225,
+     "marche": {
+      "fonds": "SPY",
+      "variation": -0.0039
+     },
+     "prix": 0.76,
+     "statut": "mesure",
+     "variation": -0.1264
     }
    },
    "methode": "score-7",
@@ -263,8 +270,7 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-7",
@@ -288,8 +294,7 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-7",
@@ -406,8 +411,7 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-7",
@@ -433,8 +437,7 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-8",
@@ -652,8 +655,7 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-8",
@@ -692,8 +694,7 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-8",
@@ -732,8 +733,7 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-8",
@@ -772,8 +772,7 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -794,7 +793,7 @@
    ],
    "symbole": "AFCG",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -847,8 +846,16 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "battu": true,
+     "date": "20261016",
+     "ecart": -0.0589,
+     "marche": {
+      "fonds": "SPY",
+      "variation": -0.0028
+     },
+     "prix": 0.76,
+     "statut": "mesure",
+     "variation": -0.0617
     }
    },
    "methode": "score-9",
@@ -923,8 +930,7 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -982,7 +988,7 @@
    ],
    "symbole": "PRHI",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -1000,8 +1006,7 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -1110,8 +1115,16 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "battu": true,
+     "date": "20261016",
+     "ecart": 0.0356,
+     "marche": {
+      "fonds": "SPY",
+      "variation": -0.0028
+     },
+     "prix": 4.73,
+     "statut": "mesure",
+     "variation": 0.0328
     }
    },
    "methode": "score-9",
@@ -1148,8 +1161,7 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -1236,8 +1248,7 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -1341,20 +1352,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-08T10:41:25+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -1373,24 +1381,21 @@
    ],
    "symbole": "GNLN",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-08T10:41:25+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -1429,8 +1434,16 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "battu": false,
+     "date": "20261020",
+     "ecart": -0.0797,
+     "marche": {
+      "fonds": "SPY",
+      "variation": -0.0149
+     },
+     "prix": 8.23,
+     "statut": "mesure",
+     "variation": -0.0946
     }
    },
    "methode": "score-9",
@@ -1470,8 +1483,16 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "battu": true,
+     "date": "20261022",
+     "ecart": -0.2048,
+     "marche": {
+      "fonds": "SPY",
+      "variation": -0.0064
+     },
+     "prix": 1.27,
+     "statut": "mesure",
+     "variation": -0.2112
     }
    },
    "methode": "score-9",
@@ -1494,20 +1515,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-09T02:12:55+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -1532,20 +1550,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-09T02:12:55+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -1585,8 +1600,7 @@
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -1611,20 +1625,30 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "40472A102",
+    "date": "20261019",
+    "prix": 0.45,
+    "statut": "ok"
    },
    "entree": "2026-10-14T08:48:44+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "battu": true,
+     "date": "20261028",
+     "ecart": -0.0973,
+     "marche": {
+      "fonds": "SPY",
+      "variation": 0.0084
+     },
+     "prix": 0.41,
+     "statut": "mesure",
+     "variation": -0.0889
     }
    },
    "methode": "score-9",
@@ -1647,20 +1671,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-14T08:48:44+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -1685,20 +1706,30 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "68270C202",
+    "date": "20261016",
+    "prix": 4.75,
+    "statut": "ok"
    },
    "entree": "2026-10-14T08:48:44+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "battu": false,
+     "date": "20261023",
+     "ecart": 0.0501,
+     "marche": {
+      "fonds": "SPY",
+      "variation": -0.0101
+     },
+     "prix": 4.94,
+     "statut": "mesure",
+     "variation": 0.04
     }
    },
    "methode": "score-9",
@@ -1720,24 +1751,34 @@
    ],
    "symbole": "ONMD",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "184492106",
+    "date": "20261016",
+    "prix": 0.12,
+    "statut": "ok"
    },
    "entree": "2026-10-14T08:48:44+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "battu": true,
+     "date": "20261023",
+     "ecart": -0.1566,
+     "marche": {
+      "fonds": "SPY",
+      "variation": -0.0101
+     },
+     "prix": 0.1,
+     "statut": "mesure",
+     "variation": -0.1667
     }
    },
    "methode": "score-9",
@@ -1763,20 +1804,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-14T08:48:44+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -1801,20 +1839,30 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "881454102",
+    "date": "20261016",
+    "prix": 3.22,
+    "statut": "ok"
    },
    "entree": "2026-10-14T08:48:44+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "battu": false,
+     "date": "20261026",
+     "ecart": -0.1151,
+     "marche": {
+      "fonds": "SPY",
+      "variation": -0.0153
+     },
+     "prix": 2.8,
+     "statut": "mesure",
+     "variation": -0.1304
     }
    },
    "methode": "score-9",
@@ -1839,20 +1887,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-14T08:48:44+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -1878,20 +1923,30 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "76135H100",
+    "date": "20261020",
+    "prix": 16.33,
+    "statut": "ok"
    },
    "entree": "2026-10-14T08:48:44+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "battu": false,
+     "date": "20261028",
+     "ecart": -0.1762,
+     "marche": {
+      "fonds": "SPY",
+      "variation": 0.0041
+     },
+     "prix": 13.52,
+     "statut": "mesure",
+     "variation": -0.1721
     }
    },
    "methode": "score-9",
@@ -1917,20 +1972,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "80349A208",
+    "date": "20261019",
+    "prix": 15.32,
+    "statut": "ok"
    },
    "entree": "2026-10-14T08:48:44+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -1956,20 +2012,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "35471R106",
+    "date": "20261020",
+    "prix": 0.38,
+    "statut": "ok"
    },
    "entree": "2026-10-15T08:23:44+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -1992,20 +2049,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "06684L103",
+    "date": "20261021",
+    "prix": 3.7,
+    "statut": "ok"
    },
    "entree": "2026-10-15T08:23:44+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -2030,20 +2088,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-15T08:23:44+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -2069,20 +2124,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-15T15:35:32+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -2105,20 +2157,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-16T08:16:35+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -2143,20 +2192,30 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "25380B102",
+    "date": "20261020",
+    "prix": 2.62,
+    "statut": "ok"
    },
    "entree": "2026-10-16T08:16:35+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "battu": false,
+     "date": "20261029",
+     "ecart": -0.061,
+     "marche": {
+      "fonds": "SPY",
+      "variation": 0.0076
+     },
+     "prix": 2.48,
+     "statut": "mesure",
+     "variation": -0.0534
     }
    },
    "methode": "score-9",
@@ -2181,20 +2240,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "33830Q208",
+    "date": "20261021",
+    "prix": 2.57,
+    "statut": "ok"
    },
    "entree": "2026-10-16T08:16:35+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -2219,20 +2279,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-16T08:16:35+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -2257,20 +2314,30 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "640655106",
+    "date": "20261020",
+    "prix": 2.16,
+    "statut": "ok"
    },
    "entree": "2026-10-16T08:16:35+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "battu": false,
+     "date": "20261027",
+     "ecart": -0.0079,
+     "marche": {
+      "fonds": "SPY",
+      "variation": -0.0014
+     },
+     "prix": 2.14,
+     "statut": "mesure",
+     "variation": -0.0093
     }
    },
    "methode": "score-9",
@@ -2295,20 +2362,30 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "38268T103",
+    "date": "20261020",
+    "prix": 1.04,
+    "statut": "ok"
    },
    "entree": "2026-10-17T07:52:45+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "battu": true,
+     "date": "20261028",
+     "ecart": -0.0233,
+     "marche": {
+      "fonds": "SPY",
+      "variation": 0.0041
+     },
+     "prix": 1.02,
+     "statut": "mesure",
+     "variation": -0.0192
     }
    },
    "methode": "score-9",
@@ -2327,24 +2404,21 @@
    ],
    "symbole": "GPRO",
    "taille": null,
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-17T07:52:45+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -2363,24 +2437,34 @@
    ],
    "symbole": "ROLR",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "12448X201",
+    "date": "20261020",
+    "prix": 5.17,
+    "statut": "ok"
    },
    "entree": "2026-10-17T07:52:45+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "battu": true,
+     "date": "20261027",
+     "ecart": -0.074,
+     "marche": {
+      "fonds": "SPY",
+      "variation": -0.0014
+     },
+     "prix": 4.78,
+     "statut": "mesure",
+     "variation": -0.0754
     }
    },
    "methode": "score-9",
@@ -2405,20 +2489,30 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "G1466R173",
+    "date": "20261020",
+    "prix": 4.44,
+    "statut": "ok"
    },
    "entree": "2026-10-17T07:52:45+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "battu": false,
+     "date": "20261027",
+     "ecart": -0.1067,
+     "marche": {
+      "fonds": "SPY",
+      "variation": -0.0014
+     },
+     "prix": 3.96,
+     "statut": "mesure",
+     "variation": -0.1081
     }
    },
    "methode": "score-9",
@@ -2449,20 +2543,30 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "713448108",
+    "date": "20261021",
+    "prix": 134.02,
+    "statut": "ok"
    },
    "entree": "2026-10-17T07:52:45+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "battu": false,
+     "date": "20261029",
+     "ecart": -0.0146,
+     "marche": {
+      "fonds": "SPY",
+      "variation": 0.0042
+     },
+     "prix": 132.63,
+     "statut": "mesure",
+     "variation": -0.0104
     }
    },
    "methode": "score-9",
@@ -2491,20 +2595,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-20T08:38:24+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -2523,23 +2624,25 @@
    ],
    "symbole": "AACP",
    "taille": null,
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "038169207",
+    "date": "20261026",
+    "prix": 18.25,
+    "statut": "ok"
    },
    "entree": "2026-10-20T08:38:24+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -2566,20 +2669,30 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "20715F100",
+    "date": "20261022",
+    "prix": 3.33,
+    "statut": "ok"
    },
    "entree": "2026-10-20T08:38:24+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "battu": false,
+     "date": "20261029",
+     "ecart": -0.1341,
+     "marche": {
+      "fonds": "SPY",
+      "variation": -0.001
+     },
+     "prix": 2.88,
+     "statut": "mesure",
+     "variation": -0.1351
     }
    },
    "methode": "score-9",
@@ -2604,19 +2717,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "26817Q886",
+    "date": "20261026",
+    "prix": 10.92,
+    "statut": "ok"
    },
    "entree": "2026-10-21T08:40:35+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -2642,19 +2757,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "G67187107",
+    "date": "20261026",
+    "prix": 1.98,
+    "statut": "ok"
    },
    "entree": "2026-10-22T08:42:49+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -2680,19 +2797,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "75383L102",
+    "date": "20261026",
+    "prix": 25.93,
+    "statut": "ok"
    },
    "entree": "2026-10-22T08:42:49+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -2719,19 +2838,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "987184108",
+    "date": "20261027",
+    "prix": 31.85,
+    "statut": "ok"
    },
    "entree": "2026-10-22T08:42:49+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -2757,20 +2878,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-23T08:38:00+00:00",
    "grace_a_la_taille": true,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -2795,20 +2913,17 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "statut": "pas_de_prix"
    },
    "entree": "2026-10-23T08:38:00+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
-     "statut": "en_attente"
+     "statut": "pas_de_prix"
     }
    },
    "methode": "score-9",
@@ -2830,23 +2945,25 @@
    ],
    "symbole": "LOAN",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "76010Y202",
+    "date": "20261027",
+    "prix": 2.82,
+    "statut": "ok"
    },
    "entree": "2026-10-24T08:13:21+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -2869,23 +2986,25 @@
    ],
    "symbole": "RENT",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "86633R609",
+    "date": "20261029",
+    "prix": 0.09,
+    "statut": "ok"
    },
    "entree": "2026-10-27T09:06:41+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -2905,11 +3024,11 @@
    ],
    "symbole": "DVLT",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
+    "attendu_vers": "2026-11-30",
     "statut": "en_attente"
    },
    "entree": "2026-10-27T09:06:41+00:00",
@@ -2917,11 +3036,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -2947,7 +3066,7 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
+    "attendu_vers": "2026-11-30",
     "statut": "en_attente"
    },
    "entree": "2026-10-27T09:06:41+00:00",
@@ -2955,11 +3074,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -2985,7 +3104,7 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
+    "attendu_vers": "2026-11-30",
     "statut": "en_attente"
    },
    "entree": "2026-10-27T09:06:41+00:00",
@@ -2993,11 +3112,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -3024,19 +3143,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "37253A103",
+    "date": "20261029",
+    "prix": 33.16,
+    "statut": "ok"
    },
    "entree": "2026-10-27T09:06:41+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -3064,7 +3185,7 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
+    "attendu_vers": "2026-11-30",
     "statut": "en_attente"
    },
    "entree": "2026-10-28T09:46:53+00:00",
@@ -3072,11 +3193,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -3102,19 +3223,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "Y2258E107",
+    "date": "20261030",
+    "prix": 18.89,
+    "statut": "ok"
    },
    "entree": "2026-10-28T09:46:53+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -3140,19 +3263,21 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
-    "statut": "en_attente"
+    "cusip": "553530106",
+    "date": "20261030",
+    "prix": 122.92,
+    "statut": "ok"
    },
    "entree": "2026-10-28T09:46:53+00:00",
    "grace_a_la_taille": false,
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-12-15",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -3178,7 +3303,7 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
+    "attendu_vers": "2026-11-30",
     "statut": "en_attente"
    },
    "entree": "2026-10-28T09:46:53+00:00",
@@ -3186,11 +3311,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -3214,11 +3339,11 @@
    ],
    "symbole": "NPB",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
+    "attendu_vers": "2026-11-30",
     "statut": "en_attente"
    },
    "entree": "2026-10-29T10:04:32+00:00",
@@ -3226,11 +3351,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -3252,11 +3377,11 @@
    ],
    "symbole": "XBIT",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
+    "attendu_vers": "2026-11-30",
     "statut": "en_attente"
    },
    "entree": "2026-10-29T10:04:32+00:00",
@@ -3264,11 +3389,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -3294,7 +3419,7 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
+    "attendu_vers": "2026-11-30",
     "statut": "en_attente"
    },
    "entree": "2026-10-29T10:04:32+00:00",
@@ -3302,11 +3427,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -3330,7 +3455,7 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
+    "attendu_vers": "2026-11-30",
     "statut": "en_attente"
    },
    "entree": "2026-10-29T10:04:32+00:00",
@@ -3338,11 +3463,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -3368,7 +3493,7 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
+    "attendu_vers": "2026-11-30",
     "statut": "en_attente"
    },
    "entree": "2026-10-29T10:04:32+00:00",
@@ -3376,11 +3501,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -3407,7 +3532,7 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
+    "attendu_vers": "2026-11-30",
     "statut": "en_attente"
    },
    "entree": "2026-10-29T10:04:32+00:00",
@@ -3415,11 +3540,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -3446,7 +3571,7 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
+    "attendu_vers": "2026-11-30",
     "statut": "en_attente"
    },
    "entree": "2026-10-30T10:08:29+00:00",
@@ -3454,11 +3579,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -3484,7 +3609,7 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
+    "attendu_vers": "2026-11-30",
     "statut": "en_attente"
    },
    "entree": "2026-10-30T10:08:29+00:00",
@@ -3492,11 +3617,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -3522,7 +3647,7 @@
   },
   {
    "depart": {
-    "attendu_vers": "2026-11-15",
+    "attendu_vers": "2026-11-30",
     "statut": "en_attente"
    },
    "entree": "2026-10-30T10:08:29+00:00",
@@ -3530,11 +3655,11 @@
    "grace_au_bonus": false,
    "horizons": {
     "30": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     },
     "7": {
-     "attendu_vers": "2026-11-15",
+     "attendu_vers": "2026-11-30",
      "statut": "en_attente"
     }
    },
@@ -3596,7 +3721,7 @@
    ],
    "symbole": "OCFC",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -3632,7 +3757,7 @@
    ],
    "symbole": "GDRX",
    "taille": null,
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -3781,7 +3906,7 @@
    ],
    "symbole": "DRVN",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -3817,7 +3942,7 @@
    ],
    "symbole": "KPTI",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -3856,7 +3981,7 @@
    ],
    "symbole": "AWRE",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -3894,7 +4019,7 @@
    ],
    "symbole": "PMN",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -4021,7 +4146,7 @@
    ],
    "symbole": "STRZ",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -4178,7 +4303,7 @@
    ],
    "symbole": "PRLB",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -4218,7 +4343,7 @@
    ],
    "symbole": "UPBD",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -4258,7 +4383,7 @@
    ],
    "symbole": "BXMT",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -4298,7 +4423,7 @@
    ],
    "symbole": "FBRT",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -4412,7 +4537,7 @@
    ],
    "symbole": "SIDU",
    "taille": null,
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -4450,7 +4575,7 @@
    ],
    "symbole": "ANVS",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -4488,7 +4613,7 @@
    ],
    "symbole": "CLST",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -4602,7 +4727,7 @@
    ],
    "symbole": "AAON",
    "taille": "moyenne",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -4638,7 +4763,7 @@
    ],
    "symbole": "GSHD",
    "taille": null,
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -4674,7 +4799,7 @@
    ],
    "symbole": "GTEN",
    "taille": null,
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -4710,7 +4835,7 @@
    ],
    "symbole": "PLCE",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -4749,7 +4874,7 @@
    ],
    "symbole": "NTHI",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -4789,7 +4914,7 @@
    ],
    "symbole": "ADTN",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5020,7 +5145,7 @@
    ],
    "symbole": "MERC",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5060,7 +5185,7 @@
    ],
    "symbole": "DTI",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5100,7 +5225,7 @@
    ],
    "symbole": "SLQT",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5140,7 +5265,7 @@
    ],
    "symbole": "FUN",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5180,7 +5305,7 @@
    ],
    "symbole": "GOOD",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5224,7 +5349,7 @@
    ],
    "symbole": "LRN",
    "taille": "moyenne",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5264,7 +5389,7 @@
    ],
    "symbole": "MX",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5343,7 +5468,7 @@
    ],
    "symbole": "WW",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5381,7 +5506,7 @@
    ],
    "symbole": "BGDE",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5419,7 +5544,7 @@
    ],
    "symbole": "STKS",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5543,7 +5668,7 @@
    ],
    "symbole": "EGBN",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5583,7 +5708,7 @@
    ],
    "symbole": "HPP",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5623,7 +5748,7 @@
    ],
    "symbole": "LRMR",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5659,7 +5784,7 @@
    ],
    "symbole": "APMD",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5697,7 +5822,7 @@
    ],
    "symbole": "ALDX",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5736,7 +5861,7 @@
    ],
    "symbole": "LPCN",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5776,7 +5901,7 @@
    ],
    "symbole": "BW",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5816,7 +5941,7 @@
    ],
    "symbole": "CATX",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5862,7 +5987,7 @@
    ],
    "symbole": "CTEV",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   },
   {
    "depart": {
@@ -5902,7 +6027,7 @@
    ],
    "symbole": "FF",
    "taille": "petite",
-   "vue": "2026-11-14"
+   "vue": "2026-11-16"
   }
  ],
  "methode": [
@@ -5924,9 +6049,9 @@
      "mesurees": 0
     },
     "7": {
-     "battu": 0,
-     "ecart_moyen": null,
-     "mesurees": 0
+     "battu": 3,
+     "ecart_moyen": -0.1085,
+     "mesurees": 3
     },
     "entrees": 13,
     "libelle": "États financiers passés à ne plus croire (8-K, point 4.02)"
@@ -5966,9 +6091,9 @@
      "mesurees": 0
     },
     "7": {
-     "battu": 0,
-     "ecart_moyen": null,
-     "mesurees": 0
+     "battu": 1,
+     "ecart_moyen": -0.0233,
+     "mesurees": 1
     },
     "entrees": 7,
     "libelle": "Taille inconnue (compagnie étrangère, ou actions ou prix trop vieux)"
@@ -5994,9 +6119,9 @@
      "mesurees": 0
     },
     "7": {
-     "battu": 0,
-     "ecart_moyen": null,
-     "mesurees": 0
+     "battu": 2,
+     "ecart_moyen": -0.1511,
+     "mesurees": 2
     },
     "entrees": 10,
     "libelle": "Petite compagnie (sous le 30e centile du NYSE)"
@@ -6011,8 +6136,8 @@
     },
     "7": {
      "battu": 0,
-     "ecart_moyen": null,
-     "mesurees": 0
+     "ecart_moyen": -0.1209,
+     "mesurees": 3
     },
     "entrees": 44,
     "libelle": "Groupe d'achats"
@@ -6025,8 +6150,8 @@
     },
     "7": {
      "battu": 0,
-     "ecart_moyen": null,
-     "mesurees": 0
+     "ecart_moyen": -0.1056,
+     "mesurees": 3
     },
     "entrees": 56,
     "libelle": "PDG, directeur financier ou président du conseil"
@@ -6039,8 +6164,8 @@
     },
     "7": {
      "battu": 0,
-     "ecart_moyen": -0.066,
-     "mesurees": 4
+     "ecart_moyen": -0.0744,
+     "mesurees": 7
     },
     "entrees": 21,
     "libelle": "Entrée grâce au bonus de petite compagnie (×1,5)"
@@ -6053,8 +6178,8 @@
     },
     "7": {
      "battu": 0,
-     "ecart_moyen": null,
-     "mesurees": 0
+     "ecart_moyen": -0.0146,
+     "mesurees": 1
     },
     "entrees": 3,
     "libelle": "Plusieurs familles de sources d'accord"
@@ -6081,8 +6206,8 @@
     },
     "7": {
      "battu": 0,
-     "ecart_moyen": -0.066,
-     "mesurees": 4
+     "ecart_moyen": -0.0799,
+     "mesurees": 12
     },
     "entrees": 89,
     "libelle": "Achat d'actions par un dirigeant ou un administrateur"
@@ -6095,8 +6220,8 @@
     },
     "7": {
      "battu": 0,
-     "ecart_moyen": null,
-     "mesurees": 0
+     "ecart_moyen": -0.0146,
+     "mesurees": 1
     },
     "entrees": 1,
     "libelle": "Un élu du Congrès achète (actions ou options d'achat)"
@@ -6108,9 +6233,9 @@
      "mesurees": 0
     },
     "7": {
-     "battu": 0,
-     "ecart_moyen": null,
-     "mesurees": 0
+     "battu": 1,
+     "ecart_moyen": 0.0356,
+     "mesurees": 1
     },
     "entrees": 4,
     "libelle": "Un gestionnaire de fonds dépasse 5 % avec des intentions actives (13D)"
@@ -6123,8 +6248,8 @@
     },
     "7": {
      "battu": 0,
-     "ecart_moyen": null,
-     "mesurees": 0
+     "ecart_moyen": -0.0146,
+     "mesurees": 1
     },
     "entrees": 6,
     "libelle": "Grande compagnie (70e centile du NYSE et plus)"
@@ -6136,9 +6261,9 @@
      "mesurees": 0
     },
     "7": {
-     "battu": 0,
-     "ecart_moyen": null,
-     "mesurees": 0
+     "battu": 1,
+     "ecart_moyen": -0.0776,
+     "mesurees": 5
     },
     "entrees": 17,
     "libelle": "Taille inconnue (compagnie étrangère, ou actions ou prix trop vieux)"
@@ -6165,8 +6290,8 @@
     },
     "7": {
      "battu": 0,
-     "ecart_moyen": -0.066,
-     "mesurees": 4
+     "ecart_moyen": -0.0744,
+     "mesurees": 7
     },
     "entrees": 57,
     "libelle": "Petite compagnie (sous le 30e centile du NYSE)"
@@ -6174,44 +6299,44 @@
   },
   "sans_raisons": 16
  },
- "prix_jusqu_au": "2026-10-14",
- "prochains_prix_vers": "2026-11-15",
+ "prix_jusqu_au": "2026-10-31",
+ "prochains_prix_vers": "2026-11-30",
  "resume": {
   "baisse_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 19,
+   "en_attente": 15,
    "mesurees": 0
   },
   "baisse_7": {
-   "battu": 0,
-   "ecart_moyen": null,
-   "en_attente": 19,
-   "mesurees": 0
+   "battu": 3,
+   "ecart_moyen": -0.1085,
+   "en_attente": 11,
+   "mesurees": 3
   },
   "ecartee_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 28,
+   "en_attente": 23,
    "mesurees": 0
   },
   "ecartee_7": {
-   "battu": 0,
-   "ecart_moyen": null,
-   "en_attente": 28,
-   "mesurees": 0
+   "battu": 3,
+   "ecart_moyen": -0.0599,
+   "en_attente": 15,
+   "mesurees": 4
   },
   "hausse_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 96,
+   "en_attente": 90,
    "mesurees": 0
   },
   "hausse_7": {
-   "battu": 2,
-   "ecart_moyen": -0.0243,
-   "en_attente": 87,
-   "mesurees": 8
+   "battu": 3,
+   "ecart_moyen": -0.0543,
+   "en_attente": 58,
+   "mesurees": 18
   }
  }
 }

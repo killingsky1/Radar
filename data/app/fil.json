@@ -1,5 +1,804 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-16T20:56:08+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Indice des prix à la consommation"
+    ],
+    [
+     "Période",
+     "octobre 2026"
+    ]
+   ],
+   "indicateur": "Indice des prix à la consommation",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261116/dq261116a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-11-16T08:30:00-05:00",
+   "periode": "octobre 2026",
+   "resume": "L'Indice des prix à la consommation (IPC) a augmenté de 3,1 % d'une année à l'autre en octobre. Il s'agit d'une hausse identique à celle enregistrée en septembre (+3,1 %). Sur une base mensuelle désaisonnalisée, l'IPC a progressé de 0,2 % en octobre."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261116/dq261116a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-11-16",
+  "official_id": "261116/dq261116a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261116/dq261116a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-11-16",
+  "sha256": "6b46e40d9f6115500fdb1830024ec59c319e4baafd5077628134d9283c1e5d79",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Indice des prix à la consommation, octobre 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-16T20:56:05+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/services-publics-approvisionnement/nouvelles/2026/11/le-gouvernement-du-canada-va-de-lavant-avec-la-mise-en-place-dun-pont-de-remplacement-permanent-et-la-renovation-du-pont-jetee-lasalle.html",
+   "ministere": "Services publics et Approvisionnement Canada",
+   "mis_a_jour": "2026-11-16T11:30:38-05:00",
+   "resume": "Le gouvernement du Canada va de l'avant avec une solution permanente pour le pont-jetée LaSalle. Celle-ci permettra de renforcer les liens entre les collectivités de Kingston, de soutenir le tourisme et les entreprises du centre-ville, ainsi que de maintenir l'accès maritime au secteur riverain de la ville.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Services publics et Approvisionnement Canada"
+  ],
+  "id": "nouvelles_eco_ca:services-publics-approvisionnement/nouvelles/2026/11/le-gouvernement-du-canada-va-de-lavant-avec-la-mise-en-place-dun-pont-de-remplacement-permanent-et-la-renovation-du-pont-jetee-lasalle.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-16",
+  "official_id": "services-publics-approvisionnement/nouvelles/2026/11/le-gouvernement-du-canada-va-de-lavant-avec-la-mise-en-place-dun-pont-de-remplacement-permanent-et-la-renovation-du-pont-jetee-lasalle.html",
+  "official_url": "https://www.canada.ca/fr/services-publics-approvisionnement/nouvelles/2026/11/le-gouvernement-du-canada-va-de-lavant-avec-la-mise-en-place-dun-pont-de-remplacement-permanent-et-la-renovation-du-pont-jetee-lasalle.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-16",
+  "sha256": "ff31dee80e4da83983a2fc100c4f7541a73f46d58e8fd30f0ee16ef6726d0567",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le gouvernement du Canada va de l’avant avec la mise en place d’un pont de remplacement permanent et la rénovation du pont-jetée LaSalle"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-16T20:56:05+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ressources-naturelles-canada/nouvelles/2026/11/le-canada-investit-dans-lexploitation-de-mineraux-critiques-au-yukon.html",
+   "ministere": "Ressources naturelles Canada",
+   "mis_a_jour": "2026-11-16T11:30:35-05:00",
+   "resume": "Le secrétaire parlementaire de la ministre des Affaires du Nord et de l’Arctique et député du Yukon, Brendan Hanley, a annoncé aujourd’hui un investissement pouvant atteindre 14 millions de dollars dans la société Fireweed Metals. Ce financement servira à soutenir des travaux d’ingénierie et de validation ainsi que des activités techniques qui permettront de faire avancer le projet minier Mactung, toujours en attente d’une décision finale d’investissement – une étape clé pour la production intérieure de concentrés de tungstène destinés au secteur industriel nord-américain.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Ressources naturelles Canada"
+  ],
+  "id": "nouvelles_eco_ca:ressources-naturelles-canada/nouvelles/2026/11/le-canada-investit-dans-lexploitation-de-mineraux-critiques-au-yukon.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-16",
+  "official_id": "ressources-naturelles-canada/nouvelles/2026/11/le-canada-investit-dans-lexploitation-de-mineraux-critiques-au-yukon.html",
+  "official_url": "https://www.canada.ca/fr/ressources-naturelles-canada/nouvelles/2026/11/le-canada-investit-dans-lexploitation-de-mineraux-critiques-au-yukon.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-16",
+  "sha256": "32a487ffe78ba1452531a7bfef10e62e8a0bcbfa3f90a08c59f8cb5063ec635a",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le Canada investit dans l’exploitation de minéraux critiques au Yukon"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-16T20:56:05+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/11/parlons-dargent--obtenez-de-laide-digne-de-confiance-pour-gerer-vos-dettes.html",
+   "ministere": "Innovation, Sciences et Développement économique Canada",
+   "mis_a_jour": "2026-11-16T10:00:00-05:00",
+   "resume": "Parlons d’argent : obtenez de l’aide digne de confiance pour gérer vos dettes",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Innovation, Sciences et Développement économique Canada"
+  ],
+  "id": "nouvelles_eco_ca:innovation-sciences-developpement-economique/nouvelles/2026/11/parlons-dargent--obtenez-de-laide-digne-de-confiance-pour-gerer-vos-dettes.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-16",
+  "official_id": "innovation-sciences-developpement-economique/nouvelles/2026/11/parlons-dargent--obtenez-de-laide-digne-de-confiance-pour-gerer-vos-dettes.html",
+  "official_url": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/11/parlons-dargent--obtenez-de-laide-digne-de-confiance-pour-gerer-vos-dettes.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-16",
+  "sha256": "0af79b3da3f30e90a5cca8ebd0d9c691510f56030c5213958fb7d0ca852889a7",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Parlons d’argent : obtenez de l’aide digne de confiance pour gérer vos dettes"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-16T20:55:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "209742",
+   "date_rapport": "2026-11-10",
+   "long": 79072,
+   "marche": "Nasdaq-100 (E-mini)",
+   "net": 29131,
+   "nom_officiel": "NASDAQ MINI - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 288717,
+   "short": 49941,
+   "variation": -13742
+  },
+  "direction": -1,
+  "entities": [
+   "NASDAQ MINI - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261110209742F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-10",
+  "official_id": "261110209742F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261110209742F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-16",
+  "sha256": "cc8101196aae8df647ee0f93845abc7a96d3d2c04e857b71e5e5d7495ab1293b",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Nasdaq-100 (E-mini) : les gros spéculateurs sont acheteurs nets de 29 131 contrats (−13 742 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-16T20:55:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "13874A",
+   "date_rapport": "2026-11-10",
+   "long": 211412,
+   "marche": "S&P 500 (E-mini)",
+   "net": -138634,
+   "nom_officiel": "E-MINI S&P 500 - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 2017687,
+   "short": 350046,
+   "variation": -9220
+  },
+  "direction": -1,
+  "entities": [
+   "E-MINI S&P 500 - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:26111013874AF",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-10",
+  "official_id": "26111013874AF",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=26111013874AF",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-16",
+  "sha256": "d37b2e4de672df01fee9a64de0537dbbccd5c08157a558d9248434f1b8e81b50",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "S&P 500 (E-mini) : les gros spéculateurs sont vendeurs nets de 138 634 contrats (−9 220 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-16T20:55:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "133741",
+   "date_rapport": "2026-11-10",
+   "long": 15943,
+   "marche": "Bitcoin (CME)",
+   "net": 2375,
+   "nom_officiel": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 19265,
+   "short": 13568,
+   "variation": 145
+  },
+  "direction": 1,
+  "entities": [
+   "BITCOIN - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261110133741F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-10",
+  "official_id": "261110133741F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261110133741F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-16",
+  "sha256": "ded1fc0782210574fe48ae1502f214990d1f53610286fbe26508cf57c962e8a6",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Bitcoin (CME) : les gros spéculateurs sont acheteurs nets de 2 375 contrats (+145 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-16T20:55:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "090741",
+   "date_rapport": "2026-11-10",
+   "long": 107703,
+   "marche": "Dollar canadien",
+   "net": -32592,
+   "nom_officiel": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 342677,
+   "short": 140295,
+   "variation": 9183
+  },
+  "direction": 1,
+  "entities": [
+   "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261110090741F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-10",
+  "official_id": "261110090741F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261110090741F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-16",
+  "sha256": "552113cbb10073306dad48816f057aa69e2774b3953a91e66596fd8ecbead4a5",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Dollar canadien : les gros spéculateurs sont vendeurs nets de 32 592 contrats (+9 183 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-16T20:55:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "088691",
+   "date_rapport": "2026-11-10",
+   "long": 226234,
+   "marche": "Or",
+   "net": 190107,
+   "nom_officiel": "GOLD - COMMODITY EXCHANGE INC.",
+   "open_interest": 404725,
+   "short": 36127,
+   "variation": 10559
+  },
+  "direction": 1,
+  "entities": [
+   "GOLD - COMMODITY EXCHANGE INC."
+  ],
+  "id": "cftc_cot:261110088691F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-10",
+  "official_id": "261110088691F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261110088691F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-16",
+  "sha256": "56e756b47af9b9c3518061f626f50b2564204f9138ed2e6e808073cc6d9d5639",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Or : les gros spéculateurs sont acheteurs nets de 190 107 contrats (+10 559 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-16T20:55:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "085692",
+   "date_rapport": "2026-11-10",
+   "long": 83735,
+   "marche": "Cuivre",
+   "net": 28904,
+   "nom_officiel": "COPPER- #1 - COMMODITY EXCHANGE INC.",
+   "open_interest": 314115,
+   "short": 54831,
+   "variation": -8806
+  },
+  "direction": -1,
+  "entities": [
+   "COPPER- #1 - COMMODITY EXCHANGE INC."
+  ],
+  "id": "cftc_cot:261110085692F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-10",
+  "official_id": "261110085692F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261110085692F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-16",
+  "sha256": "7981b84f86755c41fca448929c67ee60a47a53488720260e46c96401cf2a465b",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Cuivre : les gros spéculateurs sont acheteurs nets de 28 904 contrats (−8 806 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-16T20:55:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "067651",
+   "date_rapport": "2026-11-10",
+   "long": 316374,
+   "marche": "Pétrole WTI",
+   "net": 73982,
+   "nom_officiel": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+   "open_interest": 1917473,
+   "short": 242392,
+   "variation": -6307
+  },
+  "direction": -1,
+  "entities": [
+   "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261110067651F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-10",
+  "official_id": "261110067651F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261110067651F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-16",
+  "sha256": "7962ed0c5cffa79bc1636487d452802d8ab179e470c6cafbe6132d4cb797eef7",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Pétrole WTI : les gros spéculateurs sont acheteurs nets de 73 982 contrats (−6 307 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-16T20:55:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "043602",
+   "date_rapport": "2026-11-10",
+   "long": 684024,
+   "marche": "Obligations américaines 10 ans",
+   "net": -983916,
+   "nom_officiel": "UST 10Y NOTE - CHICAGO BOARD OF TRADE",
+   "open_interest": 6095194,
+   "short": 1667940,
+   "variation": -21557
+  },
+  "direction": -1,
+  "entities": [
+   "UST 10Y NOTE - CHICAGO BOARD OF TRADE"
+  ],
+  "id": "cftc_cot:261110043602F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-10",
+  "official_id": "261110043602F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261110043602F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-16",
+  "sha256": "bd0296a9ab2ac75a813f2249914340eb52d7a4abdce31d302d722d551010b59c",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Obligations américaines 10 ans : les gros spéculateurs sont vendeurs nets de 983 916 contrats (−21 557 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-16T20:56:05+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/services-publics-approvisionnement/nouvelles/2026/11/lhonorable-jenna-sudds-presente-les-investissements-du-gouvernement-du-canada-dans-le-budget-de-2026--maitres-chez-nous.html",
+   "ministere": "Services publics et Approvisionnement Canada",
+   "mis_a_jour": "2026-11-14T11:00:00-05:00",
+   "resume": "Hier, la député de Kanata, l'honorable Jenna Sudds, Secrétaire parlementaire du ministre de la Transformation du gouvernement, des Travaux publics et de l’Approvisionnement et du secrétaire d’État (Approvisionnement en matière de défense), a visité le centre John G Mlacak à Kanata pour présenter les investissements clés prévus dans le Budget de 2026 – Maîtres chez nous pour les installations récréatives communautaires et les patinoires.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Services publics et Approvisionnement Canada"
+  ],
+  "id": "nouvelles_eco_ca:services-publics-approvisionnement/nouvelles/2026/11/lhonorable-jenna-sudds-presente-les-investissements-du-gouvernement-du-canada-dans-le-budget-de-2026--maitres-chez-nous.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-14",
+  "official_id": "services-publics-approvisionnement/nouvelles/2026/11/lhonorable-jenna-sudds-presente-les-investissements-du-gouvernement-du-canada-dans-le-budget-de-2026--maitres-chez-nous.html",
+  "official_url": "https://www.canada.ca/fr/services-publics-approvisionnement/nouvelles/2026/11/lhonorable-jenna-sudds-presente-les-investissements-du-gouvernement-du-canada-dans-le-budget-de-2026--maitres-chez-nous.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-14",
+  "sha256": "05b4db103445ba4838030b6f04c8e6370007bfa127cd2e569cfc6aa4e8692129",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "L'honorable Jenna Sudds présente les investissements du gouvernement du Canada dans le Budget de 2026 – Maîtres chez nous"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-16T20:56:05+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/11/le-secretaire-parlementaire-ryan-turnbull-presente-les-investissements-du-gouvernement-du-canada-dans-les-installations-de-loisirs-et-les-patinoire.html",
+   "ministere": "Ministère des Finances Canada",
+   "mis_a_jour": "2026-11-14T10:00:08-05:00",
+   "resume": "Les arénas, les patinoires et les installations de loisirs occupent une place centrale dans bien des communautés partout au pays. C’est là que tant de Canadiens et de Canadiennes apprennent à patiner, que les jeunes se retrouvent après l’école, que les adultes enfilent leurs patins après le travail et que familles et amis se rassemblent dans les gradins, unis par leur passion du sport. Cependant, bon nombre de ces installations sont vieillissantes et ont grandement besoin d’investissements pour demeurer sûres et accessibles et continuer de répondre aux besoins des communautés pendant des années encore.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Ministère des Finances Canada"
+  ],
+  "id": "nouvelles_eco_ca:ministere-finances/nouvelles/2026/11/le-secretaire-parlementaire-ryan-turnbull-presente-les-investissements-du-gouvernement-du-canada-dans-les-installations-de-loisirs-et-les-patinoire.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-14",
+  "official_id": "ministere-finances/nouvelles/2026/11/le-secretaire-parlementaire-ryan-turnbull-presente-les-investissements-du-gouvernement-du-canada-dans-les-installations-de-loisirs-et-les-patinoire.html",
+  "official_url": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/11/le-secretaire-parlementaire-ryan-turnbull-presente-les-investissements-du-gouvernement-du-canada-dans-les-installations-de-loisirs-et-les-patinoire.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-14",
+  "sha256": "fb506a2f8821cba937ec19a0d15b007169ac1ae207eff87cc517c482d7ac1747",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le secrétaire parlementaire Ryan Turnbull présente les investissements du gouvernement du Canada dans les installations de loisirs et les patinoires communautaires annoncés dans le Budget de 2026 – Maîtres chez nous"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-16T20:56:05+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/11/le-secretaire-parlementaire-bardeesy-presente-les-investissements-du-gouvernement-du-canada-prevus-dans-le-budget-de-2026--maitres-chez-nous.html",
+   "ministere": "Innovation, Sciences et Développement économique Canada",
+   "mis_a_jour": "2026-11-14T10:02:26-05:00",
+   "resume": "Aujourd’hui, le secrétaire parlementaire de la ministre de l’Industrie Karim Bardeesy a rencontré des membres de la communauté de Vaughan pour présenter les investissements clés prévus dans le Budget de 2026 – Maîtres chez nous pour les installations récréatives communautaires et les patinoires.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Innovation, Sciences et Développement économique Canada"
+  ],
+  "id": "nouvelles_eco_ca:innovation-sciences-developpement-economique/nouvelles/2026/11/le-secretaire-parlementaire-bardeesy-presente-les-investissements-du-gouvernement-du-canada-prevus-dans-le-budget-de-2026--maitres-chez-nous.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-14",
+  "official_id": "innovation-sciences-developpement-economique/nouvelles/2026/11/le-secretaire-parlementaire-bardeesy-presente-les-investissements-du-gouvernement-du-canada-prevus-dans-le-budget-de-2026--maitres-chez-nous.html",
+  "official_url": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/11/le-secretaire-parlementaire-bardeesy-presente-les-investissements-du-gouvernement-du-canada-prevus-dans-le-budget-de-2026--maitres-chez-nous.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-14",
+  "sha256": "f02695bce0606965ed49889e78a271cde1d87eca956587c5fcc170fd0564b60a",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le secrétaire parlementaire Bardeesy présente les investissements du gouvernement du Canada prévus dans le Budget de 2026 – Maîtres chez nous"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-16T20:56:05+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/11/la-secretaire-parlementaire-rochefort-presente-les-investissements-du-gouvernement-du-canada-prevus-dans-le-budget-de-2026-pour-les-installations-r.html",
+   "ministere": "Innovation, Sciences et Développement économique Canada",
+   "mis_a_jour": "2026-11-14T10:00:00-05:00",
+   "resume": "La secrétaire parlementaire Rochefort présente les investissements du gouvernement du Canada prévus dans le budget de 2026 pour les installations récréatives et les infrastructures communautaires à North Bay, en Ontario",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Innovation, Sciences et Développement économique Canada"
+  ],
+  "id": "nouvelles_eco_ca:innovation-sciences-developpement-economique/nouvelles/2026/11/la-secretaire-parlementaire-rochefort-presente-les-investissements-du-gouvernement-du-canada-prevus-dans-le-budget-de-2026-pour-les-installations-r.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-14",
+  "official_id": "innovation-sciences-developpement-economique/nouvelles/2026/11/la-secretaire-parlementaire-rochefort-presente-les-investissements-du-gouvernement-du-canada-prevus-dans-le-budget-de-2026-pour-les-installations-r.html",
+  "official_url": "https://www.canada.ca/fr/innovation-sciences-developpement-economique/nouvelles/2026/11/la-secretaire-parlementaire-rochefort-presente-les-investissements-du-gouvernement-du-canada-prevus-dans-le-budget-de-2026-pour-les-installations-r.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-14",
+  "sha256": "d32f8db91004fca6863da7bee1f510bd1cb8ff041f2cb20301d0f11c37f896bf",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "La secrétaire parlementaire Rochefort présente les investissements du gouvernement du Canada prévus dans le budget de 2026 pour les installations récréatives et les infrastructures communautaires à North Bay, en Ontario"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-16T20:56:05+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/11/deces-dun-cinquieme-membre-des-forces-armees-canadiennes-a-la-suite-de-lincident-survenu-a-la-base-des-forces-canadiennes-wainwright.html",
+   "ministere": "Défense nationale",
+   "mis_a_jour": "2026-11-14T16:10:54-05:00",
+   "resume": "C’est avec une grande tristesse que les Forces armées canadiennes (FAC) confirment le décès d’un cinquième soldat qui recevait des soins médicaux en Ontario à la suite du tragique incident survenu à la Base des Forces canadiennes Wainwright le 17 octobre 2026.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Défense nationale"
+  ],
+  "id": "nouvelles_defense_ca:ministere-defense-nationale/nouvelles/2026/11/deces-dun-cinquieme-membre-des-forces-armees-canadiennes-a-la-suite-de-lincident-survenu-a-la-base-des-forces-canadiennes-wainwright.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-14",
+  "official_id": "ministere-defense-nationale/nouvelles/2026/11/deces-dun-cinquieme-membre-des-forces-armees-canadiennes-a-la-suite-de-lincident-survenu-a-la-base-des-forces-canadiennes-wainwright.html",
+  "official_url": "https://www.canada.ca/fr/ministere-defense-nationale/nouvelles/2026/11/deces-dun-cinquieme-membre-des-forces-armees-canadiennes-a-la-suite-de-lincident-survenu-a-la-base-des-forces-canadiennes-wainwright.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-14",
+  "sha256": "55e1c7af1b0b4c267c1ae18178fcf4d16c8da714b56c7674a9b7e30cbb7ec486",
+  "source": "nouvelles_defense_ca",
+  "tickers": [],
+  "title": "Décès d’un cinquième membre des Forces armées canadiennes à la suite de l’incident survenu à la Base des Forces canadiennes Wainwright"
+ },
+ {
   "amount_max": 245092692,
   "amount_min": 245092692,
   "badge": "officiel",
@@ -9281,471 +10080,6 @@
    "ONL"
   ],
   "title": "Kawa Capital Management, Inc détient 9,6 % de Orion Properties Inc. (13D, intentions actives, mise à jour n° 4)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-14T10:42:43+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 18402418.0,
-   "amendement": null,
-   "bourse": "NYSE",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0001796073",
-   "cik_sujet_entete": "0001796073",
-   "date_evenement": "2026-09-30",
-   "declarant": "Sprott Inc.",
-   "extrait_but": null,
-   "nb_personnes": 2,
-   "nom_emetteur": "Vizsla Silver Corp.",
-   "pourcentage": 5.2,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "CO",
-    "HC",
-    "IA"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Sprott Inc.",
-   "Vizsla Silver Corp."
-  ],
-  "id": "sec_13dg:0000919574-26-007637",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0000919574-26-007637",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1796073/000091957426007637/0000919574-26-007637-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-11-13",
-  "sha256": "102f901cc072070874d4674619c5d96989d8af3ea387fa873903c6a72d268027",
-  "source": "sec_13dg",
-  "tickers": [
-   "VZLA"
-  ],
-  "title": "Sprott Inc. détient 5,2 % de Vizsla Silver Corp. (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-14T10:42:43+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 3974000.0,
-   "amendement": null,
-   "bourse": "Nasdaq",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0001534120",
-   "cik_sujet_entete": "0001534120",
-   "date_evenement": "2026-09-30",
-   "declarant": "Farallon Capital Management, L.L.C.",
-   "extrait_but": null,
-   "nb_personnes": 16,
-   "nom_emetteur": "Avalo Therapeutics, Inc.",
-   "pourcentage": 7.4,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "HC",
-    "IA",
-    "IN",
-    "OO"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Farallon Capital Management, L.L.C.",
-   "Avalo Therapeutics, Inc."
-  ],
-  "id": "sec_13dg:0000908834-26-000525",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0000908834-26-000525",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1534120/000090883426000525/0000908834-26-000525-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-11-13",
-  "sha256": "bfdd4a43299fa83959ea6a407db62acd3f03ac300b7f7965117ba4e410884db2",
-  "source": "sec_13dg",
-  "tickers": [
-   "AVTX"
-  ],
-  "title": "Farallon Capital Management, L.L.C. détient 7,4 % de Avalo Therapeutics, Inc. (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-14T10:42:42+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 1091121.0,
-   "amendement": null,
-   "bourse": "Nasdaq",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0002080216",
-   "cik_sujet_entete": "0002080216",
-   "date_evenement": "2026-09-30",
-   "declarant": "Westchester Capital Management, LLC",
-   "extrait_but": null,
-   "nb_personnes": 4,
-   "nom_emetteur": "BOA Acquisition Corp. II",
-   "pourcentage": 7.48,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA",
-    "IV"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Westchester Capital Management, LLC",
-   "BOA Acquisition Corp. II"
-  ],
-  "id": "sec_13dg:0001140361-26-043538",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001140361-26-043538",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/2080216/000114036126043538/0001140361-26-043538-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-11-13",
-  "sha256": "9d2101c042599f0d231fbefd07accd7e95e9ca006377e64b01e627bf88a59691",
-  "source": "sec_13dg",
-  "tickers": [
-   "THEO"
-  ],
-  "title": "Westchester Capital Management, LLC détient 7,48 % de BOA Acquisition Corp. II (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-14T10:42:42+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 636030.0,
-   "amendement": null,
-   "bourse": "NYSE",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0002065661",
-   "cik_sujet_entete": "0002065661",
-   "date_evenement": "2026-09-30",
-   "declarant": "Westchester Capital Management, LLC",
-   "extrait_but": null,
-   "nb_personnes": 3,
-   "nom_emetteur": "Plutonian Acquisition Corp II",
-   "pourcentage": 5.59,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Westchester Capital Management, LLC",
-   "Plutonian Acquisition Corp. II"
-  ],
-  "id": "sec_13dg:0001140361-26-043536",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001140361-26-043536",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/2065661/000114036126043536/0001140361-26-043536-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-11-13",
-  "sha256": "3422b393a63cadee0ebcc93b7cb2d35ad6ffb9002e15dd04cdb7eb66b97cf288",
-  "source": "sec_13dg",
-  "tickers": [
-   "PLUN"
-  ],
-  "title": "Westchester Capital Management, LLC détient 5,59 % de Plutonian Acquisition Corp. II (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-14T10:42:41+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 1153923.0,
-   "amendement": null,
-   "bourse": "NYSE",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0001926314",
-   "cik_sujet_entete": "0001926314",
-   "date_evenement": "2026-09-30",
-   "declarant": "Westchester Capital Management, LLC",
-   "extrait_but": null,
-   "nb_personnes": 4,
-   "nom_emetteur": "Ocean Capital Acquisition Corporation",
-   "pourcentage": 7.37,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA",
-    "IV"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Westchester Capital Management, LLC",
-   "Ocean Capital Acquisition Corp"
-  ],
-  "id": "sec_13dg:0001140361-26-043535",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001140361-26-043535",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1926314/000114036126043535/0001140361-26-043535-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-11-13",
-  "sha256": "f1725a14c2c691b4728436e292c673e56f9cc2d87e239d944ec40fc3c83ed16d",
-  "source": "sec_13dg",
-  "tickers": [
-   "OCAC"
-  ],
-  "title": "Westchester Capital Management, LLC détient 7,37 % de Ocean Capital Acquisition Corp (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-14T10:42:41+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 1123581.0,
-   "amendement": null,
-   "bourse": "Nasdaq",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0002116230",
-   "cik_sujet_entete": "0002116230",
-   "date_evenement": "2026-09-30",
-   "declarant": "Westchester Capital Management, LLC",
-   "extrait_but": null,
-   "nb_personnes": 4,
-   "nom_emetteur": "Southern Cross Acquisition I Corp.",
-   "pourcentage": 7.63,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA",
-    "IV"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Westchester Capital Management, LLC",
-   "Southern Cross Acquisition I Corp."
-  ],
-  "id": "sec_13dg:0001140361-26-043534",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001140361-26-043534",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/2116230/000114036126043534/0001140361-26-043534-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-11-13",
-  "sha256": "d435f5090d11a224327f2e924fc8eb85f9498eabf05e67d2cfa4732303fe9bfc",
-  "source": "sec_13dg",
-  "tickers": [
-   "NCO"
-  ],
-  "title": "Westchester Capital Management, LLC détient 7,63 % de Southern Cross Acquisition I Corp. (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-14T10:42:40+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 1122646.0,
-   "amendement": null,
-   "bourse": "Nasdaq",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0002064658",
-   "cik_sujet_entete": "0002064658",
-   "date_evenement": "2026-09-30",
-   "declarant": "Westchester Capital Management, LLC",
-   "extrait_but": null,
-   "nb_personnes": 4,
-   "nom_emetteur": "Yorkville Acquisition Corp.",
-   "pourcentage": 6.3,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA",
-    "IV"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Westchester Capital Management, LLC",
-   "Yorkville Acquisition Corp."
-  ],
-  "id": "sec_13dg:0001140361-26-043532",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001140361-26-043532",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/2064658/000114036126043532/0001140361-26-043532-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-11-13",
-  "sha256": "637c552527d14ef801b658b512671be52a13908cf0f4b1a221e4e9da2fea699d",
-  "source": "sec_13dg",
-  "tickers": [
-   "MCGA"
-  ],
-  "title": "Westchester Capital Management, LLC détient 6,3 % de Yorkville Acquisition Corp. (13G, placement passif)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "emetteur_coherent": true,
-   "empreinte": true,
-   "pourcentage_valide": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-14T10:42:40+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 942372.0,
-   "amendement": null,
-   "bourse": "NYSE",
-   "but_sous_evalue": null,
-   "cik_emetteur": "0002111038",
-   "cik_sujet_entete": "0002111038",
-   "date_evenement": "2026-09-30",
-   "declarant": "Westchester Capital Management, LLC",
-   "extrait_but": null,
-   "nb_personnes": 3,
-   "nom_emetteur": "Disciplined Growth Acquisition Corporation",
-   "pourcentage": 5.6,
-   "type": "SCHEDULE 13G",
-   "types_declarants": [
-    "IA"
-   ]
-  },
-  "direction": 0,
-  "entities": [
-   "Westchester Capital Management, LLC",
-   "DISCIPLINED GROWTH ACQUISITION Corp"
-  ],
-  "id": "sec_13dg:0001140361-26-043529",
-  "kind": "plus_5_pourcent",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001140361-26-043529",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/2111038/000114036126043529/0001140361-26-043529-index.htm",
-  "parser_version": "sec-8",
-  "published_on": "2026-11-13",
-  "sha256": "fe374628f1d1c7ccc850c5beeffe33250ce5e2b89c7fc0e13abde8418f0559fc",
-  "source": "sec_13dg",
-  "tickers": [
-   "DGAC"
-  ],
-  "title": "Westchester Capital Management, LLC détient 5,6 % de DISCIPLINED GROWTH ACQUISITION Corp (13G, placement passif)"
  },
  {
   "amount_max": null,
@@ -43338,100 +43672,6 @@
   "title": "Contrat fédéral de 12,4 M$ : WILDSTONE CONSTRUCTION & ENGINEERIN (Gendarmerie royale du Canada)"
  },
  {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "avis_actif": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "fiches_du_meme_avis": true,
-   "marque_et_ingredient_lus": true,
-   "nouvelle_substance_active": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-07T10:26:36+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "actif": "1",
-   "avec_conditions": false,
-   "classe": "Priorité-NSA",
-   "classe_therapeutique": "",
-   "date": "2026-10-30",
-   "details": [
-    [
-     "Médicament",
-     "HIBSAGO"
-    ],
-    [
-     "Ingrédient(s)",
-     "bepirovirsen sodique 150 MG / ML"
-    ],
-    [
-     "Fabricant",
-     "GLAXOSMITHKLINE INC"
-    ],
-    [
-     "Type",
-     "Disponible avec ordonnance"
-    ],
-    [
-     "Présentation",
-     "Présentation de drog"
-    ],
-    [
-     "Classe",
-     "Priorité-NSA"
-    ],
-    [
-     "Avis de conformité",
-     "n° 38569 du 2026-10-30"
-    ]
-   ],
-   "din": [
-    "02573113"
-   ],
-   "fabricant": "GLAXOSMITHKLINE INC",
-   "fiches_meme_avis": true,
-   "ingredients": [
-    {
-     "dose": "150 MG / ML",
-     "nom": "bepirovirsen sodique"
-    }
-   ],
-   "marques": [
-    "HIBSAGO"
-   ],
-   "numero": 38569,
-   "presentation": "Présentation de drog",
-   "type_produit": "Disponible avec ordonnance"
-  },
-  "direction": 0,
-  "entities": [
-   "GLAXOSMITHKLINE INC"
-  ],
-  "id": "sante_canada:38569",
-  "kind": "approbation_sante_canada",
-  "notes": [
-   "Examen prioritaire (classe « Priorité-NSA ») : Santé Canada a examiné la demande en accéléré."
-  ],
-  "occurred_on": "2026-10-30",
-  "official_id": "38569",
-  "official_url": "https://health-products.canada.ca/noc-ac/nocInfo?lang=fre&no=38569",
-  "parser_version": "sante-canada-1",
-  "published_on": "2026-10-30",
-  "sha256": "ca32a7393a2852b8ab75237b6bfb397b53a9179ab3b1a54e6f68a5754626c5e8",
-  "source": "sante_canada",
-  "tickers": [],
-  "title": "Santé Canada : nouveau médicament autorisé, HIBSAGO (bepirovirsen sodique), de GLAXOSMITHKLINE INC"
- },
- {
   "amount_max": 15000.0,
   "amount_min": 1001.0,
   "badge": "officiel",
@@ -43885,106 +44125,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "indicateur_de_la_liste_officielle": true,
-   "lien_du_quotidien": true,
-   "resume_lu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-30T21:01:13+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "details": [
-    [
-     "Indicateur",
-     "Produit intérieur brut par industrie"
-    ],
-    [
-     "Période",
-     "août 2026"
-    ]
-   ],
-   "indicateur": "Produit intérieur brut par industrie",
-   "lien": "https://www.statcan.gc.ca/daily-quotidien/261030/dq261030a-fra.htm",
-   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
-   "mis_a_jour": "2026-10-30T08:30:00-04:00",
-   "periode": "août 2026",
-   "resume": "Pour un deuxième mois consécutif, le produit intérieur brut réel était essentiellement inchangé en août."
-  },
-  "direction": 0,
-  "entities": [
-   "Statistique Canada"
-  ],
-  "id": "statcan:261030/dq261030a",
-  "kind": "indicateur_principal",
-  "notes": [],
-  "occurred_on": "2026-10-30",
-  "official_id": "261030/dq261030a",
-  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261030/dq261030a-fra.htm",
-  "parser_version": "statcan-1",
-  "published_on": "2026-10-30",
-  "sha256": "f0ef4ec6a06a38bce91e9d1c09e85a602dc5e7def476f4e677d4c2f36487dd13",
-  "source": "statcan",
-  "tickers": [],
-  "title": "Statistique Canada : Produit intérieur brut par industrie, août 2026"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_identique_au_fil": true,
-   "lien_ministere_coherent": true,
-   "ministere_reconnu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_communique": true
-  },
-  "collected_at": "2026-10-30T21:01:10+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "id_fil": "https://www.canada.ca/fr/tribunal-commerce-exterieur/nouvelles/2026/10/le-tribunal-rend-une-decision-dindication-raisonnable-de-dommage--pneus-de-camions-et-dautobus-provenant-de-la-chine.html",
-   "ministere": "Tribunal canadien du commerce extérieur",
-   "mis_a_jour": "2026-10-30T16:10:15-04:00",
-   "resume": "À la suite de l’enquête préliminaire de dommage (PI-2026-005) du Tribunal canadien du commerce extérieur, le Tribunal a décidé aujourd’hui que les éléments de preuve indiquent, de façon raisonnable, que le dumping et le subventionnement de certains pneus de camions et d’autobus provenant de la Chine ont causé un dommage à la branche de production nationale.",
-   "type": "communiqués de presse"
-  },
-  "direction": 0,
-  "entities": [
-   "Tribunal canadien du commerce extérieur"
-  ],
-  "id": "nouvelles_eco_ca:tribunal-commerce-exterieur/nouvelles/2026/10/le-tribunal-rend-une-decision-dindication-raisonnable-de-dommage--pneus-de-camions-et-dautobus-provenant-de-la-chine.html",
-  "kind": "nouvelle_officielle",
-  "notes": [],
-  "occurred_on": "2026-10-30",
-  "official_id": "tribunal-commerce-exterieur/nouvelles/2026/10/le-tribunal-rend-une-decision-dindication-raisonnable-de-dommage--pneus-de-camions-et-dautobus-provenant-de-la-chine.html",
-  "official_url": "https://www.canada.ca/fr/tribunal-commerce-exterieur/nouvelles/2026/10/le-tribunal-rend-une-decision-dindication-raisonnable-de-dommage--pneus-de-camions-et-dautobus-provenant-de-la-chine.html",
-  "parser_version": "canada-1",
-  "published_on": "2026-10-30",
-  "sha256": "6e1c4f74452910ed2ba48ab266ebfb800086f780beada2cb9b891ba1cd7adeb7",
-  "source": "nouvelles_eco_ca",
-  "tickers": [],
-  "title": "Le Tribunal rend une décision d’indication raisonnable de dommage — Pneus de camions et d’autobus provenant de la Chine"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "militaire",
   "checks": {
    "champs_requis": true,
@@ -44070,51 +44210,6 @@
   "source": "nouvelles_defense_ca",
   "tickers": [],
   "title": "Fin de l’opération BOXTOP, la mission de ravitaillement de la Station des Forces canadiennes Alert"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_identique_au_fil": true,
-   "lien_ministere_coherent": true,
-   "ministere_reconnu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_communique": true
-  },
-  "collected_at": "2026-10-30T17:00:56+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "id_fil": "https://www.canada.ca/fr/services-publics-approvisionnement/nouvelles/2026/10/le-gouvernement-du-canada-fait-progresser-un-grand-projet-dinfrastructure-visant-a-renforcer-la-science-et-la-securite-des-transports.html",
-   "ministere": "Services publics et Approvisionnement Canada",
-   "mis_a_jour": "2026-10-30T09:06:29-04:00",
-   "resume": "Par l’entremise de Laboratoires Canada, le gouvernement du Canada investit dans des infrastructures scientifiques modernes qui contribuent à protéger la population canadienne, à soutenir l’innovation et à renforcer les capacités du Canada en matière de sécurité des transports.",
-   "type": "communiqués de presse"
-  },
-  "direction": 0,
-  "entities": [
-   "Services publics et Approvisionnement Canada"
-  ],
-  "id": "nouvelles_eco_ca:services-publics-approvisionnement/nouvelles/2026/10/le-gouvernement-du-canada-fait-progresser-un-grand-projet-dinfrastructure-visant-a-renforcer-la-science-et-la-securite-des-transports.html",
-  "kind": "nouvelle_officielle",
-  "notes": [],
-  "occurred_on": "2026-10-30",
-  "official_id": "services-publics-approvisionnement/nouvelles/2026/10/le-gouvernement-du-canada-fait-progresser-un-grand-projet-dinfrastructure-visant-a-renforcer-la-science-et-la-securite-des-transports.html",
-  "official_url": "https://www.canada.ca/fr/services-publics-approvisionnement/nouvelles/2026/10/le-gouvernement-du-canada-fait-progresser-un-grand-projet-dinfrastructure-visant-a-renforcer-la-science-et-la-securite-des-transports.html",
-  "parser_version": "canada-1",
-  "published_on": "2026-10-30",
-  "sha256": "4fcc3b7163a2d616ea029155c0fd9bd8df25b0f96e69893b17ac4d116cdb0652",
-  "source": "nouvelles_eco_ca",
-  "tickers": [],
-  "title": "Le gouvernement du Canada fait progresser un grand projet d’infrastructure visant à renforcer la science et la sécurité des transports"
  },
  {
   "amount_max": null,
@@ -44958,191 +45053,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "etape_datee": true,
-   "lien_legisinfo": true,
-   "projet_du_gouvernement": true,
-   "sanction_confirmee": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-30T10:13:14+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "champ": "PassedHouseSecondReadingDateTime",
-   "cle": "chambre-2",
-   "date_officielle": "2026-10-29T11:32:37.393-04:00",
-   "details": [
-    [
-     "Projet de loi",
-     "C-34"
-    ],
-    [
-     "Titre",
-     "Loi édictant la Loi sur la sécurité numérique et la Loi sur la Commission canadienne de la sécurité numérique et apportant des modifications corrélatives à d'autres lois"
-    ],
-    [
-     "Étape",
-     "adopté en deuxième lecture à la Chambre des communes"
-    ],
-    [
-     "Où il en est",
-     "À la deuxième lecture à la Chambre des communes"
-    ]
-   ],
-   "etape": "adopté en deuxième lecture à la Chambre des communes",
-   "numero": "C-34",
-   "sanction": false,
-   "session": "45-1",
-   "statut": "À la deuxième lecture à la Chambre des communes",
-   "titre": "Loi sur les médias sociaux sécuritaires",
-   "titre_long": "Loi édictant la Loi sur la sécurité numérique et la Loi sur la Commission canadienne de la sécurité numérique et apportant des modifications corrélatives à d'autres lois",
-   "type": "Projet de loi émanant du gouvernement (Cdc)",
-   "type_en": "House Government Bill"
-  },
-  "direction": 0,
-  "entities": [
-   "Parlement du Canada"
-  ],
-  "id": "legisinfo:45-1:C-34:chambre-2",
-  "kind": "etape_projet_de_loi",
-  "notes": [],
-  "occurred_on": "2026-10-29",
-  "official_id": "45-1:C-34:chambre-2",
-  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-34",
-  "parser_version": "legisinfo-1",
-  "published_on": "2026-10-29",
-  "sha256": "eacb7f0609a2b0932817f02bf5b7be450969ecec86945fa57f963e118505a279",
-  "source": "legisinfo",
-  "tickers": [],
-  "title": "Projet de loi C-34 (Loi sur les médias sociaux sécuritaires) : adopté en deuxième lecture à la Chambre des communes"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "etape_datee": true,
-   "lien_legisinfo": true,
-   "projet_du_gouvernement": true,
-   "sanction_confirmee": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-29T21:23:29+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "champ": "ReceivedRoyalAssentDateTime",
-   "cle": "sanction",
-   "date_officielle": "2026-10-29T06:00:00-04:00",
-   "details": [
-    [
-     "Projet de loi",
-     "C-38"
-    ],
-    [
-     "Titre",
-     "Loi modifiant la Loi sur la taxe d'accise (prolongation de l'allègement de la taxe d'accise fédérale sur les carburants)"
-    ],
-    [
-     "Étape",
-     "sanction royale : le projet devient loi"
-    ],
-    [
-     "Où il en est",
-     "Sanction royale reçue"
-    ]
-   ],
-   "etape": "sanction royale : le projet devient loi",
-   "numero": "C-38",
-   "sanction": true,
-   "session": "45-1",
-   "statut": "Sanction royale reçue",
-   "titre": "Loi sur l'abordabilité des carburants au Canada",
-   "titre_long": "Loi modifiant la Loi sur la taxe d'accise (prolongation de l'allègement de la taxe d'accise fédérale sur les carburants)",
-   "type": "Projet de loi émanant du gouvernement (Cdc)",
-   "type_en": "House Government Bill"
-  },
-  "direction": 0,
-  "entities": [
-   "Parlement du Canada"
-  ],
-  "id": "legisinfo:45-1:C-38:sanction",
-  "kind": "etape_projet_de_loi",
-  "notes": [],
-  "occurred_on": "2026-10-29",
-  "official_id": "45-1:C-38:sanction",
-  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-38",
-  "parser_version": "legisinfo-1",
-  "published_on": "2026-10-29",
-  "sha256": "3f633cfff060438afa522180174a6c7e2d5ddee7fbab798b647f985891ffb6d2",
-  "source": "legisinfo",
-  "tickers": [],
-  "title": "Projet de loi C-38 (Loi sur l'abordabilité des carburants au Canada) : sanction royale : le projet devient loi"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_identique_au_fil": true,
-   "lien_ministere_coherent": true,
-   "ministere_reconnu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_communique": true
-  },
-  "collected_at": "2026-10-29T21:23:22+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "id_fil": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/10/adoption-du-projet-de-loi-visant-a-prolonger-lallegement-de-la-taxe-daccise-federale-sur-le-carburant-pour-les-canadiens.html",
-   "ministere": "Ministère des Finances Canada",
-   "mis_a_jour": "2026-10-29T17:00:00-04:00",
-   "resume": "La population canadienne évolue dans un monde de plus en plus fragmenté, qui change rapidement. Dans ce contexte, le gouvernement se concentre sur ce qu’il peut contrôler : atténuer les pressions liées au coût de la vie, renforcer l’économie et favoriser un Canada plus autonome.",
-   "type": "communiqués de presse"
-  },
-  "direction": 0,
-  "entities": [
-   "Ministère des Finances Canada"
-  ],
-  "id": "nouvelles_eco_ca:ministere-finances/nouvelles/2026/10/adoption-du-projet-de-loi-visant-a-prolonger-lallegement-de-la-taxe-daccise-federale-sur-le-carburant-pour-les-canadiens.html",
-  "kind": "nouvelle_officielle",
-  "notes": [],
-  "occurred_on": "2026-10-29",
-  "official_id": "ministere-finances/nouvelles/2026/10/adoption-du-projet-de-loi-visant-a-prolonger-lallegement-de-la-taxe-daccise-federale-sur-le-carburant-pour-les-canadiens.html",
-  "official_url": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/10/adoption-du-projet-de-loi-visant-a-prolonger-lallegement-de-la-taxe-daccise-federale-sur-le-carburant-pour-les-canadiens.html",
-  "parser_version": "canada-1",
-  "published_on": "2026-10-29",
-  "sha256": "1674f36f448e8c11d3b2bee1624dee06758abee96d7df2ad685890c368fa936a",
-  "source": "nouvelles_eco_ca",
-  "tickers": [],
-  "title": "Adoption du projet de loi visant à prolonger l’allègement de la taxe d’accise fédérale sur le carburant pour les Canadiens"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "champs_requis": true,
@@ -45222,61 +45132,6 @@
   "source": "tarifs",
   "tickers": [],
   "title": "Douane américaine : Further Modifying Section 338 Additional Duties on Certain Goods of Canada"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "indicateur_de_la_liste_officielle": true,
-   "lien_du_quotidien": true,
-   "resume_lu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-29T19:14:52+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "details": [
-    [
-     "Indicateur",
-     "Emploi, rémunération et heures de travail, et postes vacants"
-    ],
-    [
-     "Période",
-     "août 2026"
-    ]
-   ],
-   "indicateur": "Emploi, rémunération et heures de travail, et postes vacants",
-   "lien": "https://www.statcan.gc.ca/daily-quotidien/261029/dq261029a-fra.htm",
-   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
-   "mis_a_jour": "2026-10-29T08:30:00-04:00",
-   "periode": "août 2026",
-   "resume": "Le nombre d'employés recevant une rémunération et des avantages sociaux de leur employeur, mesurés en tant qu'« emploi salarié » dans le cadre de l'Enquête sur l'emploi, la rémunération et les heures de travail, a diminué de 49 600 (-0,3 %) en août, après avoir légèrement reculé de 15 700 (-0,1 %) en juillet. Par rapport à un an plus tôt, l'emploi salarié était en hausse de 57 200 (+0,3 %) en août."
-  },
-  "direction": 0,
-  "entities": [
-   "Statistique Canada"
-  ],
-  "id": "statcan:261029/dq261029a",
-  "kind": "indicateur_principal",
-  "notes": [],
-  "occurred_on": "2026-10-29",
-  "official_id": "261029/dq261029a",
-  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261029/dq261029a-fra.htm",
-  "parser_version": "statcan-1",
-  "published_on": "2026-10-29",
-  "sha256": "70135ed0653a96b92bc4f5143ef049beb0cde353011b167c382b6294d0d06652",
-  "source": "statcan",
-  "tickers": [],
-  "title": "Statistique Canada : Emploi, rémunération et heures de travail, et postes vacants, août 2026"
  },
  {
   "amount_max": null,
