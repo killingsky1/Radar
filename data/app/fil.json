@@ -9,6 +9,102 @@
    "dates_coherentes": true,
    "domaine_officiel": true,
    "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-16T23:03:25+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/11/le-gouvernement-du-canada-depose-un-plan-visant-a-attenuer-le-cout-du-panier-depicerie-a-soutenir-laccession-a-la-propriete-et-a-stimuler-la-constr.html",
+   "ministere": "Ministère des Finances Canada",
+   "mis_a_jour": "2026-11-16T17:12:47-05:00",
+   "resume": "Dans un monde de plus en plus incertain, un trop grand nombre de Canadiens et de Canadiennes ressentent la pression exercée par la hausse des coûts. C’est pourquoi le Budget de 2026 comporte des mesures concrètes pour répondre aux besoins immédiats de la population et fait des investissements qui visent à bâtir une économie canadienne plus forte.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Ministère des Finances Canada"
+  ],
+  "id": "nouvelles_eco_ca:ministere-finances/nouvelles/2026/11/le-gouvernement-du-canada-depose-un-plan-visant-a-attenuer-le-cout-du-panier-depicerie-a-soutenir-laccession-a-la-propriete-et-a-stimuler-la-constr.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-16",
+  "official_id": "ministere-finances/nouvelles/2026/11/le-gouvernement-du-canada-depose-un-plan-visant-a-attenuer-le-cout-du-panier-depicerie-a-soutenir-laccession-a-la-propriete-et-a-stimuler-la-constr.html",
+  "official_url": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/11/le-gouvernement-du-canada-depose-un-plan-visant-a-attenuer-le-cout-du-panier-depicerie-a-soutenir-laccession-a-la-propriete-et-a-stimuler-la-constr.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-16",
+  "sha256": "8ed1e4e1fa5d51df00642e7dbcec584d9f3604d09470cc132046de10590329bd",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le gouvernement du Canada dépose un plan visant à atténuer le coût du panier d’épicerie, à soutenir l’accession à la propriété et à stimuler la construction de logements"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-16T23:03:19+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Industry and Security Bureau"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-23529",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-11-19",
+   "sorte": "exportations",
+   "sous_type": null,
+   "titre_officiel": "Addressing Remote Access to Advanced Semiconductors",
+   "type": "Rule"
+  },
+  "direction": 0,
+  "entities": [
+   "Industry and Security Bureau"
+  ],
+  "id": "registre_federal:2026-23529",
+  "kind": "exportations",
+  "notes": [],
+  "occurred_on": "2026-11-16",
+  "official_id": "2026-23529",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-23529/addressing-remote-access-to-advanced-semiconductors",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-16",
+  "sha256": "64a0b41e0b9defb25baebbcedb70d02843472817fd57d313ba444fa3272cd774",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Exportations (Commerce, BIS) : Addressing Remote Access to Advanced Semiconductors"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
    "indicateur_de_la_liste_officielle": true,
    "lien_du_quotidien": true,
    "resume_lu": true,
@@ -797,6 +893,351 @@
   "source": "nouvelles_defense_ca",
   "tickers": [],
   "title": "Décès d’un cinquième membre des Forces armées canadiennes à la suite de l’incident survenu à la Base des Forces canadiennes Wainwright"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-16T23:03:23+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "AR02",
+   "elu": "James French Hill",
+   "lecture_complete": true,
+   "nom_sec": "JBG SMITH Properties",
+   "rapport": "20035807",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "JBG SMITH Properties Common Shares (JBGS) [ST]",
+     "avis": "2026-11-09",
+     "date": "2026-11-09",
+     "description": "FULL-LIQUIDATION.",
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "James French Hill",
+   "JBG SMITH Properties"
+  ],
+  "id": "chambre_ptr:20035807:JBGS:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-11-09",
+  "official_id": "20035807:JBGS:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035807.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-13",
+  "sha256": "f2db923ade94a2a311ab92d5060edcaad93a9be826109aa8e0088646d070460c",
+  "source": "chambre_ptr",
+  "tickers": [
+   "JBGS"
+  ],
+  "title": "James French Hill (Chambre, AR02) vend JBGS"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-16T23:03:22+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "IL01",
+   "elu": "Jonathan Jackson",
+   "lecture_complete": true,
+   "nom_sec": "Sphere Entertainment Co.",
+   "rapport": "20035757",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Sphere Entertainment Co. Class A Common Stock (SPHR) [ST]",
+     "avis": "2026-11-02",
+     "date": "2026-10-12",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Jonathan Jackson",
+   "Sphere Entertainment Co."
+  ],
+  "id": "chambre_ptr:20035757:SPHR:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-12",
+  "official_id": "20035757:SPHR:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035757.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-13",
+  "sha256": "a9a6edf044854217a3a822d7d4fb9f9a2c863b4f18d7625caf53d9e5964255d2",
+  "source": "chambre_ptr",
+  "tickers": [
+   "SPHR"
+  ],
+  "title": "Jonathan Jackson (Chambre, IL01) vend SPHR — conjoint·e"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-16T23:03:22+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "IL01",
+   "elu": "Jonathan Jackson",
+   "lecture_complete": true,
+   "nom_sec": "ESTEE LAUDER COMPANIES INC",
+   "rapport": "20035757",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Estee Lauder Companies, Inc. (EL) [ST]",
+     "avis": "2026-11-02",
+     "date": "2026-10-12",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Jonathan Jackson",
+   "ESTEE LAUDER COMPANIES INC"
+  ],
+  "id": "chambre_ptr:20035757:EL:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-10-12",
+  "official_id": "20035757:EL:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035757.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-13",
+  "sha256": "a9a6edf044854217a3a822d7d4fb9f9a2c863b4f18d7625caf53d9e5964255d2",
+  "source": "chambre_ptr",
+  "tickers": [
+   "EL"
+  ],
+  "title": "Jonathan Jackson (Chambre, IL01) achète EL — conjoint·e"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-16T23:03:22+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "IL01",
+   "elu": "Jonathan Jackson",
+   "lecture_complete": true,
+   "nom_sec": "Datadog, Inc.",
+   "rapport": "20035757",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Datadog, Inc. - Class A Common Stock (DDOG) [ST]",
+     "avis": "2026-11-02",
+     "date": "2026-10-22",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Jonathan Jackson",
+   "Datadog, Inc."
+  ],
+  "id": "chambre_ptr:20035757:DDOG:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-10-22",
+  "official_id": "20035757:DDOG:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035757.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-13",
+  "sha256": "a9a6edf044854217a3a822d7d4fb9f9a2c863b4f18d7625caf53d9e5964255d2",
+  "source": "chambre_ptr",
+  "tickers": [
+   "DDOG"
+  ],
+  "title": "Jonathan Jackson (Chambre, IL01) achète DDOG"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-16T23:03:22+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "IL01",
+   "elu": "Jonathan Jackson",
+   "lecture_complete": true,
+   "nom_sec": "BP PLC",
+   "rapport": "20035757",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "BP p.l.c. Common Stock (BP) [ST]",
+     "avis": "2026-11-02",
+     "date": "2026-10-01",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Jonathan Jackson",
+   "BP PLC"
+  ],
+  "id": "chambre_ptr:20035757:BP:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-01",
+  "official_id": "20035757:BP:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035757.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-13",
+  "sha256": "a9a6edf044854217a3a822d7d4fb9f9a2c863b4f18d7625caf53d9e5964255d2",
+  "source": "chambre_ptr",
+  "tickers": [
+   "BP"
+  ],
+  "title": "Jonathan Jackson (Chambre, IL01) vend BP — compte conjoint"
  },
  {
   "amount_max": 245092692,
@@ -43577,101 +44018,6 @@
   "title": "Contrat fédéral de 74,6 M$ : OCEAN PACIFIC MARINE SUPPLY LTD (Gendarmerie royale du Canada)"
  },
  {
-  "amount_max": 12359550.0,
-  "amount_min": 12359550.0,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-10-31T09:57:47+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 30167815,
-   "amendment_value": "0.0",
-   "contract_date": "2026-04-10",
-   "contract_value": "12359550.0",
-   "description_fr": "Appareils de chauffage, de climatisation et de réfrigération",
-   "details": [
-    [
-     "Fournisseur",
-     "WILDSTONE CONSTRUCTION & ENGINEERIN"
-    ],
-    [
-     "Ministère ou organisme",
-     "Gendarmerie royale du Canada"
-    ],
-    [
-     "Valeur du contrat",
-     "12,4 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-04-10"
-    ],
-    [
-     "Description",
-     "Appareils de chauffage, de climatisation et de réfrigération"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "avril à juin 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q1-00949"
-    ]
-   ],
-   "fournisseur": "WILDSTONE CONSTRUCTION & ENGINEERIN",
-   "instrument_type": "C",
-   "ministere": "Gendarmerie royale du Canada",
-   "montant": 12359550.0,
-   "original_value": "12359550.0",
-   "owner_org": "rcmp-grc",
-   "owner_org_title": "Royal Canadian Mounted Police | Gendarmerie royale du Canada",
-   "reference_number": "C-2026-2027-Q1-00949",
-   "reporting_period": "2026-2027-Q1",
-   "type": "contrat",
-   "vendor_name": "WILDSTONE CONSTRUCTION & ENGINEERIN"
-  },
-  "direction": 0,
-  "entities": [
-   "WILDSTONE CONSTRUCTION & ENGINEERIN",
-   "Gendarmerie royale du Canada"
-  ],
-  "id": "contrats_ca_10k:rcmp-grc:C-2026-2027-Q1-00949",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2026-04-10",
-  "official_id": "rcmp-grc:C-2026-2027-Q1-00949",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/rcmp-grc,C-2026-2027-Q1-00949",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-10-31",
-  "sha256": "b367e2eb85631c531d10cb7faaaf9358eb1e87a9ea0cab9be94e063cef2d3ed2",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 12,4 M$ : WILDSTONE CONSTRUCTION & ENGINEERIN (Gendarmerie royale du Canada)"
- },
- {
   "amount_max": 15000.0,
   "amount_min": 1001.0,
   "badge": "officiel",
@@ -52257,381 +52603,6 @@
   "title": "Kevin Hern (Chambre, OK01) vend SBUX — compte conjoint"
  },
  {
-  "amount_max": 50000.0,
-  "amount_min": 15001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-14T15:49:29+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "ROCKWELL AUTOMATION, INC",
-   "rapport": "20035588",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Rockwell Automation, Inc. Common Stock (ROK) [ST]",
-     "avis": "2026-10-02",
-     "date": "2026-09-17",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "ROCKWELL AUTOMATION, INC"
-  ],
-  "id": "chambre_ptr:20035588:ROK:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-17",
-  "official_id": "20035588:ROK:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-13",
-  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
-  "source": "chambre_ptr",
-  "tickers": [
-   "ROK"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend ROK — compte conjoint"
- },
- {
-  "amount_max": 50000.0,
-  "amount_min": 15001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-14T15:49:29+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "NEXTERA ENERGY INC",
-   "rapport": "20035588",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "NextEra Energy, Inc. Common Stock (NEE) [ST]",
-     "avis": "2026-10-02",
-     "date": "2026-10-02",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "NEXTERA ENERGY INC"
-  ],
-  "id": "chambre_ptr:20035588:NEE:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-10-02",
-  "official_id": "20035588:NEE:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-13",
-  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
-  "source": "chambre_ptr",
-  "tickers": [
-   "NEE"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend NEE — compte conjoint"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-14T15:49:29+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "LOWES COMPANIES INC",
-   "rapport": "20035588",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Lowe's Companies, Inc. Common Stock (LOW) [ST]",
-     "avis": "2026-10-02",
-     "date": "2026-09-17",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "LOWES COMPANIES INC"
-  ],
-  "id": "chambre_ptr:20035588:LOW:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-17",
-  "official_id": "20035588:LOW:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-13",
-  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
-  "source": "chambre_ptr",
-  "tickers": [
-   "LOW"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend LOW — compte conjoint"
- },
- {
-  "amount_max": 200000.0,
-  "amount_min": 60004.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-14T15:49:29+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "LOCKHEED MARTIN CORP",
-   "rapport": "20035588",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Lockheed Martin Corporation Common Stock (LMT) [ST]",
-     "avis": "2026-10-02",
-     "date": "2026-09-17",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "Lockheed Martin Corporation Common Stock (LMT) [ST]",
-     "avis": "2026-10-02",
-     "date": "2026-09-17",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "Lockheed Martin Corporation Common Stock (LMT) [ST]",
-     "avis": "2026-10-02",
-     "date": "2026-09-23",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "Lockheed Martin Corporation Common Stock (LMT) [ST]",
-     "avis": "2026-10-02",
-     "date": "2026-09-23",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "LOCKHEED MARTIN CORP"
-  ],
-  "id": "chambre_ptr:20035588:LMT:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-17",
-  "official_id": "20035588:LMT:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-13",
-  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
-  "source": "chambre_ptr",
-  "tickers": [
-   "LMT"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend LMT (4 transactions) — compte conjoint"
- },
- {
-  "amount_max": 50000.0,
-  "amount_min": 15001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-14T15:49:29+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "LINDE PLC",
-   "rapport": "20035588",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Linde plc - Ordinary Shares (LIN) [ST]",
-     "avis": "2026-10-02",
-     "date": "2026-09-17",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "LINDE PLC"
-  ],
-  "id": "chambre_ptr:20035588:LIN:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-17",
-  "official_id": "20035588:LIN:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035588.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-13",
-  "sha256": "ac0a2b3e9bf36c8dc7a07bb192f962e43b69688e8eacd3c5627d16ea8cc77347",
-  "source": "chambre_ptr",
-  "tickers": [
-   "LIN"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend LIN — compte conjoint"
- },
- {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -56353,54 +56324,6 @@
   "source": "sanctions_us",
   "tickers": [],
   "title": "Sanctions américaines (OFAC) : Designations Removals; Designations Updates; Publication of Iran-related OFAC Alert; Publication of Amended Iran-related Frequently Asked Question"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_rappel": true,
-   "nombre_plausible": true,
-   "numero_de_rappel_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-10T09:58:47+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "campagne": null,
-   "composant": "SERVICE BRAKES, HYDRAULIC",
-   "consequence": "A brake fluid leak can extend the distance needed to stop the vehicle, increasing the risk of a crash.",
-   "constructeur": "Mercedes-Benz USA, LLC",
-   "defaut": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2022-2025 S 500 4MATIC, Maybach S 580 4MATIC, Maybach S 680 4MATIC,  S 580 4MATIC, 2023-2025 S 580 E 4MATIC, and 2024-2025 AMG S 63 E Performance vehicles. The front brake hoses may rupture and leak brake fluid.",
-   "numero": "26V638000",
-   "sorte": "Vehicle",
-   "sujet": "Front Brake Hose May Leak",
-   "unites": 30064
-  },
-  "direction": -1,
-  "entities": [
-   "Mercedes-Benz USA, LLC"
-  ],
-  "id": "nhtsa:26V638000",
-  "kind": "rappel",
-  "notes": [],
-  "occurred_on": "2026-10-02",
-  "official_id": "26V638000",
-  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V638000",
-  "parser_version": "nhtsa-1",
-  "published_on": "2026-10-02",
-  "sha256": "0306170387c3ed7b870a103b2427d116bb093effe59378e4fce48399243b6f18",
-  "source": "nhtsa",
-  "tickers": [],
-  "title": "Rappel de Mercedes-Benz USA, LLC : 30 064 véhicules — « Front Brake Hose May Leak »"
  },
  {
   "amount_max": null,
