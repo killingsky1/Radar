@@ -19,7 +19,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-11-10T11:19:17+00:00",
+   "lu": "2026-11-17T11:59:18+00:00",
    "moins_de_5000": 0,
    "nom": "AAON, INC.",
    "pages": 1,
@@ -29,11 +29,25 @@
    "sujets": [],
    "total": null
   },
+  "ADIG": {
+   "base": null,
+   "complet": true,
+   "firmes": 0,
+   "lu": "2026-11-17T11:59:18+00:00",
+   "moins_de_5000": 0,
+   "nom": "ADI GLOBAL DISTRIBUTION INC.",
+   "pages": 1,
+   "rapports": [],
+   "recherche": "DISTRIBUTION",
+   "revenus_firmes": null,
+   "sujets": [],
+   "total": null
+  },
   "ADTN": {
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-11-10T11:19:17+00:00",
+   "lu": "2026-11-17T11:59:18+00:00",
    "moins_de_5000": 0,
    "nom": "ADTRAN Holdings, Inc.",
    "pages": 1,
@@ -42,6 +56,69 @@
    "revenus_firmes": null,
    "sujets": [],
    "total": null
+  },
+  "APMD": {
+   "base": null,
+   "complet": true,
+   "firmes": 0,
+   "lu": "2026-11-17T11:59:18+00:00",
+   "moins_de_5000": 0,
+   "nom": "Apnimed, Inc.",
+   "pages": 1,
+   "rapports": [],
+   "recherche": "APNIMED",
+   "revenus_firmes": null,
+   "sujets": [],
+   "total": null
+  },
+  "BW": {
+   "base": "firmes",
+   "complet": true,
+   "firmes": 1,
+   "lu": "2026-11-17T11:59:18+00:00",
+   "moins_de_5000": 0,
+   "nom": "Babcock & Wilcox Enterprises, Inc.",
+   "pages": 3,
+   "rapports": [
+    {
+     "client": "BABCOCK & WILCOX ENTERPRISES, INC.",
+     "montant": 80000.0,
+     "poste": "2026-10-19",
+     "registrant": "ELEVATE GOVERNMENT AFFAIRS, LLC",
+     "sans_activite": false,
+     "soi_meme": false,
+     "sujets": [
+      "BUD",
+      "ENG",
+      "ENV",
+      "TRD"
+     ],
+     "type": "Q3",
+     "url": "https://lda.gov/filings/public/filing/a8a3d4c4-0350-49eb-aeed-9a7a55799832/print/",
+     "uuid": "a8a3d4c4-0350-49eb-aeed-9a7a55799832"
+    }
+   ],
+   "recherche": "ENTERPRISES",
+   "revenus_firmes": 80000.0,
+   "sujets": [
+    {
+     "code": "BUD",
+     "nom": "Budget et crédits"
+    },
+    {
+     "code": "ENG",
+     "nom": "Énergie et nucléaire"
+    },
+    {
+     "code": "ENV",
+     "nom": "Environnement (dont Superfund)"
+    },
+    {
+     "code": "TRD",
+     "nom": "Commerce (intérieur et extérieur)"
+    }
+   ],
+   "total": 80000.0
   },
   "BXMT": {
    "base": null,
@@ -56,6 +133,73 @@
    "revenus_firmes": null,
    "sujets": [],
    "total": null
+  },
+  "CATX": {
+   "base": null,
+   "complet": true,
+   "firmes": 0,
+   "lu": "2026-11-17T11:59:18+00:00",
+   "moins_de_5000": 0,
+   "nom": "Perspective Therapeutics, Inc.",
+   "pages": 1,
+   "rapports": [],
+   "recherche": "PERSPECTIVE",
+   "revenus_firmes": null,
+   "sujets": [],
+   "total": null
+  },
+  "CNTY": {
+   "base": null,
+   "complet": true,
+   "firmes": 0,
+   "lu": "2026-11-17T11:59:18+00:00",
+   "moins_de_5000": 0,
+   "nom": "CENTURY CASINOS INC",
+   "pages": 1,
+   "rapports": [],
+   "recherche": "CENTURY",
+   "revenus_firmes": null,
+   "sujets": [],
+   "total": null
+  },
+  "CTEV": {
+   "base": "firmes",
+   "complet": true,
+   "firmes": 1,
+   "lu": "2026-11-17T11:59:18+00:00",
+   "moins_de_5000": 0,
+   "nom": "Claritev Corp",
+   "pages": 1,
+   "rapports": [
+    {
+     "client": "CLARITEV",
+     "montant": 60000.0,
+     "poste": "2026-10-20",
+     "registrant": "ALSTON & BIRD LLP",
+     "sans_activite": false,
+     "soi_meme": false,
+     "sujets": [
+      "HCR",
+      "MMM"
+     ],
+     "type": "Q3",
+     "url": "https://lda.gov/filings/public/filing/06a709cf-a8a9-4cfb-9536-17dd24b1017d/print/",
+     "uuid": "06a709cf-a8a9-4cfb-9536-17dd24b1017d"
+    }
+   ],
+   "recherche": "CLARITEV",
+   "revenus_firmes": 60000.0,
+   "sujets": [
+    {
+     "code": "HCR",
+     "nom": "Santé"
+    },
+    {
+     "code": "MMM",
+     "nom": "Medicare et Medicaid"
+    }
+   ],
+   "total": 60000.0
   },
   "DRVN": {
    "base": null,
@@ -113,6 +257,20 @@
    "sujets": [],
    "total": null
   },
+  "FF": {
+   "base": null,
+   "complet": true,
+   "firmes": 0,
+   "lu": "2026-11-17T11:59:18+00:00",
+   "moins_de_5000": 0,
+   "nom": "FutureFuel Corp.",
+   "pages": 1,
+   "rapports": [],
+   "recherche": "FUTUREFUEL",
+   "revenus_firmes": null,
+   "sujets": [],
+   "total": null
+  },
   "FUN": {
    "base": null,
    "complet": true,
@@ -131,26 +289,12 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-11-10T11:19:17+00:00",
+   "lu": "2026-11-17T11:59:18+00:00",
    "moins_de_5000": 0,
    "nom": "GoodRx Holdings, Inc.",
    "pages": 1,
    "rapports": [],
    "recherche": "GOODRX",
-   "revenus_firmes": null,
-   "sujets": [],
-   "total": null
-  },
-  "GNLN": {
-   "base": null,
-   "complet": true,
-   "firmes": 0,
-   "lu": "2026-11-11T11:05:33+00:00",
-   "moins_de_5000": 0,
-   "nom": "Greenlane Holdings, Inc.",
-   "pages": 1,
-   "rapports": [],
-   "recherche": "GREENLANE",
    "revenus_firmes": null,
    "sujets": [],
    "total": null
@@ -212,7 +356,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-11-10T11:19:17+00:00",
+   "lu": "2026-11-17T11:59:18+00:00",
    "moins_de_5000": 0,
    "nom": "Goosehead Insurance, Inc.",
    "pages": 1,
@@ -226,7 +370,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-11-10T11:19:17+00:00",
+   "lu": "2026-11-17T11:59:18+00:00",
    "moins_de_5000": 0,
    "nom": "Gores Holdings X, Inc. / CI",
    "pages": 1,
@@ -249,6 +393,45 @@
    "revenus_firmes": null,
    "sujets": [],
    "total": null
+  },
+  "KMT": {
+   "base": "firmes",
+   "complet": true,
+   "firmes": 1,
+   "lu": "2026-11-10T11:19:17+00:00",
+   "moins_de_5000": 0,
+   "nom": "KENNAMETAL INC",
+   "pages": 1,
+   "rapports": [
+    {
+     "client": "KENNAMETAL INC.",
+     "montant": 40000.0,
+     "poste": "2026-10-08",
+     "registrant": "CASSIDY & ASSOCIATES, INC.",
+     "sans_activite": false,
+     "soi_meme": false,
+     "sujets": [
+      "BUD",
+      "DEF"
+     ],
+     "type": "Q3",
+     "url": "https://lda.gov/filings/public/filing/4ad659a0-1b47-4683-8fea-694299b7f7d0/print/",
+     "uuid": "4ad659a0-1b47-4683-8fea-694299b7f7d0"
+    }
+   ],
+   "recherche": "KENNAMETAL",
+   "revenus_firmes": 40000.0,
+   "sujets": [
+    {
+     "code": "BUD",
+     "nom": "Budget et crédits"
+    },
+    {
+     "code": "DEF",
+     "nom": "Défense"
+    }
+   ],
+   "total": 40000.0
   },
   "KPTI": {
    "base": null,
@@ -371,16 +554,16 @@
    "sujets": [],
    "total": null
   },
-  "MX": {
+  "NSLR": {
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-11-12T11:24:16+00:00",
+   "lu": "2026-11-17T11:59:18+00:00",
    "moins_de_5000": 0,
-   "nom": "MAGNACHIP SEMICONDUCTOR Corp",
+   "nom": "Neostellar Capital Corp.",
    "pages": 1,
    "rapports": [],
-   "recherche": "SEMICONDUCTOR",
+   "recherche": "NEOSTELLAR",
    "revenus_firmes": null,
    "sujets": [],
    "total": null
@@ -389,7 +572,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-11-10T11:19:17+00:00",
+   "lu": "2026-11-17T11:59:18+00:00",
    "moins_de_5000": 0,
    "nom": "Childrens Place, Inc.",
    "pages": 1,
@@ -431,7 +614,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-11-10T11:19:17+00:00",
+   "lu": "2026-11-17T11:59:18+00:00",
    "moins_de_5000": 0,
    "nom": "Sidus Space Inc.",
    "pages": 1,
@@ -440,6 +623,40 @@
    "revenus_firmes": null,
    "sujets": [],
    "total": null
+  },
+  "TH": {
+   "base": "firmes",
+   "complet": true,
+   "firmes": 1,
+   "lu": "2026-11-17T11:59:18+00:00",
+   "moins_de_5000": 0,
+   "nom": "Target Hospitality Corp.",
+   "pages": 1,
+   "rapports": [
+    {
+     "client": "TARGET HOSPITALITY",
+     "montant": 150000.0,
+     "poste": "2026-10-18",
+     "registrant": "CONTINENTAL STRATEGY, LLC",
+     "sans_activite": false,
+     "soi_meme": false,
+     "sujets": [
+      "DIS"
+     ],
+     "type": "Q3",
+     "url": "https://lda.gov/filings/public/filing/f9f9866f-ab25-4225-8cf2-219873c630e7/print/",
+     "uuid": "f9f9866f-ab25-4225-8cf2-219873c630e7"
+    }
+   ],
+   "recherche": "HOSPITALITY",
+   "revenus_firmes": 150000.0,
+   "sujets": [
+    {
+     "code": "DIS",
+     "nom": "Catastrophes et urgences"
+    }
+   ],
+   "total": 150000.0
   },
   "UPBD": {
    "base": null,

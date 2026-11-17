@@ -43155,6 +43155,56 @@
   "title": "Contrat fédéral de 12,0 M$ : EXPERIS CANADA INC (Agriculture et Agroalimentaire Canada)"
  },
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-17T12:01:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "26C49",
+   "composant": "ELECTRICAL SYSTEM",
+   "consequence": "A loss of lighting can reduce trailer visibility to other drivers, increasing the risk of a crash.",
+   "constructeur": "Ford Motor Company",
+   "defaut": "Ford Motor Company (Ford) is recalling certain 2026 Transit vehicles. A software error in the body control module C (BCMC) may cause the module to freeze, shutting off certain features such as interior lighting and trailer lights. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 108, \"Lamps, Reflective Devices, and Associated Equipment.\"",
+   "numero": "26V727000",
+   "sorte": "Vehicle",
+   "sujet": "Body Control Module Software Error/FMVSS 108",
+   "unites": 60956
+  },
+  "direction": -1,
+  "entities": [
+   "Ford Motor Company"
+  ],
+  "id": "nhtsa:26V727000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-11-02",
+  "official_id": "26V727000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V727000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-11-02",
+  "sha256": "5a1855c1c1a7429f142cd3343129abcd0ee70413d92b85185992044acf8d1c18",
+  "source": "nhtsa",
+  "tickers": [
+   "F"
+  ],
+  "title": "Rappel de Ford Motor Company : 60 956 véhicules — « Body Control Module Software Error/FMVSS 108 »"
+ },
+ {
   "amount_max": 15000.0,
   "amount_min": 1001.0,
   "badge": "officiel",
@@ -56241,57 +56291,6 @@
   "parser_version": "registre-4",
   "published_on": "2026-10-05",
   "sha256": "1901de0e8f7cfff211dbb7a08649acb66f9e339b120f9ae6798d77075f82064f",
-  "source": "registre_federal",
-  "tickers": [],
-  "title": "Sanctions (Trésor, OFAC) : Sanctions Action"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-05T21:26:15+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Foreign Assets Control Office"
-   ],
-   "etape": "inspection_publique",
-   "numero": "2026-20395",
-   "numero_dans_le_texte": true,
-   "parution_prevue": "2026-10-06",
-   "sorte": "sanctions",
-   "sous_type": null,
-   "titre_officiel": "Sanctions Action",
-   "type": "Notice"
-  },
-  "direction": 0,
-  "entities": [
-   "Foreign Assets Control Office"
-  ],
-  "id": "registre_federal:2026-20395",
-  "kind": "sanctions",
-  "notes": [],
-  "occurred_on": "2026-10-05",
-  "official_id": "2026-20395",
-  "official_url": "https://www.federalregister.gov/public-inspection/2026-20395/sanctions-action",
-  "parser_version": "registre-4",
-  "published_on": "2026-10-05",
-  "sha256": "1b5b82972fdfa7f8a3b47eaea76bcb21a90a432e0e349ed77acd39898fdb1ed8",
   "source": "registre_federal",
   "tickers": [],
   "title": "Sanctions (Trésor, OFAC) : Sanctions Action"
