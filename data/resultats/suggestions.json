@@ -3604,6 +3604,136 @@
    "symbole": "ALDX",
    "taille": "petite",
    "vue": "2026-11-16"
+  },
+  {
+   "entree": "2026-11-17T04:30:42+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "ADI GLOBAL DISTRIBUTION INC.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "ADIG",
+   "taille": "petite",
+   "vue": "2026-11-16"
+  },
+  {
+   "entree": "2026-11-17T04:30:42+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Neostellar Capital Corp.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "NSLR",
+   "taille": "petite",
+   "vue": "2026-11-16"
+  },
+  {
+   "entree": "2026-11-17T04:30:42+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Target Hospitality Corp.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 8.8,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    },
+    {
+     "facteurs": [],
+     "famille": "inities",
+     "regle": "vente_dirigeant",
+     "sens": -1
+    }
+   ],
+   "symbole": "TH",
+   "taille": "petite",
+   "vue": "2026-11-16"
+  },
+  {
+   "entree": "2026-11-17T04:30:42+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "CENTURY CASINOS INC",
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "compagnie",
+     "regle": "etats_financiers",
+     "sens": -1
+    }
+   ],
+   "symbole": "CNTY",
+   "taille": "petite",
+   "vue": "2026-11-16"
+  },
+  {
+   "entree": "2026-11-17T04:30:42+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "electroCore, Inc.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "ECOR",
+   "taille": "petite",
+   "vue": "2026-11-16"
   }
  ]
 }

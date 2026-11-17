@@ -1,5 +1,5 @@
 {
- "genere_a": "2026-11-17T00:26:34+00:00",
+ "genere_a": "2026-11-17T04:30:42+00:00",
  "horizons": {
   "30": "1 mois",
   "7": "1 semaine"
@@ -6028,6 +6028,206 @@
    "symbole": "FF",
    "taille": "petite",
    "vue": "2026-11-16"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-17T04:30:42+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "CENTURY CASINOS INC",
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "compagnie",
+     "regle": "etats_financiers",
+     "sens": -1
+    }
+   ],
+   "symbole": "CNTY",
+   "taille": "petite",
+   "vue": "2026-11-16"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-17T04:30:42+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "electroCore, Inc.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "ECOR",
+   "taille": "petite",
+   "vue": "2026-11-16"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-17T04:30:42+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "ADI GLOBAL DISTRIBUTION INC.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "ADIG",
+   "taille": "petite",
+   "vue": "2026-11-16"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-17T04:30:42+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Neostellar Capital Corp.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "NSLR",
+   "taille": "petite",
+   "vue": "2026-11-16"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-17T04:30:42+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Target Hospitality Corp.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 8.8,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    },
+    {
+     "facteurs": [],
+     "famille": "inities",
+     "regle": "vente_dirigeant",
+     "sens": -1
+    }
+   ],
+   "symbole": "TH",
+   "taille": "petite",
+   "vue": "2026-11-16"
   }
  ],
  "methode": [
@@ -6053,7 +6253,7 @@
      "ecart_moyen": -0.1085,
      "mesurees": 3
     },
-    "entrees": 13,
+    "entrees": 14,
     "libelle": "États financiers passés à ne plus croire (8-K, point 4.02)"
    },
    "regle:faillite": {
@@ -6123,7 +6323,7 @@
      "ecart_moyen": -0.1511,
      "mesurees": 2
     },
-    "entrees": 10,
+    "entrees": 11,
     "libelle": "Petite compagnie (sous le 30e centile du NYSE)"
    }
   },
@@ -6139,7 +6339,7 @@
      "ecart_moyen": -0.1209,
      "mesurees": 3
     },
-    "entrees": 44,
+    "entrees": 47,
     "libelle": "Groupe d'achats"
    },
    "facteur:PDG, directeur financier ou président du conseil": {
@@ -6153,7 +6353,7 @@
      "ecart_moyen": -0.1056,
      "mesurees": 3
     },
-    "entrees": 56,
+    "entrees": 59,
     "libelle": "PDG, directeur financier ou président du conseil"
    },
    "grace_a_la_taille": {
@@ -6209,7 +6409,7 @@
      "ecart_moyen": -0.0799,
      "mesurees": 12
     },
-    "entrees": 89,
+    "entrees": 92,
     "libelle": "Achat d'actions par un dirigeant ou un administrateur"
    },
    "regle:achat_elu": {
@@ -6293,7 +6493,7 @@
      "ecart_moyen": -0.0744,
      "mesurees": 7
     },
-    "entrees": 57,
+    "entrees": 60,
     "libelle": "Petite compagnie (sous le 30e centile du NYSE)"
    }
   },
@@ -6305,37 +6505,37 @@
   "baisse_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 15,
+   "en_attente": 16,
    "mesurees": 0
   },
   "baisse_7": {
    "battu": 3,
    "ecart_moyen": -0.1085,
-   "en_attente": 11,
+   "en_attente": 12,
    "mesurees": 3
   },
   "ecartee_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 23,
+   "en_attente": 24,
    "mesurees": 0
   },
   "ecartee_7": {
    "battu": 3,
    "ecart_moyen": -0.0599,
-   "en_attente": 15,
+   "en_attente": 16,
    "mesurees": 4
   },
   "hausse_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 90,
+   "en_attente": 93,
    "mesurees": 0
   },
   "hausse_7": {
    "battu": 3,
    "ecart_moyen": -0.0543,
-   "en_attente": 58,
+   "en_attente": 61,
    "mesurees": 18
   }
  }

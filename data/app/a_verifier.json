@@ -1,5 +1,144 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "compagnie_cotee": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "extrait_officiel": true,
+   "gouvernement_nomme": false,
+   "point_8k_retenu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_de_propriete": false
+  },
+  "collected_at": "2026-11-17T04:40:08+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "cik": "0001966983",
+   "details": [
+    [
+     "Compagnie",
+     "LITHIUM AMERICAS CORP."
+    ],
+    [
+     "Points du 8-K",
+     "1.01"
+    ],
+    [
+     "Extrait (EX-99.1)",
+     "… NEXT STEPS The Company is working with the DOE and GM to finalize the related implications on JV interest holdings. Mr. Evans added, “I am proud of the construction progress we have achieved to date and the focus and hard work in completing the definitive capital cost estimate while also …"
+    ],
+    [
+     "Extrait (EX-99.1)",
+     "… The DOE holds a warrant to purchase common shares equivalent to a 5% equity stake of the Company as of January 30, 2026, as well as a warrant at the JV level to purchase a non-voting, non-transferable equity interest in the JV (together, the “Warrants”). …"
+    ]
+   ],
+   "documents": [
+    {
+     "extraits": [
+      "… NEXT STEPS The Company is working with the DOE and GM to finalize the related implications on JV interest holdings. Mr. Evans added, “I am proud of the construction progress we have achieved to date and the focus and hard work in completing the definitive capital cost estimate while also …",
+      "… The DOE holds a warrant to purchase common shares equivalent to a 5% equity stake of the Company as of January 30, 2026, as well as a warrant at the JV level to purchase a non-voting, non-transferable equity interest in the JV (together, the “Warrants”). …",
+      "… FLS in this news release include, but are not limited to: statements relating to the anticipated sources and uses of funds to complete project financing, GM’s investment in the JV (the “JV Transaction”), the DOE Loan, the strategic investment of $250 million from Orion (the “Orion Investment”), the Warrants, the Put, Call and Exchange Agreement entered into in connection with the issuance of the Warrants, and the Yorkville Debentures, including statements …"
+     ],
+     "type": "EX-99.1",
+     "url": "https://www.sec.gov/Archives/edgar/data/1966983/000119312526461851/d109046dex991.htm"
+    }
+   ],
+   "ministere": null,
+   "points": [
+    "1.01"
+   ]
+  },
+  "direction": 0,
+  "entities": [
+   "LITHIUM AMERICAS CORP.",
+   "Gouvernement américain"
+  ],
+  "id": "participations_gouv:0001193125-26-461851",
+  "kind": "participation_gouv",
+  "notes": [
+   "Lisez l'extrait officiel : le titre résume seulement qu'il est question de titres de la compagnie et du gouvernement américain (achat, détention, bons de souscription ou revente)."
+  ],
+  "occurred_on": "2026-11-16",
+  "official_id": "0001193125-26-461851",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1966983/000119312526461851/0001193125-26-461851-index.htm",
+  "parser_version": "participations-2",
+  "published_on": "2026-11-16",
+  "sha256": "a089974ff4a14c7eb4a9bc8c26b783f2ff74d52636fb5f90da9792e1b5335a37",
+  "source": "participations_gouv",
+  "tickers": [
+   "LAC"
+  ],
+  "title": "LITHIUM AMERICAS CORP. : un 8-K dit que le gouvernement américain reçoit, détient ou revend des titres de la compagnie"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": false,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-17T04:39:12+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "BLA761488",
+   "classe": "TYPE 1",
+   "compagnie": "ALEXION PHARM",
+   "date": "20261113",
+   "fabricant": null,
+   "ingredients": [
+    "GEFURULIMAB"
+   ],
+   "lettre": null,
+   "marques": [
+    "KLYGEFA"
+   ],
+   "numero_soumission": "1",
+   "orphelin": false,
+   "priorite": "STANDARD",
+   "sponsor": "ALEXION PHARM",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "ALEXION PHARM"
+  ],
+  "id": "fda:BLA761488-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Produit biologique."
+  ],
+  "occurred_on": "2026-11-13",
+  "official_id": "BLA761488-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761488",
+  "parser_version": "fda-1",
+  "published_on": "2026-11-13",
+  "sha256": "e1183e7fd56d71cf7e759f4fdf346b1e2e17a9583591d64a47193ba5ee436fbf",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, KLYGEFA (gefurulimab), de ALEXION PHARM"
+ },
+ {
   "amount_max": 4100000000.0,
   "amount_min": 4100000000.0,
   "badge": "a_verifier",
