@@ -1,5 +1,107 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-17T19:46:05+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Foreign Assets Control Office"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-23456",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-11-18",
+   "sorte": "sanctions",
+   "sous_type": null,
+   "titre_officiel": "Sanctions Action",
+   "type": "Notice"
+  },
+  "direction": 0,
+  "entities": [
+   "Foreign Assets Control Office"
+  ],
+  "id": "registre_federal:2026-23456",
+  "kind": "sanctions",
+  "notes": [],
+  "occurred_on": "2026-11-17",
+  "official_id": "2026-23456",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-23456/sanctions-action",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-17",
+  "sha256": "b13611752b8f44d7c94da5f38f430a69e55e1c68b3348c6ee704c626c547484a",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Sanctions (Trésor, OFAC) : Sanctions Action"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-17T19:46:04+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Trade Representative, Office of United States"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-23412",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-11-18",
+   "sorte": "commerce_exterieur",
+   "sous_type": null,
+   "titre_officiel": "United States-Mexico-Canada Agreement: Applications for Inclusion on the Binational Panels Roster",
+   "type": "Notice"
+  },
+  "direction": 0,
+  "entities": [
+   "Trade Representative, Office of United States"
+  ],
+  "id": "registre_federal:2026-23412",
+  "kind": "commerce_exterieur",
+  "notes": [],
+  "occurred_on": "2026-11-17",
+  "official_id": "2026-23412",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-23412/united-states-mexico-canada-agreement-applications-for-inclusion-on-the-binational-panels-roster",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-17",
+  "sha256": "6e8b35fbf092017ca3460db2e0baa5126886abf410f956fcc2951b94b407d5ff",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Commerce extérieur (USTR) : United States-Mexico-Canada Agreement: Applications for Inclusion on the Binational Panels Roster"
+ },
+ {
   "amount_max": 400000000.0,
   "amount_min": 400000000.0,
   "badge": "officiel",
@@ -56192,108 +56294,6 @@
   "source": "nouvelles_defense_ca",
   "tickers": [],
   "title": "L’Armée canadienne se réorganise pour mieux défendre le Canada"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-05T21:26:17+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Foreign Assets Control Office"
-   ],
-   "etape": "inspection_publique",
-   "numero": "2026-20475",
-   "numero_dans_le_texte": true,
-   "parution_prevue": "2026-10-06",
-   "sorte": "sanctions",
-   "sous_type": null,
-   "titre_officiel": "Sanctions Action",
-   "type": "Notice"
-  },
-  "direction": 0,
-  "entities": [
-   "Foreign Assets Control Office"
-  ],
-  "id": "registre_federal:2026-20475",
-  "kind": "sanctions",
-  "notes": [],
-  "occurred_on": "2026-10-05",
-  "official_id": "2026-20475",
-  "official_url": "https://www.federalregister.gov/public-inspection/2026-20475/sanctions-action",
-  "parser_version": "registre-4",
-  "published_on": "2026-10-05",
-  "sha256": "d67a3e73326d1fc5a92461e3bf9cee07d9db10dfa944081d6405e0dd1fd8aaab",
-  "source": "registre_federal",
-  "tickers": [],
-  "title": "Sanctions (Trésor, OFAC) : Sanctions Action"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-05T21:26:16+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Foreign Assets Control Office"
-   ],
-   "etape": "inspection_publique",
-   "numero": "2026-20425",
-   "numero_dans_le_texte": true,
-   "parution_prevue": "2026-10-06",
-   "sorte": "sanctions",
-   "sous_type": null,
-   "titre_officiel": "Sanctions Action",
-   "type": "Notice"
-  },
-  "direction": 0,
-  "entities": [
-   "Foreign Assets Control Office"
-  ],
-  "id": "registre_federal:2026-20425",
-  "kind": "sanctions",
-  "notes": [],
-  "occurred_on": "2026-10-05",
-  "official_id": "2026-20425",
-  "official_url": "https://www.federalregister.gov/public-inspection/2026-20425/sanctions-action",
-  "parser_version": "registre-4",
-  "published_on": "2026-10-05",
-  "sha256": "1901de0e8f7cfff211dbb7a08649acb66f9e339b120f9ae6798d77075f82064f",
-  "source": "registre_federal",
-  "tickers": [],
-  "title": "Sanctions (Trésor, OFAC) : Sanctions Action"
  },
  {
   "amount_max": null,
