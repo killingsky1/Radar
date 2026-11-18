@@ -1,5 +1,55 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-11-18T19:23:06+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {
+    "entités": 3,
+    "personnes": 3
+   },
+   "communiques": [
+    "Operation Economic Outcast Targets Iran’s Proxy Networks"
+   ],
+   "retraits": 0,
+   "titre_officiel": "Counter Terrorism Designations"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20261118",
+  "kind": "sanctions",
+  "notes": [
+   "Communiqué du Trésor : Operation Economic Outcast Targets Iran’s Proxy Networks",
+   "Ajoutés à la liste des sanctions (SDN) : 3 personnes, 3 entités."
+  ],
+  "occurred_on": "2026-11-18",
+  "official_id": "20261118",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20261118",
+  "parser_version": "ofac-1",
+  "published_on": "2026-11-18",
+  "sha256": "2a3a79dd62fd0afd9bf116d192917de04e04e3c5640e07ce938989cc0ceabad4",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Counter Terrorism Designations"
+ },
+ {
   "amount_max": 155000000.0,
   "amount_min": 155000000.0,
   "badge": "officiel",
@@ -58118,60 +58168,6 @@
   "source": "doj_antitrust",
   "tickers": [],
   "title": "Antitrust (ministère de la Justice) : Justice Department and USDA Reaffirm and Expand their Partnership to Protect Competition in Agricultural Inputs"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_rappel": true,
-   "nombre_plausible": true,
-   "numero_de_rappel_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-30T10:12:08+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "anciennes_empreintes": [
-    "a9b77decf1ef1a28ea0f9e126ced23672734bea7ee78bb2a62fa7dfb14bdba3e"
-   ],
-   "campagne": null,
-   "composant": "ELECTRICAL SYSTEM",
-   "consequence": "A short circuit increases the risk of a fire even when the vehicle is parked and the ignition is in the 'Off' position.",
-   "constructeur": "Kalmar Solutions, LLC",
-   "defaut": "Kalmar Solutions, LLC (Kalmar) is recalling certain 2014-2026 Ottawa T2 4X2 and 2016-2026 T2 6X4 DOT/EPA terminal tractors. The printed circuit board (PCB) insulation may become damaged, resulting in a short circuit.",
-   "numero": "26V648000",
-   "sorte": "Vehicle",
-   "sujet": "Park Outside: Printed Circuit Board May Short Circuit and Cause Fire",
-   "unites": 16127
-  },
-  "direction": -1,
-  "entities": [
-   "Kalmar Solutions, LLC"
-  ],
-  "id": "nhtsa:26V648000",
-  "kind": "rappel",
-  "notes": [
-   "Risque d'incendie même stationné : garer dehors, loin des bâtiments.",
-   "Document modifié à la source depuis la 1re lecture."
-  ],
-  "occurred_on": "2026-10-05",
-  "official_id": "26V648000",
-  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V648000",
-  "parser_version": "nhtsa-1",
-  "published_on": "2026-10-05",
-  "sha256": "466b3a63adf73025a30bc468aa0e772db9866d20ed0fbcfe8899195acc79fb9a",
-  "source": "nhtsa",
-  "tickers": [],
-  "title": "Rappel de Kalmar Solutions, LLC : 16 127 véhicules — « Park Outside: Printed Circuit Board May Short Circuit and Cause Fire »"
  },
  {
   "amount_max": null,
