@@ -1,5 +1,5 @@
 {
- "genere_a": "2026-11-17T23:38:51+00:00",
+ "genere_a": "2026-11-18T03:43:43+00:00",
  "horizons": {
   "30": "1 mois",
   "7": "1 semaine"
@@ -6268,6 +6268,357 @@
    "symbole": "MX",
    "taille": "petite",
    "vue": "2026-11-17"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-18T03:43:43+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "CVD EQUIPMENT CORP",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "CVV",
+   "taille": "petite",
+   "vue": "2026-11-17"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-18T03:43:43+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "DATA I/O CORP",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "DAIO",
+   "taille": "petite",
+   "vue": "2026-11-17"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-18T03:43:43+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Grove Collaborative Holdings, Inc.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "GROV",
+   "taille": "petite",
+   "vue": "2026-11-17"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-18T03:43:43+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "MAIA Biotechnology, Inc.",
+   "note10": 8.8,
+   "note10_sans_bonus": 8.8,
+   "note10_sans_taille": 7.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "MAIA",
+   "taille": "petite",
+   "vue": "2026-11-17"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-18T03:43:43+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "RenovoRx, Inc.",
+   "note10": 8.8,
+   "note10_sans_bonus": 8.8,
+   "note10_sans_taille": 7.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "RNXT",
+   "taille": "petite",
+   "vue": "2026-11-17"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-18T03:43:43+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Sensus Healthcare, Inc.",
+   "note10": 8.8,
+   "note10_sans_bonus": 8.8,
+   "note10_sans_taille": 7.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "SRTS",
+   "taille": "petite",
+   "vue": "2026-11-17"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-18T03:43:43+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "NATURAL GAS SERVICES GROUP INC",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "NGS",
+   "taille": "petite",
+   "vue": "2026-11-17"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-18T03:43:43+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "NeuroPace Inc",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "NPCE",
+   "taille": "petite",
+   "vue": "2026-11-17"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-18T03:43:43+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "PureCycle Technologies, Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "PCT",
+   "taille": "petite",
+   "vue": "2026-11-17"
   }
  ],
  "methode": [
@@ -6379,7 +6730,7 @@
      "ecart_moyen": -0.1209,
      "mesurees": 3
     },
-    "entrees": 47,
+    "entrees": 50,
     "libelle": "Groupe d'achats"
    },
    "facteur:PDG, directeur financier ou président du conseil": {
@@ -6393,7 +6744,7 @@
      "ecart_moyen": -0.1056,
      "mesurees": 3
     },
-    "entrees": 59,
+    "entrees": 62,
     "libelle": "PDG, directeur financier ou président du conseil"
    },
    "grace_a_la_taille": {
@@ -6449,7 +6800,7 @@
      "ecart_moyen": -0.0799,
      "mesurees": 12
     },
-    "entrees": 92,
+    "entrees": 95,
     "libelle": "Achat d'actions par un dirigeant ou un administrateur"
    },
    "regle:achat_elu": {
@@ -6533,7 +6884,7 @@
      "ecart_moyen": -0.0744,
      "mesurees": 7
     },
-    "entrees": 60,
+    "entrees": 63,
     "libelle": "Petite compagnie (sous le 30e centile du NYSE)"
    }
   },
@@ -6557,25 +6908,25 @@
   "ecartee_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 25,
+   "en_attente": 31,
    "mesurees": 0
   },
   "ecartee_7": {
    "battu": 3,
    "ecart_moyen": -0.0599,
-   "en_attente": 17,
+   "en_attente": 23,
    "mesurees": 4
   },
   "hausse_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 93,
+   "en_attente": 96,
    "mesurees": 0
   },
   "hausse_7": {
    "battu": 3,
    "ecart_moyen": -0.0543,
-   "en_attente": 61,
+   "en_attente": 64,
    "mesurees": 18
   }
  }
