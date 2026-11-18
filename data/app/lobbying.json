@@ -5,7 +5,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-11-11T11:05:33+00:00",
+   "lu": "2026-11-18T11:51:41+00:00",
    "moins_de_5000": 0,
    "nom": "Apogee Acquisition Corp",
    "pages": 1,
@@ -120,6 +120,20 @@
    ],
    "total": 80000.0
   },
+  "BXMT": {
+   "base": null,
+   "complet": true,
+   "firmes": 0,
+   "lu": "2026-11-14T10:34:07+00:00",
+   "moins_de_5000": 0,
+   "nom": "BLACKSTONE MORTGAGE TRUST, INC.",
+   "pages": 1,
+   "rapports": [],
+   "recherche": "BLACKSTONE",
+   "revenus_firmes": null,
+   "sujets": [],
+   "total": null
+  },
   "CATX": {
    "base": null,
    "complet": true,
@@ -205,7 +219,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-11-11T11:05:33+00:00",
+   "lu": "2026-11-18T11:51:41+00:00",
    "moins_de_5000": 0,
    "nom": "Datavault AI Inc.",
    "pages": 1,
@@ -285,45 +299,6 @@
    "sujets": [],
    "total": null
   },
-  "GPRO": {
-   "base": "firmes",
-   "complet": true,
-   "firmes": 1,
-   "lu": "2026-11-11T11:05:33+00:00",
-   "moins_de_5000": 0,
-   "nom": "GoPro, Inc.",
-   "pages": 1,
-   "rapports": [
-    {
-     "client": "GOPRO INC.",
-     "montant": 60000.0,
-     "poste": "2026-10-20",
-     "registrant": "FRANKLIN SQUARE GROUP, LLC",
-     "sans_activite": false,
-     "soi_meme": false,
-     "sujets": [
-      "CPI",
-      "CPT"
-     ],
-     "type": "Q3",
-     "url": "https://lda.gov/filings/public/filing/fae9a904-3bee-4fc0-8250-bf6683d5b817/print/",
-     "uuid": "fae9a904-3bee-4fc0-8250-bf6683d5b817"
-    }
-   ],
-   "recherche": "GOPRO",
-   "revenus_firmes": 60000.0,
-   "sujets": [
-    {
-     "code": "CPI",
-     "nom": "Industrie informatique"
-    },
-    {
-     "code": "CPT",
-     "nom": "Droits d'auteur, brevets et marques"
-    }
-   ],
-   "total": 60000.0
-  },
   "GSHD": {
    "base": null,
    "complet": true,
@@ -352,25 +327,11 @@
    "sujets": [],
    "total": null
   },
-  "HPP": {
-   "base": null,
-   "complet": true,
-   "firmes": 0,
-   "lu": "2026-11-14T10:34:07+00:00",
-   "moins_de_5000": 0,
-   "nom": "Hudson Pacific Properties, Inc.",
-   "pages": 1,
-   "rapports": [],
-   "recherche": "PROPERTIES",
-   "revenus_firmes": null,
-   "sujets": [],
-   "total": null
-  },
   "KMT": {
    "base": "firmes",
    "complet": true,
    "firmes": 1,
-   "lu": "2026-11-10T11:19:17+00:00",
+   "lu": "2026-11-18T11:51:41+00:00",
    "moins_de_5000": 0,
    "nom": "KENNAMETAL INC",
    "pages": 1,
@@ -526,6 +487,54 @@
    "sujets": [],
    "total": null
   },
+  "NGS": {
+   "base": null,
+   "complet": true,
+   "firmes": 0,
+   "lu": "2026-11-18T11:51:41+00:00",
+   "moins_de_5000": 0,
+   "nom": "NATURAL GAS SERVICES GROUP INC",
+   "pages": 2,
+   "rapports": [],
+   "recherche": "NATURAL",
+   "revenus_firmes": null,
+   "sujets": [],
+   "total": null
+  },
+  "NPCE": {
+   "base": "firmes",
+   "complet": true,
+   "firmes": 1,
+   "lu": "2026-11-18T11:51:41+00:00",
+   "moins_de_5000": 0,
+   "nom": "NeuroPace Inc",
+   "pages": 1,
+   "rapports": [
+    {
+     "client": "NEUROPACE, INC.",
+     "montant": 30000.0,
+     "poste": "2026-10-19",
+     "registrant": "LMH STRATEGIC SOLUTIONS",
+     "sans_activite": false,
+     "soi_meme": false,
+     "sujets": [
+      "MMM"
+     ],
+     "type": "Q3",
+     "url": "https://lda.gov/filings/public/filing/3580c8dc-dd37-4ab2-8bda-66d1242f16af/print/",
+     "uuid": "3580c8dc-dd37-4ab2-8bda-66d1242f16af"
+    }
+   ],
+   "recherche": "NEUROPACE",
+   "revenus_firmes": 30000.0,
+   "sujets": [
+    {
+     "code": "MMM",
+     "nom": "Medicare et Medicaid"
+    }
+   ],
+   "total": 30000.0
+  },
   "NSLR": {
    "base": null,
    "complet": true,
@@ -540,6 +549,20 @@
    "sujets": [],
    "total": null
   },
+  "PCT": {
+   "base": null,
+   "complet": true,
+   "firmes": 0,
+   "lu": "2026-11-18T11:51:41+00:00",
+   "moins_de_5000": 0,
+   "nom": "PureCycle Technologies, Inc.",
+   "pages": 1,
+   "rapports": [],
+   "recherche": "PURECYCLE",
+   "revenus_firmes": null,
+   "sujets": [],
+   "total": null
+  },
   "PLCE": {
    "base": null,
    "complet": true,
@@ -550,20 +573,6 @@
    "pages": 1,
    "rapports": [],
    "recherche": "CHILDRENS",
-   "revenus_firmes": null,
-   "sujets": [],
-   "total": null
-  },
-  "ROLR": {
-   "base": null,
-   "complet": true,
-   "firmes": 0,
-   "lu": "2026-11-11T11:05:33+00:00",
-   "moins_de_5000": 0,
-   "nom": "High Roller Technologies, Inc.",
-   "pages": 1,
-   "rapports": [],
-   "recherche": "ROLLER",
    "revenus_firmes": null,
    "sujets": [],
    "total": null

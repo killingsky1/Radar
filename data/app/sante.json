@@ -211,41 +211,6 @@
    "forme": "10-K",
    "lien": "https://www.sec.gov/Archives/edgar/data/1999001/000199900126000048/0001999001-26-000048-index.htm"
   },
-  "GPRO": {
-   "accn": "0001500435-26-000068",
-   "chiffres": {
-    "cfo": -0.038017,
-    "emission": 2706000,
-    "levier": 0.075425,
-    "levier_avant": 0.0,
-    "liquidite": 0.911239,
-    "liquidite_avant": 0.952221,
-    "marge": 0.33638,
-    "marge_avant": 0.338495,
-    "roa": -0.170404,
-    "roa_avant": -0.446625,
-    "rotation": 1.198397,
-    "rotation_avant": 0.82801
-   },
-   "cik": 1500435,
-   "criteres": {
-    "ACCRUAL": 1,
-    "CFO": 0,
-    "EQ_OFFER": 0,
-    "ROA": 0,
-    "ΔLEVER": 0,
-    "ΔLIQUID": 0,
-    "ΔMARGIN": 0,
-    "ΔROA": 1,
-    "ΔTURN": 1
-   },
-   "debut": "2025-01-01",
-   "depose": "2026-10-19",
-   "f_score": 3,
-   "fin": "2025-12-31",
-   "forme": "10-K/A",
-   "lien": "https://www.sec.gov/Archives/edgar/data/1500435/000150043526000068/0001500435-26-000068-index.htm"
-  },
   "KMT": {
    "accn": "0001628280-26-056143",
    "chiffres": {
@@ -315,6 +280,41 @@
    "fin": "2026-06-30",
    "forme": "10-K",
    "lien": "https://www.sec.gov/Archives/edgar/data/1157408/000110465926090515/0001104659-26-090515-index.htm"
+  },
+  "NPCE": {
+   "accn": "0001528287-26-000011",
+   "chiffres": {
+    "cfo": -0.116285,
+    "emission": 0,
+    "levier": 0.588216,
+    "levier_avant": 0.588488,
+    "liquidite": 5.280847,
+    "liquidite_avant": 5.366785,
+    "marge": 0.772308,
+    "marge_avant": 0.739431,
+    "roa": -0.22679,
+    "roa_avant": -0.25212,
+    "rotation": 1.05641,
+    "rotation_avant": 0.742269
+   },
+   "cik": 1528287,
+   "criteres": {
+    "ACCRUAL": 1,
+    "CFO": 0,
+    "EQ_OFFER": 1,
+    "ROA": 0,
+    "ΔLEVER": 1,
+    "ΔLIQUID": 0,
+    "ΔMARGIN": 1,
+    "ΔROA": 1,
+    "ΔTURN": 1
+   },
+   "debut": "2025-01-01",
+   "depose": "2026-03-03",
+   "f_score": 6,
+   "fin": "2025-12-31",
+   "forme": "10-K",
+   "lien": "https://www.sec.gov/Archives/edgar/data/1528287/000152828726000011/0001528287-26-000011-index.htm"
   },
   "PLCE": {
    "accn": "0001628280-26-024672",

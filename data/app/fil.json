@@ -1,5 +1,646 @@
 [
  {
+  "amount_max": 155000000.0,
+  "amount_min": 155000000.0,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "contrat_federal": true,
+   "date_de_signature_lue": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "fournisseur_lu": true,
+   "lien_de_la_fiche_du_contrat": true,
+   "montant_coherent": true,
+   "seuil_de_100_millions": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-18T12:10:43+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agence": "Department of Homeland Security",
+   "debut": "2026-11-16",
+   "description": "USCGA STEM BUILDING DESIGN BUILD",
+   "details": [
+    [
+     "Fournisseur",
+     "WHITING-TURNER CONTRACTING COMPANY, THE"
+    ],
+    [
+     "Ministère ou agence",
+     "Department of Homeland Security"
+    ],
+    [
+     "Sous-agence",
+     "U.S. Coast Guard"
+    ],
+    [
+     "Sommes engagées",
+     "155 M$"
+    ],
+    [
+     "Signé le",
+     "2026-11-16"
+    ],
+    [
+     "Type",
+     "commande dans un contrat-cadre"
+    ],
+    [
+     "Description",
+     "USCGA STEM BUILDING DESIGN BUILD"
+    ],
+    [
+     "Numéro",
+     "70ZS0727FPCNI0002"
+    ]
+   ],
+   "fournisseur": "WHITING-TURNER CONTRACTING COMPANY, THE",
+   "id": "CONT_AWD_70ZS0727FPCNI0002_7008_70Z04723DPCNI0006_7008",
+   "modifie_le": "2026-11-16 07:50:13",
+   "montant": 155000000.0,
+   "numero": "70ZS0727FPCNI0002",
+   "plafond": 155000000.0,
+   "signe_le": "2026-11-16",
+   "societe_mere": "WHITING-TURNER CONTRACTING COMPANY, THE",
+   "sous_agence": "U.S. Coast Guard",
+   "type": "DELIVERY ORDER",
+   "uei": "VEP4UN7LDMK5"
+  },
+  "direction": 0,
+  "entities": [
+   "WHITING-TURNER CONTRACTING COMPANY, THE",
+   "Department of Homeland Security"
+  ],
+  "id": "usaspending:CONT_AWD_70ZS0727FPCNI0002_7008_70Z04723DPCNI0006_7008",
+  "kind": "contrat_federal_us",
+  "notes": [
+   "Date de publication : le jour où Radar a vu le contrat pour la 1re fois (USAspending ne date pas la mise en ligne).",
+   "Montant : les sommes engagées (« obligations ») à la lecture ; le plafond, si toutes les options sont levées, est dans les détails."
+  ],
+  "occurred_on": "2026-11-16",
+  "official_id": "CONT_AWD_70ZS0727FPCNI0002_7008_70Z04723DPCNI0006_7008",
+  "official_url": "https://www.usaspending.gov/award/CONT_AWD_70ZS0727FPCNI0002_7008_70Z04723DPCNI0006_7008",
+  "parser_version": "usaspending-1",
+  "published_on": "2026-11-18",
+  "sha256": "77c0149e47dbeb5a1e4d584a4b9834436d65970d06beefdf7561ef5402a2e968",
+  "source": "usaspending",
+  "tickers": [],
+  "title": "Contrat fédéral américain de 155 M$ : WHITING-TURNER CONTRACTING COMPANY, THE (Sécurité intérieure)"
+ },
+ {
+  "amount_max": 986700000.0,
+  "amount_min": 469100000.0,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "fourchettes_reconnues": true,
+   "lignes_lues": true,
+   "meme_periode_que_le_lien": true,
+   "montant_coherent": true,
+   "periode_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-18T12:10:37+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "anonymes": 0,
+   "debut": "2026-07-01",
+   "details": [
+    [
+     "Période",
+     "1er juillet 2026 au 30 septembre 2026"
+    ],
+    [
+     "Transactions",
+     "45"
+    ],
+    [
+     "La plus grosse",
+     "250 M$ à 500 M$ (Other Related Consumer Goods & Services / Autres biens et services de consommation connexes)"
+    ],
+    [
+     "Exportateurs nommés",
+     "16106196 Canada Inc., AirBoss Defense Group Ltd, CMC Electronics Inc., Canpotex Limited, Emergent BioSolutions Canada Inc., Evacusled Inc., FMD Handling Canada ULC, General Dynamics Land Systems - Canada Corporation, General Dynamics Mission Systems - Canada, General Dynamics OTS - Canada Inc., General Dynamics OTS - Canada Valleyfield Inc., H2 Analytics Inc., Indal Technologies Inc., Kamik Canada Inc., L3Harris MAS Inc., Lockheed Martin Canada Inc., Loudmouth Security Inc., Magellan Aerospace, Winnipeg, Millbrook Tactical Inc., Montreal Bronze Ltd, OSI Maritime Systems Ltd., PWS Logistics Montreal, Inc., Pratt & Whitney Canada Inc., QinetiQ Group Canada Inc., Quartz Nature Inc., Rheinmetall Canada Inc., Standard Aero Limited, Winnipeg, Transcanada Turbines Ltd., Uncharted Software Inc., Valcom Manufacturing Group Inc., Wescam Inc., Woolly Mammoth Outerwear Inc."
+    ]
+   ],
+   "fin": "2026-09-30",
+   "fin_lien": "2026-09-30",
+   "libelle_lien": "Quarter ending September 30, 2026",
+   "nombre": 45,
+   "page_modifiee_le": "2026-11-17",
+   "pdf": "https://www.ccc.ca/wp-content/uploads/2026/11/TD-2026-2027-Q2.pdf",
+   "resume": "45 transactions signées du 1er juillet 2026 au 30 septembre 2026, dont 0 avec un exportateur anonyme. Montant total déclaré : entre 469,1 M$ et 986,7 M$.",
+   "transactions": [
+    {
+     "description": "Safety & Security Equipment & Services / Équipements et services de sûreté et de sécurité",
+     "destination": "Canada",
+     "exportateur": "16106196 Canada Inc.",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Nuclear Biological Chemical (NBC) Equipment / Nucléaire Biologique Chimique Équipement",
+     "destination": "United States",
+     "exportateur": "AirBoss Defense Group Ltd",
+     "fourchette": "5 M$ à 10 M$",
+     "max": 10000000.0,
+     "min": 5000000.0,
+     "montant": "$5,000,000.00 – $10,000,000.00"
+    },
+    {
+     "description": "Clothes & Textiles / Vêtements et Textiles",
+     "destination": "United States",
+     "exportateur": "AirBoss Defense Group Ltd",
+     "fourchette": "10 M$ à 20 M$",
+     "max": 20000000.0,
+     "min": 10000000.0,
+     "montant": "$10,000,000.00 – $20,000,000.00"
+    },
+    {
+     "description": "Other Related Consumer Goods & Services / Autres biens et services de consommation connexes",
+     "destination": "Bangladesh",
+     "exportateur": "Canpotex Limited",
+     "fourchette": "250 M$ à 500 M$",
+     "max": 500000000.0,
+     "min": 250000000.0,
+     "montant": "$250,000,000.00 – $500,000,000.00"
+    },
+    {
+     "description": "Aircraft Navigational & Guidance Equipment Systems / Systèmes d'équipement de navigation et de guidage pour aéronefs",
+     "destination": "United States",
+     "exportateur": "CMC Electronics Inc.",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Pharmaceuticals and Medical Supplies / Produits pharmaceutiques et fournitures médicales",
+     "destination": "United States",
+     "exportateur": "Emergent BioSolutions Canada Inc.",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Medical Equipment / Équipement médical",
+     "destination": "United States",
+     "exportateur": "Evacusled Inc.",
+     "fourchette": "moins de 100 000 $",
+     "max": 100000.0,
+     "min": 0.0,
+     "montant": "<$100,000.00"
+    },
+    {
+     "description": "Defence Products / Produits de défense",
+     "destination": "United States",
+     "exportateur": "FMD Handling Canada ULC",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Vehicles, Engines & Parts / Véhicules, moteurs et pièces",
+     "destination": "United States",
+     "exportateur": "General Dynamics Land Systems - Canada Corporation",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Vehicles, Engines & Parts / Véhicules, moteurs et pièces",
+     "destination": "United States",
+     "exportateur": "General Dynamics Land Systems - Canada Corporation",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Vehicles, Engines & Parts / Véhicules, moteurs et pièces",
+     "destination": "United States",
+     "exportateur": "General Dynamics Land Systems - Canada Corporation",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Defence Products / Produits de défense",
+     "destination": "United States",
+     "exportateur": "General Dynamics Mission Systems - Canada",
+     "fourchette": "10 M$ à 20 M$",
+     "max": 20000000.0,
+     "min": 10000000.0,
+     "montant": "$10,000,000.00 – $20,000,000.00"
+    },
+    {
+     "description": "Ammunition / Munition",
+     "destination": "United States",
+     "exportateur": "General Dynamics OTS - Canada Inc.",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Ammunition / Munition",
+     "destination": "United States",
+     "exportateur": "General Dynamics OTS - Canada Inc.",
+     "fourchette": "10 M$ à 20 M$",
+     "max": 20000000.0,
+     "min": 10000000.0,
+     "montant": "$10,000,000.00 – $20,000,000.00"
+    },
+    {
+     "description": "Defence Development (R&D) / Développement de la défense (R&D)",
+     "destination": "United States",
+     "exportateur": "General Dynamics OTS - Canada Inc.",
+     "fourchette": "10 M$ à 20 M$",
+     "max": 20000000.0,
+     "min": 10000000.0,
+     "montant": "$10,000,000.00 – $20,000,000.00"
+    },
+    {
+     "description": "Explosives (inc. Propellant & Pyrotechnic) / Explosifs (y compris propulseur et pyrotechnique)",
+     "destination": "United States",
+     "exportateur": "General Dynamics OTS - Canada Valleyfield Inc.",
+     "fourchette": "50 M$ à 100 M$",
+     "max": 100000000.0,
+     "min": 50000000.0,
+     "montant": "$50,000,000.00 – $100,000,000.00"
+    },
+    {
+     "description": "Explosives (inc. Propellant & Pyrotechnic) / Explosifs (y compris propulseur et pyrotechnique)",
+     "destination": "United States",
+     "exportateur": "General Dynamics OTS - Canada Valleyfield Inc.",
+     "fourchette": "5 M$ à 10 M$",
+     "max": 10000000.0,
+     "min": 5000000.0,
+     "montant": "$5,000,000.00 – $10,000,000.00"
+    },
+    {
+     "description": "Defence Development (R&D) / Développement de la défense (R&D)",
+     "destination": "United States",
+     "exportateur": "General Dynamics OTS - Canada Valleyfield Inc.",
+     "fourchette": "25 M$ à 50 M$",
+     "max": 50000000.0,
+     "min": 25000000.0,
+     "montant": "$25,000,000.00 – $50,000,000.00"
+    },
+    {
+     "description": "Safety & Security Equipment & Services / Équipements et services de sûreté et de sécurité",
+     "destination": "Canada",
+     "exportateur": "H2 Analytics Inc.",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Aircraft Parts & Auxiliary Equipment / Pièces d'aéronefs et équipement auxiliaire",
+     "destination": "United States",
+     "exportateur": "Indal Technologies Inc.",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Apparel / Vêtements",
+     "destination": "Canada",
+     "exportateur": "Kamik Canada Inc.",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Aircraft Parts & Auxiliary Equipment / Pièces d'aéronefs et équipement auxiliaire",
+     "destination": "United States",
+     "exportateur": "L3Harris MAS Inc.",
+     "fourchette": "moins de 100 000 $",
+     "max": 100000.0,
+     "min": 0.0,
+     "montant": "<$100,000.00"
+    },
+    {
+     "description": "Education & Training Equipment & Services / Équipements et services destinés à l'éducation et à la formation",
+     "destination": "United States",
+     "exportateur": "Lockheed Martin Canada Inc.",
+     "fourchette": "moins de 100 000 $",
+     "max": 100000.0,
+     "min": 0.0,
+     "montant": "<$100,000.00"
+    },
+    {
+     "description": "Safety & Security Equipment & Services / Équipements et services de sûreté et de sécurité",
+     "destination": "Canada",
+     "exportateur": "Loudmouth Security Inc.",
+     "fourchette": "moins de 100 000 $",
+     "max": 100000.0,
+     "min": 0.0,
+     "montant": "<$100,000.00"
+    },
+    {
+     "description": "Aircraft Parts & Auxiliary Equipment / Pièces d'aéronefs et équipement auxiliaire",
+     "destination": "United States",
+     "exportateur": "Magellan Aerospace, Winnipeg",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Apparel / Vêtements",
+     "destination": "Canada",
+     "exportateur": "Millbrook Tactical Inc.",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Aircraft Parts & Auxiliary Equipment / Pièces d'aéronefs et équipement auxiliaire",
+     "destination": "United States",
+     "exportateur": "Montreal Bronze Ltd",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Software & Information Equipment / Logiciels et équipements informatiques",
+     "destination": "United States",
+     "exportateur": "OSI Maritime Systems Ltd.",
+     "fourchette": "moins de 100 000 $",
+     "max": 100000.0,
+     "min": 0.0,
+     "montant": "<$100,000.00"
+    },
+    {
+     "description": "Aircraft Parts & Auxiliary Equipment / Pièces d'aéronefs et équipement auxiliaire",
+     "destination": "United States",
+     "exportateur": "Pratt & Whitney Canada Inc.",
+     "fourchette": "5 M$ à 10 M$",
+     "max": 10000000.0,
+     "min": 5000000.0,
+     "montant": "$5,000,000.00 – $10,000,000.00"
+    },
+    {
+     "description": "Aircraft R&O & Maintenance Services / Services de R&R et de maintenance des aéronefs",
+     "destination": "United States",
+     "exportateur": "Pratt & Whitney Canada Inc.",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Remote Operated Vehicles / Véhicules télécommandés",
+     "destination": "Canada",
+     "exportateur": "PWS Logistics Montreal, Inc.",
+     "fourchette": "moins de 100 000 $",
+     "max": 100000.0,
+     "min": 0.0,
+     "montant": "<$100,000.00"
+    },
+    {
+     "description": "Apparel / Vêtements",
+     "destination": "Canada",
+     "exportateur": "PWS Logistics Montreal, Inc.",
+     "fourchette": "5 M$ à 10 M$",
+     "max": 10000000.0,
+     "min": 5000000.0,
+     "montant": "$5,000,000.00 – $10,000,000.00"
+    },
+    {
+     "description": "Unclassified Non classifié Defence Products / Produits de défense",
+     "destination": "United States",
+     "exportateur": "QinetiQ Group Canada Inc.",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Apparel / Vêtements",
+     "destination": "Canada",
+     "exportateur": "Quartz Nature Inc.",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Aircraft Parts & Auxiliary Equipment / Pièces d'aéronefs et équipement auxiliaire",
+     "destination": "United States",
+     "exportateur": "Rheinmetall Canada Inc.",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Gas Turbine Engines & Parts / Moteurs et pièces de turbines à gaz",
+     "destination": "United States",
+     "exportateur": "Standard Aero Limited, Winnipeg",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Gas Turbine Engines & Parts / Moteurs et pièces de turbines à gaz",
+     "destination": "United States",
+     "exportateur": "Standard Aero Limited, Winnipeg",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Gas Turbine Engines & Parts / Moteurs et pièces de turbines à gaz",
+     "destination": "United States",
+     "exportateur": "Standard Aero Limited, Winnipeg",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Gas Turbine Engines & Parts / Moteurs et pièces de turbines à gaz",
+     "destination": "United States",
+     "exportateur": "Transcanada Turbines Ltd.",
+     "fourchette": "10 M$ à 20 M$",
+     "max": 20000000.0,
+     "min": 10000000.0,
+     "montant": "$10,000,000.00 – $20,000,000.00"
+    },
+    {
+     "description": "Defence Development (R&D) / Développement de la défense (R&D)",
+     "destination": "United States",
+     "exportateur": "Uncharted Software Inc.",
+     "fourchette": "100 000 $ à 1 M$",
+     "max": 1000000.0,
+     "min": 100000.0,
+     "montant": "$100,000.00 – $1,000,000.00"
+    },
+    {
+     "description": "Defence Development (R&D) / Développement de la défense (R&D)",
+     "destination": "United States",
+     "exportateur": "Uncharted Software Inc.",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Defence Development (R&D) / Développement de la défense (R&D)",
+     "destination": "United States",
+     "exportateur": "Uncharted Software Inc.",
+     "fourchette": "1 M$ à 5 M$",
+     "max": 5000000.0,
+     "min": 1000000.0,
+     "montant": "$1,000,000.00 – $5,000,000.00"
+    },
+    {
+     "description": "Information & Communication Technologies / Technologies de l'information et de la communication",
+     "destination": "United States",
+     "exportateur": "Valcom Manufacturing Group Inc.",
+     "fourchette": "moins de 100 000 $",
+     "max": 100000.0,
+     "min": 0.0,
+     "montant": "<$100,000.00"
+    },
+    {
+     "description": "Imaging & Counter Measure Equipment / Équipement d'imagerie et de contre-mesure",
+     "destination": "United States",
+     "exportateur": "Wescam Inc.",
+     "fourchette": "50 M$ à 100 M$",
+     "max": 100000000.0,
+     "min": 50000000.0,
+     "montant": "$50,000,000.00 – $100,000,000.00"
+    },
+    {
+     "description": "Apparel / Vêtements",
+     "destination": "Canada",
+     "exportateur": "Woolly Mammoth Outerwear Inc.",
+     "fourchette": "10 M$ à 20 M$",
+     "max": 20000000.0,
+     "min": 10000000.0,
+     "montant": "$10,000,000.00 – $20,000,000.00"
+    }
+   ]
+  },
+  "direction": 0,
+  "entities": [
+   "Corporation commerciale canadienne"
+  ],
+  "id": "ccc:2026-07-01:2026-09-30",
+  "kind": "transactions_signees",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle des rapports (au plus tard)."
+  ],
+  "occurred_on": "2026-09-30",
+  "official_id": "2026-07-01:2026-09-30",
+  "official_url": "https://www.ccc.ca/wp-content/uploads/2026/11/TD-2026-2027-Q2.pdf",
+  "parser_version": "ccc-1",
+  "published_on": "2026-11-17",
+  "sha256": "9e7d744227e3cf39777f3cb618552f19e4a6a4f1e6c2eb0a714e92c36924c5f6",
+  "source": "ccc",
+  "tickers": [],
+  "title": "Corporation commerciale canadienne : 45 transactions signées (1er juillet 2026 au 30 septembre 2026), la plus grosse de 250 M$ à 500 M$"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "etape_datee": true,
+   "lien_legisinfo": true,
+   "projet_du_gouvernement": true,
+   "sanction_confirmee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-18T11:54:34+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "champ": "PassedHouseSecondReadingDateTime",
+   "cle": "chambre-2",
+   "date_officielle": "2026-11-17T10:15:00-05:00",
+   "details": [
+    [
+     "Projet de loi",
+     "C-41"
+    ],
+    [
+     "Titre",
+     "Loi modifiant le Code criminel et la Loi modifiant le Code criminel (aide médicale à mourir) et apportant des modifications connexes à d'autres lois"
+    ],
+    [
+     "Étape",
+     "adopté en deuxième lecture à la Chambre des communes"
+    ],
+    [
+     "Où il en est",
+     "À l'examen en comité à la Chambre des communes"
+    ]
+   ],
+   "etape": "adopté en deuxième lecture à la Chambre des communes",
+   "numero": "C-41",
+   "sanction": false,
+   "session": "45-1",
+   "statut": "À l'examen en comité à la Chambre des communes",
+   "titre": "Loi sur les mesures de sauvegarde à l'égard de l'aide médicale à mourir",
+   "titre_long": "Loi modifiant le Code criminel et la Loi modifiant le Code criminel (aide médicale à mourir) et apportant des modifications connexes à d'autres lois",
+   "type": "Projet de loi émanant du gouvernement (Cdc)",
+   "type_en": "House Government Bill"
+  },
+  "direction": 0,
+  "entities": [
+   "Parlement du Canada"
+  ],
+  "id": "legisinfo:45-1:C-41:chambre-2",
+  "kind": "etape_projet_de_loi",
+  "notes": [],
+  "occurred_on": "2026-11-17",
+  "official_id": "45-1:C-41:chambre-2",
+  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-41",
+  "parser_version": "legisinfo-1",
+  "published_on": "2026-11-17",
+  "sha256": "f4b23f553bd7cea519908c8f78f51660efce1e10f79c25c4019e6a288e6f9c06",
+  "source": "legisinfo",
+  "tickers": [],
+  "title": "Projet de loi C-41 (Loi sur les mesures de sauvegarde à l'égard de l'aide médicale à mourir) : adopté en deuxième lecture à la Chambre des communes"
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -45537,121 +46178,6 @@
   "title": "Rappel de Ford Motor Company : 33 578 véhicules — « Map Lights May Remain Illuminated/FMVSS 101 »"
  },
  {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "etape_datee": true,
-   "lien_legisinfo": true,
-   "projet_du_gouvernement": true,
-   "sanction_confirmee": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-03T20:18:40+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "champ": "PassedSenateFirstReadingDateTime",
-   "cle": "senat-1",
-   "date_officielle": "2026-11-02T19:00:00-05:00",
-   "details": [
-    [
-     "Projet de loi",
-     "S-8"
-    ],
-    [
-     "Titre",
-     "Loi concernant certaines mesures liées au recyclage des produits de la criminalité, au financement des activités terroristes, au contournement de sanctions et à la détection d’objets inadmissibles dans les transmissions postales"
-    ],
-    [
-     "Étape",
-     "première lecture au Sénat"
-    ],
-    [
-     "Où il en est",
-     "À la deuxième lecture au Sénat"
-    ]
-   ],
-   "etape": "première lecture au Sénat",
-   "numero": "S-8",
-   "sanction": false,
-   "session": "45-1",
-   "statut": "À la deuxième lecture au Sénat",
-   "titre": "Loi visant à lutter contre les crimes financiers et le trafic de drogues",
-   "titre_long": "Loi concernant certaines mesures liées au recyclage des produits de la criminalité, au financement des activités terroristes, au contournement de sanctions et à la détection d’objets inadmissibles dans les transmissions postales",
-   "type": "Projet de loi émanant du gouvernement (Sénat)",
-   "type_en": "Senate Government Bill"
-  },
-  "direction": 0,
-  "entities": [
-   "Parlement du Canada"
-  ],
-  "id": "legisinfo:45-1:S-8:senat-1",
-  "kind": "etape_projet_de_loi",
-  "notes": [],
-  "occurred_on": "2026-11-02",
-  "official_id": "45-1:S-8:senat-1",
-  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/s-8",
-  "parser_version": "legisinfo-1",
-  "published_on": "2026-11-02",
-  "sha256": "7b47effd957dcf05fb1b9d646c4d0911a72ef89ffbd954d3aba337365a36c92e",
-  "source": "legisinfo",
-  "tickers": [],
-  "title": "Projet de loi S-8 (Loi visant à lutter contre les crimes financiers et le trafic de drogues) : première lecture au Sénat"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_identique_au_fil": true,
-   "lien_ministere_coherent": true,
-   "ministere_reconnu": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "type_communique": true
-  },
-  "collected_at": "2026-11-02T22:29:49+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "id_fil": "https://www.canada.ca/fr/tribunal-commerce-exterieur/nouvelles/2026/11/le-tribunal-ouvre-un-reexamen-relatif-a-lexpiration--tubes-de-canalisation-en-acier-au-carbone-et-en-acier-allie-provenant-de-la-chine.html",
-   "ministere": "Tribunal canadien du commerce extérieur",
-   "mis_a_jour": "2026-11-02T16:10:17-05:00",
-   "resume": "Le Tribunal canadien du commerce extérieur a ouvert aujourd’hui un réexamen relatif à l’expiration (RR-2026-008) de son ordonnance rendue le 6 janvier 2022, dans le cadre du réexamen relatif à l’expiration RR-2020-004, pour décider si l’expiration de cette ordonnance mènera vraisemblablement à la poursuite ou la reprise du dumping ou du subventionnement de tubes de canalisation en acier au carbone et en acier allié en provenance de la Chine et causera vraisemblablement un dommage à la branche de production nationale.",
-   "type": "communiqués de presse"
-  },
-  "direction": 0,
-  "entities": [
-   "Tribunal canadien du commerce extérieur"
-  ],
-  "id": "nouvelles_eco_ca:tribunal-commerce-exterieur/nouvelles/2026/11/le-tribunal-ouvre-un-reexamen-relatif-a-lexpiration--tubes-de-canalisation-en-acier-au-carbone-et-en-acier-allie-provenant-de-la-chine.html",
-  "kind": "nouvelle_officielle",
-  "notes": [],
-  "occurred_on": "2026-11-02",
-  "official_id": "tribunal-commerce-exterieur/nouvelles/2026/11/le-tribunal-ouvre-un-reexamen-relatif-a-lexpiration--tubes-de-canalisation-en-acier-au-carbone-et-en-acier-allie-provenant-de-la-chine.html",
-  "official_url": "https://www.canada.ca/fr/tribunal-commerce-exterieur/nouvelles/2026/11/le-tribunal-ouvre-un-reexamen-relatif-a-lexpiration--tubes-de-canalisation-en-acier-au-carbone-et-en-acier-allie-provenant-de-la-chine.html",
-  "parser_version": "canada-1",
-  "published_on": "2026-11-02",
-  "sha256": "2f3e4ab58474b8afc63fec9697f2d233698d710b52e8f637b6ab3ebc9bf3f5a4",
-  "source": "nouvelles_eco_ca",
-  "tickers": [],
-  "title": "Le Tribunal ouvre un réexamen relatif à l’expiration — Tubes de canalisation en acier au carbone et en acier allié provenant de la Chine"
- },
- {
   "amount_max": 45000.0,
   "amount_min": 3003.0,
   "badge": "officiel",
@@ -57646,53 +58172,6 @@
   "source": "nhtsa",
   "tickers": [],
   "title": "Rappel de Kalmar Solutions, LLC : 16 127 véhicules — « Park Outside: Printed Circuit Board May Short Circuit and Cause Fire »"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "categorie_officielle_reconnue": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_d_une_action_presidentielle": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_officiel_lu": true
-  },
-  "collected_at": "2026-10-06T02:25:29+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "categories": [
-    "Presidential Actions",
-    "Executive Orders"
-   ],
-   "guid": "",
-   "resume": "Section 1 . Purpose and Policy . Farmers and truckers are essential to the American way of life. Restricted global diesel supply has led to rising prices, and these key industries have been particularly hard hit. While my Administration has already undertaken historic efforts to ensure fuel affordability for our citizens, it is clear that further temporary relief is necessary. To that end, today I am directing the Secretary of the Treasury (Secretary) to use his authority to defer certain diesel fuel tax payment obligations and to provide penalty relief to the extent permitted by law. I am als",
-   "sorte": "decret",
-   "titre_officiel": "Emergency Tax Relief on Diesel Fuel"
-  },
-  "direction": 0,
-  "entities": [
-   "The White House"
-  ],
-  "id": "maison_blanche:2026/10/emergency-tax-relief-on-diesel-fuel",
-  "kind": "decret",
-  "notes": [],
-  "occurred_on": "2026-10-05",
-  "official_id": "2026/10/emergency-tax-relief-on-diesel-fuel",
-  "official_url": "https://www.whitehouse.gov/presidential-actions/2026/10/emergency-tax-relief-on-diesel-fuel/",
-  "parser_version": "maison-blanche-1",
-  "published_on": "2026-10-05",
-  "sha256": "20d84bf008b3610ce7e0c251e40974bb10df7b4d74105b11acca7ec6e6672888",
-  "source": "maison_blanche",
-  "tickers": [],
-  "title": "Décret présidentiel : Emergency Tax Relief on Diesel Fuel"
  },
  {
   "amount_max": null,
