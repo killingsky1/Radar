@@ -784,8 +784,134 @@
    }
   }
  ],
- "compagnies_notees": 783,
+ "compagnies_notees": 820,
  "ecartees": [
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depot_recent": "2026-11-18",
+   "depuis": "2026-11-19T03:31:02+00:00",
+   "derniere_info": "2026-11-18",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ],
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001437749-26-037553:P",
+       "points": 7.88,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
+      },
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001437749-26-037544:P",
+       "points": 5.25,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
+      },
+      {
+       "age": 48,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001437749-26-031654:P",
+       "points": 1.48,
+       "regle": "achat_dirigeant",
+       "temps": 0.33
+      },
+      {
+       "age": 49,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001437749-26-031597:P",
+       "points": 1.45,
+       "regle": "achat_dirigeant",
+       "temps": 0.322
+      }
+     ],
+     "points": 7.88,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "FILANA THERAPEUTICS, INC.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.4,
+   "plus": 7.88,
+   "recent": true,
+   "score": 7.88,
+   "symbole": "FLNA",
+   "taille": {
+    "actions": [
+     50269619,
+     "2026-11-02"
+    ],
+    "prix": [
+     "20261029",
+     0.65
+    ],
+    "seuils": {
+     "mois": "202609",
+     "p30": 2090.64,
+     "p70": 12588.71
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 32.7
+   }
+  },
   {
    "bonus": {
     "moins": 1.0,
@@ -803,7 +929,7 @@
    ],
    "depot_recent": "2026-11-10",
    "depuis": "2026-11-11T11:05:33+00:00",
-   "derniere_info": "2026-11-17",
+   "derniere_info": "2026-11-18",
    "groupes": [
     {
      "famille": "inities",
@@ -853,6 +979,25 @@
        "points": 6.55,
        "regle": "achat_dirigeant",
        "temps": 0.831
+      },
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001193125-26-467059:P",
+       "points": 5.25,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
       },
       {
        "age": 1,
@@ -1213,6 +1358,99 @@
     "source_actions": "frames",
     "taille": "petite",
     "valeur_m": 59.2
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [
+    {
+     "id": "sec_13dg:0001217541-26-000010",
+     "pourquoi": "13G : placement passif (souvent un fonds indiciel qui grossit)."
+    },
+    {
+     "id": "sec_13dg:0000906304-26-000193",
+     "pourquoi": "13G : placement passif (souvent un fonds indiciel qui grossit)."
+    }
+   ],
+   "depot_recent": "2026-11-18",
+   "depuis": "2026-11-19T03:31:02+00:00",
+   "derniere_info": "2026-11-18",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001213900-26-121625:P",
+       "points": 5.25,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
+      },
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001213900-26-121624:P",
+       "points": 5.25,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
+      }
+     ],
+     "points": 5.25,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "Proficient Auto Logistics, Inc",
+   "note10": 9.4,
+   "note10_sans_bonus": 9.4,
+   "note10_sans_taille": 7.9,
+   "plus": 5.25,
+   "recent": true,
+   "score": 5.25,
+   "symbole": "PAL",
+   "taille": {
+    "actions": [
+     28063881,
+     "2026-11-09"
+    ],
+    "prix": [
+     "20261030",
+     2.42
+    ],
+    "seuils": {
+     "mois": "202609",
+     "p30": 2090.64,
+     "p70": 12588.71
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 67.9
    }
   },
   {
@@ -1894,7 +2132,214 @@
     "moins": 1.0,
     "plus": 1.0
    },
+   "contexte": [
+    {
+     "id": "sec_13dg:0001104659-26-126321",
+     "pourquoi": "Mise à jour d'un 13D ou passage sous 5 % : seul le premier dépôt compte."
+    },
+    {
+     "id": "sec_8k:0001493152-26-050957",
+     "pourquoi": "Autre point du 8-K (contrat, acquisition, avis de retrait de la bourse…) : effet incertain."
+    }
+   ],
+   "depot_recent": "2026-11-18",
+   "depuis": "2026-11-19T03:31:02+00:00",
+   "derniere_info": "2026-11-18",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001493152-26-053130:P",
+       "points": 3.0,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
+      }
+     ],
+     "points": 3.0,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "Stereotaxis, Inc.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "plus": 3.0,
+   "recent": true,
+   "score": 3.0,
+   "symbole": "STXS",
+   "taille": {
+    "actions": [
+     100855732,
+     "2026-10-31"
+    ],
+    "prix": [
+     "20261030",
+     0.91
+    ],
+    "seuils": {
+     "mois": "202609",
+     "p30": 2090.64,
+     "p70": 12588.71
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 91.8
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [
+    {
+     "id": "sec_13dg:0001193805-26-001507",
+     "pourquoi": "Mise à jour d'un 13D ou passage sous 5 % : seul le premier dépôt compte."
+    },
+    {
+     "id": "sec_13dg:0001172661-26-005402",
+     "pourquoi": "13G : placement passif (souvent un fonds indiciel qui grossit)."
+    }
+   ],
+   "depot_recent": "2026-11-18",
+   "depuis": "2026-11-19T03:31:02+00:00",
+   "derniere_info": "2026-11-18",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001104659-26-129796:P",
+       "points": 3.0,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
+      }
+     ],
+     "points": 3.0,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "XBP Global Holdings, Inc.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "plus": 3.0,
+   "recent": true,
+   "score": 3.0,
+   "symbole": "XBP",
+   "taille": {
+    "actions": [
+     14215851,
+     "2026-11-16"
+    ],
+    "prix": [
+     "20261118",
+     2.863
+    ],
+    "seuils": {
+     "mois": "202609",
+     "p30": 2090.64,
+     "p70": 12588.71
+    },
+    "source_actions": "frames",
+    "source_prix": "formulaire 4",
+    "taille": "petite",
+    "valeur_m": 40.7
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
    "contexte": [],
+   "depot_recent": "2026-11-18",
+   "depuis": "2026-11-19T03:31:02+00:00",
+   "derniere_info": "2026-11-18",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001213900-26-121959:P",
+       "points": 3.0,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
+      }
+     ],
+     "points": 3.0,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "XTI Aerospace, Inc.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "plus": 3.0,
+   "recent": true,
+   "score": 3.0,
+   "symbole": "XTIA",
+   "taille": {
+    "actions": [
+     38477789,
+     "2026-10-20"
+    ],
+    "prix": [
+     "20261023",
+     0.85
+    ],
+    "seuils": {
+     "mois": "202609",
+     "p30": 2090.64,
+     "p70": 12588.71
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 32.7
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [
+    {
+     "id": "sec_13dg:0001493152-26-053116",
+     "pourquoi": "Mise à jour d'un 13D ou passage sous 5 % : seul le premier dépôt compte."
+    }
+   ],
    "depot_recent": "2026-11-17",
    "depuis": "2026-11-18T03:43:43+00:00",
    "derniere_info": "2026-11-17",
@@ -2251,389 +2696,6 @@
     "taille": "petite",
     "valeur_m": 89.2
    }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depot_recent": "2026-11-16",
-   "depuis": "2026-11-13T11:06:56+00:00",
-   "derniere_info": "2026-11-16",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 2,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0000912282-26-001509:P",
-       "points": 2.86,
-       "regle": "achat_dirigeant",
-       "temps": 0.955
-      },
-      {
-       "age": 6,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0000912282-26-001461:P",
-       "points": 2.61,
-       "regle": "achat_dirigeant",
-       "temps": 0.871
-      }
-     ],
-     "points": 2.86,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "Big Digital Energy, Inc.",
-   "note10": 7.4,
-   "note10_sans_bonus": 7.4,
-   "note10_sans_taille": 6.6,
-   "plus": 2.86,
-   "recent": true,
-   "score": 2.86,
-   "symbole": "BGDE",
-   "taille": {
-    "actions": [
-     6419242,
-     "2026-11-04"
-    ],
-    "prix": [
-     "20261030",
-     3.86
-    ],
-    "seuils": {
-     "mois": "202609",
-     "p30": 2090.64,
-     "p70": 12588.71
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 24.8
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depot_recent": "2026-11-16",
-   "depuis": "2026-11-17T04:30:42+00:00",
-   "derniere_info": "2026-11-16",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 2,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001493152-26-051932:P",
-       "points": 2.86,
-       "regle": "achat_dirigeant",
-       "temps": 0.955
-      }
-     ],
-     "points": 2.86,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "electroCore, Inc.",
-   "note10": 7.4,
-   "note10_sans_bonus": 7.4,
-   "note10_sans_taille": 6.6,
-   "plus": 2.86,
-   "recent": true,
-   "score": 2.86,
-   "symbole": "ECOR",
-   "taille": {
-    "actions": [
-     9226006,
-     "2026-10-30"
-    ],
-    "prix": [
-     "20261030",
-     8.11
-    ],
-    "seuils": {
-     "mois": "202609",
-     "p30": 2090.64,
-     "p70": 12588.71
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 74.8
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [
-    {
-     "id": "sec_8k:0001193125-26-465667",
-     "pourquoi": "Autre point du 8-K (contrat, acquisition, avis de retrait de la bourse…) : effet incertain."
-    },
-    {
-     "id": "sec_13dg:0000312069-26-000249",
-     "pourquoi": "13G : placement passif (souvent un fonds indiciel qui grossit)."
-    }
-   ],
-   "depot_recent": "2026-11-13",
-   "depuis": "2026-11-14T10:34:07+00:00",
-   "derniere_info": "2026-11-13",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 5,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001193125-26-460743:P",
-       "points": 2.67,
-       "regle": "achat_dirigeant",
-       "temps": 0.891
-      }
-     ],
-     "points": 2.67,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "Aldeyra Therapeutics, Inc.",
-   "note10": 7.2,
-   "note10_sans_bonus": 7.2,
-   "note10_sans_taille": 6.5,
-   "plus": 2.67,
-   "recent": false,
-   "score": 2.67,
-   "symbole": "ALDX",
-   "taille": {
-    "actions": [
-     60356541,
-     "2026-11-03"
-    ],
-    "prix": [
-     "20261030",
-     0.66
-    ],
-    "seuils": {
-     "mois": "202609",
-     "p30": 2090.64,
-     "p70": 12588.71
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 39.8
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depot_recent": "2026-11-13",
-   "depuis": "2026-11-14T10:34:07+00:00",
-   "derniere_info": "2026-11-13",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 5,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001193125-26-460514:P",
-       "points": 2.67,
-       "regle": "achat_dirigeant",
-       "temps": 0.891
-      },
-      {
-       "age": 21,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001193125-26-435894:P",
-       "points": 1.85,
-       "regle": "achat_dirigeant",
-       "temps": 0.616
-      }
-     ],
-     "points": 2.67,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "XBiotech Inc.",
-   "note10": 7.2,
-   "note10_sans_bonus": 7.2,
-   "note10_sans_taille": 6.5,
-   "plus": 2.67,
-   "recent": false,
-   "score": 2.67,
-   "symbole": "XBIT",
-   "taille": {
-    "actions": [
-     30487731,
-     "2026-11-12"
-    ],
-    "prix": [
-     "20261020",
-     2.0
-    ],
-    "seuils": {
-     "mois": "202609",
-     "p30": 2090.64,
-     "p70": 12588.71
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 61.0
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [
-    {
-     "id": "sec_13dg:0001829126-26-012156",
-     "pourquoi": "Mise à jour d'un 13D ou passage sous 5 % : seul le premier dépôt compte."
-    },
-    {
-     "id": "sec_8k:0001628280-26-063811",
-     "pourquoi": "Autre point du 8-K (contrat, acquisition, avis de retrait de la bourse…) : effet incertain."
-    }
-   ],
-   "depot_recent": "2026-11-12",
-   "depuis": "2026-11-10T04:09:32+00:00",
-   "derniere_info": "2026-11-12",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 6,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001628280-26-073398:P",
-       "points": 2.61,
-       "regle": "achat_dirigeant",
-       "temps": 0.871
-      },
-      {
-       "age": 9,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001628280-26-072331:P",
-       "points": 2.44,
-       "regle": "achat_dirigeant",
-       "temps": 0.812
-      },
-      {
-       "age": 49,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001628280-26-064003:P",
-       "points": 0.97,
-       "regle": "achat_dirigeant",
-       "temps": 0.322
-      }
-     ],
-     "points": 2.61,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "Advanced Flower Capital Inc.",
-   "note10": 7.2,
-   "note10_sans_bonus": 7.2,
-   "note10_sans_taille": 6.5,
-   "plus": 2.61,
-   "recent": false,
-   "score": 2.61,
-   "symbole": "AFCG",
-   "taille": {
-    "actions": [
-     22403782,
-     "2026-11-02"
-    ],
-    "prix": [
-     "20261027",
-     2.98
-    ],
-    "seuils": {
-     "mois": "202609",
-     "p30": 2090.64,
-     "p70": 12588.71
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 66.8
-   }
   }
  ],
  "evenements": {
@@ -2750,63 +2812,6 @@
     "CATX"
    ],
    "title": "STATE STREET CORPORATION détient 1,8 % de Perspective Therapeutics, Inc. (13G, placement passif)"
-  },
-  "sec_13dg:0000312069-26-000249": {
-   "amount_max": null,
-   "amount_min": null,
-   "badge": "officiel",
-   "category": "baleines",
-   "checks": {
-    "champs_requis": true,
-    "dates_coherentes": true,
-    "domaine_officiel": true,
-    "emetteur_coherent": true,
-    "empreinte": true,
-    "pourcentage_valide": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-11-07T10:24:00+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 3310587.0,
-    "amendement": null,
-    "bourse": "Nasdaq",
-    "but_sous_evalue": null,
-    "cik_emetteur": "0001341235",
-    "cik_sujet_entete": "0001341235",
-    "date_evenement": "2026-09-30",
-    "declarant": "Barclays PLC",
-    "extrait_but": null,
-    "nb_personnes": 1,
-    "nom_emetteur": "ALDEYRA THERAPEUTICS INC",
-    "pourcentage": 5.48,
-    "type": "SCHEDULE 13G",
-    "types_declarants": [
-     "HC"
-    ]
-   },
-   "direction": 0,
-   "entities": [
-    "Barclays PLC",
-    "Aldeyra Therapeutics, Inc."
-   ],
-   "id": "sec_13dg:0000312069-26-000249",
-   "kind": "plus_5_pourcent",
-   "notes": [],
-   "occurred_on": "2026-09-30",
-   "official_id": "0000312069-26-000249",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1341235/000031206926000249/0000312069-26-000249-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-11-06",
-   "sha256": "7f2bcf2d0052f5d1ed81878fbce6b4bc454eb028b84aab4d0a6d7d8038f5cf8a",
-   "source": "sec_13dg",
-   "tickers": [
-    "ALDX"
-   ],
-   "title": "Barclays PLC détient 5,48 % de Aldeyra Therapeutics, Inc. (13G, placement passif)"
   },
   "sec_13dg:0000354204-26-001063": {
    "amount_max": null,
@@ -3036,6 +3041,63 @@
     "APMD"
    ],
    "title": "Morningside Venture Investments Ltd détient 17,4 % de Apnimed, Inc. (13G, placement passif)"
+  },
+  "sec_13dg:0000906304-26-000193": {
+   "amount_max": null,
+   "amount_min": null,
+   "badge": "officiel",
+   "category": "baleines",
+   "checks": {
+    "champs_requis": true,
+    "dates_coherentes": true,
+    "domaine_officiel": true,
+    "emetteur_coherent": true,
+    "empreinte": true,
+    "pourcentage_valide": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-24T08:15:09+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 1419584.0,
+    "amendement": null,
+    "bourse": "Nasdaq",
+    "but_sous_evalue": null,
+    "cik_emetteur": "0001998768",
+    "cik_sujet_entete": "0001998768",
+    "date_evenement": "2026-09-30",
+    "declarant": "ROYCE & ASSOCIATES LP",
+    "extrait_but": null,
+    "nb_personnes": 1,
+    "nom_emetteur": "Proficient Auto Logistics Inc",
+    "pourcentage": 5.06,
+    "type": "SCHEDULE 13G",
+    "types_declarants": [
+     "IA"
+    ]
+   },
+   "direction": 0,
+   "entities": [
+    "ROYCE & ASSOCIATES LP",
+    "Proficient Auto Logistics, Inc"
+   ],
+   "id": "sec_13dg:0000906304-26-000193",
+   "kind": "plus_5_pourcent",
+   "notes": [],
+   "occurred_on": "2026-09-30",
+   "official_id": "0000906304-26-000193",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1998768/000090630426000193/0000906304-26-000193-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-10-23",
+   "sha256": "aa4b3ceed877d10c98bd1d8204b7ef517261d8d62745a5f4919e62d18b897e25",
+   "source": "sec_13dg",
+   "tickers": [
+    "PAL"
+   ],
+   "title": "ROYCE & ASSOCIATES LP détient 5,06 % de Proficient Auto Logistics, Inc (13G, placement passif)"
   },
   "sec_13dg:0000919574-26-007446": {
    "amount_max": null,
@@ -3510,6 +3572,67 @@
    ],
    "title": "LSV ASSET MANAGEMENT détient 5,5 % de GoodRx Holdings, Inc. (13G, placement passif)"
   },
+  "sec_13dg:0001104659-26-126321": {
+   "amount_max": null,
+   "amount_min": null,
+   "badge": "officiel",
+   "category": "baleines",
+   "checks": {
+    "champs_requis": true,
+    "dates_coherentes": true,
+    "domaine_officiel": true,
+    "emetteur_coherent": true,
+    "empreinte": true,
+    "pourcentage_valide": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-13T11:14:47+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 15628395.0,
+    "amendement": "5",
+    "bourse": "NYSE",
+    "but_sous_evalue": null,
+    "cik_emetteur": "0001289340",
+    "cik_sujet_entete": "0001289340",
+    "date_evenement": "2026-11-09",
+    "declarant": "Dr. Nathan Fischel",
+    "extrait_but": null,
+    "nb_personnes": 5,
+    "nom_emetteur": "Stereotaxis, Inc.",
+    "pourcentage": 15.3,
+    "type": "SCHEDULE 13D/A",
+    "types_declarants": [
+     "HC",
+     "IA",
+     "IN",
+     "OO",
+     "PN"
+    ]
+   },
+   "direction": 0,
+   "entities": [
+    "Dr. Nathan Fischel",
+    "Stereotaxis, Inc."
+   ],
+   "id": "sec_13dg:0001104659-26-126321",
+   "kind": "plus_5_pourcent",
+   "notes": [],
+   "occurred_on": "2026-11-09",
+   "official_id": "0001104659-26-126321",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1289340/000110465926126321/0001104659-26-126321-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-12",
+   "sha256": "761afbb28a65e15480f16e1c17c61e3934dbd0abf46359e918a8645dc719b114",
+   "source": "sec_13dg",
+   "tickers": [
+    "STXS"
+   ],
+   "title": "Dr. Nathan Fischel détient 15,3 % de Stereotaxis, Inc. (13D, intentions actives, mise à jour n° 5)"
+  },
   "sec_13dg:0001104659-26-127114": {
    "amount_max": null,
    "amount_min": null,
@@ -3800,6 +3923,65 @@
     "DTI"
    ],
    "title": "PRIVATE MANAGEMENT GROUP INC détient 8,2 % de Drilling Tools International Corp (13G, placement passif)"
+  },
+  "sec_13dg:0001172661-26-005402": {
+   "amount_max": null,
+   "amount_min": null,
+   "badge": "officiel",
+   "category": "baleines",
+   "checks": {
+    "champs_requis": true,
+    "dates_coherentes": true,
+    "domaine_officiel": true,
+    "emetteur_coherent": true,
+    "empreinte": true,
+    "pourcentage_valide": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-17T04:37:34+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 784313.0,
+    "amendement": null,
+    "bourse": "Nasdaq",
+    "but_sous_evalue": null,
+    "cik_emetteur": "0001839530",
+    "cik_sujet_entete": "0001839530",
+    "date_evenement": "2026-09-30",
+    "declarant": "Alyeska Investment Group, L.P.",
+    "extrait_but": null,
+    "nb_personnes": 3,
+    "nom_emetteur": "XBP Global Holdings, Inc.",
+    "pourcentage": 5.54,
+    "type": "SCHEDULE 13G",
+    "types_declarants": [
+     "IA",
+     "IN",
+     "OO"
+    ]
+   },
+   "direction": 0,
+   "entities": [
+    "Alyeska Investment Group, L.P.",
+    "XBP Global Holdings, Inc."
+   ],
+   "id": "sec_13dg:0001172661-26-005402",
+   "kind": "plus_5_pourcent",
+   "notes": [],
+   "occurred_on": "2026-09-30",
+   "official_id": "0001172661-26-005402",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1839530/000117266126005402/0001172661-26-005402-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-16",
+   "sha256": "7d0b7c3258714cf554322f3e643f5a027fb2735823119350f896baec7ff6fffe",
+   "source": "sec_13dg",
+   "tickers": [
+    "XBP"
+   ],
+   "title": "Alyeska Investment Group, L.P. détient 5,54 % de XBP Global Holdings, Inc. (13G, placement passif)"
   },
   "sec_13dg:0001193125-26-424346": {
    "amount_max": null,
@@ -4154,6 +4336,66 @@
    ],
    "title": "Miller Lawrence G. détient 6,2 % de Apnimed, Inc. (13G, placement passif)"
   },
+  "sec_13dg:0001193805-26-001507": {
+   "amount_max": null,
+   "amount_min": null,
+   "badge": "officiel",
+   "category": "baleines",
+   "checks": {
+    "champs_requis": true,
+    "dates_coherentes": true,
+    "domaine_officiel": true,
+    "emetteur_coherent": true,
+    "empreinte": true,
+    "pourcentage_valide": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-19T03:34:49+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 787141.0,
+    "amendement": "1",
+    "bourse": "Nasdaq",
+    "but_sous_evalue": null,
+    "cik_emetteur": "0001839530",
+    "cik_sujet_entete": "0001839530",
+    "date_evenement": "2026-11-16",
+    "declarant": "HOF III Liquidating Partnership LP",
+    "extrait_but": null,
+    "nb_personnes": 6,
+    "nom_emetteur": "XBP Global Holdings, Inc.",
+    "pourcentage": 5.5,
+    "type": "SCHEDULE 13D/A",
+    "types_declarants": [
+     "IA",
+     "IN",
+     "OO",
+     "PN"
+    ]
+   },
+   "direction": 0,
+   "entities": [
+    "HOF III Liquidating Partnership LP",
+    "XBP Global Holdings, Inc."
+   ],
+   "id": "sec_13dg:0001193805-26-001507",
+   "kind": "plus_5_pourcent",
+   "notes": [],
+   "occurred_on": "2026-11-16",
+   "official_id": "0001193805-26-001507",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1839530/000119380526001507/0001193805-26-001507-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-18",
+   "sha256": "8f27b992f31d186b2dd4763014de1819a0a8f893bad2f34b1b0f6759f77cd6fe",
+   "source": "sec_13dg",
+   "tickers": [
+    "XBP"
+   ],
+   "title": "HOF III Liquidating Partnership LP détient 5,5 % de XBP Global Holdings, Inc. (13D, intentions actives, mise à jour n° 1)"
+  },
   "sec_13dg:0001213900-26-118179": {
    "amount_max": null,
    "amount_min": null,
@@ -4394,6 +4636,63 @@
    ],
    "title": "Red Oak Partners, LLC détient 11,2 % de DATA I/O CORP (13G, placement passif)"
   },
+  "sec_13dg:0001217541-26-000010": {
+   "amount_max": null,
+   "amount_min": null,
+   "badge": "officiel",
+   "category": "baleines",
+   "checks": {
+    "champs_requis": true,
+    "dates_coherentes": true,
+    "domaine_officiel": true,
+    "emetteur_coherent": true,
+    "empreinte": true,
+    "pourcentage_valide": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-11T11:10:46+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 1660028.0,
+    "amendement": null,
+    "bourse": "Nasdaq",
+    "but_sous_evalue": null,
+    "cik_emetteur": "0001998768",
+    "cik_sujet_entete": "0001998768",
+    "date_evenement": "2026-09-30",
+    "declarant": "Diamond Hill Capital Management, LLC (Investment Advisor)",
+    "extrait_but": null,
+    "nb_personnes": 1,
+    "nom_emetteur": "Proficient Auto Logistics, Inc",
+    "pourcentage": 5.9,
+    "type": "SCHEDULE 13G",
+    "types_declarants": [
+     "IA"
+    ]
+   },
+   "direction": 0,
+   "entities": [
+    "Diamond Hill Capital Management, LLC (Investment Advisor)",
+    "Proficient Auto Logistics, Inc"
+   ],
+   "id": "sec_13dg:0001217541-26-000010",
+   "kind": "plus_5_pourcent",
+   "notes": [],
+   "occurred_on": "2026-09-30",
+   "official_id": "0001217541-26-000010",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1998768/000121754126000010/0001217541-26-000010-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-10",
+   "sha256": "5e91c3e46632b423abcce7e980275d749276b81025173c92690d3b4170ec0211",
+   "source": "sec_13dg",
+   "tickers": [
+    "PAL"
+   ],
+   "title": "Diamond Hill Capital Management, LLC (Investment Advisor) détient 5,9 % de Proficient Auto Logistics, Inc (13G, placement passif)"
+  },
   "sec_13dg:0001493152-26-052855": {
    "amount_max": null,
    "amount_min": null,
@@ -4450,6 +4749,65 @@
     "FF"
    ],
    "title": "222 Capital, U/I dated March 25, 2003 détient 9,7 % de FutureFuel Corp. (13D, intentions actives)"
+  },
+  "sec_13dg:0001493152-26-053116": {
+   "amount_max": null,
+   "amount_min": null,
+   "badge": "officiel",
+   "category": "baleines",
+   "checks": {
+    "champs_requis": true,
+    "dates_coherentes": true,
+    "domaine_officiel": true,
+    "emetteur_coherent": true,
+    "empreinte": true,
+    "pourcentage_valide": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-19T03:34:46+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 1437288.0,
+    "amendement": "1",
+    "bourse": "Nasdaq",
+    "but_sous_evalue": false,
+    "cik_emetteur": "0000766792",
+    "cik_sujet_entete": "0000766792",
+    "date_evenement": "2026-11-16",
+    "declarant": "ANDREW AFRICK",
+    "extrait_but": "Item 4 is hereby amended and supplemented to add the following: On November 13, 2026 and November 16, 2026, Partners acquired an aggregate of 108,573 Shares in open market purchases. The Reporting Persons acquired such Shares for investment purposes. The Shares were purchased during an open trading",
+    "nb_personnes": 3,
+    "nom_emetteur": "CVD Equipment Corporation",
+    "pourcentage": 20.7,
+    "type": "SCHEDULE 13D/A",
+    "types_declarants": [
+     "IN",
+     "OO",
+     "PN"
+    ]
+   },
+   "direction": 0,
+   "entities": [
+    "ANDREW AFRICK",
+    "CVD EQUIPMENT CORP"
+   ],
+   "id": "sec_13dg:0001493152-26-053116",
+   "kind": "plus_5_pourcent",
+   "notes": [],
+   "occurred_on": "2026-11-16",
+   "official_id": "0001493152-26-053116",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/766792/000149315226053116/0001493152-26-053116-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-18",
+   "sha256": "75ae43e18c12eb2b2f39ca12cbe0d426321d3483a1d843cbf3eb34fdac4ef41a",
+   "source": "sec_13dg",
+   "tickers": [
+    "CVV"
+   ],
+   "title": "ANDREW AFRICK détient 20,7 % de CVD EQUIPMENT CORP (13D, intentions actives, mise à jour n° 1)"
   },
   "sec_13dg:0001493215-26-000194": {
    "amount_max": null,
@@ -4510,63 +4868,6 @@
     "LRMR"
    ],
    "title": "RTW Investments, LP détient 5,6 % de Larimar Therapeutics, Inc. (13G, placement passif)"
-  },
-  "sec_13dg:0001829126-26-012156": {
-   "amount_max": null,
-   "amount_min": null,
-   "badge": "officiel",
-   "category": "baleines",
-   "checks": {
-    "champs_requis": true,
-    "dates_coherentes": true,
-    "domaine_officiel": true,
-    "emetteur_coherent": true,
-    "empreinte": true,
-    "pourcentage_valide": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-11-10T04:19:56+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 7308514.0,
-    "amendement": "10",
-    "bourse": "Nasdaq",
-    "but_sous_evalue": null,
-    "cik_emetteur": "0001822523",
-    "cik_sujet_entete": "0001822523",
-    "date_evenement": "2026-11-06",
-    "declarant": "Leonard M. Tannenbaum",
-    "extrait_but": null,
-    "nb_personnes": 1,
-    "nom_emetteur": "Advanced Flower Capital Inc.",
-    "pourcentage": 32.6,
-    "type": "SCHEDULE 13D/A",
-    "types_declarants": [
-     "IN"
-    ]
-   },
-   "direction": 0,
-   "entities": [
-    "Leonard M. Tannenbaum",
-    "Advanced Flower Capital Inc."
-   ],
-   "id": "sec_13dg:0001829126-26-012156",
-   "kind": "plus_5_pourcent",
-   "notes": [],
-   "occurred_on": "2026-11-06",
-   "official_id": "0001829126-26-012156",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1822523/000182912626012156/0001829126-26-012156-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-11-09",
-   "sha256": "92c68e4206338b77499fa36f150864c523ebd9a791dbf55eef19a79a81e9b003",
-   "source": "sec_13dg",
-   "tickers": [
-    "AFCG"
-   ],
-   "title": "Leonard M. Tannenbaum détient 32,6 % de Advanced Flower Capital Inc. (13D, intentions actives, mise à jour n° 10)"
   },
   "sec_13dg:0001834600-26-000033": {
    "amount_max": null,
@@ -4856,63 +5157,6 @@
     "ADIG"
    ],
    "title": "Vanguard Capital Management détient 5,1 % de ADI GLOBAL DISTRIBUTION INC. (13G, placement passif)"
-  },
-  "sec_13dg:0002100119-26-001553": {
-   "amount_max": null,
-   "amount_min": null,
-   "badge": "officiel",
-   "category": "baleines",
-   "checks": {
-    "champs_requis": true,
-    "dates_coherentes": true,
-    "domaine_officiel": true,
-    "emetteur_coherent": true,
-    "empreinte": true,
-    "pourcentage_valide": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-31T09:47:03+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 8443619.0,
-    "amendement": null,
-    "bourse": "NYSE",
-    "but_sous_evalue": null,
-    "cik_emetteur": "0001061630",
-    "cik_sujet_entete": "0001061630",
-    "date_evenement": "2026-09-30",
-    "declarant": "Vanguard Capital Management",
-    "extrait_but": null,
-    "nb_personnes": 1,
-    "nom_emetteur": "Blackstone Mortgage Trust Inc",
-    "pourcentage": 5.0,
-    "type": "SCHEDULE 13G",
-    "types_declarants": [
-     "IA"
-    ]
-   },
-   "direction": 0,
-   "entities": [
-    "Vanguard Capital Management",
-    "BLACKSTONE MORTGAGE TRUST, INC."
-   ],
-   "id": "sec_13dg:0002100119-26-001553",
-   "kind": "plus_5_pourcent",
-   "notes": [],
-   "occurred_on": "2026-09-30",
-   "official_id": "0002100119-26-001553",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1061630/000210011926001553/0002100119-26-001553-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-10-30",
-   "sha256": "3154fc597c14c54636a57ebb646b7fa2224c5f7938746477794fcc4846acb642",
-   "source": "sec_13dg",
-   "tickers": [
-    "BXMT"
-   ],
-   "title": "Vanguard Capital Management détient 5 % de BLACKSTONE MORTGAGE TRUST, INC. (13G, placement passif)"
   },
   "sec_13dg:0002100119-26-001662": {
    "amount_max": null,
@@ -6180,57 +6424,6 @@
    ],
    "title": "MERCER INTERNATIONAL INC. : avis de retrait de la bourse"
   },
-  "sec_8k:0001193125-26-465667": {
-   "amount_max": null,
-   "amount_min": null,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "dates_coherentes": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "items_officiels_reconnus": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symboles_valides": true,
-    "type_8k": true
-   },
-   "collected_at": "2026-11-18T03:47:59+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "bourse": "Nasdaq",
-    "cik": "0001341235",
-    "items": [
-     {
-      "direction": -1,
-      "item": "3.01",
-      "libelle": "avis de retrait de la bourse",
-      "officiel": "Notice of Delisting or Failure to Satisfy a Continued Listing Rule or Standard; Transfer of Listing"
-     }
-    ],
-    "type": "8-K"
-   },
-   "direction": -1,
-   "entities": [
-    "Aldeyra Therapeutics, Inc."
-   ],
-   "id": "sec_8k:0001193125-26-465667",
-   "kind": "evenement_8k",
-   "notes": [],
-   "occurred_on": "2026-11-17",
-   "official_id": "0001193125-26-465667",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1341235/000119312526465667/0001193125-26-465667-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-11-17",
-   "sha256": "fdb948aaf0de7c0264b6aac6015694654a0bebd2d406748452a7681998b82a84",
-   "source": "sec_8k",
-   "tickers": [
-    "ALDX"
-   ],
-   "title": "Aldeyra Therapeutics, Inc. : avis de retrait de la bourse"
-  },
   "sec_8k:0001213900-26-110392": {
    "amount_max": null,
    "amount_min": null,
@@ -6281,6 +6474,57 @@
     "AACP"
    ],
    "title": "Apogee Acquisition Corp : états financiers passés à ne plus croire"
+  },
+  "sec_8k:0001213900-26-117213": {
+   "amount_max": null,
+   "amount_min": null,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "dates_coherentes": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "items_officiels_reconnus": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symboles_valides": true,
+    "type_8k": true
+   },
+   "collected_at": "2026-11-10T04:18:29+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "bourse": "Nasdaq",
+    "cik": "0001410098",
+    "items": [
+     {
+      "direction": 0,
+      "item": "1.01",
+      "libelle": "contrat important signé",
+      "officiel": "Entry into a Material Definitive Agreement"
+     }
+    ],
+    "type": "8-K"
+   },
+   "direction": 0,
+   "entities": [
+    "CorMedix Inc."
+   ],
+   "id": "sec_8k:0001213900-26-117213",
+   "kind": "evenement_8k",
+   "notes": [],
+   "occurred_on": "2026-11-08",
+   "official_id": "0001213900-26-117213",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1410098/000121390026117213/0001213900-26-117213-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-09",
+   "sha256": "391f5c8528ac17552b38c58e1e7131a33e4987b1abf233ad4681d9dc177a5d79",
+   "source": "sec_8k",
+   "tickers": [
+    "CRMD"
+   ],
+   "title": "CorMedix Inc. : contrat important signé"
   },
   "sec_8k:0001493152-26-050537": {
    "amount_max": null,
@@ -6333,7 +6577,7 @@
    ],
    "title": "Sidus Space Inc. : états financiers passés à ne plus croire"
   },
-  "sec_8k:0001628280-26-063811": {
+  "sec_8k:0001493152-26-050957": {
    "amount_max": null,
    "amount_min": null,
    "badge": "officiel",
@@ -6349,12 +6593,12 @@
     "symboles_valides": true,
     "type_8k": true
    },
-   "collected_at": "2026-10-02T20:01:35+00:00",
+   "collected_at": "2026-11-11T11:09:33+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
-    "bourse": "Nasdaq",
-    "cik": "0001822523",
+    "bourse": "NYSE",
+    "cik": "0001289340",
     "items": [
      {
       "direction": 0,
@@ -6367,22 +6611,22 @@
    },
    "direction": 0,
    "entities": [
-    "Advanced Flower Capital Inc."
+    "Stereotaxis, Inc."
    ],
-   "id": "sec_8k:0001628280-26-063811",
+   "id": "sec_8k:0001493152-26-050957",
    "kind": "evenement_8k",
    "notes": [],
-   "occurred_on": "2026-09-25",
-   "official_id": "0001628280-26-063811",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1822523/000162828026063811/0001628280-26-063811-index.htm",
-   "parser_version": "sec-2",
-   "published_on": "2026-09-29",
-   "sha256": "42362c23c9d3f9cc3447a52c0137e27899d79c6438ae916eb16c0cd96f4d012b",
+   "occurred_on": "2026-11-09",
+   "official_id": "0001493152-26-050957",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1289340/000149315226050957/0001493152-26-050957-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-10",
+   "sha256": "e579e0cfd384707a5a62f038df0148bdcdc74fda94f44250f01aff5376e6760e",
    "source": "sec_8k",
    "tickers": [
-    "AFCG"
+    "STXS"
    ],
-   "title": "Advanced Flower Capital Inc. : contrat important signé"
+   "title": "Stereotaxis, Inc. : contrat important signé"
   },
   "sec_8k:0001628280-26-069090": {
    "amount_max": null,
@@ -6887,202 +7131,6 @@
    ],
    "title": "AFRICK ANDREW (administrateur) achète 108 573 actions de CVD EQUIPMENT CORP"
   },
-  "sec_form4:0000912282-26-001461:P": {
-   "amount_max": 68825.21,
-   "amount_min": 68825.21,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-11-13T11:08:09+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 21317.0,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001218683",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 3.2287,
-    "proprietaires_cik": [
-     "2101945",
-     "2105932",
-     "2106415",
-     "1972752",
-     "2144081"
-    ],
-    "roles": [
-     "SEE REMARKS",
-     "actionnaire de 10 %"
-    ],
-    "symbole_declare": "BGDE",
-    "symboles_sec": [
-     "BGDE"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 11376.0,
-      "apres": 40226.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-09",
-      "hors_bourse": null,
-      "prix": 3.21,
-      "titre_valeur": "Common Shares"
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 9941.0,
-      "apres": 114941.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-10",
-      "hors_bourse": null,
-      "prix": 3.25,
-      "titre_valeur": "Common Shares"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Endeavor Blockchain, LLC",
-    "Kilgore Joshua Allen",
-    "Smith Cody",
-    "PM Squared LLC",
-    "Six Thirty AI, LLC",
-    "Big Digital Energy, Inc."
-   ],
-   "id": "sec_form4:0000912282-26-001461:P",
-   "kind": "achat_initie",
-   "notes": [
-    "Déclaré en retard : 3 jours ouvrables après la transaction (limite légale : 2)."
-   ],
-   "occurred_on": "2026-11-09",
-   "official_id": "0000912282-26-001461:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1218683/000091228226001461/0000912282-26-001461-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-11-12",
-   "sha256": "4802843e5b8fa2a5bef39e646090932dd87a20169bc6d097755daa795388178b",
-   "source": "sec_form4",
-   "tickers": [
-    "BGDE"
-   ],
-   "title": "Endeavor Blockchain, LLC et Kilgore Joshua Allen et Smith Cody et PM Squared LLC et Six Thirty AI, LLC (SEE REMARKS, actionnaire de 10 %) achète 21 317 actions de Big Digital Energy, Inc."
-  },
-  "sec_form4:0000912282-26-001509:P": {
-   "amount_max": 182058.0,
-   "amount_min": 182058.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-11-17T04:31:42+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 62100.0,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001218683",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 2.9317,
-    "proprietaires_cik": [
-     "2101945",
-     "2105932",
-     "2106415",
-     "1972752",
-     "2144081"
-    ],
-    "roles": [
-     "SEE REMARKS",
-     "actionnaire de 10 %"
-    ],
-    "symbole_declare": "BGDE",
-    "symboles_sec": [
-     "BGDE"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 60000.0,
-      "apres": 2152899.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-13",
-      "hors_bourse": null,
-      "prix": 2.93,
-      "titre_valeur": "Common Shares"
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 2100.0,
-      "apres": 42326.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-12",
-      "hors_bourse": null,
-      "prix": 2.98,
-      "titre_valeur": "Common Shares"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Endeavor Blockchain, LLC",
-    "Kilgore Joshua Allen",
-    "Smith Cody",
-    "PM Squared LLC",
-    "Six Thirty AI, LLC",
-    "Big Digital Energy, Inc."
-   ],
-   "id": "sec_form4:0000912282-26-001509:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-11-12",
-   "official_id": "0000912282-26-001509:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1218683/000091228226001509/0000912282-26-001509-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-11-16",
-   "sha256": "bd2bd57a20b002e1c977207b4f92090b89f6df4e0511b93919b0a8cbee795fbb",
-   "source": "sec_form4",
-   "tickers": [
-    "BGDE"
-   ],
-   "title": "Endeavor Blockchain, LLC et Kilgore Joshua Allen et Smith Cody et PM Squared LLC et Six Thirty AI, LLC (SEE REMARKS, actionnaire de 10 %) achète 62 100 actions de Big Digital Energy, Inc."
-  },
   "sec_form4:0000950142-26-002685:S": {
    "amount_max": 202400000.0,
    "amount_min": 202400000.0,
@@ -7443,160 +7491,6 @@
     "RENT"
    ],
    "title": "STORY3 Capital Partners, LLC et S3 RR Aggregator, LLC et Rising Sons Capital, LLC et Comisar Peter Harley (administrateur) achète 632 922 actions de Rent the Runway, Inc."
-  },
-  "sec_form4:0001061630-26-000102:P": {
-   "amount_max": 1035351.0,
-   "amount_min": 1035351.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-11-06T11:00:46+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 90000.0,
-    "automatique": null,
-    "bourse": "NYSE",
-    "cik_emetteur": "0001061630",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 11.5039,
-    "proprietaires_cik": [
-     "1978300"
-    ],
-    "roles": [
-     "Chief Executive Officer"
-    ],
-    "symbole_declare": "BXMT",
-    "symboles_sec": [
-     "BXMT"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 90000.0,
-      "apres": 617900.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-04",
-      "hors_bourse": null,
-      "prix": 11.5039,
-      "titre_valeur": "Class A Common Stock"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Johnson Timothy Steven",
-    "BLACKSTONE MORTGAGE TRUST, INC."
-   ],
-   "id": "sec_form4:0001061630-26-000102:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-11-04",
-   "official_id": "0001061630-26-000102:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1061630/000106163026000102/0001061630-26-000102-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-11-05",
-   "sha256": "39187cdee59dcf88827e0ba9a17bb7f25e10f8c920688f1c88c5072266e1eed1",
-   "source": "sec_form4",
-   "tickers": [
-    "BXMT"
-   ],
-   "title": "Johnson Timothy Steven (Chief Executive Officer) achète 90 000 actions de BLACKSTONE MORTGAGE TRUST, INC."
-  },
-  "sec_form4:0001061630-26-000103:P": {
-   "amount_max": 114291.0,
-   "amount_min": 114291.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-11-06T11:00:46+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 10000.0,
-    "automatique": null,
-    "bourse": "NYSE",
-    "cik_emetteur": "0001061630",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 11.4291,
-    "proprietaires_cik": [
-     "1177127"
-    ],
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "BXMT",
-    "symboles_sec": [
-     "BXMT"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 10000.0,
-      "apres": 233490.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-04",
-      "hors_bourse": null,
-      "prix": 11.4291,
-      "titre_valeur": "Class A Common Stock"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "NASSAU HENRY N",
-    "BLACKSTONE MORTGAGE TRUST, INC."
-   ],
-   "id": "sec_form4:0001061630-26-000103:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-11-04",
-   "official_id": "0001061630-26-000103:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1061630/000106163026000103/0001061630-26-000103-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-11-05",
-   "sha256": "657d343957a6dd97242ad5460cfd16580daa7a6ef54cce8696607d0803d3d2c1",
-   "source": "sec_form4",
-   "tickers": [
-    "BXMT"
-   ],
-   "title": "NASSAU HENRY N (administrateur) achète 10 000 actions de BLACKSTONE MORTGAGE TRUST, INC."
   },
   "sec_form4:0001104659-26-119177:P": {
    "amount_max": 1678106.05,
@@ -8184,9 +8078,9 @@
    ],
    "title": "ARES MANAGEMENT LLC et ASOF II Holdings I, L.P. et ASOF II A (DE) Holdings I, L.P. et ASOF III Holdings I LP (actionnaire de 10 %) achète 13 587 actions de Claritev Corp"
   },
-  "sec_form4:0001193125-26-435894:P": {
-   "amount_max": 711251.32,
-   "amount_min": 711251.32,
+  "sec_form4:0001104659-26-129796:P": {
+   "amount_max": 57260.0,
+   "amount_min": 57260.0,
    "badge": "officiel",
    "category": "compagnies",
    "checks": {
@@ -8206,60 +8100,61 @@
     "symbole_conforme_sec": true,
     "symboles_valides": true
    },
-   "collected_at": "2026-10-29T10:05:02+00:00",
+   "collected_at": "2026-11-19T03:32:10+00:00",
    "confirmations": [],
    "currency": "USD",
    "data": {
-    "actions": 368524.0,
+    "actions": 20000.0,
     "automatique": null,
     "bourse": "Nasdaq",
-    "cik_emetteur": "0001626878",
+    "cik_emetteur": "0001839530",
     "hors_bourse": null,
     "plan_10b5_1": false,
-    "prix_moyen": 1.93,
+    "prix_moyen": 2.863,
     "proprietaires_cik": [
-     "1639078"
+     "1488028"
     ],
     "roles": [
      "administrateur"
     ],
-    "symbole_declare": "XBIT",
+    "symbole_declare": "XBP",
     "symboles_sec": [
-     "XBIT"
+     "XBP",
+     "XBPEW"
     ],
     "transactions": [
      {
       "acquis_cede": "A",
-      "actions": 368524.0,
-      "apres": 4191690.0,
+      "actions": 20000.0,
+      "apres": 60000.0,
       "automatique": null,
       "code": "P",
-      "date": "2026-10-26",
+      "date": "2026-11-18",
       "hors_bourse": null,
-      "prix": 1.93,
+      "prix": 2.863,
       "titre_valeur": "Common Stock"
      }
     ]
    },
    "direction": 1,
    "entities": [
-    "SIMARD JOHN",
-    "XBiotech Inc."
+    "Klein Randal T",
+    "XBP Global Holdings, Inc."
    ],
-   "id": "sec_form4:0001193125-26-435894:P",
+   "id": "sec_form4:0001104659-26-129796:P",
    "kind": "achat_initie",
    "notes": [],
-   "occurred_on": "2026-10-26",
-   "official_id": "0001193125-26-435894:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1626878/000119312526435894/0001193125-26-435894-index.htm",
+   "occurred_on": "2026-11-18",
+   "official_id": "0001104659-26-129796:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1839530/000110465926129796/0001104659-26-129796-index.htm",
    "parser_version": "sec-8",
-   "published_on": "2026-10-28",
-   "sha256": "85f9e101afd384c5e6dd30ee355aa012eed7bef2724f609ddec7a36c5698e960",
+   "published_on": "2026-11-18",
+   "sha256": "7c50e78258a73a310a178eb7ffe32c4c902d2298e66a1ddc20bc505444ce5006",
    "source": "sec_form4",
    "tickers": [
-    "XBIT"
+    "XBP"
    ],
-   "title": "SIMARD JOHN (administrateur) achète 368 524 actions de XBiotech Inc."
+   "title": "Klein Randal T (administrateur) achète 20 000 actions de XBP Global Holdings, Inc."
   },
   "sec_form4:0001193125-26-437864:P": {
    "amount_max": 47015.64,
@@ -10520,85 +10415,6 @@
    ],
    "title": "Puhlmann Markus (Chief Medical Officer) achète 41 000 actions de Perspective Therapeutics, Inc."
   },
-  "sec_form4:0001193125-26-460514:P": {
-   "amount_max": 143409.0,
-   "amount_min": 143409.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-11-14T10:38:10+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 70000.0,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001626878",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 2.0487,
-    "proprietaires_cik": [
-     "1639078"
-    ],
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "XBIT",
-    "symboles_sec": [
-     "XBIT"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 70000.0,
-      "apres": 4261690.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-03",
-      "hors_bourse": null,
-      "prix": 2.0487,
-      "titre_valeur": "Common Stock"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "SIMARD JOHN",
-    "XBiotech Inc."
-   ],
-   "id": "sec_form4:0001193125-26-460514:P",
-   "kind": "achat_initie",
-   "notes": [
-    "Déclaré en retard : 8 jours ouvrables après la transaction (limite légale : 2)."
-   ],
-   "occurred_on": "2026-11-03",
-   "official_id": "0001193125-26-460514:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1626878/000119312526460514/0001193125-26-460514-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-11-13",
-   "sha256": "753b5e9b8d027ee5837cc89e9b6c1eb260ff2d3072db69baa72a1997e358c444",
-   "source": "sec_form4",
-   "tickers": [
-    "XBIT"
-   ],
-   "title": "SIMARD JOHN (administrateur) achète 70 000 actions de XBiotech Inc."
-  },
   "sec_form4:0001193125-26-460560:P": {
    "amount_max": 66335.26,
    "amount_min": 66335.26,
@@ -10675,83 +10491,6 @@
     "DTI"
    ],
    "title": "Neuman Eric C (administrateur) achète 37 267 actions de Drilling Tools International Corp"
-  },
-  "sec_form4:0001193125-26-460743:P": {
-   "amount_max": 128900.0,
-   "amount_min": 128900.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-11-14T10:34:11+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 200000.0,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001341235",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 0.6445,
-    "proprietaires_cik": [
-     "1021015"
-    ],
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "ALDX",
-    "symboles_sec": [
-     "ALDX"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 200000.0,
-      "apres": 395000.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-11",
-      "hors_bourse": null,
-      "prix": 0.6445,
-      "titre_valeur": "Common Stock"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "DOUGLAS RICHARD",
-    "Aldeyra Therapeutics, Inc."
-   ],
-   "id": "sec_form4:0001193125-26-460743:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-11-11",
-   "official_id": "0001193125-26-460743:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1341235/000119312526460743/0001193125-26-460743-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-11-13",
-   "sha256": "14f37c6ac12fc12a37edc2dbb57032da19a2b68b4fb2f3e2233a08013b9329f8",
-   "source": "sec_form4",
-   "tickers": [
-    "ALDX"
-   ],
-   "title": "DOUGLAS RICHARD (administrateur) achète 200 000 actions de Aldeyra Therapeutics, Inc."
   },
   "sec_form4:0001193125-26-463405:P": {
    "amount_max": 62053.94,
@@ -11115,6 +10854,83 @@
     "UPBD"
    ],
    "title": "Jain Charu (administrateur) achète 2 000 actions de UPBOUND GROUP, INC."
+  },
+  "sec_form4:0001193125-26-467059:P": {
+   "amount_max": 45639.9,
+   "amount_min": 45639.9,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-19T03:33:16+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 28500.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001884516",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 1.6014,
+    "proprietaires_cik": [
+     "2050731"
+    ],
+    "roles": [
+     "Vice President of Sales"
+    ],
+    "symbole_declare": "DTI",
+    "symboles_sec": [
+     "DTI"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 28500.0,
+      "apres": 156926.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-17",
+      "hors_bourse": null,
+      "prix": 1.6014,
+      "titre_valeur": "Common Stock"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Rodriguez Aldo",
+    "Drilling Tools International Corp"
+   ],
+   "id": "sec_form4:0001193125-26-467059:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-11-17",
+   "official_id": "0001193125-26-467059:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1884516/000119312526467059/0001193125-26-467059-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-18",
+   "sha256": "128f7713cb048e69c3d862c336a4f4007e2184c342ab3491c2765af3f1d556f6",
+   "source": "sec_form4",
+   "tickers": [
+    "DTI"
+   ],
+   "title": "Rodriguez Aldo (Vice President of Sales) achète 28 500 actions de Drilling Tools International Corp"
   },
   "sec_form4:0001199696-26-000008:P": {
    "amount_max": 49365.79,
@@ -12076,6 +11892,83 @@
    ],
    "title": "Heshmatpour Amir F (CEO, President) achète 30 000 actions de NEONC TECHNOLOGIES HOLDINGS, INC."
   },
+  "sec_form4:0001213900-26-120120:P": {
+   "amount_max": 391200.0,
+   "amount_min": 391200.0,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-17T04:32:15+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 80000.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001410098",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 4.89,
+    "proprietaires_cik": [
+     "1774807"
+    ],
+    "roles": [
+     "Chief Executive Officer"
+    ],
+    "symbole_declare": "CRMD",
+    "symboles_sec": [
+     "CRMD"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 80000.0,
+      "apres": 854749.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-13",
+      "hors_bourse": null,
+      "prix": 4.89,
+      "titre_valeur": "Common Stock"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Todisco Joseph",
+    "CorMedix Inc."
+   ],
+   "id": "sec_form4:0001213900-26-120120:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-11-13",
+   "official_id": "0001213900-26-120120:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1410098/000121390026120120/0001213900-26-120120-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-16",
+   "sha256": "f50b13756f0313df5ea47a46303f8036f43168850ed9f7dbe23434707503f101",
+   "source": "sec_form4",
+   "tickers": [
+    "CRMD"
+   ],
+   "title": "Todisco Joseph (Chief Executive Officer) achète 80 000 actions de CorMedix Inc."
+  },
   "sec_form4:0001213900-26-121073:P": {
    "amount_max": 212000.0,
    "amount_min": 212000.0,
@@ -12159,6 +12052,325 @@
     "BW"
    ],
    "title": "BRC Group Holdings, Inc. et BRF Investments, LLC et B. Riley Securities, Inc. et RILEY BRYANT R (actionnaire de 10 %) achète 50 000 actions de Babcock & Wilcox Enterprises, Inc."
+  },
+  "sec_form4:0001213900-26-121624:P": {
+   "amount_max": 65000.0,
+   "amount_min": 65000.0,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-19T03:31:49+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 25000.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001998768",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 2.6,
+    "proprietaires_cik": [
+     "1311780"
+    ],
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "PAL",
+    "symboles_sec": [
+     "PAL"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 25000.0,
+      "apres": 59135.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-16",
+      "hors_bourse": null,
+      "prix": 2.6,
+      "titre_valeur": "Common Stock"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Gattoni James B",
+    "Proficient Auto Logistics, Inc"
+   ],
+   "id": "sec_form4:0001213900-26-121624:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-11-16",
+   "official_id": "0001213900-26-121624:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1998768/000121390026121624/0001213900-26-121624-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-18",
+   "sha256": "9a3bd56a4f7307f3d9527679f36c7fe816f06125ec6fa3692528350e1090cbc7",
+   "source": "sec_form4",
+   "tickers": [
+    "PAL"
+   ],
+   "title": "Gattoni James B (administrateur) achète 25 000 actions de Proficient Auto Logistics, Inc"
+  },
+  "sec_form4:0001213900-26-121625:P": {
+   "amount_max": 179200.0,
+   "amount_min": 179200.0,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-19T03:33:18+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 70000.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001998768",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 2.56,
+    "proprietaires_cik": [
+     "1901836"
+    ],
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "PAL",
+    "symboles_sec": [
+     "PAL"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 70000.0,
+      "apres": 141903.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-16",
+      "hors_bourse": null,
+      "prix": 2.56,
+      "titre_valeur": "Common Stock"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Lal Rohit",
+    "Proficient Auto Logistics, Inc"
+   ],
+   "id": "sec_form4:0001213900-26-121625:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-11-16",
+   "official_id": "0001213900-26-121625:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1998768/000121390026121625/0001213900-26-121625-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-18",
+   "sha256": "e4d174bcb30296b14b9806a03a26645bbb7410d4b1b9b9cc31317423d29e361e",
+   "source": "sec_form4",
+   "tickers": [
+    "PAL"
+   ],
+   "title": "Lal Rohit (administrateur) achète 70 000 actions de Proficient Auto Logistics, Inc"
+  },
+  "sec_form4:0001213900-26-121895:P": {
+   "amount_max": 122000.0,
+   "amount_min": 122000.0,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-19T03:31:59+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 25000.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001410098",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 4.88,
+    "proprietaires_cik": [
+     "1672645"
+    ],
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "CRMD",
+    "symboles_sec": [
+     "CRMD"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 25000.0,
+      "apres": 256487.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-16",
+      "hors_bourse": null,
+      "prix": 4.88,
+      "titre_valeur": "Common Stock"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Kaplan Myron",
+    "CorMedix Inc."
+   ],
+   "id": "sec_form4:0001213900-26-121895:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-11-16",
+   "official_id": "0001213900-26-121895:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1410098/000121390026121895/0001213900-26-121895-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-18",
+   "sha256": "16f8e78c4429dc22e9122825bf429753af4854a3110956a357609a60cdd0c537",
+   "source": "sec_form4",
+   "tickers": [
+    "CRMD"
+   ],
+   "title": "Kaplan Myron (administrateur) achète 25 000 actions de CorMedix Inc."
+  },
+  "sec_form4:0001213900-26-121959:P": {
+   "amount_max": 86874.39,
+   "amount_min": 86874.39,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-19T03:32:17+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 100000.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001529113",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 0.8687,
+    "proprietaires_cik": [
+     "1840143"
+    ],
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "XTIA",
+    "symboles_sec": [
+     "XTIA"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 43461.0,
+      "apres": 43461.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-17",
+      "hors_bourse": null,
+      "prix": 0.8675,
+      "titre_valeur": "Common Stock, par value $0.001"
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 56539.0,
+      "apres": 100000.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-18",
+      "hors_bourse": null,
+      "prix": 0.8697,
+      "titre_valeur": "Common Stock, par value $0.001"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Evans Allan Thomas",
+    "XTI Aerospace, Inc."
+   ],
+   "id": "sec_form4:0001213900-26-121959:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-11-17",
+   "official_id": "0001213900-26-121959:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1529113/000121390026121959/0001213900-26-121959-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-18",
+   "sha256": "f2e669cad2ec19c560117f84f6099705457d107b3799a5e624ff76d8c52df174",
+   "source": "sec_form4",
+   "tickers": [
+    "XTIA"
+   ],
+   "title": "Evans Allan Thomas (administrateur) achète 100 000 actions de XTI Aerospace, Inc."
   },
   "sec_form4:0001236849-26-000015:P": {
    "amount_max": 57790.0,
@@ -12770,6 +12982,160 @@
    ],
    "title": "Williams Eugene (administrateur) achète 26 500 actions de ProMIS Neurosciences Inc."
   },
+  "sec_form4:0001437749-26-031597:P": {
+   "amount_max": 78196.44,
+   "amount_min": 78196.44,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-03T03:16:04+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 93091.0,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001069530",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 0.84,
+    "roles": [
+     "President & CEO"
+    ],
+    "symbole_declare": "FLNA",
+    "symboles_sec": [
+     "FLNA"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 93091.0,
+      "apres": 1031151.0,
+      "code": "P",
+      "date": "2026-09-28",
+      "hors_bourse": null,
+      "prix": 0.84
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Barry Richard",
+    "FILANA THERAPEUTICS, INC."
+   ],
+   "id": "sec_form4:0001437749-26-031597:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-09-28",
+   "official_id": "0001437749-26-031597:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1069530/000143774926031597/0001437749-26-031597-index.htm",
+   "parser_version": "sec-6",
+   "published_on": "2026-09-30",
+   "sha256": "6ce1721db187b762b0c548eabe5de2af1c110a5cea1c9b56ca69a25a652a1dd1",
+   "source": "sec_form4",
+   "tickers": [
+    "FLNA"
+   ],
+   "title": "Barry Richard (President & CEO) achète 93 091 actions de FILANA THERAPEUTICS, INC."
+  },
+  "sec_form4:0001437749-26-031654:P": {
+   "amount_max": 278131.7,
+   "amount_min": 278131.7,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-10-03T03:53:09+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 306813.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001069530",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 0.9065,
+    "roles": [
+     "President & CEO"
+    ],
+    "symbole_declare": "FLNA",
+    "symboles_sec": [
+     "FLNA"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 206813.0,
+      "apres": 1237964.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-09-29",
+      "hors_bourse": null,
+      "prix": 0.9
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 100000.0,
+      "apres": 1337964.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-09-30",
+      "hors_bourse": null,
+      "prix": 0.92
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Barry Richard",
+    "FILANA THERAPEUTICS, INC."
+   ],
+   "id": "sec_form4:0001437749-26-031654:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-09-29",
+   "official_id": "0001437749-26-031654:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1069530/000143774926031654/0001437749-26-031654-index.htm",
+   "parser_version": "sec-7",
+   "published_on": "2026-10-01",
+   "sha256": "c74065ef28b214ed48cb0d040dbc88ffa2006d259b22428b1e8e4f4f168a52fa",
+   "source": "sec_form4",
+   "tickers": [
+    "FLNA"
+   ],
+   "title": "Barry Richard (President & CEO) achète 306 813 actions de FILANA THERAPEUTICS, INC."
+  },
   "sec_form4:0001437749-26-036876:P": {
    "amount_max": 30315.0,
    "amount_min": 30315.0,
@@ -13154,6 +13520,160 @@
     "FF"
    ],
    "title": "KRUSZEWSKI RONALD J (administrateur) achète 100 000 actions de FutureFuel Corp."
+  },
+  "sec_form4:0001437749-26-037544:P": {
+   "amount_max": 55924.5,
+   "amount_min": 55924.5,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-19T03:31:21+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 121575.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001069530",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 0.46,
+    "proprietaires_cik": [
+     "1952028"
+    ],
+    "roles": [
+     "Chief Operating& Legal Officer"
+    ],
+    "symbole_declare": "FLNA",
+    "symboles_sec": [
+     "FLNA"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 121575.0,
+      "apres": 135300.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-16",
+      "hors_bourse": null,
+      "prix": 0.46,
+      "titre_valeur": "Common Stock"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Cook Robert Christopher",
+    "FILANA THERAPEUTICS, INC."
+   ],
+   "id": "sec_form4:0001437749-26-037544:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-11-16",
+   "official_id": "0001437749-26-037544:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1069530/000143774926037544/0001437749-26-037544-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-18",
+   "sha256": "7793962409b94672659f2d52b043705f072fb5e0108ca9921f41e39fde027741",
+   "source": "sec_form4",
+   "tickers": [
+    "FLNA"
+   ],
+   "title": "Cook Robert Christopher (Chief Operating& Legal Officer) achète 121 575 actions de FILANA THERAPEUTICS, INC."
+  },
+  "sec_form4:0001437749-26-037553:P": {
+   "amount_max": 206896.82,
+   "amount_min": 206896.82,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-19T03:31:21+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 440206.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001069530",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 0.47,
+    "proprietaires_cik": [
+     "1562371"
+    ],
+    "roles": [
+     "President & CEO"
+    ],
+    "symbole_declare": "FLNA",
+    "symboles_sec": [
+     "FLNA"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 440206.0,
+      "apres": 1778170.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-16",
+      "hors_bourse": null,
+      "prix": 0.47,
+      "titre_valeur": "Common Stock"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Barry Richard",
+    "FILANA THERAPEUTICS, INC."
+   ],
+   "id": "sec_form4:0001437749-26-037553:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-11-16",
+   "official_id": "0001437749-26-037553:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1069530/000143774926037553/0001437749-26-037553-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-18",
+   "sha256": "f4bcb6e2e90b99dfd01bf04ffe95ccef36613b0c11af83b18519942ee2ba6578",
+   "source": "sec_form4",
+   "tickers": [
+    "FLNA"
+   ],
+   "title": "Barry Richard (President & CEO) achète 440 206 actions de FILANA THERAPEUTICS, INC."
   },
   "sec_form4:0001441890-26-000007:P": {
    "amount_max": 149581.65,
@@ -13949,83 +14469,6 @@
    ],
    "title": "RAN ASSAF (President and CEO) achète 10 000 actions de MANHATTAN BRIDGE CAPITAL, INC"
   },
-  "sec_form4:0001493152-26-051932:P": {
-   "amount_max": 54400.0,
-   "amount_min": 54400.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-11-17T04:32:47+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 10000.0,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001560258",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 5.44,
-    "proprietaires_cik": [
-     "1737633"
-    ],
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "ECOR",
-    "symboles_sec": [
-     "ECOR"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 10000.0,
-      "apres": 373904.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-12",
-      "hors_bourse": null,
-      "prix": 5.44,
-      "titre_valeur": "Common Stock"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Errico Thomas J.",
-    "electroCore, Inc."
-   ],
-   "id": "sec_form4:0001493152-26-051932:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-11-12",
-   "official_id": "0001493152-26-051932:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1560258/000149315226051932/0001493152-26-051932-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-11-16",
-   "sha256": "d3f940f0177c6fffe9f921f5db43de3ea9be56a2037fe56c2f23c191e95a160a",
-   "source": "sec_form4",
-   "tickers": [
-    "ECOR"
-   ],
-   "title": "Errico Thomas J. (administrateur) achète 10 000 actions de electroCore, Inc."
-  },
   "sec_form4:0001493152-26-052459:P": {
    "amount_max": 994000.0,
    "amount_min": 994000.0,
@@ -14202,6 +14645,83 @@
     "RNXT"
    ],
    "title": "Agah Ramtin (Executive Chairman and CMO) achète 50 000 actions de RenovoRx, Inc."
+  },
+  "sec_form4:0001493152-26-053130:P": {
+   "amount_max": 99983.92,
+   "amount_min": 99983.92,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-19T03:31:47+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 121561.0,
+    "automatique": null,
+    "bourse": "NYSE",
+    "cik_emetteur": "0001289340",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 0.8225,
+    "proprietaires_cik": [
+     "1685893"
+    ],
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "STXS",
+    "symboles_sec": [
+     "STXS"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 121561.0,
+      "apres": 1157121.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-17",
+      "hors_bourse": null,
+      "prix": 0.8225,
+      "titre_valeur": "Common Stock"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Menawat Arun Swarup",
+    "Stereotaxis, Inc."
+   ],
+   "id": "sec_form4:0001493152-26-053130:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-11-17",
+   "official_id": "0001493152-26-053130:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1289340/000149315226053130/0001493152-26-053130-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-18",
+   "sha256": "c348c094e6f14d94fe70696876c6b0fb5b6adec90fd41afb2c6d79cf8cbb5e35",
+   "source": "sec_form4",
+   "tickers": [
+    "STXS"
+   ],
+   "title": "Menawat Arun Swarup (administrateur) achète 121 561 actions de Stereotaxis, Inc."
   },
   "sec_form4:0001523145-26-000009:P": {
    "amount_max": 49847.7,
@@ -14544,273 +15064,6 @@
    ],
    "title": "Shepherd Brian A. (administrateur) achète 22 000 actions de Stride, Inc."
   },
-  "sec_form4:0001628280-26-064003:P": {
-   "amount_max": 344047.49,
-   "amount_min": 344047.49,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-03T03:16:14+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 95397.0,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001822523",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 3.6065,
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "AFCG",
-    "symboles_sec": [
-     "AFCG"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 10673.0,
-      "apres": 7024890.0,
-      "code": "P",
-      "date": "2026-09-28",
-      "hors_bourse": null,
-      "prix": 3.57
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 40081.0,
-      "apres": 7064971.0,
-      "code": "P",
-      "date": "2026-09-29",
-      "hors_bourse": null,
-      "prix": 3.59
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 44643.0,
-      "apres": 7109614.0,
-      "code": "P",
-      "date": "2026-09-30",
-      "hors_bourse": null,
-      "prix": 3.63
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "TANNENBAUM LEONARD M",
-    "Advanced Flower Capital Inc."
-   ],
-   "id": "sec_form4:0001628280-26-064003:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-09-28",
-   "official_id": "0001628280-26-064003:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1822523/000162828026064003/0001628280-26-064003-index.htm",
-   "parser_version": "sec-6",
-   "published_on": "2026-09-30",
-   "sha256": "34673b274c89ca396ea169f72143a6cc6a352d5991fe8ee31c85db85b38aa2a7",
-   "source": "sec_form4",
-   "tickers": [
-    "AFCG"
-   ],
-   "title": "TANNENBAUM LEONARD M (administrateur) achète 95 397 actions de Advanced Flower Capital Inc."
-  },
-  "sec_form4:0001628280-26-072331:P": {
-   "amount_max": 56980.0,
-   "amount_min": 56980.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-11-10T04:10:39+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 18500.0,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001822523",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 3.08,
-    "proprietaires_cik": [
-     "1200461"
-    ],
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "AFCG",
-    "symboles_sec": [
-     "AFCG"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 18500.0,
-      "apres": 7128114.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-06",
-      "hors_bourse": null,
-      "prix": 3.08,
-      "titre_valeur": "Common Stock"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "TANNENBAUM LEONARD M",
-    "Advanced Flower Capital Inc."
-   ],
-   "id": "sec_form4:0001628280-26-072331:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-11-06",
-   "official_id": "0001628280-26-072331:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1822523/000162828026072331/0001628280-26-072331-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-11-09",
-   "sha256": "17c7b5e731cf518780dc93490a17fa6e2834694dafb353fc13cdbdd2f9308438",
-   "source": "sec_form4",
-   "tickers": [
-    "AFCG"
-   ],
-   "title": "TANNENBAUM LEONARD M (administrateur) achète 18 500 actions de Advanced Flower Capital Inc."
-  },
-  "sec_form4:0001628280-26-073398:P": {
-   "amount_max": 100827.36,
-   "amount_min": 100827.36,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-11-13T11:08:03+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 29982.0,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0001822523",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 3.3629,
-    "proprietaires_cik": [
-     "1200461"
-    ],
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "AFCG",
-    "symboles_sec": [
-     "AFCG"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 8905.0,
-      "apres": 7137019.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-09",
-      "hors_bourse": null,
-      "prix": 3.22,
-      "titre_valeur": "Common Stock"
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 20203.0,
-      "apres": 7157222.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-10",
-      "hors_bourse": null,
-      "prix": 3.42,
-      "titre_valeur": "Common Stock"
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 874.0,
-      "apres": 7158096.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-11",
-      "hors_bourse": null,
-      "prix": 3.5,
-      "titre_valeur": "Common Stock"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "TANNENBAUM LEONARD M",
-    "Advanced Flower Capital Inc."
-   ],
-   "id": "sec_form4:0001628280-26-073398:P",
-   "kind": "achat_initie",
-   "notes": [
-    "Déclaré en retard : 3 jours ouvrables après la transaction (limite légale : 2)."
-   ],
-   "occurred_on": "2026-11-09",
-   "official_id": "0001628280-26-073398:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1822523/000162828026073398/0001628280-26-073398-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-11-12",
-   "sha256": "3eeafc247b4f8e1d655fa6faa7afb3d8735c71c4675520beb95a07ad09d02e5a",
-   "source": "sec_form4",
-   "tickers": [
-    "AFCG"
-   ],
-   "title": "TANNENBAUM LEONARD M (administrateur) achète 29 982 actions de Advanced Flower Capital Inc."
-  },
   "sec_form4:0001628280-26-073539:S": {
    "amount_max": 1817754.93,
    "amount_min": 1817754.93,
@@ -14986,6 +15239,83 @@
     "CTEV"
    ],
    "title": "Dalton Travis (Pres., CEO & Executive Chair) achète 5 110 actions de Claritev Corp"
+  },
+  "sec_form4:0001628280-26-074869:P": {
+   "amount_max": 103661.25,
+   "amount_min": 103661.25,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-19T03:31:54+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 12500.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001528287",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 8.2929,
+    "proprietaires_cik": [
+     "1365493"
+    ],
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "NPCE",
+    "symboles_sec": [
+     "NPCE"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 12500.0,
+      "apres": 12500.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-18",
+      "hors_bourse": null,
+      "prix": 8.2929,
+      "titre_valeur": "Common Stock"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Huennekens R Scott",
+    "NeuroPace Inc"
+   ],
+   "id": "sec_form4:0001628280-26-074869:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-11-18",
+   "official_id": "0001628280-26-074869:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1528287/000162828026074869/0001628280-26-074869-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-18",
+   "sha256": "202bac1f422119dc4e55b405533b674dfb19df10e8e12d7042073f86b6a8fa44",
+   "source": "sec_form4",
+   "tickers": [
+    "NPCE"
+   ],
+   "title": "Huennekens R Scott (administrateur) achète 12 500 actions de NeuroPace Inc"
   },
   "sec_form4:0001630805-26-000087:P": {
    "amount_max": 43500.0,
@@ -17245,6 +17575,105 @@
    ],
    "title": "JAFFER REHAN (administrateur) achète 825 000 actions de Six Flags Entertainment Corporation/NEW"
   },
+  "sec_form4:0001999001-26-000121:P": {
+   "amount_max": 6354000.0,
+   "amount_min": 6354000.0,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-19T03:31:54+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 550000.0,
+    "automatique": null,
+    "bourse": "NYSE",
+    "cik_emetteur": "0001999001",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 11.5527,
+    "proprietaires_cik": [
+     "1364501"
+    ],
+    "roles": [
+     "administrateur"
+    ],
+    "symbole_declare": "FUN",
+    "symboles_sec": [
+     "FUN"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 225000.0,
+      "apres": 7400000.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-16",
+      "hors_bourse": null,
+      "prix": 11.73,
+      "titre_valeur": "Common Stock, par value $0.01 per share"
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 200000.0,
+      "apres": 7600000.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-17",
+      "hors_bourse": null,
+      "prix": 11.13,
+      "titre_valeur": "Common Stock, par value $0.01 per share"
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 125000.0,
+      "apres": 7725000.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-18",
+      "hors_bourse": null,
+      "prix": 11.91,
+      "titre_valeur": "Common Stock, par value $0.01 per share"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "JAFFER REHAN",
+    "Six Flags Entertainment Corporation/NEW"
+   ],
+   "id": "sec_form4:0001999001-26-000121:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-11-16",
+   "official_id": "0001999001-26-000121:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1999001/000199900126000121/0001999001-26-000121-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-18",
+   "sha256": "7aa5dae420e7ad82f868e171b2e054d1a005941d71fce583403ae0d0cc00d982",
+   "source": "sec_form4",
+   "tickers": [
+    "FUN"
+   ],
+   "title": "JAFFER REHAN (administrateur) achète 550 000 actions de Six Flags Entertainment Corporation/NEW"
+  },
   "sec_form4:0002144017-26-000003:P": {
    "amount_max": 25080.0,
    "amount_min": 25080.0,
@@ -17441,7 +17870,7 @@
    "title": "SEC : procédure administrative visant Eagle Bancorp, Inc."
   }
  },
- "genere_a": "2026-11-18T23:04:11+00:00",
+ "genere_a": "2026-11-19T03:31:02+00:00",
  "hausse": [
   {
    "bonus": {
@@ -17690,7 +18119,7 @@
    "contexte": [],
    "depot_recent": "2026-11-17",
    "depuis": "2026-11-18T03:43:43+00:00",
-   "derniere_info": "2026-11-17",
+   "derniere_info": "2026-11-18",
    "groupes": [
     {
      "famille": "inities",
@@ -17740,6 +18169,25 @@
        "points": 7.7,
        "regle": "achat_dirigeant",
        "temps": 0.977
+      },
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001628280-26-074869:P",
+       "points": 5.25,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
       }
      ],
      "points": 7.7,
@@ -17761,8 +18209,8 @@
      "2026-11-10"
     ],
     "prix": [
-     "20261117",
-     8.3442
+     "20261118",
+     8.2929
     ],
     "seuils": {
      "mois": "202609",
@@ -17772,7 +18220,7 @@
     "source_actions": "frames",
     "source_prix": "formulaire 4",
     "taille": "petite",
-    "valeur_m": 287.5
+    "valeur_m": 285.7
    }
   },
   {
@@ -18197,6 +18645,99 @@
     "source_actions": "frames",
     "taille": "petite",
     "valeur_m": 820.3
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [
+    {
+     "id": "sec_8k:0001213900-26-117213",
+     "pourquoi": "Autre point du 8-K (contrat, acquisition, avis de retrait de la bourse…) : effet incertain."
+    }
+   ],
+   "depot_recent": "2026-11-16",
+   "depuis": "2026-11-19T03:31:02+00:00",
+   "derniere_info": "2026-11-18",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 2,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ],
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001213900-26-120120:P",
+       "points": 7.52,
+       "regle": "achat_dirigeant",
+       "temps": 0.955
+      },
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001213900-26-121895:P",
+       "points": 5.25,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
+      }
+     ],
+     "points": 7.52,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "CorMedix Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.2,
+   "plus": 7.52,
+   "recent": true,
+   "score": 7.52,
+   "symbole": "CRMD",
+   "taille": {
+    "actions": [
+     79537626,
+     "2026-11-09"
+    ],
+    "prix": [
+     "20261029",
+     8.2
+    ],
+    "seuils": {
+     "mois": "202609",
+     "p30": 2090.64,
+     "p70": 12588.71
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 652.2
    }
   },
   {
@@ -19187,7 +19728,7 @@
    ],
    "depot_recent": "2026-11-10",
    "depuis": "2026-11-11T11:05:33+00:00",
-   "derniere_info": "2026-11-13",
+   "derniere_info": "2026-11-18",
    "groupes": [
     {
      "famille": "inities",
@@ -19252,6 +19793,21 @@
        "points": 4.26,
        "regle": "achat_dirigeant",
        "temps": 0.812
+      },
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001999001-26-000121:P",
+       "points": 3.0,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
       },
       {
        "age": 5,
@@ -19943,99 +20499,6 @@
     "source_actions": "frames",
     "taille": "petite",
     "valeur_m": 1027.0
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [
-    {
-     "id": "sec_13dg:0002100119-26-001553",
-     "pourquoi": "13G : placement passif (souvent un fonds indiciel qui grossit)."
-    }
-   ],
-   "depot_recent": "2026-11-05",
-   "depuis": "2026-11-18T11:51:41+00:00",
-   "derniere_info": "2026-11-05",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 13,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "PDG, directeur financier ou président du conseil",
-         1.5
-        ],
-        [
-         "Groupe d'achats",
-         1.75
-        ],
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001061630-26-000102:P",
-       "points": 5.83,
-       "regle": "achat_dirigeant",
-       "temps": 0.741
-      },
-      {
-       "age": 13,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "Groupe d'achats",
-         1.75
-        ],
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001061630-26-000103:P",
-       "points": 3.89,
-       "regle": "achat_dirigeant",
-       "temps": 0.741
-      }
-     ],
-     "points": 5.83,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "BLACKSTONE MORTGAGE TRUST, INC.",
-   "note10": 9.9,
-   "note10_sans_bonus": 9.9,
-   "note10_sans_taille": 8.2,
-   "plus": 5.83,
-   "recent": false,
-   "score": 5.83,
-   "symbole": "BXMT",
-   "taille": {
-    "actions": [
-     165987923,
-     "2026-10-22"
-    ],
-    "prix": [
-     "20261029",
-     10.56
-    ],
-    "seuils": {
-     "mois": "202609",
-     "p30": 2090.64,
-     "p70": 12588.71
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 1752.8
    }
   }
  ],

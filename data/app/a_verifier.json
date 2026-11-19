@@ -1,5 +1,72 @@
 [
  {
+  "amount_max": 8338917.93,
+  "amount_min": 8338917.93,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "actions_et_valeur_positives": true,
+   "actions_sous_le_total_en_circulation": false,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "prix_implicite_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-19T03:33:38+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 27000.0,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001156375",
+   "date_avis": "2026-11-18",
+   "lignes": [
+    {
+     "actions": 27000.0,
+     "bourse": "Nasdaq",
+     "classe": "Common",
+     "date_prevue": "2026-11-18",
+     "en_circulation": 0.0,
+     "valeur": 8338917.93
+    }
+   ],
+   "nom_emetteur": "CME Group",
+   "plan_10b5_1": [],
+   "relations": [
+    "Self"
+   ],
+   "vendeur": "TERRENCE DUFFY"
+  },
+  "direction": -1,
+  "entities": [
+   "TERRENCE DUFFY",
+   "CME GROUP INC."
+  ],
+  "id": "sec_form144:0001628280-26-074866",
+  "kind": "intention_vente",
+  "notes": [
+   "Vente décidée librement (pas dans un plan automatique).",
+   "Date de vente prévue : 18 novembre 2026."
+  ],
+  "occurred_on": "2026-11-18",
+  "official_id": "0001628280-26-074866",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1156375/000162828026074866/0001628280-26-074866-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-18",
+  "sha256": "b98dc6479300ab43c744f6c05b9a0706ffdf490ab9e3956165d84cb630282750",
+  "source": "sec_form144",
+  "tickers": [
+   "CME"
+  ],
+  "title": "TERRENCE DUFFY (Self) prévoit vendre 27 000 actions de CME GROUP INC."
+ },
+ {
   "amount_max": 1069710.0,
   "amount_min": 1069710.0,
   "badge": "a_verifier",

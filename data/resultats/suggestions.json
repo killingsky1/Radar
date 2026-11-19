@@ -409,7 +409,7 @@
    ],
    "symbole": "FLNA",
    "taille": "petite",
-   "vue": "2026-10-29"
+   "vue": "2026-11-18"
   },
   {
    "entree": "2026-10-05T21:26:00+00:00",
@@ -3983,6 +3983,129 @@
     }
    ],
    "symbole": "GROV",
+   "taille": "petite",
+   "vue": "2026-11-18"
+  },
+  {
+   "entree": "2026-11-19T03:31:02+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "CorMedix Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.2,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "CRMD",
+   "taille": "petite",
+   "vue": "2026-11-18"
+  },
+  {
+   "entree": "2026-11-19T03:31:02+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Proficient Auto Logistics, Inc",
+   "note10": 9.4,
+   "note10_sans_bonus": 9.4,
+   "note10_sans_taille": 7.9,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "PAL",
+   "taille": "petite",
+   "vue": "2026-11-18"
+  },
+  {
+   "entree": "2026-11-19T03:31:02+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Stereotaxis, Inc.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "STXS",
+   "taille": "petite",
+   "vue": "2026-11-18"
+  },
+  {
+   "entree": "2026-11-19T03:31:02+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "XBP Global Holdings, Inc.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "XBP",
+   "taille": "petite",
+   "vue": "2026-11-18"
+  },
+  {
+   "entree": "2026-11-19T03:31:02+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "XTI Aerospace, Inc.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "XTIA",
    "taille": "petite",
    "vue": "2026-11-18"
   }
