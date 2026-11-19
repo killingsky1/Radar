@@ -148,6 +148,40 @@
    "sujets": [],
    "total": null
   },
+  "CRMD": {
+   "base": "compagnie",
+   "complet": true,
+   "firmes": 0,
+   "lu": "2026-11-19T11:47:07+00:00",
+   "moins_de_5000": 0,
+   "nom": "CorMedix Inc.",
+   "pages": 1,
+   "rapports": [
+    {
+     "client": "CORMEDIX INC.",
+     "montant": 200000.0,
+     "poste": "2026-10-20",
+     "registrant": "CORMEDIX INC.",
+     "sans_activite": false,
+     "soi_meme": true,
+     "sujets": [
+      "HCR"
+     ],
+     "type": "3A",
+     "url": "https://lda.gov/filings/public/filing/9e9a531a-9cf2-451a-85fe-22c3c46ca933/print/",
+     "uuid": "9e9a531a-9cf2-451a-85fe-22c3c46ca933"
+    }
+   ],
+   "recherche": "CORMEDIX",
+   "revenus_firmes": null,
+   "sujets": [
+    {
+     "code": "HCR",
+     "nom": "Santé"
+    }
+   ],
+   "total": 200000.0
+  },
   "CTEV": {
    "base": "firmes",
    "complet": true,
@@ -191,7 +225,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-11-12T11:24:16+00:00",
+   "lu": "2026-11-19T11:47:07+00:00",
    "moins_de_5000": 0,
    "nom": "Driven Brands Holdings Inc.",
    "pages": 1,
@@ -247,7 +281,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-11-12T11:24:16+00:00",
+   "lu": "2026-11-19T11:47:07+00:00",
    "moins_de_5000": 0,
    "nom": "Six Flags Entertainment Corporation",
    "pages": 2,
@@ -275,7 +309,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-11-12T11:24:16+00:00",
+   "lu": "2026-11-19T11:47:07+00:00",
    "moins_de_5000": 0,
    "nom": "GLADSTONE COMMERCIAL CORP",
    "pages": 2,
@@ -356,7 +390,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-11-12T11:24:16+00:00",
+   "lu": "2026-11-19T11:47:07+00:00",
    "moins_de_5000": 0,
    "nom": "Karyopharm Therapeutics Inc.",
    "pages": 1,
@@ -397,7 +431,7 @@
    "base": "firmes",
    "complet": true,
    "firmes": 3,
-   "lu": "2026-11-12T11:24:16+00:00",
+   "lu": "2026-11-19T11:47:07+00:00",
    "moins_de_5000": 0,
    "nom": "Stride, Inc.",
    "pages": 1,
@@ -463,7 +497,7 @@
    "base": null,
    "complet": true,
    "firmes": 0,
-   "lu": "2026-11-12T11:24:16+00:00",
+   "lu": "2026-11-19T11:47:07+00:00",
    "moins_de_5000": 0,
    "nom": "MERCER INTERNATIONAL INC.",
    "pages": 1,
@@ -629,7 +663,7 @@
    "base": null,
    "complet": false,
    "firmes": 0,
-   "lu": "2026-11-12T11:24:16+00:00",
+   "lu": "2026-11-19T11:47:07+00:00",
    "moins_de_5000": 0,
    "nom": "WW INTERNATIONAL, INC.",
    "pages": 4,

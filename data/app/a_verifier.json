@@ -262,6 +262,63 @@
   "badge": "a_verifier",
   "category": "gouvernement",
   "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": false,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-19T11:49:00+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA220791",
+   "classe": "TYPE 1",
+   "compagnie": "GENENTECH INC",
+   "date": "20261116",
+   "fabricant": null,
+   "ingredients": [
+    "GIREDESTRAN"
+   ],
+   "lettre": null,
+   "marques": [
+    "WILSERDLY"
+   ],
+   "numero_soumission": "1",
+   "orphelin": false,
+   "priorite": "STANDARD",
+   "sponsor": "GENENTECH INC",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "GENENTECH INC"
+  ],
+  "id": "fda:NDA220791-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [],
+  "occurred_on": "2026-11-16",
+  "official_id": "NDA220791-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220791",
+  "parser_version": "fda-1",
+  "published_on": "2026-11-16",
+  "sha256": "0f615f1f9c6f3df389ec113b13a51e845d82020ae4625cf3836a4b53d966b676",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, WILSERDLY (giredestran), de GENENTECH INC"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "gouvernement",
+  "checks": {
    "champs_requis": true,
    "compagnie_cotee": true,
    "dates_coherentes": true,
