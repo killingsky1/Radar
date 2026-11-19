@@ -17,6 +17,146 @@
    "source_officielle": true,
    "symboles_valides": true
   },
+  "collected_at": "2026-11-19T23:12:57+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "champ": "PassedSenateThirdReadingDateTime",
+   "cle": "senat-3",
+   "date_officielle": "2026-11-19T05:10:00-05:00",
+   "details": [
+    [
+     "Projet de loi",
+     "C-10"
+    ],
+    [
+     "Titre",
+     "Loi concernant le commissaire à la mise en œuvre des traités modernes"
+    ],
+    [
+     "Étape",
+     "adopté en troisième lecture au Sénat"
+    ],
+    [
+     "Où il en est",
+     "Sanction royale reçue"
+    ]
+   ],
+   "etape": "adopté en troisième lecture au Sénat",
+   "numero": "C-10",
+   "sanction": true,
+   "session": "45-1",
+   "statut": "Sanction royale reçue",
+   "titre": "Loi sur le commissaire à la mise en œuvre des traités modernes",
+   "titre_long": "Loi concernant le commissaire à la mise en œuvre des traités modernes",
+   "type": "Projet de loi émanant du gouvernement (Cdc)",
+   "type_en": "House Government Bill"
+  },
+  "direction": 0,
+  "entities": [
+   "Parlement du Canada"
+  ],
+  "id": "legisinfo:45-1:C-10:senat-3",
+  "kind": "etape_projet_de_loi",
+  "notes": [],
+  "occurred_on": "2026-11-19",
+  "official_id": "45-1:C-10:senat-3",
+  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-10",
+  "parser_version": "legisinfo-1",
+  "published_on": "2026-11-19",
+  "sha256": "e97fe1b65e747a887ae8dc4b21d7c7503e5c21c53bb471a48e1f2f43b0954ab2",
+  "source": "legisinfo",
+  "tickers": [],
+  "title": "Projet de loi C-10 (Loi sur le commissaire à la mise en œuvre des traités modernes) : adopté en troisième lecture au Sénat"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "etape_datee": true,
+   "lien_legisinfo": true,
+   "projet_du_gouvernement": true,
+   "sanction_confirmee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-19T23:12:57+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "champ": "ReceivedRoyalAssentDateTime",
+   "cle": "sanction",
+   "date_officielle": "2026-11-19T05:55:00-05:00",
+   "details": [
+    [
+     "Projet de loi",
+     "C-10"
+    ],
+    [
+     "Titre",
+     "Loi concernant le commissaire à la mise en œuvre des traités modernes"
+    ],
+    [
+     "Étape",
+     "sanction royale : le projet devient loi"
+    ],
+    [
+     "Où il en est",
+     "Sanction royale reçue"
+    ]
+   ],
+   "etape": "sanction royale : le projet devient loi",
+   "numero": "C-10",
+   "sanction": true,
+   "session": "45-1",
+   "statut": "Sanction royale reçue",
+   "titre": "Loi sur le commissaire à la mise en œuvre des traités modernes",
+   "titre_long": "Loi concernant le commissaire à la mise en œuvre des traités modernes",
+   "type": "Projet de loi émanant du gouvernement (Cdc)",
+   "type_en": "House Government Bill"
+  },
+  "direction": 0,
+  "entities": [
+   "Parlement du Canada"
+  ],
+  "id": "legisinfo:45-1:C-10:sanction",
+  "kind": "etape_projet_de_loi",
+  "notes": [],
+  "occurred_on": "2026-11-19",
+  "official_id": "45-1:C-10:sanction",
+  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-10",
+  "parser_version": "legisinfo-1",
+  "published_on": "2026-11-19",
+  "sha256": "0e750fe7e010d07c58e0500c98d3f0139d602c303cb62edb9b06e2d1dd6424ec",
+  "source": "legisinfo",
+  "tickers": [],
+  "title": "Projet de loi C-10 (Loi sur le commissaire à la mise en œuvre des traités modernes) : sanction royale : le projet devient loi"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "etape_datee": true,
+   "lien_legisinfo": true,
+   "projet_du_gouvernement": true,
+   "sanction_confirmee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
   "collected_at": "2026-11-19T21:50:49+00:00",
   "confirmations": [],
   "currency": "CAD",
@@ -46056,205 +46196,6 @@
   "source": "contrats_ca_10k",
   "tickers": [],
   "title": "Contrat fédéral de 17,4 M$ : J-sqared (Défense nationale)"
- },
- {
-  "amount_max": 30085057.67,
-  "amount_min": 30085057.67,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32536235,
-   "amendment_value": "30085057.67",
-   "contract_date": "2022-05-03",
-   "contract_value": "72687789.68",
-   "description_fr": "Licences/maintenance des logiciels d'applications et de bases de données (y compris les COTS) et logiciels de développement et de maintenance des applications et des bases de données",
-   "details": [
-    [
-     "Fournisseur",
-     "MDA Systems Ltd."
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Hausse",
-     "30,1 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "72,7 M$"
-    ],
-    [
-     "Valeur d'origine",
-     "42,6 M$"
-    ],
-    [
-     "Date du contrat",
-     "2022-05-03"
-    ],
-    [
-     "Description",
-     "Licences/maintenance des logiciels d'applications et de bases de données (y compris les COTS) et logiciels de développement et de maintenance des applications et des bases de données"
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-06611"
-    ]
-   ],
-   "fournisseur": "MDA Systems Ltd.",
-   "instrument_type": "A",
-   "ministere": "Défense nationale",
-   "montant": 30085057.67,
-   "original_value": "42602732.01",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-06611",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "MDA Systems Ltd."
-  },
-  "direction": 0,
-  "entities": [
-   "MDA Systems Ltd.",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-06611",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-06611",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-06611",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "9c20a70f6dd03c7e22c8d3249a6c7523f043164b28ddcf023eaf97c384297ee8",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral modifié : +30,1 M$ pour MDA Systems Ltd. (Défense nationale), valeur totale 72,7 M$"
- },
- {
-  "amount_max": 72687789.68,
-  "amount_min": 72687789.68,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32536234,
-   "amendment_value": "0.0",
-   "contract_date": "2022-05-03",
-   "contract_value": "72687789.68",
-   "description_fr": "Licences/maintenance des logiciels d'applications et de bases de données (y compris les COTS) et logiciels de développement et de maintenance des applications et des bases de données",
-   "details": [
-    [
-     "Fournisseur",
-     "MDA Systems Ltd."
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Valeur du contrat",
-     "72,7 M$"
-    ],
-    [
-     "Date du contrat",
-     "2022-05-03"
-    ],
-    [
-     "Description",
-     "Licences/maintenance des logiciels d'applications et de bases de données (y compris les COTS) et logiciels de développement et de maintenance des applications et des bases de données"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-06610"
-    ]
-   ],
-   "fournisseur": "MDA Systems Ltd.",
-   "instrument_type": "C",
-   "ministere": "Défense nationale",
-   "montant": 72687789.68,
-   "original_value": "42602732.01",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-06610",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "MDA Systems Ltd."
-  },
-  "direction": 0,
-  "entities": [
-   "MDA Systems Ltd.",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-06610",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2022-05-03",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-06610",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-06610",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "420655f4c8bf3ec1bb4ce365c706d6d138e916a9c7a74d5232b7d0057c7eb6d1",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 72,7 M$ : MDA Systems Ltd. (Défense nationale)"
  },
  {
   "amount_max": null,
