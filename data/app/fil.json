@@ -3,6 +3,312 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-19T19:28:34+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ressources-naturelles-canada/nouvelles/2026/11/le-gouvernement-du-canada-investit-pour-diversifier-les-marches-et-les-debouches-economiques-dans-le-secteur-forestier-canadien.html",
+   "ministere": "Ressources naturelles Canada",
+   "mis_a_jour": "2026-11-19T08:30:00-05:00",
+   "resume": "Le 19 novembre 2026, à l’occasion de la conférence Scaling Up Bio, Corey Hogan, secrétaire parlementaire du ministre de l’Énergie et des Ressources naturelles, a annoncé l’octroi de 2,2 millions de dollars pour le Défi FIRM (Innovation forestière et marchés des énergies renouvelables) du Canada, sous la direction d’Ecostrat.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Ressources naturelles Canada"
+  ],
+  "id": "nouvelles_eco_ca:ressources-naturelles-canada/nouvelles/2026/11/le-gouvernement-du-canada-investit-pour-diversifier-les-marches-et-les-debouches-economiques-dans-le-secteur-forestier-canadien.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-19",
+  "official_id": "ressources-naturelles-canada/nouvelles/2026/11/le-gouvernement-du-canada-investit-pour-diversifier-les-marches-et-les-debouches-economiques-dans-le-secteur-forestier-canadien.html",
+  "official_url": "https://www.canada.ca/fr/ressources-naturelles-canada/nouvelles/2026/11/le-gouvernement-du-canada-investit-pour-diversifier-les-marches-et-les-debouches-economiques-dans-le-secteur-forestier-canadien.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-19",
+  "sha256": "513f496a3733f0f51597507b8b43e2352a0daab31f49b709426faef4fe3e97b9",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le gouvernement du Canada investit pour diversifier les marchés et les débouchés économiques dans le secteur forestier canadien"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-19T19:28:32+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "NJ07",
+   "elu": "Thomas H. Kean",
+   "lecture_complete": true,
+   "nom_sec": "STRYKER CORP",
+   "rapport": "20036844",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Stryker Corporation Common Stock (SYK) [ST]",
+     "avis": "2026-11-12",
+     "date": "2026-10-27",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Thomas H. Kean",
+   "STRYKER CORP"
+  ],
+  "id": "chambre_ptr:20036844:SYK:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-27",
+  "official_id": "20036844:SYK:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036844.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-19",
+  "sha256": "4ec7d89d2de8fd80e30edd77edc8a82a2107c94de494873465c6cfc22ac8fc02",
+  "source": "chambre_ptr",
+  "tickers": [
+   "SYK"
+  ],
+  "title": "Thomas H. Kean (Chambre, NJ07) vend SYK"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-19T19:28:32+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "NJ07",
+   "elu": "Thomas H. Kean",
+   "lecture_complete": true,
+   "nom_sec": "MICROSOFT CORP",
+   "rapport": "20036844",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Microsoft Corporation - Common Stock (MSFT) [ST]",
+     "avis": "2026-11-12",
+     "date": "2026-10-27",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Thomas H. Kean",
+   "MICROSOFT CORP"
+  ],
+  "id": "chambre_ptr:20036844:MSFT:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-27",
+  "official_id": "20036844:MSFT:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036844.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-19",
+  "sha256": "4ec7d89d2de8fd80e30edd77edc8a82a2107c94de494873465c6cfc22ac8fc02",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MSFT"
+  ],
+  "title": "Thomas H. Kean (Chambre, NJ07) vend MSFT"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-19T19:28:32+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "NJ07",
+   "elu": "Thomas H. Kean",
+   "lecture_complete": true,
+   "nom_sec": "JOHNSON & JOHNSON",
+   "rapport": "20036844",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Johnson & Johnson Common Stock (JNJ) [ST]",
+     "avis": "2026-11-12",
+     "date": "2026-10-27",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Thomas H. Kean",
+   "JOHNSON & JOHNSON"
+  ],
+  "id": "chambre_ptr:20036844:JNJ:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-27",
+  "official_id": "20036844:JNJ:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036844.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-19",
+  "sha256": "4ec7d89d2de8fd80e30edd77edc8a82a2107c94de494873465c6cfc22ac8fc02",
+  "source": "chambre_ptr",
+  "tickers": [
+   "JNJ"
+  ],
+  "title": "Thomas H. Kean (Chambre, NJ07) vend JNJ"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-11-19T19:28:18+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {
+    "entités": 7,
+    "personnes": 17
+   },
+   "communiques": [
+    "CHART - 'Ndrangheta Operations in Canada - November 2026",
+    "CHART - Comanchero Outlaw Motorcycle Gang - November 2026",
+    "Treasury Targets Cyber Scam Operators and Armed Group Facilitators in Southeast Asia",
+    "Treasury Sanctions Major Drug Trafficking Organizations Supporting Terrorist Cartels"
+   ],
+   "retraits": 0,
+   "titre_officiel": "Counter Narcotics Designations; Cyber-related Designations; Issuance of Illicit Drugs General License; Issuance of Amended Russia-related General License and Frequently Asked Questions"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20261119",
+  "kind": "sanctions",
+  "notes": [
+   "Communiqué du Trésor : CHART - 'Ndrangheta Operations in Canada - November 2026",
+   "Communiqué du Trésor : CHART - Comanchero Outlaw Motorcycle Gang - November 2026",
+   "Ajoutés à la liste des sanctions (SDN) : 17 personnes, 7 entités."
+  ],
+  "occurred_on": "2026-11-19",
+  "official_id": "20261119",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20261119",
+  "parser_version": "ofac-1",
+  "published_on": "2026-11-19",
+  "sha256": "04d434a3c01eb63d50a5c47ff19eeb522d8ba952c97c730bdc21cdfca4679f56",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Counter Narcotics Designations; Cyber-related Designations; Issuance of Illicit Drugs General License; Issuance of Amended Russia-related General License and Frequently Asked Questions"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "politiciens",
   "checks": {
    "champs_requis": true,
@@ -48,6 +354,541 @@
   "source": "oge_278t",
   "tickers": [],
   "title": "Donald J Trump (président des États-Unis) : rapport de transactions (278-T)"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-19T19:28:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "AL07",
+   "elu": "Terri A. Sewell",
+   "lecture_complete": true,
+   "nom_sec": "TAPESTRY, INC.",
+   "rapport": "20036864",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Tapestry, Inc. Common Stock (TPR) [ST]",
+     "avis": "2026-11-06",
+     "date": "2026-11-05",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Terri A. Sewell",
+   "TAPESTRY, INC."
+  ],
+  "id": "chambre_ptr:20036864:TPR:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-11-05",
+  "official_id": "20036864:TPR:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036864.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-18",
+  "sha256": "e23401cd3bd5b800e1cfda53d60962815395bfc5225d286d77a4d9aa30a0bbc5",
+  "source": "chambre_ptr",
+  "tickers": [
+   "TPR"
+  ],
+  "title": "Terri A. Sewell (Chambre, AL07) vend TPR"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-19T19:28:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OH06",
+   "elu": "Michael Rulli",
+   "lecture_complete": true,
+   "nom_sec": "NVIDIA CORP",
+   "rapport": "20036855",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "NVIDIA Corporation - Common Stock (NVDA) [ST]",
+     "avis": "2026-10-28",
+     "date": "2026-10-28",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Michael Rulli",
+   "NVIDIA CORP"
+  ],
+  "id": "chambre_ptr:20036855:NVDA:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-28",
+  "official_id": "20036855:NVDA:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036855.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-18",
+  "sha256": "8e269d68a3effa301ebc50ead090e12f962d3e456e52394d502533e74434746c",
+  "source": "chambre_ptr",
+  "tickers": [
+   "NVDA"
+  ],
+  "title": "Michael Rulli (Chambre, OH06) vend NVDA"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-19T19:28:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OH06",
+   "elu": "Michael Rulli",
+   "lecture_complete": true,
+   "nom_sec": "MICROSOFT CORP",
+   "rapport": "20036855",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Microsoft Corporation - Common Stock (MSFT) [ST]",
+     "avis": "2026-11-04",
+     "date": "2026-11-04",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Michael Rulli",
+   "MICROSOFT CORP"
+  ],
+  "id": "chambre_ptr:20036855:MSFT:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-11-04",
+  "official_id": "20036855:MSFT:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036855.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-18",
+  "sha256": "8e269d68a3effa301ebc50ead090e12f962d3e456e52394d502533e74434746c",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MSFT"
+  ],
+  "title": "Michael Rulli (Chambre, OH06) achète MSFT"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-19T19:28:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OH06",
+   "elu": "Michael Rulli",
+   "lecture_complete": true,
+   "nom_sec": "ELI LILLY & Co",
+   "rapport": "20036855",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Eli Lilly and Company Common Stock (LLY) [ST]",
+     "avis": "2026-11-04",
+     "date": "2026-11-04",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Michael Rulli",
+   "ELI LILLY & Co"
+  ],
+  "id": "chambre_ptr:20036855:LLY:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-11-04",
+  "official_id": "20036855:LLY:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036855.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-18",
+  "sha256": "8e269d68a3effa301ebc50ead090e12f962d3e456e52394d502533e74434746c",
+  "source": "chambre_ptr",
+  "tickers": [
+   "LLY"
+  ],
+  "title": "Michael Rulli (Chambre, OH06) vend LLY"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-19T19:28:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OH06",
+   "elu": "Michael Rulli",
+   "lecture_complete": true,
+   "nom_sec": "Lumentum Holdings Inc.",
+   "rapport": "20036855",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Lumentum Holdings Inc. - Common Stock (LITE) [ST]",
+     "avis": "2026-11-04",
+     "date": "2026-11-04",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Michael Rulli",
+   "Lumentum Holdings Inc."
+  ],
+  "id": "chambre_ptr:20036855:LITE:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-11-04",
+  "official_id": "20036855:LITE:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036855.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-18",
+  "sha256": "8e269d68a3effa301ebc50ead090e12f962d3e456e52394d502533e74434746c",
+  "source": "chambre_ptr",
+  "tickers": [
+   "LITE"
+  ],
+  "title": "Michael Rulli (Chambre, OH06) vend LITE"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-19T19:28:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OH06",
+   "elu": "Michael Rulli",
+   "lecture_complete": true,
+   "nom_sec": "Alphabet Inc.",
+   "rapport": "20036855",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Alphabet Inc. - Class A Common Stock (GOOGL) [ST]",
+     "avis": "2026-11-04",
+     "date": "2026-11-04",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Michael Rulli",
+   "Alphabet Inc."
+  ],
+  "id": "chambre_ptr:20036855:GOOGL:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-11-04",
+  "official_id": "20036855:GOOGL:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036855.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-18",
+  "sha256": "8e269d68a3effa301ebc50ead090e12f962d3e456e52394d502533e74434746c",
+  "source": "chambre_ptr",
+  "tickers": [
+   "GOOGL"
+  ],
+  "title": "Michael Rulli (Chambre, OH06) vend GOOGL"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-19T19:28:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OH06",
+   "elu": "Michael Rulli",
+   "lecture_complete": true,
+   "nom_sec": "COSTCO WHOLESALE CORP /NEW",
+   "rapport": "20036855",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Costco Wholesale Corporation - Common Stock (COST) [ST]",
+     "avis": "2026-11-12",
+     "date": "2026-11-12",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Michael Rulli",
+   "COSTCO WHOLESALE CORP /NEW"
+  ],
+  "id": "chambre_ptr:20036855:COST:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-11-12",
+  "official_id": "20036855:COST:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036855.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-18",
+  "sha256": "8e269d68a3effa301ebc50ead090e12f962d3e456e52394d502533e74434746c",
+  "source": "chambre_ptr",
+  "tickers": [
+   "COST"
+  ],
+  "title": "Michael Rulli (Chambre, OH06) vend COST"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-11-19T19:28:19+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {
+    "entités": 3,
+    "personnes": 3
+   },
+   "communiques": [
+    "Operation Economic Outcast Targets Iran's Proxy Networks",
+    "U.S. Sanctions Hizballah Front Organization and Iran-Backed Financial Network"
+   ],
+   "retraits": 0,
+   "titre_officiel": "Counter Terrorism Designations"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20261118",
+  "kind": "sanctions",
+  "notes": [
+   "Communiqué du Trésor : Operation Economic Outcast Targets Iran's Proxy Networks",
+   "Communiqué du Trésor : U.S. Sanctions Hizballah Front Organization and Iran-Backed Financial Network",
+   "Ajoutés à la liste des sanctions (SDN) : 3 personnes, 3 entités."
+  ],
+  "occurred_on": "2026-11-18",
+  "official_id": "20261118",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20261118",
+  "parser_version": "ofac-1",
+  "published_on": "2026-11-18",
+  "sha256": "2a3a79dd62fd0afd9bf116d192917de04e04e3c5640e07ce938989cc0ceabad4",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Counter Terrorism Designations"
  },
  {
   "amount_max": null,
@@ -15529,56 +16370,6 @@
   "source": "legisinfo",
   "tickers": [],
   "title": "Projet de loi C-42 (Loi sur l'abordabilité des produits d'épicerie et du logement) : première lecture à la Chambre des communes"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "action_officielle": true,
-   "champs_requis": true,
-   "date_de_l_adresse_concorde": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "liste_sdn_lue": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "titre_et_liste_concordent": true
-  },
-  "collected_at": "2026-11-18T19:23:06+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "ajouts": {
-    "entités": 3,
-    "personnes": 3
-   },
-   "communiques": [
-    "Operation Economic Outcast Targets Iran’s Proxy Networks"
-   ],
-   "retraits": 0,
-   "titre_officiel": "Counter Terrorism Designations"
-  },
-  "direction": 0,
-  "entities": [],
-  "id": "sanctions_us:20261118",
-  "kind": "sanctions",
-  "notes": [
-   "Communiqué du Trésor : Operation Economic Outcast Targets Iran’s Proxy Networks",
-   "Ajoutés à la liste des sanctions (SDN) : 3 personnes, 3 entités."
-  ],
-  "occurred_on": "2026-11-18",
-  "official_id": "20261118",
-  "official_url": "https://ofac.treasury.gov/recent-actions/20261118",
-  "parser_version": "ofac-1",
-  "published_on": "2026-11-18",
-  "sha256": "2a3a79dd62fd0afd9bf116d192917de04e04e3c5640e07ce938989cc0ceabad4",
-  "source": "sanctions_us",
-  "tickers": [],
-  "title": "Sanctions américaines (OFAC) : Counter Terrorism Designations"
  },
  {
   "amount_max": 155000000.0,
@@ -45541,101 +46332,6 @@
   "title": "Contrat fédéral de 11,7 M$ : Telecom Computer Inc. (Défense nationale)"
  },
  {
-  "amount_max": 10961000.0,
-  "amount_min": 10961000.0,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32543138,
-   "amendment_value": "0.0",
-   "contract_date": "2026-09-22",
-   "contract_value": "10961000.0",
-   "description_fr": "Bâtiments résidentiels",
-   "details": [
-    [
-     "Fournisseur",
-     "1568796 Ontario Inc. o/a Renokrew"
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Valeur du contrat",
-     "11,0 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-09-22"
-    ],
-    [
-     "Description",
-     "Bâtiments résidentiels"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-04746"
-    ]
-   ],
-   "fournisseur": "1568796 Ontario Inc. o/a Renokrew",
-   "instrument_type": "C",
-   "ministere": "Défense nationale",
-   "montant": 10961000.0,
-   "original_value": "10961000.0",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-04746",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "1568796 Ontario Inc. o/a Renokrew"
-  },
-  "direction": 0,
-  "entities": [
-   "1568796 Ontario Inc. o/a Renokrew",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-04746",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2026-09-22",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-04746",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-04746",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "b9f67d0a7c479ab4cd9137f6e8811e82fabaf6466501fe1e23667a8a210ddb3d",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 11,0 M$ : 1568796 Ontario Inc. o/a Renokrew (Défense nationale)"
- },
- {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -51688,282 +52384,6 @@
   "title": "Jonathan Jackson (Chambre, IL01) vend VSAT — compte conjoint"
  },
  {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-20T18:08:46+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "IL01",
-   "elu": "Jonathan Jackson",
-   "lecture_complete": true,
-   "nom_sec": "TORTOISE ENERGY INFRASTRUCTURE CORP",
-   "rapport": "20035551",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Tortoise Energy Infrastructure Corporation Common Stock (TYG) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-04",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "SP",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Jonathan Jackson",
-   "TORTOISE ENERGY INFRASTRUCTURE CORP"
-  ],
-  "id": "chambre_ptr:20035551:TYG:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-04",
-  "official_id": "20035551:TYG:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035551.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-19",
-  "sha256": "d664bc60b4f9ad2a7621fb4633c41d675f30e0e2c74e84dc60e7d7070ff1af06",
-  "source": "chambre_ptr",
-  "tickers": [
-   "TYG"
-  ],
-  "title": "Jonathan Jackson (Chambre, IL01) vend TYG — conjoint·e"
- },
- {
-  "amount_max": 50000.0,
-  "amount_min": 15001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-20T18:08:46+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "IL01",
-   "elu": "Jonathan Jackson",
-   "lecture_complete": true,
-   "nom_sec": "Guardant Health, Inc.",
-   "rapport": "20035551",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Guardant Health, Inc. - Common Stock (GH) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-28",
-     "description": null,
-     "montant": "$15,001 - $50,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Jonathan Jackson",
-   "Guardant Health, Inc."
-  ],
-  "id": "chambre_ptr:20035551:GH:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-09-28",
-  "official_id": "20035551:GH:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035551.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-19",
-  "sha256": "d664bc60b4f9ad2a7621fb4633c41d675f30e0e2c74e84dc60e7d7070ff1af06",
-  "source": "chambre_ptr",
-  "tickers": [
-   "GH"
-  ],
-  "title": "Jonathan Jackson (Chambre, IL01) achète GH — compte conjoint"
- },
- {
-  "amount_max": 100000.0,
-  "amount_min": 50001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-20T18:08:46+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "IL01",
-   "elu": "Jonathan Jackson",
-   "lecture_complete": true,
-   "nom_sec": "ESTEE LAUDER COMPANIES INC",
-   "rapport": "20035551",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Estee Lauder Companies, Inc. (EL) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-28",
-     "description": null,
-     "montant": "$50,001 - $100,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Jonathan Jackson",
-   "ESTEE LAUDER COMPANIES INC"
-  ],
-  "id": "chambre_ptr:20035551:EL:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-09-28",
-  "official_id": "20035551:EL:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035551.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-19",
-  "sha256": "d664bc60b4f9ad2a7621fb4633c41d675f30e0e2c74e84dc60e7d7070ff1af06",
-  "source": "chambre_ptr",
-  "tickers": [
-   "EL"
-  ],
-  "title": "Jonathan Jackson (Chambre, IL01) achète EL — compte conjoint"
- },
- {
-  "amount_max": 100000.0,
-  "amount_min": 50001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-20T18:08:46+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "IL01",
-   "elu": "Jonathan Jackson",
-   "lecture_complete": true,
-   "nom_sec": "Datadog, Inc.",
-   "rapport": "20035551",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Datadog, Inc. - Class A Common Stock (DDOG) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-28",
-     "description": null,
-     "montant": "$50,001 - $100,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Jonathan Jackson",
-   "Datadog, Inc."
-  ],
-  "id": "chambre_ptr:20035551:DDOG:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-09-28",
-  "official_id": "20035551:DDOG:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035551.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-19",
-  "sha256": "d664bc60b4f9ad2a7621fb4633c41d675f30e0e2c74e84dc60e7d7070ff1af06",
-  "source": "chambre_ptr",
-  "tickers": [
-   "DDOG"
-  ],
-  "title": "Jonathan Jackson (Chambre, IL01) achète DDOG — compte conjoint"
- },
- {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -53027,77 +53447,6 @@
   "title": "Contrat fédéral américain de 120,2 M$ : HENSEL PHELPS CONSTRUCTION CO (Défense)"
  },
  {
-  "amount_max": 100000.0,
-  "amount_min": 50001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-19T19:30:55+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "FL15",
-   "elu": "Laurel Lee",
-   "lecture_complete": true,
-   "nom_sec": "BANK OF AMERICA CORP /DE/",
-   "rapport": "20035490",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Bank of America Corporation Common Stock (BAC) [ST]",
-     "avis": "2026-09-21",
-     "date": "2026-08-24",
-     "description": null,
-     "montant": "$50,001 - $100,000",
-     "partielle": false,
-     "proprietaire": "SP",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Laurel Lee",
-   "BANK OF AMERICA CORP /DE/"
-  ],
-  "id": "chambre_ptr:20035490:BAC:S",
-  "kind": "vente_elu",
-  "notes": [
-   "Déclaré en retard : plus de 45 jours après la transaction (limite de la loi STOCK Act)."
-  ],
-  "occurred_on": "2026-08-24",
-  "official_id": "20035490:BAC:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035490.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-16",
-  "sha256": "1e28c70dc96e3fdd1e02b4eafc349ee53998f1158f547ce43f7e7790df37c5a9",
-  "source": "chambre_ptr",
-  "tickers": [
-   "BAC"
-  ],
-  "title": "Laurel Lee (Chambre, FL15) vend BAC — conjoint·e"
- },
- {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -53430,282 +53779,6 @@
   "source": "nhtsa",
   "tickers": [],
   "title": "Rappel de Jaguar Land Rover North America, LLC : 93 997 véhicules — « Water May Damage Rearview Camera »"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-16T15:22:28+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH02",
-   "elu": "David J. Taylor",
-   "lecture_complete": true,
-   "nom_sec": "AT&T INC.",
-   "rapport": "20035660",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "AT&T Inc. (T) [ST]",
-     "avis": "2026-10-15",
-     "date": "2026-10-09",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "David J. Taylor",
-   "AT&T INC."
-  ],
-  "id": "chambre_ptr:20035660:T:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-10-09",
-  "official_id": "20035660:T:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035660.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-15",
-  "sha256": "96834f7bf6b8202cb05d9398922a6d968f8c8729f8eecb2ecdb9ac98f9e14299",
-  "source": "chambre_ptr",
-  "tickers": [
-   "T"
-  ],
-  "title": "David J. Taylor (Chambre, OH02) achète T"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-16T15:22:28+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH02",
-   "elu": "David J. Taylor",
-   "lecture_complete": true,
-   "nom_sec": "RPM INTERNATIONAL INC/DE/",
-   "rapport": "20035660",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "RPM International Inc. Common Stock (RPM) [ST]",
-     "avis": "2026-10-15",
-     "date": "2026-10-09",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "David J. Taylor",
-   "RPM INTERNATIONAL INC/DE/"
-  ],
-  "id": "chambre_ptr:20035660:RPM:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-10-09",
-  "official_id": "20035660:RPM:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035660.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-15",
-  "sha256": "96834f7bf6b8202cb05d9398922a6d968f8c8729f8eecb2ecdb9ac98f9e14299",
-  "source": "chambre_ptr",
-  "tickers": [
-   "RPM"
-  ],
-  "title": "David J. Taylor (Chambre, OH02) achète RPM"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-16T15:22:28+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH02",
-   "elu": "David J. Taylor",
-   "lecture_complete": true,
-   "nom_sec": "PROCTER & GAMBLE Co",
-   "rapport": "20035660",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Procter & Gamble Company (PG) [ST]",
-     "avis": "2026-10-15",
-     "date": "2026-10-12",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "David J. Taylor",
-   "PROCTER & GAMBLE Co"
-  ],
-  "id": "chambre_ptr:20035660:PG:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-10-12",
-  "official_id": "20035660:PG:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035660.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-15",
-  "sha256": "96834f7bf6b8202cb05d9398922a6d968f8c8729f8eecb2ecdb9ac98f9e14299",
-  "source": "chambre_ptr",
-  "tickers": [
-   "PG"
-  ],
-  "title": "David J. Taylor (Chambre, OH02) vend PG"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-16T15:22:28+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH02",
-   "elu": "David J. Taylor",
-   "lecture_complete": true,
-   "nom_sec": "FIFTH THIRD BANCORP",
-   "rapport": "20035660",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Fifth Third Bancorp - Common Stock (FITB) [ST]",
-     "avis": "2026-10-15",
-     "date": "2026-10-09",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "David J. Taylor",
-   "FIFTH THIRD BANCORP"
-  ],
-  "id": "chambre_ptr:20035660:FITB:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-10-09",
-  "official_id": "20035660:FITB:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035660.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-15",
-  "sha256": "96834f7bf6b8202cb05d9398922a6d968f8c8729f8eecb2ecdb9ac98f9e14299",
-  "source": "chambre_ptr",
-  "tickers": [
-   "FITB"
-  ],
-  "title": "David J. Taylor (Chambre, OH02) achète FITB"
  },
  {
   "amount_max": null,
@@ -54258,75 +54331,6 @@
   "source": "nhtsa",
   "tickers": [],
   "title": "Rappel de Toyota Motor Engineering & Manufacturing : 105 794 véhicules — « Fuel Tubes May Disconnect and Leak »"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-15T15:35:52+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "GA06",
-   "elu": "Richard Dean Dr McCormick",
-   "lecture_complete": true,
-   "nom_sec": "BERKSHIRE HATHAWAY INC",
-   "rapport": "20035651",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Berkshire Hathaway Inc. New Common Stock (BRK.B) [ST]",
-     "avis": "2026-10-14",
-     "date": "2026-09-18",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Richard Dean Dr McCormick",
-   "BERKSHIRE HATHAWAY INC"
-  ],
-  "id": "chambre_ptr:20035651:BRK-B:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-09-18",
-  "official_id": "20035651:BRK-B:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035651.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-14",
-  "sha256": "a2d1a520ea251d44257ae8d11ebc5efde8b4e259b17d86d6c5734028d62de7e6",
-  "source": "chambre_ptr",
-  "tickers": [
-   "BRK-B"
-  ],
-  "title": "Richard Dean Dr McCormick (Chambre, GA06) achète BRK-B"
  },
  {
   "amount_max": null,
@@ -57661,57 +57665,6 @@
   "source": "registre_federal",
   "tickers": [],
   "title": "Sanctions (Trésor, OFAC) : Sanctions Action"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-06T17:10:23+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Trade Representative, Office of United States"
-   ],
-   "etape": "inspection_publique",
-   "numero": "2026-20511",
-   "numero_dans_le_texte": true,
-   "parution_prevue": "2026-10-07",
-   "sorte": "commerce_exterieur",
-   "sous_type": null,
-   "titre_officiel": "Conforming Amendment to Product Exclusion: China's Acts, Policies, and Practices Related to Technology Transfer, Intellectual Property, and Innovation",
-   "type": "Notice"
-  },
-  "direction": 0,
-  "entities": [
-   "Trade Representative, Office of United States"
-  ],
-  "id": "registre_federal:2026-20511",
-  "kind": "commerce_exterieur",
-  "notes": [],
-  "occurred_on": "2026-10-06",
-  "official_id": "2026-20511",
-  "official_url": "https://www.federalregister.gov/public-inspection/2026-20511/conforming-amendment-to-product-exclusion-chinas-acts-policies-and-practices-related-to-technology",
-  "parser_version": "registre-4",
-  "published_on": "2026-10-06",
-  "sha256": "615e4e106e8ef51dcbd9874daf62087e12a17b141b6ff6e9282eae5e34f075f1",
-  "source": "registre_federal",
-  "tickers": [],
-  "title": "Commerce extérieur (USTR) : Conforming Amendment to Product Exclusion: China's Acts, Policies, and Practices Related to Technology Transfer, Intellectual Property, and Innovation"
  },
  {
   "amount_max": null,
