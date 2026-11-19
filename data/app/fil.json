@@ -9,6 +9,121 @@
    "dates_coherentes": true,
    "domaine_officiel": true,
    "empreinte": true,
+   "etape_datee": true,
+   "lien_legisinfo": true,
+   "projet_du_gouvernement": true,
+   "sanction_confirmee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-19T21:50:49+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "champ": "PassedHouseFirstReadingDateTime",
+   "cle": "chambre-1",
+   "date_officielle": "2026-11-19T05:00:00-05:00",
+   "details": [
+    [
+     "Projet de loi",
+     "S-6"
+    ],
+    [
+     "Titre",
+     "Loi n° 4 visant à harmoniser le droit fédéral avec le droit civil du Québec et modifiant certaines lois pour que chaque version linguistique tienne compte du droit civil et de la common law"
+    ],
+    [
+     "Étape",
+     "première lecture à la Chambre des communes"
+    ],
+    [
+     "Où il en est",
+     "À la deuxième lecture à la Chambre des communes"
+    ]
+   ],
+   "etape": "première lecture à la Chambre des communes",
+   "numero": "S-6",
+   "sanction": false,
+   "session": "45-1",
+   "statut": "À la deuxième lecture à la Chambre des communes",
+   "titre": "Loi d’harmonisation n° 4 du droit fédéral avec le droit civil",
+   "titre_long": "Loi n° 4 visant à harmoniser le droit fédéral avec le droit civil du Québec et modifiant certaines lois pour que chaque version linguistique tienne compte du droit civil et de la common law",
+   "type": "Projet de loi émanant du gouvernement (Sénat)",
+   "type_en": "Senate Government Bill"
+  },
+  "direction": 0,
+  "entities": [
+   "Parlement du Canada"
+  ],
+  "id": "legisinfo:45-1:S-6:chambre-1",
+  "kind": "etape_projet_de_loi",
+  "notes": [],
+  "occurred_on": "2026-11-19",
+  "official_id": "45-1:S-6:chambre-1",
+  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/s-6",
+  "parser_version": "legisinfo-1",
+  "published_on": "2026-11-19",
+  "sha256": "415d0861265258dc88a7af70e9835ce7bec0f4191a6c59d34802f9c5e8d844de",
+  "source": "legisinfo",
+  "tickers": [],
+  "title": "Projet de loi S-6 (Loi d’harmonisation n° 4 du droit fédéral avec le droit civil) : première lecture à la Chambre des communes"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-19T21:50:45+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/regie-energie-canada/nouvelles/2026/11/la-regie-de-lenergie-du-canada-delivre-une-sanction-administrative-pecuniaire-a-westcoast-energy-gp-inc-et-a-ogilvie-mountain-holdings-lp.html",
+   "ministere": "Régie de l'énergie du Canada",
+   "mis_a_jour": "2026-11-19T14:57:56-05:00",
+   "resume": "La Régie de l’énergie du Canada a délivré une sanction administrative pécuniaire de 52 000 $ à Westcoast Energy GP Inc. (« Westcoast ») et de 3 750 $ à Ogilvie Mountain Holdings LP (« OMH »). Westcoast et OMH ont payé les sanctions dans leur intégralité. Il est possible de consulter les procès-verbaux de violation sur le site Web de la Régie.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Régie de l'énergie du Canada"
+  ],
+  "id": "nouvelles_eco_ca:regie-energie-canada/nouvelles/2026/11/la-regie-de-lenergie-du-canada-delivre-une-sanction-administrative-pecuniaire-a-westcoast-energy-gp-inc-et-a-ogilvie-mountain-holdings-lp.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-19",
+  "official_id": "regie-energie-canada/nouvelles/2026/11/la-regie-de-lenergie-du-canada-delivre-une-sanction-administrative-pecuniaire-a-westcoast-energy-gp-inc-et-a-ogilvie-mountain-holdings-lp.html",
+  "official_url": "https://www.canada.ca/fr/regie-energie-canada/nouvelles/2026/11/la-regie-de-lenergie-du-canada-delivre-une-sanction-administrative-pecuniaire-a-westcoast-energy-gp-inc-et-a-ogilvie-mountain-holdings-lp.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-19",
+  "sha256": "53254cfcfc47a1c6dd2cd63c11621a2495dc585c62c13dd11897ecddf5227f91",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "La Régie de l’énergie du Canada délivre une sanction administrative pécuniaire à Westcoast Energy GP Inc. et à Ogilvie Mountain Holdings LP"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
    "lien_identique_au_fil": true,
    "lien_ministere_coherent": true,
    "ministere_reconnu": true,
@@ -46140,196 +46255,6 @@
   "source": "contrats_ca_10k",
   "tickers": [],
   "title": "Contrat fédéral de 72,7 M$ : MDA Systems Ltd. (Défense nationale)"
- },
- {
-  "amount_max": 39000862.88,
-  "amount_min": 39000862.88,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32535843,
-   "amendment_value": "0.0",
-   "contract_date": "2026-06-17",
-   "contract_value": "39000862.88",
-   "description_fr": "Consultants en TI et en télécommunications",
-   "details": [
-    [
-     "Fournisseur",
-     "Northwestel Inc."
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Valeur du contrat",
-     "39,0 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-06-17"
-    ],
-    [
-     "Description",
-     "Consultants en TI et en télécommunications"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-06219"
-    ]
-   ],
-   "fournisseur": "Northwestel Inc.",
-   "instrument_type": "C",
-   "ministere": "Défense nationale",
-   "montant": 39000862.88,
-   "original_value": "39000862.88",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-06219",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "Northwestel Inc."
-  },
-  "direction": 0,
-  "entities": [
-   "Northwestel Inc.",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-06219",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2026-06-17",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-06219",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-06219",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "853ef9046617538cd4c6a8dea530c732c4b2dcc287e1f8f61fc7fe1fe79266e4",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 39,0 M$ : Northwestel Inc. (Défense nationale)"
- },
- {
-  "amount_max": 11703093.27,
-  "amount_min": 11703093.27,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32535838,
-   "amendment_value": "0.0",
-   "contract_date": "2026-08-20",
-   "contract_value": "11703093.27",
-   "description_fr": "Équipement informatique de l'environnement de production et opérations-Serveurs, stockage, imprimantes, etc. (y compris pièces et périphériques)",
-   "details": [
-    [
-     "Fournisseur",
-     "Telecom Computer Inc."
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Valeur du contrat",
-     "11,7 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-08-20"
-    ],
-    [
-     "Description",
-     "Équipement informatique de l'environnement de production et opérations-Serveurs, stockage, imprimantes, etc. (y compris pièces et périphériques)"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-06214"
-    ]
-   ],
-   "fournisseur": "Telecom Computer Inc.",
-   "instrument_type": "C",
-   "ministere": "Défense nationale",
-   "montant": 11703093.27,
-   "original_value": "11703093.27",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-06214",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "Telecom Computer Inc."
-  },
-  "direction": 0,
-  "entities": [
-   "Telecom Computer Inc.",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-06214",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2026-08-20",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-06214",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-06214",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "2876bd73250c3f24a7401bc03aac9b4fd9e9f94aa63b565c5bb2dac8d74057fc",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 11,7 M$ : Telecom Computer Inc. (Défense nationale)"
  },
  {
   "amount_max": null,
