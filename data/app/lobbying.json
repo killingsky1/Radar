@@ -249,20 +249,6 @@
    "sujets": [],
    "total": null
   },
-  "EGBN": {
-   "base": null,
-   "complet": true,
-   "firmes": 0,
-   "lu": "2026-11-14T10:34:07+00:00",
-   "moins_de_5000": 0,
-   "nom": "EAGLE BANCORP INC",
-   "pages": 1,
-   "rapports": [],
-   "recherche": "EAGLE",
-   "revenus_firmes": null,
-   "sujets": [],
-   "total": null
-  },
   "FF": {
    "base": null,
    "complet": true,
@@ -346,45 +332,6 @@
    "revenus_firmes": null,
    "sujets": [],
    "total": null
-  },
-  "KMT": {
-   "base": "firmes",
-   "complet": true,
-   "firmes": 1,
-   "lu": "2026-11-18T11:51:41+00:00",
-   "moins_de_5000": 0,
-   "nom": "KENNAMETAL INC",
-   "pages": 1,
-   "rapports": [
-    {
-     "client": "KENNAMETAL INC.",
-     "montant": 40000.0,
-     "poste": "2026-10-08",
-     "registrant": "CASSIDY & ASSOCIATES, INC.",
-     "sans_activite": false,
-     "soi_meme": false,
-     "sujets": [
-      "BUD",
-      "DEF"
-     ],
-     "type": "Q3",
-     "url": "https://lda.gov/filings/public/filing/4ad659a0-1b47-4683-8fea-694299b7f7d0/print/",
-     "uuid": "4ad659a0-1b47-4683-8fea-694299b7f7d0"
-    }
-   ],
-   "recherche": "KENNAMETAL",
-   "revenus_firmes": 40000.0,
-   "sujets": [
-    {
-     "code": "BUD",
-     "nom": "Budget et crédits"
-    },
-    {
-     "code": "DEF",
-     "nom": "Défense"
-    }
-   ],
-   "total": 40000.0
   },
   "KPTI": {
    "base": null,
@@ -644,34 +591,6 @@
     }
    ],
    "total": 150000.0
-  },
-  "UPBD": {
-   "base": null,
-   "complet": true,
-   "firmes": 0,
-   "lu": "2026-11-13T11:06:56+00:00",
-   "moins_de_5000": 0,
-   "nom": "UPBOUND GROUP, INC.",
-   "pages": 1,
-   "rapports": [],
-   "recherche": "UPBOUND",
-   "revenus_firmes": null,
-   "sujets": [],
-   "total": null
-  },
-  "WW": {
-   "base": null,
-   "complet": false,
-   "firmes": 0,
-   "lu": "2026-11-19T11:47:07+00:00",
-   "moins_de_5000": 0,
-   "nom": "WW INTERNATIONAL, INC.",
-   "pages": 4,
-   "rapports": [],
-   "recherche": "INTERNATIONAL",
-   "revenus_firmes": null,
-   "sujets": [],
-   "total": null
   }
  },
  "source": "https://lda.gov/",

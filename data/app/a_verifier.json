@@ -1,5 +1,349 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "emetteur_coherent": true,
+   "empreinte": true,
+   "pourcentage_valide": false,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-20T03:22:24+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": null,
+   "amendement": "5",
+   "bourse": "NYSE",
+   "but_sous_evalue": true,
+   "cik_emetteur": "0000313364",
+   "cik_sujet_entete": "0000313364",
+   "date_evenement": "2024-08-04",
+   "declarant": "A. Gile & Co. LLC",
+   "extrait_but": "The Reporting Person believes the Issuer's current share price dramatically undervalues its present value of future cash flows, unique portfolio of royalty interests, and strong capital position.",
+   "nb_personnes": 1,
+   "nom_emetteur": "MESA ROYALTY TRUST/TX",
+   "pourcentage": null,
+   "type": "SCHEDULE 13D/A",
+   "types_declarants": []
+  },
+  "direction": 0,
+  "entities": [
+   "A. Gile & Co. LLC",
+   "MESA ROYALTY TRUST/TX"
+  ],
+  "id": "sec_13dg:0002030533-26-000004",
+  "kind": "plus_5_pourcent",
+  "notes": [],
+  "occurred_on": "2024-08-04",
+  "official_id": "0002030533-26-000004",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/313364/000203053326000004/0002030533-26-000004-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-19",
+  "sha256": "628ef7b095a3890830d92a115f181fb971adbe0f3ae2b2459b5aa55ffae1a1f8",
+  "source": "sec_13dg",
+  "tickers": [
+   "MTR"
+  ],
+  "title": "A. Gile & Co. LLC détient ? % de MESA ROYALTY TRUST/TX (13D, intentions actives, mise à jour n° 5)"
+ },
+ {
+  "amount_max": 770700.0,
+  "amount_min": 770700.0,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": false,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-20T03:19:45+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 1000000.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000876343",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 0.7707,
+   "proprietaires_cik": [
+    "1278386",
+    "1278387",
+    "1278388"
+   ],
+   "roles": [
+    "actionnaire de 10 %",
+    "administrateur"
+   ],
+   "symbole_declare": "LCTX",
+   "symboles_sec": [
+    "LCTX"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 1000000.0,
+     "apres": 50560992.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-11-17",
+     "hors_bourse": null,
+     "prix": 0.7707,
+     "titre_valeur": "Common Shares"
+    },
+    {
+     "acquis_cede": "A",
+     "actions": 0.0,
+     "apres": 50560992.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-11-17",
+     "hors_bourse": null,
+     "prix": 0.0,
+     "titre_valeur": "Common Shares"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "BROADWOOD PARTNERS, L.P.",
+   "BROADWOOD CAPITAL INC",
+   "Bradsher Neal C",
+   "Lineage Cell Therapeutics, Inc."
+  ],
+  "id": "sec_form4:0000919574-26-008200:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-11-17",
+  "official_id": "0000919574-26-008200:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/876343/000091957426008200/0000919574-26-008200-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-19",
+  "sha256": "9a2e6b47230a149caafd22ef4b71339124e046b66d4e3c3cf301688e316371c2",
+  "source": "sec_form4",
+  "tickers": [
+   "LCTX"
+  ],
+  "title": "BROADWOOD PARTNERS, L.P. et BROADWOOD CAPITAL INC et Bradsher Neal C (actionnaire de 10 %, administrateur) achète 1 000 000 actions de Lineage Cell Therapeutics, Inc."
+ },
+ {
+  "amount_max": 5999999.25,
+  "amount_min": 5999999.25,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": false,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-20T03:19:45+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 3428571.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001642380",
+   "hors_bourse": "On November 17, 2026, Broadwood Partners purchased 3,428,571 shares of Common Stock, no par value (the \"Common Shares\"), of Insight Molecular Diagnostics Inc. (the \"Issuer\") from the Issuer in an underwritten public offering for a total purchase price of $5,999,999.25, or $1.75 per Common Share.",
+   "plan_10b5_1": false,
+   "prix_moyen": 1.75,
+   "proprietaires_cik": [
+    "1278386",
+    "1278387",
+    "1278388"
+   ],
+   "roles": [
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "IMDX",
+   "symboles_sec": [
+    "IMDX"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 3428571.0,
+     "apres": 16113455.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-11-17",
+     "hors_bourse": "On November 17, 2026, Broadwood Partners purchased 3,428,571 shares of Common Stock, no par value (the \"Common Shares\"), of Insight Molecular Diagnostics Inc. (the \"Issuer\") from the Issuer in an underwritten public offering for a total purchase price of $5,999,999.25, or $1.75 per Common Share.",
+     "prix": 1.75,
+     "titre_valeur": "Common Stock, no par value"
+    },
+    {
+     "acquis_cede": "A",
+     "actions": 0.0,
+     "apres": 16113455.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-11-17",
+     "hors_bourse": null,
+     "prix": 0.0,
+     "titre_valeur": "Common Stock, no par value"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "BROADWOOD PARTNERS, L.P.",
+   "BROADWOOD CAPITAL INC",
+   "Bradsher Neal C",
+   "Insight Molecular Diagnostics Inc."
+  ],
+  "id": "sec_form4:0000919574-26-008199:P",
+  "kind": "achat_initie",
+  "notes": [
+   "Note du déposant : transaction lors d'une émission ou hors bourse (« On November 17, 2026, Broadwood Partners purchased 3,428,571 shares of Common Stock, no par value (the \"Common Shares\"), of Insight Molecular Diagnostics Inc. … »)."
+  ],
+  "occurred_on": "2026-11-17",
+  "official_id": "0000919574-26-008199:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1642380/000091957426008199/0000919574-26-008199-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-19",
+  "sha256": "c9677cdd8cd9ba38496c48f547c1d9e05c690202c908c2c08f6edde129d47149",
+  "source": "sec_form4",
+  "tickers": [
+   "IMDX"
+  ],
+  "title": "BROADWOOD PARTNERS, L.P. et BROADWOOD CAPITAL INC et Bradsher Neal C (actionnaire de 10 %) achète 3 428 571 actions de Insight Molecular Diagnostics Inc."
+ },
+ {
+  "amount_max": 2201096.52,
+  "amount_min": 2201096.52,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": false,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-20T03:19:30+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 46000.0,
+   "automatique": null,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000004457",
+   "hors_bourse": null,
+   "plan_10b5_1": true,
+   "prix_moyen": 47.8499,
+   "proprietaires_cik": [
+    "1134431"
+   ],
+   "roles": [
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "UHALB",
+   "symboles_sec": [
+    "UHAL",
+    "UHAL-B"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 23000.0,
+     "apres": 34196.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-17",
+     "hors_bourse": null,
+     "prix": 47.8387,
+     "titre_valeur": "Series N Common Stock"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 22120.0,
+     "apres": 12076.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-18",
+     "hors_bourse": null,
+     "prix": 47.8484,
+     "titre_valeur": "Series N Common Stock"
+    },
+    {
+     "acquis_cede": "D",
+     "actions": 880.0,
+     "apres": 11196.0,
+     "automatique": null,
+     "code": "S",
+     "date": "2026-11-18",
+     "hors_bourse": null,
+     "prix": 48.1816,
+     "titre_valeur": "Series N Common Stock"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "SHOEN MARK V",
+   "U-Haul Holding Co /NV/"
+  ],
+  "id": "sec_form4:0001193125-26-468842:S",
+  "kind": "vente_initie",
+  "notes": [
+   "Vente prévue d'avance (plan 10b5-1) : moins révélatrice qu'une vente décidée sur le moment."
+  ],
+  "occurred_on": "2026-11-17",
+  "official_id": "0001193125-26-468842:S",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/4457/000119312526468842/0001193125-26-468842-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-19",
+  "sha256": "4367ee27f449233a2b48432ac442de648e1a5e8cda288c60b1d09796ecba791e",
+  "source": "sec_form4",
+  "tickers": [
+   "UHAL"
+  ],
+  "title": "SHOEN MARK V (actionnaire de 10 %) vend 46 000 actions de U-Haul Holding Co /NV/"
+ },
+ {
   "amount_max": 8338917.93,
   "amount_min": 8338917.93,
   "badge": "a_verifier",

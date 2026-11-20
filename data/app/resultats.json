@@ -1,5 +1,5 @@
 {
- "genere_a": "2026-11-19T23:12:31+00:00",
+ "genere_a": "2026-11-20T03:19:13+00:00",
  "horizons": {
   "30": "1 mois",
   "7": "1 semaine"
@@ -793,7 +793,7 @@
    ],
    "symbole": "AFCG",
    "taille": "petite",
-   "vue": "2026-11-18"
+   "vue": "2026-11-19"
   },
   {
    "depart": {
@@ -6812,6 +6812,321 @@
    "symbole": "CRMD",
    "taille": "petite",
    "vue": "2026-11-19"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-20T03:19:13+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Clene Inc.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "CLNN",
+   "taille": "petite",
+   "vue": "2026-11-19"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-20T03:19:13+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "CervoMed Inc.",
+   "note10": 8.8,
+   "note10_sans_bonus": 8.8,
+   "note10_sans_taille": 7.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "CRVO",
+   "taille": "petite",
+   "vue": "2026-11-19"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-20T03:19:13+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "INTELLINETICS, INC.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "INLX",
+   "taille": "petite",
+   "vue": "2026-11-19"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-20T03:19:13+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "AEye, Inc.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "LIDR",
+   "taille": "petite",
+   "vue": "2026-11-19"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-20T03:19:13+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Brookdale Senior Living Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 10.0,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "activistes",
+     "regle": "activiste_13d",
+     "sens": 1
+    },
+    {
+     "facteurs": [],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "BKD",
+   "taille": "moyenne",
+   "vue": "2026-11-19"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-20T03:19:13+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Contango Silver & Gold Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "CTGO",
+   "taille": "petite",
+   "vue": "2026-11-19"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-20T03:19:13+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Ellington Financial Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.3,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "EFC",
+   "taille": "petite",
+   "vue": "2026-11-19"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-20T03:19:13+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Lineage Cell Therapeutics, Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.2,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "LCTX",
+   "taille": "petite",
+   "vue": "2026-11-19"
   }
  ],
  "methode": [
@@ -6923,7 +7238,7 @@
      "ecart_moyen": -0.1209,
      "mesurees": 3
     },
-    "entrees": 51,
+    "entrees": 54,
     "libelle": "Groupe d'achats"
    },
    "facteur:PDG, directeur financier ou président du conseil": {
@@ -6937,7 +7252,7 @@
      "ecart_moyen": -0.1056,
      "mesurees": 3
     },
-    "entrees": 63,
+    "entrees": 66,
     "libelle": "PDG, directeur financier ou président du conseil"
    },
    "grace_a_la_taille": {
@@ -6965,7 +7280,7 @@
      "ecart_moyen": -0.0146,
      "mesurees": 1
     },
-    "entrees": 3,
+    "entrees": 4,
     "libelle": "Plusieurs familles de sources d'accord"
    },
    "regle:achat_chef": {
@@ -6993,7 +7308,7 @@
      "ecart_moyen": -0.0799,
      "mesurees": 12
     },
-    "entrees": 96,
+    "entrees": 100,
     "libelle": "Achat d'actions par un dirigeant ou un administrateur"
    },
    "regle:achat_elu": {
@@ -7021,7 +7336,7 @@
      "ecart_moyen": 0.0356,
      "mesurees": 1
     },
-    "entrees": 4,
+    "entrees": 5,
     "libelle": "Un gestionnaire de fonds dépasse 5 % avec des intentions actives (13D)"
    },
    "taille:grande": {
@@ -7063,7 +7378,7 @@
      "ecart_moyen": null,
      "mesurees": 0
     },
-    "entrees": 12,
+    "entrees": 13,
     "libelle": "Compagnie moyenne"
    },
    "taille:petite": {
@@ -7077,7 +7392,7 @@
      "ecart_moyen": -0.0744,
      "mesurees": 7
     },
-    "entrees": 64,
+    "entrees": 67,
     "libelle": "Petite compagnie (sous le 30e centile du NYSE)"
    }
   },
@@ -7101,25 +7416,25 @@
   "ecartee_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 35,
+   "en_attente": 39,
    "mesurees": 0
   },
   "ecartee_7": {
    "battu": 3,
    "ecart_moyen": -0.0599,
-   "en_attente": 27,
+   "en_attente": 31,
    "mesurees": 4
   },
   "hausse_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 97,
+   "en_attente": 101,
    "mesurees": 0
   },
   "hausse_7": {
    "battu": 3,
    "ecart_moyen": -0.0543,
-   "en_attente": 65,
+   "en_attente": 69,
    "mesurees": 18
   }
  }

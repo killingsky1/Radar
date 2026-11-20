@@ -481,7 +481,7 @@
    ],
    "symbole": "AFCG",
    "taille": "petite",
-   "vue": "2026-11-18"
+   "vue": "2026-11-19"
   },
   {
    "entree": "2026-10-05T21:26:00+00:00",
@@ -4106,6 +4106,209 @@
     }
    ],
    "symbole": "XTIA",
+   "taille": "petite",
+   "vue": "2026-11-19"
+  },
+  {
+   "entree": "2026-11-20T03:19:13+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Brookdale Senior Living Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 10.0,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "activistes",
+     "regle": "activiste_13d",
+     "sens": 1
+    },
+    {
+     "facteurs": [],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "BKD",
+   "taille": "moyenne",
+   "vue": "2026-11-19"
+  },
+  {
+   "entree": "2026-11-20T03:19:13+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Contango Silver & Gold Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "CTGO",
+   "taille": "petite",
+   "vue": "2026-11-19"
+  },
+  {
+   "entree": "2026-11-20T03:19:13+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Ellington Financial Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.3,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "EFC",
+   "taille": "petite",
+   "vue": "2026-11-19"
+  },
+  {
+   "entree": "2026-11-20T03:19:13+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Lineage Cell Therapeutics, Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.2,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "LCTX",
+   "taille": "petite",
+   "vue": "2026-11-19"
+  },
+  {
+   "entree": "2026-11-20T03:19:13+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "CervoMed Inc.",
+   "note10": 8.8,
+   "note10_sans_bonus": 8.8,
+   "note10_sans_taille": 7.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "CRVO",
+   "taille": "petite",
+   "vue": "2026-11-19"
+  },
+  {
+   "entree": "2026-11-20T03:19:13+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Clene Inc.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "CLNN",
+   "taille": "petite",
+   "vue": "2026-11-19"
+  },
+  {
+   "entree": "2026-11-20T03:19:13+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "INTELLINETICS, INC.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "INLX",
+   "taille": "petite",
+   "vue": "2026-11-19"
+  },
+  {
+   "entree": "2026-11-20T03:19:13+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "AEye, Inc.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "LIDR",
    "taille": "petite",
    "vue": "2026-11-19"
   }
