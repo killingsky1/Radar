@@ -9,6 +9,576 @@
    "dates_coherentes": true,
    "domaine_officiel": true,
    "empreinte": true,
+   "etape_datee": true,
+   "lien_legisinfo": true,
+   "projet_du_gouvernement": true,
+   "sanction_confirmee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-20T21:33:39+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "champ": "PassedHouseSecondReadingDateTime",
+   "cle": "chambre-2",
+   "date_officielle": "2026-11-20T07:18:14.31-05:00",
+   "details": [
+    [
+     "Projet de loi",
+     "C-42"
+    ],
+    [
+     "Titre",
+     "Loi visant certaines mesures liées à l'abordabilité et au logement"
+    ],
+    [
+     "Étape",
+     "adopté en deuxième lecture à la Chambre des communes"
+    ],
+    [
+     "Où il en est",
+     "À l'étape de la troisième lecture à la Chambre des communes"
+    ]
+   ],
+   "etape": "adopté en deuxième lecture à la Chambre des communes",
+   "numero": "C-42",
+   "sanction": false,
+   "session": "45-1",
+   "statut": "À l'étape de la troisième lecture à la Chambre des communes",
+   "titre": "Loi sur l'abordabilité des produits d'épicerie et du logement",
+   "titre_long": "Loi visant certaines mesures liées à l'abordabilité et au logement",
+   "type": "Projet de loi émanant du gouvernement (Cdc)",
+   "type_en": "House Government Bill"
+  },
+  "direction": 0,
+  "entities": [
+   "Parlement du Canada"
+  ],
+  "id": "legisinfo:45-1:C-42:chambre-2",
+  "kind": "etape_projet_de_loi",
+  "notes": [],
+  "occurred_on": "2026-11-20",
+  "official_id": "45-1:C-42:chambre-2",
+  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-42",
+  "parser_version": "legisinfo-1",
+  "published_on": "2026-11-20",
+  "sha256": "79038e18e1dcfd9fca7ef691f1f6d21f6818822edcdfdb4b1c03ef1a32403523",
+  "source": "legisinfo",
+  "tickers": [],
+  "title": "Projet de loi C-42 (Loi sur l'abordabilité des produits d'épicerie et du logement) : adopté en deuxième lecture à la Chambre des communes"
+ },
+ {
+  "amount_max": 500000.0,
+  "amount_min": 250001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-20T21:33:31+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "senat",
+   "circonscription": null,
+   "elu": "Rafael E Cruz",
+   "lecture_complete": true,
+   "nom_sec": "GOLDMAN SACHS GROUP INC",
+   "rapport": "f0f7eba0-ca09-4b80-a97b-64b6dafb835e",
+   "recoupements": {
+    "date_de_depot": true,
+    "nom_lu": true
+   },
+   "transactions": [
+    {
+     "actif": "Goldman Sachs Group, Inc. (The) Common Stock",
+     "commentaire": null,
+     "date": "2026-11-11",
+     "montant": "$250,001 - $500,000",
+     "partielle": true,
+     "proprietaire": "Spouse",
+     "type_officiel": "Sale (Partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Rafael E Cruz",
+   "GOLDMAN SACHS GROUP INC"
+  ],
+  "id": "senat_ptr:f0f7eba0-ca09-4b80-a97b-64b6dafb835e:GS:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-11-11",
+  "official_id": "f0f7eba0-ca09-4b80-a97b-64b6dafb835e:GS:S",
+  "official_url": "https://efdsearch.senate.gov/search/view/ptr/f0f7eba0-ca09-4b80-a97b-64b6dafb835e/",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-20",
+  "sha256": "f789a9e970981d32c8e2bfdba9374807ace4405f322a6a3bea0b6bec49ce5575",
+  "source": "senat_ptr",
+  "tickers": [
+   "GS"
+  ],
+  "title": "Rafael E Cruz (Sénat) vend GS — conjoint·e"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "action_officielle": true,
+   "champs_requis": true,
+   "date_de_l_adresse_concorde": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "liste_sdn_lue": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "titre_et_liste_concordent": true
+  },
+  "collected_at": "2026-11-20T21:33:19+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "ajouts": {
+    "personnes": 4
+   },
+   "communiques": [
+    "Operation Economic Outcast Targets Corrupt Regime Insiders Exploiting Iran's Oil Sector for Personal Gain"
+   ],
+   "retraits": 0,
+   "titre_officiel": "Iran Designations; Issuance of Cuba Frequently Asked Questions"
+  },
+  "direction": 0,
+  "entities": [],
+  "id": "sanctions_us:20261120",
+  "kind": "sanctions",
+  "notes": [
+   "Communiqué du Trésor : Operation Economic Outcast Targets Corrupt Regime Insiders Exploiting Iran's Oil Sector for Personal Gain",
+   "Ajoutés à la liste des sanctions (SDN) : 4 personnes."
+  ],
+  "occurred_on": "2026-11-20",
+  "official_id": "20261120",
+  "official_url": "https://ofac.treasury.gov/recent-actions/20261120",
+  "parser_version": "ofac-1",
+  "published_on": "2026-11-20",
+  "sha256": "6a57ccc973e7bef85c62fcdc3df1f2e4c817bb57594f0546a6f58dabf1fdf732",
+  "source": "sanctions_us",
+  "tickers": [],
+  "title": "Sanctions américaines (OFAC) : Iran Designations; Issuance of Cuba Frequently Asked Questions"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-20T21:33:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "209742",
+   "date_rapport": "2026-11-17",
+   "long": 73134,
+   "marche": "Nasdaq-100 (E-mini)",
+   "net": 4305,
+   "nom_officiel": "NASDAQ MINI - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 296423,
+   "short": 68829,
+   "variation": -24826
+  },
+  "direction": -1,
+  "entities": [
+   "NASDAQ MINI - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261117209742F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-17",
+  "official_id": "261117209742F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261117209742F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-20",
+  "sha256": "015c1d3bde90abc8c4086a2ba7a9ffa5eb7b5a9fc0b85b672af36de7a759dbac",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Nasdaq-100 (E-mini) : les gros spéculateurs sont acheteurs nets de 4 305 contrats (−24 826 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-20T21:33:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "13874A",
+   "date_rapport": "2026-11-17",
+   "long": 241667,
+   "marche": "S&P 500 (E-mini)",
+   "net": -93966,
+   "nom_officiel": "E-MINI S&P 500 - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 2096958,
+   "short": 335633,
+   "variation": 44668
+  },
+  "direction": 1,
+  "entities": [
+   "E-MINI S&P 500 - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:26111713874AF",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-17",
+  "official_id": "26111713874AF",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=26111713874AF",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-20",
+  "sha256": "152d970356dd9d067258c2925d549a03a4992f4c7bb5db6a4ea565bb2b8b5ca9",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "S&P 500 (E-mini) : les gros spéculateurs sont vendeurs nets de 93 966 contrats (+44 668 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-20T21:33:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "133741",
+   "date_rapport": "2026-11-17",
+   "long": 15125,
+   "marche": "Bitcoin (CME)",
+   "net": 1528,
+   "nom_officiel": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 19257,
+   "short": 13597,
+   "variation": -847
+  },
+  "direction": -1,
+  "entities": [
+   "BITCOIN - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261117133741F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-17",
+  "official_id": "261117133741F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261117133741F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-20",
+  "sha256": "aa2e725f40ce309690dc5a6abb839cc9c139940a9f6f0083004762695adbfbf6",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Bitcoin (CME) : les gros spéculateurs sont acheteurs nets de 1 528 contrats (−847 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-20T21:33:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "090741",
+   "date_rapport": "2026-11-17",
+   "long": 111591,
+   "marche": "Dollar canadien",
+   "net": -45048,
+   "nom_officiel": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+   "open_interest": 358186,
+   "short": 156639,
+   "variation": -12456
+  },
+  "direction": -1,
+  "entities": [
+   "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261117090741F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-17",
+  "official_id": "261117090741F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261117090741F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-20",
+  "sha256": "552b942a54e5fa2d989e6a6deaae315ee2be84ce35b2d560121c82ae1f2715fe",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Dollar canadien : les gros spéculateurs sont vendeurs nets de 45 048 contrats (−12 456 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-20T21:33:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "088691",
+   "date_rapport": "2026-11-17",
+   "long": 210051,
+   "marche": "Or",
+   "net": 166132,
+   "nom_officiel": "GOLD - COMMODITY EXCHANGE INC.",
+   "open_interest": 407834,
+   "short": 43919,
+   "variation": -23975
+  },
+  "direction": -1,
+  "entities": [
+   "GOLD - COMMODITY EXCHANGE INC."
+  ],
+  "id": "cftc_cot:261117088691F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-17",
+  "official_id": "261117088691F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261117088691F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-20",
+  "sha256": "a65c812a07decb50b1734671d2fae6a27ecd7334a59f297221e0b9828ddeaab3",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Or : les gros spéculateurs sont acheteurs nets de 166 132 contrats (−23 975 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-20T21:33:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "085692",
+   "date_rapport": "2026-11-17",
+   "long": 76467,
+   "marche": "Cuivre",
+   "net": 17777,
+   "nom_officiel": "COPPER- #1 - COMMODITY EXCHANGE INC.",
+   "open_interest": 314991,
+   "short": 58690,
+   "variation": -11127
+  },
+  "direction": -1,
+  "entities": [
+   "COPPER- #1 - COMMODITY EXCHANGE INC."
+  ],
+  "id": "cftc_cot:261117085692F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-17",
+  "official_id": "261117085692F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261117085692F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-20",
+  "sha256": "e395d23b1b6c58319245d52600b76750ceec5f99c6ea9ea738a72bf5c3e923e3",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Cuivre : les gros spéculateurs sont acheteurs nets de 17 777 contrats (−11 127 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-20T21:33:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "067651",
+   "date_rapport": "2026-11-17",
+   "long": 303469,
+   "marche": "Pétrole WTI",
+   "net": 63136,
+   "nom_officiel": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+   "open_interest": 1869789,
+   "short": 240333,
+   "variation": -10846
+  },
+  "direction": -1,
+  "entities": [
+   "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE"
+  ],
+  "id": "cftc_cot:261117067651F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-17",
+  "official_id": "261117067651F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261117067651F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-20",
+  "sha256": "2af43e3aba38b06ae664905eb95e2d6d757598aa288c289883b309455751f30f",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Pétrole WTI : les gros spéculateurs sont acheteurs nets de 63 136 contrats (−10 846 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "baleines",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "marche_attendu": true,
+   "positions_coherentes": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "variation_coherente": true
+  },
+  "collected_at": "2026-11-20T21:33:16+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "code": "043602",
+   "date_rapport": "2026-11-17",
+   "long": 677567,
+   "marche": "Obligations américaines 10 ans",
+   "net": -1048899,
+   "nom_officiel": "UST 10Y NOTE - CHICAGO BOARD OF TRADE",
+   "open_interest": 6247430,
+   "short": 1726466,
+   "variation": -64983
+  },
+  "direction": -1,
+  "entities": [
+   "UST 10Y NOTE - CHICAGO BOARD OF TRADE"
+  ],
+  "id": "cftc_cot:261117043602F",
+  "kind": "positions_speculateurs",
+  "notes": [],
+  "occurred_on": "2026-11-17",
+  "official_id": "261117043602F",
+  "official_url": "https://publicreporting.cftc.gov/resource/6dca-aqww.json?id=261117043602F",
+  "parser_version": "cftc-1",
+  "published_on": "2026-11-20",
+  "sha256": "f49d8a02030ba8849e4c4c7ad1349c65803c638f8ce51963b91dbd6eb895d2fa",
+  "source": "cftc_cot",
+  "tickers": [],
+  "title": "Obligations américaines 10 ans : les gros spéculateurs sont vendeurs nets de 1 048 899 contrats (−64 983 en une semaine)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
    "lien_identique_au_fil": true,
    "lien_ministere_coherent": true,
    "ministere_reconnu": true,
@@ -813,6 +1383,51 @@
   "source": "ventes_armes",
   "tickers": [],
   "title": "Vente d'armes à l'étranger : Australie"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_identique_au_fil": true,
+   "lien_ministere_coherent": true,
+   "ministere_reconnu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_communique": true
+  },
+  "collected_at": "2026-11-20T21:33:33+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "id_fil": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/11/le-canada-passe-aux-prochaines-etapes-de-la-mise-en-uvre-du-cadre-des-services-bancaires-axes-sur-les-consommateurs.html",
+   "ministere": "Ministère des Finances Canada",
+   "mis_a_jour": "2026-11-19T15:33:37-05:00",
+   "resume": "e gouvernement du Canada renforce le secteur financier au pays en stimulant la concurrence et l’innovation dans les services bancaires, et en réduisant les coûts des services financiers pour les Canadiens et les Canadiennes.",
+   "type": "communiqués de presse"
+  },
+  "direction": 0,
+  "entities": [
+   "Ministère des Finances Canada"
+  ],
+  "id": "nouvelles_eco_ca:ministere-finances/nouvelles/2026/11/le-canada-passe-aux-prochaines-etapes-de-la-mise-en-uvre-du-cadre-des-services-bancaires-axes-sur-les-consommateurs.html",
+  "kind": "nouvelle_officielle",
+  "notes": [],
+  "occurred_on": "2026-11-19",
+  "official_id": "ministere-finances/nouvelles/2026/11/le-canada-passe-aux-prochaines-etapes-de-la-mise-en-uvre-du-cadre-des-services-bancaires-axes-sur-les-consommateurs.html",
+  "official_url": "https://www.canada.ca/fr/ministere-finances/nouvelles/2026/11/le-canada-passe-aux-prochaines-etapes-de-la-mise-en-uvre-du-cadre-des-services-bancaires-axes-sur-les-consommateurs.html",
+  "parser_version": "canada-1",
+  "published_on": "2026-11-19",
+  "sha256": "772607ebc987d82608a86f9deac91959de2a54e27e83f38445f46cd9a5575c40",
+  "source": "nouvelles_eco_ca",
+  "tickers": [],
+  "title": "Le Canada passe aux prochaines étapes de la mise en œuvre du cadre des services bancaires axés sur les consommateurs"
  },
  {
   "amount_max": 2000000000.0,
@@ -27623,660 +28238,6 @@
   "title": "Tiger Global Management vend 574 843 actions de Meta Platforms, Inc. (classe A) (−20 %), trimestre au 30 septembre 2026"
  },
  {
-  "amount_max": 257121195,
-  "amount_min": 257121195,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "montant_coherent": true,
-   "part_du_portefeuille_coherente": true,
-   "prix_plausible": true,
-   "rapports_complets": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestres_consecutifs": true,
-   "variation_recalculee": true
-  },
-  "collected_at": "2026-11-17T04:38:51+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acc_precedent": "0000919574-26-005427",
-   "actions_apres": 4446347,
-   "actions_avant": 2999000,
-   "cik_fonds": 1167483,
-   "classe": "COM CL A",
-   "cusip": "15675D103",
-   "fonds": "Tiger Global Management",
-   "lignes": [
-    [
-     46,
-     46
-    ],
-    [
-     45,
-     45
-    ]
-   ],
-   "montant": 257121194.69648117,
-   "nom": "CEREBRAS SYSTEMS INC",
-   "part": 0.010721645021250824,
-   "positions_cachees": [
-    false,
-    false
-   ],
-   "prix": 177.65000010120667,
-   "sorte": "hausse",
-   "sortes_rapports": [
-    "13F HOLDINGS REPORT",
-    "13F HOLDINGS REPORT"
-   ],
-   "total": 23981506027.0,
-   "trimestre": "2026-09-30",
-   "trimestre_precedent": "2026-06-30",
-   "valeur_apres": 789893545.0,
-   "valeur_avant": 662779000.0
-  },
-  "direction": 1,
-  "entities": [
-   "Tiger Global Management",
-   "Cerebras Systems Inc."
-  ],
-  "id": "sec_13f:0000919574-26-008062:15675D103",
-  "kind": "position_fonds",
-  "notes": [
-   "Valeur estimée au prix de fin de trimestre déclaré : le prix réel des transactions n'est pas publié."
-  ],
-  "occurred_on": "2026-09-30",
-  "official_id": "0000919574-26-008062:15675D103",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1167483/000091957426008062/0000919574-26-008062-index.htm",
-  "parser_version": "fonds13f-1",
-  "published_on": "2026-11-16",
-  "sha256": "49457cb7a86dd06dbe466e4386842c3cf4b00a07dfb45656891a82dd74edf2fe",
-  "source": "sec_13f",
-  "tickers": [
-   "CBRS"
-  ],
-  "title": "Tiger Global Management achète 1,4 M d'actions de Cerebras Systems Inc. (classe A) (+48 %), trimestre au 30 septembre 2026"
- },
- {
-  "amount_max": 845221853,
-  "amount_min": 845221853,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "montant_coherent": true,
-   "part_du_portefeuille_coherente": true,
-   "prix_plausible": true,
-   "rapports_complets": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestres_consecutifs": true,
-   "variation_recalculee": true
-  },
-  "collected_at": "2026-11-17T04:38:51+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acc_precedent": "0000919574-26-005427",
-   "actions_apres": 3349218,
-   "actions_avant": 5805687,
-   "cik_fonds": 1167483,
-   "classe": "CAP STK CL A",
-   "cusip": "02079K305",
-   "fonds": "Tiger Global Management",
-   "lignes": [
-    [
-     46,
-     46
-    ],
-    [
-     45,
-     45
-    ]
-   ],
-   "montant": 845221853.1972839,
-   "nom": "ALPHABET INC",
-   "part": 0.03524473618319367,
-   "positions_cachees": [
-    false,
-    false
-   ],
-   "prix": 344.07999986862603,
-   "sorte": "baisse",
-   "sortes_rapports": [
-    "13F HOLDINGS REPORT",
-    "13F HOLDINGS REPORT"
-   ],
-   "total": 23981506027.0,
-   "trimestre": "2026-09-30",
-   "trimestre_precedent": "2026-06-30",
-   "valeur_apres": 1152398929.0,
-   "valeur_avant": 2074778363.0
-  },
-  "direction": -1,
-  "entities": [
-   "Tiger Global Management",
-   "Alphabet Inc."
-  ],
-  "id": "sec_13f:0000919574-26-008062:02079K305",
-  "kind": "position_fonds",
-  "notes": [
-   "Valeur estimée au prix de fin de trimestre déclaré : le prix réel des transactions n'est pas publié."
-  ],
-  "occurred_on": "2026-09-30",
-  "official_id": "0000919574-26-008062:02079K305",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1167483/000091957426008062/0000919574-26-008062-index.htm",
-  "parser_version": "fonds13f-1",
-  "published_on": "2026-11-16",
-  "sha256": "49457cb7a86dd06dbe466e4386842c3cf4b00a07dfb45656891a82dd74edf2fe",
-  "source": "sec_13f",
-  "tickers": [
-   "GOOGL"
-  ],
-  "title": "Tiger Global Management vend 2,5 M d'actions d'Alphabet Inc. (classe A) (−42 %), trimestre au 30 septembre 2026"
- },
- {
-  "amount_max": 1265869698,
-  "amount_min": 1265869698,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "montant_coherent": true,
-   "part_du_portefeuille_coherente": true,
-   "prix_plausible": true,
-   "rapports_complets": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestres_consecutifs": true,
-   "variation_recalculee": true
-  },
-  "collected_at": "2026-11-17T04:38:49+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acc_precedent": "0001104659-26-097175",
-   "actions_apres": 20513066,
-   "actions_avant": 26720744,
-   "cik_fonds": 1166559,
-   "classe": "COM",
-   "cusip": "94106L109",
-   "fonds": "Gates Foundation Trust",
-   "lignes": [
-    [
-     24,
-     24
-    ],
-    [
-     25,
-     25
-    ]
-   ],
-   "montant": 1265869697.8447337,
-   "nom": "WASTE MGMT INC DEL",
-   "part": 0.036772036279703074,
-   "positions_cachees": [
-    false,
-    false
-   ],
-   "prix": 203.92000001364983,
-   "sorte": "baisse",
-   "sortes_rapports": [
-    "13F HOLDINGS REPORT",
-    "13F HOLDINGS REPORT"
-   ],
-   "total": 34424791932.0,
-   "trimestre": "2026-09-30",
-   "trimestre_precedent": "2026-06-30",
-   "valeur_apres": 4183024419.0,
-   "valeur_avant": 5955519423.0
-  },
-  "direction": -1,
-  "entities": [
-   "Gates Foundation Trust",
-   "WASTE MANAGEMENT INC"
-  ],
-  "id": "sec_13f:0001104659-26-128337:94106L109",
-  "kind": "position_fonds",
-  "notes": [
-   "Valeur estimée au prix de fin de trimestre déclaré : le prix réel des transactions n'est pas publié."
-  ],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001104659-26-128337:94106L109",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1166559/000110465926128337/0001104659-26-128337-index.htm",
-  "parser_version": "fonds13f-1",
-  "published_on": "2026-11-16",
-  "sha256": "8a992eae4e7edf07c0a85f6563a32f817255c683117cef6b2e13013beb395a32",
-  "source": "sec_13f",
-  "tickers": [
-   "WM"
-  ],
-  "title": "Gates Foundation Trust vend 6,2 M d'actions de WASTE MANAGEMENT INC (−23 %), trimestre au 30 septembre 2026"
- },
- {
-  "amount_max": 1115675399,
-  "amount_min": 1115675399,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "montant_coherent": true,
-   "part_du_portefeuille_coherente": true,
-   "prix_plausible": true,
-   "rapports_complets": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestres_consecutifs": true,
-   "variation_recalculee": true
-  },
-  "collected_at": "2026-11-17T04:38:49+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acc_precedent": "0001104659-26-097175",
-   "actions_apres": 12449307,
-   "actions_avant": 14689844,
-   "cik_fonds": 1166559,
-   "classe": "CL B NEW",
-   "cusip": "084670702",
-   "fonds": "Gates Foundation Trust",
-   "lignes": [
-    [
-     24,
-     24
-    ],
-    [
-     25,
-     25
-    ]
-   ],
-   "montant": 1115675399.2129905,
-   "nom": "BERKSHIRE HATHAWAY INC DEL",
-   "part": 0.03240906732034306,
-   "positions_cachees": [
-    false,
-    false
-   ],
-   "prix": 497.950000028114,
-   "sorte": "baisse",
-   "sortes_rapports": [
-    "13F HOLDINGS REPORT",
-    "13F HOLDINGS REPORT"
-   ],
-   "total": 34424791932.0,
-   "trimestre": "2026-09-30",
-   "trimestre_precedent": "2026-06-30",
-   "valeur_apres": 6199132421.0,
-   "valeur_avant": 7350651039.0
-  },
-  "direction": -1,
-  "entities": [
-   "Gates Foundation Trust",
-   "BERKSHIRE HATHAWAY INC DEL"
-  ],
-  "id": "sec_13f:0001104659-26-128337:084670702",
-  "kind": "position_fonds",
-  "notes": [
-   "Valeur estimée au prix de fin de trimestre déclaré : le prix réel des transactions n'est pas publié."
-  ],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001104659-26-128337:084670702",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1166559/000110465926128337/0001104659-26-128337-index.htm",
-  "parser_version": "fonds13f-1",
-  "published_on": "2026-11-16",
-  "sha256": "8a992eae4e7edf07c0a85f6563a32f817255c683117cef6b2e13013beb395a32",
-  "source": "sec_13f",
-  "tickers": [],
-  "title": "Gates Foundation Trust vend 2,2 M d'actions de BERKSHIRE HATHAWAY INC DEL (classe B) (−15 %), trimestre au 30 septembre 2026"
- },
- {
-  "amount_max": 926232723,
-  "amount_min": 926232723,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "montant_coherent": true,
-   "part_du_portefeuille_coherente": true,
-   "prix_plausible": true,
-   "rapports_complets": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestres_consecutifs": true,
-   "variation_recalculee": true
-  },
-  "collected_at": "2026-11-17T04:38:48+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acc_precedent": "0000919574-26-005478",
-   "actions_apres": 2577666,
-   "actions_avant": 0,
-   "cik_fonds": 1135730,
-   "classe": "COM CL A",
-   "cusip": "92826C839",
-   "fonds": "Coatue Management",
-   "lignes": [
-    [
-     211,
-     211
-    ],
-    [
-     263,
-     263
-    ]
-   ],
-   "montant": 926232723.0,
-   "nom": "VISA INC",
-   "part": 0.01699657790433367,
-   "positions_cachees": [
-    false,
-    false
-   ],
-   "prix": 359.3299996974007,
-   "sorte": "nouvelle",
-   "sortes_rapports": [
-    "13F HOLDINGS REPORT",
-    "13F HOLDINGS REPORT"
-   ],
-   "total": 54495247703.0,
-   "trimestre": "2026-09-30",
-   "trimestre_precedent": "2026-06-30",
-   "valeur_apres": 926232723.0,
-   "valeur_avant": 0.0
-  },
-  "direction": 1,
-  "entities": [
-   "Coatue Management",
-   "VISA INC."
-  ],
-  "id": "sec_13f:0000919574-26-007862:92826C839",
-  "kind": "position_fonds",
-  "notes": [
-   "Valeur estimée au prix de fin de trimestre déclaré : le prix réel des transactions n'est pas publié."
-  ],
-  "occurred_on": "2026-09-30",
-  "official_id": "0000919574-26-007862:92826C839",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1135730/000091957426007862/0000919574-26-007862-index.htm",
-  "parser_version": "fonds13f-1",
-  "published_on": "2026-11-16",
-  "sha256": "25a5852fb4bcba78d273b69f22c52111cb33f7a5e4fb8212b84a8d0b5b5c94d3",
-  "source": "sec_13f",
-  "tickers": [
-   "V"
-  ],
-  "title": "Coatue Management achète 2,6 M d'actions de VISA INC. (classe A) (nouvelle position), trimestre au 30 septembre 2026"
- },
- {
-  "amount_max": 1156201967,
-  "amount_min": 1156201967,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "montant_coherent": true,
-   "part_du_portefeuille_coherente": true,
-   "prix_plausible": true,
-   "rapports_complets": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestres_consecutifs": true,
-   "variation_recalculee": true
-  },
-  "collected_at": "2026-11-17T04:38:48+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acc_precedent": "0000919574-26-005478",
-   "actions_apres": 7796372,
-   "actions_avant": 0,
-   "cik_fonds": 1135730,
-   "classe": "CL A SUB VTG SHS",
-   "cusip": "82509L107",
-   "fonds": "Coatue Management",
-   "lignes": [
-    [
-     211,
-     211
-    ],
-    [
-     263,
-     263
-    ]
-   ],
-   "montant": 1156201967.0,
-   "nom": "SHOPIFY INC",
-   "part": 0.021216565035199395,
-   "positions_cachees": [
-    false,
-    false
-   ],
-   "prix": 148.29999992304113,
-   "sorte": "nouvelle",
-   "sortes_rapports": [
-    "13F HOLDINGS REPORT",
-    "13F HOLDINGS REPORT"
-   ],
-   "total": 54495247703.0,
-   "trimestre": "2026-09-30",
-   "trimestre_precedent": "2026-06-30",
-   "valeur_apres": 1156201967.0,
-   "valeur_avant": 0.0
-  },
-  "direction": 1,
-  "entities": [
-   "Coatue Management",
-   "SHOPIFY INC."
-  ],
-  "id": "sec_13f:0000919574-26-007862:82509L107",
-  "kind": "position_fonds",
-  "notes": [
-   "Valeur estimée au prix de fin de trimestre déclaré : le prix réel des transactions n'est pas publié."
-  ],
-  "occurred_on": "2026-09-30",
-  "official_id": "0000919574-26-007862:82509L107",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1135730/000091957426007862/0000919574-26-007862-index.htm",
-  "parser_version": "fonds13f-1",
-  "published_on": "2026-11-16",
-  "sha256": "25a5852fb4bcba78d273b69f22c52111cb33f7a5e4fb8212b84a8d0b5b5c94d3",
-  "source": "sec_13f",
-  "tickers": [
-   "SHOP"
-  ],
-  "title": "Coatue Management achète 7,8 M d'actions de SHOPIFY INC. (classe A) (nouvelle position), trimestre au 30 septembre 2026"
- },
- {
-  "amount_max": 1844015745,
-  "amount_min": 1844015745,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "montant_coherent": true,
-   "part_du_portefeuille_coherente": true,
-   "prix_plausible": true,
-   "rapports_complets": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestres_consecutifs": true,
-   "variation_recalculee": true
-  },
-  "collected_at": "2026-11-17T04:38:48+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acc_precedent": "0000919574-26-005478",
-   "actions_apres": 8032477,
-   "actions_avant": 0,
-   "cik_fonds": 1135730,
-   "classe": "COM",
-   "cusip": "79466L302",
-   "fonds": "Coatue Management",
-   "lignes": [
-    [
-     211,
-     211
-    ],
-    [
-     263,
-     263
-    ]
-   ],
-   "montant": 1844015745.0,
-   "nom": "SALESFORCE INC",
-   "part": 0.0338381019029387,
-   "positions_cachees": [
-    false,
-    false
-   ],
-   "prix": 229.5700000136944,
-   "sorte": "nouvelle",
-   "sortes_rapports": [
-    "13F HOLDINGS REPORT",
-    "13F HOLDINGS REPORT"
-   ],
-   "total": 54495247703.0,
-   "trimestre": "2026-09-30",
-   "trimestre_precedent": "2026-06-30",
-   "valeur_apres": 1844015745.0,
-   "valeur_avant": 0.0
-  },
-  "direction": 1,
-  "entities": [
-   "Coatue Management",
-   "Salesforce, Inc."
-  ],
-  "id": "sec_13f:0000919574-26-007862:79466L302",
-  "kind": "position_fonds",
-  "notes": [
-   "Valeur estimée au prix de fin de trimestre déclaré : le prix réel des transactions n'est pas publié."
-  ],
-  "occurred_on": "2026-09-30",
-  "official_id": "0000919574-26-007862:79466L302",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1135730/000091957426007862/0000919574-26-007862-index.htm",
-  "parser_version": "fonds13f-1",
-  "published_on": "2026-11-16",
-  "sha256": "25a5852fb4bcba78d273b69f22c52111cb33f7a5e4fb8212b84a8d0b5b5c94d3",
-  "source": "sec_13f",
-  "tickers": [
-   "CRM"
-  ],
-  "title": "Coatue Management achète 8,0 M d'actions de Salesforce, Inc. (nouvelle position), trimestre au 30 septembre 2026"
- },
- {
-  "amount_max": 1749208071,
-  "amount_min": 1749208071,
-  "badge": "officiel",
-  "category": "baleines",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "montant_coherent": true,
-   "part_du_portefeuille_coherente": true,
-   "prix_plausible": true,
-   "rapports_complets": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestres_consecutifs": true,
-   "variation_recalculee": true
-  },
-  "collected_at": "2026-11-17T04:38:48+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acc_precedent": "0000919574-26-005478",
-   "actions_apres": 9498822,
-   "actions_avant": 0,
-   "cik_fonds": 1135730,
-   "classe": "AMERICAN DEPOSIT",
-   "cusip": "78392B206",
-   "fonds": "Coatue Management",
-   "lignes": [
-    [
-     211,
-     211
-    ],
-    [
-     263,
-     263
-    ]
-   ],
-   "montant": 1749208071.0,
-   "nom": "SK HYNIX INC",
-   "part": 0.03209835985209596,
-   "positions_cachees": [
-    false,
-    false
-   ],
-   "prix": 184.14999996841715,
-   "sorte": "nouvelle",
-   "sortes_rapports": [
-    "13F HOLDINGS REPORT",
-    "13F HOLDINGS REPORT"
-   ],
-   "total": 54495247703.0,
-   "trimestre": "2026-09-30",
-   "trimestre_precedent": "2026-06-30",
-   "valeur_apres": 1749208071.0,
-   "valeur_avant": 0.0
-  },
-  "direction": 1,
-  "entities": [
-   "Coatue Management",
-   "SK hynix Inc."
-  ],
-  "id": "sec_13f:0000919574-26-007862:78392B206",
-  "kind": "position_fonds",
-  "notes": [
-   "Valeur estimée au prix de fin de trimestre déclaré : le prix réel des transactions n'est pas publié."
-  ],
-  "occurred_on": "2026-09-30",
-  "official_id": "0000919574-26-007862:78392B206",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/1135730/000091957426007862/0000919574-26-007862-index.htm",
-  "parser_version": "fonds13f-1",
-  "published_on": "2026-11-16",
-  "sha256": "25a5852fb4bcba78d273b69f22c52111cb33f7a5e4fb8212b84a8d0b5b5c94d3",
-  "source": "sec_13f",
-  "tickers": [
-   "SKHY"
-  ],
-  "title": "Coatue Management achète 9,5 M d'actions de SK hynix Inc. (nouvelle position), trimestre au 30 septembre 2026"
- },
- {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -47276,205 +47237,6 @@
   "title": "Contrat fédéral de 25,3 M$ : Pure Logic IT Solutions Inc. (Défense nationale)"
  },
  {
-  "amount_max": 29581147.83,
-  "amount_min": 29581147.83,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32537561,
-   "amendment_value": "29581147.83",
-   "contract_date": "2011-03-09",
-   "contract_value": "42732658.23",
-   "description_fr": "Autre équipement",
-   "details": [
-    [
-     "Fournisseur",
-     "MDA Systems Ltd."
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Hausse",
-     "29,6 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "42,7 M$"
-    ],
-    [
-     "Valeur d'origine",
-     "13,2 M$"
-    ],
-    [
-     "Date du contrat",
-     "2011-03-09"
-    ],
-    [
-     "Description",
-     "Autre équipement"
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-07937"
-    ]
-   ],
-   "fournisseur": "MDA Systems Ltd.",
-   "instrument_type": "A",
-   "ministere": "Défense nationale",
-   "montant": 29581147.83,
-   "original_value": "13151510.4",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-07937",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "MDA Systems Ltd."
-  },
-  "direction": 0,
-  "entities": [
-   "MDA Systems Ltd.",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-07937",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-07937",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-07937",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "4303dd6fe7f15d3b5926db17bc4e648b1bb4ac637966e5aa39990f3a987677a6",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral modifié : +29,6 M$ pour MDA Systems Ltd. (Défense nationale), valeur totale 42,7 M$"
- },
- {
-  "amount_max": 42732658.23,
-  "amount_min": 42732658.23,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32537560,
-   "amendment_value": "0.0",
-   "contract_date": "2011-03-09",
-   "contract_value": "42732658.23",
-   "description_fr": "Autre équipement",
-   "details": [
-    [
-     "Fournisseur",
-     "MDA Systems Ltd."
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Valeur du contrat",
-     "42,7 M$"
-    ],
-    [
-     "Date du contrat",
-     "2011-03-09"
-    ],
-    [
-     "Description",
-     "Autre équipement"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-07936"
-    ]
-   ],
-   "fournisseur": "MDA Systems Ltd.",
-   "instrument_type": "C",
-   "ministere": "Défense nationale",
-   "montant": 42732658.23,
-   "original_value": "13151510.4",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-07936",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "MDA Systems Ltd."
-  },
-  "direction": 0,
-  "entities": [
-   "MDA Systems Ltd.",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-07936",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2011-03-09",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-07936",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-07936",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "b48f8ff02fdb55eb7d7a3ebeda3ecabedb9db9ee9316c31934d05eb7d143e8d1",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 42,7 M$ : MDA Systems Ltd. (Défense nationale)"
- },
- {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -53458,75 +53220,6 @@
   "title": "Jonathan Jackson (Chambre, IL01) vend WMT — compte conjoint"
  },
  {
-  "amount_max": 100000.0,
-  "amount_min": 50001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-20T18:08:46+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "IL01",
-   "elu": "Jonathan Jackson",
-   "lecture_complete": true,
-   "nom_sec": "VIASAT INC",
-   "rapport": "20035551",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "ViaSat, Inc. - Common Stock (VSAT) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-28",
-     "description": null,
-     "montant": "$50,001 - $100,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Jonathan Jackson",
-   "VIASAT INC"
-  ],
-  "id": "chambre_ptr:20035551:VSAT:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-28",
-  "official_id": "20035551:VSAT:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035551.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-19",
-  "sha256": "d664bc60b4f9ad2a7621fb4633c41d675f30e0e2c74e84dc60e7d7070ff1af06",
-  "source": "chambre_ptr",
-  "tickers": [
-   "VSAT"
-  ],
-  "title": "Jonathan Jackson (Chambre, IL01) vend VSAT — compte conjoint"
- },
- {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -58168,56 +57861,6 @@
   "source": "ftc_fusions",
   "tickers": [],
   "title": "FTC : feu vert antitrust anticipé, Stichting Administratiekantoor Lauwerecht (acquéreur) et Canadian Standards Association (partie visée)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "feu_vert_accorde": true,
-   "numero_de_transaction_officiel": true,
-   "parties_lues": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-07T17:47:31+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acquereur": "Unilever PLC",
-   "entites_visees": [
-    "McCormick & Company, Inc."
-   ],
-   "numero": "20262304",
-   "partie_visee": "McCormick & Company, Inc.",
-   "statut": "Granted"
-  },
-  "direction": 0,
-  "entities": [
-   "Unilever PLC",
-   "McCormick & Company, Inc."
-  ],
-  "id": "ftc_fusions:20262304",
-  "kind": "fusion_feu_vert",
-  "notes": [],
-  "occurred_on": "2026-10-05",
-  "official_id": "20262304",
-  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262304",
-  "parser_version": "ftc-1",
-  "published_on": "2026-10-07",
-  "sha256": "3193c19a21c0b8d264a99332230bbd07d0e644030cf03c6f08f8dd7b87cdf724",
-  "source": "ftc_fusions",
-  "tickers": [
-   "UL",
-   "MKC"
-  ],
-  "title": "FTC : feu vert antitrust anticipé, Unilever PLC (acquéreur) et McCormick & Company, Inc. (partie visée)"
  },
  {
   "amount_max": null,
