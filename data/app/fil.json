@@ -1,5 +1,628 @@
 [
  {
+  "amount_max": 300000000.0,
+  "amount_min": 300000000.0,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-20T11:50:07+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-23656",
+   "numero_dans_le_texte": true,
+   "parution": "2026-11-20",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "symboles_trouves_par": "nom exact dans la liste officielle de la SEC",
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Government of Australia",
+    "ajout_a_une_vente": false,
+    "date_congres": "October 8, 2026",
+    "fournisseurs": [
+     "BAE Systems",
+     "Tapestry Solutions",
+     "Peraton",
+     "Leidos"
+    ],
+    "fournisseurs_texte": "BAE Systems, located in San Diego, CA; Tapestry Solutions, located in St. Louis, MO; Peraton, located in San Jose, CA; and Leidos, located in Virginia Beach, VA",
+    "total": 300000000.0,
+    "transmission": "26-103"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Government of Australia",
+   "BAE Systems",
+   "Tapestry Solutions",
+   "Peraton",
+   "Leidos"
+  ],
+  "id": "ventes_armes:2026-23656",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 8 octobre 2026 ; publié au Registre plus tard."
+  ],
+  "occurred_on": "2026-10-08",
+  "official_id": "2026-23656",
+  "official_url": "https://www.federalregister.gov/documents/2026/11/20/2026-23656/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-20",
+  "sha256": "6146e80d5f8d9c2dfca15f3dffced1ea1c32fd718d272e67c1bf93083571ccfd",
+  "source": "ventes_armes",
+  "tickers": [
+   "LDOS"
+  ],
+  "title": "Vente d'armes à l'étranger : Australie — fournisseurs : BAE Systems, Tapestry Solutions, Peraton, Leidos"
+ },
+ {
+  "amount_max": 425000000.0,
+  "amount_min": 425000000.0,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-20T11:50:06+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-23655",
+   "numero_dans_le_texte": true,
+   "parution": "2026-11-20",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "symboles_trouves_par": "nom exact dans la liste officielle de la SEC",
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Government of Denmark",
+    "ajout_a_une_vente": false,
+    "date_congres": "September 22, 2026",
+    "fournisseurs": [
+     "Lockheed Martin"
+    ],
+    "fournisseurs_texte": "Lockheed Martin, located in Owego, NY, and Sikorsky, Corporation, located in Stratford, CT",
+    "total": 425000000.0,
+    "transmission": "26-96"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Government of Denmark",
+   "Lockheed Martin"
+  ],
+  "id": "ventes_armes:2026-23655",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 22 septembre 2026 ; publié au Registre plus tard."
+  ],
+  "occurred_on": "2026-09-22",
+  "official_id": "2026-23655",
+  "official_url": "https://www.federalregister.gov/documents/2026/11/20/2026-23655/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-20",
+  "sha256": "42827ebb73feda75f2ce93ab33be35dfe19afb048f6c12a36a035d87b0b07da2",
+  "source": "ventes_armes",
+  "tickers": [
+   "LMT"
+  ],
+  "title": "Vente d'armes à l'étranger : Danemark — fournisseur : Lockheed Martin"
+ },
+ {
+  "amount_max": 159000000.0,
+  "amount_min": 159000000.0,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-20T11:50:05+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-23654",
+   "numero_dans_le_texte": true,
+   "parution": "2026-11-20",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "symboles_trouves_par": "nom exact dans la liste officielle de la SEC",
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Government of Japan",
+    "ajout_a_une_vente": false,
+    "date_congres": "September 22, 2026",
+    "fournisseurs": [
+     "The Boeing Company"
+    ],
+    "fournisseurs_texte": "The Boeing Company, located in Arlington, VA",
+    "total": 159000000.0,
+    "transmission": "26-91"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Government of Japan",
+   "The Boeing Company"
+  ],
+  "id": "ventes_armes:2026-23654",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 22 septembre 2026 ; publié au Registre plus tard."
+  ],
+  "occurred_on": "2026-09-22",
+  "official_id": "2026-23654",
+  "official_url": "https://www.federalregister.gov/documents/2026/11/20/2026-23654/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-20",
+  "sha256": "bb5e8d83e3f4c1a2a8f2f2cef4a960a855ffb716909d0bd3f3e7031633e4dd00",
+  "source": "ventes_armes",
+  "tickers": [
+   "BA"
+  ],
+  "title": "Vente d'armes à l'étranger : Japon — fournisseur : The Boeing Company"
+ },
+ {
+  "amount_max": 2680000000.0,
+  "amount_min": 2680000000.0,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-20T11:50:04+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-23644",
+   "numero_dans_le_texte": true,
+   "parution": "2026-11-20",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Government of Ukraine",
+    "ajout_a_une_vente": false,
+    "date_congres": "September 18, 2026",
+    "fournisseurs": [],
+    "fournisseurs_texte": null,
+    "total": 2680000000.0,
+    "transmission": "26-90"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Government of Ukraine"
+  ],
+  "id": "ventes_armes:2026-23644",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 18 septembre 2026 ; publié au Registre plus tard."
+  ],
+  "occurred_on": "2026-09-18",
+  "official_id": "2026-23644",
+  "official_url": "https://www.federalregister.gov/documents/2026/11/20/2026-23644/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-20",
+  "sha256": "94c5781dde77014e7719de43eae889c24fd9cd3f0acbe7d9a35d0f7366e6e800",
+  "source": "ventes_armes",
+  "tickers": [],
+  "title": "Vente d'armes à l'étranger : Ukraine"
+ },
+ {
+  "amount_max": 101000000.0,
+  "amount_min": 101000000.0,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-20T11:50:03+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-23643",
+   "numero_dans_le_texte": true,
+   "parution": "2026-11-20",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Government of Greece",
+    "ajout_a_une_vente": false,
+    "date_congres": "September 23, 2026",
+    "fournisseurs": [],
+    "fournisseurs_texte": null,
+    "total": 101000000.0,
+    "transmission": "26-86"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Government of Greece"
+  ],
+  "id": "ventes_armes:2026-23643",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 23 septembre 2026 ; publié au Registre plus tard."
+  ],
+  "occurred_on": "2026-09-23",
+  "official_id": "2026-23643",
+  "official_url": "https://www.federalregister.gov/documents/2026/11/20/2026-23643/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-20",
+  "sha256": "4f56feef6a256adc2842880e98939921808d769be4b926f3bb77f154c40fcff2",
+  "source": "ventes_armes",
+  "tickers": [],
+  "title": "Vente d'armes à l'étranger : Grèce"
+ },
+ {
+  "amount_max": 24300000000.0,
+  "amount_min": 24300000000.0,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-20T11:50:01+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-23641",
+   "numero_dans_le_texte": true,
+   "parution": "2026-11-20",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Kingdom of Saudi Arabia",
+    "ajout_a_une_vente": false,
+    "date_congres": "September 17, 2026",
+    "fournisseurs": [
+     "Lockheed Martin Aeronautics Company",
+     "Pratt & Whitney Military Engines"
+    ],
+    "fournisseurs_texte": "Lockheed Martin Aeronautics Company, located in Fort Worth, TX; and Pratt & Whitney Military Engines, located in East Hartford, CT",
+    "total": 24300000000.0,
+    "transmission": "26-69"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Kingdom of Saudi Arabia",
+   "Lockheed Martin Aeronautics Company",
+   "Pratt & Whitney Military Engines"
+  ],
+  "id": "ventes_armes:2026-23641",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 17 septembre 2026 ; publié au Registre plus tard."
+  ],
+  "occurred_on": "2026-09-17",
+  "official_id": "2026-23641",
+  "official_url": "https://www.federalregister.gov/documents/2026/11/20/2026-23641/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-20",
+  "sha256": "9e38aa9552e8acbdf5ed27af93520c1d4b97513daeee2e85728b1963258069fe",
+  "source": "ventes_armes",
+  "tickers": [],
+  "title": "Vente d'armes à l'étranger : Arabie saoudite — fournisseurs : Lockheed Martin Aeronautics Company, Pratt & Whitney Military Engines"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-20T11:50:00+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-23640",
+   "numero_dans_le_texte": true,
+   "parution": "2026-11-20",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Government of Sweden",
+    "ajout_a_une_vente": true,
+    "date_congres": "October 16, 2026",
+    "fournisseurs": [],
+    "fournisseurs_texte": null,
+    "total": null,
+    "transmission": "26-1K"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Government of Sweden"
+  ],
+  "id": "ventes_armes:2026-23640",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 16 octobre 2026 ; publié au Registre plus tard.",
+   "Ajout ou mise à niveau d'une vente déjà annoncée."
+  ],
+  "occurred_on": "2026-10-16",
+  "official_id": "2026-23640",
+  "official_url": "https://www.federalregister.gov/documents/2026/11/20/2026-23640/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-20",
+  "sha256": "a0c4a26488725621543e3ddf5a2449370fc84156d80465c42556e0299a5fa5e4",
+  "source": "ventes_armes",
+  "tickers": [],
+  "title": "Vente d'armes à l'étranger : Suède"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-20T11:49:59+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-23639",
+   "numero_dans_le_texte": true,
+   "parution": "2026-11-20",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Republic of Korea",
+    "ajout_a_une_vente": true,
+    "date_congres": "September 24, 2026",
+    "fournisseurs": [],
+    "fournisseurs_texte": null,
+    "total": null,
+    "transmission": "26-1J"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Republic of Korea"
+  ],
+  "id": "ventes_armes:2026-23639",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 24 septembre 2026 ; publié au Registre plus tard.",
+   "Ajout ou mise à niveau d'une vente déjà annoncée."
+  ],
+  "occurred_on": "2026-09-24",
+  "official_id": "2026-23639",
+  "official_url": "https://www.federalregister.gov/documents/2026/11/20/2026-23639/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-20",
+  "sha256": "f056bb74748e4f5535826cb70fba422298fa5b2463c3c35a1b2f48e793bc93fc",
+  "source": "ventes_armes",
+  "tickers": [],
+  "title": "Vente d'armes à l'étranger : Corée du Sud"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-20T11:49:58+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-23638",
+   "numero_dans_le_texte": true,
+   "parution": "2026-11-20",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": "Government of Australia",
+    "ajout_a_une_vente": true,
+    "date_congres": "October 16, 2026",
+    "fournisseurs": [],
+    "fournisseurs_texte": null,
+    "total": null,
+    "transmission": "0J-26"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Government of Australia"
+  ],
+  "id": "ventes_armes:2026-23638",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 16 octobre 2026 ; publié au Registre plus tard.",
+   "Ajout ou mise à niveau d'une vente déjà annoncée."
+  ],
+  "occurred_on": "2026-10-16",
+  "official_id": "2026-23638",
+  "official_url": "https://www.federalregister.gov/documents/2026/11/20/2026-23638/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-20",
+  "sha256": "db5cb1e1a4800c525a5bf989ba4ecab25d5665cb6b7f0ce4dbbb49a3dcef1e2f",
+  "source": "ventes_armes",
+  "tickers": [],
+  "title": "Vente d'armes à l'étranger : Australie"
+ },
+ {
   "amount_max": 2000000000.0,
   "amount_min": 2000000000.0,
   "badge": "officiel",
@@ -22206,6 +22829,63 @@
   "title": "Commerce extérieur (USTR) : United States-Mexico-Canada Agreement: Applications for Inclusion on the Binational Panels Roster"
  },
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-20T11:49:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA220791",
+   "classe": "TYPE 1",
+   "compagnie": "GENENTECH INC",
+   "date": "20261116",
+   "fabricant": null,
+   "ingredients": [
+    "GIREDESTRAN"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220791Orig1s000ltr.pdf",
+   "marques": [
+    "WILSERDLY"
+   ],
+   "numero_soumission": "1",
+   "orphelin": false,
+   "priorite": "STANDARD",
+   "sponsor": "GENENTECH INC",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "GENENTECH INC"
+  ],
+  "id": "fda:NDA220791-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [],
+  "occurred_on": "2026-11-16",
+  "official_id": "NDA220791-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220791",
+  "parser_version": "fda-1",
+  "published_on": "2026-11-16",
+  "sha256": "0f615f1f9c6f3df389ec113b13a51e845d82020ae4625cf3836a4b53d966b676",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, WILSERDLY (giredestran), de GENENTECH INC"
+ },
+ {
   "amount_max": 30000.0,
   "amount_min": 2002.0,
   "badge": "officiel",
@@ -27961,6 +28641,70 @@
   "title": "Décès d’un cinquième membre des Forces armées canadiennes à la suite de l’incident survenu à la Base des Forces canadiennes Wainwright"
  },
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-20T11:49:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "anciennes_empreintes": [
+    "e1183e7fd56d71cf7e759f4fdf346b1e2e17a9583591d64a47193ba5ee436fbf"
+   ],
+   "application": "BLA761488",
+   "classe": "TYPE 1",
+   "compagnie": "ALEXION PHARM",
+   "date": "20261113",
+   "fabricant": null,
+   "ingredients": [
+    "GEFURULIMAB-GAKS"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/761488Orig1s000ltr.pdf",
+   "marques": [
+    "KLYGEFA"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "STANDARD",
+   "sponsor": "ALEXION PHARM",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "ALEXION PHARM"
+  ],
+  "id": "fda:BLA761488-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Médicament orphelin : maladie rare.",
+   "Produit biologique.",
+   "Document modifié à la source depuis la 1re lecture."
+  ],
+  "occurred_on": "2026-11-13",
+  "official_id": "BLA761488-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761488",
+  "parser_version": "fda-1",
+  "published_on": "2026-11-13",
+  "sha256": "dae9dd6740689bd6697eae1be9562bb60a9d3f9162070fa9fe7de4b0ad2f48ee",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, KLYGEFA (gefurulimab-gaks), de ALEXION PHARM"
+ },
+ {
   "amount_max": 15000.0,
   "amount_min": 1001.0,
   "badge": "officiel",
@@ -29158,6 +29902,102 @@
   "source": "sanctions_us",
   "tickers": [],
   "title": "Sanctions américaines (OFAC) : Counter Narcotics and Counter Terrorism Designations"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-20T11:49:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "26TB26 / 26TA26",
+   "composant": "ENGINE AND ENGINE COOLING",
+   "consequence": "A loss of drive power increases the risk of a crash.",
+   "constructeur": "Toyota Motor Engineering & Manufacturing",
+   "defaut": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2023 and 2025-2026 Tundra vehicles. One of the engine camshafts may have been manufactured incorrectly, allowing cracks to develop that can cause the camshaft to snap, possibly leading to an engine stall and loss of drive power.",
+   "numero": "26V750000",
+   "sorte": "Vehicle",
+   "sujet": "Cracks in Camshaft May Cause Engine Stall",
+   "unites": 62490
+  },
+  "direction": -1,
+  "entities": [
+   "Toyota Motor Engineering & Manufacturing"
+  ],
+  "id": "nhtsa:26V750000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-11-12",
+  "official_id": "26V750000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V750000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-11-12",
+  "sha256": "d53f98a847a1ef0451c899c0853c953d446e9487c31a1bcac79390c280b77072",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Toyota Motor Engineering & Manufacturing : 62 490 véhicules — « Cracks in Camshaft May Cause Engine Stall »"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-20T11:49:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "LQD",
+   "composant": "FUEL SYSTEM, GASOLINE",
+   "consequence": "An engine stall while driving increases the risk of a crash or injury.",
+   "constructeur": "Honda (American Honda Motor Co.)",
+   "defaut": "Honda (American Honda Motor Co.) is recalling certain 2004-2005 S2000 vehicles. The fuel flange joint assembly may have been improperly manufactured, allowing the fuel line connection to loosen and separate and possibly causing a fuel leak and engine stall.",
+   "numero": "26V749000",
+   "sorte": "Vehicle",
+   "sujet": "Fuel Connection May Separate and Leak Fuel",
+   "unites": 16387
+  },
+  "direction": -1,
+  "entities": [
+   "Honda (American Honda Motor Co.)"
+  ],
+  "id": "nhtsa:26V749000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-11-12",
+  "official_id": "26V749000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V749000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-11-12",
+  "sha256": "db469a784a262a24644edde0d05e7e719360a0b6461a6c18f74efcfa9e29c669",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Honda (American Honda Motor Co.) : 16 387 véhicules — « Fuel Connection May Separate and Leak Fuel »"
  },
  {
   "amount_max": null,
@@ -32749,15 +33589,15 @@
    "source_officielle": true,
    "symboles_valides": true
   },
-  "collected_at": "2026-11-17T04:39:12+00:00",
+  "collected_at": "2026-11-20T11:49:47+00:00",
   "confirmations": [],
   "currency": "USD",
   "data": {
    "application": "NDA220414",
    "classe": "TYPE 1",
-   "compagnie": "EMD SERONO",
+   "compagnie": "EMD Serono Inc.",
    "date": "20261110",
-   "fabricant": null,
+   "fabricant": "EMD Serono Inc.",
    "ingredients": [
     "PIMICOTINIB"
    ],
@@ -32774,7 +33614,7 @@
   },
   "direction": 1,
   "entities": [
-   "EMD SERONO"
+   "EMD Serono Inc."
   ],
   "id": "fda:NDA220414-ORIG-1",
   "kind": "approbation_fda",
@@ -32787,7 +33627,7 @@
   "sha256": "bd58a49af34d4676e285f7effcc5496f85abda5043a9dc2d420c1ff128adaa98",
   "source": "fda",
   "tickers": [],
-  "title": "FDA : nouveau médicament approuvé, PIMJETMI (pimicotinib), de EMD SERONO"
+  "title": "FDA : nouveau médicament approuvé, PIMJETMI (pimicotinib), de EMD Serono Inc."
  },
  {
   "amount_max": 15000.0,
@@ -57486,257 +58326,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "feu_vert_accorde": true,
-   "numero_de_transaction_officiel": true,
-   "parties_lues": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-07T17:47:31+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acquereur": "Susan Y. Kim",
-   "entites_visees": [
-    "Amkor Technology, Inc."
-   ],
-   "numero": "20262276",
-   "partie_visee": "Amkor Technology, Inc.",
-   "statut": "Granted"
-  },
-  "direction": 0,
-  "entities": [
-   "Susan Y. Kim",
-   "Amkor Technology, Inc."
-  ],
-  "id": "ftc_fusions:20262276",
-  "kind": "fusion_feu_vert",
-  "notes": [],
-  "occurred_on": "2026-10-05",
-  "official_id": "20262276",
-  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262276",
-  "parser_version": "ftc-1",
-  "published_on": "2026-10-07",
-  "sha256": "c95e7c329bdc8ce6a0cf257b45992660b8125a498633a6802b7a243edcb31fc7",
-  "source": "ftc_fusions",
-  "tickers": [
-   "AMKR"
-  ],
-  "title": "FTC : feu vert antitrust anticipé, Susan Y. Kim (acquéreur) et Amkor Technology, Inc. (partie visée)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_rappel": true,
-   "nombre_plausible": true,
-   "numero_de_rappel_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-20T15:38:54+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "campagne": "26C46",
-   "composant": "ELECTRICAL SYSTEM",
-   "consequence": "A speedometer that fails to display accurate vehicle speed can increase the risk of a crash.",
-   "constructeur": "Ford Motor Company",
-   "defaut": "Ford Motor Company (Ford) is recalling certain 2025-2026 F-250 SD, F-350 SD, F-450 SD, F-550 SD, F-600, 2026 F-150, and F-750 SD vehicles. The analog cluster’s tachometer and speedometer may become stuck or move erratically, providing inaccurate readings to the driver. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) Number 101, \"Controls and Displays.\"",
-   "numero": "26V653000",
-   "sorte": "Vehicle",
-   "sujet": "Inaccurate Speedometer and Tachometer Display/FMVSS 101",
-   "unites": 102159
-  },
-  "direction": -1,
-  "entities": [
-   "Ford Motor Company"
-  ],
-  "id": "nhtsa:26V653000",
-  "kind": "rappel",
-  "notes": [],
-  "occurred_on": "2026-10-06",
-  "official_id": "26V653000",
-  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V653000",
-  "parser_version": "nhtsa-1",
-  "published_on": "2026-10-06",
-  "sha256": "407dcc1fdde9b0a4eb51962f523ae2b562bcbeb67f1f85e32e2ed135b729c897",
-  "source": "nhtsa",
-  "tickers": [
-   "F"
-  ],
-  "title": "Rappel de Ford Motor Company : 102 159 véhicules — « Inaccurate Speedometer and Tachometer Display/FMVSS 101 »"
- },
- {
-  "amount_max": 58000000000.0,
-  "amount_min": 58000000000.0,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "montant_coherent": true,
-   "obligation_du_tresor": true,
-   "parts_qui_s_additionnent": true,
-   "resultat_officiel_du_jour": true,
-   "resultats_publies": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-07T01:35:26+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acceptees": {
-    "direct_bidder": 18047610000.0,
-    "indirect_bidder": 32826490000.0,
-    "primary_dealer": 6121437500.0
-   },
-   "adjudication": "2026-10-06",
-   "cusip": "91282CRQ6",
-   "demande_offre": 2.62,
-   "demande_offre_moyenne": 2.6483333333333334,
-   "details": [
-    [
-     "Montant offert",
-     "58 G$"
-    ],
-    [
-     "Taux retenu (le plus élevé accepté)",
-     "4,932 %"
-    ],
-    [
-     "Demande / offre",
-     "2,62 (moyenne des 6 précédentes : 2,65)"
-    ],
-    [
-     "Acheteurs indirects",
-     "57,6 % (moyenne des 6 précédentes : 65,9 %)"
-    ],
-    [
-     "Acheteurs directs",
-     "31,7 %"
-    ],
-    [
-     "Courtiers primaires",
-     "10,7 %"
-    ],
-    [
-     "Titre",
-     "Note 3-Year, CUSIP 91282CRQ6"
-    ],
-    [
-     "Date d'émission",
-     "2026-10-15"
-    ],
-    [
-     "Résultat officiel",
-     "R_20261006_2.pdf"
-    ]
-   ],
-   "document": "R_20261006_2.pdf",
-   "emission": "2026-10-15",
-   "heure_de_cloture": "01:00 PM",
-   "montant_offert": 58000000000.0,
-   "offres_competitives_acceptees": 56995537500.0,
-   "part_indirecte_moyenne": 65.89360841768992,
-   "parts": {
-    "direct_bidder": 31.66495271669295,
-    "indirect_bidder": 57.59484240323201,
-    "primary_dealer": 10.74020488007504
-   },
-   "precedentes": [
-    {
-     "adjudication": "2026-09-08",
-     "cusip": "91282CRL7",
-     "demande_offre": 2.72,
-     "document": "R_20260908_3.pdf",
-     "part_indirecte": 62.147726035114246
-    },
-    {
-     "adjudication": "2026-08-11",
-     "cusip": "91282CRG8",
-     "demande_offre": 2.71,
-     "document": "R_20260811_2.pdf",
-     "part_indirecte": 64.23774366872655
-    },
-    {
-     "adjudication": "2026-07-07",
-     "cusip": "91282CQZ7",
-     "demande_offre": 2.6,
-     "document": "R_20260707_3.pdf",
-     "part_indirecte": 67.50341399734499
-    },
-    {
-     "adjudication": "2026-06-09",
-     "cusip": "91282CQV6",
-     "demande_offre": 2.64,
-     "document": "R_20260609_3.pdf",
-     "part_indirecte": 63.709062734949015
-    },
-    {
-     "adjudication": "2026-05-11",
-     "cusip": "91282CQR5",
-     "demande_offre": 2.54,
-     "document": "R_20260511_3.pdf",
-     "part_indirecte": 62.95542517284185
-    },
-    {
-     "adjudication": "2026-04-07",
-     "cusip": "91282CQJ3",
-     "demande_offre": 2.68,
-     "document": "R_20260407_2.pdf",
-     "part_indirecte": 74.80827889716292
-    }
-   ],
-   "reference_ans": 3,
-   "reouverture": false,
-   "sorte": "nominale",
-   "taux": 4.932,
-   "terme": "3-Year",
-   "type": "Note"
-  },
-  "direction": 0,
-  "entities": [
-   "Trésor américain"
-  ],
-  "id": "tresor:91282CRQ6:2026-10-06",
-  "kind": "adjudication",
-  "notes": [
-   "Parts des acheteurs : en % des offres compétitives acceptées (catégories officielles du Trésor).",
-   "Bons du Trésor (moins d'un an) non montrés."
-  ],
-  "occurred_on": "2026-10-06",
-  "official_id": "91282CRQ6:2026-10-06",
-  "official_url": "https://fiscaldata.treasury.gov/static-data/published-reports/auctions-query/results/R_20261006_2.pdf",
-  "parser_version": "tresor-1",
-  "published_on": "2026-10-06",
-  "sha256": "4aa3f18337ef04caa7652436162488c894ac3ca3a5752c262bef8ac253048658",
-  "source": "tresor",
-  "tickers": [],
-  "title": "Trésor américain : adjudication de 58 G$ sur 3 ans à 4,932 % (demande : 2,62 fois l'offre)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "militaire",
   "checks": {
    "champs_requis": true,
@@ -57822,57 +58411,6 @@
   "source": "nouvelles_defense_ca",
   "tickers": [],
   "title": "Dépôt d'un projet de loi visant à renforcer le secteur de la défense du Canada"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-06T17:10:26+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Executive Office of the President"
-   ],
-   "etape": "inspection_publique",
-   "numero": "2026-20629",
-   "numero_dans_le_texte": true,
-   "parution_prevue": "2026-10-07",
-   "sorte": "presidentiel",
-   "sous_type": null,
-   "titre_officiel": "Special Observances: National Manufacturing Day (Proc. 11071)",
-   "type": "Presidential Document"
-  },
-  "direction": 0,
-  "entities": [
-   "Executive Office of the President"
-  ],
-  "id": "registre_federal:2026-20629",
-  "kind": "presidentiel",
-  "notes": [],
-  "occurred_on": "2026-10-06",
-  "official_id": "2026-20629",
-  "official_url": "https://www.federalregister.gov/public-inspection/2026-20629/special-observances-national-manufacturing-day-proc-11071",
-  "parser_version": "registre-4",
-  "published_on": "2026-10-06",
-  "sha256": "bb3ca53d6d1527ed8d53d9920bf0fe2a0bd5e4ef5450f9e6299a107499bf3780",
-  "source": "registre_federal",
-  "tickers": [],
-  "title": "Document présidentiel : Special Observances: National Manufacturing Day (Proc. 11071)"
  },
  {
   "amount_max": null,

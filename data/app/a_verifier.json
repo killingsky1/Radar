@@ -1,5 +1,73 @@
 [
  {
+  "amount_max": 140000000.0,
+  "amount_min": 140000000.0,
+  "badge": "a_verifier",
+  "category": "militaire",
+  "checks": {
+   "acheteur_lu": false,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-20T11:50:02+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "etape": "parution",
+   "numero": "2026-23642",
+   "numero_dans_le_texte": true,
+   "parution": "2026-11-20",
+   "sorte": "vente_armes",
+   "sous_type": null,
+   "titre_officiel": "Arms Sales Notification",
+   "type": "Notice",
+   "vente": {
+    "acheteur": null,
+    "ajout_a_une_vente": false,
+    "date_congres": "September 10, 2026",
+    "fournisseurs": [
+     "Sikorsky, a Lockheed Martin Company"
+    ],
+    "fournisseurs_texte": "Sikorsky, a Lockheed Martin Company, located in Stratford, CT",
+    "total": 140000000.0,
+    "transmission": "26-79"
+   }
+  },
+  "direction": 0,
+  "entities": [
+   "Sikorsky, a Lockheed Martin Company"
+  ],
+  "id": "ventes_armes:2026-23642",
+  "kind": "vente_armes",
+  "notes": [
+   "Avis envoyé au Congrès le 10 septembre 2026 ; publié au Registre plus tard."
+  ],
+  "occurred_on": "2026-09-10",
+  "official_id": "2026-23642",
+  "official_url": "https://www.federalregister.gov/documents/2026/11/20/2026-23642/arms-sales-notification",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-20",
+  "sha256": "712a7b0410e9a4f88f7857a686d963699327c50d6a5792f89f3ebc079ec7a796",
+  "source": "ventes_armes",
+  "tickers": [],
+  "title": "Vente d'armes à l'étranger : pays non lu — fournisseur : Sikorsky, a Lockheed Martin Company"
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "a_verifier",
@@ -411,6 +479,126 @@
   "title": "TERRENCE DUFFY (Self) prévoit vendre 27 000 actions de CME GROUP INC."
  },
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": false,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-20T11:49:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA220996",
+   "classe": "TYPE 1",
+   "compagnie": "MANDOS LLC",
+   "date": "20261117",
+   "fabricant": null,
+   "ingredients": [
+    "ADRABETADEX"
+   ],
+   "lettre": null,
+   "marques": [
+    "LEMBAZ"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "PRIORITY",
+   "sponsor": "MANDOS LLC",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "MANDOS LLC"
+  ],
+  "id": "fda:NDA220996-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
+   "Médicament orphelin : maladie rare."
+  ],
+  "occurred_on": "2026-11-17",
+  "official_id": "NDA220996-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220996",
+  "parser_version": "fda-1",
+  "published_on": "2026-11-17",
+  "sha256": "e5139a37b9128ad0651ae345cb0c0b30cedc62fa4fb0d93dcbe1224e68b33ef1",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, LEMBAZ (adrabetadex), de MANDOS LLC"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": false,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-20T11:49:47+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA220936",
+   "classe": "TYPE 1",
+   "compagnie": "NUVALENT",
+   "date": "20261117",
+   "fabricant": null,
+   "ingredients": [
+    "NELADALKIB"
+   ],
+   "lettre": null,
+   "marques": [
+    "NELKARMI"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "PRIORITY",
+   "sponsor": "NUVALENT",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "NUVALENT"
+  ],
+  "id": "fda:NDA220936-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
+   "Médicament orphelin : maladie rare."
+  ],
+  "occurred_on": "2026-11-17",
+  "official_id": "NDA220936-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220936",
+  "parser_version": "fda-1",
+  "published_on": "2026-11-17",
+  "sha256": "62f0ce0644b14aea34b1cee2b454f0318199afe12f356efa61f92ee01dffab3d",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, NELKARMI (neladalkib), de NUVALENT"
+ },
+ {
   "amount_max": 1069710.0,
   "amount_min": 1069710.0,
   "badge": "a_verifier",
@@ -606,63 +794,6 @@
   "badge": "a_verifier",
   "category": "gouvernement",
   "checks": {
-   "approbation_originale": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lettre_officielle": false,
-   "nouvelle_molecule": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-19T11:49:00+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "application": "NDA220791",
-   "classe": "TYPE 1",
-   "compagnie": "GENENTECH INC",
-   "date": "20261116",
-   "fabricant": null,
-   "ingredients": [
-    "GIREDESTRAN"
-   ],
-   "lettre": null,
-   "marques": [
-    "WILSERDLY"
-   ],
-   "numero_soumission": "1",
-   "orphelin": false,
-   "priorite": "STANDARD",
-   "sponsor": "GENENTECH INC",
-   "statut": "AP",
-   "type_soumission": "ORIG"
-  },
-  "direction": 1,
-  "entities": [
-   "GENENTECH INC"
-  ],
-  "id": "fda:NDA220791-ORIG-1",
-  "kind": "approbation_fda",
-  "notes": [],
-  "occurred_on": "2026-11-16",
-  "official_id": "NDA220791-ORIG-1",
-  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220791",
-  "parser_version": "fda-1",
-  "published_on": "2026-11-16",
-  "sha256": "0f615f1f9c6f3df389ec113b13a51e845d82020ae4625cf3836a4b53d966b676",
-  "source": "fda",
-  "tickers": [],
-  "title": "FDA : nouveau médicament approuvé, WILSERDLY (giredestran), de GENENTECH INC"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "a_verifier",
-  "category": "gouvernement",
-  "checks": {
    "champs_requis": true,
    "compagnie_cotee": true,
    "dates_coherentes": true,
@@ -736,66 +867,6 @@
    "LAC"
   ],
   "title": "LITHIUM AMERICAS CORP. : un 8-K dit que le gouvernement américain reçoit, détient ou revend des titres de la compagnie"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "a_verifier",
-  "category": "gouvernement",
-  "checks": {
-   "approbation_originale": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lettre_officielle": false,
-   "nouvelle_molecule": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-18T03:48:59+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "application": "BLA761488",
-   "classe": "TYPE 1",
-   "compagnie": "ALEXION PHARM",
-   "date": "20261113",
-   "fabricant": null,
-   "ingredients": [
-    "GEFURULIMAB"
-   ],
-   "lettre": null,
-   "marques": [
-    "KLYGEFA"
-   ],
-   "numero_soumission": "1",
-   "orphelin": true,
-   "priorite": "STANDARD",
-   "sponsor": "ALEXION PHARM",
-   "statut": "AP",
-   "type_soumission": "ORIG"
-  },
-  "direction": 1,
-  "entities": [
-   "ALEXION PHARM"
-  ],
-  "id": "fda:BLA761488-ORIG-1",
-  "kind": "approbation_fda",
-  "notes": [
-   "Médicament orphelin : maladie rare.",
-   "Produit biologique."
-  ],
-  "occurred_on": "2026-11-13",
-  "official_id": "BLA761488-ORIG-1",
-  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761488",
-  "parser_version": "fda-1",
-  "published_on": "2026-11-13",
-  "sha256": "e1183e7fd56d71cf7e759f4fdf346b1e2e17a9583591d64a47193ba5ee436fbf",
-  "source": "fda",
-  "tickers": [],
-  "title": "FDA : nouveau médicament approuvé, KLYGEFA (gefurulimab), de ALEXION PHARM"
  },
  {
   "amount_max": 4100000000.0,
@@ -7718,94 +7789,5 @@
    "TSI"
   ],
   "title": "HADEN PATRICK C (administrateur) achète 63 000 actions de TCW STRATEGIC INCOME FUND INC"
- },
- {
-  "amount_max": 280000.0,
-  "amount_min": 102003.0,
-  "badge": "a_verifier",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": false,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-02T22:45:36+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OK01",
-   "elu": "Kevin Hern",
-   "lecture_complete": true,
-   "nom_sec": "MARSH & MCLENNAN COMPANIES, INC.",
-   "rapport": "20035491",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Marsh Common Stock (MRSH) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-02",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "Marsh Common Stock (MRSH) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-14",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    },
-    {
-     "actif": "Marsh Common Stock (MRSH) [ST]",
-     "avis": "2026-09-15",
-     "date": "2026-09-09",
-     "description": null,
-     "montant": "$100,001 - $250,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Kevin Hern",
-   "MARSH & MCLENNAN COMPANIES, INC."
-  ],
-  "id": "chambre_ptr:20035491:MRSH:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-02",
-  "official_id": "20035491:MRSH:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035491.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-09-25",
-  "sha256": "ed79fd9e424e68499cc924d888446f8c5aff735c528f0671917389126ee2ff95",
-  "source": "chambre_ptr",
-  "tickers": [
-   "MRSH"
-  ],
-  "title": "Kevin Hern (Chambre, OK01) vend MRSH (3 transactions) — compte conjoint"
  }
 ]
