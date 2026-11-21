@@ -1,5 +1,149 @@
 [
  {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "declarant_concorde": true,
+   "document_pdf": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "poste_publie_sans_201": true,
+   "sans_formulaire_201": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true,
+   "type_reconnu": true
+  },
+  "collected_at": "2026-11-21T11:16:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agence": "Environmental Protection Agency",
+   "ajoute_le": "2026-11-21",
+   "declarant_concorde": true,
+   "lecture_complete": true,
+   "niveau": "Level II",
+   "nom": "Zeldin, Lee",
+   "nom_sec": "NeuroSense Therapeutics Ltd.",
+   "pdf_valide": true,
+   "rapport": "F6D7A4BD04B7AEE685258EB600334EBA",
+   "signe_le": "2026-10-19",
+   "taille": 5053,
+   "titre": "Administrator",
+   "transactions": [
+    {
+     "avis": "No",
+     "date": "2026-09-23",
+     "description": "NeuroSense Therapeutics Ltd. Ordinary Shares (NRSN)",
+     "montant": "$1,001 - $15,000",
+     "n": "1",
+     "note": null,
+     "symbole": "NRSN",
+     "type": "Sale"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Lee Zeldin",
+   "NeuroSense Therapeutics Ltd."
+  ],
+  "id": "oge_278t:F6D7A4BD04B7AEE685258EB600334EBA:NRSN:S",
+  "kind": "vente_cabinet",
+  "notes": [],
+  "occurred_on": "2026-09-23",
+  "official_id": "F6D7A4BD04B7AEE685258EB600334EBA:NRSN:S",
+  "official_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/F6D7A4BD04B7AEE685258EB600334EBA/$FILE/Lee-Zeldin-10.19.2026-278T.pdf",
+  "parser_version": "oge-3",
+  "published_on": "2026-11-21",
+  "sha256": "6152835a63f5cad433ed13d047cb24f94b92e1d8b94162c1f2884dfaf98b59cb",
+  "source": "oge_278t",
+  "tickers": [
+   "NRSN"
+  ],
+  "title": "Lee Zeldin (Administrator, Environmental Protection Agency, niveau II) vend NRSN"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "declarant_concorde": true,
+   "document_pdf": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montants_officiels": true,
+   "poste_publie_sans_201": true,
+   "sans_formulaire_201": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_reconnu": true
+  },
+  "collected_at": "2026-11-21T11:16:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agence": "Environmental Protection Agency",
+   "ajoute_le": "2026-11-21",
+   "declarant_concorde": true,
+   "lecture_complete": true,
+   "modifie_le": null,
+   "niveau": "Level II",
+   "nom": "Zeldin, Lee",
+   "pdf_valide": true,
+   "signe_le": "2026-10-19",
+   "taille": 5053,
+   "titre": "Administrator",
+   "transactions": [
+    {
+     "avis": "No",
+     "date": "2026-09-23",
+     "description": "NeuroSense Therapeutics Ltd. Ordinary Shares (NRSN)",
+     "montant": "$1,001 - $15,000",
+     "n": "1",
+     "note": null,
+     "symbole": "NRSN",
+     "type": "Sale"
+    }
+   ]
+  },
+  "direction": 0,
+  "entities": [
+   "Lee Zeldin",
+   "Environmental Protection Agency"
+  ],
+  "id": "oge_278t:F6D7A4BD04B7AEE685258EB600334EBA",
+  "kind": "rapport_278t",
+  "notes": [
+   "1 ligne lue : reliée à une action cotée à la SEC."
+  ],
+  "occurred_on": "2026-11-21",
+  "official_id": "F6D7A4BD04B7AEE685258EB600334EBA",
+  "official_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/F6D7A4BD04B7AEE685258EB600334EBA/$FILE/Lee-Zeldin-10.19.2026-278T.pdf",
+  "parser_version": "oge-3",
+  "published_on": "2026-11-21",
+  "sha256": "6152835a63f5cad433ed13d047cb24f94b92e1d8b94162c1f2884dfaf98b59cb",
+  "source": "oge_278t",
+  "tickers": [],
+  "title": "Lee Zeldin (Administrator, Environmental Protection Agency, niveau II) : rapport de transactions (278-T), 1 transaction"
+ },
+ {
   "amount_max": 350000000.0,
   "amount_min": 350000000.0,
   "badge": "officiel",
@@ -15301,6 +15445,102 @@
   "source": "ventes_armes",
   "tickers": [],
   "title": "Vente d'armes à l'étranger : Australie"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-21T11:16:06+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "BQK, MQJ, KQI, QQH",
+   "composant": "AIR BAGS",
+   "consequence": "An inflator rupture may result in sharp metal fragments striking the driver or other occupants resulting in serious injury or death.",
+   "constructeur": "Honda (American Honda Motor Co.)",
+   "defaut": "Honda (American Honda Motor Co.) is recalling certain 2013 Acura RDX, ILX, 2012-2013 Honda CR-V, Civic, and 2013 Accord vehicles equipped with certain Takata front and passenger air bag inflators. The inflators may rupture due to propellant degradation occurring after long-term exposure to high absolute humidity and high temperature variation.",
+   "numero": "26V765000",
+   "sorte": "Vehicle",
+   "sujet": "Air Bag Inflators May Rupture",
+   "unites": 810592
+  },
+  "direction": -1,
+  "entities": [
+   "Honda (American Honda Motor Co.)"
+  ],
+  "id": "nhtsa:26V765000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-11-19",
+  "official_id": "26V765000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V765000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-11-19",
+  "sha256": "4238164f16f030877d2b289a925e802cb1154718ff50797e7e294c88f7f3d7cc",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Honda (American Honda Motor Co.) : 810 592 véhicules — « Air Bag Inflators May Rupture »"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-21T11:16:06+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": "A9D",
+   "composant": "ELECTRONIC STABILITY CONTROL (ESC)",
+   "consequence": "Improper brake light illumination, unintentional vehicle movement, and a loss of driver assist features, such as electronic stability control, AutoPark, and forward collision warning, can increase the risk of a crash.",
+   "constructeur": "Chrysler (FCA US, LLC)",
+   "defaut": "Chrysler (FCA US, LLC) is recalling certain 2022-2024 Ram 1500 Classic pickup trucks. The anti-lock brake (ABS) module software may misread inputs from the brake pedal and pedal sensor, which can result in improper brake light illumination, unintentional vehicle movement, or a loss of driver assist features, such as electronic stability control, AutoPark, and forward collision warning.",
+   "numero": "26V756000",
+   "sorte": "Vehicle",
+   "sujet": "ABS Module Software Error",
+   "unites": 82843
+  },
+  "direction": -1,
+  "entities": [
+   "Chrysler (FCA US, LLC)"
+  ],
+  "id": "nhtsa:26V756000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-11-19",
+  "official_id": "26V756000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V756000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-11-19",
+  "sha256": "d32d293f16004a2b36da3e787d6b941dc731db076fef0158d4cfd3566013cafe",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Chrysler (FCA US, LLC) : 82 843 véhicules — « ABS Module Software Error »"
  },
  {
   "amount_max": null,
@@ -50572,144 +50812,6 @@
   "title": "Michael Rulli (Chambre, OH06) vend WSBC"
  },
  {
-  "amount_max": 100000.0,
-  "amount_min": 50001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-20T18:08:46+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH06",
-   "elu": "Michael Rulli",
-   "lecture_complete": true,
-   "nom_sec": "Alphabet Inc.",
-   "rapport": "20035671",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Alphabet Inc. - Class C Capital Stock (GOOG) [ST]",
-     "avis": "2026-10-16",
-     "date": "2026-10-16",
-     "description": null,
-     "montant": "$50,001 - $100,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Michael Rulli",
-   "Alphabet Inc."
-  ],
-  "id": "chambre_ptr:20035671:GOOG:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-10-16",
-  "official_id": "20035671:GOOG:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035671.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-19",
-  "sha256": "d9f5bf72e17e6d3b4993b7444553eb4bd7d7ce857c179ec41e426372637ed4c3",
-  "source": "chambre_ptr",
-  "tickers": [
-   "GOOG"
-  ],
-  "title": "Michael Rulli (Chambre, OH06) vend GOOG"
- },
- {
-  "amount_max": 100000.0,
-  "amount_min": 50001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-20T18:08:46+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "IL01",
-   "elu": "Jonathan Jackson",
-   "lecture_complete": true,
-   "nom_sec": "Walmart Inc.",
-   "rapport": "20035551",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Walmart Inc. - Common Stock (WMT) [ST]",
-     "avis": "2026-10-01",
-     "date": "2026-09-28",
-     "description": null,
-     "montant": "$50,001 - $100,000",
-     "partielle": false,
-     "proprietaire": "JT",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Jonathan Jackson",
-   "Walmart Inc."
-  ],
-  "id": "chambre_ptr:20035551:WMT:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-28",
-  "official_id": "20035551:WMT:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035551.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-19",
-  "sha256": "d664bc60b4f9ad2a7621fb4633c41d675f30e0e2c74e84dc60e7d7070ff1af06",
-  "source": "chambre_ptr",
-  "tickers": [
-   "WMT"
-  ],
-  "title": "Jonathan Jackson (Chambre, IL01) vend WMT — compte conjoint"
- },
- {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -55112,100 +55214,6 @@
    "SWK"
   ],
   "title": "FTC : feu vert antitrust anticipé, Bad Boy Mowers JV Investments, LP (acquéreur) et Stanley Black & Decker, Inc. (partie visée)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "feu_vert_accorde": true,
-   "numero_de_transaction_officiel": true,
-   "parties_lues": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-07T17:47:31+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acquereur": "GHK Fund II LP",
-   "entites_visees": [
-    "USA Hometown Experts, Inc."
-   ],
-   "numero": "20262335",
-   "partie_visee": "MSouth Equity Partners IV, L.P.",
-   "statut": "Granted"
-  },
-  "direction": 0,
-  "entities": [
-   "GHK Fund II LP",
-   "MSouth Equity Partners IV, L.P."
-  ],
-  "id": "ftc_fusions:20262335",
-  "kind": "fusion_feu_vert",
-  "notes": [],
-  "occurred_on": "2026-10-05",
-  "official_id": "20262335",
-  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262335",
-  "parser_version": "ftc-1",
-  "published_on": "2026-10-07",
-  "sha256": "aaba07b86864aded23baa802aaf0f0ea91e7e860890a5162aadd42f7f9030ad8",
-  "source": "ftc_fusions",
-  "tickers": [],
-  "title": "FTC : feu vert antitrust anticipé, GHK Fund II LP (acquéreur) et MSouth Equity Partners IV, L.P. (partie visée)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "feu_vert_accorde": true,
-   "numero_de_transaction_officiel": true,
-   "parties_lues": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-07T17:47:31+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acquereur": "KKR Core II Holding Company AIV LLC",
-   "entites_visees": [
-    "A1 Garage Acquisition, LLC"
-   ],
-   "numero": "20262333",
-   "partie_visee": "A1 Garage Equity, LLC",
-   "statut": "Granted"
-  },
-  "direction": 0,
-  "entities": [
-   "KKR Core II Holding Company AIV LLC",
-   "A1 Garage Equity, LLC"
-  ],
-  "id": "ftc_fusions:20262333",
-  "kind": "fusion_feu_vert",
-  "notes": [],
-  "occurred_on": "2026-10-05",
-  "official_id": "20262333",
-  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262333",
-  "parser_version": "ftc-1",
-  "published_on": "2026-10-07",
-  "sha256": "ce54115749b08445b9eb748e961a40fa20f4336f50000fbe6f9f6e6f6ba7804d",
-  "source": "ftc_fusions",
-  "tickers": [],
-  "title": "FTC : feu vert antitrust anticipé, KKR Core II Holding Company AIV LLC (acquéreur) et A1 Garage Equity, LLC (partie visée)"
  },
  {
   "amount_max": null,
