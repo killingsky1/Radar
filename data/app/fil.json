@@ -3,6 +3,53 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "categorie_officielle_reconnue": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_d_une_action_presidentielle": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_officiel_lu": true
+  },
+  "collected_at": "2026-11-24T01:14:58+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "categories": [
+    "Presidential Actions",
+    "Presidential Memoranda"
+   ],
+   "guid": "",
+   "resume": "SUBJECT: Expeditious Enforcement of Capital Sentences and the Pursuit of Justice for Victims of Heinous Crimes By the authority vested in me as President by the Constitution and the laws of the United States of America, I hereby direct: Section 1 . Background . A prolonged delay in carrying out a death sentence is a grave offense to the justice system that denies a victim’s family the closure they deserve. Yet capital sentences imposed upon the most vile criminals are too often frustrated by years, or even decades, of litigation. The Department of Justice must take every step to ensure that th",
+   "sorte": "memorandum",
+   "titre_officiel": "Expeditious Enforcement of Capital Sentences and the Pursuit of Justice for Victims of Heinous Crimes"
+  },
+  "direction": 0,
+  "entities": [
+   "The White House"
+  ],
+  "id": "maison_blanche:2026/11/expeditious-enforcement-of-capital-sentences-and-the-pursuit-of-justice-for-victims-of-heinous-crimes",
+  "kind": "memorandum",
+  "notes": [],
+  "occurred_on": "2026-11-23",
+  "official_id": "2026/11/expeditious-enforcement-of-capital-sentences-and-the-pursuit-of-justice-for-victims-of-heinous-crimes",
+  "official_url": "https://www.whitehouse.gov/presidential-actions/2026/11/expeditious-enforcement-of-capital-sentences-and-the-pursuit-of-justice-for-victims-of-heinous-crimes/",
+  "parser_version": "maison-blanche-1",
+  "published_on": "2026-11-23",
+  "sha256": "a5683d248b5af604b764d9a5dc43fc92dae607de6932b454a63474d05f613ef5",
+  "source": "maison_blanche",
+  "tickers": [],
+  "title": "Mémorandum présidentiel : Expeditious Enforcement of Capital Sentences and the Pursuit of Justice for Victims of Heinous Crimes"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -328,6 +375,75 @@
   "title": "Le ministre McGuinty conclut sa visite au Forum d’Halifax sur la sécurité internationale, où il a fait progresser les priorités du Canada en matière de défense et renforcé les partenariats avec nos alliés"
  },
  {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-24T01:15:13+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "HI01",
+   "elu": "Ed Case",
+   "lecture_complete": true,
+   "nom_sec": "Apple Inc.",
+   "rapport": "20036891",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Apple Inc. - Common Stock (AAPL) [ST]",
+     "avis": "2026-11-21",
+     "date": "2026-11-16",
+     "description": "Automatic stock dividend reinvestment",
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "SP",
+     "type_officiel": "P"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Ed Case",
+   "Apple Inc."
+  ],
+  "id": "chambre_ptr:20036891:AAPL:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-11-16",
+  "official_id": "20036891:AAPL:P",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036891.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-21",
+  "sha256": "36bfc7bfa485d4aa5becef81e65782c33f06cdc979e1607cc8b7f393cdce20b1",
+  "source": "chambre_ptr",
+  "tickers": [
+   "AAPL"
+  ],
+  "title": "Ed Case (Chambre, HI01) achète AAPL — conjoint·e"
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -515,6 +631,75 @@
   "source": "oge_278t",
   "tickers": [],
   "title": "Lee Zeldin (Administrator, Environmental Protection Agency, niveau II) : rapport de transactions (278-T), 1 transaction"
+ },
+ {
+  "amount_max": 100000.0,
+  "amount_min": 50001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-24T01:15:12+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "VA04",
+   "elu": "Jennifer McClellan",
+   "lecture_complete": true,
+   "nom_sec": "VERIZON COMMUNICATIONS INC",
+   "rapport": "20036883",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Verizon Communications Inc. Common Stock (VZ) [ST]",
+     "avis": "2026-11-19",
+     "date": "2026-11-19",
+     "description": null,
+     "montant": "$50,001 - $100,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Jennifer McClellan",
+   "VERIZON COMMUNICATIONS INC"
+  ],
+  "id": "chambre_ptr:20036883:VZ:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-11-19",
+  "official_id": "20036883:VZ:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036883.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-20",
+  "sha256": "1c26e2917c7880bf02234fe44f5781aae6f6b92e15f3caabafe4c3fe1a3a4769",
+  "source": "chambre_ptr",
+  "tickers": [
+   "VZ"
+  ],
+  "title": "Jennifer McClellan (Chambre, VA04) vend VZ"
  },
  {
   "amount_max": null,
@@ -50120,73 +50305,6 @@
   "title": "John Boozman (Sénat) vend MU (2 transactions) — compte conjoint"
  },
  {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-22T00:43:42+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "senat",
-   "circonscription": null,
-   "elu": "John Boozman",
-   "lecture_complete": true,
-   "nom_sec": "Aptiv PLC",
-   "rapport": "7dfdae57-9401-4bf1-9059-85d1e5ee4a84",
-   "recoupements": {
-    "date_de_depot": true,
-    "nom_lu": true
-   },
-   "transactions": [
-    {
-     "actif": "Aptiv PLC Ordinary Shares",
-     "commentaire": null,
-     "date": "2026-09-25",
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "Joint",
-     "type_officiel": "Sale (Partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "John Boozman",
-   "Aptiv PLC"
-  ],
-  "id": "senat_ptr:7dfdae57-9401-4bf1-9059-85d1e5ee4a84:APTV:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-09-25",
-  "official_id": "7dfdae57-9401-4bf1-9059-85d1e5ee4a84:APTV:S",
-  "official_url": "https://efdsearch.senate.gov/search/view/ptr/7dfdae57-9401-4bf1-9059-85d1e5ee4a84/",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-21",
-  "sha256": "18fd7b228cf791436ee6cfb34d28efeaa7d7e63b856e09c7a39deddaa6361368",
-  "source": "senat_ptr",
-  "tickers": [
-   "APTV"
-  ],
-  "title": "John Boozman (Sénat) vend APTV — compte conjoint"
- },
- {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -50906,75 +51024,6 @@
    "RTX"
   ],
   "title": "Contrat fédéral américain de 270,1 M$ : RAYTHEON COMPANY (Défense)"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-20T18:08:46+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH06",
-   "elu": "Michael Rulli",
-   "lecture_complete": true,
-   "nom_sec": "WESBANCO INC",
-   "rapport": "20035671",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "WesBanco, Inc. - Common Stock (WSBC) [ST]",
-     "avis": "2026-10-16",
-     "date": "2026-10-16",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Michael Rulli",
-   "WESBANCO INC"
-  ],
-  "id": "chambre_ptr:20035671:WSBC:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-10-16",
-  "official_id": "20035671:WSBC:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035671.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-10-19",
-  "sha256": "d9f5bf72e17e6d3b4993b7444553eb4bd7d7ce857c179ec41e426372637ed4c3",
-  "source": "chambre_ptr",
-  "tickers": [
-   "WSBC"
-  ],
-  "title": "Michael Rulli (Chambre, OH06) vend WSBC"
  },
  {
   "amount_max": null,
@@ -55180,56 +55229,6 @@
   "source": "registre_federal",
   "tickers": [],
   "title": "Commerce extérieur (USTR) : Effect of the European Union's Carbon Border Adjustment Mechanism and the Proposals to Expand Coverage on U.S. Trade"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "feu_vert_accorde": true,
-   "numero_de_transaction_officiel": true,
-   "parties_lues": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-07T17:47:31+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "acquereur": "Anderson Automotive Enterprises, LLC",
-   "entites_visees": [
-    "GPI FL-LX, LLC",
-    "GPI FL-HA, LLC"
-   ],
-   "numero": "20262359",
-   "partie_visee": "Group 1 Automotive, Inc.",
-   "statut": "Granted"
-  },
-  "direction": 0,
-  "entities": [
-   "Anderson Automotive Enterprises, LLC",
-   "Group 1 Automotive, Inc."
-  ],
-  "id": "ftc_fusions:20262359",
-  "kind": "fusion_feu_vert",
-  "notes": [],
-  "occurred_on": "2026-10-05",
-  "official_id": "20262359",
-  "official_url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262359",
-  "parser_version": "ftc-1",
-  "published_on": "2026-10-07",
-  "sha256": "5b328bf2b85fe00fdc5a8dc71b4ec70214325fdee188dd95c91831f75a59e818",
-  "source": "ftc_fusions",
-  "tickers": [
-   "GPI"
-  ],
-  "title": "FTC : feu vert antitrust anticipé, Anderson Automotive Enterprises, LLC (acquéreur) et Group 1 Automotive, Inc. (partie visée)"
  },
  {
   "amount_max": null,
