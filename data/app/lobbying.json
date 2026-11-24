@@ -221,45 +221,6 @@
    ],
    "total": 200000.0
   },
-  "CTEV": {
-   "base": "firmes",
-   "complet": true,
-   "firmes": 1,
-   "lu": "2026-11-17T11:59:18+00:00",
-   "moins_de_5000": 0,
-   "nom": "Claritev Corp",
-   "pages": 1,
-   "rapports": [
-    {
-     "client": "CLARITEV",
-     "montant": 60000.0,
-     "poste": "2026-10-20",
-     "registrant": "ALSTON & BIRD LLP",
-     "sans_activite": false,
-     "soi_meme": false,
-     "sujets": [
-      "HCR",
-      "MMM"
-     ],
-     "type": "Q3",
-     "url": "https://lda.gov/filings/public/filing/06a709cf-a8a9-4cfb-9536-17dd24b1017d/print/",
-     "uuid": "06a709cf-a8a9-4cfb-9536-17dd24b1017d"
-    }
-   ],
-   "recherche": "CLARITEV",
-   "revenus_firmes": 60000.0,
-   "sujets": [
-    {
-     "code": "HCR",
-     "nom": "Santé"
-    },
-    {
-     "code": "MMM",
-     "nom": "Medicare et Medicaid"
-    }
-   ],
-   "total": 60000.0
-  },
   "CTGO": {
    "base": null,
    "complet": true,
@@ -326,20 +287,6 @@
    "pages": 1,
    "rapports": [],
    "recherche": "FUTUREFUEL",
-   "revenus_firmes": null,
-   "sujets": [],
-   "total": null
-  },
-  "FUN": {
-   "base": null,
-   "complet": true,
-   "firmes": 0,
-   "lu": "2026-11-19T11:47:07+00:00",
-   "moins_de_5000": 0,
-   "nom": "Six Flags Entertainment Corporation",
-   "pages": 2,
-   "rapports": [],
-   "recherche": "ENTERTAINMENT",
    "revenus_firmes": null,
    "sujets": [],
    "total": null
@@ -423,20 +370,6 @@
    "pages": 1,
    "rapports": [],
    "recherche": "LINEAGE",
-   "revenus_firmes": null,
-   "sujets": [],
-   "total": null
-  },
-  "LRMR": {
-   "base": null,
-   "complet": true,
-   "firmes": 0,
-   "lu": "2026-11-21T11:14:08+00:00",
-   "moins_de_5000": 0,
-   "nom": "Larimar Therapeutics, Inc.",
-   "pages": 1,
-   "rapports": [],
-   "recherche": "LARIMAR",
    "revenus_firmes": null,
    "sujets": [],
    "total": null
@@ -624,40 +557,6 @@
    "revenus_firmes": null,
    "sujets": [],
    "total": null
-  },
-  "TH": {
-   "base": "firmes",
-   "complet": true,
-   "firmes": 1,
-   "lu": "2026-11-17T11:59:18+00:00",
-   "moins_de_5000": 0,
-   "nom": "Target Hospitality Corp.",
-   "pages": 1,
-   "rapports": [
-    {
-     "client": "TARGET HOSPITALITY",
-     "montant": 150000.0,
-     "poste": "2026-10-18",
-     "registrant": "CONTINENTAL STRATEGY, LLC",
-     "sans_activite": false,
-     "soi_meme": false,
-     "sujets": [
-      "DIS"
-     ],
-     "type": "Q3",
-     "url": "https://lda.gov/filings/public/filing/f9f9866f-ab25-4225-8cf2-219873c630e7/print/",
-     "uuid": "f9f9866f-ab25-4225-8cf2-219873c630e7"
-    }
-   ],
-   "recherche": "HOSPITALITY",
-   "revenus_firmes": 150000.0,
-   "sujets": [
-    {
-     "code": "DIS",
-     "nom": "Catastrophes et urgences"
-    }
-   ],
-   "total": 150000.0
   }
  },
  "source": "https://lda.gov/",

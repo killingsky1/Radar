@@ -47,14 +47,6 @@
   "CRMD": {
    "cik": 1410098
   },
-  "CTEV": {
-   "accn": "0001793229-26-000017",
-   "cik": 1793229,
-   "debut": "2025-01-01",
-   "fin": "2025-12-31",
-   "lien": "https://www.sec.gov/Archives/edgar/data/1793229/000179322926000017/0001793229-26-000017-index.htm",
-   "montant": 0
-  },
   "CTGO": {
    "cik": 1502377
   },
@@ -77,11 +69,11 @@
    "lien": "https://www.sec.gov/Archives/edgar/data/1411342/000162828026013279/0001628280-26-013279-index.htm",
    "montant": 0
   },
+  "EXYN": {
+   "cik": 1960355
+  },
   "FF": {
    "cik": 1337298
-  },
-  "FUN": {
-   "cik": 1999001
   },
   "GDRX": {
    "accn": "0001809519-26-000031",
@@ -90,6 +82,14 @@
    "fin": "2025-12-31",
    "lien": "https://www.sec.gov/Archives/edgar/data/1809519/000180951926000031/0001809519-26-000031-index.htm",
    "montant": 216372000
+  },
+  "GNL": {
+   "accn": "0001628280-26-011696",
+   "cik": 1526113,
+   "debut": "2025-01-01",
+   "fin": "2025-12-31",
+   "lien": "https://www.sec.gov/Archives/edgar/data/1526113/000162828026011696/0001628280-26-011696-index.htm",
+   "montant": 120279000
   },
   "GSHD": {
    "accn": "0001726978-26-000010",
@@ -102,14 +102,14 @@
   "GTEN": {
    "cik": 1986817
   },
+  "HOS": {
+   "cik": 866829
+  },
   "KPTI": {
    "cik": 1503802
   },
   "LCTX": {
    "cik": 876343
-  },
-  "LRMR": {
-   "cik": 1374690
   },
   "LRN": {
    "cik": 1157408
@@ -150,8 +150,11 @@
   "SIDU": {
    "cik": 1879726
   },
-  "TH": {
-   "cik": 1712189
+  "TMS": {
+   "cik": 2048951
+  },
+  "TROX": {
+   "cik": 1530804
   }
  },
  "source": "https://data.sec.gov/api/xbrl/frames/us-gaap/PaymentsForRepurchaseOfCommonStock/USD/CY2025.json"
