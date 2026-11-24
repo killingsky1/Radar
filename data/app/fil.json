@@ -9,6 +9,76 @@
    "dates_coherentes": true,
    "domaine_officiel": true,
    "empreinte": true,
+   "etape_datee": true,
+   "lien_legisinfo": true,
+   "projet_du_gouvernement": true,
+   "sanction_confirmee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-24T23:18:34+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "champ": "PassedSenateFirstReadingDateTime",
+   "cle": "senat-1",
+   "date_officielle": "2026-11-24T05:05:00-05:00",
+   "details": [
+    [
+     "Projet de loi",
+     "C-42"
+    ],
+    [
+     "Titre",
+     "Loi visant certaines mesures liées à l'abordabilité et au logement"
+    ],
+    [
+     "Étape",
+     "première lecture au Sénat"
+    ],
+    [
+     "Où il en est",
+     "À la deuxième lecture au Sénat"
+    ]
+   ],
+   "etape": "première lecture au Sénat",
+   "numero": "C-42",
+   "sanction": false,
+   "session": "45-1",
+   "statut": "À la deuxième lecture au Sénat",
+   "titre": "Loi sur l'abordabilité des produits d'épicerie et du logement",
+   "titre_long": "Loi visant certaines mesures liées à l'abordabilité et au logement",
+   "type": "Projet de loi émanant du gouvernement (Cdc)",
+   "type_en": "House Government Bill"
+  },
+  "direction": 0,
+  "entities": [
+   "Parlement du Canada"
+  ],
+  "id": "legisinfo:45-1:C-42:senat-1",
+  "kind": "etape_projet_de_loi",
+  "notes": [],
+  "occurred_on": "2026-11-24",
+  "official_id": "45-1:C-42:senat-1",
+  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-42",
+  "parser_version": "legisinfo-1",
+  "published_on": "2026-11-24",
+  "sha256": "5d4e94506235517f9c689b69f7fa7847d41bbcb4bdf14e7d1436752e6c522608",
+  "source": "legisinfo",
+  "tickers": [],
+  "title": "Projet de loi C-42 (Loi sur l'abordabilité des produits d'épicerie et du logement) : première lecture au Sénat"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
    "lien_identique_au_fil": true,
    "lien_ministere_coherent": true,
    "ministere_reconnu": true,
@@ -48421,112 +48491,6 @@
   "source": "contrats_ca_10k",
   "tickers": [],
   "title": "Contrat fédéral modifié : +57,5 M$ pour General Electric Canada (Défense nationale), valeur totale 172,5 M$"
- },
- {
-  "amount_max": 25408973.76,
-  "amount_min": 25408973.76,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32537669,
-   "amendment_value": "25408973.76",
-   "contract_date": "2018-06-29",
-   "contract_value": "56330781.84",
-   "description_fr": "Armes (incluant les pièces)",
-   "details": [
-    [
-     "Fournisseur",
-     "General Dynamics"
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Hausse",
-     "25,4 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "56,3 M$"
-    ],
-    [
-     "Valeur d'origine",
-     "7,5 M$"
-    ],
-    [
-     "Date du contrat",
-     "2018-06-29"
-    ],
-    [
-     "Description",
-     "Armes (incluant les pièces)"
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-08045"
-    ]
-   ],
-   "fournisseur": "General Dynamics",
-   "instrument_type": "A",
-   "ministere": "Défense nationale",
-   "montant": 25408973.76,
-   "original_value": "7506322.5",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-08045",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "General Dynamics"
-  },
-  "direction": 0,
-  "entities": [
-   "General Dynamics",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-08045",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-08045",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-08045",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "116913a7e9cb60739e544ebaa924402a1cddd3f6e9957819bb4ef44833f4ecdb",
-  "source": "contrats_ca_10k",
-  "tickers": [
-   "GD"
-  ],
-  "title": "Contrat fédéral modifié : +25,4 M$ pour General Dynamics (Défense nationale), valeur totale 56,3 M$"
  },
  {
   "amount_max": null,
