@@ -572,127 +572,6 @@
   "title": "SHOEN MARK V (actionnaire de 10 %) vend 46 000 actions de U-Haul Holding Co /NV/"
  },
  {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "a_verifier",
-  "category": "gouvernement",
-  "checks": {
-   "approbation_originale": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lettre_officielle": false,
-   "nouvelle_molecule": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-21T03:18:37+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "application": "NDA221251",
-   "classe": "TYPE 1",
-   "compagnie": "REGENERON PHARMACEUTICALS",
-   "date": "20261118",
-   "fabricant": null,
-   "ingredients": [
-    "CEMDISIRAN"
-   ],
-   "lettre": null,
-   "marques": [
-    "LIVSAYIS"
-   ],
-   "numero_soumission": "1",
-   "orphelin": false,
-   "priorite": "PRIORITY",
-   "sponsor": "REGENERON PHARMACEUTICALS",
-   "statut": "AP",
-   "type_soumission": "ORIG"
-  },
-  "direction": 1,
-  "entities": [
-   "REGENERON PHARMACEUTICALS"
-  ],
-  "id": "fda:NDA221251-ORIG-1",
-  "kind": "approbation_fda",
-  "notes": [
-   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important."
-  ],
-  "occurred_on": "2026-11-18",
-  "official_id": "NDA221251-ORIG-1",
-  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221251",
-  "parser_version": "fda-1",
-  "published_on": "2026-11-18",
-  "sha256": "cc65d22dbbd5c56f34ef0ca3ef40a4ae6545c191f1be1d1faf752ba2018cf7ef",
-  "source": "fda",
-  "tickers": [
-   "REGN"
-  ],
-  "title": "FDA : nouveau médicament approuvé, LIVSAYIS (cemdisiran), de REGENERON PHARMACEUTICALS"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "a_verifier",
-  "category": "gouvernement",
-  "checks": {
-   "approbation_originale": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lettre_officielle": false,
-   "nouvelle_molecule": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-21T03:18:37+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "application": "NDA221144",
-   "classe": "TYPE 1",
-   "compagnie": "GENZYME CORP A SANOFI CO",
-   "date": "20261118",
-   "fabricant": null,
-   "ingredients": [
-    "VENGLUSTAT"
-   ],
-   "lettre": null,
-   "marques": [
-    "INFILBRAY"
-   ],
-   "numero_soumission": "1",
-   "orphelin": true,
-   "priorite": "PRIORITY",
-   "sponsor": "GENZYME CORP A SANOFI CO",
-   "statut": "AP",
-   "type_soumission": "ORIG"
-  },
-  "direction": 1,
-  "entities": [
-   "GENZYME CORP A SANOFI CO"
-  ],
-  "id": "fda:NDA221144-ORIG-1",
-  "kind": "approbation_fda",
-  "notes": [
-   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
-   "Médicament orphelin : maladie rare."
-  ],
-  "occurred_on": "2026-11-18",
-  "official_id": "NDA221144-ORIG-1",
-  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221144",
-  "parser_version": "fda-1",
-  "published_on": "2026-11-18",
-  "sha256": "064de5a6a58eeaf32afe77ec9565b30a6db0aadfaa073a46fad4b8f546873205",
-  "source": "fda",
-  "tickers": [],
-  "title": "FDA : nouveau médicament approuvé, INFILBRAY (venglustat), de GENZYME CORP A SANOFI CO"
- },
- {
   "amount_max": 8338917.93,
   "amount_min": 8338917.93,
   "badge": "a_verifier",
@@ -7810,5 +7689,145 @@
    "UUU"
   ],
   "title": "AULT MILTON C III (administrateur) achète 18 000 actions de UNIVERSAL SAFETY PRODUCTS, INC."
+ },
+ {
+  "amount_max": 5000000000.0,
+  "amount_min": 5000000000.0,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "actions_et_valeur_positives": true,
+   "actions_sous_le_total_en_circulation": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "prix_implicite_plausible": false,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T00:12:26+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 158000000000.0,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000312069",
+   "date_avis": "2026-10-01",
+   "lignes": [
+    {
+     "actions": 158000000000.0,
+     "bourse": "NYSE",
+     "classe": "BARCLAYS PLC (BCS, BCLYF)",
+     "date_prevue": "2026-06-24",
+     "en_circulation": 800000000000.0,
+     "valeur": 5000000000.0
+    }
+   ],
+   "nom_emetteur": "BARCLAYS PLC",
+   "plan_10b5_1": [
+    "02/26/2026"
+   ],
+   "relations": [
+    "Investor"
+   ],
+   "vendeur": "Cardoso da silva Sergio Tony"
+  },
+  "direction": -1,
+  "entities": [
+   "Cardoso da silva Sergio Tony",
+   "BARCLAYS PLC"
+  ],
+  "id": "sec_form144:0002157144-26-000001",
+  "kind": "intention_vente",
+  "notes": [
+   "Vente prévue d'avance dans un plan automatique (règle 10b5-1).",
+   "Date de vente prévue : 24 juin 2026."
+  ],
+  "occurred_on": "2026-10-01",
+  "official_id": "0002157144-26-000001",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/312069/000215714426000001/0002157144-26-000001-index.htm",
+  "parser_version": "sec-4",
+  "published_on": "2026-10-01",
+  "sha256": "9edbd9d2bbcd679bef75819a1da283bb50ef544a787da2a2cf66210fcee3b1fd",
+  "source": "sec_form144",
+  "tickers": [
+   "BCS"
+  ],
+  "title": "Cardoso da silva Sergio Tony (investisseur) prévoit vendre 158 000 000 000 actions de BARCLAYS PLC"
+ },
+ {
+  "amount_max": 267239.7,
+  "amount_min": 267239.7,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": false,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-10-03T03:16:14+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 63000.0,
+   "bourse": "NYSE",
+   "cik_emetteur": "0000809559",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 4.2419,
+   "roles": [
+    "administrateur"
+   ],
+   "symbole_declare": "TSI",
+   "symboles_sec": [
+    "TSI"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "D",
+     "actions": 63000.0,
+     "apres": 22722.203,
+     "code": "P",
+     "date": "2026-09-29",
+     "hors_bourse": null,
+     "prix": 4.2419
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "HADEN PATRICK C",
+   "TCW STRATEGIC INCOME FUND INC"
+  ],
+  "id": "sec_form4:0001193125-26-408652:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-09-29",
+  "official_id": "0001193125-26-408652:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/809559/000119312526408652/0001193125-26-408652-index.htm",
+  "parser_version": "sec-6",
+  "published_on": "2026-09-30",
+  "sha256": "c0e64c2b3f160c7bab86d909b90dac0e40f8d786152d5fa19a95e0d5fc3f6a64",
+  "source": "sec_form4",
+  "tickers": [
+   "TSI"
+  ],
+  "title": "HADEN PATRICK C (administrateur) achète 63 000 actions de TCW STRATEGIC INCOME FUND INC"
  }
 ]

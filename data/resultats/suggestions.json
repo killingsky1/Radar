@@ -2819,7 +2819,7 @@
    ],
    "symbole": "KMT",
    "taille": "moyenne",
-   "vue": "2026-11-19"
+   "vue": "2026-11-24"
   },
   {
    "entree": "2026-11-10T04:09:32+00:00",
@@ -3603,7 +3603,7 @@
    ],
    "symbole": "ALDX",
    "taille": "petite",
-   "vue": "2026-11-18"
+   "vue": "2026-11-24"
   },
   {
    "entree": "2026-11-17T04:30:42+00:00",
@@ -4534,6 +4534,147 @@
     }
    ],
    "symbole": "SLSN",
+   "taille": "petite",
+   "vue": "2026-11-24"
+  },
+  {
+   "entree": "2026-11-25T04:55:28+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "American Resources Corp",
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "compagnie",
+     "regle": "etats_financiers",
+     "sens": -1
+    }
+   ],
+   "symbole": "AREC",
+   "taille": "petite",
+   "vue": "2026-11-24"
+  },
+  {
+   "entree": "2026-11-25T04:55:28+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "AMERICAS CARMART INC",
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "compagnie",
+     "regle": "faillite",
+     "sens": -1
+    }
+   ],
+   "symbole": "CRMT",
+   "taille": "petite",
+   "vue": "2026-11-24"
+  },
+  {
+   "entree": "2026-11-25T04:55:28+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "AMC Robotics Corp",
+   "note10": 8.8,
+   "note10_sans_bonus": 8.8,
+   "note10_sans_taille": 7.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "AMCI",
+   "taille": "petite",
+   "vue": "2026-11-24"
+  },
+  {
+   "entree": "2026-11-25T04:55:28+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "AMERICAN VANGUARD CORP",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "AVD",
+   "taille": "petite",
+   "vue": "2026-11-24"
+  },
+  {
+   "entree": "2026-11-25T04:55:28+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Lument Finance Trust, Inc.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "LFT",
+   "taille": "petite",
+   "vue": "2026-11-24"
+  },
+  {
+   "entree": "2026-11-25T04:55:28+00:00",
+   "grace_a_la_taille": true,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Momentus Inc.",
+   "note10": 7.5,
+   "note10_sans_bonus": 7.5,
+   "note10_sans_taille": 6.7,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "MNTS",
    "taille": "petite",
    "vue": "2026-11-24"
   }
