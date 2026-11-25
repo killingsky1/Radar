@@ -1,5 +1,60 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-25T13:03:52+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Revenu agricole"
+    ],
+    [
+     "Période",
+     "2025 (données révisées)"
+    ]
+   ],
+   "indicateur": "Revenu agricole",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261124/dq261124a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-11-24T08:30:00-05:00",
+   "periode": "2025 (données révisées)",
+   "resume": "En 2025, le revenu net réalisé des agriculteurs canadiens a augmenté de 211,4 millions de dollars (+2,5 %) pour se chiffrer à 8,6 milliards de dollars, après avoir reculé en 2024 (-33,3 %). Si l'on exclut le cannabis, le revenu net réalisé a progressé de 11,7 % pour atteindre 9,9 milliards de dollars."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261124/dq261124a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-11-24",
+  "official_id": "261124/dq261124a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261124/dq261124a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-11-24",
+  "sha256": "40bf973c66693de558a8c1d44f3151c94c3cb5cd4e781ce2e032da3126842491",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Revenu agricole, 2025 (données révisées)"
+ },
+ {
   "amount_max": 75000000.0,
   "amount_min": 75000000.0,
   "badge": "officiel",
@@ -15506,6 +15561,116 @@
   "title": "Contrat fédéral américain de 951,4 M$ : OPTUM PUBLIC SECTOR SOLUTIONS, INC. (Anciens combattants)"
  },
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-25T13:03:52+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Voyages entre le Canada et les autres pays"
+    ],
+    [
+     "Période",
+     "septembre 2026"
+    ]
+   ],
+   "indicateur": "Voyages entre le Canada et les autres pays",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261123/dq261123b-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-11-23T08:30:00-05:00",
+   "periode": "septembre 2026",
+   "resume": "En septembre, le nombre de voyages de retour des États-Unis effectués par des résidents canadiens a augmenté de 8,7 % d'une année à l'autre, et le nombre de voyages au Canada effectués par des résidents des États-Unis a progressé de 16,7 %."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261123/dq261123b",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-11-23",
+  "official_id": "261123/dq261123b",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261123/dq261123b-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-11-23",
+  "sha256": "7c86084c6b5b5edb6c3c3c3abfe9906ac9d5b60ccf9534b24621a19c9b49ff6c",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Voyages entre le Canada et les autres pays, septembre 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-25T13:03:52+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Statistiques financières trimestrielles des entreprises"
+    ],
+    [
+     "Période",
+     "troisième trimestre de 2026"
+    ]
+   ],
+   "indicateur": "Statistiques financières trimestrielles des entreprises",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261123/dq261123a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-11-23T08:30:00-05:00",
+   "periode": "troisième trimestre de 2026",
+   "resume": "Au troisième trimestre, les sociétés canadiennes ont enregistré un bénéfice d'exploitation de 236,6 milliards de dollars, ce qui représente une baisse de 4,9 milliards de dollars (-2,0 %) par rapport au deuxième trimestre. Cette diminution est attribuable tant aux industries non financières qu'aux industries financières."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261123/dq261123a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-11-23",
+  "official_id": "261123/dq261123a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261123/dq261123a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-11-23",
+  "sha256": "183ab0556dd0b1d9ffecd989a05b497d6e1d3c9f72de59612f8b01d4afca683e",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Statistiques financières trimestrielles des entreprises, troisième trimestre de 2026"
+ },
+ {
   "amount_max": 15000.0,
   "amount_min": 1001.0,
   "badge": "officiel",
@@ -27302,6 +27467,61 @@
   "title": "Lee Zeldin (Administrator, Environmental Protection Agency, niveau II) : rapport de transactions (278-T), 1 transaction"
  },
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-25T13:03:52+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Commerce de détail"
+    ],
+    [
+     "Période",
+     "septembre 2026"
+    ]
+   ],
+   "indicateur": "Commerce de détail",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261120/dq261120a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-11-20T08:30:00-05:00",
+   "periode": "septembre 2026",
+   "resume": "En septembre, les ventes au détail ont progressé de 0,8 % pour atteindre 75,3 milliards de dollars. Les ventes ont progressé dans 5 des 9 sous-secteurs et ce sont les stations-service et marchands de combustibles qui ont affiché les plus fortes hausses."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261120/dq261120a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-11-20",
+  "official_id": "261120/dq261120a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261120/dq261120a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-11-20",
+  "sha256": "bb6b30e1ea523217a8890c71e11f719de374a1b3d91eda88ff79f900e5b4695f",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Commerce de détail, septembre 2026"
+ },
+ {
   "amount_max": 100000.0,
   "amount_min": 50001.0,
   "badge": "officiel",
@@ -31272,6 +31492,116 @@
   "source": "ventes_armes",
   "tickers": [],
   "title": "Vente d'armes à l'étranger : Australie"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-25T13:03:52+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Investissement en construction de bâtiments"
+    ],
+    [
+     "Période",
+     "septembre 2026"
+    ]
+   ],
+   "indicateur": "Investissement en construction de bâtiments",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261119/dq261119b-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-11-19T08:30:00-05:00",
+   "periode": "septembre 2026",
+   "resume": "La valeur totale de l'investissement en construction de bâtiments a enregistré une légère diminution de 54,6 millions de dollars (-0,2 %) en septembre pour s'établir à 23,4 milliards de dollars."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261119/dq261119b",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-11-19",
+  "official_id": "261119/dq261119b",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261119/dq261119b-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-11-19",
+  "sha256": "e4513a93b1f8056a7569648c03910031a339c4ee095531af3e10703ba5d53f99",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Investissement en construction de bâtiments, septembre 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-25T13:03:52+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Indices des prix des produits industriels et des matières brutes"
+    ],
+    [
+     "Période",
+     "octobre 2026"
+    ]
+   ],
+   "indicateur": "Indices des prix des produits industriels et des matières brutes",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261119/dq261119a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-11-19T08:30:00-05:00",
+   "periode": "octobre 2026",
+   "resume": "En octobre, l'Indice des prix des produits industriels a affiché une légère hausse de 0,3 % d'un mois à l'autre et il a progressé de 12,6 % d'une année à l'autre. Parallèlement, l'Indice des prix des matières brutes a reculé de 1,0 % d'un mois à l'autre et il a augmenté de 23,5 % d'une année à l'autre."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261119/dq261119a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-11-19",
+  "official_id": "261119/dq261119a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261119/dq261119a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-11-19",
+  "sha256": "0dcf551488068e5ea23bfb3260b0a8a2e398e940d4c057a590e95dfd441fe047",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Indices des prix des produits industriels et des matières brutes, octobre 2026"
  },
  {
   "amount_max": null,
@@ -35548,6 +35878,61 @@
   "source": "usaspending",
   "tickers": [],
   "title": "Contrat fédéral américain de 155 M$ : WHITING-TURNER CONTRACTING COMPANY, THE (Sécurité intérieure)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-25T13:03:52+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Opérations internationales du Canada en valeurs mobilières"
+    ],
+    [
+     "Période",
+     "septembre 2026"
+    ]
+   ],
+   "indicateur": "Opérations internationales du Canada en valeurs mobilières",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261117/dq261117a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-11-17T08:30:00-05:00",
+   "periode": "septembre 2026",
+   "resume": "Les investisseurs non résidents ont acquis pour 19,5 milliards de dollars de titres canadiens en septembre 2026, surtout des instruments d'emprunt à court terme. Parallèlement, les investisseurs canadiens ont augmenté leurs avoirs en titres étrangers de 13,5 milliards de dollars, principalement par l'achat d'obligations étrangères."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261117/dq261117a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-11-17",
+  "official_id": "261117/dq261117a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261117/dq261117a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-11-17",
+  "sha256": "407c44a479ec74afa6f3f5068190e8a87ce9b8ae7bd9a1ac854cf63e5785228e",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Opérations internationales du Canada en valeurs mobilières, septembre 2026"
  },
  {
   "amount_max": null,
@@ -48557,707 +48942,6 @@
   "source": "contrats_ca_10k",
   "tickers": [],
   "title": "Contrat fédéral de 22,0 M$ : Colt Canada (Défense nationale)"
- },
- {
-  "amount_max": 82955807.13,
-  "amount_min": 82955807.13,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32537957,
-   "amendment_value": "0.0",
-   "contract_date": "2026-06-30",
-   "contract_value": "82955807.13",
-   "description_fr": "Autre équipement",
-   "details": [
-    [
-     "Fournisseur",
-     "InVeris Training Solutions Canada Inc."
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Valeur du contrat",
-     "83,0 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-06-30"
-    ],
-    [
-     "Description",
-     "Autre équipement"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-08333"
-    ]
-   ],
-   "fournisseur": "InVeris Training Solutions Canada Inc.",
-   "instrument_type": "C",
-   "ministere": "Défense nationale",
-   "montant": 82955807.13,
-   "original_value": "82955807.13",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-08333",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "InVeris Training Solutions Canada Inc."
-  },
-  "direction": 0,
-  "entities": [
-   "InVeris Training Solutions Canada Inc.",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-08333",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2026-06-30",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-08333",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-08333",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "2c010f1a909b7508a7e0dd59f8fc8d877bd7ae74386fe5988b94ddb92813db05",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 83,0 M$ : InVeris Training Solutions Canada Inc. (Défense nationale)"
- },
- {
-  "amount_max": 14100874.5,
-  "amount_min": 14100874.5,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32537945,
-   "amendment_value": "14100874.5",
-   "contract_date": "2025-03-18",
-   "contract_value": "41780930.95",
-   "description_fr": "Matières textiles divers, coiffures, parapluies, etc.",
-   "details": [
-    [
-     "Fournisseur",
-     "Logistik Unicorp Inc"
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Hausse",
-     "14,1 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "41,8 M$"
-    ],
-    [
-     "Valeur d'origine",
-     "24,2 M$"
-    ],
-    [
-     "Date du contrat",
-     "2025-03-18"
-    ],
-    [
-     "Description",
-     "Matières textiles divers, coiffures, parapluies, etc."
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-08321"
-    ]
-   ],
-   "fournisseur": "Logistik Unicorp Inc",
-   "instrument_type": "A",
-   "ministere": "Défense nationale",
-   "montant": 14100874.5,
-   "original_value": "24224260.49",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-08321",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "Logistik Unicorp Inc"
-  },
-  "direction": 0,
-  "entities": [
-   "Logistik Unicorp Inc",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-08321",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-08321",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-08321",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "859a61f3755420d90881fc0591986f6203e2fdde207f9108ecdea6b0860dff3d",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral modifié : +14,1 M$ pour Logistik Unicorp Inc (Défense nationale), valeur totale 41,8 M$"
- },
- {
-  "amount_max": 11700000.01,
-  "amount_min": 11700000.01,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32537939,
-   "amendment_value": "11700000.01",
-   "contract_date": "2020-01-29",
-   "contract_value": "15200000.01",
-   "description_fr": "Véhicules automobiles de route-Militaires",
-   "details": [
-    [
-     "Fournisseur",
-     "Marshall Aerospace Canada Inc."
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Hausse",
-     "11,7 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "15,2 M$"
-    ],
-    [
-     "Valeur d'origine",
-     "3,5 M$"
-    ],
-    [
-     "Date du contrat",
-     "2020-01-29"
-    ],
-    [
-     "Description",
-     "Véhicules automobiles de route-Militaires"
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-08315"
-    ]
-   ],
-   "fournisseur": "Marshall Aerospace Canada Inc.",
-   "instrument_type": "A",
-   "ministere": "Défense nationale",
-   "montant": 11700000.01,
-   "original_value": "3500000.0",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-08315",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "Marshall Aerospace Canada Inc."
-  },
-  "direction": 0,
-  "entities": [
-   "Marshall Aerospace Canada Inc.",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-08315",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-08315",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-08315",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "83336abb927330cbaf2555f5ef8da88343fda671485691c7300e28ff0ad27d69",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral modifié : +11,7 M$ pour Marshall Aerospace Canada Inc. (Défense nationale), valeur totale 15,2 M$"
- },
- {
-  "amount_max": 10000000.0,
-  "amount_min": 10000000.0,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32537937,
-   "amendment_value": "0.0",
-   "contract_date": "2020-05-19",
-   "contract_value": "10000000.0",
-   "description_fr": "Services techniques, non spécifiés ailleurs",
-   "details": [
-    [
-     "Fournisseur",
-     "MED-ENG HOLDINGS ULC"
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Valeur du contrat",
-     "10,0 M$"
-    ],
-    [
-     "Date du contrat",
-     "2020-05-19"
-    ],
-    [
-     "Description",
-     "Services techniques, non spécifiés ailleurs"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-08313"
-    ]
-   ],
-   "fournisseur": "MED-ENG HOLDINGS ULC",
-   "instrument_type": "C",
-   "ministere": "Défense nationale",
-   "montant": 10000000.0,
-   "original_value": "2000000.0",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-08313",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "MED-ENG HOLDINGS ULC"
-  },
-  "direction": 0,
-  "entities": [
-   "MED-ENG HOLDINGS ULC",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-08313",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2020-05-19",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-08313",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-08313",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "477213625bc07c7e9dbde5a183e654620dbc3d94a8420139b4047e016a02958d",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 10,0 M$ : MED-ENG HOLDINGS ULC (Défense nationale)"
- },
- {
-  "amount_max": 15933000.0,
-  "amount_min": 15933000.0,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32537685,
-   "amendment_value": "15933000.0",
-   "contract_date": "2024-12-19",
-   "contract_value": "49833000.0",
-   "description_fr": "Services techniques, non spécifiés ailleurs",
-   "details": [
-    [
-     "Fournisseur",
-     "Thales Canada INC."
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Hausse",
-     "15,9 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "49,8 M$"
-    ],
-    [
-     "Valeur d'origine",
-     "33,9 M$"
-    ],
-    [
-     "Date du contrat",
-     "2024-12-19"
-    ],
-    [
-     "Description",
-     "Services techniques, non spécifiés ailleurs"
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-08061"
-    ]
-   ],
-   "fournisseur": "Thales Canada INC.",
-   "instrument_type": "A",
-   "ministere": "Défense nationale",
-   "montant": 15933000.0,
-   "original_value": "33900000.0",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-08061",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "Thales Canada INC."
-  },
-  "direction": 0,
-  "entities": [
-   "Thales Canada INC.",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-08061",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-08061",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-08061",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "2bfae124d49d303420c686c06829917a527973a1c8fa686cdccdbc2e935b033e",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral modifié : +15,9 M$ pour Thales Canada INC. (Défense nationale), valeur totale 49,8 M$"
- },
- {
-  "amount_max": 15171082.67,
-  "amount_min": 15171082.67,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32537684,
-   "amendment_value": "0.0",
-   "contract_date": "2026-07-23",
-   "contract_value": "15171082.67",
-   "description_fr": "Autres pièces du matériel",
-   "details": [
-    [
-     "Fournisseur",
-     "Mobile Valve, A Divison of Source Atlantic"
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Valeur du contrat",
-     "15,2 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-07-23"
-    ],
-    [
-     "Description",
-     "Autres pièces du matériel"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-08060"
-    ]
-   ],
-   "fournisseur": "Mobile Valve, A Divison of Source Atlantic",
-   "instrument_type": "C",
-   "ministere": "Défense nationale",
-   "montant": 15171082.67,
-   "original_value": "15171082.67",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-08060",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "Mobile Valve, A Divison of Source Atlantic"
-  },
-  "direction": 0,
-  "entities": [
-   "Mobile Valve, A Divison of Source Atlantic",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-08060",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2026-07-23",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-08060",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-08060",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "52e6388232ab2995cfdbe1c5a15b62f417991577e6d42584a0042f2e107327f7",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 15,2 M$ : Mobile Valve, A Divison of Source Atlantic (Défense nationale)"
- },
- {
-  "amount_max": 57500000.0,
-  "amount_min": 57500000.0,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32537670,
-   "amendment_value": "57500000.0",
-   "contract_date": "2024-02-15",
-   "contract_value": "172500000.0",
-   "description_fr": "Services techniques, non spécifiés ailleurs",
-   "details": [
-    [
-     "Fournisseur",
-     "General Electric Canada"
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Hausse",
-     "57,5 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "172,5 M$"
-    ],
-    [
-     "Valeur d'origine",
-     "63,2 M$"
-    ],
-    [
-     "Date du contrat",
-     "2024-02-15"
-    ],
-    [
-     "Description",
-     "Services techniques, non spécifiés ailleurs"
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-08046"
-    ]
-   ],
-   "fournisseur": "General Electric Canada",
-   "instrument_type": "A",
-   "ministere": "Défense nationale",
-   "montant": 57500000.0,
-   "original_value": "63250000.0",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-08046",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "General Electric Canada"
-  },
-  "direction": 0,
-  "entities": [
-   "General Electric Canada",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-08046",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-08046",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-08046",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "99a13d5411b4fa85de917237fdef008786180efc769e770114af073fa0784fdb",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral modifié : +57,5 M$ pour General Electric Canada (Défense nationale), valeur totale 172,5 M$"
  },
  {
   "amount_max": null,
