@@ -1,5 +1,90 @@
 [
  {
+  "amount_max": 45000.0,
+  "amount_min": 3003.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:34+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "senat",
+   "circonscription": null,
+   "elu": "Rand Paul",
+   "lecture_complete": true,
+   "nom_sec": "NVIDIA CORP",
+   "rapport": "99dc7269-2f99-4c8b-8d0c-a3a91328af84",
+   "recoupements": {
+    "date_de_depot": true,
+    "nom_lu": true
+   },
+   "transactions": [
+    {
+     "actif": "NVIDIA Corporation - Common Stock",
+     "commentaire": null,
+     "date": "2026-11-05",
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "Self",
+     "type_officiel": "Purchase"
+    },
+    {
+     "actif": "NVIDIA Corporation - Common Stock",
+     "commentaire": null,
+     "date": "2026-11-07",
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "Self",
+     "type_officiel": "Purchase"
+    },
+    {
+     "actif": "NVIDIA Corporation - Common Stock",
+     "commentaire": null,
+     "date": "2026-11-09",
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "Self",
+     "type_officiel": "Purchase"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Rand Paul",
+   "NVIDIA CORP"
+  ],
+  "id": "senat_ptr:99dc7269-2f99-4c8b-8d0c-a3a91328af84:NVDA:P",
+  "kind": "achat_elu",
+  "notes": [],
+  "occurred_on": "2026-11-05",
+  "official_id": "99dc7269-2f99-4c8b-8d0c-a3a91328af84:NVDA:P",
+  "official_url": "https://efdsearch.senate.gov/search/view/ptr/99dc7269-2f99-4c8b-8d0c-a3a91328af84/",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-25",
+  "sha256": "e4db8cfc1bed0dbce870dff143b4c8fe32aba6645dbffc36e1f2518074e09a3c",
+  "source": "senat_ptr",
+  "tickers": [
+   "NVDA"
+  ],
+  "title": "Rand Paul (Sénat) achète NVDA (3 transactions)"
+ },
+ {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -94,6 +179,1199 @@
   "source": "registre_federal",
   "tickers": [],
   "title": "Mémorandum présidentiel : Capital Sentence Enforcement and Pursuit of Justice for Victims of Heinous Crimes; Efforts To Expedite (Memorandum of November 23, 2026)"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "MO03",
+   "elu": "Robert For Onder",
+   "lecture_complete": true,
+   "nom_sec": "VERIZON COMMUNICATIONS INC",
+   "rapport": "20036908",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Verizon Communications Inc. Common Stock (VZ) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-29",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Robert For Onder",
+   "VERIZON COMMUNICATIONS INC"
+  ],
+  "id": "chambre_ptr:20036908:VZ:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-29",
+  "official_id": "20036908:VZ:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036908.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-24",
+  "sha256": "f4d94100c00600706b8ff3879121df6324cbb07b3543e19913fca3e0c50ab1cb",
+  "source": "chambre_ptr",
+  "tickers": [
+   "VZ"
+  ],
+  "title": "Robert For Onder (Chambre, MO03) vend VZ"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "MO03",
+   "elu": "Robert For Onder",
+   "lecture_complete": true,
+   "nom_sec": "PROCTER & GAMBLE Co",
+   "rapport": "20036908",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Procter & Gamble Company (PG) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-29",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Robert For Onder",
+   "PROCTER & GAMBLE Co"
+  ],
+  "id": "chambre_ptr:20036908:PG:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-29",
+  "official_id": "20036908:PG:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036908.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-24",
+  "sha256": "f4d94100c00600706b8ff3879121df6324cbb07b3543e19913fca3e0c50ab1cb",
+  "source": "chambre_ptr",
+  "tickers": [
+   "PG"
+  ],
+  "title": "Robert For Onder (Chambre, MO03) vend PG"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "MO03",
+   "elu": "Robert For Onder",
+   "lecture_complete": true,
+   "nom_sec": "PEPSICO INC",
+   "rapport": "20036908",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "PepsiCo, Inc. - Common Stock (PEP) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-29",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Robert For Onder",
+   "PEPSICO INC"
+  ],
+  "id": "chambre_ptr:20036908:PEP:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-29",
+  "official_id": "20036908:PEP:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036908.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-24",
+  "sha256": "f4d94100c00600706b8ff3879121df6324cbb07b3543e19913fca3e0c50ab1cb",
+  "source": "chambre_ptr",
+  "tickers": [
+   "PEP"
+  ],
+  "title": "Robert For Onder (Chambre, MO03) vend PEP"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "MO03",
+   "elu": "Robert For Onder",
+   "lecture_complete": true,
+   "nom_sec": "Medtronic plc",
+   "rapport": "20036908",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Medtronic plc. Ordinary Shares (MDT) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-29",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Robert For Onder",
+   "Medtronic plc"
+  ],
+  "id": "chambre_ptr:20036908:MDT:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-29",
+  "official_id": "20036908:MDT:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036908.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-24",
+  "sha256": "f4d94100c00600706b8ff3879121df6324cbb07b3543e19913fca3e0c50ab1cb",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MDT"
+  ],
+  "title": "Robert For Onder (Chambre, MO03) vend MDT"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "MO03",
+   "elu": "Robert For Onder",
+   "lecture_complete": true,
+   "nom_sec": "Mondelez International, Inc.",
+   "rapport": "20036908",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Mondelez International, Inc. - Class A Common Stock (MDLZ) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-29",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Robert For Onder",
+   "Mondelez International, Inc."
+  ],
+  "id": "chambre_ptr:20036908:MDLZ:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-29",
+  "official_id": "20036908:MDLZ:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036908.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-24",
+  "sha256": "f4d94100c00600706b8ff3879121df6324cbb07b3543e19913fca3e0c50ab1cb",
+  "source": "chambre_ptr",
+  "tickers": [
+   "MDLZ"
+  ],
+  "title": "Robert For Onder (Chambre, MO03) vend MDLZ"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "MO03",
+   "elu": "Robert For Onder",
+   "lecture_complete": true,
+   "nom_sec": "HP INC",
+   "rapport": "20036908",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "HP Inc. Common Stock (HPQ) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-29",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Robert For Onder",
+   "HP INC"
+  ],
+  "id": "chambre_ptr:20036908:HPQ:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-29",
+  "official_id": "20036908:HPQ:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036908.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-24",
+  "sha256": "f4d94100c00600706b8ff3879121df6324cbb07b3543e19913fca3e0c50ab1cb",
+  "source": "chambre_ptr",
+  "tickers": [
+   "HPQ"
+  ],
+  "title": "Robert For Onder (Chambre, MO03) vend HPQ"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "MO03",
+   "elu": "Robert For Onder",
+   "lecture_complete": true,
+   "nom_sec": "Duke Energy CORP",
+   "rapport": "20036908",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Duke Energy Corporation (DUK) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-29",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Robert For Onder",
+   "Duke Energy CORP"
+  ],
+  "id": "chambre_ptr:20036908:DUK:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-29",
+  "official_id": "20036908:DUK:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036908.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-24",
+  "sha256": "f4d94100c00600706b8ff3879121df6324cbb07b3543e19913fca3e0c50ab1cb",
+  "source": "chambre_ptr",
+  "tickers": [
+   "DUK"
+  ],
+  "title": "Robert For Onder (Chambre, MO03) vend DUK"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "MO03",
+   "elu": "Robert For Onder",
+   "lecture_complete": true,
+   "nom_sec": "Walt Disney Co",
+   "rapport": "20036908",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Walt Disney Company (DIS) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-29",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Robert For Onder",
+   "Walt Disney Co"
+  ],
+  "id": "chambre_ptr:20036908:DIS:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-29",
+  "official_id": "20036908:DIS:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036908.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-24",
+  "sha256": "f4d94100c00600706b8ff3879121df6324cbb07b3543e19913fca3e0c50ab1cb",
+  "source": "chambre_ptr",
+  "tickers": [
+   "DIS"
+  ],
+  "title": "Robert For Onder (Chambre, MO03) vend DIS"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "MO03",
+   "elu": "Robert For Onder",
+   "lecture_complete": true,
+   "nom_sec": "COMCAST CORP",
+   "rapport": "20036908",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Comcast Corporation - Class A Common Stock (CMCSA) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-29",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Robert For Onder",
+   "COMCAST CORP"
+  ],
+  "id": "chambre_ptr:20036908:CMCSA:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-29",
+  "official_id": "20036908:CMCSA:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036908.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-24",
+  "sha256": "f4d94100c00600706b8ff3879121df6324cbb07b3543e19913fca3e0c50ab1cb",
+  "source": "chambre_ptr",
+  "tickers": [
+   "CMCSA"
+  ],
+  "title": "Robert For Onder (Chambre, MO03) vend CMCSA"
+ },
+ {
+  "amount_max": 15000.0,
+  "amount_min": 1001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "MO03",
+   "elu": "Robert For Onder",
+   "lecture_complete": true,
+   "nom_sec": "AMERIPRISE FINANCIAL INC",
+   "rapport": "20036908",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Ameriprise Financial, Inc. Common Stock (AMP) [ST]",
+     "avis": "2026-10-29",
+     "date": "2026-10-29",
+     "description": null,
+     "montant": "$1,001 - $15,000",
+     "partielle": false,
+     "proprietaire": "",
+     "type_officiel": "S"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Robert For Onder",
+   "AMERIPRISE FINANCIAL INC"
+  ],
+  "id": "chambre_ptr:20036908:AMP:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-10-29",
+  "official_id": "20036908:AMP:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036908.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-24",
+  "sha256": "f4d94100c00600706b8ff3879121df6324cbb07b3543e19913fca3e0c50ab1cb",
+  "source": "chambre_ptr",
+  "tickers": [
+   "AMP"
+  ],
+  "title": "Robert For Onder (Chambre, MO03) vend AMP"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "Seagate Technology Holdings plc",
+   "rapport": "20036875",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Seagate Technology Holdings PLC - Ordinary Shares (STX) [ST]",
+     "avis": "2026-11-19",
+     "date": "2026-11-10",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "Seagate Technology Holdings plc"
+  ],
+  "id": "chambre_ptr:20036875:STX:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-11-10",
+  "official_id": "20036875:STX:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036875.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-24",
+  "sha256": "a2fabd30946afb00c13c2d1e506948d22b6ed39e480b4c78d5e3bdf055213bcc",
+  "source": "chambre_ptr",
+  "tickers": [
+   "STX"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend STX"
+ },
+ {
+  "amount_max": 450000.0,
+  "amount_min": 200003.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "ROCKWELL AUTOMATION, INC",
+   "rapport": "20036875",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Rockwell Automation, Inc. Common Stock (ROK) [ST]",
+     "avis": "2026-11-19",
+     "date": "2026-11-17",
+     "description": null,
+     "montant": "$50,001 - $100,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    },
+    {
+     "actif": "Rockwell Automation, Inc. Common Stock (ROK) [ST]",
+     "avis": "2026-11-19",
+     "date": "2026-11-17",
+     "description": null,
+     "montant": "$50,001 - $100,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    },
+    {
+     "actif": "Rockwell Automation, Inc. Common Stock (ROK) [ST]",
+     "avis": "2026-11-19",
+     "date": "2026-11-16",
+     "description": null,
+     "montant": "$100,001 - $250,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "ROCKWELL AUTOMATION, INC"
+  ],
+  "id": "chambre_ptr:20036875:ROK:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-11-16",
+  "official_id": "20036875:ROK:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036875.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-24",
+  "sha256": "a2fabd30946afb00c13c2d1e506948d22b6ed39e480b4c78d5e3bdf055213bcc",
+  "source": "chambre_ptr",
+  "tickers": [
+   "ROK"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend ROK (3 transactions) — compte conjoint"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "Phillips 66",
+   "rapport": "20036875",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Phillips 66 Common Stock (PSX) [ST]",
+     "avis": "2026-11-19",
+     "date": "2026-11-10",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "Phillips 66"
+  ],
+  "id": "chambre_ptr:20036875:PSX:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-11-10",
+  "official_id": "20036875:PSX:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036875.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-24",
+  "sha256": "a2fabd30946afb00c13c2d1e506948d22b6ed39e480b4c78d5e3bdf055213bcc",
+  "source": "chambre_ptr",
+  "tickers": [
+   "PSX"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend PSX — compte conjoint"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "INTEL CORP",
+   "rapport": "20036875",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Intel Corporation - Common Stock (INTC) [ST]",
+     "avis": "2026-11-19",
+     "date": "2026-11-09",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "INTEL CORP"
+  ],
+  "id": "chambre_ptr:20036875:INTC:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-11-09",
+  "official_id": "20036875:INTC:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036875.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-24",
+  "sha256": "a2fabd30946afb00c13c2d1e506948d22b6ed39e480b4c78d5e3bdf055213bcc",
+  "source": "chambre_ptr",
+  "tickers": [
+   "INTC"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend INTC — compte conjoint"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "Eaton Corp plc",
+   "rapport": "20036875",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Eaton Corporation, PLC Ordinary Shares (ETN) [ST]",
+     "avis": "2026-11-19",
+     "date": "2026-11-10",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "Eaton Corp plc"
+  ],
+  "id": "chambre_ptr:20036875:ETN:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-11-10",
+  "official_id": "20036875:ETN:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036875.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-24",
+  "sha256": "a2fabd30946afb00c13c2d1e506948d22b6ed39e480b4c78d5e3bdf055213bcc",
+  "source": "chambre_ptr",
+  "tickers": [
+   "ETN"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend ETN"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "CUMMINS INC",
+   "rapport": "20036875",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "Cummins Inc. Common Stock (CMI) [ST]",
+     "avis": "2026-11-19",
+     "date": "2026-11-16",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "CUMMINS INC"
+  ],
+  "id": "chambre_ptr:20036875:CMI:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-11-16",
+  "official_id": "20036875:CMI:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036875.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-24",
+  "sha256": "a2fabd30946afb00c13c2d1e506948d22b6ed39e480b4c78d5e3bdf055213bcc",
+  "source": "chambre_ptr",
+  "tickers": [
+   "CMI"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend CMI — compte conjoint"
+ },
+ {
+  "amount_max": 50000.0,
+  "amount_min": 15001.0,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montant_coherent": true,
+   "montants_officiels": true,
+   "nom_coherent_avec_symbole": true,
+   "recoupements_index_document": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_cote_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T00:38:35+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "chambre": "chambre",
+   "circonscription": "OK01",
+   "elu": "Kevin Hern",
+   "lecture_complete": true,
+   "nom_sec": "ASML HOLDING NV",
+   "rapport": "20036875",
+   "recoupements": {
+    "circonscription": true,
+    "nom": true,
+    "numero": true
+   },
+   "transactions": [
+    {
+     "actif": "ASML Holding N.V. - New York Registry Shares (ASML) [ST]",
+     "avis": "2026-11-19",
+     "date": "2026-11-09",
+     "description": null,
+     "montant": "$15,001 - $50,000",
+     "partielle": true,
+     "proprietaire": "JT",
+     "type_officiel": "S (partial)"
+    }
+   ]
+  },
+  "direction": -1,
+  "entities": [
+   "Kevin Hern",
+   "ASML HOLDING NV"
+  ],
+  "id": "chambre_ptr:20036875:ASML:S",
+  "kind": "vente_elu",
+  "notes": [],
+  "occurred_on": "2026-11-09",
+  "official_id": "20036875:ASML:S",
+  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036875.pdf",
+  "parser_version": "elus-1",
+  "published_on": "2026-11-24",
+  "sha256": "a2fabd30946afb00c13c2d1e506948d22b6ed39e480b4c78d5e3bdf055213bcc",
+  "source": "chambre_ptr",
+  "tickers": [
+   "ASML"
+  ],
+  "title": "Kevin Hern (Chambre, OK01) vend ASML — compte conjoint"
  },
  {
   "amount_max": 15000.0,
@@ -37151,322 +38429,6 @@
   "title": "FDA : nouveau médicament approuvé, WILSERDLY (giredestran), de GENENTECH INC"
  },
  {
-  "amount_max": 30000.0,
-  "amount_min": 2002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-17T21:56:02+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "FL19",
-   "elu": "Byron Donalds",
-   "lecture_complete": true,
-   "nom_sec": "Zoetis Inc.",
-   "rapport": "20035811",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Zoetis Inc. Class A Common Stock (ZTS) [ST]",
-     "avis": "2026-11-01",
-     "date": "2026-10-02",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "SP",
-     "type_officiel": "S"
-    },
-    {
-     "actif": "Zoetis Inc. Class A Common Stock (ZTS) [ST]",
-     "avis": "2026-11-01",
-     "date": "2026-10-02",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Byron Donalds",
-   "Zoetis Inc."
-  ],
-  "id": "chambre_ptr:20035811:ZTS:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-10-02",
-  "official_id": "20035811:ZTS:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035811.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-16",
-  "sha256": "22b8f3321c5b2327cbf8494e6ad9d88d2f4f918ce21d84286bf2f3895dd93562",
-  "source": "chambre_ptr",
-  "tickers": [
-   "ZTS"
-  ],
-  "title": "Byron Donalds (Chambre, FL19) vend ZTS (2 transactions) — conjoint·e, l'élu·e"
- },
- {
-  "amount_max": 30000.0,
-  "amount_min": 2002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-17T21:56:02+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "FL19",
-   "elu": "Byron Donalds",
-   "lecture_complete": true,
-   "nom_sec": "NETFLIX INC",
-   "rapport": "20035811",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Netflix, Inc. - Common Stock (NFLX) [ST]",
-     "avis": "2026-11-01",
-     "date": "2026-10-02",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "SP",
-     "type_officiel": "S"
-    },
-    {
-     "actif": "Netflix, Inc. - Common Stock (NFLX) [ST]",
-     "avis": "2026-11-01",
-     "date": "2026-10-02",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Byron Donalds",
-   "NETFLIX INC"
-  ],
-  "id": "chambre_ptr:20035811:NFLX:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-10-02",
-  "official_id": "20035811:NFLX:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035811.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-16",
-  "sha256": "22b8f3321c5b2327cbf8494e6ad9d88d2f4f918ce21d84286bf2f3895dd93562",
-  "source": "chambre_ptr",
-  "tickers": [
-   "NFLX"
-  ],
-  "title": "Byron Donalds (Chambre, FL19) vend NFLX (2 transactions) — conjoint·e, l'élu·e"
- },
- {
-  "amount_max": 30000.0,
-  "amount_min": 2002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-17T21:56:02+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "FL19",
-   "elu": "Byron Donalds",
-   "lecture_complete": true,
-   "nom_sec": "Interactive Brokers Group, Inc.",
-   "rapport": "20035811",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Interactive Brokers Group, Inc. - Class A Common Stock (IBKR) [ST]",
-     "avis": "2026-11-01",
-     "date": "2026-10-02",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "SP",
-     "type_officiel": "P"
-    },
-    {
-     "actif": "Interactive Brokers Group, Inc. - Class A Common Stock (IBKR) [ST]",
-     "avis": "2026-11-01",
-     "date": "2026-10-02",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Byron Donalds",
-   "Interactive Brokers Group, Inc."
-  ],
-  "id": "chambre_ptr:20035811:IBKR:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-10-02",
-  "official_id": "20035811:IBKR:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035811.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-16",
-  "sha256": "22b8f3321c5b2327cbf8494e6ad9d88d2f4f918ce21d84286bf2f3895dd93562",
-  "source": "chambre_ptr",
-  "tickers": [
-   "IBKR"
-  ],
-  "title": "Byron Donalds (Chambre, FL19) achète IBKR (2 transactions) — conjoint·e, l'élu·e"
- },
- {
-  "amount_max": 30000.0,
-  "amount_min": 2002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-17T21:56:02+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "FL19",
-   "elu": "Byron Donalds",
-   "lecture_complete": true,
-   "nom_sec": "Autodesk, Inc.",
-   "rapport": "20035811",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Autodesk, Inc. - Common Stock (ADSK) [ST]",
-     "avis": "2026-11-01",
-     "date": "2026-10-02",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    },
-    {
-     "actif": "Autodesk, Inc. - Common Stock (ADSK) [ST]",
-     "avis": "2026-11-01",
-     "date": "2026-10-02",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "SP",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Byron Donalds",
-   "Autodesk, Inc."
-  ],
-  "id": "chambre_ptr:20035811:ADSK:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-10-02",
-  "official_id": "20035811:ADSK:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035811.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-16",
-  "sha256": "22b8f3321c5b2327cbf8494e6ad9d88d2f4f918ce21d84286bf2f3895dd93562",
-  "source": "chambre_ptr",
-  "tickers": [
-   "ADSK"
-  ],
-  "title": "Byron Donalds (Chambre, FL19) vend ADSK (2 transactions) — conjoint·e, l'élu·e"
- },
- {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -38130,351 +39092,6 @@
   "source": "fda",
   "tickers": [],
   "title": "FDA : nouveau médicament approuvé, KLYGEFA (gefurulimab-gaks), de ALEXION PHARM"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-16T23:03:23+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "AR02",
-   "elu": "James French Hill",
-   "lecture_complete": true,
-   "nom_sec": "JBG SMITH Properties",
-   "rapport": "20035807",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "JBG SMITH Properties Common Shares (JBGS) [ST]",
-     "avis": "2026-11-09",
-     "date": "2026-11-09",
-     "description": "FULL-LIQUIDATION.",
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "James French Hill",
-   "JBG SMITH Properties"
-  ],
-  "id": "chambre_ptr:20035807:JBGS:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-11-09",
-  "official_id": "20035807:JBGS:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035807.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-13",
-  "sha256": "f2db923ade94a2a311ab92d5060edcaad93a9be826109aa8e0088646d070460c",
-  "source": "chambre_ptr",
-  "tickers": [
-   "JBGS"
-  ],
-  "title": "James French Hill (Chambre, AR02) vend JBGS"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-16T23:03:22+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "IL01",
-   "elu": "Jonathan Jackson",
-   "lecture_complete": true,
-   "nom_sec": "Sphere Entertainment Co.",
-   "rapport": "20035757",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Sphere Entertainment Co. Class A Common Stock (SPHR) [ST]",
-     "avis": "2026-11-02",
-     "date": "2026-10-12",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "SP",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Jonathan Jackson",
-   "Sphere Entertainment Co."
-  ],
-  "id": "chambre_ptr:20035757:SPHR:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-10-12",
-  "official_id": "20035757:SPHR:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035757.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-13",
-  "sha256": "a9a6edf044854217a3a822d7d4fb9f9a2c863b4f18d7625caf53d9e5964255d2",
-  "source": "chambre_ptr",
-  "tickers": [
-   "SPHR"
-  ],
-  "title": "Jonathan Jackson (Chambre, IL01) vend SPHR — conjoint·e"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-16T23:03:22+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "IL01",
-   "elu": "Jonathan Jackson",
-   "lecture_complete": true,
-   "nom_sec": "ESTEE LAUDER COMPANIES INC",
-   "rapport": "20035757",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Estee Lauder Companies, Inc. (EL) [ST]",
-     "avis": "2026-11-02",
-     "date": "2026-10-12",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "SP",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Jonathan Jackson",
-   "ESTEE LAUDER COMPANIES INC"
-  ],
-  "id": "chambre_ptr:20035757:EL:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-10-12",
-  "official_id": "20035757:EL:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035757.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-13",
-  "sha256": "a9a6edf044854217a3a822d7d4fb9f9a2c863b4f18d7625caf53d9e5964255d2",
-  "source": "chambre_ptr",
-  "tickers": [
-   "EL"
-  ],
-  "title": "Jonathan Jackson (Chambre, IL01) achète EL — conjoint·e"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-16T23:03:22+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "IL01",
-   "elu": "Jonathan Jackson",
-   "lecture_complete": true,
-   "nom_sec": "Datadog, Inc.",
-   "rapport": "20035757",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Datadog, Inc. - Class A Common Stock (DDOG) [ST]",
-     "avis": "2026-11-02",
-     "date": "2026-10-22",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "Jonathan Jackson",
-   "Datadog, Inc."
-  ],
-  "id": "chambre_ptr:20035757:DDOG:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-10-22",
-  "official_id": "20035757:DDOG:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035757.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-13",
-  "sha256": "a9a6edf044854217a3a822d7d4fb9f9a2c863b4f18d7625caf53d9e5964255d2",
-  "source": "chambre_ptr",
-  "tickers": [
-   "DDOG"
-  ],
-  "title": "Jonathan Jackson (Chambre, IL01) achète DDOG"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-16T23:03:22+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "IL01",
-   "elu": "Jonathan Jackson",
-   "lecture_complete": true,
-   "nom_sec": "BP PLC",
-   "rapport": "20035757",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "BP p.l.c. Common Stock (BP) [ST]",
-     "avis": "2026-11-02",
-     "date": "2026-10-01",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "JT",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Jonathan Jackson",
-   "BP PLC"
-  ],
-  "id": "chambre_ptr:20035757:BP:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-10-01",
-  "official_id": "20035757:BP:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035757.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-13",
-  "sha256": "a9a6edf044854217a3a822d7d4fb9f9a2c863b4f18d7625caf53d9e5964255d2",
-  "source": "chambre_ptr",
-  "tickers": [
-   "BP"
-  ],
-  "title": "Jonathan Jackson (Chambre, IL01) vend BP — compte conjoint"
  },
  {
   "amount_max": null,
@@ -39473,677 +40090,6 @@
   "source": "nhtsa",
   "tickers": [],
   "title": "Rappel de Toyota Motor Engineering & Manufacturing : 314 029 véhicules — « Front Passenger Air Bag Inflator May Rupture »"
- },
- {
-  "amount_max": 30000.0,
-  "amount_min": 2002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-13T18:30:04+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH02",
-   "elu": "David J. Taylor",
-   "lecture_complete": true,
-   "nom_sec": "VISA INC.",
-   "rapport": "20035831",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Visa Inc. (V) [ST]",
-     "avis": "2026-11-12",
-     "date": "2026-11-03",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    },
-    {
-     "actif": "Visa Inc. (V) [ST]",
-     "avis": "2026-11-12",
-     "date": "2026-11-03",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "David J. Taylor",
-   "VISA INC."
-  ],
-  "id": "chambre_ptr:20035831:V:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-11-03",
-  "official_id": "20035831:V:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035831.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-12",
-  "sha256": "771a587f33b45667cdc15d6199266d92fcc00c568366d07108295318e03e6e0f",
-  "source": "chambre_ptr",
-  "tickers": [
-   "V"
-  ],
-  "title": "David J. Taylor (Chambre, OH02) vend V (2 transactions)"
- },
- {
-  "amount_max": 30000.0,
-  "amount_min": 2002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-13T18:30:04+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH02",
-   "elu": "David J. Taylor",
-   "lecture_complete": true,
-   "nom_sec": "AT&T INC.",
-   "rapport": "20035831",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "AT&T Inc. (T) [ST]",
-     "avis": "2026-11-12",
-     "date": "2026-11-03",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    },
-    {
-     "actif": "AT&T Inc. (T) [ST]",
-     "avis": "2026-11-12",
-     "date": "2026-11-03",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "David J. Taylor",
-   "AT&T INC."
-  ],
-  "id": "chambre_ptr:20035831:T:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-11-03",
-  "official_id": "20035831:T:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035831.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-12",
-  "sha256": "771a587f33b45667cdc15d6199266d92fcc00c568366d07108295318e03e6e0f",
-  "source": "chambre_ptr",
-  "tickers": [
-   "T"
-  ],
-  "title": "David J. Taylor (Chambre, OH02) achète T (2 transactions)"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-13T18:30:04+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH02",
-   "elu": "David J. Taylor",
-   "lecture_complete": true,
-   "nom_sec": "PROCTER & GAMBLE Co",
-   "rapport": "20035831",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Procter & Gamble Company (PG) [ST]",
-     "avis": "2026-11-12",
-     "date": "2026-11-05",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "David J. Taylor",
-   "PROCTER & GAMBLE Co"
-  ],
-  "id": "chambre_ptr:20035831:PG:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-11-05",
-  "official_id": "20035831:PG:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035831.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-12",
-  "sha256": "771a587f33b45667cdc15d6199266d92fcc00c568366d07108295318e03e6e0f",
-  "source": "chambre_ptr",
-  "tickers": [
-   "PG"
-  ],
-  "title": "David J. Taylor (Chambre, OH02) vend PG"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-13T18:30:04+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH02",
-   "elu": "David J. Taylor",
-   "lecture_complete": true,
-   "nom_sec": "LAM RESEARCH CORP",
-   "rapport": "20035831",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Lam Research Corporation - Common Stock (LRCX) [ST]",
-     "avis": "2026-11-12",
-     "date": "2026-11-05",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "David J. Taylor",
-   "LAM RESEARCH CORP"
-  ],
-  "id": "chambre_ptr:20035831:LRCX:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-11-05",
-  "official_id": "20035831:LRCX:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035831.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-12",
-  "sha256": "771a587f33b45667cdc15d6199266d92fcc00c568366d07108295318e03e6e0f",
-  "source": "chambre_ptr",
-  "tickers": [
-   "LRCX"
-  ],
-  "title": "David J. Taylor (Chambre, OH02) achète LRCX"
- },
- {
-  "amount_max": 30000.0,
-  "amount_min": 2002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-13T18:30:04+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH02",
-   "elu": "David J. Taylor",
-   "lecture_complete": true,
-   "nom_sec": "ELI LILLY & Co",
-   "rapport": "20035831",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Eli Lilly and Company Common Stock (LLY) [ST]",
-     "avis": "2026-11-12",
-     "date": "2026-11-03",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    },
-    {
-     "actif": "Eli Lilly and Company Common Stock (LLY) [ST]",
-     "avis": "2026-11-12",
-     "date": "2026-11-03",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "David J. Taylor",
-   "ELI LILLY & Co"
-  ],
-  "id": "chambre_ptr:20035831:LLY:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-11-03",
-  "official_id": "20035831:LLY:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035831.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-12",
-  "sha256": "771a587f33b45667cdc15d6199266d92fcc00c568366d07108295318e03e6e0f",
-  "source": "chambre_ptr",
-  "tickers": [
-   "LLY"
-  ],
-  "title": "David J. Taylor (Chambre, OH02) vend LLY (2 transactions)"
- },
- {
-  "amount_max": 30000.0,
-  "amount_min": 2002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-13T18:30:04+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH02",
-   "elu": "David J. Taylor",
-   "lecture_complete": true,
-   "nom_sec": "KROGER CO",
-   "rapport": "20035831",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Kroger Company (KR) [ST]",
-     "avis": "2026-11-12",
-     "date": "2026-11-03",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    },
-    {
-     "actif": "Kroger Company (KR) [ST]",
-     "avis": "2026-11-12",
-     "date": "2026-11-03",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "David J. Taylor",
-   "KROGER CO"
-  ],
-  "id": "chambre_ptr:20035831:KR:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-11-03",
-  "official_id": "20035831:KR:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035831.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-12",
-  "sha256": "771a587f33b45667cdc15d6199266d92fcc00c568366d07108295318e03e6e0f",
-  "source": "chambre_ptr",
-  "tickers": [
-   "KR"
-  ],
-  "title": "David J. Taylor (Chambre, OH02) vend KR (2 transactions)"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-13T18:30:04+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH02",
-   "elu": "David J. Taylor",
-   "lecture_complete": true,
-   "nom_sec": "Installed Building Products, Inc.",
-   "rapport": "20035831",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Installed Building Products, Inc. Common Stock (IBP) [ST]",
-     "avis": "2026-11-12",
-     "date": "2026-11-03",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "David J. Taylor",
-   "Installed Building Products, Inc."
-  ],
-  "id": "chambre_ptr:20035831:IBP:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-11-03",
-  "official_id": "20035831:IBP:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035831.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-12",
-  "sha256": "771a587f33b45667cdc15d6199266d92fcc00c568366d07108295318e03e6e0f",
-  "source": "chambre_ptr",
-  "tickers": [
-   "IBP"
-  ],
-  "title": "David J. Taylor (Chambre, OH02) achète IBP"
- },
- {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-13T18:30:04+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH02",
-   "elu": "David J. Taylor",
-   "lecture_complete": true,
-   "nom_sec": "HOME DEPOT, INC.",
-   "rapport": "20035831",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Home Depot, Inc. (HD) [ST]",
-     "avis": "2026-11-12",
-     "date": "2026-11-05",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "S"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "David J. Taylor",
-   "HOME DEPOT, INC."
-  ],
-  "id": "chambre_ptr:20035831:HD:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-11-05",
-  "official_id": "20035831:HD:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035831.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-12",
-  "sha256": "771a587f33b45667cdc15d6199266d92fcc00c568366d07108295318e03e6e0f",
-  "source": "chambre_ptr",
-  "tickers": [
-   "HD"
-  ],
-  "title": "David J. Taylor (Chambre, OH02) vend HD"
- },
- {
-  "amount_max": 30000.0,
-  "amount_min": 2002.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-13T18:30:04+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH02",
-   "elu": "David J. Taylor",
-   "lecture_complete": true,
-   "nom_sec": "Alphabet Inc.",
-   "rapport": "20035831",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Alphabet Inc. - Class A Common Stock (GOOGL) [ST]",
-     "avis": "2026-11-12",
-     "date": "2026-11-03",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    },
-    {
-     "actif": "Alphabet Inc. - Class A Common Stock (GOOGL) [ST]",
-     "avis": "2026-11-12",
-     "date": "2026-11-03",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": false,
-     "proprietaire": "",
-     "type_officiel": "P"
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "David J. Taylor",
-   "Alphabet Inc."
-  ],
-  "id": "chambre_ptr:20035831:GOOGL:P",
-  "kind": "achat_elu",
-  "notes": [],
-  "occurred_on": "2026-11-03",
-  "official_id": "20035831:GOOGL:P",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035831.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-12",
-  "sha256": "771a587f33b45667cdc15d6199266d92fcc00c568366d07108295318e03e6e0f",
-  "source": "chambre_ptr",
-  "tickers": [
-   "GOOGL"
-  ],
-  "title": "David J. Taylor (Chambre, OH02) achète GOOGL (2 transactions)"
  },
  {
   "amount_max": null,

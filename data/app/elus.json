@@ -910,6 +910,40 @@
     }
    ]
   },
+  "Rand Paul": {
+   "chef": null,
+   "cle": "senat:PAUL:KY",
+   "comites": [
+    {
+     "nom": "Committee on Foreign Relations",
+     "role": null
+    },
+    {
+     "nom": "Committee on Homeland Security and Governmental Affairs",
+     "role": "Chairman"
+    },
+    {
+     "nom": "Committee on Health, Education, Labor, and Pensions",
+     "role": null
+    },
+    {
+     "nom": "Committee on Small Business and Entrepreneurship",
+     "role": null
+    }
+   ],
+   "nom_officiel": "Rand Paul",
+   "votes_hr7008": [
+    {
+     "chambre": "Senate",
+     "date": "2026-09-30",
+     "numero": "253",
+     "question": "On Cloture on the Motion to Proceed H.R. 7008",
+     "sujet": "clôture pour ouvrir le débat (60 voix requises)",
+     "vote": "Yea",
+     "vote_fr": "pour"
+    }
+   ]
+  },
   "Richard Blumenthal": {
    "chef": null,
    "cle": "senat:BLUMENTHAL:CT",
@@ -1020,6 +1054,45 @@
     }
    ],
    "nom_officiel": "Robert E. Latta",
+   "votes_hr7008": [
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "279",
+     "question": "On Motion to Recommit",
+     "sujet": "motion de renvoi en comité (procédure)",
+     "vote": "Nay",
+     "vote_fr": "contre"
+    },
+    {
+     "chambre": "House",
+     "date": "2026-07-22",
+     "numero": "280",
+     "question": "On Passage",
+     "sujet": "adoption du projet de loi",
+     "vote": "Yea",
+     "vote_fr": "pour"
+    }
+   ]
+  },
+  "Robert For Onder": {
+   "chef": null,
+   "cle": "chambre:MO03",
+   "comites": [
+    {
+     "nom": "Committee on Education and Workforce",
+     "role": null
+    },
+    {
+     "nom": "Committee on the Judiciary",
+     "role": null
+    },
+    {
+     "nom": "Committee on Transportation and Infrastructure",
+     "role": null
+    }
+   ],
+   "nom_officiel": "Robert F. Onder, Jr.",
    "votes_hr7008": [
     {
      "chambre": "House",
@@ -1222,7 +1295,7 @@
  "projet": {
   "date": "2026-09-30",
   "etape": "bloqué au Sénat (clôture rejetée, 53 pour, 47 contre, 60 voix requises)",
-  "lu": "2026-11-25T22:47:52+00:00",
+  "lu": "2026-11-26T00:38:07+00:00",
   "nom": "H.R. 7008 (interdiction des transactions boursières des élus)",
   "numero": "HR 7008",
   "texte": "Cloture on the motion to proceed to the measure not invoked in Senate by Yea-Nay Vote. 53 - 47. Record Vote Number: 253.",
