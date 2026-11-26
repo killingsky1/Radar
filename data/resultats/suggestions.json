@@ -481,7 +481,7 @@
    ],
    "symbole": "AFCG",
    "taille": "petite",
-   "vue": "2026-11-24"
+   "vue": "2026-11-25"
   },
   {
    "entree": "2026-10-05T21:26:00+00:00",
@@ -4675,6 +4675,75 @@
     }
    ],
    "symbole": "MNTS",
+   "taille": "petite",
+   "vue": "2026-11-25"
+  },
+  {
+   "entree": "2026-11-26T04:11:12+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Blaize Holdings, Inc.",
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "compagnie",
+     "regle": "etats_financiers",
+     "sens": -1
+    }
+   ],
+   "symbole": "BZAI",
+   "taille": "petite",
+   "vue": "2026-11-25"
+  },
+  {
+   "entree": "2026-11-26T04:11:12+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "Legato Merger Corp. IV",
+   "note10": 0.8,
+   "note10_sans_bonus": 0.8,
+   "note10_sans_taille": 0.8,
+   "sens": "baisse",
+   "signaux": [
+    {
+     "facteurs": [],
+     "famille": "compagnie",
+     "regle": "etats_financiers",
+     "sens": -1
+    }
+   ],
+   "symbole": "LEGO",
+   "taille": "petite",
+   "vue": "2026-11-25"
+  },
+  {
+   "entree": "2026-11-26T04:11:12+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "methode": "score-9",
+   "nom": "DarioHealth Corp.",
+   "note10": 8.8,
+   "note10_sans_bonus": 8.8,
+   "note10_sans_taille": 7.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "DRIO",
    "taille": "petite",
    "vue": "2026-11-25"
   }

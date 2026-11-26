@@ -1,5 +1,215 @@
 [
  {
+  "amount_max": 103885740000.0,
+  "amount_min": 103885740000.0,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": false,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": false,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T04:12:50+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 60000.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001987240",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 1731429.0,
+   "proprietaires_cik": [
+    "2125667"
+   ],
+   "roles": [
+    "CFO Schmid Group N.V."
+   ],
+   "symbole_declare": "SHMD",
+   "symboles_sec": [
+    "SHMD",
+    "SHMDW"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 60000.0,
+     "apres": 102118.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2006-11-25",
+     "hors_bourse": null,
+     "prix": 1731429.0,
+     "titre_valeur": "Ordinary Shares"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Schuetz Arthur Josef Hermann",
+   "SCHMID Group N.V."
+  ],
+  "id": "sec_form4:0002125667-26-000005:P",
+  "kind": "achat_initie",
+  "notes": [
+   "Déclaré en retard : 5218 jours ouvrables après la transaction (limite légale : 2)."
+  ],
+  "occurred_on": "2006-11-25",
+  "official_id": "0002125667-26-000005:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1987240/000212566726000005/0002125667-26-000005-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-25",
+  "sha256": "fa573d8e0799b6a7cff303f5c6342590db437a3c492f60bbb2730935ddbea8fd",
+  "source": "sec_form4",
+  "tickers": [
+   "SHMD"
+  ],
+  "title": "Schuetz Arthur Josef Hermann (CFO Schmid Group N.V.) achète 60 000 actions de SCHMID Group N.V."
+ },
+ {
+  "amount_max": 87345.0,
+  "amount_min": 87345.0,
+  "badge": "a_verifier",
+  "category": "compagnies",
+  "checks": {
+   "champs_requis": true,
+   "code_achat_ou_vente_reel": true,
+   "dates_coherentes": true,
+   "dates_transaction_valides": false,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "montant_coherent": true,
+   "montant_plausible": true,
+   "montant_recalcule": true,
+   "prix_et_actions_positifs": true,
+   "prix_plausible": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symbole_conforme_sec": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T04:11:29+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "actions": 41000.0,
+   "automatique": null,
+   "bourse": "Nasdaq",
+   "cik_emetteur": "0001218683",
+   "hors_bourse": null,
+   "plan_10b5_1": false,
+   "prix_moyen": 2.1304,
+   "proprietaires_cik": [
+    "2101945",
+    "2105932",
+    "2106415",
+    "1972752",
+    "2144081"
+   ],
+   "roles": [
+    "SEE REMARKS",
+    "actionnaire de 10 %"
+   ],
+   "symbole_declare": "BGDE",
+   "symboles_sec": [
+    "BGDE"
+   ],
+   "transactions": [
+    {
+     "acquis_cede": "A",
+     "actions": 20000.0,
+     "apres": 134941.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-11-23",
+     "hors_bourse": null,
+     "prix": 2.11,
+     "titre_valeur": "Common Shares"
+    },
+    {
+     "acquis_cede": "A",
+     "actions": 10000.0,
+     "apres": 2162899.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-11-23",
+     "hors_bourse": null,
+     "prix": 2.27,
+     "titre_valeur": "Common Shares"
+    },
+    {
+     "acquis_cede": "A",
+     "actions": 5000.0,
+     "apres": 2167899.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-12-24",
+     "hors_bourse": null,
+     "prix": 2.01,
+     "titre_valeur": "Common Shares"
+    },
+    {
+     "acquis_cede": "A",
+     "actions": 5000.0,
+     "apres": 2172899.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-11-24",
+     "hors_bourse": null,
+     "prix": 2.04,
+     "titre_valeur": "Common Shares"
+    },
+    {
+     "acquis_cede": "A",
+     "actions": 1000.0,
+     "apres": 43326.0,
+     "automatique": null,
+     "code": "P",
+     "date": "2026-11-24",
+     "hors_bourse": null,
+     "prix": 2.195,
+     "titre_valeur": "Common Shares"
+    }
+   ]
+  },
+  "direction": 1,
+  "entities": [
+   "Endeavor Blockchain, LLC",
+   "Kilgore Joshua Allen",
+   "Smith Cody",
+   "PM Squared LLC",
+   "Six Thirty AI, LLC",
+   "Big Digital Energy, Inc."
+  ],
+  "id": "sec_form4:0000912282-26-001553:P",
+  "kind": "achat_initie",
+  "notes": [],
+  "occurred_on": "2026-11-23",
+  "official_id": "0000912282-26-001553:P",
+  "official_url": "https://www.sec.gov/Archives/edgar/data/1218683/000091228226001553/0000912282-26-001553-index.htm",
+  "parser_version": "sec-8",
+  "published_on": "2026-11-25",
+  "sha256": "835f728c79beed6048844234293df9f76dd42d6072b4e30ac3de045b4f6cfc8d",
+  "source": "sec_form4",
+  "tickers": [
+   "BGDE"
+  ],
+  "title": "Endeavor Blockchain, LLC et Kilgore Joshua Allen et Smith Cody et PM Squared LLC et Six Thirty AI, LLC (SEE REMARKS, actionnaire de 10 %) achète 41 000 actions de Big Digital Energy, Inc."
+ },
+ {
   "amount_max": 30000.0,
   "amount_min": 2002.0,
   "badge": "a_verifier",
@@ -7689,145 +7899,5 @@
    "UUU"
   ],
   "title": "AULT MILTON C III (administrateur) achète 18 000 actions de UNIVERSAL SAFETY PRODUCTS, INC."
- },
- {
-  "amount_max": 5000000000.0,
-  "amount_min": 5000000000.0,
-  "badge": "a_verifier",
-  "category": "compagnies",
-  "checks": {
-   "actions_et_valeur_positives": true,
-   "actions_sous_le_total_en_circulation": true,
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "montant_coherent": true,
-   "montant_plausible": true,
-   "prix_implicite_plausible": false,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T00:12:26+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 158000000000.0,
-   "bourse": "NYSE",
-   "cik_emetteur": "0000312069",
-   "date_avis": "2026-10-01",
-   "lignes": [
-    {
-     "actions": 158000000000.0,
-     "bourse": "NYSE",
-     "classe": "BARCLAYS PLC (BCS, BCLYF)",
-     "date_prevue": "2026-06-24",
-     "en_circulation": 800000000000.0,
-     "valeur": 5000000000.0
-    }
-   ],
-   "nom_emetteur": "BARCLAYS PLC",
-   "plan_10b5_1": [
-    "02/26/2026"
-   ],
-   "relations": [
-    "Investor"
-   ],
-   "vendeur": "Cardoso da silva Sergio Tony"
-  },
-  "direction": -1,
-  "entities": [
-   "Cardoso da silva Sergio Tony",
-   "BARCLAYS PLC"
-  ],
-  "id": "sec_form144:0002157144-26-000001",
-  "kind": "intention_vente",
-  "notes": [
-   "Vente prévue d'avance dans un plan automatique (règle 10b5-1).",
-   "Date de vente prévue : 24 juin 2026."
-  ],
-  "occurred_on": "2026-10-01",
-  "official_id": "0002157144-26-000001",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/312069/000215714426000001/0002157144-26-000001-index.htm",
-  "parser_version": "sec-4",
-  "published_on": "2026-10-01",
-  "sha256": "9edbd9d2bbcd679bef75819a1da283bb50ef544a787da2a2cf66210fcee3b1fd",
-  "source": "sec_form144",
-  "tickers": [
-   "BCS"
-  ],
-  "title": "Cardoso da silva Sergio Tony (investisseur) prévoit vendre 158 000 000 000 actions de BARCLAYS PLC"
- },
- {
-  "amount_max": 267239.7,
-  "amount_min": 267239.7,
-  "badge": "a_verifier",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "code_achat_ou_vente_reel": false,
-   "dates_coherentes": true,
-   "dates_transaction_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "montant_coherent": true,
-   "montant_plausible": true,
-   "montant_recalcule": true,
-   "prix_et_actions_positifs": true,
-   "prix_plausible": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_conforme_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T03:16:14+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 63000.0,
-   "bourse": "NYSE",
-   "cik_emetteur": "0000809559",
-   "hors_bourse": null,
-   "plan_10b5_1": false,
-   "prix_moyen": 4.2419,
-   "roles": [
-    "administrateur"
-   ],
-   "symbole_declare": "TSI",
-   "symboles_sec": [
-    "TSI"
-   ],
-   "transactions": [
-    {
-     "acquis_cede": "D",
-     "actions": 63000.0,
-     "apres": 22722.203,
-     "code": "P",
-     "date": "2026-09-29",
-     "hors_bourse": null,
-     "prix": 4.2419
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "HADEN PATRICK C",
-   "TCW STRATEGIC INCOME FUND INC"
-  ],
-  "id": "sec_form4:0001193125-26-408652:P",
-  "kind": "achat_initie",
-  "notes": [],
-  "occurred_on": "2026-09-29",
-  "official_id": "0001193125-26-408652:P",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/809559/000119312526408652/0001193125-26-408652-index.htm",
-  "parser_version": "sec-6",
-  "published_on": "2026-09-30",
-  "sha256": "c0e64c2b3f160c7bab86d909b90dac0e40f8d786152d5fa19a95e0d5fc3f6a64",
-  "source": "sec_form4",
-  "tickers": [
-   "TSI"
-  ],
-  "title": "HADEN PATRICK C (administrateur) achète 63 000 actions de TCW STRATEGIC INCOME FUND INC"
  }
 ]
