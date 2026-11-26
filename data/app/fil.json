@@ -3,6 +3,131 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "etape_datee": true,
+   "lien_legisinfo": true,
+   "projet_du_gouvernement": true,
+   "sanction_confirmee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T20:05:58+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "champ": "PassedHouseFirstReadingDateTime",
+   "cle": "chambre-1",
+   "date_officielle": "2026-11-26T05:00:00-05:00",
+   "details": [
+    [
+     "Projet de loi",
+     "C-43"
+    ],
+    [
+     "Titre",
+     "Loi portant exécution de certaines dispositions du budget déposé au Parlement le 5 novembre 2026"
+    ],
+    [
+     "Étape",
+     "première lecture à la Chambre des communes"
+    ],
+    [
+     "Où il en est",
+     "À la deuxième lecture à la Chambre des communes"
+    ]
+   ],
+   "etape": "première lecture à la Chambre des communes",
+   "numero": "C-43",
+   "sanction": false,
+   "session": "45-1",
+   "statut": "À la deuxième lecture à la Chambre des communes",
+   "titre": "Loi no 1 d'exécution du budget de 2026",
+   "titre_long": "Loi portant exécution de certaines dispositions du budget déposé au Parlement le 5 novembre 2026",
+   "type": "Projet de loi émanant du gouvernement (Cdc)",
+   "type_en": "House Government Bill"
+  },
+  "direction": 0,
+  "entities": [
+   "Parlement du Canada"
+  ],
+  "id": "legisinfo:45-1:C-43:chambre-1",
+  "kind": "etape_projet_de_loi",
+  "notes": [],
+  "occurred_on": "2026-11-26",
+  "official_id": "45-1:C-43:chambre-1",
+  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-43",
+  "parser_version": "legisinfo-1",
+  "published_on": "2026-11-26",
+  "sha256": "e5373de6e206acde0c1ffdd5e740a4d9684dedb941c720a39d6ea168c5d028d6",
+  "source": "legisinfo",
+  "tickers": [],
+  "title": "Projet de loi C-43 (Loi no 1 d'exécution du budget de 2026) : première lecture à la Chambre des communes"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T20:05:56+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Emploi, rémunération et heures de travail, et postes vacants"
+    ],
+    [
+     "Période",
+     "septembre 2026"
+    ]
+   ],
+   "indicateur": "Emploi, rémunération et heures de travail, et postes vacants",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261126/dq261126a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-11-26T08:30:00-05:00",
+   "periode": "septembre 2026",
+   "resume": "Le nombre d'employés recevant une rémunération et des avantages sociaux de leur employeur, mesurés en tant qu'« emploi salarié » dans le cadre de l'Enquête sur l'emploi, la rémunération et les heures de travail, a peu varié en septembre (+9 700; +0,1 %), après avoir enregistré une baisse cumulative de 31 400 (-0,2 %) en juillet et en août. Par rapport à un an plus tôt, l'emploi salarié était en hausse de 127 800 (+0,7 %) en septembre."
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261126/dq261126a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-11-26",
+  "official_id": "261126/dq261126a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261126/dq261126a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-11-26",
+  "sha256": "f9681d8c25d43a20d552781328f0789364ef772184b4e0302d82e07cff669901",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Emploi, rémunération et heures de travail, et postes vacants, septembre 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "politiciens",
   "checks": {
    "champs_requis": true,
@@ -47753,196 +47878,6 @@
   "source": "contrats_ca_10k",
   "tickers": [],
   "title": "Contrat fédéral de 25,8 M$ : POMERLEAU INC. (Conseil national de recherches Canada)"
- },
- {
-  "amount_max": 14129237.5,
-  "amount_min": 14129237.5,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32596795,
-   "amendment_value": "0.0",
-   "contract_date": "2026-07-07",
-   "contract_value": "14129237.5",
-   "description_fr": "Laboratoires",
-   "details": [
-    [
-     "Fournisseur",
-     "1872087 ONTARIO INC"
-    ],
-    [
-     "Ministère ou organisme",
-     "Conseil national de recherches Canada"
-    ],
-    [
-     "Valeur du contrat",
-     "14,1 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-07-07"
-    ],
-    [
-     "Description",
-     "Laboratoires"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-00153"
-    ]
-   ],
-   "fournisseur": "1872087 ONTARIO INC",
-   "instrument_type": "C",
-   "ministere": "Conseil national de recherches Canada",
-   "montant": 14129237.5,
-   "original_value": "14129237.5",
-   "owner_org": "nrc-cnrc",
-   "owner_org_title": "National Research Council Canada | Conseil national de recherches Canada",
-   "reference_number": "C-2026-2027-Q2-00153",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "1872087 ONTARIO INC"
-  },
-  "direction": 0,
-  "entities": [
-   "1872087 ONTARIO INC",
-   "Conseil national de recherches Canada"
-  ],
-  "id": "contrats_ca_10k:nrc-cnrc:C-2026-2027-Q2-00153",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2026-07-07",
-  "official_id": "nrc-cnrc:C-2026-2027-Q2-00153",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/nrc-cnrc,C-2026-2027-Q2-00153",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "2ab501d2ea380ca56816bbf79217f7750a9454cd047a5c52789c56f21981b40d",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 14,1 M$ : 1872087 ONTARIO INC (Conseil national de recherches Canada)"
- },
- {
-  "amount_max": 21314729.49,
-  "amount_min": 21314729.49,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 31824065,
-   "amendment_value": "0.0",
-   "contract_date": "2026-06-30",
-   "contract_value": "21314729.49",
-   "description_fr": "Consultants en TI et en télécommunications",
-   "details": [
-    [
-     "Fournisseur",
-     "BELL CANADA"
-    ],
-    [
-     "Ministère ou organisme",
-     "Emploi et Développement social Canada"
-    ],
-    [
-     "Valeur du contrat",
-     "21,3 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-06-30"
-    ],
-    [
-     "Description",
-     "Consultants en TI et en télécommunications"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-00130"
-    ]
-   ],
-   "fournisseur": "BELL CANADA",
-   "instrument_type": "C",
-   "ministere": "Emploi et Développement social Canada",
-   "montant": 21314729.49,
-   "original_value": "21314729.49",
-   "owner_org": "esdc-edsc",
-   "owner_org_title": "Employment and Social Development Canada | Emploi et Développement social Canada",
-   "reference_number": "C-2026-2027-Q2-00130",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "BELL CANADA"
-  },
-  "direction": 0,
-  "entities": [
-   "BELL CANADA",
-   "Emploi et Développement social Canada"
-  ],
-  "id": "contrats_ca_10k:esdc-edsc:C-2026-2027-Q2-00130",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2026-06-30",
-  "official_id": "esdc-edsc:C-2026-2027-Q2-00130",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/esdc-edsc,C-2026-2027-Q2-00130",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "6c00032dd71a0543b641e83aa98d13d3e733bdc137d0c03e1be4302e8f563003",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 21,3 M$ : BELL CANADA (Emploi et Développement social Canada)"
  },
  {
   "amount_max": null,
