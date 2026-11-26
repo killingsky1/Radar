@@ -1,5 +1,970 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "declarant_concorde": true,
+   "document_pdf": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montants_officiels": true,
+   "poste_publie_sans_201": true,
+   "sans_formulaire_201": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_reconnu": true
+  },
+  "collected_at": "2026-11-26T12:47:01+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agence": "Department of The Interior",
+   "ajoute_le": "2026-11-26",
+   "declarant_concorde": true,
+   "lecture_complete": true,
+   "modifie_le": null,
+   "niveau": "Level I",
+   "nom": "Burgum, Douglas J",
+   "pdf_valide": true,
+   "signe_le": "2026-08-31",
+   "taille": 5466,
+   "titre": "Secretary",
+   "transactions": [
+    {
+     "avis": "Yes",
+     "date": "2025-04-18",
+     "description": "Arthur Ventures V - Pearly Holdings, Inc (dental collection software)",
+     "montant": "$100,001 - $250,000",
+     "n": "1",
+     "note": "On April 18, 2025, the filer received notification that the managers of Arthur Ventures V, LP made an investment in Pearly Holdings, Inc, a dental A/R and patient billing system.",
+     "symbole": null,
+     "type": "Purchase"
+    },
+    {
+     "avis": "Yes",
+     "date": "2025-04-18",
+     "description": "Arthur Venture V, LP - Pearly Holdings, Inc (dental collection software)",
+     "montant": "$1,001 - $15,000",
+     "n": "2",
+     "note": "On April 18, 2025, the filer's spouse received notification that the managers of Arthur Ventures V, LP made an investment in Pearly Holdings, Inc, a dental A/R and patient billing system.",
+     "symbole": null,
+     "type": "Purchase"
+    }
+   ]
+  },
+  "direction": 0,
+  "entities": [
+   "Douglas J Burgum",
+   "Department of The Interior"
+  ],
+  "id": "oge_278t:C3A67886D03C683985258EBB00331765",
+  "kind": "rapport_278t",
+  "notes": [
+   "2 lignes lues : aucune action cotée à la SEC (des fonds, des obligations, des placements privés ou un symbole introuvable à la SEC : voir les lignes)."
+  ],
+  "occurred_on": "2026-11-26",
+  "official_id": "C3A67886D03C683985258EBB00331765",
+  "official_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/C3A67886D03C683985258EBB00331765/$FILE/Douglas-J-Burgum-08.31.2026-278T.pdf",
+  "parser_version": "oge-3",
+  "published_on": "2026-11-26",
+  "sha256": "2477645d51a7622ada2a875c2f2991acdfa145f74e67f6de738996a35db9a68a",
+  "source": "oge_278t",
+  "tickers": [],
+  "title": "Douglas J Burgum (Secretary, Department of The Interior, niveau I) : rapport de transactions (278-T), 2 transactions"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T12:50:00+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Millstreet Credit Fund LP",
+   "cibles": [
+    "Mercer International Inc"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-11-19",
+   "details": [
+    [
+     "Acquéreur",
+     "Millstreet Credit Fund LP"
+    ],
+    [
+     "Visé(s)",
+     "Mercer International Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-11-19"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "3221"
+    ]
+   ],
+   "page_modifiee_le": "2026-11-25",
+   "parties": "Millstreet Credit Fund LP / Mercer International Inc",
+   "resultat": "",
+   "scian": "3221"
+  },
+  "direction": 0,
+  "entities": [
+   "Millstreet Credit Fund LP",
+   "Mercer International Inc"
+  ],
+  "id": "concurrence_ca:2026-11-19:millstreet-credit-fund-lp-mercer-international-inc:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-11-19",
+  "official_id": "2026-11-19:millstreet-credit-fund-lp-mercer-international-inc:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-11-25",
+  "sha256": "2b1e36ec4b9a3cf9796f9c67ab3ba5c4bf454fd59e55a0e2728beb7d5f74de79",
+  "source": "concurrence_ca",
+  "tickers": [
+   "MERC"
+  ],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, Millstreet Credit Fund LP / Mercer International Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T12:50:00+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Canadian Natural Resources Limited",
+   "cibles": [
+    "Advantage Energy Ltd"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-11-19",
+   "details": [
+    [
+     "Acquéreur",
+     "Canadian Natural Resources Limited"
+    ],
+    [
+     "Visé(s)",
+     "Advantage Energy Ltd"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-11-19"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "2111"
+    ]
+   ],
+   "page_modifiee_le": "2026-11-25",
+   "parties": "Canadian Natural Resources Limited / Advantage Energy Ltd",
+   "resultat": "",
+   "scian": "2111"
+  },
+  "direction": 0,
+  "entities": [
+   "Canadian Natural Resources Limited",
+   "Advantage Energy Ltd"
+  ],
+  "id": "concurrence_ca:2026-11-19:canadian-natural-resources-limited-advantage-energy-ltd:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-11-19",
+  "official_id": "2026-11-19:canadian-natural-resources-limited-advantage-energy-ltd:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-11-25",
+  "sha256": "c0eeb61f1599e4635d3e978cbf97c5f49f754c65ff18d6ac1acacadf20f4c7bb",
+  "source": "concurrence_ca",
+  "tickers": [
+   "CNQ"
+  ],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, Canadian Natural Resources Limited / Advantage Energy Ltd"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T12:50:00+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Bird Construction Inc",
+   "cibles": [
+    "Kel-Gor Limited",
+    "Jenron Holdings Ltd"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-11-17",
+   "details": [
+    [
+     "Acquéreur",
+     "Bird Construction Inc"
+    ],
+    [
+     "Visé(s)",
+     "Kel-Gor Limited, Jenron Holdings Ltd"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-11-17"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "2382"
+    ]
+   ],
+   "page_modifiee_le": "2026-11-25",
+   "parties": "Bird Construction Inc / Kel-Gor Limited et Jenron Holdings Ltd",
+   "resultat": "",
+   "scian": "2382"
+  },
+  "direction": 0,
+  "entities": [
+   "Bird Construction Inc",
+   "Kel-Gor Limited",
+   "Jenron Holdings Ltd"
+  ],
+  "id": "concurrence_ca:2026-11-17:bird-construction-inc-kel-gor-limited-et-jenron-holdings-ltd:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-11-17",
+  "official_id": "2026-11-17:bird-construction-inc-kel-gor-limited-et-jenron-holdings-ltd:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-11-25",
+  "sha256": "1fdadf654fcc285039c86044d6961afb9ce37e5f7dab3c0a1e4c66e206a005b5",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, Bird Construction Inc / Kel-Gor Limited et Jenron Holdings Ltd"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T12:50:00+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Public Sector Pension Investment Board",
+   "cibles": [
+    "Enercare Inc"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-11-16",
+   "details": [
+    [
+     "Acquéreur",
+     "Public Sector Pension Investment Board"
+    ],
+    [
+     "Visé(s)",
+     "Enercare Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-11-16"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "4161"
+    ]
+   ],
+   "page_modifiee_le": "2026-11-25",
+   "parties": "Public Sector Pension Investment Board / Enercare Inc",
+   "resultat": "",
+   "scian": "4161"
+  },
+  "direction": 0,
+  "entities": [
+   "Public Sector Pension Investment Board",
+   "Enercare Inc"
+  ],
+  "id": "concurrence_ca:2026-11-16:public-sector-pension-investment-board-enercare-inc:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-11-16",
+  "official_id": "2026-11-16:public-sector-pension-investment-board-enercare-inc:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-11-25",
+  "sha256": "20533f3fb7299567dfc821318f487f5917b8d68e359a98a5554980ce21d6d62c",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, Public Sector Pension Investment Board / Enercare Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T12:50:00+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "KED Icon Holdings LLC",
+   "cibles": [
+    "Getty Images Holdings Inc"
+   ],
+   "code": "en cours",
+   "conclusion": "en cours",
+   "debut": "2026-11-16",
+   "details": [
+    [
+     "Acquéreur",
+     "KED Icon Holdings LLC"
+    ],
+    [
+     "Visé(s)",
+     "Getty Images Holdings Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-11-16"
+    ],
+    [
+     "Résultat",
+     "en cours"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "5191"
+    ]
+   ],
+   "page_modifiee_le": "2026-11-25",
+   "parties": "KED Icon Holdings LLC / Getty Images Holdings Inc",
+   "resultat": "",
+   "scian": "5191"
+  },
+  "direction": 0,
+  "entities": [
+   "KED Icon Holdings LLC",
+   "Getty Images Holdings Inc"
+  ],
+  "id": "concurrence_ca:2026-11-16:ked-icon-holdings-llc-getty-images-holdings-inc:ouvert",
+  "kind": "fusion_examen_ouvert",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-11-16",
+  "official_id": "2026-11-16:ked-icon-holdings-llc-getty-images-holdings-inc:ouvert",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-11-25",
+  "sha256": "e97b3d3776f71b60c7a953b5b240d02362b7f894304091074e4bcfe014c7bea9",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion ouvert, KED Icon Holdings LLC / Getty Images Holdings Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T12:50:00+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Truelink Capital LLC",
+   "cibles": [
+    "Johnson Controls International plc"
+   ],
+   "code": "CDP",
+   "conclusion": "2026-11-19",
+   "debut": "2026-11-06",
+   "details": [
+    [
+     "Acquéreur",
+     "Truelink Capital LLC"
+    ],
+    [
+     "Visé(s)",
+     "Johnson Controls International plc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-11-06"
+    ],
+    [
+     "Examen conclu le",
+     "2026-11-19"
+    ],
+    [
+     "Résultat",
+     "certificat de décision préalable"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "3342"
+    ]
+   ],
+   "page_modifiee_le": "2026-11-25",
+   "parties": "Truelink Capital LLC / Johnson Controls International plc",
+   "resultat": "certificat de décision préalable",
+   "scian": "3342"
+  },
+  "direction": 0,
+  "entities": [
+   "Truelink Capital LLC",
+   "Johnson Controls International plc"
+  ],
+  "id": "concurrence_ca:2026-11-06:truelink-capital-llc-johnson-controls-international-plc:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-11-19",
+  "official_id": "2026-11-06:truelink-capital-llc-johnson-controls-international-plc:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-11-25",
+  "sha256": "bd493946d88c365d4f7fe605165048a7cdcdcf1ac1e020fb0292cf6555ce14ff",
+  "source": "concurrence_ca",
+  "tickers": [
+   "JCI"
+  ],
+  "title": "Bureau de la concurrence : examen de fusion conclu (certificat de décision préalable), Truelink Capital LLC / Johnson Controls International plc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T12:50:00+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Hexagon AB",
+   "cibles": [
+    "Rocscience Inc"
+   ],
+   "code": "LNI",
+   "conclusion": "2026-11-19",
+   "debut": "2026-10-26",
+   "details": [
+    [
+     "Acquéreur",
+     "Hexagon AB"
+    ],
+    [
+     "Visé(s)",
+     "Rocscience Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-10-26"
+    ],
+    [
+     "Examen conclu le",
+     "2026-11-19"
+    ],
+    [
+     "Résultat",
+     "lettre de non-intervention"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "5112"
+    ]
+   ],
+   "page_modifiee_le": "2026-11-25",
+   "parties": "Hexagon AB / Rocscience Inc",
+   "resultat": "lettre de non-intervention",
+   "scian": "5112"
+  },
+  "direction": 0,
+  "entities": [
+   "Hexagon AB",
+   "Rocscience Inc"
+  ],
+  "id": "concurrence_ca:2026-10-26:hexagon-ab-rocscience-inc:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-11-19",
+  "official_id": "2026-10-26:hexagon-ab-rocscience-inc:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-11-25",
+  "sha256": "68f1fbd0da54c7c0d0adc9b053425edf3d7941504d4c501347729b7a8ae94b19",
+  "source": "concurrence_ca",
+  "tickers": [],
+  "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), Hexagon AB / Rocscience Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T12:50:00+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "TD SYNNEX Corporation",
+   "cibles": [
+    "United Radio Incorporated Inc"
+   ],
+   "code": "LNI",
+   "conclusion": "2026-11-19",
+   "debut": "2026-10-20",
+   "details": [
+    [
+     "Acquéreur",
+     "TD SYNNEX Corporation"
+    ],
+    [
+     "Visé(s)",
+     "United Radio Incorporated Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-10-20"
+    ],
+    [
+     "Examen conclu le",
+     "2026-11-19"
+    ],
+    [
+     "Résultat",
+     "lettre de non-intervention"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "4173"
+    ]
+   ],
+   "page_modifiee_le": "2026-11-25",
+   "parties": "TD SYNNEX Corporation / United Radio Incorporated Inc",
+   "resultat": "lettre de non-intervention",
+   "scian": "4173"
+  },
+  "direction": 0,
+  "entities": [
+   "TD SYNNEX Corporation",
+   "United Radio Incorporated Inc"
+  ],
+  "id": "concurrence_ca:2026-10-20:td-synnex-corporation-united-radio-incorporated-inc:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-11-19",
+  "official_id": "2026-10-20:td-synnex-corporation-united-radio-incorporated-inc:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-11-25",
+  "sha256": "8fb7728bbfb92d527522e69e35d1aed3bf6ed1e74238c7144d91311b4162586c",
+  "source": "concurrence_ca",
+  "tickers": [
+   "SNX"
+  ],
+  "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), TD SYNNEX Corporation / United Radio Incorporated Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T12:50:00+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "Trane Technologies plc",
+   "cibles": [
+    "Cancoil Thermal Corporation",
+    "2048895 Ontario Limited",
+    "Cancoil USA Inc"
+   ],
+   "code": "LNI",
+   "conclusion": "2026-11-17",
+   "debut": "2026-10-19",
+   "details": [
+    [
+     "Acquéreur",
+     "Trane Technologies plc"
+    ],
+    [
+     "Visé(s)",
+     "Cancoil Thermal Corporation, 2048895 Ontario Limited, Cancoil USA Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-10-19"
+    ],
+    [
+     "Examen conclu le",
+     "2026-11-17"
+    ],
+    [
+     "Résultat",
+     "lettre de non-intervention"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "3334"
+    ]
+   ],
+   "page_modifiee_le": "2026-11-25",
+   "parties": "Trane Technologies plc / Cancoil Thermal Corporation, 2048895 Ontario Limited et Cancoil USA Inc",
+   "resultat": "lettre de non-intervention",
+   "scian": "3334"
+  },
+  "direction": 0,
+  "entities": [
+   "Trane Technologies plc",
+   "Cancoil Thermal Corporation",
+   "2048895 Ontario Limited",
+   "Cancoil USA Inc"
+  ],
+  "id": "concurrence_ca:2026-10-19:trane-technologies-plc-cancoil-thermal-corporation-2048895-ontario-limited-et-ca:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-11-17",
+  "official_id": "2026-10-19:trane-technologies-plc-cancoil-thermal-corporation-2048895-ontario-limited-et-ca:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-11-25",
+  "sha256": "5f86264756b34a569cf43bec8e39b521dc230b8711b33c10274c902f08e00e84",
+  "source": "concurrence_ca",
+  "tickers": [
+   "TT"
+  ],
+  "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), Trane Technologies plc / Cancoil Thermal Corporation, 2048895 Ontario Limited et Cancoil USA Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T12:50:00+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "SmartStop Self Storage REIT Inc",
+   "cibles": [
+    "ICM Bluebird Canadian Self Storage LP",
+    "ICM Bluebird Canadian Self Storage GP Inc",
+    "ICM Bluebird Canadian Self Storage SLP LP and ICM Bluebird Canadian Self Storage SLP GP Inc"
+   ],
+   "code": "LNI",
+   "conclusion": "2026-11-17",
+   "debut": "2026-10-08",
+   "details": [
+    [
+     "Acquéreur",
+     "SmartStop Self Storage REIT Inc"
+    ],
+    [
+     "Visé(s)",
+     "ICM Bluebird Canadian Self Storage LP, ICM Bluebird Canadian Self Storage GP Inc, ICM Bluebird Canadian Self Storage SLP LP and ICM Bluebird Canadian Self Storage SLP GP Inc"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-10-08"
+    ],
+    [
+     "Examen conclu le",
+     "2026-11-17"
+    ],
+    [
+     "Résultat",
+     "lettre de non-intervention"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "4931"
+    ]
+   ],
+   "page_modifiee_le": "2026-11-25",
+   "parties": "SmartStop Self Storage REIT Inc / ICM Bluebird Canadian Self Storage LP, ICM Bluebird Canadian Self Storage GP Inc, ICM Bluebird Canadian Self Storage SLP LP and ICM Bluebird Canadian Self Storage SLP GP Inc",
+   "resultat": "lettre de non-intervention",
+   "scian": "4931"
+  },
+  "direction": 0,
+  "entities": [
+   "SmartStop Self Storage REIT Inc",
+   "ICM Bluebird Canadian Self Storage LP",
+   "ICM Bluebird Canadian Self Storage GP Inc",
+   "ICM Bluebird Canadian Self Storage SLP LP and ICM Bluebird Canadian Self Storage SLP GP Inc"
+  ],
+  "id": "concurrence_ca:2026-10-08:smartstop-self-storage-reit-inc-icm-bluebird-canadian-self-storage-lp-icm-bluebi:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-11-17",
+  "official_id": "2026-10-08:smartstop-self-storage-reit-inc-icm-bluebird-canadian-self-storage-lp-icm-bluebi:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-11-25",
+  "sha256": "b17b45f8969bcb81ee3a3fea5a265d352ea4b6bdf16df3d6e6672e50017f14d9",
+  "source": "concurrence_ca",
+  "tickers": [
+   "SMA"
+  ],
+  "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), SmartStop Self Storage REIT Inc / ICM Bluebird Canadian Self Storage LP, ICM Bluebird Canadian Self Storage GP Inc, ICM Bluebird Canadian Self Storage SLP LP and ICM Bluebird Canadian Self Storage SLP GP Inc"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_dans_l_ordre": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "industrie_scian": true,
+   "parties_lues": true,
+   "resultat_officiel_connu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T12:50:00+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "acquereur": "The Brink’s Company",
+   "cibles": [
+    "NCR Atleos Corporation"
+   ],
+   "code": "LNI",
+   "conclusion": "2026-11-16",
+   "debut": "2026-05-22",
+   "details": [
+    [
+     "Acquéreur",
+     "The Brink’s Company"
+    ],
+    [
+     "Visé(s)",
+     "NCR Atleos Corporation"
+    ],
+    [
+     "Examen ouvert le",
+     "2026-05-22"
+    ],
+    [
+     "Examen conclu le",
+     "2026-11-16"
+    ],
+    [
+     "Résultat",
+     "lettre de non-intervention"
+    ],
+    [
+     "Industrie (SCIAN)",
+     "5223"
+    ]
+   ],
+   "page_modifiee_le": "2026-11-25",
+   "parties": "The Brink’s Company / NCR Atleos Corporation",
+   "resultat": "lettre de non-intervention",
+   "scian": "5223"
+  },
+  "direction": 0,
+  "entities": [
+   "The Brink’s Company",
+   "NCR Atleos Corporation"
+  ],
+  "id": "concurrence_ca:2026-05-22:the-brinks-company-ncr-atleos-corporation:conclu",
+  "kind": "fusion_examen_conclu",
+  "notes": [
+   "Date de publication : la date de mise à jour de la page officielle (le rapport est mis à jour chaque semaine)."
+  ],
+  "occurred_on": "2026-11-16",
+  "official_id": "2026-05-22:the-brinks-company-ncr-atleos-corporation:conclu",
+  "official_url": "https://bureau-concurrence.canada.ca/fr/fusions-acquisitions/rapport-examens-fusions-termines",
+  "parser_version": "concurrence-1",
+  "published_on": "2026-11-25",
+  "sha256": "08260feaf91a0c0b502624c04e241a4c30d63fd093bcd92b897100cc5ed198b2",
+  "source": "concurrence_ca",
+  "tickers": [
+   "BCO",
+   "NATL"
+  ],
+  "title": "Bureau de la concurrence : examen de fusion conclu (lettre de non-intervention), The Brink’s Company / NCR Atleos Corporation"
+ },
+ {
   "amount_max": 15000000.0,
   "amount_min": 15000000.0,
   "badge": "officiel",
@@ -34876,75 +35841,6 @@
   "title": "Michael Rulli (Chambre, OH06) vend GOOGL"
  },
  {
-  "amount_max": 15000.0,
-  "amount_min": 1001.0,
-  "badge": "officiel",
-  "category": "politiciens",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "dates_transactions_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lecture_complete": true,
-   "montant_coherent": true,
-   "montants_officiels": true,
-   "nom_coherent_avec_symbole": true,
-   "recoupements_index_document": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_cote_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-11-19T19:28:31+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "chambre": "chambre",
-   "circonscription": "OH06",
-   "elu": "Michael Rulli",
-   "lecture_complete": true,
-   "nom_sec": "COSTCO WHOLESALE CORP /NEW",
-   "rapport": "20036855",
-   "recoupements": {
-    "circonscription": true,
-    "nom": true,
-    "numero": true
-   },
-   "transactions": [
-    {
-     "actif": "Costco Wholesale Corporation - Common Stock (COST) [ST]",
-     "avis": "2026-11-12",
-     "date": "2026-11-12",
-     "description": null,
-     "montant": "$1,001 - $15,000",
-     "partielle": true,
-     "proprietaire": "",
-     "type_officiel": "S (partial)"
-    }
-   ]
-  },
-  "direction": -1,
-  "entities": [
-   "Michael Rulli",
-   "COSTCO WHOLESALE CORP /NEW"
-  ],
-  "id": "chambre_ptr:20036855:COST:S",
-  "kind": "vente_elu",
-  "notes": [],
-  "occurred_on": "2026-11-12",
-  "official_id": "20036855:COST:S",
-  "official_url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20036855.pdf",
-  "parser_version": "elus-1",
-  "published_on": "2026-11-18",
-  "sha256": "8e269d68a3effa301ebc50ead090e12f962d3e456e52394d502533e74434746c",
-  "source": "chambre_ptr",
-  "tickers": [
-   "COST"
-  ],
-  "title": "Michael Rulli (Chambre, OH06) vend COST"
- },
- {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -36535,6 +37431,54 @@
   "source": "usaspending",
   "tickers": [],
   "title": "Contrat fédéral américain de 155 M$ : WHITING-TURNER CONTRACTING COMPANY, THE (Sécurité intérieure)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_rappel": true,
+   "nombre_plausible": true,
+   "numero_de_rappel_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-26T12:46:32+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "campagne": null,
+   "composant": "EQUIPMENT ADAPTIVE/MOBILITY",
+   "consequence": "An incorrectly labeled controller may lead to unintentionally selecting the wrong operation, increasing the risk of injury.",
+   "constructeur": "Braun Corporation",
+   "defaut": "Braun Corporation (Braun) is recalling certain wheelchair lifts with model number NUVL855RM24, NL500M24, NUSP34S31X48RWO, NULC63S30X51MMC, NUVL855R, and NUVL603C. The handheld pendant may have incorrectly labeled controls. As such, these lifts fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 403, \"Platform Lift Systems.\"",
+   "numero": "26E083000",
+   "sorte": "Equipment",
+   "sujet": "Wheelchair Lift May Have Incorrectly Labeled Controller",
+   "unites": 10016
+  },
+  "direction": -1,
+  "entities": [
+   "Braun Corporation"
+  ],
+  "id": "nhtsa:26E083000",
+  "kind": "rappel",
+  "notes": [],
+  "occurred_on": "2026-11-17",
+  "official_id": "26E083000",
+  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26E083000",
+  "parser_version": "nhtsa-1",
+  "published_on": "2026-11-17",
+  "sha256": "9b66edc12dab770e01354683325d55de129bc00a77eaa1460fdc70439c36e4ce",
+  "source": "nhtsa",
+  "tickers": [],
+  "title": "Rappel de Braun Corporation : 10 016 équipements — « Wheelchair Lift May Have Incorrectly Labeled Controller »"
  },
  {
   "amount_max": null,
@@ -47001,1100 +47945,6 @@
   "title": "Contrat fédéral de 21,3 M$ : BELL CANADA (Emploi et Développement social Canada)"
  },
  {
-  "amount_max": 124747875.0,
-  "amount_min": 124747875.0,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 31823983,
-   "amendment_value": "124747875.0",
-   "contract_date": "2025-02-21",
-   "contract_value": "452562242.55",
-   "description_fr": "Consultants en TI et en télécommunications",
-   "details": [
-    [
-     "Fournisseur",
-     "ACCENTURE INC."
-    ],
-    [
-     "Ministère ou organisme",
-     "Emploi et Développement social Canada"
-    ],
-    [
-     "Hausse",
-     "124,7 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "452,6 M$"
-    ],
-    [
-     "Valeur d'origine",
-     "94,3 M$"
-    ],
-    [
-     "Date du contrat",
-     "2025-02-21"
-    ],
-    [
-     "Description",
-     "Consultants en TI et en télécommunications"
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-00048"
-    ]
-   ],
-   "fournisseur": "ACCENTURE INC.",
-   "instrument_type": "A",
-   "ministere": "Emploi et Développement social Canada",
-   "montant": 124747875.0,
-   "original_value": "94261035.05",
-   "owner_org": "esdc-edsc",
-   "owner_org_title": "Employment and Social Development Canada | Emploi et Développement social Canada",
-   "reference_number": "C-2026-2027-Q2-00048",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "ACCENTURE INC."
-  },
-  "direction": 0,
-  "entities": [
-   "ACCENTURE INC.",
-   "Emploi et Développement social Canada"
-  ],
-  "id": "contrats_ca_10k:esdc-edsc:C-2026-2027-Q2-00048",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "esdc-edsc:C-2026-2027-Q2-00048",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/esdc-edsc,C-2026-2027-Q2-00048",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "d0b207a02b7411df28bd35b7f8085e5320e0a79ff9e87bf950858d7c21dc2147",
-  "source": "contrats_ca_10k",
-  "tickers": [
-   "ACN"
-  ],
-  "title": "Contrat fédéral modifié : +124,7 M$ pour ACCENTURE INC. (Emploi et Développement social Canada), valeur totale 452,6 M$"
- },
- {
-  "amount_max": 31159291.97,
-  "amount_min": 31159291.97,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 31823964,
-   "amendment_value": "31159291.97",
-   "contract_date": "2022-05-16",
-   "contract_value": "395098242.51",
-   "description_fr": "Services de conseillers en gestion",
-   "details": [
-    [
-     "Fournisseur",
-     "DELOITTE INC"
-    ],
-    [
-     "Ministère ou organisme",
-     "Emploi et Développement social Canada"
-    ],
-    [
-     "Hausse",
-     "31,2 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "395,1 M$"
-    ],
-    [
-     "Valeur d'origine",
-     "193,9 M$"
-    ],
-    [
-     "Date du contrat",
-     "2022-05-16"
-    ],
-    [
-     "Description",
-     "Services de conseillers en gestion"
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-00029"
-    ]
-   ],
-   "fournisseur": "DELOITTE INC",
-   "instrument_type": "A",
-   "ministere": "Emploi et Développement social Canada",
-   "montant": 31159291.97,
-   "original_value": "193916835.0",
-   "owner_org": "esdc-edsc",
-   "owner_org_title": "Employment and Social Development Canada | Emploi et Développement social Canada",
-   "reference_number": "C-2026-2027-Q2-00029",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "DELOITTE INC"
-  },
-  "direction": 0,
-  "entities": [
-   "DELOITTE INC",
-   "Emploi et Développement social Canada"
-  ],
-  "id": "contrats_ca_10k:esdc-edsc:C-2026-2027-Q2-00029",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "esdc-edsc:C-2026-2027-Q2-00029",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/esdc-edsc,C-2026-2027-Q2-00029",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "691af78b8b42d7658ca22a17ea9a8df123e643bb59b96229e81af2335d680e39",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral modifié : +31,2 M$ pour DELOITTE INC (Emploi et Développement social Canada), valeur totale 395,1 M$"
- },
- {
-  "amount_max": 15000000.01,
-  "amount_min": 15000000.01,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 31823956,
-   "amendment_value": "0.0",
-   "contract_date": "2026-07-06",
-   "contract_value": "15000000.01",
-   "description_fr": "Location d'équipement informatique de l'environnement de Production et opérations - Serveurs, stockage, imprimantes, etc. (y compris les pièces et les périphériques)",
-   "details": [
-    [
-     "Fournisseur",
-     "AMAZON WEB SERVICES CANADA INC"
-    ],
-    [
-     "Ministère ou organisme",
-     "Emploi et Développement social Canada"
-    ],
-    [
-     "Valeur du contrat",
-     "15,0 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-07-06"
-    ],
-    [
-     "Description",
-     "Location d'équipement informatique de l'environnement de Production et opérations - Serveurs, stockage, imprimantes, etc. (y compris les pièces et les périphériques)"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-00021"
-    ]
-   ],
-   "fournisseur": "AMAZON WEB SERVICES CANADA INC",
-   "instrument_type": "C",
-   "ministere": "Emploi et Développement social Canada",
-   "montant": 15000000.01,
-   "original_value": "15000000.01",
-   "owner_org": "esdc-edsc",
-   "owner_org_title": "Employment and Social Development Canada | Emploi et Développement social Canada",
-   "reference_number": "C-2026-2027-Q2-00021",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "AMAZON WEB SERVICES CANADA INC"
-  },
-  "direction": 0,
-  "entities": [
-   "AMAZON WEB SERVICES CANADA INC",
-   "Emploi et Développement social Canada"
-  ],
-  "id": "contrats_ca_10k:esdc-edsc:C-2026-2027-Q2-00021",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2026-07-06",
-  "official_id": "esdc-edsc:C-2026-2027-Q2-00021",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/esdc-edsc,C-2026-2027-Q2-00021",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "d560f0e9986d7a6579f9852dae0a7156fd91d8871c470294439a18fd8f827ead",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 15,0 M$ : AMAZON WEB SERVICES CANADA INC (Emploi et Développement social Canada)"
- },
- {
-  "amount_max": 14712600.0,
-  "amount_min": 14712600.0,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 31823936,
-   "amendment_value": "14712600.0",
-   "contract_date": "2011-08-11",
-   "contract_value": "115659600.0",
-   "description_fr": "Licences/maintenance des logiciels clients de l'environnement d'informatique répartie (EIR)",
-   "details": [
-    [
-     "Fournisseur",
-     "2KEYS CORPORATION"
-    ],
-    [
-     "Ministère ou organisme",
-     "Emploi et Développement social Canada"
-    ],
-    [
-     "Hausse",
-     "14,7 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "115,7 M$"
-    ],
-    [
-     "Valeur d'origine",
-     "41,0 M$"
-    ],
-    [
-     "Date du contrat",
-     "2011-08-11"
-    ],
-    [
-     "Description",
-     "Licences/maintenance des logiciels clients de l'environnement d'informatique répartie (EIR)"
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-00001"
-    ]
-   ],
-   "fournisseur": "2KEYS CORPORATION",
-   "instrument_type": "A",
-   "ministere": "Emploi et Développement social Canada",
-   "montant": 14712600.0,
-   "original_value": "41000000.0",
-   "owner_org": "esdc-edsc",
-   "owner_org_title": "Employment and Social Development Canada | Emploi et Développement social Canada",
-   "reference_number": "C-2026-2027-Q2-00001",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "2KEYS CORPORATION"
-  },
-  "direction": 0,
-  "entities": [
-   "2KEYS CORPORATION",
-   "Emploi et Développement social Canada"
-  ],
-  "id": "contrats_ca_10k:esdc-edsc:C-2026-2027-Q2-00001",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "esdc-edsc:C-2026-2027-Q2-00001",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/esdc-edsc,C-2026-2027-Q2-00001",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "9d065c50565866c7768d8fafc64b9901be18f5aacd138e11ab26f21311d13b8b",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral modifié : +14,7 M$ pour 2KEYS CORPORATION (Emploi et Développement social Canada), valeur totale 115,7 M$"
- },
- {
-  "amount_max": 38929684.69,
-  "amount_min": 38929684.69,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32543526,
-   "amendment_value": "38929684.69",
-   "contract_date": "2009-02-12",
-   "contract_value": "753577593.54",
-   "description_fr": "Armes (incluant les pièces)",
-   "details": [
-    [
-     "Fournisseur",
-     "CAE Inc."
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Hausse",
-     "38,9 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "753,6 M$"
-    ],
-    [
-     "Valeur d'origine",
-     "346,1 M$"
-    ],
-    [
-     "Date du contrat",
-     "2009-02-12"
-    ],
-    [
-     "Description",
-     "Armes (incluant les pièces)"
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-08902"
-    ]
-   ],
-   "fournisseur": "CAE Inc.",
-   "instrument_type": "A",
-   "ministere": "Défense nationale",
-   "montant": 38929684.69,
-   "original_value": "346069401.45",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-08902",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "CAE Inc."
-  },
-  "direction": 0,
-  "entities": [
-   "CAE Inc.",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-08902",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-08902",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-08902",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "8172a627b8c5414393ee424bde9be034bc0a3f191a4760d020d7ad89dd0b89b5",
-  "source": "contrats_ca_10k",
-  "tickers": [
-   "CAE"
-  ],
-  "title": "Contrat fédéral modifié : +38,9 M$ pour CAE Inc. (Défense nationale), valeur totale 753,6 M$"
- },
- {
-  "amount_max": 19929490.16,
-  "amount_min": 19929490.16,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32543481,
-   "amendment_value": "0.0",
-   "contract_date": "2026-07-06",
-   "contract_value": "19929490.16",
-   "description_fr": "Combustible diesel",
-   "details": [
-    [
-     "Fournisseur",
-     "GLANDER INTERNATIONAL BUNKERING"
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Valeur du contrat",
-     "19,9 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-07-06"
-    ],
-    [
-     "Description",
-     "Combustible diesel"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-08857"
-    ]
-   ],
-   "fournisseur": "GLANDER INTERNATIONAL BUNKERING",
-   "instrument_type": "C",
-   "ministere": "Défense nationale",
-   "montant": 19929490.16,
-   "original_value": "19929490.16",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-08857",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "GLANDER INTERNATIONAL BUNKERING"
-  },
-  "direction": 0,
-  "entities": [
-   "GLANDER INTERNATIONAL BUNKERING",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-08857",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2026-07-06",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-08857",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-08857",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "fdbcd1ae9174dfb7cec67cbe0af38c034d03ac58fbe1d1e22ef6b370e81e2f14",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 19,9 M$ : GLANDER INTERNATIONAL BUNKERING (Défense nationale)"
- },
- {
-  "amount_max": 10000000.0,
-  "amount_min": 10000000.0,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32538392,
-   "amendment_value": "0.0",
-   "contract_date": "2025-09-24",
-   "contract_value": "10000000.0",
-   "description_fr": "Autres services professionnels non précisés ailleurs",
-   "details": [
-    [
-     "Fournisseur",
-     "Ravenswood Canada Inc."
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Valeur du contrat",
-     "10,0 M$"
-    ],
-    [
-     "Date du contrat",
-     "2025-09-24"
-    ],
-    [
-     "Description",
-     "Autres services professionnels non précisés ailleurs"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-08768"
-    ]
-   ],
-   "fournisseur": "Ravenswood Canada Inc.",
-   "instrument_type": "C",
-   "ministere": "Défense nationale",
-   "montant": 10000000.0,
-   "original_value": "10000000.0",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-08768",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "Ravenswood Canada Inc."
-  },
-  "direction": 0,
-  "entities": [
-   "Ravenswood Canada Inc.",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-08768",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2025-09-24",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-08768",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-08768",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "7b1f07cc495350995cb75ce3b18c959a5818bf515c44efc5a609943d04c0c4a4",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 10,0 M$ : Ravenswood Canada Inc. (Défense nationale)"
- },
- {
-  "amount_max": 18000000.0,
-  "amount_min": 18000000.0,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32538333,
-   "amendment_value": "0.0",
-   "contract_date": "2026-07-08",
-   "contract_value": "18000000.0",
-   "description_fr": "Frais d'acquisition et de contrat",
-   "details": [
-    [
-     "Fournisseur",
-     "Ecolog International FZE"
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Valeur du contrat",
-     "18,0 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-07-08"
-    ],
-    [
-     "Description",
-     "Frais d'acquisition et de contrat"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-08709"
-    ]
-   ],
-   "fournisseur": "Ecolog International FZE",
-   "instrument_type": "C",
-   "ministere": "Défense nationale",
-   "montant": 18000000.0,
-   "original_value": "18000000.0",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-08709",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "Ecolog International FZE"
-  },
-  "direction": 0,
-  "entities": [
-   "Ecolog International FZE",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-08709",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2026-07-08",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-08709",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-08709",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "dc70c5ec385872e9a2cf6300130eafc31060193bd31257cf12ad12cd1ba4c446",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 18,0 M$ : Ecolog International FZE (Défense nationale)"
- },
- {
-  "amount_max": 28743750.0,
-  "amount_min": 28743750.0,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32538093,
-   "amendment_value": "0.0",
-   "contract_date": "2026-07-13",
-   "contract_value": "28743750.0",
-   "description_fr": "Conseillers techniques-autres",
-   "details": [
-    [
-     "Fournisseur",
-     "General Dynamics Ordinance and Tactical Systems- Canada Inc. Valleyfield"
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Valeur du contrat",
-     "28,7 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-07-13"
-    ],
-    [
-     "Description",
-     "Conseillers techniques-autres"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-08469"
-    ]
-   ],
-   "fournisseur": "General Dynamics Ordinance and Tactical Systems- Canada Inc. Valleyfield",
-   "instrument_type": "C",
-   "ministere": "Défense nationale",
-   "montant": 28743750.0,
-   "original_value": "28743750.0",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-08469",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "General Dynamics Ordinance and Tactical Systems- Canada Inc. Valleyfield"
-  },
-  "direction": 0,
-  "entities": [
-   "General Dynamics Ordinance and Tactical Systems- Canada Inc. Valleyfield",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-08469",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2026-07-13",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-08469",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-08469",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "eb1bd55f2304cdbbac2d971457871b51ff8d6e06e615af8e201f77a5089e9d99",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 28,7 M$ : General Dynamics Ordinance and Tactical Systems- Canada Inc. Valleyfield (Défense nationale)"
- },
- {
-  "amount_max": 59897789.91,
-  "amount_min": 59897789.91,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32538024,
-   "amendment_value": "0.0",
-   "contract_date": "2026-09-18",
-   "contract_value": "59897789.91",
-   "description_fr": "Munitions",
-   "details": [
-    [
-     "Fournisseur",
-     "General Dynamics Ordonance and Tactical Systems - Canada Inc"
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Valeur du contrat",
-     "59,9 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-09-18"
-    ],
-    [
-     "Description",
-     "Munitions"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-08400"
-    ]
-   ],
-   "fournisseur": "General Dynamics Ordonance and Tactical Systems - Canada Inc",
-   "instrument_type": "C",
-   "ministere": "Défense nationale",
-   "montant": 59897789.91,
-   "original_value": "59897789.91",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-08400",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "General Dynamics Ordonance and Tactical Systems - Canada Inc"
-  },
-  "direction": 0,
-  "entities": [
-   "General Dynamics Ordonance and Tactical Systems - Canada Inc",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-08400",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2026-09-18",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-08400",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-08400",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "84619e511a9f91e3d75a76926652351320e1f067bf0c55d79de3289679ecaa4f",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 59,9 M$ : General Dynamics Ordonance and Tactical Systems - Canada Inc (Défense nationale)"
- },
- {
-  "amount_max": 44954540.51,
-  "amount_min": 44954540.51,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32538023,
-   "amendment_value": "44954540.51",
-   "contract_date": "2026-01-08",
-   "contract_value": "70732776.55",
-   "description_fr": "Munitions",
-   "details": [
-    [
-     "Fournisseur",
-     "Magellan Aerospace Ltd"
-    ],
-    [
-     "Ministère ou organisme",
-     "Défense nationale"
-    ],
-    [
-     "Hausse",
-     "45,0 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "70,7 M$"
-    ],
-    [
-     "Valeur d'origine",
-     "25,8 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-01-08"
-    ],
-    [
-     "Description",
-     "Munitions"
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-08399"
-    ]
-   ],
-   "fournisseur": "Magellan Aerospace Ltd",
-   "instrument_type": "A",
-   "ministere": "Défense nationale",
-   "montant": 44954540.51,
-   "original_value": "25778236.04",
-   "owner_org": "dnd-mdn",
-   "owner_org_title": "National Defence | Défense nationale",
-   "reference_number": "C-2026-2027-Q2-08399",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "Magellan Aerospace Ltd"
-  },
-  "direction": 0,
-  "entities": [
-   "Magellan Aerospace Ltd",
-   "Défense nationale"
-  ],
-  "id": "contrats_ca_10k:dnd-mdn:C-2026-2027-Q2-08399",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "dnd-mdn:C-2026-2027-Q2-08399",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/dnd-mdn,C-2026-2027-Q2-08399",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "e55bddce5e46f4b048cef87aed953041ca5ed9777f839a9d3c716f4d5340c257",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral modifié : +45,0 M$ pour Magellan Aerospace Ltd (Défense nationale), valeur totale 70,7 M$"
- },
- {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -53924,56 +53774,6 @@
   "source": "registre_federal",
   "tickers": [],
   "title": "Sanctions (Trésor, OFAC) : Iran-Related Determination"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "action_officielle": true,
-   "champs_requis": true,
-   "date_de_l_adresse_concorde": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "liste_sdn_lue": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "titre_et_liste_concordent": true
-  },
-  "collected_at": "2026-10-09T18:54:21+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "ajouts": {
-    "fiches": 1
-   },
-   "communiques": [
-    "Imposing Sanctions on the International Criminal Court"
-   ],
-   "retraits": 1,
-   "titre_officiel": "Settlement Agreement between the U.S. Department of the Treasury's Office of Foreign Assets Control and Pegasus Worldwide Logistics; International Criminal Court Designation and General Licenses; Burma-related Designation Removal"
-  },
-  "direction": 0,
-  "entities": [],
-  "id": "sanctions_us:20261009",
-  "kind": "sanctions",
-  "notes": [
-   "Communiqué du Trésor : Imposing Sanctions on the International Criminal Court",
-   "Ajoutés à la liste des sanctions (SDN) : 1 fiches.",
-   "Retirés de la liste : 1 fiche."
-  ],
-  "occurred_on": "2026-10-09",
-  "official_id": "20261009",
-  "official_url": "https://ofac.treasury.gov/recent-actions/20261009",
-  "parser_version": "ofac-1",
-  "published_on": "2026-10-09",
-  "sha256": "51470f7f6ea4e965d1a3c7eb9cc1e869fdc5921c312f2d941b9149e337609dd6",
-  "source": "sanctions_us",
-  "tickers": [],
-  "title": "Sanctions américaines (OFAC) : Settlement Agreement between the U.S. Department of the Treasury's Office of Foreign Assets Control and Pegasus Worldwide Logistics; International Criminal Court Designation and General Licenses; Burma-related Designation Removal"
  },
  {
   "amount_max": 112529793.0,

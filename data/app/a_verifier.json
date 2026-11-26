@@ -1,5 +1,345 @@
 [
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "a_verifier",
+  "category": "politiciens",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "dates_transactions_valides": true,
+   "declarant_concorde": true,
+   "document_pdf": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lecture_complete": true,
+   "montants_officiels": false,
+   "poste_publie_sans_201": true,
+   "sans_formulaire_201": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "type_reconnu": true
+  },
+  "collected_at": "2026-11-26T12:47:02+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agence": "Department of The Interior",
+   "ajoute_le": "2026-11-26",
+   "declarant_concorde": true,
+   "lecture_complete": true,
+   "modifie_le": null,
+   "niveau": "Level I",
+   "nom": "Burgum, Douglas J",
+   "pdf_valide": true,
+   "signe_le": "2026-08-31",
+   "taille": 8878,
+   "titre": "Secretary",
+   "transactions": [
+    {
+     "avis": "No",
+     "date": "2026-07-23",
+     "description": "Arthur Ventures V, LP",
+     "montant": "$1,000,001 - $5,000,000",
+     "n": "1",
+     "note": "Items 2-17 were disposed in their entirety as part of disposition of the filers interest in Arthur Ventures V, LP",
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-23",
+     "description": "Hudu Technologies, Inc.",
+     "montant": "$15,001 - $50,000",
+     "n": "2",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-23",
+     "description": "Northteq",
+     "montant": "$50,001 - $100,000",
+     "n": "3",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-23",
+     "description": "Payroll Integration Holdings, Inc (employee benefits recordkeeper)",
+     "montant": "$100,001 - $250,000",
+     "n": "4",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-23",
+     "description": "Praxis Campus Management Software, Inc. (comprehensive campus management software for higher education institutions)",
+     "montant": "$15,001 - $50,000",
+     "n": "5",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-23",
+     "description": "RFX Solutions, Inc (software)",
+     "montant": "$50,001 - $100,000",
+     "n": "6",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-23",
+     "description": "Senior Sign (software)",
+     "montant": "$15,001 - $50,000",
+     "n": "7",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-23",
+     "description": "Sliced Health Inc (revenue software)",
+     "montant": "$15,001 - $50,000",
+     "n": "8",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-23",
+     "description": "Steppingblock, Inc (data and analytics software)",
+     "montant": "$15,001 - $50,000",
+     "n": "9",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-23",
+     "description": "zizzi holding company, inc. (ICHRA administration)",
+     "montant": "$50,001 - $100,000",
+     "n": "10",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-23",
+     "description": "Zum Rails Inc (payment software)",
+     "montant": "$50,001 - $100,000",
+     "n": "11",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-23",
+     "description": "Civic Plus Holdings",
+     "montant": "$50,001 - $100,000",
+     "n": "12",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-23",
+     "description": "Circadian Risk, Inc.",
+     "montant": "$15,001 - $50,000",
+     "n": "13",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-23",
+     "description": "Office Puzzle Holdings, Inc.",
+     "montant": "$100,001 - $250,000",
+     "n": "14",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-23",
+     "description": "Opterrix Group, Inc.",
+     "montant": "$15,001 - $50,000",
+     "n": "15",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-23",
+     "description": "Pearly Holdings, Inc.",
+     "montant": "$100,001 - $250,000",
+     "n": "16",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-23",
+     "description": "Aqua Platform, Inc.",
+     "montant": "$50,001 - $100,000",
+     "n": "17",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-24",
+     "description": "Arthur Ventures Growth IV, LP",
+     "montant": "$1,000,001 - $5,000,000",
+     "n": "18",
+     "note": "Items 19-28 were disposed in their entirety as part of disposition of the filers interest in Arthur Ventures V, LP",
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-24",
+     "description": "AV VBA Investment 3 Inc (Cloud based software)",
+     "montant": "",
+     "n": "19",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-24",
+     "description": "Virtual Benefits Administrator (cloud based software)",
+     "montant": "$100,001 - $250,000",
+     "n": "20",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-24",
+     "description": "CertifID, Inc. (wire fraud security solution)",
+     "montant": "$250,001 - $500,000",
+     "n": "21",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-24",
+     "description": "Documo Inc. (fax and document management software)",
+     "montant": "$50,001 - $100,000",
+     "n": "22",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-24",
+     "description": "Nucleus Security, Inc. (risk management software)",
+     "montant": "$100,001 - $250,000",
+     "n": "23",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-24",
+     "description": "Perry Weather, Inc. (weather safety management software)",
+     "montant": "$100,001 - $250,000",
+     "n": "24",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-24",
+     "description": "PSG Recast Holdings, LP (productivity suite for configuration manager)",
+     "montant": "$100,001 - $250,000",
+     "n": "25",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-24",
+     "description": "ThreatLocker, Inc (application and storage whitelisting software)",
+     "montant": "$250,001 - $500,000",
+     "n": "26",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-24",
+     "description": "Foundant Parent Holdings, LP (non-profit grant management software)",
+     "montant": "$100,001 - $250,000",
+     "n": "27",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    },
+    {
+     "avis": "No",
+     "date": "2026-07-24",
+     "description": "Office Puzzle Holdings, Inc.",
+     "montant": "$100,001 - $250,000",
+     "n": "28",
+     "note": null,
+     "symbole": null,
+     "type": "Sale"
+    }
+   ]
+  },
+  "direction": 0,
+  "entities": [
+   "Douglas J Burgum",
+   "Department of The Interior"
+  ],
+  "id": "oge_278t:E17EA676768FB1EE85258EBB0033176B",
+  "kind": "rapport_278t",
+  "notes": [
+   "28 lignes lues : aucune action cotée à la SEC (des fonds, des obligations, des placements privés ou un symbole introuvable à la SEC : voir les lignes)."
+  ],
+  "occurred_on": "2026-11-26",
+  "official_id": "E17EA676768FB1EE85258EBB0033176B",
+  "official_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/E17EA676768FB1EE85258EBB0033176B/$FILE/Douglas-J-Burgum-08.31.2026-278T(1).pdf",
+  "parser_version": "oge-3",
+  "published_on": "2026-11-26",
+  "sha256": "959ae38ed18438b273b04835233d67d0bb49ca32194baaef4673ad8e2a6920fc",
+  "source": "oge_278t",
+  "tickers": [],
+  "title": "Douglas J Burgum (Secretary, Department of The Interior, niveau I) : rapport de transactions (278-T), 28 transactions"
+ },
+ {
   "amount_max": 103885740000.0,
   "amount_min": 103885740000.0,
   "badge": "a_verifier",
@@ -7826,78 +8166,5 @@
    "SLBT"
   ],
   "title": "Wang Ching-Dong (Chief Executive Officer) achète 4 545 306 actions de SL Science Holding Ltd"
- },
- {
-  "amount_max": 92412000.0,
-  "amount_min": 92412000.0,
-  "badge": "a_verifier",
-  "category": "compagnies",
-  "checks": {
-   "champs_requis": true,
-   "code_achat_ou_vente_reel": true,
-   "dates_coherentes": true,
-   "dates_transaction_valides": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "montant_coherent": true,
-   "montant_plausible": true,
-   "montant_recalcule": true,
-   "prix_et_actions_positifs": true,
-   "prix_plausible": false,
-   "source_connue": true,
-   "source_officielle": true,
-   "symbole_conforme_sec": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-03T03:52:54+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "actions": 18000.0,
-   "automatique": null,
-   "bourse": "NYSE",
-   "cik_emetteur": "0000102109",
-   "hors_bourse": null,
-   "plan_10b5_1": false,
-   "prix_moyen": 5134.0,
-   "roles": [
-    "administrateur"
-   ],
-   "symbole_declare": "UUU",
-   "symboles_sec": [
-    "UUU"
-   ],
-   "transactions": [
-    {
-     "acquis_cede": "A",
-     "actions": 18000.0,
-     "apres": 1166096.0,
-     "automatique": null,
-     "code": "P",
-     "date": "2026-09-30",
-     "hors_bourse": null,
-     "prix": 5134.0
-    }
-   ]
-  },
-  "direction": 1,
-  "entities": [
-   "AULT MILTON C III",
-   "UNIVERSAL SAFETY PRODUCTS, INC."
-  ],
-  "id": "sec_form4:0001214659-26-012438:P",
-  "kind": "achat_initie",
-  "notes": [],
-  "occurred_on": "2026-09-30",
-  "official_id": "0001214659-26-012438:P",
-  "official_url": "https://www.sec.gov/Archives/edgar/data/102109/000121465926012438/0001214659-26-012438-index.htm",
-  "parser_version": "sec-7",
-  "published_on": "2026-10-01",
-  "sha256": "b1033ac26eb4e5251b9de2cedc2e47ed7f13387f6a43d45ddde1884723d64065",
-  "source": "sec_form4",
-  "tickers": [
-   "UUU"
-  ],
-  "title": "AULT MILTON C III (administrateur) achète 18 000 actions de UNIVERSAL SAFETY PRODUCTS, INC."
  }
 ]
