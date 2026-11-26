@@ -17,6 +17,76 @@
    "source_officielle": true,
    "symboles_valides": true
   },
+  "collected_at": "2026-11-26T22:36:56+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "champ": "PassedSenateSecondReadingDateTime",
+   "cle": "senat-2",
+   "date_officielle": "2026-11-26T05:15:00-05:00",
+   "details": [
+    [
+     "Projet de loi",
+     "S-8"
+    ],
+    [
+     "Titre",
+     "Loi concernant certaines mesures liées au recyclage des produits de la criminalité, au financement des activités terroristes, au contournement de sanctions et à la détection d’objets inadmissibles dans les transmissions postales"
+    ],
+    [
+     "Étape",
+     "adopté en deuxième lecture au Sénat"
+    ],
+    [
+     "Où il en est",
+     "À l'examen en comité au Sénat"
+    ]
+   ],
+   "etape": "adopté en deuxième lecture au Sénat",
+   "numero": "S-8",
+   "sanction": false,
+   "session": "45-1",
+   "statut": "À l'examen en comité au Sénat",
+   "titre": "Loi visant à lutter contre les crimes financiers et le trafic de drogues",
+   "titre_long": "Loi concernant certaines mesures liées au recyclage des produits de la criminalité, au financement des activités terroristes, au contournement de sanctions et à la détection d’objets inadmissibles dans les transmissions postales",
+   "type": "Projet de loi émanant du gouvernement (Sénat)",
+   "type_en": "Senate Government Bill"
+  },
+  "direction": 0,
+  "entities": [
+   "Parlement du Canada"
+  ],
+  "id": "legisinfo:45-1:S-8:senat-2",
+  "kind": "etape_projet_de_loi",
+  "notes": [],
+  "occurred_on": "2026-11-26",
+  "official_id": "45-1:S-8:senat-2",
+  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/s-8",
+  "parser_version": "legisinfo-1",
+  "published_on": "2026-11-26",
+  "sha256": "0657ac51f848db86bba6eab51b89d5e8e6c1847a5aa1cb63039c4c08f377a9b9",
+  "source": "legisinfo",
+  "tickers": [],
+  "title": "Projet de loi S-8 (Loi visant à lutter contre les crimes financiers et le trafic de drogues) : adopté en deuxième lecture au Sénat"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "etape_datee": true,
+   "lien_legisinfo": true,
+   "projet_du_gouvernement": true,
+   "sanction_confirmee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
   "collected_at": "2026-11-26T20:05:58+00:00",
   "confirmations": [],
   "currency": "CAD",
@@ -47783,101 +47853,6 @@
   "source": "contrats_ca_10k",
   "tickers": [],
   "title": "Contrat fédéral modifié : +39,3 M$ pour AMD MEDICOM INC. (Agence de la santé publique du Canada), valeur totale 200,5 M$"
- },
- {
-  "amount_max": 25784935.09,
-  "amount_min": 25784935.09,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32597016,
-   "amendment_value": "0.0",
-   "contract_date": "2026-08-14",
-   "contract_value": "25784935.09",
-   "description_fr": "Laboratoires",
-   "details": [
-    [
-     "Fournisseur",
-     "POMERLEAU INC."
-    ],
-    [
-     "Ministère ou organisme",
-     "Conseil national de recherches Canada"
-    ],
-    [
-     "Valeur du contrat",
-     "25,8 M$"
-    ],
-    [
-     "Date du contrat",
-     "2026-08-14"
-    ],
-    [
-     "Description",
-     "Laboratoires"
-    ],
-    [
-     "Type",
-     "contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-00374"
-    ]
-   ],
-   "fournisseur": "POMERLEAU INC.",
-   "instrument_type": "C",
-   "ministere": "Conseil national de recherches Canada",
-   "montant": 25784935.09,
-   "original_value": "25784935.09",
-   "owner_org": "nrc-cnrc",
-   "owner_org_title": "National Research Council Canada | Conseil national de recherches Canada",
-   "reference_number": "C-2026-2027-Q2-00374",
-   "reporting_period": "2026-2027-Q2",
-   "type": "contrat",
-   "vendor_name": "POMERLEAU INC."
-  },
-  "direction": 0,
-  "entities": [
-   "POMERLEAU INC.",
-   "Conseil national de recherches Canada"
-  ],
-  "id": "contrats_ca_10k:nrc-cnrc:C-2026-2027-Q2-00374",
-  "kind": "contrat_federal",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne)."
-  ],
-  "occurred_on": "2026-08-14",
-  "official_id": "nrc-cnrc:C-2026-2027-Q2-00374",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/nrc-cnrc,C-2026-2027-Q2-00374",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "e82b25b755e19ed2a4905e66ab1ba79b5b638f6d5dd79965324db4b4b9db8349",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral de 25,8 M$ : POMERLEAU INC. (Conseil national de recherches Canada)"
  },
  {
   "amount_max": null,
