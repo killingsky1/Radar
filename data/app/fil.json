@@ -17,6 +17,76 @@
    "source_officielle": true,
    "symboles_valides": true
   },
+  "collected_at": "2026-11-27T12:36:46+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "champ": "PassedHouseSecondReadingDateTime",
+   "cle": "chambre-2",
+   "date_officielle": "2026-11-26T10:15:00-05:00",
+   "details": [
+    [
+     "Projet de loi",
+     "C-28"
+    ],
+    [
+     "Titre",
+     "Loi modifiant la Loi sur l'aéronautique et d'autres lois en conséquence"
+    ],
+    [
+     "Étape",
+     "adopté en deuxième lecture à la Chambre des communes"
+    ],
+    [
+     "Où il en est",
+     "À l'examen en comité à la Chambre des communes"
+    ]
+   ],
+   "etape": "adopté en deuxième lecture à la Chambre des communes",
+   "numero": "C-28",
+   "sanction": false,
+   "session": "45-1",
+   "statut": "À l'examen en comité à la Chambre des communes",
+   "titre": "Loi sur les lancements spatiaux canadiens",
+   "titre_long": "Loi modifiant la Loi sur l'aéronautique et d'autres lois en conséquence",
+   "type": "Projet de loi émanant du gouvernement (Cdc)",
+   "type_en": "House Government Bill"
+  },
+  "direction": 0,
+  "entities": [
+   "Parlement du Canada"
+  ],
+  "id": "legisinfo:45-1:C-28:chambre-2",
+  "kind": "etape_projet_de_loi",
+  "notes": [],
+  "occurred_on": "2026-11-26",
+  "official_id": "45-1:C-28:chambre-2",
+  "official_url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-28",
+  "parser_version": "legisinfo-1",
+  "published_on": "2026-11-26",
+  "sha256": "7ccab4d1e1bfd8965949c4790980c9dcd59cc057919b2e72ba1d0699a275749b",
+  "source": "legisinfo",
+  "tickers": [],
+  "title": "Projet de loi C-28 (Loi sur les lancements spatiaux canadiens) : adopté en deuxième lecture à la Chambre des communes"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "etape_datee": true,
+   "lien_legisinfo": true,
+   "projet_du_gouvernement": true,
+   "sanction_confirmee": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
   "collected_at": "2026-11-26T22:36:56+00:00",
   "confirmations": [],
   "currency": "CAD",
@@ -47749,110 +47819,6 @@
   "source": "contrats_ca_10k",
   "tickers": [],
   "title": "Contrat fédéral modifié : +10,6 M$ pour ELLISDON CORPORATION (Gendarmerie royale du Canada), valeur totale 46,7 M$"
- },
- {
-  "amount_max": 39264153.47,
-  "amount_min": 39264153.47,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32719489,
-   "amendment_value": "39264153.47",
-   "contract_date": "2020-04-26",
-   "contract_value": "200508922.8",
-   "description_fr": "Fournitures médicales, etc.",
-   "details": [
-    [
-     "Fournisseur",
-     "AMD MEDICOM INC."
-    ],
-    [
-     "Ministère ou organisme",
-     "Agence de la santé publique du Canada"
-    ],
-    [
-     "Hausse",
-     "39,3 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "200,5 M$"
-    ],
-    [
-     "Valeur d'origine",
-     "93,6 M$"
-    ],
-    [
-     "Date du contrat",
-     "2020-04-26"
-    ],
-    [
-     "Description",
-     "Fournitures médicales, etc."
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-00294"
-    ]
-   ],
-   "fournisseur": "AMD MEDICOM INC.",
-   "instrument_type": "A",
-   "ministere": "Agence de la santé publique du Canada",
-   "montant": 39264153.47,
-   "original_value": "93564000.0",
-   "owner_org": "phac-aspc",
-   "owner_org_title": "Public Health Agency of Canada | Agence de la santé publique du Canada",
-   "reference_number": "C-2026-2027-Q2-00294",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "AMD MEDICOM INC."
-  },
-  "direction": 0,
-  "entities": [
-   "AMD MEDICOM INC.",
-   "Agence de la santé publique du Canada"
-  ],
-  "id": "contrats_ca_10k:phac-aspc:C-2026-2027-Q2-00294",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "phac-aspc:C-2026-2027-Q2-00294",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/phac-aspc,C-2026-2027-Q2-00294",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "1e5224aa0399ad8ef0f6c997e92583abd9163a523b7e5903992e4e3458333519",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral modifié : +39,3 M$ pour AMD MEDICOM INC. (Agence de la santé publique du Canada), valeur totale 200,5 M$"
  },
  {
   "amount_max": null,
