@@ -3,6 +3,112 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "canada",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "indicateur_de_la_liste_officielle": true,
+   "lien_du_quotidien": true,
+   "resume_lu": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-27T22:21:52+00:00",
+  "confirmations": [],
+  "currency": "CAD",
+  "data": {
+   "details": [
+    [
+     "Indicateur",
+     "Balance des paiements internationaux du Canada"
+    ],
+    [
+     "Période",
+     "troisième trimestre de 2026"
+    ]
+   ],
+   "indicateur": "Balance des paiements internationaux du Canada",
+   "lien": "https://www.statcan.gc.ca/daily-quotidien/261127/dq261127a-fra.htm",
+   "liste_officielle": "https://www150.statcan.gc.ca/n1/dai-quo/cal1-fra.htm",
+   "mis_a_jour": "2026-11-27T08:30:00-05:00",
+   "periode": "troisième trimestre de 2026",
+   "resume": "L'excédent du compte courant du Canada (après désaisonnalisation) s'est rétréci pour passer de 6,1 milliards de dollars au deuxième trimestre à 4,5 milliards de dollars au troisième trimestre"
+  },
+  "direction": 0,
+  "entities": [
+   "Statistique Canada"
+  ],
+  "id": "statcan:261127/dq261127a",
+  "kind": "indicateur_principal",
+  "notes": [],
+  "occurred_on": "2026-11-27",
+  "official_id": "261127/dq261127a",
+  "official_url": "https://www.statcan.gc.ca/daily-quotidien/261127/dq261127a-fra.htm",
+  "parser_version": "statcan-1",
+  "published_on": "2026-11-27",
+  "sha256": "8979cb4329b377f05cedb33185ec7304132bc7825708c8cc6d87d9f5199c60a2",
+  "source": "statcan",
+  "tickers": [],
+  "title": "Statistique Canada : Balance des paiements internationaux du Canada, troisième trimestre de 2026"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-27T22:21:37+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Industry and Security Bureau"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-24367",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-12-01",
+   "sorte": "exportations",
+   "sous_type": null,
+   "titre_officiel": "Determination: RETN US LLC, Case No. ICTS-2025-006",
+   "type": "Notice"
+  },
+  "direction": 0,
+  "entities": [
+   "Industry and Security Bureau"
+  ],
+  "id": "registre_federal:2026-24367",
+  "kind": "exportations",
+  "notes": [],
+  "occurred_on": "2026-11-27",
+  "official_id": "2026-24367",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-24367/determination-retn-us-llc-case-no-icts-2025-006",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-27",
+  "sha256": "cc7e410872c11891f80e8d12319aa6fb7a6ba54dee56c168a5f8e15bb6ffb1fb",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Exportations (Commerce, BIS) : Determination: RETN US LLC, Case No. ICTS-2025-006"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "gouvernement",
   "checks": {
    "champs_requis": true,
@@ -15209,6 +15315,68 @@
   "title": "Mémorandum présidentiel : Capital Sentence Enforcement and Pursuit of Justice for Victims of Heinous Crimes; Efforts To Expedite (Memorandum of November 23, 2026)"
  },
  {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-27T22:21:25+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA221283",
+   "classe": "TYPE 1",
+   "compagnie": "COGENT BIOSCIENCES INC",
+   "date": "20261124",
+   "fabricant": null,
+   "ingredients": [
+    "BEZUCLASTINIB"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/221283Orig1s000ltr.pdf",
+   "marques": [
+    "EKITNA"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "PRIORITY",
+   "sponsor": "COGENT BIOSCIENCES INC",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "COGENT BIOSCIENCES INC"
+  ],
+  "id": "fda:NDA221283-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
+   "Médicament orphelin : maladie rare."
+  ],
+  "occurred_on": "2026-11-24",
+  "official_id": "NDA221283-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221283",
+  "parser_version": "fda-1",
+  "published_on": "2026-11-24",
+  "sha256": "84996828538842f075adcf2df853b396002fa57cd69ec4c7690ef59278334f0e",
+  "source": "fda",
+  "tickers": [
+   "COGT"
+  ],
+  "title": "FDA : nouveau médicament approuvé, EKITNA (bezuclastinib), de COGENT BIOSCIENCES INC"
+ },
+ {
   "amount_max": 15000.0,
   "amount_min": 1001.0,
   "badge": "officiel",
@@ -19697,6 +19865,125 @@
   "source": "usaspending",
   "tickers": [],
   "title": "Contrat fédéral américain de 951,4 M$ : OPTUM PUBLIC SECTOR SOLUTIONS, INC. (Anciens combattants)"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-27T22:21:25+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA221325",
+   "classe": "TYPE 1",
+   "compagnie": "GENENTECH INC",
+   "date": "20261123",
+   "fabricant": null,
+   "ingredients": [
+    "GIREDESTRANT"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/221325Orig1s000ltr.pdf",
+   "marques": [
+    "WILSERDLY"
+   ],
+   "numero_soumission": "1",
+   "orphelin": false,
+   "priorite": "PRIORITY",
+   "sponsor": "GENENTECH INC",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "GENENTECH INC"
+  ],
+  "id": "fda:NDA221325-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important."
+  ],
+  "occurred_on": "2026-11-23",
+  "official_id": "NDA221325-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221325",
+  "parser_version": "fda-1",
+  "published_on": "2026-11-23",
+  "sha256": "54efde9d076210e96bbf6f6bd9e38b226f2e9788454dd52369f15d3b29e7a610",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, WILSERDLY (giredestrant), de GENENTECH INC"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "approbation_originale": true,
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lettre_officielle": true,
+   "nouvelle_molecule": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true
+  },
+  "collected_at": "2026-11-27T22:21:25+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "application": "NDA220905",
+   "classe": "TYPE 1",
+   "compagnie": "ML BIO SOLUTIONS INC",
+   "date": "20261123",
+   "fabricant": null,
+   "ingredients": [
+    "RIBITOL"
+   ],
+   "lettre": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220905Orig1s000ltr.pdf",
+   "marques": [
+    "WELGEMDA"
+   ],
+   "numero_soumission": "1",
+   "orphelin": true,
+   "priorite": "PRIORITY",
+   "sponsor": "ML BIO SOLUTIONS INC",
+   "statut": "AP",
+   "type_soumission": "ORIG"
+  },
+  "direction": 1,
+  "entities": [
+   "ML BIO SOLUTIONS INC"
+  ],
+  "id": "fda:NDA220905-ORIG-1",
+  "kind": "approbation_fda",
+  "notes": [
+   "Examen prioritaire : la FDA juge qu'il peut apporter un progrès important.",
+   "Médicament orphelin : maladie rare."
+  ],
+  "occurred_on": "2026-11-23",
+  "official_id": "NDA220905-ORIG-1",
+  "official_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220905",
+  "parser_version": "fda-1",
+  "published_on": "2026-11-23",
+  "sha256": "d2ef232b35a0bd6dd4c59d893366db4501c101b58234e62b3a38c847acd78135",
+  "source": "fda",
+  "tickers": [],
+  "title": "FDA : nouveau médicament approuvé, WELGEMDA (ribitol), de ML BIO SOLUTIONS INC"
  },
  {
   "amount_max": null,
@@ -47768,110 +48055,6 @@
   "title": "Contrat fédéral de 16,9 M$ : ONAKI CREATION S.E.N.C. (Services partagés Canada)"
  },
  {
-  "amount_max": 10586323.13,
-  "amount_min": 10586323.13,
-  "badge": "officiel",
-  "category": "canada",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_de_la_fiche_du_contrat": true,
-   "montant_coherent": true,
-   "seuil_de_10_millions": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "trimestre_declare_valide": true,
-   "type_d_instrument_connu": true,
-   "valeurs_lues": true
-  },
-  "collected_at": "2026-11-03T11:09:25+00:00",
-  "confirmations": [],
-  "currency": "CAD",
-  "data": {
-   "_id": 32840478,
-   "amendment_value": "10586323.13",
-   "contract_date": "2025-02-20",
-   "contract_value": "46672758.89",
-   "description_fr": "Autres bâtiments institutionnels",
-   "details": [
-    [
-     "Fournisseur",
-     "ELLISDON CORPORATION"
-    ],
-    [
-     "Ministère ou organisme",
-     "Gendarmerie royale du Canada"
-    ],
-    [
-     "Hausse",
-     "10,6 M$"
-    ],
-    [
-     "Nouvelle valeur totale",
-     "46,7 M$"
-    ],
-    [
-     "Valeur d'origine",
-     "35,8 M$"
-    ],
-    [
-     "Date du contrat",
-     "2025-02-20"
-    ],
-    [
-     "Description",
-     "Autres bâtiments institutionnels"
-    ],
-    [
-     "Type",
-     "modification d'un contrat"
-    ],
-    [
-     "Trimestre déclaré",
-     "juillet à septembre 2026"
-    ],
-    [
-     "Référence",
-     "C-2026-2027-Q2-00834"
-    ]
-   ],
-   "fournisseur": "ELLISDON CORPORATION",
-   "instrument_type": "A",
-   "ministere": "Gendarmerie royale du Canada",
-   "montant": 10586323.13,
-   "original_value": "35813251.54",
-   "owner_org": "rcmp-grc",
-   "owner_org_title": "Royal Canadian Mounted Police | Gendarmerie royale du Canada",
-   "reference_number": "C-2026-2027-Q2-00834",
-   "reporting_period": "2026-2027-Q2",
-   "type": "modification d'un contrat",
-   "vendor_name": "ELLISDON CORPORATION"
-  },
-  "direction": 0,
-  "entities": [
-   "ELLISDON CORPORATION",
-   "Gendarmerie royale du Canada"
-  ],
-  "id": "contrats_ca_10k:rcmp-grc:C-2026-2027-Q2-00834",
-  "kind": "contrat_modifie",
-  "notes": [
-   "Date de publication : le jour où Radar a vu la ligne pour la 1re fois (le portail ne date pas chaque ligne).",
-   "Date exacte de la modification non publiée : déclarée pour le trimestre juillet à septembre 2026."
-  ],
-  "occurred_on": "2026-07-01",
-  "official_id": "rcmp-grc:C-2026-2027-Q2-00834",
-  "official_url": "https://rechercher.ouvert.canada.ca/contrats/record/rcmp-grc,C-2026-2027-Q2-00834",
-  "parser_version": "contrats-ca-1",
-  "published_on": "2026-11-03",
-  "sha256": "f995d3740f625d8dc850041f88f90236fb12d8f10430ee9ffd1bef1c605b7f4a",
-  "source": "contrats_ca_10k",
-  "tickers": [],
-  "title": "Contrat fédéral modifié : +10,6 M$ pour ELLISDON CORPORATION (Gendarmerie royale du Canada), valeur totale 46,7 M$"
- },
- {
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
@@ -53403,60 +53586,6 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_rappel": true,
-   "nombre_plausible": true,
-   "numero_de_rappel_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true
-  },
-  "collected_at": "2026-10-16T15:22:12+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "anciennes_empreintes": [
-    "4a205b601ab7221cc822919088d3e6572ffa5ae35e73b7a1cce98ee6e8907335"
-   ],
-   "campagne": "308/035G",
-   "composant": "SEATS",
-   "consequence": "A fire increases the risk of injury.",
-   "constructeur": "Hyundai Motor America",
-   "defaut": "Hyundai Motor America (Genesis) is recalling certain 2015-2016 Hyundai Genesis, and 2017-2020 Genesis G80 vehicles. The front power seat motors may overheat due to a stuck power seat control switch, which can result in a fire while parked or driving.",
-   "numero": "26V664000",
-   "sorte": "Vehicle",
-   "sujet": "Park Outside: Fire from Overheated Power Seat Motors",
-   "unites": 94622
-  },
-  "direction": -1,
-  "entities": [
-   "Hyundai Motor America"
-  ],
-  "id": "nhtsa:26V664000",
-  "kind": "rappel",
-  "notes": [
-   "Risque d'incendie même stationné : garer dehors, loin des bâtiments.",
-   "Document modifié à la source depuis la 1re lecture."
-  ],
-  "occurred_on": "2026-10-09",
-  "official_id": "26V664000",
-  "official_url": "https://www.nhtsa.gov/recalls?nhtsaId=26V664000",
-  "parser_version": "nhtsa-1",
-  "published_on": "2026-10-09",
-  "sha256": "a375250f41ab40402a99de15c62e72aec99ade07b2ab9821056b3616132b0b45",
-  "source": "nhtsa",
-  "tickers": [],
-  "title": "Rappel de Hyundai Motor America : 94 622 véhicules — « Park Outside: Fire from Overheated Power Seat Motors »"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
   "category": "militaire",
   "checks": {
    "champs_requis": true,
@@ -53497,159 +53626,6 @@
   "source": "nouvelles_defense_ca",
   "tickers": [],
   "title": "Le Navire canadien de Sa Majesté Ottawa revient à Esquimalt après les opérations HORIZON et LATITUDE"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-09T18:54:33+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Executive Office of the President"
-   ],
-   "etape": "inspection_publique",
-   "numero": "2026-20972",
-   "numero_dans_le_texte": true,
-   "parution_prevue": "2026-10-13",
-   "sorte": "presidentiel",
-   "sous_type": null,
-   "titre_officiel": "Special Observances: Columbus Day (Proc. 11073)",
-   "type": "Presidential Document"
-  },
-  "direction": 0,
-  "entities": [
-   "Executive Office of the President"
-  ],
-  "id": "registre_federal:2026-20972",
-  "kind": "presidentiel",
-  "notes": [],
-  "occurred_on": "2026-10-09",
-  "official_id": "2026-20972",
-  "official_url": "https://www.federalregister.gov/public-inspection/2026-20972/special-observances-columbus-day-proc-11073",
-  "parser_version": "registre-4",
-  "published_on": "2026-10-09",
-  "sha256": "25d3b80afb3d10218f8ea99c15e59ea302a1a548840048fac5112e6a2523b34e",
-  "source": "registre_federal",
-  "tickers": [],
-  "title": "Document présidentiel : Special Observances: Columbus Day (Proc. 11073)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-09T18:54:32+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Executive Office of the President"
-   ],
-   "etape": "inspection_publique",
-   "numero": "2026-20969",
-   "numero_dans_le_texte": true,
-   "parution_prevue": "2026-10-13",
-   "sorte": "presidentiel",
-   "sous_type": null,
-   "titre_officiel": "Special Observances: National Energy Dominance Month (Proc. 11072)",
-   "type": "Presidential Document"
-  },
-  "direction": 0,
-  "entities": [
-   "Executive Office of the President"
-  ],
-  "id": "registre_federal:2026-20969",
-  "kind": "presidentiel",
-  "notes": [],
-  "occurred_on": "2026-10-09",
-  "official_id": "2026-20969",
-  "official_url": "https://www.federalregister.gov/public-inspection/2026-20969/special-observances-national-energy-dominance-month-proc-11072",
-  "parser_version": "registre-4",
-  "published_on": "2026-10-09",
-  "sha256": "75776591888198d7605e6f3c0ed62e51b528e79b44961e5c8bbcdbaa63dcc0f0",
-  "source": "registre_federal",
-  "tickers": [],
-  "title": "Document présidentiel : Special Observances: National Energy Dominance Month (Proc. 11072)"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-09T18:54:31+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Industry and Security Bureau"
-   ],
-   "etape": "inspection_publique",
-   "numero": "2026-20938",
-   "numero_dans_le_texte": true,
-   "parution_prevue": "2026-10-14",
-   "sorte": "exportations",
-   "sous_type": null,
-   "titre_officiel": "Guidance to U.S. Customs and Border Protection Regarding the Assessment of ''U.S. Content'' for Purposes of Implementing Tariffs",
-   "type": "Notice"
-  },
-  "direction": 0,
-  "entities": [
-   "Industry and Security Bureau"
-  ],
-  "id": "registre_federal:2026-20938",
-  "kind": "exportations",
-  "notes": [],
-  "occurred_on": "2026-10-09",
-  "official_id": "2026-20938",
-  "official_url": "https://www.federalregister.gov/public-inspection/2026-20938/guidance-to-us-customs-and-border-protection-regarding-the-assessment-of-us-content-for-purposes-of",
-  "parser_version": "registre-4",
-  "published_on": "2026-10-09",
-  "sha256": "8db45278b54ce8dfb725bd4757b45be45954d10df241b435d8ac16ca20f5feb9",
-  "source": "registre_federal",
-  "tickers": [],
-  "title": "Exportations (Commerce, BIS) : Guidance to U.S. Customs and Border Protection Regarding the Assessment of ''U.S. Content'' for Purposes of Implementing Tariffs"
  },
  {
   "amount_max": 112529793.0,
