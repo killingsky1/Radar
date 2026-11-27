@@ -3,6 +3,57 @@
   "amount_max": null,
   "amount_min": null,
   "badge": "officiel",
+  "category": "gouvernement",
+  "checks": {
+   "champs_requis": true,
+   "dates_coherentes": true,
+   "domaine_officiel": true,
+   "empreinte": true,
+   "lien_du_meme_document": true,
+   "non_retire": true,
+   "numero_officiel": true,
+   "source_connue": true,
+   "source_officielle": true,
+   "symboles_valides": true,
+   "texte_du_meme_document": true
+  },
+  "collected_at": "2026-11-27T19:54:00+00:00",
+  "confirmations": [],
+  "currency": "USD",
+  "data": {
+   "agences": [
+    "Trade Representative, Office of United States"
+   ],
+   "etape": "inspection_publique",
+   "numero": "2026-24231",
+   "numero_dans_le_texte": true,
+   "parution_prevue": "2026-11-30",
+   "sorte": "commerce_exterieur",
+   "sous_type": null,
+   "titre_officiel": "Proposed Modification of Section 301 Action: Brazil's Acts, Policies, and Practices Related to Digital Trade and Electronic Payment Services; Unfair, Preferential Tariffs; Anti-Corruption Enforcement; Intellectual Property Protection; Ethanol Market Access; and Illegal Deforestation",
+   "type": "Notice"
+  },
+  "direction": 0,
+  "entities": [
+   "Trade Representative, Office of United States"
+  ],
+  "id": "registre_federal:2026-24231",
+  "kind": "commerce_exterieur",
+  "notes": [],
+  "occurred_on": "2026-11-27",
+  "official_id": "2026-24231",
+  "official_url": "https://www.federalregister.gov/public-inspection/2026-24231/proposed-modification-of-section-301-action-brazils-acts-policies-and-practices-related-to-digital",
+  "parser_version": "registre-4",
+  "published_on": "2026-11-27",
+  "sha256": "ce716985632e48f392480ca182e64e73454655b9d9f75f52004f316094f0ac42",
+  "source": "registre_federal",
+  "tickers": [],
+  "title": "Commerce extérieur (USTR) : Proposed Modification of Section 301 Action: Brazil's Acts, Policies, and Practices Related to Digital Trade and Electronic Payment Services; Unfair, Preferential Tariffs; Anti-Corruption Enforcement; Intellectual Property Protection; Ethanol Market Access; and Illegal Deforestation"
+ },
+ {
+  "amount_max": null,
+  "amount_min": null,
+  "badge": "officiel",
   "category": "canada",
   "checks": {
    "champs_requis": true,
@@ -53599,57 +53650,6 @@
   "source": "registre_federal",
   "tickers": [],
   "title": "Exportations (Commerce, BIS) : Guidance to U.S. Customs and Border Protection Regarding the Assessment of ''U.S. Content'' for Purposes of Implementing Tariffs"
- },
- {
-  "amount_max": null,
-  "amount_min": null,
-  "badge": "officiel",
-  "category": "gouvernement",
-  "checks": {
-   "champs_requis": true,
-   "dates_coherentes": true,
-   "domaine_officiel": true,
-   "empreinte": true,
-   "lien_du_meme_document": true,
-   "non_retire": true,
-   "numero_officiel": true,
-   "source_connue": true,
-   "source_officielle": true,
-   "symboles_valides": true,
-   "texte_du_meme_document": true
-  },
-  "collected_at": "2026-10-09T18:54:30+00:00",
-  "confirmations": [],
-  "currency": "USD",
-  "data": {
-   "agences": [
-    "Foreign Assets Control Office"
-   ],
-   "etape": "inspection_publique",
-   "numero": "2026-20839",
-   "numero_dans_le_texte": true,
-   "parution_prevue": "2026-10-13",
-   "sorte": "sanctions",
-   "sous_type": null,
-   "titre_officiel": "Iran-Related Determination",
-   "type": "Rule"
-  },
-  "direction": 0,
-  "entities": [
-   "Foreign Assets Control Office"
-  ],
-  "id": "registre_federal:2026-20839",
-  "kind": "sanctions",
-  "notes": [],
-  "occurred_on": "2026-10-09",
-  "official_id": "2026-20839",
-  "official_url": "https://www.federalregister.gov/public-inspection/2026-20839/iran-related-determination",
-  "parser_version": "registre-4",
-  "published_on": "2026-10-09",
-  "sha256": "31309414df68b0c161babc9254ed4c3e66e042bd84d4a8491de7b50ec50ebb5c",
-  "source": "registre_federal",
-  "tickers": [],
-  "title": "Sanctions (Trésor, OFAC) : Iran-Related Determination"
  },
  {
   "amount_max": 112529793.0,
