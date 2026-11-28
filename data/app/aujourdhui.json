@@ -395,6 +395,10 @@
    },
    "contexte": [
     {
+     "id": "sec_13dg:0000919574-26-008281",
+     "pourquoi": "13G : placement passif (souvent un fonds indiciel qui grossit)."
+    },
+    {
      "id": "sec_8k:0001193125-26-472366",
      "pourquoi": "Autre point du 8-K (contrat, acquisition, avis de retrait de la bourse…) : effet incertain."
     },
@@ -1083,7 +1087,7 @@
    }
   }
  ],
- "compagnies_notees": 982,
+ "compagnies_notees": 996,
  "ecartees": [
   {
    "bonus": {
@@ -1863,6 +1867,155 @@
     "moins": 1.0,
     "plus": 1.0
    },
+   "contexte": [],
+   "depot_recent": "2026-11-27",
+   "depuis": "2026-11-28T03:55:42+00:00",
+   "derniere_info": "2026-11-27",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001193125-26-480461:P",
+       "points": 4.5,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
+      }
+     ],
+     "points": 4.5,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "Aardvark Therapeutics, Inc.",
+   "note10": 8.8,
+   "note10_sans_bonus": 8.8,
+   "note10_sans_taille": 7.5,
+   "plus": 4.5,
+   "recent": true,
+   "score": 4.5,
+   "symbole": "AARD",
+   "taille": {
+    "actions": [
+     21891271,
+     "2026-11-02"
+    ],
+    "prix": [
+     "20261030",
+     1.44
+    ],
+    "seuils": {
+     "mois": "202609",
+     "p30": 2090.64,
+     "p70": 12588.71
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 31.5
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depot_recent": "2026-11-27",
+   "depuis": "2026-11-25T04:55:28+00:00",
+   "derniere_info": "2026-11-27",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001094891-26-000325:P",
+       "points": 4.5,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
+      },
+      {
+       "age": 3,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001094891-26-000320:P",
+       "points": 4.2,
+       "regle": "achat_dirigeant",
+       "temps": 0.933
+      }
+     ],
+     "points": 4.5,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "AMC Robotics Corp",
+   "note10": 8.8,
+   "note10_sans_bonus": 8.8,
+   "note10_sans_taille": 7.5,
+   "plus": 4.5,
+   "recent": true,
+   "score": 4.5,
+   "symbole": "AMCI",
+   "taille": {
+    "actions": [
+     23889661,
+     "2026-11-13"
+    ],
+    "prix": [
+     "20261030",
+     2.47
+    ],
+    "seuils": {
+     "mois": "202609",
+     "p30": 2090.64,
+     "p70": 12588.71
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 59.0
+   }
+  },
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
    "contexte": [
     {
      "id": "sec_8k:0001213900-26-123421",
@@ -2248,71 +2401,6 @@
     "source_actions": "frames",
     "taille": "petite",
     "valeur_m": 39.8
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depot_recent": "2026-11-24",
-   "depuis": "2026-11-25T04:55:28+00:00",
-   "derniere_info": "2026-11-24",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 3,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "PDG, directeur financier ou président du conseil",
-         1.5
-        ],
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001094891-26-000320:P",
-       "points": 4.2,
-       "regle": "achat_dirigeant",
-       "temps": 0.933
-      }
-     ],
-     "points": 4.2,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "AMC Robotics Corp",
-   "note10": 8.5,
-   "note10_sans_bonus": 8.5,
-   "note10_sans_taille": 7.3,
-   "plus": 4.2,
-   "recent": false,
-   "score": 4.2,
-   "symbole": "AMCI",
-   "taille": {
-    "actions": [
-     23889661,
-     "2026-11-13"
-    ],
-    "prix": [
-     "20261030",
-     2.47
-    ],
-    "seuils": {
-     "mois": "202609",
-     "p30": 2090.64,
-     "p70": 12588.71
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 59.0
    }
   },
   {
@@ -3134,67 +3222,6 @@
     "taille": "petite",
     "valeur_m": 41.7
    }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [],
-   "depot_recent": "2026-11-24",
-   "depuis": "2026-11-25T04:55:28+00:00",
-   "derniere_info": "2026-11-24",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 3,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001727207-26-000008:P",
-       "points": 2.8,
-       "regle": "achat_dirigeant",
-       "temps": 0.933
-      }
-     ],
-     "points": 2.8,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "Lument Finance Trust, Inc.",
-   "note10": 7.3,
-   "note10_sans_bonus": 7.3,
-   "note10_sans_taille": 6.6,
-   "plus": 2.8,
-   "recent": false,
-   "score": 2.8,
-   "symbole": "LFT",
-   "taille": {
-    "actions": [
-     5256364,
-     "2026-11-09"
-    ],
-    "prix": [
-     "20261005",
-     5.02
-    ],
-    "seuils": {
-     "mois": "202609",
-     "p30": 2090.64,
-     "p70": 12588.71
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 26.4
-   }
   }
  ],
  "evenements": {
@@ -3861,6 +3888,65 @@
     "PMN"
    ],
    "title": "Adage Capital Management, L.P. détient 7,73 % de ProMIS Neurosciences Inc. (13G, placement passif)"
+  },
+  "sec_13dg:0000919574-26-008281": {
+   "amount_max": null,
+   "amount_min": null,
+   "badge": "officiel",
+   "category": "baleines",
+   "checks": {
+    "champs_requis": true,
+    "dates_coherentes": true,
+    "domaine_officiel": true,
+    "emetteur_coherent": true,
+    "empreinte": true,
+    "pourcentage_valide": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-28T03:57:12+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 7054954.0,
+    "amendement": null,
+    "bourse": "Nasdaq",
+    "but_sous_evalue": null,
+    "cik_emetteur": "0001745648",
+    "cik_sujet_entete": "0001745648",
+    "date_evenement": "2026-09-30",
+    "declarant": "Alpha Wave Global, LP",
+    "extrait_but": null,
+    "nb_personnes": 4,
+    "nom_emetteur": "Apnimed, Inc.",
+    "pourcentage": 16.9,
+    "type": "SCHEDULE 13G",
+    "types_declarants": [
+     "IA",
+     "OO",
+     "PN"
+    ]
+   },
+   "direction": 0,
+   "entities": [
+    "Alpha Wave Global, LP",
+    "Apnimed, Inc."
+   ],
+   "id": "sec_13dg:0000919574-26-008281",
+   "kind": "plus_5_pourcent",
+   "notes": [],
+   "occurred_on": "2026-09-30",
+   "official_id": "0000919574-26-008281",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1745648/000091957426008281/0000919574-26-008281-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-27",
+   "sha256": "55afae4063bf20ebff2d9a56129f0421ae17b794f79f93157fd08290b1512a94",
+   "source": "sec_13dg",
+   "tickers": [
+    "APMD"
+   ],
+   "title": "Alpha Wave Global, LP détient 16,9 % de Apnimed, Inc. (13G, placement passif)"
   },
   "sec_13dg:0000947871-26-000976": {
    "amount_max": null,
@@ -4904,63 +4990,6 @@
     "MERC"
    ],
    "title": "LM Asset Management Inc. détient 8 % de MERCER INTERNATIONAL INC. (13G, placement passif)"
-  },
-  "sec_13dg:0002100119-26-001542": {
-   "amount_max": null,
-   "amount_min": null,
-   "badge": "officiel",
-   "category": "baleines",
-   "checks": {
-    "champs_requis": true,
-    "dates_coherentes": true,
-    "domaine_officiel": true,
-    "emetteur_coherent": true,
-    "empreinte": true,
-    "pourcentage_valide": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-10-31T09:47:26+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 4184669.0,
-    "amendement": null,
-    "bourse": "Nasdaq",
-    "but_sous_evalue": null,
-    "cik_emetteur": "0000926282",
-    "cik_sujet_entete": "0000926282",
-    "date_evenement": "2026-09-30",
-    "declarant": "Vanguard Capital Management",
-    "extrait_but": null,
-    "nb_personnes": 1,
-    "nom_emetteur": "ADTRAN Holdings Inc",
-    "pourcentage": 5.13,
-    "type": "SCHEDULE 13G",
-    "types_declarants": [
-     "IA"
-    ]
-   },
-   "direction": 0,
-   "entities": [
-    "Vanguard Capital Management",
-    "ADTRAN Holdings, Inc."
-   ],
-   "id": "sec_13dg:0002100119-26-001542",
-   "kind": "plus_5_pourcent",
-   "notes": [],
-   "occurred_on": "2026-09-30",
-   "official_id": "0002100119-26-001542",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/926282/000210011926001542/0002100119-26-001542-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-10-30",
-   "sha256": "f22890199cb1a20a2fd04a8a414a0412b54a90e0745eaf39dd77fddf0852399d",
-   "source": "sec_13dg",
-   "tickers": [
-    "ADTN"
-   ],
-   "title": "Vanguard Capital Management détient 5,13 % de ADTRAN Holdings, Inc. (13G, placement passif)"
   },
   "sec_13dg:0002100119-26-001544": {
    "amount_max": null,
@@ -8143,6 +8172,162 @@
    ],
    "title": "Da Shengwei (Sean) (CEO) achète 342 383 actions de AMC Robotics Corp"
   },
+  "sec_form4:0001094891-26-000325:P": {
+   "amount_max": 49199.03,
+   "amount_min": 49199.03,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-28T03:56:28+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 50132.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001937891",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 0.9814,
+    "proprietaires_cik": [
+     "2089104"
+    ],
+    "roles": [
+     "CEO"
+    ],
+    "symbole_declare": "AMCI",
+    "symboles_sec": [
+     "AMCI"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 25000.0,
+      "apres": 1358894.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-24",
+      "hors_bourse": null,
+      "prix": 1.0053,
+      "titre_valeur": "Common Stock"
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 10000.0,
+      "apres": 68489.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-24",
+      "hors_bourse": null,
+      "prix": 0.93,
+      "titre_valeur": "Common Stock"
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 4100.0,
+      "apres": 72589.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-24",
+      "hors_bourse": null,
+      "prix": 0.87,
+      "titre_valeur": "Common Stock"
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 1000.0,
+      "apres": 73589.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-25",
+      "hors_bourse": null,
+      "prix": 1.0391,
+      "titre_valeur": "Common Stock"
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 2500.0,
+      "apres": 76089.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-25",
+      "hors_bourse": null,
+      "prix": 1.0322,
+      "titre_valeur": "Common Stock"
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 2500.0,
+      "apres": 78589.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-25",
+      "hors_bourse": null,
+      "prix": 1.026,
+      "titre_valeur": "Common Stock"
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 2532.0,
+      "apres": 81121.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-25",
+      "hors_bourse": null,
+      "prix": 0.99,
+      "titre_valeur": "Common Stock"
+     },
+     {
+      "acquis_cede": "A",
+      "actions": 2500.0,
+      "apres": 83121.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-25",
+      "hors_bourse": null,
+      "prix": 1.0033,
+      "titre_valeur": "Common Stock"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Da Shengwei (Sean)",
+    "AMC Robotics Corp"
+   ],
+   "id": "sec_form4:0001094891-26-000325:P",
+   "kind": "achat_initie",
+   "notes": [
+    "Déclaré en retard : 3 jours ouvrables après la transaction (limite légale : 2)."
+   ],
+   "occurred_on": "2026-11-24",
+   "official_id": "0001094891-26-000325:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1937891/000109489126000325/0001094891-26-000325-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-27",
+   "sha256": "4f396198fca43138134cb0711c79423b770927944255e89c58c53d37bf476e45",
+   "source": "sec_form4",
+   "tickers": [
+    "AMCI"
+   ],
+   "title": "Da Shengwei (Sean) (CEO) achète 50 132 actions de AMC Robotics Corp"
+  },
   "sec_form4:0001104659-26-130786:P": {
    "amount_max": 49047.06,
    "amount_min": 49047.06,
@@ -8710,6 +8895,86 @@
    ],
    "title": "PERLA STANLEY R (administrateur) achète 5 000 actions de Global Net Lease, Inc."
   },
+  "sec_form4:0001104659-26-131894:P": {
+   "amount_max": 805000.0,
+   "amount_min": 805000.0,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-26T04:12:33+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 500000.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001798562",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 1.61,
+    "proprietaires_cik": [
+     "1874431",
+     "1881973"
+    ],
+    "roles": [
+     "actionnaire de 10 %",
+     "administrateur"
+    ],
+    "symbole_declare": "TMC",
+    "symboles_sec": [
+     "TMC"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 500000.0,
+      "apres": 61453495.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-24",
+      "hors_bourse": null,
+      "prix": 1.61,
+      "titre_valeur": "Common Shares"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Karkar Andrei",
+    "ERAS Capital LLC",
+    "TMC the metals Co Inc."
+   ],
+   "id": "sec_form4:0001104659-26-131894:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-11-24",
+   "official_id": "0001104659-26-131894:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1798562/000110465926131894/0001104659-26-131894-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-25",
+   "sha256": "1ef9991dd6387d06e25510e1b26cb6989492ad5b2833abd63b3b528ac32256e6",
+   "source": "sec_form4",
+   "tickers": [
+    "TMC"
+   ],
+   "title": "Karkar Andrei et ERAS Capital LLC (actionnaire de 10 %, administrateur) achète 500 000 actions de TMC the metals Co Inc."
+  },
   "sec_form4:0001104659-26-132064:P": {
    "amount_max": 38410.0,
    "amount_min": 38410.0,
@@ -8830,6 +9095,83 @@
     "DRIO"
    ],
    "title": "Raphael Erez (Chief Executive Officer) achète 26 000 actions de DarioHealth Corp."
+  },
+  "sec_form4:0001104659-26-132347:P": {
+   "amount_max": 33400.0,
+   "amount_min": 33400.0,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-28T03:56:22+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 20000.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001798562",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 1.67,
+    "proprietaires_cik": [
+     "1878772"
+    ],
+    "roles": [
+     "Chairman & CEO"
+    ],
+    "symbole_declare": "TMC",
+    "symboles_sec": [
+     "TMC"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 20000.0,
+      "apres": 41823445.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-25",
+      "hors_bourse": null,
+      "prix": 1.67,
+      "titre_valeur": "Common Shares"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Barron Gerard",
+    "TMC the metals Co Inc."
+   ],
+   "id": "sec_form4:0001104659-26-132347:P",
+   "kind": "achat_initie",
+   "notes": [],
+   "occurred_on": "2026-11-25",
+   "official_id": "0001104659-26-132347:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1798562/000110465926132347/0001104659-26-132347-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-27",
+   "sha256": "105178be3fdc9c9421b87a9429a708d2b5fb2c6d4cf1936c3f86a9cb93daf861",
+   "source": "sec_form4",
+   "tickers": [
+    "TMC"
+   ],
+   "title": "Barron Gerard (Chairman & CEO) achète 20 000 actions de TMC the metals Co Inc."
   },
   "sec_form4:0001140361-26-042891:P": {
    "amount_max": 52600.0,
@@ -9138,160 +9480,6 @@
     "TROX"
    ],
    "title": "Romano John D (CEO and Director) achète 75 000 actions de Tronox Holdings plc"
-  },
-  "sec_form4:0001193125-26-454019:P": {
-   "amount_max": 600900.0,
-   "amount_min": 600900.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-11-10T04:10:24+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 150000.0,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0000926282",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 4.006,
-    "proprietaires_cik": [
-     "1191219"
-    ],
-    "roles": [
-     "Chairman & CEO"
-    ],
-    "symbole_declare": "ADTN",
-    "symboles_sec": [
-     "ADTN"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 150000.0,
-      "apres": 1410889.51,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-06",
-      "hors_bourse": null,
-      "prix": 4.006,
-      "titre_valeur": "Common Stock"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "STANTON THOMAS R",
-    "ADTRAN Holdings, Inc."
-   ],
-   "id": "sec_form4:0001193125-26-454019:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-11-06",
-   "official_id": "0001193125-26-454019:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/926282/000119312526454019/0001193125-26-454019-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-11-09",
-   "sha256": "0f571d91245512f5fe74bcac9f64d224247e42a40c9667bc1b8b5eb171bd2dc8",
-   "source": "sec_form4",
-   "tickers": [
-    "ADTN"
-   ],
-   "title": "STANTON THOMAS R (Chairman & CEO) achète 150 000 actions de ADTRAN Holdings, Inc."
-  },
-  "sec_form4:0001193125-26-454020:P": {
-   "amount_max": 74188.22,
-   "amount_min": 74188.22,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-11-10T04:16:06+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 17820.0,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0000926282",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 4.1632,
-    "proprietaires_cik": [
-     "1974835"
-    ],
-    "roles": [
-     "SVP of Finance; CFO"
-    ],
-    "symbole_declare": "ADTN",
-    "symboles_sec": [
-     "ADTN"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 17820.0,
-      "apres": 77744.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-06",
-      "hors_bourse": null,
-      "prix": 4.1632,
-      "titre_valeur": "Common Stock"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Santo Timothy P",
-    "ADTRAN Holdings, Inc."
-   ],
-   "id": "sec_form4:0001193125-26-454020:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-11-06",
-   "official_id": "0001193125-26-454020:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/926282/000119312526454020/0001193125-26-454020-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-11-09",
-   "sha256": "93b3a55a479e0a20fc627707f62d08f7677240b39e9948ae3b193f28d4c341a2",
-   "source": "sec_form4",
-   "tickers": [
-    "ADTN"
-   ],
-   "title": "Santo Timothy P (SVP of Finance; CFO) achète 17 820 actions de ADTRAN Holdings, Inc."
   },
   "sec_form4:0001193125-26-454344:P": {
    "amount_max": 155360.0,
@@ -9732,85 +9920,6 @@
     "MX"
    ],
    "title": "Amoruso Cristiano (administrateur) achète 568 009 actions de MAGNACHIP SEMICONDUCTOR Corp"
-  },
-  "sec_form4:0001193125-26-458287:P": {
-   "amount_max": 171920.0,
-   "amount_min": 171920.0,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-11-13T11:08:00+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 40000.0,
-    "automatique": null,
-    "bourse": "Nasdaq",
-    "cik_emetteur": "0000926282",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 4.298,
-    "proprietaires_cik": [
-     "1191219"
-    ],
-    "roles": [
-     "Chairman & CEO"
-    ],
-    "symbole_declare": "ADTN",
-    "symboles_sec": [
-     "ADTN"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 40000.0,
-      "apres": 1450889.51,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-09",
-      "hors_bourse": null,
-      "prix": 4.298,
-      "titre_valeur": "Common Stock"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "STANTON THOMAS R",
-    "ADTRAN Holdings, Inc."
-   ],
-   "id": "sec_form4:0001193125-26-458287:P",
-   "kind": "achat_initie",
-   "notes": [
-    "Déclaré en retard : 3 jours ouvrables après la transaction (limite légale : 2)."
-   ],
-   "occurred_on": "2026-11-09",
-   "official_id": "0001193125-26-458287:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/926282/000119312526458287/0001193125-26-458287-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-11-12",
-   "sha256": "d5e35f5183c1d9bd8a822fde14adb1b48491f287d6da15858f295a1d24a58ce3",
-   "source": "sec_form4",
-   "tickers": [
-    "ADTN"
-   ],
-   "title": "STANTON THOMAS R (Chairman & CEO) achète 40 000 actions de ADTRAN Holdings, Inc."
   },
   "sec_form4:0001193125-26-460560:P": {
    "amount_max": 66335.26,
@@ -11428,6 +11537,85 @@
     "AVD"
    ],
    "title": "Gottschalk Patrick E (administrateur) achète 127 400 actions de AMERICAN VANGUARD CORP"
+  },
+  "sec_form4:0001193125-26-480461:P": {
+   "amount_max": 48300.0,
+   "amount_min": 48300.0,
+   "badge": "officiel",
+   "category": "compagnies",
+   "checks": {
+    "champs_requis": true,
+    "code_achat_ou_vente_reel": true,
+    "dates_coherentes": true,
+    "dates_transaction_valides": true,
+    "domaine_officiel": true,
+    "empreinte": true,
+    "montant_coherent": true,
+    "montant_plausible": true,
+    "montant_recalcule": true,
+    "prix_et_actions_positifs": true,
+    "prix_plausible": true,
+    "source_connue": true,
+    "source_officielle": true,
+    "symbole_conforme_sec": true,
+    "symboles_valides": true
+   },
+   "collected_at": "2026-11-28T03:56:19+00:00",
+   "confirmations": [],
+   "currency": "USD",
+   "data": {
+    "actions": 50000.0,
+    "automatique": null,
+    "bourse": "Nasdaq",
+    "cik_emetteur": "0001774857",
+    "hors_bourse": null,
+    "plan_10b5_1": false,
+    "prix_moyen": 0.966,
+    "proprietaires_cik": [
+     "1940120"
+    ],
+    "roles": [
+     "Chief Executive Officer"
+    ],
+    "symbole_declare": "AARD",
+    "symboles_sec": [
+     "AARD"
+    ],
+    "transactions": [
+     {
+      "acquis_cede": "A",
+      "actions": 50000.0,
+      "apres": 1601613.0,
+      "automatique": null,
+      "code": "P",
+      "date": "2026-11-24",
+      "hors_bourse": null,
+      "prix": 0.966,
+      "titre_valeur": "Common Stock, par value $0.00001 per share"
+     }
+    ]
+   },
+   "direction": 1,
+   "entities": [
+    "Lee Tien-Li",
+    "Aardvark Therapeutics, Inc."
+   ],
+   "id": "sec_form4:0001193125-26-480461:P",
+   "kind": "achat_initie",
+   "notes": [
+    "Déclaré en retard : 3 jours ouvrables après la transaction (limite légale : 2)."
+   ],
+   "occurred_on": "2026-11-24",
+   "official_id": "0001193125-26-480461:P",
+   "official_url": "https://www.sec.gov/Archives/edgar/data/1774857/000119312526480461/0001193125-26-480461-index.htm",
+   "parser_version": "sec-8",
+   "published_on": "2026-11-27",
+   "sha256": "77b1d181984f2e39100f81e412d05232625e2df9e4643b185839fe621b2d009f",
+   "source": "sec_form4",
+   "tickers": [
+    "AARD"
+   ],
+   "title": "Lee Tien-Li (Chief Executive Officer) achète 50 000 actions de Aardvark Therapeutics, Inc."
   },
   "sec_form4:0001199696-26-000008:P": {
    "amount_max": 49365.79,
@@ -17502,106 +17690,6 @@
    ],
    "title": "Watson Patrick S (Vice President and CFO) achète 2 000 actions de KENNAMETAL INC"
   },
-  "sec_form4:0001727207-26-000008:P": {
-   "amount_max": 32523.59,
-   "amount_min": 32523.59,
-   "badge": "officiel",
-   "category": "compagnies",
-   "checks": {
-    "champs_requis": true,
-    "code_achat_ou_vente_reel": true,
-    "dates_coherentes": true,
-    "dates_transaction_valides": true,
-    "domaine_officiel": true,
-    "empreinte": true,
-    "montant_coherent": true,
-    "montant_plausible": true,
-    "montant_recalcule": true,
-    "prix_et_actions_positifs": true,
-    "prix_plausible": true,
-    "source_connue": true,
-    "source_officielle": true,
-    "symbole_conforme_sec": true,
-    "symboles_valides": true
-   },
-   "collected_at": "2026-11-25T04:56:38+00:00",
-   "confirmations": [],
-   "currency": "USD",
-   "data": {
-    "actions": 9646.0,
-    "automatique": null,
-    "bourse": "NYSE",
-    "cik_emetteur": "0001547546",
-    "hors_bourse": null,
-    "plan_10b5_1": false,
-    "prix_moyen": 3.3717,
-    "proprietaires_cik": [
-     "1727207"
-    ],
-    "roles": [
-     "administrateur"
-    ],
-    "symbole_declare": "LFT",
-    "symboles_sec": [
-     "LFT",
-     "LFT-PA"
-    ],
-    "transactions": [
-     {
-      "acquis_cede": "A",
-      "actions": 1406.0,
-      "apres": 76115.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-20",
-      "hors_bourse": null,
-      "prix": 3.499,
-      "titre_valeur": "common stock"
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 3000.0,
-      "apres": 79115.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-23",
-      "hors_bourse": null,
-      "prix": 3.35,
-      "titre_valeur": "common stock"
-     },
-     {
-      "acquis_cede": "A",
-      "actions": 5240.0,
-      "apres": 84355.0,
-      "automatique": null,
-      "code": "P",
-      "date": "2026-11-24",
-      "hors_bourse": null,
-      "prix": 3.35,
-      "titre_valeur": "common stock"
-     }
-    ]
-   },
-   "direction": 1,
-   "entities": [
-    "Hunt James Christopher",
-    "Lument Finance Trust, Inc."
-   ],
-   "id": "sec_form4:0001727207-26-000008:P",
-   "kind": "achat_initie",
-   "notes": [],
-   "occurred_on": "2026-11-20",
-   "official_id": "0001727207-26-000008:P",
-   "official_url": "https://www.sec.gov/Archives/edgar/data/1547546/000172720726000008/0001727207-26-000008-index.htm",
-   "parser_version": "sec-8",
-   "published_on": "2026-11-24",
-   "sha256": "44d827f8c0abcce09f85a41ccac242200e5d49ec810f5701170b651521d285c9",
-   "source": "sec_form4",
-   "tickers": [
-    "LFT"
-   ],
-   "title": "Hunt James Christopher (administrateur) achète 9 646 actions de Lument Finance Trust, Inc."
-  },
   "sec_form4:0001753285-26-000006:P": {
    "amount_max": 50051.55,
    "amount_min": 50051.55,
@@ -19270,8 +19358,96 @@
    "title": "Copeland Alicia Crispin (Executive VP and COO) achète 5 000 actions de ADI GLOBAL DISTRIBUTION INC."
   }
  },
- "genere_a": "2026-11-28T00:13:09+00:00",
+ "genere_a": "2026-11-28T03:55:42+00:00",
  "hausse": [
+  {
+   "bonus": {
+    "moins": 1.0,
+    "plus": 1.0
+   },
+   "contexte": [],
+   "depot_recent": "2026-11-27",
+   "depuis": "2026-11-28T03:55:42+00:00",
+   "derniere_info": "2026-11-27",
+   "groupes": [
+    {
+     "famille": "inities",
+     "infos": [
+      {
+       "age": 0,
+       "base": 2.0,
+       "compte": true,
+       "facteurs": [
+        [
+         "PDG, directeur financier ou président du conseil",
+         1.5
+        ],
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001104659-26-132347:P",
+       "points": 7.88,
+       "regle": "achat_dirigeant",
+       "temps": 1.0
+      },
+      {
+       "age": 2,
+       "base": 2.0,
+       "compte": false,
+       "facteurs": [
+        [
+         "Groupe d'achats",
+         1.75
+        ],
+        [
+         "Petite compagnie",
+         1.5
+        ]
+       ],
+       "id": "sec_form4:0001104659-26-131894:P",
+       "points": 5.01,
+       "regle": "achat_dirigeant",
+       "temps": 0.955
+      }
+     ],
+     "points": 7.88,
+     "sens": 1
+    }
+   ],
+   "moins": 0.0,
+   "nom": "TMC the metals Co Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.4,
+   "plus": 7.88,
+   "recent": true,
+   "score": 7.88,
+   "symbole": "TMC",
+   "taille": {
+    "actions": [
+     441291524,
+     "2026-11-11"
+    ],
+    "prix": [
+     "20261030",
+     2.84
+    ],
+    "seuils": {
+     "mois": "202609",
+     "p30": 2090.64,
+     "p70": 12588.71
+    },
+    "source_actions": "frames",
+    "taille": "petite",
+    "valeur_m": 1253.3
+   }
+  },
   {
    "bonus": {
     "moins": 1.0,
@@ -21640,126 +21816,6 @@
     "source_actions": "frames",
     "taille": "petite",
     "valeur_m": 239.1
-   }
-  },
-  {
-   "bonus": {
-    "moins": 1.0,
-    "plus": 1.0
-   },
-   "contexte": [
-    {
-     "id": "sec_13dg:0002100119-26-001542",
-     "pourquoi": "13G : placement passif (souvent un fonds indiciel qui grossit)."
-    }
-   ],
-   "depot_recent": "2026-11-12",
-   "depuis": "2026-11-10T04:09:32+00:00",
-   "derniere_info": "2026-11-12",
-   "groupes": [
-    {
-     "famille": "inities",
-     "infos": [
-      {
-       "age": 15,
-       "base": 2.0,
-       "compte": true,
-       "facteurs": [
-        [
-         "PDG, directeur financier ou président du conseil",
-         1.5
-        ],
-        [
-         "Groupe d'achats",
-         1.75
-        ],
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001193125-26-458287:P",
-       "points": 5.57,
-       "regle": "achat_dirigeant",
-       "temps": 0.707
-      },
-      {
-       "age": 18,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "PDG, directeur financier ou président du conseil",
-         1.5
-        ],
-        [
-         "Groupe d'achats",
-         1.75
-        ],
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001193125-26-454020:P",
-       "points": 5.2,
-       "regle": "achat_dirigeant",
-       "temps": 0.66
-      },
-      {
-       "age": 18,
-       "base": 2.0,
-       "compte": false,
-       "facteurs": [
-        [
-         "PDG, directeur financier ou président du conseil",
-         1.5
-        ],
-        [
-         "Groupe d'achats",
-         1.75
-        ],
-        [
-         "Petite compagnie",
-         1.5
-        ]
-       ],
-       "id": "sec_form4:0001193125-26-454019:P",
-       "points": 5.2,
-       "regle": "achat_dirigeant",
-       "temps": 0.66
-      }
-     ],
-     "points": 5.57,
-     "sens": 1
-    }
-   ],
-   "moins": 0.0,
-   "nom": "ADTRAN Holdings, Inc.",
-   "note10": 9.6,
-   "note10_sans_bonus": 9.6,
-   "note10_sans_taille": 8.1,
-   "plus": 5.57,
-   "recent": false,
-   "score": 5.57,
-   "symbole": "ADTN",
-   "taille": {
-    "actions": [
-     81495825,
-     "2026-10-31"
-    ],
-    "prix": [
-     "20261028",
-     6.88
-    ],
-    "seuils": {
-     "mois": "202609",
-     "p30": 2090.64,
-     "p70": 12588.71
-    },
-    "source_actions": "frames",
-    "taille": "petite",
-    "valeur_m": 560.7
    }
   }
  ],

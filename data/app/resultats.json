@@ -1,5 +1,5 @@
 {
- "genere_a": "2026-11-28T00:13:09+00:00",
+ "genere_a": "2026-11-28T03:55:42+00:00",
  "horizons": {
   "30": "1 mois",
   "7": "1 semaine"
@@ -7814,6 +7814,85 @@
    "symbole": "DRIO",
    "taille": "petite",
    "vue": "2026-11-27"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-28T03:55:42+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "Aardvark Therapeutics, Inc.",
+   "note10": 8.8,
+   "note10_sans_bonus": 8.8,
+   "note10_sans_taille": 7.5,
+   "sens": "ecartee",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "AARD",
+   "taille": "petite",
+   "vue": "2026-11-27"
+  },
+  {
+   "depart": {
+    "attendu_vers": "2026-12-15",
+    "statut": "en_attente"
+   },
+   "entree": "2026-11-28T03:55:42+00:00",
+   "grace_a_la_taille": false,
+   "grace_au_bonus": false,
+   "horizons": {
+    "30": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    },
+    "7": {
+     "attendu_vers": "2026-12-15",
+     "statut": "en_attente"
+    }
+   },
+   "methode": "score-9",
+   "nom": "TMC the metals Co Inc.",
+   "note10": 10.0,
+   "note10_sans_bonus": 10.0,
+   "note10_sans_taille": 9.4,
+   "sens": "hausse",
+   "signaux": [
+    {
+     "facteurs": [
+      "PDG, directeur financier ou président du conseil",
+      "Groupe d'achats",
+      "Petite compagnie"
+     ],
+     "famille": "inities",
+     "regle": "achat_dirigeant",
+     "sens": 1
+    }
+   ],
+   "symbole": "TMC",
+   "taille": "petite",
+   "vue": "2026-11-27"
   }
  ],
  "methode": [
@@ -7925,7 +8004,7 @@
      "ecart_moyen": -0.1209,
      "mesurees": 3
     },
-    "entrees": 59,
+    "entrees": 60,
     "libelle": "Groupe d'achats"
    },
    "facteur:PDG, directeur financier ou président du conseil": {
@@ -7939,7 +8018,7 @@
      "ecart_moyen": -0.1056,
      "mesurees": 3
     },
-    "entrees": 71,
+    "entrees": 72,
     "libelle": "PDG, directeur financier ou président du conseil"
    },
    "grace_a_la_taille": {
@@ -7995,7 +8074,7 @@
      "ecart_moyen": -0.0799,
      "mesurees": 12
     },
-    "entrees": 105,
+    "entrees": 106,
     "libelle": "Achat d'actions par un dirigeant ou un administrateur"
    },
    "regle:achat_elu": {
@@ -8079,7 +8158,7 @@
      "ecart_moyen": -0.0744,
      "mesurees": 7
     },
-    "entrees": 72,
+    "entrees": 73,
     "libelle": "Petite compagnie (sous le 30e centile du NYSE)"
    }
   },
@@ -8103,25 +8182,25 @@
   "ecartee_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 47,
+   "en_attente": 48,
    "mesurees": 0
   },
   "ecartee_7": {
    "battu": 3,
    "ecart_moyen": -0.0599,
-   "en_attente": 39,
+   "en_attente": 40,
    "mesurees": 4
   },
   "hausse_30": {
    "battu": 0,
    "ecart_moyen": null,
-   "en_attente": 106,
+   "en_attente": 107,
    "mesurees": 0
   },
   "hausse_7": {
    "battu": 3,
    "ecart_moyen": -0.0543,
-   "en_attente": 74,
+   "en_attente": 75,
    "mesurees": 18
   }
  }
